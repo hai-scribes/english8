@@ -510,9 +510,27 @@ check three things:
   a main verb, between auxiliary and main verb?
 - Did you say /sp/ and /st/ with **no vowel** between the two consonants, in
   words like *spend*, *store*, *stall*?
-- Could you speak for 45 seconds without a long pause?
+- Did your pauses fall **between** points rather than inside a sentence?
 
-Repeat Step 2 until you can answer all six without stopping.
+Repeat Step 2 until each answer runs clearly from its first word to its last.
+
+::: bridge name="One turn, one subject — again, and for the same reason" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
+Same rule as Unit 1, on the market report-back. Before you speak, name in one
+phrase what the turn is **for** — *"why I still go to the wet market"*, not
+*"shopping"* — then drop everything that does not serve it.
+
+The official indicator is the relevance of each spoken sentence to the general
+purpose of the turn. The published examiner comment that makes it concrete
+concerns a Vietnamese candidate whose long turn was held down not by weak
+language but because she "**describes several interests rather than one
+interest**".
+
+And as in Unit 1: **pause between your stages, not inside your sentences.**
+Stage-marking pauses are on the credit side of this criterion.
+
+> **Tiếng Việt:** Một lượt nói, **một** chủ đề. Dừng giữa các ý — đó là điểm cộng.
+:::
+
 
 ---
 
@@ -558,6 +576,15 @@ Repeat Step 2 until you can answer all six without stopping.
 > Saturday just browsing. Now a parcel arrives on Thursday and that's it. It's
 > convenient, but it isn't a day out.
 
+> **Before you check — how sure are you?** Mark each answer **●** if you are
+> sure and **○** if you are not, *before* you look at the key. Then count how
+> many of each you got right. If the **●** answers are not clearly better than
+> the **○** ones, the feeling of certainty is not yet telling you anything —
+> which is more useful to know than the score. Unit 1 explains why.
+>
+> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
+> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+
 ### 6.1 Listen and choose
 
 1. Hà buys most of her **(a)** food **(b)** clothes and books **(c)** furniture online
@@ -593,25 +620,53 @@ centre, or online shopping. Choose one side only — do not write both.
 
 *(94 words)*
 
-#### The structure to copy
+#### Plan it — 6 questions your paragraph has to answer
 
-| Part | What goes in it |
+Cover the finished paragraph above. Answer in note form, in your own words.
+
+The phrase bank that used to sit here has been removed on purpose — see the
+note under Unit 11's writing task for why a list of connectives to reuse
+works against you.
+
+| The question | Your answer — notes, in your own words |
 | --- | --- |
-| **Topic sentence** | Name the kind of shopping + say how many points you will give |
-| **Point 1** | *First,* … + one detail or example |
-| **Point 2** | *Second,* … + one detail or example |
-| **Point 3** | *Third,* … + one detail or example |
-| **Concession** | *Of course,* … — admit one point on the other side |
-| **Closing sentence** | *Even so, I think* … — restate your position |
+| Which kind of shopping, and what is your position on it? | |
+| Point 1, plus one detail that is not a repeat of the point | |
+| Point 2, plus one detail | |
+| Point 3, plus one detail | |
+| One point on the other side that you admit is true | |
+| Where does the reader see your position for the second time? | |
 
-#### Useful language
+::: bridge name="Re-score the frequency drill: say it aloud first, and count the -s" trains="Grammatical Range & Accuracy" cefr="B1" marker="[S]" src="07 §4.5"
+Exercise **3.2** does not change. How you run it does:
 
-| Function | Phrases |
-| --- | --- |
-| Listing | First, … · Second, … · Third, … · Another advantage is … |
-| Giving a reason | because … · so … · This means that … |
-| Conceding | Of course, … · It is true that … · On the other hand, … |
-| Concluding | Even so, … · Overall, … · For these reasons, I think … |
+1. **Say every sentence aloud first, and record it.** Then write them.
+2. Mark each sentence **supplied** or **omitted** — did the third-person `-s`
+   actually appear? Report the fraction, not a score.
+
+Why aloud first, and why this drill: third-person `-s` is the single grammar
+target with the best case in this whole course for a Vietnamese-speaking learner.
+It is one of only two structures whose accuracy climbs across the *entire* IELTS
+band range, and the one researchers singled out because its path "was not
+affected by the learner's L1". It is also the ending Vietnamese learners omit
+most — **32.26% of written obligatory contexts omitted** in a study of 32
+third-year English majors, with omission rather than wrong choice being
+essentially the whole error.
+
+**Spoken before written**, because the same source reports oral omission running
+far higher than written. Carry the caveat: that oral figure is the authors
+*quoting another study*, not their own measurement.
+
+**And one thing this drill does not do.** There are two separate reasons an `-s`
+goes missing — you did not produce the grammar, or you did not pronounce the
+final consonant. Those causes are additive and need two different fixes, and for
+any single missing `-s` it is impossible to tell which one caused it. This drill
+attacks the grammar half only. Nothing here claims to cover the other.
+
+> **Tiếng Việt:** **Nói trước, viết sau.** Đếm số lần `-s` ngôi thứ ba **có xuất
+> hiện** trên tổng số vị trí bắt buộc. Bài này chỉ xử lý **nửa ngữ pháp** của vấn
+> đề, không xử lý nửa phát âm.
+:::
 
 #### Checklist — tick before you finish
 

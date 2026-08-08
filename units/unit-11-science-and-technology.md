@@ -211,6 +211,30 @@ hand. Mark ↘ or ↗ before you speak, then record yourself.
 
 ---
 
+::: bridge name="One new-information word per sentence — and unstress the rest" trains="Pronunciation" cefr="B1" marker="[T2]" src="06 §6.2"
+Go back through exercise **2.4**. In each sentence, circle **exactly one** word:
+the one carrying information the listener does not already have. Say the sentence
+with that word prominent and everything else flattened. Record it on your phone
+and listen for whether the rest really did get out of the way.
+
+Across 280 benchmark speaking performances, the **proportion** of words a speaker
+makes prominent correlates **−0.42** with rated level: lower-rated speakers made
+roughly 39% of their words prominent, the highest-rated about 31%. Stressing more
+words does not sound more emphatic; it sounds flatter, because nothing stands out
+when everything does.
+
+**Two warnings that travel with this.** The strongest correlate in that study was
+speech *rate* (0.67) — and the researchers call it "the worst teaching target",
+because speeding up to imitate a score is exactly the wrong response. And this is
+Tier-2 research on how candidates behave, never a rule of the test. **No
+pronunciation score exists here and none will:** examiner agreement on
+pronunciation is the weakest of the four criteria, and nothing in this course
+will ever put a number on yours.
+
+> **Tiếng Việt:** Mỗi câu chỉ nhấn **một** từ — từ mang thông tin mới. Nhấn càng
+> nhiều từ, câu càng **phẳng**. Khoá học này **không** chấm điểm phát âm.
+:::
+
 ## Lesson 3 — A Closer Look 2
 
 ### Grammar — Reported speech: statements
@@ -565,9 +589,9 @@ check three things:
   after *told*?
 - Did you **stress the content words** and squeeze the function words, instead
   of reading every word with the same weight?
-- Could you speak for 45 seconds without a long pause?
+- Did your pauses fall **between** points rather than inside a sentence?
 
-Repeat Step 2 until you can answer all six without stopping.
+Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ---
 
@@ -605,6 +629,15 @@ Repeat Step 2 until you can answer all six without stopping.
 > worried, or decide to change the whole lesson because the class is tired. My
 > advice is simple. Let the machine do the boring work, and let the teacher do
 > the human work.
+
+> **Before you check — how sure are you?** Mark each answer **●** if you are
+> sure and **○** if you are not, *before* you look at the key. Then count how
+> many of each you got right. If the **●** answers are not clearly better than
+> the **○** ones, the feeling of certainty is not yet telling you anything —
+> which is more useful to know than the score. Unit 1 explains why.
+>
+> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
+> cho từng câu, rồi đếm số câu đúng của mỗi loại.
 
 ### 6.1 Listen and choose
 
@@ -644,16 +677,50 @@ point on the other side, then argue your own.
 
 *(96 words)*
 
-#### The structure to copy
+#### Plan it — 6 questions your paragraph has to answer
 
-| Part | What goes in it | Useful language |
-| --- | --- | --- |
-| **Position** | State your opinion in one sentence | *Some people believe… but I disagree.* |
-| **Concession** | Admit one real point on the other side | *It is true that…* |
-| **Turn** | Push back against it | *However, …* |
-| **Evidence** | One concrete example from your own life | *When I…, my teacher…* |
-| **Second reason** | A different argument | *A robot cannot…* |
-| **Conclusion** | Restate your position more strongly | *For these reasons, I believe that…* |
+Cover the finished paragraph above. Answer in note form, in your own words.
+
+The third column of this table used to supply an opening phrase for each row.
+It has been deleted, and the bridge below the task explains why that column was
+the most damaging thing on the page.
+
+| The question | Your answer — notes, in your own words |
+| --- | --- |
+| What is your position, in one sentence? | |
+| One real point on the other side | |
+| Why it does not change your mind | |
+| One concrete example from your own life | |
+| A second reason, different in kind from the first | |
+| Where does the reader see your position for the second time? | |
+
+::: bridge name="Say the prompt in your own words before you answer it" trains="Lexical Resource" cefr="B1" marker="[D]" src="02 §7"
+Before you write a single sentence of the persuasive paragraph, do this out loud:
+**say the task back in your own words.** Not the wording above — yours.
+
+Then write. **No prepared opening.** If a sentence arrives fully formed before
+you have thought about the question, it is a memorised sentence and it is working
+against you.
+
+This is the sharpest thing in the whole knowledge base and it is worth being
+blunt about, because it contradicts how exam writing is often taught. In IELTS,
+memorised language is not a low-scoring shortcut — it is **removed from the
+marking**:
+
+- an answer that is wholly memorised is scored at the **bottom of the scale**;
+- memorised phrases used inappropriately are a **band-4** feature of Lexical
+  Resource (Writing descriptors, **[2023]** version);
+- any wording copied from the prompt "must be discounted" before the response is
+  assessed;
+- memorised utterances are excluded from the language that counts at all.
+
+Saying the question in your own words trains a directly assessed behaviour, and
+it takes ten seconds.
+
+> **Tiếng Việt:** Trước khi viết, hãy **nói lại đề bằng lời của mình**. Không
+> dùng câu mở bài học thuộc. Trong IELTS, ngôn ngữ học thuộc **bị loại khỏi phần
+> chấm**, chứ không phải bị điểm thấp.
+:::
 
 #### Checklist — tick before you finish
 

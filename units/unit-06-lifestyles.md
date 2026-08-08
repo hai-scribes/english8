@@ -131,10 +131,10 @@ Circle the word that does not belong, and say why.
 
 ### Pronunciation — /br/ and /pr/
 
-Two consonant clusters that Vietnamese learners very often swap, because
-Vietnamese has no /br/ or /pr/ at the start of a syllable. The two sounds are
-made in exactly the same place — **both lips** — so only one thing separates
-them: the **voice**.
+Two consonant clusters that are easy to swap. The two sounds are made in
+exactly the same place — **both lips** — so only one thing separates them: the
+**voice**. That is where the difficulty actually sits, and the bridge at the end
+of this block gives the measurement behind that claim.
 
 | | /br/ — as in *bright* | /pr/ — as in *price* |
 | --- | --- | --- |
@@ -183,6 +183,31 @@ Read aloud three times, faster each time. Record yourself if you can.
 3. **Bring** the **brush** — we will **print** the poster and **celebrate**.
 
 ---
+
+::: bridge name="This is a voicing drill, not a cluster drill" trains="Pronunciation" cefr="A2" marker="[S]" src="07 §5.5.3"
+Work the **voice and the puff of air**, not the consonants. Put a hand on your
+throat: /b/ buzzes, /p/ does not. Hold a strip of paper in front of your mouth:
+/p/ moves it, /b/ does not.
+
+The reframe comes from a measurement of Vietnamese undergraduates producing
+English onset clusters — 36 learners, 1,080 tokens per cluster type, two raters
+agreeing at r = .98. In two-consonant onsets, **the dominant error was not
+dropping a consonant but changing the voicing of the plosive: 195 of 252 errors,
+77.4%, against deletion at 22.2%.** The authors attribute it to voicing and
+aspiration: learners "had a tendency to change the voicing feature of voiceless
+consonants into the voiced ones". /br/ against /pr/ is precisely that contrast,
+and both were directly tested in that study.
+
+**Three limits travel with this.** One source, not independently re-checked. 36
+learners at a single university, read-aloud and prompted tasks over Zoom — the
+paper's own limitation statement calls the sample "quite small, which
+significantly limits the generalizability of the findings". And it says nothing
+about what any of this is worth to a score.
+
+> **Tiếng Việt:** Đây là bài luyện **thanh (voicing) và hơi bật (aspiration)**,
+> không phải bài luyện cụm phụ âm. Lỗi phổ biến nhất là đổi /p/ thành /b/ —
+> chiếm 77,4% lỗi — chứ không phải lược bỏ phụ âm.
+:::
 
 ## Lesson 3 — A Closer Look 2
 
@@ -454,9 +479,9 @@ check three things:
 - Did you keep *will* **out** of every *if*-clause?
 - Did you pronounce /br/ and /pr/ differently in words like *celebrate* and
   *preserve*?
-- Could you speak for 45 seconds without a long pause?
+- Did your pauses fall **between** points rather than inside a sentence?
 
-Repeat Step 2 until you can answer all five without stopping.
+Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ---
 
@@ -496,6 +521,15 @@ Repeat Step 2 until you can answer all five without stopping.
 > get the benefits without losing our health or our friendships. That choice is
 > yours, and you will make it every single day.
 
+> **Before you check — how sure are you?** Mark each answer **●** if you are
+> sure and **○** if you are not, *before* you look at the key. Then count how
+> many of each you got right. If the **●** answers are not clearly better than
+> the **○** ones, the feeling of certainty is not yet telling you anything —
+> which is more useful to know than the score. Unit 1 explains why.
+>
+> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
+> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+
 ### 6.1 Listen and choose
 
 1. The speaker's main question is whether technology has made our lives **(a)** faster **(b)** better or worse **(c)** more expensive
@@ -530,16 +564,70 @@ the **disadvantages** of online learning. Choose **one** side only.
 
 *(91 words)*
 
-#### The structure to copy
+#### Plan it — 6 questions your paragraph has to answer
 
-| Part | What goes in it |
+Cover the finished paragraph above. Answer in note form, in your own words.
+
+| The question | Your answer — notes, in your own words |
 | --- | --- |
-| **Topic sentence** | State your side: *online learning has several advantages / disadvantages* |
-| **Point 1** | *First, …* + one clear reason |
-| **Point 2** | *Second, …* + a reason with an example |
-| **Point 3** | *Third, …* — use a **first conditional** here |
-| **Point 4** | *Finally, …* + your last reason |
-| **Closing sentence** | *For me, … / In short, …* — repeat your position |
+| What is your position — advantages or disadvantages? Say it in one sentence. | |
+| Reason 1 | |
+| Reason 2, with one concrete example | |
+| Reason 3 — this is where a **first conditional** belongs | |
+| One real point on the other side that you are willing to admit | |
+| Where does the reader see your position for the second time? | |
+
+::: bridge name="Open → stand → close. Learn the name once; you will meet it three more times" trains="Task Response" cefr="B1" marker="[Q]" src="05 §3.1"
+Three moves, and this unit is where they get their name:
+
+- **Open** — say what the paragraph is about.
+- **Stand** — say where you stand, in a sentence a reader cannot miss.
+- **Close** — leave the reader holding your position, not a new idea.
+
+You will use it again in Unit 8, Unit 10 (spoken) and Unit 11. **Do not turn it
+into sentences you reuse.** The schema is a set of questions you answer — *what
+is my position, and where does the reader first see it?* — never a frame to fill.
+A structure taught four times is one step away from a memorised template, and
+memorised language is the category IELTS removes from the marking altogether.
+
+The move itself is a named part of the criteria, not style advice: Task Response
+assesses "how clearly the candidate opens the discourse, **establishes their
+position** and formulates conclusions", and a position is required at every level
+from the middle of the scale upward — its absence is what defines the levels
+below (Writing descriptors, **[2023]** version).
+
+**One thing this task is not.** Your 80–100 words are a **body paragraph**. The
+IELTS essay is 250+ words in about 40 minutes and is a different object. Nothing
+in this course is practice for that essay, and anything claiming to be is
+overselling what the format can carry.
+
+> **Tiếng Việt:** Ba bước: **mở → nêu quan điểm → chốt**. Đây là bộ **câu hỏi**
+> bạn tự trả lời, **không phải mẫu câu** để chép lại. Đoạn 80–100 từ là một *đoạn
+> thân bài*, không phải bài luận IELTS.
+:::
+
+::: bridge name="One concession sentence — built from two simple sentences" trains="Task Response" cefr="A2" marker="[INF]" src="05 §5"
+Add exactly one pair like this to your paragraph:
+
+> Some people say online learning is lonely. I think the time it saves is worth
+> more.
+
+Two simple sentences. **Not** a subordinate clause — you have not met
+subordination yet; that is Unit 7. This is deliberately buildable with the
+grammar you already have.
+
+The behaviour is worth training because it is what examiners credit at the top
+of the range: a script commended near the top of the scale earns it partly
+because "An alternative position is also considered but rejected" (Writing
+descriptors, **[2023]** version).
+
+Whether two coordinated simple sentences at this level do the same job as the
+subordinated version an older learner would write is **our own reasoning**. No
+source tests it.
+
+> **Tiếng Việt:** Thêm đúng **một** cặp câu nhượng bộ, dùng **hai câu đơn** —
+> chưa cần mệnh đề phụ (Unit 7 mới học).
+:::
 
 #### Checklist — tick before you finish
 

@@ -101,14 +101,17 @@ Look at the **bold** verbs. Write **V-ing** or **to-V** for each.
 > ### ▶︎ [**Practise these 18 words**](../app/unit-01-vocab.html)
 >
 > Press 🔊 on any row above to hear the word. When you have finished this
-> lesson, the unit page opens a **practice** session over all eighteen —
-> recognise the meaning, produce the word, and write what you hear, mixed
-> together, with wrong answers coming straight back. The **unit test** opens
-> once all seven lessons are done.
+> lesson, the unit page opens a **practice** session over all eighteen — the
+> meaning, the word, what you hear, and, more often than any of those, **the
+> word inside a phrase it actually lives in**. Wrong answers come straight
+> back, and everything returns a week later, because what you can still recall
+> after a gap is the only recall worth counting. The **unit test** opens once
+> all seven lessons are done.
 >
 > **Luyện 18 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
-> **practice** ở trang bài sẽ mở ra để luyện cả 18 từ; bài kiểm tra của bài
-> mở khi bạn hoàn thành cả 7 lesson.
+> **practice** ở trang bài sẽ mở ra để luyện cả 18 từ — trong đó phần lớn là
+> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
+> ngay, và mọi từ quay lại sau một tuần.
 >
 > Do the written exercises below as well — writing by hand and typing on a
 > screen build different halves of the same knowledge.
@@ -134,8 +137,8 @@ Circle the word that does not belong, and say why.
 
 ### Pronunciation — /ʊ/ and /uː/
 
-Two sounds that Vietnamese learners often merge. The difference is **length**
-and **tension**.
+Two sounds that are easy to merge, because English spells both of them "oo".
+The difference is **length** and **tension**.
 
 | | /ʊ/ — short, relaxed | /uː/ — long, tense |
 | --- | --- | --- |
@@ -395,14 +398,40 @@ Find a word or phrase in the blog that means:
 **Step 2 — Speak.** Answer each question **aloud** from your notes, in full
 sentences. Use at least one verb of liking or disliking in every answer.
 
-**Step 3 — Record and check.** Record yourself on your phone. Listen back and
+**Step 4 — Report back.** Pick **one** of the five questions and talk about it
+alone for 30 seconds, as if telling someone who was not there.
+
+**Step 5 — Record and check.** Record yourself on your phone. Listen back and
 check three things:
 
 - Did you use **V-ing** or **to-V** correctly after each liking verb?
 - Did you pronounce /ʊ/ and /uː/ differently in words like *book* and *food*?
-- Could you speak for 30 seconds without a long pause?
+- In Step 4, did every sentence serve the one subject you chose?
 
-Repeat Step 2 until you can answer all five without stopping.
+::: bridge name="One turn, one subject" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
+Before the 30-second turn in Step 4, say in one short phrase what the turn is
+**for** — *"the hobby I want to start"*, not *"my free time"*. Then drop
+anything that does not serve it, however good the sentence is.
+
+This is not a style preference. One of the official indicators of coherence in
+a spoken turn is the **relevance of each spoken sentence to the general purpose
+of the turn** — and an examiner's published comment on a real Vietnamese
+candidate, speaking on this exact topic, records the whole cost of ignoring it:
+she *"describes several interests rather than one interest"*, which "makes her
+hard to follow at times and leads to some loss of coherence".
+
+**And do not chase silence.** The old version of this exercise asked you to
+speak "without a long pause". That was wrong, and it has been removed. Pausing
+at a stage boundary — with a short marker like *"So that's the first thing."* —
+is listed on the **credit** side of coherence, not the debit side. Pause where
+your talk turns a corner; do not pause in the middle of a clause.
+
+> **Tiếng Việt:** Trước khi nói, hãy gọi tên **một** chủ đề duy nhất cho lượt
+> nói đó, rồi bỏ mọi câu không phục vụ chủ đề ấy. Dừng đúng chỗ chuyển ý là
+> **điểm cộng**, không phải điểm trừ.
+:::
+
+Repeat Step 2 until you can answer all five clearly.
 
 ---
 
@@ -436,6 +465,39 @@ Repeat Step 2 until you can answer all five without stopping.
 > grandfather teaches me to cook one new dish each week. So far I have learned
 > six. Two of them were good.
 
+::: bridge name="Mark how sure you are, then check your calibration" trains="Listening" cefr="A2→B1" marker="[T2]" src="03 §6.6"
+Next to every answer in **6.1** and **6.2**, write **● sure** or **○ not sure**
+*before* you look at the key. Then fill this in:
+
+| | Answers | Of those, right |
+| --- | --- | --- |
+| ● sure | | |
+| ○ not sure | | |
+
+**What you are looking for is not the score.** It is whether the **● sure**
+answers are right much more often than the **○ not sure** ones. If they are,
+your sense of your own listening can be trusted, and under time pressure that is
+worth having. If they are not, it cannot be — and knowing *that* is worth more
+than two extra right answers.
+
+A study of 376 test-takers on IELTS Listening found that between **74% and 86%
+of them were miscalibrated**, and that on the hardest questions they were
+substantially overconfident. The researcher's own recommendation was to tell
+learners plainly whether they are realistic, overconfident or underconfident.
+It is the only trainable behaviour in the Listening research with an effect size
+attached to it.
+
+**Every listening exercise in this course carries this column**, and the
+practice engine on each unit page asks you the same question and works the
+calculation out for you.
+
+This describes a tendency in test-takers, not a rule of the test.
+
+> **Tiếng Việt:** Trước khi dò đáp án, đánh dấu **● chắc chắn** hoặc **○ không
+> chắc** cho từng câu. Điều đáng quan tâm không phải điểm số, mà là bạn **tự đánh
+> giá có chuẩn không** — 74–86% thí sinh đánh giá sai về chính mình.
+:::
+
 ### 6.1 Listen and choose
 
 1. Nam says his week is **(a)** empty **(b)** quite full **(c)** too busy
@@ -456,7 +518,7 @@ Repeat Step 2 until you can answer all five without stopping.
 **Task.** A friend from another country has asked what you do in your free
 time. Write an email of **80–100 words**.
 
-#### Model email — read this first
+#### One finished email — read it, then cover it
 
 > Hi Linh,
 >
@@ -475,16 +537,41 @@ time. Write an email of **80–100 words**.
 
 *(93 words)*
 
-#### The structure to copy
+#### Plan it — six questions your email has to answer
 
-| Part | What goes in it |
+Cover Mai's email. Answer these in the right-hand column **in your own words**,
+in note form. The plan is yours; the sentences come later.
+
+| The question | Your answer (notes, not sentences) |
 | --- | --- |
-| **Greeting** | *Hi [name],* |
-| **Opening line** | Thank them / refer to their question |
-| **Body 1** | What you usually do — use *usually, often, at the weekend* |
-| **Body 2** | Something new or a future wish — use *take up, would love to* |
-| **Closing question** | Ask them something back |
-| **Sign-off** | *Write soon,* / *Best wishes,* + your name |
+| Who are you writing to, and what did they ask? | |
+| What do you usually do in your free time? | |
+| Who with, and when? | |
+| What is new this year, or what do you want to start? | |
+| What do you want to know back from them? | |
+| How do you close a message to a friend? | |
+
+::: bridge name="Your own life is evidence — but it has to support a point" trains="Task Response" cefr="B1" marker="[C] 3-0" src="05 §3.1"
+There is no phrase list above, and there will not be one anywhere in this
+course. In IELTS, memorised language is not a shortcut that scores badly — it is
+the category that is **removed from the marking**. A wholly memorised answer is
+scored at the bottom of the scale, memorised chunks used inappropriately are a
+band-4 feature of Lexical Resource, and any wording copied from the prompt is
+discounted before the rest is read. A plan you filled in yourself cannot be
+memorised, because it did not exist before you wrote it.
+
+What this task *does* train is worth naming. Personal experience is explicitly
+allowed as evidence in IELTS writing — the criteria state that examples "may be
+drawn from a candidate's own experience" (Writing descriptors, **[2023]**
+version; an older 2013 wording also circulates). The skill is not *having* the
+experience; it is making it **answer the question you were asked**. Every one of
+your six notes should point back at the question in the left-hand column.
+
+> **Tiếng Việt:** Không có bảng "mẫu câu" — vì trong IELTS, câu học thuộc lòng
+> bị **loại khỏi phần chấm**, chứ không phải bị trừ điểm. Hãy tự viết kế hoạch
+> bằng ngôn từ của mình. Trải nghiệm cá nhân được phép dùng làm dẫn chứng, miễn
+> là nó **trả lời đúng câu hỏi**.
+:::
 
 #### Checklist — tick before you finish
 
