@@ -49,6 +49,108 @@ RE_VOCAB_ROW = re.compile(
     r"^\|\s*(\d+)\s*\|\s*(.+?)\s*\|\s*(/[^|]*?)\s*\|\s*(.*?)\s*\|\s*(.+?)\s*\|\s*$", re.M)
 
 BLANK = "\x00B%d\x00"
+BRIDGE = "\x00R%d\x00"
+
+# --------------------------------------------------------------- IELTS bridge --
+# A ":::bridge" directive is the one place a lesson may make a claim about IELTS.
+# Everything the knowledge base insists on is carried by the *syntax*, so a
+# bridge that omits its warrant cannot be authored: the marker and the source
+# section are required attributes, and the generator prints both, glossed in
+# plain English, underneath every block it emits. See research/ielts/09 §1.
+RE_BRIDGE = re.compile(r"^:::[ \t]*bridge(?P<attrs>[^\n]*)\n(?P<body>.*?)\n:::[ \t]*$",
+                       re.M | re.S)
+RE_ATTR = re.compile(r'(\w+)="([^"]*)"')
+
+BRIDGE_ATTRS = {"name", "trains", "marker", "src", "cefr"}
+BRIDGE_REQUIRED = {"name", "trains", "marker", "src"}
+
+# The only labels a bridge may train toward. The four Writing criteria and the
+# four Speaking criteria are the descriptors' own names (`02`); Reading and
+# Listening are skills, not scales, and are labelled as such.
+TRAINS = {
+    "Task Achievement":              ("w", "Writing Task 1 criterion"),
+    "Task Response":                 ("w", "Writing Task 2 criterion"),
+    "Coherence & Cohesion":          ("w", "Writing criterion"),
+    "Lexical Resource":              ("b", "Writing and Speaking criterion"),
+    "Grammatical Range & Accuracy":  ("b", "Writing and Speaking criterion"),
+    "Fluency & Coherence":           ("s", "Speaking criterion"),
+    "Pronunciation":                 ("s", "Speaking criterion"),
+    "Reading":                       ("r", "Reading skill — not a scored criterion"),
+    "Listening":                     ("r", "Listening skill — not a scored criterion"),
+}
+WRITING_CRITERIA = {k for k, (side, _) in TRAINS.items() if side in ("w", "b")}
+
+# Marker glosses. `09` G2: anything resting on a weak marker must say so *at the
+# point of use*. Printing the gloss is not optional, so it always does.
+MARKERS = {
+    "[Q]":    ("quoted", "quoted word-for-word from IELTS's own published material"),
+    "[D]":    ("descriptor", "wording taken from the published band descriptors"),
+    "[C]":    ("verified", "checked by a three-vote adversarial panel and sustained"),
+    "[V]":    ("verified", "checked by a three-vote adversarial panel and sustained"),
+    "[S]":    ("one source", "quoted from a single primary source, not independently checked"),
+    "[S/NS]": ("one source, unsustained",
+               "quoted from a single source — the matching verification did not hold. "
+               "Weaker than a verified claim"),
+    "[T2]":   ("research, not a rule",
+               "a tendency measured in candidates. Never a rule of the test"),
+    "[INF]":  ("our reasoning",
+               "our own inference from the cited facts. No source states this link"),
+    "[SPEC]": ("untested", "plausible and level-appropriate, but no source says it works"),
+}
+RE_MARKER = re.compile(r"^(\[[A-Z2/]+\])(?:\s+(\d+-\d+))?$")
+
+KB_FILES = {
+    "01": "01-exam-structure.md",   "02": "02-band-descriptors.md",
+    "03": "03-listening.md",        "04": "04-reading.md",
+    "05": "05-writing.md",          "06": "06-speaking.md",
+    "07": "07-language-foundation.md", "08": "08-bridge-map.md",
+    "09": "09-design-principles.md",
+}
+KB_TITLES = {
+    "01": "the exam structure", "02": "the band descriptors", "03": "Listening",
+    "04": "Reading", "05": "Writing", "06": "Speaking",
+    "07": "what is trainable", "08": "the grade-8 bridge map",
+    "09": "the build constitution",
+}
+RE_SRC = re.compile(r"^(0[1-9]) (§[\d.]+[a-z]?(?:[–-]§?[\d.]+[a-z]?)?)$")
+
+CEFR = {"A1", "A2", "A2→B1", "B1", "B1→B2", "B2", "C1", "C2"}
+
+
+def bridge_attrs(m) -> dict:
+    return dict(RE_ATTR.findall(m.group("attrs")))
+
+
+def bridge_html(a: dict, body: str) -> str:
+    """One bridge block: what it trains, the instruction, and its warrant.
+
+    The warrant line is generated, never authored. That is the whole point of
+    the directive — `09` G2 requires a weak marker to be declared at the point
+    of use, and a generated footer cannot be forgotten the way a prose caveat
+    can.
+    """
+    mk = RE_MARKER.match(a.get("marker", "").strip())
+    key = mk.group(1) if mk else ""
+    vote = mk.group(2) if mk and mk.group(2) else ""
+    short, gloss = MARKERS.get(key, ("unmarked", "no evidential marker — do not trust this"))
+    sm = RE_SRC.match(a.get("src", "").strip())
+    where = (f"{KB_TITLES[sm.group(1)]} · <code>research/ielts/{KB_FILES[sm.group(1)]}</code> "
+             f"{e(sm.group(2))}") if sm else e(a.get("src", ""))
+    side = TRAINS.get(a.get("trains", ""), ("", ""))[1]
+    cefr = (f'<span class="b-c" title="Levelled by CEFR. IELTS publishes no band '
+            f'below 4.0 and none at all for A2, so no band can label this.">'
+            f'CEFR {e(a.get("cefr"))}</span>') if a.get("cefr") else ""
+    return (
+        f'<aside class="bridge" data-role="bridge">'
+        f'<div class="b-h"><span class="b-k">Beyond the textbook</span>'
+        f'<span class="b-t" title="{e(side)}">{inline(a.get("trains", ""))}</span>{cefr}</div>'
+        f'<h4 class="b-n">{inline(a.get("name", ""))}</h4>'
+        f'<div class="prose">{render(body)}</div>'
+        f'<p class="b-src"><span class="b-m" data-strength="{e(key.strip("[]").lower())}">'
+        f'{e(key)}{(" " + e(vote)) if vote else ""} — {e(short)}</span>'
+        f'<span class="b-g">{e(gloss)}.</span>'
+        f'<span class="b-w">Warrant: {where}</span></p>'
+        f'</aside>')
 
 
 # ----------------------------------------------------------------- markdown --
@@ -63,6 +165,14 @@ def render(md_text: str) -> str:
        before each new speaker -- and only there, because the source is
        hard-wrapped and a blanket nl2br would shred every prose paragraph.
     """
+    blocks: list[str] = []
+
+    def stash_bridge(m):
+        blocks.append(bridge_html(bridge_attrs(m), m.group("body")))
+        return BRIDGE % (len(blocks) - 1)
+
+    md_text = RE_BRIDGE.sub(stash_bridge, md_text)
+
     holes: list[int] = []
 
     def stash(m):
@@ -90,6 +200,8 @@ def render(md_text: str) -> str:
     # engine on the unit page. Point the callout at what now serves its
     # purpose instead of leaving a link that 404s.
     out = re.sub(r'href="\.\./app/unit-\d+-vocab\.html"', 'href="../index.html"', out)
+    for i, h in enumerate(blocks):
+        out = out.replace(f"<p>{BRIDGE % i}</p>", h).replace(BRIDGE % i, h)
     return out
 
 
@@ -224,6 +336,39 @@ def vocab_table(u) -> str:
 
 RE_FIRST_TABLE = re.compile(r'<div class="scroll"><table>.*?</table></div>', re.S)
 
+RE_BOLD_TARGET = re.compile(r"\*\*(.+?)\*\*")
+
+
+def practice_data(u) -> list:
+    """The unit's words, packed for the practice engine — as collocations.
+
+    `09` **F7** is the least-contested finding in the vocabulary evidence and
+    the one the trainer was failing: items are taught as collocations, not as
+    bare word-gloss pairs. Every dictionary entry already carries both, so the
+    only thing missing was carrying them to the page.
+
+    `cloze` keeps the *inflected* form the example actually uses, because that
+    is what the learner has to produce; the headword is accepted alongside it.
+    """
+    out = []
+    for w in u["vocab"]:
+        entry = DICT.get(w["word"].lower()) or {}
+        sense = (entry.get("senses") or [{}])[0]
+        item = {"n": w["n"], "word": w["word"], "ipa": w["ipa"],
+                "pos": w["pos"], "vi": w["vi"]}
+        coll = [c for c in (sense.get("colloc") or []) if c][:3]
+        if coll:
+            item["colloc"] = coll
+        for eg in sense.get("examples") or []:
+            m = RE_BOLD_TARGET.search(eg)
+            if not m:
+                continue
+            item["cloze"] = RE_BOLD_TARGET.sub("\x01", eg, count=1).replace("**", "")
+            item["clozeKey"] = m.group(1)
+            break
+        out.append(item)
+    return out
+
 
 def e(s) -> str:
     return html.escape(str(s), quote=True)
@@ -315,6 +460,8 @@ def parse_unit(path: Path) -> dict:
             "title": mk.group(2).strip(),
             "intro": intro.strip(),
             "blocks": blocks,
+            "bridges": [dict(bridge_attrs(bm), body=bm.group("body"), lesson=int(mk.group(1)))
+                        for bm in RE_BRIDGE.finditer(body)],
         })
 
     # answer key: **N.M** ... up to the next entry or heading
@@ -338,7 +485,8 @@ def parse_unit(path: Path) -> dict:
 
     return {"num": num, "nn": f"{num:02d}", "title": title, "vi": vi,
             "strands": strands, "lessons": lessons, "answers": answers,
-            "vocab": vocab, "src": path.name}
+            "vocab": vocab, "src": path.name,
+            "bridges": [b for L in lessons for b in L["bridges"]]}
 
 
 def strand(u, key, default=""):
@@ -398,6 +546,7 @@ def ipa_title(u) -> str:
 
 
 def page_home(units) -> str:
+    n_bridge = sum(len(u["bridges"]) for u in units)
     cards = []
     for u in units:
         cards.append(f"""    <a class="unitcard" href="unit-{u['nn']}/index.html" data-unit-progress="{u['nn']}">
@@ -414,14 +563,42 @@ def page_home(units) -> str:
     <h1>Tiếng Anh 8 — Global Success</h1>
     <p class="standfirst">Every unit runs the same seven lessons. Work through them in order:
     each lesson teaches, then practises what it just taught, and the unit test opens only
-    once all seven are done.</p>
+    once all seven are done. {n_bridge} of those tasks carry one extra instruction, so that
+    finishing the syllabus also builds a skill the IELTS criteria name.</p>
   </header>
 
   <div class="overview">
     <div class="stat"><span class="n" data-units-started>0</span><span class="k">units started</span></div>
     <div class="stat good"><span class="n" data-units-done>0</span><span class="k">units finished</span></div>
     <div class="stat hot"><span class="n" data-total-lessons>0</span><span class="k">lessons done</span></div>
-    <div class="stat"><span class="n">12</span><span class="k">units available</span></div>
+    <div class="stat"><span class="n" data-review-due>0</span><span class="k">words due today</span></div>
+  </div>
+
+  <div class="card review" id="reviewCard" hidden>
+    <h3>Words due for review</h3>
+    <p class="lede" id="reviewLede"></p>
+    <div class="row">
+      <button class="btn" id="startReview" type="button">Start review</button>
+      <span class="label" id="reviewBreak"></span>
+    </div>
+    <div id="reviewEngine" hidden></div>
+  </div>
+
+  <div class="card doubleduty">
+    <h3>Two jobs, one course</h3>
+    <p class="lede">This is the Tiếng Anh 8 syllabus, taught in full and in its own order.
+    It is also built so that the work counts twice: {n_bridge} tasks across the twelve units
+    carry a changed instruction, a checkpoint or a re-scored drill drawn from what the IELTS
+    band descriptors actually reward. No new topics, no extra homework — the same task, aimed
+    better.</p>
+    <div class="strands">
+      <div><span class="k">What it adds</span><span class="v">One turn, one subject · topic-sentence
+      checkpoints · obligatory-context accuracy · paraphrase search · evidence-only reading ·
+      confidence and calibration</span></div>
+      <div><span class="k">What it refuses</span><span class="v">Band predictions · half-band
+      rubrics · essay templates and model openers · hours-to-band promises · a speaking score</span></div>
+    </div>
+    <p><a href="evidence/index.html">Read the evidence register — every claim and what backs it →</a></p>
   </div>
 
   <div class="sectionhead"><h2>The twelve units</h2><span class="label">phonology in clay · grammar in teal</span></div>
@@ -442,8 +619,44 @@ def page_home(units) -> str:
       <div><span class="k">Lesson 7</span><span class="v">Looking Back — consolidation + project</span></div>
     </div>
   </div>"""
+    # The review queue spans units, so the home page carries every unit's items.
+    # ~216 of them; the alternative is a fetch, and this site has no server.
     return shell(title=SITE, depth=0, body=body, crumb=[("Course", "")],
+                 data={"kind": "home",
+                       "vocab": {u["nn"]: practice_data(u) for u in units}},
                  desc="Self-study English 8 course: 12 units, 84 lessons, with practice and unit tests.")
+
+
+def bridge_card(u) -> str:
+    """The unit's bridges, gathered, with the lesson each one lives in.
+
+    Deliberately not a separate IELTS section: every row links back into the
+    lesson that carries it, because the whole design claim is that these are
+    changed instructions on existing tasks, not a second course bolted on.
+    """
+    if not u["bridges"]:
+        return ""
+    rows = "".join(
+        f'<a class="brow" href="lesson-{b["lesson"]}/index.html">'
+        f'<span class="n">L{b["lesson"]}</span>'
+        f'<span class="body"><span class="t">{inline(b.get("name",""))}</span>'
+        f'<span class="d">{inline(b.get("trains",""))}'
+        + (f' · CEFR {e(b["cefr"])}' if b.get("cefr") else "")
+        + f' · {e(b.get("marker",""))}</span></span>'
+          f'<span class="go" aria-hidden="true">→</span></a>'
+        for b in u["bridges"])
+    return f"""  <div class="card bridgecard"><h2>Beyond the textbook</h2>
+    <p class="lede">The same {len(u['bridges'])} tasks you are already doing, with one thing
+    changed in each so that they also build a skill the IELTS criteria name. Every
+    row carries the evidence it rests on, and how strong that evidence is.
+    <a href="../evidence/index.html">How the evidence is graded →</a></p>
+    <div class="brows">{rows}</div>
+    <p class="note small">No IELTS band is claimed anywhere on this site. IELTS publishes
+    no band below 4.0 and none at all for A2 — which is where grade-8 work sits — so a
+    band here would be invented. Levels are labelled by CEFR instead.</p>
+  </div>
+
+"""
 
 
 def page_unit(u) -> str:
@@ -479,6 +692,7 @@ def page_unit(u) -> str:
     <div class="strands">{strands}</div>
   </div>
 
+{bridge_card(u)}
   <div class="sectionhead"><h2>Lessons</h2><span class="label">work through these in order</span></div>
   <div class="lessons" data-role="lesson-index" data-unit-progress="{u['nn']}">
 {chr(10).join(rows)}
@@ -494,14 +708,16 @@ def page_unit(u) -> str:
     <div class="gategrid">
       <div class="gatecard" data-role="practice">
         <h3>Practice this unit's words</h3>
-        <p>All {len(u['vocab'])} words from Lesson 2, mixed: recognise the meaning, produce
-        the word, and write what you hear. Wrong answers come straight back.</p>
+        <p>All {len(u['vocab'])} words from Lesson 2, in five formats: the meaning, the word,
+        what you hear, and — twice as often as the rest — the word inside a phrase it
+        actually lives in. Wrong answers come straight back, then return in a week.</p>
         <button class="btn" id="startPractice" type="button" aria-disabled="true">Start practice</button>
       </div>
       <div class="gatecard" data-role="test">
         <h3>Unit test</h3>
-        <p>Every word once, scored, no feedback until the end. Opens when all seven
-        lessons are marked complete.</p>
+        <p>Every word once, no feedback until the end. You mark how sure you are of each
+        answer, and the result shows your <b>calibration</b> next to your score — whether
+        feeling certain actually means being right.</p>
         <button class="btn" id="startTest" type="button" aria-disabled="true">Take the test</button>
       </div>
     </div>
@@ -511,8 +727,94 @@ def page_unit(u) -> str:
 
     return shell(title=f"Unit {u['num']:02d} — {u['title']} · {SITE}", depth=1, body=body,
                  crumb=[("Course", "../index.html"), (f"Unit {u['num']:02d}", "")],
-                 data={"kind": "unit", "unit": u["nn"], "vocab": u["vocab"]},
+                 data={"kind": "unit", "unit": u["nn"], "vocab": practice_data(u)},
                  desc=f"Unit {u['num']}: {u['title']}. Seven lessons, practice and a unit test.")
+
+
+def page_evidence(units) -> str:
+    """The register: every IELTS claim the course makes, and what backs it.
+
+    This page exists because the alternative — trusting each lesson to caveat
+    itself — is exactly the failure `09` G2 is written against. Generated from
+    the same directives the lessons render, so it cannot drift from them.
+    """
+    all_b = [(u, b) for u in units for b in u["bridges"]]
+    by_marker = {}
+    for u, b in all_b:
+        mk = RE_MARKER.match(b.get("marker", "").strip())
+        by_marker.setdefault(mk.group(1) if mk else "?", []).append((u, b))
+
+    legend = "".join(
+        f'<tr><td><span class="b-m" data-strength="{e(k.strip("[]").lower())}">{e(k)} — {e(short)}</span></td>'
+        f'<td>{e(gloss)}</td>'
+        f'<td class="num">{len(by_marker.get(k, []))}</td></tr>'
+        for k, (short, gloss) in MARKERS.items())
+
+    cells = []
+    for u, b in all_b:
+        mk = RE_MARKER.match(b.get("marker", "").strip())
+        key = mk.group(1) if mk else ""
+        cells.append(
+            f'<tr><td class="num"><a href="../unit-{u["nn"]}/lesson-{b["lesson"]}/index.html">'
+            f'{u["num"]}.{b["lesson"]}</a></td>'
+            f'<td>{inline(b.get("name",""))}</td>'
+            f'<td>{inline(b.get("trains",""))}</td>'
+            f'<td>{e(b.get("cefr","—"))}</td>'
+            f'<td><span class="b-m" data-strength="{e(key.strip("[]").lower())}">'
+            f'{e(b.get("marker",""))}</span></td>'
+            f'<td class="src"><code>{e(b.get("src",""))}</code></td></tr>')
+    rows = "".join(cells)
+
+    weak = sum(len(by_marker.get(k, [])) for k in ("[INF]", "[SPEC]", "[S/NS]", "[T2]", "[S]"))
+    body = f"""  <header class="masthead">
+    <p class="eyebrow">Evidence register</p>
+    <h1>What this course claims about IELTS, and what backs it</h1>
+    <p class="standfirst">Every lesson in this course does two jobs: it teaches the
+    Tiếng Anh 8 syllabus, and — with one instruction changed — it builds something the
+    IELTS criteria actually name. This page lists all {len(all_b)} of those claims and
+    grades the evidence behind each one. {weak} of them rest on evidence that is weaker
+    than verified, and each says so where it appears.</p>
+  </header>
+
+  <div class="card"><h2>Three rules this course does not break</h2>
+    <ol class="rules">
+      <li><b>No IELTS band number is ever printed</b> — not as a score, not as a
+      prediction, not as a progress dial. There is no published table converting
+      raw marks to a band, no half-band descriptors, and no official arithmetic for
+      combining criterion scores. Anything claiming otherwise invented it.</li>
+      <li><b>Levels are labelled by CEFR.</b> The official IELTS–CEFR alignment stops
+      at band 4.0 = the B1 threshold and assigns <em>no band at all</em> to A2 or A1.
+      Grade-8 work sits at A2. There is therefore no band to label it with, and none
+      can be derived — so this course labels by CEFR and says why.</li>
+      <li><b>No templates and no model openers.</b> Memorised language is not a
+      shortcut in IELTS; it is the explicitly penalised category — a wholly memorised
+      answer scores zero, and memorised chunks are a band-4 feature of Lexical
+      Resource. Where this course gives a structure, it gives it as questions the
+      writer has to answer, never as sentences to reuse.</li>
+    </ol>
+  </div>
+
+  <div class="card"><h2>How to read the strength labels</h2>
+    <p class="lede">Every claim carries the marker it had in the research, unchanged.
+    Re-stating a finding never makes it stronger, so nothing on this site upgrades one.</p>
+    <div class="scroll"><table><thead><tr><th>Marker</th><th>What it means</th><th>Used</th></tr></thead>
+    <tbody>{legend}</tbody></table></div>
+  </div>
+
+  <div class="sectionhead"><h2>The register</h2><span class="label">{len(all_b)} claims across 12 units</span></div>
+  <div class="card">
+    <div class="scroll"><table class="reg"><thead><tr>
+      <th>Unit·Lesson</th><th>What changes</th><th>What it trains</th><th>CEFR</th>
+      <th>Strength</th><th>Source</th></tr></thead>
+    <tbody>{rows}</tbody></table></div>
+    <p class="note small">Sources are sections of the course's own IELTS knowledge base
+    (<code>research/ielts/</code>) — a source-verified reference built from ielts.org,
+    British Council, IDP and Cambridge material plus peer-reviewed research. The build
+    refuses to publish a claim whose cited section does not exist.</p>
+  </div>"""
+    return shell(title=f"Evidence register · {SITE}", depth=1, body=body,
+                 crumb=[("Course", "../index.html"), ("Evidence", "")],
+                 desc="Every IELTS claim this course makes, with the evidence and its strength.")
 
 
 def recap_block(u) -> str:
@@ -621,13 +923,16 @@ def main() -> int:
     tot_ans = sum(len(u["answers"]) for u in units)
     tot_vocab = sum(len(u["vocab"]) for u in units)
 
+    tot_bridge = sum(len(u["bridges"]) for u in units)
+
     if args.check:
         for u in units:
             ex = len([b for L in u["lessons"] for b in L["blocks"] if b["kind"] == "exercise"])
             print(f"  unit {u['nn']}  {u['title'][:34]:36} lessons={len(u['lessons'])} "
-                  f"ex={ex:3} answers={len(u['answers']):3} vocab={len(u['vocab']):3}")
+                  f"ex={ex:3} answers={len(u['answers']):3} vocab={len(u['vocab']):3} "
+                  f"bridges={len(u['bridges']):2}")
         print(f"\n{len(units)} units · {tot_ex} exercises · {tot_teach} teaching blocks · "
-              f"{tot_ans} answers · {tot_vocab} vocabulary rows")
+              f"{tot_ans} answers · {tot_vocab} vocabulary rows · {tot_bridge} IELTS bridges")
         return 0
 
     # Rebuild the generated tree only. docs/ may legitimately hold hand-written
@@ -637,6 +942,8 @@ def main() -> int:
         d = OUT / f"unit-{u['nn']}"
         if d.is_dir():
             shutil.rmtree(d)
+    if (OUT / "evidence").is_dir():
+        shutil.rmtree(OUT / "evidence")
     if (OUT / "assets").is_dir():
         shutil.rmtree(OUT / "assets")
 
@@ -646,7 +953,9 @@ def main() -> int:
         shutil.copy2(a, OUT / "assets" / a.name)
 
     (OUT / "index.html").write_text(page_home(units), encoding="utf-8")
-    pages = 1
+    (OUT / "evidence").mkdir(parents=True, exist_ok=True)
+    (OUT / "evidence" / "index.html").write_text(page_evidence(units), encoding="utf-8")
+    pages = 2
     for u in units:
         d = OUT / f"unit-{u['nn']}"
         d.mkdir(parents=True, exist_ok=True)
@@ -659,7 +968,8 @@ def main() -> int:
             pages += 1
 
     print(f"built {pages} pages into {OUT.relative_to(ROOT)}/ — "
-          f"{len(units)} units, {tot_ex} exercises, {tot_ans} answers, {tot_vocab} vocabulary rows")
+          f"{len(units)} units, {tot_ex} exercises, {tot_ans} answers, "
+          f"{tot_vocab} vocabulary rows, {tot_bridge} IELTS bridges")
     return 0
 
 

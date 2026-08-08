@@ -8,7 +8,22 @@ Self-study material for Tiếng Anh 8 (Global Success), built as a static site.
 python3 tools/build.py            # regenerate docs/
 python3 tools/build.py --check    # parse and report counts, write nothing
 python3 tools/check_dict.py       # gate: every vocabulary slot resolves
+python3 tools/check_ielts.py      # gate: every IELTS claim is legal and cited
 ```
+
+## The IELTS claims are enforced, not just documented
+
+`tools/check_ielts.py` turns the auditable part of `09` §1 into a build gate.
+Run it after any change to `units/*.md`. It fails on a band promise, a
+half-band, a template or phrase bank, a genre over-claim, a Vietnamese-L1
+pronunciation claim outside the three permitted targets, a unit whose writing
+task names no criterion, an illegal evidential marker, or a citation whose
+section does not exist in the file it names.
+
+A lesson may make an IELTS claim in exactly one construct — a `:::bridge`
+directive, whose `marker` and `src` are required attributes and whose warrant
+line the generator prints. `README.md` §"The IELTS bridge" has the syntax. Do
+not make IELTS claims in ordinary prose; the gate cannot see them there.
 
 ## The IELTS knowledge base — read this before making any IELTS claim
 
