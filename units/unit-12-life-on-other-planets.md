@@ -60,13 +60,13 @@ Answer in full sentences.
 
 ### 1.2 Find the phrase
 
-Find a word or phrase in the dialogue that means:
-
-1. an arranged visit to the dentist → _______________
-2. extremely large → _______________
-3. proof that something is true → _______________
-4. stopped talking suddenly → _______________
-5. that is a reasonable point → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
+- an arranged visit to the dentist = dentist appointment
+- extremely large = enormous
+- proof that something is true = evidence
+- stopped talking suddenly = went quiet
+- that is a reasonable point = fair enough
+:::
 
 ### 1.3 Notice the grammar
 
@@ -116,30 +116,27 @@ actually asked, in direct speech.
 
 ### 2.1 Complete the sentences
 
-Use one word from the table. Change the form if you need to.
-
-1. Without a thick ____________, a planet cannot hold in heat or block
-   dangerous sunlight.
-2. The Moon ____________ the Earth once every twenty-seven days or so.
-3. Humans need ____________ to breathe; on Mars there is almost none.
-4. A planet in the habitable zone may be ____________ — living things could
-   possibly stay alive there.
-5. She looked at Saturn through a small ____________ in her garden.
-6. No plant could ____________ for long in temperatures of minus one hundred
-   degrees.
-7. The ____________ took six hours to put on her suit and leave the station.
-8. Our Sun and its eight planets make up the ____________.
-9. Scientists will ____________ a new spacecraft towards Mars next year.
-10. Our Sun is only one star among billions in this ____________.
+::: task skill="course" type="gap-fill" ask="Use one word from the table. Change the form if you need to."
+- Without a thick ___ , a planet cannot hold in heat or block dangerous sunlight. = atmosphere
+- The Moon ___ the Earth once every twenty-seven days or so. = orbits
+- Humans need ___ to breathe; on Mars there is almost none. = oxygen
+- A planet in the habitable zone may be ___ — living things could possibly stay alive there. = habitable
+- She looked at Saturn through a small ___ in her garden. = telescope
+- No plant could ___ for long in temperatures of minus one hundred degrees. = survive
+- The ___ took six hours to put on her suit and leave the station. = astronaut
+- Our Sun and its eight planets make up the ___ . = solar system
+- Scientists will ___ a new spacecraft towards Mars next year. = launch
+- Our Sun is only one star among billions in this ___ . = galaxy
+:::
 
 ### 2.2 Odd one out
 
-Circle the word that does not belong, and say why.
-
-1. planet · galaxy · telescope · star
-2. alien · creature · extraterrestrial · gravity
-3. explore · survive · launch · surface
-4. oxygen · atmosphere · astronaut · air
+::: task skill="course" type="choice" ask="In each line, one word does not belong with the others. Pick it."
+- Line 1 — (a) planet (b) galaxy (c) telescope (d) star = c ~ the others are objects in space; a telescope is an instrument we use to look at them
+- Line 2 — (a) alien (b) creature (c) extraterrestrial (d) gravity = d ~ the others are living things; gravity is a force
+- Line 3 — (a) explore (b) survive (c) launch (d) surface = d ~ the others are verbs; *surface* is a noun
+- Line 4 — (a) oxygen (b) atmosphere (c) astronaut (d) air = c ~ the others are gases or the layer of gas; an astronaut is a person
+:::
 
 ### Pronunciation — Intonation in lists
 
@@ -177,15 +174,14 @@ Write ↗ or ↘ above each underlined item.
 
 ### 2.4 Open or closed?
 
-Listen to the arrow on the **last** item. Write **closed** (the list is
-complete) or **open** (there is more to come).
-
-1. I've packed my notebook, my camera and my ↘telescope. ___
-2. We studied Mercury, Venus, ↗Mars… ___
-3. She asked about gravity, water and ↘oxygen. ___
-4. Bring food, water, warm ↗clothes… ___
-5. The team explored the deserts, the canyons and the ice ↘caps. ___
-6. He named three moons: Io, Europa ↗… ___
+::: task skill="course" type="choice" opts="closed|open" ask="Look at the arrow on the **last** item. **closed** = the list is complete; **open** = there is more to come."
+- I've packed my notebook, my camera and my ↘telescope. = closed
+- We studied Mercury, Venus, ↗Mars… = open
+- She asked about gravity, water and ↘oxygen. = closed
+- Bring food, water, warm ↗clothes… = open
+- The team explored the deserts, the canyons and the ice ↘caps. = closed
+- He named three moons: Io, Europa ↗… = open
+:::
 
 ### 2.5 Say these aloud
 
@@ -315,30 +311,29 @@ Keep the question word. Everything after it becomes a plain statement.
 
 ### 3.1 Recognise the pattern
 
-Write **Y** if the reported sentence comes from a **Yes/No** question, or
-**W** if it comes from a **Wh-** question.
-
-1. She asked me if I had a telescope. ___
-2. He asked where the spacecraft had landed. ___
-3. They asked whether life could survive there. ___
-4. My teacher asked why I was late. ___
-5. Lan asked me how far Mars is from the Sun. ___
-6. The scientist asked if we knew about the habitable zone. ___
-7. Nam asked what an astronaut eats in space. ___
-8. She asked whether the atmosphere contained oxygen. ___
+::: task skill="course" type="choice" opts="Y|W" ask="**Y** if the reported sentence comes from a **Yes/No** question, **W** if it comes from a **Wh-** question."
+- She asked me if I had a telescope. = Y
+- He asked where the spacecraft had landed. = W
+- They asked whether life could survive there. = Y
+- My teacher asked why I was late. = W
+- Lan asked me how far Mars is from the Sun. = W
+- The scientist asked if we knew about the habitable zone. = Y
+- Nam asked what an astronaut eats in space. = W
+- She asked whether the atmosphere contained oxygen. = Y
+:::
 
 ### 3.2 Choose the correct form
 
-Circle the correct option.
-
-1. He asked me *(if / what)* I had seen the launch.
-2. She asked where *(did I buy / I had bought)* the telescope.
-3. They asked *(whether / what)* the planet was habitable.
-4. My father asked me why *(was I / I was)* awake at midnight.
-5. The teacher asked how many moons *(does Mars have / Mars had)*.
-6. Chi asked Duy *(if / that)* he believed in aliens.
-7. He asked when the spacecraft *(will / would)* return.
-8. Nobody asked *(what / if)* the creatures ate.
+::: task skill="course" type="gap-fill" ask="Write the correct option from the brackets."
+- He asked me ___ I had seen the launch. *(if / what)* = if
+- She asked where ___ the telescope. *(did I buy / I had bought)* = I had bought
+- They asked ___ the planet was habitable. *(whether / what)* = whether
+- My father asked me why ___ awake at midnight. *(was I / I was)* = I was
+- The teacher asked how many moons ___ . *(does Mars have / Mars had)* = Mars had
+- Chi asked Duy ___ he believed in aliens. *(if / that)* = if
+- He asked when the spacecraft ___ return. *(will / would)* = would
+- Nobody asked ___ the creatures ate. *(what / if)* = what
+:::
 
 ### 3.3 Report these Yes/No questions
 
@@ -448,18 +443,13 @@ the frames you need most:
 
 ### 4.1 Complete the mini-dialogues
 
-1. **A:** Do you think there are aliens in our galaxy?
-   **B:** It's ____________ that there are — the galaxy is enormous.
-
-2. **A:** My cousin says he saw a spacecraft over the rice fields.
-   **B:** I ____________ it. It was probably a plane.
-
-3. **A:** Will humans live on Mars one day?
-   **B:** It ____________ on how fast the technology improves.
-
-4. **A:** Chi asked me something about you yesterday.
-   **B:** Really? What did she want to ____________?
-   **A:** She asked ____________ you were joining the science club.
+::: task skill="course" type="gap-fill" ask="One word or phrase in each gap. The last dialogue has two."
+- **A:** Do you think there are aliens in our galaxy? — **B:** It's ___ that there are — the galaxy is enormous. = possible
+- **A:** My cousin says he saw a spacecraft over the rice fields. — **B:** I ___ it. It was probably a plane. = doubt
+- **A:** Will humans live on Mars one day? — **B:** It ___ on how fast the technology improves. = depends
+- **A:** Chi asked me something about you yesterday. — **B:** Really? What did she want to ___ ? = know
+- **A:** She asked ___ you were joining the science club. = if/whether
+:::
 
 ### 4.2 Write your own
 
@@ -511,34 +501,35 @@ Now report all three questions to a friend, starting *She asked me…*
 
 ### 5.1 True, False, or Not Given
 
-Write **T**, **F**, or **NG**.
-
-1. The habitable zone is the area where water can stay liquid. ___
-2. Mars is the third planet from the Sun. ___
-3. A day on Mars is a little longer than a day on Earth. ___
-4. The dry channels are evidence that water once flowed on Mars. ___
-5. Mars has more gravity than Earth. ___
-6. Scientists have already sent astronauts to Mars. ___
-7. The writer thinks people will walk on Mars during the reader's lifetime. ___
+::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and this is a topic you already know things about, which is exactly the pull this type is built to catch."
+- The habitable zone is the area where water can stay liquid. = T
+- Mars is the third planet from the Sun. = F ~ the text says it is the fourth
+- A day on Mars is a little longer than a day on Earth. = T ~ "about forty minutes longer than ours"
+- The dry channels are evidence that water once flowed on Mars. = T
+- Mars has more gravity than Earth. = F ~ about thirty-eight per cent of Earth's
+- Scientists have already sent astronauts to Mars. = F ~ spacecraft have photographed it; astronauts *will probably* walk there
+- The writer thinks people will walk on Mars during the reader's lifetime. = T
+:::
 
 ### 5.2 Answer the questions
 
-1. What is the first question astronomers ask about a newly found planet?
-2. What happens to water if a planet orbits too close to its star?
-3. Name **two** ways in which Mars feels familiar to us.
-4. Why is the Martian atmosphere a problem for humans?
-5. What does the writer mean by "Whether anyone will stay is a completely
-   different question"?
+::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
+- What happens to the water on a planet that orbits too close to its star? = it boils away/boils away
+- Which planet is the one we know best? = Mars
+- What is the Martian atmosphere made mostly of? = carbon dioxide
+- What is there at both of Mars's poles? = ice caps
+- What does the writer say once flowed on Mars? = liquid water
+:::
 
 ### 5.3 Vocabulary in context
 
-Find a word or phrase in the reading that means:
-
-1. the band of space where life is possible → _______________
-2. turns to gas because of heat → _______________
-3. periods of ten years → _______________
-4. narrow paths cut by flowing water → _______________
-5. keeping something safe from harm → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the reading that means each of these. Give yourself **three minutes** for all five — searching against a clock is the point, not reading carefully."
+- the band of space where life is possible = habitable zone
+- turns to gas because of heat = boils away
+- periods of ten years = decades
+- narrow paths cut by flowing water = channels ~ the text calls them *dry channels*
+- keeping something safe from harm = protection
+:::
 
 ::: bridge name="Only what the text says — and space is the hardest place to obey that" trains="Reading" cefr="B1" marker="[Q]" src="04 §4.2"
 Go back to exercise **5.1** and re-answer it under one extra rule: **you know
@@ -600,71 +591,60 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### Listening — The planet Verdia
 
-> **How to use this without the audio:** ask someone to read the script aloud
-> to you at normal speed while you cover it — or paste it into a
-> text-to-speech tool. Listen **twice** before you look at the text.
->
-> **Cách dùng khi không có bản ghi âm:** nhờ người khác đọc to phần lời thoại,
-> hoặc dùng công cụ đọc văn bản. Nghe **hai lần** trước khi nhìn vào bài.
+You get **one** play. That is not us being hard on you — it is how the task
+works, and practising it any other way trains a habit that does not exist on
+the day. This recording invents a whole world in five short paragraphs, so read
+both sets of questions in the preview window first and let them tell you which
+details to hold on to.
 
-**Script** — *cover this while you listen*
+**Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-> Good evening, and welcome to *Young Astronomers*. Last month we asked our
-> listeners to invent a planet that could support life. Here is the winning
-> entry, from Hà, who is fourteen.
->
-> Hà calls her planet Verdia. It orbits a small orange star, and one year there
-> lasts about four hundred Earth days. Verdia is slightly larger than Earth, so
-> gravity is a little stronger — you would feel heavy for your first week.
->
-> The atmosphere is thick with oxygen and water vapour, and the sky looks green
-> rather than blue. Most of the surface is shallow ocean, only two or three
-> metres deep, with thousands of small islands.
->
-> The creatures Hà describes live in that shallow water. They are flat and
-> wide, like living carpets, and they breathe through their skin. They have no
-> bones at all. When the two moons pull the water away at low tide, the
-> creatures fold themselves into the sand and wait.
->
-> We asked Hà why she chose water instead of land. She said that life on Earth
-> began in water, so it seemed the safest guess. We also asked whether her
-> creatures were intelligent. She said they build nothing and say nothing — but
-> they always know when a storm is coming, and no scientist on Verdia can
-> explain how.
+::: audio orientation="You will hear part of a radio programme in which the presenter describes an imaginary planet invented by a listener, and the creatures that live on it." mode="computer" preview="30" review="120"
+Good evening, and welcome to *Young Astronomers*. Last month we asked our
+listeners to invent a planet that could support life. Here is the winning
+entry, from Hà, who is fourteen.
 
-> **Before you check — how sure are you?** Mark each answer **●** if you are
-> sure and **○** if you are not, *before* you look at the key. Then count how
-> many of each you got right. If the **●** answers are not clearly better than
-> the **○** ones, the feeling of certainty is not yet telling you anything —
-> which is more useful to know than the score. Unit 1 explains why.
->
-> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
-> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+Hà calls her planet Verdia. It orbits a small orange star, and one year there
+lasts about four hundred Earth days. Verdia is slightly larger than Earth, so
+gravity is a little stronger — you would feel heavy for your first week.
+
+The atmosphere is thick with oxygen and water vapour, and the sky looks green
+rather than blue. Most of the surface is shallow ocean, only two or three
+metres deep, with thousands of small islands.
+
+The creatures Hà describes live in that shallow water. They are flat and
+wide, like living carpets, and they breathe through their skin. They have no
+bones at all. When the two moons pull the water away at low tide, the
+creatures fold themselves into the sand and wait.
+
+We asked Hà why she chose water instead of land. She said that life on Earth
+began in water, so it seemed the safest guess. We also asked whether her
+creatures were intelligent. She said they build nothing and say nothing — but
+they always know when a storm is coming, and no scientist on Verdia can
+explain how.
+:::
 
 ### 6.1 Listen and choose
 
-1. Verdia orbits **(a)** a small orange star **(b)** two suns **(c)** a
-   dying white star
-2. Gravity on Verdia is **(a)** weaker than Earth's **(b)** the same as
-   Earth's **(c)** a little stronger than Earth's
-3. The sky on Verdia looks **(a)** blue **(b)** green **(c)** orange
-4. The creatures breathe **(a)** through their skin **(b)** through gills
-   **(c)** through two mouths
-5. Hà chose water because **(a)** she likes swimming **(b)** life on Earth
-   began in water **(c)** there is no land on Verdia
-6. According to Hà, the creatures **(a)** build cities **(b)** speak a
-   language **(c)** can sense a coming storm
+::: task skill="listening" type="multiple-choice"
+- Verdia orbits (a) a small orange star (b) two suns (c) a dying white star = a
+- Gravity on Verdia is (a) weaker than Earth's (b) the same as Earth's (c) a little stronger than Earth's = c
+- The sky on Verdia looks (a) blue (b) green (c) orange = b
+- The creatures breathe (a) through their skin (b) through gills (c) through two mouths = a
+- Hà chose water because (a) she likes swimming (b) life on Earth began in water (c) there is no land on Verdia = b
+- According to Hà, the creatures (a) build cities (b) speak a language (c) can sense a coming storm = c
+:::
 
 ### 6.2 Listen and complete
 
-Write **one** word or number in each gap.
-
-1. One year on Verdia lasts about ____________ Earth days.
-2. The atmosphere is thick with oxygen and water ____________.
-3. Most of the surface is ____________ ocean, only two or three metres deep.
-4. The creatures are flat and wide, like living ____________.
-5. Verdia has ____________ moons.
-6. The creatures fold themselves into the ____________ at low tide.
+::: task skill="listening" type="sentence-completion" words="2+number"
+- One year on Verdia lasts about ___ Earth days. = four hundred/400 ~ the speaker says it in words
+- The atmosphere is thick with oxygen and water ___ . = vapour
+- Most of the surface is ___ ocean, only two or three metres deep. = shallow
+- The creatures are flat and wide, like living ___ . = carpets
+- Verdia has ___ moons. = two
+- The creatures fold themselves into the ___ at low tide. = sand
+:::
 
 ### Writing — A descriptive paragraph about aliens
 
@@ -753,16 +733,16 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-Complete with a word from this unit. The first letter is given.
-
-1. Mars is the fourth p_______ from the Sun.
-2. The Earth takes one year to o_______ the Sun.
-3. On the Moon, g_______ is much weaker than on Earth.
-4. We cannot breathe on Mars because there is almost no o_______.
-5. A planet where living things could stay alive is called h_______.
-6. She watched Jupiter through her father's t_______.
-7. The strange c_______ had six legs and no eyes.
-8. Our Sun is one of billions of stars in this g_______.
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
+- Mars is the fourth ___ from the Sun. = planet ~ starts with *p*
+- The Earth takes one year to ___ the Sun. = orbit ~ starts with *o*
+- On the Moon, ___ is much weaker than on Earth. = gravity ~ starts with *g*
+- We cannot breathe on Mars because there is almost no ___ . = oxygen ~ starts with *o*
+- A planet where living things could stay alive is called ___ . = habitable ~ starts with *h*
+- She watched Jupiter through her father's ___ . = telescope ~ starts with *t*
+- The strange ___ had six legs and no eyes. = creature ~ starts with *c*
+- Our Sun is one of billions of stars in this ___ . = galaxy ~ starts with *g*
+:::
 
 ### 7.2 Pronunciation check
 
@@ -849,9 +829,6 @@ survive. 4. It is about thirty-eight per cent of Earth's gravity. 5. Because
 the speaker asked him what evidence he had, and he had none. 6. Because the
 speaker asked their teacher when the club meets next month.
 
-**1.2** 1. dentist appointment 2. enormous 3. evidence 4. went quiet
-5. Fair enough
-
 **1.3**
 1. "What does a planet need before life can survive?"
 2. "Do you know how strong gravity is on Mars?"
@@ -860,17 +837,6 @@ speaker asked their teacher when the club meets next month.
 
 ### Lesson 2
 
-**2.1** 1. atmosphere 2. orbits 3. oxygen 4. habitable 5. telescope
-6. survive 7. astronaut 8. solar system 9. launch 10. galaxy
-
-**2.2**
-1. **telescope** — the others are objects in space; a telescope is an
-   instrument we use to look at them.
-2. **gravity** — the others are living things; gravity is a force.
-3. **surface** — the others are verbs; *surface* is a noun.
-4. **astronaut** — the others are gases or the layer of gas; an astronaut is a
-   person.
-
 **2.3** In every list, all items except the last rise ↗; the final item falls ↘.
 1. water ↗, warmth ↗, an atmosphere ↘
 2. food ↗, water ↗, warm clothes ↗, a camera ↘
@@ -878,18 +844,11 @@ speaker asked their teacher when the club meets next month.
 4. Mars ↗, Jupiter ↗, Saturn ↘
 5. stars ↗, planets ↗, galaxies ↘
 
-**2.4** 1. closed 2. open 3. closed 4. open 5. closed 6. open
-
 **2.5** Answers will vary. Check: in items 1–3 your voice steps **up** on
 every item except the last, and clearly **down** on the last one; in item 4 the "open" version
 ends with a rise, which should sound as though you were about to continue.
 
 ### Lesson 3
-
-**3.1** 1. Y 2. W 3. Y 4. W 5. W 6. Y 7. W 8. Y
-
-**3.2** 1. if 2. I had bought 3. whether 4. I was 5. Mars had 6. if
-7. would 8. what
 
 **3.3**
 1. She asked me if/whether I liked science fiction.
@@ -929,8 +888,6 @@ asked me why I was awake so late.
 
 ### Lesson 4
 
-**4.1** 1. possible 2. doubt 3. depends 4. know / if (*or* whether)
-
 **4.2** Answers will vary. Check: items 1–3 each contain one phrase from the
 certainty tables plus a reason; items 4–6 are correctly reported questions —
 *She asked me if there was life on other planets. / She asked me if I would
@@ -939,27 +896,7 @@ years.*
 
 ### Lesson 5
 
-**5.1** 1. T 2. F (it is the fourth planet) 3. T 4. T 5. F (about
-thirty-eight per cent of Earth's) 6. F (spacecraft have photographed it; the
-text says astronauts *will probably* walk there) 7. T
-
-**5.2** 1. Could anything live there? 2. It boils away. 3. Any two of: a
-Martian day is only about forty minutes longer than an Earth day; there are
-ice caps at both poles; there are dry river channels on the surface. 4. It is
-thin and mostly carbon dioxide, so there is almost nothing to breathe and very
-little protection from the Sun. 5. That reaching Mars and *living* there
-permanently are two very different problems — a short visit may be possible
-long before anyone can stay.
-
-**5.3** 1. habitable zone 2. boils away 3. decades 4. channels
-5. protection
-
 ### Lesson 6
-
-**6.1** 1. a 2. c 3. b 4. a 5. b 6. c
-
-**6.2** 1. four hundred (400) 2. vapour 3. shallow 4. carpets 5. two
-6. sand
 
 **Writing** Answers will vary. Check against the checklist: 80–100 words
 counted, a topic sentence naming the planet, six or more adjectives, four or
@@ -967,9 +904,6 @@ more Lesson 2 words, one list of three or more items, and present simple
 throughout.
 
 ### Lesson 7
-
-**7.1** 1. planet 2. orbit 3. gravity 4. oxygen 5. habitable
-6. telescope 7. creature 8. galaxy
 
 **7.2**
 1. water ↗, oxygen ↗, warmth ↘

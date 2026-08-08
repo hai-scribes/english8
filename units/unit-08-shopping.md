@@ -59,24 +59,23 @@ Answer in full sentences.
 
 ### 1.2 Find the phrase
 
-Find a word or phrase in the dialogue that means:
-
-1. almost never → _______________
-2. money in notes and coins, not a card → _______________
-3. the piece of paper that proves you paid → _______________
-4. your money given back to you → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
+- almost never = hardly ever
+- money in notes and coins, not a card = cash
+- the piece of paper that proves you paid = receipt
+- your money given back to you = refund
+:::
 
 ### 1.3 Notice the grammar
 
-Look at the **bold** words. Write **A** if it is an adverb of frequency, or
-**F** if it is a present simple verb used for a **future** event.
-
-1. I'm **always** free on Saturday. → ___
-2. The sale **starts** on Monday. → ___
-3. They **rarely** have my size. → ___
-4. It **opens** at nine on Saturdays. → ___
-5. The bus **leaves** our stop at 8:40. → ___
-6. The good sizes **never** last. → ___
+::: task skill="course" type="choice" opts="A|F" ask="Look at the **bold** word. Write **A** if it is an adverb of frequency, or **F** if it is a present simple verb used for a **future** event."
+- I'm **always** free on Saturday. = A
+- The sale **starts** on Monday. = F
+- They **rarely** have my size. = A
+- It **opens** at nine on Saturdays. = F
+- The bus **leaves** our stop at 8:40. = F
+- The good sizes **never** last. = A
+:::
 
 > **Ghi chú:** Bạn vừa gặp hai trọng tâm ngữ pháp của bài — **trạng từ chỉ tần
 > suất** và **thì hiện tại đơn dùng cho sự việc tương lai đã lên lịch**. Vị trí
@@ -111,22 +110,22 @@ Look at the **bold** words. Write **A** if it is an adverb of frequency, or
 
 ### 2.1 Complete the sentences
 
-Use one word or phrase from the table. Change the form if you need to.
-
-1. I asked for a _______ because the shirt had a hole in it.
-2. Keep your _______ — you cannot return anything without it.
-3. That jacket is far too _______ for me. I'll look somewhere else.
-4. Sorry, that size isn't _______ _______ at the moment. Try again next week.
-5. She buys mangoes from a _______ _______ on the corner every morning.
-6. Always _______ shoes _______ before you pay for them.
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
+- I asked for a ___ because the shirt had a hole in it. = refund
+- Keep your ___ — you cannot return anything without it. = receipt
+- That jacket is far too ___ for me. I'll look somewhere else. = expensive
+- Sorry, that size isn't ___ at the moment. Try again next week. = in stock
+- She buys mangoes from a ___ on the corner every morning. = street vendor
+- Always ___ a pair of shoes before you pay for them. = try on
+:::
 
 ### 2.2 Odd one out
 
-Circle the word that does not belong, and say why.
-
-1. stall · customer · street vendor · shopkeeper
-2. cash · receipt · card · coin
-3. discount · bargain · sale · delivery
+::: task skill="course" type="choice" ask="In each line, one word does not belong. Pick it."
+- Line 1 — (a) stall (b) customer (c) street vendor (d) shopkeeper = a ~ the others are people; a stall is a thing
+- Line 2 — (a) cash (b) receipt (c) card (d) coin = b ~ the others are ways of paying; a receipt is proof you paid
+- Line 3 — (a) discount (b) bargain (c) sale (d) delivery = d ~ the others all mean a lower price
+:::
 
 ### Pronunciation — /sp/ and /st/
 
@@ -162,12 +161,12 @@ expensive**
 
 ### 2.4 Odd sound out
 
-In each line, one word has a **different** cluster. Circle it.
-
-1. spend · special · store · sport
-2. stall · stock · style · spare
-3. customer · mistake · display · instead
-4. expensive · display · spare · stock
+::: task skill="course" type="choice" ask="In each line, one word has a **different** cluster. Pick it."
+- Line 1 — (a) spend (b) special (c) store (d) sport = c ~ *store* is /st/; the others are /sp/
+- Line 2 — (a) stall (b) stock (c) style (d) spare = d ~ *spare* is /sp/; the others are /st/
+- Line 3 — (a) customer (b) mistake (c) display (d) instead = c ~ *display* is /sp/; the others are /st/
+- Line 4 — (a) expensive (b) display (c) spare (d) stock = d ~ *stock* is /st/; the others are /sp/
+:::
 
 ### 2.5 Say these sentences
 
@@ -323,14 +322,14 @@ Rewrite each sentence with the adverb in brackets in the correct position.
 
 ### 3.3 Present simple or *will*?
 
-Choose the correct form.
-
-1. The sale (starts / will start) on 15 September — it says so on the poster.
-2. I think this jacket (is / will be) too expensive for me.
-3. The department store (opens / will open) at 9:30 tomorrow.
-4. Don't worry, I (pay / will pay) you back on Friday.
-5. Our delivery (arrives / will arrive) on Tuesday morning — the app says so.
-6. The market (closes / will close) at noon on Sundays.
+::: task skill="course" type="choice" ask="Choose the correct form."
+- The sale (a) starts (b) will start on 15 September — it says so on the poster. = a
+- I think this jacket (a) is (b) will be too expensive for me. = b
+- The department store (a) opens (b) will open at 9:30 tomorrow. = a
+- Don't worry, I (a) pay (b) will pay you back on Friday. = b
+- Our delivery (a) arrives (b) will arrive on Tuesday morning — the app says so. = a
+- The market (a) closes (b) will close at noon on Sundays. = a
+:::
 
 ### 3.4 Correct the mistake
 
@@ -456,32 +455,34 @@ the tables above, and one adverb of frequency.
 
 ### 5.1 True, False, or Not Given
 
-Write **T**, **F**, or **NG**.
-
-1. The writer's grandmother used to shop at a wet market. ___
-2. The writer's brother goes to the wet market twice a week. ___
-3. You cannot bargain in a shopping centre because prices are fixed. ___
-4. The shopping centre on the ring road is the largest in the city. ___
-5. Goods at a stall are usually cheaper than the same goods in a centre. ___
-6. The grandmother has stopped going to the market. ___
+::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and answering from what you already know about markets and shopping centres is exactly the pull this type is built to catch."
+- The writer's grandmother used to shop at a wet market. = T
+- The writer's brother goes to the wet market twice a week. = F ~ he has never been
+- You cannot bargain in a shopping centre because prices are fixed. = T
+- The shopping centre on the ring road is the largest in the city. = NG ~ the text never compares its size with any other
+- Goods at a stall are usually cheaper than the same goods in a centre. = T
+- The grandmother has stopped going to the market. = F ~ she still goes at six
+:::
 
 ### 5.2 Answer the questions
 
-1. What four kinds of place are inside the centre on the ring road?
-2. Give two advantages of a shopping centre mentioned in the text.
-3. Why do small shopkeepers disappear, according to the writer?
-4. Why did the grandmother's morning at the market take two hours?
-5. What do most families in the city do now?
+::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
+- Besides a supermarket, forty shops and a cinema, what is under the centre's roof? = (a) food court
+- What are the prices in a shopping centre, so that nobody has to bargain? = fixed
+- What can small shopkeepers not pay, so that they disappear? = (the) rent
+- What was half of the grandmother's two hours at the market? = conversation
+- Where do most families buy their fresh food now? = (at) the market
+:::
 
 ### 5.3 Vocabulary in context
 
-Find a word or phrase in the text that means:
-
-1. an open-air market selling fresh food → _______________
-2. an area with many places to eat → _______________
-3. not changing; the same for everybody → _______________
-4. something you have bought → _______________
-5. money paid regularly to use a shop or a flat → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. Give yourself **three minutes** for all five — searching against a clock is the point, not reading carefully."
+- an open-air market selling fresh food = wet market
+- an area with many places to eat = food court
+- not changing; the same for everybody = fixed
+- something you have bought = purchase
+- money paid regularly to use a shop or a flat = rent
+:::
 
 ### Speaking — Your local market or shopping centre
 
@@ -538,69 +539,64 @@ Stage-marking pauses are on the credit side of this criterion.
 
 ### Listening — Buying online
 
-> **How to use this without the audio:** ask someone to read the script aloud
-> to you at normal speed while you cover it — or paste it into a
-> text-to-speech tool. Listen **twice** before you look at the text.
->
-> **Cách dùng khi không có bản ghi âm:** nhờ người khác đọc to phần lời thoại,
-> hoặc dùng công cụ đọc văn bản. Nghe **hai lần** trước khi nhìn vào bài.
+You get **one** play. That is not us being hard on you — it is how the task
+works, and practising it any other way trains a habit that does not exist on
+the day. Two people are speaking here, so read both sets of questions in the
+preview window first and decide which of them each answer will come from.
 
-**Script** — *cover this while you listen*
+**Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-> **Interviewer:** Thanks for coming in, Hà. You buy almost everything online,
-> is that right?
->
-> **Hà:** Not everything. But yes, most of my clothes and all my books.
->
-> **Interviewer:** Why online and not in a shop?
->
-> **Hà:** Two reasons. Price first — things are usually about twenty per cent
-> cheaper, and there's nearly always a discount code somewhere. And time. I
-> finish school at half past five, and the shops near me close at eight, so I
-> hardly ever get there.
->
-> **Interviewer:** What's the worst part?
->
-> **Hà:** You can't try anything on. I once bought a jacket that was three
-> sizes too big. Sending it back took two weeks and I never got the full
-> refund — I paid for the return delivery myself.
->
-> **Interviewer:** So do you have a rule now?
->
-> **Hà:** Yes. I never buy shoes online. Shoes I always try on in a store. And
-> I always read the reviews, especially the bad ones.
->
-> **Interviewer:** Anything you miss about ordinary shopping?
->
-> **Hà:** Going out with my friends, honestly. We used to spend a whole
-> Saturday just browsing. Now a parcel arrives on Thursday and that's it. It's
-> convenient, but it isn't a day out.
+::: audio orientation="You will hear an interviewer asking a secondary-school student about why she buys things online and what has gone wrong when she has." mode="computer" preview="30" review="120"
+**Interviewer:** Thanks for coming in, Hà. You buy almost everything online,
+is that right?
 
-> **Before you check — how sure are you?** Mark each answer **●** if you are
-> sure and **○** if you are not, *before* you look at the key. Then count how
-> many of each you got right. If the **●** answers are not clearly better than
-> the **○** ones, the feeling of certainty is not yet telling you anything —
-> which is more useful to know than the score. Unit 1 explains why.
->
-> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
-> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+**Hà:** Not everything. But yes, most of my clothes and all my books.
+
+**Interviewer:** Why online and not in a shop?
+
+**Hà:** Two reasons. Price first — things are usually about twenty per cent
+cheaper, and there's nearly always a discount code somewhere. And time. I
+finish school at half past five, and the shops near me close at eight, so I
+hardly ever get there.
+
+**Interviewer:** What's the worst part?
+
+**Hà:** You can't try anything on. I once bought a jacket that was three
+sizes too big. Sending it back took two weeks and I never got the full
+refund — I paid for the return delivery myself.
+
+**Interviewer:** So do you have a rule now?
+
+**Hà:** Yes. I never buy shoes online. Shoes I always try on in a store. And
+I always read the reviews, especially the bad ones.
+
+**Interviewer:** Anything you miss about ordinary shopping?
+
+**Hà:** Going out with my friends, honestly. We used to spend a whole
+Saturday just browsing. Now a parcel arrives on Thursday and that's it. It's
+convenient, but it isn't a day out.
+:::
 
 ### 6.1 Listen and choose
 
-1. Hà buys most of her **(a)** food **(b)** clothes and books **(c)** furniture online
-2. Online prices are usually about **(a)** 10% **(b)** 20% **(c)** 50% cheaper
-3. She hardly ever reaches the shops because they close at **(a)** six **(b)** seven **(c)** eight
-4. The jacket she bought was **(a)** the wrong colour **(b)** three sizes too big **(c)** damaged
-5. Her rule now is that she never buys **(a)** shoes **(b)** books **(c)** jackets online
-6. What she misses most is **(a)** the discounts **(b)** trying things on **(c)** going out with friends
+::: task skill="listening" type="multiple-choice"
+- Hà buys most of her (a) food (b) clothes and books (c) furniture online = b
+- Online prices are usually about (a) 10% (b) 20% (c) 50% cheaper = b
+- She hardly ever reaches the shops because they close at (a) six (b) seven (c) eight = c
+- The jacket she bought was (a) the wrong colour (b) three sizes too big (c) damaged = b
+- Her rule now is that she never buys (a) shoes (b) books (c) jackets online = a
+- What she misses most is (a) the discounts (b) trying things on (c) going out with friends = c
+:::
 
 ### 6.2 Listen and complete
 
-1. Hà finishes school at ____________ ____________ ____________.
-2. Sending the jacket back took ____________ ____________.
-3. She paid for the return ____________ herself.
-4. She always reads the ____________, especially the bad ones.
-5. A parcel ____________ on Thursday.
+::: task skill="listening" type="sentence-completion" words="3"
+- Hà finishes school at ___ . = half past five ~ written as words, the way the speaker says it
+- Sending the jacket back took ___ . = two weeks
+- She paid for the return ___ herself. = delivery
+- She always reads the ___ , especially the bad ones. = reviews
+- A parcel ___ on Thursday. = arrives
+:::
 
 ### Writing — A paragraph about one kind of shopping
 
@@ -696,22 +692,28 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-Complete with a word from this unit. The first letter is given.
-
-1. Keep the r_______ so you can ask for a r_______ later.
-2. My aunt sells fruit from a s_______ at the market.
-3. The shop is closed, but their d_______ arrives on Tuesday.
-4. I never pay by card at the market — I always use c_______.
-5. That phone is far too e_______ for a student.
-6. Sorry, that colour isn't in s_______ this week.
-7. I like to b_______ for half an hour before I buy anything.
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
+- Keep the ___ so you can ask for a refund later. = receipt ~ starts with *r*
+- My aunt sells fruit from a ___ at the market. = stall ~ starts with *s*
+- The shop is closed, but their ___ arrives on Tuesday. = delivery ~ starts with *d*
+- I never pay by card at the market — I always use ___ . = cash ~ starts with *c*
+- That phone is far too ___ for a student. = expensive ~ starts with *e*
+- Sorry, that colour isn't in ___ this week. = stock ~ starts with *s*
+- I like to ___ for half an hour before I buy anything. = browse ~ starts with *b*
+:::
 
 ### 7.2 Pronunciation check
 
-Write **/sp/** or **/st/** for the cluster in each word.
-
-1. spend ___  2. customer ___  3. display ___  4. stall ___
-5. expensive ___  6. instead ___  7. spare ___  8. mistake ___
+::: task skill="course" type="choice" opts="/sp/|/st/" ask="Which cluster is in the word?"
+- **sp**end = /sp/
+- cu**st**omer = /st/
+- di**sp**lay = /sp/
+- **st**all = /st/
+- e**xp**ensive = /sp/
+- in**st**ead = /st/
+- **sp**are = /sp/
+- mi**st**ake = /st/
+:::
 
 ### 7.3 Grammar check
 
@@ -791,26 +793,11 @@ waited last year and got nothing. 4. It opens at nine on Saturdays.
 centre you get a receipt and can ask for a refund. *(Also acceptable: the
 market is much cheaper.)*
 
-**1.2** 1. hardly ever 2. cash 3. receipt 4. refund
-
-**1.3** 1. A 2. F 3. A 4. F 5. F 6. A
-
 ### Lesson 2
-
-**2.1** 1. refund 2. receipt 3. expensive 4. in stock 5. street vendor
-6. try … on (*Always try shoes on before you pay for them.*)
-
-**2.2** 1. **stall** — the others are people; a stall is a thing.
-2. **receipt** — the others are ways of paying; a receipt is proof you paid.
-3. **delivery** — the others all mean a lower price.
 
 **2.3**
 - /sp/ — spend, special, sport, spare, display, expensive
 - /st/ — store, style, stall, customer, mistake, stock, instead
-
-**2.4** 1. store *(/st/, the others are /sp/)* 2. spare *(/sp/, the others are
-/st/)* 3. display *(/sp/, the others are /st/)* 4. stock *(/st/, the others are
-/sp/)*
 
 **2.5** Answers will vary — this is a speaking task. Check: no vowel sound
 between /s/ and /p/ or between /s/ and /t/ (*not* "sờ-pend"), and no aspiration
@@ -829,8 +816,6 @@ puff on the /p/ or /t/.
 5. Street vendors **hardly ever take** cards.
 6. You **can often find** a bargain there.
 7. She **doesn't usually shop** online.
-
-**3.3** 1. starts 2. will be 3. opens 4. will pay 5. arrives 6. closes
 
 **3.4**
 1. I **never** buy clothes online. *(or: I don't **ever** buy clothes online.)*
@@ -860,30 +845,9 @@ attempt to bargain the price down from 150,000 to 100,000.
 
 ### Lesson 5
 
-**5.1** 1. T 2. F (he has never been) 3. T 4. NG (the text never compares its
-size with others) 5. T 6. F (she still goes at six)
-
-**5.2** 1. A supermarket, forty shops, a cinema and a food court.
-2. Any two of: everything is in one building; prices are fixed so you needn't
-bargain; you get a receipt and can ask for a refund; it is air-conditioned;
-it opens seven days a week from nine to ten. 3. Because they cannot pay the
-rent. 4. Because half of it was conversation with the vendors. 5. They use
-both — they buy fresh food at the market and everything else at the centre.
-
-**5.3** 1. wet market 2. food court 3. fixed 4. purchase 5. rent
-
 ### Lesson 6
 
-**6.1** 1. b 2. b 3. c 4. b 5. a 6. c
-
-**6.2** 1. half past five 2. two weeks 3. delivery 4. reviews 5. arrives
-
 ### Lesson 7
-
-**7.1** 1. receipt / refund 2. stall 3. delivery 4. cash 5. expensive
-6. stock 7. browse
-
-**7.2** 1. /sp/ 2. /st/ 3. /sp/ 4. /st/ 5. /sp/ 6. /st/ 7. /sp/ 8. /st/
 
 **7.3**
 1. She **is never** late for school.

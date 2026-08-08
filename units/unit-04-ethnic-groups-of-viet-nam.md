@@ -58,12 +58,12 @@ Answer in full sentences.
 
 ### 1.2 Find the phrase
 
-Find a word or phrase in the dialogue that means:
-
-1. a house built above the ground on tall wooden legs → _______________
-2. flat steps of land cut into a hillside for growing rice → _______________
-3. traditional songs passed down among a people → _______________
-4. make baskets or cloth by crossing strips or threads → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
+- a house built above the ground on tall wooden legs = stilt house
+- flat steps of land cut into a hillside for growing rice = terraced fields
+- traditional songs passed down among a people = folk songs
+- make baskets or cloth by crossing strips or threads = weave
+:::
 
 ### 1.3 Notice the grammar
 
@@ -114,22 +114,23 @@ dialogue.
 
 ### 2.1 Complete the sentences
 
-Use one word or phrase from the table. Change the form if you need to.
-
-1. Viet Nam has 54 ethnic groups, so its culture is very _______.
-2. My grandmother _______ baskets from strips of _______.
-3. The Kinh are the _______; the other 53 groups are ethnic minorities.
-4. At the festival, everyone wears a _______ costume.
-5. Rice grows on _______ _______ cut into the hillside.
-6. Old songs, old houses and old crafts are all part of our _______.
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
+- Viet Nam has 54 ethnic groups, so its culture is very ___ . = diverse
+- My grandmother ___ baskets from strips of bamboo. = weaves
+- My grandmother weaves baskets from strips of ___ . = bamboo
+- The Kinh are the ___ ; the other 53 groups are ethnic minorities. = majority
+- At the festival, everyone wears a ___ costume. = traditional
+- Rice grows on ___ cut into the hillside. = terraced fields
+- Old songs, old houses and old crafts are all part of our ___ . = heritage
+:::
 
 ### 2.2 Odd one out
 
-Circle the word that does not belong, and say why.
-
-1. bamboo · wood · basket · palm leaf
-2. custom · ritual · folk song · market
-3. stilt house · terraced field · cave · costume
+::: task skill="course" type="choice" ask="In each line, one word does not belong with the others. Pick it."
+- Line 1 — (a) bamboo (b) wood (c) basket (d) palm leaf = c ~ the others are materials; a *basket* is a thing made from them
+- Line 2 — (a) custom (b) ritual (c) folk song (d) market = d ~ the others are cultural traditions; a *market* is a place
+- Line 3 — (a) stilt house (b) terraced field (c) cave (d) costume = d ~ the others are places; a *costume* is clothing
+:::
 
 ### Pronunciation — /k/ and /ɡ/
 
@@ -166,12 +167,12 @@ garden · market · guest · coat · goat · culture · group**
 
 ### 2.4 Odd sound out
 
-In each line, one word has a **different** sound for the bold letter. Circle it.
-
-1. **c**ave · **c**ustom · **g**ong · **c**oat
-2. **g**oat · **g**roup · **g**uitar · **c**ostume
-3. **gh**ost · **g**arden · **g**ong · mar**k**et
-4. **c**eremony · **c**ave · **c**oat · **c**ulture
+::: task skill="course" type="choice" ask="In each line, one word has a **different** sound for the bold letter. Pick it."
+- Line 1 — (a) **c**ave (b) **c**ustom (c) **g**ong (d) **c**oat = c ~ *gong* is /ɡ/; the others are /k/
+- Line 2 — (a) **g**oat (b) **g**roup (c) **g**uitar (d) **c**ostume = d ~ *costume* is /k/; the others are /ɡ/
+- Line 3 — (a) **gh**ost (b) **g**arden (c) **g**ong (d) mar**k**et = d ~ *market* is /k/; the others are /ɡ/
+- Line 4 — (a) **c**eremony (b) **c**ave (c) **c**oat (d) **c**ulture = a ~ *ceremony* is /s/; the others are /k/
+:::
 
 ### 2.5 Say these sentences
 
@@ -290,17 +291,16 @@ To count an uncountable noun, put a **unit** in front of it:
 
 ### 3.1 Recognise the question type
 
-Write **Y/N** (Yes/No question), **Wh-O** (Wh- question asking about an object
-or an adverbial), or **Wh-S** (subject question).
-
-1. Are the terraced fields far from the village? ___
-2. Where did your grandmother learn to weave? ___
-3. Who built the stilt house? ___
-4. Can she speak Tay at home? ___
-5. What happened after the ritual? ___
-6. How many ethnic groups live in Viet Nam? ___
-7. Do the Khmer live mainly in the south? ___
-8. What did the children carry to the market? ___
+::: task skill="course" type="choice" opts="Y/N|Wh-O|Wh-S" ask="**Y/N** for a Yes/No question, **Wh-O** for a Wh- question asking about an object or an adverbial, **Wh-S** for a subject question."
+- Are the terraced fields far from the village? = Y/N
+- Where did your grandmother learn to weave? = Wh-O
+- Who built the stilt house? = Wh-S
+- Can she speak Tay at home? = Y/N
+- What happened after the ritual? = Wh-S
+- How many ethnic groups live in Viet Nam? = Wh-S ~ *How many ethnic groups* is the subject of *live*, so there is no *do*
+- Do the Khmer live mainly in the south? = Y/N
+- What did the children carry to the market? = Wh-O
+:::
 
 ### 3.2 Make the question
 
@@ -321,16 +321,16 @@ Ask about the **bold** part.
 
 ### 3.3 Countable or uncountable?
 
-Choose the correct word.
-
-1. How **(many / much)** rice does your family eat in a week?
-2. My grandmother gave me a good **(advice / piece of advice)**.
-3. There aren't **(many / much)** stilt houses left in this village.
-4. I found **(a / some)** information about the Dao on the museum website.
-5. She wears **(a / some)** beautiful silver jewellery at Tet.
-6. We didn't take **(much / any)** photos inside the cave.
-7. How **(many / much)** folk songs do you know?
-8. They brought **(a bowl of / a bowl)** rice and some vegetables.
+::: task skill="course" type="choice" ask="Choose the correct word. Write it out in full."
+- How **(many / much)** rice does your family eat in a week? = much
+- My grandmother gave me a good **(advice / piece of advice)**. = piece of advice
+- There aren't **(many / much)** stilt houses left in this village. = many
+- I found **(a / some)** information about the Dao on the museum website. = some
+- She wears **(a / some)** beautiful silver jewellery at Tet. = some
+- We didn't take **(much / any)** photos inside the cave. = any
+- How **(many / much)** folk songs do you know? = many
+- They brought **(a bowl of / a bowl)** rice and some vegetables. = a bowl of
+:::
 
 ### 3.4 Correct the mistake
 
@@ -440,31 +440,33 @@ question, and one beginning *Could you tell me…*.
 
 ### 5.1 True, False, or Not Given
 
-Write **T**, **F**, or **NG**.
-
-1. There are 54 ethnic groups in Viet Nam. ___
-2. The Kinh are one of the ethnic minorities. ___
-3. Every ethnic minority group has a small population. ___
-4. A stilt house is cooler because air moves under the floor. ___
-5. Most mountain families now live in brick houses. ___
-6. Hoa's own family lives in a stilt house. ___
+::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you already know about ethnic groups is exactly the pull this type is built to catch."
+- There are 54 ethnic groups in Viet Nam. = T
+- The Kinh are one of the ethnic minorities. = F ~ the Kinh are the majority
+- Every ethnic minority group has a small population. = F ~ some, such as the Tay and the Thai, have quite large populations
+- A stilt house is cooler because air moves under the floor. = T
+- Most mountain families now live in brick houses. = NG ~ the text says *some* families now build brick houses; it does not say most
+- Hoa's own family lives in a stilt house. = NG ~ the text never says where Hoa lives
+:::
 
 ### 5.2 Answer the questions
 
-1. What are the 53 groups other than the Kinh called?
-2. Give **two** reasons for building a house on stilts.
-3. What materials is a stilt house usually built of?
-4. What do families keep in the space under the floor?
-5. Why do some families now choose brick and concrete?
+::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
+- What are the 53 groups other than the Kinh called? = (ethnic) minorities
+- In which season does the floor of a stilt house stay dry? = (the) rainy season
+- Which two materials is a stilt house usually built of? = wood and bamboo
+- What do you climb to reach the door? = (a) wooden staircase
+- Which two modern materials do some families now build with? = brick and concrete
+:::
 
 ### 5.3 Vocabulary in context
 
-Find a word or phrase in the text that means:
-
-1. the larger part of a population → _______________
-2. a set of steps between floors → _______________
-3. repair something old and bring it back to its former state → _______________
-4. traditions and objects passed down from earlier generations → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. Give yourself **three minutes** for all four — searching against a clock is the point, not reading carefully."
+- the larger part of a population = majority
+- a set of steps between floors = staircase
+- repair something old and bring it back to its former state = restore
+- traditions and objects passed down from earlier generations = heritage
+:::
 
 ::: bridge name="Synonym search against the clock" trains="Reading" cefr="B1" marker="[T2]" src="04 §8.3"
 Three minutes, on the text you have just read. For each phrase below, find the
@@ -546,63 +548,58 @@ also research on how candidates behave, not a rule of the test.
 
 ### Listening — A day in Mai's life
 
-> **How to use this without the audio:** ask someone to read the script aloud
-> to you at normal speed while you cover it — or paste it into a
-> text-to-speech tool. Listen **twice** before you look at the text.
->
-> **Cách dùng khi không có bản ghi âm:** nhờ người khác đọc to phần lời thoại,
-> hoặc dùng công cụ đọc văn bản. Nghe **hai lần** trước khi nhìn vào bài.
+You get **one** play. That is not us being hard on you — it is how the task
+works, and practising it any other way trains a habit that does not exist on
+the day. Read both sets of questions in the preview window, then answer as you
+listen rather than afterwards. The speaker moves through her day in order, so
+the questions come in that order too.
 
-**Script** — *cover this while you listen*
+**Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-> Hello. My name is Mai. I'm thirteen and I'm Dao. I live with my parents, my
-> grandmother and my little brother in a village in the north.
->
-> My day starts at half past five. That sounds early, but the mountain is cold
-> in the morning and nobody wants to be the last one out of bed. Before school I
-> sweep the yard and feed the chickens. My brother carries the water, though he
-> spills half of it.
->
-> School is four kilometres away. In the dry season I walk there in fifty
-> minutes with three friends. In the rainy season the path turns to mud and my
-> father takes me on his motorbike.
->
-> I like maths best, and English second. Our teacher plays us songs in English
-> and we write down the words we catch.
->
-> After school I do my homework first, because once it is dark it is hard to
-> read. Then I help my grandmother. She weaves baskets from bamboo and sells
-> them at the market on Sundays. She is teaching me, but my baskets are still
-> crooked.
->
-> In the evening we all eat together on the floor of the big room. My
-> grandmother tells stories. Some of them are about our family, and some, I
-> think, she invents.
+::: audio orientation="You will hear a thirteen-year-old girl from a mountain village describing an ordinary day, from before school until the evening meal." mode="computer" preview="30" review="120"
+Hello. My name is Mai. I'm thirteen and I'm Dao. I live with my parents, my
+grandmother and my little brother in a village in the north.
 
-> **Before you check — how sure are you?** Mark each answer **●** if you are
-> sure and **○** if you are not, *before* you look at the key. Then count how
-> many of each you got right. If the **●** answers are not clearly better than
-> the **○** ones, the feeling of certainty is not yet telling you anything —
-> which is more useful to know than the score. Unit 1 explains why.
->
-> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
-> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+My day starts at half past five. That sounds early, but the mountain is cold
+in the morning and nobody wants to be the last one out of bed. Before school I
+sweep the yard and feed the chickens. My brother carries the water, though he
+spills half of it.
+
+School is four kilometres away. In the dry season I walk there in fifty
+minutes with three friends. In the rainy season the path turns to mud and my
+father takes me on his motorbike.
+
+I like maths best, and English second. Our teacher plays us songs in English
+and we write down the words we catch.
+
+After school I do my homework first, because once it is dark it is hard to
+read. Then I help my grandmother. She weaves baskets from bamboo and sells
+them at the market on Sundays. She is teaching me, but my baskets are still
+crooked.
+
+In the evening we all eat together on the floor of the big room. My
+grandmother tells stories. Some of them are about our family, and some, I
+think, she invents.
+:::
 
 ### 6.1 Listen and choose
 
-1. Mai gets up at **(a)** 5.00 **(b)** 5.30 **(c)** 6.30
-2. Before school she **(a)** sweeps the yard and feeds the chickens **(b)** carries the water **(c)** cooks breakfast
-3. In the dry season the walk to school takes **(a)** fifteen minutes **(b)** fifty minutes **(c)** an hour and a half
-4. She does her homework straight after school because **(a)** her mother tells her to **(b)** it is hard to read after dark **(c)** she has no time later
-5. Her grandmother sells the baskets **(a)** at the school **(b)** to neighbours **(c)** at the market on Sundays
+::: task skill="listening" type="multiple-choice"
+- Mai gets up at (a) 5.00 (b) 5.30 (c) 6.30 = b
+- Before school she (a) sweeps the yard and feeds the chickens (b) carries the water (c) cooks breakfast = a
+- In the dry season the walk to school takes (a) fifteen minutes (b) fifty minutes (c) an hour and a half = b
+- She does her homework straight after school because (a) her mother tells her to (b) it is hard to read after dark (c) she has no time later = b
+- Her grandmother sells the baskets (a) at the school (b) to neighbours (c) at the market on Sundays = c
+:::
 
 ### 6.2 Listen and complete
 
-1. Mai is ____________ years old and belongs to the Dao ethnic group.
-2. Her school is ____________ kilometres from her village.
-3. Her grandmother weaves baskets from ____________.
-4. In the evening the family eats together on the floor of the ____________
-   ____________.
+::: task skill="listening" type="sentence-completion" words="2+number"
+- Mai is ___ years old and belongs to the Dao ethnic group. = thirteen/13
+- Her school is ___ kilometres from her village. = four/4
+- Her grandmother weaves baskets from ___ . = bamboo
+- In the evening the family eats together on the floor of the ___ . = big room
+:::
 
 ### Writing — A paragraph about what you do for your family
 
@@ -676,21 +673,27 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-Complete with a word from this unit. The first letter is given.
-
-1. The Kinh are the m_______; the other 53 groups are ethnic m_______.
-2. My grandmother w_______ baskets from b_______.
-3. Rice grows on t_______ f_______ cut into the hillside.
-4. At the festival the dancers wear traditional c_______.
-5. The old songs and old houses are part of our h_______.
-6. They live in a wooden s_______ h_______ above the ground.
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
+- The Kinh are the ___ ; the other 53 groups are ethnic minorities. = majority ~ starts with *m*
+- The Kinh are the majority; the other 53 groups are ethnic ___ . = minorities ~ starts with *m*
+- My grandmother ___ baskets from bamboo. = weaves ~ starts with *w*
+- My grandmother weaves baskets from ___ . = bamboo ~ starts with *b*
+- Rice grows on ___ cut into the hillside. = terraced fields ~ starts with *t f*
+- At the festival the dancers wear traditional ___ . = costumes ~ starts with *c*
+- The old songs and old houses are part of our ___ . = heritage ~ starts with *h*
+- They live in a wooden ___ above the ground. = stilt house ~ starts with *s h*
+:::
 
 ### 7.2 Pronunciation check
 
-Write **/k/**, **/ɡ/**, or **/s/** for the sound of the bold letter.
-
-1. **c**ostume ___  2. **g**ong ___  3. **c**eremony ___
-4. **gh**ost ___  5. bas**k**et ___  6. lan**g**uage ___
+::: task skill="course" type="choice" opts="/k/|/ɡ/|/s/" ask="Which sound does the bold letter make?"
+- **c**ostume = /k/
+- **g**ong = /ɡ/
+- **c**eremony = /s/
+- **gh**ost = /ɡ/
+- bas**k**et = /k/
+- lan**g**uage = /ɡ/
+:::
 
 ### 7.3 Grammar check
 
@@ -764,37 +767,20 @@ sleeps in the same space. 4. She misses the folk songs at Tet and her
 grandmother's bamboo baskets. 5. Because weaving takes a lot of patience and she
 says she does not have much (yet).
 
-**1.2** 1. stilt house 2. terraced fields 3. folk songs 4. weave
-
 **1.3** **A.** 1. Yes/No 2. Wh- 3. Subject 4. Yes/No
 **B.** 5. countable 6. uncountable
 
 ### Lesson 2
 
-**2.1** 1. diverse 2. weaves / bamboo 3. majority 4. traditional 5. terraced
-fields 6. heritage
-
-**2.2** 1. **basket** — the others are materials; a basket is a thing made from
-them. 2. **market** — the others are cultural traditions; a market is a place.
-3. **costume** — the others are places; a costume is clothing.
-
 **2.3**
 - /k/ — cave, custom, basket, market, coat, culture
 - /ɡ/ — gate, gong, garden, guest, goat, group
-
-**2.4** 1. gong (/ɡ/, the others /k/) 2. costume (/k/, the others /ɡ/)
-3. market (/k/, the others /ɡ/) 4. ceremony (/s/, the others /k/)
 
 **2.5** Answers will vary. Check: the bold letters in *goat, group, grandmother*
 buzz (put a hand on your throat), while *coat, cave, customs, costumes, basket*
 are silent at the throat and start with a small puff of air.
 
 ### Lesson 3
-
-**3.1** 1. Y/N 2. Wh-O 3. Wh-S 4. Y/N 5. Wh-S 6. Wh-S 7. Y/N 8. Wh-O
-
-*(Note on 6: "How many ethnic groups" is the subject of *live*, so there is no
-*do* — that makes it a subject question.)*
 
 **3.2**
 1. Who lives in the northern mountains?
@@ -803,9 +789,6 @@ are silent at the throat and start with a small puff of air.
 4. Why do they build houses on stilts?
 5. Who makes your festival costumes?
 6. How long did you stay in the village?
-
-**3.3** 1. much 2. piece of advice 3. many 4. some 5. some 6. any 7. many
-8. a bowl of
 
 **3.4**
 1. **Where do** your grandparents **live**?
@@ -832,40 +815,17 @@ clause is in **statement** order.
 
 ### Lesson 5
 
-**5.1** 1. T 2. F (the Kinh are the majority) 3. F (some, such as the Tay and
-the Thai, have quite large populations) 4. T 5. NG (the text says *some*
-families now build brick houses; it does not say most) 6. NG (the text never
-says where Hoa lives)
-
-**5.2** 1. Ethnic minorities. 2. Any two of: the floor stays dry in the rainy
-season; insects and animals find it harder to get in; cool air moves under the
-floor on hot days; the space underneath is useful for storage. 3. Wood and
-bamboo, with a roof of palm leaves or tiles. 4. Tools, firewood and sometimes
-animals. 5. Because brick and concrete houses are quicker to put up and easier
-to repair.
-
-**5.3** 1. majority 2. staircase 3. restore 4. heritage
-
 **Speaking** Answers will vary. Check: your Wh- questions keep the order *Wh- +
 operator + subject + verb*, your subject questions have no *do/does*, and you
 say *How many rooms* but *How much rice*.
 
 ### Lesson 6
 
-**6.1** 1. b 2. a 3. b 4. b 5. c
-
-**6.2** 1. thirteen 2. four 3. bamboo 4. big room
-
 **Writing** Answers will vary. Check: 80–100 words, one paragraph, present
 simple with correct third-person **-s**, at least four Lesson 2 words, and one
 uncountable noun used with no plural *-s*.
 
 ### Lesson 7
-
-**7.1** 1. majority / minorities 2. weaves / bamboo 3. terraced fields
-4. costumes 5. heritage 6. stilt house
-
-**7.2** 1. /k/ 2. /ɡ/ 3. /s/ 4. /ɡ/ 5. /k/ 6. /ɡ/
 
 **7.3** **A.** 1. Do they live in a stilt house? 2. Who repairs the roof?
 3. How many people are there in your family? 4. Why do they build houses on

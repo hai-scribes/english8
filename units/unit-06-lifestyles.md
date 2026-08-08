@@ -61,22 +61,22 @@ Answer in full sentences.
 
 ### 1.2 Find the phrase
 
-Find a word or phrase in the dialogue that means:
-
-1. far away and difficult to reach → _______________
-2. the number of hours you spend looking at a phone or computer → _______________
-3. to rely on someone for help → _______________
-4. good at planning things carefully → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
+- far away and difficult to reach = remote
+- the number of hours you spend looking at a phone or computer = screen time
+- to rely on someone for help = depend on
+- good at planning things carefully = organised
+:::
 
 ### 1.3 Notice the grammar
 
-Look at the **bold** parts. Write **will**, **won't**, or **if-clause** for each.
-
-1. I know what **I'll write** about. → _______
-2. **I won't complain** about my old bicycle again. → _______
-3. **If you move there**, you will learn to depend on your community. → _______
-4. **If I finish** my homework before eight, I'll go for a run. → _______
-5. **It won't rain.** I checked. → _______
+::: task skill="course" type="choice" opts="will|won't|if-clause" ask="Look at the **bold** part of each line and label it."
+- I know what **I'll write** about. = will
+- **I won't complain** about my old bicycle again. = won't
+- **If you move there**, you will learn to depend on your community. = if-clause
+- **If I finish** my homework before eight, I'll go for a run. = if-clause
+- **It won't rain.** I checked. = won't
+:::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **thì tương lai đơn**
 > (*will / won't*) và **câu điều kiện loại 1** (*If + hiện tại đơn, will +
@@ -112,22 +112,22 @@ Look at the **bold** parts. Write **will**, **won't**, or **if-clause** for each
 
 ### 2.1 Complete the sentences
 
-Use one word or phrase from the table. Change the form if you need to.
-
-1. Sitting in front of a computer all day is a very _______ lifestyle.
-2. My grandparents live in a _______ village that you can only reach by boat.
-3. Museums help us to _______ the past for future generations.
-4. Doctors say too much _______ is bad for children's sleep.
-5. When my family moved to the city, it took me a year to _______.
-6. My phone is the only _______ I really need.
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
+- Sitting in front of a computer all day is a very ___ lifestyle. = sedentary
+- My grandparents live in a ___ village that you can only reach by boat. = remote
+- Museums help us to ___ the past for future generations. = preserve
+- Doctors say too much ___ is bad for children's sleep. = screen time
+- When my family moved to the city, it took me a year to ___ . = adapt
+- My phone is the only ___ I really need. = gadget
+:::
 
 ### 2.2 Odd one out
 
-Circle the word that does not belong, and say why.
-
-1. rural · remote · peaceful · urban
-2. sled · hunt · whaling · gadget
-3. active · fit · healthy · sedentary
+::: task skill="course" type="choice" ask="In each line, pick the word that does not belong."
+- rural · remote · peaceful · urban = urban ~ the other three are about the countryside or places far from a city
+- sled · hunt · whaling · gadget = gadget ~ the other three belong to a traditional Arctic lifestyle
+- active · fit · healthy · sedentary = sedentary ~ the other three describe a healthy lifestyle
+:::
 
 ### Pronunciation — /br/ and /pr/
 
@@ -167,12 +167,12 @@ protect · umbrella · prefer · break · surprise · brave · print · celebrat
 
 ### 2.4 Odd sound out
 
-In each line, one word has a **different** cluster. Circle it.
-
-1. bring · brave · print · brush
-2. price · practice · brother · protect
-3. surprise · umbrella · improve · prefer
-4. celebrate · break · bright · produce
+::: task skill="course" type="choice" ask="In each line, one word has a **different** cluster. Pick it."
+- Line 1 — bring · brave · print · brush = print ~ *print* is /pr/; the others are /br/
+- Line 2 — price · practice · brother · protect = brother ~ *brother* is /br/; the others are /pr/
+- Line 3 — surprise · umbrella · improve · prefer = umbrella ~ *umbrella* is /br/; the others are /pr/
+- Line 4 — celebrate · break · bright · produce = produce ~ *produce* is /pr/; the others are /br/
+:::
 
 ### 2.5 Say these sentences
 
@@ -286,25 +286,25 @@ mean different things:
 
 ### 3.1 Recognise the correct sentence
 
-Tick (✓) the correct sentence in each pair.
-
-1. a. If it will rain, we will stay at home.  b. If it rains, we will stay at home.
-2. a. I think she'll like the present.  b. I think she'll likes the present.
-3. a. When I finish my homework, I'll call you.  b. When I will finish my homework, I'll call you.
-4. a. Unless you don't hurry, you'll miss the bus.  b. Unless you hurry, you'll miss the bus.
-5. a. You will pass if you study hard.  b. You will pass, if you study hard.
-6. a. If he won't come, we'll start without him.  b. If he doesn't come, we'll start without him.
+::: task skill="course" type="choice" ask="Pick the correct sentence in each pair."
+- Pair 1 — (a) If it will rain, we will stay at home. (b) If it rains, we will stay at home. = b ~ no *will* in an *if*-clause
+- Pair 2 — (a) I think she'll like the present. (b) I think she'll likes the present. = a ~ bare infinitive after *will*
+- Pair 3 — (a) When I finish my homework, I'll call you. (b) When I will finish my homework, I'll call you. = a ~ no *will* after *when* in a future clause
+- Pair 4 — (a) Unless you don't hurry, you'll miss the bus. (b) Unless you hurry, you'll miss the bus. = b ~ *unless* takes a positive verb
+- Pair 5 — (a) You will pass if you study hard. (b) You will pass, if you study hard. = a ~ main clause first, so no comma
+- Pair 6 — (a) If he won't come, we'll start without him. (b) If he doesn't come, we'll start without him. = b ~ present simple in the *if*-clause
+:::
 
 ### 3.2 *will* or *won't*
 
-Complete with **will** or **won't** and the verb in brackets.
-
-1. Don't worry — I ____________ (tell) anyone your secret.
-2. Look at those clouds! It ____________ (rain).
-3. I'm really tired. I think I ____________ (go) to bed early.
-4. She's very careful, so she ____________ (make) that mistake again.
-5. That box looks heavy. I ____________ (carry) it for you.
-6. Their team is much stronger than ours. We ____________ (win).
+::: task skill="course" type="gap-fill" ask="Complete with **will** or **won't** and the verb in brackets. Write both words."
+- Don't worry — I ___ (tell) anyone your secret. = won't tell
+- Look at those clouds! It ___ (rain). = will rain
+- I'm really tired. I think I ___ (go) to bed early. = will go
+- She's very careful, so she ___ (make) that mistake again. = won't make
+- That box looks heavy. I ___ (carry) it for you. = will carry
+- Their team is much stronger than ours. We ___ (win). = won't win
+:::
 
 ### 3.3 First conditional
 
@@ -369,19 +369,12 @@ Write true sentences about yourself. Use the structure given each time.
 
 ### 4.1 Complete the mini-dialogues
 
-Use one word or short form in each gap.
-
-1. **A:** I'm worried about the test tomorrow.
-   **B:** Don't worry. I'm ____________ you'll do well.
-
-2. **A:** This box is really heavy.
-   **B:** ____________ carry it for you.
-
-3. **A:** Do you think our team will win on Sunday?
-   **B:** I ____________ it — the other team is much stronger.
-
-4. **A:** I promise I ____________ tell anyone your secret.
-   **B:** Thanks, that's kind of you.
+::: task skill="course" type="gap-fill" ask="Use one word or short form in each gap."
+- **A:** I'm worried about the test tomorrow. — **B:** Don't worry. I'm ___ you'll do well. = sure
+- **A:** This box is really heavy. — **B:** ___ carry it for you. = I'll
+- **A:** Do you think our team will win on Sunday? — **B:** I ___ it — the other team is much stronger. = doubt
+- **A:** I promise I ___ tell anyone your secret. — **B:** Thanks, that's kind of you. = won't
+:::
 
 ### 4.2 Write your own
 
@@ -429,30 +422,32 @@ Reply to each person. Use a prediction, a promise and an offer — one of each.
 
 ### 5.1 True, False, or Not Given
 
-Write **T**, **F**, or **NG**.
-
-1. Some Alaskan villages can only be reached by plane or by boat. ___
-2. Families pick berries during the long summer. ___
-3. Sled dogs are no longer trained in Alaska. ___
-4. Most young people who move to the city come home again later. ___
-5. Elders teach hunting and sewing to children after school. ___
+::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and answering from what you already know about Alaska is exactly the pull this type is built to catch."
+- Some Alaskan villages can only be reached by plane or by boat. = T
+- Families pick berries during the long summer. = F ~ the text says the summer is short
+- Sled dogs are no longer trained in Alaska. = F ~ they are still trained and raced
+- Most young people who move to the city come home again later. = NG ~ the text says some leave, but never says whether they return
+- Elders teach hunting and sewing to children after school. = T
+:::
 
 ### 5.2 Answer the questions
 
-1. Where do the Inupiat and the Yupik peoples live?
-2. Name three ways families traditionally get their food.
-3. What happens to the meat when a whale is caught?
-4. How has travel in winter changed?
-5. What question worries the elders, and what are they doing about it?
+::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
+- Where do the Yupik people live? = (in) western Alaska
+- What do families fish through in the ice? = holes
+- What is shared across the whole village when a whale is caught? = (the) meat
+- What do most families travel by today? = snowmobiles
+- Besides sewing and language, what do elders now teach after school? = hunting
+:::
 
 ### 5.3 Vocabulary in context
 
-Find a word or phrase in the article that means:
-
-1. far away and hard to reach → _______________
-2. a group of people who work together on a boat → _______________
-3. not included, forgotten → _______________
-4. the older, respected members of a community → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the article that means each of these. Give yourself **three minutes** for all four — searching against a clock is the point, not reading carefully."
+- far away and hard to reach = remote
+- a group of people who work together on a boat = crew
+- not included, forgotten = left out
+- the older, respected members of a community = elders
+:::
 
 ### Speaking — How communities keep their traditions
 
@@ -489,62 +484,57 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### Listening — Technology and the way we live
 
-> **How to use this without the audio:** ask someone to read the script aloud
-> to you at normal speed while you cover it — or paste it into a
-> text-to-speech tool. Listen **twice** before you look at the text.
->
-> **Cách dùng khi không có bản ghi âm:** nhờ người khác đọc to phần lời thoại,
-> hoặc dùng công cụ đọc văn bản. Nghe **hai lần** trước khi nhìn vào bài.
+You get **one** play. That is not us being hard on you — it is how the task
+works, and practising it any other way trains a habit that does not exist on
+the day. Read both sets of questions in the preview window, then answer as you
+listen rather than afterwards.
 
-**Script** — *cover this while you listen*
+**Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-> Good morning. Today I want to ask one question: has technology made our
-> lives better or worse?
->
-> Think about my grandmother. When she was fourteen, she walked four
-> kilometres to school. There was no fridge in the house, and the family grew
-> most of their own food. Her lifestyle was active — not because she went to a
-> gym, but because everything took effort.
->
-> Now think about a teenager today. You order food on an app. You message a
-> friend who lives two streets away. You study, watch films and talk to people
-> on the same small screen. Life is easier, and it is also far more sedentary.
->
-> Learning has changed most of all. A few years ago, millions of students
-> studied online for the first time. Some loved it. They could pause the video,
-> replay the difficult part, and learn at their own speed. Others hated it.
-> They missed their classmates, their internet was slow, and nobody noticed
-> when they stopped understanding.
->
-> So the honest answer is this. Technology has not made us better or worse. It
-> has given us choices our grandparents never had. If we choose well, we will
-> get the benefits without losing our health or our friendships. That choice is
-> yours, and you will make it every single day.
+::: audio orientation="You will hear a speaker giving a talk about whether technology has made our lives better or worse, and about learning online." mode="computer" preview="30" review="120"
+Good morning. Today I want to ask one question: has technology made our
+lives better or worse?
 
-> **Before you check — how sure are you?** Mark each answer **●** if you are
-> sure and **○** if you are not, *before* you look at the key. Then count how
-> many of each you got right. If the **●** answers are not clearly better than
-> the **○** ones, the feeling of certainty is not yet telling you anything —
-> which is more useful to know than the score. Unit 1 explains why.
->
-> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
-> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+Think about my grandmother. When she was fourteen, she walked four
+kilometres to school. There was no fridge in the house, and the family grew
+most of their own food. Her lifestyle was active — not because she went to a
+gym, but because everything took effort.
+
+Now think about a teenager today. You order food on an app. You message a
+friend who lives two streets away. You study, watch films and talk to people
+on the same small screen. Life is easier, and it is also far more sedentary.
+
+Learning has changed most of all. A few years ago, millions of students
+studied online for the first time. Some loved it. They could pause the video,
+replay the difficult part, and learn at their own speed. Others hated it.
+They missed their classmates, their internet was slow, and nobody noticed
+when they stopped understanding.
+
+So the honest answer is this. Technology has not made us better or worse. It
+has given us choices our grandparents never had. If we choose well, we will
+get the benefits without losing our health or our friendships. That choice is
+yours, and you will make it every single day.
+:::
 
 ### 6.1 Listen and choose
 
-1. The speaker's main question is whether technology has made our lives **(a)** faster **(b)** better or worse **(c)** more expensive
-2. The grandmother's family **(a)** bought all their food **(b)** grew most of their food **(c)** had a large fridge
-3. The grandmother's lifestyle was active because **(a)** she went to a gym **(b)** everything took effort **(c)** she played sport
-4. Students who liked online learning could **(a)** pause and replay the video **(b)** finish school early **(c)** choose their teacher
-5. The speaker concludes that **(a)** technology is bad for us **(b)** technology is always good **(c)** what matters is how we choose
+::: task skill="listening" type="multiple-choice"
+- The speaker's main question is whether technology has made our lives (a) faster (b) better or worse (c) more expensive = b
+- The grandmother's family (a) bought all their food (b) grew most of their food (c) had a large fridge = b
+- The grandmother's lifestyle was active because (a) she went to a gym (b) everything took effort (c) she played sport = b
+- Students who liked online learning could (a) pause and replay the video (b) finish school early (c) choose their teacher = a
+- The speaker concludes that (a) technology is bad for us (b) technology is always good (c) what matters is how we choose = c
+:::
 
 ### 6.2 Listen and complete
 
-1. The speaker's grandmother walked ____________ kilometres to school.
-2. Life today is easier, and also far more ____________.
-3. Some students loved online learning because they could learn at their own ____________.
-4. Others missed their ____________ and their internet was slow.
-5. Technology has given us ____________ our grandparents never had.
+::: task skill="listening" type="sentence-completion" words="1"
+- The speaker's grandmother walked ___ kilometres to school. = four ~ written as a word, the way the speaker says it
+- Life today is easier, and also far more ___ . = sedentary
+- Some students loved online learning because they could learn at their own ___ . = speed
+- Others missed their ___ and their internet was slow. = classmates
+- Technology has given us ___ our grandparents never had. = choices
+:::
 
 ### Writing — A paragraph about online learning
 
@@ -655,31 +645,38 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-Complete with a word from this unit. The first letter is given.
-
-1. Hanoi is a busy u_______ area, but my grandparents live in a r_______ village.
-2. Spending all day on the sofa is a s_______ lifestyle.
-3. Every g_______ has a duty to p_______ its traditions.
-4. In the far north, families still h_______ for food and travel by s_______.
-5. Too much screen time is bad for your w_______.
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
+- Hanoi is a busy ___ area. = urban ~ starts with *u*
+- My grandparents live in a quiet ___ village outside the city. = rural ~ starts with *r*
+- Spending all day on the sofa is a ___ lifestyle. = sedentary ~ starts with *s*
+- Every ___ has a duty to look after its traditions. = generation ~ starts with *g*
+- Museums exist to ___ the past. = preserve ~ starts with *p*
+- In the far north, families still ___ for their food. = hunt ~ starts with *h*
+- In winter they travel by ___ across the snow. = sled ~ starts with *s*
+- Too much screen time is bad for your ___ . = well-being ~ starts with *w*
+:::
 
 ### 7.2 Pronunciation check
 
-Write **/br/** or **/pr/** for the underlined cluster.
-
-1. **br**ave ___  2. **pr**otect ___  3. um**br**ella ___
-4. sur**pr**ise ___  5. **br**eak ___  6. im**pr**ove ___
+::: task skill="course" type="choice" opts="/br/|/pr/" ask="Which cluster is in the part in bold?"
+- **br**ave = /br/
+- **pr**otect = /pr/
+- um**br**ella = /br/
+- sur**pr**ise = /pr/
+- **br**eak = /br/
+- im**pr**ove = /pr/
+:::
 
 ### 7.3 Grammar check
 
-Complete with the correct form of the verb in brackets.
-
-1. I'm sure you ____________ (enjoy) the film tomorrow.
-2. If we ____________ (not leave) now, we will be late.
-3. She ____________ (not come) to the party — she's ill.
-4. When my brother ____________ (finish) university, he will move abroad.
-5. Unless it ____________ (stop) raining, we will stay indoors.
-6. "Will you help me with this?" — "Yes, I ____________."
+::: task skill="course" type="gap-fill" ask="Complete with the correct form of the verb in brackets."
+- I'm sure you ___ (enjoy) the film tomorrow. = will enjoy
+- If we ___ (not leave) now, we will be late. = don't leave
+- She ___ (not come) to the party — she's ill. = won't come
+- When my brother ___ (finish) university, he will move abroad. = finishes
+- Unless it ___ (stop) raining, we will stay indoors. = stops
+- "Will you help me with this?" — "Yes, I ___ ." = will
+:::
 
 ### 7.4 Error hunt
 
@@ -743,23 +740,11 @@ roads, so you can only get there by plane. 3. They learn to depend on their
 community very quickly. 4. He will go for a run. 5. They will run together on
 Sunday morning unless it rains.
 
-**1.2** 1. remote 2. screen time 3. depend on 4. organised
-
-**1.3** 1. will 2. won't 3. if-clause 4. if-clause 5. won't
-
 ### Lesson 2
-
-**2.1** 1. sedentary 2. remote 3. preserve 4. screen time 5. adapt 6. gadget
-
-**2.2** 1. **urban** — the other three are about the countryside or places far
-from a city. 2. **gadget** — the other three belong to a traditional Arctic
-lifestyle. 3. **sedentary** — the other three describe a healthy lifestyle.
 
 **2.3**
 - /br/ — bright, brother, umbrella, break, brave, celebrate
 - /pr/ — price, practice, protect, prefer, surprise, print
-
-**2.4** 1. print 2. brother 3. umbrella 4. produce
 
 **2.5** Answers will vary (spoken). Check: your throat buzzes on the **br** of
 *brother, bright, bring, brush, celebrate, umbrella* — at the very start in the
@@ -767,11 +752,6 @@ first four, and in the middle of *celebrate* and *umbrella* — and does not buz
 on the **pr** of *practise, improve, price, print*.
 
 ### Lesson 3
-
-**3.1** 1. b 2. a 3. a 4. b 5. a 6. b
-
-**3.2** 1. won't tell 2. will rain 3. will go 4. won't make 5. will carry
-6. won't win
 
 **3.3** 1. rains / won't go 2. eat / will feel 3. will miss / don't leave
 4. practises / won't improve 5. is / won't join 6. am / will move
@@ -790,28 +770,11 @@ a comma only when the *if*-clause comes first.
 
 ### Lesson 4
 
-**4.1** 1. sure 2. I'll 3. doubt 4. won't
-
 **4.2** Answers will vary. Check that you used one prediction (*I think… will*,
 *I'm sure… will*), one promise (*I promise I'll… / I won't…*) and one offer
 (*I'll… / Shall I…*), each with a bare infinitive after *will* or *shall*.
 
 ### Lesson 5
-
-**5.1** 1. T 2. F (the summer is short) 3. F (they are still trained and raced)
-4. NG (the text says some leave, but never says whether they return)
-5. T
-
-**5.2** 1. The Inupiat live in northern Alaska and the Yupik in western Alaska.
-2. Any three of: hunting caribou, hunting seals, fishing through holes in the
-ice, picking berries, whaling. 3. It is shared across the whole village, so
-nobody is left out. 4. Travel once meant dog sleds pulled by teams of dogs;
-today most families use snowmobiles, although sled dogs are still trained and
-raced. 5. They worry about what will be left if the old skills disappear, so
-many of them teach hunting, sewing and the own language to children after
-school.
-
-**5.3** 1. remote 2. crew 3. left out 4. elders
 
 **Speaking** Answers will vary. Check: *will/won't* in at least one sentence per
 question, at least one correct first conditional, and no *will* inside any
@@ -819,22 +782,11 @@ question, at least one correct first conditional, and no *will* inside any
 
 ### Lesson 6
 
-**6.1** 1. b 2. b 3. b 4. a 5. c
-
-**6.2** 1. four 2. sedentary 3. speed 4. classmates 5. choices
-
 **Writing** Answers will vary. Check: 80–100 words; one side only; the four
 ordering words; at least one first conditional with the present simple in the
 *if*-clause; at least four words from the Lesson 2 table.
 
 ### Lesson 7
-
-**7.1** 1. urban / rural 2. sedentary 3. generation / preserve 4. hunt / sled
-5. well-being
-
-**7.2** 1. /br/ 2. /pr/ 3. /br/ 4. /pr/ 5. /br/ 6. /pr/
-
-**7.3** 1. will enjoy 2. don't leave 3. won't come 4. finishes 5. stops 6. will
 
 **7.4**
 1. will moves → **will move**

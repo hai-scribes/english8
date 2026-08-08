@@ -62,12 +62,12 @@ Answer in full sentences.
 
 ### 1.2 Find the phrase
 
-Find a word or phrase in the dialogue that means:
-
-1. very good, excellent → _______________
-2. thinks about one thing all the time → _______________
-3. short periods of activity → _______________
-4. to know who someone is → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
+- very good, excellent = brilliant
+- thinks about one thing all the time = is obsessed with
+- short periods of activity = bursts
+- to know who someone is = identify
+:::
 
 ### 1.3 Notice the grammar
 
@@ -115,30 +115,29 @@ reporting verb (*us*, *him*). Does sentence 1 or 4 have one? Why not?
 
 ### 2.1 Complete the sentences
 
-Use one word or phrase from the table. Change the form if you need to.
-
-1. The printing press was one of the most important _______ in history.
-2. My laptop and my phone are the two _______ I use every single day.
-3. Scientists work for months in the _______ before they announce anything.
-4. A program that learns from data is using _______ _______.
-5. No two people have the same _______, so it is very hard to copy.
-6. The new engine is extremely _______ — it uses half the fuel.
-7. The biggest _______ of studying online is that you cannot ask a question
-   immediately.
-8. Face _______ lets my phone unlock as soon as I look at it.
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
+- The printing press was one of the most important ___ in history. = inventions
+- My laptop and my phone are the two ___ I use every single day. = devices
+- Scientists work for months in the ___ before they announce anything. = laboratory
+- A program that learns from data is using ___ . = artificial intelligence
+- No two people have the same ___ , so it is very hard to copy. = fingerprint/fingerprints
+- The new engine is extremely ___ — it uses half the fuel. = efficient
+- The biggest ___ of studying online is that you cannot ask a question immediately. = drawback
+- Face ___ lets my phone unlock as soon as I look at it. = recognition
+:::
 
 ### 2.2 Match the word to its meaning
 
-| Word | | Meaning |
-| --- | --- | --- |
-| 1. biometrics | ___ | a. the coloured ring around the pupil of the eye |
-| 2. nanolearning | ___ | b. an important new discovery that changes things |
-| 3. breakthrough | ___ | c. to make a machine do a job a person used to do |
-| 4. automate | ___ | d. identifying a person from a part of the body |
-| 5. iris | ___ | e. a scientific test done to find something out |
-| 6. innovative | ___ | f. studying in very short, focused bursts |
-| 7. experiment | ___ | g. to take the place of someone or something |
-| 8. replace | ___ | h. new and full of fresh ideas |
+::: task skill="course" type="choice" opts="biometrics|nanolearning|breakthrough|automate|iris|innovative|experiment|replace" ask="Which word from the table does each meaning belong to?"
+- the coloured ring around the pupil of the eye = iris
+- an important new discovery that changes things = breakthrough
+- to make a machine do a job a person used to do = automate
+- identifying a person from a part of the body = biometrics
+- a scientific test done to find something out = experiment
+- studying in very short, focused bursts = nanolearning
+- to take the place of someone or something = replace
+- new and full of fresh ideas = innovative
+:::
 
 ### Pronunciation — Stress in statements and questions
 
@@ -180,11 +179,18 @@ Three things to notice:
 
 ### 2.3 Content or function?
 
-Write **C** (content word — stressed) or **F** (function word — weak).
-
-1. laboratory ___  2. the ___  3. invent ___  4. can ___
-5. quickly ___  6. of ___  7. why ___  8. they ___
-9. efficient ___  10. and ___
+::: task skill="course" type="choice" opts="C|F" ask="**C** for a content word (stressed), **F** for a function word (weak)."
+- laboratory = C
+- the = F
+- invent = C
+- can = F
+- quickly = C
+- of = F
+- why = C
+- they = F
+- efficient = C
+- and = F
+:::
 
 ### 2.4 Which words are stressed?
 
@@ -199,15 +205,18 @@ Write out the stressed (content) words of each sentence, in order.
 
 ### 2.5 Say these aloud
 
-Read each line three times, faster each time. Beat the stressed words with your
-hand. Mark ↘ or ↗ before you speak, then record yourself.
+Read each line three times, faster each time, beating the stressed words with
+your hand. Decide where your voice goes at the end **before** you speak, commit
+to it below, then record yourself and listen back for whether it really did.
 
-1. **BIOMETRICS** can **IDENTIFY** a **PERSON**. ___
-2. **WHY** did they **AUTOMATE** the **FACTORY**? ___
-3. Did **NAM** **FINISH** his **PROJECT**? ___
-4. Yes, he **DID**. ___
-5. **HOW** does **NANOLEARNING** **WORK**? ___
-6. The **NEW** **DEVICE** is **NOT** **CHEAP**. ___
+::: task skill="course" type="choice" opts="↘|↗" ask="Does the voice **fall** (↘) or **rise** (↗) at the end of each line?"
+- **BIOMETRICS** can **IDENTIFY** a **PERSON**. = ↘
+- **WHY** did they **AUTOMATE** the **FACTORY**? = ↘ ~ a Wh- question falls, exactly like a statement
+- Did **NAM** **FINISH** his **PROJECT**? = ↗ ~ a Yes/No question rises
+- Yes, he **DID**. = ↘ ~ a short answer falls, and *DID* is strong
+- **HOW** does **NANOLEARNING** **WORK**? = ↘
+- The **NEW** **DEVICE** is **NOT** **CHEAP**. = ↘
+:::
 
 ---
 
@@ -351,33 +360,33 @@ in Hue* — and he still does.
 
 ### 3.1 Say or tell?
 
-Write **said** or **told** in each gap. Look for a person after the gap.
-
-1. Nam _______ that the experiment had failed.
-2. Nam _______ me that the experiment had failed.
-3. The scientist _______ the students that the laboratory was closed.
-4. The scientist _______ that the laboratory was closed.
-5. My father _______ he would buy me a new device.
-6. My father _______ my brother he would buy him a new device.
-7. Ms Hoa _______ us that robots could not feel anything.
-8. Ms Hoa _______ that robots could not feel anything.
-9. Who _______ you that?
-10. Nobody _______ anything about the test.
+::: task skill="course" type="choice" opts="said|told" ask="Which reporting verb fits? Look for a person straight after the gap."
+- Nam ___ that the experiment had failed. = said
+- Nam ___ me that the experiment had failed. = told
+- The scientist ___ the students that the laboratory was closed. = told
+- The scientist ___ that the laboratory was closed. = said
+- My father ___ he would buy me a new device. = said
+- My father ___ my brother he would buy him a new device. = told
+- Ms Hoa ___ us that robots could not feel anything. = told
+- Ms Hoa ___ that robots could not feel anything. = said
+- Who ___ you that? = told
+- Nobody ___ anything about the test. = said
+:::
 
 ### 3.2 Backshift the verb
 
-Write the reported form of the verb in **bold**.
-
-1. "I **am** tired." → He said he _____________ tired.
-2. "We **are testing** a new app." → They said they _____________ a new app.
-3. "I **have seen** the robot." → She said she _____________ the robot.
-4. "I **saw** the robot." → She said she _____________ the robot.
-5. "I **will help** you." → He said he _____________ me.
-6. "I **can drive**." → She said she _____________.
-7. "It **may rain**." → He said it _____________.
-8. "You **must hurry**." → She told us we _____________.
-9. "I **don't like** robots." → He said he _____________ robots.
-10. "The sun **rises** in the east." → She said the sun _____________ in the east.
+::: task skill="course" type="gap-fill" ask="Write the reported form of the verb in **bold**."
+- "I **am** tired." → He said he ___ tired. = was
+- "We **are testing** a new app." → They said they ___ a new app. = were testing
+- "I **have seen** the robot." → She said she ___ the robot. = had seen
+- "I **saw** the robot." → She said she ___ the robot. = had seen
+- "I **will help** you." → He said he ___ me. = would help
+- "I **can drive**." → She said she ___ . = could drive
+- "It **may rain**." → He said it ___ . = might rain
+- "You **must hurry**." → She told us we ___ . = had to hurry
+- "I **don't like** robots." → He said he ___ robots. = didn't like/did not like
+- "The sun **rises** in the east." → She said the sun ___ in the east. = rises/rose ~ a general truth needs no backshift, but *rose* is also accepted
+:::
 
 ### 3.3 Report these statements
 
@@ -472,19 +481,16 @@ time, and remember the pronoun shift.
 
 ### 4.1 Complete the mini-dialogues
 
-1. **A:** What do you use that app _______?
-   **B:** Homework, mostly. The main _______ is that it checks my spelling.
-
-2. **A:** Are there any _______?
-   **B:** Yes — it drains my battery in about an hour.
-
-3. **A:** Guess what! Ms Hoa _______ us that the science club was moving to
-   Friday.
-   **B:** Really? Who _______ you that?
-   **A:** She _______ it herself, at the end of the lesson.
-
-4. **A:** Could you _______ without your phone for a week?
-   **B:** To be _______, no. I'd last two days.
+::: task skill="course" type="gap-fill" ask="One word per gap. The four short exchanges run in order — read each one whole before you fill it in."
+- **A:** What do you use that app ___ ? = for
+- **B:** Homework, mostly. The main ___ is that it checks my spelling. = benefit
+- **A:** Are there any ___ ? (**B:** Yes — it drains my battery in about an hour.) = drawbacks
+- **A:** Guess what! Ms Hoa ___ us that the science club was moving to Friday. = told
+- **B:** Really? Who ___ you that? = told
+- **A:** She ___ it herself, at the end of the lesson. = said
+- **A:** Could you ___ without your phone for a week? = live
+- **B:** To be ___ , no. I'd last two days. = honest
+:::
 
 ### 4.2 Write your own
 
@@ -535,32 +541,34 @@ were repeating it (*He/She said that…*).
 
 ### 5.1 True, False, or Not Given
 
-Write **T**, **F**, or **NG**.
-
-1. Biometrics identifies people by something they have to remember. ___
-2. Fingerprints are the only kind of biometrics in use. ___
-3. A dark room can stop a scanner working properly. ___
-4. Most companies now delete biometric data after one year. ___
-5. A nanolearning lesson usually lasts two or three minutes. ___
-6. The article says nanolearning works well for every kind of learning. ___
+::: task skill="reading" type="true-false-not-given" ask="**False** means the article says the opposite. **Not Given** means the article does not say either way — and everything you already know about phones and privacy is exactly the pull this type is built to catch."
+- Biometrics identifies people by something they have to remember. = F ~ it identifies them by a part of the body, *instead of* by something remembered
+- Fingerprints are the only kind of biometrics in use. = F ~ face recognition and the iris are also used
+- A dark room can stop a scanner working properly. = T
+- Most companies now delete biometric data after one year. = NG ~ the article raises privacy questions but says nothing about deleting data
+- A nanolearning lesson usually lasts two or three minutes. = T
+- The article says nanolearning works well for every kind of learning. = F ~ a difficult idea still needs long, slow thinking
+:::
 
 ### 5.2 Answer the questions
 
-1. What is biometrics, in your own words?
-2. Give two examples of biometrics from the article, apart from fingerprints.
-3. Why is a body safer than a password, according to the article?
-4. What is the privacy problem the article describes?
-5. What kind of learning does nanolearning **not** suit, and why?
+::: task skill="reading" type="short-answer" words="3" ask="Take the words from the article. Do not rephrase them — this is the one place in the course where putting it in your own words costs you the mark."
+- Apart from fingerprints, what kind of recognition do some devices use? = face recognition
+- The iris is the coloured ring around which part of the eye? = (the) pupil
+- Besides being stolen, what can happen to a password? = forgotten
+- What does the article say a company might store that you cannot then change? = (your) face
+- What does nanolearning break a subject into? = (very) short lessons
+:::
 
 ### 5.3 Vocabulary in context
 
-Find a word or phrase in the article that means:
-
-1. a machine that reads or scans something → _______________
-2. the coloured ring around the pupil → _______________
-3. the ability to keep personal information to yourself → _______________
-4. the ability to keep your mind on one thing → _______________
-5. a disadvantage → _______________
+::: task skill="course" type="synonym-search" ask="Find the word in the article that means each of these. Give yourself **three minutes** for all five — searching against a clock is the point, not reading carefully."
+- a machine that reads or scans something = scanner
+- the coloured ring around the pupil = iris
+- the ability to keep personal information to yourself = privacy
+- the ability to keep your mind on one thing = concentration
+- a disadvantage = drawback
+:::
 
 ### Speaking — The technology you use, and why
 
@@ -599,64 +607,60 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### Listening — A teacher talks about a robot
 
-> **How to use this without the audio:** ask someone to read the script aloud
-> to you at normal speed while you cover it — or paste it into a
-> text-to-speech tool. Listen **twice** before you look at the text.
->
-> **Cách dùng khi không có bản ghi âm:** nhờ người khác đọc to phần lời thoại,
-> hoặc dùng công cụ đọc văn bản. Nghe **hai lần** trước khi nhìn vào bài.
+This plays **once**. That is the task, not us being hard on you — a second
+play is a habit that does not exist on the day. The talk runs in order and so
+do the questions, so read both 6.1 and 6.2 in the preview window and answer
+while the voice is still moving, not afterwards from memory.
 
-**Script** — *cover this while you listen*
+**Bài nghe chỉ phát một lần.** Đọc trước cả 6.1 và 6.2 trong lúc chờ, rồi vừa
+nghe vừa trả lời.
 
-> Good afternoon. My name is Ms Trang and I teach science at a secondary
-> school. Last term my school borrowed a teaching robot for six weeks, and
-> people keep asking me what it was like.
->
-> The robot was about a metre tall. It could speak English and Vietnamese, it
-> never got tired, and it never lost its temper. It marked our quizzes
-> instantly. My students loved it for the first two weeks.
->
-> Then things changed. The robot could answer a question, but it could not tell
-> the difference between a student who was thinking hard and a student who had
-> given up. One boy in my class stopped working completely, and the robot did
-> not notice for three lessons. I noticed on the first day.
->
-> So do I think robots will replace teachers? No. I think they will replace
-> parts of the job: the marking, the repeating, the recording of results. That
-> is not a bad thing. Those parts take my evenings.
->
-> What a robot cannot do is care. It cannot see that a quiet student is
-> worried, or decide to change the whole lesson because the class is tired. My
-> advice is simple. Let the machine do the boring work, and let the teacher do
-> the human work.
+::: audio orientation="You will hear a science teacher describing what happened when her school borrowed a teaching robot, and what she now thinks robots are good for." mode="computer" preview="30" review="120"
+Good afternoon. My name is Ms Trang and I teach science at a secondary
+school. Last term my school borrowed a teaching robot for six weeks, and
+people keep asking me what it was like.
 
-> **Before you check — how sure are you?** Mark each answer **●** if you are
-> sure and **○** if you are not, *before* you look at the key. Then count how
-> many of each you got right. If the **●** answers are not clearly better than
-> the **○** ones, the feeling of certainty is not yet telling you anything —
-> which is more useful to know than the score. Unit 1 explains why.
->
-> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
-> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+The robot was about a metre tall. It could speak English and Vietnamese, it
+never got tired, and it never lost its temper. It marked our quizzes
+instantly. My students loved it for the first two weeks.
+
+Then things changed. The robot could answer a question, but it could not tell
+the difference between a student who was thinking hard and a student who had
+given up. One boy in my class stopped working completely, and the robot did
+not notice for three lessons. I noticed on the first day.
+
+So do I think robots will replace teachers? No. I think they will replace
+parts of the job: the marking, the repeating, the recording of results. That
+is not a bad thing. Those parts take my evenings.
+
+What a robot cannot do is care. It cannot see that a quiet student is
+worried, or decide to change the whole lesson because the class is tired. My
+advice is simple. Let the machine do the boring work, and let the teacher do
+the human work.
+:::
 
 ### 6.1 Listen and choose
 
-1. Ms Trang teaches **(a)** English **(b)** science **(c)** mathematics
-2. The school had the robot for **(a)** six days **(b)** six weeks **(c)** six months
-3. The students liked the robot **(a)** all term **(b)** for the first two weeks **(c)** not at all
-4. The robot could not tell the difference between a student who was thinking and one who **(a)** was talking **(b)** had given up **(c)** was absent
-5. Ms Trang thinks robots will replace **(a)** teachers **(b)** parts of a teacher's job **(c)** nothing at all
-6. The one thing she says a robot cannot do is **(a)** mark work **(b)** speak Vietnamese **(c)** care
+::: task skill="listening" type="multiple-choice"
+- Ms Trang teaches (a) English (b) science (c) mathematics = b
+- The school had the robot for (a) six days (b) six weeks (c) six months = b
+- The students liked the robot (a) all term (b) for the first two weeks (c) not at all = b
+- The robot could not tell the difference between a student who was thinking and one who (a) was talking (b) had given up (c) was absent = b
+- Ms Trang thinks robots will replace (a) teachers (b) parts of a teacher's job (c) nothing at all = b
+- The one thing she says a robot cannot do is (a) mark work (b) speak Vietnamese (c) care = c
+:::
 
 ### 6.2 Listen and complete
 
-1. The robot was about a _______ tall.
-2. It could speak English and _______.
-3. It marked the quizzes _______.
-4. The robot did not notice the boy for _______ lessons.
-5. Ms Trang noticed on the _______ day.
-6. Her advice: let the machine do the _______ work, and let the teacher do the
-   _______ work.
+::: task skill="listening" type="sentence-completion" words="1"
+- The robot was about a ___ tall. = metre
+- It could speak English and ___ . = Vietnamese
+- It marked the quizzes ___ . = instantly
+- The robot did not notice the boy for ___ lessons. = three
+- Ms Trang noticed on the ___ day. = first
+- Her advice: let the machine do the ___ work. = boring
+- And let the teacher do the ___ work. = human
+:::
 
 ### Writing — A persuasive paragraph
 
@@ -750,16 +754,16 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-Complete with a word from this unit. The first letter is given.
-
-1. The telephone was a famous i_______ of the nineteenth century.
-2. Scientists carry out an e_______ to test an idea.
-3. My phone uses face r_______ to unlock.
-4. Machines can now a_______ many boring jobs.
-5. The main d_______ of this app is that it costs money.
-6. A washing machine is a very useful d_______.
-7. Solar power was a real b_______ for remote villages.
-8. This method is much more e_______ — it takes half the time.
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
+- The telephone was a famous ___ of the nineteenth century. = invention ~ starts with *i*
+- Scientists carry out an ___ to test an idea. = experiment ~ starts with *e*
+- My phone uses face ___ to unlock. = recognition ~ starts with *r*
+- Machines can now ___ many boring jobs. = automate ~ starts with *a*
+- The main ___ of this app is that it costs money. = drawback ~ starts with *d*
+- A washing machine is a very useful ___ . = device ~ starts with *d*
+- Solar power was a real ___ for remote villages. = breakthrough ~ starts with *b*
+- This method is much more ___ — it takes half the time. = efficient ~ starts with *e*
+:::
 
 ### 7.2 Pronunciation check
 
@@ -854,20 +858,11 @@ and the iris of the eye. 3. It means studying in very short bursts — three or
 four minutes, one idea at a time. 4. She told him that a robot would never
 replace her. 5. He is going to put it in the science club magazine.
 
-**1.2** 1. brilliant 2. is obsessed with 3. bursts 4. identify
-
 **1.3** 1. say 2. tell 3. tell 4. say
 **Question:** No. Sentences 1 and 4 use *said*, and *say* is **not** followed by
 a person. Only *tell* takes an object (*told us*, *told him*).
 
 ### Lesson 2
-
-**2.1** 1. inventions 2. devices 3. laboratory 4. artificial intelligence
-5. fingerprint 6. efficient 7. drawback 8. recognition
-
-**2.2** 1. d 2. f 3. b 4. c 5. a 6. h 7. e 8. g
-
-**2.3** 1. C 2. F 3. C 4. F 5. C 6. F 7. C 8. F 9. C 10. F
 
 **2.4**
 1. scientist, finished, experiment
@@ -877,17 +872,7 @@ a person. Only *tell* takes an object (*told us*, *told him*).
 5. new, phone, very, efficient
 6. Where, test, devices
 
-**2.5** 1. ↘ 2. ↘ (Wh- question — falls) 3. ↗ (Yes/No question — rises)
-4. ↘ (short answer — *DID* is strong and the voice falls) 5. ↘ 6. ↘
-
 ### Lesson 3
-
-**3.1** 1. said 2. told 3. told 4. said 5. said 6. told 7. told 8. said
-9. told 10. said
-
-**3.2** 1. was 2. were testing 3. had seen 4. had seen 5. would help
-6. could drive 7. might rain 8. had to hurry 9. didn't like
-10. rises *(general truth — no backshift needed; "rose" is also accepted)*
 
 **3.3**
 1. Mai said that she was doing an experiment then.
@@ -918,32 +903,11 @@ truth; (5) the pronoun changed from *I/my* to *he/she/his/her*.
 
 ### Lesson 4
 
-**4.1**
-1. for / benefit
-2. drawbacks
-3. told / told / said
-4. live / honest
-
 **4.2** Answers will vary. Check: each of 1–3 gives an opinion **and** a reason
 (*because…* / *so…*); answer 4 uses *He/She said that…* with the pronouns
 shifted out of the first person, and no person after *said*.
 
 ### Lesson 5
-
-**5.1** 1. F (it identifies people by a part of the body, *instead of* by
-something remembered) 2. F (face recognition and the iris are also used)
-3. T 4. NG (the article raises privacy questions but says nothing about
-deleting data) 5. T 6. F (it says a difficult idea still needs long, slow
-thinking)
-
-**5.2** 1. Technology that identifies a person by a part of their body rather
-than by a password they must remember. 2. Face recognition and iris reading.
-3. Because a password can be stolen or forgotten, but a body is much harder to
-copy. 4. Once a company stores your face you cannot change it, the way you can
-change a password. 5. Difficult ideas — they still need long, slow,
-uncomfortable thinking, which short bursts do not give.
-
-**5.3** 1. scanner 2. iris 3. privacy 4. concentration 5. drawback
 
 **Speaking** Answers will vary. Check: no person after *said*, a person after
 *told*; every answer contains a reason; question 5 answered with a reported
@@ -951,20 +915,12 @@ statement.
 
 ### Lesson 6
 
-**6.1** 1. b 2. b 3. b 4. b 5. b 6. c
-
-**6.2** 1. metre 2. Vietnamese 3. instantly 4. three 5. first
-6. boring (first gap), human (second gap)
-
 **Writing** Answers will vary. Check against the checklist: 80–100 words, a
 position in the first sentence, one *It is true that…* concession, one
 *However*, a concrete personal example, four unit vocabulary words, one
 reported statement, and a conclusion that restates the position.
 
 ### Lesson 7
-
-**7.1** 1. invention 2. experiment 3. recognition 4. automate 5. drawback
-6. device 7. breakthrough 8. efficient
 
 **7.2**
 **Part A.** 1. students, automated, whole, experiment 2. Why, replace, old,

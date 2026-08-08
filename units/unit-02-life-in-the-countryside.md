@@ -59,21 +59,21 @@ Answer in full sentences.
 
 ### 1.2 Find the phrase
 
-Find a word or phrase in the dialogue that means:
-
-1. become very annoyed or bored → _______________
-2. a piece of land where fruit trees are grown → _______________
-3. much more quickly than me → _______________
-4. by the middle of the day → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these. Give yourself **two minutes** for all four — searching against a clock is the point, not reading carefully."
+- become very annoyed or bored = go mad
+- a piece of land where fruit trees are grown = orchard
+- much more quickly than me = much faster than me
+- by the middle of the day = by lunchtime
+:::
 
 ### 1.3 Notice the grammar
 
-Look at the **bold** words. Write **-er**, **more + adverb**, or **irregular**.
-
-1. It works **more slowly** than ours. → _______________
-2. I got up **earlier** than I ever do here. → _______________
-3. I slept **better** there. → _______________
-4. She does it **much faster** than me. → _______________
+::: task skill="course" type="choice" opts="-er|more + adverb|irregular" ask="Look at the **bold** words. Which of the three groups does each one belong to?"
+- It works **more slowly** than ours. = more + adverb
+- I got up **earlier** than I ever do here. = -er
+- I slept **better** there. = irregular
+- She does it **much faster** than me. = -er
+:::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **trạng từ so sánh hơn**
 > (comparative adverbs). Có ba nhóm: thêm **-er**, dùng **more**, và các dạng
@@ -108,27 +108,25 @@ Look at the **bold** words. Write **-er**, **more + adverb**, or **irregular**.
 
 ### 2.1 Complete the sentences
 
-Use one word or phrase from the table. Change the form if you need to.
-
-1. The farmer keeps his rice and his tools in a big wooden _______.
-2. Every morning my grandmother goes out to _______ from the hens.
-3. We still drink water from the _______ behind the kitchen.
-4. In September the whole village helps with the rice _______.
-5. When the wind is strong the children go to the open field to _______.
-6. The paddy fields are _______ — you cannot see where they end.
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
+- The farmer keeps his rice and his tools in a big wooden ___ . = barn
+- Every morning my grandmother goes out to ___ from the hens. = collect eggs
+- We still drink water from the ___ behind the kitchen. = well
+- In September the whole village helps with the rice ___ . = harvest
+- When the wind is strong the children go to the open field to ___ . = fly a kite
+- The paddy fields are ___ — you cannot see where they end. = vast
+:::
 
 ### 2.2 Match the word to its meaning
 
-Write the correct letter next to each number.
-
-| | Word | | Meaning |
-| --- | --- | --- | --- |
-| 1 | herd ___ | a | a small, narrow river |
-| 2 | orchard ___ | b | a tall, hard grass used for building and furniture |
-| 3 | stream ___ | c | a group of cattle or buffaloes moving together |
-| 4 | nomad ___ | d | a wet field where rice is grown |
-| 5 | paddy field ___ | e | someone who moves from place to place with animals |
-| 6 | bamboo ___ | f | a piece of land where fruit trees are grown |
+::: task skill="course" type="choice" opts="herd|orchard|stream|nomad|paddy field|bamboo" ask="Which word does each meaning define?"
+- a group of cattle or buffaloes moving together = herd
+- a piece of land where fruit trees are grown = orchard
+- a small, narrow river = stream
+- someone who moves from place to place with animals = nomad
+- a wet field where rice is grown = paddy field
+- a tall, hard grass used for building and furniture = bamboo
+:::
 
 ### Pronunciation — /ə/ and /ɪ/
 
@@ -173,12 +171,12 @@ h*i*ll · c*o*llect · m*i*lk · neighb*our* · br*i*dge**
 
 ### 2.4 Odd sound out
 
-In each line, one word has a **different** vowel in the *italic* part. Circle it.
-
-1. farm*er* · wat*er* · broth*er* · farm*ing*
-2. v*i*llage · ch*i*cken · h*i*ll · *a*bout
-3. c*o*llect · *a*bout · b*a*nana · *i*nside
-4. p*i*ck · m*i*lk · br*i*dge · broth*er*
+::: task skill="course" type="choice" ask="In each line, one word has a **different** vowel in the *italic* part. Pick it."
+- Line 1 — (a) farm*er* (b) farm*ing* (c) wat*er* (d) broth*er* = b ~ *farming* ends in /ɪ/; the others are /ə/
+- Line 2 — (a) v*i*llage (b) ch*i*cken (c) *a*bout (d) h*i*ll = c ~ *about* starts with /ə/; the others are /ɪ/
+- Line 3 — (a) c*o*llect (b) *i*nside (c) *a*bout (d) b*a*nana = b ~ *inside* starts with /ɪ/; the others are /ə/
+- Line 4 — (a) p*i*ck (b) m*i*lk (c) broth*er* (d) br*i*dge = c ~ *brother* ends in /ə/; the others are /ɪ/
+:::
 
 ### 2.5 Say these sentences
 
@@ -290,23 +288,29 @@ comparative.
 
 ### 3.1 Recognise the group
 
-Write **1** (add *-er*), **2** (use *more*), or **3** (irregular).
-
-1. hard ___  2. carefully ___  3. well ___  4. early ___
-5. quietly ___  6. badly ___  7. fast ___  8. far ___
+::: task skill="course" type="choice" opts="1|2|3" ask="Which group is each adverb in — **1** (add *-er*), **2** (use *more*), or **3** (irregular)?"
+- hard = 1
+- carefully = 2
+- well = 3
+- early = 1 ~ *early* is not an *-ly* adverb; it is Group 1
+- quietly = 2
+- badly = 3 ~ *badly* → **worse**, the exception in the *-ly* group
+- fast = 1
+- far = 3
+:::
 
 ### 3.2 Write the comparative adverb
 
-Put the word in brackets into its comparative form.
-
-1. My brother works ______________ (hard) than I do.
-2. Please speak ______________ (slowly) — I can't follow you.
-3. She sings ______________ (well) than anyone in her class.
-4. We arrived at the market ______________ (early) than the others.
-5. He drives ______________ (carefully) than his father.
-6. Buffaloes walk ______________ (slowly) than horses.
-7. My cousin picks fruit ______________ (fast) than I do.
-8. I did ______________ (badly) in the test than last time.
+::: task skill="course" type="gap-fill" ask="Put the word in brackets into its comparative form."
+- My brother works ___ (hard) than I do. = harder
+- Please speak ___ (slowly) — I can't follow you. = more slowly
+- She sings ___ (well) than anyone in her class. = better
+- We arrived at the market ___ (early) than the others. = earlier
+- He drives ___ (carefully) than his father. = more carefully
+- Buffaloes walk ___ (slowly) than horses. = more slowly
+- My cousin picks fruit ___ (fast) than I do. = faster
+- I did ___ (badly) in the test than last time. = worse
+:::
 
 ### 3.3 Build the sentence
 
@@ -380,15 +384,14 @@ Write true sentences about yourself. Use **than** in every sentence.
 
 ### 4.1 Complete the mini-dialogues
 
-1. **A:** What's your grandparents' village ____________?
-   **B:** It's much ____________ (quiet) than here. You can hear the stream.
-
-2. **A:** Is it ____________ from Ha Noi?
-   **B:** About three hours ____________ bus.
-
-3. **A:** People must have an easy life out there.
-   **B:** Not at all — they work far ____________ (hard) than you'd think.
-   **A:** Really? ____________ me more.
+::: task skill="course" type="gap-fill" ask="Complete each line. Where a word is given in brackets, use its comparative form."
+- **A:** What's your grandparents' village ___ ? = like
+- **B:** It's much ___ (quiet) than here. You can hear the stream. = quieter
+- **A:** Is it ___ from Ha Noi? = far
+- **B:** About three hours ___ bus. = by
+- **B:** Not at all — they work far ___ (hard) than you'd think. = harder
+- **A:** Really? ___ me more. = Tell
+:::
 
 ### 4.2 Write your own
 
@@ -436,30 +439,32 @@ to each question. Use a comparative adverb in at least two of your answers.
 
 ### 5.1 True, False, or Not Given
 
-Write **T**, **F**, or **NG**.
-
-1. Quang's grandmother was born in the village. ___
-2. The village has more than one shop. ___
-3. The old well is still used every day. ___
-4. Quang thinks life in the village is slower than life in the city. ___
-5. Quang expected the village to be silent. ___
+::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you know about villages is exactly the pull this type is built to catch."
+- Quang's grandmother was born in the village. = NG ~ we are told she has lived there sixty-one years, not that she was born there
+- The village has more than one shop. = T ~ "two shops"
+- The old well is still used every day. = F ~ "nobody uses [it] any more"
+- Quang thinks life in the village is slower than life in the city. = F ~ he says it does **not** move more slowly — it moves differently
+- Quang expected the village to be silent. = T ~ "I had imagined silence"
+:::
 
 ### 5.2 Answer the questions
 
-1. What is the village between?
-2. What happens in the village in September?
-3. What does Quang's grandmother do before breakfast?
-4. What did Quang expect to find, and what did he find instead?
-5. What difference does Quang make between *slow* and *different*?
+::: task skill="reading" type="short-answer" words="2+number" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
+- What is the hill beside the village covered in? = bamboo
+- How many houses are there in the village? = (about) ninety
+- Who uses the very old well now? = nobody
+- In which month does the harvest happen? = September
+- What had Quang imagined the village would be full of? = silence
+:::
 
 ### 5.3 Vocabulary in context
 
-Find a word in the article that means:
-
-1. a curve in a river → _______________
-2. doing nothing, not busy → _______________
-3. moves in a great hurry → _______________
-4. a structure built over a stream so you can cross it → _______________
+::: task skill="course" type="synonym-search" ask="Find the word in the article that means each of these. Give yourself **two minutes** for all four — searching against a clock is the point, not reading carefully."
+- a curve in a river = bend
+- doing nothing, not busy = idle
+- moves in a great hurry = rushes
+- a structure built over a stream so you can cross it = bridge
+:::
 
 ### Speaking — Describing a village or town you know
 
@@ -498,59 +503,54 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### Listening — Hoa moved to the countryside
 
-> **How to use this without the audio:** ask someone to read the script aloud
-> to you at normal speed while you cover it — or paste it into a
-> text-to-speech tool. Listen **twice** before you look at the text.
->
-> **Cách dùng khi không có bản ghi âm:** nhờ người khác đọc to phần lời thoại,
-> hoặc dùng công cụ đọc văn bản. Nghe **hai lần** trước khi nhìn vào bài.
+You get **one** play. That is not us being hard on you — it is how the task
+works, and practising it any other way trains a habit that does not exist on
+the day. Read both sets of questions in the preview window, then answer as you
+listen rather than afterwards.
 
-**Script** — *cover this while you listen*
+**Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-> Hello. My name is Hoa and I moved from Ha Noi to a small village in Thanh Hoa
-> two years ago, when my mother changed her job. People always ask me the same
-> question: is it boring? So let me answer honestly.
->
-> Yes, sometimes. On a wet Sunday afternoon there is nothing at all to do. The
-> nearest cinema is forty kilometres away. My old friends message me about
-> places I have never seen, and I feel a long way from everything.
->
-> But I sleep better here than I ever slept in the city, and I get to school
-> more easily too. It is a ten-minute walk along the stream instead of half an
-> hour on a bus. My class has nineteen students, so the teachers know all of us
-> properly. My marks have improved. I read much more than I used to, mostly
-> because my phone signal is terrible.
->
-> The thing nobody tells you is how hard people work. My neighbours are up
-> before five during the harvest. My grandmother, who is eighty, still carries
-> water from the well faster than I can.
->
-> Would I move back? I do not know. I think I would miss the fields more than I
-> ever missed the city.
+::: audio orientation="You will hear a girl called Hoa describing what changed when her family left the city for a village, and whether she would go back." mode="computer" preview="30" review="120"
+Hello. My name is Hoa and I moved from Ha Noi to a small village in Thanh Hoa
+two years ago, when my mother changed her job. People always ask me the same
+question: is it boring? So let me answer honestly.
 
-> **Before you check — how sure are you?** Mark each answer **●** if you are
-> sure and **○** if you are not, *before* you look at the key. Then count how
-> many of each you got right. If the **●** answers are not clearly better than
-> the **○** ones, the feeling of certainty is not yet telling you anything —
-> which is more useful to know than the score. Unit 1 explains why.
->
-> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
-> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+Yes, sometimes. On a wet Sunday afternoon there is nothing at all to do. The
+nearest cinema is forty kilometres away. My old friends message me about
+places I have never seen, and I feel a long way from everything.
+
+But I sleep better here than I ever slept in the city, and I get to school
+more easily too. It is a ten-minute walk along the stream instead of half an
+hour on a bus. My class has nineteen students, so the teachers know all of us
+properly. My marks have improved. I read much more than I used to, mostly
+because my phone signal is terrible.
+
+The thing nobody tells you is how hard people work. My neighbours are up
+before five during the harvest. My grandmother, who is eighty, still carries
+water from the well faster than I can.
+
+Would I move back? I do not know. I think I would miss the fields more than I
+ever missed the city.
+:::
 
 ### 6.1 Listen and choose
 
-1. Hoa moved to the village **(a)** last year **(b)** two years ago **(c)** when she was a small child
-2. The nearest cinema is **(a)** ten **(b)** nineteen **(c)** forty kilometres away
-3. Her journey to school now takes **(a)** ten minutes **(b)** half an hour **(c)** an hour
-4. She reads more than before mainly because **(a)** she has more homework **(b)** her phone signal is bad **(c)** there is a new library
-5. At the end, Hoa says she **(a)** definitely wants to move back **(b)** is not sure **(c)** hates the city
+::: task skill="listening" type="multiple-choice"
+- Hoa moved to the village (a) last year (b) two years ago (c) when she was a small child = b
+- The nearest cinema is (a) ten (b) nineteen (c) forty kilometres away = c
+- Her journey to school now takes (a) ten minutes (b) half an hour (c) an hour = a
+- She reads more than before mainly because (a) she has more homework (b) her phone signal is bad (c) there is a new library = b
+- At the end, Hoa says she (a) definitely wants to move back (b) is not sure (c) hates the city = b
+:::
 
 ### 6.2 Listen and complete
 
-1. Hoa moved from Ha Noi to a village in ____________.
-2. Her class has ____________ students.
-3. Her neighbours are up before ____________ during the harvest.
-4. Her grandmother is ____________ years old.
+::: task skill="listening" type="sentence-completion" words="2+number"
+- Hoa moved from Ha Noi to a village in ___ . = Thanh Hoa
+- Her class has ___ students. = nineteen ~ written as a word, the way the speaker says it
+- Her neighbours are up before ___ during the harvest. = five
+- Her grandmother is ___ years old. = eighty
+:::
 
 ### Writing — A paragraph about rural life
 
@@ -645,32 +645,36 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-Complete with a word from this unit. The first letter is given.
-
-1. My grandfather takes the b_______ down to the river every morning.
-2. In September the whole village helps with the h_______.
-3. We pick oranges in my uncle's o_______.
-4. There is an old w_______ behind the kitchen; we get our water there.
-5. A group of cattle moving together is called a h_______.
-6. The paddy fields are v_______ — they reach the horizon.
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
+- My grandfather takes the ___ down to the river every morning. = buffalo ~ starts with *b*
+- In September the whole village helps with the ___ . = harvest ~ starts with *h*
+- We pick oranges in my uncle's ___ . = orchard ~ starts with *o*
+- There is an old ___ behind the kitchen; we get our water there. = well ~ starts with *w*
+- A group of cattle moving together is called a ___ . = herd ~ starts with *h*
+- The paddy fields are ___ — they reach the horizon. = vast ~ starts with *v*
+:::
 
 ### 7.2 Pronunciation check
 
-Write /ə/ or /ɪ/ for the sound in the *italic* part.
-
-1. farm*er* ___  2. v*i*llage ___  3. c*o*llect ___
-4. ch*i*cken ___  5. orch*ar*d ___  6. br*i*dge ___
+::: task skill="course" type="choice" opts="/ə/|/ɪ/" ask="Which vowel is in the **bold** part?"
+- farm**er** = /ə/
+- v**i**llage = /ɪ/
+- c**o**llect = /ə/
+- ch**i**cken = /ɪ/
+- orch**ar**d = /ə/
+- br**i**dge = /ɪ/
+:::
 
 ### 7.3 Grammar check
 
-Complete with the comparative form of the word in brackets.
-
-1. My sister writes ____________ (neatly) than I do.
-2. Buffaloes work ____________ (hard) than most people think.
-3. He speaks Vietnamese ____________ (well) than English.
-4. We got to the market ____________ (late) than usual.
-5. It rained ____________ (heavily) yesterday than today.
-6. She did ____________ (badly) in maths than in English.
+::: task skill="course" type="gap-fill" ask="Complete with the comparative form of the word in brackets."
+- My sister writes ___ (neatly) than I do. = more neatly
+- Buffaloes work ___ (hard) than most people think. = harder
+- He speaks Vietnamese ___ (well) than English. = better
+- We got to the market ___ (late) than usual. = later
+- It rained ___ (heavily) yesterday than today. = more heavily
+- She did ___ (badly) in maths than in English. = worse
+:::
 
 ### 7.4 Error hunt
 
@@ -730,22 +734,11 @@ in the orchard, collected eggs, and carried water from the well. 5. Any one of:
 the nearest shop is three kilometres away; everyone knows everything about you
 by lunchtime.
 
-**1.2** 1. go mad 2. orchard 3. much faster than me 4. by lunchtime
-
-**1.3** 1. more + adverb 2. -er 3. irregular 4. -er
-
 ### Lesson 2
-
-**2.1** 1. barn 2. collect eggs 3. well 4. harvest 5. fly a kite 6. vast
-
-**2.2** 1. c 2. f 3. a 4. e 5. d 6. b
 
 **2.3**
 - /ə/ — farm**er**, wat**er**, broth**er**, orch**ard**, c**o**llect, neighb**our**
 - /ɪ/ — v**i**llage, ch**i**cken, p**i**ck, h**i**ll, m**i**lk, br**i**dge
-
-**2.4** 1. farm*ing* (/ɪ/, the others are /ə/) 2. *a*bout (/ə/, the others are
-/ɪ/) 3. *i*nside (/ɪ/, the others are /ə/) 4. broth*er* (/ə/, the others are /ɪ/)
 
 **2.5** Answers will vary — this is a speaking drill. Check: every *-er* ending
 (*farmer, brother, water, neighbour, bigger*) is the relaxed /ə/, never a full
@@ -753,12 +746,6 @@ by lunchtime.
 /ɪ/.
 
 ### Lesson 3
-
-**3.1** 1. Group 1 2. Group 2 3. Group 3 4. Group 1 5. Group 2 6. Group 3
-7. Group 1 8. Group 3
-
-**3.2** 1. harder 2. more slowly 3. better 4. earlier 5. more carefully
-6. more slowly 7. faster 8. worse
 
 **3.3** *(the intensifier may be* much*,* far *or* a lot*)*
 1. Life in the countryside moves much more slowly than life in the city.
@@ -781,42 +768,15 @@ sentence contains **than**.
 
 ### Lesson 4
 
-**4.1** 1. like / quieter 2. far / by 3. harder / Tell
-
 **4.2** Answers will vary. Check: answer 1 describes the place (it does not say
 "I like it"), and at least two of the three answers contain a comparative
 adverb with *than*.
 
 ### Lesson 5
 
-**5.1** 1. NG (we are told she has lived there sixty-one years, not that she
-was born there) 2. T (there are two shops) 3. F (nobody uses it any more)
-4. F (he says it does **not** move more slowly — it moves differently) 5. T
-("I had imagined silence")
-
-**5.2** 1. It sits between a bend in the river and a hill covered in bamboo.
-2. It is harvest time: everything turns gold and the whole village works from
-five in the morning until it is too dark to see. 3. She gets up, feeds the
-chickens, collects the eggs and walks to the orchard. 4. He expected silence,
-but he found noise — buffaloes, dogs, a radio, and children shouting on the
-bridge. 5. Slow would mean people do little; in fact nobody is idle and
-everyone works hard. What is different is that nobody rushes.
-
-**5.3** 1. bend 2. idle 3. rushes 4. bridge
-
 ### Lesson 6
 
-**6.1** 1. b 2. c 3. a 4. b 5. b
-
-**6.2** 1. Thanh Hoa 2. nineteen 3. five 4. eighty
-
 ### Lesson 7
-
-**7.1** 1. buffalo 2. harvest 3. orchard 4. well 5. herd 6. vast
-
-**7.2** 1. /ə/ 2. /ɪ/ 3. /ə/ 4. /ɪ/ 5. /ə/ 6. /ɪ/
-
-**7.3** 1. more neatly 2. harder 3. better 4. later 5. more heavily 6. worse
 
 **7.4**
 1. live → **lives** *(subject–verb agreement)*

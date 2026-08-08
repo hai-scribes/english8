@@ -52,21 +52,21 @@ Answer in full sentences.
 
 ### 1.2 Find the phrase
 
-Find a phrase in the dialogue that means:
-
-1. I am tired of doing this now → _______________
-2. I have no strong objection → _______________
-3. I really dislike it → _______________
-4. explore a place casually → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
+- I am tired of doing this now = getting bored of that
+- I have no strong objection = I don't mind
+- I really dislike it = can't stand/hate
+- explore a place casually = look around
+:::
 
 ### 1.3 Notice the grammar
 
-Look at the **bold** verbs. Write **V-ing** or **to-V** for each.
-
-1. I **love cooking**. → _______
-2. I don't mind **going**. → _______
-3. I'd love **to try** that. → _______
-4. I **hate getting** up early. → _______
+::: task skill="course" type="choice" opts="V-ing|to-V" ask="Look at the **bold** verbs. Which form follows the verb of liking or disliking?"
+- I **love cooking**. = V-ing
+- I don't mind **going**. = V-ing
+- I'd love **to try** that. = to-V
+- I **hate getting** up early. = V-ing
+:::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — động từ chỉ sự yêu
 > thích đi với **V-ing** hoặc **to-V**. Chi tiết ở Lesson 3.
@@ -118,22 +118,22 @@ Look at the **bold** verbs. Write **V-ing** or **to-V** for each.
 
 ### 2.1 Complete the sentences
 
-Use one word or phrase from the table. Change the form if you need to.
-
-1. My grandmother makes beautiful paper flowers. Her _______ are lovely.
-2. I want to _______ photography next year — I've just bought a camera.
-3. On Sundays I like to _______ with my cousins at the park.
-4. He _______ loud music when he is trying to study.
-5. In her _______ time, my sister does jigsaw puzzles.
-6. We couldn't _______ between the film and the football match.
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
+- My grandmother makes beautiful paper flowers. Her ___ are lovely. = crafts
+- I want to ___ photography next year — I've just bought a camera. = take up
+- On Sundays I like to ___ with my cousins at the park. = hang out
+- He ___ loud music when he is trying to study. = can't stand
+- In her ___ time, my sister does jigsaw puzzles. = leisure
+- We couldn't ___ between the film and the football match. = choose
+:::
 
 ### 2.2 Odd one out
 
-Circle the word that does not belong, and say why.
-
-1. cook · bake · relax · fry
-2. football · swimming · cycling · bookshop
-3. movie · music · craft · concert
+::: task skill="course" type="choice" ask="Pick the word that does not belong. The reason appears when you check."
+- cook · bake · relax · fry = relax ~ the others are ways of cooking
+- football · swimming · cycling · bookshop = bookshop ~ the others are sports or physical activities
+- movie · music · craft · concert = craft ~ the others involve listening or watching
+:::
 
 ### Pronunciation — /ʊ/ and /uː/
 
@@ -171,12 +171,12 @@ boot · foot · June · pull · true · wood · movie**
 
 ### 2.4 Odd sound out
 
-In each line, one word has a **different** vowel sound. Circle it.
-
-1. book · cook · food · look
-2. school · pool · good · cool
-3. would · could · should · choose
-4. music · sugar · blue · movie
+::: task skill="course" type="choice" ask="In each line, one word has a **different** vowel sound. Pick it."
+- book · cook · food · look = food ~ *food* is the long /uː/; the other three are short /ʊ/
+- school · pool · good · cool = good ~ *good* is the short /ʊ/; the other three are long /uː/
+- would · could · should · choose = choose ~ *choose* is the long /uː/; the other three are short /ʊ/
+- music · sugar · blue · movie = sugar ~ *sugar* is the short /ʊ/; the other three are long /uː/
+:::
 
 ### 2.5 Say these sentences
 
@@ -232,21 +232,27 @@ are **three groups**. Learn which group each verb belongs to.
 
 ### 3.1 Recognise the group
 
-Write **1**, **2**, or **3** for the group each verb belongs to.
-
-1. enjoy ___  2. would love ___  3. hate ___  4. can't stand ___
-5. prefer ___  6. don't mind ___  7. would prefer ___  8. avoid ___
+::: task skill="course" type="choice" opts="1|2|3" ask="Which group does each verb belong to? **1** = always V-ing, **2** = both forms, **3** = always to-V."
+- enjoy = 1
+- would love = 3
+- hate = 2
+- can't stand = 1
+- prefer = 2
+- don't mind = 1
+- would prefer = 3
+- avoid = 1
+:::
 
 ### 3.2 One form only
 
-Put the verb in brackets into the correct form. Only **one** answer is possible.
-
-1. I can't stand ____________ (queue) for tickets.
-2. She'd like ____________ (join) the chess club.
-3. My brother avoids ____________ (cook) whenever he can.
-4. We don't mind ____________ (walk) if it isn't far.
-5. Would you prefer ____________ (stay) in tonight?
-6. He practises ____________ (play) the piano every evening.
+::: task skill="course" type="gap-fill" ask="Put the verb in brackets into the correct form. Only **one** answer is possible."
+- I can't stand ___ (queue) for tickets. = queuing
+- She'd like ___ (join) the chess club. = to join
+- My brother avoids ___ (cook) whenever he can. = cooking
+- We don't mind ___ (walk) if it isn't far. = walking
+- Would you prefer ___ (stay) in tonight? = to stay
+- He practises ___ (play) the piano every evening. = playing
+:::
 
 ### 3.3 Two forms possible
 
@@ -355,30 +361,32 @@ one politely, and give a reason.
 
 ### 5.1 True, False, or Not Given
 
-Write **T**, **F**, or **NG**.
-
-1. Trang's family made the Sunday rule many years ago. ___
-2. Trang's father follows recipes carefully. ___
-3. Trang's brother made a piece of furniture for her. ___
-4. Trang's grandmother is the best board game player in the family. ___
-5. Trang's friends understand why she stays at home on Sundays. ___
+::: task skill="reading" type="true-false-not-given" ask="**False** means the blog says the opposite. **Not Given** means the blog does not say either way — and answering from what feels likely about families is exactly the pull this type is built to catch."
+- Trang's family made the Sunday rule many years ago. = F ~ they made it last year
+- Trang's father follows recipes carefully. = F ~ he "can't stand following a recipe"
+- Trang's brother made a piece of furniture for her. = T ~ he built her a bookshelf
+- Trang's grandmother is the best board game player in the family. = NG ~ she usually wins, but the blog never calls her the best
+- Trang's friends understand why she stays at home on Sundays. = F ~ they think it is strange
+:::
 
 ### 5.2 Answer the questions
 
-1. Why is Sunday the only day the family can spend together?
-2. Who chooses the food, and who cooks it?
-3. What has Trang's brother recently taken up?
-4. Why does Trang say the board games "get very loud"?
-5. What does Trang mean by "I would not change it for anything"?
+::: task skill="reading" type="short-answer" words="3" ask="Take the words from the blog. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
+- Where does the family go first on Sunday? = (the) market
+- What is Trang's mother teaching her to make? = paper flowers
+- What hobby has Trang's brother taken up? = woodwork
+- What did her brother build for her room? = (a) (small) bookshelf
+- Who usually wins at board games? = (my) grandmother
+:::
 
 ### 5.3 Vocabulary in context
 
-Find a word or phrase in the blog that means:
-
-1. a new hobby someone has started → _______________
-2. spend time socially → _______________
-3. tilts, is not straight → _______________
-4. a set of instructions for cooking → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the blog that means each of these. Give yourself **three minutes** for all four — searching against a clock is the point, not reading carefully."
+- a new hobby someone has started = taken up
+- spend time socially = hang out
+- tilts, is not straight = leans
+- a set of instructions for cooking = recipe
+:::
 
 ### Speaking — Talking about your leisure time
 
@@ -439,31 +447,31 @@ Repeat Step 2 until you can answer all five clearly.
 
 ### Listening — Nam's free time
 
-> **How to use this without the audio:** ask someone to read the script aloud
-> to you at normal speed while you cover it — or paste it into a
-> text-to-speech tool. Listen **twice** before you look at the text.
->
-> **Cách dùng khi không có file nghe:** nhờ người khác đọc to phần script,
-> hoặc dùng công cụ đọc văn bản. Nghe **hai lần** trước khi nhìn vào bài.
+You get **one** play. That is not us being hard on you — it is how the task
+works, and practising it any other way trains a habit that does not exist on
+the day. Read both sets of questions in the preview window, then answer as you
+listen rather than afterwards.
 
-**Script** — *cover this while you listen*
+**Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-> Hi, I'm Nam. People think I have a lot of free time because I don't play
-> sport, but my week is quite full.
->
-> On weekday evenings I usually stay in. I like listening to music while I do
-> my homework — my mother says this is impossible, but my marks are fine. After
-> that I sometimes watch a short film, though I can't stand anything longer
-> than an hour on a school night.
->
-> Saturdays are for my friends. We meet at the shopping centre near the
-> swimming pool and just walk around. We don't spend much money. Mostly we
-> talk. Last month we started playing football in the park instead, and now
-> half of us are too tired to do anything on Sunday.
->
-> Sunday belongs to my grandparents. I go to their house for lunch and my
-> grandfather teaches me to cook one new dish each week. So far I have learned
-> six. Two of them were good.
+::: audio orientation="You will hear a student called Nam describing how he spends his free time on weekday evenings, on Saturdays and on Sundays." mode="computer" preview="30" review="120"
+Hi, I'm Nam. People think I have a lot of free time because I don't play
+sport, but my week is quite full.
+
+On weekday evenings I usually stay in. I like listening to music while I do
+my homework — my mother says this is impossible, but my marks are fine. After
+that I sometimes watch a short film, though I can't stand anything longer
+than an hour on a school night.
+
+Saturdays are for my friends. We meet at the shopping centre near the
+swimming pool and just walk around. We don't spend much money. Mostly we
+talk. Last month we started playing football in the park instead, and now
+half of us are too tired to do anything on Sunday.
+
+Sunday belongs to my grandparents. I go to their house for lunch and my
+grandfather teaches me to cook one new dish each week. So far I have learned
+six. Two of them were good.
+:::
 
 ::: bridge name="Mark how sure you are, then check your calibration" trains="Listening" cefr="A2→B1" marker="[T2]" src="03 §6.6"
 Next to every answer in **6.1** and **6.2**, write **● sure** or **○ not sure**
@@ -500,18 +508,22 @@ This describes a tendency in test-takers, not a rule of the test.
 
 ### 6.1 Listen and choose
 
-1. Nam says his week is **(a)** empty **(b)** quite full **(c)** too busy
-2. He listens to music while he **(a)** cooks **(b)** exercises **(c)** does homework
-3. On a school night he won't watch anything longer than **(a)** 30 minutes **(b)** an hour **(c)** two hours
-4. On Saturdays he mainly **(a)** spends money **(b)** talks with friends **(c)** studies
-5. His grandfather teaches him **(a)** to cook **(b)** to play football **(c)** to fix things
+::: task skill="listening" type="multiple-choice"
+- Nam says his week is (a) empty (b) quite full (c) too busy = b
+- He listens to music while he (a) cooks (b) exercises (c) does homework = c
+- On a school night he won't watch anything longer than (a) 30 minutes (b) an hour (c) two hours = b
+- On Saturdays he mainly (a) spends money (b) talks with friends (c) studies = b
+- His grandfather teaches him (a) to cook (b) to play football (c) to fix things = a
+:::
 
 ### 6.2 Listen and complete
 
-1. Nam meets his friends at the shopping centre near the ____________.
-2. Last month they started playing ____________ in the park.
-3. He has learned ____________ new dishes so far.
-4. He says ____________ of them were good.
+::: task skill="listening" type="sentence-completion" words="2+number"
+- Nam meets his friends at the shopping centre near the ___ . = swimming pool
+- Last month they started playing ___ in the park. = football
+- He has learned ___ new dishes so far. = six ~ written as words, the way the speaker says it
+- He says ___ of them were good. = Two
+:::
 
 ### Writing — An email about your leisure time
 
@@ -595,31 +607,35 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-Complete with a word from this unit. The first letter is given.
-
-1. In my free time I like doing j_______ p_______.
-2. My sister wants to t_______ u_______ the guitar.
-3. He's very sociable — he loves to s_______ with new people.
-4. I c_______ s_______ loud noise when I'm reading.
-5. We bought the book at the new b_______ in town.
+::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
+- In my free time I like doing ___ . = jigsaw puzzles ~ starts with *j p*
+- My sister wants to ___ the guitar. = take up ~ starts with *t u*
+- He's very sociable — he loves to ___ with new people. = socialise ~ starts with *s*
+- I ___ loud noise when I'm reading. = can't stand ~ starts with *c s*
+- We bought the book at the new ___ in town. = bookshop ~ starts with *b*
+:::
 
 ### 7.2 Pronunciation check
 
-Write /ʊ/ or /uː/ for the underlined sound.
-
-1. f__oo__tball ___  2. sch__oo__l ___  3. w__ou__ld ___
-4. ch__oo__se ___  5. c__oo__k ___  6. m__o__vie ___
+::: task skill="course" type="choice" opts="/ʊ/|/uː/" ask="Which vowel is in the bold part?"
+- f**oo**tball = /ʊ/
+- sch**oo**l = /uː/
+- w**ou**ld = /ʊ/
+- ch**oo**se = /uː/
+- c**oo**k = /ʊ/
+- m**o**vie = /uː/
+:::
 
 ### 7.3 Grammar check
 
-Complete with the correct form of the verb.
-
-1. I enjoy ____________ (spend) time with my grandparents.
-2. She'd love ____________ (visit) Da Nang next summer.
-3. They don't mind ____________ (wait) for ten minutes.
-4. He can't stand ____________ (lose) at board games.
-5. Would you like ____________ (come) with us?
-6. My father hates ____________ (drive) in the rain. *(two answers possible)*
+::: task skill="course" type="gap-fill" ask="Complete with the correct form of the verb. One of these has two possible answers."
+- I enjoy ___ (spend) time with my grandparents. = spending
+- She'd love ___ (visit) Da Nang next summer. = to visit
+- They don't mind ___ (wait) for ten minutes. = waiting
+- He can't stand ___ (lose) at board games. = losing
+- Would you like ___ (come) with us? = to come
+- My father hates ___ (drive) in the rain. = driving/to drive
+:::
 
 ### 7.4 Error hunt
 
@@ -670,17 +686,7 @@ wants to make lunch herself. 3. You can buy books, and play board games for
 free if you buy a drink (there is also a café). 4. He hates it. 5. They plan to
 go for a swim.
 
-**1.2** 1. getting bored of that 2. I don't mind 3. can't stand / hate 4. look around
-
-**1.3** 1. V-ing 2. V-ing 3. to-V 4. V-ing
-
 ### Lesson 2
-
-**2.1** 1. crafts 2. take up 3. hang out 4. can't stand 5. leisure 6. choose
-
-**2.2** 1. **relax** — the others are ways of cooking. 2. **bookshop** — the
-others are sports/physical activities. 3. **craft** — the others involve
-listening or watching.
 
 **2.3**
 - /ʊ/ — good, look, put, foot, pull, wood
@@ -689,14 +695,7 @@ listening or watching.
 *Compare **foot** /fʊt/ with **boot** /buːt/ — same consonants, and the vowel
 is the only thing that tells them apart.*
 
-**2.4** 1. food 2. good 3. choose 4. sugar
-
 ### Lesson 3
-
-**3.1** 1. Group 1 2. Group 3 3. Group 2 4. Group 1 5. Group 2 6. Group 1
-7. Group 3 8. Group 1
-
-**3.2** 1. queuing 2. to join 3. cooking 4. walking 5. to stay 6. playing
 
 **3.3**
 1. I love watching films with my dad. / I love to watch films with my dad.
@@ -722,32 +721,9 @@ politely with a reason.
 
 ### Lesson 5
 
-**5.1** 1. F (last year) 2. F (he can't stand following a recipe) 3. T
-4. NG (she usually wins, but the text doesn't say she is the best) 5. F (they
-think it is strange)
-
-**5.2** 1. Because everyone is busy from Monday to Saturday — the parents work,
-her brother has extra classes, and she has school and homework. 2. Trang and
-her mum choose the food; her dad and brother cook it. 3. Woodwork. 4. Because
-nobody in the family enjoys losing. 5. That she loves the bookshelf exactly as
-it is, despite the fault — she values it too much to replace it.
-
-**5.3** 1. taken up 2. hang out 3. leans 4. recipe
-
 ### Lesson 6
 
-**6.1** 1. b 2. c 3. b 4. b 5. a
-
-**6.2** 1. swimming pool 2. football 3. six 4. Two
-
 ### Lesson 7
-
-**7.1** 1. jigsaw puzzles 2. take up 3. socialise 4. can't stand 5. bookshop
-
-**7.2** 1. /ʊ/ 2. /uː/ 3. /ʊ/ 4. /uː/ 5. /ʊ/ 6. /uː/
-
-**7.3** 1. spending 2. to visit 3. waiting 4. losing 5. to come
-6. driving *or* to drive
 
 **7.4**
 1. enjoy → **enjoys**

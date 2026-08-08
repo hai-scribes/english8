@@ -61,23 +61,22 @@ Answer in full sentences.
 
 ### 1.2 Find the phrase
 
-Find a word or phrase in the dialogue that means:
-
-1. things you place on an altar for spirits or ancestors → _______________
-2. cover something completely in paper, leaves or cloth → _______________
-3. object to something; find it unacceptable → _______________
-4. look at something with your own eyes → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
+- things you place on an altar for spirits or ancestors = offerings
+- cover something completely in paper, leaves or cloth = wrap
+- object to something; find it unacceptable = mind
+- look at something with your own eyes = see for yourself
+:::
 
 ### 1.3 Notice the grammar
 
-Each sentence below comes from the dialogue, but the little word before the
-noun is missing. Write **a**, **an**, **the**, or **—** if no word is needed.
-
-1. It's ______ festival for the village guardian spirit.
-2. I've got ______ hour before my class.
-3. He is ______ oldest person in the family.
-4. Wrap these cakes in ______ banana leaves.
-5. He was ______ loudest singer I have ever heard.
+::: task skill="course" type="choice" opts="a|an|the|—" ask="Each sentence comes from the dialogue, but the little word before the noun is missing. Pick **a**, **an**, **the**, or **—** if no word is needed."
+- It's ___ festival for the village guardian spirit. = a
+- I've got ___ hour before my class. = an
+- He is ___ oldest person in the family. = the
+- Wrap these cakes in ___ banana leaves. = — ~ plural, general meaning — no article
+- He was ___ loudest singer I have ever heard. = the
+:::
 
 > **Ghi chú:** Những từ nhỏ *a*, *an*, *the* gọi là **mạo từ** (articles).
 > Tiếng Việt không có mạo từ, nên đây là phần khó nhất của cả cuốn sách với
@@ -112,24 +111,22 @@ noun is missing. Write **a**, **an**, **the**, or **—** if no word is needed.
 
 ### 2.1 Complete the sentences
 
-Use one word or phrase from the table. Change the form if you need to.
-
-1. On the morning of the first day, the ____________ brings luck into the house.
-2. My grandmother burns ____________ in front of the altar every morning.
-3. These songs have been ____________ ____________ from parents to children for
-   three hundred years.
-4. In my village it is a ____________ to sweep the floor on the first day of the
-   lunar year.
-5. The whole family ____________ ____________ on the last evening of the year.
-6. We ____________ the house with yellow flowers a week before the festival.
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
+- On the morning of the first day, the ___ brings luck into the house. = first-footer
+- My grandmother burns ___ in front of the altar every morning. = incense
+- These songs have been ___ from parents to children for three hundred years. = passed down
+- In my village it is a ___ to sweep the floor on the first day of the lunar year. = taboo
+- The whole family ___ on the last evening of the year. = gets together
+- We ___ the house with yellow flowers a week before the festival. = decorate
+:::
 
 ### 2.2 Odd one out
 
-Circle the word that does not belong, and say why.
-
-1. custom · tradition · ritual · taboo
-2. wrap · decorate · celebrate · ancestor
-3. lunar · festival · generation · offering
+::: task skill="course" type="choice" ask="In each line, one word does not belong. Pick it — the reason is given when you check."
+- Line 1 — (a) custom (b) tradition (c) ritual (d) taboo = d ~ the others are things people *do*; a taboo is something you must **not** do
+- Line 2 — (a) wrap (b) decorate (c) celebrate (d) ancestor = d ~ the others are verbs; *ancestor* is a noun
+- Line 3 — (a) lunar (b) festival (c) generation (d) offering = a ~ the others are nouns; *lunar* is an adjective
+:::
 
 ### Pronunciation — /n/ and /ŋ/
 
@@ -170,12 +167,12 @@ spring · incense · young · banner · gong · lantern · wrapping**
 
 ### 2.4 Odd sound out
 
-In each line, one word has a **different** nasal sound. Circle it.
-
-1. thin · win · king · sun
-2. sing · song · sun · young
-3. banner · dinner · finger · runner
-4. thank · bank · ban · sink
+::: task skill="course" type="choice" ask="In each line, one word has a **different** nasal sound. Pick it."
+- Line 1 — (a) thin (b) win (c) king (d) sun = c ~ *king* ends in /ŋ/; the others end in /n/
+- Line 2 — (a) sing (b) song (c) sun (d) young = c ~ *sun* ends in /n/; the others end in /ŋ/
+- Line 3 — (a) banner (b) dinner (c) finger (d) runner = c ~ *finger* is /ˈfɪŋɡə(r)/, so it has /ŋ/; the others have /n/
+- Line 4 — (a) thank (b) bank (c) ban (d) sink = c ~ *ban* is /bæn/; in *thank*, *bank* and *sink* the *n* comes before /k/, so it is /ŋ/
+:::
 
 ### 2.5 Say these sentences
 
@@ -275,23 +272,33 @@ happens in a place*, use no article. When you mean *the building itself*, use
 
 ### 3.1 *a* or *an*?
 
-Write **a** or **an** in front of each phrase. Say it aloud before you decide.
-
-1. ______ hour  2. ______ university  3. ______ MP3 file  4. ______ ancestor
-5. ______ European friend  6. ______ honest answer  7. ______ lunar month
-8. ______ umbrella  9. ______ one-day holiday  10. ______ offering
+::: task skill="course" type="choice" opts="a|an" ask="Pick **a** or **an** for each phrase. Say it aloud before you decide — the choice follows the **sound**, not the spelling."
+- ___ hour = an
+- ___ university = a
+- ___ MP3 file = an
+- ___ ancestor = an
+- ___ European friend = a
+- ___ honest answer = an
+- ___ lunar month = a
+- ___ umbrella = an
+- ___ one-day holiday = a
+- ___ offering = an
+:::
 
 ### 3.2 Fill the gaps
 
-Write **a**, **an**, **the**, or **—** (no article).
-
-Last week my aunt gave me (1) ______ old photograph. (2) ______ photograph
-shows my great-grandmother at (3) ______ village festival in 1968. She is
-holding (4) ______ tray of offerings, and behind her (5) ______ moon is very
-bright. My aunt says that (6) ______ customs like this one are disappearing.
-In our family (7) ______ oldest person always lights (8) ______ first stick of
-incense, and nobody eats (9) ______ dinner before that. I hope my own children
-will see (10) ______ same photograph one day.
+::: task skill="course" type="choice" opts="a|an|the|—" ask="One connected story, one gap at a time. Pick **a**, **an**, **the**, or **—** (no article)."
+- Last week my aunt gave me ___ old photograph. = an
+- ___ photograph shows my great-grandmother… = the ~ second mention; write it with a capital *T* at the start of the sentence
+- …at ___ village festival in 1968. = a
+- She is holding ___ tray of offerings… = a
+- …and behind her ___ moon is very bright. = the ~ there is only one
+- My aunt says that ___ customs like this one are disappearing. = — ~ plural, general meaning
+- In our family ___ oldest person always lights… = the ~ superlative
+- …always lights ___ first stick of incense… = the ~ ordinal number
+- …and nobody eats ___ dinner before that. = — ~ meals take no article
+- I hope my own children will see ___ same photograph one day. = the
+:::
 
 ### 3.3 First mention, then second mention
 
@@ -418,30 +425,32 @@ in one or two sentences, using a phrase from the tables above.
 
 ### 5.1 True, False, or Not Given
 
-Write **T**, **F**, or **NG**.
-
-1. The village festival takes place in the second lunar month. ___
-2. Khanh's grandmother checks the cakes he has wrapped. ___
-3. Khanh's little brother carries a tray of offerings. ___
-4. The rice-cooking contest is the most popular event of the afternoon. ___
-5. Khanh no longer complains about getting up at four. ___
+::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you already know about village festivals is exactly the pull this type is built to catch."
+- The village festival takes place in the second lunar month. = T
+- Khanh's grandmother checks the cakes he has wrapped. = T
+- Khanh's little brother carries a tray of offerings. = F ~ "his only job is to stay out of the way"
+- The rice-cooking contest is the most popular event of the afternoon. = NG ~ the text names the contest but never ranks it
+- Khanh no longer complains about getting up at four. = T
+:::
 
 ### 5.2 Answer the questions
 
-1. What is Khanh's job early in the morning?
-2. Who carries the palanquin, and where does it go?
-3. Why do visitors find the moment at the temple strange?
-4. What does Khanh's grandmother mean when she says "the silence is the point"?
-5. What made Khanh change his attitude to the early start?
+::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
+- What is Khanh's job early in the morning? = wrap the cakes
+- Which building does the procession set out from? = (the) communal house
+- Who lights the first stick of incense at the temple? = (the) oldest man
+- What keeps everyone in step during the procession? = (a) gong
+- What contest is held in the afternoon? = rice-cooking
+:::
 
 ### 5.3 Vocabulary in context
 
-Find a word in the text that means:
-
-1. a covered seat carried on poles by several people → _______________
-2. a line of people moving forward together in a ceremony → _______________
-3. not tight; likely to come off → _______________
-4. left in water for a long time → _______________
+::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. Give yourself **three minutes** for all four — searching against a clock is the point, not reading carefully."
+- a covered seat carried on poles by several people = palanquin
+- a line of people moving forward together in a ceremony = procession
+- not tight; likely to come off = loose
+- left in water for a long time = soaked
+:::
 
 ### Speaking — Building a dialogue about a family event
 
@@ -483,60 +492,54 @@ Repeat Step 2 until all six exchanges run clearly.
 
 ### Listening — Ok Om Bok, the Moon Worshipping festival
 
-> **How to use this without the audio:** ask someone to read the script aloud
-> to you at normal speed while you cover it — or paste it into a
-> text-to-speech tool. Listen **twice** before you look at the text.
->
-> **Cách dùng khi không có bản ghi âm:** nhờ người khác đọc to phần lời thoại,
-> hoặc dùng công cụ đọc văn bản. Nghe **hai lần** trước khi nhìn vào bài.
+You get **one** play. Place names and dates go past quickly here, so read both
+sets of questions in the preview window first and answer as you listen rather
+than afterwards. The script stays locked until you have marked every question.
 
-**Script** — *cover this while you listen*
+**Nghe một lần duy nhất.** Đọc trước câu hỏi, rồi vừa nghe vừa trả lời.
 
-> Good evening, and welcome to *Festivals of Viet Nam*. Tonight: Ok Om Bok.
->
-> Ok Om Bok is a festival of the Khmer people in southern Viet Nam. You will
-> see it most clearly in Tra Vinh and Soc Trang, where the Khmer communities
-> are large. It falls on the full-moon night of the tenth lunar month, when the
-> rice harvest is finished and the sky is usually clear.
->
-> The English name is the Moon Worshipping festival, and that is exactly what
-> happens. Families build a small bamboo frame in the yard and lay out
-> offerings: fruit, coconuts, sweet potatoes, and above all *com dep*, young
-> green rice flattened by hand. When the moon is high, the oldest person calls
-> the children forward, puts a little *com dep* into each child's mouth and
-> asks what they wish for. The answer is supposed to tell the family how the
-> coming year will go.
->
-> After that, the festival moves outside. People float paper lanterns to carry
-> away the bad luck of the old year, and in the days around the full moon there
-> are *ngo* boat races on the river. A *ngo* boat is long and narrow, and a
-> village will train its crew for weeks.
->
-> Next week: a festival with no music at all.
+::: audio orientation="You will hear the presenter of a radio programme about Vietnamese festivals describing Ok Om Bok, a Khmer festival in the south of the country." mode="computer" preview="30" review="120"
+Good evening, and welcome to *Festivals of Viet Nam*. Tonight: Ok Om Bok.
 
-> **Before you check — how sure are you?** Mark each answer **●** if you are
-> sure and **○** if you are not, *before* you look at the key. Then count how
-> many of each you got right. If the **●** answers are not clearly better than
-> the **○** ones, the feeling of certainty is not yet telling you anything —
-> which is more useful to know than the score. Unit 1 explains why.
->
-> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
-> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+Ok Om Bok is a festival of the Khmer people in southern Viet Nam. You will
+see it most clearly in Tra Vinh and Soc Trang, where the Khmer communities
+are large. It falls on the full-moon night of the tenth lunar month, when the
+rice harvest is finished and the sky is usually clear.
+
+The English name is the Moon Worshipping festival, and that is exactly what
+happens. Families build a small bamboo frame in the yard and lay out
+offerings: fruit, coconuts, sweet potatoes, and above all *com dep*, young
+green rice flattened by hand. When the moon is high, the oldest person calls
+the children forward, puts a little *com dep* into each child's mouth and
+asks what they wish for. The answer is supposed to tell the family how the
+coming year will go.
+
+After that, the festival moves outside. People float paper lanterns to carry
+away the bad luck of the old year, and in the days around the full moon there
+are *ngo* boat races on the river. A *ngo* boat is long and narrow, and a
+village will train its crew for weeks.
+
+Next week: a festival with no music at all.
+:::
 
 ### 6.1 Listen and choose
 
-1. Ok Om Bok is a festival of the **(a)** Kinh **(b)** Khmer **(c)** Tay people
-2. It falls in the **(a)** first **(b)** eighth **(c)** tenth lunar month
-3. *Com dep* is **(a)** young green rice **(b)** a sweet soup **(c)** a boat
-4. The oldest person asks the children **(a)** to sing **(b)** what they wish for **(c)** to bow to the moon
-5. People float paper lanterns to **(a)** light the river **(b)** carry away bad luck **(c)** show the boats the way
+::: task skill="listening" type="multiple-choice"
+- Ok Om Bok is a festival of the (a) Kinh (b) Khmer (c) Tay people = b
+- It falls in the (a) first (b) eighth (c) tenth lunar month = c
+- *Com dep* is (a) young green rice (b) a sweet soup (c) a boat = a
+- The oldest person asks the children (a) to sing (b) what they wish for (c) to bow to the moon = b
+- People float paper lanterns to (a) light the river (b) carry away bad luck (c) show the boats the way = b
+:::
 
 ### 6.2 Listen and complete
 
-1. The festival is easiest to see in Tra Vinh and ____________.
-2. It falls on the ____________ night of the tenth lunar month.
-3. Families lay the offerings out on a small ____________ frame.
-4. A *ngo* boat is long and ____________.
+::: task skill="listening" type="sentence-completion" words="2"
+- The festival is easiest to see in Tra Vinh and ___ . = Soc Trang
+- It falls on the ___ night of the tenth lunar month. = full-moon
+- Families lay the offerings out on a small ___ frame. = bamboo
+- A *ngo* boat is long and ___ . = narrow
+:::
 
 ### Writing — An email of advice
 
@@ -649,33 +652,37 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-Complete with a word from this unit. The first letter is given.
-
-1. My grandmother burns i_______ in front of the altar each morning.
-2. Tet falls on the first day of the l_______ year.
-3. Stories like this are p_______ d_______ from one generation to the next.
-4. Breaking a mirror is bad luck — that is an old s_______.
-5. The whole family g_______ t_______ on the last evening of the year.
+::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
+- My grandmother burns ___ in front of the altar each morning. = incense ~ starts with *i*
+- Tet falls on the first day of the ___ year. = lunar ~ starts with *l*
+- Stories like this are ___ from one generation to the next. = passed down ~ starts with *p d*
+- Breaking a mirror is bad luck — that is an old ___ . = superstition ~ starts with *s*
+- The whole family ___ on the last evening of the year. = gets together ~ starts with *g t*
+:::
 
 ### 7.2 Pronunciation check
 
-Write **/n/** or **/ŋ/** for the underlined sound.
-
-1. thi__n__ ___  2. spri__ng__ ___  3. i__n__cense ___
-4. tha__n__k ___  5. ba__nn__er ___  6. offeri__ng__ ___
+::: task skill="course" type="choice" opts="/n/|/ŋ/" ask="Which nasal sound is in the bold part?"
+- thi**n** = /n/
+- spri**ng** = /ŋ/
+- i**n**cense = /n/
+- tha**n**k = /ŋ/
+- ba**nn**er = /n/
+- offeri**ng** = /ŋ/
+:::
 
 ### 7.3 Grammar check
 
-Complete with **a**, **an**, **the**, or **—** (no article).
-
-1. My sister goes to ______ bed very late on New Year's Eve.
-2. It took us ______ hour to decorate the altar.
-3. ______ moon was very bright that night.
-4. ______ Traditions change slowly, but they do change.
-5. My cousin is ______ university student in Can Tho.
-6. My grandmother gave me ______ old silver bracelet.
-7. She said ______ bracelet had belonged to her mother.
-8. We never eat ______ breakfast before the offerings.
+::: task skill="course" type="choice" opts="a|an|the|—" ask="Complete with **a**, **an**, **the**, or **—** (no article)."
+- My sister goes to ___ bed very late on New Year's Eve. = — ~ *go to bed* is the activity, not the furniture
+- It took us ___ hour to decorate the altar. = an ~ silent *h*, so the sound is a vowel
+- ___ moon was very bright that night. = the ~ there is only one; capitalise it at the start of the sentence
+- ___ Traditions change slowly, but they do change. = — ~ plural, general meaning
+- My cousin is ___ university student in Can Tho. = a ~ "yoo-niversity" starts with the consonant sound /j/
+- My grandmother gave me ___ old silver bracelet. = an
+- She said ___ bracelet had belonged to her mother. = the ~ second mention
+- We never eat ___ breakfast before the offerings. = — ~ meals take no article
+:::
 
 ### 7.4 Error hunt
 
@@ -735,26 +742,11 @@ checking your articles.
 family. 4. He must not wear a hat inside the communal house. 5. There were games
 in the yard and a gong, and an old man from the next village sang for two hours.
 
-**1.2** 1. offerings 2. wrap 3. mind 4. see for yourself
-
-**1.3** 1. a 2. an 3. the 4. — 5. the
-
 ### Lesson 2
-
-**2.1** 1. first-footer 2. incense 3. passed down 4. taboo 5. gets together
-6. decorate
-
-**2.2** 1. **taboo** — the others are things people *do*; a taboo is something
-you must **not** do. 2. **ancestor** — the others are verbs; *ancestor* is a
-noun. 3. **lunar** — the others are nouns; *lunar* is an adjective.
 
 **2.3**
 - /n/ — sun, moon, dinner, incense, banner, lantern
 - /ŋ/ — sing, thing, spring, young, gong, wrapping
-
-**2.4** 1. king (/ŋ/; the others end in /n/) 2. sun (/n/; the others end in /ŋ/)
-3. finger (/ˈfɪŋɡə(r)/ has /ŋ/; the others have /n/) 4. ban (/bæn/ has /n/; in
-*thank*, *bank* and *sink* the *n* comes before /k/, so it is /ŋ/)
 
 **2.5** Answers will vary in speed. Check: every *-ng* word ends at the **back**
 of your mouth with the tongue tip **down**, and *thin*, *banners*, *lane*,
@@ -762,10 +754,6 @@ of your mouth with the tongue tip **down**, and *thin*, *banners*, *lane*,
 *Thank* has /ŋ/, not /n/.
 
 ### Lesson 3
-
-**3.1** 1. an 2. a 3. an 4. an 5. a 6. an 7. a 8. an 9. a 10. an
-
-**3.2** 1. an 2. The 3. a 4. a 5. the 6. — 7. the 8. the 9. — 10. the
 
 **3.3** Sample answers — yours will differ.
 1. An old man stood at the temple gate. / The old man sang for two hours.
@@ -800,32 +788,9 @@ a reason as well as an instruction.
 
 ### Lesson 5
 
-**5.1** 1. T 2. T 3. F (his only job is to stay out of the way) 4. NG (the text
-mentions the contest but never says it is the most popular) 5. T
-
-**5.2** 1. He wraps the cakes his grandmother has soaked overnight — and rewraps
-any with a loose leaf. 2. Men from each family carry it, from the communal house
-to the temple. 3. Because the silence lasts a long time and nothing appears to
-be happening. 4. That the silence is not empty time before the ceremony — it
-**is** the ceremony, the most important part of it. 5. He realised that the
-people who taught his grandmother these customs have died, and that she is now
-teaching him — so the early start matters.
-
-**5.3** 1. palanquin 2. procession 3. loose 4. soaked
-
 ### Lesson 6
 
-**6.1** 1. b 2. c 3. a 4. b 5. b
-
-**6.2** 1. Soc Trang 2. full-moon 3. bamboo 4. narrow
-
 ### Lesson 7
-
-**7.1** 1. incense 2. lunar 3. passed down 4. superstition 5. gets together
-
-**7.2** 1. /n/ 2. /ŋ/ 3. /n/ 4. /ŋ/ 5. /n/ 6. /ŋ/
-
-**7.3** 1. — 2. an 3. The 4. — 5. a 6. an 7. the 8. —
 
 **7.4**
 1. in a Ha Noi → in **Ha Noi** *(no article with most cities)*

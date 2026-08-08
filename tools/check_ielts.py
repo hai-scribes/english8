@@ -70,7 +70,13 @@ spec.loader.exec_module(b)
 BAND_PROMISE = [
     (re.compile(r"\b(your|estimated|predicted|target|current)\s+(ielts\s+)?band\b", re.I),
      "a band presented as the learner's own score (A2)"),
-    (re.compile(r"\b(reach|get to|hit|achieve|guarantee[sd]?)\s+(ielts\s+)?band\b", re.I),
+    # "get you to band 6" slipped through an earlier "get to band" — the
+    # promise takes an object as often as not, so the verb and the noun are
+    # allowed a few words between them.
+    (re.compile(r"\b(reach|get(s|ting)?|take[sn]?|bring|push|lift|move|hit|achiev\w+|"
+                r"guarantee[sd]?)\b(\s+\w+){0,3}\s+to\s+(ielts\s+)?band\b", re.I),
+     "a band presented as a promise (A2)"),
+    (re.compile(r"\b(reach|hit|achiev\w+|guarantee[sd]?|score)\s+(ielts\s+)?band\s*\d", re.I),
      "a band presented as a promise (A2)"),
     (re.compile(r"\bband\s*\d(\.\d)?\s*(lesson|level|vocabulary|words|checklist|rubric)\b", re.I),
      "a band used as a level label — label by CEFR instead (A1)"),

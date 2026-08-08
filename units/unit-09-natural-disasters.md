@@ -59,21 +59,21 @@ Answer in full sentences.
 
 ### 1.2 Find the phrase
 
-Find a word or phrase in the dialogue that means:
-
-1. a statement about what the weather will do → _______________
-2. gone back the way you came → _______________
-3. covered by water → _______________
-4. survived many difficult events → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
+- a statement about what the weather will do = forecast
+- gone back the way you came = turned back
+- covered by water = under water
+- survived many difficult events = has been through
+:::
 
 ### 1.3 Notice the grammar
 
-Look at the **bold** verbs. Write **past continuous** or **past simple**.
-
-1. The wind **was hitting** our window all night. → _______________
-2. A branch **fell** on the roof. → _______________
-3. I **was cycling** to school. → _______________
-4. I **saw** two men pushing a motorbike. → _______________
+::: task skill="course" type="choice" opts="past continuous|past simple" ask="Look at the **bold** verb in each line. Which tense is it?"
+- The wind **was hitting** our window all night. = past continuous
+- A branch **fell** on the roof. = past simple
+- I **was cycling** to school. = past continuous
+- I **saw** two men pushing a motorbike. = past simple
+:::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **thì quá khứ tiếp diễn**
 > (*was/were* + V-ing) và cách kết hợp nó với thì quá khứ đơn bằng *when* và
@@ -108,26 +108,24 @@ Look at the **bold** verbs. Write **past continuous** or **past simple**.
 
 ### 2.1 Complete the sentences
 
-Use one word from the table. Change the form if you need to.
-
-1. There has been no rain here for eight months — it is the worst _______ in
-   twenty years.
-2. The police told everyone near the coast to _______ before the wave arrived.
-3. Heavy rain caused a _______ that buried the mountain road.
-4. Three days after the earthquake the team found another _______ under the
-   building — a boy of eleven.
-5. The storm did not _______ our house, but it did a lot of _______ to the roof.
-6. Lorries brought _______ supplies — rice, blankets and clean water — to the
-   village.
+::: task skill="course" type="gap-fill" ask="Use one word from the table. Change the form if you need to."
+- There has been no rain here for eight months — it is the worst ___ in twenty years. = drought
+- The police told everyone near the coast to ___ before the wave arrived. = evacuate
+- Heavy rain caused a ___ that buried the mountain road. = landslide
+- Three days after the earthquake the team found another ___ under the building — a boy of eleven. = survivor
+- The storm did not ___ our house. = destroy
+- It did a lot of ___ to the roof, though. = damage
+- Lorries brought ___ supplies — rice, blankets and clean water — to the village. = relief
+:::
 
 ### 2.2 Odd one out
 
-Circle the word that does not belong, and say why.
-
-1. earthquake · flood · landslide · shelter
-2. destroy · damage · collapse · rescue
-3. warning · forecast · siren · drought
-4. victim · survivor · volcano · rescue team
+::: task skill="course" type="choice" ask="One word in each line does not belong. Pick it — the reason tells you why."
+- Line 1 — (a) earthquake (b) flood (c) landslide (d) shelter = d ~ the others are natural disasters; a shelter is a safe place
+- Line 2 — (a) destroy (b) damage (c) collapse (d) rescue = d ~ the others mean to break or harm something
+- Line 3 — (a) warning (b) forecast (c) siren (d) drought = d ~ the others tell you that something dangerous is coming
+- Line 4 — (a) victim (b) survivor (c) volcano (d) rescue team = c ~ the others are people
+:::
 
 ### Pronunciation — Word stress in multi-syllable words
 
@@ -214,17 +212,16 @@ danger · escape**
 
 ### 2.4 Use the suffix rule
 
-Mark the stressed syllable with `ˈ` in front of it. Do not use a dictionary —
-use Rule 3.
-
-1. destruction → _______________
-2. eruption → _______________
-3. volcanic → _______________
-4. ability → _______________
-5. protection → _______________
-6. electricity → _______________
-7. dramatic → _______________
-8. evacuation → _______________
+::: task skill="course" type="gap-fill" ask="Write each word out with `ˈ` in front of its stressed syllable. Do not use a dictionary — use Rule 3."
+- destruction = deˈstruction
+- eruption = eˈruption
+- volcanic = volˈcanic
+- ability = aˈbility
+- protection = proˈtection
+- electricity = elecˈtricity
+- dramatic = draˈmatic
+- evacuation = evacuˈation
+:::
 
 ### 2.5 Say these aloud
 
@@ -316,27 +313,27 @@ it:
 
 ### 3.1 Recognise the tense
 
-Write **PC** (past continuous) or **PS** (past simple) for each **bold** verb.
-
-1. At eight o'clock last night it **was raining** hard. ___
-2. The wall **collapsed** just after midnight. ___
-3. While we **were packing**, the lights went out. ___
-4. My father **filled** ten buckets with water. ___
-5. The radio **was warning** people all afternoon. ___
-6. Nobody **heard** the siren. ___
-7. The rescue team **were carrying** an old woman to the boat. ___
-8. That volcano **erupted** in 2010. ___
+::: task skill="course" type="choice" opts="PC|PS" ask="**PC** for past continuous, **PS** for past simple. Judge the **bold** verb only."
+- At eight o'clock last night it **was raining** hard. = PC
+- The wall **collapsed** just after midnight. = PS
+- While we **were packing**, the lights went out. = PC
+- My father **filled** ten buckets with water. = PS
+- The radio **was warning** people all afternoon. = PC
+- Nobody **heard** the siren. = PS
+- The rescue team **were carrying** an old woman to the boat. = PC
+- That volcano **erupted** in 2010. = PS
+:::
 
 ### 3.2 Put the verb into the past continuous
 
-Watch the spelling of the *-ing* form.
-
-1. At seven o'clock we ____________ (listen) to the forecast.
-2. She ____________ (not / sleep) when the branch fell on the roof.
-3. What ____________ you ____________ (do) when the earthquake started?
-4. The men ____________ (dig) a channel behind the school.
-5. My grandmother ____________ (lie) on the sofa with the radio on.
-6. The water ____________ (rise) far more quickly than anyone expected.
+::: task skill="course" type="gap-fill" ask="Watch the spelling of the *-ing* form."
+- At seven o'clock we ___ (listen) to the forecast. = were listening
+- She ___ (not / sleep) when the branch fell on the roof. = was not sleeping/wasn't sleeping
+- What were you ___ (do) when the earthquake started? = doing
+- The men ___ (dig) a channel behind the school. = were digging
+- My grandmother ___ (lie) on the sofa with the radio on. = was lying
+- The water ___ (rise) far more quickly than anyone expected. = was rising
+:::
 
 ### 3.3 Join with *when* or *while*
 
@@ -478,31 +475,32 @@ then a reason.
 
 ### 5.1 True, False, or Not Given
 
-Write **T**, **F**, or **NG**.
-
-1. The flood filled the ground floor of every house on that street. ___
-2. The mud went away as soon as the water did. ___
-3. Japan has more earthquakes than any other country. ___
-4. Rescue teams sometimes have to reach a village on foot. ___
-5. In coastal villages the siren sounds after the big wave has arrived. ___
+::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and what you already know about storms and floods is exactly the pull this type is built to catch."
+- The flood filled the ground floor of every house on that street. = T
+- The mud went away as soon as the water did. = F ~ the water went down after three days; the mud stayed three weeks
+- Japan has more earthquakes than any other country. = NG ~ the text says Japan has earthquakes, never that it has the most
+- Rescue teams sometimes have to reach a village on foot. = T
+- In coastal villages the siren sounds after the big wave has arrived. = F ~ it sounds long before the wave arrives
+:::
 
 ### 5.2 Answer the questions
 
-1. What were the families doing while the water was rising?
-2. How long did the water stay, and how long did the mud stay?
-3. Why are doctors often busier a month after a flood than during it?
-4. Why must engineers check buildings that still look safe?
-5. What does the writer mean by "Nobody can stop a disaster. Being ready for one
-   is something you can learn."?
+::: task skill="reading" type="short-answer" words="2" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
+- What were the families carrying upstairs? = (their) furniture
+- How long did the mud stay? = three weeks
+- What makes people ill after a flood? = dirty water
+- Buildings that look safe may be what, inside? = weak
+- What sounds in many coastal villages before a big wave? = (a) siren
+:::
 
 ### 5.3 Vocabulary in context
 
-Find a word in the text that means:
-
-1. spoils something completely → _______________
-2. soft wet earth left behind by water → _______________
-3. the raised edge of a river → _______________
-4. a loud machine that gives a warning sound → _______________
+::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. Give yourself **three minutes** for all four — searching against a clock is the point, not reading carefully."
+- spoils something completely = ruins
+- soft wet earth left behind by water = mud
+- the raised edge of a river = bank
+- a loud machine that gives a warning sound = siren
+:::
 
 ### Speaking — Delivering a news report
 
@@ -559,68 +557,63 @@ Repeat Step 2 until the report runs clearly from start to finish.
 
 ### Listening — The evening storm bulletin
 
-> **How to use this without the audio:** ask someone to read the script aloud
-> to you at normal speed while you cover it — or paste it into a
-> text-to-speech tool. Listen **twice** before you look at the text.
->
-> **Cách dùng khi không có bản ghi âm:** nhờ người khác đọc to phần lời thoại,
-> hoặc dùng công cụ đọc văn bản. Nghe **hai lần** trước khi nhìn vào bài.
+You get **one** play. A radio bulletin in a storm does not rewind for anybody,
+and practising it any other way trains a habit that will not be there on the
+night. Read both sets of questions in the preview window first, then answer as
+you listen rather than afterwards.
 
-**Script** — *cover this while you listen*
+**Nghe một lần duy nhất.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
 
-> Good evening. This is the seven o'clock weather bulletin.
->
-> Storm Number Six is now about two hundred kilometres off the coast and moving
-> west. It should reach us tomorrow morning. Winds of a hundred kilometres an
-> hour are expected, with heavy rain for two days after that.
->
-> Here is what we are asking you to do tonight.
->
-> If you live near the river, move upstairs now. Do not wait until the morning.
-> Take your documents, your medicine and a torch with you, and put them in a
-> plastic bag.
->
-> Check your roof. This afternoon our reporter was driving through Phu Loc and
-> saw dozens of loose roof sheets. While she was filming, one of them came off
-> in the wind.
->
-> Fill every container you have with clean water. When the flood arrives, the
-> tap water will not be safe to drink.
->
-> Charge your phone tonight. The electricity may go off tomorrow.
->
-> Schools in the coastal districts will be closed tomorrow and Thursday. Buses
-> to the mountains have already stopped.
->
-> Finally, please check on your neighbours, especially the older ones. Last year
-> most of the people we rescued were over seventy.
->
-> We will be back with another bulletin at six in the morning.
+::: audio orientation="You will hear a local radio weather bulletin about a storm that is approaching the coast, and about what people are being asked to do before it arrives." mode="computer" preview="30" review="120"
+Good evening. This is the seven o'clock weather bulletin.
 
-> **Before you check — how sure are you?** Mark each answer **●** if you are
-> sure and **○** if you are not, *before* you look at the key. Then count how
-> many of each you got right. If the **●** answers are not clearly better than
-> the **○** ones, the feeling of certainty is not yet telling you anything —
-> which is more useful to know than the score. Unit 1 explains why.
->
-> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
-> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+Storm Number Six is now about two hundred kilometres off the coast and moving
+west. It should reach us tomorrow morning. Winds of a hundred kilometres an
+hour are expected, with heavy rain for two days after that.
+
+Here is what we are asking you to do tonight.
+
+If you live near the river, move upstairs now. Do not wait until the morning.
+Take your documents, your medicine and a torch with you, and put them in a
+plastic bag.
+
+Check your roof. This afternoon our reporter was driving through Phu Loc and
+saw dozens of loose roof sheets. While she was filming, one of them came off
+in the wind.
+
+Fill every container you have with clean water. When the flood arrives, the
+tap water will not be safe to drink.
+
+Charge your phone tonight. The electricity may go off tomorrow.
+
+Schools in the coastal districts will be closed tomorrow and Thursday. Buses
+to the mountains have already stopped.
+
+Finally, please check on your neighbours, especially the older ones. Last year
+most of the people we rescued were over seventy.
+
+We will be back with another bulletin at six in the morning.
+:::
 
 ### 6.1 Listen and choose
 
-1. The storm is expected to arrive **(a)** tonight **(b)** tomorrow morning **(c)** on Thursday
-2. The expected wind speed is **(a)** 100 km/h **(b)** 200 km/h **(c)** 70 km/h
-3. People who live near the river should **(a)** leave the town **(b)** move upstairs tonight **(c)** wait until morning
-4. Once the flood arrives, the tap water will be **(a)** safe **(b)** unsafe to drink **(c)** free
-5. Last year, most of the people who were rescued were **(a)** children **(b)** over seventy **(c)** fishermen
+::: task skill="listening" type="multiple-choice"
+- The storm is expected to arrive (a) tonight (b) tomorrow morning (c) on Thursday = b
+- The expected wind speed is (a) 100 km/h (b) 200 km/h (c) 70 km/h = a ~ two hundred is the distance, not the speed
+- People who live near the river should (a) leave the town (b) move upstairs tonight (c) wait until morning = b
+- Once the flood arrives, the tap water will be (a) safe (b) unsafe to drink (c) free = b
+- Last year, most of the people who were rescued were (a) children (b) over seventy (c) fishermen = b
+:::
 
 ### 6.2 Listen and complete
 
-1. The storm is about ____________ kilometres off the coast.
-2. Put your documents, medicine and torch in a ____________ bag.
-3. While the reporter ____________, a roof sheet came off in the wind.
-4. Schools in the ____________ districts will be closed tomorrow and Thursday.
-5. The next bulletin is at ____________ in the morning.
+::: task skill="listening" type="sentence-completion" words="2+number"
+- The storm is about ___ kilometres off the coast. = two hundred ~ written as words, the way the speaker says it
+- Put your documents, medicine and torch in a ___ bag. = plastic
+- While the reporter ___, a roof sheet came off in the wind. = was filming
+- Schools in the ___ districts will be closed tomorrow and Thursday. = coastal
+- The next bulletin is at ___ in the morning. = six
+:::
 
 ::: bridge name="Same ninety seconds, more facts in it" trains="Listening" cefr="B1" marker="[T2]" src="03 §2.1"
 When you re-record or re-read this unit's bulletin for extra practice, do not
@@ -743,21 +736,27 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-Complete with a word from this unit. The first letter is given.
-
-1. A long period with no rain at all is a d_______.
-2. Three days later the team found another s_______ under the fallen building.
-3. The government told every family near the coast to e_______.
-4. Heavy rain caused a l_______ that buried the mountain road.
-5. Always listen to the weather f_______ before you travel in September.
-6. Lorries brought r_______ supplies — rice, blankets and medicine.
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
+- A long period with no rain at all is a ___ . = drought ~ starts with *d*
+- Three days later the team found another ___ under the fallen building. = survivor ~ starts with *s*
+- The government told every family near the coast to ___ . = evacuate ~ starts with *e*
+- Heavy rain caused a ___ that buried the mountain road. = landslide ~ starts with *l*
+- Always listen to the weather ___ before you travel in September. = forecast ~ starts with *f*
+- Lorries brought ___ supplies — rice, blankets and medicine. = relief ~ starts with *r*
+:::
 
 ### 7.2 Pronunciation check
 
-Which syllable takes the stress? Write **1**, **2** or **3**.
-
-1. disaster ___  2. hurricane ___  3. destruction ___  4. tsunami ___
-5. volcanic ___  6. evacuate ___  7. eruption ___  8. earthquake ___
+::: task skill="course" type="choice" opts="1|2|3" ask="Which syllable takes the stress? Pick **1**, **2** or **3**."
+- disaster = 2 ~ disˈaster
+- hurricane = 1 ~ ˈhurricane
+- destruction = 2 ~ deˈstruction
+- tsunami = 2 ~ tsuˈnami
+- volcanic = 2 ~ volˈcanic
+- evacuate = 2 ~ eˈvacuate
+- eruption = 2 ~ eˈruption
+- earthquake = 1 ~ ˈearthquake
+:::
 
 ### 7.3 Grammar check
 
@@ -827,37 +826,17 @@ boat, because the street was under water and he could not cycle through it.
 4. It was warning people about the storm. 5. The family's papers and two
 torches.
 
-**1.2** 1. forecast 2. turned back 3. under water 4. has been through
-
-**1.3** 1. past continuous 2. past simple 3. past continuous 4. past simple
-
 ### Lesson 2
-
-**2.1** 1. drought 2. evacuate 3. landslide 4. survivor 5. destroy / damage
-6. relief
-
-**2.2** 1. **shelter** — the others are natural disasters; a shelter is a safe
-place. 2. **rescue** — the others mean to break or harm something. 3. **drought**
-— the others tell you that something dangerous is coming. 4. **volcano** — the
-others are people.
 
 **2.3**
 - Oo (1st syllable): damage, shelter, warning, victim, flooding, danger
 - oO (2nd syllable): destroy, erupt, collapse, prepare, survive, escape
-
-**2.4** 1. deˈstruction 2. eˈruption 3. volˈcanic 4. aˈbility 5. proˈtection
-6. elecˈtricity 7. draˈmatic 8. evacuˈation
 
 **2.5** Spoken. Check: the capitalised syllable is longer, louder and clearer,
 and every other syllable is short and light. If *disaster* comes out as
 *DIS-as-ter*, slow down and try again.
 
 ### Lesson 3
-
-**3.1** 1. PC 2. PS 3. PC 4. PS 5. PC 6. PS 7. PC 8. PS
-
-**3.2** 1. were listening 2. was not sleeping (wasn't sleeping) 3. were … doing
-4. were digging 5. was lying 6. was rising
 
 **3.3**
 1. I was cooking dinner **when** the storm hit the village.
@@ -894,18 +873,6 @@ repaired last year."
 
 ### Lesson 5
 
-**5.1** 1. T 2. F (the water went down after three days, the mud stayed three
-weeks) 3. NG 4. T 5. F (it sounds long before the wave arrives)
-
-**5.2** 1. They were carrying their furniture upstairs. 2. The water stayed for
-three days; the mud stayed for three weeks. 3. Because the mud blocks the wells,
-so clean water is hard to find, and dirty water makes people ill. 4. Because a
-building can look safe and still be weak inside. 5. That disasters cannot be
-prevented, but preparation is a skill — you can be taught it and practise it,
-and that is what saves lives.
-
-**5.3** 1. ruins 2. mud 3. bank 4. siren
-
 **Speaking** Answers will vary. Check: at least three past continuous verbs with
 the correct *was/were*, correct stress on *disˈaster, deˈstruction, eˈvacuate,
 ˈhurricane*, and pauses that fall at stage boundaries rather than inside a
@@ -913,21 +880,12 @@ sentence.
 
 ### Lesson 6
 
-**6.1** 1. b 2. a 3. b 4. b 5. b
-
-**6.2** 1. two hundred 2. plastic 3. was filming 4. coastal 5. six
-
 **Writing** Answers will vary. Check against the checklist: 80–100 words, the
 three headings, every instruction beginning with an imperative verb, at least
 four sequencing signals, at least one *Do not…* or *Never…*, four unit
 vocabulary words, and no *I think* or *you should*.
 
 ### Lesson 7
-
-**7.1** 1. drought 2. survivor 3. evacuate 4. landslide 5. forecast 6. relief
-
-**7.2** 1. 2 (disˈaster) 2. 1 (ˈhurricane) 3. 2 (deˈstruction) 4. 2 (tsuˈnami)
-5. 2 (volˈcanic) 6. 2 (eˈvacuate) 7. 2 (eˈruption) 8. 1 (ˈearthquake)
 
 **7.3** 1. was raining 2. was cooking / went 3. were playing / sounded
 4. did not know (didn't know) — *know* is stative 5. was … doing

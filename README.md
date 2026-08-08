@@ -90,6 +90,26 @@ has both a task and a hand-written entry.
 Listening tasks get a confidence toggle on every item and a calibration report
 next to the score. That is not optional and no attribute turns it off: it is
 the one Listening finding with an effect size attached, and it costs nothing.
+The Check button stays shut until every item is rated — a rating made after the
+key is visible measures nothing.
+
+**What the gate refuses**, so you meet it in the docs rather than in a build
+failure. Each of these was a route around a rule, not a hypothetical:
+
+- A bracketed *part* of a word — `give(s) up`. The published legend makes whole
+  **words** optional; write the alternates out, `give up/gives up`.
+- `opts` on a completion or short-answer task. Choosing an answer from buttons
+  means never writing one, which drops both the word limit and the spelling
+  rule off a task whose type requires them.
+- A typed item on any IELTS-skill task with no `words` — whatever the type says.
+- A `skill="course"` task in a lesson that has a recording. A listening set
+  relabelled a course drill loses its word limit and its confidence rating.
+- A sentence of the recording's script printed anywhere in the lesson, including
+  inside a task prompt. The questions then test reading.
+- A bullet that does not parse. The separator is ` = ` with a space either side;
+  `second___= two` used to vanish silently, taking its question with it.
+- A directive name the generator does not know — `:::taskk` — which would
+  otherwise render its own source, answer keys and all.
 
 ### `:::audio` — the recording plays once
 

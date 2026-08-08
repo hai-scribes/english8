@@ -55,12 +55,12 @@ Answer in full sentences.
 
 ### 1.2 Find the phrase
 
-Find a phrase in the dialogue that means:
-
-1. directly across the road from → _______________
-2. in the space separating two things → _______________
-3. immediately beside, with nothing in the middle → _______________
-4. belonging to those people → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
+- directly across the road from = opposite
+- in the space separating two things = between
+- immediately beside, with nothing in the middle = next to
+- belonging to those people = theirs
+:::
 
 ### 1.3 Notice the grammar
 
@@ -106,23 +106,16 @@ Look at the **bold** words. Write **place**, **time**, or **possessive**.
 
 ### 2.1 Complete the sentences
 
-Use one word or phrase from the table. Change the form if you need to.
-
-1. Deaf people often use hand ____________ to make their meaning clear.
-2. My grandmother prefers a ____________ visit to a phone call.
-3. This app can ____________ a whole page from English into Vietnamese in a
-   second.
-4. Our ____________ is very slow tonight, so the picture keeps freezing.
-5. In the film, the twins could read each other's minds — they were
-   ____________.
-6. She sent me an ____________ ____________ instead of ringing me.
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
+- Deaf people often use hand ___ to make their meaning clear. = gestures
+- My grandmother prefers a ___ visit to a phone call. = face-to-face
+- This app can ___ a whole page from English into Vietnamese in a second. = translate
+- Our ___ is very slow tonight, so the picture keeps freezing. = connection
+- In the film, the twins could read each other's minds — they were ___ . = telepathic
+- She sent me an ___ instead of ringing me. = instant message
+:::
 
 ### 2.2 Match the word to the meaning
-
-Write the letter of the meaning next to each word.
-
-**Words:** 1. device · 2. network · 3. virtual · 4. interviewee ·
-5. signal · 6. holographic
 
 | | Meaning |
 | --- | --- |
@@ -132,6 +125,15 @@ Write the letter of the meaning next to each word.
 | **d** | made of light, so that it looks solid and three-dimensional |
 | **e** | the person who answers the questions in an interview |
 | **f** | a sound, a light or an electrical pulse that carries information |
+
+::: task skill="course" type="choice" opts="a|b|c|d|e|f" ask="Write the letter of the meaning next to each word."
+- device = c
+- network = a
+- virtual = b
+- interviewee = e
+- signal = f
+- holographic = d
+:::
 
 ### Pronunciation — Stress in *-ese* and *-ee* words
 
@@ -167,13 +169,12 @@ Vietnamese · interviewee**
 
 ### 2.4 Odd stress out
 
-In each line, one word does **not** have the stress on its last syllable.
-Circle it.
-
-1. Japanese · Chinese · coffee · Portuguese
-2. refugee · committee · trainee · guarantee
-3. agree · toffee · degree · referee
-4. interviewee · Frisbee · trainee · degree
+::: task skill="course" type="choice" ask="In each line, one word does **not** have the stress on its last syllable. Pick it."
+- Line 1 — (a) Japanese (b) Chinese (c) coffee (d) Portuguese = c ~ **ˈcof**fee — the stress is on the first syllable
+- Line 2 — (a) refugee (b) committee (c) trainee (d) guarantee = b ~ com**ˈmit**tee — the stress is in the middle
+- Line 3 — (a) agree (b) toffee (c) degree (d) referee = b ~ **ˈtof**fee — the final *-ee* here is a short, weak /i/
+- Line 4 — (a) interviewee (b) Frisbee (c) trainee (d) degree = b ~ **ˈFris**bee — spelt *-ee*, but not stressed at the end
+:::
 
 ### 2.5 Say these sentences
 
@@ -267,45 +268,42 @@ A possessive **adjective** comes **before a noun**. A possessive **pronoun**
 
 ### 3.1 Place — choose the correct preposition
 
-Circle the right word.
-
-1. My phone is ____________ (on / in) the table, next to the lamp.
-2. The cat is sleeping ____________ (under / above) the desk.
-3. There is a big clock ____________ (above / between) the whiteboard.
-4. Lan sits ____________ (in front of / behind) me, so I can see the back of
-   her head.
-5. The post office is ____________ (opposite / under) the museum, on the other
-   side of the road.
-6. The café is ____________ (next to / above) the bookshop — the two doors are
-   side by side.
-7. The letter is ____________ (in / on) the envelope.
-8. Minh is standing ____________ (between / behind) Vy and Duy.
+::: task skill="course" type="gap-fill" ask="Write the right word from the pair in brackets."
+- My phone is ___ (on / in) the table, next to the lamp. = on
+- The cat is sleeping ___ (under / above) the desk. = under
+- There is a big clock ___ (above / between) the whiteboard. = above
+- Lan sits ___ (in front of / behind) me, so I can see the back of her head. = in front of
+- The post office is ___ (opposite / under) the museum, on the other side of the road. = opposite
+- The café is ___ (next to / above) the bookshop — the two doors are side by side. = next to
+- The letter is ___ (in / on) the envelope. = in
+- Minh is standing ___ (between / behind) Vy and Duy. = between
+:::
 
 ### 3.2 Time — *in*, *on*, or *at*?
 
-Write **in**, **on**, or **at**.
-
-1. ______ Monday morning
-2. ______ 2025
-3. ______ half past seven
-4. ______ night
-5. ______ the afternoon
-6. ______ 12 October
-7. ______ March
-8. ______ the weekend
-9. ______ midnight
-10. ______ Tuesday
+::: task skill="course" type="choice" opts="in|on|at" ask="Choose **in**, **on**, or **at**."
+- ___ Monday morning = on
+- ___ 2025 = in
+- ___ half past seven = at
+- ___ night = at
+- ___ the afternoon = in
+- ___ 12 October = on
+- ___ March = in
+- ___ the weekend = at
+- ___ midnight = at
+- ___ Tuesday = on
+:::
 
 ### 3.3 Rewrite with a possessive pronoun
 
-Keep the meaning. Use *mine, yours, his, hers, ours, theirs*.
-
-1. This is my tablet. → This tablet is ____________.
-2. That is her phone. → That phone is ____________.
-3. These are our tickets. → These tickets are ____________.
-4. That is their network. → That network is ____________.
-5. Is this your charger? → Is this charger ____________?
-6. That is his message. → That message is ____________.
+::: task skill="course" type="gap-fill" ask="Keep the meaning. Use *mine, yours, his, hers, ours, theirs*."
+- This is my tablet. → This tablet is ___ . = mine
+- That is her phone. → That phone is ___ . = hers
+- These are our tickets. → These tickets are ___ . = ours
+- That is their network. → That network is ___ . = theirs
+- Is this your charger? → Is this charger ___ ? = yours
+- That is his message. → That message is ___ . = his
+:::
 
 ### 3.4 Correct the mistake
 
@@ -440,31 +438,32 @@ researcher.*
 
 ### 5.1 True, False, or Not Given
 
-Write **T**, **F**, or **NG**.
-
-1. Dr Bảo says scientists are building the kind of telepathy shown in films. ___
-2. The device would be worn above the ear. ___
-3. The device changes brain signals into text before sending them. ___
-4. Dr Bảo believes silent messages would carry more meaning than face-to-face
-   talk. ___
-5. Dr Bảo has already tested the device on schoolchildren. ___
+::: task skill="reading" type="true-false-not-given" ask="**False** means the interview says the opposite. **Not Given** means it does not say either way — and answering from what you already believe about brain research is exactly the pull this type is built to catch."
+- Dr Bảo says scientists are building the kind of telepathy shown in films. = F ~ he says that is *not* what scientists are working on
+- The device would be worn above the ear. = T
+- The device changes brain signals into text before sending them. = T
+- Dr Bảo believes silent messages would carry more meaning than face-to-face talk. = F ~ he says such a machine would lose about half the meaning
+- Dr Bảo has already tested the device on schoolchildren. = NG ~ the interview never mentions testing on anybody
+:::
 
 ### 5.2 Answer the questions
 
-1. According to Dr Bảo, how is real research different from telepathy in films?
-2. What are the four steps a message takes, from your brain to your friend's ear?
-3. Why does Dr Bảo say the new device is "really a very fast text message"?
-4. What does he mean when he says a machine "would lose the other half"?
-5. Who does Dr Bảo think should own the signals from your brain?
+::: task skill="reading" type="short-answer" words="3" ask="Take the words from the interview. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
+- Where on the head does the device sit? = above the ear
+- What does the device translate the brain's signals into? = text
+- What does the device send the text across? = (a) network
+- How much of the meaning do face-to-face signals carry? = (about) half
+- What worries Dr Bảo most? = privacy
+:::
 
 ### 5.3 Vocabulary in context
 
-Find a word or phrase in the interview that means:
-
-1. changes words from one form or language into another → _______________
-2. a system of connected computers, devices or people → _______________
-3. a movement of the hand, head or face that carries meaning → _______________
-4. in person, with the other person in the same room → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the interview that means each of these. Give yourself **three minutes** for all four — searching against a clock is the point, not reading carefully."
+- changes words from one form or language into another = translate/translates
+- a system of connected computers, devices or people = network
+- a movement of the hand, head or face that carries meaning = gesture
+- in person, with the other person in the same room = face-to-face
+:::
 
 ### Speaking — The pros and cons of online calls
 
@@ -503,64 +502,58 @@ between stages rather than inside a sentence.
 
 ### Listening — A guide at the communication exhibition
 
-> **How to use this without the audio:** ask someone to read the script aloud
-> to you at normal speed while you cover it — or paste it into a
-> text-to-speech tool. Listen **twice** before you look at the text.
->
-> **Cách dùng khi không có bản ghi âm:** nhờ người khác đọc to phần lời thoại,
-> hoặc dùng công cụ đọc văn bản. Nghe **hai lần** trước khi nhìn vào bài.
+You get **one** play. That is not us being hard on you — it is how the task
+works, and practising it any other way trains a habit that does not exist on
+the day. This recording is dense with times, numbers and room names, so read
+both sets of questions in the preview window first and answer as you listen.
 
-**Script** — *cover this while you listen*
+**Nghe một lần duy nhất.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
 
-> Good morning, and welcome to *Six Thousand Years of Talking*, our new
-> exhibition on the second floor. It opens at nine every day except Monday, and
-> the last entry is at half past four.
->
-> The exhibition has four rooms. In Room One you will find the oldest tools:
-> drums, smoke and clay tablets. A message that crossed a mountain by drum took
-> minutes; the same message on a clay tablet, carried by a runner, took days.
->
-> Room Two is about paper and the post. Look for the wooden letter box near the
-> window — it stood outside a village post office for ninety years.
->
-> Room Three is the electric room, and it is the loudest one. The telegraph, the
-> telephone and the radio are all here. Our guides give a short talk in this
-> room at eleven o'clock and again at three.
->
-> Room Four is the one most visitors remember. It is dark, and the walls are
-> screens. You can send an instant message to a stranger standing on the other
-> side of the room, make a video call to the room next door, and stand inside a
-> holographic image of yourself.
->
-> Before you leave, please write one sentence on the wall by the exit: how will
-> your grandchildren talk to each other? The best answers go on our website in
-> September.
+::: audio orientation="You will hear a museum guide welcoming visitors to a new exhibition about the history of communication, and describing its four rooms." mode="computer" preview="30" review="120"
+Good morning, and welcome to *Six Thousand Years of Talking*, our new
+exhibition on the second floor. It opens at nine every day except Monday, and
+the last entry is at half past four.
 
-> **Before you check — how sure are you?** Mark each answer **●** if you are
-> sure and **○** if you are not, *before* you look at the key. Then count how
-> many of each you got right. If the **●** answers are not clearly better than
-> the **○** ones, the feeling of certainty is not yet telling you anything —
-> which is more useful to know than the score. Unit 1 explains why.
->
-> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
-> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+The exhibition has four rooms. In Room One you will find the oldest tools:
+drums, smoke and clay tablets. A message that crossed a mountain by drum took
+minutes; the same message on a clay tablet, carried by a runner, took days.
+
+Room Two is about paper and the post. Look for the wooden letter box near the
+window — it stood outside a village post office for ninety years.
+
+Room Three is the electric room, and it is the loudest one. The telegraph, the
+telephone and the radio are all here. Our guides give a short talk in this
+room at eleven o'clock and again at three.
+
+Room Four is the one most visitors remember. It is dark, and the walls are
+screens. You can send an instant message to a stranger standing on the other
+side of the room, make a video call to the room next door, and stand inside a
+holographic image of yourself.
+
+Before you leave, please write one sentence on the wall by the exit: how will
+your grandchildren talk to each other? The best answers go on our website in
+September.
+:::
 
 ### 6.1 Listen and choose
 
-1. The exhibition is on the **(a)** ground floor **(b)** second floor **(c)** fourth floor
-2. The last entry is at **(a)** half past four **(b)** four o'clock **(c)** nine o'clock
-3. A drum message crossing a mountain took **(a)** minutes **(b)** days **(c)** weeks
-4. The guides talk in Room Three at eleven o'clock and again at **(a)** one **(b)** two **(c)** three
-5. In Room Four you can stand inside **(a)** a clay tablet **(b)** a letter box **(c)** a holographic image of yourself
+::: task skill="listening" type="multiple-choice"
+- The exhibition is on the (a) ground floor (b) second floor (c) fourth floor = b
+- The last entry is at (a) half past four (b) four o'clock (c) nine o'clock = a
+- A drum message crossing a mountain took (a) minutes (b) days (c) weeks = a
+- The guides talk in Room Three at eleven o'clock and again at (a) one (b) two (c) three = c
+- In Room Four you can stand inside (a) a clay tablet (b) a letter box (c) a holographic image of yourself = c
+:::
 
 ### 6.2 Listen and complete
 
-1. The exhibition has ____________ rooms.
-2. The wooden letter box stood outside a village post office for ____________
-   years.
-3. Room Three is the ____________ room, and it is the loudest one.
-4. In Room Four the walls are ____________.
-5. The best answers go on the website in ____________.
+::: task skill="listening" type="sentence-completion" words="1+number"
+- The exhibition has ___ rooms. = four
+- The wooden letter box stood outside a village post office for ___ years. = ninety
+- Room Three is the ___ room, and it is the loudest one. = electric
+- In Room Four the walls are ___ . = screens
+- The best answers go on the website in ___ . = September
+:::
 
 ::: bridge name="Open → stand → close, out loud, with an audible pause at each turn" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
 The schema you named in Unit 6, spoken this time. In the pros-and-cons pair work:
@@ -661,37 +654,37 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-Complete with a word from this unit. The first letter is given.
-
-1. My phone can t____________ Japanese into English in a second.
-2. A smile is the friendliest g____________ in the world.
-3. We use s____________ m____________ to keep in touch with friends far away.
-4. The i____________ answered every question honestly.
-5. In the future, teachers may appear as h____________ images.
+::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
+- My phone can ___ Japanese into English in a second. = translate ~ starts with *t*
+- A smile is the friendliest ___ in the world. = gesture ~ starts with *g*
+- We use ___ to keep in touch with friends far away. = social media ~ starts with *s m*
+- The ___ answered every question honestly. = interviewee ~ starts with *i*
+- In the future, teachers may appear as ___ images. = holographic ~ starts with *h*
+:::
 
 ### 7.2 Pronunciation check
 
-Where is the stress? Write **final** (last syllable) or **not final**.
-
-1. Japanese ___
-2. coffee ___
-3. refugee ___
-4. committee ___
-5. Vietnamese ___
-6. guarantee ___
+::: task skill="course" type="choice" opts="final|not final" ask="Where is the stress — on the **final** syllable, or **not final**?"
+- Japanese = final
+- coffee = not final
+- refugee = final
+- committee = not final
+- Vietnamese = final
+- guarantee = final
+:::
 
 ### 7.3 Grammar check
 
-Write **in**, **on**, **at**, or the correct possessive pronoun.
-
-1. The museum opens ______ half past eight.
-2. My grandparents got married ______ 1979.
-3. We have an English test ______ Friday.
-4. I never study ______ night.
-5. This tablet isn't mine — I think it's ______ (she).
-6. Their house is bigger than ______ (we).
-7. Is this charger ______ (you)?
-8. The blue helmet is ______ (they).
+::: task skill="course" type="gap-fill" ask="Write **in**, **on**, **at**, or the correct possessive pronoun."
+- The museum opens ___ half past eight. = at
+- My grandparents got married ___ 1979. = in
+- We have an English test ___ Friday. = on
+- I never study ___ night. = at
+- This tablet isn't mine — I think it's ___ (she). = hers
+- Their house is bigger than ___ (we). = ours
+- Is this charger ___ (you)? = yours
+- The blue helmet is ___ (they). = theirs
+:::
 
 ### 7.4 Error hunt
 
@@ -752,23 +745,14 @@ phone is much older than the one under the chair. 4. They will meet at the gate,
 in front of the big screen, at nine o'clock. 5. She admits that she is never
 late in the morning but that she is often late at night.
 
-**1.2** 1. opposite 2. between 3. next to 4. theirs
-
 **1.3** 1. place 2. time 3. possessive 4. possessive 5. time 6. place
 
 ### Lesson 2
-
-**2.1** 1. gestures 2. face-to-face 3. translate 4. connection 5. telepathic
-6. instant message
-
-**2.2** 1. c 2. a 3. b 4. e 5. f 6. d
 
 **2.3**
 - **Stress on the LAST syllable** — Chinese, refugee, Japanese, guarantee,
   Portuguese, trainee, agree, Vietnamese, interviewee
 - **Stress NOT on the last syllable** — coffee, committee, toffee
-
-**2.4** 1. coffee 2. committee 3. toffee 4. Frisbee
 
 **2.5** Answers will vary (this is a speaking task). Check: the stress lands on
 *-nese*, *-nee*, *-tee*, *-gee*, *-ee* in *Japanese, trainee, Vietnamese,
@@ -776,13 +760,6 @@ interviewee, guarantee, Portuguese, refugee, agree, Chinese* — and on the FIRS
 syllable of *coffee*, and the SECOND of *committee*.
 
 ### Lesson 3
-
-**3.1** 1. on 2. under 3. above 4. in front of 5. opposite 6. next to 7. in
-8. between
-
-**3.2** 1. on 2. in 3. at 4. at 5. in 6. on 7. in 8. at 9. at 10. on
-
-**3.3** 1. mine 2. hers 3. ours 4. theirs 5. yours 6. his
 
 **3.4**
 1. My birthday is **on** 3 September.
@@ -813,31 +790,10 @@ for example *at eight*, *on Sunday*, *in the evening*.
 
 ### Lesson 5
 
-**5.1** 1. F (he says that is *not* what scientists are working on) 2. T
-3. T 4. F (he says such a machine would lose about half the meaning)
-5. NG (the interview never mentions testing on schoolchildren)
-
-**5.2** 1. Films show one person reading another person's private thoughts;
-real research only reads the signals you make when you have already decided to
-say a word, so you still choose every word yourself. 2. The device reads the
-brain's electrical signals → it translates them into text → it sends the text
-across a network → the friend's device turns the text back into a voice.
-3. Because it carries only the words you have chosen, exactly like a text
-message, but silently and much faster. 4. Face-to-face talk also carries meaning
-through gestures, pauses and looks; a words-only machine cannot send those, so
-about half the meaning disappears. 5. You do — he says the signal is yours and
-belongs to nobody else.
-
-**5.3** 1. translates 2. network 3. gesture 4. face-to-face
-
 **Speaking** Answers will vary. Check: you spoke for a full minute, used the
 pros/cons frame, and used *in / on / at* correctly with every day and time.
 
 ### Lesson 6
-
-**6.1** 1. b 2. a 3. a 4. c 5. c
-
-**6.2** 1. four 2. ninety 3. electric 4. screens 5. September
 
 **Writing** Answers will vary. Check against the checklist: 80–100 words, three
 correct prepositions of time, two of place, one possessive pronoun with no noun
@@ -845,12 +801,6 @@ after it, four unit vocabulary words, and one sentence each about a sound and a
 picture.
 
 ### Lesson 7
-
-**7.1** 1. translate 2. gesture 3. social media 4. interviewee 5. holographic
-
-**7.2** 1. final 2. not final 3. final 4. not final 5. final 6. final
-
-**7.3** 1. at 2. in 3. on 4. at 5. hers 6. ours 7. yours 8. theirs
 
 **7.4** In order of appearance:
 1. *in seven o'clock* → **at** seven o'clock *(clock time takes at)*

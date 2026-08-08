@@ -57,13 +57,12 @@ Answer in full sentences.
 
 ### 1.2 Find the phrase
 
-Find a phrase in the dialogue that means:
-
-1. put harmful substances into water or air → _______________
-2. proof that something is true → _______________
-3. no longer, not now → _______________
-4. we should act before the situation becomes impossible to fix →
-   _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
+- put harmful substances into water or air = pollute
+- proof that something is true = evidence
+- no longer, not now = not any more
+- at the point where nothing can be fixed any more = too late
+:::
 
 ### 1.3 Notice the grammar
 
@@ -109,23 +108,22 @@ sentence. Write the time clause only.
 
 ### 2.1 Complete the sentences
 
-Use one word from the table. Change the form if you need to.
-
-1. Farmers here use less _______ than they did ten years ago, so there are more
-   insects in the fields.
-2. Cutting down the forest destroys the _______ of hundreds of animals.
-3. Don't drop that bottle — we can _______ it.
-4. The saola is an _______ animal; very few are left.
-5. Untreated _______ from the town runs straight into the river.
-6. The club's main job is to raise _______ among younger students.
+::: task skill="course" type="gap-fill" ask="Use one word from the table. Change the form if you need to."
+- Farmers here use less ___ than they did ten years ago, so there are more insects in the fields. = pesticide
+- Cutting down the forest destroys the ___ of hundreds of animals. = habitat
+- Don't drop that bottle — we can ___ it. = recycle
+- The saola is an ___ animal; very few are left. = endangered
+- Untreated ___ from the town runs straight into the river. = sewage
+- The club's main job is to raise ___ among younger students. = awareness
+:::
 
 ### 2.2 Odd one out
 
-Circle the word that does not belong, and say why.
-
-1. reduce · reuse · recycle · contaminate
-2. habitat · species · wildlife · sewage
-3. protect · preserve · pollute · conserve
+::: task skill="course" type="choice" ask="In each line, one word does not belong with the other three. Pick it."
+- Line 1 — (a) reduce (b) contaminate (c) reuse (d) recycle = b ~ the other three are ways of creating less waste
+- Line 2 — (a) habitat (b) species (c) sewage (d) wildlife = c ~ the others are about living things and where they live
+- Line 3 — (a) protect (b) preserve (c) conserve (d) pollute = d ~ the others mean to look after or keep something safe
+:::
 
 ### Pronunciation — /bl/ and /kl/
 
@@ -161,12 +159,12 @@ problem · close · blow · recycle · possible · clothes · blame · include**
 
 ### 2.4 Odd cluster out
 
-In each line, three words share a cluster. Circle the one that does not belong.
-
-1. blue · black · blame · clean
-2. clear · climate · close · blow
-3. problem · possible · terrible · recycle
-4. clothes · climb · clever · blossom
+::: task skill="course" type="choice" ask="In each line, three words share a cluster. Pick the one that does not."
+- Line 1 — (a) blue (b) black (c) clean (d) blame = c ~ *clean* is /kl/; the others are /bl/
+- Line 2 — (a) blow (b) clear (c) climate (d) close = a ~ *blow* is /bl/; the others are /kl/
+- Line 3 — (a) problem (b) possible (c) recycle (d) terrible = c ~ *recycle* is /kl/; the others are /bl/
+- Line 4 — (a) clothes (b) blossom (c) climb (d) clever = b ~ *blossom* is /bl/; the others are /kl/
+:::
 
 ### 2.5 Say these sentences
 
@@ -261,14 +259,14 @@ stays in the **present simple**. This holds for every subordinator above.
 
 ### 3.1 Simple, compound, or complex?
 
-Write **S**, **CD** (compound), or **CX** (complex).
-
-1. The rangers move the eggs to a safe hatchery. ___
-2. We collected the litter, and the school lorry took it away. ___
-3. Before the sun rose, the turtles had already returned to the sea. ___
-4. Deforestation destroys habitats and threatens endangered species. ___
-5. She has volunteered at the park since she left school. ___
-6. The water looked clean, but the test showed pesticide in it. ___
+::: task skill="course" type="choice" opts="S|CD|CX" ask="**S** for simple, **CD** for compound, **CX** for complex. Careful — one of these looks compound and is not."
+- The rangers move the eggs to a safe hatchery. = S
+- We collected the litter, and the school lorry took it away. = CD
+- Before the sun rose, the turtles had already returned to the sea. = CX
+- Deforestation destroys habitats and threatens endangered species. = S ~ one clause with two verbs sharing one subject
+- She has volunteered at the park since she left school. = CX
+- The water looked clean, but the test showed pesticide in it. = CD
+:::
 
 ### 3.2 Underline the time clause
 
@@ -404,33 +402,34 @@ practical action.
 
 ### 5.1 True, False, or Not Given
 
-Write **T**, **F**, or **NG**.
-
-1. Con Dao National Park protects only the forest on the islands. ___
-2. Sea turtles return to the beaches where they hatched. ___
-3. The rangers move turtle eggs to a safer place. ___
-4. More tourists visit Con Dao than any other national park in Viet Nam. ___
-5. Dugongs feed on the sea grass near the islands. ___
-6. Visitors are asked not to use lights on the nesting beaches at night. ___
+::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you already know about national parks is exactly the pull this type is built to catch."
+- Con Dao National Park protects only the forest on the islands. = F ~ it protects the forest **and** the sea around it
+- Sea turtles return to the beaches where they hatched. = T
+- The rangers move turtle eggs to a safer place. = T
+- More tourists visit Con Dao than any other national park in Viet Nam. = NG ~ the text never compares visitor numbers
+- Dugongs feed on the sea grass near the islands. = T
+- Visitors are asked not to use lights on the nesting beaches at night. = T
+:::
 
 ### 5.2 Answer the questions
 
-1. Where is Con Dao National Park?
-2. Why does the writer say the park protects "two worlds at once"?
-3. When do the turtles come ashore to lay their eggs?
-4. What do the rangers protect the eggs from?
-5. Why are the sea grass beds important?
-6. What does the writer mean by "that agreement has to be renewed by everyone
-   who arrives"?
+::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
+- Which coast of Viet Nam are the islands off? = (the) southern coast
+- As well as the forest, what does the park protect? = (the) sea
+- At what time do the turtles lay their eggs? = (at) night
+- Where do the rangers move the eggs to? = (a) (protected) hatchery
+- Which animals feed on the sea grass beds? = dugongs
+- What are visitors told to take home? = (your) litter
+:::
 
 ### 5.3 Vocabulary in context
 
-Find a word or phrase in the text that means:
-
-1. a protected place where eggs are kept safe until they hatch → _______________
-2. animals or people that live in a particular place → _______________
-3. come out of the egg → _______________
-4. very firm, allowing no exceptions → _______________
+::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. Give yourself **three minutes** for all four — searching against a clock is the point, not reading carefully."
+- a protected place where eggs are kept safe until they hatch = hatchery
+- animals or people that live in a particular place = residents
+- come out of the egg = hatch/hatched
+- very firm, allowing no exceptions = strict
+:::
 
 ### Speaking — Asking and answering about Vu Quang National Park
 
@@ -478,62 +477,57 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### Listening — Why our water gets dirty
 
-> **How to use this without the audio:** ask someone to read the script aloud
-> to you at normal speed while you cover it — or paste it into a
-> text-to-speech tool. Listen **twice** before you look at the text.
->
-> **Cách dùng khi không có bản ghi âm:** nhờ người khác đọc to phần lời thoại,
-> hoặc dùng công cụ đọc văn bản. Nghe **hai lần** trước khi nhìn vào bài.
+You get **one** play, and that is the point rather than a cruelty. The talk
+gives three causes and then their effects, in that order, and the two question
+sets follow it. Read both sets in the preview window, then answer as you listen
+— not afterwards, from memory.
 
-**Script** — *cover this while you listen*
+**Nghe một lần duy nhất.** Đọc trước cả hai phần câu hỏi trong lúc chờ, rồi vừa
+nghe vừa trả lời.
 
-> Good morning, everyone. My name is Hoa, and I work for a water testing
-> laboratory. Today I want to talk about how water becomes polluted, and what
-> happens afterwards.
->
-> There are three main causes. The first is untreated sewage. When a town grows
-> faster than its drains, waste water goes straight into the nearest river. The
-> second cause is farming. Rain washes pesticide off the fields, and once it
-> reaches the water, it stays there for a long time. The third is factory
-> waste. Some factories release chemicals at night, when nobody is watching.
->
-> Now the effects. Fish die first, because dirty water carries less oxygen.
-> After the fish disappear, the birds that feed on them leave as well.
-> Villagers who use the river for washing get skin problems. And once a river
-> is badly contaminated, cleaning it takes years and costs far more than
-> preventing the damage would have cost.
->
-> So what can you do? Use less plastic. Never pour oil or paint down a drain.
-> And when you see something wrong with your local water, report it — take a
-> photograph, note the date, and tell an adult. Young people notice these
-> things first.
+::: audio orientation="You will hear a woman who works at a water testing laboratory explaining to students what makes rivers dirty and what follows once they are." mode="computer" preview="30" review="120"
+Good morning, everyone. My name is Hoa, and I work for a water testing
+laboratory. Today I want to talk about how water becomes polluted, and what
+happens afterwards.
 
-> **Before you check — how sure are you?** Mark each answer **●** if you are
-> sure and **○** if you are not, *before* you look at the key. Then count how
-> many of each you got right. If the **●** answers are not clearly better than
-> the **○** ones, the feeling of certainty is not yet telling you anything —
-> which is more useful to know than the score. Unit 1 explains why.
->
-> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
-> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+There are three main causes. The first is untreated sewage. When a town grows
+faster than its drains, waste water goes straight into the nearest river. The
+second cause is farming. Rain washes pesticide off the fields, and once it
+reaches the water, it stays there for a long time. The third is factory
+waste. Some factories release chemicals at night, when nobody is watching.
+
+Now the effects. Fish die first, because dirty water carries less oxygen.
+After the fish disappear, the birds that feed on them leave as well.
+Villagers who use the river for washing get skin problems. And once a river
+is badly contaminated, cleaning it takes years and costs far more than
+preventing the damage would have cost.
+
+So what can you do? Use less plastic. Never pour oil or paint down a drain.
+And when you see something wrong with your local water, report it — take a
+photograph, note the date, and tell an adult. Young people notice these
+things first.
+:::
 
 ### 6.1 Listen and choose
 
-1. Hoa works for **(a)** a school **(b)** a water testing laboratory **(c)** a factory
-2. The first cause she gives is **(a)** untreated sewage **(b)** farming **(c)** factory waste
-3. Pesticide reaches the water when **(a)** farmers pour it in **(b)** rain washes it off the fields **(c)** the river floods
-4. Some factories release chemicals **(a)** at night **(b)** at the weekend **(c)** in the rainy season
-5. Fish die first because dirty water **(a)** is too warm **(b)** carries less oxygen **(c)** moves too slowly
-6. Hoa's final advice is to **(a)** stop swimming **(b)** report what you see **(c)** move away
+::: task skill="listening" type="multiple-choice"
+- Hoa works for (a) a school (b) a water testing laboratory (c) a factory = b
+- The first cause she gives is (a) untreated sewage (b) farming (c) factory waste = a
+- Pesticide reaches the water when (a) farmers pour it in (b) rain washes it off the fields (c) the river floods = b
+- Some factories release chemicals (a) at night (b) at the weekend (c) in the rainy season = a
+- Fish die first because dirty water (a) is too warm (b) carries less oxygen (c) moves too slowly = b
+- Hoa's final advice is to (a) stop swimming (b) report what you see (c) move away = b
+:::
 
 ### 6.2 Listen and complete
 
-1. When a town grows faster than its ____________, waste water goes straight
-   into the nearest river.
-2. After the fish disappear, the ____________ that feed on them leave as well.
-3. Villagers who use the river for washing get ____________ problems.
-4. Never pour oil or ____________ down a drain.
-5. Take a photograph, note the ____________, and tell an adult.
+::: task skill="listening" type="sentence-completion" words="1"
+- When a town grows faster than its ___ , waste water goes straight into the nearest river. = drains
+- After the fish disappear, the ___ that feed on them leave as well. = birds
+- Villagers who use the river for washing get ___ problems. = skin
+- Never pour oil or ___ down a drain. = paint
+- Take a photograph, note the ___ , and tell an adult. = date
+:::
 
 ::: bridge name="Two cause-and-result sentences on what you just heard" trains="Grammatical Range & Accuracy" cefr="B1" marker="[Q]" src="05 §2.6"
 After the listening, before the notice: write **two** sentences, each linking one
@@ -668,24 +662,27 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-Complete with a word from this unit. The first letter is given.
-
-1. Cutting down forests is called d_______ .
-2. The tiger is an e_______ species in Viet Nam.
-3. Please don't drop l_______ on the beach.
-4. Untreated s_______ from the town flows into the stream.
-5. Cuc Phuong was the first n_______ p_______ in Viet Nam.
-6. The campaign's aim is to raise a_______ about plastic waste.
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
+- Cutting down forests is called ___ . = deforestation ~ starts with *d*
+- The tiger is an ___ species in Viet Nam. = endangered ~ starts with *e*
+- Please don't drop ___ on the beach. = litter ~ starts with *l*
+- Untreated ___ from the town flows into the stream. = sewage ~ starts with *s*
+- Cuc Phuong was the first ___ in Viet Nam. = national park ~ starts with *n p*
+- The campaign's aim is to raise ___ about plastic waste. = awareness ~ starts with *a*
+:::
 
 ### 7.2 Pronunciation check
 
-Write **/bl/** or **/kl/** for the bold cluster.
-
-1. **bl**ue ___  2. **cl**imate ___  3. possi**bl**e ___
-4. in**cl**ude ___  5. pro**bl**em ___  6. recy**cl**e ___
-
-Then answer: which of these two words contains **neither** cluster —
-*rubbish* or *clothes*? ___________
+::: task skill="course" type="choice" opts="/bl/|/kl/|neither" ask="Which cluster is in the **bold** part? One of these words has **neither** — that is the trap."
+- **bl**ue = /bl/
+- **cl**imate = /kl/
+- possi**bl**e = /bl/
+- in**cl**ude = /kl/
+- pro**bl**em = /bl/
+- recy**cl**e = /kl/
+- **cl**othes = /kl/ ~ /kləʊðz/ — the cluster is there, at the front
+- ru**bb**ish = neither ~ /ˈrʌbɪʃ/ — a vowel follows the /b/, so there is no cluster at all
+:::
 
 ### 7.3 Grammar check
 
@@ -759,27 +756,15 @@ workshop opened on the other side of the lake. 3. The birds stopped coming to
 the lake as well. 4. She will ask them for evidence — photographs and dates.
 5. She is going to take a photo of the lake while she walks to school.
 
-**1.2** 1. pollute 2. evidence 3. not any more 4. We shouldn't wait until the
-lake is completely dead.
-
 **1.3** 1. after the new workshop opened 2. As soon as the fish disappeared
 3. Once we have photographs 4. until the lake is completely dead
 5. Whenever I walk past that lake now
 
 ### Lesson 2
 
-**2.1** 1. pesticide 2. habitat 3. recycle 4. endangered 5. sewage 6. awareness
-
-**2.2** 1. **contaminate** — the other three are ways of creating less waste.
-2. **sewage** — the others are about living things and where they live.
-3. **pollute** — the others mean to look after or keep something safe.
-
 **2.3**
 - /bl/ — blue, black, problem, blow, possible, blame
 - /kl/ — clean, climate, close, recycle, clothes, include
-
-**2.4** 1. clean (/kl/; the others are /bl/) 2. blow (/bl/; the others are /kl/)
-3. recycle (/kl/; the others are /bl/) 4. blossom (/bl/; the others are /kl/)
 
 **2.5** Answers will vary — this is a speaking drill. Check: your /b/ buzzes and
 your /k/ does not, and there is no vowel between the consonant and the /l/.
@@ -787,9 +772,6 @@ Item 4 is a knowledge check: *rubbish* is /ˈrʌbɪʃ/ (no /bl/) and *chemical* 
 /ˈkemɪkl/ (the *ch* is a plain /k/).
 
 ### Lesson 3
-
-**3.1** 1. S 2. CD 3. CX 4. S (one clause with two verbs sharing one subject)
-5. CX 6. CD
 
 **3.2** 1. As soon as the factory opened — *as soon as* 2. until the river is
 clean — *until* 3. Whenever it rains heavily — *whenever* 4. after the
@@ -822,27 +804,11 @@ concrete, doable action (*We could start by…*, *Why don't we…*).
 
 ### Lesson 5
 
-**5.1** 1. F (it protects the forest **and** the sea) 2. T 3. T 4. NG (the text
-never compares visitor numbers) 5. T 6. T
-
-**5.2** 1. On a group of islands off the southern coast of Viet Nam. 2. Because it protects the forest on the
-islands and the sea around them at the same time. 3. At night, during the warm
-season. 4. From dogs, crabs and rising tides. 5. Because dugongs feed on the
-sea grass, and there are very few places left in Viet Nam where dugongs can
-still be found. 6. That protecting the park is not finished once and for all —
-every new visitor has to choose to follow the rules, or the protection fails.
-
-**5.3** 1. hatchery 2. residents 3. hatch(ed) 4. strict
-
 **Speaking** Answers will vary. Check: you gave the province (Ha Tinh), said
 the landscape is mountainous forest, named the saola and the year 1992, used at
 least one time clause per answer, and kept *will* out of every time clause.
 
 ### Lesson 6
-
-**6.1** 1. b 2. a 3. b 4. a 5. b 6. b
-
-**6.2** 1. drains 2. birds 3. skin 4. paint 5. date
 
 **Writing** Answers will vary. Check against the checklist: 100–120 words, a
 NOTICE heading, date/time/place all present, at least one time clause with no
@@ -850,13 +816,6 @@ NOTICE heading, date/time/place all present, at least one time clause with no
 friendly greeting or sign-off.
 
 ### Lesson 7
-
-**7.1** 1. deforestation 2. endangered 3. litter 4. sewage 5. national park
-6. awareness
-
-**7.2** 1. /bl/ 2. /kl/ 3. /bl/ 4. /kl/ 5. /bl/ 6. /kl/
-Neither cluster: **rubbish** (/ˈrʌbɪʃ/). *Clothes* is /kləʊðz/, so it does have
-/kl/.
 
 **7.3** 1. When the rain **stops**, we **will plant** the seedlings. *(comma)*
 2. I **will call** you as soon as I **get** home. *(no comma)* 3. Before you
