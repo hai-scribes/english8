@@ -1,0 +1,306 @@
+{
+  "_unit": "12 — Life on Other Planets",
+
+  "planet": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a very large round object in space that moves around a star such as the Sun",
+        "vi": "hành tinh",
+        "examples": ["Mars is the **planet** that people talk about most.",
+                     "Eight **planets** travel around the Sun.",
+                     "Could there be life on another **planet**?"],
+        "colloc": ["a distant planet", "life on other planets", "the red planet"] }
+    ],
+    "note": "The names of planets are capitalised: *Mars*, *Venus*, *Jupiter*. We usually write **Earth** with a capital letter when we mean the planet, but *the earth* when we mean the ground or soil."
+  },
+
+  "orbit": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "the curved path that a planet, moon or spacecraft follows around a larger object in space",
+        "vi": "quỹ đạo",
+        "examples": ["The Moon takes about 27 days to complete one **orbit** of the Earth.",
+                     "The satellite is now in **orbit** above us.",
+                     "Each planet has its own **orbit** around the Sun."],
+        "colloc": ["in orbit", "go into orbit", "the earth's orbit"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to travel in a curved path around a planet, star or moon",
+        "vi": "quay quanh, bay quanh",
+        "examples": ["The space station **orbits** the Earth sixteen times a day.",
+                     "Two small moons **orbit** Mars.",
+                     "The telescope has been **orbiting** our planet since 1990."],
+        "colloc": ["orbit the earth", "orbit the sun"] }
+    ],
+    "note": "As a verb, **orbit** takes an object with no preposition: *orbit the Earth* (not ~~orbit around the Earth~~). As a noun, use **in orbit** or *an orbit around something*."
+  },
+
+  "gravity": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the natural force that pulls objects towards each other, and pulls things on Earth down to the ground",
+        "vi": "trọng lực, lực hấp dẫn",
+        "examples": ["Things fall to the ground because of **gravity**.",
+                     "The Moon has much weaker **gravity** than the Earth.",
+                     "Astronauts float because there is almost no **gravity** in the space station."],
+        "colloc": ["the force of gravity", "low gravity", "zero gravity"] }
+    ],
+    "forms": [
+      { "w": "gravitational", "pos": "adjective", "en": "connected with gravity", "vi": "thuộc về trọng lực, hấp dẫn", "ex": "The **gravitational** pull of the Moon moves the sea." }
+    ],
+    "note": "**Gravity** is uncountable, so we never say ~~a gravity~~ or ~~gravities~~. Say *there is no gravity* or *the force of gravity*."
+  },
+
+  "atmosphere": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "the layer of gases that surrounds a planet",
+        "vi": "khí quyển, bầu khí quyển",
+        "examples": ["The Earth's **atmosphere** protects us from the Sun.",
+                     "The **atmosphere** on Mars is very thin.",
+                     "The spacecraft burned as it entered the **atmosphere**."],
+        "colloc": ["the earth's atmosphere", "a thin atmosphere", "enter the atmosphere"] },
+      { "pos": "noun", "grammar": "usually singular",
+        "en": "the feeling or mood that a place or situation gives you",
+        "vi": "bầu không khí, không khí (nơi chốn)",
+        "examples": ["The little café has a warm, friendly **atmosphere**.",
+                     "There was an exciting **atmosphere** before the launch.",
+                     "I love the **atmosphere** of the night market."],
+        "colloc": ["a relaxed atmosphere", "create an atmosphere"] }
+    ],
+    "note": "Stress the first syllable: **AT**-mos-phere. The adjective is *atmospheric*."
+  },
+
+  "oxygen": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "a gas in the air that has no colour or smell and that people, animals and plants need to live",
+        "vi": "khí ô-xy",
+        "examples": ["Humans cannot live without **oxygen**.",
+                     "Astronauts carry **oxygen** in their suits.",
+                     "There is not enough **oxygen** on Mars for us to breathe."],
+        "colloc": ["breathe oxygen", "an oxygen tank", "run out of oxygen"] }
+    ],
+    "note": "**Oxygen** is uncountable: say *some oxygen* or *a lot of oxygen*, never ~~an oxygen~~. Stress the first syllable: **OX**-y-gen."
+  },
+
+  "habitable": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "good enough for people or animals to live in",
+        "vi": "có thể sinh sống được",
+        "examples": ["Scientists are looking for a **habitable** planet.",
+                     "After the storm, the old house was no longer **habitable**.",
+                     "Only a small part of the desert is **habitable**."],
+        "colloc": ["a habitable planet", "habitable land", "the habitable zone"] }
+    ],
+    "forms": [
+      { "w": "habitat", "pos": "noun", "en": "the natural place where a plant or animal lives", "vi": "môi trường sống", "ex": "Pollution is destroying the **habitat** of these birds." },
+      { "w": "inhabit", "pos": "verb", "en": "to live in a particular place", "vi": "cư trú, sinh sống ở", "ex": "No one knows whether any creature **inhabits** that planet." },
+      { "w": "uninhabitable", "pos": "adjective", "en": "impossible to live in", "vi": "không thể sinh sống được", "ex": "Venus is far too hot and is completely **uninhabitable**." }
+    ],
+    "note": "Careful: **inhabitable** means the *same* as habitable, not the opposite. The opposite is **uninhabitable**."
+  },
+
+  "surface": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "the outside or top layer of something",
+        "vi": "bề mặt",
+        "examples": ["The **surface** of the Moon is covered with dust and rocks.",
+                     "Water covers most of the Earth's **surface**.",
+                     "Please clean the **surface** of the table before you eat."],
+        "colloc": ["the surface of the moon", "a flat surface", "on the surface"] },
+      { "pos": "verb", "grammar": "intransitive",
+        "en": "to come up to the top of the water from below",
+        "vi": "nổi lên (mặt nước)",
+        "examples": ["The whale **surfaced** a few metres from our boat.",
+                     "He swam down and then **surfaced** near the rocks.",
+                     "The submarine **surfaces** once a day."],
+        "colloc": ["surface for air", "surface slowly"] }
+    ]
+  },
+
+  "telescope": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a tube-shaped instrument that makes faraway things, especially stars and planets, look bigger and nearer",
+        "vi": "kính thiên văn",
+        "examples": ["We looked at Saturn through a **telescope**.",
+                     "The school has a small **telescope** on the roof.",
+                     "A powerful space **telescope** took these pictures."],
+        "colloc": ["look through a telescope", "a space telescope", "a powerful telescope"] }
+    ],
+    "note": "Built from *tele-* (far) + *-scope* (an instrument for looking), like **television** and **telephone**."
+  },
+
+  "astronaut": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a person who is trained to travel and work in a spacecraft",
+        "vi": "phi hành gia, nhà du hành vũ trụ",
+        "examples": ["The **astronauts** spent six months on the space station.",
+                     "She wants to become an **astronaut** one day.",
+                     "An **astronaut** must wear a special suit outside the spacecraft."],
+        "colloc": ["become an astronaut", "train as an astronaut", "an astronaut's suit"] }
+    ],
+    "note": "Russian space travellers are often called **cosmonauts**, and Chinese ones **taikonauts**, but *astronaut* is the general word in English."
+  },
+
+  "spacecraft": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a vehicle that travels in space, with or without people inside",
+        "vi": "tàu vũ trụ",
+        "examples": ["The **spacecraft** landed safely in the sea.",
+                     "Two **spacecraft** are now travelling towards Jupiter.",
+                     "Engineers are testing a new **spacecraft** this year."],
+        "colloc": ["land a spacecraft", "an unmanned spacecraft", "aboard the spacecraft"] }
+    ],
+    "note": "**Spacecraft** has the same form in the plural: *one spacecraft, two spacecraft* (never ~~spacecrafts~~). *Spaceship* is a more informal word and its plural is *spaceships*."
+  },
+
+  "extraterrestrial": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "connected with life or things from outside the planet Earth",
+        "vi": "ngoài Trái Đất, ngoài hành tinh",
+        "examples": ["Scientists are still searching for **extraterrestrial** life.",
+                     "There is no clear proof of **extraterrestrial** visitors.",
+                     "The film is about an **extraterrestrial** creature."],
+        "colloc": ["extraterrestrial life", "extraterrestrial intelligence"] },
+      { "pos": "noun", "grammar": "countable",
+        "en": "a living being that comes from a planet other than Earth",
+        "vi": "sinh vật ngoài hành tinh",
+        "examples": ["In the story, a friendly **extraterrestrial** lands in a garden.",
+                     "Do you believe **extraterrestrials** really exist?"],
+        "colloc": ["believe in extraterrestrials", "an intelligent extraterrestrial"] }
+    ],
+    "forms": [
+      { "w": "ET", "pos": "noun", "en": "short form of extraterrestrial, often used in films and newspapers", "vi": "sinh vật ngoài hành tinh (viết tắt)", "ex": "The famous film **ET** is about a lost alien." },
+      { "w": "terrestrial", "pos": "adjective", "en": "connected with the Earth or with land", "vi": "thuộc về Trái Đất, trên cạn", "ex": "Turtles lay their eggs in **terrestrial** nests on the beach." }
+    ],
+    "note": "A useful word-building word: *extra-* means **outside** and *terrestrial* means **of the Earth**, so extraterrestrial = *from outside the Earth*. Compare *extraordinary* = outside the ordinary."
+  },
+
+  "alien": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a living being that comes from another planet",
+        "vi": "người ngoài hành tinh, sinh vật ngoài hành tinh",
+        "examples": ["The boy dreamed that **aliens** landed in his school yard.",
+                     "Nobody has ever met an **alien**.",
+                     "In the film, the **alien** speaks perfect English."],
+        "colloc": ["believe in aliens", "an alien spaceship", "meet an alien"] },
+      { "pos": "adjective",
+        "en": "strange and completely unfamiliar to you",
+        "vi": "xa lạ, không quen thuộc",
+        "examples": ["At first, life in the big city felt **alien** to her.",
+                     "The customs of the village were **alien** to the visitors."],
+        "colloc": ["alien to someone", "an alien culture"] }
+    ],
+    "note": "As a noun, **alien** usually means a being from space in everyday English and in films. As an adjective it more often means *unfamiliar or strange*, and it is followed by **to**: *the idea was alien to me*."
+  },
+
+  "creature": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "any living thing that can move, such as an animal or an imaginary being",
+        "vi": "sinh vật, sinh linh",
+        "examples": ["Strange **creatures** live at the bottom of the ocean.",
+                     "Could simple **creatures** survive on Mars?",
+                     "The story is about a small green **creature** with three eyes."],
+        "colloc": ["a living creature", "a strange creature", "sea creatures"] }
+    ],
+    "note": "**Creature** is used for animals and imaginary beings, not normally for plants and not for people (except in phrases like *a creature of habit*)."
+  },
+
+  "survive": {
+    "senses": [
+      { "pos": "verb", "grammar": "intransitive or transitive",
+        "en": "to continue to live, especially after a difficult or dangerous situation",
+        "vi": "sống sót, tồn tại",
+        "examples": ["No plant could **survive** without water.",
+                     "All the passengers **survived** the crash.",
+                     "Some tiny creatures can **survive** in extremely cold places."],
+        "colloc": ["survive without something", "survive an accident", "manage to survive"] }
+    ],
+    "forms": [
+      { "w": "survival", "pos": "noun", "en": "the state of continuing to live", "vi": "sự sống sót, sự sinh tồn", "ex": "Water is necessary for the **survival** of every living thing." },
+      { "w": "survivor", "pos": "noun", "en": "a person who continues to live after an accident or disaster", "vi": "người sống sót", "ex": "Rescue teams found three **survivors** in the building." }
+    ]
+  },
+
+  "explore": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to travel through a place in order to learn about it",
+        "vi": "khám phá, thám hiểm",
+        "examples": ["Robots are sent to **explore** the surface of Mars.",
+                     "We spent the morning **exploring** the old town.",
+                     "Humans have not **explored** most of the ocean."],
+        "colloc": ["explore space", "explore a place", "explore the world"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to think about or examine an idea carefully",
+        "vi": "tìm hiểu, xem xét (ý tưởng)",
+        "examples": ["The class **explored** the question of life on other planets.",
+                     "We should **explore** every possible solution.",
+                     "Her essay **explores** why people are afraid of the dark."],
+        "colloc": ["explore an idea", "explore the possibility of something"] }
+    ],
+    "forms": [
+      { "w": "exploration", "pos": "noun", "en": "the act of travelling through a place or studying something to learn about it", "vi": "sự thám hiểm, sự khám phá", "ex": "Space **exploration** costs a lot of money." },
+      { "w": "explorer", "pos": "noun", "en": "a person who travels to unknown places to find out about them", "vi": "nhà thám hiểm", "ex": "The **explorer** wrote a book about her journey." }
+    ]
+  },
+
+  "launch": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to send a rocket, spacecraft or missile up into the sky or into space",
+        "vi": "phóng (tên lửa, tàu vũ trụ)",
+        "examples": ["They will **launch** the rocket at six o'clock tomorrow.",
+                     "The satellite was **launched** from an island near the equator.",
+                     "Bad weather stopped them from **launching** the spacecraft."],
+        "colloc": ["launch a rocket", "launch a satellite", "a launch pad"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to start something new, such as a product, a campaign or a plan",
+        "vi": "ra mắt, khởi động",
+        "examples": ["The company will **launch** its new phone in May.",
+                     "Our school **launched** a project to clean the river.",
+                     "She **launched** a website about astronomy."],
+        "colloc": ["launch a product", "launch a campaign", "launch a website"] },
+      { "pos": "noun", "grammar": "countable",
+        "en": "the act of sending a spacecraft into space, or of starting something new",
+        "vi": "cuộc phóng; sự ra mắt",
+        "examples": ["We watched the **launch** live on television.",
+                     "The **launch** of the new book is next Friday."],
+        "colloc": ["a successful launch", "delay the launch"] }
+    ]
+  },
+
+  "solar system": {
+    "senses": [
+      { "pos": "noun", "grammar": "singular",
+        "en": "the Sun together with the planets and other objects that travel around it",
+        "vi": "hệ Mặt Trời",
+        "examples": ["Jupiter is the largest planet in the **solar system**.",
+                     "Our **solar system** formed billions of years ago.",
+                     "Scientists have found other **solar systems** far away."],
+        "colloc": ["the solar system", "in our solar system", "the outer solar system"] }
+    ],
+    "note": "Normally used with **the**: *the solar system*, *the planets of the solar system*. The adjective **solar** means *of the Sun*, as in *solar energy* and *solar panels*."
+  },
+
+  "galaxy": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a very large group of stars and planets held together in space",
+        "vi": "thiên hà",
+        "examples": ["Our **galaxy** is called the Milky Way.",
+                     "There are billions of **galaxies** in the universe.",
+                     "The telescope photographed a **galaxy** far from Earth."],
+        "colloc": ["a distant galaxy", "our galaxy", "the milky way galaxy"] }
+    ],
+    "note": "When we mean our own galaxy we say **the galaxy**. The plural is *galaxies* (y → ies). Do not confuse **galaxy** (one group of stars) with **universe** (everything that exists)."
+  }
+}

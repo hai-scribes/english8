@@ -93,6 +93,110 @@ def render(md_text: str) -> str:
     return out
 
 
+DICT_DIR = ROOT / "data" / "dict"
+
+
+def load_dictionary() -> dict:
+    """Merge every data/dict/unit-NN.json into one lookup keyed by headword.
+
+    Nine headwords appear in two units (bamboo, custom, device, generation,
+    hang out (with), preserve, ritual, socialise, traditional). First
+    definition wins, so a repeated word is authored once and stays consistent
+    wherever it turns up.
+    """
+    out: dict = {}
+    if not DICT_DIR.is_dir():
+        return out
+    for f in sorted(DICT_DIR.glob("unit-*.json")):
+        try:
+            data = json.loads(f.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            raise SystemExit(f"{f.name}: invalid JSON — {exc}")
+        for k, v in data.items():
+            if k.startswith("_"):
+                continue
+            out.setdefault(k.lower(), v)
+    return out
+
+
+DICT = load_dictionary()
+
+
+def sense_html(sn, n=None) -> str:
+    """One numbered sense: definition, Vietnamese subtitle, examples."""
+    num = f'<span class="s-n">{n}</span>' if n else ""
+    gram = f'<span class="s-g">{e(sn["grammar"])}</span>' if sn.get("grammar") else ""
+    egs = "".join(f"<li>{inline(x)}</li>" for x in sn.get("examples", []))
+    coll = ""
+    if sn.get("colloc"):
+        coll = ('<p class="s-c">' + " · ".join(f"<span>{e(c)}</span>" for c in sn["colloc"]) + "</p>")
+    return (f'<div class="sense">{num}<div class="s-b">'
+            f'<p class="s-p"><span class="s-pos">{e(sn.get("pos",""))}</span>{gram}</p>'
+            f'<p class="s-en">{inline(sn.get("en",""))}</p>'
+            f'<p class="s-vi">{inline(sn.get("vi",""))}</p>'
+            + (f'<ul class="s-eg">{egs}</ul>' if egs else "")
+            + coll + "</div></div>")
+
+
+def slug(s) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", str(s).lower()).strip("-")
+
+
+def entry_html(w, entry) -> str:
+    """An Oxford-style entry: headword line, the first sense flat, the rest
+    behind one toggle. A word with a single sense, no forms and no note gets
+    no toggle at all — an empty expander is worse than none."""
+    say = re.sub(r"\s*\(.*?\)\s*", " ", w["word"]).strip()
+    audio = (f'<button class="speak" type="button" data-say="{e(say)}" '
+             f'aria-label="Hear {e(say)}">🔊</button>'
+             f'<button class="speak" type="button" data-say="{e(say)}" data-slow="1" '
+             f'aria-label="Hear {e(say)} slowly">🐢</button>')
+    if not entry:
+        # No dictionary entry authored yet: fall back to the unit table's own
+        # part of speech and gloss rather than dropping the word.
+        entry = {"senses": [{"pos": w.get("pos", ""), "en": "", "vi": w["vi"], "examples": []}]}
+    senses = entry.get("senses", [])
+    head = (f'<div class="e-h"><h3>{e(w["word"])}</h3>'
+            f'<span class="e-ipa">{e(w["ipa"])}</span>{audio}'
+            f'<span class="e-n">{w["n"]}</span></div>')
+    flat = sense_html(senses[0], 1 if len(senses) > 1 else None) if senses else ""
+
+    rest = "".join(sense_html(sn, i + 2) for i, sn in enumerate(senses[1:]))
+    forms = ""
+    if entry.get("forms"):
+        rows = "".join(
+            f'<li><b>{e(f["w"])}</b> <span class="s-pos">{e(f.get("pos",""))}</span> '
+            f'{inline(f.get("en",""))} <span class="s-vi">{inline(f.get("vi",""))}</span>'
+            + (f'<span class="f-ex">{inline(f["ex"])}</span>' if f.get("ex") else "")
+            + "</li>" for f in entry["forms"])
+        forms = f'<div class="e-sec"><h4>Word family</h4><ul class="e-forms">{rows}</ul></div>'
+    note = (f'<div class="e-sec"><h4>Watch out</h4><p class="e-note">{inline(entry["note"])}</p></div>'
+            if entry.get("note") else "")
+
+    body = rest + forms + note
+    if not body:
+        return f'<article class="entry" id="w-{e(slug(w["word"]))}" data-role="vocab-row">{head}{flat}</article>'
+    extra = len(senses) - 1
+    bits = []
+    if extra > 0:
+        bits.append(f"{extra} more meaning" + ("s" if extra != 1 else ""))
+    if entry.get("forms"):
+        bits.append("word family")
+    if entry.get("note"):
+        bits.append("usage")
+    return (f'<article class="entry" id="w-{e(slug(w["word"]))}" data-role="vocab-row">{head}{flat}'
+            f'<div class="e-more">'
+            f'<button type="button" class="e-toggle" aria-expanded="false">'
+            f'<span class="bk">📖</span> Full entry <span class="e-hint">{e(" · ".join(bits))}</span></button>'
+            f'<div class="e-full" hidden="until-found" id="full-{e(slug(w["word"]))}">{body}</div></div></article>')
+
+
+def vocab_entries(u) -> str:
+    return ('<div class="entries">'
+            + "".join(entry_html(w, DICT.get(w["word"].lower())) for w in u["vocab"])
+            + "</div>")
+
+
 def vocab_table(u) -> str:
     """The vocabulary table, rebuilt from parsed data rather than passed through.
 
@@ -443,7 +547,7 @@ def page_lesson(u, L) -> str:
             # The vocabulary block's table is swapped for the rebuilt one, so
             # every row carries its marker and its own audio button.
             if b["title"].lower().startswith("vocabulary") and u["vocab"]:
-                inner, n = RE_FIRST_TABLE.subn(lambda _: vocab_table(u), inner, count=1)
+                inner, n = RE_FIRST_TABLE.subn(lambda _: vocab_entries(u), inner, count=1)
                 if n != 1:
                     raise SystemExit(
                         f"unit {u['nn']} lesson {L['n']}: vocabulary block has no table to replace")

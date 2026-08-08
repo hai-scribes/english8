@@ -286,3 +286,67 @@ footer.foot p{margin:0;max-width:74ch}
   body{background:#fff}
   .card,.block{break-inside:avoid;box-shadow:none;border-color:#ccc}
 }
+
+/* ---------------- dictionary entries ----------------
+   Oxford-style: headword line, then the first sense flat — part of speech,
+   English definition, Vietnamese under it, examples. Everything else (further
+   senses, word family, usage) sits behind one toggle so the flat view stays
+   scannable for eighteen words in a row. */
+.entries{display:flex;flex-direction:column;gap:.2rem}
+.entry{border-top:1px solid var(--rule-soft);padding:1.05rem 0 .95rem;position:relative;scroll-margin-top:4.2rem}
+.block,.card,h2[id],h3[id]{scroll-margin-top:4.2rem}
+.entry:first-child{border-top:0;padding-top:.2rem}
+
+.e-h{display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap;margin-bottom:.55rem}
+.e-h h3{font-size:1.24rem;font-weight:600;letter-spacing:-.01em}
+.e-ipa{font-family:var(--f-mono);font-size:.83rem;color:var(--muted)}
+.e-n{margin-left:auto;font-family:var(--f-mono);font-size:.68rem;color:var(--faint);
+  font-variant-numeric:tabular-nums;flex:none}
+.e-h .speak{padding:.1rem .38rem;font-size:.76rem}
+
+.sense{display:flex;gap:.55rem;padding:.15rem 0}
+.sense+.sense{margin-top:.7rem;padding-top:.7rem;border-top:1px dotted var(--rule-soft)}
+.s-n{font-family:var(--f-mono);font-size:.74rem;color:var(--clay);background:var(--clay-wash);
+  border-radius:3px;height:1.35rem;min-width:1.35rem;display:grid;place-items:center;flex:none;margin-top:.12rem}
+.s-b{min-width:0;display:flex;flex-direction:column;gap:.3rem}
+.s-p{margin:0;display:flex;gap:.45rem;align-items:baseline;flex-wrap:wrap}
+.s-pos{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--teal);background:var(--teal-wash);padding:.1rem .4rem;border-radius:3px}
+.s-g{font-size:.75rem;color:var(--faint);font-style:italic}
+.s-en{margin:0;font-size:.98rem;line-height:1.5}
+.s-vi{margin:0;font-size:.89rem;color:var(--muted);font-style:italic}
+.s-eg{margin:.15rem 0 0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:.28rem}
+.s-eg li{font-size:.9rem;color:var(--muted);padding-left:.85rem;position:relative;line-height:1.5}
+.s-eg li::before{content:"·";position:absolute;left:.15rem;color:var(--clay);font-weight:700}
+.s-eg strong{color:var(--ink);font-weight:600}
+.s-c{margin:.2rem 0 0;display:flex;flex-wrap:wrap;gap:.3rem}
+.s-c span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);
+  background:var(--sunk);border-radius:3px;padding:.12rem .4rem}
+
+.e-more{margin-top:.6rem}
+.e-toggle{font:inherit;font-size:.8rem;background:none;border:1px solid var(--rule);color:var(--muted);
+  border-radius:var(--r);padding:.32rem .7rem;cursor:pointer;display:inline-flex;align-items:center;gap:.4rem}
+.e-toggle:hover{border-color:var(--teal);color:var(--teal)}
+.e-toggle[aria-expanded="true"]{border-color:var(--teal);color:var(--teal);background:var(--teal-wash)}
+.e-toggle .bk{font-size:.92rem;line-height:1}
+.e-hint{font-family:var(--f-mono);font-size:.68rem;color:var(--faint)}
+.e-toggle:hover .e-hint,.e-toggle[aria-expanded="true"] .e-hint{color:inherit;opacity:.75}
+.e-full{margin-top:.75rem;padding:.85rem 1rem;background:var(--raised);
+  border:1px solid var(--rule-soft);border-radius:var(--r);display:flex;flex-direction:column;gap:.85rem}
+.e-sec h4{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--faint);font-weight:400;margin:0 0 .4rem}
+.e-forms{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.e-forms li{font-size:.89rem;line-height:1.5}
+.e-forms .s-pos{margin-right:.25rem}
+.e-forms .s-vi{display:inline;font-size:.85rem}
+.f-ex{display:block;font-size:.85rem;color:var(--muted);padding-left:.85rem;position:relative;margin-top:.12rem}
+.f-ex::before{content:"·";position:absolute;left:.15rem;color:var(--clay);font-weight:700}
+.f-ex strong{color:var(--ink)}
+.e-note{margin:0;font-size:.88rem;line-height:1.55;color:var(--muted)}
+.e-note strong{color:var(--ink)}
+@media (max-width:560px){
+  .e-h h3{font-size:1.12rem}
+  .e-n{display:none}
+  .e-full{padding:.75rem .8rem}
+}
+@media print{ .e-toggle{display:none!important} .e-full{display:flex!important} }

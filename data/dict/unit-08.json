@@ -1,0 +1,277 @@
+{
+  "_unit": "08 — Shopping",
+
+  "shopping centre": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a large building or group of buildings containing many different shops",
+        "vi": "trung tâm mua sắm",
+        "examples": ["We meet at the **shopping centre** near the swimming pool.",
+                     "The new **shopping centre** has a cinema on the top floor.",
+                     "It rained, so we spent the afternoon in the **shopping centre**."],
+        "colloc": ["go to the shopping centre", "a new shopping centre"] }
+    ],
+    "note": "British English. Americans say **shopping mall** or just *the mall*. Note the British spelling *centre*."
+  },
+
+  "department store": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a large shop divided into sections, each selling a different type of goods",
+        "vi": "cửa hàng bách hoá",
+        "examples": ["She bought the shoes in a **department store**.",
+                     "The **department store** has six floors.",
+                     "Clothes are on the second floor of the **department store**."],
+        "colloc": ["a large department store", "shop at a department store"] }
+    ],
+    "note": "A **department store** is one shop with many sections; a *shopping centre* is many separate shops under one roof."
+  },
+
+  "street vendor": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a person who sells food or goods from a stall or cart in the street",
+        "vi": "người bán hàng rong",
+        "examples": ["A **street vendor** was selling banh mi on the corner.",
+                     "**Street vendors** line the road near the market.",
+                     "We bought sugarcane juice from a **street vendor**."],
+        "colloc": ["buy from a street vendor", "a food vendor"] }
+    ],
+    "forms": [
+      { "w": "vendor", "pos": "noun", "en": "a person or company that sells something", "vi": "người bán", "ex": "The **vendor** gave us a discount." }
+    ]
+  },
+
+  "stall": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a table or small open shop in a market or at a fair, where things are sold",
+        "vi": "quầy hàng, sạp hàng",
+        "examples": ["Her family runs a fruit **stall** in the market.",
+                     "There were twenty **stalls** at the school fair.",
+                     "The **stall** opens at five in the morning."],
+        "colloc": ["a market stall", "run a stall", "a food stall"] }
+    ]
+  },
+
+  "customer": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a person who buys goods or services from a shop or business",
+        "vi": "khách hàng",
+        "examples": ["The shop was full of **customers** on Saturday.",
+                     "A good shop looks after its **customers**.",
+                     "She is one of our regular **customers**."],
+        "colloc": ["a regular customer", "customer service", "serve a customer"] }
+    ],
+    "note": "A **customer** buys goods; a *client* buys professional services; a *guest* stays at a hotel."
+  },
+
+  "bargain": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "something bought for much less than its usual price",
+        "vi": "món hời, món mua được giá rẻ",
+        "examples": ["These shoes were a real **bargain** at 200,000 dong.",
+                     "The sale is full of **bargains**.",
+                     "It's a **bargain** — buy it!"],
+        "colloc": ["a real bargain", "a bargain price", "look for bargains"] },
+      { "pos": "verb", "grammar": "intransitive, + with / over",
+        "en": "to discuss a price with a seller in order to pay less",
+        "vi": "mặc cả, trả giá",
+        "examples": ["You are expected to **bargain** at the market.",
+                     "He **bargained** with the vendor for ten minutes.",
+                     "She **bargained** the price down to half."],
+        "colloc": ["bargain over the price", "bargain with a seller"] }
+    ],
+    "note": "In British shops the price is fixed and you do not bargain; at a market you often can. *Haggle* means the same as the verb."
+  },
+
+  "discount": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "an amount taken off the usual price",
+        "vi": "sự giảm giá, chiết khấu",
+        "examples": ["Students get a 10% **discount**.",
+                     "They offered me a **discount** because the box was damaged.",
+                     "There is a **discount** on all winter coats."],
+        "colloc": ["get a discount", "offer a discount", "a 20% discount"] }
+    ],
+    "note": "Stress the noun on the first syllable (**DIS**-count) and the verb on the second (dis-**COUNT**)."
+  },
+
+  "refund": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "money that is given back to you, especially because you have returned goods",
+        "vi": "tiền hoàn lại",
+        "examples": ["I took the shirt back and asked for a **refund**.",
+                     "You can get a full **refund** within 14 days.",
+                     "They gave me a **refund** without any trouble."],
+        "colloc": ["ask for a refund", "get a full refund", "a refund policy"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to give someone their money back",
+        "vi": "hoàn tiền",
+        "examples": ["The shop **refunded** the full amount.",
+                     "They will **refund** you if the item is faulty."],
+        "colloc": ["refund the money"] }
+    ],
+    "note": "Keep the **receipt** — most shops will not give a refund without one."
+  },
+
+  "receipt": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a piece of paper showing that you have paid for something",
+        "vi": "hoá đơn, biên lai",
+        "examples": ["Keep the **receipt** in case you want a refund.",
+                     "The cashier printed the **receipt**.",
+                     "I lost the **receipt**, so I couldn't return it."],
+        "colloc": ["keep the receipt", "ask for a receipt"] }
+    ],
+    "note": "The **p** is silent: /rɪˈsiːt/, ri-**SEET**. A *receipt* proves you paid; a *bill* (BrE) or *check* (AmE) asks you to pay."
+  },
+
+  "cash": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "money in the form of coins and notes rather than cards",
+        "vi": "tiền mặt",
+        "examples": ["Do you want to pay by card or in **cash**?",
+                     "Many street vendors only take **cash**.",
+                     "I don't have enough **cash** on me."],
+        "colloc": ["pay in cash", "pay cash", "cash only"] }
+    ],
+    "note": "**Uncountable** — never *cashes*. Say *pay **in** cash* or *pay cash*, but *pay **by** card*."
+  },
+
+  "in stock": {
+    "senses": [
+      { "pos": "phrase",
+        "en": "available in the shop and ready to be bought",
+        "vi": "còn hàng, có sẵn",
+        "examples": ["Do you have this jacket **in stock** in a smaller size?",
+                     "The book is **in stock** at the city branch.",
+                     "Sorry, we don't have that colour **in stock**."],
+        "colloc": ["have something in stock", "back in stock"] }
+    ],
+    "note": "Opposite: **out of stock** or *sold out*."
+  },
+
+  "delivery": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable / uncountable",
+        "en": "the act of taking goods to the person who has bought them",
+        "vi": "việc giao hàng",
+        "examples": ["**Delivery** is free on orders over 500,000 dong.",
+                     "The **delivery** arrived two days late.",
+                     "They offer next-day **delivery**."],
+        "colloc": ["free delivery", "next-day delivery", "a delivery charge"] }
+    ],
+    "forms": [
+      { "w": "deliver", "pos": "verb", "en": "to take goods to a person or place", "vi": "giao hàng", "ex": "They **deliver** on Sundays too." }
+    ]
+  },
+
+  "browse": {
+    "senses": [
+      { "pos": "verb", "grammar": "intransitive",
+        "en": "to look at things in a shop without intending to buy anything in particular",
+        "vi": "xem hàng, ngắm hàng",
+        "examples": ["We spent an hour **browsing** in the bookshop.",
+                     "I'm just **browsing**, thank you.",
+                     "She likes to **browse** before she decides."],
+        "colloc": ["browse in a shop", "just browsing"] },
+      { "pos": "verb", "grammar": "transitive / intransitive",
+        "en": "to look through pages on the internet",
+        "vi": "lướt web, duyệt web",
+        "examples": ["He was **browsing** the web on his phone.",
+                     "I **browsed** a few online shops last night."],
+        "colloc": ["browse the internet", "browse a website"] }
+    ],
+    "forms": [
+      { "w": "browser", "pos": "noun", "en": "a program used to look at internet pages", "vi": "trình duyệt", "ex": "Open the link in a different **browser**." }
+    ],
+    "note": "*I'm just browsing* is the polite English answer when a shop assistant asks if you need help."
+  },
+
+  "try on": {
+    "senses": [
+      { "pos": "phrasal verb", "grammar": "separable",
+        "en": "to put on a piece of clothing to see whether it fits and suits you",
+        "vi": "mặc thử, thử (quần áo)",
+        "examples": ["Can I **try** these shoes **on**?",
+                     "She **tried on** four dresses and bought none.",
+                     "**Try** it **on** before you buy it."],
+        "colloc": ["try on a jacket", "a changing room to try things on"] }
+    ],
+    "note": "Separable, and with a pronoun it **must** split: *try **it** on*, never *try on it*."
+  },
+
+  "queue": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a line of people waiting for something",
+        "vi": "hàng người xếp hàng",
+        "examples": ["There was a long **queue** at the till.",
+                     "Join the **queue** over there.",
+                     "The **queue** moved surprisingly quickly."],
+        "colloc": ["join a queue", "a long queue", "jump the queue"] },
+      { "pos": "verb", "grammar": "intransitive, + for / up",
+        "en": "to wait in a line",
+        "vi": "xếp hàng",
+        "examples": ["We **queued** for twenty minutes.",
+                     "People were **queuing up** outside the shop."],
+        "colloc": ["queue for tickets", "queue up"] }
+    ],
+    "note": "British English; Americans say *line* and *stand in line*. Pronounced simply /kjuː/ — like the letter **Q**; the last four letters are silent."
+  },
+
+  "convenient": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "useful and easy because it saves you time or trouble",
+        "vi": "tiện lợi, thuận tiện",
+        "examples": ["Online shopping is very **convenient**.",
+                     "The shop is **convenient** for the bus station.",
+                     "Would Saturday be **convenient** for you?"],
+        "colloc": ["convenient for", "a convenient time", "quick and convenient"] }
+    ],
+    "forms": [
+      { "w": "convenience", "pos": "noun", "en": "the quality of being easy and useful", "vi": "sự tiện lợi", "ex": "People shop online for **convenience**." }
+    ],
+    "note": "Opposite: **inconvenient**. Stress the second syllable: con-**VEN**-ient."
+  },
+
+  "expensive": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "costing a lot of money",
+        "vi": "đắt, đắt đỏ",
+        "examples": ["That jacket is too **expensive** for me.",
+                     "Fruit is more **expensive** in winter.",
+                     "It was the most **expensive** thing in the shop."],
+        "colloc": ["very expensive", "too expensive", "an expensive mistake"] }
+    ],
+    "note": "Opposite: **cheap** or *inexpensive*. Things are *expensive*; **prices** are *high*, not *expensive*."
+  },
+
+  "purchase": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive, formal",
+        "en": "to buy something",
+        "vi": "mua (trang trọng)",
+        "examples": ["Tickets may be **purchased** online.",
+                     "The company **purchased** new equipment.",
+                     "Goods **purchased** in the sale cannot be returned."],
+        "colloc": ["purchase tickets", "purchase online"] },
+      { "pos": "noun", "grammar": "countable, formal",
+        "en": "something you have bought, or the act of buying it",
+        "vi": "món hàng đã mua; việc mua",
+        "examples": ["Keep your receipt as proof of **purchase**.",
+                     "She was pleased with her **purchases**."],
+        "colloc": ["proof of purchase", "make a purchase"] }
+    ],
+    "note": "**Formal.** In everyday speech use *buy*: you *buy* a coffee, but a company *purchases* equipment. Pronounced /ˈpɜːtʃəs/: **PUR**-chuss."
+  }
+}

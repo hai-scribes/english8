@@ -24,6 +24,8 @@ never above the lessons, and inert until the lessons they cover are complete.
 | Path | What it is |
 | --- | --- |
 | `units/*.md` | **Source of truth.** One markdown file per unit. |
+| `data/dict/*.json` | Dictionary entries — senses, definitions, examples, word families. |
+| `tools/check_dict.py` | Gate: every vocabulary slot resolves to a complete entry. |
 | `tools/build.py` | Generator: markdown → the 97-page site. |
 | `tools/assets/` | `app.css` and `app.js`, copied into the build. |
 | `docs/` | Generated output. GitHub Pages serves this directory. |
@@ -39,6 +41,21 @@ python3 tools/build.py --check    # parse and report counts, write nothing
 
 Requires `markdown` (`pip install markdown`). Edit the markdown in `units/`,
 re-run the build, commit `docs/`. There is no CI step — a push publishes.
+
+## Vocabulary entries
+
+Each word is a dictionary entry rather than a table row. The flat view shows the
+most common sense — part of speech, an English definition, the Vietnamese under
+it, examples and collocations. A **Full entry** toggle opens any further senses,
+the word family and a usage note; words with only one meaning and nothing to add
+get no toggle at all.
+
+Entries live in `data/dict/unit-NN.json`, merged into one lookup keyed by
+headword, so a word appearing in two units is written once. Definitions and
+examples are original, written in the style of a learner's dictionary — they are
+not taken from any published dictionary. Run `python3 tools/check_dict.py` to
+confirm every headword resolves and every sense has a part of speech, both
+glosses and at least two examples with the target word bolded.
 
 ## A note on the audio
 

@@ -183,6 +183,32 @@ function initAnswers(){
   });
 }
 
+/* ---------------- dictionary entries -------------------------------------
+   One toggle per entry. Kept independent (not an accordion) because a learner
+   comparing two words wants both open at once. */
+function initEntries(){
+  $$(".e-toggle").forEach(btn => {
+    const full = btn.parentElement.querySelector(".e-full");
+    if (!full) return;
+    const sync = open => {
+      btn.setAttribute("aria-expanded", String(open));
+      btn.querySelector(".bk").textContent = open ? "📕" : "📖";
+      const label = Array.from(btn.childNodes).find(n => n.nodeType === 3 && n.textContent.trim());
+      if (label) label.textContent = open ? " Hide full entry " : " Full entry ";
+    };
+    /* Ctrl+F can reveal a hidden="until-found" block without a click; keep the
+       button honest when the browser opens it for us. */
+    full.addEventListener("beforematch", () => sync(true));
+    btn.addEventListener("click", () => {
+      const open = full.hasAttribute("hidden");
+      if (open) full.removeAttribute("hidden");
+      else full.setAttribute("hidden", "until-found");
+      sync(open);
+      return;
+    });
+  });
+}
+
 /* ---------------- lesson page -------------------------------------------- */
 function initLesson(){
   if (DATA.kind !== "lesson") return;
@@ -454,6 +480,7 @@ function initSpeakButtons(){
 function boot(){
   initTheme();
   initAnswers();
+  initEntries();
   initLesson();
   paintProgress();
   initGate();

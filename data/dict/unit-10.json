@@ -1,0 +1,692 @@
+{
+  "_unit": "10 — Communication in the Future",
+
+  "telepathy": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "the ability to send thoughts to another person, or to know what they are thinking, without speaking or writing",
+        "vi": "thần giao cách cảm",
+        "examples": [
+          "Some people believe that twins can use **telepathy**.",
+          "In the story, the two friends talk by **telepathy** across the sea.",
+          "Scientists have never proved that **telepathy** is real."
+        ],
+        "colloc": [
+          "use telepathy",
+          "believe in telepathy",
+          "communicate by telepathy"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "telepathic",
+        "pos": "adjective",
+        "en": "able to send or receive thoughts without words",
+        "vi": "có khả năng thần giao cách cảm",
+        "ex": "The robot in the film has **telepathic** powers."
+      }
+    ],
+    "note": "Uncountable: say *some telepathy*, never *a telepathy*. Watch the stress: te-**LEP**-a-thy (noun) but tel-e-**PATH**-ic (adjective) — the stress moves."
+  },
+
+  "telepathic": {
+    "senses": [
+      {
+        "pos": "adjective",
+        "en": "able to share thoughts with someone without speaking, or connected with this ability",
+        "vi": "thuộc về thần giao cách cảm; có khả năng thần giao cách cảm",
+        "examples": [
+          "The alien sends a **telepathic** message to the captain.",
+          "My sister and I are almost **telepathic** — we say the same thing at the same moment.",
+          "In 2050, people may wear **telepathic** helmets to talk without words."
+        ],
+        "colloc": [
+          "a telepathic message",
+          "telepathic powers"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "telepathy",
+        "pos": "noun",
+        "en": "the ability to send or receive thoughts without words",
+        "vi": "thần giao cách cảm",
+        "ex": "He says he can read minds by **telepathy**."
+      },
+      {
+        "w": "telepathically",
+        "pos": "adverb",
+        "en": "by sending thoughts, not words",
+        "vi": "bằng thần giao cách cảm",
+        "ex": "The two robots speak to each other **telepathically**."
+      }
+    ],
+    "note": "Stress: tel-e-**PATH**-ic. Compare the noun te-**LEP**-a-thy, where the stress is on a different syllable."
+  },
+
+  "video call": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a phone or internet call in which you can see the other person on a screen while you talk",
+        "vi": "cuộc gọi video (cuộc gọi có hình)",
+        "examples": [
+          "I have a **video call** with my cousin in Australia every Sunday.",
+          "We had a short **video call** to plan the class project.",
+          "Her **video call** froze because the wifi was slow."
+        ],
+        "colloc": [
+          "make a video call",
+          "have a video call",
+          "be on a video call"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "video-call",
+        "pos": "verb",
+        "en": "to call someone so that you can see and hear each other",
+        "vi": "gọi video cho ai",
+        "ex": "I'll **video-call** you after dinner."
+      }
+    ],
+    "note": "Two words as a noun (*a video call*), but hyphenated when used as a verb: *I video-called my grandma*. We **make** or **have** a video call — not *do* a video call."
+  },
+
+  "social media": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "usually uncountable",
+        "en": "websites and apps that people use to share messages, photos and videos with lots of other people",
+        "vi": "mạng xã hội",
+        "examples": [
+          "My parents limit my time on **social media** to one hour a day.",
+          "News travels fast on **social media**.",
+          "She learnt about the concert from **social media**."
+        ],
+        "colloc": [
+          "on social media",
+          "a social media account",
+          "spend time on social media"
+        ]
+      }
+    ],
+    "note": "Usually **uncountable**, so we say *social media is popular* — but some writers treat it as plural (*social media are changing news*). Both are used; keep one style in a piece of writing. Do not say *a social media*; say **a social media site** or **a social network**."
+  },
+
+  "instant message": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a short written message sent over the internet that reaches the other person immediately",
+        "vi": "tin nhắn tức thời",
+        "examples": [
+          "She sent me an **instant message** to say she was late.",
+          "I got three **instant messages** during the lesson.",
+          "An **instant message** is quicker than an email."
+        ],
+        "colloc": [
+          "send an instant message",
+          "get an instant message"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "instant messaging",
+        "pos": "noun",
+        "en": "the activity of sending short messages over the internet in real time",
+        "vi": "nhắn tin tức thời",
+        "ex": "**Instant messaging** has almost replaced text messages in my family."
+      }
+    ],
+    "note": "Often shortened to **IM** in informal writing (*I'll IM you*). Remember: *instant* means it arrives at once, so do not add *quickly* — *he sent an instant message quickly* sounds strange."
+  },
+
+  "face-to-face": {
+    "senses": [
+      {
+        "pos": "adjective",
+        "grammar": "before a noun",
+        "en": "happening when two people are together in the same place, not by phone or over the internet",
+        "vi": "trực tiếp, mặt đối mặt",
+        "examples": [
+          "We had a **face-to-face** meeting instead of a video call.",
+          "**Face-to-face** lessons started again after the storm.",
+          "A **face-to-face** interview can feel more friendly than an online one."
+        ],
+        "colloc": [
+          "a face-to-face meeting",
+          "face-to-face communication",
+          "a face-to-face interview"
+        ]
+      },
+      {
+        "pos": "adverb",
+        "en": "with the other person in front of you, in the same place",
+        "vi": "gặp trực tiếp, mặt đối mặt",
+        "examples": [
+          "We finally met **face-to-face** after two years online.",
+          "Some things are easier to say **face-to-face**.",
+          "I'd rather talk to my teacher **face-to-face** than send an email."
+        ],
+        "colloc": [
+          "meet face-to-face",
+          "talk face-to-face"
+        ]
+      }
+    ],
+    "note": "Keep the hyphens: **face-to-face** (adjective and adverb). Some writers drop them in the adverb (*meet face to face*), but hyphens are always correct before a noun: *a face-to-face chat*."
+  },
+
+  "interact": {
+    "senses": [
+      {
+        "pos": "verb",
+        "grammar": "intransitive, + with",
+        "en": "to talk to and spend time with other people, or to work together with them",
+        "vi": "tương tác, giao tiếp qua lại",
+        "examples": [
+          "Children need to **interact** with other children, not only with screens.",
+          "In the new app you can **interact** with students in other countries.",
+          "He is shy and finds it hard to **interact** in a big group."
+        ],
+        "colloc": [
+          "interact with people",
+          "interact with each other",
+          "interact online"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "interaction",
+        "pos": "noun",
+        "en": "the activity of talking to or working with other people",
+        "vi": "sự tương tác",
+        "ex": "There is very little **interaction** between the two classes."
+      },
+      {
+        "w": "interactive",
+        "pos": "adjective",
+        "en": "allowing information to go both ways between a person and a computer, or between people",
+        "vi": "có tính tương tác",
+        "ex": "Our English lessons use an **interactive** whiteboard."
+      }
+    ],
+    "note": "**Interact** is followed by **with**, not *to*: *interact with your classmates* (not *interact to*)."
+  },
+
+  "communicate": {
+    "senses": [
+      {
+        "pos": "verb",
+        "grammar": "intransitive, + with",
+        "en": "to share information, ideas or feelings with other people by speaking, writing or moving your body",
+        "vi": "giao tiếp, liên lạc",
+        "examples": [
+          "Deaf people **communicate** with sign language.",
+          "We **communicate** with our relatives abroad by video call.",
+          "In the future we may **communicate** without opening our mouths."
+        ],
+        "colloc": [
+          "communicate with someone",
+          "communicate by email",
+          "communicate effectively"
+        ]
+      },
+      {
+        "pos": "verb",
+        "grammar": "transitive",
+        "en": "to make an idea or a feeling clear to other people",
+        "vi": "truyền đạt, bày tỏ",
+        "examples": [
+          "A good speaker can **communicate** difficult ideas simply.",
+          "Her face **communicated** how tired she was.",
+          "Try to **communicate** your opinion politely."
+        ],
+        "colloc": [
+          "communicate an idea",
+          "communicate a message"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "communication",
+        "pos": "noun",
+        "en": "the activity of sharing information with other people",
+        "vi": "sự giao tiếp, sự truyền thông",
+        "ex": "Good **communication** is important in every family."
+      },
+      {
+        "w": "communicative",
+        "pos": "adjective",
+        "en": "willing to talk to people and share information",
+        "vi": "cởi mở, thích giao tiếp",
+        "ex": "My little brother is very **communicative** with strangers."
+      }
+    ],
+    "note": "Spelling: two **m**s and two **c** sounds — commu-ni-cate. The noun **communication** is uncountable when it means the activity, but plural **communications** can mean systems such as phones and the internet."
+  },
+
+  "gesture": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a movement of your hand, head or body that shows what you mean or how you feel",
+        "vi": "cử chỉ, điệu bộ",
+        "examples": [
+          "A thumbs-up is a friendly **gesture** in Viet Nam.",
+          "He made a **gesture** towards the door to show us the way out.",
+          "Some **gestures** mean different things in different countries."
+        ],
+        "colloc": [
+          "make a gesture",
+          "a friendly gesture",
+          "a rude gesture"
+        ]
+      },
+      {
+        "pos": "verb",
+        "grammar": "intransitive",
+        "en": "to move your hand, head or body in order to tell someone something",
+        "vi": "ra hiệu, khoát tay ra dấu",
+        "examples": [
+          "She **gestured** to us to sit down.",
+          "The guide **gestured** at the old temple on the hill.",
+          "He **gestured** wildly because the music was too loud to talk."
+        ],
+        "colloc": [
+          "gesture to someone",
+          "gesture at something"
+        ]
+      }
+    ],
+    "note": "We **make** a gesture (not *do* a gesture). Gestures are part of **body language** — the way we communicate without words."
+  },
+
+  "signal": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a movement, sound or light that gives information or tells someone to do something",
+        "vi": "tín hiệu, dấu hiệu",
+        "examples": [
+          "When I raise my hand, that's the **signal** to start.",
+          "The teacher gave a **signal** and everybody stood up.",
+          "A red light is a **signal** to stop."
+        ],
+        "colloc": [
+          "give a signal",
+          "wait for the signal"
+        ]
+      },
+      {
+        "pos": "noun",
+        "grammar": "countable or uncountable",
+        "en": "radio waves that carry sound, pictures or data to a phone, TV or computer",
+        "vi": "sóng, tín hiệu (điện thoại, truyền hình)",
+        "examples": [
+          "There is no **signal** up in the mountains, so I can't call you.",
+          "The **signal** is weak inside the lift.",
+          "Move to the window for a better **signal**."
+        ],
+        "colloc": [
+          "a weak signal",
+          "a strong signal",
+          "lose the signal"
+        ]
+      },
+      {
+        "pos": "verb",
+        "grammar": "transitive or intransitive",
+        "en": "to make a movement or sound in order to tell someone something",
+        "vi": "ra hiệu, báo hiệu",
+        "examples": [
+          "The driver **signalled** that he was turning left.",
+          "She **signalled** to me to be quiet.",
+          "A bell **signals** the end of the lesson."
+        ],
+        "colloc": [
+          "signal to someone",
+          "signal the end of something"
+        ]
+      }
+    ],
+    "note": "British English doubles the **l**: *signalled, signalling*; American English writes *signaled, signaling*. The **g** is silent-ish: say **SIG**-nuhl."
+  },
+
+  "translate": {
+    "senses": [
+      {
+        "pos": "verb",
+        "grammar": "transitive",
+        "en": "to change words from one language into another language",
+        "vi": "dịch (từ ngôn ngữ này sang ngôn ngữ khác)",
+        "examples": [
+          "Can you **translate** this sentence into Vietnamese?",
+          "The app can **translate** a menu from a photo.",
+          "Her book has been **translated** into ten languages."
+        ],
+        "colloc": [
+          "translate something into English",
+          "translate a text",
+          "translate word for word"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "translation",
+        "pos": "noun",
+        "en": "a text that has been changed into another language, or the act of doing this",
+        "vi": "bản dịch; việc dịch",
+        "ex": "I read an English **translation** of the poem."
+      },
+      {
+        "w": "translator",
+        "pos": "noun",
+        "en": "a person or machine that changes writing into another language",
+        "vi": "người dịch, phần mềm dịch",
+        "ex": "In the future, a tiny **translator** in your ear may do the work."
+      }
+    ],
+    "note": "Translate **into** a language, **from** another: *translate from English into Vietnamese*. A **translator** works with writing; an *interpreter* works with speech."
+  },
+
+  "device": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a machine or piece of equipment made to do one particular job",
+        "vi": "thiết bị",
+        "examples": [
+          "This small **device** records your voice and turns it into text.",
+          "Please switch off all electronic **devices** during the test.",
+          "In 2050, we may wear a **device** that translates every language."
+        ],
+        "colloc": [
+          "an electronic device",
+          "a mobile device",
+          "use a device"
+        ]
+      }
+    ],
+    "note": "**Device** is the noun; *devise* (with an **s**) is the verb meaning *to invent*. A **device** is any tool or machine, often serious or technical; a *gadget* is usually small, clever and a bit fun — a phone is a **device**, a tiny camera pen is a *gadget*."
+  },
+
+  "network": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a group of computers or phones that are joined together so that they can share information",
+        "vi": "mạng (máy tính, điện thoại)",
+        "examples": [
+          "All the school computers are on the same **network**.",
+          "Don't share your password on a public **network**.",
+          "The **network** went down and nobody could send an email."
+        ],
+        "colloc": [
+          "a computer network",
+          "a mobile network",
+          "connect to a network"
+        ]
+      },
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a group of people or organizations that are connected and help each other",
+        "vi": "mạng lưới (người, tổ chức)",
+        "examples": [
+          "She has a wide **network** of friends around the world.",
+          "The club is part of a **network** of youth groups.",
+          "A good **network** of volunteers helped after the flood."
+        ],
+        "colloc": [
+          "a network of friends",
+          "a support network"
+        ]
+      },
+      {
+        "pos": "verb",
+        "grammar": "intransitive",
+        "en": "to meet and talk to people who may be useful to you in work or study",
+        "vi": "kết nối, mở rộng quan hệ",
+        "examples": [
+          "Students go to the fair to **network** with companies.",
+          "He is good at **networking** at conferences.",
+          "You can **network** online without leaving your house."
+        ],
+        "colloc": [
+          "network with people",
+          "network online"
+        ]
+      }
+    ],
+    "note": "One word, no hyphen: **network**. Note **social network** (one website or app) versus *social media* (all of them together)."
+  },
+
+  "connection": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a link between two things, in which one thing is related to or affects the other",
+        "vi": "mối liên hệ, sự liên quan",
+        "examples": [
+          "Is there a **connection** between screen time and poor sleep?",
+          "I can't see any **connection** between the two stories.",
+          "There is a close **connection** between language and culture."
+        ],
+        "colloc": [
+          "a connection between two things",
+          "a close connection",
+          "make a connection"
+        ]
+      },
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "the way a computer or phone joins the internet or a phone line",
+        "vi": "kết nối (mạng, internet)",
+        "examples": [
+          "Our internet **connection** is very slow today.",
+          "I lost the **connection** in the middle of the video call.",
+          "You need a strong **connection** to watch films online."
+        ],
+        "colloc": [
+          "an internet connection",
+          "a slow connection",
+          "lose the connection"
+        ]
+      },
+      {
+        "pos": "noun",
+        "grammar": "countable, usually plural",
+        "en": "a person you know who may be able to help you",
+        "vi": "mối quan hệ (người quen có thể giúp đỡ)",
+        "examples": [
+          "He got the job through family **connections**.",
+          "She has useful **connections** in the music world.",
+          "Good **connections** can open doors, but hard work matters more."
+        ],
+        "colloc": [
+          "family connections",
+          "useful connections"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "connect",
+        "pos": "verb",
+        "en": "to join two things together, or to join a device to the internet",
+        "vi": "kết nối, nối",
+        "ex": "**Connect** the headphones to your phone."
+      },
+      {
+        "w": "connected",
+        "pos": "adjective",
+        "en": "joined to something, especially to a network",
+        "vi": "được kết nối",
+        "ex": "My laptop isn't **connected** to the wifi."
+      }
+    ],
+    "note": "Spelling trap: **connection** has two **n**s in the middle and ends in **-tion** (the older form *connexion* is no longer used)."
+  },
+
+  "virtual": {
+    "senses": [
+      {
+        "pos": "adjective",
+        "grammar": "before a noun",
+        "en": "made by a computer so that it seems real, although it does not exist in the real world",
+        "vi": "ảo (do máy tính tạo ra)",
+        "examples": [
+          "We took a **virtual** tour of the museum from our classroom.",
+          "In the future, students may meet in a **virtual** classroom.",
+          "He plays football with friends in a **virtual** world."
+        ],
+        "colloc": [
+          "virtual reality",
+          "a virtual classroom",
+          "a virtual assistant"
+        ]
+      },
+      {
+        "pos": "adjective",
+        "grammar": "before a noun",
+        "en": "almost what you are describing, but not exactly or officially",
+        "vi": "gần như, thực tế là",
+        "examples": [
+          "The old phone box is a **virtual** museum piece now.",
+          "Losing the last match made him a **virtual** unknown again.",
+          "Her silence was a **virtual** answer to the question."
+        ],
+        "colloc": [
+          "a virtual certainty",
+          "a virtual impossibility"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "virtually",
+        "pos": "adverb",
+        "en": "almost, very nearly",
+        "vi": "hầu như, gần như",
+        "ex": "**Virtually** everyone in my class has a smartphone."
+      },
+      {
+        "w": "virtual reality",
+        "pos": "noun",
+        "en": "computer images and sounds that make you feel you are in a real place",
+        "vi": "thực tế ảo",
+        "ex": "We tried **virtual reality** glasses at the science fair."
+      }
+    ],
+    "note": "Careful: the adverb **virtually** usually means *almost* (**virtually** finished), not *by computer*. For the computer meaning we normally say *online* or *in virtual reality*."
+  },
+
+  "holographic": {
+    "senses": [
+      {
+        "pos": "adjective",
+        "en": "connected with a hologram — an image made with laser light that looks solid and three-dimensional",
+        "vi": "thuộc ảnh ba chiều, dạng hình nổi ba chiều",
+        "examples": [
+          "In the film, a **holographic** teacher appears in the middle of the room.",
+          "One day we may send a **holographic** image of ourselves to a meeting.",
+          "The concert used a **holographic** singer on stage."
+        ],
+        "colloc": [
+          "a holographic image",
+          "a holographic display",
+          "a holographic call"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "hologram",
+        "pos": "noun",
+        "en": "a picture made with laser light that looks three-dimensional",
+        "vi": "ảnh ba chiều, hình nổi",
+        "ex": "There is a small **hologram** on my bank card."
+      }
+    ],
+    "note": "Stress: hol-o-**GRAPH**-ic. The noun is **hologram** (**HOL**-o-gram), so say *a hologram of my father*, but *a holographic message*."
+  },
+
+  "smartphone": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a mobile phone that works like a small computer, with apps, a camera and the internet",
+        "vi": "điện thoại thông minh",
+        "examples": [
+          "She reads the news on her **smartphone** on the bus.",
+          "My first **smartphone** was a present from my uncle.",
+          "**Smartphones** are not allowed during the exam."
+        ],
+        "colloc": [
+          "use a smartphone",
+          "a smartphone app",
+          "on your smartphone"
+        ]
+      }
+    ],
+    "note": "One word: **smartphone**, not *smart phone*. It is countable, so use *a/an* or a plural: *I need a new smartphone*."
+  },
+
+  "interviewee": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "the person who answers the questions in an interview",
+        "vi": "người được phỏng vấn",
+        "examples": [
+          "The **interviewee** looked nervous at first, then relaxed.",
+          "Each **interviewee** had ten minutes to answer.",
+          "As the **interviewee**, you should listen carefully before you speak."
+        ],
+        "colloc": [
+          "a nervous interviewee",
+          "the next interviewee"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "interviewer",
+        "pos": "noun",
+        "en": "the person who asks the questions in an interview",
+        "vi": "người phỏng vấn",
+        "ex": "The **interviewer** smiled and asked about my hobbies."
+      },
+      {
+        "w": "interview",
+        "pos": "noun",
+        "en": "a meeting in which someone is asked questions, for a job or for the news",
+        "vi": "cuộc phỏng vấn",
+        "ex": "I have a job **interview** on Friday morning."
+      }
+    ],
+    "note": "The ending **-ee** shows the person who *receives* the action: interview**ee** = the one who is asked, employ**ee** = the one who is employed, train**ee** = the one who is trained. The ending **-er** shows the person who *does* it: interview**er**, employ**er**, train**er**. Pronunciation: **-ee** is stressed and long — in-ter-view-**EE** — while **-er** is weak: **IN**-ter-view-er."
+  }
+}

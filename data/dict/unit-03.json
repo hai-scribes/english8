@@ -1,0 +1,277 @@
+{
+  "_unit": "03 — Teenagers",
+
+  "teenager": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a person between 13 and 19 years old",
+        "vi": "thanh thiếu niên, tuổi teen",
+        "examples": ["Most **teenagers** in my class have a part-time hobby.",
+                     "The club is for **teenagers** aged 14 to 18.",
+                     "As a **teenager** he was very shy."],
+        "colloc": ["a typical teenager", "teenagers today"] }
+    ],
+    "forms": [
+      { "w": "teenage", "pos": "adjective", "en": "aged between 13 and 19", "vi": "ở tuổi teen", "ex": "She has two **teenage** sons." }
+    ],
+    "note": "The name comes from the numbers that end in *-teen*: thir**teen** to nine**teen**. Use the adjective *teenage* before a noun, not *teenager*: *a teenage boy*, never *a teenager boy*."
+  },
+
+  "adolescence": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the period of life when a child develops into an adult",
+        "vi": "tuổi dậy thì, giai đoạn vị thành niên",
+        "examples": ["**Adolescence** can be a confusing time.",
+                     "Many changes happen during **adolescence**.",
+                     "He was quiet throughout his **adolescence**."],
+        "colloc": ["during adolescence", "early adolescence"] }
+    ],
+    "forms": [
+      { "w": "adolescent", "pos": "noun / adjective", "en": "a young person going through this stage", "vi": "thiếu niên; thuộc tuổi vị thành niên", "ex": "**Adolescents** need plenty of sleep." }
+    ],
+    "note": "Stress the third syllable: ad-o-**LES**-cence. More formal than *teenage years*."
+  },
+
+  "peer pressure": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the strong feeling that you must do what people of your own age are doing in order to be accepted",
+        "vi": "áp lực từ bạn bè đồng trang lứa",
+        "examples": ["**Peer pressure** made him start smoking.",
+                     "Learning to say no is the best answer to **peer pressure**.",
+                     "She gave in to **peer pressure** and skipped the class."],
+        "colloc": ["give in to peer pressure", "resist peer pressure"] }
+    ],
+    "forms": [
+      { "w": "peer", "pos": "noun", "en": "a person of the same age or position as you", "vi": "bạn đồng trang lứa", "ex": "He is respected by his **peers**." }
+    ]
+  },
+
+  "self-confident": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "sure that you can do things well and that people will like you",
+        "vi": "tự tin",
+        "examples": ["Speaking in class made her more **self-confident**.",
+                     "He is **self-confident** enough to ask for help.",
+                     "A **self-confident** student is not always the loudest one."],
+        "colloc": ["become self-confident", "a self-confident manner"] }
+    ],
+    "forms": [
+      { "w": "self-confidence", "pos": "noun", "en": "belief in your own ability", "vi": "sự tự tin", "ex": "Joining the club gave him **self-confidence**." }
+    ],
+    "note": "Keep the hyphen. Compare *confident* (sure about something in general) with *self-confident* (sure about **yourself**)."
+  },
+
+  "delighted": {
+    "senses": [
+      { "pos": "adjective", "grammar": "+ to-infinitive / + that",
+        "en": "very pleased and happy",
+        "vi": "vui sướng, hài lòng",
+        "examples": ["I was **delighted** to hear your news.",
+                     "She was **delighted** that her team had won.",
+                     "My parents were **delighted** with my report."],
+        "colloc": ["delighted to hear", "delighted with something"] }
+    ],
+    "note": "Stronger than *pleased* or *glad*. Feelings adjective — the *-ed* form describes the **person**; the *-ing* form (*delightful*, *delighting*) describes the thing."
+  },
+
+  "embarrassed": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "feeling shy, awkward or ashamed, especially in front of other people",
+        "vi": "xấu hổ, ngượng ngùng",
+        "examples": ["I felt **embarrassed** when I forgot her name.",
+                     "He was too **embarrassed** to sing in front of the class.",
+                     "She looked **embarrassed** and went very red."],
+        "colloc": ["feel embarrassed", "embarrassed about something"] }
+    ],
+    "forms": [
+      { "w": "embarrassing", "pos": "adjective", "en": "making you feel embarrassed", "vi": "gây xấu hổ", "ex": "It was an **embarrassing** mistake." }
+    ],
+    "note": "Two *r*s and two *s*s. The person is *embarrass**ed***; the situation is *embarrass**ing***."
+  },
+
+  "frustrated": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "annoyed or impatient because you cannot do or change something",
+        "vi": "bực bội, nản lòng",
+        "examples": ["I get **frustrated** when the internet is slow.",
+                     "She was **frustrated** by her own mistakes.",
+                     "He felt **frustrated** that nobody would listen."],
+        "colloc": ["get frustrated", "frustrated with something"] }
+    ],
+    "forms": [
+      { "w": "frustrating", "pos": "adjective", "en": "causing that feeling", "vi": "gây bực bội", "ex": "Losing by one point was **frustrating**." }
+    ]
+  },
+
+  "stressed": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "worried and tense because of pressure from work, study or life",
+        "vi": "căng thẳng, áp lực",
+        "examples": ["Many students feel **stressed** before exams.",
+                     "He gets **stressed** when he has too much homework.",
+                     "You look **stressed** — take a break."],
+        "colloc": ["feel stressed", "stressed out", "stressed about exams"] }
+    ],
+    "forms": [
+      { "w": "stress", "pos": "noun", "en": "worry caused by a difficult situation", "vi": "sự căng thẳng", "ex": "Exercise helps reduce **stress**." },
+      { "w": "stressful", "pos": "adjective", "en": "causing stress", "vi": "gây căng thẳng", "ex": "Exam week is **stressful**." }
+    ],
+    "note": "The person is *stress**ed***; the situation is *stress**ful***. In phonetics, *stress* also means the strong syllable in a word — the sense used in Units 9–12."
+  },
+
+  "curious": {
+    "senses": [
+      { "pos": "adjective", "grammar": "+ about",
+        "en": "wanting to know or learn about something",
+        "vi": "tò mò, ham hiểu biết",
+        "examples": ["Teenagers are naturally **curious** about the world.",
+                     "I was **curious** to see what was inside.",
+                     "She is **curious** about how things work."],
+        "colloc": ["curious about something", "curious to know"] },
+      { "pos": "adjective",
+        "en": "strange or unusual",
+        "vi": "kỳ lạ, khác thường",
+        "examples": ["There was a **curious** smell in the room.",
+                     "It is **curious** that nobody noticed."],
+        "colloc": ["a curious thing", "curiously enough"] }
+    ],
+    "forms": [
+      { "w": "curiosity", "pos": "noun", "en": "the wish to know about things", "vi": "sự tò mò", "ex": "**Curiosity** is the best reason to read." }
+    ]
+  },
+
+  "socialise": {
+    "senses": [
+      { "pos": "verb", "grammar": "intransitive",
+        "en": "to meet and spend time with other people in a friendly way",
+        "vi": "giao lưu, gặp gỡ mọi người",
+        "examples": ["Teenagers need time to **socialise** with their friends.",
+                     "He doesn't **socialise** much during exam term.",
+                     "Clubs are a good place to **socialise**."],
+        "colloc": ["socialise with friends", "a chance to socialise"] }
+    ],
+    "note": "British spelling *socialise*; American *socialize*. Do not confuse *social* (about meeting people) with *sociable* (a friendly person)."
+  },
+
+  "informed decision": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a choice you make after finding out the facts you need",
+        "vi": "quyết định sáng suốt (dựa trên hiểu biết)",
+        "examples": ["Read about the course first so you can make an **informed decision**.",
+                     "Teenagers should learn to make **informed decisions** about money.",
+                     "It was an **informed decision**, not a guess."],
+        "colloc": ["make an informed decision", "an informed choice"] }
+    ],
+    "forms": [
+      { "w": "informed", "pos": "adjective", "en": "knowing about a subject because you have learned the facts", "vi": "hiểu biết, nắm rõ thông tin", "ex": "She is well **informed** about the issue." }
+    ]
+  },
+
+  "life skill": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable, usually plural",
+        "en": "a practical ability you need in order to manage everyday life",
+        "vi": "kỹ năng sống",
+        "examples": ["Cooking and managing money are useful **life skills**.",
+                     "The school runs a **life skills** class on Fridays.",
+                     "Saying no politely is an important **life skill**."],
+        "colloc": ["learn life skills", "essential life skills"] }
+    ]
+  },
+
+  "housework": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the work of cleaning and looking after a house",
+        "vi": "việc nhà",
+        "examples": ["We all share the **housework** at home.",
+                     "I do my **housework** before I go out.",
+                     "He does more **housework** than anyone else in the family."],
+        "colloc": ["do the housework", "help with the housework", "share the housework"] }
+    ],
+    "note": "**Uncountable** — never *houseworks* or *a housework*. Say *a lot of housework*. And you **do** housework; you don't *make* it. Not the same as *homework*, which is school work."
+  },
+
+  "join a club": {
+    "senses": [
+      { "pos": "phrase", "grammar": "verb + noun",
+        "en": "to become a member of a group that meets for a shared activity",
+        "vi": "tham gia câu lạc bộ",
+        "examples": ["Why don't you **join a club** and meet new people?",
+                     "I **joined the** photography **club** last term.",
+                     "She wants to **join a** chess **club** at school."],
+        "colloc": ["join a chess club", "join the school club"] }
+    ],
+    "note": "**Join** a club (become a member) is different from *join in* an activity (take part on one occasion)."
+  },
+
+  "get involved (in)": {
+    "senses": [
+      { "pos": "phrase", "grammar": "+ in / with",
+        "en": "to start taking part in an activity or become connected with it",
+        "vi": "tham gia vào, dấn thân vào",
+        "examples": ["He **got involved in** a community project last year.",
+                     "More students should **get involved in** school events.",
+                     "Try not to **get involved in** their argument."],
+        "colloc": ["get involved in a project", "get involved with a charity"] }
+    ]
+  },
+
+  "keep up with": {
+    "senses": [
+      { "pos": "phrasal verb",
+        "en": "to move or make progress at the same speed as someone or something else",
+        "vi": "theo kịp, bắt kịp",
+        "examples": ["I can't **keep up with** the rest of the class in maths.",
+                     "Walk slower — I can't **keep up with** you!",
+                     "It's hard to **keep up with** all the homework."],
+        "colloc": ["keep up with the class", "keep up with the work"] },
+      { "pos": "phrasal verb",
+        "en": "to continue to learn about something as it changes",
+        "vi": "cập nhật, theo dõi (tin tức, xu hướng)",
+        "examples": ["She **keeps up with** the news every morning.",
+                     "It's impossible to **keep up with** every new app."],
+        "colloc": ["keep up with the news", "keep up with technology"] }
+    ],
+    "note": "Three parts, and they never separate: *keep up with **them***, never *keep them up with*."
+  },
+
+  "deal with": {
+    "senses": [
+      { "pos": "phrasal verb",
+        "en": "to take action in order to solve a problem or handle a situation",
+        "vi": "giải quyết, xử lý",
+        "examples": ["How do you **deal with** stress before an exam?",
+                     "The teacher **dealt with** the problem quickly.",
+                     "I'll **deal with** it tomorrow morning."],
+        "colloc": ["deal with a problem", "deal with stress"] },
+      { "pos": "phrasal verb",
+        "en": "to be about a particular subject",
+        "vi": "đề cập đến, nói về",
+        "examples": ["The article **deals with** teenage sleep.",
+                     "Chapter three **deals with** the causes of the war."],
+        "colloc": ["the book deals with"] }
+    ],
+    "note": "Irregular: deal → **dealt** /delt/ → **dealt**."
+  },
+
+  "hang out (with)": {
+    "senses": [
+      { "pos": "phrasal verb", "grammar": "informal",
+        "en": "to spend time somewhere, or with someone, in a relaxed way with no particular plan",
+        "vi": "đi chơi, la cà, tụ tập",
+        "examples": ["We usually **hang out with** friends after school.",
+                     "They **hang out** at the shopping centre on Saturdays.",
+                     "I just want to **hang out** at home this weekend."],
+        "colloc": ["hang out with friends", "hang out after school"] }
+    ],
+    "note": "Informal. Use *with* for people and *at / in* for places. Irregular: hang → hung → hung."
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "_unit": "05 — Our Customs and Traditions",
+
+  "tradition": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable / uncountable",
+        "en": "a belief, custom or way of doing things that has been passed from one generation to the next",
+        "vi": "truyền thống",
+        "examples": ["It is a **tradition** to visit relatives at Tet.",
+                     "The family has kept this **tradition** for a hundred years.",
+                     "By **tradition**, the youngest child speaks first."],
+        "colloc": ["keep a tradition", "a family tradition", "by tradition"] }
+    ],
+    "forms": [
+      { "w": "traditional", "pos": "adjective", "en": "following long-established custom", "vi": "truyền thống", "ex": "**Traditional** food is served at the festival." }
+    ],
+    "note": "A **tradition** is older and passed down; a *custom* is simply what a group usually does. A *habit* belongs to one person."
+  },
+
+  "ancestor": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a person in your family who lived a long time before you",
+        "vi": "tổ tiên, ông bà tổ tiên",
+        "examples": ["We honour our **ancestors** on the death anniversary.",
+                     "His **ancestors** came from a village in Ha Nam.",
+                     "The altar holds photographs of our **ancestors**."],
+        "colloc": ["worship one's ancestors", "an ancestor altar"] }
+    ],
+    "forms": [
+      { "w": "ancestral", "pos": "adjective", "en": "belonging to your ancestors", "vi": "thuộc về tổ tiên", "ex": "This is our **ancestral** home." }
+    ],
+    "note": "Opposite: **descendant** (someone who comes after you). Stress the first syllable: **AN**-ces-tor."
+  },
+
+  "worship": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive / intransitive",
+        "en": "to show respect and love for a god or for your ancestors, especially through ceremonies",
+        "vi": "thờ cúng, thờ phụng",
+        "examples": ["Many Vietnamese families **worship** their ancestors.",
+                     "People come here to **worship** at the temple.",
+                     "The village **worships** a local guardian spirit."],
+        "colloc": ["worship ancestors", "a place of worship"] },
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the act of showing respect and love for a god",
+        "vi": "sự thờ phụng",
+        "examples": ["The pagoda is a place of **worship**.",
+                     "Ancestor **worship** is common in Viet Nam."],
+        "colloc": ["ancestor worship", "a place of worship"] }
+    ],
+    "note": "British spelling doubles the *p*: **worshipped**, **worshipping**."
+  },
+
+  "offering": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "something such as food, flowers or money that is given as part of a religious ceremony",
+        "vi": "đồ cúng, lễ vật",
+        "examples": ["The family placed fruit and flowers as **offerings** on the altar.",
+                     "**Offerings** are made before the ceremony begins.",
+                     "She brought an **offering** of rice and incense."],
+        "colloc": ["make an offering", "place offerings on the altar"] }
+    ],
+    "forms": [
+      { "w": "offer", "pos": "verb", "en": "to give or present something", "vi": "dâng, mời, đề nghị", "ex": "They **offer** fruit to their ancestors." }
+    ]
+  },
+
+  "incense": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "a substance that produces a sweet smell when burned, used in religious ceremonies",
+        "vi": "hương, nhang",
+        "examples": ["She lit three sticks of **incense**.",
+                     "The temple smelled of **incense**.",
+                     "Burning **incense** is part of the ritual."],
+        "colloc": ["burn incense", "light incense", "a stick of incense"] }
+    ],
+    "note": "**Uncountable** — say *a stick of incense*, not *an incense*. Stress the first syllable: **IN**-cense."
+  },
+
+  "lunar": {
+    "senses": [
+      { "pos": "adjective", "grammar": "before a noun",
+        "en": "connected with the moon, or measured by the moon's cycle",
+        "vi": "thuộc về mặt trăng, âm lịch",
+        "examples": ["Tet is the **lunar** New Year.",
+                     "The festival follows the **lunar** calendar.",
+                     "The **lunar** month has about 29 days."],
+        "colloc": ["the lunar calendar", "the lunar New Year", "a lunar month"] }
+    ],
+    "note": "Compare **solar** (connected with the sun). Pronounced /ˈluːnə/: **LOO**-nuh."
+  },
+
+  "festival": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a special day or period when people celebrate something, often with music, food and ceremonies",
+        "vi": "lễ hội",
+        "examples": ["The village holds a **festival** every spring.",
+                     "The Mid-Autumn **Festival** is popular with children.",
+                     "Thousands of people attend the **festival**."],
+        "colloc": ["hold a festival", "attend a festival", "a music festival"] }
+    ]
+  },
+
+  "ritual": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a set of actions always performed in the same way as part of a ceremony",
+        "vi": "nghi lễ, nghi thức",
+        "examples": ["Lighting incense is an important **ritual**.",
+                     "The **ritual** is performed before the meal.",
+                     "Each family follows the same **ritual** at Tet."],
+        "colloc": ["perform a ritual", "a religious ritual"] }
+    ]
+  },
+
+  "generation": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "all the people in a family or society who are about the same age",
+        "vi": "thế hệ",
+        "examples": ["Three **generations** live in this house.",
+                     "The recipe has been passed down for **generations**.",
+                     "My grandmother's **generation** did things differently."],
+        "colloc": ["the younger generation", "for generations", "from generation to generation"] },
+      { "pos": "noun", "grammar": "countable",
+        "en": "a stage in the development of a product",
+        "vi": "thế hệ (sản phẩm)",
+        "examples": ["This is the fifth **generation** of the phone.",
+                     "A new **generation** of electric cars is arriving."],
+        "colloc": ["the next generation of"] }
+    ]
+  },
+
+  "taboo": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "something that people avoid doing or talking about because it is thought to be wrong or offensive",
+        "vi": "điều cấm kỵ",
+        "examples": ["Sweeping the floor on the first day of Tet is a **taboo**.",
+                     "In some cultures it is a **taboo** to point at people.",
+                     "Money used to be a **taboo** subject at dinner."],
+        "colloc": ["break a taboo", "a taboo subject"] },
+      { "pos": "adjective",
+        "en": "avoided because it is considered wrong or embarrassing",
+        "vi": "cấm kỵ",
+        "examples": ["Death is still a **taboo** topic in many families.",
+                     "Those words are **taboo** in polite conversation."],
+        "colloc": ["a taboo topic", "taboo words"] }
+    ],
+    "note": "Stress the second syllable: ta-**BOO**. Plural *taboos*."
+  },
+
+  "superstition": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable / uncountable",
+        "en": "a belief that certain events or objects bring good or bad luck, not based on reason",
+        "vi": "sự mê tín, điều mê tín",
+        "examples": ["It is a common **superstition** that black cats bring bad luck.",
+                     "Old **superstitions** are still strong in some villages.",
+                     "He laughed and called it pure **superstition**."],
+        "colloc": ["an old superstition", "believe in superstitions"] }
+    ],
+    "forms": [
+      { "w": "superstitious", "pos": "adjective", "en": "believing in superstitions", "vi": "mê tín", "ex": "My aunt is very **superstitious** about numbers." }
+    ]
+  },
+
+  "wrap": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to cover something completely by folding paper, cloth or leaves around it",
+        "vi": "gói, bọc",
+        "examples": ["We **wrap** the sticky rice cakes in banana leaves.",
+                     "She **wrapped** the present in red paper.",
+                     "**Wrap** the fish in foil before you cook it."],
+        "colloc": ["wrap a present", "wrap something in paper"] }
+    ],
+    "forms": [
+      { "w": "wrapping", "pos": "noun", "en": "the paper or material used to cover something", "vi": "giấy gói, vật liệu gói", "ex": "Take the **wrapping** off carefully." }
+    ],
+    "note": "The *w* is silent: /ræp/. Double the *p*: **wrapped**, **wrapping**. Sounds the same as *rap*."
+  },
+
+  "decorate": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to make something look more attractive by adding things to it",
+        "vi": "trang trí, trang hoàng",
+        "examples": ["We **decorate** the house with peach blossom at Tet.",
+                     "The children **decorated** the classroom for the festival.",
+                     "The streets are **decorated** with red lanterns."],
+        "colloc": ["decorate a house", "decorate with flowers"] }
+    ],
+    "forms": [
+      { "w": "decoration", "pos": "noun", "en": "something added to make a place look attractive", "vi": "đồ trang trí", "ex": "The **decorations** stay up for a week." }
+    ],
+    "note": "Stress the first syllable: **DEC**-o-rate."
+  },
+
+  "celebrate": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive / intransitive",
+        "en": "to do something enjoyable to show that a day or an event is important",
+        "vi": "kỷ niệm, ăn mừng",
+        "examples": ["We **celebrate** Tet with our whole family.",
+                     "How do you **celebrate** your birthday?",
+                     "The village **celebrated** the good harvest."],
+        "colloc": ["celebrate a festival", "celebrate a birthday"] }
+    ],
+    "forms": [
+      { "w": "celebration", "pos": "noun", "en": "an occasion when people celebrate", "vi": "lễ kỷ niệm, sự ăn mừng", "ex": "The **celebrations** lasted three days." }
+    ]
+  },
+
+  "pass down": {
+    "senses": [
+      { "pos": "phrasal verb", "grammar": "usually passive",
+        "en": "to give knowledge, skills or objects to younger people so that they continue",
+        "vi": "truyền lại (cho đời sau)",
+        "examples": ["These songs have been **passed down** for generations.",
+                     "My grandmother **passed** the recipe **down** to my mother.",
+                     "The craft is **passed down** from parent to child."],
+        "colloc": ["passed down from generation to generation"] }
+    ],
+    "note": "Often in the passive: *the story **was passed down***. Compare *pass on* (give to the next person) and *pass away* (a polite way of saying *die*)."
+  },
+
+  "get together": {
+    "senses": [
+      { "pos": "phrasal verb",
+        "en": "to meet in order to spend time with each other",
+        "vi": "tụ họp, sum họp",
+        "examples": ["The whole family **gets together** at Tet.",
+                     "We **got together** at my aunt's house.",
+                     "Let's **get together** after the exams."],
+        "colloc": ["get together with friends", "the family gets together"] }
+    ],
+    "forms": [
+      { "w": "get-together", "pos": "noun", "en": "an informal social meeting", "vi": "buổi họp mặt", "ex": "We're having a small **get-together** on Sunday." }
+    ]
+  },
+
+  "first-footer": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "the first person to enter a house in the new year, believed to bring good or bad luck for the year",
+        "vi": "người xông đất, người xông nhà",
+        "examples": ["The family chose a cheerful neighbour as their **first-footer**.",
+                     "A good **first-footer** is said to bring luck all year.",
+                     "Being the **first-footer** is a great responsibility."],
+        "colloc": ["choose a first-footer", "be the first-footer"] }
+    ],
+    "note": "The custom itself is *first-footing*. In Viet Nam it is *xông đất* at Tet; the same belief exists in Scotland at New Year."
+  }
+}

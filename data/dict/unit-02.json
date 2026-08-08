@@ -1,0 +1,277 @@
+{
+  "_unit": "02 — Life in the Countryside",
+
+  "buffalo": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable, plural: buffalo or buffaloes",
+        "en": "a large heavy animal of the cow family, used in Asia for pulling ploughs and carts",
+        "vi": "con trâu",
+        "examples": ["A **buffalo** was standing in the middle of the paddy field.",
+                     "My grandfather still uses a **buffalo** to plough the rice fields.",
+                     "The boys rode the **buffalo** home along the river path."],
+        "colloc": ["ride a buffalo", "a water buffalo", "a herd of buffalo"] }
+    ],
+    "note": "In Viet Nam this almost always means the **water buffalo**. The plural can be *buffalo* (unchanged) or *buffaloes* — both are correct."
+  },
+
+  "paddy field": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a field filled with shallow water where rice is grown",
+        "vi": "ruộng lúa nước, cánh đồng lúa",
+        "examples": ["The **paddy fields** turn bright green in early summer.",
+                     "We walked along the narrow path between two **paddy fields**.",
+                     "Her parents work in the **paddy fields** from dawn."],
+        "colloc": ["work in the paddy fields", "a terraced paddy field"] }
+    ],
+    "note": "Also written *rice paddy* or just *paddy*. *Paddy* on its own can also mean rice that still has its husk on."
+  },
+
+  "harvest": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "the time when crops are gathered from the fields, or the crops that are gathered",
+        "vi": "vụ thu hoạch; mùa gặt",
+        "examples": ["The rice **harvest** begins in October.",
+                     "It was a good **harvest** this year — the best for a decade.",
+                     "The whole village helps at **harvest** time."],
+        "colloc": ["a good harvest", "a poor harvest", "harvest time"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to gather a crop from the fields",
+        "vi": "thu hoạch, gặt hái",
+        "examples": ["They **harvest** the rice twice a year.",
+                     "The corn is **harvested** in late August."],
+        "colloc": ["harvest a crop", "harvest rice"] }
+    ]
+  },
+
+  "orchard": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a piece of land where fruit trees are grown",
+        "vi": "vườn cây ăn quả",
+        "examples": ["My uncle has an **orchard** behind his house.",
+                     "We picked apples in the **orchard** all morning.",
+                     "The **orchard** is full of mango trees."],
+        "colloc": ["an apple orchard", "pick fruit in the orchard"] }
+    ],
+    "note": "An **orchard** is for fruit *trees*. A *garden* is a general word, and a *vegetable garden* grows vegetables instead."
+  },
+
+  "cattle": {
+    "senses": [
+      { "pos": "noun", "grammar": "plural noun — always plural",
+        "en": "cows and bulls kept on a farm for their milk or meat",
+        "vi": "gia súc (trâu bò)",
+        "examples": ["The **cattle** are grazing in the field.",
+                     "His family keeps about forty **cattle**.",
+                     "We drove the **cattle** down to the stream to drink."],
+        "colloc": ["keep cattle", "a cattle farm", "graze cattle"] }
+    ],
+    "note": "**Always plural** — *the cattle **are** in the field*, never *is*. There is no form *a cattle* or *cattles*; for one animal say *a cow* or *a bull*."
+  },
+
+  "herd": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a large group of animals of the same kind that live or are kept together",
+        "vi": "đàn, bầy (thú lớn)",
+        "examples": ["A **herd** of buffalo crossed the road in front of us.",
+                     "The farmer has a **herd** of thirty cows.",
+                     "We watched a **herd** of elephants at the waterhole."],
+        "colloc": ["a herd of cattle", "a herd of buffalo"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to move animals, or people, together as a group",
+        "vi": "lùa, dồn (đàn gia súc)",
+        "examples": ["The boy **herded** the goats back to the barn.",
+                     "We were **herded** onto the bus like sheep."],
+        "colloc": ["herd cattle", "herd sheep"] }
+    ],
+    "note": "Use **herd** for cows, buffalo and elephants; *flock* for birds and sheep; *school* for fish. Sounds exactly like *heard*."
+  },
+
+  "barn": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a large farm building used for storing crops or keeping animals in",
+        "vi": "nhà kho, chuồng gia súc (ở trang trại)",
+        "examples": ["The hay is kept in the **barn**.",
+                     "We shelter the cattle in the **barn** in winter.",
+                     "There is an old wooden **barn** behind the farmhouse."],
+        "colloc": ["an old barn", "a hay barn"] }
+    ]
+  },
+
+  "well": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a deep hole dug in the ground to reach water",
+        "vi": "cái giếng",
+        "examples": ["Every morning she draws water from the **well**.",
+                     "The village **well** dried up during the drought.",
+                     "There is an old stone **well** in the yard."],
+        "colloc": ["draw water from a well", "a village well", "dig a well"] },
+      { "pos": "adverb", "grammar": "comparative: better, best",
+        "en": "in a good or satisfactory way",
+        "vi": "tốt, giỏi",
+        "examples": ["She sings very **well**.",
+                     "He didn't sleep **well** last night."],
+        "colloc": ["do well", "work well", "as well as"] }
+    ],
+    "note": "In this unit it is the **noun** — a hole for water. Do not confuse the adverb *well* (*she plays well*) with the adjective *good* (*she is a good player*)."
+  },
+
+  "stream": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a small narrow river",
+        "vi": "con suối, dòng suối",
+        "examples": ["The children were playing in the **stream**.",
+                     "A small **stream** runs behind our house.",
+                     "We crossed the **stream** on stepping stones."],
+        "colloc": ["a mountain stream", "cross a stream"] },
+      { "pos": "verb", "grammar": "transitive / intransitive",
+        "en": "to send or receive video or music over the internet as it plays",
+        "vi": "phát trực tuyến",
+        "examples": ["We **streamed** the match on my phone.",
+                     "The concert was **streamed** live."],
+        "colloc": ["stream a film", "live-streamed"] }
+    ],
+    "note": "Size order: a **stream** is smaller than a *river*; a *brook* is smaller still."
+  },
+
+  "bamboo": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable / countable",
+        "en": "a tall tropical plant with hard hollow stems, used for building and for making furniture",
+        "vi": "cây tre, tre nứa",
+        "examples": ["The fence is made of **bamboo**.",
+                     "**Bamboo** grows very quickly — up to a metre a day.",
+                     "She was carrying two baskets on a **bamboo** pole."],
+        "colloc": ["a bamboo pole", "a bamboo fence", "a bamboo forest"] }
+    ],
+    "note": "Usually uncountable when you mean the material: *made of bamboo*. Stress the second syllable: bam-**BOO**."
+  },
+
+  "vast": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "extremely large in area or amount",
+        "vi": "rộng lớn, mênh mông",
+        "examples": ["A **vast** paddy field stretched to the mountains.",
+                     "The country has **vast** areas of forest.",
+                     "There is a **vast** difference between the two villages."],
+        "colloc": ["a vast area", "a vast majority", "vast amounts of"] }
+    ],
+    "forms": [
+      { "w": "vastly", "pos": "adverb", "en": "very much; to a great degree", "vi": "vô cùng, rất nhiều", "ex": "Life here is **vastly** different from the city." }
+    ],
+    "note": "Stronger than *big* or *large*, and used for open space or quantity — not usually for a single object. Rhymes with *fast*."
+  },
+
+  "peaceful": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "quiet and calm, without noise or worry",
+        "vi": "yên bình, thanh bình",
+        "examples": ["The countryside is much more **peaceful** than the city.",
+                     "We spent a **peaceful** afternoon by the stream.",
+                     "It is so **peaceful** here in the early morning."],
+        "colloc": ["a peaceful village", "peaceful and quiet"] },
+      { "pos": "adjective",
+        "en": "not involving war, violence or argument",
+        "vi": "hoà bình, ôn hoà",
+        "examples": ["They found a **peaceful** solution to the dispute.",
+                     "It was a **peaceful** protest."],
+        "colloc": ["a peaceful solution", "a peaceful protest"] }
+    ],
+    "forms": [
+      { "w": "peace", "pos": "noun", "en": "a situation with no war, or a state of calm", "vi": "hoà bình; sự yên tĩnh", "ex": "I just want a bit of **peace** and quiet." }
+    ]
+  },
+
+  "load": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to put a large quantity of things onto a vehicle or into a container",
+        "vi": "chất, xếp (hàng lên xe)",
+        "examples": ["They **loaded** the rice onto the cart.",
+                     "Help me **load** the truck before it rains.",
+                     "The buffalo cart was **loaded** with bamboo."],
+        "colloc": ["load a truck", "load something onto something"] },
+      { "pos": "noun", "grammar": "countable",
+        "en": "something heavy that is being carried",
+        "vi": "gánh nặng, chuyến hàng",
+        "examples": ["He carried a heavy **load** of firewood.",
+                     "That's the third **load** of hay today."],
+        "colloc": ["a heavy load", "carry a load"] }
+    ],
+    "note": "Opposite: **unload**. Note the pair *load the cart* (the cart is the object) and *load the rice onto the cart* (the rice is)."
+  },
+
+  "pick fruit": {
+    "senses": [
+      { "pos": "phrase", "grammar": "verb + noun",
+        "en": "to take fruit off a tree or plant by hand",
+        "vi": "hái quả, hái trái cây",
+        "examples": ["In summer we **pick fruit** in my uncle's orchard.",
+                     "The children love to **pick fruit** straight from the tree.",
+                     "We spent the morning **picking fruit** and the afternoon swimming."],
+        "colloc": ["pick fruit from a tree", "fruit picking"] }
+    ],
+    "note": "**Pick** here means take *off* the plant. *Pick up* is different — it means lift something from the ground."
+  },
+
+  "collect eggs": {
+    "senses": [
+      { "pos": "phrase", "grammar": "verb + noun",
+        "en": "to gather eggs from where hens have laid them",
+        "vi": "nhặt trứng, thu trứng",
+        "examples": ["Every morning I **collect eggs** from the hen house.",
+                     "It's my job to **collect the eggs** before school.",
+                     "She **collected** six **eggs** today."],
+        "colloc": ["collect eggs from the hen house"] }
+    ]
+  },
+
+  "ride a horse": {
+    "senses": [
+      { "pos": "phrase", "grammar": "verb + noun",
+        "en": "to sit on a horse and control it as it moves",
+        "vi": "cưỡi ngựa",
+        "examples": ["My cousin can **ride a horse** very well.",
+                     "I learned to **ride a horse** when I was eight.",
+                     "They **rode horses** along the beach at sunset."],
+        "colloc": ["learn to ride a horse", "go horse riding"] }
+    ],
+    "note": "Irregular: ride → **rode** → **ridden**. Use *ride* for horses, bikes and motorbikes; use *drive* for cars."
+  },
+
+  "fly a kite": {
+    "senses": [
+      { "pos": "phrase", "grammar": "verb + noun",
+        "en": "to make a kite rise and stay in the air on the end of a string",
+        "vi": "thả diều",
+        "examples": ["On windy afternoons we **fly kites** on the hill.",
+                     "He taught his little sister to **fly a kite**.",
+                     "It's too still today — you can't **fly a kite** without wind."],
+        "colloc": ["fly a kite in the wind", "kite flying"] }
+    ],
+    "note": "Irregular: fly → **flew** → **flown**."
+  },
+
+  "nomad": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a member of a group of people who move from place to place instead of living in one",
+        "vi": "người du mục",
+        "examples": ["The **nomads** move their herds to new grass each season.",
+                     "For centuries **nomads** have crossed these plains.",
+                     "His grandparents were **nomads** before they settled in the village."],
+        "colloc": ["a group of nomads", "desert nomads"] }
+    ],
+    "forms": [
+      { "w": "nomadic", "pos": "adjective", "en": "moving from place to place rather than living in one", "vi": "du mục, nay đây mai đó", "ex": "They lead a **nomadic** life." }
+    ]
+  }
+}

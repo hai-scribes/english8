@@ -1,0 +1,273 @@
+{
+  "_unit": "06 — Lifestyles",
+
+  "lifestyle": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "the way in which a person or group lives, including their habits, work and interests",
+        "vi": "lối sống, phong cách sống",
+        "examples": ["City life and country life are two very different **lifestyles**.",
+                     "He changed his **lifestyle** and started cycling to work.",
+                     "A healthy **lifestyle** includes sleep as well as exercise."],
+        "colloc": ["a healthy lifestyle", "an active lifestyle", "change your lifestyle"] }
+    ],
+    "note": "Written as one word. Careful: *lifestyle* is how you live; *life* is the fact of living."
+  },
+
+  "traditional": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "following ideas, customs or methods that have existed for a long time",
+        "vi": "truyền thống, cổ truyền",
+        "examples": ["They still follow a **traditional** way of life.",
+                     "**Traditional** houses here are built of wood.",
+                     "She prefers **traditional** music to pop."],
+        "colloc": ["a traditional lifestyle", "traditional methods"] }
+    ]
+  },
+
+  "modern": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "of the present time, or using the newest ideas and technology",
+        "vi": "hiện đại",
+        "examples": ["**Modern** life moves much faster.",
+                     "The village now has a **modern** school.",
+                     "He prefers **modern** furniture to antiques."],
+        "colloc": ["modern technology", "modern life", "the modern world"] }
+    ],
+    "forms": [
+      { "w": "modernise", "pos": "verb", "en": "to make something more modern", "vi": "hiện đại hoá", "ex": "The government plans to **modernise** the railway." }
+    ],
+    "note": "Opposite: **traditional** or *old-fashioned*."
+  },
+
+  "sedentary": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "involving a lot of sitting and little exercise",
+        "vi": "ít vận động, ngồi nhiều",
+        "examples": ["A **sedentary** lifestyle is bad for your health.",
+                     "Office work is often **sedentary**.",
+                     "Too much screen time makes children **sedentary**."],
+        "colloc": ["a sedentary lifestyle", "sedentary work"] }
+    ],
+    "note": "Opposite: **active**. Stress the first syllable: **SED**-en-try."
+  },
+
+  "active": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "doing a lot of physical exercise or many activities",
+        "vi": "năng động, tích cực vận động",
+        "examples": ["My grandfather is still very **active** at eighty.",
+                     "Try to stay **active** during the holidays.",
+                     "She leads an **active** life."],
+        "colloc": ["stay active", "an active lifestyle", "physically active"] }
+    ],
+    "forms": [
+      { "w": "activity", "pos": "noun", "en": "a thing that you do, often for enjoyment", "vi": "hoạt động", "ex": "Swimming is my favourite **activity**." }
+    ],
+    "note": "Opposite: **sedentary** or *inactive*."
+  },
+
+  "rural": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "connected with the countryside rather than the town",
+        "vi": "thuộc về nông thôn",
+        "examples": ["**Rural** life is quieter but there are fewer jobs.",
+                     "Many families have moved away from **rural** areas.",
+                     "The school serves five **rural** villages."],
+        "colloc": ["a rural area", "the rural population", "rural life"] }
+    ],
+    "note": "Opposite: **urban**. Pronounced /ˈrʊərəl/: **ROOR**-uhl."
+  },
+
+  "urban": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "connected with a town or city",
+        "vi": "thuộc về thành thị, đô thị",
+        "examples": ["**Urban** areas are growing quickly.",
+                     "**Urban** life offers more choice but less space.",
+                     "Air quality is worse in **urban** districts."],
+        "colloc": ["an urban area", "urban life", "urban population"] }
+    ],
+    "note": "Opposite: **rural**. Do not confuse with *urgent*."
+  },
+
+  "remote": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "far away from towns and places where most people live",
+        "vi": "xa xôi, hẻo lánh",
+        "examples": ["They live in a **remote** village in the mountains.",
+                     "The island is too **remote** for daily ferries.",
+                     "Teachers are hard to find in **remote** areas."],
+        "colloc": ["a remote village", "a remote area"] },
+      { "pos": "adjective", "grammar": "before a noun",
+        "en": "done from a distance, especially using a computer or the internet",
+        "vi": "từ xa (làm việc, điều khiển)",
+        "examples": ["**Remote** learning became normal during the pandemic.",
+                     "She has a **remote** job and works from home."],
+        "colloc": ["remote working", "remote learning", "a remote control"] }
+    ]
+  },
+
+  "community": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "all the people who live in the same area, or a group who share the same interests",
+        "vi": "cộng đồng",
+        "examples": ["The whole **community** helped rebuild the bridge.",
+                     "She is an active member of the local **community**.",
+                     "The festival brings the **community** together."],
+        "colloc": ["the local community", "a close-knit community", "community spirit"] }
+    ],
+    "note": "Stress the second syllable: com-**MU**-ni-ty."
+  },
+
+  "generation": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "all the people in a family or society who are about the same age",
+        "vi": "thế hệ",
+        "examples": ["The older **generation** prefers the traditional way.",
+                     "Each **generation** lives a little differently.",
+                     "Three **generations** share this house."],
+        "colloc": ["the younger generation", "the older generation"] }
+    ]
+  },
+
+  "adapt": {
+    "senses": [
+      { "pos": "verb", "grammar": "intransitive, + to",
+        "en": "to change your behaviour so that you can deal with a new situation",
+        "vi": "thích nghi, thích ứng",
+        "examples": ["It took him a year to **adapt to** city life.",
+                     "Children **adapt** more quickly than adults.",
+                     "Wildlife must **adapt** as the climate changes."],
+        "colloc": ["adapt to a new situation", "adapt quickly"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to change something so that it is suitable for a new use",
+        "vi": "sửa đổi cho phù hợp, chuyển thể",
+        "examples": ["The house was **adapted** for wheelchair users.",
+                     "The novel has been **adapted** for television."],
+        "colloc": ["adapt something for something"] }
+    ],
+    "forms": [
+      { "w": "adaptable", "pos": "adjective", "en": "able to change to suit new conditions", "vi": "dễ thích nghi", "ex": "Young people are usually more **adaptable**." }
+    ],
+    "note": "Do not confuse **adapt** (change to fit) with *adopt* (take on or take in)."
+  },
+
+  "preserve": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to keep something in its original state so that it is not lost or damaged",
+        "vi": "bảo tồn, gìn giữ",
+        "examples": ["The village wants to **preserve** its traditions.",
+                     "These forests must be **preserved** for the future.",
+                     "The old town has been carefully **preserved**."],
+        "colloc": ["preserve a tradition", "preserve the environment", "well-preserved"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to treat food so that it can be kept for a long time",
+        "vi": "bảo quản (thực phẩm)",
+        "examples": ["Salt is used to **preserve** the fish.",
+                     "Fruit can be **preserved** in sugar."],
+        "colloc": ["preserve food", "preserved fruit"] }
+    ],
+    "forms": [
+      { "w": "preservation", "pos": "noun", "en": "the act of keeping something safe or unchanged", "vi": "sự bảo tồn", "ex": "The **preservation** of folk songs matters." }
+    ],
+    "note": "Compare **conserve** (use carefully so it is not wasted) with **preserve** (keep unchanged)."
+  },
+
+  "hunt": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive / intransitive",
+        "en": "to chase and kill wild animals for food or sport",
+        "vi": "săn bắn",
+        "examples": ["The Inuit traditionally **hunted** seals for food.",
+                     "It is illegal to **hunt** these birds.",
+                     "They **hunt** with dogs in winter."],
+        "colloc": ["hunt animals", "go hunting"] },
+      { "pos": "verb", "grammar": "intransitive, + for",
+        "en": "to search hard for something",
+        "vi": "tìm kiếm ráo riết",
+        "examples": ["I spent an hour **hunting for** my keys.",
+                     "She is **hunting for** a summer job."],
+        "colloc": ["hunt for a job", "hunt for something"] }
+    ],
+    "forms": [
+      { "w": "hunter", "pos": "noun", "en": "a person who hunts animals", "vi": "thợ săn", "ex": "The **hunters** set out before dawn." }
+    ]
+  },
+
+  "sled": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a vehicle with long narrow strips instead of wheels, used for travelling over snow",
+        "vi": "xe trượt tuyết",
+        "examples": ["Dogs pull the **sled** across the ice.",
+                     "They loaded the **sled** with supplies.",
+                     "The children have a small wooden **sled**."],
+        "colloc": ["a dog sled", "pull a sled"] }
+    ],
+    "note": "Also **sledge** in British English; *sled* is more common in American English."
+  },
+
+  "whaling": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the activity of hunting whales",
+        "vi": "nghề săn cá voi",
+        "examples": ["**Whaling** is now banned in most countries.",
+                     "The town's economy once depended on **whaling**.",
+                     "Commercial **whaling** has almost stopped."],
+        "colloc": ["commercial whaling", "a whaling ship", "ban whaling"] }
+    ],
+    "forms": [
+      { "w": "whale", "pos": "noun", "en": "a very large sea mammal", "vi": "cá voi", "ex": "A blue **whale** can weigh 150 tonnes." }
+    ]
+  },
+
+  "gadget": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a small useful tool or device, especially a clever new one",
+        "vi": "đồ dùng công nghệ nhỏ, thiết bị tiện ích",
+        "examples": ["His kitchen is full of **gadgets**.",
+                     "This little **gadget** peels garlic in seconds.",
+                     "Teenagers spend a lot of money on **gadgets**."],
+        "colloc": ["a useful gadget", "the latest gadget", "kitchen gadgets"] }
+    ],
+    "note": "Slightly informal. A **gadget** is small and often clever or novel; a *device* is the more neutral, general word."
+  },
+
+  "screen time": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the amount of time you spend looking at a phone, computer or television",
+        "vi": "thời gian sử dụng màn hình",
+        "examples": ["My parents limit my **screen time** on school nights.",
+                     "Too much **screen time** can affect your sleep.",
+                     "She tracks her **screen time** with an app."],
+        "colloc": ["limit screen time", "reduce screen time", "daily screen time"] }
+    ]
+  },
+
+  "well-being": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the state of being healthy, comfortable and happy",
+        "vi": "sức khoẻ và hạnh phúc, sự an lạc",
+        "examples": ["Exercise improves both health and **well-being**.",
+                     "The school cares about students' **well-being**.",
+                     "Sleep has a big effect on mental **well-being**."],
+        "colloc": ["mental well-being", "improve well-being", "health and well-being"] }
+    ],
+    "note": "Usually hyphenated in British English (*well-being*); Americans often write *wellbeing* or *well being*. Uncountable."
+  }
+}

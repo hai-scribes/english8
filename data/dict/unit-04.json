@@ -1,0 +1,263 @@
+{
+  "_unit": "04 — Ethnic Groups of Viet Nam",
+
+  "ethnic group": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a group of people who share the same language, culture and origins",
+        "vi": "dân tộc, nhóm dân tộc",
+        "examples": ["Viet Nam has 54 **ethnic groups**.",
+                     "Each **ethnic group** has its own costume and festivals.",
+                     "The Tay are the largest **ethnic group** in the north."],
+        "colloc": ["a different ethnic group", "belong to an ethnic group"] }
+    ],
+    "forms": [
+      { "w": "ethnic", "pos": "adjective", "en": "connected with a group that shares a culture and origin", "vi": "thuộc về dân tộc", "ex": "**Ethnic** costumes are worn at the festival." }
+    ]
+  },
+
+  "ethnic minority": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "an ethnic group that is small in number compared with the main group in a country",
+        "vi": "dân tộc thiểu số",
+        "examples": ["Many **ethnic minorities** live in the mountains.",
+                     "The school teaches children from three **ethnic minorities**.",
+                     "**Ethnic minority** languages are taught in some provinces."],
+        "colloc": ["an ethnic minority group", "ethnic minority languages"] }
+    ],
+    "note": "Opposite of *majority*. The plural is *minorit**ies*** — change *y* to *ies*."
+  },
+
+  "majority": {
+    "senses": [
+      { "pos": "noun", "grammar": "singular, + of",
+        "en": "the largest part of a group; more than half",
+        "vi": "đa số, phần lớn",
+        "examples": ["The **majority** of people here are farmers.",
+                     "The Kinh are the **majority** in Viet Nam.",
+                     "A **majority** of students voted for the trip."],
+        "colloc": ["the vast majority", "a majority of"] }
+    ],
+    "note": "Opposite: **minority**. With *the majority of + plural noun*, the verb is usually plural: *the majority of students **are** …*"
+  },
+
+  "custom": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a way of behaving that a group of people has followed for a long time",
+        "vi": "phong tục, tập quán",
+        "examples": ["It is a **custom** to give lucky money at Tet.",
+                     "Every village has its own **customs**.",
+                     "Taking off your shoes indoors is a local **custom**."],
+        "colloc": ["a local custom", "an old custom", "follow a custom"] },
+      { "pos": "noun", "grammar": "plural: customs",
+        "en": "the place at a border or airport where officials check what you are bringing in",
+        "vi": "hải quan",
+        "examples": ["We waited an hour to get through **customs**.",
+                     "You must declare it at **customs**."],
+        "colloc": ["go through customs", "a customs officer"] }
+    ],
+    "note": "A **custom** is what a group does; a *habit* is what one person does. Compare *tradition*, which is usually older and passed down through generations."
+  },
+
+  "costume": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable / uncountable",
+        "en": "the clothes worn by people of a particular place, period or group, especially at a special event",
+        "vi": "trang phục (truyền thống, biểu diễn)",
+        "examples": ["The dancers wore traditional **costume**.",
+                     "Each ethnic group has its own colourful **costume**.",
+                     "She made a **costume** for the school play."],
+        "colloc": ["traditional costume", "national costume", "wear a costume"] }
+    ],
+    "note": "**Costume** is special or traditional clothing, not everyday clothes — for those use *clothes*. Careful with the spelling: cos-**tume**, not *custom*."
+  },
+
+  "stilt house": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a house built on tall posts above the ground or above water",
+        "vi": "nhà sàn",
+        "examples": ["Many ethnic groups live in **stilt houses**.",
+                     "The **stilt house** keeps the family dry in the rainy season.",
+                     "We climbed a wooden ladder into the **stilt house**."],
+        "colloc": ["live in a stilt house", "a wooden stilt house"] }
+    ],
+    "forms": [
+      { "w": "stilt", "pos": "noun", "en": "one of the long posts a building stands on", "vi": "cột nhà sàn", "ex": "The house stands on twelve **stilts**." }
+    ]
+  },
+
+  "terraced field": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "one of a series of flat steps cut into a hillside so that crops can be grown on it",
+        "vi": "ruộng bậc thang",
+        "examples": ["The **terraced fields** of Sa Pa are famous.",
+                     "Rice is grown on **terraced fields** in the mountains.",
+                     "The **terraced fields** look like giant steps."],
+        "colloc": ["terraced rice fields", "grow rice on terraced fields"] }
+    ],
+    "forms": [
+      { "w": "terrace", "pos": "noun", "en": "a flat level area cut into a slope", "vi": "bậc thang, thềm", "ex": "Each **terrace** holds a few centimetres of water." }
+    ]
+  },
+
+  "heritage": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the traditions, buildings and culture a country has had for many years and still values",
+        "vi": "di sản (văn hoá)",
+        "examples": ["Ha Long Bay is a World **Heritage** Site.",
+                     "Folk songs are part of our cultural **heritage**.",
+                     "The village is proud of its **heritage**."],
+        "colloc": ["cultural heritage", "a World Heritage Site", "preserve our heritage"] }
+    ],
+    "note": "Uncountable — never *heritages*. Stress the first syllable: **HER**-i-tage."
+  },
+
+  "ritual": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a set of actions always performed in the same way, especially as part of a ceremony",
+        "vi": "nghi lễ, nghi thức",
+        "examples": ["The **ritual** is performed at the start of the harvest.",
+                     "Lighting incense is an important **ritual**.",
+                     "The wedding follows an ancient **ritual**."],
+        "colloc": ["perform a ritual", "a religious ritual", "an ancient ritual"] },
+      { "pos": "noun", "grammar": "countable, everyday use",
+        "en": "something you always do in the same way, out of habit",
+        "vi": "thói quen cố định",
+        "examples": ["Sunday lunch with my grandparents is a family **ritual**.",
+                     "Coffee at seven is his morning **ritual**."],
+        "colloc": ["a daily ritual", "a family ritual"] }
+    ]
+  },
+
+  "folk song": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a traditional song of a particular region, usually passed on by being sung rather than written down",
+        "vi": "dân ca",
+        "examples": ["She sang an old **folk song** at the festival.",
+                     "**Folk songs** tell the story of the village.",
+                     "My grandmother taught me three **folk songs**."],
+        "colloc": ["sing a folk song", "a traditional folk song"] }
+    ],
+    "forms": [
+      { "w": "folk", "pos": "adjective", "en": "traditional, belonging to ordinary people of a region", "vi": "dân gian", "ex": "**Folk** tales are told at bedtime." }
+    ],
+    "note": "The *l* in **folk** is silent: /fəʊk/."
+  },
+
+  "bamboo": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable / countable",
+        "en": "a tall tropical plant with hard hollow stems, used for building and making things",
+        "vi": "cây tre, tre nứa",
+        "examples": ["Baskets are woven from **bamboo**.",
+                     "The stilt house is built of **bamboo** and wood.",
+                     "**Bamboo** grows very quickly."],
+        "colloc": ["a bamboo basket", "made of bamboo"] }
+    ],
+    "note": "Stress the second syllable: bam-**BOO**."
+  },
+
+  "weave": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive / intransitive",
+        "en": "to make cloth or baskets by passing threads or strips over and under each other",
+        "vi": "dệt, đan",
+        "examples": ["The women **weave** cloth on wooden looms.",
+                     "She learned to **weave** baskets from her mother.",
+                     "This scarf was **woven** by hand."],
+        "colloc": ["weave cloth", "weave a basket", "hand-woven"] }
+    ],
+    "forms": [
+      { "w": "weaving", "pos": "noun", "en": "the craft of making cloth", "vi": "nghề dệt", "ex": "**Weaving** is a traditional craft here." },
+      { "w": "weaver", "pos": "noun", "en": "a person who weaves", "vi": "thợ dệt", "ex": "She is the best **weaver** in the village." }
+    ],
+    "note": "Irregular: weave → **wove** → **woven**."
+  },
+
+  "basket": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a container made of thin strips of wood, bamboo or cane woven together",
+        "vi": "cái giỏ, cái rổ",
+        "examples": ["She carried the fruit in a bamboo **basket**.",
+                     "The **baskets** are woven by hand.",
+                     "Put the eggs in that **basket**."],
+        "colloc": ["a bamboo basket", "a shopping basket", "a basket of fruit"] }
+    ]
+  },
+
+  "gong": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a round metal disc that makes a deep ringing sound when you hit it",
+        "vi": "cái cồng, cái chiêng",
+        "examples": ["The **gong** is played at village ceremonies.",
+                     "**Gong** culture in the Central Highlands is a World Heritage tradition.",
+                     "He struck the **gong** three times."],
+        "colloc": ["beat a gong", "play the gong", "gong culture"] }
+    ]
+  },
+
+  "cave": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a large natural hole in the side of a hill or under the ground",
+        "vi": "hang, động",
+        "examples": ["Son Doong is the largest **cave** in the world.",
+                     "Early people lived in **caves**.",
+                     "We explored a **cave** near the village."],
+        "colloc": ["explore a cave", "a limestone cave"] }
+    ]
+  },
+
+  "unique": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "being the only one of its kind; unlike anything else",
+        "vi": "độc đáo, độc nhất vô nhị",
+        "examples": ["Each ethnic group has its own **unique** costume.",
+                     "The festival is **unique** to this province.",
+                     "Every fingerprint is **unique**."],
+        "colloc": ["absolutely unique", "unique to a place"] }
+    ],
+    "note": "Because it means *the only one*, careful writers avoid *very unique* or *quite unique* — something is either unique or it isn't. Pronounced /juˈniːk/: yoo-**NEEK**."
+  },
+
+  "diverse": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "very different from each other; of many different kinds",
+        "vi": "đa dạng, phong phú",
+        "examples": ["Viet Nam is culturally very **diverse**.",
+                     "The country has a **diverse** range of landscapes.",
+                     "Our class is **diverse** — six languages are spoken."],
+        "colloc": ["culturally diverse", "a diverse range"] }
+    ],
+    "forms": [
+      { "w": "diversity", "pos": "noun", "en": "the fact of including many different kinds", "vi": "sự đa dạng", "ex": "Cultural **diversity** is a strength." }
+    ]
+  },
+
+  "traditional": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "following ideas, customs or methods that have existed for a long time",
+        "vi": "truyền thống, cổ truyền",
+        "examples": ["They wore **traditional** costumes for the festival.",
+                     "Weaving is a **traditional** craft in this village.",
+                     "**Traditional** music is played on the gong."],
+        "colloc": ["traditional dress", "a traditional festival", "traditional music"] }
+    ],
+    "forms": [
+      { "w": "tradition", "pos": "noun", "en": "a belief or custom passed from one generation to the next", "vi": "truyền thống", "ex": "It is a **tradition** to visit relatives at Tet." },
+      { "w": "traditionally", "pos": "adverb", "en": "in the way that has been usual for a long time", "vi": "theo truyền thống", "ex": "**Traditionally**, the house faces south." }
+    ]
+  }
+}

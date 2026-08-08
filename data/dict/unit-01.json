@@ -1,0 +1,444 @@
+{
+  "_schema": "Dictionary entries keyed by lowercase headword. Merged across all unit files in order; the first definition of a repeated headword wins. Examples use **bold** for the target word. Senses are ordered: the first is the flat view, the rest sit behind the full-entry toggle.",
+  "_unit": "01 — Leisure Time",
+
+  "leisure": {
+    "senses": [
+      {
+        "pos": "noun", "grammar": "uncountable",
+        "en": "time when you are not working or studying, and can do what you enjoy",
+        "vi": "thời gian rảnh rỗi",
+        "examples": [
+          "In her **leisure** time, my sister does jigsaw puzzles.",
+          "Most teenagers have very little **leisure** during exam week.",
+          "The town has a new **leisure** centre with a pool and a gym."
+        ],
+        "colloc": ["leisure time", "leisure activities", "a leisure centre"]
+      },
+      {
+        "pos": "noun", "grammar": "uncountable, formal",
+        "en": "the state of having time to relax, with no work you must do",
+        "vi": "sự nhàn hạ, sự thảnh thơi",
+        "examples": [
+          "He retired early and now lives a life of **leisure**.",
+          "Read the contract at your **leisure** and sign it next week."
+        ],
+        "colloc": ["a life of leisure", "at your leisure"]
+      }
+    ],
+    "forms": [
+      { "w": "leisurely", "pos": "adjective", "en": "done slowly, without hurrying", "vi": "thong thả, thư thái", "ex": "We had a **leisurely** breakfast and left at ten." }
+    ],
+    "note": "Usually sits before another noun: *leisure time*, *leisure activities*. The first syllable rhymes with *measure*, not with *seize*."
+  },
+
+  "pastime": {
+    "senses": [
+      {
+        "pos": "noun", "grammar": "countable",
+        "en": "something you do regularly for pleasure when you are not working",
+        "vi": "thú tiêu khiển, trò giải trí",
+        "examples": [
+          "Fishing is his favourite **pastime**.",
+          "Board games are a cheap **pastime** for a rainy Sunday.",
+          "Collecting stamps was a popular **pastime** fifty years ago."
+        ],
+        "colloc": ["a favourite pastime", "a popular pastime", "a national pastime"]
+      }
+    ],
+    "note": "One word, one *s* — not *past time*. Close to *hobby*, but a pastime can be more casual: a hobby usually needs equipment or skill."
+  },
+
+  "hang out (with)": {
+    "senses": [
+      {
+        "pos": "phrasal verb", "grammar": "informal",
+        "en": "to spend time somewhere, or with someone, in a relaxed way with no particular plan",
+        "vi": "đi chơi, la cà, tụ tập",
+        "examples": [
+          "On Sundays I **hang out with** my cousins at the park.",
+          "They **hang out** at the shopping centre near the swimming pool.",
+          "We just **hung out** at home and watched films all afternoon."
+        ],
+        "colloc": ["hang out with friends", "hang out at the park"]
+      },
+      {
+        "pos": "phrasal verb", "grammar": "literal",
+        "en": "to put washing outside on a line so that it dries",
+        "vi": "phơi (quần áo)",
+        "examples": [
+          "Could you **hang out** the washing before it rains?",
+          "My grandmother **hangs** the sheets **out** every morning."
+        ],
+        "colloc": ["hang out the washing"]
+      }
+    ],
+    "forms": [
+      { "w": "hangout", "pos": "noun", "en": "a place someone often goes to relax", "vi": "chỗ hay lui tới", "ex": "That café is their usual **hangout**." }
+    ],
+    "note": "Informal. Use *with* for people and *at / in* for places: *hang out with Nam at the café*. Irregular: hang → hung → hung."
+  },
+
+  "socialise": {
+    "senses": [
+      {
+        "pos": "verb", "grammar": "intransitive",
+        "en": "to meet and spend time with other people in a friendly way",
+        "vi": "giao lưu, gặp gỡ mọi người",
+        "examples": [
+          "He loves to **socialise** with new people.",
+          "I don't **socialise** much during the week because of homework.",
+          "A club is a good place to **socialise** with people your own age."
+        ],
+        "colloc": ["socialise with someone", "a chance to socialise"]
+      }
+    ],
+    "forms": [
+      { "w": "social", "pos": "adjective", "en": "connected with meeting people and spending time with them", "vi": "thuộc về xã hội, giao tiếp", "ex": "She has a busy **social** life." },
+      { "w": "sociable", "pos": "adjective", "en": "friendly and enjoying the company of others", "vi": "hoà đồng, dễ gần", "ex": "He is quiet but very **sociable** once you know him." }
+    ],
+    "note": "British spelling *socialise*; American *socialize*. Both are correct — just be consistent. Do not confuse *social* (about society or meeting people) with *sociable* (describing a friendly person)."
+  },
+
+  "take up": {
+    "senses": [
+      {
+        "pos": "phrasal verb", "grammar": "separable",
+        "en": "to start doing a new hobby, sport or activity",
+        "vi": "bắt đầu (một sở thích, môn thể thao mới)",
+        "examples": [
+          "I want to **take up** photography next year — I've just bought a camera.",
+          "My brother has **taken up** woodwork.",
+          "She decided to **take up** the guitar after watching the concert."
+        ],
+        "colloc": ["take up a hobby", "take up the guitar", "take up cycling"]
+      },
+      {
+        "pos": "phrasal verb", "grammar": "separable",
+        "en": "to fill an amount of space or time",
+        "vi": "chiếm (chỗ, thời gian)",
+        "examples": [
+          "That old sofa **takes up** half the room.",
+          "Homework **takes up** most of my evening."
+        ],
+        "colloc": ["take up space", "take up time"]
+      },
+      {
+        "pos": "phrasal verb", "grammar": "separable",
+        "en": "to accept an offer or an invitation",
+        "vi": "chấp nhận (lời mời, đề nghị)",
+        "examples": [
+          "Thanks for the offer — I'd like to **take** you **up** on it.",
+          "She **took up** the job in Da Nang."
+        ],
+        "colloc": ["take up an offer", "take somebody up on something"]
+      }
+    ],
+    "note": "Separable: *take up the guitar* = *take the guitar up*. With a pronoun it **must** split: *take it up*, never *take up it*. Irregular: take → took → taken."
+  },
+
+  "DIY": {
+    "senses": [
+      {
+        "pos": "noun", "grammar": "uncountable, abbreviation",
+        "en": "do-it-yourself: making or repairing things in your home yourself instead of paying someone",
+        "vi": "tự làm, tự sửa chữa (đồ trong nhà)",
+        "examples": [
+          "My dad spends every Sunday doing **DIY**.",
+          "She made the bookshelf herself — it was a **DIY** project.",
+          "There's a **DIY** shop at the end of our street."
+        ],
+        "colloc": ["do DIY", "a DIY project", "a DIY shop"]
+      }
+    ],
+    "note": "Uncountable — never *a DIY* on its own, but *a DIY project* is fine. Say the three letters: dee-eye-**WHY**, with the stress on the last one."
+  },
+
+  "craft": {
+    "senses": [
+      {
+        "pos": "noun", "grammar": "countable / uncountable",
+        "en": "an activity in which you make things skilfully with your hands; also the objects you make",
+        "vi": "nghề thủ công; đồ thủ công",
+        "examples": [
+          "My grandmother makes paper flowers. Her **crafts** are lovely.",
+          "We learn a traditional **craft** at school on Fridays.",
+          "The village is famous for the **craft** of silk weaving."
+        ],
+        "colloc": ["arts and crafts", "a traditional craft", "a craft fair"]
+      },
+      {
+        "pos": "noun", "grammar": "countable, plural: craft",
+        "en": "a boat, an aircraft or a spacecraft",
+        "vi": "tàu, thuyền, phi thuyền",
+        "examples": [
+          "Several small **craft** were sheltering in the harbour.",
+          "The landing **craft** reached the beach at dawn."
+        ],
+        "colloc": ["a small craft", "a landing craft"]
+      },
+      {
+        "pos": "verb", "grammar": "transitive",
+        "en": "to make something skilfully, especially by hand",
+        "vi": "chế tác, làm thủ công",
+        "examples": [
+          "Each bowl is **crafted** from a single piece of wood.",
+          "She **crafts** jewellery from recycled metal."
+        ],
+        "colloc": ["hand-crafted", "carefully crafted"]
+      }
+    ],
+    "forms": [
+      { "w": "craftsman", "pos": "noun", "en": "a skilled worker who makes things by hand", "vi": "thợ thủ công", "ex": "The chair was made by a local **craftsman**." }
+    ],
+    "note": "In the boat sense the plural is also *craft*, never *crafts*: *three fishing craft*."
+  },
+
+  "cook": {
+    "senses": [
+      {
+        "pos": "verb", "grammar": "transitive / intransitive",
+        "en": "to prepare food by heating it",
+        "vi": "nấu ăn, nấu nướng",
+        "examples": [
+          "My dad and my brother **cook** lunch on Sundays.",
+          "The rice is still **cooking** — give it five more minutes.",
+          "My grandfather is teaching me to **cook** one new dish each week."
+        ],
+        "colloc": ["cook a meal", "learn to cook", "cook dinner"]
+      },
+      {
+        "pos": "noun", "grammar": "countable",
+        "en": "a person who cooks, especially as their job or at home",
+        "vi": "đầu bếp, người nấu ăn",
+        "examples": [
+          "He is a good **cook**, but he can't stand following a recipe.",
+          "The school has two **cooks** and they feed four hundred children."
+        ],
+        "colloc": ["a good cook", "a terrible cook"]
+      }
+    ],
+    "note": "Short /ʊ/ — the vowel of *book*, not the long /uː/ of *food*. A **cook** works at home or in a small kitchen; a **chef** is trained and works professionally."
+  },
+
+  "bookshop": {
+    "senses": [
+      {
+        "pos": "noun", "grammar": "countable",
+        "en": "a shop that sells books",
+        "vi": "hiệu sách, nhà sách",
+        "examples": [
+          "We bought the book at the new **bookshop** in town.",
+          "A new **bookshop** opened near the swimming pool.",
+          "There is a café upstairs in that **bookshop**."
+        ],
+        "colloc": ["a local bookshop", "a second-hand bookshop"]
+      }
+    ],
+    "note": "British English; Americans say *bookstore*. Short /ʊ/ in *book*. Compare *library*, where you borrow books instead of buying them — a common false friend for Vietnamese learners."
+  },
+
+  "football": {
+    "senses": [
+      {
+        "pos": "noun", "grammar": "uncountable",
+        "en": "a game played by two teams of eleven players who kick a ball into a goal",
+        "vi": "môn bóng đá",
+        "examples": [
+          "Last month we started playing **football** in the park.",
+          "My cousin enjoys playing **football** every Saturday.",
+          "He was too tired after the **football** match to do anything."
+        ],
+        "colloc": ["play football", "a football match", "a football team"]
+      },
+      {
+        "pos": "noun", "grammar": "countable",
+        "en": "the ball used in this game",
+        "vi": "quả bóng đá",
+        "examples": [
+          "My little brother got a new **football** for his birthday.",
+          "The **football** went over the fence and into the garden."
+        ],
+        "colloc": ["kick a football", "a leather football"]
+      }
+    ],
+    "note": "*Play football* — no *the*. First vowel is the short /ʊ/ of *put*, not the long /uː/ of *food*. In American English this game is *soccer*, and *football* means a different sport."
+  },
+
+  "board game": {
+    "senses": [
+      {
+        "pos": "noun", "grammar": "countable",
+        "en": "a game such as chess, played on a marked board with pieces or counters",
+        "vi": "trò chơi cờ bàn (cờ, cá ngựa…)",
+        "examples": [
+          "In the evening we play **board games**.",
+          "There is a big table with **board games** upstairs in the café.",
+          "Chess is the only **board game** my grandmother ever loses."
+        ],
+        "colloc": ["play a board game", "a board game night"]
+      }
+    ],
+    "note": "Two words. *Board* /bɔːd/ sounds exactly like *bored* — same sound, completely different word. You **play** a board game, but you **do** a jigsaw puzzle."
+  },
+
+  "jigsaw puzzle": {
+    "senses": [
+      {
+        "pos": "noun", "grammar": "countable",
+        "en": "a picture printed on card or wood and cut into many small pieces that you fit back together",
+        "vi": "trò chơi xếp hình",
+        "examples": [
+          "In my free time I like doing **jigsaw puzzles**.",
+          "This **jigsaw puzzle** has a thousand pieces and I've already lost two.",
+          "We finished the **jigsaw puzzle** on the last day of the holiday."
+        ],
+        "colloc": ["do a jigsaw puzzle", "a 500-piece jigsaw puzzle"]
+      }
+    ],
+    "note": "You **do** a jigsaw puzzle — never *play* one. Often shortened to just *a jigsaw*."
+  },
+
+  "movie": {
+    "senses": [
+      {
+        "pos": "noun", "grammar": "countable",
+        "en": "a story told in moving pictures that you watch at a cinema or at home",
+        "vi": "bộ phim",
+        "examples": [
+          "I usually stay home and watch **movies**.",
+          "Why don't we watch a **movie** tonight?",
+          "I can't stand any **movie** that is longer than two hours."
+        ],
+        "colloc": ["watch a movie", "a horror movie", "an action movie"]
+      },
+      {
+        "pos": "noun", "grammar": "plural: the movies, especially American",
+        "en": "the cinema, as a place you go to",
+        "vi": "rạp chiếu phim",
+        "examples": [
+          "Do you want to go to **the movies** on Saturday?",
+          "We hadn't been to **the movies** since March."
+        ],
+        "colloc": ["go to the movies"]
+      }
+    ],
+    "note": "Long /uː/ — the vowel of *food*, not *book*. British speakers usually say *film*, and *go to the cinema* rather than *go to the movies*."
+  },
+
+  "music": {
+    "senses": [
+      {
+        "pos": "noun", "grammar": "uncountable",
+        "en": "sounds arranged in patterns to be sung or played on instruments",
+        "vi": "âm nhạc",
+        "examples": [
+          "I like listening to **music** while I do my homework.",
+          "He can't stand loud **music** when he is trying to study.",
+          "She has been studying **music** since she was six."
+        ],
+        "colloc": ["listen to music", "play music", "loud music"]
+      }
+    ],
+    "forms": [
+      { "w": "musician", "pos": "noun", "en": "a person who plays a musical instrument or writes music", "vi": "nhạc sĩ, nhạc công", "ex": "Her brother is a professional **musician**." },
+      { "w": "musical", "pos": "adjective", "en": "connected with music, or good at music", "vi": "thuộc về âm nhạc; có khiếu nhạc", "ex": "He comes from a very **musical** family." }
+    ],
+    "note": "Uncountable — never *a music* or *musics*. Say *a piece of music* or *a song*. Begins /mjuː/, with a *y* sound: **myoo**-zik."
+  },
+
+  "swimming pool": {
+    "senses": [
+      {
+        "pos": "noun", "grammar": "countable",
+        "en": "a large structure filled with water for people to swim in",
+        "vi": "bể bơi, hồ bơi",
+        "examples": [
+          "Look at the blue **swimming pool** near the bookshop.",
+          "We meet at the shopping centre near the **swimming pool**.",
+          "The water in the **swimming pool** was far too cold."
+        ],
+        "colloc": ["an indoor swimming pool", "go to the swimming pool"]
+      }
+    ],
+    "note": "*Pool* has the long /uː/ of *food*. Stress the first word: **SWIM**ming pool. Often shortened to *the pool*."
+  },
+
+  "choose": {
+    "senses": [
+      {
+        "pos": "verb", "grammar": "transitive / intransitive",
+        "en": "to decide which thing or person you want from a number of them",
+        "vi": "chọn, lựa chọn",
+        "examples": [
+          "We couldn't **choose** between the film and the football match.",
+          "My mum and I **choose** the food at the market.",
+          "You can **choose** any three books from this shelf."
+        ],
+        "colloc": ["choose between A and B", "choose from a list", "hard to choose"]
+      },
+      {
+        "pos": "verb", "grammar": "+ to-infinitive",
+        "en": "to decide to do something, when you could have done otherwise",
+        "vi": "quyết định (làm gì)",
+        "examples": [
+          "She **chose** to stay at home instead of going out.",
+          "He **chose** not to answer the question."
+        ],
+        "colloc": ["choose to do something"]
+      }
+    ],
+    "forms": [
+      { "w": "choice", "pos": "noun", "en": "the act of choosing, or the thing chosen", "vi": "sự lựa chọn", "ex": "It was a difficult **choice**." }
+    ],
+    "note": "Irregular: choose → **chose** /tʃəʊz/ → **chosen**. Two *o*s in the present, one in the past. Long /uː/, ending in a /z/ sound."
+  },
+
+  "relax": {
+    "senses": [
+      {
+        "pos": "verb", "grammar": "intransitive",
+        "en": "to rest and stop feeling worried or tense",
+        "vi": "thư giãn, nghỉ ngơi",
+        "examples": [
+          "I read comics to **relax** after school.",
+          "Sunday is the only day my whole family can **relax** together.",
+          "Just **relax** — the exam isn't until next week."
+        ],
+        "colloc": ["relax after work", "sit back and relax", "help you relax"]
+      },
+      {
+        "pos": "verb", "grammar": "transitive",
+        "en": "to make a rule, a muscle or a grip less tight or less strict",
+        "vi": "nới lỏng, làm giãn ra",
+        "examples": [
+          "The school has **relaxed** its rules about mobile phones.",
+          "**Relax** your shoulders and breathe slowly."
+        ],
+        "colloc": ["relax the rules", "relax your muscles"]
+      }
+    ],
+    "forms": [
+      { "w": "relaxing", "pos": "adjective", "en": "making you feel calm — describes a thing", "vi": "gây thư giãn", "ex": "A **relaxing** afternoon by the river." },
+      { "w": "relaxed", "pos": "adjective", "en": "feeling calm — describes a person", "vi": "thoải mái, thư thái", "ex": "He looked **relaxed** and happy." }
+    ],
+    "note": "Stress the second syllable: re**LAX**. Careful with the pair: a holiday is *relaxing*; you are *relaxed*."
+  },
+
+  "can't stand": {
+    "senses": [
+      {
+        "pos": "phrase", "grammar": "+ V-ing or + noun",
+        "en": "to dislike something very strongly; to be unable to bear it",
+        "vi": "không chịu được, ghét cay ghét đắng",
+        "examples": [
+          "I **can't stand** loud noise when I'm reading.",
+          "My dad **can't stand** following a recipe.",
+          "She **can't stand** queuing for tickets in the rain."
+        ],
+        "colloc": ["can't stand doing something", "can't stand the noise"]
+      }
+    ],
+    "note": "Always followed by **V-ing**, never *to-V*: *I can't stand queuing.* ❌ *I can't stand to queue.* The full form is *cannot stand*; *can't* is normal in speech and in most writing."
+  }
+}

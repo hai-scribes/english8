@@ -1,0 +1,435 @@
+{
+  "_unit": "11 — Science and Technology",
+
+  "invention": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a machine, tool or idea that somebody has made for the first time",
+        "vi": "phát minh, sáng chế",
+        "examples": [
+          "The light bulb was one of the most useful **inventions** of the 19th century.",
+          "My little brother showed us his own **invention**: a robot made of paper cups.",
+          "Which **invention** has changed your daily life the most?"
+        ],
+        "colloc": ["a great invention", "a new invention", "a useful invention"]
+      },
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "the act of making something that did not exist before",
+        "vi": "việc sáng chế, sự phát minh",
+        "examples": [
+          "The **invention** of the smartphone changed how we talk to each other.",
+          "Life became much faster after the **invention** of the aeroplane."
+        ],
+        "colloc": ["the invention of something", "since the invention of"]
+      }
+    ],
+    "forms": [
+      { "w": "inventor", "pos": "noun", "en": "a person who makes something new", "vi": "nhà phát minh", "ex": "Thomas Edison was a famous American **inventor**." },
+      { "w": "inventive", "pos": "adjective", "en": "good at thinking of new ideas", "vi": "sáng tạo, giàu óc sáng chế", "ex": "She is very **inventive** and always finds a clever solution." }
+    ],
+    "note": "Use *the* **invention of** + noun when you mean the moment something was first made: *the invention of the printing press*."
+  },
+
+  "invent": {
+    "senses": [
+      {
+        "pos": "verb",
+        "grammar": "transitive",
+        "en": "to make or design something completely new for the first time",
+        "vi": "phát minh, sáng chế",
+        "examples": [
+          "Who **invented** the telephone?",
+          "Students at our school **invented** a bag that charges a phone using sunlight.",
+          "Engineers are trying to **invent** a cheaper way to clean sea water."
+        ],
+        "colloc": ["invent a machine", "invent a new method", "be invented by"]
+      }
+    ],
+    "forms": [
+      { "w": "invention", "pos": "noun", "en": "something new that has been made", "vi": "phát minh", "ex": "The wheel is a very old **invention**." },
+      { "w": "inventor", "pos": "noun", "en": "a person who invents things", "vi": "nhà phát minh", "ex": "The **inventor** received a prize for her design." }
+    ],
+    "note": "**Invent** = create something that never existed (*Bell invented the telephone*). *Discover* = find something that was already there (*Scientists discovered a new planet*). This is a very common learner mistake."
+  },
+
+  "biometrics": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "the use of body features such as fingerprints, faces or eyes to check who a person is",
+        "vi": "sinh trắc học",
+        "examples": [
+          "**Biometrics** is now used at most international airports.",
+          "Our new phone uses **biometrics** instead of a password.",
+          "**Biometrics** makes it harder for someone to steal your identity."
+        ],
+        "colloc": ["use biometrics", "biometrics technology"]
+      }
+    ],
+    "forms": [
+      { "w": "biometric", "pos": "adjective", "en": "connected with measuring features of the human body", "vi": "thuộc sinh trắc học", "ex": "The school gate has a **biometric** scanner." }
+    ],
+    "note": "**Biometrics** ends in *-s* but takes a **singular** verb: *Biometrics **is** used in banks.* (like *physics*, *economics*). Before a noun, use the adjective **biometric**: *a biometric passport*."
+  },
+
+  "fingerprint": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "the mark made by the lines on the end of your finger, which is different for every person",
+        "vi": "dấu vân tay",
+        "examples": [
+          "I unlock my laptop with my **fingerprint**.",
+          "The police found a **fingerprint** on the glass.",
+          "No two people in the world have the same **fingerprints**."
+        ],
+        "colloc": ["take someone's fingerprints", "a fingerprint scanner", "leave a fingerprint"]
+      }
+    ],
+    "note": "Written as one word. The machine that reads it is a **fingerprint scanner** or **fingerprint reader**."
+  },
+
+  "iris": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "the coloured ring around the black centre of your eye",
+        "vi": "mống mắt",
+        "examples": [
+          "The camera scans your **iris** before the door opens.",
+          "Her **irises** are a very dark brown.",
+          "**Iris** recognition is faster than typing a password."
+        ],
+        "colloc": ["iris scanner", "iris recognition"]
+      },
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a tall garden flower with long thin leaves, usually purple, blue or yellow",
+        "vi": "hoa diên vĩ (hoa iris)",
+        "examples": [
+          "My grandmother grows purple **irises** beside the pond.",
+          "There were yellow **irises** all along the river."
+        ],
+        "colloc": ["grow irises", "a bunch of irises"]
+      }
+    ],
+    "note": "Plural: **irises**. In technology texts you will almost always meet the eye meaning, as in *iris scanning*."
+  },
+
+  "recognition": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "the act of knowing who or what somebody or something is, especially by a machine",
+        "vi": "sự nhận dạng, sự nhận diện",
+        "examples": [
+          "Face **recognition** lets you pay without a card.",
+          "Voice **recognition** software can type what you say.",
+          "**Recognition** of your fingerprint takes less than a second."
+        ],
+        "colloc": ["facial recognition", "voice recognition", "speech recognition"]
+      },
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "public praise for what somebody has done well",
+        "vi": "sự công nhận, sự ghi nhận",
+        "examples": [
+          "The young scientist finally got the **recognition** she deserved.",
+          "He received a medal in **recognition** of his work on clean energy."
+        ],
+        "colloc": ["gain recognition", "in recognition of"]
+      }
+    ],
+    "forms": [
+      { "w": "recognise", "pos": "verb", "en": "to know somebody or something because you have seen it before", "vi": "nhận ra, nhận diện", "ex": "The app **recognises** my face even in the dark." }
+    ],
+    "note": "British spelling **recognise**; American spelling *recognize*. Both are pronounced the same."
+  },
+
+  "device": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a piece of equipment made to do a particular job",
+        "vi": "thiết bị, dụng cụ",
+        "examples": [
+          "This small **device** measures the air quality in the room.",
+          "You can log in on up to three **devices**.",
+          "Please switch off all electronic **devices** during the test."
+        ],
+        "colloc": ["an electronic device", "a mobile device", "a smart device"]
+      }
+    ],
+    "note": "**Device** is countable: *a device*, *two devices*. Use *equipment* (uncountable) for the general idea: *lab equipment*, not ~~lab equipments~~."
+  },
+
+  "artificial intelligence": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "the ability of computers to do things that normally need human thinking, such as learning and making decisions",
+        "vi": "trí tuệ nhân tạo",
+        "examples": [
+          "**Artificial intelligence** can translate a whole book in seconds.",
+          "Doctors use **artificial intelligence** to read X-ray pictures.",
+          "Our teacher explained how **artificial intelligence** learns from data."
+        ],
+        "colloc": ["use artificial intelligence", "artificial intelligence technology"]
+      }
+    ],
+    "note": "Uncountable — no *a/an* and no plural. It is usually shortened to **AI**: *an AI tool*, *AI is changing schools*. Say the two letters: /ˌeɪ ˈaɪ/."
+  },
+
+  "automate": {
+    "senses": [
+      {
+        "pos": "verb",
+        "grammar": "transitive",
+        "en": "to make a machine or computer do a job that people used to do",
+        "vi": "tự động hoá",
+        "examples": [
+          "The factory has **automated** most of its packing work.",
+          "We can **automate** the watering of the school garden.",
+          "Many boring office tasks are now **automated**."
+        ],
+        "colloc": ["automate a process", "fully automated", "automate a task"]
+      }
+    ],
+    "forms": [
+      { "w": "automation", "pos": "noun", "en": "the use of machines to do work instead of people", "vi": "sự tự động hoá", "ex": "**Automation** has changed the way cars are built." },
+      { "w": "automatic", "pos": "adjective", "en": "working by itself without a person controlling it", "vi": "tự động", "ex": "The lights in the corridor are **automatic**." }
+    ],
+    "note": "**Automatic** describes a thing; **automatically** describes how something happens: *The door opens **automatically***."
+  },
+
+  "nanolearning": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "a way of studying in which you learn a very small amount at a time, usually in lessons of a few minutes",
+        "vi": "học siêu ngắn (học theo từng đoạn rất ngắn)",
+        "examples": [
+          "**Nanolearning** is popular with students who are always busy.",
+          "With **nanolearning**, five minutes on the bus is enough for one lesson.",
+          "Our app uses **nanolearning** to teach ten new words a week."
+        ],
+        "colloc": ["a nanolearning app", "use nanolearning"]
+      }
+    ],
+    "note": "A very new word, so many dictionaries do not have it yet. *Nano-* means *extremely small*, so **nanolearning** means learning in very short bursts — often two to five minutes on a phone. Compare *microlearning*, which means almost the same thing."
+  },
+
+  "efficient": {
+    "senses": [
+      {
+        "pos": "adjective",
+        "en": "doing a job well without wasting time, money or energy",
+        "vi": "hiệu quả, có năng suất",
+        "examples": [
+          "Electric trains are more **efficient** than old diesel ones.",
+          "This robot is **efficient**: it does in one hour what took us a day.",
+          "We need a more **efficient** way to sort the rubbish."
+        ],
+        "colloc": ["energy efficient", "highly efficient", "an efficient method"]
+      }
+    ],
+    "forms": [
+      { "w": "efficiency", "pos": "noun", "en": "the quality of working well without waste", "vi": "hiệu suất, sự hiệu quả", "ex": "The new engine improved the car's **efficiency**." },
+      { "w": "efficiently", "pos": "adverb", "en": "in a way that does not waste time or energy", "vi": "một cách hiệu quả", "ex": "The team worked quickly and **efficiently**." }
+    ],
+    "note": "**Efficient** = no waste of time or energy. *Effective* = it gives the result you want. A method can be *effective* but not **efficient** if it takes too long."
+  },
+
+  "innovative": {
+    "senses": [
+      {
+        "pos": "adjective",
+        "en": "using new ideas or new ways of doing things",
+        "vi": "đổi mới, sáng tạo",
+        "examples": [
+          "The team won the prize for their **innovative** water filter.",
+          "Our school has a very **innovative** way of teaching science.",
+          "Viet Nam has many **innovative** young start-ups."
+        ],
+        "colloc": ["an innovative idea", "an innovative design", "highly innovative"]
+      }
+    ],
+    "forms": [
+      { "w": "innovation", "pos": "noun", "en": "a new idea or method, or the making of new ideas", "vi": "sự đổi mới, cải tiến", "ex": "This app is the biggest **innovation** in online learning this year." },
+      { "w": "innovate", "pos": "verb", "en": "to introduce new ideas or methods", "vi": "đổi mới, cải tiến", "ex": "Companies must **innovate** or they will lose customers." }
+    ]
+  },
+
+  "breakthrough": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "an important discovery or change that helps you make progress after a long time",
+        "vi": "bước đột phá",
+        "examples": [
+          "Scientists have made a **breakthrough** in the treatment of malaria.",
+          "The new battery is a real **breakthrough** for electric cars.",
+          "After months of failure, they finally had a **breakthrough**."
+        ],
+        "colloc": ["make a breakthrough", "a major breakthrough", "a scientific breakthrough"]
+      }
+    ],
+    "note": "The noun is one word, **breakthrough**; the verb phrase is two words: *break through*. We usually say **make** a breakthrough, not ~~do~~ a breakthrough."
+  },
+
+  "laboratory": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a room or building where scientists do tests and research",
+        "vi": "phòng thí nghiệm",
+        "examples": [
+          "The samples were sent to a **laboratory** for testing.",
+          "You must wear glasses and gloves in the **laboratory**.",
+          "Our school built a new computer **laboratory** last year."
+        ],
+        "colloc": ["a science laboratory", "work in a laboratory", "a laboratory test"]
+      }
+    ],
+    "note": "The short, everyday form is **lab**: *the school lab*, *lab coat*. Stress differs: British *la-**BOR**-a-try*, American ***LAB**-ra-tory*."
+  },
+
+  "experiment": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a scientific test done to find out what happens or to prove an idea",
+        "vi": "cuộc thí nghiệm, thực nghiệm",
+        "examples": [
+          "We did an **experiment** with salt and ice in class today.",
+          "The **experiment** showed that the plants grew faster in blue light.",
+          "Her first **experiment** failed, so she tried again."
+        ],
+        "colloc": ["do an experiment", "carry out an experiment", "a simple experiment"]
+      },
+      {
+        "pos": "verb",
+        "grammar": "+ with / on",
+        "en": "to try new things or do scientific tests to see what happens",
+        "vi": "thí nghiệm, thử nghiệm",
+        "examples": [
+          "The class **experimented** with different kinds of soil.",
+          "Scientists are **experimenting** with a new kind of plastic.",
+          "I like to **experiment** with recipes at the weekend."
+        ],
+        "colloc": ["experiment with something", "experiment on animals"]
+      }
+    ],
+    "forms": [
+      { "w": "experimental", "pos": "adjective", "en": "connected with tests, or still being tested", "vi": "mang tính thử nghiệm", "ex": "The hospital is using an **experimental** drug." }
+    ],
+    "note": "The noun and the verb are spelt the same but stressed differently in careful speech, and we say **do** or **carry out** an experiment — not ~~make an experiment~~."
+  },
+
+  "replace": {
+    "senses": [
+      {
+        "pos": "verb",
+        "grammar": "transitive",
+        "en": "to take the place of somebody or something else",
+        "vi": "thay thế cho",
+        "examples": [
+          "Will robots **replace** teachers in the future?",
+          "Email has largely **replaced** letters.",
+          "Nothing can **replace** a good night's sleep."
+        ],
+        "colloc": ["replace something with something", "be replaced by", "completely replace"]
+      },
+      {
+        "pos": "verb",
+        "grammar": "transitive",
+        "en": "to put a new or different thing in the position of an old one",
+        "vi": "thay mới, đổi cái mới",
+        "examples": [
+          "We had to **replace** the broken screen.",
+          "The school **replaced** all the old lights with LED ones."
+        ],
+        "colloc": ["replace a battery", "replace an old machine"]
+      },
+      {
+        "pos": "verb",
+        "grammar": "transitive",
+        "en": "to put something back where it was before",
+        "vi": "đặt lại chỗ cũ",
+        "examples": [
+          "Please **replace** the books on the shelf when you finish.",
+          "He **replaced** the lid carefully so nothing spilled."
+        ],
+        "colloc": ["replace the lid", "replace the receiver"]
+      }
+    ],
+    "note": "Say **replace** A **with** B (*We replaced the old PC with a laptop*), or *A was replaced **by** B*. Do not say ~~replace A by a new one~~ in the active voice."
+  },
+
+  "benefit": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a good effect or advantage that something brings",
+        "vi": "lợi ích",
+        "examples": [
+          "One **benefit** of online learning is that you can study anywhere.",
+          "The **benefits** of exercise are well known.",
+          "New technology brings both **benefits** and problems."
+        ],
+        "colloc": ["the benefits of something", "bring benefits", "a major benefit"]
+      },
+      {
+        "pos": "verb",
+        "grammar": "+ from",
+        "en": "to be helped by something, or to help somebody",
+        "vi": "hưởng lợi; mang lại lợi ích cho",
+        "examples": [
+          "Farmers **benefit** from weather apps on their phones.",
+          "The whole village **benefited** from the new solar panels.",
+          "Clean water **benefits** everyone."
+        ],
+        "colloc": ["benefit from something", "benefit greatly"]
+      }
+    ],
+    "forms": [
+      { "w": "beneficial", "pos": "adjective", "en": "having a good effect", "vi": "có lợi, có ích", "ex": "Reading before bed is **beneficial** for sleep." }
+    ],
+    "note": "The opposite is **drawback** or *disadvantage*. Note the spelling of the verb forms: **benefited**, **benefiting** (one *t* in British and American English)."
+  },
+
+  "drawback": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a bad point or problem that makes something less good",
+        "vi": "nhược điểm, mặt hạn chế",
+        "examples": [
+          "The main **drawback** of the robot is its high price.",
+          "Studying online has one big **drawback**: you miss your friends.",
+          "Every new invention has some **drawbacks**."
+        ],
+        "colloc": ["the main drawback", "a serious drawback", "the drawback of something"]
+      }
+    ],
+    "note": "**Drawback** is the opposite of **benefit** / *advantage*. It is countable, and it is often used in the pattern *The (main) drawback of X is that…*"
+  }
+}

@@ -1,0 +1,330 @@
+{
+  "_unit": "09 — Natural Disasters",
+
+  "earthquake": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a sudden violent shaking of the ground that can knock down buildings",
+        "vi": "trận động đất",
+        "examples": ["A strong **earthquake** hit the city early on Sunday morning.",
+                     "Thousands of people lost their homes in the **earthquake**.",
+                     "During an **earthquake**, get under a table and hold on."],
+        "colloc": ["a strong earthquake", "an earthquake hits", "survive an earthquake"] }
+    ],
+    "note": "Stress the first part: **EARTH**quake. In news reports you may also see the shorter word *quake*, which means the same thing."
+  },
+
+  "flood": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a large amount of water covering land that is usually dry",
+        "vi": "trận lụt, lũ lụt",
+        "examples": ["The **floods** last October destroyed most of the rice crop.",
+                     "Heavy rain caused a serious **flood** in the north.",
+                     "After the **flood**, mud was everywhere in our street."],
+        "colloc": ["a serious flood", "cause a flood", "flood water"] },
+      { "pos": "verb", "grammar": "transitive/intransitive",
+        "en": "to fill a place with water, or to become full of water",
+        "vi": "làm ngập, bị ngập nước",
+        "examples": ["The river **flooded** the whole village in one night.",
+                     "Our kitchen **floods** every rainy season.",
+                     "The road was **flooded**, so the bus could not pass."],
+        "colloc": ["be badly flooded", "flood a village"] }
+    ],
+    "note": "Pronounced /flʌd/ — it rhymes with *blood*, not with *food*. The adjective is **flooded**: *a flooded street*."
+  },
+
+  "drought": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable/uncountable",
+        "en": "a long period of time with little or no rain, so that plants and animals suffer",
+        "vi": "hạn hán",
+        "examples": ["The **drought** lasted for eight months and the wells dried up.",
+                     "Farmers lost their coffee plants in the **drought**.",
+                     "Long periods of **drought** are becoming more common."],
+        "colloc": ["a severe drought", "suffer from drought", "a long drought"] }
+    ],
+    "note": "Pronounced /draʊt/ — the *gh* is silent and the ending sounds like *out*. Do not confuse it with *draught* (a cold current of air)."
+  },
+
+  "landslide": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a mass of earth, mud and rock that falls down the side of a hill or mountain",
+        "vi": "sạt lở đất",
+        "examples": ["A **landslide** blocked the mountain road for three days.",
+                     "Heavy rain often causes **landslides** in this province.",
+                     "Two houses were buried by the **landslide**."],
+        "colloc": ["cause a landslide", "a landslide blocks a road", "a deadly landslide"] },
+      { "pos": "noun", "grammar": "usually singular",
+        "en": "a very large victory in an election",
+        "vi": "thắng lợi áp đảo (trong bầu cử)",
+        "examples": ["Her party won the election by a **landslide**.",
+                     "It was a **landslide** victory for the young candidate."],
+        "colloc": ["win by a landslide", "a landslide victory"] }
+    ],
+    "note": "The first meaning is the one you need in this unit. *Mudslide* is a similar word used when the material is mostly wet mud."
+  },
+
+  "tsunami": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "an extremely large ocean wave, usually caused by an earthquake under the sea",
+        "vi": "sóng thần",
+        "examples": ["The **tsunami** reached the coast twenty minutes after the earthquake.",
+                     "A huge **tsunami** swept away hundreds of small boats.",
+                     "Sirens warned the villagers that a **tsunami** was coming."],
+        "colloc": ["a huge tsunami", "a tsunami warning", "be hit by a tsunami"] }
+    ],
+    "note": "Pronounced /suːˈnɑːmi/ — the **t** is not pronounced in English, so it begins like *sue*. The word comes from Japanese. An older word for it, *tidal wave*, is not really correct because tides do not cause it."
+  },
+
+  "volcano": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a mountain with a hole at the top through which hot melted rock, gas and ash come out",
+        "vi": "núi lửa",
+        "examples": ["Smoke rose from the **volcano** for several weeks.",
+                     "There are more than a hundred active **volcanoes** in that country.",
+                     "We climbed to the top of an old **volcano**."],
+        "colloc": ["an active volcano", "a volcano erupts", "climb a volcano"] }
+    ],
+    "forms": [
+      { "w": "volcanic", "pos": "adjective", "en": "connected with or produced by a volcano", "vi": "thuộc về núi lửa", "ex": "**Volcanic** ash covered the fields for miles." }
+    ],
+    "note": "The plural is **volcanoes** (with *-es*), though *volcanos* is sometimes seen. Note the stress: vol-**CA**-no."
+  },
+
+  "erupt": {
+    "senses": [
+      { "pos": "verb", "grammar": "intransitive",
+        "en": "to suddenly throw out hot rock, ash and gas, used about a volcano",
+        "vi": "phun trào (núi lửa)",
+        "examples": ["The volcano **erupted** without any warning at midnight.",
+                     "If that mountain **erupts**, the village must be evacuated.",
+                     "Ash fell on the town for hours after the volcano **erupted**."],
+        "colloc": ["a volcano erupts", "erupt suddenly", "erupt violently"] },
+      { "pos": "verb", "grammar": "intransitive",
+        "en": "to start suddenly and with a lot of force, used about noise, anger or fighting",
+        "vi": "bùng nổ, bùng phát",
+        "examples": ["The crowd **erupted** in cheers when the team scored.",
+                     "Fighting **erupted** in the streets after the announcement."],
+        "colloc": ["erupt into violence", "erupt in laughter"] }
+    ],
+    "forms": [
+      { "w": "eruption", "pos": "noun", "en": "the act of a volcano throwing out rock, ash and gas", "vi": "sự phun trào", "ex": "The **eruption** lasted three days and covered the town in ash." }
+    ]
+  },
+
+  "evacuate": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to move people away from a dangerous place to somewhere safer",
+        "vi": "sơ tán, di tản",
+        "examples": ["The army **evacuated** two thousand people from the coast.",
+                     "We were told to **evacuate** the building immediately.",
+                     "Families were **evacuated** before the storm arrived."],
+        "colloc": ["evacuate a village", "be evacuated to a shelter", "evacuate immediately"] }
+    ],
+    "forms": [
+      { "w": "evacuation", "pos": "noun", "en": "the act of moving people away from danger", "vi": "cuộc sơ tán", "ex": "The **evacuation** of the island took only six hours." },
+      { "w": "evacuee", "pos": "noun", "en": "a person who has been moved away from a dangerous place", "vi": "người được sơ tán", "ex": "The school is now home to two hundred **evacuees**." }
+    ],
+    "note": "You can evacuate *people* or *a place*: **evacuate the residents** and **evacuate the hotel** are both correct."
+  },
+
+  "shelter": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a place or building where people can stay to be safe from danger or bad weather",
+        "vi": "nơi trú ẩn",
+        "examples": ["The school was used as an emergency **shelter** during the flood.",
+                     "Families slept in a **shelter** for two weeks.",
+                     "We ran to a bus **shelter** when the rain started."],
+        "colloc": ["an emergency shelter", "a temporary shelter", "build a shelter"] },
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "protection from danger or bad weather",
+        "vi": "sự che chở, sự trú ẩn",
+        "examples": ["We took **shelter** under a big tree.",
+                     "The victims need food, water and **shelter**."],
+        "colloc": ["take shelter", "provide shelter", "food and shelter"] },
+      { "pos": "verb", "grammar": "transitive/intransitive",
+        "en": "to protect somebody from danger, or to stay somewhere to be safe",
+        "vi": "che chở, trú ẩn",
+        "examples": ["Hundreds of people **sheltered** in the temple that night.",
+                     "The high wall **shelters** the garden from the wind."],
+        "colloc": ["shelter from the rain", "shelter people"] }
+    ],
+    "note": "When it means protection in general it is **uncountable**: *take shelter*, not *take a shelter*. When it is a particular building it is countable: *an emergency shelter*."
+  },
+
+  "rescue": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to save somebody or something from a dangerous or harmful situation",
+        "vi": "cứu, giải cứu",
+        "examples": ["Soldiers **rescued** a family from the roof of their house.",
+                     "The dog was **rescued** after two days under the rubble.",
+                     "They used a boat to **rescue** people from the flooded village."],
+        "colloc": ["rescue somebody from danger", "be rescued by helicopter"] },
+      { "pos": "noun", "grammar": "countable/uncountable",
+        "en": "the act of saving somebody from danger",
+        "vi": "cuộc giải cứu, sự cứu hộ",
+        "examples": ["The **rescue** took more than ten hours.",
+                     "A **rescue** team arrived from the capital that evening."],
+        "colloc": ["a rescue team", "a rescue operation", "come to somebody's rescue"] }
+    ],
+    "forms": [
+      { "w": "rescuer", "pos": "noun", "en": "a person who saves somebody from danger", "vi": "người cứu hộ", "ex": "The **rescuers** worked all night in the rain." }
+    ],
+    "note": "Pronounced /ˈreskjuː/, with the stress on the first part. The *-ing* form drops the *e*: **rescuing**."
+  },
+
+  "damage": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "physical harm caused to something, which makes it less useful or valuable",
+        "vi": "thiệt hại, hư hỏng",
+        "examples": ["The storm caused serious **damage** to the school roof.",
+                     "There was little **damage** to the houses on the hill.",
+                     "Engineers are checking the **damage** to the bridge."],
+        "colloc": ["cause damage", "serious damage", "damage to property"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to harm something so that it does not work properly or look as good as before",
+        "vi": "làm hư hại, gây thiệt hại",
+        "examples": ["The flood **damaged** hundreds of motorbikes.",
+                     "Strong winds **damaged** the roof but did not destroy the house."],
+        "colloc": ["badly damaged", "damage crops"] }
+    ],
+    "note": "The noun is **uncountable** — say *a lot of damage*, never *many damages*. Compare with **destroy**: *damage* means to harm something partly, so it can be repaired; *destroy* means to ruin it completely."
+  },
+
+  "destroy": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to damage something so badly that it no longer exists or can never be used again",
+        "vi": "phá huỷ, tiêu huỷ",
+        "examples": ["The fire **destroyed** three houses in less than an hour.",
+                     "The earthquake **destroyed** the old bridge completely.",
+                     "Thousands of trees were **destroyed** by the landslide."],
+        "colloc": ["completely destroy", "be destroyed by fire", "destroy a building"] }
+    ],
+    "forms": [
+      { "w": "destruction", "pos": "noun", "en": "the act of destroying something, or the state of being destroyed", "vi": "sự phá huỷ, sự tàn phá", "ex": "The typhoon left a trail of **destruction** along the coast." },
+      { "w": "destructive", "pos": "adjective", "en": "causing a lot of damage", "vi": "có sức tàn phá", "ex": "It was the most **destructive** storm in fifty years." }
+    ],
+    "note": "There is no noun *destroyment*; the noun is **destruction**. Remember the difference: a damaged house can be repaired, a destroyed house cannot."
+  },
+
+  "collapse": {
+    "senses": [
+      { "pos": "verb", "grammar": "intransitive",
+        "en": "to fall down suddenly, used about a building, roof or structure",
+        "vi": "sụp đổ, đổ sập",
+        "examples": ["The old wall **collapsed** during the second earthquake.",
+                     "Part of the roof **collapsed** under the weight of the water.",
+                     "Two bridges **collapsed** and the road was closed."],
+        "colloc": ["a building collapses", "collapse suddenly", "collapse completely"] },
+      { "pos": "verb", "grammar": "intransitive",
+        "en": "to fall down because you are very ill, tired or weak",
+        "vi": "ngã quỵ, ngất xỉu",
+        "examples": ["One rescuer **collapsed** from exhaustion after twelve hours.",
+                     "She **collapsed** in the heat and was taken to hospital."],
+        "colloc": ["collapse from exhaustion", "collapse in the street"] },
+      { "pos": "noun", "grammar": "usually singular",
+        "en": "the sudden falling down of a building or structure",
+        "vi": "sự sụp đổ",
+        "examples": ["The **collapse** of the bridge trapped several cars.",
+                     "Nobody was hurt in the **collapse** of the old factory."],
+        "colloc": ["the collapse of a building", "cause a collapse"] }
+    ],
+    "note": "Stress the second part: col-**LAPSE**. As a verb it is intransitive — say *the roof collapsed*, not *the storm collapsed the roof*."
+  },
+
+  "warning": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable/uncountable",
+        "en": "a statement or sign telling people that something bad may happen so that they can prepare",
+        "vi": "lời cảnh báo",
+        "examples": ["The government issued a flood **warning** for the whole province.",
+                     "The storm arrived without any **warning**.",
+                     "People ignored the **warning** and stayed in their homes."],
+        "colloc": ["issue a warning", "a storm warning", "ignore a warning"] }
+    ],
+    "forms": [
+      { "w": "warn", "pos": "verb", "en": "to tell somebody about a possible danger or problem", "vi": "cảnh báo", "ex": "Radio stations **warned** people to leave the coast." }
+    ],
+    "note": "After **warn** you often use a *to*-infinitive: *They warned us **to stay** indoors.* Note *without warning* has no article."
+  },
+
+  "forecast": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a statement about what the weather or another situation will probably be like",
+        "vi": "dự báo",
+        "examples": ["The weather **forecast** says there will be heavy rain tonight.",
+                     "According to the **forecast**, the typhoon will reach us by Friday.",
+                     "I always check the **forecast** before a long trip."],
+        "colloc": ["the weather forecast", "check the forecast", "according to the forecast"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to say what you think will happen in the future, using information you have now",
+        "vi": "dự báo, dự đoán",
+        "examples": ["Scientists **forecast** stronger storms in the coming years.",
+                     "Rain was **forecast** for the weekend, but the sky stayed clear."],
+        "colloc": ["forecast rain", "as forecast"] }
+    ],
+    "forms": [
+      { "w": "forecaster", "pos": "noun", "en": "a person whose job is to say what the weather will be like", "vi": "người dự báo (thời tiết)", "ex": "The **forecaster** on TV said the storm would turn west." }
+    ],
+    "note": "The verb is usually irregular: **forecast → forecast → forecast**. The form *forecasted* exists but is less common. Stress the first part: **FORE**cast."
+  },
+
+  "victim": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a person who has been hurt, killed or badly affected by an event or a crime",
+        "vi": "nạn nhân",
+        "examples": ["The **victims** of the earthquake need clean water and blankets.",
+                     "Most of the flood **victims** are living in temporary shelters.",
+                     "A fund was set up to help the **victims** of the landslide."],
+        "colloc": ["flood victims", "help the victims", "the victims of a disaster"] }
+    ],
+    "note": "A **victim** is someone harmed by the disaster — they may or may not have died. A **survivor** is someone who lived through it. Someone can be both: *a victim who is now a survivor*."
+  },
+
+  "relief": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "food, money, medicine and other help given to people after a disaster",
+        "vi": "cứu trợ",
+        "examples": ["**Relief** arrived by helicopter three days after the flood.",
+                     "Our school collected clothes for the **relief** effort.",
+                     "**Relief** workers are still handing out rice and water."],
+        "colloc": ["relief workers", "disaster relief", "send relief"] },
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the good feeling you have when something unpleasant stops or does not happen",
+        "vi": "sự nhẹ nhõm",
+        "examples": ["It was a huge **relief** to hear that my cousin was safe.",
+                     "She smiled with **relief** when the water finally went down."],
+        "colloc": ["a huge relief", "with relief", "to my relief"] }
+    ],
+    "note": "**Relief** is uncountable in both meanings — never *reliefs*. The related verb is **relieve** (note the different spelling and the /v/ sound)."
+  },
+
+  "survivor": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a person who is still alive after an accident, illness or disaster",
+        "vi": "người sống sót",
+        "examples": ["Rescue teams found three **survivors** under the fallen building.",
+                     "The **survivors** were taken to a shelter near the river.",
+                     "She was the only **survivor** of the landslide."],
+        "colloc": ["the only survivor", "look for survivors", "search for survivors"] }
+    ],
+    "forms": [
+      { "w": "survive", "pos": "verb", "en": "to continue to live after a dangerous event", "vi": "sống sót", "ex": "The family **survived** the flood by climbing onto the roof." },
+      { "w": "survival", "pos": "noun", "en": "the state of continuing to live after danger", "vi": "sự sống sót", "ex": "Clean water is the key to **survival** after a disaster." }
+    ],
+    "note": "Note the spelling: **surviv-or**, not *surviver*. Stress the middle part: sur-**VI**-vor."
+  }
+}

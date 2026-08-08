@@ -1,0 +1,264 @@
+{
+  "_unit": "07 — Environmental Protection",
+
+  "pollution": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the process of making air, water or land dirty and dangerous, or the substances that do this",
+        "vi": "sự ô nhiễm",
+        "examples": ["Air **pollution** in the city is getting worse.",
+                     "Factories are a major cause of water **pollution**.",
+                     "We must reduce **pollution** from traffic."],
+        "colloc": ["air pollution", "water pollution", "reduce pollution", "cause pollution"] }
+    ],
+    "forms": [
+      { "w": "pollute", "pos": "verb", "en": "to make air, water or land dirty and unsafe", "vi": "làm ô nhiễm", "ex": "The factory **polluted** the river for years." },
+      { "w": "pollutant", "pos": "noun", "en": "a substance that causes pollution", "vi": "chất gây ô nhiễm", "ex": "Cars release several **pollutants**." }
+    ],
+    "note": "**Uncountable** — never *pollutions*. Say *a lot of pollution* or *high levels of pollution*."
+  },
+
+  "deforestation": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the cutting down of forests over a large area",
+        "vi": "nạn phá rừng",
+        "examples": ["**Deforestation** destroys the habitat of many species.",
+                     "**Deforestation** is a major cause of flooding.",
+                     "The government has promised to slow **deforestation**."],
+        "colloc": ["cause deforestation", "stop deforestation", "the rate of deforestation"] }
+    ],
+    "note": "Built from *de-* (removing) + *forest* + *-ation*. Stress: de-for-es-**TA**-tion."
+  },
+
+  "endangered": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "at risk of disappearing completely, especially a kind of animal or plant",
+        "vi": "có nguy cơ tuyệt chủng",
+        "examples": ["The Saola is an **endangered** species.",
+                     "Many **endangered** animals live in this park.",
+                     "Tigers became **endangered** through hunting."],
+        "colloc": ["an endangered species", "critically endangered"] }
+    ],
+    "forms": [
+      { "w": "endanger", "pos": "verb", "en": "to put someone or something at risk", "vi": "gây nguy hiểm cho", "ex": "Plastic waste **endangers** sea turtles." }
+    ],
+    "note": "**Extinct** is the next stage: an *endangered* species still exists; an *extinct* one is gone."
+  },
+
+  "habitat": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "the natural place where a plant or animal normally lives",
+        "vi": "môi trường sống (của sinh vật)",
+        "examples": ["The forest is the **habitat** of many rare birds.",
+                     "Building roads destroys natural **habitats**.",
+                     "This frog's **habitat** is the mountain stream."],
+        "colloc": ["a natural habitat", "destroy a habitat", "habitat loss"] }
+    ],
+    "note": "A **habitat** belongs to an animal or plant. The wider surroundings we all share is the *environment*."
+  },
+
+  "species": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable, plural: species",
+        "en": "a group of animals or plants of the same kind that can breed together",
+        "vi": "loài",
+        "examples": ["This **species** is found only in Viet Nam.",
+                     "Hundreds of **species** are lost every year.",
+                     "Scientists discovered a new **species** of frog."],
+        "colloc": ["an endangered species", "a rare species", "a new species"] }
+    ],
+    "note": "The plural is also **species** — never *specie* or *specieses*. *One species, two species.*"
+  },
+
+  "conservation": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the protection of the natural world, or the careful use of something so it is not wasted",
+        "vi": "sự bảo tồn, bảo vệ (thiên nhiên)",
+        "examples": ["She works in wildlife **conservation**.",
+                     "**Conservation** of water matters most in the dry season.",
+                     "The park was set up for the **conservation** of rare plants."],
+        "colloc": ["wildlife conservation", "energy conservation", "a conservation project"] }
+    ],
+    "forms": [
+      { "w": "conserve", "pos": "verb", "en": "to use something carefully so it is not wasted, or to protect nature", "vi": "bảo tồn, tiết kiệm", "ex": "Turn off the tap to **conserve** water." }
+    ]
+  },
+
+  "litter": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "waste paper, cans and other rubbish left lying in a public place",
+        "vi": "rác vứt bừa bãi",
+        "examples": ["There was **litter** all over the beach.",
+                     "Please don't drop **litter** in the park.",
+                     "Volunteers collected three bags of **litter**."],
+        "colloc": ["drop litter", "pick up litter", "a litter bin"] },
+      { "pos": "verb", "grammar": "transitive / intransitive",
+        "en": "to leave rubbish lying in a public place",
+        "vi": "xả rác",
+        "examples": ["People who **litter** can be fined.",
+                     "The path was **littered** with plastic bottles."],
+        "colloc": ["littered with rubbish"] }
+    ],
+    "note": "**Uncountable** — never *litters*. *Litter* is rubbish in the wrong place; *rubbish* (BrE) / *garbage* (AmE) is waste in general."
+  },
+
+  "recycle": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to treat used materials so that they can be made into something new",
+        "vi": "tái chế",
+        "examples": ["We **recycle** paper, glass and plastic at home.",
+                     "These bags are made from **recycled** bottles.",
+                     "Only a small part of our waste is **recycled**."],
+        "colloc": ["recycle paper", "recycled materials", "a recycling bin"] }
+    ],
+    "forms": [
+      { "w": "recycling", "pos": "noun", "en": "the process of recycling materials", "vi": "việc tái chế", "ex": "**Recycling** has doubled in ten years." }
+    ],
+    "note": "One of the three Rs: **reduce**, **reuse**, **recycle** — in that order of usefulness."
+  },
+
+  "reduce": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to make something smaller in size, amount or number",
+        "vi": "giảm, giảm bớt",
+        "examples": ["We should **reduce** the amount of plastic we use.",
+                     "Cycling to school **reduces** pollution.",
+                     "The shop has **reduced** its prices."],
+        "colloc": ["reduce waste", "reduce pollution", "greatly reduce"] }
+    ],
+    "forms": [
+      { "w": "reduction", "pos": "noun", "en": "the act of making something smaller", "vi": "sự giảm bớt", "ex": "There has been a **reduction** in litter." }
+    ],
+    "note": "Opposite: *increase*. Stress the second syllable: re-**DUCE**."
+  },
+
+  "reuse": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to use something again instead of throwing it away",
+        "vi": "tái sử dụng",
+        "examples": ["**Reuse** your water bottle instead of buying a new one.",
+                     "These jars can be **reused** for storage.",
+                     "We **reuse** the paper by printing on both sides."],
+        "colloc": ["reuse a bag", "reuse materials"] }
+    ],
+    "note": "**Reuse** means use again as it is; **recycle** means break it down and make something new. The verb is /ˌriːˈjuːz/ with a /z/; the noun *reuse* ends in /s/."
+  },
+
+  "sewage": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "waste water and human waste carried away in pipes",
+        "vi": "nước thải, nước cống",
+        "examples": ["Untreated **sewage** was flowing into the river.",
+                     "The town is building a new **sewage** treatment plant.",
+                     "**Sewage** must be cleaned before it reaches the sea."],
+        "colloc": ["raw sewage", "sewage treatment", "untreated sewage"] }
+    ],
+    "note": "Pronounced /ˈsuːɪdʒ/: **SOO**-ij. **Uncountable** — never *sewages*."
+  },
+
+  "pesticide": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable / uncountable",
+        "en": "a chemical used to kill insects and other pests that damage crops",
+        "vi": "thuốc trừ sâu",
+        "examples": ["Too much **pesticide** contaminates the soil.",
+                     "**Pesticides** can harm bees as well as pests.",
+                     "The farm has stopped using chemical **pesticides**."],
+        "colloc": ["use pesticides", "chemical pesticides", "pesticide residues"] }
+    ],
+    "note": "The ending *-cide* means *killing*: compare *insecticide*, *herbicide*."
+  },
+
+  "contaminate": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to make something dirty, polluted or poisonous by adding a harmful substance",
+        "vi": "làm nhiễm bẩn, làm ô nhiễm",
+        "examples": ["Chemicals from the factory **contaminated** the water.",
+                     "The soil has been **contaminated** by pesticides.",
+                     "Don't let the raw meat **contaminate** the vegetables."],
+        "colloc": ["contaminate the water", "heavily contaminated"] }
+    ],
+    "forms": [
+      { "w": "contamination", "pos": "noun", "en": "the state of being made impure or poisonous", "vi": "sự nhiễm bẩn", "ex": "Tests showed serious **contamination**." }
+    ]
+  },
+
+  "protect": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive, + from / against",
+        "en": "to keep someone or something safe from harm or damage",
+        "vi": "bảo vệ",
+        "examples": ["We must **protect** the environment for future generations.",
+                     "The park **protects** several rare species.",
+                     "Sunscreen **protects** your skin **from** the sun."],
+        "colloc": ["protect the environment", "protect wildlife", "protect against damage"] }
+    ],
+    "forms": [
+      { "w": "protection", "pos": "noun", "en": "the act of keeping something safe", "vi": "sự bảo vệ", "ex": "These birds are under legal **protection**." },
+      { "w": "protective", "pos": "adjective", "en": "giving protection", "vi": "có tính bảo vệ", "ex": "Wear **protective** gloves." }
+    ]
+  },
+
+  "preserve": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to keep something in its original state so that it is not lost or damaged",
+        "vi": "bảo tồn, gìn giữ",
+        "examples": ["National parks **preserve** natural habitats.",
+                     "We must **preserve** these forests for the future.",
+                     "The wetlands have been carefully **preserved**."],
+        "colloc": ["preserve the environment", "preserve a habitat"] }
+    ]
+  },
+
+  "national park": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a large area of countryside protected by the government for its nature and beauty",
+        "vi": "vườn quốc gia",
+        "examples": ["Cuc Phuong is Viet Nam's oldest **national park**.",
+                     "Hunting is forbidden inside the **national park**.",
+                     "We camped in the **national park** for two nights."],
+        "colloc": ["visit a national park", "protect a national park"] }
+    ]
+  },
+
+  "wildlife": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "animals and plants that live and grow in natural conditions",
+        "vi": "động thực vật hoang dã",
+        "examples": ["The park is home to rare **wildlife**.",
+                     "Pollution threatens **wildlife** in the river.",
+                     "She photographs **wildlife** for a living."],
+        "colloc": ["protect wildlife", "wildlife conservation", "a wildlife reserve"] }
+    ],
+    "note": "**Uncountable** and written as one word — never *wildlifes*."
+  },
+
+  "awareness": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable, + of",
+        "en": "knowing that something exists and being interested in it",
+        "vi": "sự nhận thức, ý thức",
+        "examples": ["The campaign raised **awareness of** plastic waste.",
+                     "There is growing **awareness** of climate change.",
+                     "The poster aims to increase public **awareness**."],
+        "colloc": ["raise awareness", "public awareness", "environmental awareness"] }
+    ],
+    "forms": [
+      { "w": "aware", "pos": "adjective", "en": "knowing that something exists or is true", "vi": "nhận thức được, biết", "ex": "Are you **aware** of the new rules?" }
+    ],
+    "note": "The usual verb is **raise** awareness, not *make* or *rise*."
+  }
+}
