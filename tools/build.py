@@ -973,6 +973,11 @@ def page_home(units) -> str:
     # reader has no way to catch.
     n_item = sum(len(t["items"]) for u in units for _, _, t in u["tasks"])
     n_audio = sum(len(u["audio"]) for u in units)
+    n_ielts = sum(len(t["items"]) for u in units for _, _, t in u["tasks"]
+                  if t["skill"] != "course")
+    n_limit = sum(len(t["items"]) for u in units for _, _, t in u["tasks"] if t.get("words"))
+    n_conf = sum(len(t["items"]) for u in units for _, _, t in u["tasks"]
+                 if t["skill"] == "listening")
     cards = []
     for u in units:
         cards.append(f"""    <a class="unitcard" href="unit-{u['nn']}/index.html" data-unit-progress="{u['nn']}">
@@ -1015,22 +1020,27 @@ def page_home(units) -> str:
     <p class="lede">This is the Tiếng Anh 8 syllabus, taught in full and in its own order.
     It is also built so that the work counts twice — and the second job is mostly not
     something the pages <em>say</em>. It is how they behave.</p>
-    <p>{n_item} questions across the twelve units are marked the way a real answer key
-    marks: one mark each, nothing part-marked, spelling costing the mark, both British and
-    American spellings accepted, a word limit printed on the task and enforced, and two
-    answers in one gap scoring zero. {n_audio} recording{"" if n_audio == 1 else "s"}
+    <p>{n_item} questions across the twelve units are marked rather than revealed: one mark
+    each, nothing part-marked, spelling costing the mark, both British and American
+    spellings accepted, and two answers in one gap scoring zero. {n_ielts} of them are
+    official IELTS question types, and the {n_limit} whose answers are written carry a word
+    limit printed on the task in the test's own wording and enforced as a hard fail — the
+    rest are grade-8 drills, marked by the same engine but not dressed as IELTS
+    items.</p>
+    <p>{n_audio} recording{"" if n_audio == 1 else "s"}
     play{"s" if n_audio == 1 else ""} <b>once</b>, after a spoken
     introduction that is never written down and a window to read the questions — because
     that is the task, and practising it any other way trains a habit that does not
-    exist on the day. Every listening answer carries a <b>how sure are you</b> mark, and
-    the result shows whether feeling certain actually meant being right.</p>
+    exist on the day. Each of the {n_conf} listening answers carries a <b>how sure are
+    you</b> mark, and the unit keeps a running comparison of how often <i>sure</i> and
+    <i>not sure</i> turned out right.</p>
     <p>On top of that, {n_bridge} tasks carry a changed instruction, a checkpoint or a
-    re-scored drill drawn from what the IELTS band descriptors reward — each one cited,
-    each one carrying the strength of the evidence behind it. No new topics, no extra
-    homework.</p>
+    re-scored drill built from the IELTS research — each one cited, each one carrying the
+    strength of the evidence behind it, including the ones whose evidence is thin and
+    say so. No new topics, no extra homework.</p>
     <div class="strands">
       <div><span class="k">What it adds</span><span class="v">Official item types, marked by the
-      published rules · one play, one clock · confidence and calibration · one turn, one subject ·
+      published rules · one play, no replay · confidence and calibration · one turn, one subject ·
       topic-sentence checkpoints · obligatory-context accuracy · paraphrase search ·
       evidence-only reading</span></div>
       <div><span class="k">What it refuses</span><span class="v">Band predictions · half-band

@@ -195,6 +195,18 @@ function norm(s){
 const OUR_OR = ("armour behaviour candour clamour colour demeanour endeavour favour "
   + "fervour flavour glamour harbour honour humour labour neighbour odour parlour "
   + "rigour rumour saviour splendour succour tumour valour vapour vigour").split(" ");
+/* Pairs that no suffix rule covers. Each is a real UK/US alternation, and
+   leaving one out is a FALSE REJECTION -- the learner is right and marked
+   wrong, which is worse than the over-acceptance the closed lists fixed.
+   "jewellery" is in Unit 4's vocabulary, so this one shipped. */
+const PAIRS = {
+  jewellery:"jewelry", catalogue:"catalog", dialogue:"dialog", monologue:"monolog",
+  defence:"defense", offence:"offense", pretence:"pretense", licence:"license",
+  practise:"practice", storey:"story", plough:"plow", cheque:"check",
+  draught:"draft", kerb:"curb", tyre:"tire", pyjamas:"pajamas", aluminium:"aluminum",
+  moustache:"mustache", axe:"ax", grey:"gray", programme:"program", sceptical:"skeptical",
+  aeroplane:"airplane", mould:"mold", smoulder:"smolder", woollen:"woolen",
+};
 const RE_ER = ("calibre centre fibre goitre litre lustre manoeuvre meagre metre mitre "
   + "ochre sabre sceptre sepulchre sombre spectre theatre").split(" ");
 /* -ise verbs that never take -ize. The productive class is enormous, so this
@@ -216,11 +228,11 @@ const RE_RE = anyOf(RE_ER, "(s|d|ing)?");
 const RE_LL = anyOf(DOUBLE_L, "l(ed|ing|er|or)");
 const RE_NEVER = anyOf(NEVER_IZE, INFLECT);
 
+const PAIR_STEM = new RegExp("^(" + Object.keys(PAIRS).join("|") + ")(s|d|ed|ing|es)?$");
 function fold(s){
   return norm(s).split(" ").map(w => {
-    if (w === "programme") return "program";
-    if (w === "grey") return "gray";
-    if (/^practis/.test(w)) return w.replace(/^practis/, "practic");
+    const p = PAIR_STEM.exec(w);
+    if (p) return PAIRS[p[1]] + (p[2] || "");
     let m = RE_OUR.exec(w);
     if (m) return m[1].replace(/our$/, "or") + (m[2] || "");
     m = RE_RE.exec(w);
@@ -820,7 +832,11 @@ function overLimit(given, words){
   /* "AND/OR A NUMBER" is *a* number, singular: up to n words plus at most one
      numeric token. Letting every number through free would make "45 60 90" a
      legal one-word answer. */
-  const nums = toks.filter(x => /^[\d][\d.,:\/-]*$/.test(x));
+  /* A numeric token is ONE number: "45" or "9:30" or "1,200" or "5.30". It is
+     not "45,60,90" -- separators may join a number's own parts, never three
+     numbers into one free token. */
+  const one = /^\d+(?:[.,:]\d+)?(?:[-\/]\d+(?:[.,:]\d+)?)?%?$/;
+  const nums = toks.filter(x => one.test(x));
   return nums.length > 1 || toks.length - nums.length > Number(n);
 }
 
@@ -883,9 +899,15 @@ function markTask(t, answers){
   parseEither(t.either, t.items.length).forEach(group => {
     const keys = group.map(j => t.items[j].key);
     const over = group.map(i => given[i].trim() && overLimit(given[i], t.words));
+    /* markOne, not markAnswer: a picked answer must be compared to the option
+       it is, or an IPA option like "/ʊə/" is read as a list of alternates and
+       every cell of the grid comes back false. bestAssignment is only as good
+       as the matrix it is handed. */
     const fits = group.map((i, gi) =>
       over[gi] ? keys.map(() => false)
-               : keys.map(k => markAnswer(given[i], [k]).ok));
+               : keys.map((k, ki) =>
+                   markOne(t, Object.assign({}, t.items[group[ki]], { key:k }),
+                           given[i]).ok));
     const best = bestAssignment(fits);
     group.forEach((i, gi) => {
       if (over[gi]){ marks[i] = { ok:false, why:"limit" }; return; }
@@ -970,7 +992,29 @@ function itemHTML(t, it, i){
    tendency in candidates, and no study shows that training calibration
    raises anything. So below MIN_CAL it reports the counts and stops. */
 const MIN_CAL = 4;
-function calibrationLine(marks, conf){
+const CAL_KEY = "en8:calib:v1";
+
+/* The tallies accumulate across the unit, and that is not a nicety.
+   A listening set is four to seven items, so a threshold of four sure AND
+   four unsure can never be met inside one task -- the verdict would read
+   "too few" forever and the feature would be decoration. Phakiti's finding is
+   about a person's calibration, not one exercise's, so the person is what is
+   counted. This task's own split is still shown beside the running total. */
+function calTally(unit){
+  try {
+    const all = JSON.parse(localStorage.getItem(CAL_KEY) || "{}");
+    return all[unit] || { 1:{n:0,ok:0}, 0:{n:0,ok:0} };
+  } catch(e){ return { 1:{n:0,ok:0}, 0:{n:0,ok:0} }; }
+}
+function calSave(unit, tally){
+  try {
+    const all = JSON.parse(localStorage.getItem(CAL_KEY) || "{}");
+    all[unit] = tally;
+    localStorage.setItem(CAL_KEY, JSON.stringify(all));
+  } catch(e){}
+}
+
+function calibrationLine(marks, conf, unit){
   const g = { 1:{n:0,ok:0}, 0:{n:0,ok:0} };
   marks.forEach((m, i) => {
     const c = conf[i];
@@ -978,29 +1022,40 @@ function calibrationLine(marks, conf){
     g[c].n++; if (m.ok) g[c].ok++;
   });
   if (!g[1].n && !g[0].n) return "";
+
+  let tot = { 1:{n:g[1].n,ok:g[1].ok}, 0:{n:g[0].n,ok:g[0].ok} };
+  if (unit){
+    const was = calTally(unit);
+    tot = { 1:{ n:was[1].n + g[1].n, ok:was[1].ok + g[1].ok },
+            0:{ n:was[0].n + g[0].n, ok:was[0].ok + g[0].ok } };
+    calSave(unit, tot);
+  }
   const pct = s => s.n ? Math.round(s.ok / s.n * 100) : null;
-  const hi = pct(g[1]), lo = pct(g[0]);
+  const hi = pct(tot[1]), lo = pct(tot[0]);
   let verdict;
   if (hi == null || lo == null)
-    verdict = "You marked every answer the same way, so there is nothing to compare "
-            + "this time.";
-  else if (g[1].n < MIN_CAL || g[0].n < MIN_CAL)
-    verdict = "Too few of each to read anything into yet — a handful of answers cannot "
-            + "tell you what your sense of certainty is worth. Keep marking them; the "
-            + "pattern is worth watching across a whole unit, not inside one exercise.";
+    verdict = "So far you have marked every answer the same way, so there is nothing to "
+            + "compare yet.";
+  else if (tot[1].n < MIN_CAL || tot[0].n < MIN_CAL)
+    verdict = "Not enough of each yet — a handful of answers cannot tell you what your "
+            + "sense of certainty is worth. Keep marking them; this total carries across "
+            + "the whole unit.";
   else if (hi - lo >= 25)
-    verdict = "Here your sure answers were right much more often than your unsure ones. "
-            + "Watch whether that holds across the next few sets.";
+    verdict = "Across this unit your sure answers have been right much more often than "
+            + "your unsure ones. Watch whether that holds as the unit goes on.";
   else if (hi >= lo)
-    verdict = "Being sure barely separated right from wrong here. Most test-takers are "
-            + "miscalibrated, and noticing it is the point of the column.";
+    verdict = "Being sure has barely separated right from wrong so far. Most test-takers "
+            + "are miscalibrated, and noticing it is the point of the column.";
   else
-    verdict = "You were right more often when you felt unsure. That is the pattern most "
-            + "often found on hard items — worth watching rather than acting on yet.";
+    verdict = "You have been right more often when you felt unsure. That is the pattern "
+            + "most often found on hard items — worth watching rather than acting on yet.";
+  const row = (label, here, all) =>
+    '<tr><td>' + label + '</td><td>' + here.n + '</td><td>'
+    + (here.n ? Math.round(here.ok / here.n * 100) + "%" : "—") + '</td><td>' + all.n
+    + '</td><td>' + (all.n ? Math.round(all.ok / all.n * 100) + "%" : "—") + '</td></tr>';
   return '<div class="t-cal"><b>Calibration</b>'
-    + '<table><tr><th></th><th>answers</th><th>right</th></tr>'
-    + '<tr><td>&#9679; sure</td><td>' + g[1].n + '</td><td>' + (hi == null ? "—" : hi + "%") + '</td></tr>'
-    + '<tr><td>&#9675; not sure</td><td>' + g[0].n + '</td><td>' + (lo == null ? "—" : lo + "%") + '</td></tr>'
+    + '<table><tr><th></th><th>here</th><th>right</th><th>unit</th><th>right</th></tr>'
+    + row("&#9679; sure", g[1], tot[1]) + row("&#9675; not sure", g[0], tot[0])
     + '</table><p>' + verdict + '</p></div>';
 }
 
@@ -1079,7 +1134,7 @@ function initTasks(){
         /* A rating changed after seeing the key measures nothing, so the
            toggles close with the task. */
         $$(".i-conf button", root).forEach(x => { x.disabled = true; });
-        const html = calibrationLine(marks, conf);
+        const html = calibrationLine(marks, conf, DATA.unit);
         $(".t-foot", root).insertAdjacentHTML("afterend", html || '<div class="t-cal">'
           + '<b>Calibration</b><p>You did not mark how sure you were, so there is '
           + 'nothing to compare. Next time mark each answer before you check — on '
@@ -1138,7 +1193,26 @@ function initAudio(){
         + 'a single-play task. Cover the script, have someone read it aloud <b>once</b>, '
         + 'and answer as you listen.</p>');
     };
-    let used = false;
+    /* "Plays once" has to survive a reload, or it is a suggestion. The flag is
+       stored, not held in a variable a refresh throws away -- and `played`
+       (set when the recording ENDS) is what unlocks the script, because Start
+       only means the audio began. */
+    const PLAY_KEY = "en8:played:" + a.id;
+    let used = false, played = false;
+    try {
+      const was = JSON.parse(localStorage.getItem(PLAY_KEY) || "null");
+      if (was){ used = true; played = !!was.done; }
+    } catch(e){}
+    const remember = done => {
+      try { localStorage.setItem(PLAY_KEY, JSON.stringify({ done: !!done })); } catch(e){}
+    };
+    if (used){
+      btn.disabled = true;
+      state.innerHTML = played
+        ? "<b>Already played.</b> It plays once."
+        : "<b>Already started.</b> It plays once, and that play is spent.";
+      if (played) revealScript();
+    }
     const tick = (secs, label, then) => {
       let left = secs;
       state.textContent = label + " — " + left + "s";
@@ -1152,7 +1226,7 @@ function initAudio(){
       if (used) return;
       primeSpeech();
       if (!canListen()){ noVoice(); return; }
-      used = true;
+      used = true; remember(false);
       btn.disabled = true;
       root.dataset.playing = "1";
       state.textContent = "Introduction — listen, it is not written down";
@@ -1160,6 +1234,7 @@ function initAudio(){
         tick(a.preview, "Read the questions", () => {
           state.textContent = "Playing — once only";
           speakSeq(a.script, () => {
+            played = true; remember(true);
             root.dataset.playing = "";
             const label = a.mode === "computer"
               ? "Review your answers" : "Transfer your answers";
@@ -1194,7 +1269,9 @@ function initAudio(){
        pressing Start would otherwise hand over the script and turn the whole
        lesson into a reading exercise. */
     document.addEventListener("en8:task-done", () => {
-      if (!used) return;
+      /* `played`, not `used`: submitting blank answers during the orientation
+         must not hand over the script before the recording has run. */
+      if (!played) return;
       const all = $$('[data-role="task"]');
       if (all.length && all.every(x => x.dataset.done === "1")) revealScript();
     });

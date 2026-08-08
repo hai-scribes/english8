@@ -25,15 +25,26 @@ What this gate enforces
   B11 True/False/Not Given and Yes/No/Not Given are two types, and neither
       is taught as the harder reasoning
   C1  every task key parses under the official key grammar
-  C4  every task whose answers are written declares its word limit, and the
-      limit is one the official instruction line can express
+  C4  every task whose answers are written declares its word limit, the limit
+      is one the official instruction line can express, and no key accepts a
+      form its own limit would forfeit
+  C5  a completion task is not turned into buttons, which would drop both the
+      word limit and the spelling rule
   C6  a recording declares its delivery mode, and computer-delivered means a
       two-minute review rather than a transfer window
   C8  a recording's script is carried by the directive, never printed above
-      the questions, and it declares its spoken orientation
+      the questions, and it declares its spoken orientation; and no listening
+      answer is given away by the orientation or by another task's reason
+  D7  no instruction to score a spoken answer, and no pronunciation score
   E7  no hours-to-band promise of any kind
   G1  every bridge's source resolves to a real section of a real KB file
-  G2  every bridge carries a legal evidential marker, printed at use
+  G2  every bridge carries a legal evidential marker, printed at use — and a
+      bridge whose body admits it is our own reasoning is marked [INF]
+
+  Learner-facing copy is not only in `units/`. The generator authors the home
+  page, the unit cards and the evidence register, so `tools/build.py` is
+  scanned for the same prohibitions: a band promise written there used to pass
+  untouched.
 
   Plus one rule the constitution does not have, because the constitution is
   about claims made of IELTS and this is a claim the course makes of itself:
@@ -119,6 +130,35 @@ TEMPLATE_LANGUAGE = [
 # B11: the two Not Given types are officially distinguished by *target* —
 # TFNG on information, YNNG on views and claims — not by difficulty. `04`
 # §4.1 is explicit that the reasoning is the same.
+# D7: no Speaking rubric or Speaking feedback tool ships before `06`'s second
+# research pass. Only two Speaking claims survived verification. An instruction
+# to *score* a spoken answer is that tool in miniature, and unit 04 shipped one
+# ("Score your peer-interview answers on two beats") inside a block that went
+# on to say the behaviour is not scored.
+SPEAKING_SCORING = [
+    (re.compile(r"\bscore\s+(your|each|every|the)\s+[^.\n]{0,40}"
+                r"(answer|reply|response|turn|interview|speaking|report)", re.I),
+     "an instruction to score a spoken answer is a Speaking feedback tool, which is "
+     "blocked until `06`'s second research pass (D7)"),
+    (re.compile(r"\b(give|award)\s+yourself\s+[^.\n]{0,30}"
+                r"(out of|/\s*\d|point|mark)[^.\n]{0,40}(speaking|pronunciation|fluency)", re.I),
+     "a self-awarded Speaking mark is a Speaking rubric (D7)"),
+    (re.compile(r"\bpronunciation\s+(score|band|rating)\b", re.I),
+     "pronunciation is never scored as a band or a score (D8)"),
+]
+
+# Saying a thing does not exist is not shipping it. Unit 11's "**No
+# pronunciation score exists here and none will**" is the prohibition being
+# honoured out loud, and a gate that reds on its own disclaimer teaches authors
+# to stop writing disclaimers.
+RE_NEGATED = re.compile(r"\b(no|never|not|without|nor|non-|refus\w+|forbid\w+|"
+                        r"cannot|can't|won't|will not|does not|do not|is not|isn't)\b",
+                        re.I)
+
+
+def negated(text: str, at: int, window: int = 60) -> bool:
+    return bool(RE_NEGATED.search(text[max(0, at - window):at]))
+
 TYPE_CONFUSION = [
     (re.compile(r"(yes/?no/?not given|ynng)[^.\n]{0,60}"
                 r"(harder|more difficult|trickier|tougher)", re.I),
@@ -224,6 +264,18 @@ def check_bridge(where: str, a: dict, body: str, problems: list):
     if a.get("trains") in WRITING_CRITERIA and quoted and descriptor and "[2023]" not in body:
         problems.append(f"{where}: quotes Writing descriptor wording without the [2023] "
                         f"version string (A5)")
+    # G2, the direction the syntax could not carry: a bridge that TELLS the
+    # learner it is inference must be MARKED as inference. Unit 02 shipped
+    # "this is our own reasoning… which is why it is marked as inference
+    # below" under marker="[Q]", so the generated footer read "quoted
+    # word-for-word" directly beneath the disclaimer.
+    mk_key = mk.group(1) if mk else ""
+    if re.search(r"our own (reasoning|inference)|not something a source states|"
+                 r"no source (states|says)|marked as inference", body, re.I) \
+            and mk_key not in ("[INF]", "[SPEC]"):
+        problems.append(f"{where}: the body says this is our own reasoning, but the "
+                        f"marker is {mk_key or 'missing'} — an inference is [INF] "
+                        f"(or [SPEC] if untested), and the footer prints the marker (G2)")
 
 
 def check_task(where: str, a: dict, problems: list):
@@ -636,8 +688,10 @@ def main() -> int:
                                 f"and the confidence rating (C6, C10)")
 
         for rx, why in (BAND_PROMISE + GENRE_OVERCLAIM + TEMPLATE_LANGUAGE
-                        + VN_PROHIBITED + TYPE_CONFUSION):
+                        + VN_PROHIBITED + TYPE_CONFUSION + SPEAKING_SCORING):
             for m in rx.finditer(text):
+                if (rx, why) in SPEAKING_SCORING and negated(text, m.start()):
+                    continue
                 line = text[:m.start()].count("\n") + 1
                 problems.append(f"{tag}:{line}: {why}\n      → {m.group(0).strip()[:70]!r}")
 
@@ -660,6 +714,21 @@ def main() -> int:
         # B1: the unit's writing task must name the criterion it trains.
         if not any(x.get("trains") in WRITING_CRITERIA for x in u["bridges"]):
             problems.append(f"{tag}: no writing task names the criterion it trains (B1)")
+
+    # The prohibitions were only ever applied to units/*.md, so a band promise
+    # written into the generator's own copy — the home page, a unit card, the
+    # evidence register — passed untouched. The generator is learner-facing
+    # text too.
+    for tool in ("build.py",):
+        src = (ROOT / "tools" / tool)
+        body = src.read_text(encoding="utf-8")
+        for rx, why in BAND_PROMISE + GENRE_OVERCLAIM + SPEAKING_SCORING:
+            for m in rx.finditer(body):
+                if negated(body, m.start()):
+                    continue
+                line = body[:m.start()].count("\n") + 1
+                problems.append(f"tools/{tool}:{line}: {why}\n      "
+                                f"→ {m.group(0).strip()[:70]!r}")
 
     check_threads(units, problems)
 

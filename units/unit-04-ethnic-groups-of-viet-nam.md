@@ -522,7 +522,7 @@ check three things:
 Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ::: bridge name="Answer, then develop — two beats for every reply" trains="Fluency & Coherence" cefr="A2→B1" marker="[T2]" src="06 §6.3"
-Score your peer-interview answers on two beats, not on length:
+Build every peer-interview answer on two beats, rather than on length:
 
 1. **Beat one** — one sentence that answers the question that was asked.
 2. **Beat two** — one sentence that extends it: a reason, an example, a contrast.

@@ -601,7 +601,7 @@ name it as the limiter again and again (Writing descriptors, **[2023]** version)
 > phục vụ câu chủ đề thì sửa hoặc bỏ.
 :::
 
-::: bridge name="One comparison, highlighted — not a list of differences" trains="Task Achievement" cefr="B1" marker="[Q]" src="02 §2.1"
+::: bridge name="One comparison, highlighted — not a list of differences" trains="Task Achievement" cefr="B1" marker="[INF]" src="02 §2.1"
 In exercise **3.4** and again in your paragraph, give the **biggest** difference
 between the town and the village, stated once and clearly — instead of three
 parallel comparisons of equal weight.

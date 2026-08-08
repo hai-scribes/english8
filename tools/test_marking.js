@@ -117,18 +117,38 @@ t("blank option",        one(ipa,"").why,     "blank");
 // Four of each is the minimum before any verdict is read off the split. Two
 // observations cannot establish a person's calibration, and claiming they can
 // would be exactly the overconfidence this column is about.
+// unit omitted, so no accumulation: the tallies are this task alone.
 const cal = (oks, cs) => M.calibrationLine(oks.map(o => ({ok:o})), cs);
 const many = (n, v) => Array(n).fill(v);
 t("calibration: too few to read",
-  /Too few of each/.test(cal([true,true,false,false], [1,1,0,0])), true);
+  /Not enough of each/.test(cal([true,true,false,false], [1,1,0,0])), true);
 t("calibration: sure beats unsure",
   /right much more often/.test(cal(many(4,true).concat(many(4,false)),
                                    many(4,1).concat(many(4,0)))), true);
+// A real listening set is 4-7 items, so the verdict must be reachable from a
+// 4/3 split accumulated across the unit, not from 8 items in one task.
+t("calibration: reachable from a real set size",
+  /Not enough of each/.test(cal(many(4,true).concat(many(3,false)),
+                                many(4,1).concat(many(3,0)))), true);
 t("calibration: reversed is not a verdict",
   /worth watching rather than acting on/.test(
     cal(many(4,false).concat(many(4,true)), many(4,1).concat(many(4,0)))), true);
 t("calibration: one-sided",
   /nothing to compare/.test(cal(many(4,true), many(4,1))), true);
+// UK/US pairs no suffix rule reaches. A false REJECTION marks a right answer
+// wrong, which is the direction that must never regress.
+[["jewellery","jewelry"],["catalogue","catalog"],["defence","defense"],
+ ["licence","license"],["tyre","tire"],["cheque","check"],["aluminium","aluminum"]
+].forEach(([k,g]) => t("accepts " + k + "/" + g, spell(k,g), true));
+// Three numbers packed into one token are still three numbers.
+t("packed numbers exceed", M.overLimit("answer 45,60,90","1+number"), true);
+t("one decimal is one number", M.overLimit("5.30","1+number"), false);
+// An either-order pair of PICKED options must not run through key grammar.
+const ipaPair = { items:[{q:"",key:"/ʊə/",opts:[{k:"/ʊə/",t:"a"},{k:"/ɔɪ/",t:"b"}]},
+                         {q:"",key:"/ɔɪ/",opts:[{k:"/ʊə/",t:"a"},{k:"/ɔɪ/",t:"b"}]}],
+                  either:"1-2", words:"" };
+t("either-order over picked options",
+  M.markTask(ipaPair,["/ɔɪ/","/ʊə/"]).map(m=>m.ok), [true,true]);
 t("calibration: nothing marked", cal([true], [null]), "");
 // No payoff may be promised: the finding is [T2] and no study shows training
 // calibration raises anything.

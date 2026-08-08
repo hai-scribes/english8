@@ -110,6 +110,22 @@ failure. Each of these was a route around a rule, not a hypothetical:
   `second___= two` used to vanish silently, taking its question with it.
 - A directive name the generator does not know — `:::taskk` — which would
   otherwise render its own source, answer keys and all.
+- A key that accepts a form its own word limit forfeits. `(to) a primary
+  school` under a three-word limit marks the learner wrong for writing the
+  four-word form the key itself permits.
+- A listening key the recording never says. `03` §4.1 is explicit and
+  counter-intuitive: *"Don't try to rephrase what you hear."* The answers are
+  the words on the tape, so a key that paraphrases them is unanswerable.
+- An answer given away before it is earned — by the spoken orientation, or by
+  another task's revealed reason. For a chosen answer the leak is the option's
+  text, not its letter.
+- An instruction to **score** a spoken answer, or any pronunciation score.
+  Saying one does not exist is not shipping one, so a disclaimer passes.
+- A bridge whose body admits it is our own reasoning while carrying a marker
+  that says quoted. The footer prints the marker; the two must agree.
+
+The same prohibitions are scanned over `tools/build.py`, because the generator
+authors learner-facing copy too — the home page, the unit cards, the register.
 
 ### `:::audio` — the recording plays once
 
