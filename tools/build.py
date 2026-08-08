@@ -259,10 +259,12 @@ def parse_task_body(a: dict, body: str) -> dict:
             item["opts"] = [{"k": k, "t": k} for k in PICK_SETS[a["type"]]]
         elif shared:
             item["opts"] = [{"k": k, "t": k} for k in shared]
-        # A printed gap belongs to a typed answer. Where the learner picks
-        # from buttons instead, the row of underscores is left-over furniture.
+        # A gap at the END of a picked-answer prompt is left-over furniture —
+        # "sure of yourself → ____" with buttons under it. A gap in the MIDDLE
+        # is the question: "The sale ___ on 15 September" needs to show where
+        # the word goes, or the options have nothing to attach to.
         if item.get("opts"):
-            item["q"] = re.sub(r"\s*(→|->)?\s*_{3,}\s*", " ", item["q"]).strip()
+            item["q"] = re.sub(r"\s*(→|->)?\s*_{3,}\s*$", "", item["q"]).strip()
             item["opts"] = [{"k": o["k"], "t": inline(o["t"])} for o in item["opts"]]
         # Prompts are escaped and their **bold**/*italic* honoured here rather
         # than in the browser: a pronunciation item is written "t**ou**rist"

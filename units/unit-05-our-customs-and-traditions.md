@@ -440,7 +440,7 @@ in one or two sentences, using a phrase from the tables above.
 - Which building does the procession set out from? = (the) communal house
 - Who lights the first stick of incense at the temple? = (the) oldest man
 - What keeps everyone in step during the procession? = (a) gong
-- What contest is held in the afternoon? = rice-cooking
+- What contest is held in the afternoon? = rice-cooking/rice-cooking contest
 :::
 
 ### 5.3 Vocabulary in context
@@ -498,7 +498,7 @@ than afterwards. The script stays locked until you have marked every question.
 
 **Nghe một lần duy nhất.** Đọc trước câu hỏi, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear the presenter of a radio programme about Vietnamese festivals describing Ok Om Bok, a Khmer festival in the south of the country." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear the presenter of a radio programme about Vietnamese festivals describing Ok Om Bok, a festival held in the south of the country." mode="computer" preview="30" review="120"
 Good evening, and welcome to *Festivals of Viet Nam*. Tonight: Ok Om Bok.
 
 Ok Om Bok is a festival of the Khmer people in southern Viet Nam. You will
@@ -525,8 +525,8 @@ Next week: a festival with no music at all.
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- Ok Om Bok is a festival of the (a) Kinh (b) Khmer (c) Tay people = b
-- It falls in the (a) first (b) eighth (c) tenth lunar month = c
+- Ok Om Bok is a festival of the ___ people. (a) Kinh (b) Khmer (c) Tay = b
+- It falls in the ___ lunar month. (a) first (b) eighth (c) tenth = c
 - *Com dep* is (a) young green rice (b) a sweet soup (c) a boat = a
 - The oldest person asks the children (a) to sing (b) what they wish for (c) to bow to the moon = b
 - People float paper lanterns to (a) light the river (b) carry away bad luck (c) show the boats the way = b
@@ -536,7 +536,7 @@ Next week: a festival with no music at all.
 
 ::: task skill="listening" type="sentence-completion" words="2"
 - The festival is easiest to see in Tra Vinh and ___ . = Soc Trang
-- It falls on the ___ night of the tenth lunar month. = full-moon
+- It falls on the ___ night of the tenth lunar month. = full-moon/full moon
 - Families lay the offerings out on a small ___ frame. = bamboo
 - A *ngo* boat is long and ___ . = narrow
 :::
@@ -652,12 +652,12 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
-- My grandmother burns ___ in front of the altar each morning. = incense ~ starts with *i*
-- Tet falls on the first day of the ___ year. = lunar ~ starts with *l*
-- Stories like this are ___ from one generation to the next. = passed down ~ starts with *p d*
-- Breaking a mirror is bad luck — that is an old ___ . = superstition ~ starts with *s*
-- The whole family ___ on the last evening of the year. = gets together ~ starts with *g t*
+::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
+- My grandmother burns ___ in front of the altar each morning. *(i…)* = incense
+- Tet falls on the first day of the ___ year. *(l…)* = lunar
+- Stories like this are ___ from one generation to the next. *(p d…)* = passed down
+- Breaking a mirror is bad luck — that is an old ___ . *(s…)* = superstition
+- The whole family ___ on the last evening of the year. *(g t…)* = gets together
 :::
 
 ### 7.2 Pronunciation check

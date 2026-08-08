@@ -509,7 +509,7 @@ both sets of questions in the preview window first and answer as you listen.
 
 **Nghe một lần duy nhất.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a museum guide welcoming visitors to a new exhibition about the history of communication, and describing its four rooms." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a museum guide welcoming visitors to a new exhibition about the history of communication, and taking them through it room by room." mode="computer" preview="30" review="120"
 Good morning, and welcome to *Six Thousand Years of Talking*, our new
 exhibition on the second floor. It opens at nine every day except Monday, and
 the last entry is at half past four.
@@ -548,8 +548,8 @@ September.
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="1+number"
-- The exhibition has ___ rooms. = four
-- The wooden letter box stood outside a village post office for ___ years. = ninety
+- The exhibition has ___ rooms. = four/4
+- The wooden letter box stood outside a village post office for ___ years. = ninety/90
 - Room Three is the ___ room, and it is the loudest one. = electric
 - In Room Four the walls are ___ . = screens
 - The best answers go on the website in ___ . = September
@@ -654,12 +654,12 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
-- My phone can ___ Japanese into English in a second. = translate ~ starts with *t*
-- A smile is the friendliest ___ in the world. = gesture ~ starts with *g*
-- We use ___ to keep in touch with friends far away. = social media ~ starts with *s m*
-- The ___ answered every question honestly. = interviewee ~ starts with *i*
-- In the future, teachers may appear as ___ images. = holographic ~ starts with *h*
+::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
+- My phone can ___ Japanese into English in a second. *(t…)* = translate
+- A smile is the friendliest ___ in the world. *(g…)* = gesture
+- We use ___ to keep in touch with friends far away. *(s m…)* = social media
+- The ___ answered every question honestly. *(i…)* = interviewee
+- In the future, teachers may appear as ___ images. *(h…)* = holographic
 :::
 
 ### 7.2 Pronunciation check

@@ -318,6 +318,18 @@ def check_task(where: str, a: dict, problems: list):
                 problems.append(f"{where} item {i}: key {k!r} is not one of the options "
                                 f"offered ({', '.join(o['k'] for o in it['opts'])})")
             continue
+        # C4, the direction that is easy to miss: a key may not offer a form
+        # its own limit forbids. "(to) a primary school" under a three-word
+        # limit marks the learner wrong for writing the four-word form the key
+        # explicitly permits — and every gate around it stays green, because
+        # the limit is legal and the key is legal; only the pair is not.
+        if a.get("words") and not it.get("opts"):
+            longest = max(accepted_forms(k), key=lambda x: len(x.split()), default="")
+            if over_limit(longest, a["words"]):
+                problems.append(
+                    f"{where} item {i}: key {k!r} accepts {longest!r} "
+                    f"({len(longest.split())} words), which its own words={a['words']!r} "
+                    f"forfeits. Tighten the key or raise the limit (C4)")
         if k.count("(") != k.count(")"):
             problems.append(f"{where} item {i}: key {k!r} has unbalanced brackets — "
                             f"'( )' marks an optional token (C1)")
@@ -361,6 +373,50 @@ def check_audio(where: str, a: dict, script: str, problems: list):
 
 RE_WS = re.compile(r"\s+")
 RE_BRACKET = re.compile(r"\([^)]*\)")
+
+# The two published rules the browser marks by, restated here so the gate can
+# apply them to the KEY at build time rather than to the learner at run time.
+# Kept deliberately small and independent of app.js: a shared implementation
+# would make a bug in one invisible to the other.
+RE_NUMERIC = re.compile(r"\d[\d.,:/-]*$")
+
+
+def _expand_optional(s: str) -> list[str]:
+    m = RE_BRACKET.search(s)
+    if not m:
+        return [RE_WS.sub(" ", s).strip()]
+    return (_expand_optional(s[:m.start()] + m.group(0)[1:-1] + s[m.end():])
+            + _expand_optional(s[:m.start()] + s[m.end():]))
+
+
+def accepted_forms(key: str) -> list[str]:
+    """Every string this key marks correct — brackets expanded, / split."""
+    out = []
+    for alt in str(key).split("/"):
+        out += [f for f in _expand_optional(alt) if f]
+    return out
+
+
+RE_WORD = re.compile(r"[^\W_]+", re.UNICODE)
+
+
+def words_of(s: str) -> list[str]:
+    """Lowercased word tokens, punctuation and markdown discarded.
+
+    Comparison is on words rather than raw text so that a key does not miss
+    its own script over a comma, a bold marker or a curly apostrophe.
+    """
+    return RE_WORD.findall(str(s).lower())
+
+
+def over_limit(given: str, words: str) -> bool:
+    """`03` §4: hyphens count as one word; AND/OR A NUMBER permits one number."""
+    n, _, num = str(words).partition("+")
+    toks = given.split()
+    if not num:
+        return len(toks) > int(n)
+    nums = [t for t in toks if RE_NUMERIC.fullmatch(t)]
+    return len(nums) > 1 or len(toks) - len(nums) > int(n)
 
 # Every line that opens a directive, so a name the generator does not know is
 # a build failure rather than a block of raw markdown on the page. ":::taskk"
@@ -494,9 +550,78 @@ def main() -> int:
                 problems.append(f"{tag}: exercise {blk['id']} has both a :::task and a "
                                 f"hand-written answer-key entry — the task's keys are the "
                                 f"source, so delete the entry")
+        scripts: dict[int, str] = {}
+        orientations: dict[int, str] = {}
         for lesson, a, script in u["audio"]:
             check_audio(f"{tag} lesson {lesson} (recording)", a, script, problems)
             check_not_printed(f"{tag} lesson {lesson}", script, text, problems)
+            scripts[lesson] = scripts.get(lesson, "") + "\n" + script
+            orientations[lesson] = (orientations.get(lesson, "") + " "
+                                    + a.get("orientation", ""))
+
+        # Two ways a listening answer gets given away before it is earned, and
+        # both were found in the wild:
+        #
+        #   the spoken orientation — unit 04's "a thirteen-year-old girl"
+        #   preceding "Mai is ___ years old";
+        #   another task's revealed reason — unit 09's 6.1 note "two hundred
+        #   is the distance, not the speed" preceding 6.2's "= two hundred".
+        #
+        # A reason inside the SAME task is fine: it appears only once that task
+        # has been marked, by which time its own items are committed.
+        reasons: dict[tuple, str] = {}
+        for lesson, blk, t in u["tasks"]:
+            if t.get("skill") != "listening":
+                continue
+            reasons[(lesson, blk["id"])] = " ".join(
+                it.get("why", "") for it in t["items"])
+        for lesson, blk, t in u["tasks"]:
+            if t.get("skill") != "listening" or lesson not in orientations:
+                continue
+            elsewhere = " ".join(v for (ln, ex), v in reasons.items()
+                                 if ln == lesson and ex != blk["id"])
+            said = " ".join(words_of(orientations[lesson] + " " + elsewhere))
+            if not said:
+                continue
+            for i, it in enumerate(t["items"], 1):
+                # For a chosen answer the leak is the option's TEXT, not its
+                # letter: unit 06's orientation reproduced option (b) word for
+                # word, so "= b" was readable without listening.
+                if it.get("opts"):
+                    hit = next((o["t"] for o in it["opts"] if o["k"] == it["key"]), "")
+                    cands = [re.sub(r"<[^>]+>", "", hit)]
+                else:
+                    cands = accepted_forms(it["key"])
+                for f in cands:
+                    w = words_of(f)
+                    # One-word keys that are ordinary function words are not a
+                    # leak; a content answer appearing verbatim is.
+                    if not w or (len(w) == 1 and len(w[0]) < 4):
+                        continue
+                    if " ".join(w) in said:
+                        problems.append(
+                            f"{tag} lesson {lesson} ex {blk['id']} item {i}: the spoken "
+                            f"orientation already says {f!r}, which is this item's answer. "
+                            f"The orientation sets the scene; it does not answer the paper")
+                        break
+
+        # `03` §4.1, official and counter-intuitive: "Don't try to rephrase what
+        # you hear. Try to write down the words you hear which fit the
+        # question." A listening key the recording never says is therefore not
+        # a hard question — it is an unanswerable one, and only the author can
+        # see that, because the script is no longer on the page.
+        for lesson, blk, t in u["tasks"]:
+            if t.get("skill") != "listening" or lesson not in scripts:
+                continue
+            said = " ".join(words_of(scripts[lesson]))
+            for i, it in enumerate(t["items"], 1):
+                if it.get("opts"):
+                    continue
+                if not any(" ".join(words_of(f)) in said for f in accepted_forms(it["key"])):
+                    problems.append(
+                        f"{tag} lesson {lesson} ex {blk['id']} item {i}: key "
+                        f"{it['key']!r} is never said in the recording. The answers are "
+                        f"the words you hear, not a paraphrase of them (`03` §4.1)")
 
         # C6/C10 cannot be dodged by relabelling. A lesson that carries a
         # recording is a listening lesson, and calling its questions a course

@@ -113,7 +113,7 @@ Answer in full sentences.
 - The police told everyone near the coast to ___ before the wave arrived. = evacuate
 - Heavy rain caused a ___ that buried the mountain road. = landslide
 - Three days after the earthquake the team found another ___ under the building — a boy of eleven. = survivor
-- The storm did not ___ our house. = destroy
+- The storm did not ___ our house completely. = destroy
 - It did a lot of ___ to the roof, though. = damage
 - Lorries brought ___ supplies — rice, blankets and clean water — to the village. = relief
 :::
@@ -599,7 +599,7 @@ We will be back with another bulletin at six in the morning.
 
 ::: task skill="listening" type="multiple-choice"
 - The storm is expected to arrive (a) tonight (b) tomorrow morning (c) on Thursday = b
-- The expected wind speed is (a) 100 km/h (b) 200 km/h (c) 70 km/h = a ~ two hundred is the distance, not the speed
+- The expected wind speed is (a) 100 km/h (b) 200 km/h (c) 70 km/h = a ~ the bulletin gives two numbers — one is a wind speed, the other a distance
 - People who live near the river should (a) leave the town (b) move upstairs tonight (c) wait until morning = b
 - Once the flood arrives, the tap water will be (a) safe (b) unsafe to drink (c) free = b
 - Last year, most of the people who were rescued were (a) children (b) over seventy (c) fishermen = b
@@ -608,11 +608,11 @@ We will be back with another bulletin at six in the morning.
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="2+number"
-- The storm is about ___ kilometres off the coast. = two hundred ~ written as words, the way the speaker says it
+- The storm is about ___ kilometres off the coast. = two hundred/200
 - Put your documents, medicine and torch in a ___ bag. = plastic
 - While the reporter ___, a roof sheet came off in the wind. = was filming
 - Schools in the ___ districts will be closed tomorrow and Thursday. = coastal
-- The next bulletin is at ___ in the morning. = six
+- The next bulletin is at ___ in the morning. = six/6
 :::
 
 ::: bridge name="Same ninety seconds, more facts in it" trains="Listening" cefr="B1" marker="[T2]" src="03 §2.1"
@@ -736,13 +736,13 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
-- A long period with no rain at all is a ___ . = drought ~ starts with *d*
-- Three days later the team found another ___ under the fallen building. = survivor ~ starts with *s*
-- The government told every family near the coast to ___ . = evacuate ~ starts with *e*
-- Heavy rain caused a ___ that buried the mountain road. = landslide ~ starts with *l*
-- Always listen to the weather ___ before you travel in September. = forecast ~ starts with *f*
-- Lorries brought ___ supplies — rice, blankets and medicine. = relief ~ starts with *r*
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
+- A long period with no rain at all is a ___ . *(d…)* = drought
+- Three days later the team found another ___ under the fallen building. *(s…)* = survivor
+- The government told every family near the coast to ___ . *(e…)* = evacuate
+- Heavy rain caused a ___ that buried the mountain road. *(l…)* = landslide
+- Always listen to the weather ___ before you travel in September. *(f…)* = forecast
+- Lorries brought ___ supplies — rice, blankets and medicine. *(r…)* = relief
 :::
 
 ### 7.2 Pronunciation check

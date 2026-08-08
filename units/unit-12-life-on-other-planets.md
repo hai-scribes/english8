@@ -443,7 +443,7 @@ the frames you need most:
 
 ### 4.1 Complete the mini-dialogues
 
-::: task skill="course" type="gap-fill" ask="One word or phrase in each gap. The last dialogue has two."
+::: task skill="course" type="gap-fill" ask="One word or phrase in each gap."
 - **A:** Do you think there are aliens in our galaxy? — **B:** It's ___ that there are — the galaxy is enormous. = possible
 - **A:** My cousin says he saw a spacecraft over the rice fields. — **B:** I ___ it. It was probably a plane. = doubt
 - **A:** Will humans live on Mars one day? — **B:** It ___ on how fast the technology improves. = depends
@@ -642,7 +642,7 @@ explain how.
 - The atmosphere is thick with oxygen and water ___ . = vapour
 - Most of the surface is ___ ocean, only two or three metres deep. = shallow
 - The creatures are flat and wide, like living ___ . = carpets
-- Verdia has ___ moons. = two
+- Verdia has ___ moons. = two/2
 - The creatures fold themselves into the ___ at low tide. = sand
 :::
 
@@ -733,15 +733,15 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
-- Mars is the fourth ___ from the Sun. = planet ~ starts with *p*
-- The Earth takes one year to ___ the Sun. = orbit ~ starts with *o*
-- On the Moon, ___ is much weaker than on Earth. = gravity ~ starts with *g*
-- We cannot breathe on Mars because there is almost no ___ . = oxygen ~ starts with *o*
-- A planet where living things could stay alive is called ___ . = habitable ~ starts with *h*
-- She watched Jupiter through her father's ___ . = telescope ~ starts with *t*
-- The strange ___ had six legs and no eyes. = creature ~ starts with *c*
-- Our Sun is one of billions of stars in this ___ . = galaxy ~ starts with *g*
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
+- Mars is the fourth ___ from the Sun. *(p…)* = planet
+- The Earth takes one year to ___ the Sun. *(o…)* = orbit
+- On the Moon, ___ is much weaker than on Earth. *(g…)* = gravity
+- We cannot breathe on Mars because there is almost no ___ . *(o…)* = oxygen
+- A planet where living things could stay alive is called ___ . *(h…)* = habitable
+- She watched Jupiter through her father's ___ . *(t…)* = telescope
+- The strange ___ had six legs and no eyes. *(c…)* = creature
+- Our Sun is one of billions of stars in this ___ . *(g…)* = galaxy
 :::
 
 ### 7.2 Pronunciation check

@@ -553,7 +553,7 @@ were repeating it (*He/She said that…*).
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="3" ask="Take the words from the article. Do not rephrase them — this is the one place in the course where putting it in your own words costs you the mark."
-- Apart from fingerprints, what kind of recognition do some devices use? = face recognition
+- Apart from fingerprints, what kind of recognition do some devices use? = face (recognition)
 - The iris is the coloured ring around which part of the eye? = (the) pupil
 - Besides being stolen, what can happen to a password? = forgotten
 - What does the article say a company might store that you cannot then change? = (your) face
@@ -615,7 +615,7 @@ while the voice is still moving, not afterwards from memory.
 **Bài nghe chỉ phát một lần.** Đọc trước cả 6.1 và 6.2 trong lúc chờ, rồi vừa
 nghe vừa trả lời.
 
-::: audio orientation="You will hear a science teacher describing what happened when her school borrowed a teaching robot, and what she now thinks robots are good for." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a secondary-school teacher describing what happened when her school borrowed a teaching robot, and what she now thinks robots are good for." mode="computer" preview="30" review="120"
 Good afternoon. My name is Ms Trang and I teach science at a secondary
 school. Last term my school borrowed a teaching robot for six weeks, and
 people keep asking me what it was like.
@@ -656,7 +656,7 @@ the human work.
 - The robot was about a ___ tall. = metre
 - It could speak English and ___ . = Vietnamese
 - It marked the quizzes ___ . = instantly
-- The robot did not notice the boy for ___ lessons. = three
+- The robot did not notice the boy for ___ lessons. = three/3
 - Ms Trang noticed on the ___ day. = first
 - Her advice: let the machine do the ___ work. = boring
 - And let the teacher do the ___ work. = human
@@ -754,15 +754,15 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
-- The telephone was a famous ___ of the nineteenth century. = invention ~ starts with *i*
-- Scientists carry out an ___ to test an idea. = experiment ~ starts with *e*
-- My phone uses face ___ to unlock. = recognition ~ starts with *r*
-- Machines can now ___ many boring jobs. = automate ~ starts with *a*
-- The main ___ of this app is that it costs money. = drawback ~ starts with *d*
-- A washing machine is a very useful ___ . = device ~ starts with *d*
-- Solar power was a real ___ for remote villages. = breakthrough ~ starts with *b*
-- This method is much more ___ — it takes half the time. = efficient ~ starts with *e*
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
+- The telephone was a famous ___ of the nineteenth century. *(i…)* = invention
+- Scientists carry out an ___ to test an idea. *(e…)* = experiment
+- My phone uses face ___ to unlock. *(r…)* = recognition
+- Machines can now ___ many boring jobs. *(a…)* = automate
+- The main ___ of this app is that it costs money. *(d…)* = drawback
+- A washing machine is a very useful ___ . *(d…)* = device
+- Solar power was a real ___ for remote villages. *(b…)* = breakthrough
+- This method is much more ___ — it takes half the time. *(e…)* = efficient
 :::
 
 ### 7.2 Pronunciation check

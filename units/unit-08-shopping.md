@@ -323,12 +323,12 @@ Rewrite each sentence with the adverb in brackets in the correct position.
 ### 3.3 Present simple or *will*?
 
 ::: task skill="course" type="choice" ask="Choose the correct form."
-- The sale (a) starts (b) will start on 15 September — it says so on the poster. = a
-- I think this jacket (a) is (b) will be too expensive for me. = b
-- The department store (a) opens (b) will open at 9:30 tomorrow. = a
-- Don't worry, I (a) pay (b) will pay you back on Friday. = b
-- Our delivery (a) arrives (b) will arrive on Tuesday morning — the app says so. = a
-- The market (a) closes (b) will close at noon on Sundays. = a
+- The sale ___ on 15 September — it says so on the poster. (a) starts (b) will start = a
+- I think this jacket ___ too expensive for me. (a) is (b) will be = b
+- The department store ___ at 9:30 tomorrow. (a) opens (b) will open = a
+- Don't worry, I ___ you back on Friday. (a) pay (b) will pay = b
+- Our delivery ___ on Tuesday morning — the app says so. (a) arrives (b) will arrive = a
+- The market ___ at noon on Sundays. (a) closes (b) will close = a
 :::
 
 ### 3.4 Correct the mistake
@@ -581,17 +581,17 @@ convenient, but it isn't a day out.
 
 ::: task skill="listening" type="multiple-choice"
 - Hà buys most of her (a) food (b) clothes and books (c) furniture online = b
-- Online prices are usually about (a) 10% (b) 20% (c) 50% cheaper = b
+- Online prices are usually about ___ cheaper. (a) 10% (b) 20% (c) 50% = b
 - She hardly ever reaches the shops because they close at (a) six (b) seven (c) eight = c
 - The jacket she bought was (a) the wrong colour (b) three sizes too big (c) damaged = b
-- Her rule now is that she never buys (a) shoes (b) books (c) jackets online = a
+- Her rule now is that she never buys ___ online. (a) shoes (b) books (c) jackets = a
 - What she misses most is (a) the discounts (b) trying things on (c) going out with friends = c
 :::
 
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="3"
-- Hà finishes school at ___ . = half past five ~ written as words, the way the speaker says it
+- Hà finishes school at ___ . = half past five/5.30/5:30
 - Sending the jacket back took ___ . = two weeks
 - She paid for the return ___ herself. = delivery
 - She always reads the ___ , especially the bad ones. = reviews
@@ -692,14 +692,14 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
-- Keep the ___ so you can ask for a refund later. = receipt ~ starts with *r*
-- My aunt sells fruit from a ___ at the market. = stall ~ starts with *s*
-- The shop is closed, but their ___ arrives on Tuesday. = delivery ~ starts with *d*
-- I never pay by card at the market — I always use ___ . = cash ~ starts with *c*
-- That phone is far too ___ for a student. = expensive ~ starts with *e*
-- Sorry, that colour isn't in ___ this week. = stock ~ starts with *s*
-- I like to ___ for half an hour before I buy anything. = browse ~ starts with *b*
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
+- Keep the ___ so you can ask for a refund later. *(r…)* = receipt
+- My aunt sells fruit from a ___ at the market. *(s…)* = stall
+- The shop is closed, but their ___ arrives on Tuesday. *(d…)* = delivery
+- I never pay by card at the market — I always use ___ . *(c…)* = cash
+- That phone is far too ___ for a student. *(e…)* = expensive
+- Sorry, that colour isn't in ___ this week. *(s…)* = stock
+- I like to ___ for half an hour before I buy anything. *(b…)* = browse
 :::
 
 ### 7.2 Pronunciation check

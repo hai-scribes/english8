@@ -414,7 +414,7 @@ practical action.
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- Which coast of Viet Nam are the islands off? = (the) southern coast
+- Which coast of Viet Nam are the islands off? = (the) southern (coast)
 - As well as the forest, what does the park protect? = (the) sea
 - At what time do the turtles lay their eggs? = (at) night
 - Where do the rangers move the eggs to? = (a) (protected) hatchery
@@ -485,7 +485,7 @@ sets follow it. Read both sets in the preview window, then answer as you listen
 **Nghe một lần duy nhất.** Đọc trước cả hai phần câu hỏi trong lúc chờ, rồi vừa
 nghe vừa trả lời.
 
-::: audio orientation="You will hear a woman who works at a water testing laboratory explaining to students what makes rivers dirty and what follows once they are." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a woman explaining to students what makes rivers dirty and what follows once they are." mode="computer" preview="30" review="120"
 Good morning, everyone. My name is Hoa, and I work for a water testing
 laboratory. Today I want to talk about how water becomes polluted, and what
 happens afterwards.
@@ -662,13 +662,13 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
-- Cutting down forests is called ___ . = deforestation ~ starts with *d*
-- The tiger is an ___ species in Viet Nam. = endangered ~ starts with *e*
-- Please don't drop ___ on the beach. = litter ~ starts with *l*
-- Untreated ___ from the town flows into the stream. = sewage ~ starts with *s*
-- Cuc Phuong was the first ___ in Viet Nam. = national park ~ starts with *n p*
-- The campaign's aim is to raise ___ about plastic waste. = awareness ~ starts with *a*
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
+- Cutting down forests is called ___ . *(d…)* = deforestation
+- The tiger is an ___ species in Viet Nam. *(e…)* = endangered
+- Please don't drop ___ on the beach. *(l…)* = litter
+- Untreated ___ from the town flows into the stream. *(s…)* = sewage
+- Cuc Phuong was the first ___ in Viet Nam. *(n p…)* = national park
+- The campaign's aim is to raise ___ about plastic waste. *(a…)* = awareness
 :::
 
 ### 7.2 Pronunciation check

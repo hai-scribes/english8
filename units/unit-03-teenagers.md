@@ -420,7 +420,7 @@ reassures them and offers something practical.
 - What time do the clubs begin? = (by) three o'clock ~ lessons finish at half past two
 - How do debate club members say they have changed since September? = (far) more self-confident
 - What does the cooking club do with the food it makes? = eat it together/eats it together
-- Where do the repaired books go? = (to) a primary school
+- Where do the repaired books go? = (a) primary school
 - What does the volunteer club do to the old books before sending them? = repair them/repairs them
 :::
 
@@ -477,7 +477,7 @@ listen rather than afterwards.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a school counsellor talking to students about what causes stress, and about what helps." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a member of the school staff talking to students about what causes stress, and about what helps." mode="computer" preview="30" review="120"
 Hello. I'm Ms Trang, and I'm the school counsellor here. Today I want to talk
 about stress: what causes it, and what actually helps.
 
@@ -517,9 +517,9 @@ the week that belongs to them.
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="2+number"
-- The school asked ___ students. = two hundred ~ written as words, the way the speaker says it
-- Too little sleep was named by ___ per cent. = forty-five
-- A ___-minute walk after dinner is enough. = twenty
+- The school asked ___ students. = two hundred/200
+- Too little sleep was named by ___ per cent. = forty-five/45
+- A ___-minute walk after dinner is enough. = twenty/20
 - ___ the students felt better after telling someone. = Half
 - Students who join a club are busy, ___ they usually cope better. = yet
 :::
@@ -603,13 +603,13 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
-- My cousin is fifteen, so he is in the middle of ___ . = adolescence ~ starts with *a*
-- I do the ___ every weekend to help my mum. = housework ~ starts with *h*
-- Don't copy your friends just because they do it — that's ___ . = peer pressure ~ starts with *p p*
-- I felt ___ when I fell over in front of the whole class. = embarrassed ~ starts with *e*
-- Learning to manage money is an important ___ . = life skill ~ starts with *l s*
-- If you ___ in a club, you'll make new friends. = get involved ~ starts with *g i*
+::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
+- My cousin is fifteen, so he is in the middle of ___ . *(a…)* = adolescence
+- I do the ___ every weekend to help my mum. *(h…)* = housework
+- Don't copy your friends just because they do it — that's ___ . *(p p…)* = peer pressure
+- I felt ___ when I fell over in front of the whole class. *(e…)* = embarrassed
+- Learning to manage money is an important ___ . *(l s…)* = life skill
+- If you ___ in a club, you'll make new friends. *(g i…)* = get involved
 :::
 
 ### 7.2 Pronunciation check

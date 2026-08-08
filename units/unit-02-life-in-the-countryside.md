@@ -537,7 +537,7 @@ ever missed the city.
 
 ::: task skill="listening" type="multiple-choice"
 - Hoa moved to the village (a) last year (b) two years ago (c) when she was a small child = b
-- The nearest cinema is (a) ten (b) nineteen (c) forty kilometres away = c
+- The nearest cinema is ___ kilometres away. (a) ten (b) nineteen (c) forty = c
 - Her journey to school now takes (a) ten minutes (b) half an hour (c) an hour = a
 - She reads more than before mainly because (a) she has more homework (b) her phone signal is bad (c) there is a new library = b
 - At the end, Hoa says she (a) definitely wants to move back (b) is not sure (c) hates the city = b
@@ -547,9 +547,9 @@ ever missed the city.
 
 ::: task skill="listening" type="sentence-completion" words="2+number"
 - Hoa moved from Ha Noi to a village in ___ . = Thanh Hoa
-- Her class has ___ students. = nineteen ~ written as a word, the way the speaker says it
-- Her neighbours are up before ___ during the harvest. = five
-- Her grandmother is ___ years old. = eighty
+- Her class has ___ students. = nineteen/19
+- Her neighbours are up before ___ during the harvest. = five/5
+- Her grandmother is ___ years old. = eighty/80
 :::
 
 ### Writing — A paragraph about rural life
@@ -645,13 +645,13 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
-- My grandfather takes the ___ down to the river every morning. = buffalo ~ starts with *b*
-- In September the whole village helps with the ___ . = harvest ~ starts with *h*
-- We pick oranges in my uncle's ___ . = orchard ~ starts with *o*
-- There is an old ___ behind the kitchen; we get our water there. = well ~ starts with *w*
-- A group of cattle moving together is called a ___ . = herd ~ starts with *h*
-- The paddy fields are ___ — they reach the horizon. = vast ~ starts with *v*
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
+- My grandfather takes the ___ down to the river every morning. *(b…)* = buffalo
+- In September the whole village helps with the ___ . *(h…)* = harvest
+- We pick oranges in my uncle's ___ . *(o…)* = orchard
+- There is an old ___ behind the kitchen; we get our water there. *(w…)* = well
+- A group of cattle moving together is called a ___ . *(h…)* = herd
+- The paddy fields are ___ — they reach the horizon. *(v…)* = vast
 :::
 
 ### 7.2 Pronunciation check

@@ -491,7 +491,7 @@ listen rather than afterwards.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a speaker giving a talk about whether technology has made our lives better or worse, and about learning online." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a speaker giving a talk about how technology has changed the way we live and learn." mode="computer" preview="30" review="120"
 Good morning. Today I want to ask one question: has technology made our
 lives better or worse?
 
@@ -529,7 +529,7 @@ yours, and you will make it every single day.
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="1"
-- The speaker's grandmother walked ___ kilometres to school. = four ~ written as a word, the way the speaker says it
+- The speaker's grandmother walked ___ kilometres to school. = four/4
 - Life today is easier, and also far more ___ . = sedentary
 - Some students loved online learning because they could learn at their own ___ . = speed
 - Others missed their ___ and their internet was slow. = classmates
@@ -645,15 +645,15 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
-- Hanoi is a busy ___ area. = urban ~ starts with *u*
-- My grandparents live in a quiet ___ village outside the city. = rural ~ starts with *r*
-- Spending all day on the sofa is a ___ lifestyle. = sedentary ~ starts with *s*
-- Every ___ has a duty to look after its traditions. = generation ~ starts with *g*
-- Museums exist to ___ the past. = preserve ~ starts with *p*
-- In the far north, families still ___ for their food. = hunt ~ starts with *h*
-- In winter they travel by ___ across the snow. = sled ~ starts with *s*
-- Too much screen time is bad for your ___ . = well-being ~ starts with *w*
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
+- Hanoi is a busy ___ area. *(u…)* = urban
+- My grandparents live in a quiet ___ village outside the city. *(r…)* = rural
+- Spending all day on the sofa is a ___ lifestyle. *(s…)* = sedentary
+- Every ___ has a duty to look after its traditions. *(g…)* = generation
+- Museums exist to ___ the past. *(p…)* = preserve
+- In the far north, families still ___ for their food. *(h…)* = hunt
+- In winter they travel by ___ across the snow. *(s…)* = sled
+- Too much screen time is bad for your ___ . *(w…)* = well-being
 :::
 
 ### 7.2 Pronunciation check

@@ -376,7 +376,7 @@ one politely, and give a reason.
 - What is Trang's mother teaching her to make? = paper flowers
 - What hobby has Trang's brother taken up? = woodwork
 - What did her brother build for her room? = (a) (small) bookshelf
-- Who usually wins at board games? = (my) grandmother
+- What does Trang's father build for her room? = (a) (small) bookshelf
 :::
 
 ### 5.3 Vocabulary in context
@@ -521,8 +521,8 @@ This describes a tendency in test-takers, not a rule of the test.
 ::: task skill="listening" type="sentence-completion" words="2+number"
 - Nam meets his friends at the shopping centre near the ___ . = swimming pool
 - Last month they started playing ___ in the park. = football
-- He has learned ___ new dishes so far. = six ~ written as words, the way the speaker says it
-- He says ___ of them were good. = Two
+- He has learned ___ new dishes so far. = six/6
+- He says ___ of them were good. = Two/2
 :::
 
 ### Writing — An email about your leisure time
@@ -607,12 +607,12 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
-- In my free time I like doing ___ . = jigsaw puzzles ~ starts with *j p*
-- My sister wants to ___ the guitar. = take up ~ starts with *t u*
-- He's very sociable — he loves to ___ with new people. = socialise ~ starts with *s*
-- I ___ loud noise when I'm reading. = can't stand ~ starts with *c s*
-- We bought the book at the new ___ in town. = bookshop ~ starts with *b*
+::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
+- In my free time I like doing ___ . *(j p…)* = jigsaw puzzles
+- My sister wants to ___ the guitar. *(t u…)* = take up
+- He's very sociable — he loves to ___ with new people. *(s…)* = socialise
+- I ___ loud noise when I'm reading. *(c s…)* = can't stand
+- We bought the book at the new ___ in town. *(b…)* = bookshop
 :::
 
 ### 7.2 Pronunciation check

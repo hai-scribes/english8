@@ -556,7 +556,7 @@ the questions come in that order too.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a thirteen-year-old girl from a mountain village describing an ordinary day, from before school until the evening meal." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a girl from a mountain village in the north describing an ordinary day, from before school until the evening meal." mode="computer" preview="30" review="120"
 Hello. My name is Mai. I'm thirteen and I'm Dao. I live with my parents, my
 grandmother and my little brother in a village in the north.
 
@@ -673,15 +673,15 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
-- The Kinh are the ___ ; the other 53 groups are ethnic minorities. = majority ~ starts with *m*
-- The Kinh are the majority; the other 53 groups are ethnic ___ . = minorities ~ starts with *m*
-- My grandmother ___ baskets from bamboo. = weaves ~ starts with *w*
-- My grandmother weaves baskets from ___ . = bamboo ~ starts with *b*
-- Rice grows on ___ cut into the hillside. = terraced fields ~ starts with *t f*
-- At the festival the dancers wear traditional ___ . = costumes ~ starts with *c*
-- The old songs and old houses are part of our ___ . = heritage ~ starts with *h*
-- They live in a wooden ___ above the ground. = stilt house ~ starts with *s h*
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
+- The Kinh are the ___ ; the other 53 groups are ethnic minorities. *(m…)* = majority
+- The Kinh are the majority; the other 53 groups are ethnic ___ . *(m…)* = minorities
+- My grandmother ___ baskets from bamboo. *(w…)* = weaves
+- My grandmother weaves baskets from ___ . *(b…)* = bamboo
+- Rice grows on ___ cut into the hillside. *(t f…)* = terraced fields
+- At the festival the dancers wear traditional ___ . *(c…)* = costumes
+- The old songs and old houses are part of our ___ . *(h…)* = heritage
+- They live in a wooden ___ above the ground. *(s h…)* = stilt house
 :::
 
 ### 7.2 Pronunciation check
