@@ -464,9 +464,9 @@ check three things:
 
 - Did you actually produce compound sentences, or only short simple ones?
 - Did you pronounce /ʊə/ and /ɔɪ/ differently in *curious* and *join*?
-- Could you talk about the club for 45 seconds without a long pause?
+- Did your pauses fall **between** points rather than inside a sentence?
 
-Repeat Step 2 until you can answer all six without stopping.
+Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ---
 
@@ -508,6 +508,15 @@ Repeat Step 2 until you can answer all six without stopping.
 > club are busy, yet they usually cope better, because they have one part of
 > the week that belongs to them.
 
+> **Before you check — how sure are you?** Mark each answer **●** if you are
+> sure and **○** if you are not, *before* you look at the key. Then count how
+> many of each you got right. If the **●** answers are not clearly better than
+> the **○** ones, the feeling of certainty is not yet telling you anything —
+> which is more useful to know than the score. Unit 1 explains why.
+>
+> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
+> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+
 ### 6.1 Listen and choose
 
 1. Ms Trang is the school's **(a)** head teacher **(b)** counsellor **(c)** PE teacher
@@ -542,16 +551,43 @@ stress and **two solutions**.
 
 *(97 words)*
 
-#### The structure to copy
+#### Plan it — 6 questions your paragraph has to answer
 
-| Part | What goes in it |
+Cover the finished paragraph above. Answer these in note form, in your
+own words — no opening phrases are supplied, and none are needed.
+
+| The question | Your answer — notes, in your own words |
 | --- | --- |
-| **Topic sentence** | Name the problem — *Many students … feel stressed* |
-| **Cause 1** | *First, …* + a compound sentence with **so** |
-| **Cause 2** | *Second, …* + a compound sentence with **and** |
-| **Cause 3** | *Third, …* (optional — drop it if you run out of words) |
-| **Solutions** | Two ideas, joined with **or** and **and** |
-| **Closing sentence** | A hopeful line — use **yet** or **but** |
+| What is the problem, in one sentence a reader could repeat back? | |
+| Cause 1 — what is it, and *why* does it cause stress? | |
+| Cause 2 — what, and why? | |
+| Cause 3 — keep this only if you still have words left | |
+| Which two solutions, and which of them do you think is better? | |
+| What do you want the reader left with? | |
+
+::: bridge name="One marker per stage, none inside a stage" trains="Coherence & Cohesion" cefr="B1" marker="[Q]" src="05 §4"
+You have just learned coordinating conjunctions, and this is the moment the
+habit forms. The rule for the paragraph below, and for every paragraph after it:
+
+**One linking word at each new stage of the argument. None inside a stage.**
+
+*First… Second… Third…* at the head of your three causes is one marker per
+stage — that is correct use. *First, and also, moreover, in addition* inside a
+single cause is four markers inside one stage, and that is the failure.
+
+The criteria genuinely **want** discourse markers; the band-4 description of
+spoken coherence is "can link simple sentences but often with **repetitious use
+of connectives**". But examiner comments on real scripts flag the opposite
+problem just as often — "connectives are overused or inappropriate", "cohesive
+devices are overused", "some mechanical use of linkers" (Writing descriptors,
+**[2023]** version). You are aiming between the two, and the cheapest way to
+land there is a hard count.
+
+**This upgrade asks you to write less, not more.**
+
+> **Tiếng Việt:** Mỗi ý lớn dùng **một** từ nối. Trong cùng một ý thì **không**
+> dùng thêm từ nối nào nữa. Dùng quá nhiều từ nối bị trừ điểm y như dùng quá ít.
+:::
 
 #### Checklist — tick before you finish
 
@@ -750,7 +786,8 @@ breathing, and going to bed earlier.
 5. keep up with
 
 **Speaking** Answers will vary. Check: at least one compound sentence per
-answer, a comma before each conjunction, and 45 seconds without a long pause.
+answer, a comma before each conjunction, and pauses that fall between points
+rather than inside a sentence.
 
 ### Lesson 6
 

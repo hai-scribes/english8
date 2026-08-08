@@ -466,6 +466,30 @@ Find a word or phrase in the text that means:
 3. repair something old and bring it back to its former state → _______________
 4. traditions and objects passed down from earlier generations → _______________
 
+::: bridge name="Synonym search against the clock" trains="Reading" cefr="B1" marker="[T2]" src="04 §8.3"
+Three minutes, on the text you have just read. For each phrase below, find the
+part of **one named paragraph** that means the same thing. Speed is the point.
+
+| Look in | Find the words that mean… |
+| --- | --- |
+| Paragraph 1 | *built above the ground* |
+| Paragraph 2 | *keeps the house cool* |
+| Paragraph 3 | *passed down from parents to children* |
+
+Eye-tracking work on IELTS Reading found that what separated successful readers
+from unsuccessful ones was fixating on the **lexical link** between the question
+and the text: on one item, weak readers "fixated on this target word almost not
+at all". The researcher's own recommendation was to train "the ability to
+identify **lexical matches of various kinds**" — which is this drill.
+
+Two limits worth knowing: only two question types were studied, and on 7 of the
+11 items the strong and weak groups showed no significant difference. This is a
+tendency in readers, not a rule of the test.
+
+> **Tiếng Việt:** Tìm **từ đồng nghĩa** giữa câu hỏi và bài đọc, trong đoạn được
+> chỉ định, càng nhanh càng tốt. Đây là kỹ năng phân biệt người đọc tốt và kém.
+:::
+
 ### Speaking — Talking about homes
 
 > **Working alone:** You have no partner, so do this in three steps. It still
@@ -493,7 +517,28 @@ check three things:
 - Did you say *How **many** rooms* but *How **much** rice*?
 - Did /k/ and /ɡ/ sound different in *coat* and *goat*, *custom* and *gong*?
 
-Repeat Step 2 until you can do all five without stopping.
+Repeat Step 2 until each answer runs clearly from its first word to its last.
+
+::: bridge name="Answer, then develop — two beats for every reply" trains="Fluency & Coherence" cefr="A2→B1" marker="[T2]" src="06 §6.3"
+Score your peer-interview answers on two beats, not on length:
+
+1. **Beat one** — one sentence that answers the question that was asked.
+2. **Beat two** — one sentence that extends it: a reason, an example, a contrast.
+
+A study of the IELTS Speaking interview found candidates "need to provide an
+answer to the question **and** develop the topic inherent in the question" — and
+noted, in the same breath, that "the ability to answer questions is **not
+specifically included**" in the marking criteria.
+
+Both halves of that matter. Answering-then-developing is a real demand of the
+conversation, so practise it. It is **not** a scored behaviour, so do not treat
+it as one — this is a habit for being understood, not a way to buy marks. It is
+also research on how candidates behave, not a rule of the test.
+
+> **Tiếng Việt:** Mỗi câu trả lời gồm **hai nhịp**: một câu trả lời đúng câu
+> hỏi, một câu mở rộng. Đây là thói quen giao tiếp, **không** phải tiêu chí chấm.
+:::
+
 
 ---
 
@@ -534,6 +579,15 @@ Repeat Step 2 until you can do all five without stopping.
 > grandmother tells stories. Some of them are about our family, and some, I
 > think, she invents.
 
+> **Before you check — how sure are you?** Mark each answer **●** if you are
+> sure and **○** if you are not, *before* you look at the key. Then count how
+> many of each you got right. If the **●** answers are not clearly better than
+> the **○** ones, the feeling of certainty is not yet telling you anything —
+> which is more useful to know than the score. Unit 1 explains why.
+>
+> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
+> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+
 ### 6.1 Listen and choose
 
 1. Mai gets up at **(a)** 5.00 **(b)** 5.30 **(c)** 6.30
@@ -567,15 +621,36 @@ every day, what you do at the weekend, and how you feel about it.
 
 *(92 words)*
 
-#### The structure to copy
+#### Plan it — 5 questions your paragraph has to answer
 
-| Part | What goes in it |
+Cover the finished paragraph above. Answer in note form, in your own words.
+
+| The question | Your answer — notes, in your own words |
 | --- | --- |
-| **Topic sentence** | Say that you have jobs at home — set the scene in one line |
-| **Every day** | Two or three daily jobs — use *every morning, before school, after dinner* |
-| **At the weekend** | One bigger or different job — use *at the weekend, on Sundays* |
-| **Someone else** | A job you do **with** or **for** another person in the family |
-| **Closing feeling** | How you feel about it, or what you are still learning |
+| What is the one thing this paragraph is about? | |
+| Two or three jobs you do daily — and when? | |
+| One bigger or different job — and when? | |
+| One job you do **with** or **for** someone else in the family | |
+| How do you feel about it, or what are you still learning to do? | |
+
+::: bridge name="Countable or uncountable is a determiner decision" trains="Grammatical Range & Accuracy" cefr="B1" marker="[S]" src="07 §4.4"
+Before you write, mark every noun in your plan **C** or **U**. That decision is
+what then fixes *a / an / the / some / much / many / no article at all*.
+
+This matters more than its size in the textbook suggests. Across 500 rated IELTS
+scripts, **determiners were the single largest error category at every level
+from the middle of the scale to the top**, and the category that shrank most as
+scripts improved — from 18.7% of all errors down to 4.7%. No other structure in
+the grade-8 syllabus attacks a bigger target.
+
+Two honest limits. That study did not break determiner errors down by
+countability, so the step from *this* lesson to *that* finding is our own
+reasoning. And the finding comes from a single source that was not
+independently re-checked.
+
+> **Tiếng Việt:** Đánh dấu **đếm được (C)** hay **không đếm được (U)** cho mọi
+> danh từ trước khi viết — quyết định đó chi phối toàn bộ mạo từ và lượng từ.
+:::
 
 #### Checklist — tick before you finish
 

@@ -494,7 +494,8 @@ check three things:
 - Did you say **mine, hers, theirs** with no noun after them?
 - Did you stress the last syllable in *Vietnamese*, *Japanese*, *guarantee*?
 
-Repeat Step 2 until you can speak for a full minute without a long pause.
+Repeat Step 2 until you can speak for a full minute with your pauses falling
+between stages rather than inside a sentence.
 
 ---
 
@@ -535,6 +536,15 @@ Repeat Step 2 until you can speak for a full minute without a long pause.
 > your grandchildren talk to each other? The best answers go on our website in
 > September.
 
+> **Before you check — how sure are you?** Mark each answer **●** if you are
+> sure and **○** if you are not, *before* you look at the key. Then count how
+> many of each you got right. If the **●** answers are not clearly better than
+> the **○** ones, the feeling of certainty is not yet telling you anything —
+> which is more useful to know than the score. Unit 1 explains why.
+>
+> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
+> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+
 ### 6.1 Listen and choose
 
 1. The exhibition is on the **(a)** ground floor **(b)** second floor **(c)** fourth floor
@@ -551,6 +561,24 @@ Repeat Step 2 until you can speak for a full minute without a long pause.
 3. Room Three is the ____________ room, and it is the loudest one.
 4. In Room Four the walls are ____________.
 5. The best answers go on the website in ____________.
+
+::: bridge name="Open → stand → close, out loud, with an audible pause at each turn" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
+The schema you named in Unit 6, spoken this time. In the pros-and-cons pair work:
+
+1. **Open** — *"I want to talk about video calls with family."* — **pause.**
+2. **Stand** — *"I think they help more than they hurt."* — **pause.**
+3. **Close** — *"So that is why I would keep them."*
+
+The pause is not hesitation and must not be hidden. The official coherence
+indicator credits "clear marking (**with appropriate use of pausing, and spoken
+discourse markers and fillers**) of stages in a discussion, narration or
+argument". A deliberate silence at a stage boundary is **credited behaviour**.
+A silence in the middle of a clause is not the same thing, and this is the
+distinction worth practising.
+
+> **Tiếng Việt:** Nói theo ba bước, **dừng rõ** giữa mỗi bước. Dừng ở ranh giới ý
+> là **điểm cộng**; dừng giữa câu thì không.
+:::
 
 ### Writing — A descriptive paragraph
 
@@ -570,16 +598,41 @@ what you see and hear, not only what you think.
 
 *(97 words)*
 
-#### The structure to copy
+#### Plan it — 6 questions your paragraph has to answer
 
-| Part | What goes in it |
+Cover the finished paragraph above. Answer in note form, in your own words.
+
+| The question | Your answer — notes, in your own words |
 | --- | --- |
-| **Topic sentence** | Name the thing and say why it matters to you |
-| **When and where** | Use *in / on / at* — a day, a time, a place |
-| **What you see** | One or two visual details: the screen, the light, the room behind |
-| **What you hear** | Voices, delay, background noise |
-| **A problem** | Something that goes wrong — freezing, bad connection |
-| **Closing feeling** | One short sentence. Do not start a new topic. |
+| What is this paragraph about, and why does it matter to you? | |
+| When and where — and which of *in / on / at* does each one take? | |
+| What you **see**: one or two visual details | |
+| What you **hear**: voices, delay, background noise | |
+| What goes wrong | |
+| The closing feeling — one sentence, and no new topic | |
+
+::: bridge name="Prepositions, tracked the way Unit 5 tracks articles" trains="Grammatical Range & Accuracy" cefr="B1" marker="[INF]" src="07 §8.2"
+Same machinery as Unit 5, second structure. On your finished paragraph:
+
+> **Prepositions correct in ___ of ___ places that required one.**
+
+A fraction, not a mark. And the same reading rule applies: at this level the
+fraction moves around, and going backwards for a while while your range grows is
+what progress looks like.
+
+Prepositions earn this because they are the **second-largest** error category at
+every level from the middle of the IELTS scale upward — 16.2% of all errors
+falling to 5.2% — right behind determiners.
+
+**This one is our own reasoning and is labelled that way.** The
+count-in-obligatory-contexts method is recommended for "named structures", and
+the structures actually named are third-person `-s` and determiners. **No source
+tracks prepositions this way.** We extended it because the error table puts
+prepositions second; nobody has checked whether it works.
+
+> **Tiếng Việt:** Ghi kết quả dạng **phân số**, giống Unit 5. Đây là **suy luận
+> của chúng tôi**, chưa có nguồn nào kiểm chứng cách áp dụng này cho giới từ.
+:::
 
 #### Checklist — tick before you finish
 

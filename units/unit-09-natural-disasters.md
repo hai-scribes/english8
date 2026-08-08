@@ -536,9 +536,9 @@ check three things:
   or *were*?
 - Did you stress the right syllable in *disˈaster*, *deˈstruction*, *eˈvacuate*
   and *ˈhurricane*?
-- Could you speak for a whole minute without a long pause?
+- Did you pause **at each new stage** of the report, and not inside a sentence?
 
-Repeat Step 2 until the report runs from start to finish without stopping.
+Repeat Step 2 until the report runs clearly from start to finish.
 
 ---
 
@@ -584,6 +584,15 @@ Repeat Step 2 until the report runs from start to finish without stopping.
 >
 > We will be back with another bulletin at six in the morning.
 
+> **Before you check — how sure are you?** Mark each answer **●** if you are
+> sure and **○** if you are not, *before* you look at the key. Then count how
+> many of each you got right. If the **●** answers are not clearly better than
+> the **○** ones, the feeling of certainty is not yet telling you anything —
+> which is more useful to know than the score. Unit 1 explains why.
+>
+> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
+> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+
 ### 6.1 Listen and choose
 
 1. The storm is expected to arrive **(a)** tonight **(b)** tomorrow morning **(c)** on Thursday
@@ -599,6 +608,24 @@ Repeat Step 2 until the report runs from start to finish without stopping.
 3. While the reporter ____________, a roof sheet came off in the wind.
 4. Schools in the ____________ districts will be closed tomorrow and Thursday.
 5. The next bulletin is at ____________ in the morning.
+
+::: bridge name="Same ninety seconds, more facts in it" trains="Listening" cefr="B1" marker="[T2]" src="03 §2.1"
+When you re-record or re-read this unit's bulletin for extra practice, do not
+reach for harder words. **Pack more separate facts into the same ninety
+seconds** — a second river, another road closure, one more time.
+
+The research reason is a neat one: analysing what makes IELTS Listening Part 4
+hard, the investigator concluded that "it is **not the duration** of the
+recording that creates difficulty but the **density of the information** that it
+includes". So a grade-8 listening can be made harder in the IELTS direction
+without raising its vocabulary level at all — which is exactly what you want at
+this stage, since the words are not the thing you are training here.
+
+Tier-2 research on what makes items difficult, not a rule of the test.
+
+> **Tiếng Việt:** Muốn bài nghe khó hơn, hãy **nhồi thêm thông tin** vào cùng 90
+> giây — **đừng** dùng từ khó hơn. Độ khó nằm ở mật độ thông tin, không ở độ dài.
+:::
 
 ### Writing — Instructions: flood safety
 
@@ -636,14 +663,44 @@ and **after** a flood.
 
 *(99 words)*
 
-#### The structure to copy
+#### Plan it — 5 questions your instructions has to answer
 
-| Part | What goes in it |
+Answer in note form. Instructions are read by someone in a hurry, so every
+line has to earn its place.
+
+| The question | Your answer — notes, in your own words |
 | --- | --- |
-| **Title** | What the instructions are for |
-| **Before** | 3 instructions — listening, packing, agreeing a plan |
-| **During** | 3 instructions — including one *Never…* |
-| **After** | 3 instructions — water, cleaning, reporting damage |
+| What are these instructions for? | |
+| **Before** — three steps: listening, packing, agreeing a plan | |
+| **During** — three steps, one of them a *Never…* | |
+| **After** — three steps: water, cleaning, reporting damage | |
+| Which **one** of the three stages matters most, and why? | |
+
+::: bridge name="After the three stages, one sentence saying which matters most" trains="Task Achievement" cefr="B1" marker="[C] 2-1" src="05 §2.2"
+Your instructions run *before → during → after*. Add **one** sentence at the end:
+
+> Of the three stages, the preparation before the storm matters most, because
+> nothing you do afterwards can replace it.
+
+That single sentence is a comparison, and comparison is the one clause the IELTS
+Task 1 rubric asks for on **every** visual genre — the instruction "make
+comparisons where relevant" appears word-for-word on all three official sample
+tasks, including the process diagram. Your instructions genre is otherwise
+sequence-only, so this is the cheapest possible way to train the clause the task
+always wants. It also reuses Unit 2's comparative grammar, so it costs no new
+language.
+
+The finding was checked by a three-vote panel and sustained **2–1, not
+unanimously**, and no map task appears in the official sample set at all.
+
+**A note on where this genre actually leads.** Writing instructions trains
+sequencing and procedural language, which feeds **Academic** Task 1
+process-diagram description. It does **not** train General Training Task 1 — that
+task is a letter, and only a letter.
+
+> **Tiếng Việt:** Thêm **một** câu so sánh ở cuối: giai đoạn nào quan trọng nhất
+> và vì sao. Đây là mệnh đề mà đề IELTS Task 1 luôn yêu cầu.
+:::
 
 #### Checklist — tick before you finish
 
@@ -835,7 +892,8 @@ and that is what saves lives.
 
 **Speaking** Answers will vary. Check: at least three past continuous verbs with
 the correct *was/were*, correct stress on *disˈaster, deˈstruction, eˈvacuate,
-ˈhurricane*, and one continuous minute of speech with no long pause.
+ˈhurricane*, and pauses that fall at stage boundaries rather than inside a
+sentence.
 
 ### Lesson 6
 

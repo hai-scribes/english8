@@ -473,9 +473,9 @@ check three things:
 - Did you get **a/an/the/no article** right in front of each noun? Listen
   especially for general statements — *Customs*, not *The customs*.
 - Did you keep /n/ and /ŋ/ apart in words like *thin*, *sun*, *thing*, *gong*?
-- Could you keep the dialogue going for one minute without a long pause?
+- Did your pauses fall **between** turns rather than inside a sentence?
 
-Repeat Step 2 until all six exchanges run without stopping.
+Repeat Step 2 until all six exchanges run clearly.
 
 ---
 
@@ -513,6 +513,15 @@ Repeat Step 2 until all six exchanges run without stopping.
 > village will train its crew for weeks.
 >
 > Next week: a festival with no music at all.
+
+> **Before you check — how sure are you?** Mark each answer **●** if you are
+> sure and **○** if you are not, *before* you look at the key. Then count how
+> many of each you got right. If the **●** answers are not clearly better than
+> the **○** ones, the feeling of certainty is not yet telling you anything —
+> which is more useful to know than the score. Unit 1 explains why.
+>
+> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
+> cho từng câu, rồi đếm số câu đúng của mỗi loại.
 
 ### 6.1 Listen and choose
 
@@ -557,16 +566,60 @@ what **not** to do.
 
 *(86 words)*
 
-#### The structure to copy
+#### Plan it — 5 questions your email has to answer
 
-| Part | What goes in it |
+Cover the finished email above. Answer in note form, in your own words.
+
+| The question | Your answer — notes, in your own words |
 | --- | --- |
-| **Greeting** | *Hi [name],* |
-| **Opening line** | Say you are glad they are coming; announce the advice |
-| **The dos** | Two or three things to **do** — start with *Do…* or *You're supposed to…* |
-| **The don'ts** | Two things **not** to do, with a short reason |
-| **One last tip** | Something small and friendly |
-| **Sign-off** | *See you soon,* / *Best wishes,* + your name |
+| Who is coming, and what are they coming to? | |
+| Two or three things they **should** do | |
+| Two things they should **not** do — and the reason for each | |
+| One small, friendly tip that is not a rule | |
+| How do you close a message to someone you know but are not close to? | |
+
+::: bridge name="Articles are a spine, not a single lesson" trains="Grammatical Range & Accuracy" cefr="B1" marker="[S]" src="07 §4.4"
+This is, on the evidence, the highest-leverage grammar lesson in the whole
+twelve-unit course — and one unit is not proportionate to it. So it does not end
+here. **Every writing task from Unit 6 to Unit 12 carries a five-item article
+check**, and this is where that starts.
+
+The reason is a measurement. Across 500 rated IELTS scripts totalling 144,671
+words, determiners were the largest error category at every level from the
+middle of the scale upward, and the one that improved most across the range:
+18.7% → 14.2% → 12.8% → 8.0% → 4.7% of all errors. The knowledge base's verdict
+is quoted rather than paraphrased: *"treat it as a spine, not a one-off."*
+
+This rests on one source that was not independently re-checked.
+
+> **Tiếng Việt:** Mạo từ là **trục chính**, không phải một bài lẻ. Từ Unit 6 trở
+> đi, mỗi bài viết đều có phần kiểm tra 5 mạo từ.
+:::
+
+::: bridge name="Report it as a fraction, not as a mark" trains="Grammatical Range & Accuracy" cefr="B1" marker="[S/NS]" src="07 §8.2"
+When you check your email, do not give yourself a score. Count instead:
+
+> **Articles supplied in ___ of ___ places that required one.**
+
+Find every place an article was obligatory, then count how many you actually
+supplied. That fraction is the measurement — not a percentage, not a grade.
+
+And read it correctly, because this is the part that misleads people. At the
+level you are working at, **the fraction is expected to wobble, and a rising
+error rate is a sign of progress, not of decline.** The CEFR's own reference
+volume states it plainly: "inaccuracy increases at around B1 as the learner is
+beginning to use language more independently and creatively." When you start
+attempting harder sentences, you make more mistakes in them. That is what moving
+up looks like. A tool that told you "your accuracy got worse" would be wrong
+about exactly the transition you are making.
+
+This method is quoted from a source whose matching verification did **not** hold
+— it is well evidenced but singly sourced, and weaker than a verified claim.
+
+> **Tiếng Việt:** Ghi kết quả dạng **phân số** (đúng ___/___ vị trí bắt buộc),
+> không phải điểm số. Ở trình độ này, **tỉ lệ lỗi tăng lên là dấu hiệu tiến bộ**
+> — vì bạn đang thử những câu khó hơn.
+:::
 
 #### Checklist — tick before you finish
 

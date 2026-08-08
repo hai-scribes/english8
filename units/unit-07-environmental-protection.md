@@ -179,6 +179,24 @@ Read aloud three times, faster each time. Record yourself if you can.
 
 ---
 
+::: bridge name="Same drill as Unit 6 — but the support here is weaker, and this says so" trains="Pronunciation" cefr="A2" marker="[S]" src="07 §5.5.3"
+Work /bl/ and /kl/ the way you worked /br/ and /pr/ in Unit 6: **the voice and
+the puff of air on the first consonant**, not the cluster.
+
+The honest difference, stated rather than borrowed: the Vietnamese study behind
+the Unit 6 framing tested five onset clusters — /br/, /kr/, /pr/, /st/, /tr/.
+**/bl/ and /kl/ were not among them.** Applying its finding here is an extension
+from /kr/, not a direct result, and this unit does not get to reuse Unit 6's
+warrant as if it were its own.
+
+What the study does establish, for the clusters it did test, is that the dominant
+error is feature change on the plosive (77.4%) rather than deletion (22.2%). One
+source, 36 learners, not independently re-checked.
+
+> **Tiếng Việt:** Cách luyện giống Unit 6, nhưng bằng chứng ở đây **yếu hơn**:
+> nghiên cứu gốc không kiểm tra /bl/ và /kl/, chỉ suy rộng từ /kr/.
+:::
+
 ## Lesson 3 — A Closer Look 2
 
 ### Grammar — Complex sentences with time clauses
@@ -450,9 +468,9 @@ check three things:
 - Did you keep the **present simple** inside every time clause, with no *will*?
 - Did you pronounce /bl/ and /kl/ clearly in words like *problem* and *climate*,
   with no extra vowel in the middle?
-- Could you speak for 45 seconds without a long pause?
+- Did your pauses fall **between** points rather than inside a sentence?
 
-Repeat Step 2 until you can answer all five without stopping.
+Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ---
 
@@ -490,6 +508,15 @@ Repeat Step 2 until you can answer all five without stopping.
 > photograph, note the date, and tell an adult. Young people notice these
 > things first.
 
+> **Before you check — how sure are you?** Mark each answer **●** if you are
+> sure and **○** if you are not, *before* you look at the key. Then count how
+> many of each you got right. If the **●** answers are not clearly better than
+> the **○** ones, the feeling of certainty is not yet telling you anything —
+> which is more useful to know than the score. Unit 1 explains why.
+>
+> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
+> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+
 ### 6.1 Listen and choose
 
 1. Hoa works for **(a)** a school **(b)** a water testing laboratory **(c)** a factory
@@ -507,6 +534,23 @@ Repeat Step 2 until you can answer all five without stopping.
 3. Villagers who use the river for washing get ____________ problems.
 4. Never pour oil or ____________ down a drain.
 5. Take a photograph, note the ____________, and tell an adult.
+
+::: bridge name="Two cause-and-result sentences on what you just heard" trains="Grammatical Range & Accuracy" cefr="B1" marker="[Q]" src="05 §2.6"
+After the listening, before the notice: write **two** sentences, each linking one
+named cause from the recording to one named effect. Use *because*, *as a result*
+or *this causes*.
+
+> Factories release waste into the river. **As a result,** fish die downstream.
+
+Cause-and-result is one of three language systems the British Council's own
+teaching material targets for describing a process — alongside purpose (*to*,
+*so that*, *in order to*) and relative clauses — and it pitches them at just
+above the level you are working at. The listening you have already done is about
+causes and effects; the only thing being added is the clause that names the link.
+
+> **Tiếng Việt:** Viết **hai** câu nối một nguyên nhân với một kết quả từ bài
+> nghe, dùng *because / as a result / this causes*.
+:::
 
 ### Writing — A notice
 
@@ -554,17 +598,47 @@ back at the friendly email you wrote in Unit 1 and notice the difference.
 
 *(118 words)*
 
-#### The structure to copy
+#### Plan it — 6 questions your notice has to answer
 
-| Part | What goes in it |
+A notice is read standing up, once. Answer these in note form; anything
+that does not answer one of them does not belong on the notice.
+
+| The question | Your answer — notes, in your own words |
 | --- | --- |
-| **Heading** | The word **NOTICE**, then the title of the event |
-| **Who + what** | Who is inviting, who is invited, what the event is |
-| **When + where** | Speaker, date, time, place — one short labelled line each |
-| **What to bring / do** | Notebook, question, gloves; any preparation needed |
-| **How to sign up** | The deadline and who to tell |
-| **Contact line** | Where to ask for more information |
-| **Signature** | The name of the club or the person in charge |
+| What is the event, and who is it for? | |
+| When and where — the facts a reader must not have to hunt for | |
+| What should they bring or prepare? | |
+| How do they sign up, and by when? | |
+| Who do they ask if something is unclear? | |
+| Whose notice is this? | |
+
+::: bridge name="Write the same three facts twice, and name what changed" trains="Lexical Resource" cefr="B1" marker="[SPEC]" src="07 §4.6"
+Five minutes, after the notice is finished. Take **three facts** from it and
+write them again as a message to a friend. Then write one line naming what
+changed — word choice, sentence length, what you left out.
+
+> *Notice:* Volunteers should assemble at the main gate by 07:00.
+> *Message:* Meet me at the gate at 7 — don't be late!
+
+Style, formal against informal, is a named indicator inside Lexical Resource, and
+audience-appropriate register is what this unit's notice genuinely trains.
+
+**This one is untested and is labelled as such.** No source in the knowledge base
+tries a paired-register exercise and measures anything. The related idea — saying
+one thing several ways to build flexibility — is grounded in descriptor wording,
+not in any study that taught it and checked. Do it because it is interesting and
+cheap, not because it is proven.
+
+**And one thing this notice is not.** It does **not** train IELTS General
+Training Writing Task 1. That task admits exactly one genre — a letter to a named
+recipient, with a salutation. A notice is neither. What the notice trains is
+register and concision, plus familiarity with a text type that appears in GT
+*Reading*.
+
+> **Tiếng Việt:** Viết lại **ba** thông tin dưới dạng tin nhắn cho bạn, rồi nêu
+> **điều gì đã thay đổi**. Bài này **chưa có bằng chứng** — làm vì hữu ích, không
+> phải vì đã được chứng minh.
+:::
 
 #### Checklist — tick before you finish
 

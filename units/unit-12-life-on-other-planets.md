@@ -201,6 +201,31 @@ normal speed. Record yourself and check that the last item really falls.
 
 ---
 
+::: bridge name="A list read aloud is chunking in miniature" trains="Pronunciation" cefr="B1" marker="[INF]" src="07 §5.2"
+Once the list intonation is comfortable, take the same contour discipline off the
+list and onto real description. Say your imaginary planet in **three or four
+deliberate chunks**, with an audible pause between them:
+
+> There are creatures on Verdia ↗ | about a metre tall ↗ | with soft blue-grey
+> skin ↘
+
+Same physical drill as the list. Different material.
+
+Why it is worth the extra five minutes: when researchers measured which
+phonological features separate weaker from stronger speakers, **chunking loaded
+highest of all** (.745), just ahead of intonation (.735) and well ahead of
+individual vowel and consonant errors (.551). It is also the first feature named
+in the pronunciation descriptors, and a stage-marking pause is separately
+credited under coherence.
+
+**The extension itself is our own reasoning.** The value of chunking is sourced;
+no source tests whether a list-intonation drill transfers to discourse chunking.
+
+> **Tiếng Việt:** Nói mô tả theo **3–4 cụm**, dừng rõ giữa các cụm — dùng đúng
+> ngữ điệu vừa luyện ở bài liệt kê. Việc **mở rộng** từ liệt kê sang mô tả là suy
+> luận của chúng tôi, chưa được kiểm chứng.
+:::
+
 ## Lesson 3 — A Closer Look 2
 
 ### Grammar — Reported speech: questions
@@ -515,6 +540,31 @@ Find a word or phrase in the reading that means:
 4. narrow paths cut by flowing water → _______________
 5. keeping something safe from harm → _______________
 
+::: bridge name="Only what the text says — and space is the hardest place to obey that" trains="Reading" cefr="B1" marker="[Q]" src="04 §4.2"
+Go back to exercise **5.1** and re-answer it under one extra rule: **you know
+nothing about space.** For each statement, the only question is whether *this
+passage* says it, contradicts it, or neither.
+
+This unit is the right place for the drill precisely because you *do* arrive
+knowing things about Mars — which is the trap. Both examining boards state the
+rule without hedging: "students need to understand that any knowledge they bring
+with them from outside the passage **should not play a part** when deciding on
+their answers", and, twice over, "the answer is always in the text" / "Do not use
+your own knowledge about the topic." An official worked example marks an item
+**Not Given** *because* the candidate happens to know the fact from elsewhere.
+
+**Two things not to believe about this task type.** Not Given is not a harder
+kind of logic — the boards state that True/False/Not Given and Yes/No/Not Given
+"can be answered using the SAME strategy", and the difference between them is
+what the statement is *about*, not how you reason. And the vocabulary is not the
+obstacle: IELTS glosses technical words, so "all the words you will need… will be
+given in the text".
+
+> **Tiếng Việt:** Trả lời **chỉ dựa vào bài đọc** — kiến thức bên ngoài của bạn
+> không được tính. Not Given **không** khó hơn về mặt logic; chỉ khác ở chỗ câu
+> hỏi hướng vào đâu.
+:::
+
 ### Speaking — What does a planet need for life?
 
 > **Working alone:** you have no partner, so do this in three steps. It still
@@ -540,9 +590,9 @@ check three things:
 
 - In your list, did every item **except the last** rise ↗, and the last one **fall ↘**?
 - Did you use at least four words from the Lesson 2 vocabulary table?
-- Could you speak for 45 seconds without a long pause?
+- Did your pauses fall **between** points rather than inside a sentence?
 
-Repeat Step 2 until you can answer all five without stopping.
+Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ---
 
@@ -581,6 +631,15 @@ Repeat Step 2 until you can answer all five without stopping.
 > creatures were intelligent. She said they build nothing and say nothing — but
 > they always know when a storm is coming, and no scientist on Verdia can
 > explain how.
+
+> **Before you check — how sure are you?** Mark each answer **●** if you are
+> sure and **○** if you are not, *before* you look at the key. Then count how
+> many of each you got right. If the **●** answers are not clearly better than
+> the **○** ones, the feeling of certainty is not yet telling you anything —
+> which is more useful to know than the score. Unit 1 explains why.
+>
+> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
+> cho từng câu, rồi đếm số câu đúng của mỗi loại.
 
 ### 6.1 Listen and choose
 
@@ -625,25 +684,46 @@ they look like, how they live, and one strange thing about them.
 
 *(86 words)*
 
-#### The structure to copy
+#### Plan it — 5 questions your paragraph has to answer
 
-| Part | What goes in it |
+Cover the finished paragraph above. Answer in note form, in your own words.
+
+| The question | Your answer — notes, in your own words |
 | --- | --- |
-| **Topic sentence** | Name the planet and the creatures; give one strong first impression |
-| **Body 1 — appearance** | Size, skin, eyes, limbs — use adjectives before the noun |
-| **Body 2 — why they look like that** | Link one feature to the planet (*because the surface is always dark…*) |
-| **Body 3 — behaviour** | How they move, eat, communicate |
-| **Final touch** | One strange or memorable detail |
+| Which planet, which creatures — and one strong first impression | |
+| Appearance: size, skin, eyes, limbs | |
+| **Why** do they look like that? Link one feature to the planet itself | |
+| How do they move, eat, communicate? | |
+| One strange detail worth remembering | |
 
-#### Useful language
+#### Words you might need
 
-| Function | Phrases |
+Content words only — measurements and descriptions you can combine yourself.
+There is no list of ready-made sentences here, and there is not one anywhere
+else in this course either.
+
+| | |
 | --- | --- |
-| **Size** | about a metre tall · no bigger than a cat · twice the height of a human |
-| **Appearance** | soft blue-grey skin · enormous black eyes · four thin arms |
-| **Comparing** | like living carpets · rather like a bird, but without feathers |
-| **Cause** | because the star is weak · so they have no need for eyes |
-| **Listing** | They move ↗slowly, they ↗hum, and they ↘glow. |
+| **Size** | a metre tall · no bigger than a cat · twice the height of a human |
+| **Surface** | soft · blue-grey · scaled · translucent · ridged |
+| **Body parts** | limbs · antennae · a single eye · four thin arms |
+| **Movement** | drift · glide · hum · pulse · glow |
+
+::: bridge name="One sentence that carries the whole paragraph" trains="Coherence & Cohesion" cefr="B1" marker="[Q]" src="05 §2.5"
+Last unit, same check as Unit 2 — this time on a description rather than an
+opinion. Write the one sentence a reader who read nothing else would still have
+to be given, then make every other sentence serve it.
+
+Descriptions are where this slips most easily, because each new detail feels like
+it earns its place on its own. It does not: it earns its place by supporting the
+first impression you opened with. The skill has a name in IELTS Writing — the
+*overview* — and it is described as a summarising skill rather than a slot to
+fill: given five facts, produce the one sentence a reader who reads nothing else
+should get (Writing descriptors, **[2023]** version).
+
+> **Tiếng Việt:** Viết **một câu** mang toàn bộ ý đoạn văn, rồi để mọi câu còn
+> lại phục vụ nó. Với văn miêu tả, đây là chỗ dễ trượt nhất.
+:::
 
 #### Checklist — tick before you finish
 

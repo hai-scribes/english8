@@ -488,9 +488,9 @@ check three things:
 - Did you use **-er** with short adverbs and **more** with *-ly* adverbs — and
   never both together?
 - Did you say *better* and *worse*, not *more good* / *more bad*?
-- Could you speak for 45 seconds without a long pause?
+- Did your pauses fall **between** points rather than inside a sentence?
 
-Repeat Step 2 until you can answer all five without stopping.
+Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ---
 
@@ -528,6 +528,15 @@ Repeat Step 2 until you can answer all five without stopping.
 > Would I move back? I do not know. I think I would miss the fields more than I
 > ever missed the city.
 
+> **Before you check — how sure are you?** Mark each answer **●** if you are
+> sure and **○** if you are not, *before* you look at the key. Then count how
+> many of each you got right. If the **●** answers are not clearly better than
+> the **○** ones, the feeling of certainty is not yet telling you anything —
+> which is more useful to know than the score. Unit 1 explains why.
+>
+> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
+> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+
 ### 6.1 Listen and choose
 
 1. Hoa moved to the village **(a)** last year **(b)** two years ago **(c)** when she was a small child
@@ -561,15 +570,56 @@ adverbs.
 
 *(99 words)*
 
-#### The structure to copy
+#### Plan it — 5 questions your paragraph has to answer
 
-| Part | What goes in it |
+Cover the finished paragraph above. Answer these in note form, in your
+own words. The plan is yours; the sentences come afterwards.
+
+| The question | Your answer — notes, in your own words |
 | --- | --- |
-| **Opening sentence** | Say which place you are describing and how you know it |
-| **Likes (2–3 sentences)** | *What I like most is…* + a comparative adverb |
-| **Turning point** | *What I dislike is…* / *On the other hand…* |
-| **Dislikes (1–2 sentences)** | Be concrete — a distance, a time, a missing thing |
-| **Closing sentence** | Your overall feeling — *Even so…* / *All the same…* |
+| Which place are you describing, and how do you know it? | |
+| What is the **one** thing you like most about it? | |
+| What is the **biggest** single difference between it and where you live? | |
+| What is the one thing you dislike — a distance, a time, a missing thing? | |
+| Having said both, what is your overall feeling? | |
+
+::: bridge name="The one sentence a reader who reads nothing else should get" trains="Coherence & Cohesion" cefr="B1" marker="[Q]" src="05 §2.5"
+**Before you draft:** write the single sentence that a reader who read nothing
+else would still have to be given. That is your topic sentence.
+
+**After you draft:** read each remaining sentence and ask whether it supports
+that one. Delete or rewrite any that does not.
+
+This is one skill wearing two hats. In IELTS Writing it is called the
+*overview*, and it is not a paragraph slot to be filled — it is the ability to
+be given five facts and produce the one sentence that carries them. Paragraphing
+itself sits inside Coherence & Cohesion, and examiner comments on real scripts
+name it as the limiter again and again (Writing descriptors, **[2023]** version).
+
+> **Tiếng Việt:** Trước khi viết, hãy viết **một câu** mà người chỉ đọc đúng câu
+> đó vẫn nắm được ý chính. Viết xong, kiểm tra từng câu còn lại: câu nào không
+> phục vụ câu chủ đề thì sửa hoặc bỏ.
+:::
+
+::: bridge name="One comparison, highlighted — not a list of differences" trains="Task Achievement" cefr="B1" marker="[Q]" src="02 §2.1"
+In exercise **3.4** and again in your paragraph, give the **biggest** difference
+between the town and the village, stated once and clearly — instead of three
+parallel comparisons of equal weight.
+
+Why one and not three: the criterion that governs comparison asks for
+"comparing or contrasting… by adequately **highlighting** the identifiable
+trends, principal changes or differences… **rather than mechanical description
+reporting detail**" (Writing descriptors, **[2023]** version). "Mechanical" is
+the word that recurs in examiner comments on scripts held down at the middle of
+the scale. Three tidy comparisons is exactly what mechanical looks like.
+
+That this transfers from a grade-8 comparative-adverb drill to the IELTS task is
+our own reasoning, not something a source states — which is why it is marked as
+inference below.
+
+> **Tiếng Việt:** Hãy nêu **một** khác biệt lớn nhất, thật rõ — đừng liệt kê ba
+> khác biệt ngang nhau. Tiêu chí chấm yêu cầu *làm nổi bật*, không phải *liệt kê*.
+:::
 
 #### Checklist — tick before you finish
 
