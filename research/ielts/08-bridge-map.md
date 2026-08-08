@@ -849,7 +849,7 @@ Speculating, analysing and justifying are what Part 3 officially rewards (`06`
 **[T2]**. U10's pros-and-cons pair task and U12's habitability discussion touch
 the edge of it; neither can carry it. Deferred to §6.
 
-### 5.4 Syllable-final consonants — the syllabus's largest evidence-backed phonology gap
+### 5.4 Syllable-final consonants — the best-evidenced *difficulty*, and a syllabus change that was tested and not supported
 
 *Rewritten 2026-08-08. This section previously read "Vietnamese-L1 pronunciation
 — pending, not absent" and treated `07` §5.5 as a blocking gap. **§5.5 is now
@@ -858,9 +858,47 @@ in it is **[S]** — quoted from primary documents in the research cache, none
 through the adversarial panel — and the sample sizes are uniformly small. The
 markers below are inherited at that strength and are not upgraded.*
 
+> **⚠ Corrected 2026-08-08 (second targeted pass).** This section was headed "the
+> syllabus's largest evidence-backed **phonology gap**" and read as a standing
+> request for a coda lesson. **That overstated the evidence, and the heading has
+> been changed.** The user's condition for adding coda work to the syllabus was
+> that it be **proved helpful for reaching the top of the IELTS scale**. It was
+> tested and **not proved** (`07` §5.5.7a–§5.5.7c):
+>
+> - **No cost evidence exists.** No study, any L1, any level, relates coda
+>   *deletion* to a band, a pronunciation score, comprehensibility, or
+>   transcription intelligibility. The functional-load literature ranks **phonemic
+>   substitutions**, and a deletion is not a contrast (`07` §5.5.7a) **[S]**.
+> - **The only position-ranked study points the other way.** Bent, Bradlow &
+>   Smith (2007): "errors in word-initial position are more detrimental to
+>   intelligibility than errors in other positions", with **vowel** rather than
+>   consonant accuracy correlating with intelligibility. **N and L1 not
+>   obtainable — directional only** **[S]**.
+> - **Trainability is the decisive gate and it fails.** Saito & Plonsky (2019),
+>   77 studies: "The 95% CIs for all three subgroups involving spontaneous speech
+>   cross zero" — expert rating controlled d = 0.75 [0.42, 1.07] vs spontaneous
+>   **d = 0.40 [−0.44, 1.26]**; acoustic controlled d = 0.84 [0.45, 1.24] vs
+>   spontaneous **d = 0.24 [−0.22, 0.71]**. Lee, Jang & Plonsky (2014), 86
+>   reports, find the same asymmetry **[S]**.
+> - **The one Vietnamese trial with a spontaneous outcome was null.** Chau et al.
+>   (2022), **N = 30**, 32 h / 8 weeks, pre/post monologues, 11 NS raters: no
+>   effect of Time, F(1,28) = 1.41, p = .25, "**Strong to decisive evidence for
+>   the null hypothesis**" (Time BF₁₀ = .05). **Caveats that must travel: no
+>   control group, N = 30, beginners, probable ceiling at 81.7% mean
+>   intelligibility, and the outcome is global intelligibility not coda accuracy.
+>   It does not show that coda instruction fails** **[S]**.
+>
+> **Best-evidenced difficulty is not best-evidenced payoff.** The difficulty
+> findings below are unchanged and remain the strongest Vietnamese-L1 evidence in
+> this knowledge base. **No coda upgrade is recommended on current evidence, and
+> none is added to §3's per-unit table or to `curriculum/syllabus.md`.** Neither
+> is the opposite asserted: `07` §5.5.7a–c record four gaps, not a refutation.
+
 **The finding this file has to carry.** `07` §5.5.8 ranks Vietnamese-specific
-pronunciation targets for this learner population, and **rank 1 is syllable-final
-consonants, above all coda /s~z/ — which no unit in the twelve teaches.**
+pronunciation targets for this learner population, and **rank 1 by *difficulty
+and persistence* is syllable-final consonants, above all coda /s~z/ — which no
+unit in the twelve teaches.** That ordering is explicitly "ordered by difficulty
+evidence, not by demonstrated payoff" (`07` §5.5.8).
 
 The structural fact: Hanoi Vietnamese "licenses eight segments in coda position:
 three unreleased voiceless obstruents /p t k/ …, three nasals /m n ŋ/, and two
@@ -888,21 +926,46 @@ advanced majority.**
 | U9–U12 | Word stress, sentence stress, intonation | No |
 
 `07` §5.5.8's verdict is quoted rather than paraphrased: "**The best-evidenced
-Vietnamese difficulty in this document has no lesson.**" `07` §8.3 makes it the
-first of its four shippable Vietnamese targets (VN-1) and says the same thing:
-"Highest-value Vietnamese target in the document, and **the syllabus has no unit
-for it.**"
+Vietnamese *difficulty* in this document has no lesson.**" As amended on
+2026-08-08, that sentence is an **observation about coverage**, not a request for
+a lesson — `07` §5.5.8 now states "**no syllabus change is recommended on current
+evidence**", and `07` §8.3's VN-1 row carries the same amendment.
 
-**Why no upgrade is offered here.** Every other entry in §3 is implementable
-inside an existing lesson. This one is not: there is no unit whose phonology slot
-it could occupy without displacing a national-curriculum target this course does
-not control. Adding a coda-consonant unit is a syllabus change, and syllabus
-changes belong to §6, not to §3. Two things §3 *can* honestly do, and both are
-recorded in place: name the limit of U5's nasal contrast (§3, U5), and note that
-U8's 3SG `-s` drill attacks only the morphological half of a two-part problem
-(§3, U8) — `07` §5.5.2 establishes that the phonological and morphological causes
-are **additive and independently attackable** (interaction n.s., p = 0.519), so
-one intervention cannot cover both.
+**Why no upgrade is offered here — two independent reasons, and the second is
+now the stronger.** First, feasibility: every other entry in §3 is implementable
+inside an existing lesson and this one is not, because there is no unit whose
+phonology slot it could occupy without displacing a national-curriculum target
+this course does not control. Second, and decisively: **the evidence does not
+support the change** (the correction block above). Two things §3 *can* honestly
+do, and both are recorded in place: name the limit of U5's nasal contrast (§3,
+U5), and note that U8's 3SG `-s` drill attacks only the morphological half of a
+two-part problem (§3, U8) — `07` §5.5.2 establishes that the phonological and
+morphological causes are **additive and independently attackable** (interaction
+n.s., p = 0.519), so one intervention cannot cover both.
+
+**One alternative was proposed and is *not* adopted.** Recorded here so the
+option is not silently re-derived, and so the user can decide it rather than the
+knowledge base deciding it by omission:
+
+> **Unadopted option, pending the user's decision — [INF].** Instead of a
+> phonology lesson, teach **`-s` audibility inside the existing grammar
+> lessons**: in **U4** (plural `-s`) and **U8** (third-person `-s`), framed as
+> "the ending has to be *heard*, not just written". The reasoning is that it
+> rests on **grammar** evidence rather than phonology evidence — singular/plural
+> is the **highest-loading feature of grammatical accuracy** in Kang & Yan 2018
+> (loading **.55**, ahead of articles at **.44**; sample internally inconsistent
+> at 106 vs 118, 10 L1s, **no Vietnamese**) **[S]**, and 3SG `-s` and plural `-s`
+> are already among the accuracy targets `07` §8.2 names. **This is `08`'s own
+> reasoning; no source states the link, which is why it is [INF].**
+>
+> **It is not adopted, and it has the same defect as the phonology proposal:**
+> there is **no spontaneous-speech trainability evidence** for it either (`07`
+> §5.5.7b), and the cross-criterion premise underneath it — that raters charge an
+> inaudible ending to *grammar* — is **unexamined by anyone** (`07` §5.5.7c),
+> while the one demonstrated cross-criterion effect runs the **other** way
+> (Isaacs et al.: grammatical accuracy loading .945 on the *Pronunciation* scale).
+> **Do not implement it. Nothing has been added to §3's per-unit upgrade table or
+> to `curriculum/syllabus.md`.**
 
 **What this file may now claim, and what it still may not.** `07` §8.3's
 Vietnamese block is four rows — **three positive targets (VN-1 to VN-3) and one
@@ -934,8 +997,41 @@ misreads `06` §5; Hendrik (Germany) is limited by filler overuse and segmental
 mispronunciation, not by rhythm. And `06` §5's corpus is **four** commentaries,
 which is now what `02` says too (`09` §8.3 item 1).
 
-**Three sub-questions remain genuinely open**, and no lesson may be built on any
-of them:
+**Seven sub-questions remain genuinely open** — three about the Vietnamese
+evidence itself, and four opened on 2026-08-08 by the test of the coda-syllabus
+proposal. **No lesson may be built on any of them, and none of them may be
+asserted in the negative either:**
+
+> **GAP** — `07` §5.5.7a: **no evidence of any measurable cost to coda
+> omission.** No study, for any L1 at any proficiency, relates coda deletion to
+> an IELTS band, a pronunciation score, a comprehensibility rating or a
+> transcription-intelligibility measure. The functional-load tradition ranks
+> phonemic **substitutions** and has no rank for a deletion. **The difficulty is
+> established; the cost is not.**
+
+> **GAP** — `07` §5.5.7b: **no coda-targeted intervention study with a control
+> group and a spontaneous-speech outcome**, for Vietnamese or any other L1. The
+> general pronunciation-instruction meta-analyses (77 studies; 86 reports) find
+> gains at controlled-speech level and confidence intervals crossing zero for
+> spontaneous speech; the one Vietnamese trial (N = 30) is **uncontrolled** and
+> null. Neither "coda instruction works" nor "coda instruction fails" is asserted.
+
+> **GAP** — `07` §5.5.7c: **whether raters attribute an omitted inflectional
+> ending to *grammar* rather than to *pronunciation* is unexamined by anyone.**
+> No peer-reviewed study tests it. Kang & Yan's coding scheme makes an inaudible
+> plural a grammar error **by construction** — a fact about a research method,
+> not about examiners — and the one demonstrated cross-criterion effect runs the
+> opposite way (Isaacs et al.: grammatical accuracy loading .945 on the
+> *Pronunciation* scale). **No tool or lesson may claim that coda work buys a
+> grammar-scale improvement.**
+
+> **GAP** — `07` §5.5.7b: **whether ~14 is an appropriate age for coda
+> instruction is unknown.** Nothing addresses whether early adolescence is a
+> better or worse window for it. The critical-period literature is about **age of
+> onset and ultimate attainment in naturalistic acquisition** and **must not be
+> used to fill this gap** in a syllabus decision.
+
+The three that were already open:
 
 > **GAP** — `07` §5.5.7: **no intelligibility *ranking* of Vietnamese features
 > with an adequate sample.** The ordering above is built from *difficulty and
@@ -973,9 +1069,17 @@ of them:
   Speaking tool or rubric is built. Every speaking upgrade in §3 is drawn from
   the two criteria that *did* survive (the four-criterion architecture and the
   coherence indicators) or from clearly-labelled **[T2]** research.
-- **The vocabulary trainer's ranking function must not be built yet** — `07` §3
-  leaves the rarity-vs-formulaicity question open and `07` §8.1 forbids
-  optimising for either side.
+- **The vocabulary trainer's ranking function is no longer blocked** *(updated
+  2026-08-08)* — `07` §3 resolved rarity-vs-formulaicity by separating word-level
+  from combination-level rarity, and `07` §8.1a specifies the permitted function:
+  a coverage **eligibility gate** (K1–K4), then ranking **inside** that set by the
+  association strength of the strongest collocation an item participates in
+  (`max MI`, filtered `n > 5`, `t > 2`, tie-break dobj > amod > advmod). **Still
+  forbidden:** ranking by raw frequency band, by CEFR level, by word-list
+  membership or by diversity, and **any accuracy-scoring module**. Two caveats
+  travel with it — **no intervention study** shows that teaching high-MI
+  collocations raises a rating, and **every MI finding comes from a B2-and-above
+  population**, so grade-8 use is an extrapolation (`07` §3.6).
 
 ---
 
@@ -1033,15 +1137,22 @@ control, grammatical accuracy and phonological control (`07` §5.3, §6.3)
    heard vocabulary predicts Speaking and Listening (`07` §2.4, Milton et al.,
    N=30) **[S/NS]**. A trainer that only shows words in print trains half the
    construct. N=30 is small and `07` says so.
-4. **The rarity-versus-formulaicity question is open and must stay open.**
-   `07` §3 lays out an experimental causal finding that low-frequency words raise
-   examiner ratings (Naismith & Juffs, 47 examiners) **[V]** 3-0 against
-   observational findings that high-band lexical resource is formulaic and built
-   from high-frequency words (Read & Nation, 88 speaking tests; Banerjee, 275
-   scripts) **[S/NS]**. `07` §8.1's instruction — do not optimise for either —
-   carries forward unchanged. What **both** sides support is teaching items
-   **inside collocations**; that is the part the follow-on course can build on
-   safely.
+4. **The rarity-versus-formulaicity question is resolved — but four new gaps
+   opened with it.** *Updated 2026-08-08.* `07` §3 previously set an experimental
+   causal finding that low-frequency words raise examiner ratings (Naismith &
+   Juffs, 47 examiners) **[V]** 3-0 against observational findings that high-band
+   lexical resource is formulaic (Read & Nation, 88 speaking tests; Banerjee, 275
+   scripts) **[S/NS]**. **They were measuring different constructs**: word-level
+   rarity is weak, non-monotonic and stops discriminating at the top;
+   combination-level rarity (MI) is strong, monotonic and largest at the top
+   (Saito 2020, N = 85: bigram MI r = .734/.755 with single-word frequency n.s.;
+   Paquot 2019, 98 texts, dobj η² = .154 with **no** lexical-complexity measure
+   separating B2/C1/C2) **[S]**. A formulaic sequence *is* a rare item, counted on
+   combinations. The follow-on course may therefore rank by association strength
+   to `07` §8.1a — **but must carry that no intervention study exists, and that
+   every MI finding is from B2 upward** (`07` §3.6). What both sides always
+   supported — teaching items **inside collocations** — is unchanged and remains
+   the safest part.
 
 ---
 

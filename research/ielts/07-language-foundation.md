@@ -43,11 +43,21 @@ states the negation of a failed claim as fact either.
 ## 1. The one thing to read if you read nothing else
 
 The plan's working assumption was that band-9 Lexical Resource means *precision
-and collocation, not rare words*. **That assumption is now contested, and the
-research pass did not resolve it.** Two well-designed studies point opposite
-ways, and the disagreement is not a detail — it decides whether a vocabulary
-trainer should optimise for rarity or for chunking. §3 lays out both sides. Do
-not build the trainer's ranking function until that section has been read.
+and collocation, not rare words*. **That question was open when this file was
+written and was resolved on 2026-08-08 (§3): it was a false opposition.** Rarity
+of a *single word* and rarity of a *word combination* are different constructs.
+Word-level rarity is real, causal and small, and stops discriminating near the
+top. Combination-level rarity — association strength, MI — is strong, monotonic,
+and is the only complexity family still separating levels at the ceiling. A
+formulaic sequence *is* a rare item, measured on combinations. §8.1's ranking
+function is therefore **no longer blocked**, and §3 also corrects **two errors of
+fact** this file previously carried.
+
+A second targeted pass on the same date tested whether **syllable-final consonant
+work** should enter the syllabus, on the user's condition that it be *proved
+helpful for reaching the top of the scale*. **It was not proved** (§5.5.7a–c). No
+study relates coda omission to any score, and the trainability evidence points
+the wrong way. The difficulty finding stands; the payoff claim never existed.
 
 Everything else in this document rests on firmer ground.
 
@@ -270,20 +280,55 @@ vocabulary trainer that only ever shows words in print trains half the construct
 
 ---
 
-## 3. ⚠ The open question: rarity or collocation?
+## 3. Rarity or collocation? — resolved by separating the two measures
 
-This is the tension the plan's assumption sits on top of, and **the research
-pass did not resolve it.** Both sides are Tier 2, both peer-reviewed or
-IELTS-published, both with real samples. Presented in full because getting it
-wrong misdirects the highest-leverage tool in the roadmap.
+*Rewritten 2026-08-08 by a second, targeted gap-closure pass. This section
+previously recorded the question as **unresolved** and carried **two errors of
+fact plus one minor one**; all three are corrected in place and flagged where
+they occur. Everything added by that pass is **[S]** — retrieved and quoted from
+the primary document, **not** panel-verified. Pre-existing **[V]** and **[S/NS]**
+markers are unchanged and are not upgraded.*
 
-### Side A — sophistication (rarity) causally raises ratings
+### 3.0 The resolution — word rarity and combination rarity are different constructs
+
+**The two "sides" were measuring different things.** Rarity of a *single word*
+and rarity of a *word combination* are separate constructs, and once they are
+separated the evidence stops disagreeing. **[S]**
+
+| | **Word-level rarity** (frequency band of a lemma) | **Combination-level rarity** (association strength, MI) |
+| --- | --- | --- |
+| Relation to proficiency | Weak, **non-monotonic**, unreliable as an index | **Strong and monotonic** |
+| At the top of the scale | Stops discriminating | **Effects are largest at the top** |
+| Causal evidence | **Yes** — inserting rarer lemmas raises expert ratings | **None.** Correlational and rater-perception only |
+| Verdict | Real but small; **not** a ranking key | The only complexity family still discriminating at the ceiling |
+
+A high-MI collocation is typically **moderately frequent words in a rare,
+exclusive pairing** — *immortal souls*, not *hard work*. That is why "rare words"
+and "formulaic language" looked like rival answers: **the formulaic answer *is* a
+rarity answer, measured on combinations instead of on words.** Granger & Bestgen
+put the learner-side signature of it plainly: intermediate learners
+
+> "overuse high frequency collocations (such as *hard work*) and underuse
+> lower-frequency, but strongly associated, collocations (such as *immortal
+> souls*)"
+> ([Granger & Bestgen 2014, *IRAL* 52(3)](https://doi.org/10.1515/iral-2014-0011)) **[S]**
+
+The consequence for tooling is in §8.1, which is **no longer blocked**: rank by
+the association strength of the collocations an item participates in, not by the
+item's own frequency band.
+
+### 3.1 Side A — word-level rarity causally raises ratings, by a small amount
 
 Naismith & Juffs (2025), *Studies in Second Language Acquisition* 47, 336–360.
-Experimental: 30 versions of 3 argumentative essays (base texts at CEFR B1, B2,
-C1; all normalised to 250 words, single prompt), rated by **47 current or former
-IELTS examiners**, with rater severity controlled via many-facet Rasch
-measurement before regression.
+Experimental: 30 versions of 3 argumentative essays, all normalised to 250 words,
+single prompt, rated by **47 current or former IELTS examiners**, with rater
+severity controlled via many-facet Rasch measurement before regression.
+
+> **Correction, 2026-08-08.** This section previously described the three base
+> texts as "CEFR B1, B2, C1". They are **real published IELTS Task 2 scripts
+> rated band 4, 6.5 and 8**, which the authors then map onto B1/B2/C1. The
+> distinction matters: the design **does** include a genuine band-8 script, so
+> the study is not confined to mid-band material. **[S]**
 
 > "The findings revealed that the use of lower-frequency words significantly and
 > positively impacted the experts' ratings."
@@ -302,15 +347,34 @@ But read the magnitudes. In the regression on Lexical Resource fair scores: **[S
 | Task Response fair score | .883 | < .001 |
 | Grammatical Range & Accuracy fair score | .879 | < .001 |
 | Frequency [low] | .032 | < .001 |
-| Item type [collocation vs not] | –.022 | < .001 |
+| Item type [collocation vs not] | –.022 *(sum contrast — see correction below)* | < .001 |
 | **Collocational accuracy [low–high]** | **–.005** | **.293 (n.s.)** |
 
 Tukey contrasts on frequency: low vs high .050 (p < .001), mid vs high .032
-(p = .018), low vs mid .018 (n.s.). So the rarity effect is **real, causal, and
-about one-twentieth the size** of the other analytic criteria's association with
-the Lexical Resource score in the same model.
+(p = .018), low vs mid .018 (n.s.). So the word-level rarity effect is **real,
+causal, and about one-twentieth the size** of the other analytic criteria's
+association with the Lexical Resource score in the same model.
 
-### Side B — high-band lexical resource is formulaic, not rare
+> **⚠ Error corrected, 2026-08-08 — this file previously recorded the opposite of
+> the finding.** The `–.022` above is a **sum-contrast coefficient, not a
+> between-condition contrast**, and this section formerly read it as showing that
+> collocational packaging *lowered* ratings. The paper's own post-hoc says the
+> reverse: "Tukey's … col vs. non-col: Estimate **.036**, SE .006, t ratio 5.744,
+> **p = .018**", and "This effect was small but significant, resulting in
+> **higher** LR ratings when the lower-frequency lemmas were part of a
+> collocation." The authors' abstract concludes: "low-frequency words within
+> collocations are particularly salient to raters and deserving of pedagogic
+> focus."
+> ([Naismith & Juffs 2025](https://www.cambridge.org/core/journals/studies-in-second-language-acquisition/article/impact-of-collocational-proficiency-features-on-expert-ratings-of-l2-english-learners-writing/66E56E465A7FDE3C1D506B3AF5F76253)) **[S]**
+> Anything downstream that cited a negative collocation effect from this file was
+> citing a sign error. Nothing in this knowledge base now asserts one.
+
+Naismith & Juffs also tested whether the rarity effect **attenuates** near the
+top of the range. It does not: the CEFR × frequency interactions were
+non-significant (B1–C1 × freq **−.014, p = .162**; B2–C1 × freq **−.010,
+p = .240**). **[S]**
+
+### 3.2 Side B — high-band lexical resource is *also* formulaic — a two-channel finding, not a rival one
 
 Read & Nation (2006), *IELTS Research Reports* Vol. 6, Report 7. Corpus of
 **88 IELTS Speaking Tests** transcribed under operational conditions at 21 test
@@ -329,6 +393,20 @@ report is in the cache and the abstract states them verbatim:
 > noticeable amount of low-frequency words in their speech. Conversely, there
 > was little obvious use of formulaic language among Band 4 candidates."
 > ([Read & Nation 2006](https://ielts.org/researchers/our-research/research-reports/an-investigation-of-the-lexical-dimension-of-the-ielts-speaking-test)) **[S/NS]**
+
+> **⚠ Error corrected, 2026-08-08 — Read & Nation were overstated here.** This
+> section was formerly headed "high-band lexical resource is formulaic, **not**
+> rare", which is not what the report says. Verbatim from the report body
+> (RR 6/7, p. 17): "high-proficiency candidates **have available to them a wide
+> range of low frequency words** … However … such lower-frequency vocabulary does
+> not necessarily occur with high density … The sophistication of their
+> vocabulary ability **may also be reflected in** their use of formulaic
+> sequences – made up largely or entirely of high-frequency words". **[S]**
+> That is a **two-channel** finding — range *and* formulaicity — not a denial of
+> the first channel. Their actual negative result is narrower and is the quote
+> above it: **word-level lexical *statistics* do not reliably discriminate
+> bands.** That is a claim about *measures*, not about language, and it is
+> exactly what §3.0 predicts.
 
 Banerjee, Franceschina & Smith (2007), *IELTS Research Reports* Vol. 7,
 Report 5. **275 Academic Writing scripts**, L1 Chinese and L1 Spanish, bands 3–8.
@@ -359,50 +437,131 @@ test-takers, speaking. In the regression on the **Lexical Resource** sub-score,
 proportion of **K1 words** (the first 1,000 families) was a significant
 *positive* predictor (β = 0.20, p = .036). **[S]**
 
-### How to hold both
+### 3.3 The combination-level evidence — what actually resolves it
 
-They are not straightforwardly contradictory, and the honest position is that
-the evidence is **modality-split and design-split**:
+Two studies carry this, and both are **[S]**.
 
-| | Side A (rarity) | Side B (formulaicity) |
+**Saito (2020), *Language Learning***
+([PDF](https://discovery.ucl.ac.uk/10083748/1/LL2020.pdf)). **N = 85** Japanese
+speakers, **10 raters**, spontaneous **speech**. Decisive because both measures
+were computed on the *same* speakers, so the comparison is not confounded by
+sample: **[S]**
+
+| Measure | Correlation with rated proficiency (two rating sets) |
+| --- | --- |
+| **Bigram MI** (association strength) | **.734 / .755** |
+| Trigram MI | .676 / .641 |
+| **Bigram t-score** (raw co-occurrence frequency) | **−.333 / −.322** — *frequent* collocations predict **worse** ratings |
+| **Single-word frequency** | **n.s. — the only non-significant variable in the study** |
+
+Regression: **Advanced Collocation Use accounted for 35.3% / 42.8%** of rating
+variance; **One-Word Use for 4.8% / 5.9%**. With text length partialled out,
+collocation still held **17.6% / 25.5%**. **[S]**
+
+**Paquot (2019), *Second Language Research* 35(1)**
+([record](https://research.dial.uclouvain.be/handle/2078.5/178318)). **98 texts:
+B2 = 25, C1 = 62, C2 = 11** — French-L1 academic **writing**. MI computed over
+Stanford typed dependencies, so "collocation" is defined syntactically rather
+than by adjacency: **[S]**
+
+| Dependency | η² | Mean MI B2 → C1 → C2 |
 | --- | --- | --- |
-| Modality | Writing | Speaking (Read & Nation, Kang) and Writing (Banerjee) |
-| Design | Experimental, causal, manipulated | Observational, correlational |
-| Band range | B1/B2/C1 base texts | Bands 3–8, including the top |
-| Effect | Small but real | Reversal above band 6–7 |
-| N | 47 raters, 30 text versions, 1 prompt | 88 speaking tests; 275 scripts; 41 learners |
+| amod (adjective–noun) | .106 | — |
+| advmod (adverb–verb) | .118 | — |
+| **dobj (verb–object)** | **.154**; **C2–C1 = 0.40, p = .005** | **1.79 → 1.97 → 2.38** |
 
-Naismith & Juffs manipulated *mid-band* texts and measured whether examiners
-notice rarity. They do. Read & Nation and Banerjee looked at what *actually
-distinguishes the top* and found rarity stops helping there. Both can be true:
-rarity buys movement through the middle bands and stops paying at the ceiling.
+And the negative half, which is the part that matters most: **[S]**
 
-**And the collocation half of the plan's assumption is genuinely weakened.**
-Naismith & Juffs found collocational *accuracy* had no significant effect
-(estimate –.005, p = .293) — the panel put this to a vote and it errored (0-2),
-so it is unconfirmed either way. The authors themselves attribute the null to
-their design:
+> "no measure of lexical complexity distinguishes with statistical significance
+> between proficiency levels"
+
+Neither did syntactic complexity. Phraseological **diversity** was **n.s. and
+declining**, and **membership of an academic collocation list was n.s.** So in a
+study where *nothing else* separated B2/C1/C2, **association strength did** — and
+its largest step is **C1 → C2**.
+
+**Corroboration, both [S]:**
+
+- **Kim, Crossley & Kyle (2018), *Modern Language Journal* 102(1):** bigram and
+  trigram features accounted for **16.1%** and **31.0%** of proficiency variance;
+  content-word frequency added **+8.5% incremental** — i.e. word-level frequency
+  is *not* zero, it is *second*.
+- **Crossley, Salsbury & McNamara (2015):** collocation accuracy explained
+  **84%** of variance in writing and **89%** in speaking. **Read with the caveat
+  attached: predictor and outcome are both human ratings, so an unknown share of
+  those figures is rater consistency, not language.** **[S]**
+
+### 3.4 The moderators, tested
+
+| Candidate moderator | Verdict |
+| --- | --- |
+| **Measure** (word vs combination) | **This is the moderator.** §3.0 |
+| **Modality** (speaking vs writing) | **Not a moderator. Retired 2026-08-08.** This file previously ran a "Modality" row splitting the two sides; it does not survive. The strongest MI finding (Saito, r = .734/.755) is **speaking**; Crossley et al. found collocation accuracy explained *more* variance in speaking (89%) than in writing (84%); Paquot found the construct valid in writing. **[S]** |
+| **Band range** | **Partial moderator — and this file's previous conclusion was backwards for combinations.** "Rarity buys movement through the middle bands and stops paying at the ceiling" is right for **word-level** rarity and **wrong for combination-level**: Paquot's MI effects are *largest at the top* (C2–C1 dobj = 0.40, p = .005), and Naismith & Juffs found no CEFR × frequency attenuation. This corroborates `02` §3.4: **range** is already "wide" at band 8 and so cannot separate 8 from 9; **control** does — and MI is a control measure. **[S]** |
+| **Accuracy** | **Not resolved.** See §3.5. |
+| **Design** (experimental vs observational) | Still real, and still asymmetric in the unhelpful direction: the *word-level* finding is causal; **every combination-level finding is correlational.** See the first GAP in §3.6. |
+
+### 3.5 Collocational accuracy — still open, and now a three-way split
+
+Naismith & Juffs tested the accuracy question directly and found nothing:
+frequency × accuracy **.009, p = .150 (n.s.)**; main effect of accuracy
+**−.005, p = .293 (n.s.)**. The panel put the accuracy claim to a vote and it
+errored (0-2), so it is unconfirmed either way. The authors attribute both nulls
+to their design:
 
 > "These rater data further support the hypothesis that the lack of significance
 > for collocational accuracy in this study can likely be attributed to
 > experimental design." **[S]**
 
-(They excluded error gravity as a factor, used one prompt and three base texts,
-and note that some manipulated "errors" — e.g. *positive school* — may have read
-as creative rather than wrong.) Their raters' *comments* told the opposite story
-from their statistics: collocation errors were "frequently noted", and writers at
-all three levels were described as "risk takers", i.e. higher sophistication with
-lower accuracy.
+Specifically: only **six collocation errors per 250-word text**, and uniformly
+light error gravity — "the meaning remains clear in all the collocation errors,
+for example, *positive school*". **[S]** They excluded error gravity as a factor
+and used one prompt and three base texts. Their raters' *comments* told the
+opposite story from their statistics: collocation errors were "frequently noted",
+and writers at all three levels were described as "risk takers", i.e. higher
+sophistication with lower accuracy.
 
-> **GAP** — not established in this research pass: whether collocational
-> accuracy affects IELTS band outcomes. One experimental null result whose own
-> authors call it a design artefact is not evidence of no effect, and no other
-> source in this pass tested it.
+**A comparable manipulation found the opposite.** Fritz & Ruegg (2013),
+*Assessing Writing* 18(2), report **accuracy F(2,68) = 4.262, p = .013
+(significant)** and **sophistication F(2,68) = 1.68, p = .194 (n.s.)** — the
+mirror image of Naismith & Juffs. **This is second-hand: it reaches this file via
+Naismith & Juffs' discussion, and the primary was not retrieved.** **[S]**
 
-> **This decision is not yet evidence-supported.** A vocabulary trainer for this
-> project should **not** be built to optimise a rarity score, and should **not**
-> be built to optimise a collocation-accuracy score. Both would be a bet on one
-> side of an open question. §8 gives the design that survives either outcome.
+So the position is a three-way split — one null, one positive, and one pair of
+correlations (Crossley et al.) whose predictor and outcome are the same kind of
+object — **and none of the three is decisive.**
+
+### 3.6 What is still not established
+
+> **GAP** — not established: whether **teaching** high-MI collocations raises a
+> rated band. Every supporting finding in §3.3 is either correlational (Saito,
+> Paquot, Kim et al.) or a rater-perception experiment on texts **no learner ever
+> studied** (Naismith & Juffs). **No intervention study was found.** The ranking
+> function specified in §8.1 is therefore a bet on a well-evidenced *correlate*,
+> not on a demonstrated cause, and must be labelled that way wherever it is used.
+
+> **GAP** — not established: whether collocational **accuracy** affects band
+> outcomes. The evidence is a three-way split (§3.5), none of it decisive, and
+> **no study has manipulated error gravity** — the one variable both sides blame.
+> **Do not build an accuracy-scoring module** (`09` **F1**).
+
+> **GAP** — not established: **any lexical feature that separates band 8 from
+> band 9.** The nearest proxy in this literature is Paquot's C2-versus-C1 dobj
+> contrast, which rests on **n = 11 C2 texts** in **French-L1 academic writing** —
+> a different population, a different genre, and a sample too small to carry a
+> ceiling claim. Nothing here licenses a "band 9 vocabulary" statement.
+
+> **GAP** — not established: **what MI values are appropriate for A2/B1
+> learners.** Every MI finding above comes from a **B2-and-above** population
+> (Paquot B2–C2; Saito's speakers rated on advanced collocation use; Naismith &
+> Juffs' band 4–8 scripts rated by examiners). Applying an MI threshold to
+> grade-8 learners is **an extrapolation, not a finding.**
+
+**What follows for tooling.** §8.1's ranking function is **no longer blocked** —
+the measure question is resolved and the specification is written there. What
+remains forbidden is narrower and specific: no ranking by **raw frequency band**,
+no ranking by **CEFR level**, no ranking by **word-list membership**, no ranking
+by **diversity**, and **no accuracy module at all**.
 
 ---
 
@@ -1275,7 +1434,202 @@ their classification as having a strong accent." **[S]**
 > not from a Vietnamese intelligibility study. **Label it as such wherever it is
 > used.**
 
+#### 5.5.7a Is there a measurable *cost* to coda omission? No evidence, either way
+
+*Added 2026-08-08 by a second, targeted pass. The user's condition for adding
+syllable-final consonant work to the syllabus was that it be **proved helpful for
+reaching the top of the IELTS scale**. §5.5.7a–§5.5.7c are that test. It failed.
+Everything in them is **[S]**; the difficulty findings above are untouched.*
+
+**No study, for any L1, at any proficiency, relates coda *deletion* to an IELTS
+band, a pronunciation score, a comprehensibility rating, or transcription
+intelligibility.** Roughly twelve query formulations were run across OpenAlex
+full text, Semantic Scholar, Crossref and general web search. Nothing was found.
+**[S]**
+
+**Why the functional-load literature does not fill the gap.** The functional-load
+tradition — Catford (1987), Brown (1988), and its L2 testing applications
+(Munro & Derwing 2006, cited here **second-hand**; Suzukida & Saito 2019,
+N = 40 + 40) — ranks **phonemic substitutions**: how much a listener loses when
+one contrast collapses into another. **A deletion is not a contrast, so it has no
+functional-load rank at all.** Suzukida & Saito's full text contains **zero**
+instances of "deletion", "omission", "coda", "word-final" or "cluster". **[S]**
+The FL literature is therefore not silent on codas by oversight; codas are
+outside what it measures.
+
+**The one study that ranks errors by *position* points away from coda priority.**
+Bent, Bradlow & Smith (2007), in *Language Learning & Language Teaching* 17:
+
+> "errors in word-initial position are more detrimental to intelligibility than
+> errors in other positions" **[S]**
+
+and in the same study **vowel** accuracy — not consonant accuracy — correlated
+with intelligibility. **Sample size and L1 were not obtainable**, so this is
+**directional only** and must never be quoted as a magnitude. It is nonetheless
+the empirical shape sitting behind the Lingua Franca Core's permission to omit
+final clusters, already noted in §5.4 — a permission this file still declines to
+adopt, but now for a *different and weaker* reason than it gave there.
+
+> **GAP** — not established: **any cost of coda omission.** No study, any L1, any
+> level, relates coda deletion to a band, a pronunciation score, a
+> comprehensibility rating or a transcription-intelligibility measure. The
+> difficulty of coda obstruents for Vietnamese learners is well evidenced
+> (§5.5.1–§5.5.2); **what it costs the learner is not evidenced at all.** Do not
+> assert a cost, and do not assert the absence of one.
+
+#### 5.5.7b Is it trainable into spontaneous speech? The evidence points the wrong way
+
+This is the decisive gate, because a syllabus item has to survive not just
+"is it hard" but "does teaching it change what the learner does when not being
+taught".
+
+**Saito & Plonsky (2019), *Language Learning* 69(3)** — meta-analysis of **77
+studies** of instructed L2 pronunciation:
+
+> "The 95% CIs for all three subgroups involving spontaneous speech cross zero"
+> **[S]**
+
+> "the effectiveness of pronunciation teaching could be limited to L2 learners'
+> acquisition of specific segmental and suprasegmental features at a controlled
+> speech level" **[S]**
+
+The between-group figures, which must travel with the claim: **[S]**
+
+| Outcome | Controlled speech | **Spontaneous speech** |
+| --- | --- | --- |
+| Expert rating | d = **0.75** [0.42, 1.07] | d = **0.40 [−0.44, 1.26]** |
+| Acoustic measure | d = **0.84** [0.45, 1.24] | d = **0.24 [−0.22, 0.71]** |
+
+**Lee, Jang & Plonsky (2014), *Applied Linguistics* 36(3)**, an earlier
+meta-analysis over **86 reports**, found the same asymmetry: larger effects for
+"more controlled outcome measures". **[S]** Two independent meta-analyses, same
+direction.
+
+**The only Vietnamese intervention study with a spontaneous-speech outcome found
+null.** Chau, Huensch, Hoang & Chau (2022), *TESL-EJ* 25(4): **N = 30**
+Vietnamese adult EFL learners (elementary to low-intermediate), **32 hours over 8
+weeks**, segmental versus suprasegmental instruction, pre/post **monologues**
+rated by **11 native-speaker raters**.
+
+> No effect of Time, **F(1,28) = 1.41, p = .25**; "**Strong to decisive evidence
+> for the null hypothesis** … Time (BF₁₀ = .05), Group (BF₁₀ < .01), Time × Group
+> (BF₁₀ = .02)" **[S]**
+
+**Caveats that must travel with this and must never be dropped:** **no control
+group**; **N = 30**; beginners, not the population this file's other Vietnamese
+studies describe; a probable **ceiling effect** (mean intelligibility already
+81.7% at pre-test); and the outcome is **global intelligibility, not coda
+accuracy**. **It does not show that coda instruction fails.** It shows that a
+comprehensive segmental course did not move a global spontaneous measure.
+
+> **GAP** — not established: **whether coda-targeted instruction transfers to
+> spontaneous speech.** No intervention study targeting syllable-final consonants
+> with a control group and a spontaneous-speech outcome was found, for Vietnamese
+> or for any L1. The general pronunciation-instruction meta-analyses find
+> controlled-speech gains and confidence intervals crossing zero for spontaneous
+> speech; the one Vietnamese trial is uncontrolled and null. **Neither the claim
+> that coda instruction works nor the claim that it fails is asserted here.**
+
+> **GAP** — not established: **whether ~14 is an appropriate age for coda
+> instruction.** No study addresses whether early adolescence is a better or worse
+> window for it. The critical-period literature (Long 1990; DeKeyser 2000;
+> Muñoz 2008) concerns **age of onset and ultimate attainment in naturalistic
+> acquisition**; it does **not** transfer to a classroom-syllabus decision and
+> **must not be used to fill this gap.**
+
+#### 5.5.7c The cross-criterion attribution question — a real, unexamined gap
+
+The most plausible remaining argument for coda work is *cross-criterion*: that an
+inaudible inflectional `-s` is heard by an examiner as a **grammar** error rather
+than a pronunciation one, so the phonological problem is paid for on the
+Grammatical Range & Accuracy scale. **No peer-reviewed study tests this.** About
+twelve query formulations across OpenAlex full text, Semantic Scholar, Crossref
+and web search returned nothing. **[S]** It is a real and publishable gap, not a
+retrieval failure this file can route around.
+
+**One strong indirect finding exists.** Kang & Yan (2018), *Journal of Language
+Testing & Assessment* 1(1), on a Cambridge PET/FCE/CAE/CPE speaking corpus.
+**Sample size is internally inconsistent in the paper — 106 candidates per the
+abstract, 118 files per the method section; flag it wherever this is cited.** Ten
+L1s, **no Vietnamese**; two coders, ICC ≥ .89. Three things follow: **[S]**
+
+1. **Grammar was coded off orthographic transcripts verified against audio.** So
+   an **inaudible plural becomes a grammar error by construction** — the coding
+   scheme cannot do otherwise. This is evidence about **coding practice, not
+   about examiner perception**, and the study never discusses the point. Do not
+   present it as showing what examiners do.
+2. **Singular/plural errors are the highest-loading feature of grammatical
+   accuracy** in that study — loading **.55**, ahead of articles at **.44**.
+3. "Speaking performance at the C1 and C2 levels were distinguished on three
+   rating criteria **except pronunciation**", with consonant errors giving the
+   Tukey pattern `1>234; 2>4` — i.e. **C1 and C2 do not differ on pronunciation
+   at all.** Whatever separates the top two levels, segmental consonant accuracy
+   is not it.
+
+**The counter-direction is already in this knowledge base, and it is the one that
+is demonstrated.** Isaacs et al. (2015) found grammatical accuracy loading
+**.945 on the *Pronunciation* scale** (§5.2). Cross-criterion bleed is real —
+but the demonstrated direction is **grammar contaminating pronunciation**, not
+pronunciation contaminating grammar.
+
+**And attribution may be undecidable in principle.** Disney & Le, on their own
+data: "it would be impossible to ascertain a phonological or morphological cause
+for a given case of C+ morphological {-s} elision." **[S]** (§5.5.2)
+
+> **GAP** — not established, and **not examined by anyone**: whether listeners or
+> examiners attribute an omitted inflectional ending to **grammar** rather than to
+> **pronunciation**. No peer-reviewed study tests it. Kang & Yan's coding
+> practice makes an inaudible plural a grammar error *by construction*, which is
+> a fact about a research method, not about raters. Isaacs et al. demonstrate
+> bleed in the **opposite** direction. Nothing in this knowledge base may assert
+> that coda work buys a grammar-scale improvement.
+
+#### 5.5.7d Mis-citation warnings, and the three studies that would settle this
+
+**Four citations that look Vietnamese or look load-bearing and are not.** Record
+these so they are not silently re-derived: **[S]**
+
+| Citation | What it actually is |
+| --- | --- |
+| Hansen (2001), *Applied Linguistics* 22(3), on English syllable codas | **Mandarin** speakers, **N = 3**. **Not Vietnamese** |
+| Hansen Edwards (2011), on /t, d/ deletion | **7 Mandarin** speakers. **Not Vietnamese** |
+| Osburne (1996), *Applied Linguistics* 17(2) | **Is** Vietnamese, but **N = 1**, descriptive, with **no cost and no training data**. Already listed in this file's source table at that strength |
+| Suzukida & Saito (2019), functional load | Ranks **phonemic substitutions**; contains no treatment of deletion, omission, codas, word-final position or clusters |
+
+**The three studies that would settle the question.** Recorded so that a future
+pass knows what to look for rather than re-running the same searches:
+
+1. **An attribution experiment.** Resynthesise the `-s` within a single speaker's
+   utterances (present / absent, everything else held constant), have raters score
+   **Pronunciation and Grammar separately**, and measure which scale moves. This
+   is the study that does not exist (§5.5.7c).
+2. **A cost study.** Relate measured coda-omission rate to band, or to
+   comprehensibility, in **Vietnamese B2–C1 speakers** — the population Disney &
+   Le already sampled. This is the study that would close §5.5.7a.
+3. **A coda-targeted intervention** with a **control group** and a
+   **spontaneous-speech outcome**. This is the study that would close §5.5.7b,
+   and the only one of the three that could satisfy the user's original condition.
+
 #### 5.5.8 Priority ordering for this learner population — and where it disagrees with Isaacs
+
+> **Read this before the table — reframed 2026-08-08.** This section previously
+> read as a *recommendation* to add coda work to the syllabus. It is not one, and
+> the ordering below is **ordered by difficulty evidence, not by demonstrated
+> payoff.** Four separate claims are in play and only two of them are
+> established:
+>
+> | | Claim | Status |
+> | --- | --- | --- |
+> | **(a)** | Vietnamese learners make this error | **Established.** Disney & Le 2024, N = 16 at C1: 28.4% overall, 46.7% in coda clusters (§5.5.2) **[S]** |
+> | **(b)** | It persists at C1 | **Established.** Same study; the sample was chosen for its advancedness (§5.5.2) **[S]** |
+> | **(c)** | It costs something measurable | **Not established.** No study of any L1 relates coda deletion to a band, a pronunciation score, comprehensibility or intelligibility (§5.5.7a) |
+> | **(d)** | Instruction fixes it in spontaneous speech | **Not established, and the available evidence runs the other way.** Two meta-analyses find spontaneous-speech CIs crossing zero; the one Vietnamese trial is uncontrolled and null (§5.5.7b) |
+>
+> **Best-evidenced difficulty is not best-evidenced payoff.** The ordering below
+> answers "what is hardest and most persistent for this population", which is a
+> real question with a real answer. It does **not** answer "what will most raise a
+> rating", which nothing in this file answers. Where a lesson, tool or syllabus
+> decision needs the second question, this section is not a warrant for it.
 
 Isaacs et al.'s discriminant loadings (§5.2) rank the phonological features
 **chunking .745 > intonation .735 > word stress .668 > segmentals .551**. The
@@ -1307,11 +1661,15 @@ be expected to agree, and where they conflict the floor evidence governs.
 - **Keep the U1–U12 order** (§8.3 already says so, on descriptor grounds). This
   ordering is about *where to spend the extra practice minutes inside* that
   order, not about resequencing it.
-- **The syllabus's single biggest omission, judged against this evidence, is that
-  no unit targets syllable-final consonants.** U1–U4 are vowels, U5 is /n/–/ŋ/
+- **No unit targets syllable-final consonants** — U1–U4 are vowels, U5 is /n/–/ŋ/
   (both of which Vietnamese already permits in a coda), U6–U8 are onset clusters,
-  U9–U12 are suprasegmental. **The best-evidenced Vietnamese difficulty in this
-  document has no lesson.** That is the recommendation to carry forward.
+  U9–U12 are suprasegmental. **The best-evidenced Vietnamese *difficulty* in this
+  document has no lesson.** *Amended 2026-08-08:* that sentence was previously
+  carried forward as a recommendation to add one. **It is not.** The proposal was
+  tested against the user's condition — add coda work *only if proved helpful for
+  reaching the top of the scale* — and **the condition was not met** (§5.5.7a–c).
+  The observation stands as an observation about coverage; **no syllabus change
+  is recommended on current evidence**, and `08` §5.4 records the same verdict.
 - **Teach word stress on the IELTS descriptors and Isaacs, and never on a claim
   about Vietnamese tone transfer.** #7 above is why.
 - **Item #4 is where the two rankings agree and both are strong** — if only one
@@ -1566,9 +1924,84 @@ open, it says so instead of picking a side.
 | **Listening target** | 3,000 BNC/COCA families for 95% coverage of IELTS Listening is the only defensible listening figure. Do not display a 98% listening number. | *SAGE Open* 2022 **[V 2-1]**; GAP §2.1 |
 | **Topic sets** | Pre-teach each unit's topic lexis **before** the unit's reading/listening. This is worth roughly a 1,000-family level of coverage on that text. Build it as a first-class feature, not a warm-up. | Nation 2006 **[S]** |
 | **Modality** | Every item needs an audio form, not just print. Orthographic and phonological vocabulary correlate only .46 and predict different IELTS skills. | Milton et al. 2010, N=30 **[S/NS]** |
-| **Ranking function** | **Do not implement one yet.** Do not rank items by rarity; do not rank by collocation-accuracy value. Instead: store frequency band (K1/K2/K3–9/K10+), collocation membership, and CEFR tag as **independent attributes**, and make the selection policy a swappable module. | §3 — the tension is unresolved |
-| **What to teach *around* an item** | Teach high-value items **inside collocations regardless of which side of §3 wins.** Both sides support this: Naismith & Juffs found collocational packaging adds a small significant boost; Read & Nation found high-band speakers' sophistication is formulaic. The two camps disagree about *rarity*, not about *chunking*. | **[V 3-0]** and **[S/NS]** |
+| **Ranking function** | **Unblocked 2026-08-08 (§3), to the specification in §8.1a below and no further.** Two stages: an **eligibility gate** on coverage, then **ranking inside the eligible set by collocational association strength**. Do **not** rank by raw frequency band, CEFR level, word-list membership, diversity, or accuracy. | §3.0, §3.3 **[S]** |
+| **What to teach *around* an item** | Teach the item **as a collocation, not as a word.** This is the least-contested decision in the area — it survives every reading of §3. Naismith & Juffs found collocational packaging produced *higher* ratings (Tukey .036, p = .018 — see the sign correction in §3.1); Read & Nation found high-band speakers' sophistication is formulaic; Saito found combination-level MI at r = .734/.755 in the same speakers for whom single-word frequency was n.s. | **[V 3-0]**, **[S/NS]** and **[S]** |
 | **Progress metric** | Report coverage estimates and CEFR-tagged counts. **Never report a predicted IELTS band** from vocabulary size — the best available correlation is .68 overall on N=30, and Read & Nation found lexical statistics "did not offer a reliable basis for distinguishing oral proficiency levels". | Milton **[S/NS]**; Read & Nation **[S/NS]** |
+
+#### 8.1a The ranking function — specification
+
+*Added 2026-08-08. This replaces the "**Do not implement one yet**" block this
+section carried until §3 was resolved. All of it is **[S]**. It is a
+specification, not a licence to extend: anything not named here stays out.*
+
+**Stage 1 — eligibility gate (a gate, not a ranking).** Nation's coverage figures
+decide *which* items are admissible at all: **K1–K4 first**, in that order, on the
+coverage argument already in §2.1 and row 3 above. Oxford 3000/5000 CEFR tags are
+used **for labelling** the item, never for ordering it. An item outside the
+eligible band is simply not in the pool; it is not ranked low.
+
+**Stage 2 — ranking within the eligible set.** Score each eligible item by the
+**association strength of the strongest collocation it participates in**:
+
+```
+value(item) = max over collocations c containing item of MI(c)
+  subject to   n(c) > 5   and   t(c) > 2
+  tie-break    dobj  >  amod  >  advmod
+```
+
+- **`MI > 3` is the conventional threshold** for treating a pair as a collocation
+  at all (Hunston; Durrant & Schmitt; Granger & Bestgen; Paquot; Naismith &
+  Juffs). **[S]**
+- **`n > 5`, `MI > 3`, `t > 2`** together are **Naismith & Juffs' own COCA
+  filter**, adopted whole rather than re-invented. **[S]**
+- The **dependency tie-break is Paquot's**, and follows her effect sizes directly:
+  dobj η² = .154 > advmod .118 > amod .106, with dobj also carrying the only
+  significant C2–C1 step (0.40, p = .005). **[S]**
+
+**Teach the item as a collocation, not as a word.** This is the single least
+contested decision in the whole area (§8.1 row 8).
+
+**Store as attributes, never as a ranking key.** These are what the item record
+holds so that the policy can change without a re-import:
+
+| Attribute | Note |
+| --- | --- |
+| lemma + POS | |
+| audio form | Mandatory — §8.1 row 6, **F3** |
+| frequency band K1–K16 | **Attribute only.** Ranking by it is explicitly not supported |
+| CEFR tag | Labelling only |
+| AWL / AVL flag | Tag, never a stage gate (§8.1 row 2) |
+| top collocates, each with **n, MI, t-score, dependency relation, and an MI ≥ 3 flag** | The ranking input |
+
+**Leave swappable** — these are engineering choices this evidence base does not
+settle, and each must be a configurable parameter rather than a constant baked
+into the scorer:
+
+1. **The weight between MI strength and headword frequency band.** Default
+   **MI-dominant**, on §3.0. Nothing establishes the exchange rate.
+2. **Anything touching accuracy** — because §3.5 is unresolved.
+3. **The reference corpus.** Paquot showed MI values depend on corpus choice and
+   **rejected the BNC in favour of a genre-matched corpus**. **A grade-8 trainer
+   must not silently inherit an academic-corpus MI table.** **[S]**
+
+**Explicitly NOT supported by the evidence** — each of these was checked and each
+fails:
+
+| Ranking proposal | Why it fails |
+| --- | --- |
+| By **raw frequency band** | Word-level frequency was **the only n.s. variable** in Saito 2020 and is non-monotonic in Banerjee (§3.2's trough-then-rise table) |
+| By **CEFR level** | Paquot: "no measure of lexical complexity distinguishes with statistical significance between proficiency levels" across B2/C1/C2 |
+| By **AWL or collocation-list membership** | Paquot found academic-collocation-list membership **n.s.**; and §2.3 already establishes that most of the AWL sits inside the top 4,000 COCA lemmas, so the list is largely a high-frequency list |
+| By **diversity** (type–token style measures over phrases) | Phraseological diversity was **n.s. and declining** with level in Paquot |
+| An **accuracy-scoring module** | §3.5 **GAP**; `09` **F1** |
+
+**Two caveats travel with every use of this specification**, and a tool that
+implements it must surface them in its own documentation:
+
+- **§3.6 GAP (i)** — no intervention study shows that *teaching* high-MI
+  collocations raises a rating. This ranks on a well-evidenced **correlate**.
+- **§3.6 GAP (iv)** — every MI finding comes from **B2-and-above** populations.
+  Applying it at A2/B1 is an **extrapolation**.
 
 ### 8.2 A grammar ladder above grade 8
 
@@ -1591,7 +2024,7 @@ open, it says so instead of picking a side.
 | **Score intelligibility, not accent** | Self-review prompts should ask "could a listener follow this without effort?" — the descriptor language is about *effect on intelligibility*, and the CEFR explicitly rejects accent-as-deficit. | Band descriptors **[S]**; CEFR CV **[S]** |
 | **No band prediction from pronunciation features** | Discriminant classification accuracy was 47%, with band 6 misclassified 80% of the time. Examiners themselves conflate bands 6 and 7. | Isaacs **[S]**; Yates et al. **[S]** |
 | **Vietnamese-specific guidance** | **Unblocked as of 2026-08-08** (§5.5), with limits. Ship the four targets below; ship nothing else Vietnamese-specific. | §5.5, all **[S]** |
-| **VN-1 — final consonants, especially coda /s~z/** | Highest-value Vietnamese target in the document, and **the syllabus has no unit for it.** Drill coda obstruents in content words, not function words — the six commonest /s~z/ function words carry an 11% error rate while removing them raises the overall rate to 41%. Pair with the §8.2 third-person -s drill but keep them as **two** interventions: the causes are additive, not one problem. | Disney & Le 2024, N=16 at C1: 28.4% overall, 46.7% in coda clusters, interaction n.s. (p = .519) **[S]** |
+| **VN-1 — final consonants, especially coda /s~z/** | **Best-evidenced *difficulty* in the document — not a demonstrated payoff** (amended 2026-08-08: §5.5.7a–c found no cost evidence and no spontaneous-speech trainability evidence, so **no syllabus change is recommended**; the syllabus still has no unit for it and that is now recorded as an observation, not a request). Where this is taught at all, drill coda obstruents in content words, not function words — the six commonest /s~z/ function words carry an 11% error rate while removing them raises the overall rate to 41%. Pair with the §8.2 third-person -s drill but keep them as **two** interventions: the causes are additive, not one problem. | Disney & Le 2024, N=16 at C1: 28.4% overall, 46.7% in coda clusters, interaction n.s. (p = .519) **[S]** |
 | **VN-2 — onset-cluster voicing/aspiration** | Teach U6 /br/–/pr/ and U7 /bl/–/kl/ explicitly as **voicing-and-aspiration** contrasts, not as "clusters". Feature change is 77.4% of two-consonant onset errors; deletion is only 22.2%, and when it happens it removes the plosive, not the liquid. | Tran & Nguyen 2022, N=36 **[S]** |
 | **VN-3 — deaccenting and question tunes** | The one place the Vietnamese evidence and Isaacs' loadings both point the same way. Prioritise U11–U12 audio over U9–U10 audio if only one can be resourced. Target the specific errors found: rise-overuse on Wh- and tag questions, and failure to deaccent. | Nguyễn & Đào 2018, N=30 (20 Southern) **[S]**; Isaacs intonation .735 **[S]** |
 | **VN-4 — what NOT to claim** | Do not justify word-stress teaching by Vietnamese tone transfer (the premise is contested — Brunelle 2017, N=18). Do not ship Vietnamese-specific **vowel** guidance (no qualifying source). Do not ship region-specific (North/South) guidance. Do not predict errors by contrasting the two inventories. | GAPs §5.5.4–§5.5.6; Disney & Le's own anti-contrastive conclusion **[S]** |
@@ -1685,6 +2118,31 @@ because they are uniformly small and the file's claims are scoped to them.
 | Nguyen, T. A.-T., Ingram, J. & Pensalfini, J. R. (2008). Prosodic transfer in Vietnamese acquisition of English contrastive stress patterns. *Journal of Phonetics* 36(1), 158–190 | https://doi.org/10.1016/j.wocn.2007.09.001 | **Confirmed to exist; body and abstract unretrievable.** No numbers cited from it |
 | Grabe, E. & Low, E. L. (2002). Durational variability in speech and the rhythm class hypothesis | https://wwwhomes.uni-bielefeld.de/~gibbon/AK-Phon/Rhythmus/Grabe/Grabe_Low-reformatted.pdf | 18 languages, **1 speaker each**. Retrieved in full and confirmed to **exclude Vietnamese** |
 
+#### Tier 2 — added 2026-08-08 by the second gap-closure pass (§3, §5.5.7a–d)
+
+All are **[S]**: retrieved and quoted, **not** panel-verified. Sample sizes are
+given because several are small or problematic and the file's claims are scoped
+to them.
+
+| Source | URL | Sample / status |
+| --- | --- | --- |
+| Saito, K. (2020). Multi- or single-word units? The role of collocation use in comprehensible and contextually appropriate L2 speech. *Language Learning* | https://discovery.ucl.ac.uk/10083748/1/LL2020.pdf | **N = 85** Japanese speakers, **10 raters**, spontaneous speech. Both word- and combination-level measures on the *same* speakers — the study that separates the two constructs |
+| Paquot, M. (2019). The phraseological dimension in interlanguage complexity research. *Second Language Research* 35(1) | https://research.dial.uclouvain.be/handle/2078.5/178318 | **98 texts: B2 = 25, C1 = 62, C2 = 11.** French-L1 academic writing. **The C2 cell is n = 11** and every ceiling claim drawn from it must say so |
+| Granger, S. & Bestgen, Y. (2014). The use of collocations by intermediate vs. advanced non-native writers. *IRAL* 52(3) | https://doi.org/10.1515/iral-2014-0011 | Learner-corpus comparison; source of the *hard work* vs *immortal souls* contrast |
+| Kim, M., Crossley, S. A. & Kyle, K. (2018). Lexical sophistication as a multidimensional phenomenon. *Modern Language Journal* 102(1) | https://doi.org/10.1111/modl.12447 | Bigram 16.1% / trigram 31.0% of proficiency variance; content-word frequency +8.5% incremental |
+| Crossley, S. A., Salsbury, T. & McNamara, D. S. (2015). Assessing lexical proficiency using analytic ratings | *(via §3.3)* | 84% (writing) / 89% (speaking) of variance — **predictor and outcome are both human ratings**; an unknown share is rater consistency |
+| Saito, K. & Plonsky, L. (2019). Effects of second language pronunciation teaching revisited. *Language Learning* 69(3) | https://doi.org/10.1111/lang.12345 | **Meta-analysis of 77 studies.** The load-bearing trainability source: all spontaneous-speech CIs cross zero |
+| Lee, J., Jang, J. & Plonsky, L. (2014). The effectiveness of second language pronunciation instruction. *Applied Linguistics* 36(3) | https://doi.org/10.1093/applin/amu040 | **86 reports.** Larger effects for "more controlled outcome measures" |
+| Chau, T. T., Huensch, A., Hoang, T. B. & Chau, T. H. (2022). The effects of pronunciation instruction on Vietnamese EFL learners. *TESL-EJ* 25(4) | https://tesl-ej.org/pdf/ej100/a3.pdf | **N = 30**, elementary–low-intermediate, 32 h / 8 weeks, pre/post monologues, 11 NS raters. **No control group**; probable ceiling (81.7% pre-test intelligibility); outcome is global intelligibility, **not** coda accuracy |
+| Bent, T., Bradlow, A. R. & Smith, B. L. (2007). Phonemic errors in different word positions and their effects on intelligibility. In *Language Learning & Language Teaching* 17 | https://doi.org/10.1075/lllt.17.10ben | **N and L1 not obtainable.** Directional only: word-initial errors more detrimental; vowel accuracy correlated with intelligibility |
+| Suzukida, Y. & Saito, K. (2019). Which segmental features matter for successful L2 comprehensibility? *Language Teaching Research* | https://doi.org/10.1177/1362168819858246 | **N = 40 + 40.** Ranks **phonemic substitutions**; full text contains no "deletion", "omission", "coda", "word-final" or "cluster" |
+| Kang, O. & Yan, X. (2018). Linguistic features distinguishing examinees' speaking performances at different proficiency levels. *Journal of Language Testing & Assessment* 1(1) | *(open access; Cambridge PET/FCE/CAE/CPE corpus)* | **Internally inconsistent sample: 106 candidates per the abstract, 118 files per the method section — flag it.** 10 L1s, **no Vietnamese**; 2 coders, ICC ≥ .89 |
+| Fritz, E. & Ruegg, R. (2013). Rater sensitivity to lexical accuracy, sophistication and range when assessing writing. *Assessing Writing* 18(2) | https://doi.org/10.1016/j.asw.2013.05.001 | **SECOND-HAND — reaches this file only via Naismith & Juffs' discussion; the primary was not retrieved.** Accuracy F(2,68) = 4.262, p = .013; sophistication F(2,68) = 1.68, p = .194 |
+| Catford, J. C. (1987); Brown, A. (1988) — functional load | *(foundational; cited for what the tradition measures)* | Rank **phonemic substitutions**. A deletion is not a contrast and has no FL rank |
+| Munro, M. J. & Derwing, T. M. (2006). The functional load principle in ESL pronunciation instruction. *System* 34(4) | https://doi.org/10.1016/j.system.2006.09.004 | **SECOND-HAND in this file.** Cited for the FL tradition's scope, not for a number |
+| Hansen, J. G. (2001). Linguistic constraints on the acquisition of English syllable codas. *Applied Linguistics* 22(3) | https://doi.org/10.1093/applin/22.3.338 | **MIS-CITATION WARNING: Mandarin speakers, N = 3. Not Vietnamese** (§5.5.7d) |
+| Hansen Edwards, J. G. (2011). Deletion of /t, d/ and the acquisition of linguistic variation | *(see §5.5.7d)* | **MIS-CITATION WARNING: 7 Mandarin speakers. Not Vietnamese** |
+
 #### Retrieved but below the source policy — leads only, never cited as evidence
 
 | Source | Why it does not qualify |
@@ -1711,6 +2169,11 @@ Two failures **are** consequential for the plan and are recorded neutrally:
   not rare words."** A confirmed experimental finding (Naismith & Juffs) shows
   rarity *causally* raises examiner ratings, and the collocational-*accuracy*
   claim errored at the panel (0-2). The assumption is not established. See §3.
+  *Updated 2026-08-08:* §3 now shows the "not rare words" half of the assumption
+  rested on a **false opposition** — a formulaic sequence *is* a rare item,
+  measured on combinations rather than on words. The panel result is unchanged
+  and no marker is upgraded; what changed is that the two sides are no longer in
+  conflict. The **accuracy** half remains open (§3.5).
 - **The claim that a 5,000-family vocabulary reaches 98% coverage of IELTS
   Listening** failed 0-3 and no verbatim text was recoverable. Do not use it.
 
@@ -1722,25 +2185,61 @@ moved.*
 **Still open:**
 
 1. §2.1 — vocabulary size for 98% coverage of IELTS Listening.
-2. §3 — whether collocational accuracy affects IELTS outcomes.
-3. §4.6 — band-level evidence for conditionals, modality, reported speech,
+2. §3.6 — whether collocational accuracy affects IELTS outcomes. **Now a
+   three-way split rather than a single null, and no study has manipulated error
+   gravity.**
+3. §3.6 — whether **teaching** high-MI collocations raises a rated band. Every
+   supporting finding is correlational or a rater-perception experiment on texts
+   no learner studied; **no intervention study exists.** *(new 2026-08-08)*
+4. §3.6 — any lexical feature separating **band 8 from band 9**. Nearest proxy is
+   Paquot's C2-vs-C1 contrast on **n = 11 C2 texts**, French-L1 academic writing.
+   *(new 2026-08-08)*
+5. §3.6 — what MI values suit **A2/B1** learners. Every MI finding is from a
+   **B2-and-above** population; grade-8 application is an extrapolation.
+   *(new 2026-08-08)*
+6. §4.6 — band-level evidence for conditionals, modality, reported speech,
    cleft, inversion.
-4. §5.5.4 — any rhythm-metric characterisation of Vietnamese-accented English;
+7. §5.5.4 — any rhythm-metric characterisation of Vietnamese-accented English;
    and any study of Vietnamese learners' nuclear stress / tonic placement.
-5. §5.5.5 — any quantified Northern vs Southern comparison of **English**
+8. §5.5.5 — any quantified Northern vs Southern comparison of **English**
    production. The segmental evidence is Northern, the prosodic evidence is
    Southern, and the two halves of §5.5 are not from the same population.
-6. §5.5.6 — Vietnamese-L1 difficulty on the **vowel** contrasts of U1–U4
+9. §5.5.6 — Vietnamese-L1 difficulty on the **vowel** contrasts of U1–U4
    (/ʊ/–/uː/, /ə/–/ɪ/). Nothing qualifying was found.
-7. §5.5.7 — an intelligibility *ranking* of Vietnamese features with an adequate
-   sample. The §5.5.8 ordering is built from difficulty-and-persistence evidence
-   plus one N=1 intelligibility result, and says so.
-8. §6.2a — whether British Council publishes its own band↔CEFR table
-   (`takeielts.britishcouncil.org` was unreachable throughout this pass); and
-   whether bands 8.0–9.0 map to C1 or C2 beyond the "8.5 and higher … C2" FAQ.
+10. §5.5.7 — an intelligibility *ranking* of Vietnamese features with an adequate
+    sample. The §5.5.8 ordering is built from difficulty-and-persistence evidence
+    plus one N=1 intelligibility result, and says so.
+11. §5.5.7a — **any measurable cost of coda omission.** No study, any L1, any
+    level, relates coda deletion to a band, pronunciation score, comprehensibility
+    or intelligibility. *(new 2026-08-08)*
+12. §5.5.7b — **whether coda-targeted instruction transfers to spontaneous
+    speech.** No controlled intervention with a spontaneous outcome exists for any
+    L1; the general meta-analyses find spontaneous CIs crossing zero and the one
+    Vietnamese trial is uncontrolled and null. *(new 2026-08-08)*
+13. §5.5.7b — **whether ~14 is an appropriate age** for coda instruction. The
+    critical-period literature does not transfer to a syllabus decision and must
+    not be used to fill this. *(new 2026-08-08)*
+14. §5.5.7c — **whether raters attribute an omitted inflectional ending to grammar
+    rather than pronunciation.** Unexamined by anyone; a real, publishable gap.
+    *(new 2026-08-08)*
+15. §6.2a — whether British Council publishes its own band↔CEFR table
+    (`takeielts.britishcouncil.org` was unreachable throughout this pass); and
+    whether bands 8.0–9.0 map to C1 or C2 beyond the "8.5 and higher … C2" FAQ.
 
 **Closed on 2026-08-08:**
 
+- **§3 — rarity versus formulaicity.** Closed by **separating the measures**:
+  word-level rarity and combination-level rarity are different constructs and,
+  once separated, the two "sides" agree (§3.0). This unblocks §8.1's ranking
+  function to the specification in §8.1a — and opens **four new gaps** (items
+  3, 4, 5 and the accuracy question at 2 above), so the closure is narrower than
+  it looks.
+- **The coda-syllabus question — closed with a *negative*.** Whether syllable-final
+  consonant work should be added to the syllabus was tested against the user's
+  condition (*only if proved helpful for reaching the top of the scale*) and
+  **the condition was not met** (§5.5.7a–§5.5.7c). The *difficulty* evidence is
+  unchanged and remains the strongest in §5.5. **Nothing here asserts that coda
+  work is useless** — four gaps (11–14 above) record exactly what is unknown.
 - **§5.5 — Vietnamese-L1 pronunciation difficulty.** Was "the largest single gap
   in Phase 4". Now closed for coda consonants, final /s~z/ (including the
   phonology-vs-morphology question, which the literature answers explicitly),

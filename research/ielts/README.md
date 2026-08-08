@@ -38,10 +38,15 @@ The five headlines:
 3. **No Speaking rubric or Speaking feedback tool may ship yet.** Only two
    Speaking claims survived adversarial verification; fluency indicators,
    pronunciation ordering and lexical-resource mechanisms are all unresolved.
-4. **The vocabulary trainer's ranking function cannot be built.** The literature
-   is split on whether high band scores reward *rare* words or *formulaic* ones,
-   and this pass did not resolve it. Store the attributes; keep the policy
-   swappable.
+4. **The vocabulary trainer's ranking function is now buildable — to one
+   specification and no further** *(changed 2026-08-08)*. The rare-versus-
+   formulaic split was a **false opposition**: word-level rarity and
+   combination-level rarity are different constructs, and a formulaic sequence
+   *is* a rare item counted on combinations. Rank by **collocational association
+   strength inside a coverage gate** (`07` §8.1a). Still forbidden: ranking by
+   raw frequency band, CEFR level, list membership or diversity, and **any
+   accuracy module**. Two caveats travel with it — **no intervention study**
+   exists, and **all MI evidence is B2-and-above**.
 5. **A claim that failed verification is unproven, not disproven.** Nowhere in
    these nine files is the negation of a failed claim asserted either.
 
@@ -62,7 +67,7 @@ inherit markers from everything above.
 | **04** | [`04-reading.md`](04-reading.md) | **Reading** — the one-clock rule, passage selection and editing for density, the eleven question types, the official TFNG/YNNG distinction and Not-Given generators, time economics, what reading the test elicits, and the eye-tracking evidence on what separates strong readers from weak ones. |
 | **05** | [`05-writing.md`](05-writing.md) | **Writing** — Task 1 as information transfer, the comparison clause, the overview as a band-gated summarising skill, Task 2 position clarity and licensed personal examples, the underlength finding, copied rubric, discourse-marker overuse, and the full examiner verdict corpus. |
 | **06** | [`06-speaking.md`](06-speaking.md) | **Speaking** — the four-criterion architecture, the coherence indicators (the one criterion this pass established in detail), verbatim criterion text for the other three, the three Parts, four officially commented performances at bands 5–7, and the Tier-2 correlates. **Deliberately shorter than `05`, and that is a finding.** |
-| **07** | [`07-language-foundation.md`](07-language-foundation.md) | **What is trainable, and at what CEFR level** — vocabulary coverage thresholds and list strategy, the open rarity-vs-formulaicity question, the grammar ladder (complexity does *not* predict band; accuracy on named structures does), phonology and the Vietnamese-L1 evidence, and the IELTS↔CEFR crosswalk with its band-4.0 floor. **The lowest confirmation rate of the six passes — read its verification note.** |
+| **07** | [`07-language-foundation.md`](07-language-foundation.md) | **What is trainable, and at what CEFR level** — vocabulary coverage thresholds and list strategy, the rarity-vs-formulaicity question (**resolved 2026-08-08** by separating word-level from combination-level rarity, with two errors of fact corrected in §3), the grammar ladder (complexity does *not* predict band; accuracy on named structures does), phonology and the Vietnamese-L1 evidence, and the IELTS↔CEFR crosswalk with its band-4.0 floor. **The lowest confirmation rate of the six passes — read its verification note.** |
 | **08** | [`08-bridge-map.md`](08-bridge-map.md) | **Grade 8 → IELTS** — per-unit alignment for all twelve units, each with at least one upgrade implementable inside the existing lesson, the cross-cutting strands, the gaps grade 8 cannot fix, and the post-grade-8 arc. Introduces no new sources; synthesises `01`–`07` and the syllabus. |
 | **09** | [`09-design-principles.md`](09-design-principles.md) | **The build constitution** — a 66-item audit checklist any lesson, tool or test in this repo can be checked against, plus the pedagogy evidence behind it (spacing, extensive reading, corrective feedback), a washback review, the boundary on LLM-based feedback, honest progress metrics, and the tooling leverage ranking with its blocked list. |
 
@@ -151,7 +156,10 @@ Consolidated from all nine files. **Read this before the contents.**
 | **Half-band anything** — a "Band 6.5" rubric column, a "band 7.5 checklist" | `02` §9 **GAP** | Nothing. No half-band descriptors are published |
 | **Any Speaking rubric or feedback tool** | `06` preamble and §7; `09` **D7** | A second Speaking research pass re-testing fluency indicators, pronunciation ordering and lexical-resource mechanisms |
 | **Averaging Speaking's four criteria** into one figure | `01` §7.4 — the equal-weighting claim errored in verification **[?]** | Verification of that claim. Report the four separately meanwhile |
-| **The vocabulary trainer's ranking function** | `07` §3, §8.1 — rarity vs formulaicity is open | Resolving that question. Until then: store frequency band, collocation membership and CEFR tag as independent attributes, policy swappable |
+| ~~**The vocabulary trainer's ranking function**~~ — **unblocked 2026-08-08** | Was `07` §3, §8.1. Resolved: word-level and combination-level rarity are different constructs (`07` §3.0) | **Permitted to one spec** (`07` §8.1a): coverage eligibility gate K1–K4, then rank inside it by `max MI` over the item's collocations, filtered `n > 5`, `t > 2`, tie-break dobj > amod > advmod. Carries `07` §3.6's *no-intervention-study* and *B2-and-above* caveats |
+| **An accuracy-scoring module** in the vocabulary trainer; ranking by raw frequency band, CEFR level, word-list membership, or diversity | `07` §3.5 **GAP**; `07` §8.1a's "explicitly NOT supported" table | For accuracy: a study that manipulates **error gravity**. For the rest: nothing — each was checked and each fails |
+| **Any claim that syllable-final consonant work raises a score, band, comprehensibility or intelligibility**, or transfers to spontaneous speech | `07` §5.5.7a, §5.5.7b **GAP**s — no cost evidence for any L1; 77-study meta-analysis finds spontaneous-speech CIs crossing zero; the one Vietnamese trial is N = 30, uncontrolled, null | A cost study in Vietnamese B2–C1 speakers **and** a coda-targeted intervention with a control group and a spontaneous-speech outcome. Teaching the contrast as a *difficulty* finding is not blocked; claiming a *payoff* is |
+| **Any claim that an inaudible inflectional ending is charged to the Grammar scale** rather than Pronunciation | `07` §5.5.7c **GAP** — unexamined by anyone; Isaacs et al. demonstrate bleed in the **opposite** direction (grammar → Pronunciation, loading .945) | An attribution experiment: resynthesised `-s` within speaker, Pronunciation and Grammar scored separately |
 | **Distractor-annotated Listening transcripts** | `03` §5, §5.2 **GAP** — no official account of how Listening distractors are built | An official or research account. **Reading** annotation is *not* blocked — `04` §4.4–4.5 has four official Not-Given generators |
 | **Task 1 data-description and map lessons** | `05` §2.6 **GAP** ×2 | A Tier-1 trend-lexis inventory; an official map task with examiner commentary |
 | **A five-way Task 2 archetype taxonomy** | `05` §3.2 **GAP** — only two archetypes are attested by official prompts | A Tier-1 source enumerating Task 2 question archetypes |
@@ -175,10 +183,18 @@ Ordered by what they block, not by file.
 **Curriculum**
 
 - **No unit in the twelve teaches syllable-final consonants** — rank 1 in the
-  Vietnamese-L1 priority ordering, structurally guaranteed (no Vietnamese dialect
-  permits a coda fricative) and measured at 28.4% omission of final /s~z/ in
-  learners already at C1. `07` §5.5.8, `08` §5.4. **This is a gap in the course,
-  not in the research.**
+  Vietnamese-L1 **difficulty** ordering, structurally guaranteed (no Vietnamese
+  dialect permits a coda fricative) and measured at 28.4% omission of final
+  /s~z/ in learners already at C1. `07` §5.5.8, `08` §5.4. *Corrected
+  2026-08-08:* this was previously listed as "a gap in the course, not in the
+  research". **It is now a gap in the research.** Adding coda work was tested
+  against the condition *only if proved helpful for reaching the top of the
+  scale* and **was not supported** — no cost evidence exists for any L1
+  (`07` §5.5.7a), the trainability evidence points the other way (`07` §5.5.7b),
+  the cross-criterion argument is unexamined (`07` §5.5.7c) and age
+  appropriateness at ~14 is unknown. **Best-evidenced difficulty is not
+  best-evidenced payoff.** No syllabus change is recommended, and the negation is
+  not asserted either.
 - **Passives are absent from the grade-8 syllabus** and are the second-best
   accuracy discriminator across bands 3–8. `07` §8.2, `08` §5.1.
 
@@ -217,10 +233,28 @@ Ordered by what they block, not by file.
 
 **Language foundation**
 
-- Whether high-band Lexical Resource rewards **rarity or formulaicity** — two
-  well-designed studies point opposite ways. `07` §3.
-- Whether **collocational accuracy** affects band outcomes. One experimental null
-  whose own authors call it a design artefact. `07` §3.
+- ~~Whether high-band Lexical Resource rewards **rarity or formulaicity**~~ —
+  **resolved 2026-08-08** by separating word-level from combination-level rarity.
+  `07` §3.0. Four narrower gaps replace it:
+- Whether **teaching** high-MI collocations raises a rated band. Every supporting
+  finding is correlational or a rater-perception experiment on texts no learner
+  studied; **no intervention study exists**. `07` §3.6.
+- Whether **collocational accuracy** affects band outcomes. Now a **three-way
+  split** — one null (Naismith & Juffs, whose authors blame their own design),
+  one positive (Fritz & Ruegg, second-hand), one pair of correlations whose
+  predictor and outcome are both human ratings — and **no study has manipulated
+  error gravity**. `07` §3.5.
+- **Any lexical feature separating band 8 from band 9.** Nearest proxy is
+  Paquot's C2-vs-C1 contrast on **n = 11 C2 texts** in French-L1 academic
+  writing. `07` §3.6.
+- **What MI values suit A2/B1 learners.** Every MI finding comes from a
+  B2-and-above population; grade-8 application is an **extrapolation, not a
+  finding**. `07` §3.6.
+- **Any measurable cost of coda omission**, for any L1 (`07` §5.5.7a); whether
+  **coda instruction transfers to spontaneous speech** (`07` §5.5.7b); whether
+  **~14 is an appropriate age** for it (`07` §5.5.7b); and whether raters charge
+  an inaudible inflection to **grammar** rather than pronunciation — unexamined by
+  anyone (`07` §5.5.7c).
 - Band-level evidence for **conditionals, modality, reported speech, cleft or
   inversion** — none. Any claim that "inversion is a band-8 structure" would be
   invented. `07` §4.6.

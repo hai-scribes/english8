@@ -57,7 +57,14 @@ These hold repo-wide and need no lookup. Each traces to a documented gap.
 - **No Speaking rubric or Speaking feedback tool.** Only two Speaking claims
   survived verification.
 - **No Vietnamese pronunciation tooling** beyond the three sourced findings in
-  `07` §5.5; vowels, region and intelligibility ranking are open gaps.
+  `07` §5.5; vowels, region and intelligibility ranking are open gaps. Those
+  findings say what is **hard**, not what pays: no evidence relates coda omission
+  to any score or to intelligibility, and none shows coda teaching transfers to
+  spontaneous speech (`07` §5.5.7a–c). Never claim a payoff for it.
+- **The vocabulary trainer's ranking function is permitted, to one spec**
+  (`07` §8.1a): a coverage gate, then rank by collocational association strength
+  (`max MI`). Never rank by raw frequency band, CEFR level, list membership or
+  diversity, and ship **no accuracy-scoring module**.
 - **Do not average Speaking's four criteria** — the equal-weighting claim errored
   in verification. Report them separately.
 - **Writing descriptor claims must cite the [2023] version.** Two official
