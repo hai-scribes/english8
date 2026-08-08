@@ -7,12 +7,15 @@ Self-study material for Tiếng Anh 8 (Global Success), published as a static si
 Twelve units, seven lessons each. Every lesson teaches, then practises what it
 just taught; the unit test opens only once all seven lessons are done.
 
-Twenty-eight of those tasks do double duty. Each carries one changed
-instruction, checkpoint or re-scored drill drawn from what the IELTS band
-descriptors reward — no new topics, no extra homework, the same task aimed
-better. See [The IELTS bridge](#the-ielts-bridge) below, and the generated
-[evidence register](docs/evidence/index.html), which lists all twenty-eight with
-the evidence behind each and how strong that evidence is.
+The second job is mostly not something the pages *say* — it is how they
+behave. 954 questions are marked the way a real answer key marks; twelve
+recordings play once, behind a spoken introduction that is never written down;
+every listening answer carries a *how sure are you* mark. On top of that,
+twenty-eight tasks carry one changed instruction, checkpoint or re-scored drill
+built from the IELTS research — each cited, each carrying the strength of its
+evidence. See [Marked tasks, one play, and strands](#marked-tasks-one-play-and-strands)
+and [The IELTS bridge](#the-ielts-bridge) below, plus the generated
+[evidence register](docs/evidence/index.html).
 
 ## How the site is laid out
 
@@ -22,9 +25,11 @@ the evidence behind each and how strong that evidence is.
 /unit-NN/lesson-M/         one lesson: teaching blocks, then its exercises
 ```
 
-Exercises are inline with the lesson that teaches them, each with the answer
-behind a reveal. Practice and the unit test live at the foot of the unit page —
-never above the lessons, and inert until the lessons they cover are complete.
+Exercises are inline with the lesson that teaches them. Most are marked: you
+commit an answer and the page marks it by the published rules. The rest keep a
+reveal, and where an exercise is marked its reveal stays shut until it has been
+checked. Practice and the unit test live at the foot of the unit page — never
+above the lessons, and inert until the lessons they cover are complete.
 
 ## Repository
 
@@ -66,7 +71,7 @@ with a mechanic the page enforces.
 
 ```markdown
 ::: task skill="listening" type="sentence-completion" words="2+number"
-- The school asked ___ students. = two hundred ~ written as words
+- The school asked ___ students. = two hundred/200 ~ both forms are accepted
 - Too little sleep was named by ___ per cent. = forty-five
 :::
 ```
@@ -139,7 +144,9 @@ Hello. I'm Ms Trang, and I'm the school counsellor here…
 The script never reaches the printed page. The orientation is spoken and not
 written down, because in the real test it never is; then a preview window over
 the questions; then one play; then the declared review window, after which the
-script unlocks. It also unlocks as soon as every task on the page is marked.
+script unlocks. It also unlocks once every task on the page is marked — but only
+after the recording has actually finished, and the spent play is remembered
+across a reload, or "plays once" would only be a suggestion.
 
 The voice is the device's speech synthesiser and the page says so plainly —
 what this trains is the shape of the task, not the ear.
