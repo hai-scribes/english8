@@ -125,6 +125,33 @@ def e(s) -> str:
     return html.escape(str(s), quote=True)
 
 
+RE_STRONG = re.compile(r"\*\*(.+?)\*\*", re.S)
+RE_EM = re.compile(r"(?<!\*)\*([^*]+?)\*(?!\*)")
+
+
+def inline(s) -> str:
+    """Escape, then honour **bold** and *italic*.
+
+    The strand table cells are markdown like `short *book* vs long *food*` and
+    `**V-ing** vs **to-V**`. Passing them through e() alone printed the
+    asterisks literally on every unit card and in every "What this unit
+    teaches" strip -- the whole course looked like unrendered source.
+    """
+    out = e(s)
+    out = RE_STRONG.sub(r"<strong>\1</strong>", out)
+    out = RE_EM.sub(r"<em>\1</em>", out)
+    return out
+
+
+def short_strand(s) -> str:
+    """The headline half of a strand, for the space-constrained unit card.
+
+    `/ʊ/ vs /uː/ — short *book* vs long *food*` -> `/ʊ/ vs /uː/`. The full
+    text still appears on the unit page and in the card's title attribute.
+    """
+    return re.split(r"\s+—\s+", str(s), maxsplit=1)[0].strip()
+
+
 # -------------------------------------------------------------------- parse --
 def parse_unit(path: Path) -> dict:
     text = path.read_text(encoding="utf-8")
@@ -258,8 +285,8 @@ def page_home(units) -> str:
       <div class="hd"><span class="num">{u['num']:02d}</span><h3>{e(u['title'])}</h3></div>
       <p class="vi">{e(u['vi'])}</p>
       <div class="tags">
-        <span class="chip ipa">{e(strand(u, 'Pronunciation', '—'))}</span>
-        <span class="chip gram">{e(strand(u, 'Grammar', '—'))}</span>
+        <span class="chip ipa" title="{e(strand(u, 'Pronunciation', ''))}">{inline(short_strand(strand(u, 'Pronunciation', '—')))}</span>
+        <span class="chip gram">{inline(strand(u, 'Grammar', '—'))}</span>
       </div>
       <div class="foot"><span data-progress-text>7 lessons</span><span class="bar"><i></i></span></div>
     </a>""")
@@ -320,7 +347,7 @@ def page_unit(u) -> str:
     </a>""")
 
     strands = "".join(
-        f'<div><span class="k">{e(k)}</span><span class="v">{e(v)}</span></div>'
+        f'<div><span class="k">{e(k)}</span><span class="v">{inline(v)}</span></div>'
         for k, v in u["strands"])
 
     body = f"""  <header class="masthead">
@@ -344,7 +371,7 @@ def page_unit(u) -> str:
 
   <div class="sectionhead"><h2>Practice &amp; test</h2><span class="label">after the lessons</span></div>
   <div class="gate" id="gate">
-    <p class="lock" id="gateLock"><span>🔒</span><div>Work through the lessons first.</div></p>
+    <div class="lock" id="gateLock"><span>🔒</span><div>Work through the lessons first.</div></div>
     <div class="gategrid">
       <div class="gatecard" data-role="practice">
         <h3>Practice this unit's words</h3>
@@ -377,7 +404,7 @@ def recap_block(u) -> str:
     teaching and the one ordering rule this site is built to keep.
     """
     items = "".join(
-        f'<div><span class="k">{e(k)}</span><span class="v">{e(v)}</span></div>'
+        f'<div><span class="k">{e(k)}</span><span class="v">{inline(v)}</span></div>'
         for k, v in u["strands"])
     return f"""  <section class="block" data-role="teach">
     <h2>Before you start — what this checks</h2>

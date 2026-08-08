@@ -50,7 +50,7 @@
 }
 
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:hidden}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 body{
   margin:0;background:var(--paper);color:var(--ink);
@@ -110,6 +110,13 @@ main{padding:2rem 0 5rem;display:flex;flex-direction:column;gap:1.5rem}
 .row{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center}
 .chip{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;
   padding:.2rem .5rem;border-radius:3px;background:var(--sunk);color:var(--muted);white-space:nowrap}
+/* Card chips hold full strand sentences, so they must wrap and stay inside
+   the card — nowrap here scrolled the whole page sideways on a phone. */
+.unitcard .chip{white-space:normal;line-height:1.45;max-width:100%;overflow-wrap:anywhere;
+  display:block;text-transform:none;letter-spacing:0;font-size:.76rem}
+.unitcard .tags{flex-direction:column;align-items:stretch;gap:.3rem}
+.strands .v strong{font-weight:650}
+.strands .v em{font-style:italic}
 .chip.ipa{background:var(--clay-wash);color:var(--clay);text-transform:none;letter-spacing:0;font-size:.78rem}
 .chip.gram{background:var(--teal-wash);color:var(--teal);text-transform:none;letter-spacing:0;font-size:.75rem}
 .chip.done{background:var(--green-wash);color:var(--green)}
@@ -134,7 +141,8 @@ main{padding:2rem 0 5rem;display:flex;flex-direction:column;gap:1.5rem}
 .unitcard h3{font-size:1.1rem;line-height:1.25}
 .unitcard .vi{font-size:.85rem;color:var(--muted);font-style:italic;margin:-.35rem 0 0}
 .unitcard .tags{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:auto;padding-top:.5rem}
-.unitcard .foot{display:flex;align-items:center;gap:.6rem;font-family:var(--f-mono);font-size:.68rem;color:var(--faint)}
+.unitcard .foot{display:flex;align-items:center;gap:.6rem;font-family:var(--f-mono);font-size:.68rem;color:var(--faint);min-width:0}
+.unitcard .foot>span:first-child{flex:none;white-space:nowrap}
 .bar{height:4px;background:var(--rule-soft);border-radius:3px;overflow:hidden;flex:1}
 .bar i{display:block;height:100%;background:var(--teal);width:0;transition:width .3s}
 
@@ -164,6 +172,7 @@ main{padding:2rem 0 5rem;display:flex;flex-direction:column;gap:1.5rem}
   display:flex;flex-direction:column;gap:.85rem}
 .gate[data-open="1"]{border-style:solid;background:var(--surface);box-shadow:var(--shadow)}
 .gate .lock{display:flex;align-items:flex-start;gap:.6rem;font-size:.88rem;color:var(--muted)}
+.gate .lock>span{flex:none}
 .gate .lock b{color:var(--ink)}
 .gategrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.8rem}
 .gatecard{background:var(--raised);border:1px solid var(--rule);border-radius:var(--r);padding:1rem 1.05rem;

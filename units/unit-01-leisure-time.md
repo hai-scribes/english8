@@ -98,21 +98,17 @@ Look at the **bold** verbs. Write **V-ing** or **to-V** for each.
 | 17 | relax | /rɪˈlæks/ | v | thư giãn |
 | 18 | can't stand | /kɑːnt ˈstænd/ | phr | không chịu được |
 
-> ### ▶︎ [**Learn these 18 words — interactive trainer**](../app/unit-01-vocab.html)
+> ### ▶︎ [**Practise these 18 words**](../app/unit-01-vocab.html)
 >
-> Open `app/unit-01-vocab.html` in any browser (double-click the file — it works
-> offline, no internet needed), or use the hosted copy on a phone:
-> [claude.ai/code/artifact/08914336…](https://claude.ai/code/artifact/08914336-f9c1-40db-abd7-72ed7d42cebe)
-> It teaches **six words at a time**: each word
-> appears on its own card with sound, IPA, meaning, examples and a usage tip,
-> and then you have to use it — four times, four different ways — before it
-> counts as done. At the end there is a scored practice test, freshly built
-> every time you take it. It remembers what you got wrong and brings those
-> words back on the right day.
+> Press 🔊 on any row above to hear the word. When you have finished this
+> lesson, the unit page opens a **practice** session over all eighteen —
+> recognise the meaning, produce the word, and write what you hear, mixed
+> together, with wrong answers coming straight back. The **unit test** opens
+> once all seven lessons are done.
 >
-> **Học 18 từ này bằng ứng dụng.** Mở file `app/unit-01-vocab.html` trong trình
-> duyệt. Học 6 từ một lượt, có phát âm, ví dụ và bài kiểm tra chấm điểm. Ứng
-> dụng tự nhớ những từ bạn còn sai và nhắc lại đúng ngày cần ôn.
+> **Luyện 18 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **practice** ở trang bài sẽ mở ra để luyện cả 18 từ; bài kiểm tra của bài
+> mở khi bạn hoàn thành cả 7 lesson.
 >
 > Do the written exercises below as well — writing by hand and typing on a
 > screen build different halves of the same knowledge.
