@@ -976,7 +976,7 @@ band), and Speaking materially under-evidenced.
 *Updated 2026-08-08, from the second gap-closure pass:*
 
 8. **The vocabulary ranking function is no longer among them** — `07` §3 resolved
-   the measure question and `07` §8.1a specifies what may be built. Five gaps
+   the measure question and `07` §8.1a specifies what may be built. Four gaps
    replace it: whether **teaching** high-MI collocations raises a rating (no
    intervention study exists), whether collocational **accuracy** matters (a
    three-way split, error gravity never manipulated), any lexical feature

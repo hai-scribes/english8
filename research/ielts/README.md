@@ -15,7 +15,7 @@ carries a marker saying how strongly it is evidenced, and — where the evidence
 ran out — says so in a `> **GAP**` blockquote instead of filling the space.
 
 **Looking for one fact?** Do not read these documents. Grep
-[`index.jsonl`](index.jsonl) — 1,244 claims, one JSON object per line, each
+[`index.jsonl`](index.jsonl) — 1,301 claims, one JSON object per line, each
 naming the file and section to open — and see [`ROUTER.md`](ROUTER.md) for the
 grep recipes. This file is the whole picture; the router is the fast path.
 
