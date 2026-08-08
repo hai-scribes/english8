@@ -143,6 +143,16 @@ def inline(s) -> str:
     return out
 
 
+def plain(s) -> str:
+    """Strip markdown markers for places that can only hold text.
+
+    A title attribute cannot carry <strong>, so passing raw markdown there
+    put literal asterisks in the tooltip -- "**Word stress** in multi-syllable
+    words" -- on the four units whose pronunciation strand has no em dash.
+    """
+    return RE_EM.sub(r"\1", RE_STRONG.sub(r"\1", str(s)))
+
+
 def short_strand(s) -> str:
     """The headline half of a strand, for the space-constrained unit card.
 
@@ -278,6 +288,11 @@ def shell(*, title, depth, body, crumb, data=None, desc=""):
 
 
 # ------------------------------------------------------------------- pages ---
+def ipa_title(u) -> str:
+    full = strand(u, "Pronunciation", "")
+    return "" if plain(full) == plain(short_strand(full)) else f' title="{e(plain(full))}"'
+
+
 def page_home(units) -> str:
     cards = []
     for u in units:
@@ -285,7 +300,7 @@ def page_home(units) -> str:
       <div class="hd"><span class="num">{u['num']:02d}</span><h3>{e(u['title'])}</h3></div>
       <p class="vi">{e(u['vi'])}</p>
       <div class="tags">
-        <span class="chip ipa" title="{e(strand(u, 'Pronunciation', ''))}">{inline(short_strand(strand(u, 'Pronunciation', '—')))}</span>
+        <span class="chip ipa"{ipa_title(u)}>{inline(short_strand(strand(u, 'Pronunciation', '—')))}</span>
         <span class="chip gram">{inline(strand(u, 'Grammar', '—'))}</span>
       </div>
       <div class="foot"><span data-progress-text>7 lessons</span><span class="bar"><i></i></span></div>
