@@ -10,3 +10,6 @@
 .specs/prototype/*.cap-lock
 reports/*.lock
 reports/*.status.json
+
+# /rigor drive scaffolding — sealed contract + checkers, not the deliverable
+.rigor/

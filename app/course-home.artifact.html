@@ -1,0 +1,2086 @@
+<title>English 8 — Global Success</title>
+
+<style>
+  :root {
+    --paper:      #f4f6f4;
+    --surface:    #ffffff;
+    --raised:     #fbfcfb;
+    --ink:        #16202b;
+    --muted:      #55676e;
+    --faint:      #85979a;
+    --rule:       #dce2dd;
+    --rule-soft:  #eaefea;
+    --teal:       #0f6b62;
+    --teal-wash:  #e4efec;
+    --clay:       #b4622a;
+    --clay-wash:  #f7ece3;
+    --green:      #2f7d4f;
+    --green-wash: #e6f2e9;
+    --red:        #b03a35;
+    --red-wash:   #f9e9e8;
+    --amber:      #97701a;
+    --amber-wash: #f7f0dc;
+    --shadow:     0 1px 2px rgba(22,32,43,.05), 0 2px 14px rgba(22,32,43,.05);
+
+    --f-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+    --f-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --f-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#0f1619; --surface:#172025; --raised:#1d282d; --ink:#e6ebe8;
+      --muted:#9aabaa; --faint:#6f8382; --rule:#2a373c; --rule-soft:#202c31;
+      --teal:#5cc9b7; --teal-wash:#16302d; --clay:#e2955e; --clay-wash:#33241a;
+      --green:#6cc48c; --green-wash:#16301f; --red:#ef8b84; --red-wash:#341c1b;
+      --amber:#d9b95f; --amber-wash:#302819;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 2px 14px rgba(0,0,0,.2);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#0f1619; --surface:#172025; --raised:#1d282d; --ink:#e6ebe8;
+    --muted:#9aabaa; --faint:#6f8382; --rule:#2a373c; --rule-soft:#202c31;
+    --teal:#5cc9b7; --teal-wash:#16302d; --clay:#e2955e; --clay-wash:#33241a;
+    --green:#6cc48c; --green-wash:#16301f; --red:#ef8b84; --red-wash:#341c1b;
+    --amber:#d9b95f; --amber-wash:#302819;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 2px 14px rgba(0,0,0,.2);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--f-body); font-size:16px; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3 { font-family:var(--f-display); font-weight:600; letter-spacing:-.01em; margin:0; text-wrap:balance; }
+
+  .shell { max-width:980px; margin:0 auto; padding:0 1rem 5rem; }
+
+  /* ---------- top bar ---------- */
+  .topbar { position:sticky; top:0; z-index:20; background:var(--paper); border-bottom:1px solid var(--rule); padding:.75rem 0 0; }
+  .brand { display:flex; align-items:baseline; gap:.6rem; flex-wrap:wrap; padding-bottom:.7rem; }
+  .brand h1 { font-size:1.1rem; }
+  .brand .sub { font-family:var(--f-mono); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:var(--clay); }
+  .brand .due { margin-left:auto; font-family:var(--f-mono); font-size:.72rem; background:var(--clay-wash); color:var(--clay); padding:.2rem .5rem; border-radius:2px; }
+
+  nav { display:flex; gap:.15rem; overflow-x:auto; scrollbar-width:none; }
+  nav::-webkit-scrollbar { display:none; }
+  nav button {
+    font:inherit; font-size:.85rem; background:none; border:0;
+    border-bottom:2px solid transparent; color:var(--muted);
+    padding:.45rem .7rem; cursor:pointer; white-space:nowrap; border-radius:2px 2px 0 0;
+  }
+  nav button:hover { color:var(--ink); }
+  nav button[aria-current="true"] { color:var(--teal); border-bottom-color:var(--teal); font-weight:600; }
+  nav.sub { border-top:1px solid var(--rule-soft); padding-top:.15rem; }
+  nav.sub button { font-size:.8rem; padding:.35rem .6rem; }
+  nav button:focus-visible, .btn:focus-visible, input:focus-visible, textarea:focus-visible,
+  .speak:focus-visible, .steps button:focus-visible, .choices button:focus-visible {
+    outline:2px solid var(--clay); outline-offset:2px;
+  }
+
+  main { padding-top:1.75rem; display:flex; flex-direction:column; gap:1.5rem; }
+  .view { display:flex; flex-direction:column; gap:1.25rem; }
+  .view[hidden], .sub-view[hidden] { display:none; }
+  .sub-view { display:flex; flex-direction:column; gap:1.25rem; }
+
+  /* ---------- cards ---------- */
+  .card { background:var(--surface); border:1px solid var(--rule); border-radius:5px; padding:1.3rem; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:.85rem; }
+  .card > h2 { font-size:1.2rem; }
+  .card > h3 { font-size:1rem; }
+  .lede { color:var(--muted); font-size:.93rem; margin:0; }
+  .label { font-family:var(--f-mono); font-size:.66rem; letter-spacing:.13em; text-transform:uppercase; color:var(--faint); }
+  .hintline { font-size:.85rem; color:var(--faint); }
+
+  .btn { font:inherit; font-size:.9rem; font-weight:550; background:var(--teal); color:var(--surface); border:1px solid var(--teal); border-radius:4px; padding:.55rem 1.05rem; cursor:pointer; }
+  .btn:hover { filter:brightness(1.08); }
+  .btn[disabled] { opacity:.45; cursor:not-allowed; filter:none; }
+  .btn.ghost { background:none; color:var(--teal); }
+  .btn.quiet { background:none; color:var(--muted); border-color:var(--rule); }
+  .btn.wide { width:100%; }
+  .row { display:flex; gap:.5rem; flex-wrap:wrap; align-items:center; }
+
+  input[type="text"], textarea { font:inherit; background:var(--raised); color:var(--ink); border:1px solid var(--rule); border-radius:4px; padding:.6rem .7rem; width:100%; }
+  textarea { min-height:9rem; resize:vertical; line-height:1.6; }
+
+  /* ---------- masthead (map) ---------- */
+  .masthead { display:flex; flex-direction:column; gap:1.1rem; }
+  .masthead h2 { font-size:clamp(1.9rem,4.5vw,2.7rem); line-height:1.1; }
+  .eyebrow { font-family:var(--f-mono); font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:var(--clay); margin:0; }
+  .standfirst { margin:0; max-width:62ch; font-size:1.05rem; color:var(--muted); }
+  .meta-strip { display:flex; flex-wrap:wrap; gap:.5rem 2rem; padding-top:1.1rem; border-top:1px solid var(--rule); font-family:var(--f-mono); font-size:.76rem; color:var(--faint); }
+  .meta-strip b { color:var(--muted); font-weight:500; }
+
+  /* ---------- unit shape ---------- */
+  .shape { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); border-radius:3px; overflow:hidden; }
+  .shape div { background:var(--surface); padding:.8rem .85rem; display:flex; flex-direction:column; gap:.28rem; }
+  .shape .n { font-family:var(--f-mono); font-size:.66rem; color:var(--faint); }
+  .shape .l { font-size:.86rem; font-weight:550; line-height:1.3; }
+  .shape .d { font-size:.77rem; color:var(--muted); line-height:1.35; }
+
+  /* ---------- unit rows ---------- */
+  .units { display:flex; flex-direction:column; gap:.7rem; }
+  .unit { background:var(--surface); border:1px solid var(--rule); border-radius:4px; box-shadow:var(--shadow); overflow:hidden; }
+  .unit.live { border-color:var(--teal); }
+  .unit-head { display:flex; align-items:center; gap:.8rem; padding:.9rem 1.1rem; border-bottom:1px solid var(--rule-soft); flex-wrap:wrap; }
+  .unit-n { font-family:var(--f-mono); font-size:.76rem; font-variant-numeric:tabular-nums; color:var(--surface); background:var(--ink); border-radius:2px; padding:.18rem .45rem; flex:none; }
+  .unit.live .unit-n { background:var(--teal); }
+  .unit-title { font-family:var(--f-display); font-size:1.18rem; font-weight:600; margin:0; }
+  .unit-head .go { margin-left:auto; }
+  .badge { font-family:var(--f-mono); font-size:.63rem; letter-spacing:.1em; text-transform:uppercase; padding:.2rem .45rem; border-radius:2px; background:var(--rule-soft); color:var(--faint); }
+  .badge.ready { background:var(--teal-wash); color:var(--teal); }
+
+  .strands { display:grid; grid-template-columns:.85fr 1.15fr 1.5fr 1.5fr; }
+  .strand { padding:.95rem 1.1rem 1.1rem; border-left:1px solid var(--rule-soft); display:flex; flex-direction:column; gap:.45rem; min-width:0; }
+  .strand:first-child { border-left:0; }
+  .strand-label { font-family:var(--f-mono); font-size:.64rem; letter-spacing:.13em; text-transform:uppercase; color:var(--faint); }
+  .ipa-tag { font-family:var(--f-mono); font-size:.92rem; color:var(--clay); background:var(--clay-wash); border-radius:2px; padding:.18rem .42rem; align-self:flex-start; line-height:1.5; }
+  .gram { color:var(--teal); font-weight:550; font-size:.88rem; line-height:1.4; }
+  .strand p { margin:0; font-size:.86rem; line-height:1.45; }
+  .task { color:var(--muted); }
+  .genre { display:inline-flex; align-items:baseline; gap:.4rem; font-size:.78rem; font-weight:600; background:var(--teal-wash); color:var(--teal); border-radius:2px; padding:.18rem .48rem; align-self:flex-start; }
+  .genre span { font-family:var(--f-mono); font-weight:400; font-size:.7rem; font-variant-numeric:tabular-nums; opacity:.8; }
+  .q { font-family:var(--f-mono); font-size:.7rem; color:var(--clay); vertical-align:super; cursor:help; margin-left:.1em; }
+
+  .checkpoint { display:flex; align-items:center; gap:.9rem; padding:.25rem .1rem; font-family:var(--f-mono); font-size:.68rem; letter-spacing:.13em; text-transform:uppercase; color:var(--faint); }
+  .checkpoint::before, .checkpoint::after { content:""; height:1px; background:var(--rule); flex:1; }
+  .checkpoint::before { flex:0 0 1.5rem; }
+
+  /* ---------- panels ---------- */
+  .panels { display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:1rem; }
+  .panel { background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:1.25rem 1.3rem; display:flex; flex-direction:column; gap:.65rem; box-shadow:var(--shadow); }
+  .panel h3 { font-size:1.02rem; }
+  .panel p { margin:0; font-size:.88rem; color:var(--muted); }
+  .panel ul { margin:0; padding-left:1.05rem; display:flex; flex-direction:column; gap:.35rem; }
+  .panel li { font-size:.88rem; color:var(--muted); }
+  .panel li b, .panel p b { color:var(--ink); font-weight:600; }
+  .panel.flag { border-left:3px solid var(--clay); }
+
+  .tally { display:flex; flex-direction:column; gap:.4rem; font-size:.86rem; }
+  .tally-row { display:grid; grid-template-columns:1fr auto; gap:.75rem; align-items:baseline; padding-bottom:.4rem; border-bottom:1px solid var(--rule-soft); }
+  .tally-row:last-child { border-bottom:0; padding-bottom:0; }
+  .tally-row b { font-weight:600; }
+  .tally-row span { font-family:var(--f-mono); font-size:.76rem; color:var(--faint); font-variant-numeric:tabular-nums; }
+
+  /* ---------- app bits ---------- */
+  .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:.6rem; }
+  .tile { background:var(--raised); border:1px solid var(--rule-soft); border-radius:4px; padding:.7rem .8rem; display:flex; flex-direction:column; gap:.15rem; }
+  .tile .n { font-family:var(--f-mono); font-size:1.4rem; font-variant-numeric:tabular-nums; line-height:1.1; }
+  .tile .k { font-family:var(--f-mono); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); }
+  .tile.hot .n { color:var(--clay); }
+  .tile.good .n { color:var(--green); }
+
+  .ladder { display:flex; flex-direction:column; gap:.4rem; }
+  .rung { display:grid; grid-template-columns:5.5rem 1fr 2.5rem; gap:.6rem; align-items:center; font-size:.82rem; }
+  .rung .nm { font-family:var(--f-mono); font-size:.7rem; color:var(--muted); }
+  .rung .bar { height:9px; background:var(--rule-soft); border-radius:5px; overflow:hidden; }
+  .rung .bar i { display:block; height:100%; background:var(--teal); border-radius:5px; }
+  .rung .ct { font-family:var(--f-mono); font-size:.75rem; text-align:right; color:var(--muted); font-variant-numeric:tabular-nums; }
+
+  .progressbar { height:4px; background:var(--rule-soft); border-radius:3px; overflow:hidden; }
+  .progressbar i { display:block; height:100%; background:var(--teal); transition:width .25s; }
+  @media (prefers-reduced-motion:reduce) { .progressbar i { transition:none; } }
+
+  .qhead { display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; }
+  .chip { font-family:var(--f-mono); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; padding:.18rem .45rem; border-radius:2px; background:var(--teal-wash); color:var(--teal); }
+  .prompt { font-size:1.2rem; line-height:1.45; }
+  .prompt .gap { font-family:var(--f-mono); color:var(--clay); letter-spacing:.05em; }
+  .prompt .vi { font-style:italic; color:var(--muted); font-size:.98rem; display:block; margin-top:.3rem; }
+
+  .choices { display:grid; gap:.45rem; }
+  .choices button { font:inherit; text-align:left; background:var(--raised); color:var(--ink); border:1px solid var(--rule); border-radius:4px; padding:.65rem .8rem; cursor:pointer; }
+  .choices button:hover { border-color:var(--teal); }
+  .choices button[aria-pressed="true"] { border-color:var(--teal); background:var(--teal-wash); font-weight:600; }
+  .choices.two { grid-template-columns:1fr 1fr; }
+
+  .verdict { border-radius:4px; padding:.8rem .9rem; display:flex; flex-direction:column; gap:.35rem; font-size:.9rem; }
+  .verdict.ok { background:var(--green-wash); border-left:3px solid var(--green); }
+  .verdict.no { background:var(--red-wash); border-left:3px solid var(--red); }
+  .verdict .note { color:var(--muted); font-size:.85rem; }
+
+  .scroll { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; font-size:.87rem; }
+  th, td { text-align:left; padding:.5rem .6rem; border-bottom:1px solid var(--rule-soft); vertical-align:top; }
+  th { font-family:var(--f-mono); font-size:.63rem; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); font-weight:400; }
+  td.ipa, td.mono { font-family:var(--f-mono); font-size:.81rem; }
+  td.vi { color:var(--muted); }
+  tr:last-child td { border-bottom:0; }
+
+  .speak { font:inherit; font-size:.8rem; background:none; border:1px solid var(--rule); color:var(--teal); border-radius:3px; padding:.12rem .4rem; cursor:pointer; line-height:1.4; }
+  .speak:hover { border-color:var(--teal); }
+
+  .grp { border-left:3px solid var(--teal); padding-left:.9rem; display:flex; flex-direction:column; gap:.35rem; }
+  .grp .verbs { font-weight:600; color:var(--teal); font-size:.93rem; }
+  .grp .eg { font-size:.88rem; color:var(--muted); }
+  .grp .eg b { color:var(--ink); }
+  .warn { background:var(--clay-wash); border-left:3px solid var(--clay); padding:.7rem .85rem; border-radius:3px; font-size:.88rem; }
+  .warn .vi { color:var(--muted); display:block; margin-top:.25rem; }
+
+  .passage { font-size:1rem; line-height:1.75; display:flex; flex-direction:column; gap:.8rem; }
+  .passage p { margin:0; }
+  .masked { filter:blur(5px); user-select:none; pointer-events:none; opacity:.55; }
+
+  .qa { display:flex; flex-direction:column; gap:1rem; }
+  .qa .item { display:flex; flex-direction:column; gap:.4rem; padding-bottom:1rem; border-bottom:1px solid var(--rule-soft); }
+  .qa .item:last-child { border-bottom:0; padding-bottom:0; }
+  .qa .q { font-size:.93rem; font-weight:550; }
+
+  .steps { display:flex; gap:.3rem; flex-wrap:wrap; }
+  .steps button { font:inherit; font-size:.78rem; background:var(--raised); border:1px solid var(--rule); color:var(--muted); border-radius:3px; padding:.3rem .6rem; cursor:pointer; }
+  .steps button[aria-current="true"] { background:var(--teal-wash); border-color:var(--teal); color:var(--teal); font-weight:600; }
+  .steps button.done { color:var(--green); border-color:var(--green); }
+
+  .checklist { display:flex; flex-direction:column; gap:.45rem; }
+  .checklist label { display:flex; gap:.55rem; align-items:flex-start; font-size:.89rem; cursor:pointer; }
+  .checklist input { margin-top:.3rem; flex:none; accent-color:var(--teal); }
+
+  .counter { font-family:var(--f-mono); font-size:.77rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+  .counter.over { color:var(--red); }
+  .counter.ok { color:var(--green); }
+
+  .errlist { display:flex; flex-direction:column; gap:.5rem; }
+  .erritem { background:var(--amber-wash); border-left:3px solid var(--amber); padding:.6rem .75rem; border-radius:3px; font-size:.87rem; display:flex; flex-direction:column; gap:.2rem; }
+  .erritem .m { font-family:var(--f-mono); font-size:.74rem; color:var(--muted); }
+
+  .empty { color:var(--faint); font-size:.9rem; font-style:italic; }
+  .note-box { background:var(--raised); border:1px dashed var(--rule); border-radius:4px; padding:.8rem .9rem; font-size:.86rem; color:var(--muted); }
+  .note-box b { color:var(--ink); }
+
+  footer { margin-top:2.5rem; padding-top:1.25rem; border-top:1px solid var(--rule); font-size:.8rem; color:var(--faint); display:flex; flex-direction:column; gap:.5rem; }
+  footer p { margin:0; max-width:72ch; }
+  footer a { color:var(--teal); text-underline-offset:2px; }
+
+  @media (max-width:900px) {
+    .strands { grid-template-columns:1fr 1fr; }
+    .strand:nth-child(3) { border-left:0; }
+    .strand:nth-child(n+3) { border-top:1px solid var(--rule-soft); }
+  }
+  @media (max-width:560px) {
+    .shell { padding:0 .85rem 4rem; }
+    .strands { grid-template-columns:1fr; }
+    .strand { border-left:0; border-top:1px solid var(--rule-soft); }
+    .strand:first-child { border-top:0; }
+    .conf .opts { grid-template-columns:1fr; }
+    .choices.two { grid-template-columns:1fr; }
+    .rung { grid-template-columns:4.5rem 1fr 2.2rem; }
+  }
+</style>
+
+<div class="shell">
+
+  <div class="topbar">
+    <div class="brand">
+      <span class="sub">Grade 8</span>
+      <h1>English — Global Success</h1>
+      <span class="due" id="dueBadge" hidden>—</span>
+    </div>
+    <nav id="mainNav">
+      <button data-sec="map" aria-current="true">Course map</button>
+      <button data-sec="unit1">Unit 1 · Leisure Time</button>
+      <button data-sec="roadmap">Units 2–12</button>
+    </nav>
+    <nav class="sub" id="unitNav" hidden>
+      <button data-view="today" aria-current="true">Today</button>
+      <button data-view="practice">Practice</button>
+      <button data-view="learn">Word &amp; Rule</button>
+      <button data-view="read">Read</button>
+      <button data-view="listen">Listen</button>
+      <button data-view="write">Write</button>
+      <button data-view="progress">Progress</button>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ================= COURSE MAP ================= -->
+    <section class="view" id="s-map">
+      <header class="masthead">
+        <p class="eyebrow">Curriculum map · 12 units</p>
+        <h2>Tiếng Anh 8 — Global Success</h2>
+        <p class="standfirst">
+          What the national grade-8 English textbook teaches, unit by unit — and original
+          study material built against it. This records structure and targets, not the
+          book's text.
+        </p>
+        <div class="meta-strip">
+          <div><b>Publisher</b> NXB Giáo dục Việt Nam × Pearson</div>
+          <div><b>Curriculum</b> GDPT 2018</div>
+          <div><b>Chief editor</b> GS.TS. Hoàng Văn Vân</div>
+          <div><b>Units</b> 12 + 4 reviews</div>
+        </div>
+      </header>
+
+      <div class="card">
+        <h3>The unit shape</h3>
+        <p class="lede">Every unit runs the same seven lessons, so material written for one slot transfers to the same slot in all twelve.</p>
+        <div class="shape">
+          <div><span class="n">1</span><span class="l">Getting Started</span><span class="d">Opening dialogue; topic and core lexis</span></div>
+          <div><span class="n">2</span><span class="l">A Closer Look 1</span><span class="d">Vocabulary + pronunciation</span></div>
+          <div><span class="n">3</span><span class="l">A Closer Look 2</span><span class="d">Grammar target</span></div>
+          <div><span class="n">4</span><span class="l">Communication</span><span class="d">Everyday English; culture</span></div>
+          <div><span class="n">5</span><span class="l">Skills 1</span><span class="d">Reading → Speaking</span></div>
+          <div><span class="n">6</span><span class="l">Skills 2</span><span class="d">Listening → Writing</span></div>
+          <div><span class="n">7</span><span class="l">Looking Back</span><span class="d">Consolidation + project</span></div>
+        </div>
+      </div>
+
+      <div class="card" style="gap:.5rem">
+        <h3>Twelve units</h3>
+        <p class="lede">Phonology in clay, grammar in teal. Where a reading's <em>text type</em> could not be verified it carries a <span class="q" tabindex="0" title="Topic confirmed, text type unverified">?</span> marker.</p>
+      </div>
+
+      <div class="units" id="unitList"></div>
+
+      <div class="card" style="gap:.5rem">
+        <h3>What the year actually asks for</h3>
+        <p class="lede">Patterns worth planning around before writing a single exercise.</p>
+      </div>
+
+      <div class="panels">
+        <div class="panel">
+          <h3>Writing is narrower than it looks</h3>
+          <div class="tally">
+            <div class="tally-row"><b>Paragraph — opinion or description</b><span>5 units</span></div>
+            <div class="tally-row"><b>Descriptive paragraph</b><span>2 units</span></div>
+            <div class="tally-row"><b>Email</b><span>2 units</span></div>
+            <div class="tally-row"><b>Persuasive paragraph</b><span>1 unit</span></div>
+            <div class="tally-row"><b>Instructions</b><span>1 unit</span></div>
+            <div class="tally-row"><b>Notice</b><span>1 unit</span></div>
+          </div>
+          <p>Eight of twelve are some form of paragraph, and eleven of twelve run to 80–100 words. Unit 7's notice is the only formal public register and the only longer piece.</p>
+        </div>
+
+        <div class="panel">
+          <h3>One structure, taught once, reused twice</h3>
+          <p>Units 6, 8 and 11 all ask for advantages/disadvantages or a for-and-against stance. Teach that rhetorical move properly around Unit 6 and it pays off twice more — the last time on the year's hardest grammar.</p>
+        </div>
+
+        <div class="panel">
+          <h3>Grammar builds sentence complexity</h3>
+          <ul>
+            <li>Simple → <b>compound</b> at Unit 3</li>
+            <li>→ <b>complex with subordination</b> at Unit 7</li>
+            <li>→ <b>reported speech</b> across Units 11–12</li>
+          </ul>
+          <p>Reported speech is the heaviest load of the year and arrives when the calendar is tightest. It deserves the deepest practice bank.</p>
+        </div>
+
+        <div class="panel">
+          <h3>Phonology turns abstract at Unit 9</h3>
+          <p>Units 1–4 are vowel contrasts, 5–8 nasals and consonant clusters — all teachable on paper. From Unit 9 the targets become word stress, sentence stress and intonation, which print cannot carry.</p>
+        </div>
+
+        <div class="panel">
+          <h3>Themes alternate by register</h3>
+          <p>Personal and local topics — leisure, countryside, teenagers, shopping — trade off against civic and global ones. The personal units carry easier lexis, so they absorb harder grammar well.</p>
+        </div>
+
+        <div class="panel flag">
+          <h3>Listening has no text solution</h3>
+          <p>Every unit's listening topic is known, but the audio ships with the book. Either use the official recordings, or script and record your own. The app works around this with browser speech.</p>
+        </div>
+
+        <div class="panel flag">
+          <h3>Seven reading text types unverified</h3>
+          <p>Units 2, 3, 4, 8, 9, 11 and 12 have confirmed topics but unconfirmed genres. Topics were recorded and genres left blank rather than guessed.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= UNIT 1 ================= -->
+    <section class="view" id="s-unit1" hidden>
+
+      <div class="sub-view" id="v-today">
+        <div class="card">
+          <h2>Today's session</h2>
+          <p class="lede" id="todayLede">Loading…</p>
+          <div class="tiles" id="todayTiles"></div>
+          <div class="row">
+            <button class="btn" id="startMix">Start daily mix</button>
+            <button class="btn quiet" id="startNew">Learn new items only</button>
+          </div>
+          <p class="hintline">A mix pulls whatever is due across vocabulary, sounds, grammar and reading — deliberately jumbled rather than grouped by type.</p>
+        </div>
+        <div class="card">
+          <h3>How to use this</h3>
+          <p class="lede">Four habits do most of the work. They are built in, but they only pay off if you let them.</p>
+          <ol style="margin:0;padding-left:1.15rem;display:flex;flex-direction:column;gap:.5rem;font-size:.91rem;color:var(--muted)">
+            <li><b style="color:var(--ink)">Answer before you reveal.</b> Typing a wrong answer teaches you more than reading the right one.</li>
+            <li><b style="color:var(--ink)">Come back tomorrow.</b> Fifteen minutes on five days beats two hours on one. The schedule assumes you return.</li>
+            <li><b style="color:var(--ink)">Speak out loud.</b> Silent reading will not fix /ʊ/ and /uː/. Use the ▶ buttons and copy them.</li>
+            <li><b style="color:var(--ink)">Overrule the app when it is wrong.</b> If your answer was also correct, say so — it will be remembered.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="sub-view" id="v-practice" hidden>
+        <div class="card">
+          <div class="progressbar"><i id="sessBar" style="width:0%"></i></div>
+          <div class="qhead">
+            <span class="chip" id="qType">—</span>
+            <span class="counter" id="qCount">—</span>
+            <span class="counter" id="qBox" style="margin-left:auto"></span>
+          </div>
+          <div id="qBody"></div>
+          <div id="qFoot"></div>
+        </div>
+      </div>
+
+      <div class="sub-view" id="v-learn" hidden>
+        <div class="card">
+          <h2>Vocabulary</h2>
+          <p class="lede">Eighteen words. Press ▶ to hear each one — the voice changes between plays on purpose.</p>
+          <div class="scroll"><table id="vocabTable"></table></div>
+        </div>
+        <div class="card">
+          <h2>Sounds — /ʊ/ and /uː/</h2>
+          <p class="lede">Same spelling, different sound. <b>book</b> is short; <b>food</b> is long.</p>
+          <div class="scroll"><table>
+            <tr><th></th><th>/ʊ/ — short, relaxed</th><th>/uː/ — long, tense</th></tr>
+            <tr><td class="mono">Lips</td><td>slightly rounded, loose</td><td>tightly rounded, pushed forward</td></tr>
+            <tr><td class="mono">Length</td><td>very short</td><td>about twice as long</td></tr>
+            <tr><td class="mono">Words</td><td>b<b>oo</b>k, c<b>oo</b>k, g<b>oo</b>d, f<b>oo</b>tball, p<b>u</b>t</td><td>f<b>oo</b>d, m<b>o</b>vie, p<b>oo</b>l, ch<b>oo</b>se, sch<b>oo</b>l</td></tr>
+          </table></div>
+          <div class="warn">
+            <b>Mẹo:</b> Đặt tay trước miệng. Với /uː/ bạn sẽ thấy môi đẩy ra xa hơn và âm kéo dài gấp đôi.
+            <span class="vi">Tiếng Việt không phân biệt độ dài nguyên âm kiểu này, nên phải luyện bằng tai chứ không đoán theo chữ viết.</span>
+          </div>
+          <h3>Minimal pairs</h3>
+          <p class="lede">These differ by one sound only. Play each pair and listen for the length.</p>
+          <div class="scroll"><table id="pairTable"></table></div>
+        </div>
+        <div class="card">
+          <h2>Grammar — liking &amp; disliking</h2>
+          <p class="lede">After these verbs, the next verb changes form. Three groups.</p>
+          <div class="grp">
+            <span class="label">Group 1 — always + V-ing</span>
+            <span class="verbs">enjoy · don't mind · can't stand · dislike · avoid · practise · fancy</span>
+            <span class="eg">I enjoy <b>reading</b> comics. · She can't stand <b>waiting</b>.</span>
+            <span class="eg" style="color:var(--red)">✗ I enjoy to read.</span>
+          </div>
+          <div class="grp">
+            <span class="label">Group 2 — both forms, same meaning</span>
+            <span class="verbs">like · love · hate · prefer</span>
+            <span class="eg">I love <b>cooking</b>. = I love <b>to cook</b>.</span>
+          </div>
+          <div class="grp">
+            <span class="label">Group 3 — always + to-V</span>
+            <span class="verbs">would like · would love · would prefer</span>
+            <span class="eg">I would like <b>to try</b> that café.</span>
+            <span class="eg" style="color:var(--red)">✗ I would like trying that café.</span>
+          </div>
+          <div class="warn">
+            <b>Bẫy thường gặp:</b> <i>like</i> + V-ing nhưng <i>would like</i> + to-V.
+            <span class="vi">I <b>like swimming</b>. = Tôi thích bơi (nói chung).<br>I <b>would like to swim</b>. = Tôi muốn đi bơi (bây giờ).</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-view" id="v-vocabmode" hidden>
+        <div class="card">
+          <div class="row">
+            <button class="btn quiet" id="vmBack">← Word &amp; Rule</button>
+            <span class="counter" id="vmCount" style="margin-left:auto"></span>
+          </div>
+          <div class="progressbar"><i id="vmBar" style="width:0%"></i></div>
+          <div id="vmBody"></div>
+          <div id="vmFoot"></div>
+        </div>
+      </div>
+
+      <div class="sub-view" id="v-read" hidden>
+        <div class="card">
+          <h2>Sunday is our day</h2>
+          <p class="lede">A blog post by Trang, 14, from Da Nang.</p>
+          <div class="note-box" id="readNote"><b>Step 1.</b> Read it once, properly. Then press <i>Hide and answer</i> — the questions are harder without the text, and that difficulty is the point.</div>
+          <div class="passage" id="passage"></div>
+          <div class="row">
+            <button class="btn" id="hideRead">Hide and answer</button>
+            <button class="btn quiet" id="showRead" hidden>Show the text again</button>
+          </div>
+        </div>
+        <div class="card" id="readQCard" hidden>
+          <h3>From memory</h3>
+          <div class="qa" id="readQ"></div>
+          <button class="btn" id="checkRead">Check my answers</button>
+        </div>
+      </div>
+
+      <div class="sub-view" id="v-listen" hidden>
+        <div class="card">
+          <h2>Nam's free time</h2>
+          <p class="lede">Listen twice before you read anything. The script stays hidden until you have answered.</p>
+          <div class="row">
+            <button class="btn" id="playListen">▶ Play</button>
+            <button class="btn quiet" id="stopListen">Stop</button>
+            <span class="counter" id="playCount">played 0×</span>
+          </div>
+          <label class="hintline" style="display:flex;gap:.5rem;align-items:center">
+            <span>Speed</span>
+            <input type="range" id="rate" min="0.6" max="1.1" step="0.05" value="0.9" style="flex:1;max-width:200px;accent-color:var(--teal)">
+            <span class="counter" id="rateVal">0.90×</span>
+          </label>
+          <div class="note-box" id="ttsWarn" hidden></div>
+        </div>
+        <div class="card">
+          <h3>Questions</h3>
+          <div class="qa" id="listenQ"></div>
+          <button class="btn" id="checkListen">Check my answers</button>
+        </div>
+        <div class="card">
+          <h3>Script</h3>
+          <p class="lede">Only open this after you have answered.</p>
+          <button class="btn quiet" id="toggleScript">Reveal script</button>
+          <div class="passage masked" id="script"></div>
+        </div>
+      </div>
+
+      <div class="sub-view" id="v-write" hidden>
+        <div class="card">
+          <h2>Email — your leisure time</h2>
+          <p class="lede">A friend abroad asked what you do in your free time. Write <b>80–100 words</b>.</p>
+          <p class="hintline">The support fades at each step. Do them in order — step 4 is the real task.</p>
+          <div class="steps" id="wSteps"></div>
+          <div id="wScaffold"></div>
+        </div>
+        <div class="card">
+          <h3>Your draft</h3>
+          <textarea id="draft" placeholder="Hi …"></textarea>
+          <div class="row">
+            <span class="counter" id="wc">0 words</span>
+            <button class="btn quiet" id="clearDraft" style="margin-left:auto">Clear</button>
+          </div>
+          <p class="hintline">Saved on this device as you type.</p>
+        </div>
+        <div class="card">
+          <h3>Check it yourself</h3>
+          <div class="checklist" id="wCheck"></div>
+          <div id="autoCheck"></div>
+        </div>
+      </div>
+
+      <div class="sub-view" id="v-progress" hidden>
+        <div class="card">
+          <h2>Where each item sits</h2>
+          <p class="lede">Answer an item correctly and it climbs a rung, and you will not see it again until the interval passes. Get it wrong and it drops to the bottom.</p>
+          <div class="ladder" id="ladder"></div>
+        </div>
+        <div class="card">
+          <h2>Needs more work</h2>
+          <p class="lede">Items you have answered at least twice and got wrong more often than right, weakest first. Worth a look before a test.</p>
+          <div class="errlist" id="errList"></div>
+        </div>
+        <div class="card">
+          <h3>Reset</h3>
+          <p class="lede">Clears all progress, drafts and schedules on this device.</p>
+          <button class="btn quiet" id="resetAll">Reset everything</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= ROADMAP ================= -->
+    <section class="view" id="s-roadmap" hidden>
+      <div class="card">
+        <h2>Units 2–12</h2>
+        <p class="lede">Unit 1 is built. The remaining eleven follow the same seven-lesson template, and each will appear here as a section of this same page — one link, everything inside it.</p>
+        <div class="note-box">
+          <b>Why one page:</b> a shared link grants access to that page only. Keeping every unit inside this single page means one share covers the whole course, now and as it grows.
+        </div>
+      </div>
+      <div class="card">
+        <h3>What each unit will carry</h3>
+        <ul style="margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.4rem;font-size:.9rem;color:var(--muted)">
+          <li><b style="color:var(--ink)">~18 vocabulary items</b> with IPA and Vietnamese glosses, seeded with that unit's target sounds</li>
+          <li><b style="color:var(--ink)">Pronunciation training</b> on the unit's contrast, with voice-varied listening</li>
+          <li><b style="color:var(--ink)">Grammar</b> taught as patterns, with graded production exercises</li>
+          <li><b style="color:var(--ink)">An original reading passage</b> on the unit's topic, with recall-after-hiding</li>
+          <li><b style="color:var(--ink)">A listening script</b> read by browser speech</li>
+          <li><b style="color:var(--ink)">The writing task</b> in its correct genre, with a fading scaffold</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Open questions before the rollout</h3>
+        <ul style="margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.4rem;font-size:.9rem;color:var(--muted)">
+          <li>Is the level right? Unit 1 sits around A2–B1.</li>
+          <li>Is 90 practice items per unit too many, too few?</li>
+          <li>Is the amount of Vietnamese support correct?</li>
+          <li>Units 9–12 need stress and intonation, which browser speech renders imperfectly. That may need a different exercise design.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><b>Method.</b> Built on practice testing and distributed practice — the two techniques Dunlosky et al. (2013) rated high-utility — plus interleaving, the generation effect, and confidence calibration. Pronunciation training rotates between voices because variability is what makes perceptual training generalise.</p>
+    <p><b>Scope.</b> This records structure and teaching targets compiled from public sources; it contains none of the textbook's own text, passages or word lists. All study material here is original.</p>
+    <p>Official free reader: <a href="https://hanhtrangso.nxbgd.vn/">hanhtrangso.nxbgd.vn</a> · companion audio: <a href="https://www.sachmem.vn/">sachmem.vn</a> · publisher: <a href="https://heid.vn/product/sach-giao-khoa-tieng-anh-lop-8-global-success/">HEID</a>. Progress is stored only in this browser; nothing is uploaded.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ================= SYLLABUS DATA ================= */
+
+  const UNITS = [
+    {n:1, t:"Leisure time", ipa:"/ʊ/ vs /uː/", gram:"Verbs of liking &amp; disliking + V-ing vs + to-V",
+     read:"Blog post — a teenager's leisure activities with family", speak:"Group Q&amp;A on own leisure, then report back",
+     listen:"Free time with family and friends", genre:"Email", wc:"80–100w", wtask:"", live:true},
+    {n:2, t:"Life in the countryside", ipa:"/ə/ vs /ɪ/", gram:"Comparative adverbs — -er / more",
+     read:"Countryside life", readQ:true, speak:"Describe a village or town you know",
+     listen:"Life in the countryside", genre:"Paragraph", wc:"80–100w", wtask:"Likes and dislikes of rural life"},
+    {n:3, t:"Teenagers", ipa:"/ʊə/ vs /ɔɪ/", gram:"Simple vs compound sentences; coordinating conjunctions",
+     read:"School clubs", readQ:true, speak:"Pair and group Q&amp;A on club details, then report",
+     listen:"Teen stress and its solutions", genre:"Paragraph", wc:"80–100w", wtask:"Causes of stress and how to handle them"},
+    {n:4, t:"Ethnic groups of Viet Nam", ipa:"/k/ vs /g/", gram:"Yes/No and Wh- questions; countable &amp; uncountable nouns",
+     read:"Ethnic groups; stilt houses", readQ:true, speak:"Discuss stilt-house features; interview peers on home types",
+     listen:"Daily life of ethnic-minority children", genre:"Paragraph", wc:"80–100w", wtask:"Own contributions to the family"},
+    {n:5, t:"Our customs and traditions", ipa:"/n/ vs /ŋ/", gram:"Articles, including the zero article",
+     read:"A village festival day", speak:"Complete, then build, a dialogue about a family event",
+     listen:"Ok Om Bok, the Moon Worshipping festival", genre:"Email of advice", wc:"80–100w", wtask:"Festival dos and don'ts"},
+    {n:6, t:"Lifestyles", ipa:"/br/ vs /pr/", gram:"Future simple; first conditional",
+     read:"Traditional lifestyle in Alaska", speak:"Pairs: how communities preserve their traditions",
+     listen:"Technology's effect on lifestyle and learning", genre:"Paragraph", wc:"80–100w", wtask:"Advantages <em>or</em> disadvantages of online learning"},
+    {n:7, t:"Environmental protection", ipa:"/bl/ vs /kl/", gram:"Complex sentences with adverbial time clauses",
+     read:"Con Dao National Park", speak:"Pairs Q&amp;A on Vu Quang National Park",
+     listen:"Causes and effects of water pollution", genre:"Notice", wc:"100–120w", wtask:"Invitation to an environment lecture"},
+    {n:8, t:"Shopping", ipa:"/sp/ vs /st/", gram:"Adverbs of frequency; present simple for future events",
+     read:"Shopping centres", readQ:true, speak:"Pairs Q&amp;A on a local market or centre, then report",
+     listen:"Online shopping", genre:"Paragraph", wc:"80–100w", wtask:"Advantages <em>or</em> disadvantages of a shopping type"},
+    {n:9, t:"Natural disasters", ipa:"Word stress", ipaNote:"Multi-syllable words", gram:"Past continuous",
+     read:"Natural disasters", readQ:true, speak:"Match Q&amp;A, then prepare and deliver a news report",
+     listen:"Storm and flood preparedness", genre:"Instructions", wc:"80–100w", wtask:"Flood safety before, during and after"},
+    {n:10, t:"Communication in the future", ipa:"Stress: -ese, -ee", gram:"Prepositions of place and time; possessive pronouns",
+     read:"Interview — telepathy as future communication", speak:"Pairs: pros and cons of online calls, then report",
+     listen:"Exhibition on communication through history", genre:"Descriptive paragraph", wc:"80–100w", wtask:"Video calls or social media"},
+    {n:11, t:"Science and technology", ipa:"Stress in statements vs questions", gram:"Reported speech — statements",
+     read:"Inventions — biometrics, nanolearning", readQ:true, speak:"Build conversations on how technologies are used",
+     listen:"Robot teachers and what they can do", genre:"Persuasive paragraph", wc:"80–100w", wtask:"Will robots replace teachers?"},
+    {n:12, t:"Life on other planets", ipa:"Intonation in lists", gram:"Reported speech — questions",
+     read:"Habitable planets; Mars", readQ:true, speak:"Discuss the conditions a planet needs to support life",
+     listen:"An imaginary planet that supports life", genre:"Descriptive paragraph", wc:"80–100w", wtask:"Aliens on another planet"}
+  ];
+
+  /* ================= UNIT 1 CONTENT ================= */
+
+  /* alt  = the same word, just spelled differently → plain correct.
+     near = different but genuinely correct English (usually American where the
+            book is British, or a fair synonym) → accepted, with a note naming
+            the form the textbook uses. Never mark real English wrong. */
+  const VOCAB = [
+    {en:"leisure", ipa:"/ˈleʒə(r)/", pos:"n", vi:"thời gian rảnh rỗi", cloze:"In my ___ time I read comics.",
+     near:["free time","spare time"]},
+    {en:"pastime", ipa:"/ˈpɑːstaɪm/", pos:"n", vi:"thú tiêu khiển", cloze:"Chess is his favourite ___.",
+     near:["hobby"]},
+    {en:"hang out", ipa:"/ˌhæŋ ˈaʊt/", pos:"phr v", vi:"đi chơi, la cà", cloze:"I like to ___ ___ with my friends on Saturdays.",
+     alt:["hang out with"]},
+    {en:"socialise", ipa:"/ˈsəʊʃəlaɪz/", pos:"v", vi:"giao lưu, gặp gỡ mọi người", cloze:"He loves to ___ and meet new people.", alt:["socialize"]},
+    {en:"take up", ipa:"/ˌteɪk ˈʌp/", pos:"phr v", vi:"bắt đầu (một sở thích mới)", cloze:"I want to ___ ___ photography next year."},
+    {en:"DIY", ipa:"/ˌdiː aɪ ˈwaɪ/", pos:"n", vi:"tự làm, tự sửa chữa", cloze:"My dad enjoys ___ and fixed the door himself.",
+     alt:["do it yourself","do-it-yourself"]},
+    {en:"craft", ipa:"/krɑːft/", pos:"n", vi:"đồ thủ công", cloze:"She sells her ___ at the weekend market.", alt:["crafts"],
+     near:["handicraft","handicrafts"]},
+    {en:"cook", ipa:"/kʊk/", pos:"v, n", vi:"nấu ăn; đầu bếp", cloze:"My brother can ___ three dishes."},
+    {en:"bookshop", ipa:"/ˈbʊkʃɒp/", pos:"n", vi:"hiệu sách", cloze:"We bought it at the new ___ in town.",
+     alt:["book shop"], near:["bookstore","book store"]},
+    {en:"football", ipa:"/ˈfʊtbɔːl/", pos:"n", vi:"bóng đá", cloze:"They play ___ in the park every Sunday.",
+     near:["soccer"]},
+    {en:"board game", ipa:"/ˈbɔːd ɡeɪm/", pos:"n", vi:"trò chơi cờ bàn", cloze:"We played a ___ ___ after dinner.",
+     alt:["boardgame"]},
+    {en:"jigsaw puzzle", ipa:"/ˈdʒɪɡsɔː ˌpʌzl/", pos:"n", vi:"trò xếp hình", cloze:"She finished a 1000-piece ___ ___.",
+     near:["jigsaw","puzzle"]},
+    {en:"movie", ipa:"/ˈmuːvi/", pos:"n", vi:"bộ phim", cloze:"We watched a ___ last night.",
+     near:["film"]},
+    {en:"music", ipa:"/ˈmjuːzɪk/", pos:"n", vi:"âm nhạc", cloze:"I listen to ___ while I study."},
+    {en:"swimming pool", ipa:"/ˈswɪmɪŋ puːl/", pos:"n", vi:"bể bơi", cloze:"The ___ ___ is next to the bookshop.",
+     near:["pool"]},
+    {en:"choose", ipa:"/tʃuːz/", pos:"v", vi:"chọn, lựa chọn", cloze:"I couldn't ___ between the two films.",
+     near:["pick","select"]},
+    {en:"relax", ipa:"/rɪˈlæks/", pos:"v", vi:"thư giãn", cloze:"I ___ by listening to music.",
+     near:["chill","unwind"]},
+    {en:"can't stand", ipa:"/kɑːnt ˈstænd/", pos:"phr", vi:"không chịu được", cloze:"I ___ ___ waiting in queues.",
+     alt:["cant stand","cannot stand"]}
+  ];
+
+  /* English has few /ʊ/–/uː/ minimal pairs, and the rare ones (wooed, shooed)
+     are obscure at this level and unreliable in text-to-speech. These four are
+     the usable set; the sorting task carries the rest of the perceptual load. */
+  const PAIRS = [
+    {short:"full", long:"fool"}, {short:"pull", long:"pool"},
+    {short:"look", long:"Luke"}, {short:"soot", long:"suit"}
+  ];
+
+  const SORT_WORDS = [
+    {w:"good",s:"ʊ"},{w:"look",s:"ʊ"},{w:"put",s:"ʊ"},{w:"foot",s:"ʊ"},
+    {w:"pull",s:"ʊ"},{w:"wood",s:"ʊ"},{w:"book",s:"ʊ"},{w:"cook",s:"ʊ"},
+    {w:"football",s:"ʊ"},{w:"would",s:"ʊ"},{w:"should",s:"ʊ"},{w:"sugar",s:"ʊ"},
+    {w:"cool",s:"uː"},{w:"soup",s:"uː"},{w:"room",s:"uː"},{w:"June",s:"uː"},
+    {w:"true",s:"uː"},{w:"movie",s:"uː"},{w:"food",s:"uː"},{w:"school",s:"uː"},
+    {w:"pool",s:"uː"},{w:"choose",s:"uː"},{w:"group",s:"uː"},{w:"music",s:"uː"}
+  ];
+
+  const GROUPS = [
+    {v:"enjoy",g:1},{v:"don't mind",g:1},{v:"can't stand",g:1},{v:"dislike",g:1},
+    {v:"avoid",g:1},{v:"practise",g:1},{v:"fancy",g:1},
+    {v:"like",g:2},{v:"love",g:2},{v:"hate",g:2},{v:"prefer",g:2},
+    {v:"would like",g:3},{v:"would love",g:3},{v:"would prefer",g:3}
+  ];
+
+  const FORMS = [
+    {s:"I can't stand ___ (queue) for tickets.", a:["queuing","queueing"], why:"can't stand is Group 1 — always V-ing."},
+    {s:"She'd like ___ (join) the chess club.", a:["to join"], why:"would like is Group 3 — always to-V."},
+    {s:"My brother avoids ___ (cook) whenever he can.", a:["cooking"], why:"avoid is Group 1 — always V-ing."},
+    {s:"We don't mind ___ (walk) if it isn't far.", a:["walking"], why:"don't mind is Group 1 — always V-ing."},
+    {s:"Would you prefer ___ (stay) in tonight?", a:["to stay"], why:"would prefer is Group 3 — always to-V."},
+    {s:"He practises ___ (play) the piano every evening.", a:["playing"], why:"practise is Group 1 — always V-ing."},
+    {s:"I enjoy ___ (spend) time with my grandparents.", a:["spending"], why:"enjoy is Group 1 — always V-ing."},
+    {s:"They can't stand ___ (lose) at board games.", a:["losing"], why:"can't stand is Group 1 — always V-ing."},
+    {s:"I'd love ___ (learn) the guitar.", a:["to learn"], why:"would love is Group 3 — always to-V."},
+    {s:"She fancies ___ (go) to the cinema.", a:["going"], why:"fancy is Group 1 — always V-ing."},
+    {s:"He hates ___ (drive) in the rain.", a:["driving","to drive"], why:"hate is Group 2 — both forms are correct here."},
+    {s:"Would you like ___ (come) with us?", a:["to come"], why:"would like is Group 3 — always to-V."}
+  ];
+
+  const PASSAGE = [
+    "Everyone in my family is busy from Monday to Saturday. My parents work, my brother has extra classes, and I have school and homework. So we made a rule last year: Sunday belongs to all of us together.",
+    "We start with the market. My mum and I choose the food, and my dad and my brother cook it. My dad can't stand following a recipe, so lunch is always a surprise. Sometimes it is wonderful. Sometimes we eat rice and laugh a lot.",
+    "In the afternoon we do something with our hands. My mum is teaching me to make paper flowers, and my brother has taken up woodwork — he built a small bookshelf for my room last month. It leans slightly to the left, but I would not change it for anything.",
+    "In the evening we play board games. Nobody in my family enjoys losing, so these games can get very loud. My grandmother usually wins, which nobody can explain.",
+    "My friends sometimes ask me to hang out on Sundays and I say no. They think this is strange. But I only get one Sunday a week, and I would rather spend it at home."
+  ];
+
+  const READ_Q = [
+    {q:"Which day does Trang's family keep for each other?", a:["sunday"], why:"“Sunday belongs to all of us together.”"},
+    {q:"What has Trang's brother recently taken up?", a:["woodwork","wood work"], why:"He took up woodwork and built her a bookshelf."},
+    {q:"What does Trang's father refuse to follow when he cooks?", a:["a recipe","recipe","recipes","the recipe"], why:"“My dad can't stand following a recipe.”"},
+    {q:"Who usually wins the board games?", a:["her grandmother","grandmother","grandma","the grandmother","trang's grandmother"], why:"“My grandmother usually wins, which nobody can explain.”"},
+    {q:"In one word — how does Trang feel about the crooked bookshelf? (fond / annoyed / embarrassed)", a:["fond"], why:"“I would not change it for anything” — she values it as it is."}
+  ];
+
+  const SCRIPT = [
+    "Hi, I'm Nam. People think I have a lot of free time because I don't play sport, but my week is quite full.",
+    "On weekday evenings I usually stay in. I like listening to music while I do my homework — my mother says this is impossible, but my marks are fine. After that I sometimes watch a short film, though I can't stand anything longer than an hour on a school night.",
+    "Saturdays are for my friends. We meet at the shopping centre near the swimming pool and just walk around. We don't spend much money. Mostly we talk. Last month we started playing football in the park instead, and now half of us are too tired to do anything on Sunday.",
+    "Sunday belongs to my grandparents. I go to their house for lunch and my grandfather teaches me to cook one new dish each week. So far I have learned six. Two of them were good."
+  ];
+
+  const LISTEN_Q = [
+    {q:"What does Nam listen to while doing homework?", a:["music"], why:"“I like listening to music while I do my homework.”"},
+    {q:"What is the longest film he will watch on a school night? (hour / minute / day)", a:["hour","an hour","one hour"], why:"He can't stand anything longer than an hour."},
+    {q:"Where do he and his friends meet on Saturdays? (three words)", a:["the shopping centre","shopping centre","the shopping center","shopping center"], why:"At the shopping centre near the swimming pool."},
+    {q:"What sport did they start playing last month?", a:["football"], why:"“Last month we started playing football in the park.”"},
+    {q:"How many dishes has he learned to cook? (write the number in words)", a:["six","6"], why:"“So far I have learned six.”"}
+  ];
+
+  const W_STEPS = [
+    {name:"1 · Model", html:'<p class="lede">Read this once. Notice how each paragraph does a different job.</p><div class="passage" style="font-size:.94rem"><p>Hi Linh,</p><p>Thanks for your message! You asked what I do at the weekend, so here it is.</p><p>I don\'t have much free time during the week, but Saturdays are mine. I usually hang out with two friends from my class. We enjoy walking around the bookshops in the old quarter, and we always end up in the same café.</p><p>I\'ve also taken up cooking this year. I can\'t stand following recipes, so my food is unpredictable! Next I\'d love to learn how to make bánh xèo.</p><p>What about you? Write soon.<br>Mai</p></div><p class="counter">96 words</p>'},
+    {name:"2 · Frames", html:'<p class="lede">Same shape, with the content removed. Fill each frame in your draft below.</p><div class="passage" style="font-size:.94rem;color:var(--muted)"><p>Hi ____,</p><p>Thanks for ____. You asked ____, so here it is.</p><p>I don\'t have much free time during ____, but ____ are mine. I usually ____ with ____. We enjoy ____, and we always ____.</p><p>I\'ve also taken up ____ this year. I can\'t stand ____, so ____! Next I\'d love to ____.</p><p>What about you? Write soon.<br>____</p></div>'},
+    {name:"3 · Keywords", html:'<p class="lede">Only the plan is left. Write full sentences from these.</p><ul style="margin:0;padding-left:1.15rem;color:var(--muted);font-size:.91rem;display:flex;flex-direction:column;gap:.35rem"><li>greeting + thank them</li><li>weekdays busy → but one free day</li><li>who with · what you enjoy doing (V-ing)</li><li>something you\'ve taken up · something you can\'t stand</li><li>what you\'d love to do next (to-V)</li><li>question back + sign-off</li></ul>'},
+    {name:"4 · On your own", html:'<p class="lede">No support now. Write the whole email from a blank page — this is the version that counts.</p><div class="note-box">If you get stuck, go back one step rather than copying the model. Struggling briefly is doing the work.</div>'}
+  ];
+
+  const W_CHECK = [
+    "80–100 words", "Greeting and sign-off",
+    "Three or more liking/disliking verbs, correctly followed",
+    "Four or more words from the vocabulary list",
+    "A question back to your friend",
+    "Written in paragraphs, not one block"
+  ];
+
+  const INTERVALS = [0,1,3,7,14,30];
+  const MIX_SIZE = 12;
+  const KEY = "eng8-unit1-v1";
+  const DAY = 86400000;
+  const today = () => { const d = new Date(); d.setHours(0,0,0,0); return d.getTime(); };
+
+  /* ================= STATE ================= */
+
+  /* `accepted` holds answers the learner overruled the app on. No word list can
+     anticipate every correct synonym, so the learner gets the final say and the
+     app remembers it — the same answer is never rejected twice. */
+  let S = { items:{}, draft:"", wstep:0, checks:[], errors:[], plays:0, accepted:{} };
+  function load() { try { const r = localStorage.getItem(KEY); if (r) S = Object.assign(S, JSON.parse(r)); } catch (e) {} }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+
+  const BANK = [];
+  VOCAB.forEach((v,i) => { BANK.push({id:"vr"+i,kind:"vocab-recall",data:v}); BANK.push({id:"vc"+i,kind:"vocab-cloze",data:v}); });
+  PAIRS.forEach((p,i) => BANK.push({id:"mp"+i,kind:"minimal-pair",data:p}));
+  SORT_WORDS.forEach((w,i) => BANK.push({id:"ps"+i,kind:"pron-sort",data:w}));
+  GROUPS.forEach((g,i) => BANK.push({id:"gg"+i,kind:"grammar-group",data:g}));
+  FORMS.forEach((f,i) => BANK.push({id:"gf"+i,kind:"grammar-form",data:f}));
+  const byId = {}; BANK.forEach(it => { byId[it.id] = it; });
+
+  function rec(id) { if (!S.items[id]) S.items[id] = {box:0,due:0,seen:0,right:0}; return S.items[id]; }
+  const isDue = it => { const r = S.items[it.id]; return !r || r.due <= today(); };
+  const isNew = it => !S.items[it.id];
+  const dueList = () => BANK.filter(isDue);
+
+  function grade(id, correct) {
+    const r = rec(id); r.seen++;
+    if (correct) { r.right++; r.box = Math.min(r.box+1, INTERVALS.length-1); }
+    else { r.box = 0; }
+    r.due = today() + INTERVALS[r.box]*DAY;
+    save();
+  }
+
+  /* Items answered at least twice and still going wrong more often than not.
+     Derived from the record rather than tracked separately, so it cannot drift
+     out of step with what actually happened. */
+  function troubled() {
+    return BANK.filter(it => {
+      const r = S.items[it.id];
+      return r && r.seen >= 2 && r.right / r.seen < 0.6;
+    }).sort((a,b) => {
+      const ra = S.items[a.id], rb = S.items[b.id];
+      return (ra.right/ra.seen) - (rb.right/rb.seen);
+    });
+  }
+
+  /* Learner overrules a "wrong" verdict: undo the penalty and remember the
+     wording, so the same answer is never rejected twice. */
+  function override(id, typed) {
+    const r = rec(id);
+    if (r.seen > 0) r.seen--;
+    const t = (typed || "").trim();
+    if (t) {
+      S.accepted[id] = S.accepted[id] || [];
+      if (S.accepted[id].indexOf(t) === -1) S.accepted[id].push(t);
+    }
+    grade(id, true);
+  }
+  const learnerOK = (id, typed) => matches(typed, S.accepted[id] || []);
+
+  /* ================= SPEECH ================= */
+
+  /* The voice IS the pronunciation model, so it is chosen, not accepted.
+     getVoices() returns every installed en-* voice unranked, and on macOS that
+     list is mostly Apple's stylised set — of the 37 English voices on a stock
+     machine, Daniel and Samantha are the only neutral speakers. Because the
+     rotation below steps to the next voice on every press, an unfiltered pool
+     meant a learner who pressed "Hear it" a few times marched straight through
+     Bahh, Bells, Boing and Bubbles. A cartoon voice is not a pronunciation
+     model. Same ranking as app/unit-01-vocab.html, which fixed this first. */
+  const CHARACTER_VOICE = /\b(albert|bad news|bahh|bells|boing|bubbles|cellos|eddy|flo|fred|good news|grandma|grandpa|jester|junior|kathy|organ|ralph|reed|rocko|sandy|shelley|superstar|trinoids|whisper|wobble|zarvox)\b/i;
+  const NEURAL_VOICE    = /(natural|neural|enhanced|premium|siri|google|online)/i;
+  const NEUTRAL_VOICE   = /\b(daniel|kate|serena|libby|sonia|ryan|arthur|oliver|hazel|george|martha|samantha|alex|karen|moira|tessa)\b/i;
+
+  let voices = [], voiceTurn = 0, ttsOK = ("speechSynthesis" in window);
+  function scoreVoice(v) {
+    const lang = String(v.lang || "").replace("_", "-");
+    const name = String(v.name || "");
+    let s = /^en-GB/i.test(lang) ? 100 : /^en-(IE|AU|NZ|ZA)/i.test(lang) ? 40 : 20;
+    if (NEURAL_VOICE.test(name))  s += 50;
+    if (NEUTRAL_VOICE.test(name)) s += 25;
+    if (/compact/i.test(name))    s -= 15;
+    return s;
+  }
+  function refreshVoices() {
+    if (!ttsOK) return;
+    const all = speechSynthesis.getVoices() || [];
+    const en  = all.filter(v => /^en/i.test(String(v.lang || "").replace("_", "-")));
+    /* Novelty voices are dropped, not merely ranked last — a rotation always
+       reaches the end of its pool eventually. They return only on a machine
+       with nothing else, where a silly voice still beats silence. */
+    const usable = en.filter(v => !CHARACTER_VOICE.test(String(v.name || "")));
+    voices = (usable.length ? usable : en).slice().sort((a, b) => scoreVoice(b) - scoreVoice(a));
+    if (!voices.length && all.length) voices = all.slice(0, 3);
+    voiceTurn = 0;
+  }
+  if (ttsOK) { refreshVoices(); speechSynthesis.onvoiceschanged = () => { refreshVoices(); renderTTSWarn(); }; }
+
+  /* HVPT: rotate voices so the contrast is heard from several speakers — that
+     variability is what makes perceptual training generalise to new words. The
+     rotation runs over the ranked pool above and is capped, so every repeat
+     stays inside the handful of voices actually worth imitating. */
+  const ROTATE_POOL = 4;
+  let sayTimer = null, sayTurn = 0;
+  function stopSpeaking() {
+    sayTurn++;                                   // invalidate anything waiting to start
+    if (sayTimer) { clearTimeout(sayTimer); sayTimer = null; }
+    if (ttsOK) speechSynthesis.cancel();
+  }
+  function say(text, opts) {
+    opts = opts || {};
+    if (!ttsOK || !text) return;
+    try {
+      stopSpeaking();
+      const mine = sayTurn;
+      /* A cancel() landing mid-word can leave Chrome's engine paused, and a
+         paused engine accepts utterances without ever playing them. */
+      if (speechSynthesis.paused) speechSynthesis.resume();
+      /* Chrome drops an utterance queued in the same tick as cancel(), and
+         WebKit keeps a queued-but-unstarted one alive so the replacement plays
+         over the top of it. Either way repeated presses garble. Wait for the
+         engine to actually fall idle, with a cap so a stuck engine still
+         gets its one attempt. */
+      let waited = 0;
+      const fire = () => {
+        sayTimer = null;
+        if (mine !== sayTurn) return;            // a later press already won
+        if ((speechSynthesis.speaking || speechSynthesis.pending) && waited < 600) {
+          waited += 40; sayTimer = setTimeout(fire, 40); return;
+        }
+        const u = new SpeechSynthesisUtterance(text);
+        if (voices.length) {
+          const pool = Math.min(voices.length, ROTATE_POOL);
+          u.voice = opts.vary === false ? voices[0] : voices[voiceTurn % pool];
+          if (opts.vary !== false) voiceTurn++;
+          u.lang = u.voice.lang;
+        }
+        u.rate = opts.rate || 0.85; u.pitch = 1;
+        speechSynthesis.speak(u);
+      };
+      sayTimer = setTimeout(fire, 60);
+    } catch (e) {}
+  }
+  function renderTTSWarn() {
+    const el2 = document.getElementById("ttsWarn"); if (!el2) return;
+    const bad = !ttsOK || !voices.length;
+    el2.hidden = !bad;
+    if (bad) el2.innerHTML = "<b>No speech voices found in this browser.</b> The listening and sound exercises need them. Try Chrome, Edge or Safari, or ask someone to read the script aloud while you cover it.";
+  }
+
+  /* ================= HELPERS ================= */
+
+  const $ = s => document.querySelector(s);
+  const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+  /* ---- answer matching ----------------------------------------------------
+     Rule: a genuinely correct answer must never be marked wrong. Rather than
+     listing every possible spelling by hand, each answer is reduced to a set
+     of equivalent keys, and a reply counts if any key collides. This absorbs
+     punctuation, hyphens, spacing, articles and British/American spelling
+     without anyone having to anticipate them. */
+
+  const norm = s => (s||"")
+    .toLowerCase()
+    .normalize("NFC")
+    .replace(/[’‘`´]/g,"'")
+    .replace(/[-–—_/]+/g," ")               // hyphens and slashes behave as spaces
+    .replace(/[.,!?;:"“”()\[\]]/g,"")       // punctuation is never meaningful here
+    .replace(/\s+/g," ")
+    .trim();
+
+  /* Words that differ only by dialect. First entry is the canonical form. */
+  const EQUIV = [
+    ["practise","practice"], ["centre","center"], ["theatre","theater"],
+    ["favourite","favorite"], ["colour","color"], ["neighbour","neighbor"],
+    ["travelling","traveling"], ["queuing","queueing"], ["grey","gray"],
+    ["programme","program"], ["metre","meter"], ["litre","liter"]
+  ];
+  const CANON = {};
+  EQUIV.forEach(g => g.forEach(w => { CANON[w] = g[0]; }));
+
+  /* -ise/-ize is a systematic difference and cannot collide with real words. */
+  const fold = s => s.replace(/is(e|ed|es|ing|ation)\b/g, (m,t) => "iz" + t);
+  const canon = s => s.split(" ").map(w => CANON[w] || w).join(" ");
+  const squash = s => s.replace(/\s+/g,"");
+  const noArticle = s => s.replace(/^(a|an|the)\s+/,"");
+
+  function keys(s) {
+    const out = new Set();
+    const base = norm(s);
+    if (!base) return out;
+    [base, noArticle(base)].forEach(v => {
+      [v, fold(v), canon(v), fold(canon(v))].forEach(w => { out.add(w); out.add(squash(w)); });
+    });
+    return out;
+  }
+
+  /* Strict: the reply must be one of the accepted answers. */
+  function matches(typed, accepted) {
+    if (!typed || !typed.trim()) return false;
+    const t = keys(typed);
+    return accepted.some(a => {
+      for (const k of keys(a)) if (t.has(k)) return true;
+      return false;
+    });
+  }
+
+  /* Loose: also true when the accepted answer sits inside a fuller reply, so
+     "on Sunday" or "her grandmother wins" count for short-answer questions. */
+  function matchesLoose(typed, accepted) {
+    if (matches(typed, accepted)) return true;
+    if (!typed || !typed.trim()) return false;
+    const hay = " " + fold(canon(norm(typed))) + " ";
+    return accepted.some(a => {
+      const n = fold(canon(norm(a)));
+      if (!n) return false;
+      const at = hay.indexOf(" " + n + " ");
+      if (at === -1) return false;
+      /* "not Sunday" and "never on Sunday" must not count as "Sunday" — the
+         negator may sit a couple of small words back, not just adjacent. */
+      const before = hay.slice(Math.max(0, at - 24), at + 1);
+      return !/\b(not|never|no)\b[\s\w']{0,10}$/.test(before);
+    });
+  }
+  const shuffle = a => { const r=a.slice(); for(let i=r.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[r[i],r[j]]=[r[j],r[i]];} return r; };
+  const words = t => (t.trim().match(/[A-Za-zÀ-ỹ0-9'’-]+/g)||[]).length;
+
+  /* Touch devices: the on-screen keyboard covers the controls below the input,
+     so we never steal focus automatically and we always give a way out. */
+  const COARSE = !!(window.matchMedia && window.matchMedia("(pointer: coarse)").matches);
+  const isField = n => n && (n.tagName === "INPUT" || n.tagName === "TEXTAREA");
+
+  /* Tapping anywhere that is not a field dismisses the keyboard. */
+  document.addEventListener("pointerdown", e => {
+    const a = document.activeElement;
+    if (!isField(a) || e.target === a) return;
+    if (e.target.closest && e.target.closest("input, textarea")) return;
+    a.blur();
+  });
+
+  /* ================= NAVIGATION ================= */
+
+  const SECTIONS = ["map","unit1","roadmap"];
+  const TABS = ["today","practice","learn","vocabmode","read","listen","write","progress"];
+  let curSec = "map", curTab = "today";
+
+  function showSection(sec) {
+    curSec = sec;
+    SECTIONS.forEach(s => { $("#s-"+s).hidden = (s !== sec); });
+    document.querySelectorAll("#mainNav button").forEach(b => b.setAttribute("aria-current", String(b.dataset.sec === sec)));
+    $("#unitNav").hidden = (sec !== "unit1");
+    $("#dueBadge").hidden = (sec !== "unit1");
+    if (sec === "unit1") showTab(curTab); else window.scrollTo({top:0,behavior:"instant"});
+  }
+
+  function showTab(tab) {
+    curTab = tab;
+    TABS.forEach(t => { $("#v-"+t).hidden = (t !== tab); });
+    document.querySelectorAll("#unitNav button").forEach(b => b.setAttribute("aria-current", String(b.dataset.view === tab)));
+    if (tab === "today") renderToday();
+    if (tab === "progress") renderProgress();
+    if (tab === "learn") renderLearn();
+    if (tab === "vocabmode") vmEnter();
+    if (tab === "practice" && (!session || session.i >= session.queue.length)) startSession(dueList());
+    window.scrollTo({top:0,behavior:"instant"});
+  }
+
+  document.querySelectorAll("#mainNav button").forEach(b => b.addEventListener("click", () => showSection(b.dataset.sec)));
+  document.querySelectorAll("#unitNav button").forEach(b => b.addEventListener("click", () => showTab(b.dataset.view)));
+
+  /* ================= COURSE MAP ================= */
+
+  function renderMap() {
+    const list = $("#unitList");
+    list.innerHTML = "";
+    UNITS.forEach(u => {
+      const art = el("article", "unit" + (u.live ? " live" : ""));
+      const head = el("div","unit-head");
+      head.appendChild(el("span","unit-n", String(u.n).padStart(2,"0")));
+      const h = el("h3","unit-title"); h.textContent = u.t; head.appendChild(h);
+      if (u.live) {
+        const go = el("button","btn ghost go","Open unit →");
+        go.addEventListener("click", () => { showSection("unit1"); });
+        head.appendChild(go);
+      } else {
+        const b = el("span","badge go","planned");
+        head.appendChild(b);
+      }
+      art.appendChild(head);
+
+      const st = el("div","strands");
+
+      const s1 = el("div","strand");
+      s1.appendChild(el("span","strand-label","Pronunciation"));
+      s1.appendChild(el("span","ipa-tag", u.ipa));
+      if (u.ipaNote) s1.appendChild(el("p","task", u.ipaNote));
+      st.appendChild(s1);
+
+      const s2 = el("div","strand");
+      s2.appendChild(el("span","strand-label","Grammar"));
+      const g = el("span","gram"); g.innerHTML = u.gram; s2.appendChild(g);
+      st.appendChild(s2);
+
+      const s3 = el("div","strand");
+      s3.appendChild(el("span","strand-label","Reading → Speaking"));
+      const rp = el("p"); rp.innerHTML = u.read + (u.readQ ? ' <span class="q" tabindex="0" title="Topic confirmed, text type unverified">?</span>' : "");
+      s3.appendChild(rp);
+      const sp = el("p","task"); sp.innerHTML = u.speak; s3.appendChild(sp);
+      st.appendChild(s3);
+
+      const s4 = el("div","strand");
+      s4.appendChild(el("span","strand-label","Listening → Writing"));
+      s4.appendChild(el("p", null, u.listen));
+      const gn = el("span","genre"); gn.innerHTML = u.genre + ' <span>' + u.wc + '</span>'; s4.appendChild(gn);
+      if (u.wtask) { const wt = el("p","task"); wt.innerHTML = u.wtask; s4.appendChild(wt); }
+      st.appendChild(s4);
+
+      art.appendChild(st);
+      list.appendChild(art);
+
+      if (u.n % 3 === 0) {
+        const cp = el("div","checkpoint", "Review " + (u.n/3) + " · units " + (u.n-2) + "–" + u.n);
+        list.appendChild(cp);
+      }
+    });
+  }
+
+  /* ================= TODAY ================= */
+
+  function renderToday() {
+    const due = dueList();
+    const fresh = BANK.filter(isNew);
+    const learned = BANK.length - fresh.length;
+    const mastered = BANK.filter(it => (S.items[it.id]||{}).box >= 4).length;
+
+    $("#dueBadge").textContent = due.length ? due.length + " due" : "all caught up";
+    $("#todayLede").textContent = due.length
+      ? due.length + " item" + (due.length===1?"":"s") + " ready — " + fresh.length + " you have never seen, " + (due.length-fresh.length) + " coming back for review."
+      : "Nothing is due right now. Come back tomorrow — that gap is doing the work.";
+
+    const tiles = $("#todayTiles"); tiles.innerHTML = "";
+    [["due now", due.length, due.length?"hot":""],
+     ["items seen", learned+"/"+BANK.length, ""],
+     ["mastered", mastered, mastered?"good":""],
+     ["needs work", troubled().length, troubled().length?"hot":""]
+    ].forEach(([k,n,cls]) => {
+      const t = el("div","tile "+cls);
+      t.appendChild(el("span","n",String(n)));
+      t.appendChild(el("span","k",k));
+      tiles.appendChild(t);
+    });
+    $("#startMix").disabled = !due.length;
+    $("#startNew").disabled = !fresh.length;
+  }
+
+  $("#startMix").addEventListener("click", () => { startSession(dueList()); showTab("practice"); });
+  $("#startNew").addEventListener("click", () => { startSession(BANK.filter(isNew)); showTab("practice"); });
+
+  /* ================= SESSION ENGINE ================= */
+
+  let session = null;
+
+  function startSession(pool) {
+    if (!pool.length) { session = null; renderDone("Nothing to practise right now."); return; }
+    session = { queue: spread(shuffle(pool).slice(0,MIX_SIZE)), i:0, right:0, conf:null, answered:false };
+    renderQ();
+  }
+  function spread(list) {
+    const out = [], rest = list.slice();
+    while (rest.length) {
+      let idx = rest.findIndex(x => !out.length || x.kind !== out[out.length-1].kind);
+      if (idx === -1) idx = 0;
+      out.push(rest.splice(idx,1)[0]);
+    }
+    return out;
+  }
+
+  function renderDone(msg) {
+    $("#sessBar").style.width = "100%";
+    $("#qType").textContent = "done"; $("#qCount").textContent = ""; $("#qBox").textContent = "";
+    const b = $("#qBody"); b.innerHTML = ""; b.appendChild(el("p","prompt",msg));
+    const f = $("#qFoot"); f.innerHTML = "";
+    const row = el("div","row");
+    const back = el("button","btn","Back to Today");
+    back.addEventListener("click", () => showTab("today"));
+    row.appendChild(back);
+    const more = dueList();
+    if (more.length) {
+      const nxt = el("button","btn quiet","Another " + Math.min(MIX_SIZE, more.length));
+      nxt.addEventListener("click", () => startSession(more));
+      row.appendChild(nxt);
+    }
+    f.appendChild(row);
+    renderToday();
+  }
+
+  const KIND_LABEL = {
+    "vocab-recall":"vocabulary", "vocab-cloze":"vocabulary in context",
+    "minimal-pair":"listening · sounds", "pron-sort":"sounds",
+    "grammar-group":"grammar pattern", "grammar-form":"grammar form"
+  };
+
+  function renderQ() {
+    if (!session) return;
+    if (session.i >= session.queue.length) {
+      return renderDone("Session finished — " + session.right + " of " + session.queue.length +
+        " correct. Items you missed will come back tomorrow; the rest are scheduled further out.");
+    }
+    const item = session.queue[session.i];
+    session.answered = false;
+
+    $("#sessBar").style.width = Math.round(session.i/session.queue.length*100) + "%";
+    $("#qType").textContent = KIND_LABEL[item.kind] || item.kind;
+    $("#qCount").textContent = (session.i+1) + " / " + session.queue.length;
+    const r = S.items[item.id];
+    $("#qBox").textContent = r ? "rung " + r.box : "new";
+
+    const body = $("#qBody"); body.innerHTML = "";
+    const foot = $("#qFoot"); foot.innerHTML = "";
+    const ctl = BUILDERS[item.kind](item, body);
+
+    const checkBtn = el("button","btn wide","Check");
+    checkBtn.addEventListener("click", () => {
+      if (session.answered) return;
+      session.answered = true;
+      const res = ctl.check();
+      grade(item.id, res.ok);
+      if (res.ok) session.right++;
+      ctl.lock(); checkBtn.remove();
+      showVerdict(foot, res, item);
+    });
+    foot.appendChild(checkBtn);
+    /* On touch devices the keyboard would spring up on every question and hide
+       the confidence buttons — let the learner open it by tapping instead. */
+    if (ctl.focus && !COARSE) ctl.focus();
+  }
+
+  function showVerdict(foot, res, item) {
+    const v = el("div","verdict " + (res.ok ? "ok" : "no"));
+    const head = el("div");
+    head.innerHTML = res.ok ? (res.near ? "<b>Accepted.</b>" : "<b>Correct.</b>") : "<b>Not quite.</b>";
+    v.appendChild(head);
+    if (!res.ok && res.answer) v.appendChild(el("div", null, "Answer: " + res.answer));
+    if (res.why) v.appendChild(el("div","note", res.why));
+
+    /* The app's word list is not the authority on English. If the learner's
+       answer was in fact correct, they say so and it is remembered. */
+    if (!res.ok && item && (res.typed || "").trim()) {
+      const undo = el("button","btn quiet","My answer was also correct — count it");
+      undo.style.alignSelf = "flex-start";
+      undo.addEventListener("click", () => {
+        override(item.id, res.typed);
+        if (session.right < session.queue.length) session.right++;
+        v.className = "verdict ok";
+        v.innerHTML = "";
+        const done = el("div"); done.innerHTML = "<b>Counted as correct.</b>";
+        v.appendChild(done);
+        v.appendChild(el("div","note","“" + res.typed.trim() + "” is saved for this item — it will not be marked wrong again."));
+        renderToday();
+      });
+      v.appendChild(undo);
+    }
+
+    foot.appendChild(v);
+    const next = el("button","btn wide", session.i+1 >= session.queue.length ? "Finish" : "Next");
+    next.addEventListener("click", () => { session.i++; renderQ(); });
+    foot.appendChild(next); next.focus();
+  }
+
+  function mkInput(ph) {
+    const i = el("input"); i.type = "text"; i.placeholder = ph;
+    i.setAttribute("autocapitalize","off"); i.setAttribute("autocomplete","off"); i.setAttribute("spellcheck","false");
+    /* Labels the iOS return key "done" instead of "return". */
+    i.setAttribute("enterkeyhint","done");
+    return i;
+  }
+  function gapPrompt(text) {
+    const p = el("div","prompt");
+    text.split("___").forEach((t,i,arr) => {
+      p.appendChild(document.createTextNode(t));
+      if (i < arr.length-1) p.appendChild(el("span","gap","____"));
+    });
+    return p;
+  }
+  function pickList(container, opts, onPick) {
+    opts.forEach(o => {
+      const b = el("button", null, o.label); b.type = "button"; b.setAttribute("aria-pressed","false");
+      b.addEventListener("click", () => {
+        onPick(o.value);
+        container.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x===b)));
+      });
+      container.appendChild(b);
+    });
+  }
+
+  /* Exact spelling and simple variants are plain correct. A different but real
+     English word counts too — it is marked accepted, and the note says which
+     form the textbook expects, because that is the one exams will use. */
+  function judgeWord(v, typed, shown, id) {
+    if (matches(typed, [v.en].concat(v.alt || []))) return { ok:true, answer:shown, why:null, typed:typed };
+    if (learnerOK(id, typed)) {
+      return { ok:true, near:true, answer:shown, typed:typed,
+        why:"You counted this as right before, so it counts now." };
+    }
+    if (matches(typed, v.near || [])) {
+      return { ok:true, near:true, answer:shown, typed:typed,
+        why:"“" + typed.trim() + "” is good English. This book uses “" + v.en + "” — learn that form for tests." };
+    }
+    return { ok:false, answer:shown, why:v.vi, typed:typed };
+  }
+
+  const BUILDERS = {
+    "vocab-recall": function (item, body) {
+      const v = item.data;
+      const p = el("div","prompt"); p.appendChild(document.createTextNode("Write the English word:"));
+      p.appendChild(el("span","vi", v.vi + "  ·  (" + v.pos + ")"));
+      body.appendChild(p);
+      const input = mkInput("type in English"); body.appendChild(input);
+      const nw = v.en.split(" ").length;
+      body.appendChild(el("p","hintline", nw > 1 ? nw + " words" : v.en.length + " letters"));
+      return { focus:()=>input.focus(), lock:()=>{input.disabled=true;},
+        check:()=>judgeWord(v, input.value, v.en + "  " + v.ipa, item.id) };
+    },
+    "vocab-cloze": function (item, body) {
+      const v = item.data;
+      body.appendChild(gapPrompt(v.cloze));
+      const input = mkInput("fill the gap"); body.appendChild(input);
+      const nw = v.en.split(" ").length;
+      body.appendChild(el("p","hintline","Nghĩa: " + v.vi + (nw>1 ? "  ·  " + nw + " words — type them both in the box" : "")));
+      return { focus:()=>input.focus(), lock:()=>{input.disabled=true;},
+        check:()=>judgeWord(v, input.value, v.en, item.id) };
+    },
+    "minimal-pair": function (item, body) {
+      const p = item.data;
+      const target = Math.random() < 0.5 ? p.short : p.long;
+      body.appendChild(el("div","prompt","Which word did you hear?"));
+      const row = el("div","row");
+      const play = el("button","btn ghost","▶ Play"); play.addEventListener("click",()=>say(target,{rate:0.8}));
+      const slow = el("button","btn quiet","▶ Slower"); slow.addEventListener("click",()=>say(target,{rate:0.6}));
+      row.appendChild(play); row.appendChild(slow); body.appendChild(row);
+      body.appendChild(el("p","hintline","The voice changes each time you play — that variation is what trains your ear."));
+      let pick = null;
+      const ch = el("div","choices two");
+      pickList(ch, [{label:p.short,value:p.short},{label:p.long,value:p.long}], v => { pick = v; });
+      body.appendChild(ch);
+      say(target,{rate:0.8});
+      return { lock:()=>ch.querySelectorAll("button").forEach(b=>b.disabled=true),
+        check:()=>({ok: pick===target, answer:target, why: p.short+" has the short /ʊ/; "+p.long+" has the long /uː/."}) };
+    },
+    "pron-sort": function (item, body) {
+      const w = item.data;
+      body.appendChild(el("div","prompt", w.w));
+      const row = el("div","row");
+      const play = el("button","btn ghost","▶ Hear it"); play.addEventListener("click",()=>say(w.w,{rate:0.75}));
+      row.appendChild(play); body.appendChild(row);
+      body.appendChild(el("p","hintline","Which vowel sound is in this word?"));
+      let pick = null;
+      const ch = el("div","choices two");
+      pickList(ch, [{label:"/ʊ/ — short, like book",value:"ʊ"},{label:"/uː/ — long, like food",value:"uː"}], v => { pick = v; });
+      body.appendChild(ch);
+      return { lock:()=>ch.querySelectorAll("button").forEach(b=>b.disabled=true),
+        check:()=>({ok: pick===w.s, answer:"/"+w.s+"/",
+          why: w.s==="ʊ" ? "Short and relaxed — the lips barely move." : "Long and tense — the lips push forward and the sound is held."}) };
+    },
+    "grammar-group": function (item, body) {
+      const g = item.data;
+      const p = el("div","prompt"); p.appendChild(document.createTextNode(g.v));
+      p.appendChild(el("span","vi","Which group does this verb belong to?"));
+      body.appendChild(p);
+      let pick = null;
+      const ch = el("div","choices");
+      pickList(ch, [{label:"Group 1 — always V-ing",value:1},{label:"Group 2 — both forms",value:2},{label:"Group 3 — always to-V",value:3}], v => { pick = v; });
+      body.appendChild(ch);
+      const ex = {1:"e.g. I "+g.v+" reading.", 2:"e.g. I "+g.v+" reading. = I "+g.v+" to read.", 3:"e.g. I "+g.v+" to read."};
+      return { lock:()=>ch.querySelectorAll("button").forEach(b=>b.disabled=true),
+        check:()=>({ok: pick===g.g, answer:"Group "+g.g, why:ex[g.g]}) };
+    },
+    "grammar-form": function (item, body) {
+      const f = item.data;
+      body.appendChild(gapPrompt(f.s));
+      const input = mkInput("correct form of the verb"); body.appendChild(input);
+      if (f.a.length > 1) body.appendChild(el("p","hintline","More than one answer is possible here."));
+      return { focus:()=>input.focus(), lock:()=>{input.disabled=true;},
+        check:()=>({ok: matches(input.value, f.a) || learnerOK(item.id, input.value),
+          answer:f.a.join("  /  "), why:f.why, typed:input.value}) };
+    }
+  };
+
+  document.addEventListener("keydown", e => {
+    if (e.key !== "Enter") return;
+    const a = document.activeElement;
+    /* Return always closes the keyboard first, so the controls underneath
+       become reachable even when the answer is not ready to submit. */
+    if (isField(a) && a.tagName === "INPUT") { e.preventDefault(); a.blur(); }
+    if (curSec !== "unit1" || curTab !== "practice") return;
+    const btn = $("#qFoot").querySelector("button.btn.wide");
+    if (btn && !btn.disabled) { e.preventDefault(); btn.click(); }
+  });
+
+  /* ================= LEARN ================= */
+
+  function speakBtn(text, label) {
+    const b = el("button","speak", label || "▶"); b.type = "button";
+    b.setAttribute("aria-label","Hear " + text);
+    b.addEventListener("click", () => say(text));
+    return b;
+  }
+
+  function renderLearn() {
+    const t = $("#vocabTable"); t.innerHTML = "";
+    const hr = document.createElement("tr");
+    ["","Word","IPA","","Nghĩa"].forEach(h => { const th=document.createElement("th"); th.textContent=h; hr.appendChild(th); });
+    t.appendChild(hr);
+    VOCAB.forEach((v,i) => {
+      const tr = document.createElement("tr");
+      tr.appendChild(el("td","mono",String(i+1)));
+      const w = el("td"); w.appendChild(el("b",null,v.en)); tr.appendChild(w);
+      tr.appendChild(el("td","ipa",v.ipa));
+      const sp = el("td"); sp.appendChild(speakBtn(v.en)); tr.appendChild(sp);
+      tr.appendChild(el("td","vi",v.vi));
+      t.appendChild(tr);
+    });
+
+    /* The way into the guided mode lives in the vocabulary section itself,
+       directly under the list of words it teaches. */
+    const card = t.closest(".card");
+    if (card) {
+      const old = card.querySelector(".vm-cta");
+      if (old) old.remove();
+      const wrap = el("div","vm-cta");
+      const done = VOCAB.filter((v,i) => vmSeen(i)).length;
+      const b = el("button","btn wide");
+      b.type = "button";
+      b.innerHTML = done >= VOCAB.length
+        ? "Practise these words step by step"
+        : "Learn these words step by step <span style='font-weight:400;opacity:.85'>· "
+          + (VOCAB.length - done) + " still new</span>";
+      b.addEventListener("click", () => showTab("vocabmode"));
+      wrap.appendChild(b);
+      const h = el("p","hintline","Six words at a time. Each one gets a card with sound, meaning and "
+        + "examples, then comes straight back as a question — recognise it, recall it, write it, "
+        + "then use it in a sentence.");
+      wrap.appendChild(h);
+      card.appendChild(wrap);
+    }
+
+    const pt = $("#pairTable"); pt.innerHTML = "";
+    const ph = document.createElement("tr");
+    ["/ʊ/ short","","/uː/ long","","Both"].forEach(h => { const th=document.createElement("th"); th.textContent=h; ph.appendChild(th); });
+    pt.appendChild(ph);
+    PAIRS.forEach(p => {
+      const tr = document.createElement("tr");
+      tr.appendChild(el("td",null,p.short));
+      const b1 = el("td"); b1.appendChild(speakBtn(p.short)); tr.appendChild(b1);
+      tr.appendChild(el("td",null,p.long));
+      const b2 = el("td"); b2.appendChild(speakBtn(p.long)); tr.appendChild(b2);
+      const b3 = el("td");
+      const x3 = el("button","speak","▶ pair"); x3.type = "button";
+      x3.addEventListener("click", () => say(p.short + " … " + p.long, {rate:0.7}));
+      b3.appendChild(x3); tr.appendChild(b3);
+      pt.appendChild(tr);
+    });
+  }
+
+  /* ================= GUIDED VOCABULARY MODE =================
+
+     A first-encounter mode for words the learner has never met. The Practice
+     tab assumes you already know an item well enough to be tested on it; this
+     is what comes before that.
+
+     Shape, and why:
+       - Six words per round, not eighteen. Larger sets are simply harder with
+         no delayed payoff, and rounds are composed so that words easy to
+         confuse with each other (leisure/pastime, hang out/socialise) never
+         land in the same round.
+       - One card, then a question two or three items later — never straight
+         after the card, and never twice in a row. Retrieval is the thing that
+         builds memory; reading the card is only what makes retrieval possible.
+       - Four rungs of rising effort. A word leaves the round once it has been
+         recognised, recalled, written from Vietnamese, and used in a sentence.
+       - A wrong answer shows the pairing and puts the word back three items
+         later. It costs nothing else.
+
+     It writes through the same Leitner record as everything else, so a word
+     learned here is scheduled, counted and revised with the rest of the unit
+     rather than tracked twice. */
+
+  /* Rounds, by index into VOCAB. Deliberately not sequential. */
+  const VM_ROUNDS = [[0,2,5,9,12,15],[1,3,6,10,16,8],[4,7,11,13,14,17]];
+
+  /* Teaching content for the card: what the word means beyond the gloss, the
+     mistake to avoid, real examples, and a second sentence context so the
+     cloze rung is not always the same sentence. Keyed by VOCAB index. */
+  const TEACH = {
+    0:{def:"time when you are not working or studying and can do what you enjoy",
+       note:"Almost always used before another noun: <i>leisure time</i>, <i>leisure activities</i>. The first syllable rhymes with <i>measure</i>, not with <i>seize</i>.",
+       eg:["In her <b>leisure</b> time, my sister does jigsaw puzzles.","Most teenagers have very little <b>leisure</b> during exam week."],
+       col:["leisure time","leisure activity"], cloze2:"Between school and homework I have almost no ___ time."},
+    1:{def:"an activity you do regularly for pleasure when you are not working",
+       note:"One word, one <i>s</i> — not <i>past time</i>. Close to <i>hobby</i>, but a pastime can be more casual.",
+       eg:["Fishing is his favourite <b>pastime</b>.","Board games are a cheap <b>pastime</b> for a rainy Sunday."],
+       col:["a favourite pastime","a popular pastime"], cloze2:"Collecting stamps was a popular ___ fifty years ago."},
+    2:{def:"to spend time somewhere, or with someone, in a relaxed way",
+       note:"Informal. Use <i>with</i> for people and <i>at / in</i> for places: <i>hang out with Nam at the café</i>.",
+       eg:["On Sundays I <b>hang out with</b> my cousins at the park.","They <b>hang out</b> at the shopping centre near the pool."],
+       col:["hang out with friends","hang out at the park"], cloze2:"At the weekend I like to ___ with my cousins at the park."},
+    3:{def:"to meet and spend time with other people in a friendly way",
+       note:"British spelling <i>socialise</i>; American <i>socialize</i>. Both are correct — just be consistent.",
+       eg:["He loves to <b>socialise</b> with new people.","I don't <b>socialise</b> much during the week because of homework."],
+       col:["socialise with someone","a chance to socialise"], cloze2:"My brother is shy and doesn't ___ much at parties."},
+    4:{def:"to start doing a new hobby, sport or activity",
+       note:"Separable: <i>take up the guitar</i> = <i>take the guitar up</i>. With a pronoun it <b>must</b> split: <i>take it up</i>.",
+       eg:["I want to <b>take up</b> photography next year.","My brother has <b>taken up</b> woodwork."],
+       col:["take up a hobby","take up the guitar"], cloze2:"She decided to ___ the guitar after watching the concert."},
+    5:{def:"do-it-yourself: making or repairing things in your home yourself instead of paying someone",
+       note:"Uncountable — never <i>a DIY</i> on its own, but <i>a DIY project</i> is fine. Stress the last letter: dee-eye-<b>WHY</b>.",
+       eg:["My dad spends every Sunday doing <b>DIY</b>.","She made the bookshelf herself — it was a <b>DIY</b> project."],
+       col:["do DIY","a DIY project"], cloze2:"We built the shelf ourselves — it was a ___ project."},
+    6:{def:"an activity in which you make things skilfully with your hands; also the object you make",
+       note:"Usually plural when you mean the objects: <i>her crafts</i>. Singular for the skill itself: <i>the craft of weaving</i>.",
+       eg:["My grandmother makes paper flowers. Her <b>crafts</b> are lovely.","We learn a traditional <b>craft</b> at school on Fridays."],
+       col:["arts and crafts","a craft fair"], cloze2:"Weaving is a traditional ___ in many villages."},
+    7:{def:"to prepare food by heating it; also, a person who cooks",
+       note:"Short /ʊ/ — the vowel of <i>book</i>, <b>not</b> the long /uː/ of <i>food</i>. A <i>cook</i> works at home or in a small kitchen; a <i>chef</i> is trained and professional.",
+       eg:["My dad and my brother <b>cook</b> lunch on Sundays.","He is a good <b>cook</b>, but he can't stand following a recipe."],
+       col:["cook a meal","a good cook"], cloze2:"He is a very good ___, but he never follows a recipe."},
+    8:{def:"a shop that sells books",
+       note:"British English; Americans say <i>bookstore</i>. Short /ʊ/ in <i>book</i>.",
+       eg:["We bought the book at the new <b>bookshop</b> in town.","A new <b>bookshop</b> opened near the swimming pool."],
+       col:["a local bookshop","go to the bookshop"], cloze2:"There is a café upstairs in that ___."},
+    9:{def:"a game played by two teams of eleven who kick a ball into a goal",
+       note:"<i>Play football</i> — no <i>the</i>. First vowel is the short /ʊ/ of <i>put</i>, not the long /uː/ of <i>food</i>.",
+       eg:["Last month we started playing <b>football</b> in the park.","My cousin enjoys playing <b>football</b> every Saturday."],
+       col:["play football","a football match"], cloze2:"He was too tired after the ___ match to do anything."},
+    10:{def:"a game such as chess, played on a marked board with pieces or counters",
+       note:"Two words. <i>Board</i> /bɔːd/ sounds exactly like <i>bored</i> — same sound, completely different word.",
+       eg:["In the evening we play <b>board games</b>.","There is a big table with <b>board games</b> upstairs in the café."],
+       col:["play a board game","a board game night"], cloze2:"Chess is the only ___ my grandmother ever loses."},
+    11:{def:"a picture cut into many small pieces that you fit back together",
+       note:"You <b>do</b> a jigsaw puzzle — never <i>play</i> one. Often shortened to just <i>a jigsaw</i>.",
+       eg:["In my free time I like doing <b>jigsaw puzzles</b>.","This <b>jigsaw puzzle</b> has a thousand pieces."],
+       col:["do a jigsaw puzzle","a 500-piece jigsaw puzzle"], cloze2:"This ___ has a thousand pieces and I've lost two."},
+    12:{def:"a story told in moving pictures that you watch at a cinema or at home",
+       note:"Long /uː/ — the vowel of <i>food</i>, not <i>book</i>. British speakers often say <i>film</i> instead.",
+       eg:["I usually stay home and watch <b>movies</b>.","Why don't we watch a <b>movie</b> tonight?"],
+       col:["watch a movie","go to the movies"], cloze2:"I can't stand any ___ that is longer than two hours."},
+    13:{def:"sounds arranged in patterns to be sung or played on instruments",
+       note:"Uncountable — never <i>a music</i> or <i>musics</i>. Say <i>a piece of music</i> or <i>a song</i>. Begins /mjuː/, with a <i>y</i> sound.",
+       eg:["I like listening to <b>music</b> while I do my homework.","He can't stand loud <b>music</b> when he is trying to study."],
+       col:["listen to music","loud music"], cloze2:"He can't stand loud ___ when he is trying to study."},
+    14:{def:"a large tank or hole filled with water for people to swim in",
+       note:"<i>Pool</i> has the long /uː/ of <i>food</i>. Stress the first word: <b>SWIM</b>ming pool.",
+       eg:["Look at the blue <b>swimming pool</b> near the bookshop.","We meet at the shopping centre near the <b>swimming pool</b>."],
+       col:["an indoor swimming pool"], cloze2:"The water in the ___ was far too cold to swim in."},
+    15:{def:"to decide which thing or person you want from a number of them",
+       note:"Irregular: choose → chose /tʃəʊz/ → chosen. Two <i>o</i>s in the present, one in the past. Long /uː/, ending in a /z/ sound.",
+       eg:["We couldn't <b>choose</b> between the film and the football match.","My mum and I <b>choose</b> the food at the market."],
+       col:["choose between A and B","hard to choose"], cloze2:"You can ___ any three books from this shelf."},
+    16:{def:"to rest and stop feeling worried or tense",
+       note:"Stress the second syllable: re<b>LAX</b>. The adjective is <i>relaxing</i> for a thing, <i>relaxed</i> for a person.",
+       eg:["I read comics to <b>relax</b> after school.","Sunday is the only day my whole family can <b>relax</b> together."],
+       col:["sit back and relax","help you relax"], cloze2:"Sunday is the only day my family can sit down and ___."},
+    17:{def:"to hate something very strongly; to be unable to bear it",
+       note:"Always followed by <b>V-ing</b>, never <i>to-V</i>: <i>I can't stand queuing.</i> ✗ <i>I can't stand to queue.</i>",
+       eg:["I <b>can't stand</b> loud noise when I'm reading.","My dad <b>can't stand</b> following a recipe."],
+       col:["can't stand doing something"], cloze2:"She ___ queuing for tickets in the rain."}
+  };
+
+  /* Meaning groups, so a multiple-choice distractor is never a near-synonym
+     of the word being asked about. */
+  const VM_GROUP = {0:"free",1:"free",2:"social",3:"social",4:"verb",5:"make",6:"make",7:"make",
+                    8:"place",9:"game",10:"game",11:"game",12:"media",13:"media",14:"place",
+                    15:"verb",16:"verb",17:"feel"};
+
+  if (!S.vm) S.vm = { seen:{} };
+  const vmSeen = i => !!S.vm.seen[i];
+  function vmNextRound(){
+    for (const r of VM_ROUNDS) { const open = r.filter(i => !vmSeen(i)); if (open.length) return open; }
+    return [];
+  }
+  /* Receptive work lands on the recall item, productive work on the cloze
+     item, so this mode and the Practice tab move the same two records. */
+  const vmId = (i, dim) => (dim === "productive" ? "vc" : "vr") + i;
+
+  let vm = null;   // the running round
+
+  function vmEnter(){
+    if (!vm || vm.finished) vmStart();
+    else vmRender();
+  }
+  function vmStart(){
+    const round = vmNextRound();
+    if (!round.length) { vm = { review:true, finished:false, queue:vmBuildReview(), i:0, log:[] }; vmRender(); return; }
+    round.forEach(i => { S.vm.seen[i] = 1; });
+    save();
+    vm = vmMakeRound(round);
+    vmRender();
+  }
+
+  /* Every word met so far, one question each, for when there is nothing new. */
+  function vmBuildReview(){
+    const met = VOCAB.map((v,i) => i).filter(vmSeen);
+    return shuffle(met).map((i,k) => vmPrompt(i, k % 2 ? "cloze" : "mc"));
+  }
+
+  const VM_LADDER = ["mc","recall","type","cloze"];
+  function vmMakeRound(round){
+    const st = {};
+    round.forEach(i => { st[i] = { rung:0, asks:0, notBefore:0, done:false }; });
+    /* Card, card, card, then question — each first question lands two or three
+       items after its own card, with other words in between. */
+    const opening = [], pending = [];
+    round.forEach((i,k) => {
+      opening.push({ card:i });
+      pending.push(i);
+      if (k >= 2) opening.push({ ask:pending.shift(), first:true });
+    });
+    while (pending.length) opening.push({ ask:pending.shift(), first:true });
+    return { round, st, opening, step:0, last:null, finished:false, log:[] };
+  }
+  function vmDone(){ return vm.round.filter(i => vm.st[i].done).length; }
+  function vmFrac(){
+    const c = vm.round.reduce((a,i) => a + (vm.st[i].done ? VM_LADDER.length : vm.st[i].rung), 0);
+    return c / (vm.round.length * VM_LADDER.length);
+  }
+  function vmNext(){
+    vm.step++;
+    if (vm.opening.length){
+      const t = vm.opening.shift();
+      if (t.card != null){ vm.last = t.card; return { card:t.card }; }
+      vm.last = t.ask; vm.st[t.ask].asks++;
+      return vmPrompt(t.ask, VM_LADDER[vm.st[t.ask].rung]);
+    }
+    const open = vm.round.filter(i => !vm.st[i].done);
+    if (!open.length) return null;
+    let elig = open.filter(i => vm.st[i].notBefore <= vm.step && i !== vm.last);
+    if (!elig.length) elig = open.filter(i => i !== vm.last);
+    if (!elig.length) elig = open;
+    elig.sort((a,b) => vm.st[a].rung - vm.st[b].rung || vm.st[a].asks - vm.st[b].asks);
+    const i = elig[0];
+    vm.st[i].asks++; vm.last = i;
+    return vmPrompt(i, VM_LADDER[Math.min(vm.st[i].rung, VM_LADDER.length-1)]);
+  }
+  function vmPrompt(i, kind){
+    const p = { i, kind, dim:(kind === "mc" || kind === "recall") ? "receptive" : "productive" };
+    if (kind === "mc"){
+      const pool = VOCAB.map((v,k) => k).filter(k => k !== i && VM_GROUP[k] !== VM_GROUP[i]);
+      p.opts = shuffle(shuffle(pool).slice(0,3).map(k => ({ text:VOCAB[k].vi, ok:false }))
+                 .concat([{ text:VOCAB[i].vi, ok:true }]));
+    } else if (kind === "cloze"){
+      p.sentence = Math.random() < 0.5 ? VOCAB[i].cloze : (TEACH[i].cloze2 || VOCAB[i].cloze);
+    }
+    return p;
+  }
+  function vmRecord(p, ok){
+    grade(vmId(p.i, p.dim), ok);
+    const st = vm.st && vm.st[p.i];
+    if (!st) return;
+    if (ok){ if (st.rung < VM_LADDER.length) st.rung++; }
+    else st.notBefore = vm.step + 3;
+    if (st.rung >= VM_LADDER.length || st.asks >= 14) st.done = true;
+  }
+
+  /* ---- rendering ---- */
+  function vmRender(){
+    const body = $("#vmBody"), foot = $("#vmFoot");
+    body.innerHTML = ""; foot.innerHTML = "";
+    if (vm.review){ vmRenderReview(body, foot); return; }
+    const t = vmNext();
+    if (!t){ vmRenderDone(body, foot); return; }
+    $("#vmBar").style.width = Math.round(vmFrac()*100) + "%";
+    $("#vmCount").textContent = vmDone() + " of " + vm.round.length + " words finished";
+    if (t.card != null) vmRenderCard(body, foot, t.card);
+    else vmRenderPrompt(body, foot, t);
+  }
+  function vmRenderCard(body, foot, i){
+    const v = VOCAB[i], d = TEACH[i];
+    body.appendChild(el("span","label","New word"));
+    const h = el("div","qhead");
+    const w = el("h2",null,v.en); w.style.fontSize = "1.9rem"; h.appendChild(w);
+    h.appendChild(speakBtn(v.en, "▶ hear it"));
+    const sl = el("button","speak","▶ slowly"); sl.type = "button";
+    sl.addEventListener("click", () => say(v.en, {rate:0.6})); h.appendChild(sl);
+    body.appendChild(h);
+    const ip = el("div","ipa-tag", v.ipa + "  ·  " + v.pos); body.appendChild(ip);
+    const g = el("p"); g.style.fontSize = "1.15rem"; g.style.fontWeight = "600"; g.style.margin = ".5rem 0 0";
+    g.textContent = v.vi; body.appendChild(g);
+    body.appendChild(el("p","lede", d.def));
+    const eg = el("div","grp");
+    eg.appendChild(el("span","label","Examples"));
+    d.eg.forEach(x => { const e = el("span","eg"); e.innerHTML = x; eg.appendChild(e); });
+    body.appendChild(eg);
+    const cw = el("div","row");
+    d.col.forEach(c => cw.appendChild(el("span","chip",c)));
+    body.appendChild(cw);
+    const wn = el("div","warn"); wn.innerHTML = "<b>Watch out:</b> " + d.note;
+    body.appendChild(wn);
+    const r = el("div","row");
+    const go = el("button","btn","Got it — next"); go.type = "button";
+    go.addEventListener("click", () => { vmRender(); });
+    r.appendChild(go);
+    r.appendChild(el("span","hintline","You will be asked to use this word in a moment."));
+    foot.appendChild(r);
+    go.focus();
+  }
+  function vmRenderPrompt(body, foot, p){
+    const v = VOCAB[p.i], d = TEACH[p.i];
+    const KIND = { mc:"What does it mean?", recall:"Meaning check",
+                   type:"Write the English word", cloze:"Fill the gap" };
+    const head = el("div","qhead");
+    head.appendChild(el("span","chip", KIND[p.kind]));
+    body.appendChild(head);
+
+    if (p.kind === "mc"){
+      const q = el("div","prompt"); q.textContent = v.en; body.appendChild(q);
+      body.appendChild(el("div","ipa-tag", v.ipa));
+      const sr = el("div","row"); sr.appendChild(speakBtn(v.en, "▶ hear it")); body.appendChild(sr);
+      const box = el("div","choices");
+      p.opts.concat([{ text:"I don't know", idk:true }]).forEach(o => {
+        const b = el("button", null, o.text); b.type = "button";
+        b.addEventListener("click", () => {
+          box.querySelectorAll("button").forEach(x => { x.disabled = true; });
+          vmAfter(p, !!o.ok, o.idk ? null : o.text);
+        });
+        box.appendChild(b);
+      });
+      body.appendChild(box);
+      return;
+    }
+    if (p.kind === "recall"){
+      const q = el("div","prompt"); q.textContent = v.en; body.appendChild(q);
+      body.appendChild(el("div","ipa-tag", v.ipa));
+      body.appendChild(el("p","lede","Say the Vietnamese meaning out loud, then check yourself."));
+      const show = el("button","btn","Show the answer"); show.type = "button";
+      show.addEventListener("click", () => {
+        foot.innerHTML = "";
+        const a = el("div","verdict"); a.style.background = "var(--raised)";
+        a.appendChild(el("b",null,v.vi));
+        a.appendChild(el("span","note", d.def));
+        foot.appendChild(a);
+        const r = el("div","row");
+        const yes = el("button","btn","I knew it"); yes.type = "button";
+        yes.addEventListener("click", () => vmAfter(p, true, null));
+        const no = el("button","btn quiet","I didn't know it"); no.type = "button";
+        no.addEventListener("click", () => vmAfter(p, false, null));
+        r.appendChild(yes); r.appendChild(no); foot.appendChild(r);
+        yes.focus();
+      });
+      foot.appendChild(show); show.focus();
+      return;
+    }
+    /* typed answers: write the word, or fill a gap */
+    if (p.kind === "type"){
+      const q = el("div","prompt");
+      q.appendChild(document.createTextNode("Write the English word:"));
+      q.appendChild(el("span","vi", v.vi + "  ·  (" + v.pos + ")"));
+      body.appendChild(q);
+    } else {
+      body.appendChild(gapPrompt(p.sentence));
+      body.appendChild(el("p","hintline", v.vi + "  ·  " + v.pos));
+    }
+    const input = mkInput("type in English");
+    body.appendChild(input);
+    const submit = () => {
+      input.disabled = true;
+      const res = judgeWord(v, input.value, v.en + "  " + v.ipa, vmId(p.i, p.dim));
+      vmAfter(p, res.ok, input.value, res);
+    };
+    const go = el("button","btn","Check"); go.type = "button";
+    go.addEventListener("click", submit);
+    input.addEventListener("keydown", e => { if (e.key === "Enter"){ e.preventDefault(); submit(); } });
+    foot.appendChild(go);
+    if (!COARSE) input.focus();
+  }
+  /* Feedback, then the word goes back into the round. */
+  function vmAfter(p, ok, typed, res){
+    if (vm.review){ grade(vmId(p.i, p.dim), ok); vm.log.push({ i:p.i, ok:ok }); vm.i++; vmRender(); return; }
+    vmRecord(p, ok);
+    if (vm.log) vm.log.push({ i:p.i, ok:ok });
+    const body = $("#vmBody"), foot = $("#vmFoot");
+    foot.innerHTML = "";
+    const v = VOCAB[p.i], d = TEACH[p.i];
+    const box = el("div","verdict " + (ok ? "ok" : "no"));
+    const t = el("b", null, ok ? (res && res.near ? "Accepted" : "Correct") : (typed ? "Not quite" : "No answer"));
+    box.appendChild(t);
+    const line = el("div");
+    line.innerHTML = "<b>" + v.en + "</b> — <b>" + v.vi + "</b>";
+    box.appendChild(line);
+    if (res && res.why) box.appendChild(el("span","note", res.why));
+    if (!ok){
+      if (p.kind === "cloze") box.appendChild(el("span","note", p.sentence.replace("___", v.en)));
+      box.appendChild(el("span","note", d.def));
+      const again = el("span","note","This word comes back in a few questions — that is the point.");
+      box.appendChild(again);
+    }
+    const sr = el("div","row"); sr.appendChild(speakBtn(v.en, "▶ hear it")); box.appendChild(sr);
+    body.appendChild(box);
+    /* Let the learner overrule a wrong verdict on a typed answer, exactly as
+       the Practice tab does — no word list anticipates every good answer. */
+    if (!ok && typed && typed.trim() && (p.kind === "type" || p.kind === "cloze")){
+      const ov = el("button","btn quiet","My answer was right too"); ov.type = "button";
+      ov.addEventListener("click", () => {
+        override(vmId(p.i, p.dim), typed);
+        const st = vm.st && vm.st[p.i];
+        if (st){ if (st.rung < VM_LADDER.length) st.rung++; st.notBefore = 0;
+                 if (st.rung >= VM_LADDER.length) st.done = true; }
+        ov.disabled = true; ov.textContent = "Counted as right";
+      });
+      foot.appendChild(ov);
+    }
+    const go = el("button","btn","Continue"); go.type = "button";
+    go.addEventListener("click", () => vmRender());
+    foot.appendChild(go);
+    go.focus();
+  }
+  function vmRenderDone(body, foot){
+    vm.finished = true;
+    $("#vmBar").style.width = "100%";
+    $("#vmCount").textContent = "round finished";
+    body.appendChild(el("h2",null,"Round finished"));
+    body.appendChild(el("p","lede","You recalled each of these four times — from meaning, into English, "
+      + "and inside a sentence. They are now in the schedule with everything else."));
+    const row = el("div","row");
+    vm.round.forEach(i => row.appendChild(el("span","chip", VOCAB[i].en)));
+    body.appendChild(row);
+    body.appendChild(el("p","hintline","Come back tomorrow — the Today tab will bring them round again. "
+      + "That gap is what makes them stick."));
+    const r = el("div","row");
+    if (vmNextRound().length){
+      const more = el("button","btn","Learn the next six"); more.type = "button";
+      more.addEventListener("click", () => vmStart());
+      r.appendChild(more);
+    }
+    const test = el("button","btn quiet","Test everything I have met"); test.type = "button";
+    test.addEventListener("click", () => { vm = { review:true, finished:false, queue:vmBuildReview(), i:0, log:[] }; vmRender(); });
+    r.appendChild(test);
+    const back = el("button","btn quiet","Back to Word & Rule"); back.type = "button";
+    back.addEventListener("click", () => showTab("learn"));
+    r.appendChild(back);
+    foot.appendChild(r);
+  }
+  /* The scored check: every word met so far, once, freshly generated. */
+  function vmRenderReview(body, foot){
+    const q = vm.queue;
+    if (!q.length){
+      body.appendChild(el("p","empty","Nothing to test yet — learn a round of words first."));
+      const back = el("button","btn quiet","Back to Word & Rule"); back.type = "button";
+      back.addEventListener("click", () => showTab("learn"));
+      foot.appendChild(back); return;
+    }
+    if (vm.i >= q.length){
+      const right = vm.log.filter(x => x.ok).length;
+      $("#vmBar").style.width = "100%";
+      $("#vmCount").textContent = "check finished";
+      body.appendChild(el("h2",null,"Check — result"));
+      const pct = el("div"); pct.style.fontSize = "2.4rem"; pct.style.fontWeight = "600";
+      pct.textContent = Math.round(100*right/q.length) + "%";
+      body.appendChild(pct);
+      body.appendChild(el("p","lede", right + " of " + q.length + " correct. "
+        + (right < q.length ? "The ones you missed are back in tomorrow's mix." : "Everything is on schedule.")));
+      const wrap = el("div","scroll"); const tb = document.createElement("table");
+      vm.log.forEach(x => {
+        const tr = document.createElement("tr");
+        tr.appendChild(el("td","mono", x.ok ? "✓" : "✗"));
+        const c = el("td"); c.appendChild(el("b",null,VOCAB[x.i].en)); tr.appendChild(c);
+        tr.appendChild(el("td","vi", VOCAB[x.i].vi));
+        tb.appendChild(tr);
+      });
+      wrap.appendChild(tb); body.appendChild(wrap);
+      body.appendChild(el("p","hintline","Every check is built fresh — different questions, different order. "
+        + "Taking it again right now helps least; coming back tomorrow helps most."));
+      const r = el("div","row");
+      const again = el("button","btn","A different check"); again.type = "button";
+      again.addEventListener("click", () => { vm = { review:true, finished:false, queue:vmBuildReview(), i:0, log:[] }; vmRender(); });
+      const back = el("button","btn quiet","Back to Word & Rule"); back.type = "button";
+      back.addEventListener("click", () => showTab("learn"));
+      r.appendChild(again); r.appendChild(back); foot.appendChild(r);
+      return;
+    }
+    $("#vmBar").style.width = Math.round(100*vm.i/q.length) + "%";
+    $("#vmCount").textContent = "question " + (vm.i+1) + " of " + q.length;
+    /* An answer here advances the paper; vmAfter handles that when vm.review. */
+    vmRenderPrompt(body, foot, q[vm.i]);
+  }
+
+  /* ================= READ / LISTEN ================= */
+
+  function fillQA(sel, bank) {
+    const q = $(sel); q.innerHTML = "";
+    bank.forEach((item,i) => {
+      const box = el("div","item");
+      box.appendChild(el("div","q",(i+1)+". "+item.q));
+      const inp = mkInput(""); inp.dataset.i = i; box.appendChild(inp);
+      const fb = el("div"); fb.dataset.fb = i; box.appendChild(fb);
+      q.appendChild(box);
+    });
+  }
+  function gradeQA(sel, bank) {
+    const root = $(sel); let n = 0;
+    bank.forEach((item,i) => {
+      const inp = root.querySelector('input[data-i="'+i+'"]');
+      const fb = root.querySelector('[data-fb="'+i+'"]');
+      const ok = matchesLoose(inp.value, item.a);
+      if (ok) n++;
+      fb.innerHTML = "";
+      const v = el("div","verdict " + (ok?"ok":"no"));
+      v.innerHTML = ok ? "<b>Correct.</b>" : "<b>Not quite.</b> Answer: " + item.a[0];
+      if (item.why) v.appendChild(el("div","note",item.why));
+      fb.appendChild(v);
+    });
+    const head = root.parentElement.querySelector("h3");
+    if (head) head.textContent = head.textContent.replace(/ — .*$/,"") + " — " + n + "/" + bank.length;
+  }
+
+  function renderRead() {
+    const p = $("#passage"); p.innerHTML = "";
+    PASSAGE.forEach(t => p.appendChild(el("p",null,t)));
+    fillQA("#readQ", READ_Q);
+  }
+  function renderListen() {
+    const s = $("#script"); s.innerHTML = "";
+    SCRIPT.forEach(t => s.appendChild(el("p",null,t)));
+    fillQA("#listenQ", LISTEN_Q);
+    renderTTSWarn();
+  }
+
+  $("#hideRead").addEventListener("click", () => {
+    $("#passage").classList.add("masked");
+    $("#readQCard").hidden = false;
+    $("#hideRead").hidden = true; $("#showRead").hidden = false;
+    $("#readNote").innerHTML = "<b>Text hidden.</b> Answer from memory. Recalling it is what makes it stick — checking back does not.";
+    $("#readQCard").scrollIntoView({behavior:"smooth",block:"start"});
+  });
+  $("#showRead").addEventListener("click", () => {
+    $("#passage").classList.remove("masked");
+    $("#showRead").hidden = true; $("#hideRead").hidden = false;
+  });
+  $("#checkRead").addEventListener("click", () => gradeQA("#readQ", READ_Q));
+  $("#checkListen").addEventListener("click", () => gradeQA("#listenQ", LISTEN_Q));
+
+  $("#playListen").addEventListener("click", () => {
+    S.plays = (S.plays||0)+1; save();
+    $("#playCount").textContent = "played " + S.plays + "×";
+    say(SCRIPT.join(" "), {rate:parseFloat($("#rate").value), vary:false});
+  });
+  $("#stopListen").addEventListener("click", stopSpeaking);
+  $("#rate").addEventListener("input", e => { $("#rateVal").textContent = parseFloat(e.target.value).toFixed(2) + "×"; });
+  $("#toggleScript").addEventListener("click", () => {
+    const hidden = $("#script").classList.toggle("masked");
+    $("#toggleScript").textContent = hidden ? "Reveal script" : "Hide script";
+  });
+
+  /* ================= WRITE ================= */
+
+  function renderWrite() {
+    const steps = $("#wSteps"); steps.innerHTML = "";
+    W_STEPS.forEach((s,i) => {
+      const b = el("button",null,s.name); b.type = "button";
+      b.setAttribute("aria-current", String(i === S.wstep));
+      if (i < S.wstep) b.classList.add("done");
+      b.addEventListener("click", () => { S.wstep = i; save(); renderWrite(); });
+      steps.appendChild(b);
+    });
+    $("#wScaffold").innerHTML = W_STEPS[S.wstep].html;
+
+    const cl = $("#wCheck"); cl.innerHTML = "";
+    W_CHECK.forEach((t,i) => {
+      const lab = el("label");
+      const cb = el("input"); cb.type = "checkbox"; cb.checked = !!(S.checks||[])[i];
+      cb.addEventListener("change", () => { S.checks = S.checks||[]; S.checks[i] = cb.checked; save(); });
+      lab.appendChild(cb); lab.appendChild(el("span",null,t)); cl.appendChild(lab);
+    });
+    $("#draft").value = S.draft || "";
+    updateWC();
+  }
+
+  function updateWC() {
+    const t = $("#draft").value, n = words(t), c = $("#wc");
+    c.textContent = n + " word" + (n===1?"":"s");
+    c.className = "counter" + (n===0 ? "" : (n>=80 && n<=100 ? " ok" : (n>100 ? " over" : "")));
+
+    const low = t.toLowerCase();
+    const likeVerbs = ["enjoy","like","love","hate","prefer","don't mind","dont mind","can't stand","cant stand","dislike","fancy","avoid"];
+    const usedVerbs = likeVerbs.filter(v => low.indexOf(v) !== -1);
+    const usedVocab = VOCAB.filter(v => low.indexOf(v.en.toLowerCase()) !== -1);
+    const hasQ = t.indexOf("?") !== -1;
+    const paras = t.split(/\n\s*\n/).filter(x => x.trim()).length;
+
+    const box = $("#autoCheck"); box.innerHTML = "";
+    if (!t.trim()) { box.appendChild(el("p","empty","Start writing and these update as you go.")); return; }
+    const tb = document.createElement("table");
+    [["Length", n+" words", n>=80&&n<=100],
+     ["Liking verbs used", usedVerbs.length?usedVerbs.join(", "):"none yet", usedVerbs.length>=3],
+     ["Unit vocabulary used", usedVocab.length?usedVocab.map(v=>v.en).join(", "):"none yet", usedVocab.length>=4],
+     ["Question to your friend", hasQ?"yes":"not yet", hasQ],
+     ["Paragraphs", String(paras), paras>=3]
+    ].forEach(([k,v,ok]) => {
+      const tr = document.createElement("tr");
+      tr.appendChild(el("td",null,k));
+      tr.appendChild(el("td","vi",v));
+      const s = el("td","mono", ok?"✓":"·");
+      s.style.color = ok ? "var(--green)" : "var(--faint)";
+      s.style.textAlign = "right";
+      tr.appendChild(s); tb.appendChild(tr);
+    });
+    const wrap = el("div","scroll"); wrap.appendChild(tb); box.appendChild(wrap);
+    box.appendChild(el("p","hintline","These are only the things a machine can count. Whether it reads well is your call."));
+  }
+
+  $("#draft").addEventListener("input", () => { S.draft = $("#draft").value; save(); updateWC(); });
+  $("#clearDraft").addEventListener("click", () => {
+    if (!confirm("Clear your draft? This cannot be undone.")) return;
+    S.draft = ""; save(); $("#draft").value = ""; updateWC();
+  });
+
+  /* ================= PROGRESS ================= */
+
+  function renderProgress() {
+    const counts = [0,0,0,0,0,0];
+    let untouched = 0;
+    BANK.forEach(it => { const r = S.items[it.id]; if (!r) untouched++; else counts[r.box]++; });
+    const names = ["Every day","1 day","3 days","7 days","14 days","30 days"];
+    const max = Math.max(1, BANK.length);
+    const lad = $("#ladder"); lad.innerHTML = "";
+
+    const nr = el("div","rung");
+    nr.appendChild(el("span","nm","not seen"));
+    const nb = el("div","bar"); const ni = document.createElement("i");
+    ni.style.width = (untouched/max*100) + "%"; ni.style.background = "var(--rule)";
+    nb.appendChild(ni); nr.appendChild(nb);
+    nr.appendChild(el("span","ct",String(untouched)));
+    lad.appendChild(nr);
+
+    counts.forEach((c,i) => {
+      const r = el("div","rung");
+      r.appendChild(el("span","nm",names[i]));
+      const bar = el("div","bar"); const fill = document.createElement("i");
+      fill.style.width = (c/max*100) + "%";
+      if (i >= 4) fill.style.background = "var(--green)";
+      bar.appendChild(fill); r.appendChild(bar);
+      r.appendChild(el("span","ct",String(c)));
+      lad.appendChild(r);
+    });
+
+    const list = $("#errList"); list.innerHTML = "";
+    const bad = troubled();
+    if (!bad.length) {
+      list.appendChild(el("p","empty","Nothing here — no item has gone wrong more often than right. Come back once you have practised a few times."));
+      return;
+    }
+    bad.forEach(it => {
+      const r = S.items[it.id] || {};
+      const d = el("div","erritem");
+      d.appendChild(el("div",null,describe(it)));
+      d.appendChild(el("div","m",(KIND_LABEL[it.kind]||it.kind) + " · rung " + (r.box||0) + " · " + (r.right||0) + " right of " + (r.seen||0)));
+      list.appendChild(d);
+    });
+  }
+
+  function describe(it) {
+    const d = it.data;
+    switch (it.kind) {
+      case "vocab-recall": case "vocab-cloze": return d.en + " — " + d.vi;
+      case "minimal-pair": return d.short + " / " + d.long;
+      case "pron-sort": return d.w + " → /" + d.s + "/";
+      case "grammar-group": return d.v + " → Group " + d.g;
+      case "grammar-form": return d.s.replace("___","____");
+      default: return it.id;
+    }
+  }
+
+  $("#resetAll").addEventListener("click", () => {
+    if (!confirm("Delete all progress, drafts and schedules on this device?")) return;
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    S = { items:{}, draft:"", wstep:0, checks:[], errors:[], plays:0, accepted:{} };
+    renderProgress(); renderToday(); renderWrite();
+  });
+
+  /* ================= BOOT ================= */
+
+  load();
+  renderMap();
+  renderLearn();
+  renderRead();
+  renderListen();
+  renderWrite();
+  renderToday();
+  $("#playCount").textContent = "played " + (S.plays||0) + "×";
+  showSection("map");
+
+})();
+</script>

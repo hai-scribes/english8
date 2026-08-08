@@ -1,0 +1,1425 @@
+<!-- GENERATED FILE — do not edit.
+     Source of truth: app/unit-01-vocab.html (the standalone, double-clickable version).
+     This copy is the same page with the document wrapper stripped, for publishing
+     as a hosted Artifact. Regenerate it after any change to the source. -->
+<title>Unit 1 — Leisure Time · Vocabulary Trainer</title>
+<style>
+/* Neutrals are biased green, toward the accent, so the paper reads as chosen
+   rather than default grey. Every colour is a token; nothing below this block
+   hard-codes one, which is what lets all three theme states resolve as a set. */
+:root{
+  --bg:#f2f4f3; --panel:#ffffff; --ink:#141a19; --muted:#5f6b68; --line:#dde3e0;
+  --accent:#1f5c4d; --accent-ink:#ffffff; --accent-soft:#e2efea;
+  --good:#256b4a; --good-soft:#e0f0e7; --bad:#9e3524; --bad-soft:#f8e7e3;
+  --warn:#7d6318; --warn-soft:#f6eed9; --radius:14px;
+  --shadow:0 1px 2px rgba(20,26,25,.05), 0 8px 24px rgba(20,26,25,.06);
+}
+/* System dark — but an explicit light choice must still win. */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121614; --panel:#1a201e; --ink:#e8eeeb; --muted:#94a19d; --line:#2c3532;
+    --accent:#79c9ae; --accent-ink:#0c1c17; --accent-soft:#1f2f2a;
+    --good:#8ad2a8; --good-soft:#1b2c23; --bad:#f0a48f; --bad-soft:#33201b;
+    --warn:#d6bd72; --warn-soft:#312817;
+    --shadow:0 1px 2px rgba(0,0,0,.32), 0 8px 24px rgba(0,0,0,.38);
+  }
+}
+/* Explicit dark choice — wins over a light OS. */
+:root[data-theme="dark"]{
+  --bg:#121614; --panel:#1a201e; --ink:#e8eeeb; --muted:#94a19d; --line:#2c3532;
+  --accent:#79c9ae; --accent-ink:#0c1c17; --accent-soft:#1f2f2a;
+  --good:#8ad2a8; --good-soft:#1b2c23; --bad:#f0a48f; --bad-soft:#33201b;
+  --warn:#d6bd72; --warn-soft:#312817;
+  --shadow:0 1px 2px rgba(0,0,0,.32), 0 8px 24px rgba(0,0,0,.38);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--ink);
+  font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:640px;margin:0 auto;padding:20px 16px 64px}
+header.top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+header.top h1{font-size:1.06rem;margin:0;font-weight:650;letter-spacing:-.01em}
+header.top .sub{color:var(--muted);font-size:.82rem}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+.panel + .panel{margin-top:14px}
+h2{font-size:1rem;margin:0 0 6px;font-weight:650;letter-spacing:-.01em}
+p{margin:0 0 12px}
+p:last-child{margin-bottom:0}
+.muted{color:var(--muted)}
+.small{font-size:.85rem}
+.tiny{font-size:.78rem}
+button{font:inherit;cursor:pointer;border-radius:10px;border:1px solid var(--line);
+  background:var(--panel);color:var(--ink);padding:10px 16px;transition:background .12s,border-color .12s,transform .04s}
+button:hover:not(:disabled){border-color:var(--accent)}
+button:active:not(:disabled){transform:translateY(1px)}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button:disabled{opacity:.5;cursor:not-allowed}
+.btn-primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:600}
+.btn-primary:hover:not(:disabled){filter:brightness(1.08)}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.btn-row.end{justify-content:flex-end}
+input[type=text]{font:inherit;width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);
+  background:var(--bg);color:var(--ink)}
+input[type=text]:focus{outline:3px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+label.field{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px}
+
+/* home menu */
+.menu{display:grid;gap:12px}
+.card-btn{display:block;width:100%;text-align:left;padding:16px 18px;border-radius:var(--radius);
+  background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow)}
+.card-btn .t{font-weight:650;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.card-btn .d{color:var(--muted);font-size:.86rem;margin-top:4px}
+.card-btn .pill{font-size:.74rem;font-weight:700;padding:2px 9px;border-radius:999px;
+  background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.card-btn:disabled{box-shadow:none}
+/* study-pack homepage: the unit picker */
+.back{padding:5px 12px;font-size:.82rem;border-radius:999px;color:var(--muted)}
+.back:hover{color:var(--ink)}
+ol.units{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.urow{background:var(--panel)}
+.urow.is-off{display:flex;align-items:center;gap:10px;padding:11px 13px;opacity:.62}
+.ubtn{display:flex;align-items:center;gap:10px;width:100%;text-align:left;
+  padding:11px 13px;border:0;border-radius:0;background:var(--panel)}
+.ubtn:hover{background:var(--accent-soft)}
+.unum{font-size:.74rem;color:var(--muted);min-width:1.6em;font-variant-numeric:tabular-nums}
+.umain{flex:1;min-width:0}
+.uword{font-weight:600;display:block}
+.uvi{display:block;font-size:.79rem;color:var(--muted)}
+.uchev{color:var(--accent);font-weight:700}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;
+  background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:1px 5px}
+
+/* the new-vocabulary section: its call-to-action, then the words themselves */
+.cta{display:block;width:100%;text-align:left;margin:16px 0 0;padding:14px 18px;font-size:1.02rem;line-height:1.3}
+.cta .cta-sub{display:block;font-size:.8rem;font-weight:400;opacity:.82;margin-top:4px;line-height:1.4}
+.cta:disabled{opacity:1;background:var(--bg);color:var(--muted);border-color:var(--line)}
+.vround{display:flex;justify-content:space-between;gap:10px;align-items:baseline;
+  font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);
+  font-weight:700;margin:20px 0 8px}
+ol.vocab{list-style:none;margin:0;padding:0;display:grid;gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.vrow{display:flex;align-items:center;gap:10px;background:var(--panel);padding:9px 12px}
+.vnum{font-size:.74rem;color:var(--muted);min-width:1.5em;font-variant-numeric:tabular-nums}
+.vmain{flex:1;min-width:0}
+.vword{font-weight:600}
+.vipa{font-size:.8rem}
+.vvi{display:block;font-size:.8rem;color:var(--muted)}
+.vstat{font-size:.68rem;font-weight:700;letter-spacing:.03em;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.s-new{background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.s-learning{background:var(--accent-soft);color:var(--accent)}
+.s-due{background:var(--warn-soft);color:var(--warn)}
+.s-known{background:var(--good-soft);color:var(--good)}
+.speak.mini{margin-left:0;padding:5px 9px;font-size:.8rem;line-height:1}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px;text-align:center}
+.stat b{display:block;font-size:1.5rem;line-height:1.2;font-weight:650}
+.stat span{font-size:.74rem;color:var(--muted)}
+
+/* progress */
+.prog{margin-bottom:16px}
+.prog .bar{height:7px;border-radius:99px;background:var(--line);overflow:hidden}
+.prog .fill{height:100%;background:var(--accent);width:0;transition:width .28s ease}
+.prog .lbl{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted);margin-bottom:6px;gap:10px}
+
+/* word card */
+.word{font-size:2rem;font-weight:650;letter-spacing:-.02em;line-height:1.15;margin:0}
+.ipa{font-family:"Doulos SIL","Charis SIL","Gentium Plus","Lucida Grande",serif;color:var(--muted);font-size:1.02rem}
+.pos{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;
+  padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:700;vertical-align:2px}
+.gloss{font-size:1.18rem;font-weight:600;margin:14px 0 2px}
+.dl{margin:16px 0 0;padding-top:14px;border-top:1px solid var(--line)}
+.dl h3{font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 6px;font-weight:700}
+.dl + .dl{margin-top:14px}
+ul.ex{margin:0;padding-left:18px}
+ul.ex li{margin-bottom:5px}
+ul.ex li:last-child{margin-bottom:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.8rem;padding:3px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--muted)}
+.speak{border-radius:999px;padding:6px 13px;font-size:.86rem;margin-left:8px;vertical-align:3px}
+
+/* choices */
+.choices{display:grid;gap:9px;margin-top:14px}
+.choice{text-align:left;padding:13px 16px;border-radius:12px;width:100%}
+.choice.correct{background:var(--good-soft);border-color:var(--good);color:var(--ink)}
+.choice.wrong{background:var(--bad-soft);border-color:var(--bad);color:var(--ink)}
+.choice.dim{opacity:.55}
+
+/* feedback */
+.fb{margin-top:16px;padding:14px 16px;border-radius:12px;border:1px solid var(--line)}
+.fb.ok{background:var(--good-soft);border-color:var(--good)}
+.fb.no{background:var(--bad-soft);border-color:var(--bad)}
+.fb .h{font-weight:700;margin-bottom:4px}
+.prompt-q{font-size:1.15rem;font-weight:600;margin:0 0 4px;line-height:1.4}
+.prompt-q .gap{display:inline-block;min-width:96px;border-bottom:2px solid var(--accent);vertical-align:-3px}
+.kicker{font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:700;margin-bottom:10px}
+
+/* results */
+table.res{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:10px}
+table.res th{text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);
+  border-bottom:1px solid var(--line);padding:6px 8px 6px 0;font-weight:700}
+table.res td{padding:7px 8px 7px 0;border-bottom:1px solid var(--line);vertical-align:top}
+table.res td.mark{width:1.6em}
+.score{font-size:2.6rem;font-weight:650;letter-spacing:-.02em;line-height:1.1}
+footer.foot{margin-top:26px;color:var(--muted);font-size:.78rem;text-align:center}
+footer.foot button{padding:5px 11px;font-size:.78rem;border-radius:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.notice{font-size:.8rem;color:var(--warn);margin-top:10px}
+@media (prefers-reduced-motion: reduce){*{transition:none !important}}
+@media (max-width:420px){ .word{font-size:1.7rem} .stat b{font-size:1.3rem} }
+</style>
+<div class="wrap">
+  <header class="top" id="top"></header>
+  <main id="app" aria-live="polite"></main>
+  <footer class="foot" id="foot"></footer>
+</div>
+<script>
+"use strict";
+/* ============================================================
+   Unit 1 — Leisure Time · vocabulary trainer
+   Single file, offline, no dependencies. Progress in localStorage.
+
+   Design follows the evidence review in docs/vocabulary-mode-design.md:
+   short exposure -> early retrieval with feedback -> repeated, spaced
+   retrieval. Words repeat by design; the prompts around them rotate.
+   ============================================================ */
+
+const CONTENT_VERSION = 1;
+const STORE_KEY = "en8:vocab:unit01:v1";
+
+/* ---------- authored content ---------- */
+const WORDS = [
+{
+  id:"leisure", round:1, word:"leisure", ipa:"/ˈleʒə(r)/", pos:"noun", syn:"freetime",
+  vi:"thời gian rảnh rỗi",
+  en:"time when you are not working or studying and can do what you enjoy",
+  note:"Almost always used before another noun: <i>leisure time</i>, <i>leisure activities</i>. The first syllable rhymes with <i>measure</i>, not with <i>seize</i>.",
+  examples:["In her <b>leisure</b> time, my sister does jigsaw puzzles.","Most teenagers have very little <b>leisure</b> during exam week."],
+  colloc:["leisure time","leisure activity","a life of leisure"],
+  accept:["leisure"],
+  cloze:[
+    {t:"Reading is my favourite ___ activity."},
+    {t:"Between school and homework I have almost no ___ time."}
+  ]
+},
+{
+  id:"hang-out", round:1, word:"hang out (with)", ipa:"/ˌhæŋ ˈaʊt/", pos:"phrasal verb", syn:"social",
+  vi:"đi chơi, la cà",
+  en:"to spend time somewhere, or with someone, in a relaxed way",
+  note:"Informal. Use <i>with</i> for people and <i>at / in</i> for places: <i>hang out with Nam at the café</i>.",
+  examples:["On Sundays I <b>hang out with</b> my cousins at the park.","They <b>hang out</b> at the shopping centre near the swimming pool."],
+  colloc:["hang out with friends","hang out at the park"],
+  accept:["hang out","hang out (with)","hang out with","hangs out","hanging out"],
+  speak:"hang out",
+  cloze:[
+    {t:"At the weekend I like to ___ with my cousins at the park."},
+    {t:"They usually ___ at the shopping centre after school."}
+  ]
+},
+{
+  id:"diy", round:1, word:"DIY", ipa:"/ˌdiː aɪ ˈwaɪ/", pos:"noun", syn:"make",
+  vi:"tự làm, tự sửa chữa",
+  en:"do-it-yourself: making or repairing things in your home yourself instead of paying someone",
+  note:"Uncountable — never <i>a DIY</i> on its own, but <i>a DIY project</i> is fine. Stress the last letter: dee-eye-<b>WHY</b>.",
+  examples:["My dad spends every Sunday doing <b>DIY</b>.","She made the bookshelf herself — it was a <b>DIY</b> project."],
+  colloc:["do DIY","a DIY project","a DIY shop"],
+  accept:["diy","d.i.y.","d i y","do it yourself","do-it-yourself"],
+  speak:"D I Y",
+  cloze:[
+    {t:"My father spends every Sunday doing ___ around the house."},
+    {t:"We built the shelf ourselves — it was a ___ project."}
+  ]
+},
+{
+  lengthPair:true, id:"football", round:1, word:"football", ipa:"/ˈfʊtbɔːl/", pos:"noun", syn:"game",
+  vi:"bóng đá",
+  en:"a game played by two teams of eleven who kick a ball into a goal",
+  note:"<i>Play football</i> — no <i>the</i>. First vowel is the short /ʊ/ of <i>put</i>, not the long /uː/ of <i>food</i>.",
+  examples:["Last month we started playing <b>football</b> in the park.","My cousin enjoys playing <b>football</b> every Saturday."],
+  colloc:["play football","a football match","a football team"],
+  accept:["football"],
+  cloze:[
+    {t:"We play ___ in the park every Saturday morning."},
+    {t:"He was too tired after the ___ match to do anything."}
+  ]
+},
+{
+  lengthPair:true, id:"movie", round:1, word:"movie", ipa:"/ˈmuːvi/", pos:"noun", syn:"media",
+  vi:"bộ phim",
+  en:"a story told in moving pictures that you watch at a cinema or at home",
+  note:"Long /uː/ — the vowel of <i>food</i>, not <i>book</i>. British speakers often say <i>film</i> instead.",
+  examples:["I usually stay home and watch <b>movies</b>.","Why don't we watch a <b>movie</b> tonight?"],
+  colloc:["watch a movie","go to the movies","a horror movie"],
+  accept:["movie","movies","film","films"],
+  cloze:[
+    {t:"Why don't we watch a ___ tonight?"},
+    {t:"I can't stand any ___ that is longer than two hours."}
+  ]
+},
+{
+  lengthPair:true, id:"choose", round:1, word:"choose", ipa:"/tʃuːz/", pos:"verb", syn:"verb",
+  vi:"chọn, lựa chọn",
+  en:"to decide which thing or person you want from a number of them",
+  note:"Irregular: choose → chose /tʃəʊz/ → chosen. Two <i>o</i>s in the present, one in the past. Long /uː/, ending in a /z/ sound.",
+  examples:["We couldn't <b>choose</b> between the film and the football match.","My mum and I <b>choose</b> the food at the market."],
+  colloc:["choose between A and B","choose from a list","hard to choose"],
+  accept:["choose"],
+  cloze:[
+    {t:"I couldn't ___ between the film and the football match."},
+    {t:"You can ___ any three books from this shelf."}
+  ]
+},
+
+{
+  id:"pastime", round:2, word:"pastime", ipa:"/ˈpɑːstaɪm/", pos:"noun", syn:"freetime",
+  vi:"thú tiêu khiển",
+  en:"an activity you do regularly for pleasure when you are not working",
+  note:"One word, one <i>s</i> — not <i>past time</i>. Close to <i>hobby</i>, but a pastime can be more casual.",
+  examples:["Fishing is his favourite <b>pastime</b>.","Board games are a cheap <b>pastime</b> for a rainy Sunday."],
+  colloc:["a favourite pastime","a popular pastime"],
+  accept:["pastime","pastimes"],
+  cloze:[
+    {t:"Collecting stamps was a popular ___ fifty years ago."},
+    {t:"Cycling is my grandfather's favourite ___."}
+  ]
+},
+{
+  id:"socialise", round:2, word:"socialise", ipa:"/ˈsəʊʃəlaɪz/", pos:"verb", syn:"social",
+  vi:"giao lưu, gặp gỡ mọi người",
+  en:"to meet and spend time with other people in a friendly way",
+  note:"British spelling <i>socialise</i>; American <i>socialize</i>. Both are correct — just be consistent.",
+  examples:["He loves to <b>socialise</b> with new people.","I don't <b>socialise</b> much during the week because of homework."],
+  colloc:["socialise with someone","a chance to socialise"],
+  accept:["socialise","socialize","socialises","socializes"],
+  cloze:[
+    {t:"My brother is shy and doesn't ___ much at parties."},
+    {t:"A club is a good place to ___ with people your own age."}
+  ]
+},
+{
+  id:"craft", round:2, word:"craft", ipa:"/krɑːft/", pos:"noun", syn:"make",
+  vi:"đồ thủ công",
+  en:"an activity in which you make things skilfully with your hands; also the object you make",
+  note:"Usually plural when you mean the objects: <i>her crafts</i>. Singular for the skill itself: <i>the craft of weaving</i>.",
+  examples:["My grandmother makes beautiful paper flowers. Her <b>crafts</b> are lovely.","We learn a traditional <b>craft</b> at school on Fridays."],
+  colloc:["arts and crafts","a traditional craft","a craft fair"],
+  accept:["craft","crafts"],
+  cloze:[
+    {t:"My grandmother sells her paper flowers at a ___ fair."},
+    {t:"Weaving is a traditional ___ in many villages."}
+  ]
+},
+{
+  id:"board-game", round:2, word:"board game", ipa:"/ˈbɔːd ɡeɪm/", pos:"noun", syn:"game",
+  vi:"trò chơi cờ bàn",
+  en:"a game such as chess, played on a marked board with pieces or counters",
+  note:"Two words. <i>Board</i> /bɔːd/ sounds exactly like <i>bored</i> — same sound, completely different word.",
+  examples:["In the evening we play <b>board games</b>.","There is a big table with <b>board games</b> upstairs in the café."],
+  colloc:["play a board game","a board game night"],
+  accept:["board game","board games","boardgame","boardgames"],
+  cloze:[
+    {t:"Chess is the only ___ my grandmother ever loses."},
+    {t:"We play ___ in the evening and they get very loud."}
+  ]
+},
+{
+  id:"relax", round:2, word:"relax", ipa:"/rɪˈlæks/", pos:"verb", syn:"verb",
+  vi:"thư giãn",
+  en:"to rest and stop feeling worried or tense",
+  note:"Stress the second syllable: re<b>LAX</b>. The adjective is <i>relaxing</i> for a thing, <i>relaxed</i> for a person.",
+  examples:["I read comics to <b>relax</b> after school.","Sunday is the only day my whole family can <b>relax</b> together."],
+  colloc:["relax after work","sit back and relax","help you relax"],
+  accept:["relax","relaxes"],
+  cloze:[
+    {t:"I read comics to ___ after a long school day."},
+    {t:"Sunday is the only day my family can sit down and ___."}
+  ]
+},
+{
+  lengthPair:true, id:"bookshop", round:2, word:"bookshop", ipa:"/ˈbʊkʃɒp/", pos:"noun", syn:"place",
+  vi:"hiệu sách",
+  en:"a shop that sells books",
+  note:"British English; Americans say <i>bookstore</i>. Short /ʊ/ in <i>book</i>.",
+  examples:["We bought the book at the new <b>bookshop</b> in town.","A new <b>bookshop</b> opened near the swimming pool."],
+  colloc:["a local bookshop","go to the bookshop"],
+  accept:["bookshop","bookshops","book shop","bookstore"],
+  cloze:[
+    {t:"I bought this dictionary at the new ___ in town."},
+    {t:"There is a café upstairs in that ___."}
+  ]
+},
+
+{
+  id:"take-up", round:3, word:"take up", ipa:"/ˌteɪk ˈʌp/", pos:"phrasal verb", syn:"verb",
+  vi:"bắt đầu (một sở thích mới)",
+  en:"to start doing a new hobby, sport or activity",
+  note:"Separable: <i>take up the guitar</i> = <i>take the guitar up</i>. With a pronoun it <b>must</b> split: <i>take it up</i>.",
+  examples:["I want to <b>take up</b> photography next year — I've just bought a camera.","My brother has <b>taken up</b> woodwork."],
+  colloc:["take up a hobby","take up the guitar","take up cycling"],
+  accept:["take up","takes up","taken up"],
+  cloze:[
+    {t:"I've bought a camera because I want to ___ photography."},
+    {t:"She decided to ___ the guitar after watching the concert."}
+  ]
+},
+{
+  lengthPair:true, id:"cook", round:3, word:"cook", ipa:"/kʊk/", pos:"verb / noun", syn:"make",
+  vi:"nấu ăn; đầu bếp",
+  en:"to prepare food by heating it; also, a person who cooks",
+  note:"Short /ʊ/ — the vowel of <i>book</i>, <b>not</b> the long /uː/ of <i>food</i>. A <i>cook</i> works at home or in a small kitchen; a <i>chef</i> is trained and professional.",
+  examples:["My dad and my brother <b>cook</b> lunch on Sundays.","He is a good <b>cook</b>, but he can't stand following a recipe."],
+  colloc:["cook a meal","a good cook","learn to cook"],
+  accept:["cook","cooks"],
+  cloze:[
+    {t:"My dad and my brother ___ lunch every Sunday."},
+    {t:"He is a very good ___, but he never follows a recipe."}
+  ]
+},
+{
+  id:"jigsaw-puzzle", round:3, word:"jigsaw puzzle", ipa:"/ˈdʒɪɡsɔː ˌpʌzl/", pos:"noun", syn:"game",
+  vi:"trò xếp hình",
+  en:"a picture cut into many small pieces that you fit back together",
+  note:"You <b>do</b> a jigsaw puzzle — never <i>play</i> one. Often shortened to just <i>a jigsaw</i>.",
+  examples:["In my free time I like doing <b>jigsaw puzzles</b>.","This <b>jigsaw puzzle</b> has a thousand pieces."],
+  colloc:["do a jigsaw puzzle","a 500-piece jigsaw puzzle"],
+  accept:["jigsaw puzzle","jigsaw puzzles","jigsaw","jigsaws"],
+  cloze:[
+    {t:"This ___ has a thousand pieces and I've already lost two."},
+    {t:"In my free time I like doing ___."}
+  ]
+},
+{
+  id:"music", round:3, word:"music", ipa:"/ˈmjuːzɪk/", pos:"noun", syn:"media",
+  vi:"âm nhạc",
+  en:"sounds arranged in patterns to be sung or played on instruments",
+  note:"Uncountable — never <i>a music</i> or <i>musics</i>. Say <i>a piece of music</i> or <i>a song</i>. Begins /mjuː/, with a <i>y</i> sound.",
+  examples:["I like listening to <b>music</b> while I do my homework.","He can't stand loud <b>music</b> when he is trying to study."],
+  colloc:["listen to music","play music","loud music"],
+  accept:["music"],
+  cloze:[
+    {t:"I like listening to ___ while I do my homework."},
+    {t:"He can't stand loud ___ when he is trying to study."}
+  ]
+},
+{
+  lengthPair:true, id:"swimming-pool", round:3, word:"swimming pool", ipa:"/ˈswɪmɪŋ puːl/", pos:"noun", syn:"place",
+  vi:"bể bơi",
+  en:"a large tank or hole filled with water for people to swim in",
+  note:"<i>Pool</i> has the long /uː/ of <i>food</i>. Stress the first word: <b>SWIM</b>ming pool.",
+  examples:["Look at the blue <b>swimming pool</b> near the bookshop.","We meet at the shopping centre near the <b>swimming pool</b>."],
+  colloc:["an indoor swimming pool","go to the swimming pool"],
+  accept:["swimming pool","swimming pools","pool","swimming-pool"],
+  cloze:[
+    {t:"The water in the ___ was far too cold to swim in."},
+    {t:"After the bookshop we went to the ___ for a swim."}
+  ]
+},
+{
+  id:"cant-stand", round:3, word:"can't stand", ipa:"/kɑːnt ˈstænd/", pos:"phrase", syn:"feel",
+  vi:"không chịu được",
+  en:"to hate something very strongly; to be unable to bear it",
+  note:"Always followed by <b>V-ing</b>, never <i>to-V</i>: <i>I can't stand queuing.</i> ❌ <i>I can't stand to queue.</i>",
+  examples:["I <b>can't stand</b> loud noise when I'm reading.","My dad <b>can't stand</b> following a recipe."],
+  colloc:["can't stand doing something","can't stand the noise"],
+  accept:["can't stand","cant stand","can’t stand","cannot stand","can not stand"],
+  cloze:[
+    {t:"I ___ getting up early at the weekend."},
+    {t:"She ___ queuing for tickets in the rain."}
+  ]
+}
+];
+
+const BY_ID = Object.fromEntries(WORDS.map(w => [w.id, w]));
+const ROUNDS = [1,2,3].map(n => WORDS.filter(w => w.round === n));
+const NEW_PER_ROUND = 6;
+
+/* Leitner-style interval ladder, in days. Step 0 = just introduced. */
+const INTERVALS = [1,3,7,14,30];
+function intervalForStep(step){
+  if (step < INTERVALS.length) return INTERVALS[step];
+  let d = INTERVALS[INTERVALS.length - 1];
+  for (let i = INTERVALS.length; i <= step; i++) d = Math.min(90, d * 2);
+  return d;
+}
+
+/* ---------- dates as local day strings (DST-safe) ---------- */
+function fmtDay(d){
+  const p = n => String(n).padStart(2,"0");
+  return d.getFullYear() + "-" + p(d.getMonth()+1) + "-" + p(d.getDate());
+}
+function today(){ return fmtDay(new Date()); }
+function addDays(day, n){
+  const [y,m,d] = day.split("-").map(Number);
+  const dt = new Date(y, m-1, d, 12, 0, 0); // noon anchor
+  dt.setDate(dt.getDate() + n);
+  return fmtDay(dt);
+}
+
+/* ---------- persistent progress ---------- */
+function blankRecord(){
+  return { introduced:null, due:null, step:0, lastReviewed:null,
+           attempts:0, correct:0, lapses:0,
+           receptive:0, productive:0, listening:0,
+           delayedSuccesses:0, durable:false };
+}
+let STATE = loadState();
+
+function loadState(){
+  let raw = null;
+  try { raw = localStorage.getItem(STORE_KEY); } catch(e){ raw = null; }
+  let s = null;
+  if (raw){ try { s = JSON.parse(raw); } catch(e){ s = null; } }
+  if (!s || typeof s !== "object" || s.contentVersion !== CONTENT_VERSION){
+    s = { contentVersion:CONTENT_VERSION, words:{}, testsTaken:0, lastSession:null };
+  }
+  if (!s.words) s.words = {};
+  for (const w of WORDS) if (!s.words[w.id]) s.words[w.id] = blankRecord();
+  return s;
+}
+let saveWarned = false;
+function saveState(){
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(STATE)); }
+  catch(e){
+    if (!saveWarned){
+      saveWarned = true;
+      alert("Progress can't be saved in this browser (storage is blocked or full). "
+          + "You can keep practising, but today's results will be lost when you close the tab.");
+    }
+  }
+}
+const rec = id => STATE.words[id];
+const isIntroduced = id => !!rec(id).introduced;
+const introducedWords = () => WORDS.filter(w => isIntroduced(w.id));
+const dueWords = () => WORDS.filter(w => isIntroduced(w.id) && rec(w.id).due && rec(w.id).due <= today());
+const newWordsLeft = () => WORDS.filter(w => !isIntroduced(w.id));
+function nextRound(){
+  for (const r of ROUNDS) if (r.some(w => !isIntroduced(w.id))) return r.filter(w => !isIntroduced(w.id));
+  return [];
+}
+const durableCount = () => WORDS.filter(w => rec(w.id).durable).length;
+const acquiredTodayCount = () => WORDS.filter(w => rec(w.id).introduced === today()).length;
+
+/* Advance / reset an item's schedule after a graded retrieval. */
+function grade(id, ok, dimension){
+  const r = rec(id);
+  const t = today();
+  r.attempts++;
+  const wasDelayed = r.lastReviewed && r.lastReviewed !== t;
+  r.lastReviewed = t;
+  if (ok){
+    r.correct++;
+    if (dimension) r[dimension]++;
+    if (wasDelayed){
+      r.delayedSuccesses++;
+      r.step = Math.min(r.step + 1, 12);
+    }
+    r.due = addDays(t, intervalForStep(r.step));
+    if (r.delayedSuccesses >= 3 && r.productive >= 1) r.durable = true;
+  } else {
+    r.lapses++;
+    r.step = 0;
+    r.durable = false;
+    r.delayedSuccesses = 0;
+    r.due = addDays(t, 1);
+  }
+  saveState();
+}
+
+/* ============================================================
+   Speech
+
+   The voice IS the pronunciation model, so it is chosen, not accepted.
+   getVoices() returns an unranked list and the old code took the first
+   en-GB match — on macOS that is a coin flip across nine en-GB voices of
+   which exactly one (Daniel) is a neutral speaker; the other eight are
+   Apple's stylised set (Grandpa, Rocko, Shelley, Flo...). A cartoon voice
+   is not a pronunciation model.
+
+   Ranking, in order of weight:
+     1. Never a character voice, in any accent.
+     2. Prefer en-GB. This unit teaches British IPA, and a US voice
+        contradicts the table printed beside it: US "leisure" is /ˈliːʒər/,
+        which rhymes with the exact word the note says it does not rhyme
+        with, and "craft" is /kræft/ against the table's /krɑːft/.
+     3. Prefer a neural/enhanced voice over a compact one.
+
+   Read the honest limit in NOT_A_LENGTH_MODEL below before trusting this
+   audio for the /ʊ/ vs /uː/ contrast.
+   ============================================================ */
+const RATE_NORMAL = 1.0;   // the natural-speed reference
+const RATE_SLOW   = 0.6;   // deliberate replay, on request only
+
+/* Apple's stylised/novelty voices — present in en-GB and en-US alike. */
+const CHARACTER_VOICE = /\b(albert|bad news|bahh|bells|boing|bubbles|cellos|eddy|flo|fred|good news|grandma|grandpa|jester|junior|kathy|organ|ralph|reed|rocko|sandy|shelley|superstar|trinoids|whisper|wobble|zarvox)\b/i;
+/* Name fragments that mark the high-fidelity path on each platform. */
+const NEURAL_VOICE    = /(natural|neural|enhanced|premium|siri|google|online)/i;
+/* Neutral news-reader voices shipped by Apple, Microsoft and Google. */
+const NEUTRAL_VOICE   = /\b(daniel|kate|serena|libby|sonia|ryan|arthur|oliver|hazel|george|martha)\b/i;
+
+const TTS = { ready:false, voice:null, british:false, failed:false,
+              supported:("speechSynthesis" in window) };
+let onVoicesReady = null;   // installed by the UI once it exists
+
+function scoreVoice(v){
+  const lang = String(v.lang || "").replace("_", "-");
+  if (!/^en\b/i.test(lang)) return -Infinity;
+  const name = String(v.name || "");
+  let s = 0;
+  if (/^en-GB/i.test(lang)) s += 100;
+  else if (/^en-(IE|AU|NZ|ZA)/i.test(lang)) s += 40;
+  else s += 20;
+  /* Outweighs the accent bonus, so a plain US voice beats a character GB
+     one — but stays finite, so a character voice is still better than
+     silence on a machine that has nothing else. */
+  if (CHARACTER_VOICE.test(name)) s -= 200;
+  if (NEURAL_VOICE.test(name))    s += 50;
+  if (NEUTRAL_VOICE.test(name))   s += 25;
+  if (/compact/i.test(name))      s -= 15;
+  if (v.localService === false)   s += 5;
+  return s;
+}
+function pickVoice(){
+  if (!TTS.supported) return null;
+  const vs = speechSynthesis.getVoices() || [];
+  let best = null, bestScore = -Infinity;
+  for (const v of vs){
+    const s = scoreVoice(v);
+    if (s > bestScore){ best = v; bestScore = s; }
+  }
+  return bestScore === -Infinity ? null : best;
+}
+function refreshVoice(){
+  const was = TTS.ready;
+  TTS.voice = pickVoice();
+  TTS.ready = !!TTS.voice;
+  TTS.british = !!(TTS.voice && /^en[-_]GB/i.test(TTS.voice.lang));
+  return TTS.ready !== was;
+}
+if (TTS.supported){
+  refreshVoice();
+  /* Chrome returns an empty list on the first call and fills it
+     asynchronously. Without a repaint the home screen keeps claiming there
+     is no voice, and every review session keeps skipping listening prompts,
+     for the whole session. */
+  speechSynthesis.addEventListener("voiceschanged", () => {
+    if (refreshVoice() && onVoicesReady) onVoicesReady();
+  });
+}
+function canListen(){ return TTS.supported && TTS.ready && !TTS.failed; }
+
+/* iOS Safari will only start synthesis that descends from a user gesture.
+   A silent utterance on the first click buys every later programmatic
+   speak() the same permission. */
+let speechPrimed = false;
+function primeSpeech(){
+  if (speechPrimed || !TTS.supported) return;
+  speechPrimed = true;
+  try {
+    const u = new SpeechSynthesisUtterance(" ");
+    u.volume = 0;
+    speechSynthesis.speak(u);
+  } catch(e){ /* priming is best-effort */ }
+}
+
+let speakTimer = null, speakTurn = 0;
+function speak(text, opts){
+  if (!TTS.supported || !text) return false;
+  opts = opts || {};
+  try {
+    const mine = ++speakTurn;
+    if (speakTimer){ clearTimeout(speakTimer); speakTimer = null; }
+    speechSynthesis.cancel();
+    /* A cancel() landing mid-word can leave Chrome's engine paused, and a
+       paused engine accepts utterances without ever playing them. */
+    if (speechSynthesis.paused) speechSynthesis.resume();
+    /* Chrome drops an utterance queued in the same tick as cancel(); one
+       frame of separation is enough to make it reliable. A fixed frame is
+       not enough on WebKit, which keeps a queued-but-unstarted utterance
+       alive across cancel() — so a learner tapping 🔊 twice gets the second
+       reading laid over the first. Wait for the engine to actually fall
+       idle, capped so a stuck engine still gets its one attempt. */
+    let waited = 0;
+    const fire = () => {
+      speakTimer = null;
+      if (mine !== speakTurn) return;          // a later tap already won
+      if ((speechSynthesis.speaking || speechSynthesis.pending) && waited < 600){
+        waited += 40; speakTimer = setTimeout(fire, 40); return;
+      }
+      const u = new SpeechSynthesisUtterance(text);
+      if (TTS.voice){ u.voice = TTS.voice; u.lang = TTS.voice.lang; } else { u.lang = "en-GB"; }
+      u.rate = opts.slow ? RATE_SLOW : RATE_NORMAL;
+      u.pitch = 1;
+      u.volume = 1;
+      u.onerror = ev => {
+        /* "interrupted" and "canceled" are our own cancel() calls landing,
+           not a broken voice. Anything else means the audio path is dead
+           and listening prompts must stop being offered. */
+        const err = ev && ev.error;
+        if (err === "interrupted" || err === "canceled") return;
+        TTS.failed = true;
+      };
+      speechSynthesis.speak(u);
+    };
+    speakTimer = setTimeout(fire, 60);
+    return true;
+  } catch(e){ return false; }
+}
+const sayText = w => w.speak || w.word.replace(/\s*\(.*?\)\s*/g, " ").trim();
+
+/* Measured, not assumed: on this machine the en-GB voices render the
+   /ʊ/-/uː/ pair with a 1-3% duration difference, and Daniel — the voice
+   the ranking above picks — renders "full" LONGER than "fool", i.e.
+   backwards. The unit teaches that /uː/ is held about twice as long.
+   So the audio is a reliable model of word identity and stress, and is
+   NOT a model of vowel length. Words that turn on that contrast say so. */
+const NOT_A_LENGTH_MODEL =
+  "Computer voices do not reliably hold /uː/ longer than /ʊ/ — some make it "
++ "shorter. Use 🔊 to check <i>which</i> word this is; use the IPA "
++ "and the note above for <i>how long</i> the vowel is.";
+
+/* ---------- answer checking ---------- */
+function norm(s){
+  return String(s == null ? "" : s)
+    .normalize("NFC").toLowerCase()
+    .replace(/[’‘`´]/g, "'")
+    .replace(/[.,!?;:]+$/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+function checkTyped(input, accept){
+  const a = norm(input);
+  if (!a) return false;
+  return accept.some(x => norm(x) === a);
+}
+
+/* ---------- small helpers ---------- */
+function shuffle(arr){
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+const pick = a => a[Math.floor(Math.random() * a.length)];
+function esc(s){
+  return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+function clozeHTML(text){ return esc(text).replace(/___/g, '<span class="gap"></span>'); }
+
+/* Distractor glosses: same part of speech where possible, never a word from
+   the same meaning group (leisure/pastime, hang out/socialise, ...). */
+function distractors(word, n){
+  const sameGroup = w => w.syn === word.syn;
+  const pool = WORDS.filter(w => w.id !== word.id && !sameGroup(w));
+  const samePos = shuffle(pool.filter(w => w.pos === word.pos));
+  const rest = shuffle(pool.filter(w => w.pos !== word.pos));
+  return samePos.concat(rest).slice(0, n);
+}
+
+/* ---------- prompt construction ---------- */
+/* formats:
+   mc-meaning     English word (+audio) -> choose the Vietnamese meaning   [receptive]
+   recall-meaning English word -> think, reveal, self-mark                 [receptive]
+   type-word      Vietnamese + part of speech -> type the English word     [productive]
+   cloze          sentence with a gap -> type the English word             [productive]
+   listen-type    audio only -> type the English word                      [listening] */
+const DIMENSION = {
+  "mc-meaning":"receptive", "recall-meaning":"receptive",
+  "type-word":"productive", "cloze":"productive", "listen-type":"listening"
+};
+function buildPrompt(word, format){
+  const p = { format, wordId:word.id, dimension:DIMENSION[format] };
+  if (format === "mc-meaning"){
+    const opts = shuffle(distractors(word, 3).map(w => ({ text:w.vi, ok:false }))
+                  .concat([{ text:word.vi, ok:true }]));
+    p.options = opts;
+  } else if (format === "cloze"){
+    p.sentence = pick(word.cloze).t;
+  }
+  return p;
+}
+
+/* ============================================================
+   Session engines
+   ============================================================ */
+
+/* --- learn round: exposure, then early interleaved retrieval --- */
+function LearnRound(words){
+  /* Four rungs, easiest first, each a step up in retrieval effort. A word
+     leaves the round only after clearing all four — recognise the meaning,
+     recall the meaning, produce the form, then produce it inside a sentence.
+     Listening prompts belong to review, once the form is stable. */
+  const ladder = ["mc-meaning","recall-meaning","type-word","cloze"];
+  const MAX_PROMPTS = 14;
+  const st = {};
+  for (const w of words) st[w.id] = { rung:0, s:0, receptive:0, productive:0, prompts:0, notBefore:0, done:false };
+  // Phase A: expose 3, then interleave each first retrieval 2-3 items behind.
+  const opening = [];
+  const q = words.slice();
+  const pendingFirst = [];
+  q.forEach((w, i) => {
+    opening.push({ kind:"expose", wordId:w.id });
+    pendingFirst.push(w.id);
+    if (i >= 2) opening.push({ kind:"prompt", wordId:pendingFirst.shift(), first:true });
+  });
+  while (pendingFirst.length) opening.push({ kind:"prompt", wordId:pendingFirst.shift(), first:true });
+
+  let step = 0, lastId = null;
+  return {
+    mode:"learn",
+    words,
+    total: words.length,
+    doneCount(){ return words.filter(w => st[w.id].done).length; },
+    /* The bar fills on rungs cleared, so it moves on every success, while the
+       label only counts words that are actually finished. */
+    frac(){
+      const cleared = words.reduce((n, w) => n + (st[w.id].done ? ladder.length : st[w.id].rung), 0);
+      return cleared / (words.length * ladder.length);
+    },
+    next(){
+      step++;
+      if (opening.length){
+        const t = opening.shift();
+        if (t.kind === "expose"){ lastId = t.wordId; return { kind:"expose", word:BY_ID[t.wordId] }; }
+        lastId = t.wordId;
+        const s = st[t.wordId]; s.prompts++;
+        return { kind:"prompt", prompt:buildPrompt(BY_ID[t.wordId], ladder[s.rung]) };
+      }
+      const open = words.filter(w => !st[w.id].done);
+      if (!open.length) return null;
+      let elig = open.filter(w => st[w.id].notBefore <= step && w.id !== lastId);
+      if (!elig.length) elig = open.filter(w => w.id !== lastId);
+      if (!elig.length) elig = open;
+      elig.sort((a,b) => st[a.id].s - st[b.id].s || st[a.id].prompts - st[b.id].prompts);
+      const w = elig[0];
+      const s = st[w.id];
+      s.prompts++;
+      lastId = w.id;
+      const fmt = ladder[Math.min(s.rung, ladder.length - 1)];
+      return { kind:"prompt", prompt:buildPrompt(w, fmt) };
+    },
+    record(prompt, ok){
+      const s = st[prompt.wordId];
+      grade(prompt.wordId, ok, ok ? prompt.dimension : null);
+      if (ok){
+        s.s++;
+        if (prompt.dimension === "receptive") s.receptive++;
+        if (prompt.dimension === "productive") s.productive++;
+        if (s.rung < ladder.length) s.rung++;
+      } else {
+        s.notBefore = step + 3;   // don't re-ask while the answer is still in mind
+      }
+      /* Criterion: every rung cleared — four separated successes, at least one
+         receptive and at least one productive. The cap stops a word the learner
+         is clearly not ready for from eating the whole session; it comes back
+         tomorrow either way. */
+      if (s.rung >= ladder.length || s.prompts >= MAX_PROMPTS) s.done = true;
+    }
+  };
+}
+
+/* --- review session: due words from earlier days --- */
+function ReviewRound(words){
+  const queue = shuffle(words).map(w => w.id);
+  const retry = [];
+  const retried = new Set();   // each word gets at most one second chance per session
+  const seen = new Set();
+  const total = queue.length;
+  return {
+    mode:"review",
+    total,
+    doneCount(){ return seen.size; },
+    next(){
+      let id = queue.shift();
+      if (id === undefined){
+        if (!retry.length) return null;
+        id = retry.shift();
+      }
+      const w = BY_ID[id], r = rec(id);
+      let fmt;
+      if (r.productive === 0) fmt = "type-word";
+      else if (r.listening === 0 && canListen()) fmt = "listen-type";
+      else if (r.durable) fmt = pick(canListen() ? ["cloze","listen-type","type-word"] : ["cloze","type-word"]);
+      else fmt = pick(["recall-meaning","type-word","cloze"]);
+      return { kind:"prompt", prompt:buildPrompt(w, fmt) };
+    },
+    record(prompt, ok){
+      grade(prompt.wordId, ok, ok ? prompt.dimension : null);
+      seen.add(prompt.wordId);
+      if (!ok && !retried.has(prompt.wordId)){
+        retried.add(prompt.wordId);
+        retry.push(prompt.wordId);
+      }
+    }
+  };
+}
+
+/* --- scored check: every introduced word once, freshly generated --- */
+/* Roughly half receptive (recognise the meaning), half productive (produce the
+   form). Only auto-gradable formats are used, so the score means something. */
+function buildTest(words){
+  return shuffle(words).map((w, i) => {
+    let fmt;
+    if (i % 2 === 0) fmt = "mc-meaning";
+    else if (canListen() && i % 5 === 3) fmt = "listen-type";
+    else fmt = pick(["type-word","cloze"]);
+    return buildPrompt(w, fmt);
+  });
+}
+
+/* ============================================================
+   UI
+   ============================================================ */
+const app = document.getElementById("app");
+const foot = document.getElementById("foot");
+let UI = { screen:"home" };
+
+function render(){
+  const fns = { home:viewUnit, unit:viewUnit, expose:viewExpose, prompt:viewPrompt,
+                feedback:viewFeedback, roundDone:viewRoundDone,
+                test:viewTest, testResult:viewTestResult };
+  app.innerHTML = (fns[UI.screen] || viewUnit)();
+  renderTop();
+  renderFoot();
+  const f = app.querySelector("[data-autofocus]");
+  // preventScroll: focusing the first answer must not scroll the question away
+  if (f) { try { f.focus({ preventScroll:true }); } catch(e){ f.focus(); } }
+  window.scrollTo(0, 0);
+}
+/* The header doubles as the way back up. "home" is the study pack; every other
+   screen is somewhere inside Unit 1's vocabulary, so it gets a back link to
+   whichever level is one step up. */
+function renderTop(){
+  const top = document.getElementById("top");
+  if (UI.screen === "home" || UI.screen === "unit"){
+    top.innerHTML = '<h1>Unit 1 — Leisure Time · Vocabulary</h1>'
+      + '<span class="sub">18 words · self-study trainer</span>';
+    return;
+  }
+  top.innerHTML = '<button class="back" type="button" data-act="unit">← Word list</button>'
+    + '<h1>Unit 1 · Vocabulary</h1>';
+}
+function renderFoot(){
+  foot.innerHTML =
+    'Progress is stored in this browser only. '
+    + '<button type="button" data-act="export">Export</button> '
+    + '<button type="button" data-act="import">Import</button> '
+    + '<button type="button" data-act="reset">Reset</button>';
+}
+
+/* ---- home ---- */
+function viewUnit(){
+  const due = dueWords(), left = newWordsLeft(), intro = introducedWords();
+  const nr = nextRound();
+  const bar = (() => {
+    const done = durableCount(), n = WORDS.length;
+    return progressBar("Words learned for good", done + " of " + n, done / n);
+  })();
+  const cards = [];
+  cards.push(cardBtn("review", "Review", due.length + " due", due.length
+      ? "The words your memory is about to lose. Always do these first."
+      : "Nothing is due today. Come back tomorrow — that gap is what makes it stick.",
+      due.length === 0));
+  cards.push(cardBtn("test", "Practice test", intro.length ? intro.length + " questions" : "locked",
+      intro.length ? "A scored test over every word you have met. Freshly generated each time — you will not get the same paper twice."
+                   : "Learn some words first and this unlocks.",
+      intro.length === 0));
+  /* The learner is told which voice is modelling the words for them, because
+     the answer changes what they should trust. A US voice is not a small
+     accent difference here: it says /ˈliːʒər/ for a word whose card insists
+     it does not rhyme with "seize", and /kræft/ against the /krɑːft/ printed
+     in the unit's own vocabulary table. */
+  let notice = "";
+  if (!TTS.supported){
+    notice = '<p class="notice">This browser has no speech support, so listening questions are switched off. '
+           + 'Everything else works. On a phone, try Chrome or Safari.</p>';
+  } else if (TTS.failed){
+    notice = '<p class="notice">The speech voice stopped responding, so listening questions are switched off '
+           + 'for now. Reload the page to try again.</p>';
+  } else if (!TTS.ready){
+    notice = '<p class="notice">No English speech voice is available in this browser, so listening questions are '
+           + 'switched off. Everything else works. On a phone, try Chrome or Safari.</p>';
+  } else if (!TTS.british){
+    notice = '<p class="notice">Reading the words with <b>' + esc(TTS.voice.name) + '</b> ('
+           + esc(TTS.voice.lang) + '). This unit teaches British pronunciation, so a few words will not '
+           + 'match the IPA on the card — <i>leisure</i>, <i>craft</i>, <i>pastime</i> and <i>can\'t</i> '
+           + 'are the ones to watch. Installing a British English voice fixes it.</p>';
+  }
+  return '<div class="stats">'
+    + stat(due.length, "due today")
+    + stat(acquiredTodayCount(), "learned today")
+    + stat(durableCount(), "known well")
+    + '</div>'
+    + '</div>'
+    + vocabPanel(bar, nr)
+    + '<div class="menu" style="margin-top:14px">' + cards.join("") + '</div>'
+    + notice;
+}
+
+/* ---- the new-vocabulary list, and the way into the learning mode ----
+   This is the page's centre of gravity: the 18 words of Lesson 2, grouped
+   into the rounds they are actually taught in, each showing where the
+   learner stands with it. The button that starts the mode sits inside this
+   section, above the list it applies to, so it is obvious which words it is
+   about to teach. */
+function wordStatus(w){
+  const r = rec(w.id);
+  if (!r.introduced) return { k:"new", label:"not started" };
+  if (r.durable) return { k:"known", label:"known well" };
+  if (r.due && r.due <= today()) return { k:"due", label:"due today" };
+  return { k:"learning", label:"learning" };
+}
+function vocabPanel(bar, nr){
+  const done = durableCount();
+  const cta = nr.length
+    ? '<button class="btn-primary cta" type="button" data-act="learn">'
+        + 'Learn the next ' + nr.length + ' words'
+        + '<span class="cta-sub">' + esc(nr.map(w => w.word).join(" · ")) + '</span></button>'
+    : '<button class="btn-primary cta" type="button" data-act="learn" disabled>'
+        + 'All 18 words started'
+        + '<span class="cta-sub">Nothing new left to meet — use Review and the practice test to make them stick</span></button>';
+  const groups = ROUNDS.map((r, i) => {
+    const states = r.map(wordStatus);
+    const summary = states.every(s => s.k === "new") ? "not started yet"
+      : states.every(s => s.k === "known") ? "all known well"
+      : states.filter(s => s.k !== "new").length + " of " + r.length + " started";
+    return '<h3 class="vround"><span>Round ' + (i + 1) + '</span><span>' + esc(summary) + '</span></h3>'
+      + '<ol class="vocab">' + r.map((w, j) => vocabRow(w, i * 6 + j + 1)).join("") + '</ol>';
+  }).join("");
+  return '<div class="panel">'
+    + '<h2>The 18 new words</h2>'
+    + '<p class="small muted">Lesson 2 vocabulary, taught six at a time. Words that are easy to '
+    + 'confuse with each other are deliberately split across different rounds.</p>'
+    + cta
+    + '<div class="dl" style="border-top:0;padding-top:16px">' + bar
+    + '<p class="tiny muted" style="margin-top:2px">A word counts as <b>known well</b> after you recall it '
+    + 'correctly on three different days, including once from Vietnamese into English. '
+    + '<b>' + done + '</b> of ' + WORDS.length + ' so far.</p></div>'
+    + groups
+    + '</div>';
+}
+function vocabRow(w, n){
+  const s = wordStatus(w);
+  const audio = TTS.supported
+    ? '<button class="speak mini" type="button" data-act="say" data-id="' + w.id
+      + '" aria-label="Hear ' + esc(w.word) + '">🔊</button>' : "";
+  return '<li class="vrow">'
+    + '<span class="vnum">' + n + '</span>'
+    + '<span class="vmain"><span class="vword">' + esc(w.word) + '</span> '
+      + '<span class="ipa vipa">' + esc(w.ipa) + '</span>'
+      + '<span class="vvi">' + esc(w.vi) + '</span></span>'
+    + '<span class="vstat s-' + s.k + '">' + esc(s.label) + '</span>'
+    + audio + '</li>';
+}
+function stat(n, label){ return '<div class="stat"><b>' + n + '</b><span>' + esc(label) + '</span></div>'; }
+function cardBtn(act, title, pill, desc, disabled){
+  return '<button class="card-btn" type="button" data-act="' + act + '"' + (disabled ? " disabled" : "") + '>'
+    + '<span class="t">' + esc(title) + '<span class="pill">' + esc(pill) + '</span></span>'
+    + '<span class="d">' + esc(desc) + '</span></button>';
+}
+function progressBar(label, right, frac){
+  const pct = Math.max(0, Math.min(100, Math.round(frac * 100)));
+  return '<div class="prog"><div class="lbl"><span>' + esc(label) + '</span><span>' + esc(right) + '</span></div>'
+    + '<div class="bar"><div class="fill" style="width:' + pct + '%"></div></div></div>';
+}
+
+/* ---- word card (exposure) ---- */
+/* Two buttons, not one. A single slowed-down button (the old behaviour: every
+   utterance at rate 0.88) leaves the learner no natural-speed reference,
+   which is the only speed they will ever meet the word at. Natural is the
+   default; the slow replay is there on request. */
+function audioButtons(id, inline){
+  /* canListen(), not TTS.supported: a browser can support the API and still
+     have no English voice installed, and a speaker button that plays nothing
+     reads to the learner as a broken app rather than a missing voice. The
+     home screen explains the absence; here it simply does not appear. */
+  if (!canListen()) return "";
+  const style = inline ? "" : ' style="margin-left:0"';
+  return '<button class="speak" type="button" data-act="say" data-id="' + id + '"' + style + '>🔊 Hear it</button>'
+       + '<button class="speak" type="button" data-act="say-slow" data-id="' + id + '">🐢 Slowly</button>';
+}
+function wordCardHTML(w, opts){
+  opts = opts || {};
+  const lengthWarn = w.lengthPair && canListen()
+    ? '<p class="tiny notice">' + NOT_A_LENGTH_MODEL + '</p>' : "";
+  return '<p class="word">' + esc(w.word) + ' <span class="pos">' + esc(w.pos) + '</span>'
+      + audioButtons(w.id, true) + '</p>'
+    + '<div class="ipa">' + esc(w.ipa) + '</div>'
+    + '<p class="gloss">' + esc(w.vi) + '</p>'
+    + '<p class="small muted">' + esc(w.en) + '</p>'
+    + (opts.hideDetail ? "" :
+        '<div class="dl"><h3>Examples</h3><ul class="ex"><li>' + w.examples.join("</li><li>") + '</li></ul></div>'
+      + '<div class="dl"><h3>Goes with</h3><div class="chips"><span class="chip">'
+        + w.colloc.map(esc).join('</span><span class="chip">') + '</span></div></div>'
+      + '<div class="dl"><h3>Watch out</h3><p class="small">' + w.note + '</p>' + lengthWarn + '</div>');
+}
+function viewExpose(){
+  const w = UI.word, e = UI.engine;
+  return sessionProgress(e)
+    + '<div class="panel"><div class="kicker">New word</div>' + wordCardHTML(w) + '</div>'
+    + '<div class="btn-row end"><button class="btn-primary" type="button" data-act="next" data-autofocus>'
+    + 'Got it — next</button></div>'
+    + '<p class="tiny muted" style="margin-top:10px">You will be asked to use this word in a moment. '
+    + 'Reading it once is not learning it — the questions are.</p>';
+}
+function sessionProgress(e){
+  if (!e) return "";
+  if (e.mode === "learn")
+    return progressBar("Words finished in this round", e.doneCount() + " of " + e.total, e.frac());
+  return progressBar("Words reviewed", e.doneCount() + " of " + e.total, e.doneCount() / e.total);
+}
+
+/* ---- prompt ---- */
+function viewPrompt(){
+  const p = UI.prompt, w = BY_ID[p.wordId], e = UI.engine;
+  let body = "", kicker = "", helper = "";
+  if (p.format === "mc-meaning"){
+    kicker = "What does it mean?";
+    body = '<p class="prompt-q">' + esc(w.word) + '</p><div class="ipa">' + esc(w.ipa) + '</div>'
+      + (canListen() ? '<div style="margin-top:8px">' + audioButtons(w.id) + '</div>' : "")
+      + '<div class="choices">'
+      + p.options.map((o,i) => '<button class="choice" type="button" data-act="choose" data-i="' + i + '"'
+          + (i === 0 ? " data-autofocus" : "") + '>' + esc(o.text) + '</button>').join("")
+      + '<button class="choice" type="button" data-act="choose" data-i="-1">I don\'t know</button></div>';
+  } else if (p.format === "recall-meaning"){
+    kicker = "Meaning check";
+    body = '<p class="prompt-q">' + esc(w.word) + '</p><div class="ipa">' + esc(w.ipa) + '</div>'
+      + '<p class="small muted" style="margin-top:12px">Say the Vietnamese meaning out loud, then check yourself.</p>'
+      + '<div class="btn-row"><button class="btn-primary" type="button" data-act="reveal" data-autofocus>Show the answer</button></div>';
+  } else if (p.format === "type-word"){
+    kicker = "Write the English word";
+    body = '<p class="prompt-q">' + esc(w.vi) + '</p>'
+      + '<p class="small muted">' + esc(w.pos) + '</p>'
+      + typedInput("Your answer");
+  } else if (p.format === "cloze"){
+    kicker = "Fill the gap";
+    body = '<p class="prompt-q">' + clozeHTML(p.sentence) + '</p>'
+      + '<p class="small muted">' + esc(w.vi) + ' · ' + esc(w.pos) + '</p>'
+      + typedInput("The missing word");
+  } else if (p.format === "listen-type"){
+    kicker = "Listen and write";
+    body = '<p class="small muted">Play the word and write what you hear. Play it as often as you like.</p>'
+      + '<div style="margin:12px 0">'
+      + '<button class="speak" type="button" data-act="say" data-id="' + w.id + '" style="margin-left:0">🔊 Play again</button>'
+      + '<button class="speak" type="button" data-act="say-slow" data-id="' + w.id + '">🐢 Slowly</button></div>'
+      + typedInput("What you heard");
+    /* An audio-only question with no audio is unanswerable, and silent
+       failure is common: a blocked autoplay policy, a voice that dies
+       mid-session, headphones on the wrong device. Offer the same word
+       from its meaning instead of letting the learner burn a lapse. */
+    helper = '<p class="tiny muted" style="margin-top:12px">Nothing playing? '
+      + '<button type="button" data-act="noaudio" style="padding:2px 8px;font-size:.78rem;border-radius:8px">'
+      + 'Answer from the meaning instead</button></p>';
+    setTimeout(() => speak(sayText(w)), 220);
+  }
+  return sessionProgress(e)
+    + '<div class="panel"><div class="kicker">' + esc(kicker) + '</div>' + body + helper + '</div>'
+    + (p.format === "recall-meaning" || p.format === "mc-meaning" ? ""
+      : '<div class="btn-row end"><button class="btn-primary" type="button" data-act="submit">Check</button></div>');
+}
+function typedInput(label){
+  return '<div style="margin-top:14px"><label class="field" for="ans">' + esc(label) + '</label>'
+    + '<input id="ans" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" '
+    + 'spellcheck="false" data-autofocus></div>';
+}
+
+/* ---- feedback ---- */
+function viewFeedback(){
+  const { prompt:p, ok, given } = UI.fb, w = BY_ID[p.wordId], e = UI.engine;
+  const head = ok ? "Correct" : (given ? "Not quite" : "No answer");
+  const pair = '<b>' + esc(w.word) + '</b> — <b>' + esc(w.vi) + '</b>';
+  let detail;
+  if (ok){
+    detail = pair;
+  } else {
+    detail = (given ? 'You wrote <i>' + esc(given) + '</i>. ' : "") + pair
+      + (p.format === "cloze"
+          ? '<br><span class="small">' + esc(p.sentence.replace("___", w.word)) + '</span>' : "");
+  }
+  const extra = ok ? "" :
+    '<div class="dl" style="border-top:0;padding-top:10px;margin-top:10px">'
+    + '<p class="small">' + esc(w.en) + '</p>'
+    + '<ul class="ex small"><li>' + w.examples[0] + '</li></ul></div>';
+  const audio = audioButtons(w.id);
+  return sessionProgress(e)
+    + '<div class="panel"><div class="fb ' + (ok ? "ok" : "no") + '" style="margin-top:0">'
+    + '<div class="h">' + head + '</div><div>' + detail + '</div>'
+    + '<div style="margin-top:10px">' + audio + '</div>' + extra + '</div>'
+    + (ok ? "" : '<p class="tiny muted" style="margin-top:12px">This word will come back in a few questions. '
+        + 'Getting it wrong now and fixing it is one of the best things you can do for your memory.</p>')
+    + '</div>'
+    + '<div class="btn-row end"><button class="btn-primary" type="button" data-act="next" data-autofocus>Continue</button></div>';
+}
+
+/* ---- round finished ---- */
+function viewRoundDone(){
+  const e = UI.engine;
+  const isLearn = e.mode === "learn";
+  const words = isLearn ? e.words : [];
+  const tomorrow = WORDS.filter(w => rec(w.id).due === addDays(today(), 1));
+  return '<div class="panel"><h2>' + (isLearn ? "Round finished" : "Review finished") + '</h2>'
+    + '<p class="small muted">' + (isLearn
+        ? "You recalled each of these four times — from meaning, into English, and inside a sentence."
+        : "Your schedule has been updated.") + '</p>'
+    + (isLearn ? '<div class="chips" style="margin-top:12px"><span class="chip">'
+        + words.map(w => esc(w.word)).join('</span><span class="chip">') + '</span></div>' : "")
+    + '<p class="small" style="margin-top:16px">Come back <b>tomorrow</b>: ' + tomorrow.length
+    + ' word' + (tomorrow.length === 1 ? "" : "s") + ' will be waiting for review. '
+    + 'That delay is not a delay — it is the part that makes the words permanent.</p>'
+    + '</div>'
+    + '<div class="btn-row"><button class="btn-primary" type="button" data-act="unit" data-autofocus>Back to the word list</button>'
+    + (isLearn && nextRound().length ? '<button type="button" data-act="learn">Learn 6 more</button>' : "")
+    + (introducedWords().length ? '<button type="button" data-act="test">Take a practice test</button>' : "")
+    + '</div>';
+}
+
+/* ---- scored test ---- */
+function viewTest(){
+  const t = UI.test, p = t.items[t.i], w = BY_ID[p.wordId];
+  let body = "";
+  if (p.format === "mc-meaning"){
+    body = '<p class="prompt-q">' + esc(w.word) + '</p><div class="ipa">' + esc(w.ipa) + '</div>'
+      + '<div class="choices">'
+      + p.options.map((o,i) => '<button class="choice" type="button" data-act="tchoose" data-i="' + i + '"'
+          + (i === 0 ? " data-autofocus" : "") + '>' + esc(o.text) + '</button>').join("")
+      + '<button class="choice" type="button" data-act="tchoose" data-i="-1">I don\'t know</button></div>';
+  } else if (p.format === "type-word"){
+    body = '<p class="prompt-q">' + esc(w.vi) + '</p><p class="small muted">' + esc(w.pos) + '</p>' + typedInput("The English word");
+  } else if (p.format === "cloze"){
+    body = '<p class="prompt-q">' + clozeHTML(p.sentence) + '</p><p class="small muted">' + esc(w.vi) + '</p>'
+      + typedInput("The missing word");
+  } else if (p.format === "listen-type"){
+    body = '<p class="small muted">Write the word you hear.</p>'
+      + '<div style="margin:12px 0">'
+      + '<button class="speak" type="button" data-act="say" data-id="' + w.id + '" style="margin-left:0">🔊 Play again</button>'
+      + '<button class="speak" type="button" data-act="say-slow" data-id="' + w.id + '">🐢 Slowly</button></div>'
+      + typedInput("What you heard")
+      /* Same escape as in practice: a dead audio path must not cost marks on
+         a scored test. Swapping to the meaning keeps the item productive, so
+         the score still means what the results table says it means. */
+      + '<p class="tiny muted" style="margin-top:12px">Nothing playing? '
+      + '<button type="button" data-act="tnoaudio" style="padding:2px 8px;font-size:.78rem;border-radius:8px">'
+      + 'Answer from the meaning instead</button></p>';
+    setTimeout(() => speak(sayText(w)), 220);
+  }
+  return progressBar("Question " + (t.i + 1) + " of " + t.items.length, "", (t.i) / t.items.length)
+    + '<div class="panel"><div class="kicker">Practice test — no feedback until the end</div>' + body + '</div>'
+    + (p.format === "mc-meaning" ? ""
+      : '<div class="btn-row end"><button class="btn-primary" type="button" data-act="tsubmit">Next</button></div>');
+}
+function viewTestResult(){
+  const t = UI.test;
+  const wrong = t.results.filter(r => !r.ok);
+  const pct = Math.round(100 * (t.results.length - wrong.length) / t.results.length);
+  const rows = t.results.map(r => {
+    const w = BY_ID[r.prompt.wordId];
+    return '<tr><td class="mark">' + (r.ok ? "✓" : "✗") + '</td>'
+      + '<td><b>' + esc(w.word) + '</b><br><span class="tiny muted">' + esc(w.vi) + '</span></td>'
+      + '<td class="tiny">' + (r.ok ? "" : (r.given ? "you wrote: " + esc(r.given) : "no answer")) + '</td></tr>';
+  }).join("");
+  const repair = wrong.length && t.repairs < 2
+    ? '<button type="button" data-act="repair">Practise the ' + wrong.length + ' you missed</button>' : "";
+  return '<div class="panel"><h2>Practice test — result</h2>'
+    + '<div class="score">' + pct + '%</div>'
+    + '<p class="small muted">' + (t.results.length - wrong.length) + ' of ' + t.results.length + ' correct.'
+    + (wrong.length ? " The words below with ✗ have been moved back to tomorrow's review."
+                    : " Every word is on schedule.") + '</p>'
+    + '<table class="res"><thead><tr><th></th><th>Word</th><th>Your answer</th></tr></thead><tbody>'
+    + rows + '</tbody></table></div>'
+    + '<div class="btn-row"><button class="btn-primary" type="button" data-act="unit" data-autofocus>Back to the word list</button>'
+    + '<button type="button" data-act="test">Take a new test</button>' + repair + '</div>'
+    + '<p class="tiny muted" style="margin-top:12px">Every test is generated fresh — different questions, different '
+    + 'order, different wrong options. Retaking it straight away helps least; coming back tomorrow helps most.</p>';
+}
+
+/* ============================================================
+   Controller
+   ============================================================ */
+function startLearn(){
+  const r = nextRound();
+  if (!r.length) return;
+  const words = r.slice(0, NEW_PER_ROUND);
+  const t = today();
+  for (const w of words){
+    const rc = rec(w.id);
+    if (!rc.introduced){ rc.introduced = t; rc.due = addDays(t, 1); }
+  }
+  saveState();
+  UI.engine = LearnRound(words);
+  advance();
+}
+function startReview(){
+  const due = dueWords();
+  if (!due.length) return;
+  UI.engine = ReviewRound(due);
+  advance();
+}
+function startTest(words){
+  const list = words || introducedWords();
+  if (!list.length) return;
+  const prev = UI.test;
+  UI.test = { items:buildTest(list), i:0, results:[], repairs:prev && words ? prev.repairs + 1 : 0 };
+  STATE.testsTaken = (STATE.testsTaken || 0) + 1;
+  saveState();
+  UI.screen = "test";
+  render();
+}
+function advance(){
+  const t = UI.engine.next();
+  if (!t){ UI.screen = "roundDone"; render(); return; }
+  if (t.kind === "expose"){ UI.screen = "expose"; UI.word = t.word; render(); setTimeout(() => speak(sayText(t.word)), 260); return; }
+  UI.prompt = t.prompt; UI.screen = "prompt"; render();
+}
+function answerPrompt(ok, given){
+  UI.engine.record(UI.prompt, ok);
+  UI.fb = { prompt:UI.prompt, ok, given };
+  UI.screen = "feedback";
+  render();
+}
+function currentTyped(){
+  const el = document.getElementById("ans");
+  return el ? el.value : "";
+}
+function submitTyped(){
+  const p = UI.prompt, w = BY_ID[p.wordId];
+  const given = currentTyped();
+  const accept = w.accept;
+  answerPrompt(checkTyped(given, accept), given.trim());
+}
+
+/* ---- events ---- */
+document.addEventListener("click", ev => {
+  const b = ev.target.closest("button");
+  if (!b) return;
+  primeSpeech();   // iOS grants synthesis from inside a gesture; take it early
+  const act = b.dataset.act;
+  if (act === "say"){ speak(sayText(BY_ID[b.dataset.id])); return; }
+  if (act === "say-slow"){ speak(sayText(BY_ID[b.dataset.id]), { slow:true }); return; }
+  if (act === "noaudio"){
+    UI.prompt = buildPrompt(BY_ID[UI.prompt.wordId], "type-word");
+    render();
+    return;
+  }
+  if (act === "tnoaudio"){
+    const t = UI.test;
+    t.items[t.i] = buildPrompt(BY_ID[t.items[t.i].wordId], "type-word");
+    render();
+    return;
+  }
+  if (act === "home"){ UI = { screen:"home" }; render(); return; }
+  if (act === "unit"){ UI = { screen:"unit" }; render(); return; }
+  if (act === "learn"){ startLearn(); return; }
+  if (act === "review"){ startReview(); return; }
+  if (act === "test"){ startTest(null); return; }
+  if (act === "next"){ advance(); return; }
+  if (act === "submit"){ submitTyped(); return; }
+  if (act === "reveal"){
+    const w = BY_ID[UI.prompt.wordId];
+    const panel = b.closest(".panel");
+    panel.querySelector(".btn-row").outerHTML =
+      '<div class="fb" style="border-color:var(--line)"><div class="h">' + esc(w.vi) + '</div>'
+      + '<div class="small muted">' + esc(w.en) + '</div></div>'
+      + '<div class="btn-row"><button class="btn-primary" type="button" data-act="selfmark" data-ok="1">I knew it</button>'
+      + '<button type="button" data-act="selfmark" data-ok="0">I didn\'t know it</button></div>';
+    return;
+  }
+  if (act === "selfmark"){ answerPrompt(b.dataset.ok === "1", null); return; }
+  if (act === "choose"){
+    const i = Number(b.dataset.i);
+    const opts = UI.prompt.options;
+    const ok = i >= 0 && opts[i].ok;
+    Array.from(b.parentElement.children).forEach((c, idx) => {
+      c.disabled = true;
+      if (idx < opts.length && opts[idx].ok) c.classList.add("correct");
+      else if (c === b) c.classList.add("wrong");
+      else c.classList.add("dim");
+    });
+    setTimeout(() => answerPrompt(ok, i >= 0 ? opts[i].text : null), 420);
+    return;
+  }
+  if (act === "tchoose"){ const i = Number(b.dataset.i); testAnswer(i); return; }
+  if (act === "tsubmit"){ testAnswer(null); return; }
+  if (act === "repair"){
+    const wrongIds = UI.test.results.filter(r => !r.ok).map(r => r.prompt.wordId);
+    startTest(wrongIds.map(id => BY_ID[id]));
+    return;
+  }
+  if (act === "export"){ doExport(); return; }
+  if (act === "import"){ doImport(); return; }
+  if (act === "reset"){ doReset(); return; }
+});
+document.addEventListener("keydown", ev => {
+  if (ev.key !== "Enter") return;
+  if (UI.screen === "prompt" && document.getElementById("ans")){ ev.preventDefault(); submitTyped(); }
+  else if (UI.screen === "test" && document.getElementById("ans")){ ev.preventDefault(); testAnswer(null); }
+});
+
+function testAnswer(choiceIndex){
+  const t = UI.test, p = t.items[t.i], w = BY_ID[p.wordId];
+  let ok, given;
+  if (p.format === "mc-meaning"){
+    ok = choiceIndex >= 0 && p.options[choiceIndex].ok;
+    given = choiceIndex >= 0 ? p.options[choiceIndex].text : null;
+  } else {
+    given = currentTyped().trim();
+    ok = checkTyped(given, w.accept);
+  }
+  grade(p.wordId, ok, ok ? p.dimension : null);
+  t.results.push({ prompt:p, ok, given });
+  t.i++;
+  if (t.i >= t.items.length){ UI.screen = "testResult"; }
+  render();
+}
+
+/* ---- data management ---- */
+function doExport(){
+  const blob = new Blob([JSON.stringify(STATE, null, 2)], { type:"application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "unit01-vocab-progress-" + today() + ".json";
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+}
+function doImport(){
+  const inp = document.createElement("input");
+  inp.type = "file"; inp.accept = "application/json,.json";
+  inp.onchange = () => {
+    const f = inp.files && inp.files[0];
+    if (!f) return;
+    const r = new FileReader();
+    r.onload = () => {
+      let data;
+      try { data = JSON.parse(r.result); }
+      catch(e){ alert("That file isn't valid progress data. Choose a file exported from this page."); return; }
+      if (!data || data.contentVersion !== CONTENT_VERSION || !data.words){
+        alert("That file was exported from a different version of this trainer. It can't be imported.");
+        return;
+      }
+      STATE = data;
+      for (const w of WORDS) if (!STATE.words[w.id]) STATE.words[w.id] = blankRecord();
+      saveState();
+      UI = { screen:"home" }; render();
+    };
+    r.readAsText(f);
+  };
+  inp.click();
+}
+function doReset(){
+  if (!confirm("Delete all progress for Unit 1 and start again? This cannot be undone.")) return;
+  STATE = { contentVersion:CONTENT_VERSION, words:{}, testsTaken:0, lastSession:null };
+  for (const w of WORDS) STATE.words[w.id] = blankRecord();
+  saveState();
+  UI = { screen:"home" }; render();
+}
+
+/* Repaint when a late-arriving voice list changes what the app can offer —
+   but only on the home screen, where nothing is half-typed. Mid-session the
+   new voice is picked up by the next speak() anyway. */
+onVoicesReady = () => { if (UI.screen === "home") render(); };
+
+render();
+</script>

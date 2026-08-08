@@ -1,0 +1,880 @@
+# Unit 9 — Natural Disasters
+
+> **Bài 9 — Thiên tai**
+> Self-study pack. Work through Lessons 1–7 in order. Answers to every
+> exercise are in the [Answer Key](#answer-key) at the end — do the exercise
+> first, then check.
+
+## What this unit teaches
+
+| Strand | Target |
+| --- | --- |
+| **Pronunciation** | **Word stress** in multi-syllable words |
+| **Grammar** | **Past continuous** — and past continuous with past simple |
+| **Reading** | Natural disasters and what they leave behind |
+| **Speaking** | Preparing and delivering a news report |
+| **Listening** | Getting ready for a storm or a flood |
+| **Writing** | **Instructions**, 80–100 words — flood safety before, during and after |
+
+---
+
+## Lesson 1 — Getting Started
+
+### Dialogue: The night of the storm
+
+*Read the conversation aloud. Then answer the questions below.*
+
+> **Duy:** You look tired, Hà. Did you sleep at all last night?
+> **Hà:** Not much. The wind was hitting our window all night. At two o'clock a
+> branch fell on the roof.
+> **Duy:** Were you awake when it happened?
+> **Hà:** I was lying in bed listening to the rain. Then there was a huge bang
+> and the whole family got up.
+> **Duy:** Was your mother frightened?
+> **Hà:** A bit. While my dad was checking the roof, she was filling every
+> bucket in the house with clean water.
+> **Duy:** That was sensible. Our street was already under water at six this
+> morning. I was cycling to school when I saw two men pushing a motorbike
+> through it.
+> **Hà:** Did you get through?
+> **Duy:** No. I turned back, and my brother brought me here in his boat. It's
+> the first time I have ever arrived at school by boat.
+> **Hà:** Lucky you. The radio was warning people about the storm all yesterday
+> afternoon, but nobody in my street moved anything upstairs.
+> **Duy:** People never believe a forecast until they can see the water.
+> **Hà:** My grandmother does. While we were watching television yesterday
+> evening, she was quietly packing a bag with our papers and two torches.
+> **Duy:** Your grandmother has been through more storms than the radio has.
+> **Hà:** That is exactly what she said.
+
+### 1.1 Comprehension
+
+Answer in full sentences.
+
+1. What woke Hà's family up at two o'clock?
+2. What was Hà's mother doing while her father was checking the roof?
+3. How did Duy get to school in the end, and why?
+4. What was the radio doing all yesterday afternoon?
+5. What did Hà's grandmother put in her bag?
+
+### 1.2 Find the phrase
+
+Find a word or phrase in the dialogue that means:
+
+1. a statement about what the weather will do → _______________
+2. gone back the way you came → _______________
+3. covered by water → _______________
+4. survived many difficult events → _______________
+
+### 1.3 Notice the grammar
+
+Look at the **bold** verbs. Write **past continuous** or **past simple**.
+
+1. The wind **was hitting** our window all night. → _______________
+2. A branch **fell** on the roof. → _______________
+3. I **was cycling** to school. → _______________
+4. I **saw** two men pushing a motorbike. → _______________
+
+> **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **thì quá khứ tiếp diễn**
+> (*was/were* + V-ing) và cách kết hợp nó với thì quá khứ đơn bằng *when* và
+> *while*. Chi tiết đầy đủ ở Lesson 3.
+
+---
+
+## Lesson 2 — A Closer Look 1
+
+### Vocabulary — Natural disasters
+
+| # | Word | IPA | Type | Nghĩa tiếng Việt |
+| --- | --- | --- | --- | --- |
+| 1 | earthquake | /ˈɜːθkweɪk/ | n | trận động đất |
+| 2 | flood | /flʌd/ | n, v | lũ lụt; ngập lụt |
+| 3 | drought | /draʊt/ | n | hạn hán |
+| 4 | landslide | /ˈlændslaɪd/ | n | sạt lở đất |
+| 5 | tsunami | /tsuːˈnɑːmi/ | n | sóng thần |
+| 6 | volcano | /vɒlˈkeɪnəʊ/ | n | núi lửa |
+| 7 | erupt | /ɪˈrʌpt/ | v | phun trào |
+| 8 | evacuate | /ɪˈvækjueɪt/ | v | sơ tán |
+| 9 | shelter | /ˈʃeltə(r)/ | n, v | nơi trú ẩn; trú ẩn |
+| 10 | rescue | /ˈreskjuː/ | v, n | cứu hộ, giải cứu |
+| 11 | damage | /ˈdæmɪdʒ/ | n, v | thiệt hại; làm hư hại |
+| 12 | destroy | /dɪˈstrɔɪ/ | v | phá huỷ |
+| 13 | collapse | /kəˈlæps/ | v, n | sụp đổ, đổ sập |
+| 14 | warning | /ˈwɔːnɪŋ/ | n | lời cảnh báo |
+| 15 | forecast | /ˈfɔːkɑːst/ | n, v | dự báo |
+| 16 | victim | /ˈvɪktɪm/ | n | nạn nhân |
+| 17 | relief | /rɪˈliːf/ | n | cứu trợ |
+| 18 | survivor | /səˈvaɪvə(r)/ | n | người sống sót |
+
+### 2.1 Complete the sentences
+
+Use one word from the table. Change the form if you need to.
+
+1. There has been no rain here for eight months — it is the worst _______ in
+   twenty years.
+2. The police told everyone near the coast to _______ before the wave arrived.
+3. Heavy rain caused a _______ that buried the mountain road.
+4. Three days after the earthquake the team found another _______ under the
+   building — a boy of eleven.
+5. The storm did not _______ our house, but it did a lot of _______ to the roof.
+6. Lorries brought _______ supplies — rice, blankets and clean water — to the
+   village.
+
+### 2.2 Odd one out
+
+Circle the word that does not belong, and say why.
+
+1. earthquake · flood · landslide · shelter
+2. destroy · damage · collapse · rescue
+3. warning · forecast · siren · drought
+4. victim · survivor · volcano · rescue team
+
+### Pronunciation — Word stress in multi-syllable words
+
+Every English word of two or more syllables has **one** syllable that is louder,
+longer and clearer than the others. That is the **stressed** syllable.
+Dictionaries mark it with a small vertical line `ˈ` placed **before** the
+stressed syllable:
+
+> disˈaster = dis-**AS**-ter · ˈhurricane = **HUR**-ri-cane
+
+Get the stress wrong and a listener may not recognise the word at all, even if
+every sound in it is correct.
+
+#### Rule 1 — two-syllable words: nouns **Oo**, verbs **oO**
+
+| Two-syllable **nouns** — stress 1st (Oo) | Two-syllable **verbs** — stress 2nd (oO) |
+| --- | --- |
+| ˈdamage, ˈshelter, ˈwarning | deˈstroy, eˈrupt, colˈlapse |
+| ˈvictim, ˈdanger, ˈflooding | preˈpare, surˈvive, esˈcape |
+
+This is a strong tendency, not a law — *ˈrescue* is a first-stressed verb, and
+*beˈlief* is a second-stressed noun. But it is right far more often than it is
+wrong.
+
+#### Rule 2 — the same spelling, two stresses, two words
+
+| Noun — Oo | Verb — oO |
+| --- | --- |
+| a ˈrecord /ˈrekɔːd/ — bản ghi, kỷ lục | to reˈcord /rɪˈkɔːd/ — ghi âm, ghi lại |
+| a ˈpresent /ˈpreznt/ — món quà | to preˈsent /prɪˈzent/ — trình bày |
+| an ˈincrease /ˈɪŋkriːs/ — sự gia tăng | to inˈcrease /ɪnˈkriːs/ — tăng lên |
+
+#### Rule 3 — the suffixes that pull the stress
+
+The endings **-tion, -sion, -ic** and **-ity** never take the stress themselves.
+They pull it onto the syllable **immediately before** them. This rule is
+reliable, so learn it once and you can stress hundreds of words correctly.
+
+| Word | Stress marked | Syllable that takes it |
+| --- | --- | --- |
+| destruction | deˈstruction /dɪˈstrʌkʃn/ | -struc- (before *-tion*) |
+| eruption | eˈruption /ɪˈrʌpʃn/ | -rup- (before *-tion*) |
+| protection | proˈtection /prəˈtekʃn/ | -tec- (before *-tion*) |
+| explosion | exˈplosion /ɪkˈspləʊʒn/ | -plo- (before *-sion*) |
+| volcanic | volˈcanic /vɒlˈkænɪk/ | -can- (before *-ic*) |
+| dramatic | draˈmatic /drəˈmætɪk/ | -mat- (before *-ic*) |
+| ability | aˈbility /əˈbɪləti/ | -bil- (before *-ity*) |
+| electricity | elecˈtricity /ɪˌlekˈtrɪsəti/ | -tric- (before *-ity*) |
+
+Notice what happens to a word family: volˈcano → volˈcanic; deˈstroy →
+deˈstruction; eˈrupt → eˈruption. Here the stress **stays put** — it was
+already on the syllable before the ending, which is what makes these three
+families easy. But when the stem is stressed somewhere else, the ending
+**pulls** the stress onto the syllable in front of it: *ˈphotograph* →
+*photoˈgraphic*, *eˈlectric* → *elecˈtricity*.
+
+#### The unit's key words, marked
+
+| Word | Marked | Pattern |
+| --- | --- | --- |
+| hurricane | ˈhurricane /ˈhʌrɪkən/ | Ooo |
+| earthquake | ˈearthquake /ˈɜːθkweɪk/ | Oo |
+| tsunami | tsuˈnami /tsuːˈnɑːmi/ | oOo |
+| volcano | volˈcano /vɒlˈkeɪnəʊ/ | oOo |
+| disaster | disˈaster /dɪˈzɑːstə(r)/ | oOo |
+| eruption | eˈruption /ɪˈrʌpʃn/ | oOo |
+| destruction | deˈstruction /dɪˈstrʌkʃn/ | oOo |
+| evacuate | eˈvacuate /ɪˈvækjueɪt/ | oOoo |
+
+> **Mẹo:** Tiếng Việt có thanh điệu, tiếng Anh có **trọng âm**. Khi đọc âm tiết
+> mang trọng âm, hãy đọc **to hơn, dài hơn và rõ hơn**; các âm tiết còn lại đọc
+> nhẹ và nhanh. Mẹo kiểm tra: vỗ tay một cái mạnh đúng vào âm tiết đó —
+> *dis-**AS**-ter*, chứ không phải *DIS-as-ter*.
+
+### 2.3 Sort by stress pattern
+
+Write each two-syllable word in the correct column: **damage · destroy ·
+shelter · erupt · warning · collapse · victim · prepare · flooding · survive ·
+danger · escape**
+
+| Oo — stress on the 1st syllable | oO — stress on the 2nd syllable |
+| --- | --- |
+| | |
+
+### 2.4 Use the suffix rule
+
+Mark the stressed syllable with `ˈ` in front of it. Do not use a dictionary —
+use Rule 3.
+
+1. destruction → _______________
+2. eruption → _______________
+3. volcanic → _______________
+4. ability → _______________
+5. protection → _______________
+6. electricity → _______________
+7. dramatic → _______________
+8. evacuation → _______________
+
+### 2.5 Say these aloud
+
+The stressed syllable is in CAPITALS. Read each sentence three times, faster
+each time. Record yourself if you can.
+
+1. The vol-**CA**-no was quiet for years before the e-**RUP**-tion.
+2. A **HUR**-ri-cane and a tsu-**NA**-mi are very different di-**SAS**-ters.
+3. The de-**STRUC**-tion was so bad that they had to e-**VAC**-u-ate the town.
+4. There was no e-lec-**TRI**-ci-ty, so we could not re-**CORD** the **WARN**-ing.
+
+---
+
+## Lesson 3 — A Closer Look 2
+
+### Grammar — The past continuous
+
+The past continuous describes an action that was **in progress** at a moment in
+the past. It was already going on; it had not finished.
+
+> At eight o'clock last night it **was raining** hard.
+> The rescue team **were carrying** an old woman to the boat.
+
+#### Form: *was / were* + V-ing
+
+| | Positive | Negative | Question |
+| --- | --- | --- | --- |
+| I / he / she / it | I **was** working | I **was not (wasn't)** working | **Was** I working? |
+| you / we / they | We **were** working | We **were not (weren't)** working | **Were** we working? |
+
+Wh- questions put the question word first: *What **were** you **doing**?*
+Short answers: *Yes, I **was**. / No, we **weren't**.*
+
+#### Spelling of the -ing form
+
+| Rule | Examples |
+| --- | --- |
+| Most verbs — just add *-ing* | work → work**ing**, rain → rain**ing**, carry → carry**ing** |
+| Ends in silent *-e* — drop the *e* | make → mak**ing**, rise → ris**ing**, evacuate → evacuat**ing** |
+| One syllable, one vowel + one consonant — double it | run → ru**nn**ing, swim → swi**mm**ing, dig → di**gg**ing |
+| Ends in *-ie* — change to *-y* | lie → **ly**ing, die → **dy**ing, tie → **ty**ing |
+
+❌ *makeing* · ❌ *runing* · ❌ *lieing*
+
+#### Combination 1 — interrupted action: *when* + past simple
+
+A long action was in progress; a short action cut across it.
+
+> I **was cooking** when the storm **hit**.
+> They **were driving** to the shelter when a tree **fell** across the road.
+
+The **long** action takes the past continuous. The **short**, sudden one takes
+the past simple after *when*.
+
+```
+was cooking  ───────────────────────►
+                  ▲
+             the storm hit
+```
+
+#### Combination 2 — two actions at the same time: *while*
+
+Two long actions were happening together. Both take the past continuous.
+
+> **While** it **was raining**, we **were filling** sandbags.
+> **While** my mother **was packing** our papers, my father **was checking** the roof.
+
+#### *when* or *while*?
+
+| Word | What follows it | Meaning |
+| --- | --- | --- |
+| **when** | usually the **past simple** — the short action | *…when the siren sounded.* |
+| **while** | usually the **past continuous** — the long action | *While the siren was sounding…* |
+
+Either clause can come first. If the time clause comes first, put a comma after
+it:
+
+> ✅ We were filling sandbags **while** it was raining.
+> ✅ **While** it was raining, we were filling sandbags.
+
+> ⚠️ **Bẫy thường gặp:** Có một nhóm động từ **không dùng ở thì tiếp diễn** —
+> gọi là *stative verbs* (động từ chỉ trạng thái): **know, understand, believe,
+> want, need, like, love, hate, own, belong, seem**. Chúng nói về trạng thái,
+> không phải hành động đang diễn ra.
+> ❌ *I **was knowing** about the storm.* → ✅ *I **knew** about the storm.*
+> ❌ *She **was wanting** to help.* → ✅ *She **wanted** to help.*
+> Bẫy thứ hai: nhớ chia đúng **was** (I/he/she/it) và **were** (you/we/they).
+> ❌ *My sister **were** crying.* → ✅ *My sister **was** crying.*
+
+### 3.1 Recognise the tense
+
+Write **PC** (past continuous) or **PS** (past simple) for each **bold** verb.
+
+1. At eight o'clock last night it **was raining** hard. ___
+2. The wall **collapsed** just after midnight. ___
+3. While we **were packing**, the lights went out. ___
+4. My father **filled** ten buckets with water. ___
+5. The radio **was warning** people all afternoon. ___
+6. Nobody **heard** the siren. ___
+7. The rescue team **were carrying** an old woman to the boat. ___
+8. That volcano **erupted** in 2010. ___
+
+### 3.2 Put the verb into the past continuous
+
+Watch the spelling of the *-ing* form.
+
+1. At seven o'clock we ____________ (listen) to the forecast.
+2. She ____________ (not / sleep) when the branch fell on the roof.
+3. What ____________ you ____________ (do) when the earthquake started?
+4. The men ____________ (dig) a channel behind the school.
+5. My grandmother ____________ (lie) on the sofa with the radio on.
+6. The water ____________ (rise) far more quickly than anyone expected.
+
+### 3.3 Join with *when* or *while*
+
+Make one sentence from each pair. Use **when** if a short action interrupted a
+long one, and **while** if the two actions were going on at the same time. Put
+the verbs into the correct tense.
+
+1. I / cook dinner // the storm / hit the village
+   → _______________________________
+2. it / rain hard // we / fill sandbags
+   → _______________________________
+3. they / drive to the shelter // a tree / fall across the road
+   → _______________________________
+4. the children / play in the yard // the siren / sound
+   → _______________________________
+5. my mother / pack our papers // my father / check the roof
+   → _______________________________
+
+### 3.4 Correct the mistake
+
+Each sentence has **one** error. Rewrite it correctly.
+
+1. While the water was rise, we moved everything upstairs.
+2. I was knowing about the storm two days before it arrived.
+3. They were fill buckets when the tap stopped working.
+4. What were you do when the siren sounded?
+5. My brother were carrying a box upstairs when I saw him.
+
+### 3.5 About you
+
+Write true sentences. Use the past continuous at least once in each.
+
+1. What were you doing at eight o'clock yesterday evening?
+   → _______________________________
+2. Finish with *when*: I was _______________ when _______________.
+3. Write one sentence with *while* and **two** actions happening together.
+   → _______________________________
+4. Think of the last heavy rain or storm where you live. What was your family
+   doing? → _______________________________
+
+---
+
+## Lesson 4 — Communication
+
+### Everyday English — Warning, worrying and reassuring
+
+#### Warning someone
+
+| English | Nghĩa |
+| --- | --- |
+| **Watch out!** | Coi chừng! |
+| **Be careful** — the road is flooded. | Cẩn thận — đường đang ngập. |
+| **Don't go** near the river. | Đừng lại gần sông. |
+| **Mind** the broken glass. | Coi chừng mảnh kính vỡ. |
+| **Make sure you** take a torch. | Nhớ mang theo đèn pin nhé. |
+| **Whatever you do, don't** touch that wire. | Dù thế nào cũng đừng chạm vào dây điện đó. |
+
+#### Saying you are worried
+
+| English | Nghĩa |
+| --- | --- |
+| I'm **worried about** my grandparents. | Mình lo cho ông bà mình quá. |
+| **What if** the water comes into the house? | Nhỡ nước tràn vào nhà thì sao? |
+| I'm **not sure** we have enough clean water. | Mình không chắc nhà mình đủ nước sạch. |
+| This is **really frightening**. | Chuyện này đáng sợ thật. |
+
+#### Reassuring someone
+
+| English | Nghĩa |
+| --- | --- |
+| **Don't worry** — they moved upstairs this morning. | Đừng lo — sáng nay họ lên gác rồi. |
+| **It'll be all right.** | Rồi sẽ ổn thôi. |
+| **Try not to panic.** | Cố đừng hoảng nhé. |
+| **Calm down.** We have five full buckets. | Bình tĩnh nào. Nhà mình có năm xô đầy rồi. |
+| **We're safe here.** | Ở đây mình an toàn mà. |
+
+> ⚠️ Note the grammar: **Be careful**, **Mind**, **Don't go** and **Try not to
+> panic** are all **imperatives** — the bare verb, with no subject. You will use
+> this form again in the writing task in Lesson 6.
+
+### 4.1 Complete the mini-dialogues
+
+1. **A:** Watch _______! There's broken glass on the step.
+   **B:** Thanks. I didn't see it.
+
+2. **A:** I'm _______ about my grandmother. She lives near the river.
+   **B:** Don't _______ — my uncle took her to the shelter this morning.
+
+3. **A:** _______ if the electricity goes off tonight?
+   **B:** Then we use the torch. Try not to _______.
+
+4. **A:** Make _______ you charge your phone before you go to bed.
+   **B:** Good idea. I'll do it now.
+
+### 4.2 Write your own
+
+Write a short reply to each person: first a warning or a piece of reassurance,
+then a reason.
+
+1. "The water on our road is only up to my knees. I'll cycle through it."
+   → _______________________________
+2. "I'm really frightened. The wind sounds like it will take the roof off."
+   → _______________________________
+3. "There's a wire hanging down from the pole outside our gate."
+   → _______________________________
+
+---
+
+## Lesson 5 — Skills 1: Reading & Speaking
+
+### Reading — *What a disaster leaves behind*
+
+*From a school magazine, written by a geography teacher.*
+
+> Every country has its own disasters. Viet Nam has storms and floods, Japan has
+> earthquakes, and parts of Africa have droughts that last for years. The event
+> itself may be over in a few hours. What it leaves behind is not.
+>
+> Think about a flood in a small town. While the water was rising in the fields,
+> families were carrying their furniture upstairs. When the river finally broke
+> through the bank, it took less than an hour to fill the ground floor of every
+> house on the street. The water went down after three days. The mud stayed for
+> three weeks.
+>
+> That mud is the part people forget. It ruins school books, seeds and stored
+> rice. It blocks wells, so clean water becomes hard to find. Doctors are often
+> busier a month after a flood than during it, because dirty water makes people
+> ill.
+>
+> An earthquake leaves a different kind of damage. Buildings that look safe may
+> be weak inside, so engineers must check every school and hospital before
+> anyone goes back in. A landslide can block the only road into a village, and
+> rescue teams sometimes walk for a whole day with food on their backs.
+>
+> There is good news too. Better warnings save lives. In many coastal villages a
+> siren now sounds long before a big wave arrives, and children practise
+> evacuation at school twice a year. Nobody can stop a disaster. Being ready for
+> one is something you can learn.
+
+### 5.1 True, False, or Not Given
+
+Write **T**, **F**, or **NG**.
+
+1. The flood filled the ground floor of every house on that street. ___
+2. The mud went away as soon as the water did. ___
+3. Japan has more earthquakes than any other country. ___
+4. Rescue teams sometimes have to reach a village on foot. ___
+5. In coastal villages the siren sounds after the big wave has arrived. ___
+
+### 5.2 Answer the questions
+
+1. What were the families doing while the water was rising?
+2. How long did the water stay, and how long did the mud stay?
+3. Why are doctors often busier a month after a flood than during it?
+4. Why must engineers check buildings that still look safe?
+5. What does the writer mean by "Nobody can stop a disaster. Being ready for one
+   is something you can learn."?
+
+### 5.3 Vocabulary in context
+
+Find a word in the text that means:
+
+1. spoils something completely → _______________
+2. soft wet earth left behind by water → _______________
+3. the raised edge of a river → _______________
+4. a loud machine that gives a warning sound → _______________
+
+### Speaking — Delivering a news report
+
+> **Working alone:** you have no partner and no camera crew, so do this in three
+> steps. It still works — a news report is one speaker talking to an audience
+> anyway, which is exactly what you can practise on your own.
+
+**Step 1 — Prepare.** You are a reporter. A storm hit a small coastal town last
+night. Fill in your notes — short phrases, not full sentences.
+
+| Reporter's notes | Your notes |
+| --- | --- |
+| Where and when did it happen? | |
+| What was the weather doing? (past continuous) | |
+| What were people doing when it hit? (past continuous + past simple) | |
+| What damage did it cause? | |
+| Who helped, and how? | |
+| What should people do now? | |
+
+**Step 2 — Speak.** Deliver the report **aloud**, standing up, for about
+**one minute**. Use this shape:
+
+> "Good evening. I'm reporting from ______. At about ______ last night, a ______
+> hit this town. While most people ______, the water ______. This morning ______.
+> Rescue teams ______. People here are being asked to ______. Back to the studio."
+
+**Step 3 — Record and check.** Record yourself on your phone. Listen back and
+check three things:
+
+- Did you use **at least three** past continuous verbs, with the correct *was*
+  or *were*?
+- Did you stress the right syllable in *disˈaster*, *deˈstruction*, *eˈvacuate*
+  and *ˈhurricane*?
+- Could you speak for a whole minute without a long pause?
+
+Repeat Step 2 until the report runs from start to finish without stopping.
+
+---
+
+## Lesson 6 — Skills 2: Listening & Writing
+
+### Listening — The evening storm bulletin
+
+> **How to use this without the audio:** ask someone to read the script aloud
+> to you at normal speed while you cover it — or paste it into a
+> text-to-speech tool. Listen **twice** before you look at the text.
+>
+> **Cách dùng khi không có bản ghi âm:** nhờ người khác đọc to phần lời thoại,
+> hoặc dùng công cụ đọc văn bản. Nghe **hai lần** trước khi nhìn vào bài.
+
+**Script** — *cover this while you listen*
+
+> Good evening. This is the seven o'clock weather bulletin.
+>
+> Storm Number Six is now about two hundred kilometres off the coast and moving
+> west. It should reach us tomorrow morning. Winds of a hundred kilometres an
+> hour are expected, with heavy rain for two days after that.
+>
+> Here is what we are asking you to do tonight.
+>
+> If you live near the river, move upstairs now. Do not wait until the morning.
+> Take your documents, your medicine and a torch with you, and put them in a
+> plastic bag.
+>
+> Check your roof. This afternoon our reporter was driving through Phu Loc and
+> saw dozens of loose roof sheets. While she was filming, one of them came off
+> in the wind.
+>
+> Fill every container you have with clean water. When the flood arrives, the
+> tap water will not be safe to drink.
+>
+> Charge your phone tonight. The electricity may go off tomorrow.
+>
+> Schools in the coastal districts will be closed tomorrow and Thursday. Buses
+> to the mountains have already stopped.
+>
+> Finally, please check on your neighbours, especially the older ones. Last year
+> most of the people we rescued were over seventy.
+>
+> We will be back with another bulletin at six in the morning.
+
+### 6.1 Listen and choose
+
+1. The storm is expected to arrive **(a)** tonight **(b)** tomorrow morning **(c)** on Thursday
+2. The expected wind speed is **(a)** 100 km/h **(b)** 200 km/h **(c)** 70 km/h
+3. People who live near the river should **(a)** leave the town **(b)** move upstairs tonight **(c)** wait until morning
+4. Once the flood arrives, the tap water will be **(a)** safe **(b)** unsafe to drink **(c)** free
+5. Last year, most of the people who were rescued were **(a)** children **(b)** over seventy **(c)** fishermen
+
+### 6.2 Listen and complete
+
+1. The storm is about ____________ kilometres off the coast.
+2. Put your documents, medicine and torch in a ____________ bag.
+3. While the reporter ____________, a roof sheet came off in the wind.
+4. Schools in the ____________ districts will be closed tomorrow and Thursday.
+5. The next bulletin is at ____________ in the morning.
+
+### Writing — Instructions: flood safety
+
+**Task.** Your school is making a leaflet for younger students. Write the flood
+safety instructions in **80–100 words**, in three parts: **before**, **during**
+and **after** a flood.
+
+#### What makes this an instruction text — not a paragraph
+
+| Feature | What to do | Example |
+| --- | --- | --- |
+| **Imperative verbs** | Start with the bare verb. No *you*, no *I*. | **Turn off** the electricity. |
+| **Negative imperative** | *Do not* / *Never* + bare verb | **Never walk** through moving water. |
+| **Sequencing signals** | *First, Next, Then, Finally* + comma | **First,** listen to the forecast. |
+| **Short sentences** | One instruction per sentence | ❌ *Turn off the electricity and move upstairs and stay there because…* |
+| **Headings** | Before / During / After | **During the flood.** |
+
+❌ *You should to turn off the electricity.* → ✅ *Turn off the electricity.*
+❌ *I think it is good to boil water.* → ✅ *Boil all drinking water.*
+
+#### Model instructions — read this first
+
+> **Flood safety — what to do**
+>
+> **Before the flood.** First, listen to the weather forecast. Next, put your
+> papers, a torch and some medicine in a plastic bag on a high shelf. Then turn
+> off the electricity at the main switch.
+>
+> **During the flood.** Go to the shelter if the authorities tell you to. If you
+> stay, move upstairs — never into a closed loft. Never walk or swim through
+> moving water. Never touch a switch when wet.
+>
+> **After the flood.** Wait for an official message before you go home. Then boil
+> all drinking water. Finally, wear boots while you clean.
+
+*(99 words)*
+
+#### The structure to copy
+
+| Part | What goes in it |
+| --- | --- |
+| **Title** | What the instructions are for |
+| **Before** | 3 instructions — listening, packing, agreeing a plan |
+| **During** | 3 instructions — including one *Never…* |
+| **After** | 3 instructions — water, cleaning, reporting damage |
+
+#### Checklist — tick before you finish
+
+- [ ] 80–100 words (count them)
+- [ ] Three headings: **Before**, **During**, **After**
+- [ ] Every instruction starts with an **imperative** verb
+- [ ] At least **four** sequencing signals (*First, Next, Then, Finally*)
+- [ ] At least one **negative** instruction (*Do not…* / *Never…*)
+- [ ] At least **four** words from the Lesson 2 vocabulary table
+- [ ] No *I think*, no *you should*
+
+#### Now write yours
+
+_______________________________________________
+_______________________________________________
+_______________________________________________
+_______________________________________________
+_______________________________________________
+_______________________________________________
+
+---
+
+## Lesson 7 — Looking Back & Project
+
+### 7.1 Vocabulary check
+
+Complete with a word from this unit. The first letter is given.
+
+1. A long period with no rain at all is a d_______.
+2. Three days later the team found another s_______ under the fallen building.
+3. The government told every family near the coast to e_______.
+4. Heavy rain caused a l_______ that buried the mountain road.
+5. Always listen to the weather f_______ before you travel in September.
+6. Lorries brought r_______ supplies — rice, blankets and medicine.
+
+### 7.2 Pronunciation check
+
+Which syllable takes the stress? Write **1**, **2** or **3**.
+
+1. disaster ___  2. hurricane ___  3. destruction ___  4. tsunami ___
+5. volcanic ___  6. evacuate ___  7. eruption ___  8. earthquake ___
+
+### 7.3 Grammar check
+
+Complete with the past continuous or the past simple.
+
+1. At six o'clock yesterday evening it ____________ (rain) heavily.
+2. While my mother ____________ (cook), the power ____________ (go) off.
+3. The children ____________ (play) outside when the siren ____________ (sound).
+4. I ____________ (not / know) anything about the warning. *(careful!)*
+5. What ____________ your father ____________ (do) when the landslide happened?
+6. While the men ____________ (fill) sandbags, the women ____________ (move)
+   the rice upstairs.
+
+### 7.4 Error hunt
+
+Find and correct **six** errors in this paragraph. They are all connected to the
+past continuous: its *-ing* form, its *was/were*, or a verb that should not be
+in the continuous at all.
+
+> Last November a big storm was hit our village. At nine o'clock in the evening
+> my family were sit in the kitchen. While my father was listen to the radio, my
+> mother was packing our documents. I was knowing that the water would come, but
+> I said nothing. Suddenly the lights went out. My little sister were crying, so
+> I took her upstairs. We was watching the water from the window until midnight.
+
+### Project — Your family's disaster plan
+
+Every family should be able to answer four questions before a storm arrives,
+not during one. Build the answers.
+
+**Step 1 — Find out.** Ask an adult at home:
+
+| Question | Answer |
+| --- | --- |
+| Which disasters affect our area? | |
+| What is the highest safe place in or near our house? | |
+| Where would we meet if we were separated? | |
+| Who would we phone first? | |
+
+**Step 2 — Pack the bag.** List **eight** things that should go in an emergency
+bag, and say why each one is there. Weigh the bag when you have finished — can
+you carry it up a flight of stairs?
+
+**Step 3 — Write the instructions.** Turn Steps 1 and 2 into a one-page set of
+instructions for your family, using **Before / During / After** and imperative
+verbs. Put it on the wall where everyone can see it.
+
+**Step 4 — Present it.** Explain your plan aloud in **one minute**, as if you
+were the reporter from Lesson 5. Record it and listen back once: check your
+imperatives and your word stress.
+
+> **Stretch:** Interview the oldest person in your family about the worst storm
+> or flood they remember. Ask what they were doing when it started, and write
+> their story in 120 words. Use at least four past continuous verbs.
+
+---
+
+## Answer Key
+
+> **Đáp án.** Chỉ xem sau khi đã tự làm bài.
+
+### Lesson 1
+
+**1.1** 1. A branch fell on the roof and made a huge bang. 2. She was filling
+every bucket in the house with clean water. 3. His brother brought him in his
+boat, because the street was under water and he could not cycle through it.
+4. It was warning people about the storm. 5. The family's papers and two
+torches.
+
+**1.2** 1. forecast 2. turned back 3. under water 4. has been through
+
+**1.3** 1. past continuous 2. past simple 3. past continuous 4. past simple
+
+### Lesson 2
+
+**2.1** 1. drought 2. evacuate 3. landslide 4. survivor 5. destroy / damage
+6. relief
+
+**2.2** 1. **shelter** — the others are natural disasters; a shelter is a safe
+place. 2. **rescue** — the others mean to break or harm something. 3. **drought**
+— the others tell you that something dangerous is coming. 4. **volcano** — the
+others are people.
+
+**2.3**
+- Oo (1st syllable): damage, shelter, warning, victim, flooding, danger
+- oO (2nd syllable): destroy, erupt, collapse, prepare, survive, escape
+
+**2.4** 1. deˈstruction 2. eˈruption 3. volˈcanic 4. aˈbility 5. proˈtection
+6. elecˈtricity 7. draˈmatic 8. evacuˈation
+
+**2.5** Spoken. Check: the capitalised syllable is longer, louder and clearer,
+and every other syllable is short and light. If *disaster* comes out as
+*DIS-as-ter*, slow down and try again.
+
+### Lesson 3
+
+**3.1** 1. PC 2. PS 3. PC 4. PS 5. PC 6. PS 7. PC 8. PS
+
+**3.2** 1. were listening 2. was not sleeping (wasn't sleeping) 3. were … doing
+4. were digging 5. was lying 6. was rising
+
+**3.3**
+1. I was cooking dinner **when** the storm hit the village.
+2. **While** it was raining hard, we were filling sandbags. *(or: We were filling
+   sandbags while it was raining hard.)*
+3. They were driving to the shelter **when** a tree fell across the road.
+4. The children were playing in the yard **when** the siren sounded. *(or: When
+   the siren sounded, the children were playing in the yard.)*
+5. **While** my mother was packing our papers, my father was checking the roof.
+
+**3.4**
+1. While the water **was rising**, we moved everything upstairs.
+2. I **knew** about the storm two days before it arrived. *(know is stative)*
+3. They **were filling** buckets when the tap stopped working.
+4. What **were you doing** when the siren sounded?
+5. My brother **was** carrying a box upstairs when I saw him.
+
+**3.5** Answers will vary. Check: *was* with I/he/she/it and *were* with
+you/we/they; a correct *-ing* spelling; in item 2 the *when* clause is past
+simple; in item 3 **both** verbs are past continuous; and no stative verb
+(*know, want, like*) is used in the continuous.
+
+### Lesson 4
+
+**4.1** 1. out 2. worried / worry 3. What / panic 4. sure
+
+**4.2** Answers will vary. Check that each reply contains (a) an imperative
+warning or a reassuring phrase from the tables, and (b) a reason. Sample:
+1. "Don't cycle through it! Moving water can knock you off, and you cannot see
+what is under it."
+2. "Try not to panic. Come downstairs away from the windows — the roof was
+repaired last year."
+3. "Whatever you do, don't touch that wire. Tell an adult and stay inside."
+
+### Lesson 5
+
+**5.1** 1. T 2. F (the water went down after three days, the mud stayed three
+weeks) 3. NG 4. T 5. F (it sounds long before the wave arrives)
+
+**5.2** 1. They were carrying their furniture upstairs. 2. The water stayed for
+three days; the mud stayed for three weeks. 3. Because the mud blocks the wells,
+so clean water is hard to find, and dirty water makes people ill. 4. Because a
+building can look safe and still be weak inside. 5. That disasters cannot be
+prevented, but preparation is a skill — you can be taught it and practise it,
+and that is what saves lives.
+
+**5.3** 1. ruins 2. mud 3. bank 4. siren
+
+**Speaking** Answers will vary. Check: at least three past continuous verbs with
+the correct *was/were*, correct stress on *disˈaster, deˈstruction, eˈvacuate,
+ˈhurricane*, and one continuous minute of speech with no long pause.
+
+### Lesson 6
+
+**6.1** 1. b 2. a 3. b 4. b 5. b
+
+**6.2** 1. two hundred 2. plastic 3. was filming 4. coastal 5. six
+
+**Writing** Answers will vary. Check against the checklist: 80–100 words, the
+three headings, every instruction beginning with an imperative verb, at least
+four sequencing signals, at least one *Do not…* or *Never…*, four unit
+vocabulary words, and no *I think* or *you should*.
+
+### Lesson 7
+
+**7.1** 1. drought 2. survivor 3. evacuate 4. landslide 5. forecast 6. relief
+
+**7.2** 1. 2 (disˈaster) 2. 1 (ˈhurricane) 3. 2 (deˈstruction) 4. 2 (tsuˈnami)
+5. 2 (volˈcanic) 6. 2 (eˈvacuate) 7. 2 (eˈruption) 8. 1 (ˈearthquake)
+
+**7.3** 1. was raining 2. was cooking / went 3. were playing / sounded
+4. did not know (didn't know) — *know* is stative 5. was … doing
+6. were filling / were moving
+
+**7.4**
+1. was hit → **hit**
+2. were sit → **were sitting**
+3. was listen → **was listening**
+4. was knowing → **knew**
+5. My little sister were crying → **was crying**
+6. We was watching → **We were watching**
+
+**Corrected paragraph:** *Last November a big storm hit our village. At nine
+o'clock in the evening my family were sitting in the kitchen. While my father
+was listening to the radio, my mother was packing our documents. I knew that the
+water would come, but I said nothing. Suddenly the lights went out. My little
+sister was crying, so I took her upstairs. We were watching the water from the
+window until midnight.*
+
+**Project** Answers will vary. Check: Step 1 has a real answer from an adult in
+all four rows; Step 2 lists eight items with a reason for each; Step 3 uses
+Before/During/After headings and imperative verbs only; Step 4 lasts a full
+minute.
