@@ -629,6 +629,9 @@ source tests it.
 > chưa cần mệnh đề phụ (Unit 7 mới học).
 :::
 
+::: thread id="articles" stage="check"
+:::
+
 #### Checklist — tick before you finish
 
 - [ ] 80–100 words (count them)

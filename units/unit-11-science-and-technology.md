@@ -722,6 +722,9 @@ it takes ten seconds.
 > chấm**, chứ không phải bị điểm thấp.
 :::
 
+::: thread id="articles" stage="check"
+:::
+
 #### Checklist — tick before you finish
 
 - [ ] 80–100 words (count them)

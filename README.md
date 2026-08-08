@@ -35,6 +35,7 @@ never above the lessons, and inert until the lessons they cover are complete.
 | `research/ielts/` | The source-verified IELTS knowledge base every bridge cites. |
 | `tools/check_dict.py` | Gate: every vocabulary slot resolves to a complete entry. |
 | `tools/check_ielts.py` | Gate: the knowledge base's audit checklist, enforced. |
+| `tools/test_marking.js` | Gate: the marking engine, against the published rules. |
 | `tools/build.py` | Generator: markdown → the 98-page site. |
 | `tools/assets/` | `app.css` and `app.js`, copied into the build. |
 | `docs/` | Generated output. GitHub Pages serves this directory. |
@@ -48,11 +49,83 @@ python3 tools/build.py            # regenerate docs/
 python3 tools/build.py --check    # parse and report counts, write nothing
 python3 tools/check_dict.py       # gate: every vocabulary slot resolves
 python3 tools/check_ielts.py      # gate: every IELTS claim is legal and cited
+node tools/test_marking.js        # gate: the marking engine obeys the published rules
 ```
 
 Requires `markdown` (`pip install markdown`). Edit the markdown in `units/`,
 re-run the build, commit `docs/`. There is no CI step — a push publishes, so
-run both gates before you push.
+run all three gates before you push.
+
+## Marked tasks, one play, and strands
+
+Three directives carry the parts of IELTS that are a *system* rather than a
+label. Each replaces an instruction the learner used to be trusted to follow
+with a mechanic the page enforces.
+
+### `:::task` — a committed answer, marked by the published rules
+
+```markdown
+::: task skill="listening" type="sentence-completion" words="2+number"
+- The school asked ___ students. = two hundred ~ written as words
+- Too little sleep was named by ___ per cent. = forty-five
+:::
+```
+
+One line per item: the prompt, ` = `, the key, and optionally ` ~ ` and the
+reason. The key is written in IELTS's own key grammar — `(the) (public)
+library/libraries` — and the same engine the vocabulary trainer uses expands
+it. The generator writes the answer-key entry from the task, so the printed
+answers and the marked ones cannot drift; the gate rejects an exercise that
+has both a task and a hand-written entry.
+
+| Attribute | What it must be |
+| --- | --- |
+| `skill` | `listening`, `reading` or `course`. The first two must name an official question type; `course` is a grade-8 drill and is never dressed as an IELTS item. |
+| `type` | One of the official six Listening or eleven Reading types, or a course type. |
+| `words` | `1`–`3`, optionally `+number`. Required for completion and short-answer, printed on the task in IELTS's own wording, and enforced as a hard fail. |
+| `opts` | `S\|C` — a fixed option set shared by every item. Inline `(a) … (b) …` works too. |
+| `either` | `1-2` — those items are marked as an unordered pair. |
+| `ask` | The instruction line, in markdown. |
+
+Listening tasks get a confidence toggle on every item and a calibration report
+next to the score. That is not optional and no attribute turns it off: it is
+the one Listening finding with an effect size attached, and it costs nothing.
+
+### `:::audio` — the recording plays once
+
+```markdown
+::: audio orientation="You will hear a school counsellor talking about stress."
+          mode="computer" preview="30" review="120"
+Hello. I'm Ms Trang, and I'm the school counsellor here…
+:::
+```
+
+The script never reaches the printed page. The orientation is spoken and not
+written down, because in the real test it never is; then a preview window over
+the questions; then one play; then the declared review window, after which the
+script unlocks. It also unlocks as soon as every task on the page is marked.
+
+The voice is the device's speech synthesiser and the page says so plainly —
+what this trains is the shape of the task, not the ear.
+
+### `:::thread` — a strand that says it recurs, and does
+
+```markdown
+::: thread id="articles" name="Articles — *a*, *an*, *the*, and no article"
+           stage="introduce" measure="articles supplied correctly in the places
+           that required one" resumes="6,7,8,9,10,11,12" marker="[S]" src="07 §4.4"
+:::
+```
+
+Later units carry `stage="check"` and nothing else; the name and the measure
+come from the introduction, so the strand cannot say two different things in
+two places. The build fails if a unit named in `resumes` carries no check.
+
+This construct exists because of a real defect: Unit 5 promised in bold that
+every writing task from Unit 6 to Unit 12 carried a five-item article check,
+and not one of the seven did. The gate could prove the bridge's citation
+resolved. Nothing could prove the course kept its own promise, because the
+promise was prose.
 
 ## The IELTS bridge
 

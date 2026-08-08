@@ -725,6 +725,9 @@ should get (Writing descriptors, **[2023]** version).
 > lại phục vụ nó. Với văn miêu tả, đây là chỗ dễ trượt nhất.
 :::
 
+::: thread id="articles" stage="check"
+:::
+
 #### Checklist — tick before you finish
 
 - [ ] 80–100 words (count them)

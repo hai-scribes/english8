@@ -57,12 +57,12 @@ Answer in full sentences.
 
 ### 1.2 Find the phrase
 
-Find a word or phrase in the dialogue that means:
-
-1. become ill or exhausted from working too hard → _______________
-2. the feeling that you must do what your friends do → _______________
-3. very, very tired → _______________
-4. start taking part in an activity → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
+- become ill or exhausted from working too hard = burn out
+- the feeling that you must do what your friends do = peer pressure
+- very, very tired = exhausted
+- start taking part in an activity = get involved
+:::
 
 ### 1.3 Notice the grammar
 
@@ -107,27 +107,24 @@ word, then write **addition**, **contrast**, **result**, or **choice**.
 
 ### 2.1 Complete the sentences
 
-Use one word or phrase from the table. Change the form if you need to.
-
-1. She never puts her hand up in class. She isn't very ____________ .
-2. My brother refuses to smoke, even though his friends all do. He ignores
-   ____________ .
-3. I do the ____________ every Saturday — washing up, sweeping and ironing.
-4. Cooking a simple meal for your family is an important ____________ .
-5. Read about all the clubs first, then make an ____________ .
-6. I was ____________ when the results came out — I passed everything!
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
+- She never puts her hand up in class. She isn't very ___ . = self-confident
+- My brother refuses to smoke, even though his friends all do. He ignores ___ . = peer pressure
+- I do the ___ every Saturday — washing up, sweeping and ironing. = housework
+- Cooking a simple meal for your family is an important ___ . = life skill
+- Read about all the clubs first, then make an ___ . = informed decision
+- I was ___ when the results came out — I passed everything! = delighted
+:::
 
 ### 2.2 Match the feeling
 
-Match each situation (1–5) with the best adjective: **embarrassed ·
-frustrated · stressed · delighted · self-confident**
-
-1. You forget your lines in front of the whole school. → ____________
-2. You have tried the same maths problem six times and still cannot solve it.
-   → ____________
-3. You have four tests and a project, all in the same week. → ____________
-4. Your team wins the school football final. → ____________
-5. You walk onto the stage and speak clearly, without shaking. → ____________
+::: task skill="course" type="choice" opts="embarrassed|frustrated|stressed|delighted|self-confident"
+- You forget your lines in front of the whole school. = embarrassed
+- You have tried the same maths problem six times and still cannot solve it. = frustrated
+- You have four tests and a project, all in the same week. = stressed
+- Your team wins the school football final. = delighted
+- You walk onto the stage and speak clearly, without shaking. = self-confident
+:::
 
 ### Pronunciation — /ʊə/ and /ɔɪ/
 
@@ -161,12 +158,12 @@ during · noise · curious · enjoy · cure · avoid · furious · boy**
 
 ### 2.4 Odd sound out
 
-In each line, one word has a **different** vowel sound. Circle it.
-
-1. tourist · pure · point · during
-2. choice · noise · voice · cure
-3. enjoy · Europe · annoy · employ
-4. jury · furious · toy · curious
+::: task skill="course" type="choice" ask="In each line, one word has a **different** vowel sound. Pick it."
+- Line 1 — (a) tourist (b) pure (c) point (d) during = c ~ *point* is /ɔɪ/; the others are /ʊə/
+- Line 2 — (a) choice (b) noise (c) voice (d) cure = d ~ *cure* is /ʊə/; the others are /ɔɪ/
+- Line 3 — (a) enjoy (b) Europe (c) annoy (d) employ = b ~ *Europe* is /ˈjʊərəp/; the others are /ɔɪ/
+- Line 4 — (a) jury (b) furious (c) toy (d) curious = c ~ *toy* is /ɔɪ/; the others are /ʊə/
+:::
 
 ### 2.5 Say these sentences
 
@@ -257,29 +254,26 @@ its own. This is the single most common mistake in grade-8 writing.
 
 ### 3.1 Simple or compound?
 
-Write **S** (simple) or **C** (compound). Careful — three of these are traps.
-
-1. My sister and I do the housework together. ___
-2. My sister does the housework, and I cook. ___
-3. Teenagers need sleep, yet most of them stay up late. ___
-4. Duy joined the club and made three new friends. ___
-5. You can walk to school, or you can take the bus. ___
-6. Peer pressure is powerful, but it is not unbeatable. ___
-7. Linh takes photos and edits them on her phone. ___
-8. I was exhausted, so I went to bed at nine. ___
+::: task skill="course" type="choice" opts="S|C" ask="**S** for simple, **C** for compound. Careful — three of these are traps."
+- My sister and I do the housework together. = S ~ compound subject *My sister and I*, one verb
+- My sister does the housework, and I cook. = C
+- Teenagers need sleep, yet most of them stay up late. = C
+- Duy joined the club and made three new friends. = S ~ one subject *Duy*, compound verb *joined … and made*
+- You can walk to school, or you can take the bus. = C
+- Peer pressure is powerful, but it is not unbeatable. = C
+- Linh takes photos and edits them on her phone. = S ~ compound verb
+- I was exhausted, so I went to bed at nine. = C
+:::
 
 ### 3.2 Choose the conjunction
 
-Complete each compound sentence with **and, but, so, or,** or **yet**. Use each
-one at least once.
-
-1. I had four tests last week, ____________ I hardly slept.
-2. Nam wanted to join the debate club, ____________ it was already full.
-3. You can talk to a teacher, ____________ you can talk to your parents.
-4. She does two hours of homework every evening, ____________ she still finds
-   time for the cooking club.
-5. The volunteer club repairs old books, ____________ it sends them to a
-   primary school.
+::: task skill="course" type="gap-fill" ask="Complete each compound sentence with **and, but, so, or,** or **yet**. Each one is used at least once."
+- I had four tests last week, ___ I hardly slept. = so
+- Nam wanted to join the debate club, ___ it was already full. = but
+- You can talk to a teacher, ___ you can talk to your parents. = or
+- She does two hours of homework every evening, ___ she still finds time for the cooking club. = yet
+- The volunteer club repairs old books, ___ it sends them to a primary school. = and
+:::
 
 ### 3.3 Join them up
 
@@ -412,31 +406,33 @@ reassures them and offers something practical.
 
 ### 5.1 True, False, or Not Given
 
-Write **T**, **F**, or **NG**.
-
-1. The clubs at this school meet on Thursday afternoons. ___
-2. The winner of each debate receives a prize. ___
-3. Khanh could not cook anything at all before September. ___
-4. The wellbeing club is the oldest club in the school. ___
-5. Ms Lan thinks club members keep up with their schoolwork better. ___
+::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you know about clubs is exactly the pull this type is built to catch."
+- The clubs at this school meet on Thursday afternoons. = T
+- The winner of each debate receives a prize. = F ~ "Nobody wins a prize"
+- Khanh could not cook anything at all before September. = NG ~ he says *some of us* could not boil rice — not necessarily himself
+- The wellbeing club is the oldest club in the school. = F ~ it is the newest
+- Ms Lan thinks club members keep up with their schoolwork better. = T
+:::
 
 ### 5.2 Answer the questions
 
-1. What time do the clubs begin?
-2. What has changed for the debate club members since September?
-3. What does the cooking club do with the food it makes?
-4. Where do the repaired books go?
-5. What three ways of dealing with stress does the wellbeing club teach?
+::: task skill="reading" type="short-answer" words="3+number" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
+- What time do the clubs begin? = (by) three o'clock ~ lessons finish at half past two
+- How do debate club members say they have changed since September? = (far) more self-confident
+- What does the cooking club do with the food it makes? = eat it together/eats it together
+- Where do the repaired books go? = (to) a primary school
+- What does the volunteer club do to the old books before sending them? = repair them/repairs them
+:::
 
 ### 5.3 Vocabulary in context
 
-Find a word or phrase in the text that means:
-
-1. sure of yourself → _______________
-2. something useful you need in everyday life → _______________
-3. stop trying → _______________
-4. take part in something → _______________
-5. manage to stay level with something → _______________
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. Give yourself **three minutes** for all five — searching against a clock is the point, not reading carefully."
+- sure of yourself = self-confident
+- something useful you need in everyday life = life skill
+- stop trying = give up/gives up
+- take part in something = get involved
+- manage to stay level with something = keep up with
+:::
 
 ### Speaking — Asking and answering about a club
 
@@ -474,64 +470,59 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### Listening — What makes teenagers stressed
 
-> **How to use this without the audio:** ask someone to read the script aloud
-> to you at normal speed while you cover it — or paste it into a
-> text-to-speech tool. Listen **twice** before you look at the text.
->
-> **Cách dùng khi không có bản ghi âm:** nhờ người khác đọc to phần lời thoại,
-> hoặc dùng công cụ đọc văn bản. Nghe **hai lần** trước khi nhìn vào bài.
+You get **one** play. That is not us being hard on you — it is how the task
+works, and practising it any other way trains a habit that does not exist on
+the day. Read both sets of questions in the preview window, then answer as you
+listen rather than afterwards.
 
-**Script** — *cover this while you listen*
+**Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-> Hello. I'm Ms Trang, and I'm the school counsellor here. Today I want to talk
-> about stress: what causes it, and what actually helps.
->
-> Last month we asked two hundred students in Years 8 and 9 one question. What
-> makes you feel stressed? The biggest answer, by far, was tests, at sixty per
-> cent. The second was too little sleep, at forty-five per cent. Then came
-> arguments at home, and after that peer pressure, which means feeling that you
-> must look, dress or think like everybody else.
->
-> Now, the solutions. Students told us that three things work.
->
-> First: planning. If you write down what you have to do, the pile stops
-> growing in your head. Students who plan their week report much less stress.
->
-> Second: exercise. It does not have to be a sport. A twenty-minute walk after
-> dinner is enough, and it helps you sleep.
->
-> Third, and this was the strongest answer of all, talking to somebody. Half
-> the students said they felt better simply after telling a friend, a parent or
-> a teacher. Nobody solved the problem for them. Those people just listened.
->
-> One last thing. Do not give up your free time completely. Students who join a
-> club are busy, yet they usually cope better, because they have one part of
-> the week that belongs to them.
+::: audio orientation="You will hear a school counsellor talking to students about what causes stress, and about what helps." mode="computer" preview="30" review="120"
+Hello. I'm Ms Trang, and I'm the school counsellor here. Today I want to talk
+about stress: what causes it, and what actually helps.
 
-> **Before you check — how sure are you?** Mark each answer **●** if you are
-> sure and **○** if you are not, *before* you look at the key. Then count how
-> many of each you got right. If the **●** answers are not clearly better than
-> the **○** ones, the feeling of certainty is not yet telling you anything —
-> which is more useful to know than the score. Unit 1 explains why.
->
-> **Trước khi dò đáp án:** đánh dấu **●** (chắc chắn) hoặc **○** (không chắc)
-> cho từng câu, rồi đếm số câu đúng của mỗi loại.
+Last month we asked two hundred students in Years 8 and 9 one question. What
+makes you feel stressed? The biggest answer, by far, was tests, at sixty per
+cent. The second was too little sleep, at forty-five per cent. Then came
+arguments at home, and after that peer pressure, which means feeling that you
+must look, dress or think like everybody else.
+
+Now, the solutions. Students told us that three things work.
+
+First: planning. If you write down what you have to do, the pile stops
+growing in your head. Students who plan their week report much less stress.
+
+Second: exercise. It does not have to be a sport. A twenty-minute walk after
+dinner is enough, and it helps you sleep.
+
+Third, and this was the strongest answer of all, talking to somebody. Half
+the students said they felt better simply after telling a friend, a parent or
+a teacher. Nobody solved the problem for them. Those people just listened.
+
+One last thing. Do not give up your free time completely. Students who join a
+club are busy, yet they usually cope better, because they have one part of
+the week that belongs to them.
+:::
 
 ### 6.1 Listen and choose
 
-1. Ms Trang is the school's **(a)** head teacher **(b)** counsellor **(c)** PE teacher
-2. The survey asked students in **(a)** Years 6 and 7 **(b)** Years 8 and 9 **(c)** Year 12
-3. The biggest cause of stress was **(a)** tests **(b)** too little sleep **(c)** peer pressure
-4. Ms Trang says exercise **(a)** must be a team sport **(b)** can be a short walk **(c)** does not help
-5. The strongest solution of all was **(a)** planning **(b)** exercise **(c)** talking to somebody
+::: task skill="listening" type="multiple-choice"
+- Ms Trang is the school's (a) head teacher (b) counsellor (c) PE teacher = b
+- The survey asked students in (a) Years 6 and 7 (b) Years 8 and 9 (c) Year 12 = b
+- The biggest cause of stress was (a) tests (b) too little sleep (c) peer pressure = a
+- Ms Trang says exercise (a) must be a team sport (b) can be a short walk (c) does not help = b
+- The strongest solution of all was (a) planning (b) exercise (c) talking to somebody = c
+:::
 
 ### 6.2 Listen and complete
 
-1. The school asked ____________ ____________ students.
-2. Too little sleep was named by ____________ per cent.
-3. A ____________-minute walk after dinner is enough.
-4. ____________ the students felt better after telling someone.
-5. Students who join a club are busy, ____________ they usually cope better.
+::: task skill="listening" type="sentence-completion" words="2+number"
+- The school asked ___ students. = two hundred ~ written as words, the way the speaker says it
+- Too little sleep was named by ___ per cent. = forty-five
+- A ___-minute walk after dinner is enough. = twenty
+- ___ the students felt better after telling someone. = Half
+- Students who join a club are busy, ___ they usually cope better. = yet
+:::
 
 ### Writing — A paragraph about stress
 
@@ -612,21 +603,25 @@ _______________________________________________
 
 ### 7.1 Vocabulary check
 
-Complete with a word or phrase from this unit. The first letter is given.
-
-1. My cousin is fifteen, so he is in the middle of a_______ .
-2. I do the h_______ every weekend to help my mum.
-3. Don't copy your friends just because they do it — that's p_______ p_______ .
-4. I felt e_______ when I fell over in front of the whole class.
-5. Learning to manage money is an important l_______ s_______ .
-6. If you g_______ i_______ in a club, you'll make new friends.
+::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit. Write the whole word — the first letter is given as a nudge, not as part of the gap."
+- My cousin is fifteen, so he is in the middle of ___ . = adolescence ~ starts with *a*
+- I do the ___ every weekend to help my mum. = housework ~ starts with *h*
+- Don't copy your friends just because they do it — that's ___ . = peer pressure ~ starts with *p p*
+- I felt ___ when I fell over in front of the whole class. = embarrassed ~ starts with *e*
+- Learning to manage money is an important ___ . = life skill ~ starts with *l s*
+- If you ___ in a club, you'll make new friends. = get involved ~ starts with *g i*
+:::
 
 ### 7.2 Pronunciation check
 
-Write /ʊə/ or /ɔɪ/ for the underlined sound.
-
-1. t__ou__rist ___  2. ch__oi__ce ___  3. c__u__re ___
-4. av__oi__d ___  5. d__u__ring ___  6. empl__oy__ ___
+::: task skill="course" type="choice" opts="/ʊə/|/ɔɪ/" ask="Which vowel is in the underlined part?"
+- t**ou**rist = /ʊə/
+- ch**oi**ce = /ɔɪ/
+- c**u**re = /ʊə/
+- av**oi**d = /ɔɪ/
+- d**u**ring = /ʊə/
+- empl**oy** = /ɔɪ/
+:::
 
 ### 7.3 Grammar check
 
@@ -706,38 +701,20 @@ pressure. 3. She joined it last term. 4. She comes home calmer, so she finishes
 her homework faster. 5. Nothing special — a phone is fine, and Mr Hung lends
 out two cameras.
 
-**1.2** 1. burn out 2. peer pressure 3. exhausted 4. get involved
-
 **1.3** 1. but / contrast 2. or / choice 3. so / result 4. yet / contrast
 5. and / addition
 
 ### Lesson 2
 
-**2.1** 1. self-confident 2. peer pressure 3. housework 4. life skill
-5. informed decision 6. delighted
-
-**2.2** 1. embarrassed 2. frustrated 3. stressed 4. delighted
-5. self-confident
-
 **2.3**
 - /ʊə/ — tourist, pure, during, curious, cure, furious
 - /ɔɪ/ — join, voice, noise, enjoy, avoid, boy
-
-**2.4** 1. point (/ɔɪ/; the others are /ʊə/) 2. cure (/ʊə/; the others are
-/ɔɪ/) 3. Europe (/ˈjʊərəp/; the others are /ɔɪ/) 4. toy (/ɔɪ/; the others are
-/ʊə/)
 
 **2.5** Answers will vary. Check: your lips **spread into a smile** at the end
 of *choice, enjoy, noise, boys*, and **relax back to the centre** at the end of
 *tourist, curious, during, furious*.
 
 ### Lesson 3
-
-**3.1** 1. S (compound subject *My sister and I*, one verb) 2. C 3. C
-4. S (one subject *Duy*, compound verb *joined … and made*) 5. C 6. C
-7. S (compound verb *takes … and edits*) 8. C
-
-**3.2** 1. so 2. but 3. or 4. yet 5. and
 
 **3.3** *(other conjunctions may work — check that each answer has a comma and
 two full clauses)*
@@ -774,38 +751,9 @@ to you for the first meeting.*
 
 ### Lesson 5
 
-**5.1** 1. T 2. F (nobody wins a prize) 3. NG (he says "*some of us* could not
-boil rice" — not necessarily himself) 4. F (it is the newest) 5. T
-
-**5.2** 1. By three o'clock — lessons finish at half past two. 2. They say they
-are far more self-confident than they were in September. 3. The members eat it
-together afterwards. 4. To a primary school in the mountains. 5. Planning,
-breathing, and going to bed earlier.
-
-**5.3** 1. self-confident 2. life skill 3. give(s) up 4. get involved
-5. keep up with
-
-**Speaking** Answers will vary. Check: at least one compound sentence per
-answer, a comma before each conjunction, and pauses that fall between points
-rather than inside a sentence.
-
 ### Lesson 6
 
-**6.1** 1. b 2. b 3. a 4. b 5. c
-
-**6.2** 1. two hundred 2. forty-five 3. twenty 4. Half 5. yet
-
-**Writing** Answers will vary. Check against the checklist: 80–100 words, one
-paragraph, at least four compound sentences with a comma before the
-conjunction, three different conjunctions, four unit words, and no comma
-splices.
-
 ### Lesson 7
-
-**7.1** 1. adolescence 2. housework 3. peer pressure 4. embarrassed
-5. life skill 6. get involved
-
-**7.2** 1. /ʊə/ 2. /ɔɪ/ 3. /ʊə/ 4. /ɔɪ/ 5. /ʊə/ 6. /ɔɪ/
 
 **7.3**
 **Part A.** 1. S 2. C 3. C 4. S

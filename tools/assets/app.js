@@ -181,21 +181,56 @@ function norm(s){
    here because it is wrong there, and hiding that would be the kind favour
    that costs a mark later. */
 
-/* Fold UK and US spellings onto one form. Both the key and the learner's
-   answer go through this, so a rule that over-fires (four -> for) can only
-   ever accept something, never reject it — and the stoplist covers the
-   common words where that would matter. */
-const NOT_OUR = /^(four|your|hour|tour|pour|sour|flour|scour|dour)$/;
+/* Fold UK and US spellings onto one form, so both are accepted (01 §8).
+   Because the fold can only ever ACCEPT something, a rule that over-fires
+   marks a misspelling right -- which is the one direction C5 forbids. Written
+   as patterns, three of the four rules did exactly that:
+
+     promise/promize   filled/filed   contour/contor   acre/acer
+
+   So each alternation is now a closed list rather than a suffix rule. These
+   are finite sets in English, they are the words a grade-8 learner will
+   actually write, and a word that is not on one is simply not folded. */
+
+const OUR_OR = ("armour behaviour candour clamour colour demeanour endeavour favour "
+  + "fervour flavour glamour harbour honour humour labour neighbour odour parlour "
+  + "rigour rumour saviour splendour succour tumour valour vapour vigour").split(" ");
+const RE_ER = ("calibre centre fibre goitre litre lustre manoeuvre meagre metre mitre "
+  + "ochre sabre sceptre sepulchre sombre spectre theatre").split(" ");
+/* -ise verbs that never take -ize. The productive class is enormous, so this
+   one is a blocklist: everything else ending -ise folds to -ize. */
+const NEVER_IZE = ("advertise advise apprise arise chastise circumcise comprise "
+  + "compromise demise despise devise disguise enterprise excise exercise franchise "
+  + "guise improvise incise likewise merchandise otherwise paradise precise premise "
+  + "promise reprise revise rise supervise surmise surprise televise treatise wise"
+  ).split(" ");
+/* Stems that double a final -l before a suffix in British spelling. */
+const DOUBLE_L = ("cancel channel counsel dial equal fuel grovel initial jewel label "
+  + "level libel marvel medal model parcel pedal quarrel refuel revel rival shrivel "
+  + "signal snivel total travel tunnel unravel").split(" ");
+
+const INFLECT = "(?:s|es|d|ed|ing)?";
+const anyOf = (list, tail) => new RegExp("^(" + list.join("|") + ")" + (tail || "") + "$");
+const RE_OUR = anyOf(OUR_OR, "(s|ed|ing|ite|ful|less|able)?");
+const RE_RE = anyOf(RE_ER, "(s|d|ing)?");
+const RE_LL = anyOf(DOUBLE_L, "l(ed|ing|er|or)");
+const RE_NEVER = anyOf(NEVER_IZE, INFLECT);
+
 function fold(s){
-  return norm(s).split(" ").map(w => w
-    .replace(/practis/, "practic")          // before the -ise rule, or it eats it
-    .replace(/^(.{2,})our$/, (m, a) => NOT_OUR.test(m) ? m : a + "or")
-    .replace(/([^aeiou])re$/, "$1er")
-    .replace(/is(e|ed|es|ing|ation)$/, "iz$1")
-    .replace(/ll(ed|ing|er)$/, "l$1")
-    .replace(/^programme$/, "program")
-    .replace(/^grey$/, "gray")
-  ).join(" ");
+  return norm(s).split(" ").map(w => {
+    if (w === "programme") return "program";
+    if (w === "grey") return "gray";
+    if (/^practis/.test(w)) return w.replace(/^practis/, "practic");
+    let m = RE_OUR.exec(w);
+    if (m) return m[1].replace(/our$/, "or") + (m[2] || "");
+    m = RE_RE.exec(w);
+    if (m) return m[1].replace(/re$/, "er") + (m[2] || "");
+    m = RE_LL.exec(w);
+    if (m) return m[1] + m[2];
+    if (/is(e|ed|es|ing|ation)$/.test(w) && !RE_NEVER.test(w))
+      return w.replace(/is(e|ed|es|ing|ation)$/, "iz$1");
+    return w;
+  }).join(" ");
 }
 
 /* "(the) old (public) library" -> every combination the key admits. */
@@ -244,6 +279,19 @@ function initAnswers(){
     if (!btn || !body) return;
     body.hidden = true;
     btn.setAttribute("aria-expanded", "false");
+    /* An exercise with a marked task keeps its key shut until the task is
+       checked. Otherwise the attempt is optional, and an optional attempt is
+       exactly the reveal-and-self-mark this replaced. */
+    if (a.dataset.locked === "1"){
+      const lock = () => {
+        const open = $$('[data-role="task"]', a.closest(".block") || document)
+          .every(x => x.dataset.done === "1");
+        btn.disabled = !open;
+        btn.title = open ? "" : "Check your answers first.";
+      };
+      lock();
+      document.addEventListener("en8:task-done", lock);
+    }
     btn.addEventListener("click", () => {
       const open = body.hidden;
       body.hidden = !open;
@@ -737,6 +785,449 @@ function initSpeakButtons(){
   }
 }
 
+/* ================== marked tasks =========================================
+   Everything below exists because an exercise you mark yourself against a
+   printed key is not the same exercise. The rules here are IELTS's own and
+   published; the point of enforcing rather than describing them is that a
+   rule you meet as feedback is a rule you keep.
+
+     word limit   per task, printed, and a hard fail (03 §4)
+     hyphens      "check-in" counts as one word (03 §4)
+     spelling     costs the mark, and the task says so first (03 §4)
+     UK/US        both accepted (already in fold(), above)
+     two answers  in one gap score zero (already in markAnswer(), above)
+     either order  a declared pair is marked as a set
+
+   The marking core -- fold(), acceptedForms(), markAnswer() -- is the same
+   code the vocabulary trainer has always used. Only the reach is new. */
+
+const T_KEY = "en8:tasks:v1";
+let TASKS = (() => {
+  try { return JSON.parse(localStorage.getItem(T_KEY)) || {}; } catch(e){ return {}; }
+})();
+function saveTasks(){
+  try { localStorage.setItem(T_KEY, JSON.stringify(TASKS)); } catch(e){}
+}
+
+/* "NO MORE THAN TWO WORDS AND/OR A NUMBER" -> 2, numbers free.
+   Hyphenated words count as one, so a plain whitespace split is already the
+   official rule and no de-hyphenating is wanted here. */
+function overLimit(given, words){
+  if (!words) return false;
+  const [n, num] = String(words).split("+");
+  const toks = String(given).trim().split(/\s+/).filter(Boolean);
+  if (!num) return toks.length > Number(n);
+  /* "AND/OR A NUMBER" is *a* number, singular: up to n words plus at most one
+     numeric token. Letting every number through free would make "45 60 90" a
+     legal one-word answer. */
+  const nums = toks.filter(x => /^[\d][\d.,:\/-]*$/.test(x));
+  return nums.length > 1 || toks.length - nums.length > Number(n);
+}
+
+/* Items declared "in either order" are one SET with N marks, not N items in
+   sequence -- the official keys mark pairs this way (03 §3.2). Returns the
+   groups; markTask consumes each key once, so writing the same right answer
+   in both gaps scores one, not two. */
+function parseEither(spec, count){
+  const groups = [], seen = new Set();
+  String(spec || "").split(",").forEach(part => {
+    const ns = [];
+    part.split("-").forEach(x => {
+      const n = Number(x.trim()) - 1;
+      /* An index outside the task, a repeat, or an item already claimed by
+         another group is dropped rather than trusted. The gate rejects all
+         three at build time; this keeps a bad directive from throwing in the
+         learner's browser. */
+      if (!Number.isInteger(n) || n < 0 || n >= count || seen.has(n)) return;
+      seen.add(n); ns.push(n);
+    });
+    if (ns.length > 1) groups.push(ns);
+  });
+  return groups;
+}
+
+const WHY_TEXT = {
+  blank:  "nothing written",
+  two:    "two answers in one gap score zero — even when one of them is right",
+  limit:  "over the word limit, which forfeits the mark whatever it says",
+  repeat: "already given above — these two may come in either order, but they are "
+        + "two different answers",
+  wrong:  ""
+};
+
+function markOne(t, it, given){
+  /* An answer picked from buttons is matched against the option it IS.
+     Running it through the key grammar would read the slashes in an IPA
+     option like "/ʊə/" as a list of alternates and reject every answer. */
+  if (it.opts){
+    if (!given) return { ok:false, why:"blank" };
+    return { ok: given === it.key };
+  }
+  if (given.trim() && overLimit(given, t.words)) return { ok:false, why:"limit" };
+  return markAnswer(given, [it.key]);
+}
+
+function markTask(t, answers){
+  const given = t.items.map((_, i) => answers[i] == null ? "" : String(answers[i]));
+  const marks = t.items.map((it, i) => markOne(t, it, given[i]));
+
+  /* Order-free groups are re-marked as SETS: each key may be claimed once, so
+     the same right answer written in two gaps earns one mark, not two -- which
+     is what marking a pair rather than two items means.
+
+     The assignment is a full search rather than first-fit, because keys can
+     overlap: with keys "(public) library" and "library", answering "library"
+     then "public library" is a valid pairing that first-fit would reject by
+     letting the first answer take the broader key. Groups are two or three
+     items, so the permutations are trivial. */
+  parseEither(t.either, t.items.length).forEach(group => {
+    const keys = group.map(j => t.items[j].key);
+    const over = group.map(i => given[i].trim() && overLimit(given[i], t.words));
+    const fits = group.map((i, gi) =>
+      over[gi] ? keys.map(() => false)
+               : keys.map(k => markAnswer(given[i], [k]).ok));
+    const best = bestAssignment(fits);
+    group.forEach((i, gi) => {
+      if (over[gi]){ marks[i] = { ok:false, why:"limit" }; return; }
+      if (best[gi] >= 0){ marks[i] = { ok:true }; return; }
+      marks[i] = fits[gi].some(Boolean)
+        ? { ok:false, why:"repeat" }        /* right, but that key is spent */
+        : markAnswer(given[i], keys);
+    });
+  });
+  return marks;
+}
+
+/* Maximum matching over a tiny boolean grid: which answer takes which key.
+   Returns, per answer, the key index assigned to it, or -1. Exhaustive
+   backtracking -- a group is two or three items, so the search is trivial and
+   a greedy pass would get overlapping keys wrong. */
+function bestAssignment(fits){
+  const n = fits.length, m = n ? fits[0].length : 0;
+  const cur = fits.map(() => -1), used = new Array(m).fill(false);
+  let bestCount = -1, best = fits.map(() => -1);
+  const walk = (i, count) => {
+    if (i === n){
+      if (count > bestCount){ bestCount = count; best = cur.slice(); }
+      return;
+    }
+    /* Assignments are explored before the skip branch, and a tie keeps the
+       first maximum found. That makes the EARLIER answer the one credited
+       when two answers claim one key, so a duplicate reads as the repeat it
+       is rather than making the first attempt look wrong. */
+    for (let k = 0; k < m; k++){
+      if (!fits[i][k] || used[k]) continue;
+      used[k] = true; cur[i] = k;
+      walk(i + 1, count + 1);
+      used[k] = false;
+    }
+    cur[i] = -1;
+    walk(i + 1, count);                     // leave this answer unmatched
+  };
+  walk(0, 0);
+  return best;
+}
+
+function itemHTML(t, it, i){
+  const conf = t.conf
+    ? '<span class="i-conf" role="group" aria-label="How sure are you?">'
+      + '<button type="button" data-conf="1" title="I am sure">&#9679;</button>'
+      + '<button type="button" data-conf="0" title="I am not sure">&#9675;</button></span>'
+    : "";
+  /* it.q, it.opts[].t and it.why arrive already escaped, with **bold** and
+     *italic* resolved by the generator. Re-escaping here would print the
+     tags; the generator is the only thing that ever builds this HTML. */
+  let q;
+  if (it.opts){
+    /* The radio group is namespaced to the task. Without that, two tasks on
+       one lesson page share the groups "q0", "q1"... and answering the second
+       silently clears the first. */
+    const group = "q-" + t.id + "-" + i;
+    const opts = it.opts.map(o =>
+      '<label class="i-opt"><input type="radio" name="' + esc(group) + '" value="'
+      + esc(o.k) + '">'
+      + '<span>' + (o.t === o.k ? esc(o.k) : "(" + esc(o.k) + ") " + o.t) + '</span></label>').join("");
+    q = '<div class="i-q">' + it.q + '</div><div class="i-opts">' + opts + '</div>';
+  } else {
+    const box = '<input class="i-in" type="text" autocomplete="off" autocapitalize="off"'
+      + ' spellcheck="false" aria-label="Answer ' + (i + 1) + '">';
+    q = it.q.includes("___")
+      ? '<div class="i-q">' + it.q.replace(/_{3,}/, box) + '</div>'
+      : '<div class="i-q">' + it.q + '</div>' + box;
+  }
+  return '<li class="i" data-i="' + i + '">' + q + conf
+    + '<div class="i-out" role="status"></div></li>';
+}
+
+/* Calibration, reported the way 03 §6.6 recommends: not a score, but whether
+   feeling sure predicts being right. Phakiti's own training recommendation is
+   explicit feedback on being realistic, overconfident or underconfident.
+
+   Two things this must not do. It must not read a verdict off two or three
+   answers -- a five-item set is far too small to establish anything about a
+   person, and saying otherwise would be the overconfidence the feature is
+   about. And it must not promise a payoff: the finding is [T2], a measured
+   tendency in candidates, and no study shows that training calibration
+   raises anything. So below MIN_CAL it reports the counts and stops. */
+const MIN_CAL = 4;
+function calibrationLine(marks, conf){
+  const g = { 1:{n:0,ok:0}, 0:{n:0,ok:0} };
+  marks.forEach((m, i) => {
+    const c = conf[i];
+    if (c !== 1 && c !== 0) return;
+    g[c].n++; if (m.ok) g[c].ok++;
+  });
+  if (!g[1].n && !g[0].n) return "";
+  const pct = s => s.n ? Math.round(s.ok / s.n * 100) : null;
+  const hi = pct(g[1]), lo = pct(g[0]);
+  let verdict;
+  if (hi == null || lo == null)
+    verdict = "You marked every answer the same way, so there is nothing to compare "
+            + "this time.";
+  else if (g[1].n < MIN_CAL || g[0].n < MIN_CAL)
+    verdict = "Too few of each to read anything into yet — a handful of answers cannot "
+            + "tell you what your sense of certainty is worth. Keep marking them; the "
+            + "pattern is worth watching across a whole unit, not inside one exercise.";
+  else if (hi - lo >= 25)
+    verdict = "Here your sure answers were right much more often than your unsure ones. "
+            + "Watch whether that holds across the next few sets.";
+  else if (hi >= lo)
+    verdict = "Being sure barely separated right from wrong here. Most test-takers are "
+            + "miscalibrated, and noticing it is the point of the column.";
+  else
+    verdict = "You were right more often when you felt unsure. That is the pattern most "
+            + "often found on hard items — worth watching rather than acting on yet.";
+  return '<div class="t-cal"><b>Calibration</b>'
+    + '<table><tr><th></th><th>answers</th><th>right</th></tr>'
+    + '<tr><td>&#9679; sure</td><td>' + g[1].n + '</td><td>' + (hi == null ? "—" : hi + "%") + '</td></tr>'
+    + '<tr><td>&#9675; not sure</td><td>' + g[0].n + '</td><td>' + (lo == null ? "—" : lo + "%") + '</td></tr>'
+    + '</table><p>' + verdict + '</p></div>';
+}
+
+function initTasks(){
+  const list = DATA.tasks || [];
+  if (!list.length) return;
+  list.forEach(t => {
+    const root = document.querySelector('[data-task="' + t.id + '"]');
+    if (!root) return;
+    const box = $(".t-items", root);
+    box.innerHTML = '<ol class="items">'
+      + t.items.map((it, i) => itemHTML(t, it, i)).join("") + '</ol>';
+
+    const conf = t.items.map(() => null);
+    if (t.conf) $$(".i-conf button", root).forEach(b => {
+      b.addEventListener("click", () => {
+        const li = b.closest(".i"), i = Number(li.dataset.i);
+        conf[i] = Number(b.dataset.conf);
+        $$(".i-conf button", li).forEach(x => x.classList.toggle(
+          "on", Number(x.dataset.conf) === conf[i]));
+        gate();
+      });
+    });
+
+    const check = $(".t-check", root), out = $(".t-score", root);
+
+    /* C10: the rating is not an optional extra on a listening item. Marked
+       after the key is visible it measures nothing, so Check stays shut until
+       every item has one -- two clicks each, and the comparison it buys is
+       the only trainable thing in the listening evidence. */
+    const gate = () => {
+      if (!t.conf || root.dataset.done === "1") return;
+      const missing = conf.filter(c => c !== 0 && c !== 1).length;
+      check.disabled = missing > 0;
+      check.title = missing ? "Mark how sure you are on every item first." : "";
+      const hint = $(".t-need", root);
+      if (hint) hint.textContent = missing
+        ? missing + (missing === 1 ? " item still needs" : " items still need")
+          + " a ● / ○ mark."
+        : "";
+    };
+    if (t.conf){
+      $(".t-foot", root).insertAdjacentHTML("beforeend", '<span class="t-need"></span>');
+      gate();
+    }
+
+    check.addEventListener("click", () => {
+      const answers = t.items.map((it, i) => {
+        const li = $('.i[data-i="' + i + '"]', root);
+        if (it.opts){
+          const on = $("input:checked", li);
+          return on ? on.value : "";
+        }
+        const box = $(".i-in", li);
+        return box ? box.value : "";
+      });
+      const marks = markTask(t, answers);
+      marks.forEach((m, i) => {
+        const li = $('.i[data-i="' + i + '"]', root);
+        li.dataset.ok = m.ok ? "1" : "0";
+        const why = WHY_TEXT[m.why] || "";
+        const it = t.items[i];
+        $(".i-out", li).innerHTML = m.ok
+          ? '<span class="ok">&#10003; right</span>'
+          : '<span class="no">&#10007;</span> <b>' + esc(it.key) + '</b>'
+            + (why ? ' <i>— ' + esc(why) + '</i>' : "")
+            + (it.why ? ' <i>(' + it.why + ')</i>' : "");
+        $$("input", li).forEach(x => { x.disabled = true; });
+      });
+      const score = marks.filter(m => m.ok).length;
+      out.innerHTML = '<b>' + score + ' of ' + marks.length + '</b> — one mark each, '
+        + 'nothing part-marked.';
+      let cal = $(".t-cal", root);
+      if (cal) cal.remove();
+      if (t.conf){
+        /* A rating changed after seeing the key measures nothing, so the
+           toggles close with the task. */
+        $$(".i-conf button", root).forEach(x => { x.disabled = true; });
+        const html = calibrationLine(marks, conf);
+        $(".t-foot", root).insertAdjacentHTML("afterend", html || '<div class="t-cal">'
+          + '<b>Calibration</b><p>You did not mark how sure you were, so there is '
+          + 'nothing to compare. Next time mark each answer before you check — on '
+          + 'listening items that comparison is worth more than the score.</p></div>');
+      }
+      check.disabled = true;
+      root.dataset.done = "1";
+      TASKS[t.id] = { score: score, of: marks.length, at: Date.now() };
+      saveTasks();
+      document.dispatchEvent(new CustomEvent("en8:task-done", { detail:{ id:t.id } }));
+    });
+  });
+}
+
+/* ================== single-play listening ================================
+   03 §1.1 and §4.2, all Tier 1: the orientation is spoken and deliberately
+   NOT written down, there is a fixed window to read the questions, and the
+   recording plays once. Printing the script above the questions -- which is
+   what this course used to do -- deletes the task and leaves a reading
+   comprehension exercise wearing its name. */
+
+function speakSeq(lines, onEnd){
+  if (!canListen()){ onEnd(false); return; }
+  try { speechSynthesis.cancel(); } catch(e){}
+  let i = 0;
+  const next = () => {
+    if (i >= lines.length){ onEnd(true); return; }
+    const u = new SpeechSynthesisUtterance(lines[i++]);
+    u.voice = TTS.voice; u.lang = TTS.voice.lang; u.rate = RATE_NORMAL;
+    u.onend = next;
+    u.onerror = ev => {
+      const err = ev && ev.error;
+      if (err === "interrupted" || err === "canceled") return;
+      TTS.failed = true; onEnd(false);
+    };
+    speechSynthesis.speak(u);
+  };
+  setTimeout(next, 60);
+}
+
+function initAudio(){
+  const list = DATA.audio || [];
+  list.forEach(a => {
+    const root = document.querySelector('[data-audio="' + a.id + '"]');
+    if (!root) return;
+    const btn = $(".p-start", root), state = $(".p-state", root),
+          script = $(".p-script", root);
+    /* Voices load asynchronously, so nothing is decided at boot. The device
+       is only judged when the learner presses Start. */
+    const noVoice = () => {
+      btn.disabled = true;
+      state.textContent = "No speech voice on this device.";
+      script.hidden = false;
+      script.insertAdjacentHTML("afterbegin",
+        '<p class="p-fallback">Your device has no speech voice, so this cannot run as '
+        + 'a single-play task. Cover the script, have someone read it aloud <b>once</b>, '
+        + 'and answer as you listen.</p>');
+    };
+    let used = false;
+    const tick = (secs, label, then) => {
+      let left = secs;
+      state.textContent = label + " — " + left + "s";
+      const iv = setInterval(() => {
+        left--;
+        if (left <= 0){ clearInterval(iv); then(); return; }
+        state.textContent = label + " — " + left + "s";
+      }, 1000);
+    };
+    btn.addEventListener("click", () => {
+      if (used) return;
+      primeSpeech();
+      if (!canListen()){ noVoice(); return; }
+      used = true;
+      btn.disabled = true;
+      root.dataset.playing = "1";
+      state.textContent = "Introduction — listen, it is not written down";
+      speakSeq([a.orientation], () => {
+        tick(a.preview, "Read the questions", () => {
+          state.textContent = "Playing — once only";
+          speakSeq(a.script, () => {
+            root.dataset.playing = "";
+            const label = a.mode === "computer"
+              ? "Review your answers" : "Transfer your answers";
+            tick(a.mode === "computer" ? a.review : 600, label, () => {
+              /* C6: the review window is a window. When it closes, writing
+                 stops -- otherwise "two minutes to review" is decoration and
+                 the task has no timing at all. Check stays live, so whatever
+                 is already written can still be submitted. */
+              $$('[data-role="task"]').forEach(x => {
+                if (x.dataset.done === "1") return;
+                $$(".i-in, .i-opt input", x).forEach(y => { y.disabled = true; });
+                x.dataset.timeup = "1";
+              });
+              state.innerHTML = '<b>Time.</b> Check your answers below.';
+              revealScript();
+            });
+          });
+        });
+      });
+    });
+    function revealScript(){
+      if (!script.hidden) return;
+      script.hidden = false;
+      script.insertAdjacentHTML("afterbegin",
+        '<p class="p-fallback">The recording has played. Read the script now and find '
+        + 'the places your answers came apart — that is the part of this worth doing '
+        + 'twice.</p>');
+    }
+    /* The script also unlocks once every task on the page has been marked, so
+       a learner who finishes early is not held hostage to a countdown -- but
+       only after the recording has been played. Checking blank answers before
+       pressing Start would otherwise hand over the script and turn the whole
+       lesson into a reading exercise. */
+    document.addEventListener("en8:task-done", () => {
+      if (!used) return;
+      const all = $$('[data-role="task"]');
+      if (all.length && all.every(x => x.dataset.done === "1")) revealScript();
+    });
+  });
+}
+
+/* ================== strand checks ========================================
+   A fraction in obligatory contexts, which 09 §4.2 lists as auto-scorable
+   and E1 requires progress to be reported as. The reading rule underneath it
+   matters more than the number: at A2->B1 a fraction that falls while range
+   grows is the expected signature of progress, not regression (E3). */
+function initThreads(){
+  $$('[data-role="thread"][data-stage="check"]').forEach(root => {
+    const got = $('[data-th="got"]', root), all = $('[data-th="all"]', root),
+          out = $(".th-out", root);
+    const key = "en8:thread:" + root.dataset.thread + ":"
+              + (DATA.unit || "") + ":" + (DATA.lesson || "");
+    try {
+      const was = JSON.parse(localStorage.getItem(key) || "null");
+      if (was){ got.value = was.got; all.value = was.all; }
+    } catch(e){}
+    const paint = () => {
+      const g = Number(got.value), n = Number(all.value);
+      if (!n || got.value === "" || all.value === ""){ out.textContent = ""; return; }
+      out.textContent = g + " of " + n;
+      try { localStorage.setItem(key, JSON.stringify({ got:g, all:n })); } catch(e){}
+    };
+    got.addEventListener("input", paint);
+    all.addEventListener("input", paint);
+    paint();
+  });
+}
+
 /* ---------------- boot ---------------------------------------------------- */
 function boot(){
   initTheme();
@@ -746,6 +1237,9 @@ function boot(){
   paintProgress();
   initGate();
   paintReview();
+  initTasks();
+  initAudio();
+  initThreads();
   initSpeakButtons();
   onVoices = () => { initSpeakButtons(); };
 }

@@ -640,6 +640,9 @@ register and concision, plus familiarity with a text type that appears in GT
 > phải vì đã được chứng minh.
 :::
 
+::: thread id="articles" stage="check"
+:::
+
 #### Checklist — tick before you finish
 
 - [ ] 100–120 words (count them)

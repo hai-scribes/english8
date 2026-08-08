@@ -22,9 +22,25 @@ What this gate enforces
   B5  notices and instructions are not claimed to train GT Writing Task 1
   B7  Vietnamese-specific pronunciation guidance stays inside the three
       permitted targets; the four VN-4 prohibitions are absolute
+  B11 True/False/Not Given and Yes/No/Not Given are two types, and neither
+      is taught as the harder reasoning
+  C1  every task key parses under the official key grammar
+  C4  every task whose answers are written declares its word limit, and the
+      limit is one the official instruction line can express
+  C6  a recording declares its delivery mode, and computer-delivered means a
+      two-minute review rather than a transfer window
+  C8  a recording's script is carried by the directive, never printed above
+      the questions, and it declares its spoken orientation
   E7  no hours-to-band promise of any kind
   G1  every bridge's source resolves to a real section of a real KB file
   G2  every bridge carries a legal evidential marker, printed at use
+
+  Plus one rule the constitution does not have, because the constitution is
+  about claims made of IELTS and this is a claim the course makes of itself:
+  a strand that announces it recurs in later units must actually recur in
+  each of them. Unit 5 promised in bold that "every writing task from Unit 6
+  to Unit 12 carries a five-item article check" and not one of those seven
+  units carried one. Nothing could catch that, because the promise was prose.
 
 What it deliberately does not do
 --------------------------------
@@ -85,6 +101,27 @@ TEMPLATE_LANGUAGE = [
      "memorised openers are explicitly penalised, not a shortcut (B3)"),
     (re.compile(r"sentence (frames?|starters?) to (use|copy|reuse)", re.I),
      "a sentence frame is a template (B3)"),
+    # The hole Unit 9 went through: a quoted passage carrying three or more
+    # gaps is a skeleton to fill in, whatever the sentence above it calls it.
+    # Matching on the shape rather than on the invitation is the only version
+    # of this check that a rewording cannot walk around.
+    (re.compile(r"^>[^\n]*(_{3,}[^\n]*){3,}$", re.M),
+     "a quoted line with three or more gaps is a fill-in skeleton — the "
+     "memorised-language category, not a scaffold (B3)"),
+]
+
+# B11: the two Not Given types are officially distinguished by *target* —
+# TFNG on information, YNNG on views and claims — not by difficulty. `04`
+# §4.1 is explicit that the reasoning is the same.
+TYPE_CONFUSION = [
+    (re.compile(r"(yes/?no/?not given|ynng)[^.\n]{0,60}"
+                r"(harder|more difficult|trickier|tougher)", re.I),
+     "YNNG is not taught as harder than TFNG — the official distinction is "
+     "target, not logic (B11)"),
+    (re.compile(r"(harder|more difficult|trickier)[^.\n]{0,40}"
+                r"than (true/?false/?not given|tfng)", re.I),
+     "YNNG is not taught as harder than TFNG — the official distinction is "
+     "target, not logic (B11)"),
 ]
 
 # --------------------------------------------------------------------- B7 ----
@@ -183,6 +220,255 @@ def check_bridge(where: str, a: dict, body: str, problems: list):
                         f"version string (A5)")
 
 
+def check_task(where: str, a: dict, problems: list):
+    """Group C, for one :::task.
+
+    Every rule here is published and mechanical, which is exactly why it is a
+    gate rather than a review note: `09` C1-C5 are the items a well-meaning
+    author fails silently, by being kind.
+    """
+    unknown = set(a) - b.TASK_ATTRS - {"items", "bullets"}
+    if unknown:
+        problems.append(f"{where}: unknown task attribute(s) {sorted(unknown)}")
+    for req in sorted(b.TASK_REQUIRED):
+        if not a.get(req):
+            problems.append(f"{where}: task is missing required attribute {req!r}")
+    # A bullet that did not parse is a question the learner never sees. The
+    # separator is ` = ` with spaces on both sides; "second___= two" silently
+    # vanished before this check existed.
+    if a.get("bullets", 0) != len(a.get("items", [])):
+        problems.append(f"{where}: {a['bullets']} bullet(s) but {len(a.get('items', []))} "
+                        f"parsed — an item is '- prompt = key', with a space either side "
+                        f"of the '='")
+    skill, typ = a.get("skill", ""), a.get("type", "")
+    if skill not in b.TASK_TYPES:
+        problems.append(f"{where}: skill={skill!r} is not one of "
+                        f"{', '.join(sorted(b.TASK_TYPES))}")
+        return
+    if typ not in b.TASK_TYPES[skill]:
+        problems.append(f"{where}: {typ!r} is not one of the official "
+                        f"{skill} question types (allowed: "
+                        f"{', '.join(sorted(b.TASK_TYPES[skill]))})")
+    if not a.get("items"):
+        problems.append(f"{where}: task has no items — each is one line "
+                        f"'- prompt = key'")
+    # C4/C5. The limit is per task and printed on it, and only the forms the
+    # official instruction line can express are legal — there is no such
+    # published instruction as "no more than five words".
+    #
+    # Both directions are checked, because both were reachable. A completion
+    # task with `opts` renders buttons, so no answer is ever written and the
+    # spelling rule is never exercised; a multiple-choice task with an
+    # untyped item renders a text box with no limit on it.
+    typed = [i for i, it in enumerate(a.get("items", []), 1) if not it.get("opts")]
+    if skill != "course" and typ in b.NEEDS_LIMIT:
+        if a.get("opts"):
+            problems.append(f"{where}: a {typ} task cannot declare opts — a completion "
+                            f"answer is written, not chosen, and choosing it away drops "
+                            f"the word limit and the spelling rule (C4, C5)")
+        if not a.get("words"):
+            problems.append(f"{where}: a {typ} task must declare its word limit "
+                            f"(words=\"2\" or words=\"3+number\") — the limit is per task, "
+                            f"printed, and a hard fail (C4)")
+    if skill != "course" and typed and not a.get("words"):
+        problems.append(f"{where}: item(s) {typed} are typed rather than chosen, so this "
+                        f"task needs a word limit whatever its type says (C4)")
+    if a.get("words"):
+        n, _, num = a["words"].partition("+")
+        if n not in b.WORDS_IN_ENGLISH or (num and num != "number"):
+            problems.append(f"{where}: words={a['words']!r} is not a limit the official "
+                            f"instruction line can express — use 1, 2 or 3, "
+                            f"optionally +number (C4)")
+    # "in either order" names item numbers. An index outside the task, a
+    # repeat, or a group of one is a directive that cannot mean anything, and
+    # an out-of-range index used to throw in the learner's browser.
+    n_items = len(a.get("items", []))
+    claimed: set[int] = set()
+    for part in (a.get("either") or "").split(","):
+        if not part.strip():
+            continue
+        nums = [x.strip() for x in part.split("-")]
+        if len(nums) < 2:
+            problems.append(f"{where}: either={part.strip()!r} names one item — an "
+                            f"order-free group needs at least two")
+        for x in nums:
+            if not x.isdigit() or not 1 <= int(x) <= n_items:
+                problems.append(f"{where}: either={part.strip()!r} names item {x!r}, "
+                                f"which is not one of this task's {n_items}")
+            elif int(x) in claimed:
+                problems.append(f"{where}: item {x} is in two order-free groups")
+            else:
+                claimed.add(int(x))
+
+    # C1. A key the marking engine cannot expand is a key that will mark a
+    # right answer wrong.
+    for i, it in enumerate(a.get("items", []), 1):
+        k = it.get("key", "")
+        if it.get("opts"):
+            # A picked answer is matched against the option it *is*. The key
+            # grammar does not apply, which is what lets an option be spelled
+            # "/ʊə/" without its slashes reading as alternates.
+            if k not in {o["k"] for o in it["opts"]}:
+                problems.append(f"{where} item {i}: key {k!r} is not one of the options "
+                                f"offered ({', '.join(o['k'] for o in it['opts'])})")
+            continue
+        if k.count("(") != k.count(")"):
+            problems.append(f"{where} item {i}: key {k!r} has unbalanced brackets — "
+                            f"'( )' marks an optional token (C1)")
+        if any(not part.strip() for part in k.split("/")):
+            problems.append(f"{where} item {i}: key {k!r} has an empty alternate — "
+                            f"'/' separates alternatives (C1)")
+        # The published legend is "words in brackets are optional". A bracketed
+        # *suffix* — "give(s) up" — is our invention, and it silently accepts a
+        # wrong inflection. Write the alternates out: "give up/gives up".
+        for opt in RE_BRACKET.finditer(k):
+            before = k[opt.start() - 1] if opt.start() else " "
+            after = k[opt.end()] if opt.end() < len(k) else " "
+            if before not in " " or after not in " ":
+                problems.append(f"{where} item {i}: key {k!r} brackets part of a word. "
+                                f"The official grammar makes whole *words* optional — "
+                                f"write the alternates out with '/' instead (C1)")
+                break
+
+
+def check_audio(where: str, a: dict, script: str, problems: list):
+    """Group C, for one :::audio. C6 and C8 are timing and orientation."""
+    unknown = set(a) - b.AUDIO_ATTRS
+    if unknown:
+        problems.append(f"{where}: unknown audio attribute(s) {sorted(unknown)}")
+    for req in sorted(b.AUDIO_REQUIRED):
+        if not a.get(req):
+            problems.append(f"{where}: recording is missing required attribute {req!r} — "
+                            f"the spoken orientation is never written on the paper, so it "
+                            f"has to be carried here (C8)")
+    if a.get("mode") not in b.AUDIO_MODES:
+        problems.append(f"{where}: mode={a.get('mode')!r} — a listening tool must declare "
+                        f"which delivery it simulates, 'computer' or 'paper' (C6)")
+    # C6: the two modes differ in exactly this, and practising the wrong one
+    # trains a habit that costs marks.
+    if a.get("mode") == "computer" and a.get("review") and a["review"] != "120":
+        problems.append(f"{where}: computer-delivered gives two minutes to review, not "
+                        f"{a['review']}s — there is no transfer window (C6)")
+    if not script.strip():
+        problems.append(f"{where}: recording has no script")
+
+
+RE_WS = re.compile(r"\s+")
+RE_BRACKET = re.compile(r"\([^)]*\)")
+
+# Every line that opens a directive, so a name the generator does not know is
+# a build failure rather than a block of raw markdown on the page. ":::taskk"
+# used to render its own source, keys and all, and no gate could see it.
+RE_OPENER = re.compile(r"^:::[ \t]*(?P<name>[A-Za-z][\w-]*)", re.M)
+KNOWN_DIRECTIVES = {"bridge", "task", "audio", "thread"}
+
+
+def check_directives(tag: str, text: str, problems: list):
+    for m in RE_OPENER.finditer(text):
+        if m.group("name") not in KNOWN_DIRECTIVES:
+            line = text[:m.start()].count("\n") + 1
+            problems.append(f"{tag}:{line}: {':::' + m.group('name')!r} is not a directive "
+                            f"({', '.join(sorted(KNOWN_DIRECTIVES))}) — it would render as "
+                            f"raw markdown, answer keys and all")
+    # A directive that is never closed swallows the rest of the file or, for
+    # the ones whose body is optional, silently drops its content.
+    opens = len(RE_OPENER.findall(text))
+    closes = len(re.findall(r"^:::[ \t]*$", text, re.M))
+    if opens != closes:
+        problems.append(f"{tag}: {opens} directive(s) opened but {closes} closed — "
+                        f"every ':::name' needs a bare ':::' to end it")
+
+
+def check_not_printed(where: str, script: str, text: str, problems: list):
+    """C8: a script inside :::audio and also printed above the questions.
+
+    Moving the script into the directive is only half the change — leaving a
+    copy in the prose gives it back, and the exercise is a reading task again.
+    Every sentence long enough to be distinctive is checked, not just one, so
+    quoting a slice of the script is caught as surely as quoting all of it.
+    """
+    # Only the recording's own directive is removed. A task body is shown to
+    # the learner, so a transcript sentence pasted into an item prompt is the
+    # script printed on the page by another route.
+    prose = RE_WS.sub(" ", b.RE_AUDIO.sub("", text))
+    for raw in re.split(r"[.!?]", script):
+        s = RE_WS.sub(" ", raw.strip().lstrip("> "))
+        if len(s) > 40 and s in prose:
+            problems.append(f"{where}: the recording's script is also printed in the "
+                            f"lesson — the questions then test reading, not listening "
+                            f"(C8)\n      → {s[:70]!r}")
+            return
+
+
+def check_threads(units, problems: list):
+    """A strand that says it comes back has to come back.
+
+    This is the rule that would have caught the article spine: Unit 5's bridge
+    named Units 6-12 in bold and nothing rendered in any of them.
+    """
+    intro, checks = {}, {}
+    for u in units:
+        for lesson, t in u["threads"]:
+            tid, stage = t.get("id", ""), t.get("stage", "")
+            where = f"unit {u['nn']} lesson {lesson} (thread {tid or '?'})"
+            unknown = set(t) - b.THREAD_ATTRS
+            if unknown:
+                problems.append(f"{where}: unknown thread attribute(s) {sorted(unknown)}")
+            if not tid:
+                problems.append(f"{where}: thread is missing required attribute 'id'")
+                continue
+            if stage not in b.THREAD_STAGES:
+                problems.append(f"{where}: stage={stage!r} is not "
+                                f"{' or '.join(sorted(b.THREAD_STAGES))}")
+                continue
+            if stage == "introduce":
+                if tid in intro:
+                    problems.append(f"{where}: strand {tid!r} is introduced twice — "
+                                    f"already at unit {intro[tid]['unit']:02d}")
+                for req in ("name", "measure", "resumes"):
+                    if not t.get(req):
+                        problems.append(f"{where}: an introducing thread must declare "
+                                        f"{req!r}")
+                intro[tid] = dict(t, unit=u["num"])
+            else:
+                # A check renders the introduction's wording. Letting it carry
+                # its own would mean the strand measured two different things
+                # under one name, which is the failure the construct exists
+                # to prevent.
+                for banned in ("name", "measure", "resumes", "marker", "src"):
+                    if t.get(banned):
+                        problems.append(f"{where}: a check declares only 'id' and "
+                                        f"'stage' — {banned!r} belongs to the "
+                                        f"introduction, so the strand says one thing "
+                                        f"everywhere")
+                checks.setdefault(tid, set()).add(u["num"])
+
+    for tid, seen in checks.items():
+        if tid not in intro:
+            problems.append(f"strand {tid!r}: checked in "
+                            f"{', '.join(f'unit {n:02d}' for n in sorted(seen))} but never "
+                            f"introduced — a check with no introduction has nothing to "
+                            f"measure against")
+            continue
+        first = intro[tid]["unit"]
+        early = sorted(n for n in seen if n <= first)
+        if early:
+            problems.append(f"strand {tid!r}: checked in "
+                            f"{', '.join(f'unit {n:02d}' for n in early)}, which is not "
+                            f"after unit {first:02d} where it is introduced — recurrence "
+                            f"means a later unit")
+    for tid, t in intro.items():
+        want = {int(x) for x in t.get("resumes", "").split(",") if x.strip().isdigit()}
+        missing = sorted(want - checks.get(tid, set()))
+        if missing:
+            problems.append(
+                f"strand {tid!r} (introduced unit {t['unit']:02d}) says it comes back in "
+                f"{', '.join(f'unit {n:02d}' for n in sorted(want))}, but "
+                f"{', '.join(f'unit {n:02d}' for n in missing)} carr"
+                f"{'ies' if len(missing) == 1 else 'y'} no check. A promise the course "
+                f"makes about itself is a promise the build keeps")
+
+
 def main() -> int:
     problems: list[str] = []
     units = []
@@ -192,7 +478,34 @@ def main() -> int:
         units.append(u)
         tag = f"unit {u['nn']}"
 
-        for rx, why in BAND_PROMISE + GENRE_OVERCLAIM + TEMPLATE_LANGUAGE + VN_PROHIBITED:
+        check_directives(tag, text, problems)
+
+        for lesson, blk, t in u["tasks"]:
+            check_task(f"{tag} lesson {lesson} ex {blk['id'] or blk['title']}", t, problems)
+            # The generated answer entry and a hand-written one are two copies
+            # of the same key, and two copies drift.
+            if blk["id"] and u["answers"].get(blk["id"]):
+                problems.append(f"{tag}: exercise {blk['id']} has both a :::task and a "
+                                f"hand-written answer-key entry — the task's keys are the "
+                                f"source, so delete the entry")
+        for lesson, a, script in u["audio"]:
+            check_audio(f"{tag} lesson {lesson} (recording)", a, script, problems)
+            check_not_printed(f"{tag} lesson {lesson}", script, text, problems)
+
+        # C6/C10 cannot be dodged by relabelling. A lesson that carries a
+        # recording is a listening lesson, and calling its questions a course
+        # drill would strip the word limit, the marking rules and the
+        # confidence rating off items that are supposed to have them.
+        heard = {lesson for lesson, _, _ in u["audio"]}
+        for lesson, blk, t in u["tasks"]:
+            if lesson in heard and t.get("skill") != "listening":
+                problems.append(f"{tag} lesson {lesson} ex {blk['id']}: this lesson has a "
+                                f"recording, so its tasks are skill=\"listening\", not "
+                                f"{t.get('skill')!r} — relabelling drops the word limit "
+                                f"and the confidence rating (C6, C10)")
+
+        for rx, why in (BAND_PROMISE + GENRE_OVERCLAIM + TEMPLATE_LANGUAGE
+                        + VN_PROHIBITED + TYPE_CONFUSION):
             for m in rx.finditer(text):
                 line = text[:m.start()].count("\n") + 1
                 problems.append(f"{tag}:{line}: {why}\n      → {m.group(0).strip()[:70]!r}")
@@ -217,6 +530,8 @@ def main() -> int:
         if not any(x.get("trains") in WRITING_CRITERIA for x in u["bridges"]):
             problems.append(f"{tag}: no writing task names the criterion it trains (B1)")
 
+    check_threads(units, problems)
+
     if problems:
         print(f"FAIL: {len(problems)} problem(s)")
         for p in problems[:60]:
@@ -232,10 +547,19 @@ def main() -> int:
         by_mark[mk.group(1)] = by_mark.get(mk.group(1), 0) + 1
     weak = sum(n for k, n in by_mark.items() if k in ("[S]", "[S/NS]", "[T2]", "[INF]", "[SPEC]"))
     spread = " · ".join(f"{k} {n}" for k, n in sorted(by_mark.items(), key=lambda kv: -kv[1]))
+    tasks = [t for u in units for _, _, t in u["tasks"]]
+    items = sum(len(t["items"]) for t in tasks)
+    ielts = sum(1 for t in tasks if t["skill"] != "course")
+    audio = sum(len(u["audio"]) for u in units)
+    strands = {t.get("id") for u in units for _, t in u["threads"]
+               if t.get("stage") == "introduce"}
     print(f"PASS: {len(bridges)} IELTS bridges across {len(units)} units · every citation "
           f"resolves · {spread}")
     print(f"      {weak} of {len(bridges)} rest on evidence weaker than verified, and each "
           f"says so where it appears.")
+    print(f"      {len(tasks)} marked tasks ({items} items), {ielts} of them official IELTS "
+          f"question types · {audio} single-play recording(s) · {len(strands)} strand(s), "
+          f"each recurring where it says it does.")
     return 0
 
 

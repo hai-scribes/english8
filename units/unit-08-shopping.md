@@ -668,6 +668,9 @@ attacks the grammar half only. Nothing here claims to cover the other.
 > đề, không xử lý nửa phát âm.
 :::
 
+::: thread id="articles" stage="check"
+:::
+
 #### Checklist — tick before you finish
 
 - [ ] 80–100 words (count them)

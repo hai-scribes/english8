@@ -596,6 +596,9 @@ This rests on one source that was not independently re-checked.
 > đi, mỗi bài viết đều có phần kiểm tra 5 mạo từ.
 :::
 
+::: thread id="articles" name="Articles — *a*, *an*, *the*, and no article" stage="introduce" measure="articles supplied correctly in the places that required one" resumes="6,7,8,9,10,11,12" marker="[S]" src="07 §4.4"
+:::
+
 ::: bridge name="Report it as a fraction, not as a mark" trains="Grammatical Range & Accuracy" cefr="B1" marker="[S/NS]" src="07 §8.2"
 When you check your email, do not give yourself a score. Count instead:
 

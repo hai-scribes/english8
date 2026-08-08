@@ -435,3 +435,85 @@ table.reg td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;whi
 .engine .prompt.small{font-size:1rem}
 .hole{display:inline-block;min-width:5.5rem;border-bottom:2px solid var(--clay);
   vertical-align:baseline;height:1.05em;margin:0 .15rem}
+
+/* =========================================================================
+   Marked tasks, single-play listening, strand checks
+   The three constructs that make an exercise an attempt rather than a page.
+   ========================================================================= */
+.task,.player,.thread{margin:1.3rem 0 .2rem;padding:.95rem 1.1rem .85rem;
+  background:var(--raised);border:1px solid var(--rule);border-radius:var(--r-lg)}
+.t-h,.p-h,.th-h{display:flex;align-items:center;gap:.45rem;flex-wrap:wrap;margin-bottom:.5rem}
+.t-k,.p-k,.th-k{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--clay);font-weight:600}
+.t-k::before{content:"✓ "}
+.p-k::before{content:"♪ "}
+.th-k::before{content:"↻ "}
+.t-t,.p-t,.th-t{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.05em;
+  padding:.1rem .42rem;border-radius:3px;background:var(--teal-wash);color:var(--teal)}
+.t-ask{margin:0 0 .5rem;font-size:.95rem}
+.t-lim{margin:.2rem 0 .5rem;font-family:var(--f-mono);font-size:.76rem;letter-spacing:.04em;
+  color:var(--clay);background:var(--clay-wash);padding:.4rem .6rem;border-radius:var(--r)}
+.t-rules{margin:.2rem 0 .55rem;padding-left:1.05rem;font-size:.82rem;color:var(--muted)}
+.t-rules li{margin:.1rem 0}
+.t-w,.t-conf,.p-mode,.p-say,.th-r{margin:.35rem 0 .55rem;font-size:.84rem;color:var(--muted)}
+.t-conf{background:var(--sunk);padding:.5rem .65rem;border-radius:var(--r)}
+
+.task ol.items{margin:.6rem 0 .2rem;padding-left:1.5rem}
+.task .i{margin:.55rem 0;padding:.35rem 0 .35rem .1rem}
+.task .i-q{line-height:1.6}
+.i-in{font:inherit;font-size:.95rem;padding:.24rem .45rem;min-width:8rem;max-width:100%;
+  border:1px solid var(--rule);border-bottom:2px solid var(--clay);border-radius:3px;
+  background:var(--surface);color:var(--ink)}
+.i-in:focus{outline:2px solid var(--teal);outline-offset:1px}
+.i-opts{display:flex;flex-wrap:wrap;gap:.3rem .9rem;margin:.3rem 0 0}
+.i-opt{display:inline-flex;align-items:center;gap:.3rem;font-size:.92rem;cursor:pointer}
+.i-conf{display:inline-flex;gap:.2rem;margin-left:.5rem;vertical-align:middle}
+.i-conf button:disabled{opacity:.55;cursor:default}
+.i-conf button{font:inherit;font-size:.8rem;line-height:1;padding:.18rem .34rem;cursor:pointer;
+  border:1px solid var(--rule);border-radius:3px;background:var(--surface);color:var(--faint)}
+.i-conf button.on{border-color:var(--teal);color:var(--teal);background:var(--teal-wash)}
+.i-out{font-size:.86rem;margin-top:.25rem;min-height:0}
+.i-out .ok{color:var(--green);font-weight:600}
+.i-out .no{color:var(--red);font-weight:600}
+.i-out i{color:var(--muted)}
+.task .i[data-ok="0"]{border-left:2px solid var(--red);padding-left:.55rem;margin-left:-.65rem}
+.task .i[data-ok="1"]{border-left:2px solid var(--green);padding-left:.55rem;margin-left:-.65rem}
+.t-foot{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin-top:.7rem}
+.t-score{font-size:.9rem}
+.t-score b{font-family:var(--f-mono);color:var(--teal);font-variant-numeric:tabular-nums}
+.t-cal{margin:.8rem 0 .1rem;padding:.75rem .9rem;background:var(--sunk);border-radius:var(--r)}
+.t-cal b{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--faint);font-weight:400;display:block;margin-bottom:.4rem}
+.t-cal table{font-size:.86rem;border-collapse:collapse}
+.t-cal th,.t-cal td{padding:.2rem .9rem .2rem 0;text-align:left;font-weight:400;color:var(--muted)}
+.t-cal td{font-variant-numeric:tabular-nums;color:var(--ink)}
+.t-cal p{margin:.5rem 0 0;font-size:.86rem}
+.t-key{margin:0;padding-left:1.3rem}
+.t-key li{margin:.2rem 0}
+.t-key i{color:var(--muted)}
+
+.player[data-playing="1"]{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-wash)}
+.p-ctl{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin:.6rem 0 .1rem}
+.p-state{font-family:var(--f-mono);font-size:.78rem;color:var(--teal);font-variant-numeric:tabular-nums}
+.p-note{margin:.7rem 0 0;padding-top:.55rem;border-top:1px dotted var(--rule);
+  font-size:.78rem;color:var(--muted);line-height:1.55}
+.p-script{margin-top:.9rem;padding:.8rem .95rem;background:var(--sunk);border-radius:var(--r)}
+.p-script h4{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--faint);font-weight:400;margin:0 0 .5rem}
+.p-script p{margin:.5rem 0;font-size:.92rem}
+.p-fallback{color:var(--muted);font-size:.85rem!important;border-left:2px solid var(--clay);
+  padding-left:.7rem}
+
+.thread{border-left:3px solid var(--teal)}
+.th-m{margin:.3rem 0 .5rem;font-size:.95rem}
+.th-u{margin:.3rem 0;font-size:.84rem;color:var(--muted)}
+.th-in{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin:.5rem 0 .2rem}
+.th-in label{display:inline-flex;align-items:center;gap:.35rem;font-size:.9rem;color:var(--muted)}
+.th-in input{font:inherit;font-size:.95rem;width:3.6rem;padding:.22rem .4rem;text-align:center;
+  border:1px solid var(--rule);border-bottom:2px solid var(--teal);border-radius:3px;
+  background:var(--surface);color:var(--ink);font-variant-numeric:tabular-nums}
+.th-out{font-family:var(--f-mono);font-size:1rem;color:var(--teal);font-variant-numeric:tabular-nums}
+.answer>button:disabled{opacity:.5;cursor:not-allowed;border-color:var(--rule)}
+.answer>button:disabled:hover{border-color:var(--rule);color:var(--muted)}
+.t-need{font-size:.82rem;color:var(--clay)}
+.task[data-timeup="1"] .i-q{opacity:.75}

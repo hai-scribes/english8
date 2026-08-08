@@ -9,7 +9,25 @@ python3 tools/build.py            # regenerate docs/
 python3 tools/build.py --check    # parse and report counts, write nothing
 python3 tools/check_dict.py       # gate: every vocabulary slot resolves
 python3 tools/check_ielts.py      # gate: every IELTS claim is legal and cited
+node tools/test_marking.js        # gate: the marking engine obeys the published rules
 ```
+
+## Four directives, and what each one is for
+
+`:::bridge` makes an IELTS *claim*. The other three make the app *behave* like
+IELTS, which is a different job — see `README.md` for the full syntax.
+
+| | What it does | The rule it stops you breaking |
+| --- | --- | --- |
+| `:::task` | An exercise becomes a committed, marked attempt | C1–C5: official key grammar, per-task word limit, spelling costs the mark |
+| `:::audio` | A script becomes a recording that plays once | C6, C8: declared delivery mode, unwritten orientation, no replay |
+| `:::thread` | A strand that says it recurs is made to recur | the course's promises about itself |
+
+Two things follow for anyone adding lessons. **Prefer a `:::task` to a printed
+gap** — a reveal button is not an attempt, and the whole Group C half of the
+constitution is unenforceable against prose. And **never print a listening
+script**: put it in `:::audio` or the exercise above it is a reading task
+wearing a listening label.
 
 ## The IELTS claims are enforced, not just documented
 

@@ -523,11 +523,24 @@ night. Fill in your notes — short phrases, not full sentences.
 | What should people do now? | |
 
 **Step 2 — Speak.** Deliver the report **aloud**, standing up, for about
-**one minute**. Use this shape:
+**one minute**, from your notes and not from a written-out script.
 
-> "Good evening. I'm reporting from ______. At about ______ last night, a ______
-> hit this town. While most people ______, the water ______. This morning ______.
-> Rescue teams ______. People here are being asked to ______. Back to the studio."
+A news report moves through four stages, and the only thing fixed about it is
+the *order*. Nothing here gives you words: the table asks questions, and the
+sentences that answer them have to be yours. That is the rule this course
+follows everywhere, and it is why you will not find an opening line to learn
+anywhere in these twelve units.
+
+| Stage | The question it answers | Roughly how long |
+| --- | --- | --- |
+| **Open** | Where are you, and what happened? | 10 seconds |
+| **Then** | What was happening when it hit? | 20 seconds |
+| **Now** | What does the town look like this morning, and who is helping? | 20 seconds |
+| **Close** | What are people being asked to do? | 10 seconds |
+
+> **Tiếng Việt:** Bản tin đi theo **bốn chặng** trên. Bảng này chỉ cho bạn *thứ
+> tự* và *câu hỏi cần trả lời* — câu chữ phải do bạn tự nghĩ ra. Trong cả khoá
+> học này không có câu mẫu nào để học thuộc.
 
 **Step 3 — Record and check.** Record yourself on your phone. Listen back and
 check three things:
@@ -700,6 +713,9 @@ task is a letter, and only a letter.
 
 > **Tiếng Việt:** Thêm **một** câu so sánh ở cuối: giai đoạn nào quan trọng nhất
 > và vì sao. Đây là mệnh đề mà đề IELTS Task 1 luôn yêu cầu.
+:::
+
+::: thread id="articles" stage="check"
 :::
 
 #### Checklist — tick before you finish
