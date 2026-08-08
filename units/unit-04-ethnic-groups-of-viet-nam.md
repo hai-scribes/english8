@@ -158,13 +158,20 @@ against the soft palate. The **only** difference is voice.
 
 ### 2.3 Sort the sounds
 
-Write each word in the correct column: **cave · gate · custom · gong · basket ·
-garden · market · guest · coat · goat · culture · group**
-
-| /k/ | /ɡ/ |
-| --- | --- |
-| | |
-
+::: task skill="course" type="sort" opts="/k/|/ɡ/" ask="Which sound is in each word?"
+- cave = /k/
+- gate = /ɡ/
+- custom = /k/
+- gong = /ɡ/
+- basket = /k/
+- garden = /ɡ/
+- market = /k/
+- guest = /ɡ/
+- coat = /k/
+- goat = /ɡ/
+- culture = /k/
+- group = /ɡ/
+:::
 ### 2.4 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** sound for the bold letter. Pick it."
@@ -771,10 +778,6 @@ says she does not have much (yet).
 **B.** 5. countable 6. uncountable
 
 ### Lesson 2
-
-**2.3**
-- /k/ — cave, custom, basket, market, coat, culture
-- /ɡ/ — gate, gong, garden, guest, goat, group
 
 **2.5** Answers will vary. Check: the bold letters in *goat, group, grandmother*
 buzz (put a hand on your throat), while *coat, cave, customs, costumes, basket*

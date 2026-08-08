@@ -158,13 +158,20 @@ of this block gives the measurement behind that claim.
 
 ### 2.3 Sort the sounds
 
-Write each word in the correct column: **bright · price · practice · brother ·
-protect · umbrella · prefer · break · surprise · brave · print · celebrate**
-
-| /br/ | /pr/ |
-| --- | --- |
-| | |
-
+::: task skill="course" type="sort" opts="/br/|/pr/" ask="Which sound is in each word?"
+- bright = /br/
+- price = /pr/
+- practice = /pr/
+- brother = /br/
+- protect = /pr/
+- umbrella = /br/
+- prefer = /pr/
+- break = /br/
+- surprise = /pr/
+- brave = /br/
+- print = /pr/
+- celebrate = /br/
+:::
 ### 2.4 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** cluster. Pick it."
@@ -741,10 +748,6 @@ community very quickly. 4. He will go for a run. 5. They will run together on
 Sunday morning unless it rains.
 
 ### Lesson 2
-
-**2.3**
-- /br/ — bright, brother, umbrella, break, brave, celebrate
-- /pr/ — price, practice, protect, prefer, surprise, print
 
 **2.5** Answers will vary (spoken). Check: your throat buzzes on the **br** of
 *brother, bright, bring, brush, celebrate, umbrella* — at the very start in the

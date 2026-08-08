@@ -149,13 +149,20 @@ and travel in opposite directions.
 
 ### 2.3 Sort the sounds
 
-Write each word in the correct column: **tourist · join · pure · voice ·
-during · noise · curious · enjoy · cure · avoid · furious · boy**
-
-| /ʊə/ | /ɔɪ/ |
-| --- | --- |
-| | |
-
+::: task skill="course" type="sort" opts="/ʊə/|/ɔɪ/" ask="Which sound is in each word?"
+- tourist = /ʊə/
+- join = /ɔɪ/
+- pure = /ʊə/
+- voice = /ɔɪ/
+- during = /ʊə/
+- noise = /ɔɪ/
+- curious = /ʊə/
+- enjoy = /ɔɪ/
+- cure = /ʊə/
+- avoid = /ɔɪ/
+- furious = /ʊə/
+- boy = /ɔɪ/
+:::
 ### 2.4 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** vowel sound. Pick it."
@@ -705,10 +712,6 @@ out two cameras.
 5. and / addition
 
 ### Lesson 2
-
-**2.3**
-- /ʊə/ — tourist, pure, during, curious, cure, furious
-- /ɔɪ/ — join, voice, noise, enjoy, avoid, boy
 
 **2.5** Answers will vary. Check: your lips **spread into a smile** at the end
 of *choice, enjoy, noise, boys*, and **relax back to the centre** at the end of

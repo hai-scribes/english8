@@ -151,14 +151,21 @@ Notice that the cluster does not have to start the word: *di**sp**lay*,
 
 ### 2.3 Sort the sounds
 
-Write each word in the correct column: **spend · store · style · special ·
-stall · sport · customer · spare · mistake · display · stock · instead ·
-expensive**
-
-| /sp/ | /st/ |
-| --- | --- |
-| | |
-
+::: task skill="course" type="sort" opts="/sp/|/st/" ask="Which sound is in each word?"
+- spend = /sp/
+- store = /st/
+- style = /st/
+- special = /sp/
+- stall = /st/
+- sport = /sp/
+- customer = /st/
+- spare = /sp/
+- mistake = /st/
+- display = /sp/
+- stock = /st/
+- instead = /st/
+- expensive = /sp/
+:::
 ### 2.4 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** cluster. Pick it."
@@ -794,10 +801,6 @@ centre you get a receipt and can ask for a refund. *(Also acceptable: the
 market is much cheaper.)*
 
 ### Lesson 2
-
-**2.3**
-- /sp/ — spend, special, sport, spare, display, expensive
-- /st/ — store, style, stall, customer, mistake, stock, instead
 
 **2.5** Answers will vary — this is a speaking task. Check: no vowel sound
 between /s/ and /p/ or between /s/ and /t/ (*not* "sờ-pend"), and no aspiration

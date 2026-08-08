@@ -158,13 +158,20 @@ One more pair worth learning by heart:
 
 ### 2.3 Sort the sounds
 
-Write each word in the correct column: **sun · sing · moon · thing · dinner ·
-spring · incense · young · banner · gong · lantern · wrapping**
-
-| /n/ | /ŋ/ |
-| --- | --- |
-| | |
-
+::: task skill="course" type="sort" opts="/n/|/ŋ/" ask="Which sound is in each word?"
+- sun = /n/
+- sing = /ŋ/
+- moon = /n/
+- thing = /ŋ/
+- dinner = /n/
+- spring = /ŋ/
+- incense = /n/
+- young = /ŋ/
+- banner = /n/
+- gong = /ŋ/
+- lantern = /n/
+- wrapping = /ŋ/
+:::
 ### 2.4 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** nasal sound. Pick it."
@@ -743,10 +750,6 @@ family. 4. He must not wear a hat inside the communal house. 5. There were games
 in the yard and a gong, and an old man from the next village sang for two hours.
 
 ### Lesson 2
-
-**2.3**
-- /n/ — sun, moon, dinner, incense, banner, lantern
-- /ŋ/ — sing, thing, spring, young, gong, wrapping
 
 **2.5** Answers will vary in speed. Check: every *-ng* word ends at the **back**
 of your mouth with the tongue tip **down**, and *thin*, *banners*, *lane*,

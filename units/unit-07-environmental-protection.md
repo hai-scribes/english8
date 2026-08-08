@@ -150,13 +150,20 @@ between them. The second sound is /l/ in both. Only the first sound differs.
 
 ### 2.3 Sort the sounds
 
-Write each word in the correct column: **blue · clean · black · climate ·
-problem · close · blow · recycle · possible · clothes · blame · include**
-
-| /bl/ | /kl/ |
-| --- | --- |
-| | |
-
+::: task skill="course" type="sort" opts="/bl/|/kl/" ask="Which sound is in each word?"
+- blue = /bl/
+- clean = /kl/
+- black = /bl/
+- climate = /kl/
+- problem = /bl/
+- close = /kl/
+- blow = /bl/
+- recycle = /kl/
+- possible = /bl/
+- clothes = /kl/
+- blame = /bl/
+- include = /kl/
+:::
 ### 2.4 Odd cluster out
 
 ::: task skill="course" type="choice" ask="In each line, three words share a cluster. Pick the one that does not."
@@ -761,10 +768,6 @@ the lake as well. 4. She will ask them for evidence — photographs and dates.
 5. Whenever I walk past that lake now
 
 ### Lesson 2
-
-**2.3**
-- /bl/ — blue, black, problem, blow, possible, blame
-- /kl/ — clean, climate, close, recycle, clothes, include
 
 **2.5** Answers will vary — this is a speaking drill. Check: your /b/ buzzes and
 your /k/ does not, and there is no vowel between the consonant and the /l/.

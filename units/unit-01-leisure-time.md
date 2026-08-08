@@ -162,13 +162,23 @@ The difference is **length** and **tension**.
 
 ### 2.3 Sort the sounds
 
-Write each word in the correct column: **cool · good · look · soup · put ·
-boot · foot · June · pull · true · wood · movie**
+::: task skill="course" type="sort" opts="/ʊ/|/uː/" ask="Which sound is in each word?"
+- cool = /uː/
+- good = /ʊ/
+- look = /ʊ/
+- soup = /uː/
+- put = /ʊ/
+- boot = /uː/
+- foot = /ʊ/
+- June = /uː/
+- pull = /ʊ/
+- true = /uː/
+- wood = /ʊ/
+- movie = /uː/
+:::
 
-| /ʊ/ | /uː/ |
-| --- | --- |
-| | |
-
+*Compare **foot** /fʊt/ with **boot** /buːt/ — same consonants, and the vowel
+is the only thing that tells them apart.*
 ### 2.4 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** vowel sound. Pick it."
@@ -687,13 +697,6 @@ free if you buy a drink (there is also a café). 4. He hates it. 5. They plan to
 go for a swim.
 
 ### Lesson 2
-
-**2.3**
-- /ʊ/ — good, look, put, foot, pull, wood
-- /uː/ — cool, soup, boot, June, true, movie
-
-*Compare **foot** /fʊt/ with **boot** /buːt/ — same consonants, and the vowel
-is the only thing that tells them apart.*
 
 ### Lesson 3
 
