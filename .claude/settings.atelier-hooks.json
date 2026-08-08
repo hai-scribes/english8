@@ -1,0 +1,46 @@
+{
+  "_atelier_note": "W8.3 + trust-fence PreToolUse + GAP-6/rigor Stop hooks scaffold. Merge into `.claude/settings.json` to enable. Each command resolves the hooks dir in three tiers — $ATELIER_HOOKS_DIR, then $CLAUDE_PROJECT_DIR/atelier/hooks (dev clone), then ${ATELIER_HOME:-$HOME/.atelier}/current/hooks (packaged install) — and prints one actionable line to stderr if none resolve, so a guard is never silently inert. The Stop array holds two gates: stop-gate.sh enforces W5 TWIN/FUZZ/SOAK markers AND — only once a project runs `atelier stop-gate enable` — the GAP-6 close-marker backstop; rigor-goal-stop-gate enforces a sealed /rigor Layer-1 drive and is a silent no-op until `atelier rigor stop-gate install --apply` creates it. Both are inert on a fresh repo, so wiring this is safe.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Edit|Write|NotebookEdit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-prototype-read.sh"
+          },
+          {
+            "type": "command",
+            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-operator-verbs.sh"
+          },
+          {
+            "type": "command",
+            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-goal-direct-writes.sh"
+          },
+          {
+            "type": "command",
+            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ arch-boundary-guard.sh"
+          },
+          {
+            "type": "command",
+            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-unresolved-shared-edit.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ stop-gate.sh"
+          },
+          {
+            "type": "command",
+            "command": "sh -c 'G=\"${ATELIER_HOME:-$HOME/.atelier}/bin/rigor-goal-stop-gate\"; [ ! -x \"$G\" ] || exec \"$G\"'"
+          }
+        ]
+      }
+    ]
+  }
+}

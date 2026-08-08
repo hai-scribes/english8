@@ -1,0 +1,12 @@
+# gate-routing.local.yaml — per-project gate routing overrides (template)
+#
+# This file is gitignored (see .gitignore). Copy to `gate-routing.local.yaml`
+# (drop the .template suffix) and edit to override the defaults in
+# atelier.yml. Useful when one developer wants to test claude-backed
+# gates without committing the choice to source control.
+#
+# Schema mirrors atelier.yml's `gate_routing` block.
+
+# classifier: claude
+# reconcile: claude
+# scribe: claude

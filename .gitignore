@@ -1,0 +1,12 @@
+# Atelier runtime state ---
+.specs/.orchestra/
+.atelier/.orchestra-overrides/
+.atelier/local/
+.atelier/gate-routing.local.yaml
+.atelier/supervision.local.yaml
+.atelier/command-version.yaml
+.atelier/.refresh-commands.lock
+.worktrees/
+.specs/prototype/*.cap-lock
+reports/*.lock
+reports/*.status.json

@@ -1,0 +1,54 @@
+# atelier.yml — project config (W2.2.a scaffold)
+#
+# Marker file: presence of this file signals an Atelier-managed project.
+# Edit this file rather than the local templates if you want changes
+# tracked in source control.
+#
+# === SCHEMA STATUS: TENTATIVE (W2.2.d disclaimer) ===
+#
+# As of W2.2, NO Atelier component reads `gate_routing` or `supervision`
+# below — these blocks document the intended schema but the consumers
+# land in W3+ (routing layer) and later waves (supervision overrides).
+# Keys may be renamed or restructured before they are wired. Operators
+# who source-control this file should expect breaking schema changes
+# until ATELIER_PLAN.md § W3 closes; pin the version field but treat
+# the rest as advisory.
+#
+# Only `version` and `name` are stable today. The reader contract for
+# everything else is provisional and will be pinned in cli-conventions.md
+# § "Pinned strings" once W3 wires the first consumer.
+
+version: "0.1.0-dev"
+
+# Project name. Defaults to the basename of <project>; override if the
+# directory name doesn't match the desired project identity (e.g. when
+# init'd inside a parent monorepo).
+name: ""
+
+# Default routing for gates that have multiple viable backends. Operators
+# override per-project at `gate-routing.local.yaml` (gitignored).
+gate_routing:
+  classifier: codex  # codex | claude
+  reconcile: codex   # codex | claude
+  scribe: codex      # codex | claude
+
+# Default supervision tuning. Operators override per-project at
+# `supervision.local.yaml` (gitignored).
+supervision:
+  worker_timeout_sec: 1800
+  watchdog_tick_sec: 5
+  strike_threshold: 3
+
+# Declared provider keys (W2.3.a substrate). `atelier doctor
+# --validate-secrets` probes each via `~/.atelier/hooks/_secret-resolve.sh`
+# in priority order: cache → keychain → 1Password → file → env. The
+# resolver runs in probe mode and reports source-availability; values
+# never reach doctor's address space. KEY_NAME must match
+# ^[A-Z_][A-Z0-9_]*$. Empty list = no secrets expected (default).
+#
+# === SCHEMA STATUS: TENTATIVE (W2.2.d disclaimer) ===
+# Only `keys` is read today. Future additions (per-key provider hints,
+# 1Password vault overrides, file-source path overrides) will be folded
+# in as optional fields; the bare `keys` list remains the stable anchor.
+secrets:
+  keys: []

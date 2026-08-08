@@ -1,0 +1,12 @@
+# supervision.local.yaml — per-project supervision tuning (template)
+#
+# This file is gitignored. Copy to `supervision.local.yaml` and edit to
+# override the defaults in atelier.yml. Useful for slower-than-typical
+# test suites or environments where the orchestrator should be more or
+# less patient.
+#
+# Schema mirrors atelier.yml's `supervision` block.
+
+# worker_timeout_sec: 3600
+# watchdog_tick_sec: 10
+# strike_threshold: 5
