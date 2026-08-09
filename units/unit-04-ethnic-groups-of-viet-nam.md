@@ -67,18 +67,21 @@ Answer in full sentences.
 
 ### 1.3 Notice the grammar
 
-**A.** Write **Yes/No**, **Wh-**, or **Subject** for each question from the
-dialogue.
+**A.** What kind of question is each one from the dialogue?
 
-1. **Do** they live in a stilt house? → _______
-2. **Where** does your family live? → _______
-3. **Who** looks after the house now? → _______
-4. **Can** you weave? → _______
+::: task skill="course" type="choice" opts="Yes/No|Wh-|Subject" ask="Yes/No, Wh-, or Subject?"
+- **Do** they live in a stilt house? = Yes/No
+- **Where** does your family live? = Wh-
+- **Who** looks after the house now? = Subject ~ *who* is the subject, so there is no *does*
+- **Can** you weave? = Yes/No
+:::
 
-**B.** Write **countable** or **uncountable** for the noun in bold.
+**B.** And the nouns in **bold**:
 
-5. How many **rooms** does it have? → _______
-6. How much **rice** does your family grow? → _______
+::: task skill="course" type="choice" opts="countable|uncountable" ask="Countable or uncountable? The question word in front of it is the clue."
+- How many **rooms** does it have? = countable ~ *how many* goes with countable nouns
+- How much **rice** does your family grow? = uncountable ~ *how much* goes with uncountable nouns
+:::
 
 > **Ghi chú:** Bạn vừa gặp hai trọng tâm ngữ pháp của bài — cách đặt **câu hỏi
 > Yes/No và câu hỏi Wh-**, cùng với **danh từ đếm được và không đếm được**. Hãy
@@ -421,6 +424,9 @@ question, and one beginning *Could you tell me…*.
 
 *From a school magazine, written by Hoa, 14.*
 
+::: clock mins="18" for="18 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+:::
+
 > Viet Nam is home to 54 ethnic groups. The Kinh are the majority, and the other
 > 53 groups are called ethnic minorities. Some — the Tay, the Thai, the Muong,
 > the Khmer, the H'Mong, the Dao — have quite large populations.
@@ -468,7 +474,7 @@ question, and one beginning *Could you tell me…*.
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. Give yourself **three minutes** for all four — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - the larger part of a population = majority
 - a set of steps between floors = staircase
 - repair something old and bring it back to its former state = restore
@@ -619,11 +625,12 @@ every day, what you do at the weekend, and how you feel about it.
 > In my family everyone has a job to do, and mine is not the hardest one. Every
 > morning I sweep the yard and feed the chickens before school. After dinner I
 > wash the bowls with my sister, and I help my younger brother with his homework
-> because he cannot read very well yet. At the weekend I go to the market with
+> because he cannot read well yet. At the weekend I go to the market with
 > my mother and carry the heavy baskets home. My grandmother is teaching me to
-> weave. I am still slow and my baskets are crooked, but she says I am patient.
+> weave bamboo in the traditional way, because it is an old custom here. My
+> baskets are still crooked, but she says I am patient.
 
-*(92 words)*
+*(99 words)*
 
 #### Plan it — 5 questions your paragraph has to answer
 
@@ -656,23 +663,15 @@ independently re-checked.
 > danh từ trước khi viết — quyết định đó chi phối toàn bộ mạo từ và lượng từ.
 :::
 
-#### Checklist — tick before you finish
-
-- [ ] 80–100 words (count them)
-- [ ] One paragraph, no headings, no bullet points
-- [ ] At least **four** words from the Lesson 2 vocabulary table
-- [ ] At least one **uncountable** noun used correctly (*rice, food, water, clothing, advice*)
-- [ ] Time expressions: *every morning · after dinner · at the weekend*
-- [ ] Present simple throughout — check the **-s** on *he / she / it*
-
-#### Now write yours
-
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
+::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — a paragraph of **80–100 words** for the *At home, I help* booklet."
+- [ ] 80–100 words ~ words
+- [ ] One paragraph, no headings, no bullet points ~ para:1
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] At least one **uncountable** noun ~ any:1 rice/food/water/clothing/advice/furniture/homework/money/work
+- [ ] …and none of them made countable — no *a rice*, no *advices* ~ none a rice/a food/a water/a clothing/an advice/a furniture/a homework/a money/rices/foods/waters/clothings/advices/furnitures/homeworks/moneys
+- [ ] At least one time expression ~ any:1 every morning/every day/every evening/every night/every week/after dinner/after school/before school/at the weekend/in the evening/in the morning/on sundays/at night
+- [ ] Present simple throughout — check the **-s** on *he / she / it* yourself, one verb at a time
+:::
 
 ---
 
@@ -728,6 +727,14 @@ forms; three are about countable and uncountable nouns.
 > her, "Do you can weave?" She said yes, and she showed me. She told me a lot of
 > informations about her village, and she gave me an advice: be patient.
 
+::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
+- Error 1 = how many rooms does it have ~ a question needs *does* + the bare verb
+- Error 2 = a lot of rice/much rice ~ *rice* is uncountable — not *many*
+- Error 3 = can you weave ~ *can* is already the auxiliary — no *do*
+- Error 4 = a lot of information ~ *information* is uncountable — no plural *-s*
+- Error 5 = some advice/a piece of advice ~ *advice* is uncountable — no *an*
+:::
+
 ### Project — A village fact file
 
 Build a one-page fact file about one ethnic group of Viet Nam.
@@ -773,9 +780,6 @@ of wood and bamboo. 3. It has one big room; the family cooks, eats, talks and
 sleeps in the same space. 4. She misses the folk songs at Tet and her
 grandmother's bamboo baskets. 5. Because weaving takes a lot of patience and she
 says she does not have much (yet).
-
-**1.3** **A.** 1. Yes/No 2. Wh- 3. Subject 4. Yes/No
-**B.** 5. countable 6. uncountable
 
 ### Lesson 2
 
@@ -835,19 +839,3 @@ uncountable noun used with no plural *-s*.
 stilts? *(or: Why is the house built on stilts?)*
 **B.** 5. much 6. many 7. some advice 8. a bowl of
 
-**7.4**
-1. How many rooms it has? → **How many rooms does it have?**
-2. many rice → **a lot of rice** *(or: much rice)*
-3. Do you can weave? → **Can you weave?**
-4. a lot of informations → **a lot of information**
-5. an advice → **some advice** *(or: a piece of advice)*
-
-**Corrected paragraph:** *My cousin lives in a stilt house in Cao Bang. How many
-rooms does it have? Only one! Her mother gets up at five and cooks a lot of rice
-for the whole family. I asked her, "Can you weave?" She said yes, and she showed
-me. She told me a lot of information about her village, and she gave me some
-advice: be patient.*
-
-**Project** Answers will vary. Check: ten questions with different question
-words, at least two of them subject questions with no *do/does*; every answer
-has a source next to it; the paragraph is 100–120 words.

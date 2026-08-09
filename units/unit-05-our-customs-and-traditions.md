@@ -406,6 +406,9 @@ in one or two sentences, using a phrase from the tables above.
 
 *By Khanh, 14, from a village in Bac Ninh province.*
 
+::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+:::
+
 > Our village festival falls in the second lunar month, and for one day the
 > whole place changes.
 >
@@ -452,7 +455,7 @@ in one or two sentences, using a phrase from the tables above.
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. Give yourself **three minutes** for all four — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - a covered seat carried on poles by several people = palanquin
 - a line of people moving forward together in a ceremony = procession
 - not tight; likely to come off = loose
@@ -562,7 +565,8 @@ what **not** to do.
 > advice.
 >
 > Do bring a small gift for my grandmother — fruit or flowers is perfect. Do
-> wear long trousers, and do copy me when we bow at the altar.
+> wear long trousers, and do copy me when we light the incense and bow to our
+> ancestors at the altar.
 >
 > Don't wear a hat inside the communal house, and please don't point at the
 > offerings. Older people really mind that.
@@ -574,7 +578,7 @@ what **not** to do.
 >
 > Hoa
 
-*(86 words)*
+*(93 words)*
 
 #### Plan it — 5 questions your email has to answer
 
@@ -634,24 +638,16 @@ This method is quoted from a source whose matching verification did **not** hold
 > — vì bạn đang thử những câu khó hơn.
 :::
 
-#### Checklist — tick before you finish
-
-- [ ] 80–100 words (count them)
-- [ ] Greeting and sign-off included
-- [ ] At least **two** dos and **two** don'ts
-- [ ] At least **four** words from the Lesson 2 vocabulary table
-- [ ] Articles checked: *a/an* by sound, *the* for the one we both know, **no**
-      article for general plurals
-- [ ] Paragraphs, not one solid block
-
-#### Now write yours
-
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
+::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — the email of advice, in **80–100 words**."
+- [ ] 80–100 words ~ words
+- [ ] Paragraphs, not one solid block ~ paras:2
+- [ ] A greeting at the top ~ any:1 hi/hello/dear
+- [ ] A sign-off at the end ~ any:1 best wishes/see you soon/see you/write soon/love/bye for now/take care/all the best
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] At least **two** don'ts ~ any:2 don't/do not/never/avoid/mustn't/must not/should not/shouldn't
+- [ ] At least **two** dos — things you tell them **to** do
+- [ ] Articles checked: *a/an* by sound, *the* for the one we both know, **no** article for general plurals
+:::
 
 ---
 
@@ -702,6 +698,15 @@ is a subject–verb agreement slip.
 > he is oldest person in the family. Nobody sweep the floor that day — it is an
 > taboo. We eat the breakfast together, and then the children receive lucky
 > money.
+
+::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
+- Error 1 = Ha Noi/in Ha Noi ~ most city names take no article
+- Error 2 = the last evening/the ~ there is only one last evening — *the*
+- Error 3 = the oldest person/the ~ a superlative takes *the*
+- Error 4 = sweeps ~ *Nobody sweep* → *sweeps* — subject–verb agreement
+- Error 5 = a taboo/a ~ *taboo* starts with the consonant sound /t/
+- Error 6 = breakfast/eat breakfast ~ meals take no article
+:::
 
 ### Project — A custom in your family
 
@@ -795,17 +800,3 @@ a reason as well as an instruction.
 
 ### Lesson 7
 
-**7.4**
-1. in a Ha Noi → in **Ha Noi** *(no article with most cities)*
-2. on a last evening → on **the** last evening *(there is only one)*
-3. he is oldest person → he is **the** oldest person *(superlative)*
-4. Nobody sweep → Nobody **sweeps** *(subject–verb agreement)*
-5. an taboo → **a** taboo *(/t/ is a consonant sound)*
-6. eat the breakfast → eat **breakfast** *(meals take no article)*
-
-**Corrected paragraph:** *Every year my family goes to my grandparents' house in
-Ha Noi for Tet. We arrive on the last evening of the old year and wrap cakes
-until midnight. On the first morning my grandfather lights the first stick of
-incense, because he is the oldest person in the family. Nobody sweeps the floor
-that day — it is a taboo. We eat breakfast together, and then the children
-receive lucky money.*

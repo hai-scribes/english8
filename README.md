@@ -8,12 +8,15 @@ Twelve units, seven lessons each. Every lesson teaches, then practises what it
 just taught; the unit test opens only once all seven lessons are done.
 
 The second job is mostly not something the pages *say* — it is how they
-behave. 954 questions are marked the way a real answer key marks; twelve
+behave. 1,143 questions are marked the way a real answer key marks; twelve
 recordings play once, behind a spoken introduction that is never written down;
-every listening answer carries a *how sure are you* mark. On top of that,
-twenty-eight tasks carry one changed instruction, checkpoint or re-scored drill
-built from the IELTS research — each cited, each carrying the strength of its
-evidence. See [Marked tasks, one play, and strands](#marked-tasks-one-play-and-strands)
+every listening answer carries a *how sure are you* mark; twelve reading blocks
+run one clock that does not stop while you type; and twelve writing tasks are
+written into the page, where seventy of their ninety-two checklist lines are
+settled from the text rather than from the learner's own opinion of it. On top
+of that, twenty-eight tasks carry one changed instruction, checkpoint or
+re-scored drill built from the IELTS research — each cited, each carrying the
+strength of its evidence. See [Marked tasks, one play, and strands](#marked-tasks-one-play-and-strands)
 and [The IELTS bridge](#the-ielts-bridge) below, plus the generated
 [evidence register](docs/evidence/index.html).
 
@@ -41,6 +44,7 @@ above the lessons, and inert until the lessons they cover are complete.
 | `tools/check_dict.py` | Gate: every vocabulary slot resolves to a complete entry. |
 | `tools/check_ielts.py` | Gate: the knowledge base's audit checklist, enforced. |
 | `tools/test_marking.js` | Gate: the marking engine, against the published rules. |
+| `tools/check_write.js` | Gate: every unit's model satisfies the checklist that unit prints. |
 | `tools/build.py` | Generator: markdown → the 98-page site. |
 | `tools/assets/` | `app.css` and `app.js`, copied into the build. |
 | `docs/` | Generated output. GitHub Pages serves this directory. |
@@ -55,15 +59,17 @@ python3 tools/build.py --check    # parse and report counts, write nothing
 python3 tools/check_dict.py       # gate: every vocabulary slot resolves
 python3 tools/check_ielts.py      # gate: every IELTS claim is legal and cited
 node tools/test_marking.js        # gate: the marking engine obeys the published rules
+node tools/check_write.js         # gate: each model satisfies its own checklist (needs docs/)
 ```
 
 Requires `markdown` (`pip install markdown`). Edit the markdown in `units/`,
 re-run the build, commit `docs/`. There is no CI step — a push publishes, so
-run all three gates before you push.
+run all four gates before you push. `check_write.js` reads the built pages, so
+run it after `build.py` rather than before.
 
 ## Marked tasks, one play, and strands
 
-Three directives carry the parts of IELTS that are a *system* rather than a
+Five directives carry the parts of IELTS that are a *system* rather than a
 label. Each replaces an instruction the learner used to be trusted to follow
 with a mechanic the page enforces.
 
@@ -150,6 +156,82 @@ across a reload, or "plays once" would only be a suggestion.
 
 The voice is the device's speech synthesiser and the page says so plainly —
 what this trains is the shape of the task, not the ear.
+
+### `:::write` — the writing task is attempted on the page, and counted
+
+```markdown
+::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours."
+- [ ] 80–100 words ~ words
+- [ ] One paragraph, no bullet points ~ para:1
+- [ ] Linking words: *First, Second, Third* ~ all first/second/third
+- [ ] At least **five** words from the Lesson 2 vocabulary table ~ vocab:5
+- [ ] A topic sentence and a closing sentence
+:::
+```
+
+Writing was the last part of this course that was still a printed worksheet: a
+model, a plan table, tick-boxes and six blank underscore lines. Nothing about
+it was committed and nothing about it was counted — and the `:::thread` check
+sitting beside it asked the learner to type *"articles supplied \_ of \_"*
+about a paragraph the page had never seen.
+
+Now there is a text box, a live word count against the declared range, and a
+checker behind every checklist line a machine can honestly decide. A line with
+no ` ~ ` check keeps its tick-box and stays the learner's own judgement,
+because "a topic sentence and a closing sentence" is not decidable by counting
+and pretending otherwise would be the overclaim the knowledge base blocks.
+Across the twelve units, 70 of 92 lines are counted.
+
+| Check | What it decides |
+| --- | --- |
+| `words` | the count falls inside the declared range |
+| `vocab:N` | at least N distinct headwords from **this unit's** table, matched across the dictionary's own word families and regular inflections |
+| `any:N a/b/c` | at least N hits in total from a closed list |
+| `distinct:N a/b/c` | at least N *different* members of that list |
+| `all a/b/c` · `none a/b/c` | every member present · no member present |
+| `para:N` · `paras:N` | exactly N paragraphs and no bullet list · at least N |
+| `re:N pattern` | at least N matches of a pattern |
+
+What may be counted is bounded by `09` **D9** and §5.3, the defensible set:
+obligatory-context accuracy on named structures, and the presence or absence of
+named discourse moves. **No total is computed and nothing is scored.** Each
+line reports what it found; no line is added to another, there is no
+percentage, and there is no band — `09` **A2** and **D3**. The panel also says
+in as many words that a rising error rate beside a growing range is what this
+stage of progress looks like (**E3**).
+
+The gate refuses a `:::write` whose checklist decides nothing at all. A list of
+tick-boxes beside a text box is the unanchored self-assessment the construct
+exists to replace — `09` **E8** wants a self-report paired with an objective
+anchor, and §4.4 is why: learners cannot self-assess accurately.
+
+`node tools/check_write.js` then runs each unit's **own model** through its
+**own checklist**. That is not a hypothetical: ten of the twelve models failed
+the list printed under them — one was 101 words against an 80–100 limit, and
+eight used fewer of the unit's vocabulary than they demanded. A model that
+would not tick the box teaches that the box does not matter.
+
+### `:::clock` — one clock over the reading, and it does not stop
+
+```markdown
+::: clock mins="18" for="18 minutes for the text and every exercise below it."
+:::
+```
+
+`09` **C7**, from `04` §1.1: the Reading test runs one clock covering
+everything, **including the time spent writing the answers down**. It was the
+last Group C rule this course left to the learner's discretion, in prose —
+*"give yourself three minutes"* — which is precisely the arrangement every
+other rule here was built to replace. One clock per reading block; when it
+runs out the unfinished reading answers stop taking input, exactly as the
+listening review window does, and Check stays live so what is written can
+still be marked.
+
+The build fails if a lesson with `skill="reading"` tasks does not carry exactly
+one, or if a clock is declared where there is nothing to time. Each is sized
+from the work it covers — the passage at 120 words per minute plus a minute a
+question — not from IELTS's own pace over a text a grade-8 reader could not
+read at all.
 
 ### `:::thread` — a strand that says it recurs, and does
 

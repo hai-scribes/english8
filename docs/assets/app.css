@@ -440,23 +440,64 @@ table.reg td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;whi
    Marked tasks, single-play listening, strand checks
    The three constructs that make an exercise an attempt rather than a page.
    ========================================================================= */
-.task,.player,.thread{margin:1.3rem 0 .2rem;padding:.95rem 1.1rem .85rem;
+.task,.player,.thread,.write,.clock{margin:1.3rem 0 .2rem;padding:.95rem 1.1rem .85rem;
   background:var(--raised);border:1px solid var(--rule);border-radius:var(--r-lg)}
-.t-h,.p-h,.th-h{display:flex;align-items:center;gap:.45rem;flex-wrap:wrap;margin-bottom:.5rem}
-.t-k,.p-k,.th-k{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.13em;
+.t-h,.p-h,.th-h,.w-h,.c-h{display:flex;align-items:center;gap:.45rem;flex-wrap:wrap;
+  margin-bottom:.5rem}
+.t-k,.p-k,.th-k,.w-k,.c-k{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.13em;
   text-transform:uppercase;color:var(--clay);font-weight:600}
 .t-k::before{content:"✓ "}
 .p-k::before{content:"♪ "}
 .th-k::before{content:"↻ "}
-.t-t,.p-t,.th-t{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.05em;
+.w-k::before{content:"✎ "}
+.c-k::before{content:"◷ "}
+.t-t,.p-t,.th-t,.w-c,.c-t{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.05em;
   padding:.1rem .42rem;border-radius:3px;background:var(--teal-wash);color:var(--teal)}
 .t-ask{margin:0 0 .5rem;font-size:.95rem}
 .t-lim{margin:.2rem 0 .5rem;font-family:var(--f-mono);font-size:.76rem;letter-spacing:.04em;
   color:var(--clay);background:var(--clay-wash);padding:.4rem .6rem;border-radius:var(--r)}
 .t-rules{margin:.2rem 0 .55rem;padding-left:1.05rem;font-size:.82rem;color:var(--muted)}
 .t-rules li{margin:.1rem 0}
-.t-w,.t-conf,.p-mode,.p-say,.th-r{margin:.35rem 0 .55rem;font-size:.84rem;color:var(--muted)}
+.t-w,.t-conf,.p-mode,.p-say,.th-r,.th-a,.c-say{margin:.35rem 0 .55rem;font-size:.84rem;
+  color:var(--muted)}
 .t-conf{background:var(--sunk);padding:.5rem .65rem;border-radius:var(--r)}
+
+/* Writing — the committed attempt. C9's live word count, and the checklist
+   lines a machine can decide reported beside the ones it cannot. */
+.w-ask{margin:0 0 .6rem;font-size:.95rem}
+.w-box{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.95rem;
+  line-height:1.7;padding:.7rem .8rem;min-height:11rem;resize:vertical;
+  border:1px solid var(--rule);border-bottom:2px solid var(--clay);border-radius:var(--r);
+  background:var(--surface);color:var(--ink)}
+.w-box:focus{outline:2px solid var(--teal);outline-offset:1px}
+.w-bar{display:flex;align-items:baseline;gap:.6rem;margin:.4rem 0 .2rem;
+  font-family:var(--f-mono);font-size:.76rem;font-variant-numeric:tabular-nums}
+.w-n{color:var(--muted)}
+.w-n[data-state="in"]{color:var(--green);font-weight:600}
+.w-n[data-state="over"],.w-n[data-state="under"]{color:var(--clay)}
+.w-r{margin-left:auto;color:var(--faint)}
+.w-lh{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);margin:.9rem 0 .35rem}
+.w-list{list-style:none;margin:.2rem 0 .5rem;padding:0}
+.w-i{display:flex;align-items:flex-start;gap:.5rem;margin:.3rem 0;font-size:.92rem;
+  line-height:1.55}
+.w-i input{margin-top:.32rem;flex:none}
+.w-i[data-auto="1"] .w-t{color:var(--ink)}
+.w-i[data-ok="1"] .w-f{color:var(--green)}
+.w-i[data-ok="0"] .w-f{color:var(--clay)}
+.w-f{margin-left:auto;flex:none;font-family:var(--f-mono);font-size:.72rem;
+  font-variant-numeric:tabular-nums;color:var(--faint);text-align:right}
+.w-note{margin:.6rem 0 0;padding-top:.5rem;border-top:1px dotted var(--rule);
+  font-size:.78rem;color:var(--muted);line-height:1.55}
+.w-note.quiet{border-top:0;padding-top:0;color:var(--faint)}
+
+/* One reading clock, covering everything (C7). */
+.clock[data-running="1"]{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-wash)}
+.clock[data-done="1"]{border-color:var(--clay)}
+.c-ctl{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin:.6rem 0 .1rem}
+.c-state{font-family:var(--f-mono);font-size:.82rem;color:var(--teal);
+  font-variant-numeric:tabular-nums}
+.task[data-timeup="1"]{border-color:var(--clay)}
 
 .task ol.items{margin:.6rem 0 .2rem;padding-left:1.5rem}
 .task .i{margin:.55rem 0;padding:.35rem 0 .35rem .1rem}

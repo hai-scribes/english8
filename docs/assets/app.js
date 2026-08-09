@@ -1014,7 +1014,10 @@ function calSave(unit, tally){
   } catch(e){}
 }
 
-function calibrationLine(marks, conf, unit){
+/* `record` is false when an already-marked task is being repainted after a
+   reload. The line still reads the unit total, but adding to it a second time
+   would inflate the running tally every time the page was refreshed. */
+function calibrationLine(marks, conf, unit, record){
   const g = { 1:{n:0,ok:0}, 0:{n:0,ok:0} };
   marks.forEach((m, i) => {
     const c = conf[i];
@@ -1028,7 +1031,7 @@ function calibrationLine(marks, conf, unit){
     const was = calTally(unit);
     tot = { 1:{ n:was[1].n + g[1].n, ok:was[1].ok + g[1].ok },
             0:{ n:was[0].n + g[0].n, ok:was[0].ok + g[0].ok } };
-    calSave(unit, tot);
+    if (record !== false) calSave(unit, tot);
   }
   const pct = s => s.n ? Math.round(s.ok / s.n * 100) : null;
   const hi = pct(tot[1]), lo = pct(tot[0]);
@@ -1102,16 +1105,21 @@ function initTasks(){
       gate();
     }
 
-    check.addEventListener("click", () => {
-      const answers = t.items.map((it, i) => {
-        const li = $('.i[data-i="' + i + '"]', root);
-        if (it.opts){
-          const on = $("input:checked", li);
-          return on ? on.value : "";
-        }
-        const box = $(".i-in", li);
-        return box ? box.value : "";
-      });
+    const read = () => t.items.map((it, i) => {
+      const li = $('.i[data-i="' + i + '"]', root);
+      if (it.opts){
+        const on = $("input:checked", li);
+        return on ? on.value : "";
+      }
+      const box = $(".i-in", li);
+      return box ? box.value : "";
+    });
+
+    /* An attempt that a refresh wipes is not committed, it is a suggestion.
+       The recording already remembers that its one play is spent; the task it
+       belongs to has to remember the same way, or F5 is a retry button and
+       every rule in the box above is optional. */
+    const settle = (answers, confArr, record) => {
       const marks = markTask(t, answers);
       marks.forEach((m, i) => {
         const li = $('.i[data-i="' + i + '"]', root);
@@ -1134,7 +1142,7 @@ function initTasks(){
         /* A rating changed after seeing the key measures nothing, so the
            toggles close with the task. */
         $$(".i-conf button", root).forEach(x => { x.disabled = true; });
-        const html = calibrationLine(marks, conf, DATA.unit);
+        const html = calibrationLine(marks, confArr, DATA.unit, record);
         $(".t-foot", root).insertAdjacentHTML("afterend", html || '<div class="t-cal">'
           + '<b>Calibration</b><p>You did not mark how sure you were, so there is '
           + 'nothing to compare. Next time mark each answer before you check — on '
@@ -1142,10 +1150,42 @@ function initTasks(){
       }
       check.disabled = true;
       root.dataset.done = "1";
-      TASKS[t.id] = { score: score, of: marks.length, at: Date.now() };
+      return marks;
+    };
+
+    check.addEventListener("click", () => {
+      const answers = read();
+      const marks = settle(answers, conf, true);
+      TASKS[t.id] = { score: marks.filter(m => m.ok).length, of: marks.length,
+                      at: Date.now(), given: answers, conf: conf.slice() };
       saveTasks();
       document.dispatchEvent(new CustomEvent("en8:task-done", { detail:{ id:t.id } }));
     });
+
+    const was = TASKS[t.id];
+    if (was && was.given){
+      /* Put the answers back before re-marking, so the learner sees what they
+         actually wrote rather than an empty form with a score under it. */
+      t.items.forEach((it, i) => {
+        const li = $('.i[data-i="' + i + '"]', root);
+        const given = was.given[i] || "";
+        if (it.opts){
+          const on = $('input[value="' + String(given).replace(/"/g, '\\"') + '"]', li);
+          if (on) on.checked = true;
+        } else {
+          const box = $(".i-in", li);
+          if (box) box.value = given;
+        }
+      });
+      (was.conf || []).forEach((c, i) => {
+        if (c !== 0 && c !== 1) return;
+        conf[i] = c;
+        const li = $('.i[data-i="' + i + '"]', root);
+        if (li) $$(".i-conf button", li).forEach(
+          x => x.classList.toggle("on", Number(x.dataset.conf) === c));
+      });
+      settle(was.given, conf, false);
+    }
   });
 }
 
@@ -1283,6 +1323,212 @@ function initAudio(){
    and E1 requires progress to be reported as. The reading rule underneath it
    matters more than the number: at A2->B1 a fraction that falls while range
    grows is the expected signature of progress, not regression (E3). */
+/* ---------------- writing: a committed attempt ----------------------------
+   The last place in this course that was still a printed worksheet. The page
+   held a model, a plan table, a list of tick-boxes and six blank lines, and
+   the strand check beside it asked the learner to type "supplied _ of _"
+   about a paragraph nothing had ever read.
+
+   `09` E8 wants a self-report anchored to something measured, and §4.4 says
+   why: learners cannot self-assess accurately. So every checklist line a
+   machine can honestly decide is decided here, against the learner's own
+   text, and the rest keep their tick-box and say so.
+
+   What is decidable is bounded by D9 and §5.3 -- obligatory-context accuracy
+   on named structures, and the presence or absence of named discourse moves.
+   Counting closed lists and words is inside that set. A holistic judgement is
+   not, a score is not, and a band is not (A2, D3). Nothing below computes one:
+   each line reports what it found, and no line is added to another. */
+const W_KEY = "en8:write:v1";
+let WRITE = (() => {
+  try { return JSON.parse(localStorage.getItem(W_KEY)) || {}; } catch(e){ return {}; }
+})();
+function saveWrite(){
+  try { localStorage.setItem(W_KEY, JSON.stringify(WRITE)); } catch(e){}
+}
+
+/* The official word rule, and the same one the marking engine uses: split on
+   whitespace, and a hyphenated word counts as one (03 §4). */
+const wordsIn = s => String(s).trim().split(/\s+/).filter(Boolean);
+
+const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+/* A closed list -> one boundary-anchored matcher. Members may be phrases
+   ("hardly ever"), so inner spaces match any run of whitespace. */
+function listRe(list){
+  const alts = list.slice().sort((a, b) => b.length - a.length)
+                   .map(x => reEsc(x).replace(/\s+/g, "\\s+"));
+  return new RegExp("(?:^|[^A-Za-z'])(" + alts.join("|") + ")(?![A-Za-z'])", "gi");
+}
+function hits(text, list){
+  const re = listRe(list), seen = [];
+  let m;
+  while ((m = re.exec(text))){
+    seen.push(m[1].toLowerCase().replace(/\s+/g, " "));
+    re.lastIndex = m.index + m[1].length;   // allow adjacent members to match
+  }
+  return seen;
+}
+
+/* One checklist line -> {ok, found, need, label}. `found` is a count of a
+   named feature, never a mark: nothing sums these and nothing grades them. */
+function runCheck(c, text, p){
+  const paras = text.trim().split(/\n\s*\n/).filter(x => x.trim());
+  const bulleted = /^\s*([-*•]|\d+[.)])\s+/m.test(text);
+  switch (c.k){
+    case "words": {
+      const n = wordsIn(text).length;
+      return { ok: n >= p.lo && n <= p.hi, found: n + " words",
+               need: p.lo + "–" + p.hi };
+    }
+    case "vocab": {
+      const got = [];
+      for (const w of Object.keys(p.vocab || {}))
+        if (hits(text, p.vocab[w]).length) got.push(w);
+      return { ok: got.length >= c.n, found: got.length + " used",
+               need: c.n + " needed", list: got };
+    }
+    case "any": {
+      const n = hits(text, c.l).length;
+      return { ok: n >= c.n, found: n + " found", need: c.n + " needed" };
+    }
+    case "distinct": {
+      const set = new Set(hits(text, c.l));
+      return { ok: set.size >= c.n, found: set.size + " different",
+               need: c.n + " needed", list: Array.from(set) };
+    }
+    case "all": {
+      const set = new Set(hits(text, c.l));
+      const missing = c.l.filter(x => !set.has(x));
+      return { ok: !missing.length,
+               found: missing.length ? "missing: " + missing.join(", ") : "all there" };
+    }
+    case "none": {
+      const set = Array.from(new Set(hits(text, c.l)));
+      return { ok: !set.length, found: set.length ? "found: " + set.join(", ") : "none" };
+    }
+    case "para": {
+      const ok = paras.length === c.n && !bulleted;
+      return { ok, found: bulleted ? "a list, not prose"
+                                   : paras.length + (paras.length === 1 ? " paragraph"
+                                                                        : " paragraphs") };
+    }
+    case "paras":
+      return { ok: paras.length >= c.n, found: paras.length + " paragraphs",
+               need: c.n + " needed" };
+    case "re": {
+      let n = 0;
+      try { n = (text.match(new RegExp(c.p, "gi")) || []).length; } catch(e){ return null; }
+      return { ok: n >= c.n, found: n + " found", need: c.n + " needed" };
+    }
+  }
+  return null;
+}
+
+function initWrite(){
+  (DATA.write || []).forEach(p => {
+    const root = document.querySelector('[data-write="' + p.id + '"]');
+    if (!root) return;
+    const box = $(".w-box", root), count = $(".w-n", root);
+    const rows = $$(".w-i", root);
+
+    const rec = WRITE[p.id] || { text:"", ticks:{} };
+    box.value = rec.text || "";
+    rows.forEach(li => {
+      if (li.dataset.auto) return;
+      const cb = $("input", li), i = li.dataset.i;
+      cb.checked = !!(rec.ticks || {})[i];
+      cb.addEventListener("change", () => {
+        rec.ticks = rec.ticks || {};
+        rec.ticks[i] = cb.checked;
+        WRITE[p.id] = rec; saveWrite();
+      });
+    });
+
+    const paint = () => {
+      const text = box.value;
+      const n = wordsIn(text).length;
+      /* C9: the live word count the real Writing screen has. It reports the
+         number and the range; it does not stop you and it does not judge. */
+      count.textContent = n + (n === 1 ? " word" : " words");
+      count.dataset.state = !n ? "" : (n < p.lo ? "under" : n > p.hi ? "over" : "in");
+
+      rows.forEach(li => {
+        const c = p.items[Number(li.dataset.i)].c;
+        if (!c) return;
+        const r = runCheck(c, text, p);
+        const cb = $("input", li), out = $(".w-f", li);
+        if (!r || !text.trim()){ cb.checked = false; out.textContent = ""; li.dataset.ok = ""; return; }
+        cb.checked = !!r.ok;
+        li.dataset.ok = r.ok ? "1" : "0";
+        out.textContent = r.found + (r.ok || !r.need ? "" : " · " + r.need);
+        out.title = r.list && r.list.length ? r.list.join(", ") : "";
+      });
+
+      rec.text = text;
+      WRITE[p.id] = rec; saveWrite();
+    };
+    box.addEventListener("input", paint);
+    paint();
+  });
+}
+
+/* ---------------- the reading clock ---------------------------------------
+   C7, and the last Group C rule this course left to the learner's discretion:
+   one clock covering everything, the typing included (04 §1.1). It used to be
+   prose -- "give yourself three minutes" -- which is the arrangement every
+   other rule here exists to replace. When it runs out the unfinished reading
+   answers stop taking input, exactly as the listening review window does;
+   Check stays live, so whatever is written can still be marked. */
+function initClock(){
+  (DATA.clock || []).forEach(p => {
+    const root = document.querySelector('[data-clock="' + p.id + '"]');
+    if (!root) return;
+    const btn = $(".c-start", root), state = $(".c-state", root);
+    const KEY = "en8:clock:" + p.id;
+    /* Everything BELOW the clock, which is what the clock says it covers --
+       not just the tasks labelled `reading`. The synonym-search that follows
+       the passage is inside the reading block too, and a clock that claims to
+       cover an exercise it does not stop is the loose instruction this
+       replaced. Anything above the clock was never part of the timing. */
+    const covered = () =>
+      $$('[data-role="task"]').filter(x =>
+        root.compareDocumentPosition(x) & Node.DOCUMENT_POSITION_FOLLOWING);
+
+    const timeUp = () => {
+      state.innerHTML = "<b>Time.</b> Check what you have.";
+      root.dataset.done = "1";
+      covered().forEach(x => {
+        if (x.dataset.done === "1") return;
+        $$(".i-in, .i-opt input", x).forEach(y => { y.disabled = true; });
+        x.dataset.timeup = "1";
+      });
+    };
+
+    let spent = false;
+    try { spent = !!JSON.parse(localStorage.getItem(KEY) || "null"); } catch(e){}
+    if (spent){ btn.disabled = true; state.innerHTML = "<b>Already run.</b> One clock, once."; }
+
+    btn.addEventListener("click", () => {
+      if (btn.disabled) return;
+      btn.disabled = true;
+      try { localStorage.setItem(KEY, "true"); } catch(e){}
+      root.dataset.running = "1";
+      let left = p.secs;
+      const show = () => {
+        const m = Math.floor(left / 60), s = left % 60;
+        state.textContent = m + ":" + String(s).padStart(2, "0") + " left";
+      };
+      show();
+      const iv = setInterval(() => {
+        left--;
+        if (left <= 0){ clearInterval(iv); root.dataset.running = ""; timeUp(); return; }
+        show();
+      }, 1000);
+    });
+  });
+}
+
 function initThreads(){
   $$('[data-role="thread"][data-stage="check"]').forEach(root => {
     const got = $('[data-th="got"]', root), all = $('[data-th="all"]', root),
@@ -1316,6 +1562,8 @@ function boot(){
   paintReview();
   initTasks();
   initAudio();
+  initClock();
+  initWrite();
   initThreads();
   initSpeakButtons();
   onVoices = () => { initSpeakButtons(); };

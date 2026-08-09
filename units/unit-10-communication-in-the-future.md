@@ -64,14 +64,16 @@ Answer in full sentences.
 
 ### 1.3 Notice the grammar
 
-Look at the **bold** words. Write **place**, **time**, or **possessive**.
+Look at the **bold** words.
 
-1. The museum is **opposite** the old post office. → _______
-2. The exhibition opens **at** nine. → _______
-3. Is this ticket **yours**? → _______
-4. That one's **mine**. → _______
-5. I'm free **in** the morning. → _______
-6. The phone is **under** the chair. → _______
+::: task skill="course" type="choice" opts="place|time|possessive" ask="Is the bold word telling you **where**, **when**, or **whose**?"
+- The museum is **opposite** the old post office. = place
+- The exhibition opens **at** nine. = time
+- Is this ticket **yours**? = possessive
+- That one's **mine**. = possessive
+- I'm free **in** the morning. = time
+- The phone is **under** the chair. = place
+:::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **giới từ chỉ nơi chốn
 > và thời gian** (*in, on, at, under, opposite…*) và **đại từ sở hữu**
@@ -396,6 +398,9 @@ _______________________________________________
 
 ### Reading — *Will we talk without speaking?*
 
+::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+:::
+
 *An interview from a school magazine. Linh, 14, talks to Dr Bảo, a brain
 researcher.*
 
@@ -458,7 +463,7 @@ researcher.*
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the interview that means each of these. Give yourself **three minutes** for all four — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the interview that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - changes words from one form or language into another = translate/translates
 - a system of connected computers, devices or people = network
 - a movement of the hand, head or face that carries meaning = gesture
@@ -545,14 +550,18 @@ September.
 - In Room Four you can stand inside (a) a clay tablet (b) a letter box (c) a holographic image of yourself = c
 :::
 
-### 6.2 Listen and complete
+### 6.2 Note completion
 
-::: task skill="listening" type="sentence-completion" words="1+number"
-- The exhibition has ___ rooms. = four/4
-- The wooden letter box stood outside a village post office for ___ years. = ninety/90
-- Room Three is the ___ room, and it is the loudest one. = electric
-- In Room Four the walls are ___ . = screens
-- The best answers go on the website in ___ . = September
+The notes below are the shape this type always takes: headings and fragments,
+never full sentences. Fill each gap **as you listen** — there is no transfer
+time at the end.
+
+::: task skill="listening" type="completion" words="1+number"
+- Number of rooms in the exhibition: ___ = four/4
+- Room One — a message carried by drum took ___ = minutes
+- Room Two — the wooden letter box stood outside a post office for ___ years = ninety/90
+- Room Three — guides talk at eleven o'clock and again at ___ = three/3
+- Room Four — the walls are ___ = screens
 :::
 
 ::: bridge name="Open → stand → close, out loud, with an audible pause at each turn" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
@@ -581,13 +590,14 @@ what you see and hear, not only what you think.
 
 #### Model paragraph — read this first
 
-> Video calls have changed the way my family talks. My aunt lives in Australia,
-> so every Sunday at eight in the evening her face appears on our kitchen
-> tablet, inside a small bright square. Behind her I can see a window and a
-> green garden that is still wet with morning rain. She waves; my grandmother
-> waves back and leans too close to the screen. Sometimes the picture freezes
-> and her voice arrives a second late, but nobody minds. What I like most is her
-> smile. It is exactly like my mother's, only eight thousand kilometres away.
+> Video calls have changed the way my family communicates. My aunt lives in
+> Australia, so at the weekend, always in the evening, her face appears on the
+> tablet next to our kitchen window. Behind her a green garden is still wet
+> with rain: in the morning it is already tomorrow there. She waves; my
+> grandmother copies
+> the gesture and leans too close to the screen. Sometimes the connection drops
+> and her voice arrives a second late, but nobody minds. Her laugh is so like
+> my mother's that I can never tell whether it is hers or ours.
 
 *(97 words)*
 
@@ -630,23 +640,15 @@ prepositions second; nobody has checked whether it works.
 ::: thread id="articles" stage="check"
 :::
 
-#### Checklist — tick before you finish
-
-- [ ] 80–100 words (count them)
-- [ ] At least **three** prepositions of time, correct (*in / on / at*)
-- [ ] At least **two** prepositions of place (*on, behind, next to, in front of…*)
-- [ ] At least **one** possessive pronoun (*mine, hers, ours, theirs*) with **no**
-      noun after it
-- [ ] At least **four** words from the Lesson 2 vocabulary table
+::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — **80–100 words** describing one way you communicate. What you see and hear, not only what you think."
+- [ ] 80–100 words ~ words
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] At least **three** time phrases with *in / on / at* ~ any:3 in the morning/in the afternoon/in the evening/at night/at the weekend/at weekends/on monday/on tuesday/on wednesday/on thursday/on friday/on saturday/on sunday/at the moment/in the future/at midnight/at noon/on time/in time/at lunchtime/on my birthday
+- [ ] At least **two** prepositions of place ~ any:2 behind/next to/in front of/under/above/below/beside/near/between/opposite/on the left/on the right/on the screen/on the wall/on the table/at the top/at the bottom
+- [ ] At least **one** possessive pronoun ~ any:1 mine/hers/his own/ours/theirs/yours
+- [ ] …and no noun after it — *that phone is mine*, never *mine phone*
 - [ ] One sentence about a sound, one about a picture
-
-#### Now write yours
-
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
+:::
 
 ---
 
@@ -699,6 +701,15 @@ place or time; three are possessive forms.
 > fine — the problem was ours. Its true: our network is slow in the evening.
 > Next time we will call in Sunday morning instead.
 
+::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
+- Error 1 = at seven o'clock/at ~ clock time takes *at*
+- Error 2 = on the sofa/on ~ a surface takes *on*
+- Error 3 = yours ~ a possessive pronoun takes no apostrophe
+- Error 4 = her camera/her ~ *hers* takes no noun after it
+- Error 5 = It's true/it is true ~ *it's* = *it is*; *its* is the possessive
+- Error 6 = on sunday morning/on ~ a named day takes *on*
+:::
+
 ### Project — A message across a hundred years
 
 Build a two-page display comparing how a message travelled in **1925**, in
@@ -744,8 +755,6 @@ entrance to the museum is between the bookshop and the café. 3. Because Minh's
 phone is much older than the one under the chair. 4. They will meet at the gate,
 in front of the big screen, at nine o'clock. 5. She admits that she is never
 late in the morning but that she is often late at night.
-
-**1.3** 1. place 2. time 3. possessive 4. possessive 5. time 6. place
 
 ### Lesson 2
 
@@ -802,22 +811,3 @@ picture.
 
 ### Lesson 7
 
-**7.4** In order of appearance:
-1. *in seven o'clock* → **at** seven o'clock *(clock time takes at)*
-2. *sat in the sofa* → sat **on** the sofa
-3. *your's* → **yours** *(no apostrophe)*
-4. *hers camera* → **her** camera *(a possessive pronoun takes no noun)*
-5. *Its true* → **It's** true *(= it is)*
-6. *call in Sunday morning* → call **on** Sunday morning *(a named day)*
-
-**Corrected paragraph:** *My family has a video call every Sunday at seven
-o'clock in the evening. My aunt lives in Sydney, so morning for her is night for
-us. Last week the connection was terrible. My little brother sat on the sofa
-with his tablet, and my cousin held her phone in front of the window, so we saw
-only her hair. "Is this camera yours?" my father asked. She laughed and said her
-camera was fine — the problem was ours. It's true: our network is slow in the
-evening. Next time we will call on Sunday morning instead.*
-
-**Project** Answers will vary. Check: the table has all three columns filled,
-the write-up is 100–120 words, and it contains at least four prepositions of
-time and two possessive pronouns used with no noun after them.

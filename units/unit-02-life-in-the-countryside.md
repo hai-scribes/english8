@@ -413,6 +413,9 @@ to each question. Use a comparative adverb in at least two of your answers.
 
 *An article by Quang, 14, from Ha Noi.*
 
+::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+:::
+
 > My grandmother has lived in the same village in Ha Nam for sixty-one years.
 > She has never wanted to leave it, and after three weeks there last summer I
 > began to understand why.
@@ -459,7 +462,7 @@ to each question. Use a comparative adverb in at least two of your answers.
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word in the article that means each of these. Give yourself **two minutes** for all four — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word in the article that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - a curve in a river = bend
 - doing nothing, not busy = idle
 - moves in a great hurry = rushes
@@ -543,13 +546,19 @@ ever missed the city.
 - At the end, Hoa says she (a) definitely wants to move back (b) is not sure (c) hates the city = b
 :::
 
-### 6.2 Listen and complete
+### 6.2 Note completion
 
-::: task skill="listening" type="sentence-completion" words="2+number"
-- Hoa moved from Ha Noi to a village in ___ . = Thanh Hoa
-- Her class has ___ students. = nineteen/19
-- Her neighbours are up before ___ during the harvest. = five/5
-- Her grandmother is ___ years old. = eighty/80
+The notes below are the shape this type always takes: headings and fragments,
+never full sentences. Fill each gap **as you listen** — there is no transfer
+time at the end.
+
+::: task skill="listening" type="completion" words="2+number"
+- Moved from Ha Noi to a village in ___ = Thanh Hoa
+- Length of time since the move: ___ years = two/2
+- Journey to school: a ___ walk along the stream = ten-minute
+- Number of students in her class: ___ = nineteen/19
+- During the harvest, neighbours are up before ___ = five/5
+- Grandmother's age: ___ = eighty/80
 :::
 
 ### Writing — A paragraph about rural life
@@ -561,14 +570,14 @@ adverbs.
 #### Model paragraph — read this first
 
 > I have spent every summer of my life in my grandparents' village, so I know
-> it well. What I like most is the space. In the city I walk more slowly than
-> everyone else, but in the village nobody hurries at all. The air smells of
-> rice and smoke, and at night I sleep far better there than I do at home.
-> People also greet you more warmly. What I dislike is the distance: the
-> nearest shop is three kilometres away, so I have to plan much more carefully.
-> Even so, I always leave more sadly than I arrive.
+> it well. What I like most is the space: vast paddy fields, and a stream
+> behind the barn where the buffalo drink. In the city I walk more slowly than
+> everyone; in the village nobody hurries. At night I sleep far better there
+> than at home, because it is so peaceful. What I dislike is
+> the distance: the nearest shop is three kilometres away, so I have to plan
+> much more carefully. Even so, I always leave more sadly than I arrive.
 
-*(99 words)*
+*(97 words)*
 
 #### Plan it — 5 questions your paragraph has to answer
 
@@ -621,23 +630,15 @@ inference below.
 > khác biệt ngang nhau. Tiêu chí chấm yêu cầu *làm nổi bật*, không phải *liệt kê*.
 :::
 
-#### Checklist — tick before you finish
-
-- [ ] 80–100 words (count them)
-- [ ] **One** paragraph, not several
-- [ ] At least **three** comparative adverbs, each with **than** or a clear comparison
-- [ ] *-er* on short adverbs, *more* on *-ly* adverbs — never both
-- [ ] At least **four** words from the Lesson 2 vocabulary table
+::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — **one** paragraph of **80–100 words** on what you like and dislike about life in the countryside."
+- [ ] 80–100 words ~ words
+- [ ] **One** paragraph, not several ~ para:1
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] At least **three** comparative adverbs ~ any:3 more quickly/more slowly/more carefully/more easily/more often/more cheaply/more clearly/more loudly/better/worse/harder/faster/earlier/later/longer/closer/higher/lower/further/farther
+- [ ] Never both markers on one adverb — no *more faster*, no *more better* ~ none more faster/more better/more worse/more harder/more earlier/more later/more longer/more closer/more higher/more lower/more further
+- [ ] Each comparative has **than** or a comparison the reader can see
 - [ ] Both a like **and** a dislike — the task asks for both
-
-#### Now write yours
-
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
+:::
 
 ---
 
@@ -685,6 +686,15 @@ errors; one is a subject–verb agreement slip.
 > and she works more hard all day. She rides her bicycle more fast than I can
 > run, and she speaks English more good than her teacher expects. In the
 > evening she studies more careful than anybody in her class.
+
+::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
+- Error 1 = lives ~ *live* → *lives* — subject–verb agreement
+- Error 2 = earlier ~ *more early* → *earlier* — a short adverb takes *-er*
+- Error 3 = harder ~ *more hard* → *harder*
+- Error 4 = faster ~ *more fast* → *faster*
+- Error 5 = better ~ *more good* → *better* — irregular
+- Error 6 = more carefully ~ *more careful* → *more carefully* — it modifies a verb
+:::
 
 ### Project — A village profile
 
@@ -778,15 +788,3 @@ adverb with *than*.
 
 ### Lesson 7
 
-**7.4**
-1. live → **lives** *(subject–verb agreement)*
-2. more early → **earlier**
-3. more hard → **harder**
-4. more fast → **faster**
-5. more good → **better**
-6. more careful → **more carefully**
-
-**Corrected paragraph:** *My cousin lives in a village near Ninh Binh. She gets
-up earlier than me and she works harder all day. She rides her bicycle faster
-than I can run, and she speaks English better than her teacher expects. In the
-evening she studies more carefully than anybody in her class.*

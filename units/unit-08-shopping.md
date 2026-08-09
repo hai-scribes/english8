@@ -438,6 +438,9 @@ the tables above, and one adverb of frequency.
 
 *An article about how shopping centres changed one Vietnamese city.*
 
+::: clock mins="19" for="19 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+:::
+
 > Thirty years ago, my grandmother did all her shopping at one place: the wet
 > market at the end of our street. She went every morning, she always paid in
 > cash, and she knew every vendor by name. Today my little brother has never
@@ -483,7 +486,7 @@ the tables above, and one adverb of frequency.
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. Give yourself **three minutes** for all five — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - an open-air market selling fresh food = wet market
 - an area with many places to eat = food court
 - not changing; the same for everybody = fixed
@@ -674,24 +677,16 @@ attacks the grammar half only. Nothing here claims to cover the other.
 ::: thread id="articles" stage="check"
 :::
 
-#### Checklist — tick before you finish
-
-- [ ] 80–100 words (count them)
+::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours. One paragraph on the **advantages** *or* the **disadvantages** of **one** kind of shopping."
+- [ ] 80–100 words ~ words
+- [ ] One paragraph, no bullet points ~ para:1
+- [ ] Linking words: *First, Second, Third* ~ all first/second/third
+- [ ] At least **five** words from the Lesson 2 vocabulary table ~ vocab:5
+- [ ] At least **three** adverbs of frequency ~ any:3 always/usually/often/sometimes/rarely/never/hardly ever/seldom/occasionally/frequently
+- [ ] Each of those adverbs is in the right place — before the main verb, after *be*
 - [ ] **One** side only — advantages *or* disadvantages
 - [ ] A topic sentence and a closing sentence
-- [ ] At least **three** adverbs of frequency, each in the correct position
-- [ ] At least **five** words from the Lesson 2 vocabulary table
-- [ ] Linking words: *First, Second, Third*
-- [ ] One paragraph, no bullet points
-
-#### Now write yours
-
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
+:::
 
 ---
 
@@ -746,6 +741,16 @@ scheduled future events.
 > shopping centre will open at nine, and the big sale will start at ten. Always
 > I go with her when there is a discount, but I hardly ever don't find anything
 > in my size.
+
+::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
+- Error 1 = is always ~ an adverb of frequency goes after *be*
+- Error 2 = goes there twice a week/there twice a week ~ a frequency expression goes at the end
+- Error 3 = never pays ~ double negative — *never* is already negative
+- Error 4 = I always go ~ *always* cannot start the sentence
+- Error 5 = opens ~ a fixed opening time takes the present simple
+- Error 6 = starts ~ a scheduled event takes the present simple
+- Error 7 = hardly ever find ~ double negative — *hardly ever* is already negative
+:::
 
 ### Project — A shopping survey
 
@@ -861,18 +866,3 @@ attempt to bargain the price down from 150,000 to 100,000.
 6. will rain
 7. leaves
 
-**7.4**
-1. always is → **is always**
-2. goes twice a week there → **goes there twice a week**
-3. doesn't never pay → **never pays**
-4. Always I go → **I always go**
-5. will open at nine → **opens** at nine *(fixed opening time)*
-6. will start at ten → **starts** at ten *(scheduled event)*
-7. hardly ever don't find → **hardly ever find** *(double negative — *hardly
-   ever* is already negative)*
-
-**Corrected paragraph:** *My mother is always at the market by six o'clock.
-She goes there twice a week, and she never pays by card. Tomorrow is
-different: the new shopping centre opens at nine, and the big sale starts at
-ten. I always go with her when there is a discount, but I hardly ever find
-anything in my size.*

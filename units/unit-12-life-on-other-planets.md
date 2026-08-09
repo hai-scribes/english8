@@ -70,17 +70,14 @@ Answer in full sentences.
 
 ### 1.3 Notice the grammar
 
-Each sentence below reports a **question**. Write the question the person
-actually asked, in direct speech.
+Each sentence below reports a **question**. What did the person actually ask?
 
-1. She asked us **what a planet needs** before life can survive.
-   → "____________________________________?"
-2. She asked **if we knew** how strong gravity is on Mars.
-   → "____________________________________?"
-3. Minh asked her **whether she believed** in extraterrestrial life.
-   → "____________________________________?"
-4. She asked him **what evidence he had**.
-   → "____________________________________?"
+::: task skill="course" type="short-answer" ask="Write the direct question — the words the speaker really used. Put the subject and verb back in question order."
+- She asked us **what a planet needs** before life can survive. = what does a planet need before life can survive
+- She asked **if we knew** how strong gravity is on Mars. = do you know how strong gravity is on mars
+- Minh asked her **whether she believed** in extraterrestrial life. = do you believe in extraterrestrial life
+- She asked him **what evidence he had**. = what evidence do you have
+:::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **câu hỏi tường
 > thuật** (reported questions). Hãy để ý: trong phần tường thuật **không có
@@ -475,6 +472,9 @@ Now report all three questions to a friend, starting *She asked me…*
 
 ### Reading — *Looking for a second home*
 
+::: clock mins="20" for="20 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+:::
+
 > Astronomers have found thousands of planets outside our solar system, and the
 > first question they ask about each one is simple: could anything live there?
 >
@@ -523,7 +523,7 @@ Now report all three questions to a friend, starting *She asked me…*
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the reading that means each of these. Give yourself **three minutes** for all five — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the reading that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - the band of space where life is possible = habitable zone
 - turns to gas because of heat = boils away
 - periods of ten years = decades
@@ -656,13 +656,14 @@ they look like, how they live, and one strange thing about them.
 
 > The creatures on Zonia are small, but nobody who meets one ever forgets
 > them. An adult stands about a metre tall, with soft blue-grey skin and four
-> thin arms. Their eyes are enormous and completely black, because Zonia orbits
-> a weak star and the surface is always dark. They have no mouths; they take in
-> food through their skin. When they are happy, tiny lights run along their
+> thin arms. Their eyes are enormous and completely black, because the planet
+> orbits a weak star and its surface is always dark. They have no mouths; they
+> take in food through their skin, and the thin atmosphere is enough for them
+> to survive. When they are happy, tiny lights run along their
 > backs like sparks. They move slowly, they hum instead of speaking, and they
 > seem endlessly curious about everything.
 
-*(86 words)*
+*(97 words)*
 
 #### Plan it — 5 questions your paragraph has to answer
 
@@ -708,24 +709,16 @@ should get (Writing descriptors, **[2023]** version).
 ::: thread id="articles" stage="check"
 :::
 
-#### Checklist — tick before you finish
-
-- [ ] 80–100 words (count them)
+::: write words="80-100" trains="Lexical Resource" ask="Now write yours — **80–100 words** describing the creatures on your planet."
+- [ ] 80–100 words ~ words
+- [ ] One paragraph ~ para:1
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] One list of three or more items — *X, Y and Z* ~ re:1 \w+,\s+\w+[\w\s]*,?\s+and\s+\w+
+- [ ] Present simple throughout — you are describing, not narrating ~ none was/were/had/went/came/saw/ate/lived/became/found/made/took/gave/told/said
 - [ ] A topic sentence that names the planet
 - [ ] At least **six** descriptive adjectives
-- [ ] At least **four** words from the Lesson 2 vocabulary table
-- [ ] One list of three or more items (say it aloud with ↗ ↗ ↘)
 - [ ] One strange detail nobody else would think of
-- [ ] Present simple throughout — you are describing, not narrating
-
-#### Now write yours
-
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
+:::
 
 ---
 
@@ -782,6 +775,15 @@ questions; one is a subject–verb agreement slip.
 > I asked her when will humans land there. Later my brother asked me why did I
 > look so excited. Everyone want to be an astronaut now.
 
+::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
+- Error 1 = asked us if we knew/asked us whether we knew ~ a reported Yes/No question takes *if* or *whether*
+- Error 2 = asked what we thought ~ no *do* and no inversion in a reported question
+- Error 3 = asked her if Mars had water ~ and it ends in a full stop, not a question mark
+- Error 4 = asked her when humans would land ~ statement order, and *will* backshifts
+- Error 5 = asked me why I looked ~ no *did*, and statement order
+- Error 6 = wants ~ *Everyone* takes a singular verb
+:::
+
 ### Project — Design a habitable planet
 
 Invent a planet that could really support life, and present it.
@@ -828,12 +830,6 @@ people could ever live there. 3. She asked what a planet needs before life can
 survive. 4. It is about thirty-eight per cent of Earth's gravity. 5. Because
 the speaker asked him what evidence he had, and he had none. 6. Because the
 speaker asked their teacher when the club meets next month.
-
-**1.3**
-1. "What does a planet need before life can survive?"
-2. "Do you know how strong gravity is on Mars?"
-3. "Do you believe in extraterrestrial life?"
-4. "What evidence do you have?"
 
 ### Lesson 2
 
@@ -920,18 +916,3 @@ throughout.
 5. Lan asked me if/whether I would go with them the next day.
 6. I asked my father how far Mars was from the Earth.
 
-**7.4**
-1. asked us did we know → **asked us if/whether we knew**
-2. asked what do we think → **asked what we thought**
-3. if Mars had water**?** → **if Mars had water.** *(full stop, not a question
-   mark)*
-4. asked her when will humans land → **asked her when humans would land**
-5. asked me why did I look → **asked me why I looked**
-6. Everyone want → **Everyone wants**
-
-**Corrected paragraph:** *Last week a scientist visited our school. She asked
-us if we knew how many planets there are in the solar system. Then she asked
-what we thought life needs. Lan asked her if Mars had water. She said there
-was ice at the poles. I asked her when humans would land there. Later my
-brother asked me why I looked so excited. Everyone wants to be an astronaut
-now.*

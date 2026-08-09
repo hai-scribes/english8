@@ -348,6 +348,9 @@ one politely, and give a reason.
 
 *A blog post by Trang, 14, from Da Nang.*
 
+::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+:::
+
 > Everyone in my family is busy from Monday to Saturday. My parents work, my
 > brother has extra classes, and I have school and homework. So we made a rule
 > last year: Sunday belongs to all of us together.
@@ -391,7 +394,7 @@ one politely, and give a reason.
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the blog that means each of these. Give yourself **three minutes** for all four — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the blog that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - a new hobby someone has started = taken up
 - spend time socially = hang out
 - tilts, is not straight = leans
@@ -595,21 +598,16 @@ your six notes should point back at the question in the left-hand column.
 > là nó **trả lời đúng câu hỏi**.
 :::
 
-#### Checklist — tick before you finish
-
-- [ ] 80–100 words (count them)
-- [ ] Greeting and sign-off included
-- [ ] At least **three** verbs of liking/disliking, correctly followed by V-ing or to-V
-- [ ] At least **four** words from the Lesson 2 vocabulary table
-- [ ] One question to your friend
-- [ ] Paragraphs, not one solid block
-
-#### Now write yours
-
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
+::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — the email to your friend, in **80–100 words**."
+- [ ] 80–100 words ~ words
+- [ ] Paragraphs, not one solid block ~ paras:2
+- [ ] A greeting at the top ~ any:1 hi/hello/dear
+- [ ] A sign-off at the end ~ any:1 best wishes/see you soon/see you/write soon/love/bye for now/take care/all the best
+- [ ] One question to your friend ~ re:1 \?
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] At least **three** verbs of liking or disliking ~ any:3 like/likes/love/loves/enjoy/enjoys/hate/hates/prefer/prefers/don't mind/do not mind/can't stand/cannot stand/adore/adores/dislike/dislikes/fancy/fancies/be into/am into/is into/are into
+- [ ] Each of those verbs is followed by the right form — V-ing, or *to* + verb after *would like/love/prefer*
+:::
 
 ---
 
@@ -655,6 +653,15 @@ after liking/disliking verbs; one is a subject–verb agreement slip.
 > My cousin enjoy to play football every Saturday. He can't stand to lose, so
 > he practises to shoot for an hour before each match. I don't mind watch him,
 > but I would like doing something else sometimes.
+
+::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
+- Error 1 = enjoys ~ *enjoy* → *enjoys* — subject–verb agreement
+- Error 2 = playing ~ *to play* → *playing* after *enjoy*
+- Error 3 = losing ~ *to lose* → *losing* after *can't stand*
+- Error 4 = shooting ~ *to shoot* → *shooting* after *practise*
+- Error 5 = watching ~ *watch* → *watching* after *don't mind*
+- Error 6 = would like to do/to do ~ *would like doing* → *would like to do*
+:::
 
 ### Project — Your leisure profile
 
@@ -728,14 +735,3 @@ politely with a reason.
 
 ### Lesson 7
 
-**7.4**
-1. enjoy → **enjoys**
-2. to play → **playing**
-3. to lose → **losing**
-4. to shoot → **shooting**
-5. watch → **watching**
-6. would like doing → **would like to do**
-
-**Corrected paragraph:** *My cousin enjoys playing football every Saturday. He
-can't stand losing, so he practises shooting for an hour before each match. I
-don't mind watching him, but I would like to do something else sometimes.*

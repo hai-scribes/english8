@@ -139,11 +139,12 @@ RE_AUDIO = re.compile(r"^:::[ \t]*audio\b(?P<attrs>[^\n]*)\n(?P<body>.*?)\n:::[ 
 RE_THREAD = re.compile(r"^:::[ \t]*thread\b(?P<attrs>[^\n]*)\n(?P<body>.*?)"
                        r"\n?:::[ \t]*$", re.M | re.S)
 
-# One pass over all three, so a block's widgets come out in source order and a
-# misspelled directive name (":::taskk") fails to match instead of matching
+# One pass over all of them, so a block's widgets come out in source order and
+# a misspelled directive name (":::taskk") fails to match instead of matching
 # ":::task" with the rest silently dropped.
-RE_DIRECTIVE = re.compile(r"^:::[ \t]*(?P<kind>task|audio|thread)\b(?P<attrs>[^\n]*)\n"
-                          r"(?P<body>.*?)\n?:::[ \t]*$", re.M | re.S)
+RE_DIRECTIVE = re.compile(
+    r"^:::[ \t]*(?P<kind>task|audio|write|clock|thread)\b(?P<attrs>[^\n]*)\n"
+    r"(?P<body>.*?)\n?:::[ \t]*$", re.M | re.S)
 WIDGET = "\x00W%d\x00"
 
 TASK_ATTRS = {"type", "skill", "words", "ask", "either", "opts"}
@@ -426,6 +427,238 @@ def audio_html(p: dict) -> str:
             f'</div></div>')
 
 
+# ------------------------------------------------------------------ write ---
+# Writing was the one skill that stayed a printed worksheet: a model, a plan
+# table, a list of tick-boxes and six blank underscore lines. Everything the
+# other three directives exist to do — commit the attempt, check it by a
+# published rule, remember it — stopped at the writing task, and the `:::thread`
+# strand beside it asked the learner to type "supplied _ of _" about a paragraph
+# the page had never seen.
+#
+# `09` **E8** is explicit that a self-assessment is a prompt and never a
+# measure, and must be *paired with an objective anchor*; `09` §4.4 is why —
+# learners cannot self-assess accurately. So this directive keeps the
+# checklist, and puts a machine behind every line of it that a machine can
+# honestly decide.
+#
+# What may be decided is bounded by `09` **D9** and §5.3, the defensible set:
+# obligatory-context accuracy on named structures, error-free sentence density,
+# and the presence or absence of *named discourse moves*. Closed-list matching
+# and a word count are inside it. A holistic judgement, a score, a percentage
+# and a band are outside it — **A2**, **D3** — and nothing here computes one.
+# The live word count is `09` **C9**'s, the one Writing affordance the real
+# screen has that this course did not.
+WRITE_ATTRS = {"words", "ask", "trains", "genre"}
+WRITE_REQUIRED = {"words", "ask", "trains"}
+RE_WORDS_RANGE = re.compile(r"^(\d{2,4})-(\d{2,4})$")
+
+# One checklist line: the text, and optionally ` ~ ` and the check that decides
+# it. A line with no check keeps its tick-box, honestly — "a topic sentence and
+# a closing sentence" is not decidable by counting, and pretending otherwise
+# would be exactly the overclaim the knowledge base blocks.
+RE_CHECK_LINE = re.compile(r"^[-*][ \t]+\[[ xX]?\][ \t]*(?P<text>.+?)"
+                           r"(?:[ \t]+~[ \t]+(?P<check>[a-z]+(?::\S+)?(?:[ \t]+.+)?))?$", re.M)
+
+# The check vocabulary. Deliberately small: every one of these is exact on the
+# learner's own text, so the panel never has to guess.
+#   words          the word count falls inside the declared range
+#   vocab:N        at least N distinct headwords from this unit's table
+#   any:N a/b/c    at least N hits in total from a closed list
+#   distinct:N …   at least N *different* members of that list
+#   all a/b/c      every member present
+#   none a/b/c     no member present
+#   para:N         exactly N paragraphs, and no bullet list
+#   paras:N        at least N paragraphs
+#   re:N pattern   at least N matches of a literal pattern
+CHECK_KINDS = {"words", "vocab", "any", "distinct", "all", "none", "para", "paras", "re"}
+
+
+def parse_check(spec: str) -> dict:
+    """` ~ any:3 always/usually/often` -> {kind, n, list}."""
+    head, _, rest = spec.strip().partition(" ")
+    kind, _, n = head.partition(":")
+    if kind not in CHECK_KINDS:
+        raise SystemExit(f"write: unknown checklist check {kind!r}")
+    c: dict = {"k": kind}
+    if n:
+        c["n"] = int(n)
+    rest = rest.strip()
+    if kind in ("any", "distinct", "all", "none"):
+        if not rest:
+            raise SystemExit(f"write: {kind} needs a list — '{kind} a/b/c'")
+        c["l"] = [x.strip().lower() for x in rest.split("/") if x.strip()]
+    elif kind == "re":
+        if not rest:
+            raise SystemExit("write: re needs a pattern")
+        c["p"] = rest
+    return c
+
+
+def word_forms(headword: str) -> list:
+    """Every written form of one vocabulary item that should count as a hit.
+
+    The dictionary's word-family block already holds the derived forms an
+    author wrote by hand (*deliver* under *delivery*); regular inflections are
+    generated, because a learner who wrote "delivers" has used the word.
+    """
+    entry = DICT.get(headword.lower()) or {}
+    base = [headword.lower()] + [f["w"].lower() for f in entry.get("forms") or []]
+    out = set()
+    for raw in base:
+        for w in _optional(raw):
+            out.add(w)
+            # Which word of a phrase carries the inflection is not decidable
+            # here: "shopping centre" takes it on the last word, "take up" and
+            # "pick fruit" on the first. Every position is varied instead. The
+            # extra strings are not words and match nothing.
+            parts = w.split(" ")
+            for i, part in enumerate(parts):
+                for form in _inflect(part):
+                    out.add(" ".join(parts[:i] + [form] + parts[i + 1:]))
+    return sorted(out)
+
+
+def _optional(w: str) -> list:
+    """`hang out (with)` -> both `hang out` and `hang out with`.
+
+    The vocabulary tables mark an optional particle in brackets, the same way
+    the answer keys mark an optional word. Matched literally, the bracketed
+    form never appears in anyone's writing and the item could not be credited.
+    """
+    if "(" not in w:
+        return [w]
+    bare = RE_WS.sub(" ", re.sub(r"\s*\([^)]*\)", "", w)).strip()
+    full = RE_WS.sub(" ", w.replace("(", "").replace(")", "")).strip()
+    return sorted({bare, full})
+
+
+RE_WS = re.compile(r"\s+")
+VOWELS = "aeiou"
+# Irregular past and participle forms for the verbs the vocabulary tables
+# actually contain. A regular generator turns "take up" into "take uped", and
+# the learner who wrote "I have taken up cooking" gets nothing for it.
+IRREGULAR = {
+    "take": ["took", "taken"],      "give": ["gave", "given"],
+    "make": ["made"],               "get": ["got", "gotten"],
+    "keep": ["kept"],               "leave": ["left"],
+    "hang": ["hung"],               "feed": ["fed"],
+    "grow": ["grew", "grown"],      "build": ["built"],
+    "wear": ["wore", "worn"],       "blow": ["blew", "blown"],
+    "hold": ["held"],               "sell": ["sold"],
+    "rise": ["rose", "risen"],      "fly": ["flew", "flown"],
+    "ride": ["rode", "ridden"],     "spend": ["spent"],
+    "run": ["ran"],                 "cut": ["cut"],
+    "put": ["put"],                 "come": ["came"],
+    "become": ["became"],           "lose": ["lost"],
+    "find": ["found"],              "break": ["broke", "broken"],
+    "throw": ["threw", "thrown"],   "deal": ["dealt"],
+}
+
+
+def _inflect(w: str) -> set:
+    """Regular written forms of one word, plus any irregular ones.
+
+    Over-generation is cheap here and under-generation is not: a form that is
+    not a word ("vendores") matches nothing, while a missing "shopping" costs
+    the learner a vocabulary item they actually used.
+    """
+    out = {w, w + "s", w + "es", w + "ed", w + "ing"}
+    out |= set(IRREGULAR.get(w, []))
+    if w.endswith("e"):
+        out |= {w[:-1] + "ed", w[:-1] + "ing"}
+    if w.endswith("y") and len(w) > 2 and w[-2] not in VOWELS:
+        out |= {w[:-1] + "ies", w[:-1] + "ied"}
+    # shop -> shopped, shopping. A final consonant after a single vowel doubles.
+    if (len(w) >= 3 and w[-1] not in VOWELS + "wxy"
+            and w[-2] in VOWELS and w[-3] not in VOWELS):
+        out |= {w + w[-1] + "ed", w + w[-1] + "ing"}
+    return out
+
+
+def write_payload(u, lesson, a: dict, body: str, idx: int = 0) -> dict:
+    lo, hi = RE_WORDS_RANGE.match(a["words"]).groups()
+    items = []
+    for m in RE_CHECK_LINE.finditer(body):
+        it: dict = {"t": inline(m.group("text").strip())}
+        if m.group("check"):
+            it["c"] = parse_check(m.group("check"))
+        items.append(it)
+    return {
+        "id": f"{u['nn']}-{lesson}-w{idx + 1}",
+        "lo": int(lo), "hi": int(hi),
+        "items": items,
+        # Carried per task rather than per page: the vocabulary check has to
+        # mean "this unit's table", and a lesson page knows nothing else.
+        "vocab": {w["word"]: word_forms(w["word"]) for w in u["vocab"]},
+    }
+
+
+def write_html(p: dict, a: dict) -> str:
+    n_auto = sum(1 for it in p["items"] if it.get("c"))
+    # A counted line's box is not the learner's to tick: it is set from what
+    # they wrote, and a box you can tick yourself is the tick-box this replaced.
+    auto = ' data-auto="1"'
+    rows = "".join(
+        f'<li class="w-i" data-i="{i}"{auto if it.get("c") else ""}>'
+        f'<input type="checkbox"{" disabled" if it.get("c") else ""}>'
+        f'<span class="w-t">{it["t"]}</span><span class="w-f" role="status"></span></li>'
+        for i, it in enumerate(p["items"]))
+    return (
+        f'<div class="write" data-role="write" data-write="{e(p["id"])}">'
+        f'<div class="w-h"><span class="w-k">Writing — a committed attempt</span>'
+        f'<span class="w-c">{e(a["trains"])}</span></div>'
+        f'<p class="w-ask">{inline(a["ask"])}</p>'
+        f'<textarea class="w-box" rows="10" spellcheck="false" '
+        f'placeholder="Write your {p["lo"]}–{p["hi"]} words here. It is saved as you type."'
+        f'></textarea>'
+        f'<div class="w-bar"><span class="w-n" role="status"></span>'
+        f'<span class="w-r">{p["lo"]}–{p["hi"]} words</span></div>'
+        f'<h4 class="w-lh">Before you finish</h4>'
+        f'<ul class="w-list">{rows}</ul>'
+        f'<p class="w-note"><b>{n_auto} of these {len(p["items"])} are counted for you, '
+        f'from what you actually wrote</b> — the rest are yours to judge, and they stay '
+        f'yours because counting cannot decide them. What is counted is counted: a '
+        f'feature is present or it is not. Nothing here scores the writing, and nothing '
+        f'here is a band — no band exists at this level to give.</p>'
+        f'<p class="w-note quiet">As your range grows your error rate usually rises for '
+        f'a while. That is what this stage of progress looks like, not a fault, so '
+        f'nothing on this page reports it as one.</p>'
+        f'</div>')
+
+
+# ------------------------------------------------------------------ clock ---
+# `09` **C7**: the Reading tool runs *one clock covering everything*, including
+# the time spent writing the answers down — `04` §1.1. It was the last Group C
+# rule the course left to the learner's own discretion, in prose ("give
+# yourself three minutes"), which is the arrangement every other rule here was
+# built to replace. One clock per reading block, and it covers every reading
+# task on the page.
+CLOCK_ATTRS = {"mins", "for"}
+CLOCK_REQUIRED = {"mins"}
+
+
+def clock_payload(u, lesson, a: dict, idx: int = 0) -> dict:
+    return {"id": f"{u['nn']}-{lesson}-c{idx + 1}",
+            "secs": int(round(float(a["mins"]) * 60)),
+            "for": a.get("for", "")}
+
+
+def clock_html(p: dict) -> str:
+    mins = p["secs"] / 60
+    shown = f"{mins:g}"
+    return (f'<div class="clock" data-role="clock" data-clock="{e(p["id"])}">'
+            f'<div class="c-h"><span class="c-k">Reading</span>'
+            f'<span class="c-t">One clock — {e(shown)} minutes</span></div>'
+            f'<p class="c-say">{inline(p["for"]) + " " if p["for"] else ""}'
+            f'The clock covers <b>everything</b>: reading the text, finding the answers '
+            f'and typing them in. There is no extra time at the end to write them up — '
+            f'in the real Reading test there is not, and a trainer that pauses while you '
+            f'type is training a test that does not exist.</p>'
+            f'<div class="c-ctl"><button class="btn c-start" type="button">Start reading</button>'
+            f'<span class="c-state" role="status"></span></div>'
+            f'</div>')
+
+
 # ----------------------------------------------------------------- threads --
 # The defect this construct exists for: Unit 5 promised in bold that "every
 # writing task from Unit 6 to Unit 12 carries a five-item article check", and
@@ -460,6 +693,11 @@ def thread_html(a: dict, threads: dict) -> str:
             f'<div class="th-h"><span class="th-k">Strand check</span>'
             f'<span class="th-t">{inline(name)}</span></div>'
             f'<p class="th-m">On the paragraph you just wrote: <b>{inline(measure)}</b></p>'
+            f'<p class="th-a">You count this one yourself — finding which places '
+            f'<i>required</i> one is the work, and no counter can do it for you. It is '
+            f'your own judgement, so it sits beside the checks above, which are not: '
+            f'`09` <b>E8</b> asks a self-report to be anchored to something measured, '
+            f'and those are the anchor.</p>'
             f'<div class="th-in"><label>supplied <input type="number" min="0" '
             f'inputmode="numeric" data-th="got"></label>'
             f'<label>of <input type="number" min="0" inputmode="numeric" '
@@ -819,7 +1057,7 @@ def parse_unit(path: Path) -> dict:
                 a = dict(RE_ATTR.findall(m.group("attrs")))
                 if kind == "task":
                     _w.append((kind, parse_task_body(a, m.group("body"))))
-                elif kind == "audio":
+                elif kind in ("audio", "write"):
                     _w.append((kind, (a, m.group("body"))))
                 else:
                     _w.append((kind, a))
@@ -834,6 +1072,8 @@ def parse_unit(path: Path) -> dict:
                 "widgets": widgets,
                 "tasks": [d for k, d in widgets if k == "task"],
                 "audio": [d for k, d in widgets if k == "audio"],
+                "writes": [d for k, d in widgets if k == "write"],
+                "clocks": [d for k, d in widgets if k == "clock"],
                 "threads": [d for k, d in widgets if k == "thread"],
             }
             if h is None:
@@ -877,6 +1117,10 @@ def parse_unit(path: Path) -> dict:
                       for t in blk["tasks"]],
             "audio": [(L["n"], a, s) for L in lessons for blk in lesson_blocks(L)
                       for a, s in blk["audio"]],
+            "writes": [(L["n"], a, s) for L in lessons for blk in lesson_blocks(L)
+                       for a, s in blk["writes"]],
+            "clocks": [(L["n"], c) for L in lessons for blk in lesson_blocks(L)
+                       for c in blk["clocks"]],
             "threads": [(L["n"], t) for L in lessons for blk in lesson_blocks(L)
                         for t in blk["threads"]]}
 
@@ -1289,7 +1533,7 @@ def recap_block(u) -> str:
 
 def page_lesson(u, L) -> str:
     parts = []
-    payload: dict = {"tasks": [], "audio": []}
+    payload: dict = {"tasks": [], "audio": [], "write": [], "clock": []}
     if L["n"] == LESSONS:
         parts.append(recap_block(u))
     def prose(b) -> str:
@@ -1300,13 +1544,23 @@ def page_lesson(u, L) -> str:
         between a task and its recording still prints between them.
         """
         out = render(b["md"])
-        n_task = n_audio = 0
+        n_task = n_audio = n_write = n_clock = 0
         for i, (kind, d) in enumerate(b["widgets"]):
             if kind == "audio":
                 p = audio_payload(u, L["n"], d[0], d[1], n_audio)
                 n_audio += 1
                 payload["audio"].append(p)
                 html_ = audio_html(p)
+            elif kind == "write":
+                p = write_payload(u, L["n"], d[0], d[1], n_write)
+                n_write += 1
+                payload["write"].append(p)
+                html_ = write_html(p, d[0])
+            elif kind == "clock":
+                p = clock_payload(u, L["n"], d, n_clock)
+                n_clock += 1
+                payload["clock"].append(p)
+                html_ = clock_html(p)
             elif kind == "thread":
                 html_ = thread_html(d, THREADS)
             else:
@@ -1398,7 +1652,8 @@ def page_lesson(u, L) -> str:
                         (f"Lesson {L['n']}", "")],
                  data={"kind": "lesson", "unit": u["nn"], "lesson": L["n"],
                        "titles": {str(x["n"]): x["title"] for x in u["lessons"]},
-                       "tasks": payload["tasks"], "audio": payload["audio"]},
+                       "tasks": payload["tasks"], "audio": payload["audio"],
+                       "write": payload["write"], "clock": payload["clock"]},
                  desc=f"Unit {u['num']} Lesson {L['n']}: {L['title']}.")
 
 
@@ -1428,6 +1683,11 @@ def main() -> int:
     tot_task = sum(len(u["tasks"]) for u in units)
     tot_item = sum(len(t["items"]) for u in units for _, _, t in u["tasks"])
     tot_audio = sum(len(u["audio"]) for u in units)
+    tot_write = sum(len(u["writes"]) for u in units)
+    tot_clock = sum(len(u["clocks"]) for u in units)
+    write_items = [it for u in units for _, a, body in u["writes"]
+                   for it in write_payload(u, 0, a, body)["items"]]
+    tot_checked = sum(1 for it in write_items if it.get("c"))
 
     if args.check:
         for u in units:
@@ -1435,11 +1695,14 @@ def main() -> int:
             print(f"  unit {u['nn']}  {u['title'][:34]:36} lessons={len(u['lessons'])} "
                   f"ex={ex:3} answers={len(u['answers']):3} vocab={len(u['vocab']):3} "
                   f"bridges={len(u['bridges']):2} marked={len(u['tasks']):2} "
-                  f"audio={len(u['audio'])} threads={len(u['threads'])}")
+                  f"audio={len(u['audio'])} write={len(u['writes'])} "
+                  f"clock={len(u['clocks'])} threads={len(u['threads'])}")
         print(f"\n{len(units)} units · {tot_ex} exercises · {tot_teach} teaching blocks · "
               f"{tot_ans} answers · {tot_vocab} vocabulary rows · {tot_bridge} IELTS bridges")
         print(f"{tot_task} marked tasks · {tot_item} marked items · {tot_audio} single-play "
               f"recordings · {len(THREADS)} strands")
+        print(f"{tot_write} committed writing tasks · {tot_checked} of {len(write_items)} "
+              f"checklist lines decided from the learner's own text · {tot_clock} reading clocks")
         return 0
 
     # Rebuild the generated tree only. docs/ may legitimately hold hand-written

@@ -448,6 +448,9 @@ then a reason.
 
 *From a school magazine, written by a geography teacher.*
 
+::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+:::
+
 > Every country has its own disasters. Viet Nam has storms and floods, Japan has
 > earthquakes, and parts of Africa have droughts that last for years. The event
 > itself may be over in a few hours. What it leaves behind is not.
@@ -495,7 +498,7 @@ then a reason.
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. Give yourself **three minutes** for all four — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - spoils something completely = ruins
 - soft wet earth left behind by water = mud
 - the raised edge of a river = bank
@@ -656,18 +659,18 @@ and **after** a flood.
 
 > **Flood safety — what to do**
 >
-> **Before the flood.** First, listen to the weather forecast. Next, put your
-> papers, a torch and some medicine in a plastic bag on a high shelf. Then turn
-> off the electricity at the main switch.
+> **Before the flood.** First, listen to the forecast and to any official
+> warning. Next, put your papers, a torch and medicine in a plastic bag on
+> a high shelf. Then turn off the electricity at the main switch.
 >
-> **During the flood.** Go to the shelter if the authorities tell you to. If you
-> stay, move upstairs — never into a closed loft. Never walk or swim through
-> moving water. Never touch a switch when wet.
+> **During the flood.** Go to the shelter if the authorities say so. If you
+> stay, move upstairs — never into a closed loft. Never walk through moving
+> water. Never touch a switch when wet.
 >
-> **After the flood.** Wait for an official message before you go home. Then boil
+> **After the flood.** Wait for an official message before going home. Then boil
 > all drinking water. Finally, wear boots while you clean.
 
-*(99 words)*
+*(98 words)*
 
 #### Plan it — 5 questions your instructions has to answer
 
@@ -711,24 +714,15 @@ task is a letter, and only a letter.
 ::: thread id="articles" stage="check"
 :::
 
-#### Checklist — tick before you finish
-
-- [ ] 80–100 words (count them)
-- [ ] Three headings: **Before**, **During**, **After**
+::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours — the flood safety instructions, in **80–100 words**, in three parts."
+- [ ] 80–100 words ~ words
+- [ ] Three headings: **Before**, **During**, **After** ~ all before/during/after
+- [ ] At least **four** sequencing signals ~ any:4 first/next/then/finally/after that/lastly/second/third/straight away/immediately
+- [ ] At least one **negative** instruction ~ any:1 do not/don't/never
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] No *I think*, no *you should* ~ none i think/you should/in my opinion/i believe/i feel that/maybe you
 - [ ] Every instruction starts with an **imperative** verb
-- [ ] At least **four** sequencing signals (*First, Next, Then, Finally*)
-- [ ] At least one **negative** instruction (*Do not…* / *Never…*)
-- [ ] At least **four** words from the Lesson 2 vocabulary table
-- [ ] No *I think*, no *you should*
-
-#### Now write yours
-
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
+:::
 
 ---
 
@@ -781,6 +775,15 @@ in the continuous at all.
 > mother was packing our documents. I was knowing that the water would come, but
 > I said nothing. Suddenly the lights went out. My little sister were crying, so
 > I took her upstairs. We was watching the water from the window until midnight.
+
+::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
+- Error 1 = hit ~ a single completed action — past simple, not continuous
+- Error 2 = were sitting ~ *were sit* → *were sitting*
+- Error 3 = was listening ~ *was listen* → *was listening*
+- Error 4 = knew ~ *know* is not used in the continuous
+- Error 5 = was crying ~ *My little sister* is singular — *was*
+- Error 6 = were watching ~ *We* is plural — *were*
+:::
 
 ### Project — Your family's disaster plan
 
@@ -891,22 +894,3 @@ vocabulary words, and no *I think* or *you should*.
 4. did not know (didn't know) — *know* is stative 5. was … doing
 6. were filling / were moving
 
-**7.4**
-1. was hit → **hit**
-2. were sit → **were sitting**
-3. was listen → **was listening**
-4. was knowing → **knew**
-5. My little sister were crying → **was crying**
-6. We was watching → **We were watching**
-
-**Corrected paragraph:** *Last November a big storm hit our village. At nine
-o'clock in the evening my family were sitting in the kitchen. While my father
-was listening to the radio, my mother was packing our documents. I knew that the
-water would come, but I said nothing. Suddenly the lights went out. My little
-sister was crying, so I took her upstairs. We were watching the water from the
-window until midnight.*
-
-**Project** Answers will vary. Check: Step 1 has a real answer from an adult in
-all four rows; Step 2 lists eight items with a reason for each; Step 3 uses
-Before/During/After headings and imperative verbs only; Step 4 lasts a full
-minute.

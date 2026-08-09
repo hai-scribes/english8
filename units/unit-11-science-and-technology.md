@@ -71,16 +71,17 @@ Answer in full sentences.
 
 ### 1.3 Notice the grammar
 
-Look at the **bold** words. Write **say** or **tell** for each gap, then answer
-the question underneath.
+::: task skill="course" type="choice" opts="say|tell" ask="Which reporting verb is each sentence using?"
+- She **said** that a machine **could** identify a person. = say
+- She **told us** that no two fingerprints **are** the same. = tell
+- Ms Hoa **told him** that a robot **would** never replace her. = tell
+- He **said** he **would** put it in the magazine. = say
+:::
 
-1. She **said** that a machine **could** identify a person. → reporting verb: _______
-2. She **told us** that no two fingerprints **are** the same. → reporting verb: _______
-3. Ms Hoa **told him** that a robot **would** never replace her. → reporting verb: _______
-4. He **said** he **would** put it in the magazine. → reporting verb: _______
-
-**Question:** In sentences 2 and 3 there is an extra word straight after the
-reporting verb (*us*, *him*). Does sentence 1 or 4 have one? Why not?
+Now look at what follows each verb. Sentences 2 and 3 have an extra word
+straight after it — *us*, *him*. Sentences 1 and 4 have nothing there, and
+cannot: **only *tell* takes a person after it.** *Say* never does. That single
+difference is most of what Lesson 3 is about.
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **câu tường thuật**
 > (reported speech) với câu trần thuật. Chú ý hai điều: *say* và *tell* dùng
@@ -515,6 +516,9 @@ were repeating it (*He/She said that…*).
 
 *An article from a school science magazine.*
 
+::: clock mins="19" for="19 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+:::
+
 > Think about the last time you unlocked your phone. You probably did not type
 > a password. You put your thumb on a small square, or you simply looked at the
 > screen and it opened. That is biometrics: technology that identifies a person
@@ -539,15 +543,19 @@ were repeating it (*He/She said that…*).
 > small skills, but a difficult idea still needs long, slow, uncomfortable
 > thinking. No app removes that.
 
-### 5.1 True, False, or Not Given
+### 5.1 Yes, No, or Not Given
 
-::: task skill="reading" type="true-false-not-given" ask="**False** means the article says the opposite. **Not Given** means the article does not say either way — and everything you already know about phones and privacy is exactly the pull this type is built to catch."
-- Biometrics identifies people by something they have to remember. = F ~ it identifies them by a part of the body, *instead of* by something remembered
-- Fingerprints are the only kind of biometrics in use. = F ~ face recognition and the iris are also used
-- A dark room can stop a scanner working properly. = T
-- Most companies now delete biometric data after one year. = NG ~ the article raises privacy questions but says nothing about deleting data
-- A nanolearning lesson usually lasts two or three minutes. = T
-- The article says nanolearning works well for every kind of learning. = F ~ a difficult idea still needs long, slow thinking
+This is the same three-way decision you have been making since Unit 1, aimed at
+a different target. **True/False/Not Given** asks about **facts** in a text;
+**Yes/No/Not Given** asks whether the **writer** would agree with a claim. The
+reasoning is the same; what you are matching against is not.
+
+::: task skill="reading" type="yes-no-not-given" ask="Does the writer agree? **YES** if the article supports the claim, **NO** if it takes the opposite view, **NG** if the article never takes a position either way."
+- A password is easier to steal than a body is to copy. = YES ~ *A password can be stolen or forgotten. A body is much harder to copy.*
+- Biometrics can be relied on in any situation. = NO ~ *Biometrics is not perfect* — a cut finger, new glasses or a dark room can confuse a scanner
+- Companies should not be allowed to store people's faces. = NG ~ the article raises the privacy question and recommends nothing
+- Nanolearning suits every kind of learning equally well. = NO ~ short bursts are excellent for facts, but a difficult idea still needs long, slow thinking
+- Nanolearning helps people who lose concentration easily. = YES ~ *Learners who are busy, or who lose concentration easily, often find this easier*
 :::
 
 ### 5.2 Answer the questions
@@ -562,7 +570,7 @@ were repeating it (*He/She said that…*).
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word in the article that means each of these. Give yourself **three minutes** for all five — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word in the article that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - a machine that reads or scans something = scanner
 - the coloured ring around the pupil = iris
 - the ability to keep personal information to yourself = privacy
@@ -671,15 +679,14 @@ point on the other side, then argue your own.
 #### Model paragraph — read this first
 
 > Some people believe that robots will soon replace teachers, but I disagree.
-> It is true that a robot can explain the same rule a hundred times without
-> getting tired, and artificial intelligence can mark our work in seconds.
-> However, learning is not only about information. When I am worried before an
-> exam, my teacher notices my face and says something kind. No device can do
-> that. A robot cannot understand why a whole class is quiet today. For these
-> reasons, I believe that robots will help teachers in the future, but they
-> will never replace them.
+> It is true that artificial intelligence can mark our work in seconds, and
+> that is far more efficient than any person. However, learning is not only
+> about information. Last year, for example, I was worried before an exam, and
+> my teacher noticed my face and said something kind. No device can do that.
+> Afterwards she told me that she had seen the same look on her own son. For
+> these reasons, robots will help teachers, but they will never replace them.
 
-*(96 words)*
+*(93 words)*
 
 #### Plan it — 6 questions your paragraph has to answer
 
@@ -729,24 +736,17 @@ it takes ten seconds.
 ::: thread id="articles" stage="check"
 :::
 
-#### Checklist — tick before you finish
-
-- [ ] 80–100 words (count them)
+::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours — the persuasive paragraph, **80–100 words**. A clear position, one point admitted, then your own argument."
+- [ ] 80–100 words ~ words
+- [ ] One paragraph, not a list ~ para:1
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] One concession ~ any:1 it is true that/it is true/of course/admittedly/i admit that/certainly/there is no doubt that
+- [ ] One *However* ~ any:1 however/nevertheless/even so/on the other hand/all the same
+- [ ] At least **one** concrete example ~ any:1 for example/for instance/such as/in my school/in my class/last year/last week
+- [ ] At least **one** reported statement ~ any:1 said that/told me that/told us that/explained that/said he/said she/told me/told us
 - [ ] Your position is clear in the **first** sentence
-- [ ] One concession (*It is true that…*) and one *However*
-- [ ] At least **one** concrete example, not only general statements
-- [ ] At least **four** words from the Lesson 2 vocabulary table
-- [ ] At least **one** reported statement (*My teacher said that…* / *told me that…*)
 - [ ] A conclusion that repeats your position in different words
-
-#### Now write yours
-
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
+:::
 
 ---
 
@@ -805,6 +805,15 @@ agreement slip.
 > home, which surprised everybody. He told me that he will finish it next
 > month. His sister say that the whole kitchen was full of wires.
 
+::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
+- Error 1 = told us that/told us ~ *tell* needs a person after it
+- Error 2 = she told us ~ *said us* → *told us*
+- Error 3 = he was building ~ the pronoun shifts — Nam is reporting about himself
+- Error 4 = he would finish ~ *will* backshifts to *would*
+- Error 5 = the following month ~ *next month* shifts to *the following month*
+- Error 6 = his sister said ~ *say* → *said* — and it is a report
+:::
+
 ### Project — An invention file
 
 Build a one-page file on a piece of technology you actually use.
@@ -857,10 +866,6 @@ stress: are the content words louder than the function words?
 and the iris of the eye. 3. It means studying in very short bursts — three or
 four minutes, one idea at a time. 4. She told him that a robot would never
 replace her. 5. He is going to put it in the science club magazine.
-
-**1.3** 1. say 2. tell 3. tell 4. say
-**Question:** No. Sentences 1 and 4 use *said*, and *say* is **not** followed by
-a person. Only *tell* takes an object (*told us*, *told him*).
 
 ### Lesson 2
 
@@ -939,21 +944,3 @@ device
 8. Hoa told her friend that her parents might buy her a laptop the following
    week.
 
-**7.4**
-1. told that → **told us that** *(or: **said that**)*
-2. She said us → **She told us**
-3. Nam said that I was building → **Nam said that he was building**
-4. he will finish → **he would finish**
-5. next month → **the following month**
-6. His sister say → **His sister said**
-
-**Corrected paragraph:** *Yesterday Ms Hoa told us that the science club would
-meet on Friday. She told us that we should bring our notebooks. Nam said that
-he was building a robot at home, which surprised everybody. He told me that he
-would finish it the following month. His sister said that the whole kitchen was
-full of wires.*
-
-**Project** Answers will vary. Check: Step 3 records three people's exact words
-and reports each one with the pronouns shifted and a correct *said* / *told +
-person* choice; the Step 4 report is 120–150 words and contains at least five
-reported statements.

@@ -402,6 +402,9 @@ Reply to each person. Use a prediction, a promise and an offer — one of each.
 
 *A school magazine article about Alaska.*
 
+::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+:::
+
 > For thousands of years, the Inupiat people of northern Alaska and the Yupik
 > people of western Alaska have lived in one of the coldest places on Earth.
 > Their villages are small and remote. Some can only be reached by plane or by
@@ -423,18 +426,23 @@ Reply to each person. Use a prediction, a promise and an offer — one of each.
 > York. Some leave for the cities.
 >
 > So the elders face a hard question: if the old skills disappear, what will be
-> left? Many of them now teach hunting, sewing and the own language to
+> left? Many of them now teach hunting, sewing and their own language to
 > children after school. They believe a community can be modern and traditional
 > at the same time.
 
-### 5.1 True, False, or Not Given
+### 5.1 Matching information
 
-::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and answering from what you already know about Alaska is exactly the pull this type is built to catch."
-- Some Alaskan villages can only be reached by plane or by boat. = T
-- Families pick berries during the long summer. = F ~ the text says the summer is short
-- Sled dogs are no longer trained in Alaska. = F ~ they are still trained and raced
-- Most young people who move to the city come home again later. = NG ~ the text says some leave, but never says whether they return
-- Elders teach hunting and sewing to children after school. = T
+The article has **five** paragraphs, **A** to **E**, in the order they are
+printed. Each statement below is somewhere in one of them — but never in the
+same words, which is the point of the type. You are looking for the
+information, not for the sentence.
+
+::: task skill="reading" type="matching-information" opts="A|B|C|D|E" ask="Which paragraph contains each piece of information? A paragraph may be used once, more than once, or not at all."
+- a description of how a catch is divided up = B ~ *the meat is shared across the whole village*
+- a form of transport that has been replaced but not forgotten = C ~ dog sleds: most families now use snowmobiles, yet the dogs are still trained
+- a comparison between young people in two different places = D ~ they *watch the same videos as teenagers in New York*
+- a mention of places that cannot be reached by road = A ~ *some can only be reached by plane or by boat*
+- a belief that two ways of living can exist at once = E ~ *modern and traditional at the same time*
 :::
 
 ### 5.2 Answer the questions
@@ -449,7 +457,7 @@ Reply to each person. Use a prediction, a promise and an offer — one of each.
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the article that means each of these. Give yourself **three minutes** for all four — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the article that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - far away and hard to reach = remote
 - a group of people who work together on a boat = crew
 - not included, forgotten = left out
@@ -629,22 +637,16 @@ source tests it.
 ::: thread id="articles" stage="check"
 :::
 
-#### Checklist — tick before you finish
-
-- [ ] 80–100 words (count them)
+::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours — a paragraph of **80–100 words** on the advantages *or* the disadvantages of online learning."
+- [ ] 80–100 words ~ words
+- [ ] One paragraph, not a list ~ para:1
+- [ ] Four ordering words: *First, Second, Third, Finally* ~ all first/second/third/finally
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] At least **one** *if* sentence ~ re:1 \bif\b
+- [ ] …with **no** *will* inside the *if*-clause ~ none if it will/if i will/if you will/if we will/if they will/if he will/if she will/if there will/if people will/if students will
+- [ ] At least **one** sentence with *will* or *won't* in the main clause ~ any:1 will/won't/will not
 - [ ] One side only — do not mix advantages and disadvantages
-- [ ] Four ordering words: *First, Second, Third, Finally*
-- [ ] At least **one** first conditional, with **no** *will* in the *if*-clause
-- [ ] At least **one** sentence with *will* or *won't* in the main clause
-- [ ] At least **four** words from the Lesson 2 vocabulary table
-- [ ] One paragraph, not a list
-
-#### Now write yours
-
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
+:::
 
 ---
 
@@ -696,6 +698,15 @@ simple or the first conditional.
 > Unless we don't find a good school, I will go to the village school with my
 > cousins. I think I will be happy there — if I get bored, I visit my friends
 > in town at the weekend.
+
+::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
+- Error 1 = will move ~ *will* is followed by the bare infinitive
+- Error 2 = if we live ~ no *will* inside the *if*-clause
+- Error 3 = he will grow ~ *will* + bare infinitive — no *to*
+- Error 4 = she won't miss ~ *won't* + bare infinitive
+- Error 5 = unless we find ~ *unless* is already negative
+- Error 6 = I will visit/will visit ~ the main clause of a first conditional takes *will*
+:::
 
 ### Project — Two lifestyles, one week
 
@@ -791,21 +802,3 @@ ordering words; at least one first conditional with the present simple in the
 
 ### Lesson 7
 
-**7.4**
-1. will moves → **will move**
-2. If we will live → **If we live**
-3. he will to grow → **he will grow**
-4. she won't misses → **she won't miss**
-5. Unless we don't find → **Unless we find** *(or: **If** we **don't find**)*
-6. if I get bored, I visit → **I will visit**
-
-**Corrected paragraph:** *Next year my family will move to a village in the
-countryside. If we live there, we will have a much healthier lifestyle. My
-father says he will grow vegetables, and my mother says she won't miss the city
-at all. Unless we find a good school, I will go to the village school with my
-cousins. I think I will be happy there — if I get bored, I will visit my
-friends in town at the weekend.*
-
-**Project** Answers will vary. Check: your Step 4 text is 100–120 words, uses
-*will* and *won't* with bare infinitives, and contains at least two first
-conditionals with the present simple in the *if*-clause.

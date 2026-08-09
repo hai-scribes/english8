@@ -474,7 +474,7 @@ def over_limit(given: str, words: str) -> bool:
 # a build failure rather than a block of raw markdown on the page. ":::taskk"
 # used to render its own source, keys and all, and no gate could see it.
 RE_OPENER = re.compile(r"^:::[ \t]*(?P<name>[A-Za-z][\w-]*)", re.M)
-KNOWN_DIRECTIVES = {"bridge", "task", "audio", "thread"}
+KNOWN_DIRECTIVES = {"bridge", "task", "audio", "write", "clock", "thread"}
 
 
 def check_directives(tag: str, text: str, problems: list):
@@ -491,6 +491,82 @@ def check_directives(tag: str, text: str, problems: list):
     if opens != closes:
         problems.append(f"{tag}: {opens} directive(s) opened but {closes} closed — "
                         f"every ':::name' needs a bare ':::' to end it")
+
+
+def check_write(where: str, a: dict, body: str, problems: list):
+    """One :::write directive — a writing task that is actually attempted.
+
+    Three things are load-bearing. **B1**: the criterion is named on the task
+    itself, not somewhere in the unit. **E8**: a checklist that decides nothing
+    is the self-assessment the construct exists to anchor, so at least one line
+    has to be settled from the learner's own text. And **D3**/**A2**: what the
+    panel reports is a count of a named feature, never a score and never a band
+    — which is a rule about what may be authored into the line, since the
+    generator does the arithmetic.
+    """
+    unknown = set(a) - b.WRITE_ATTRS
+    if unknown:
+        problems.append(f"{where}: unknown write attribute(s) "
+                        f"{', '.join(sorted(unknown))} — allowed: "
+                        f"{', '.join(sorted(b.WRITE_ATTRS))}")
+    missing = b.WRITE_REQUIRED - set(a)
+    if missing:
+        problems.append(f"{where}: write is missing {', '.join(sorted(missing))}")
+        return
+    if not b.RE_WORDS_RANGE.match(a["words"].strip()):
+        problems.append(f"{where}: words={a['words']!r} is not a range like \"80-100\". "
+                        f"The count is printed live on the task (C9), so it needs two ends")
+        return
+    lo, hi = (int(x) for x in b.RE_WORDS_RANGE.match(a["words"].strip()).groups())
+    if lo >= hi:
+        problems.append(f"{where}: words=\"{lo}-{hi}\" is not a range")
+
+    # B1 at the point of use. `trains` is checked against the descriptors' own
+    # criterion names, and a Writing task may not claim to train a Speaking
+    # scale or a receptive skill.
+    if a["trains"] not in b.WRITING_CRITERIA:
+        problems.append(f"{where}: trains={a['trains']!r} is not one of the Writing "
+                        f"criteria ({', '.join(sorted(b.WRITING_CRITERIA))}) — a writing "
+                        f"task names the criterion it trains (B1)")
+
+    lines = list(b.RE_CHECK_LINE.finditer(body))
+    bullets = len([ln for ln in body.split("\n") if ln.strip().startswith("- ")])
+    if len(lines) != bullets:
+        problems.append(f"{where}: {bullets} checklist bullet(s) but {len(lines)} parsed. "
+                        f"A line is '- [ ] text' and optionally ' ~ check' — one that does "
+                        f"not parse vanishes, taking its check with it")
+    checked = 0
+    for m in lines:
+        if not m.group("check"):
+            continue
+        try:
+            b.parse_check(m.group("check"))
+        except SystemExit as exc:
+            problems.append(f"{where}: {exc}")
+            continue
+        checked += 1
+    if not checked:
+        problems.append(f"{where}: not one checklist line is decided from what the learner "
+                        f"wrote. A list of tick-boxes beside a text box is the unanchored "
+                        f"self-assessment this directive replaced (E8, §4.4)")
+
+
+def check_clock(where: str, a: dict, problems: list):
+    """C7: one clock, and it covers writing the answers down too (`04` §1.1)."""
+    unknown = set(a) - b.CLOCK_ATTRS
+    if unknown:
+        problems.append(f"{where}: unknown clock attribute(s) {', '.join(sorted(unknown))}")
+    if "mins" not in a:
+        problems.append(f"{where}: clock is missing mins")
+        return
+    try:
+        mins = float(a["mins"])
+    except ValueError:
+        problems.append(f"{where}: mins={a['mins']!r} is not a number")
+        return
+    if not 0 < mins <= 60:
+        problems.append(f"{where}: mins={a['mins']!r} — a reading clock runs "
+                        f"between a minute and an hour")
 
 
 def check_not_printed(where: str, script: str, text: str, problems: list):
@@ -687,6 +763,37 @@ def main() -> int:
                                 f"{t.get('skill')!r} — relabelling drops the word limit "
                                 f"and the confidence rating (C6, C10)")
 
+        for lesson, wa, wbody in u["writes"]:
+            check_write(f"{tag} lesson {lesson} (write)", wa, wbody, problems)
+        for lesson, ca in u["clocks"]:
+            check_clock(f"{tag} lesson {lesson} (clock)", ca, problems)
+
+        # Writing is a skill in every unit of this syllabus, and it was the one
+        # place the course handed the learner a pencil and a promise. A unit
+        # whose writing task is still six printed lines has no committed
+        # attempt to anchor its own checklist to (E8).
+        if not u["writes"]:
+            problems.append(f"{tag}: no :::write — the unit's writing task is printed "
+                            f"rather than attempted, so its checklist and any strand "
+                            f"check beside it rest on nothing measured (E8, C9)")
+
+        # C7: one clock covering everything, the typing included (`04` §1.1).
+        # Per lesson, because that is the unit of a reading block here; two
+        # clocks over one set of questions is not one clock.
+        read_at = {lesson for lesson, _, t in u["tasks"] if t.get("skill") == "reading"}
+        clock_at = [lesson for lesson, _ in u["clocks"]]
+        for lesson in sorted(read_at):
+            n = clock_at.count(lesson)
+            if n != 1:
+                problems.append(
+                    f"{tag} lesson {lesson}: {n} reading clock(s) for a lesson with "
+                    f"reading tasks — C7 wants exactly one, and it covers finding the "
+                    f"answers and typing them in (`04` §1.1)")
+        for lesson in clock_at:
+            if lesson not in read_at:
+                problems.append(f"{tag} lesson {lesson}: a reading clock with no reading "
+                                f"task to time")
+
         for rx, why in (BAND_PROMISE + GENRE_OVERCLAIM + TEMPLATE_LANGUAGE
                         + VN_PROHIBITED + TYPE_CONFUSION + SPEAKING_SCORING):
             for m in rx.finditer(text):
@@ -711,8 +818,12 @@ def main() -> int:
                                     f"bridge citing `07` §5.5 or §8.3 to license it (B7)\n      "
                                     f"→ {m.group(0).strip()[:70]!r}")
 
-        # B1: the unit's writing task must name the criterion it trains.
-        if not any(x.get("trains") in WRITING_CRITERIA for x in u["bridges"]):
+        # B1: the unit's writing task must name the criterion it trains. Since
+        # the task became a directive the name belongs on the task itself, and
+        # a bridge elsewhere in the unit no longer satisfies it — that was the
+        # loose reading, and it let the criterion sit two lessons away from the
+        # writing it was supposed to label.
+        if not any(x.get("trains") in WRITING_CRITERIA for _, x, _ in u["writes"]):
             problems.append(f"{tag}: no writing task names the criterion it trains (B1)")
 
     # The prohibitions were only ever applied to units/*.md, so a band promise

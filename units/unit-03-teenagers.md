@@ -66,14 +66,16 @@ Answer in full sentences.
 
 ### 1.3 Notice the grammar
 
-Each sentence below joins **two** ideas with a small word in **bold**. Write the
-word, then write **addition**, **contrast**, **result**, or **choice**.
+Each sentence below joins **two** ideas with a small word in **bold**. What is
+that word doing?
 
-1. I'm fine, **but** I didn't sleep much. → _______ / _______
-2. You should slow down, **or** you'll burn out. → _______ / _______
-3. I joined the photography club, **so** now I have one afternoon a week. → _______ / _______
-4. I know, **yet** I can't stop. → _______ / _______
-5. A phone is fine, **and** Mr Hung lends out two cameras. → _______ / _______
+::: task skill="course" type="choice" opts="addition|contrast|result|choice" ask="What relation does the **bold** conjunction set up between the two ideas?"
+- I'm fine, **but** I didn't sleep much. = contrast
+- You should slow down, **or** you'll burn out. = choice
+- I joined the photography club, **so** now I have one afternoon a week. = result
+- I know, **yet** I can't stop. = contrast
+- A phone is fine, **and** Mr Hung lends out two cameras. = addition
+:::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **câu đơn** và **câu
 > ghép** nối bằng các liên từ *and, but, so, or, yet*. Chi tiết ở Lesson 3.
@@ -385,6 +387,9 @@ reassures them and offers something practical.
 
 *A report from the school magazine of Nguyen Du Secondary School.*
 
+::: clock mins="18" for="18 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+:::
+
 > At Nguyen Du Secondary School, Thursday afternoon belongs to the clubs.
 > Lessons finish at half past two, and by three o'clock the classrooms have
 > changed completely.
@@ -411,14 +416,30 @@ reassures them and offers something practical.
 > something. "The ones who get involved keep up with their schoolwork better,"
 > she says. "They are busier, yet they seem calmer."
 
-### 5.1 True, False, or Not Given
+### 5.1 Matching headings
 
-::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you know about clubs is exactly the pull this type is built to catch."
-- The clubs at this school meet on Thursday afternoons. = T
-- The winner of each debate receives a prize. = F ~ "Nobody wins a prize"
-- Khanh could not cook anything at all before September. = NG ~ he says *some of us* could not boil rice — not necessarily himself
-- The wellbeing club is the oldest club in the school. = F ~ it is the newest
-- Ms Lan thinks club members keep up with their schoolwork better. = T
+The report has **six** paragraphs. Below are **eight** headings — two of them
+match no paragraph at all. That is how this question type is always built, and
+it is the whole difficulty: a heading that fits nothing still looks plausible.
+
+| | Heading |
+| --- | --- |
+| **i** | A skill that helps at home |
+| **ii** | The afternoon the school changes |
+| **iii** | Books repaired for somebody else |
+| **iv** | A prize worth winning |
+| **v** | Talking your way to confidence |
+| **vi** | Learning to handle a hard week |
+| **vii** | What a teacher has noticed |
+| **viii** | Why some students stay away |
+
+::: task skill="reading" type="matching-headings" opts="i|ii|iii|iv|v|vi|vii|viii" ask="Choose the correct heading for each paragraph. Read the whole paragraph before you choose: a heading that matches one sentence of it is the commonest way to get this wrong."
+- Paragraph 1 = ii ~ lessons end and the classrooms change completely
+- Paragraph 2 = v ~ the debate club — members are *far more self-confident than they were*
+- Paragraph 3 = i ~ Khanh now cooks dinner at home on Sundays
+- Paragraph 4 = iii ~ the volunteer club repairs old books and sends them away
+- Paragraph 5 = vi ~ the wellbeing club teaches ways to deal with stress
+- Paragraph 6 = vii ~ Ms Lan's observation about the students who get involved
 :::
 
 ### 5.2 Answer the questions
@@ -433,7 +454,7 @@ reassures them and offers something practical.
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. Give yourself **three minutes** for all five — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - sure of yourself = self-confident
 - something useful you need in everyday life = life skill
 - stop trying = give up/gives up
@@ -539,15 +560,15 @@ stress and **two solutions**.
 
 #### Model paragraph — read this first
 
-> Many students in my class feel stressed, and there are three main reasons.
-> First, we get too much homework, so we go to bed after midnight. Second, our
-> parents expect high marks, and we do not want to disappoint them. Third, we
-> compare ourselves with our friends, and then we feel that we are not good
-> enough. There are simple solutions. We can plan the week on Sunday, or we can
-> ask a teacher for help. Exercise helps too, and talking to someone you trust
-> helps most. Stress is normal, yet nobody has to face it alone.
+> Many teenagers in my class feel stressed, and there are three main reasons.
+> First, we get too much homework, so we cannot keep up with every subject.
+> Second, our parents expect high marks, and we do not want to disappoint them.
+> Third, peer pressure is strong, and then we feel that we are not good enough.
+> There are simple solutions. We can plan the week on Sunday, or we can ask a
+> teacher for help. Exercise helps too, and joining a club helps most. Stress
+> is normal, yet nobody has to deal with it alone.
 
-*(97 words)*
+*(95 words)*
 
 #### Plan it — 6 questions your paragraph has to answer
 
@@ -587,22 +608,14 @@ land there is a hard count.
 > dùng thêm từ nối nào nữa. Dùng quá nhiều từ nối bị trừ điểm y như dùng quá ít.
 :::
 
-#### Checklist — tick before you finish
-
-- [ ] 80–100 words (count them)
-- [ ] One paragraph, not a list
-- [ ] At least **four** compound sentences, each with a comma before the conjunction
-- [ ] At least **three** different conjunctions from *and, but, so, or, yet*
-- [ ] At least **four** words from the Lesson 2 vocabulary table
-- [ ] No comma splices — check every comma you wrote
-
-#### Now write yours
-
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
+::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — **one** paragraph of **80–100 words** on the causes of teenage stress and what helps."
+- [ ] 80–100 words ~ words
+- [ ] One paragraph, not a list ~ para:1
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] At least **four** compound sentences — a comma, then the conjunction ~ re:4 ,\s+(and|but|so|or|yet)\s
+- [ ] At least **three** different conjunctions from *and, but, so, or, yet* ~ distinct:3 and/but/so/or/yet
+- [ ] No comma splices — every comma you wrote joins with a conjunction, or it is not joining two clauses at all
+:::
 
 ---
 
@@ -659,6 +672,15 @@ agreement slip.
 > for help. I told her to join a club, she said she had no time. Last week she
 > came to the chess club with me, and now she go every Thursday.
 
+::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
+- Error 1 = fourteen, and she/fourteen, and ~ a comma is needed before *and* joining two clauses
+- Error 2 = homework, so she never goes/homework, so she/homework, so ~ comma splice — *so* joins the two clauses
+- Error 3 = late, so she thinks/late, so she/late, so ~ missing comma before *so*
+- Error 4 = week, or she can/week, or she/week, or ~ missing comma before *or*
+- Error 5 = club, but she said/club, but she/club, but ~ comma splice — *but* joins the two clauses
+- Error 6 = she goes ~ *she go* → *she goes* — subject–verb agreement
+:::
+
 ### Project — Start a club
 
 Design a club that your school does not have yet, and make the case for it.
@@ -707,9 +729,6 @@ says half of them are exhausted too, but nobody admits it — it is just peer
 pressure. 3. She joined it last term. 4. She comes home calmer, so she finishes
 her homework faster. 5. Nothing special — a phone is fine, and Mr Hung lends
 out two cameras.
-
-**1.3** 1. but / contrast 2. or / choice 3. so / result 4. yet / contrast
-5. and / addition
 
 ### Lesson 2
 
@@ -764,23 +783,3 @@ to you for the first meeting.*
 no comma) 7. You can come on Thursday**,** or you can come next week. 8. ✓ (one
 clause, two objects)
 
-**7.4**
-1. *fourteen and she* → **fourteen, and she** *(missing comma)*
-2. *homework, she never goes* → **homework, so she never goes** *(comma
-   splice)*
-3. *study late so she thinks* → **study late, so she thinks** *(missing comma)*
-4. *her week or she can* → **her week, or she can** *(missing comma)*
-5. *join a club, she said* → **join a club, but she said** *(comma splice)*
-6. *she go every Thursday* → **she goes every Thursday** *(subject–verb
-   agreement)*
-
-**Corrected paragraph:** *My sister is fourteen, and she is always stressed.
-She has too much homework, so she never goes to bed before midnight. Her
-friends all study late, so she thinks she must do the same. She can plan her
-week, or she can ask a teacher for help. I told her to join a club, but she
-said she had no time. Last week she came to the chess club with me, and now she
-goes every Thursday.*
-
-**Project** Answers will vary. Check: five classmates surveyed, all five rows
-of the plan filled in, a 60–80-word poster containing at least three compound
-sentences, and a one-minute recording.

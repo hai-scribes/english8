@@ -67,13 +67,15 @@ Answer in full sentences.
 ### 1.3 Notice the grammar
 
 Look at the **bold** words. Each one joins a **time clause** to the rest of the
-sentence. Write the time clause only.
+sentence.
 
-1. It started changing colour **after** the new workshop opened. → __________
-2. **As soon as** the fish disappeared, the birds stopped coming. → __________
-3. **Once** we have photographs, she can take it to the office. → __________
-4. We shouldn't wait **until** the lake is completely dead. → __________
-5. **Whenever** I walk past that lake now, I feel angry. → __________
+::: task skill="course" type="short-answer" ask="Write the **time clause only** — the bold word and everything that belongs with it, and nothing else."
+- It started changing colour **after** the new workshop opened. = after the new workshop opened
+- **As soon as** the fish disappeared, the birds stopped coming. = as soon as the fish disappeared
+- **Once** we have photographs, she can take it to the office. = once we have photographs
+- We shouldn't wait **until** the lake is completely dead. = until the lake is completely dead
+- **Whenever** I walk past that lake now, I feel angry. = whenever I walk past that lake now
+:::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **câu phức** với mệnh
 > đề trạng ngữ chỉ thời gian (*when, while, before, after, as soon as, until,
@@ -383,6 +385,9 @@ practical action.
 
 *About Con Dao National Park.*
 
+::: clock mins="19" for="19 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+:::
+
 > Con Dao National Park lies on a group of islands off the southern coast of
 > Viet Nam. It is unusual among Vietnamese
 > national parks because it protects two worlds at once: the forest on the
@@ -431,7 +436,7 @@ practical action.
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. Give yourself **three minutes** for all four — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - a protected place where eggs are kept safe until they hatch = hatchery
 - animals or people that live in a particular place = residents
 - come out of the egg = hatch/hatched
@@ -526,14 +531,19 @@ things first.
 - Hoa's final advice is to (a) stop swimming (b) report what you see (c) move away = b
 :::
 
-### 6.2 Listen and complete
+### 6.2 Note completion
 
-::: task skill="listening" type="sentence-completion" words="1"
-- When a town grows faster than its ___ , waste water goes straight into the nearest river. = drains
-- After the fish disappear, the ___ that feed on them leave as well. = birds
-- Villagers who use the river for washing get ___ problems. = skin
-- Never pour oil or ___ down a drain. = paint
-- Take a photograph, note the ___ , and tell an adult. = date
+The notes below are the shape this type always takes: headings and fragments,
+never full sentences. Fill each gap **as you listen** — there is no transfer
+time at the end.
+
+::: task skill="listening" type="completion" words="1"
+- Cause 1 — untreated ___ goes straight into the nearest river = sewage
+- Cause 2 — rain washes ___ off the fields = pesticide
+- Cause 3 — some factories release chemicals at ___ = night
+- Effect — fish die first, because dirty water carries less ___ = oxygen
+- Effect — villagers who wash in the river get ___ problems = skin
+- Advice — never pour oil or ___ down a drain = paint
 :::
 
 ::: bridge name="Two cause-and-result sentences on what you just heard" trains="Grammatical Range & Accuracy" cefr="B1" marker="[Q]" src="05 §2.6"
@@ -578,26 +588,25 @@ back at the friendly email you wrote in Unit 1 and notice the difference.
 >
 > **Talk: "Our River, Our Responsibility"**
 >
-> The Green Club invites all students in Grades 8 and 9 to a lecture on water
-> pollution and on what young people can do about it.
+> The Green Club invites students in Grades 8 and 9 to a lecture on water
+> pollution: where the sewage in our river comes from, and how to protect it.
 >
 > **Speaker:** Dr Le Minh Hoa, Institute of Environmental Science
 > **Date:** Saturday, 12 October
 > **Time:** 8.30 a.m. – 10.00 a.m.
 > **Place:** School Hall, Block B
 >
-> Please bring a notebook and one question for the speaker. After the talk
-> finishes, the club will clean the bank of the school lake, so students who
+> Bring a notebook and a question for the speaker. After the talk finishes,
+> the club will clear the litter from the bank of the school lake, so those who
 > want to join should bring gloves.
 >
-> Places are limited. Give your name to your class monitor before Friday,
-> 10 October.
+> Places are limited. Give your name to your class monitor before 10 October.
 >
-> For more information, contact the Green Club at room B12 during break time.
+> For more information, contact the Green Club at room B12.
 >
 > **The Green Club**
 
-*(118 words)*
+*(119 words)*
 
 #### Plan it — 6 questions your notice has to answer
 
@@ -644,24 +653,17 @@ register and concision, plus familiarity with a text type that appears in GT
 ::: thread id="articles" stage="check"
 :::
 
-#### Checklist — tick before you finish
-
-- [ ] 100–120 words (count them)
+::: write words="100-120" trains="Grammatical Range & Accuracy" ask="Now write yours — the notice, in **100–120 words**."
+- [ ] 100–120 words ~ words
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] At least **two** numbers — the date and the time ~ re:2 \d+
+- [ ] At least **one** time clause ~ any:1 after/before/once/when/until/as soon as/while/whenever
+- [ ] …with **no** *will* inside it ~ none when it will/after it will/before it will/once it will/until it will/as soon as it will/when we will/when you will/when they will/after we will/before we will/while we will
+- [ ] Impersonal throughout — no greeting, no *Write soon*, no jokes ~ none hi/hello/dear/write soon/love/see you soon/best wishes/take care/your friend
 - [ ] A clear heading and a title for the event
-- [ ] Date, time and place all present and easy to find
-- [ ] At least **one** complex sentence with a time clause (*after…*, *before…*,
-      *once…*) — with no *will* inside the time clause
-- [ ] At least **four** words from the Lesson 2 vocabulary table
+- [ ] The place is there, and easy to find
 - [ ] A contact line and a signature
-- [ ] No greeting, no *Write soon*, no jokes — impersonal throughout
-
-#### Now write yours
-
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
+:::
 
 ---
 
@@ -718,6 +720,14 @@ clause of purpose. One is a vocabulary slip.
 > until the whole school will join in. Our teacher says that small habits
 > pollute the environment more than big speeches do.
 
+::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
+- Error 1 = when we collect ~ no *will* inside a time clause
+- Error 2 = the gate so that/gate so that ~ no comma before *so that*
+- Error 3 = wrong bin, the monitor/bin, the monitor ~ a fronted time clause takes a comma after it
+- Error 4 = joins ~ no *will* inside a time clause — *until the whole school joins*
+- Error 5 = protect ~ *pollute* is the opposite of what the sentence means
+:::
+
 ### Project — A water report for your neighbourhood
 
 Build a one-page report on a river, lake, canal or pond near where you live.
@@ -762,10 +772,6 @@ board, inviting classmates to a clean-up. Reuse the Lesson 6 structure.
 workshop opened on the other side of the lake. 3. The birds stopped coming to
 the lake as well. 4. She will ask them for evidence — photographs and dates.
 5. She is going to take a photo of the lake while she walks to school.
-
-**1.3** 1. after the new workshop opened 2. As soon as the fish disappeared
-3. Once we have photographs 4. until the lake is completely dead
-5. Whenever I walk past that lake now
 
 ### Lesson 2
 
@@ -827,21 +833,3 @@ the factory **opened** last year. *(no comma)* 5. We **will not give** up until
 the district office **answers** our letter. *(no comma)* 6. Once the eggs
 **hatch**, the rangers **will release** the young turtles. *(comma)*
 
-**7.4** 1. When we **will collect** → When we **collect**. 2. *the bins near the
-gate, so that* → the comma before *so that* is wrong: **the gate so that**.
-3. *…in the wrong bin the monitor takes it out* → comma needed after the
-fronted time clause: **wrong bin, the monitor**. 4. until the whole school
-**will join** → **joins**. 5. small habits **pollute** the environment →
-**protect** (*pollute* is the opposite of what the sentence means).
-
-**Corrected paragraph:** *Our class started a recycling project last term. When
-we collect enough paper, we will sell it and buy young trees for the school
-yard. We keep the bins near the gate so that everyone can see them. Whenever
-somebody drops rubbish in the wrong bin, the monitor takes it out again. We
-will not stop until the whole school joins in. Our teacher says that small
-habits protect the environment more than big speeches do.*
-
-**Project** Answers will vary. Check: four dated observations recorded in the
-table, two interviews written up, a cause → effect chain where every arrow is
-labelled with a time clause, a 120–150 word write-up containing at least four
-complex sentences, and a notice that follows the Lesson 6 structure.
