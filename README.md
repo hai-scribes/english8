@@ -11,10 +11,12 @@ The second job is mostly not something the pages *say* — it is how they
 behave. 1,143 questions are marked the way a real answer key marks; twelve
 recordings play once, behind a spoken introduction that is never written down;
 every listening answer carries a *how sure are you* mark; twelve reading blocks
-run one clock that does not stop while you type; and twelve writing tasks are
-written into the page, where seventy of their ninety-two checklist lines are
-settled from the text rather than from the learner's own opinion of it. On top
-of that, twenty-eight tasks carry one changed instruction, checkpoint or
+run one clock that does not stop while you type; twelve passages can be
+highlighted and annotated under a numbered question bar with a review flag; and
+twelve writing tasks are written into the page, where seventy of their
+ninety-two checklist lines are settled from the text rather than from the
+learner's own opinion of it. On top
+of that, twenty-nine tasks carry one changed instruction, checkpoint or
 re-scored drill built from the IELTS research — each cited, each carrying the
 strength of its evidence. See [Marked tasks, one play, and strands](#marked-tasks-one-play-and-strands)
 and [The IELTS bridge](#the-ielts-bridge) below, plus the generated
@@ -45,6 +47,7 @@ above the lessons, and inert until the lessons they cover are complete.
 | `tools/check_ielts.py` | Gate: the knowledge base's audit checklist, enforced. |
 | `tools/test_marking.js` | Gate: the marking engine, against the published rules. |
 | `tools/check_write.js` | Gate: every unit's model satisfies the checklist that unit prints. |
+| `tools/test_reading.js` | Gate: the reading screen — labels, highlighting, notes, question bar. |
 | `tools/build.py` | Generator: markdown → the 98-page site. |
 | `tools/assets/` | `app.css` and `app.js`, copied into the build. |
 | `docs/` | Generated output. GitHub Pages serves this directory. |
@@ -60,16 +63,19 @@ python3 tools/check_dict.py       # gate: every vocabulary slot resolves
 python3 tools/check_ielts.py      # gate: every IELTS claim is legal and cited
 node tools/test_marking.js        # gate: the marking engine obeys the published rules
 node tools/check_write.js         # gate: each model satisfies its own checklist (needs docs/)
+node tools/test_reading.js        # gate: the reading screen behaves (needs docs/ and jsdom)
 ```
 
 Requires `markdown` (`pip install markdown`). Edit the markdown in `units/`,
 re-run the build, commit `docs/`. There is no CI step — a push publishes, so
-run all four gates before you push. `check_write.js` reads the built pages, so
-run it after `build.py` rather than before.
+run all five gates before you push. `check_write.js` and `test_reading.js` read
+the built pages, so run them after `build.py` rather than before.
+`test_reading.js` additionally wants `npm install jsdom`; without it, it skips
+loudly rather than failing, so a clean checkout still runs the other four.
 
 ## Marked tasks, one play, and strands
 
-Five directives carry the parts of IELTS that are a *system* rather than a
+Six directives carry the parts of IELTS that are a *system* rather than a
 label. Each replaces an instruction the learner used to be trusted to follow
 with a mechanic the page enforces.
 
@@ -232,6 +238,46 @@ one, or if a clock is declared where there is nothing to time. Each is sized
 from the work it covers — the passage at 120 words per minute plus a minute a
 question — not from IELTS's own pace over a text a grade-8 reader could not
 read at all.
+
+### `:::passage` — the reading text, on a screen that behaves like the test's
+
+```markdown
+::: passage label="A"
+> For thousands of years, the Inupiat people of northern Alaska…
+>
+> Traditionally, families live from the land and the sea…
+:::
+```
+
+`09` **C9**, from `01` §9.1 and §12.7: the Reading screen offers colour
+highlighting and on-screen notes, and Writing shows a live word count. The
+writing half shipped with `:::write`. The reading half did not exist — the
+passage was an inert blockquote — so this adds selection highlighting (select
+to mark, select a mark to take it off), a notes box, and a question navigation
+bar with a review flag. All of it is kept on the device, and none of it stops
+the clock.
+
+`label` also fixes a defect the blockquote could not. A paragraph-referencing
+question type — matching headings, matching information, matching features —
+asks *which paragraph*, and needs the paragraphs to be labelled. Unit 3's
+lesson said "The report has six paragraphs" and Unit 6's said "five paragraphs,
+**A** to **E**, in the order they are printed", and neither page printed a
+single label: under a clock, the learner counted paragraphs by hand before they
+could start. `label="A"` letters them A, B, C…; `label="1"` numbers them. The
+labels are generated from the paragraph count, never authored, so adding a
+paragraph cannot leave the lettering behind.
+
+The gate refuses a timed reading block without exactly one passage, a
+paragraph-referencing task over an unlabelled one, and a question that names a
+paragraph the passage does not have — `opts="A|B|C|D|E|F"` over five
+paragraphs, or a key that says *Paragraph G*.
+
+`node tools/test_reading.js` drives the built page in a DOM and checks the
+behaviour, because none of it is visible to a static check. It earned that
+straight away: the first highlighter asked `Selection.containsNode` which
+paragraphs a drag touched, and the test found it naming every paragraph
+*except* the selected one — four whole paragraphs highlighted instead of the
+phrase the reader had dragged over.
 
 ### `:::thread` — a strand that says it recurs, and does
 

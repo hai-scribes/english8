@@ -207,6 +207,16 @@ VN_PROHIBITED = [
 # inference, and is not what VN-4 prohibits.
 RE_VN_CLAIM = re.compile(r"vietnamese (learners|speakers|students)[^.\n]{0,80}"
                          r"(merge|swap|drop|omit|confuse|mispronounce)", re.I)
+
+# The same claim, made in Vietnamese. Every pattern above reads English only,
+# and this course is bilingual: unit 12's tip said "Người Việt thường đọc cả
+# câu liệt kê trên một cao độ đều đều" — a Vietnamese-L1 intonation claim
+# outside VN-1/VN-2/VN-3, with no marker and no warrant — and walked through
+# six B7 patterns untouched because not one of them reads Vietnamese.
+RE_VN_CLAIM_VI = re.compile(
+    r"(người việt|người nam|học sinh việt|tiếng việt)[^.\n!?]{0,90}"
+    r"(thường|hay|khó|không) ?[^.\n!?]{0,60}"
+    r"(đọc|phát âm|nói|nghe|nhấn|ngữ điệu|âm|giọng)", re.I)
 RE_PRON_BLOCK = re.compile(r"^###\s+Pronunciation\b.*?(?=^###\s|\Z)", re.M | re.S)
 
 WRITING_CRITERIA = b.WRITING_CRITERIA
@@ -474,7 +484,7 @@ def over_limit(given: str, words: str) -> bool:
 # a build failure rather than a block of raw markdown on the page. ":::taskk"
 # used to render its own source, keys and all, and no gate could see it.
 RE_OPENER = re.compile(r"^:::[ \t]*(?P<name>[A-Za-z][\w-]*)", re.M)
-KNOWN_DIRECTIVES = {"bridge", "task", "audio", "write", "clock", "thread"}
+KNOWN_DIRECTIVES = {"bridge", "task", "audio", "write", "clock", "thread", "passage"}
 
 
 def check_directives(tag: str, text: str, problems: list):
@@ -567,6 +577,95 @@ def check_clock(where: str, a: dict, problems: list):
     if not 0 < mins <= 60:
         problems.append(f"{where}: mins={a['mins']!r} — a reading clock runs "
                         f"between a minute and an hour")
+
+
+# Reading types whose questions name a paragraph. The question is unanswerable
+# the way its own type is answered unless the passage carries the labels the
+# question refers to, and until this gate existed neither of the two lessons
+# using one printed a single label: unit 03 said "The report has six
+# paragraphs" and unit 06 said "five paragraphs, **A** to **E**, in the order
+# they are printed", over a blockquote with nothing on it.
+#
+# Matching *features* is deliberately not here. Its option set letters a list
+# of researchers or places, not the paragraphs — requiring those letters to be
+# paragraph labels would reject a correctly built task.
+PARA_TYPES = {"matching-headings", "matching-information"}
+# Only matching information puts the paragraph label in the option set;
+# matching headings puts the headings there and names the paragraph in the
+# prompt instead.
+OPTS_ARE_PARAS = {"matching-information"}
+# re.I is load-bearing: the prompts are written "Paragraph D", and the literal
+# in this pattern is lowercase. The capture class is spelled out so the flag
+# cannot change what counts as a label.
+RE_PARA_REF = re.compile(r"\bparagraphs?\s+([A-Za-z]|\d+)\b", re.I)
+
+
+def check_passage(where: str, a: dict, body: str, problems: list):
+    """One :::passage — the reading text, and the screen it is read on (C9)."""
+    unknown = set(a) - b.PASSAGE_ATTRS
+    if unknown:
+        problems.append(f"{where}: unknown passage attribute(s) {', '.join(sorted(unknown))}")
+    if "label" in a and a["label"] not in b.PASSAGE_LABELS:
+        problems.append(f"{where}: label={a['label']!r} is not a labelling scheme — "
+                        f"{', '.join(sorted(b.PASSAGE_LABELS))} (letters, numbers)")
+    if not body.strip():
+        problems.append(f"{where}: the passage is empty")
+
+
+def check_reading_screen(tag: str, u, problems: list):
+    """C9 for reading, per lesson: the passage, and the labels its tasks name.
+
+    Two rules, and both are about a promise the page could not previously
+    keep. A reading block gets exactly one passage, so the highlighting, the
+    notes and the question bar cannot be omitted from a future lesson the way
+    they were absent from every lesson before this. And a question that says
+    "which paragraph" only works if the paragraphs are labelled, so the
+    labelling is required wherever such a task appears — and every label the
+    task refers to has to be one the passage actually produces.
+    """
+    passages: dict[int, list] = {}
+    for lesson, a, body in u["passages"]:
+        passages.setdefault(lesson, []).append((a, body))
+
+    clock_at = [lesson for lesson, _ in u["clocks"]]
+    for lesson in sorted(set(clock_at)):
+        n = len(passages.get(lesson, []))
+        if n != 1:
+            problems.append(
+                f"{tag} lesson {lesson}: {n} :::passage for a timed reading block — C9 "
+                f"wants exactly one, and it is what carries the highlighting, the notes "
+                f"and the question bar (`01` §9.1, §12.7)")
+
+    for lesson, blk, t in u["tasks"]:
+        if t.get("type") not in PARA_TYPES or t.get("skill") != "reading":
+            continue
+        where = f"{tag} lesson {lesson} ex {blk['id'] or blk['title']}"
+        here = passages.get(lesson, [])
+        if len(here) != 1:
+            problems.append(f"{where}: a {t['type']} task with no single :::passage to "
+                            f"letter — the question asks which paragraph and the page "
+                            f"prints no paragraph labels")
+            continue
+        a, body = here[0]
+        labels = b.passage_labels(a, body)
+        if not labels:
+            problems.append(f"{where}: a {t['type']} task over an unlabelled passage — "
+                            f"add label=\"A\" to the :::passage, or the learner counts "
+                            f"paragraphs by hand under the clock")
+            continue
+        # Every paragraph the task points at, from both places a task can name
+        # one: "Paragraph D" in a prompt, and the option set where the options
+        # are the paragraphs.
+        want = {ref.upper() for it in t["items"] for ref in RE_PARA_REF.findall(it["q"])}
+        if t.get("type") in OPTS_ARE_PARAS:
+            want |= {o.strip().upper() for o in (t.get("opts") or "").split("|") if o.strip()}
+        have = {x.upper() for x in labels}
+        missing = sorted(want - have)
+        if missing:
+            problems.append(
+                f"{where}: names paragraph {', '.join(missing)} but the passage letters "
+                f"{', '.join(labels)} — the question points at a paragraph that is not "
+                f"on the page")
 
 
 def check_not_printed(where: str, script: str, text: str, problems: list):
@@ -767,6 +866,9 @@ def main() -> int:
             check_write(f"{tag} lesson {lesson} (write)", wa, wbody, problems)
         for lesson, ca in u["clocks"]:
             check_clock(f"{tag} lesson {lesson} (clock)", ca, problems)
+        for lesson, pa, pbody in u["passages"]:
+            check_passage(f"{tag} lesson {lesson} (passage)", pa, pbody, problems)
+        check_reading_screen(tag, u, problems)
 
         # Writing is a skill in every unit of this syllabus, and it was the one
         # place the course handed the learner a pencil and a promise. A unit
@@ -812,11 +914,12 @@ def main() -> int:
         licensed = any(s.startswith("07 §5.5") or s.startswith("07 §8.3") for s in srcs)
         if not licensed:
             for blk in RE_PRON_BLOCK.finditer(text):
-                for m in RE_VN_CLAIM.finditer(blk.group(0)):
-                    line = text[:blk.start() + m.start()].count("\n") + 1
-                    problems.append(f"{tag}:{line}: a Vietnamese-L1 pronunciation claim with no "
-                                    f"bridge citing `07` §5.5 or §8.3 to license it (B7)\n      "
-                                    f"→ {m.group(0).strip()[:70]!r}")
+                for rx in (RE_VN_CLAIM, RE_VN_CLAIM_VI):
+                    for m in rx.finditer(blk.group(0)):
+                        line = text[:blk.start() + m.start()].count("\n") + 1
+                        problems.append(f"{tag}:{line}: a Vietnamese-L1 pronunciation claim with no "
+                                        f"bridge citing `07` §5.5 or §8.3 to license it (B7)\n      "
+                                        f"→ {m.group(0).strip()[:70]!r}")
 
         # B1: the unit's writing task must name the criterion it trains. Since
         # the task became a directive the name belongs on the task itself, and

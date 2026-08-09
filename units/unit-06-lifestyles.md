@@ -172,6 +172,7 @@ of this block gives the measurement behind that claim.
 - print = /pr/
 - celebrate = /br/
 :::
+
 ### 2.4 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** cluster. Pick it."
@@ -405,6 +406,7 @@ Reply to each person. Use a prediction, a promise and an offer — one of each.
 ::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
 :::
 
+::: passage label="A"
 > For thousands of years, the Inupiat people of northern Alaska and the Yupik
 > people of western Alaska have lived in one of the coldest places on Earth.
 > Their villages are small and remote. Some can only be reached by plane or by
@@ -429,6 +431,7 @@ Reply to each person. Use a prediction, a promise and an offer — one of each.
 > left? Many of them now teach hunting, sewing and their own language to
 > children after school. They believe a community can be modern and traditional
 > at the same time.
+:::
 
 ### 5.1 Matching information
 

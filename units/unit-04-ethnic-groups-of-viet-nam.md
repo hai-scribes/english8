@@ -156,8 +156,33 @@ against the soft palate. The **only** difference is voice.
 - **l** in *folk* /fəʊk/ is silent, but the /k/ at the end is not.
 
 > **Mẹo:** Đặt tay lên cổ họng. Nói **coat** — cổ họng im. Nói **goat** — bạn
-> thấy rung. Người Việt thường phát âm /ɡ/ thành /k/ ở cuối từ; hãy giữ độ rung
-> đến hết âm: *do**g***, *ba**g***, *fla**g***.
+> thấy rung. Hãy giữ độ rung đến hết âm: *do**g***, *ba**g***, *fla**g***.
+
+---
+
+::: bridge name="Final /ɡ/ is outside the Vietnamese coda inventory — that is why it drifts to /k/" trains="Pronunciation" cefr="A2" marker="[S]" src="07 §5.5.1"
+The end of the word is the hard part, and there is a structural reason for it.
+A Vietnamese syllable may close with only eight segments: the three
+**unreleased voiceless** obstruents /p t k/, the three nasals /m n ŋ/, and
+/j w/. **No voiced obstruent closes a Vietnamese syllable at all** — so English
+final /b d ɡ/ sit outside the inventory the mouth already has, and /ɡ/ drifts to
+the nearest thing that is inside it, /k/.
+
+That is why the drill is *hold the buzz to the end*, not *say it louder*. The
+sound is not missing from Vietnamese — /ɡ/ is a perfectly ordinary onset. It is
+missing from that **position**.
+
+**Two limits travel with this.** It is a description of the Vietnamese sound
+system, quoted from one source and not independently re-checked, and that
+source describes **Hanoi** Vietnamese specifically. And it says what is
+**hard** — nothing here claims that fixing it raises a score, a band, or how
+well you are understood. No study has measured that.
+
+> **Tiếng Việt:** Âm tiết tiếng Việt chỉ khép lại bằng /p t k m n ŋ j w/, và
+> **không có phụ âm hữu thanh nào** đứng cuối. Vì vậy /ɡ/ cuối từ trong tiếng
+> Anh nằm ngoài hệ thống có sẵn, và dễ trượt về /k/. Đây là mô tả cái **khó**,
+> không phải lời hứa về điểm số.
+:::
 
 ### 2.3 Sort the sounds
 
@@ -175,6 +200,7 @@ against the soft palate. The **only** difference is voice.
 - culture = /k/
 - group = /ɡ/
 :::
+
 ### 2.4 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** sound for the bold letter. Pick it."
@@ -427,6 +453,7 @@ question, and one beginning *Could you tell me…*.
 ::: clock mins="18" for="18 minutes for the text and every exercise below it — reading, finding, and typing your answers."
 :::
 
+::: passage
 > Viet Nam is home to 54 ethnic groups. The Kinh are the majority, and the other
 > 53 groups are called ethnic minorities. Some — the Tay, the Thai, the Muong,
 > the Khmer, the H'Mong, the Dao — have quite large populations.
@@ -450,6 +477,7 @@ question, and one beginning *Could you tell me…*.
 > people are proud of the old houses, and a few villages have begun to restore
 > them. A stilt house is not only somewhere to sleep. It is a piece of heritage
 > that a family can stand inside.
+:::
 
 ### 5.1 True, False, or Not Given
 

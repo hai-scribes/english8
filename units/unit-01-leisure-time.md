@@ -351,6 +351,7 @@ one politely, and give a reason.
 ::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
 :::
 
+::: passage
 > Everyone in my family is busy from Monday to Saturday. My parents work, my
 > brother has extra classes, and I have school and homework. So we made a rule
 > last year: Sunday belongs to all of us together.
@@ -371,6 +372,7 @@ one politely, and give a reason.
 > My friends sometimes ask me to hang out on Sundays and I say no. They think
 > this is strange. But I only get one Sunday a week, and I would rather spend
 > it at home.
+:::
 
 ### 5.1 True, False, or Not Given
 

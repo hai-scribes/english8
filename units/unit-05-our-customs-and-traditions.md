@@ -172,6 +172,7 @@ One more pair worth learning by heart:
 - lantern = /n/
 - wrapping = /ŋ/
 :::
+
 ### 2.4 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** nasal sound. Pick it."
@@ -409,6 +410,7 @@ in one or two sentences, using a phrase from the tables above.
 ::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
 :::
 
+::: passage
 > Our village festival falls in the second lunar month, and for one day the
 > whole place changes.
 >
@@ -432,6 +434,7 @@ in one or two sentences, using a phrase from the tables above.
 > I used to complain about getting up at four. Last year I noticed something.
 > The people who taught my grandmother these customs are gone, and now she is
 > teaching me. So I get up.
+:::
 
 ### 5.1 True, False, or Not Given
 

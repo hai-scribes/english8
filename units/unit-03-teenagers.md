@@ -165,6 +165,7 @@ and travel in opposite directions.
 - furious = /ʊə/
 - boy = /ɔɪ/
 :::
+
 ### 2.4 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** vowel sound. Pick it."
@@ -390,6 +391,7 @@ reassures them and offers something practical.
 ::: clock mins="18" for="18 minutes for the text and every exercise below it — reading, finding, and typing your answers."
 :::
 
+::: passage label="A"
 > At Nguyen Du Secondary School, Thursday afternoon belongs to the clubs.
 > Lessons finish at half past two, and by three o'clock the classrooms have
 > changed completely.
@@ -415,12 +417,14 @@ reassures them and offers something practical.
 > Not every student joins a club, and that is fine. But Ms Lan has noticed
 > something. "The ones who get involved keep up with their schoolwork better,"
 > she says. "They are busier, yet they seem calmer."
+:::
 
 ### 5.1 Matching headings
 
-The report has **six** paragraphs. Below are **eight** headings — two of them
-match no paragraph at all. That is how this question type is always built, and
-it is the whole difficulty: a heading that fits nothing still looks plausible.
+The report has **six** paragraphs, **A** to **F**, lettered in the text above.
+Below are **eight** headings — two of them match no paragraph at all. That is
+how this question type is always built, and it is the whole difficulty: a
+heading that fits nothing still looks plausible.
 
 | | Heading |
 | --- | --- |
@@ -434,12 +438,12 @@ it is the whole difficulty: a heading that fits nothing still looks plausible.
 | **viii** | Why some students stay away |
 
 ::: task skill="reading" type="matching-headings" opts="i|ii|iii|iv|v|vi|vii|viii" ask="Choose the correct heading for each paragraph. Read the whole paragraph before you choose: a heading that matches one sentence of it is the commonest way to get this wrong."
-- Paragraph 1 = ii ~ lessons end and the classrooms change completely
-- Paragraph 2 = v ~ the debate club — members are *far more self-confident than they were*
-- Paragraph 3 = i ~ Khanh now cooks dinner at home on Sundays
-- Paragraph 4 = iii ~ the volunteer club repairs old books and sends them away
-- Paragraph 5 = vi ~ the wellbeing club teaches ways to deal with stress
-- Paragraph 6 = vii ~ Ms Lan's observation about the students who get involved
+- Paragraph A = ii ~ lessons end and the classrooms change completely
+- Paragraph B = v ~ the debate club — members are *far more self-confident than they were*
+- Paragraph C = i ~ Khanh now cooks dinner at home on Sundays
+- Paragraph D = iii ~ the volunteer club repairs old books and sends them away
+- Paragraph E = vi ~ the wellbeing club teaches ways to deal with stress
+- Paragraph F = vii ~ Ms Lan's observation about the students who get involved
 :::
 
 ### 5.2 Answer the questions

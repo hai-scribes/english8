@@ -519,6 +519,7 @@ were repeating it (*He/She said that…*).
 ::: clock mins="19" for="19 minutes for the text and every exercise below it — reading, finding, and typing your answers."
 :::
 
+::: passage
 > Think about the last time you unlocked your phone. You probably did not type
 > a password. You put your thumb on a small square, or you simply looked at the
 > screen and it opened. That is biometrics: technology that identifies a person
@@ -542,6 +543,7 @@ were repeating it (*He/She said that…*).
 > Nanolearning has a drawback too. Short bursts are excellent for facts and
 > small skills, but a difficult idea still needs long, slow, uncomfortable
 > thinking. No app removes that.
+:::
 
 ### 5.1 Yes, No, or Not Given
 

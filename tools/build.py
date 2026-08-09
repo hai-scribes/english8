@@ -143,7 +143,7 @@ RE_THREAD = re.compile(r"^:::[ \t]*thread\b(?P<attrs>[^\n]*)\n(?P<body>.*?)"
 # a misspelled directive name (":::taskk") fails to match instead of matching
 # ":::task" with the rest silently dropped.
 RE_DIRECTIVE = re.compile(
-    r"^:::[ \t]*(?P<kind>task|audio|write|clock|thread)\b(?P<attrs>[^\n]*)\n"
+    r"^:::[ \t]*(?P<kind>task|audio|write|clock|thread|passage)\b(?P<attrs>[^\n]*)\n"
     r"(?P<body>.*?)\n?:::[ \t]*$", re.M | re.S)
 WIDGET = "\x00W%d\x00"
 
@@ -659,6 +659,97 @@ def clock_html(p: dict) -> str:
             f'</div>')
 
 
+# --------------------------------------------------------------- passages ---
+# `09` **C9**: the reading screen's affordances are part of the test, not
+# decoration — `01` §9.1, §12.7 names colour highlighting, on-screen notes, a
+# question navigation bar and a review flag. Writing's half of C9, the live
+# word count, shipped with `:::write`; the reading half was a blockquote with
+# nothing on it.
+#
+# The directive also fixes a defect that a blockquote could not fix. A
+# paragraph-referencing question type — matching headings, matching
+# information, matching features — asks "which paragraph", and the passage has
+# to *have* labelled paragraphs for that question to be answerable the way the
+# type is answered. Unit 03's lesson said "The report has six paragraphs" and
+# unit 06's said "five paragraphs, **A** to **E**, in the order they are
+# printed"; neither page printed a single label, so under a clock the learner
+# counted paragraphs by hand before they could start. `label` makes the label
+# real, and the gate makes it required wherever a task refers to one.
+PASSAGE_ATTRS = {"label", "kind", "title"}
+
+# A label scheme is a starting token: "A" letters the paragraphs A, B, C…,
+# "1" numbers them. Anything else is rejected by the gate rather than guessed.
+PASSAGE_LABELS = {"A": lambda i: chr(ord("A") + i), "1": lambda i: str(i + 1)}
+RE_P_OPEN = re.compile(r"<p>")
+
+
+def passage_labels(a: dict, body: str) -> list:
+    """The labels a passage prints, derived rather than authored.
+
+    The gate needs these without building a page, so the count comes from the
+    rendered paragraphs — which is what the reader sees — rather than from the
+    source, which for an interview is one blockquote and twelve turns.
+    """
+    scheme = PASSAGE_LABELS.get(a.get("label", ""))
+    if not scheme:
+        return []
+    return [scheme(i) for i in range(len(RE_P_OPEN.findall(render(body))))]
+
+
+def passage_block(u, lesson, a: dict, body: str, idx: int = 0):
+    """The passage, its paragraph labels, and the reading tools that sit on it.
+
+    The body keeps whatever markdown it was written in — the twelve passages
+    are blockquotes, and one of them is an interview whose speaker turns depend
+    on that — so this renders first and counts the paragraphs it actually
+    produced, rather than counting the source and hoping the two agree.
+
+    The labels are generated from that count rather than authored, so a
+    paragraph added to the text cannot leave the lettering behind: the same
+    reason the answer key is generated from the task and the strand check from
+    the strand's introduction.
+    """
+    inner = render(body)
+    n = len(RE_P_OPEN.findall(inner))
+    labels = passage_labels(a, body)
+    p = {"id": f"{u['nn']}-{lesson}-p{idx + 1}", "label": a.get("label", ""),
+         "paras": n, "labels": labels}
+
+    if labels:
+        seq = iter(labels)
+
+        def label(_m):
+            lb = next(seq)
+            return f'<p class="pg-p"><span class="pg-l" aria-hidden="true">{e(lb)}</span>'
+
+        inner = RE_P_OPEN.sub(label, inner)
+    title = a.get("title", "")
+    kind = a.get("kind", "Reading passage")
+    note = ("Paragraphs are lettered, as they are in the test."
+            if p["label"] == "A" else
+            "Paragraphs are numbered, as they are in the test."
+            if p["label"] else
+            "Select any words to highlight them; select a highlight to take it off.")
+    lab = ' data-labelled="1"' if p["labels"] else ""
+    tt = f'<span class="pg-t">{inline(title)}</span>' if title else ""
+    html = (f'<div class="pg" data-role="passage" data-passage="{e(p["id"])}"{lab}>'
+            f'<div class="pg-h"><span class="pg-k">{e(kind)}</span>{tt}'
+            f'<span class="pg-sp"></span>'
+            f'<button class="pg-b" type="button" data-pg="note" aria-expanded="false">Notes</button>'
+            f'<button class="pg-b" type="button" data-pg="clear">Clear marks</button>'
+            f'</div>'
+            f'<div class="pg-body" data-pg="body">{inner}</div>'
+            f'<p class="pg-say">{e(note)} Your highlights and notes are kept on this '
+            f'device, and the clock does not stop for either.</p>'
+            f'<div class="pg-note" data-pg="notepad" hidden>'
+            f'<label class="pg-nl" for="nt-{e(p["id"])}">On-screen notes</label>'
+            f'<textarea id="nt-{e(p["id"])}" class="pg-ta" rows="4" '
+            f'placeholder="Notes stay with this passage. Nothing here is marked."></textarea>'
+            f'</div>'
+            f'</div>')
+    return p, html
+
+
 # ----------------------------------------------------------------- threads --
 # The defect this construct exists for: Unit 5 promised in bold that "every
 # writing task from Unit 6 to Unit 12 carries a five-item article check", and
@@ -1057,7 +1148,7 @@ def parse_unit(path: Path) -> dict:
                 a = dict(RE_ATTR.findall(m.group("attrs")))
                 if kind == "task":
                     _w.append((kind, parse_task_body(a, m.group("body"))))
-                elif kind in ("audio", "write"):
+                elif kind in ("audio", "write", "passage"):
                     _w.append((kind, (a, m.group("body"))))
                 else:
                     _w.append((kind, a))
@@ -1075,6 +1166,7 @@ def parse_unit(path: Path) -> dict:
                 "writes": [d for k, d in widgets if k == "write"],
                 "clocks": [d for k, d in widgets if k == "clock"],
                 "threads": [d for k, d in widgets if k == "thread"],
+                "passages": [d for k, d in widgets if k == "passage"],
             }
             if h is None:
                 blk["kind"] = "intro"
@@ -1122,7 +1214,9 @@ def parse_unit(path: Path) -> dict:
             "clocks": [(L["n"], c) for L in lessons for blk in lesson_blocks(L)
                        for c in blk["clocks"]],
             "threads": [(L["n"], t) for L in lessons for blk in lesson_blocks(L)
-                        for t in blk["threads"]]}
+                        for t in blk["threads"]],
+            "passages": [(L["n"], a, s) for L in lessons for blk in lesson_blocks(L)
+                         for a, s in blk["passages"]]}
 
 
 def lesson_blocks(L):
@@ -1474,10 +1568,13 @@ def page_evidence(units) -> str:
 
   <div class="card"><h2>Three rules this course does not break</h2>
     <ol class="rules">
-      <li><b>No IELTS band number is ever printed</b> — not as a score, not as a
+      <li><b>No IELTS band number is ever put on you</b> — not as a score, not as a
       prediction, not as a progress dial. There is no published table converting
       raw marks to a band, no half-band descriptors, and no official arithmetic for
-      combining criterion scores. Anything claiming otherwise invented it.</li>
+      combining criterion scores. Anything claiming otherwise invented it. A band
+      number appears on this site in one way only: as a coordinate on the published
+      descriptor grid, the way the next rule uses it — never as a measurement of a
+      learner.</li>
       <li><b>Levels are labelled by CEFR.</b> The official IELTS–CEFR alignment stops
       at band 4.0 = the B1 threshold and assigns <em>no band at all</em> to A2 or A1.
       Grade-8 work sits at A2. There is therefore no band to label it with, and none
@@ -1533,7 +1630,7 @@ def recap_block(u) -> str:
 
 def page_lesson(u, L) -> str:
     parts = []
-    payload: dict = {"tasks": [], "audio": [], "write": [], "clock": []}
+    payload: dict = {"tasks": [], "audio": [], "write": [], "clock": [], "passage": []}
     if L["n"] == LESSONS:
         parts.append(recap_block(u))
     def prose(b) -> str:
@@ -1544,9 +1641,13 @@ def page_lesson(u, L) -> str:
         between a task and its recording still prints between them.
         """
         out = render(b["md"])
-        n_task = n_audio = n_write = n_clock = 0
+        n_task = n_audio = n_write = n_clock = n_pass = 0
         for i, (kind, d) in enumerate(b["widgets"]):
-            if kind == "audio":
+            if kind == "passage":
+                p, html_ = passage_block(u, L["n"], d[0], d[1], n_pass)
+                n_pass += 1
+                payload["passage"].append(p)
+            elif kind == "audio":
                 p = audio_payload(u, L["n"], d[0], d[1], n_audio)
                 n_audio += 1
                 payload["audio"].append(p)
@@ -1653,7 +1754,8 @@ def page_lesson(u, L) -> str:
                  data={"kind": "lesson", "unit": u["nn"], "lesson": L["n"],
                        "titles": {str(x["n"]): x["title"] for x in u["lessons"]},
                        "tasks": payload["tasks"], "audio": payload["audio"],
-                       "write": payload["write"], "clock": payload["clock"]},
+                       "write": payload["write"], "clock": payload["clock"],
+                       "passage": payload["passage"]},
                  desc=f"Unit {u['num']} Lesson {L['n']}: {L['title']}.")
 
 
@@ -1685,6 +1787,8 @@ def main() -> int:
     tot_audio = sum(len(u["audio"]) for u in units)
     tot_write = sum(len(u["writes"]) for u in units)
     tot_clock = sum(len(u["clocks"]) for u in units)
+    tot_pass = sum(len(u["passages"]) for u in units)
+    tot_lab = sum(len(passage_labels(a, body)) for u in units for _, a, body in u["passages"])
     write_items = [it for u in units for _, a, body in u["writes"]
                    for it in write_payload(u, 0, a, body)["items"]]
     tot_checked = sum(1 for it in write_items if it.get("c"))
@@ -1696,13 +1800,16 @@ def main() -> int:
                   f"ex={ex:3} answers={len(u['answers']):3} vocab={len(u['vocab']):3} "
                   f"bridges={len(u['bridges']):2} marked={len(u['tasks']):2} "
                   f"audio={len(u['audio'])} write={len(u['writes'])} "
-                  f"clock={len(u['clocks'])} threads={len(u['threads'])}")
+                  f"clock={len(u['clocks'])} passage={len(u['passages'])} "
+                  f"threads={len(u['threads'])}")
         print(f"\n{len(units)} units · {tot_ex} exercises · {tot_teach} teaching blocks · "
               f"{tot_ans} answers · {tot_vocab} vocabulary rows · {tot_bridge} IELTS bridges")
         print(f"{tot_task} marked tasks · {tot_item} marked items · {tot_audio} single-play "
               f"recordings · {len(THREADS)} strands")
         print(f"{tot_write} committed writing tasks · {tot_checked} of {len(write_items)} "
               f"checklist lines decided from the learner's own text · {tot_clock} reading clocks")
+        print(f"{tot_pass} reading passages, highlightable and annotatable · "
+              f"{tot_lab} generated paragraph labels")
         return 0
 
     # Rebuild the generated tree only. docs/ may legitimately hold hand-written

@@ -154,10 +154,10 @@ Compare these two:
 > I've studied ↗Mercury, ↗Venus and ↘Mars. *(three planets — that's all)*
 > I've studied ↗Mercury, ↗Venus, ↗Mars… *(and others I'm not naming)*
 
-> **Mẹo:** Người Việt thường đọc cả câu liệt kê trên một cao độ đều đều, nên
-> người nghe không biết lúc nào danh sách kết thúc. Hãy tưởng tượng bạn đang
-> **đi lên từng bậc thang** ở mỗi mục, rồi **bước xuống** ở mục cuối. Nếu bạn
-> lên giọng ở mục cuối, người nghe sẽ ngồi đợi bạn nói tiếp!
+> **Mẹo:** Hãy tưởng tượng bạn **đi lên từng bậc thang** ở mỗi mục, rồi
+> **bước xuống** ở mục cuối. Bước xuống ấy chính là tín hiệu kết thúc trong
+> tiếng Anh: giữ giọng đi lên ở mục cuối thì câu vẫn còn để ngỏ, như bảng
+> trên đã nói.
 
 ### 2.3 Mark the intonation
 
@@ -475,6 +475,7 @@ Now report all three questions to a friend, starting *She asked me…*
 ::: clock mins="20" for="20 minutes for the text and every exercise below it — reading, finding, and typing your answers."
 :::
 
+::: passage
 > Astronomers have found thousands of planets outside our solar system, and the
 > first question they ask about each one is simple: could anything live there?
 >
@@ -498,6 +499,7 @@ Now report all three questions to a friend, starting *She asked me…*
 >
 > Astronauts will probably walk on Mars in your lifetime. Whether anyone will
 > stay is a completely different question.
+:::
 
 ### 5.1 True, False, or Not Given
 

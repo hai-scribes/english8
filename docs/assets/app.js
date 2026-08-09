@@ -1473,6 +1473,185 @@ function initWrite(){
   });
 }
 
+/* ---------------- the reading passage: highlights and notes ---------------
+   C9, from 01 §9.1 and §12.7. The real Reading screen offers colour
+   highlighting and on-screen notes, and the checklist says the affordances
+   are part of the test rather than decoration. Writing's half of C9 -- the
+   live word count -- shipped with the writing box; this is the reading half,
+   and until now the passage was an inert blockquote.
+
+   A highlight is stored as a character range inside one paragraph, never as a
+   DOM range. The paragraph's text survives a reload; its nodes do not. */
+const HL_KEY = "en8:marks:";
+const NT_KEY = "en8:notes:";
+
+/* The generated paragraph letter is inside the <p> and must not count toward
+   any offset, or every highlight in a lettered passage lands one character
+   late. */
+const textWalker = p => document.createTreeWalker(p, NodeFilter.SHOW_TEXT, {
+  acceptNode: n => n.parentElement && n.parentElement.closest(".pg-l")
+    ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+});
+
+function textLen(p){
+  const w = textWalker(p);
+  let n, total = 0;
+  while ((n = w.nextNode())) total += n.nodeValue.length;
+  return total;
+}
+
+/* Character offset of a (node, offset) boundary within the paragraph. */
+function offsetIn(p, node, off){
+  const w = textWalker(p);
+  let n, total = 0;
+  while ((n = w.nextNode())){
+    if (n === node) return total + off;
+    total += n.nodeValue.length;
+  }
+  return -1;
+}
+
+/* Character offset at which an element's own text starts. */
+function offsetOfEl(p, el){
+  const w = textWalker(p);
+  let n, total = 0;
+  while ((n = w.nextNode())){
+    if (el.contains(n)) return total;
+    total += n.nodeValue.length;
+  }
+  return -1;
+}
+
+function wrapRange(p, s, e){
+  const w = textWalker(p);
+  let n, off = 0, sn = null, so = 0, en = null, eo = 0;
+  while ((n = w.nextNode())){
+    const len = n.nodeValue.length;
+    if (sn === null && off + len > s){ sn = n; so = s - off; }
+    if (sn !== null && off + len >= e){ en = n; eo = e - off; break; }
+    off += len;
+  }
+  if (!sn || !en) return;
+  const r = document.createRange();
+  r.setStart(sn, so); r.setEnd(en, eo);
+  const m = document.createElement("mark");
+  /* surroundContents throws when the range straddles an inline tag -- the
+     passages carry <strong> and <em> -- so fall back to extract-and-insert,
+     which handles a partial split. */
+  try { r.surroundContents(m); }
+  catch(err){ m.appendChild(r.extractContents()); r.insertNode(m); }
+}
+
+function initPassage(){
+  (DATA.passage || []).forEach(p => {
+    const root = document.querySelector('[data-passage="' + p.id + '"]');
+    if (!root) return;
+    const body = $('[data-pg="body"]', root);
+    if (!body) return;
+    const paras = $$("p", body);
+
+    let marks = [];
+    try { marks = JSON.parse(localStorage.getItem(HL_KEY + p.id) || "[]"); } catch(e){}
+    const save = () => {
+      try { localStorage.setItem(HL_KEY + p.id, JSON.stringify(marks)); } catch(e){}
+    };
+
+    /* Overlapping ranges are merged rather than nested. Highlighting over an
+       existing highlight should widen it, not bury a <mark> in a <mark>. */
+    const merge = () => {
+      const by = {};
+      marks.forEach(m => { (by[m.p] = by[m.p] || []).push(m); });
+      marks = [];
+      Object.keys(by).forEach(k => {
+        let cur = null;
+        by[k].sort((a, b) => a.s - b.s).forEach(m => {
+          if (cur && m.s <= cur.e){ cur.e = Math.max(cur.e, m.e); return; }
+          cur = { p:Number(k), s:m.s, e:m.e };
+          marks.push(cur);
+        });
+      });
+    };
+
+    const paint = () => {
+      paras.forEach((el, pi) => {
+        $$("mark", el).forEach(m => { m.replaceWith.apply(m, m.childNodes); });
+        el.normalize();
+        /* Right to left, so an earlier range's offsets are not shifted by a
+           later one's inserted element. */
+        marks.filter(m => m.p === pi).sort((a, b) => b.s - a.s)
+             .forEach(m => wrapRange(el, m.s, m.e));
+      });
+    };
+
+    body.addEventListener("mouseup", () => {
+      const sel = window.getSelection();
+      if (!sel || sel.isCollapsed || !sel.rangeCount) return;
+      const r = sel.getRangeAt(0);
+      if (!body.contains(r.commonAncestorContainer)) return;
+      /* Which paragraphs the selection touches, by comparing boundary points
+         rather than by Selection.containsNode. containsNode is inconsistent
+         across engines -- under test it reported every paragraph EXCEPT the
+         selected one, which silently highlighted four whole paragraphs and
+         not the phrase the reader had actually dragged over. Boundary
+         comparison is defined arithmetic and behaves the same everywhere. */
+      const touches = el => {
+        const pr = document.createRange();
+        pr.selectNodeContents(el);
+        return r.compareBoundaryPoints(Range.END_TO_START, pr) < 0
+            && r.compareBoundaryPoints(Range.START_TO_END, pr) > 0;
+      };
+      let added = false;
+      paras.forEach((el, pi) => {
+        if (!touches(el)) return;
+        const len = textLen(el);
+        const s = el.contains(r.startContainer) ? offsetIn(el, r.startContainer, r.startOffset) : 0;
+        const e = el.contains(r.endContainer) ? offsetIn(el, r.endContainer, r.endOffset) : len;
+        if (s < 0 || e < 0 || e <= s) return;
+        marks.push({ p:pi, s:s, e:e });
+        added = true;
+      });
+      if (!added) return;
+      merge(); save(); paint();
+      sel.removeAllRanges();
+    });
+
+    /* Selecting a highlight takes it off, which is how the real screen does
+       it: the same gesture adds and removes. */
+    body.addEventListener("click", ev => {
+      const m = ev.target.closest("mark");
+      if (!m) return;
+      const el = m.closest("p"), pi = paras.indexOf(el);
+      if (pi < 0) return;
+      const s = offsetOfEl(el, m), e = s + m.textContent.length;
+      if (s < 0) return;
+      marks = marks.filter(x => !(x.p === pi && x.s < e && x.e > s));
+      save(); paint();
+    });
+
+    const clear = $('[data-pg="clear"]', root);
+    if (clear) clear.addEventListener("click", () => {
+      marks = []; save(); paint();
+    });
+
+    const pad = $('[data-pg="notepad"]', root), note = $('[data-pg="note"]', root);
+    const ta = $(".pg-ta", root);
+    if (ta){
+      try { ta.value = localStorage.getItem(NT_KEY + p.id) || ""; } catch(e){}
+      if (ta.value && pad){ pad.hidden = false; if (note) note.setAttribute("aria-expanded", "true"); }
+      ta.addEventListener("input", () => {
+        try { localStorage.setItem(NT_KEY + p.id, ta.value); } catch(e){}
+      });
+    }
+    if (note && pad) note.addEventListener("click", () => {
+      pad.hidden = !pad.hidden;
+      note.setAttribute("aria-expanded", String(!pad.hidden));
+      if (!pad.hidden && ta) ta.focus();
+    });
+
+    paint();
+  });
+}
+
 /* ---------------- the reading clock ---------------------------------------
    C7, and the last Group C rule this course left to the learner's discretion:
    one clock covering everything, the typing included (04 §1.1). It used to be
@@ -1529,6 +1708,98 @@ function initClock(){
   });
 }
 
+/* ---------------- question navigation and the review flag -----------------
+   The other half of C9: the real Reading screen carries a numbered question
+   bar and a review flag, and 01 §12.7 lists them among the affordances a
+   trainer has to match.
+
+   It hangs off the clock rather than off the passage, because the clock is
+   what defines a reading block -- exactly one per block, and the build fails
+   if a reading lesson does not carry one. Questions are numbered across the
+   whole block, the way the test numbers them across a section, rather than
+   restarting at each exercise. */
+const FLAG_KEY = "en8:flags:";
+
+function initReadingNav(){
+  (DATA.clock || []).forEach(p => {
+    const root = document.querySelector('[data-clock="' + p.id + '"]');
+    if (!root) return;
+    const items = [];
+    $$('[data-role="task"]')
+      .filter(t => root.compareDocumentPosition(t) & Node.DOCUMENT_POSITION_FOLLOWING)
+      .forEach(t => { $$(".i", t).forEach(li => items.push(li)); });
+    if (!items.length) return;
+
+    let flags = {};
+    try { flags = JSON.parse(localStorage.getItem(FLAG_KEY + p.id) || "{}"); } catch(e){}
+    const save = () => {
+      try { localStorage.setItem(FLAG_KEY + p.id, JSON.stringify(flags)); } catch(e){}
+    };
+
+    const nav = document.createElement("div");
+    nav.className = "c-nav";
+    nav.innerHTML = '<p class="c-nl">Questions ' + 1 + "–" + items.length + "</p>"
+      + '<div class="c-ns"></div>'
+      + '<p class="c-nh">A number fills in when that question has an answer. '
+      + 'Flag one with ⚑ beside it to come back to it — the flag is a marker, '
+      + 'not an answer, and nothing about it is scored.</p>';
+    root.appendChild(nav);
+    const strip = $(".c-ns", nav);
+
+    const answered = li => {
+      const box = $(".i-in", li);
+      if (box) return !!box.value.trim();
+      return !!$(".i-opt input:checked", li);
+    };
+
+    const btns = items.map((li, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "c-q";
+      b.textContent = String(i + 1);
+      b.setAttribute("aria-label", "Go to question " + (i + 1));
+      b.addEventListener("click", () => {
+        li.scrollIntoView({ behavior:"smooth", block:"center" });
+        const f = $(".i-in", li) || $(".i-opt input", li);
+        if (f && !f.disabled) f.focus({ preventScroll:true });
+      });
+      strip.appendChild(b);
+
+      /* The flag sits on the question, as it does on the real screen, and the
+         bar reflects it. */
+      const fl = document.createElement("button");
+      fl.type = "button";
+      fl.className = "i-flag";
+      fl.textContent = "⚑";
+      fl.title = "Flag for review";
+      fl.setAttribute("aria-label", "Flag question " + (i + 1) + " for review");
+      fl.setAttribute("aria-pressed", "false");
+      fl.addEventListener("click", () => {
+        flags[i] = !flags[i];
+        save(); repaint();
+      });
+      li.appendChild(fl);
+      return { b, fl, li };
+    });
+
+    function repaint(){
+      btns.forEach((x, i) => {
+        x.b.dataset.answered = answered(x.li) ? "1" : "0";
+        const on = !!flags[i];
+        x.b.dataset.flag = on ? "1" : "0";
+        x.li.dataset.flag = on ? "1" : "0";
+        x.fl.setAttribute("aria-pressed", String(on));
+      });
+    }
+
+    items.forEach(li => {
+      li.addEventListener("input", repaint);
+      li.addEventListener("change", repaint);
+    });
+    repaint();
+  });
+}
+
 function initThreads(){
   $$('[data-role="thread"][data-stage="check"]').forEach(root => {
     const got = $('[data-th="got"]', root), all = $('[data-th="all"]', root),
@@ -1562,7 +1833,9 @@ function boot(){
   paintReview();
   initTasks();
   initAudio();
+  initPassage();
   initClock();
+  initReadingNav();     // after initTasks: it numbers the items those render
   initWrite();
   initThreads();
   initSpeakButtons();

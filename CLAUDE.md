@@ -11,11 +11,15 @@ python3 tools/check_dict.py       # gate: every vocabulary slot resolves
 python3 tools/check_ielts.py      # gate: every IELTS claim is legal and cited
 node tools/test_marking.js        # gate: the marking engine obeys the published rules
 node tools/check_write.js         # gate: each model satisfies its own checklist (after build)
+node tools/test_reading.js        # gate: the reading screen behaves (after build; needs jsdom)
 ```
 
-## Five directives, and what each one is for
+`test_reading.js` needs `npm install jsdom` and skips loudly without it, so the
+other four still run on a clean checkout.
 
-`:::bridge` makes an IELTS *claim*. The other four make the app *behave* like
+## Six directives, and what each one is for
+
+`:::bridge` makes an IELTS *claim*. The other five make the app *behave* like
 IELTS, which is a different job — see `README.md` for the full syntax.
 
 | | What it does | The rule it stops you breaking |
@@ -24,17 +28,21 @@ IELTS, which is a different job — see `README.md` for the full syntax.
 | `:::audio` | A script becomes a recording that plays once | C6, C8: declared delivery mode, unwritten orientation, no replay |
 | `:::write` | A writing task is attempted on the page, and counted | C9 live word count; E8 + §4.4, a self-report needs an objective anchor |
 | `:::clock` | The reading runs one clock, and it does not stop while you type | C7, from `04` §1.1 |
+| `:::passage` | The reading text can be highlighted and annotated, and its paragraphs carry the labels its questions name | C9's reading half, from `01` §9.1, §12.7 |
 | `:::thread` | A strand that says it recurs is made to recur | the course's promises about itself |
 
-Three things follow for anyone adding lessons. **Prefer a `:::task` to a printed
+Four things follow for anyone adding lessons. **Prefer a `:::task` to a printed
 gap** — a reveal button is not an attempt, and the whole Group C half of the
 constitution is unenforceable against prose. **Never print a listening
 script**: put it in `:::audio` or the exercise above it is a reading task
-wearing a listening label. And **a `:::write` checklist line that a machine
+wearing a listening label. **A `:::write` checklist line that a machine
 could decide should carry its check** — a tick-box beside a text box is the
 unanchored self-assessment the directive replaced. Lines that genuinely need
 judgement keep their box and say so; over-claiming a check is worse than not
-having one.
+having one. And **a question that says "which paragraph" needs a lettered
+passage**: put the text in `:::passage label="A"`, because a question type
+whose whole mechanic is the paragraph label is unanswerable over a blockquote
+that prints none — which is exactly what units 03 and 06 shipped.
 
 What a `:::write` panel may report is bounded by **D9** and §5.3: counts of
 named features in the learner's own text. **Never a total, a percentage, a

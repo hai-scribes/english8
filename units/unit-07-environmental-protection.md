@@ -166,6 +166,7 @@ between them. The second sound is /l/ in both. Only the first sound differs.
 - blame = /bl/
 - include = /kl/
 :::
+
 ### 2.4 Odd cluster out
 
 ::: task skill="course" type="choice" ask="In each line, three words share a cluster. Pick the one that does not."
@@ -388,6 +389,7 @@ practical action.
 ::: clock mins="19" for="19 minutes for the text and every exercise below it — reading, finding, and typing your answers."
 :::
 
+::: passage
 > Con Dao National Park lies on a group of islands off the southern coast of
 > Viet Nam. It is unusual among Vietnamese
 > national parks because it protects two worlds at once: the forest on the
@@ -411,6 +413,7 @@ practical action.
 > not shine lights on the nesting beaches at night. Take your litter home.
 > Con Dao has survived because people agreed to leave it alone, and that
 > agreement has to be renewed by everyone who arrives.
+:::
 
 ### 5.1 True, False, or Not Given
 

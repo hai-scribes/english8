@@ -451,6 +451,7 @@ then a reason.
 ::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
 :::
 
+::: passage
 > Every country has its own disasters. Viet Nam has storms and floods, Japan has
 > earthquakes, and parts of Africa have droughts that last for years. The event
 > itself may be over in a few hours. What it leaves behind is not.
@@ -475,6 +476,7 @@ then a reason.
 > siren now sounds long before a big wave arrives, and children practise
 > evacuation at school twice a year. Nobody can stop a disaster. Being ready for
 > one is something you can learn.
+:::
 
 ### 5.1 True, False, or Not Given
 

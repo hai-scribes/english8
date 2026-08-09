@@ -404,6 +404,7 @@ _______________________________________________
 *An interview from a school magazine. Linh, 14, talks to Dr Bảo, a brain
 researcher.*
 
+::: passage
 > **Linh:** Dr Bảo, thank you for coming. Some people say that in fifty years we
 > will not need phones at all. Is that possible?
 >
@@ -440,6 +441,7 @@ researcher.*
 >
 > **Dr Bảo:** In the laboratory, now. In your pocket — not in my lifetime, and
 > possibly not in yours.
+:::
 
 ### 5.1 True, False, or Not Given
 
@@ -485,11 +487,21 @@ researcher.*
 | **Technical problems** | | |
 | **Family and friends far away** | | |
 
-**Step 2 — Speak.** Talk for **one minute** using this frame:
+**Step 2 — Speak.** Talk for **one minute**. There is no sentence frame here on
+purpose: memorised language is the one thing an IELTS examiner is told to
+discount, so a frame would train the habit that costs the most. What you get
+instead is the **order of the questions**. Answer these five, out loud, in your
+own words, using your notes from Step 1:
 
-> *"An online call has two big advantages. First, … Second, … On the other
-> hand, there are problems. One is … Another is … In my opinion, an online call
-> is better than / worse than a face-to-face meeting when …"*
+1. What are the two biggest **advantages** of an online call?
+2. Of those two, which matters more to you — and **why**?
+3. What are the two biggest **problems**?
+4. When is an online call **better** than meeting face to face?
+5. When is it **worse**?
+
+Your answer to 2 is the one to spend time on. Naming an advantage is a list;
+saying which one matters more and why is the part that carries a reason, and
+that is what a spoken answer is judged on.
 
 **Step 3 — Record and check.** Record yourself on your phone. Listen back and
 check three things:

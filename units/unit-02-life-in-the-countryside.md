@@ -416,6 +416,7 @@ to each question. Use a comparative adverb in at least two of your answers.
 ::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
 :::
 
+::: passage
 > My grandmother has lived in the same village in Ha Nam for sixty-one years.
 > She has never wanted to leave it, and after three weeks there last summer I
 > began to understand why.
@@ -439,6 +440,7 @@ to each question. Use a comparative adverb in at least two of your answers.
 > the stream. The evening was the quiet part. We sat outside, my cousins flew a
 > kite until the light went, and my grandmother told the same three stories she
 > tells every year. I listened much more carefully than I used to.
+:::
 
 ### 5.1 True, False, or Not Given
 

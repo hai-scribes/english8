@@ -166,6 +166,7 @@ Notice that the cluster does not have to start the word: *di**sp**lay*,
 - instead = /st/
 - expensive = /sp/
 :::
+
 ### 2.4 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** cluster. Pick it."
@@ -441,6 +442,7 @@ the tables above, and one adverb of frequency.
 ::: clock mins="19" for="19 minutes for the text and every exercise below it — reading, finding, and typing your answers."
 :::
 
+::: passage
 > Thirty years ago, my grandmother did all her shopping at one place: the wet
 > market at the end of our street. She went every morning, she always paid in
 > cash, and she knew every vendor by name. Today my little brother has never
@@ -462,6 +464,7 @@ the tables above, and one adverb of frequency.
 > Most families now use both. They buy fresh food at the market and everything
 > else at the centre. My grandmother says this is sensible. She still goes to
 > the market at six, and she still knows every vendor by name.
+:::
 
 ### 5.1 True, False, or Not Given
 
