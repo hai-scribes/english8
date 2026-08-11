@@ -40,7 +40,7 @@ function ok(name, cond, extra) {
   console.log("  FAIL " + name + (extra ? "\n       -> " + extra : ""));
 }
 
-function load(rel, store) {
+function load(rel, store, beforeParse) {
   const p = path.join(ROOT, rel);
   if (!fs.existsSync(p)) {
     console.log("FAIL: " + rel + " is not built — run `python3 tools/build.py` first");
@@ -52,10 +52,47 @@ function load(rel, store) {
   html = html.replace(/<script src="[^"]*app\.js"[^>]*><\/script>/,
                       () => "<script>" + APP + "<\/script>");
   const dom = new JSDOM(html, { runScripts: "dangerously", pretendToBeVisual: true,
-                                url: "https://example.org/" + rel });
+                                url: "https://example.org/" + rel,
+                                beforeParse: w => { w.scrollTo = () => {};
+                                                    if (beforeParse) beforeParse(w); } });
   dom.window.scrollTo = () => {};
   if (store) for (const k of Object.keys(store)) dom.window.localStorage.setItem(k, store[k]);
   return dom;
+}
+
+/* Both timers count in real seconds, and a Review's clock is eighteen minutes
+   long, so the only way to watch one expire is to make the page's seconds
+   short. Delays are divided rather than mocked out, so the ORDER of everything
+   -- orientation, preview window, play, review window -- is still the order
+   the page schedules, and a bug that reversed two of them would still show.
+
+   jsdom has no speech synthesis, and without it the player takes its
+   no-voice branch and never opens a review window at all. So it gets a voice
+   that says every line instantly. */
+function fastPage(w) {
+  const si = w.setInterval, st = w.setTimeout;
+  const squash = ms => (typeof ms === "number" && ms > 8 ? Math.max(1, ms / 1000) : ms);
+  w.setInterval = (fn, ms, ...a) => si(fn, squash(ms), ...a);
+  w.setTimeout = (fn, ms, ...a) => st(fn, squash(ms), ...a);
+
+  const voice = { name: "Daniel", lang: "en-GB", localService: true };
+  class Utterance {
+    constructor(text) { this.text = text; this.onend = null; this.onerror = null; }
+  }
+  w.SpeechSynthesisUtterance = Utterance;
+  w.speechSynthesis = {
+    getVoices: () => [voice],
+    addEventListener: () => {},
+    cancel: () => {},
+    speak: u => st(() => { if (u.onend) u.onend(); }, 1),
+  };
+}
+
+/* Run the page's timers forward until `done()` or the budget runs out. */
+async function until(win, done, ms) {
+  const stop = Date.now() + (ms || 4000);
+  while (!done() && Date.now() < stop) await new Promise(r => setTimeout(r, 15));
+  return done();
 }
 
 const settled = dom => new Promise(r => setTimeout(() => r(dom.window), 60));
@@ -249,11 +286,21 @@ async function main() {
        doc.querySelectorAll('[data-role="clock"]').length === 1);
 
     const tasks = Array.from(doc.querySelectorAll('[data-role="task"]'));
-    const under = tasks.filter(t =>
-      clock.compareDocumentPosition(t) & win.Node.DOCUMENT_POSITION_FOLLOWING);
+    const player = doc.querySelector('[data-role="audio"]');
+    ok("review 1: the page carries a Listening half", !!player);
+
+    /* The territory rule, read straight off the page: five Language exercises
+       above the clock, three reading exercises between the clock and the
+       player, one listening exercise below the player. */
+    const between = (a, b) =>
+      !!(a.compareDocumentPosition(b) & win.Node.DOCUMENT_POSITION_FOLLOWING);
+    const underClock = tasks.filter(t => between(clock, t) && !between(player, t));
+    const underPlayer = tasks.filter(t => between(player, t));
     ok("review 1: the Language half is above the clock and not timed by it",
-       tasks.length === 8 && under.length === 3, tasks.length + " tasks, " + under.length
-       + " under the clock");
+       tasks.length === 9 && underClock.length === 3,
+       tasks.length + " tasks, " + underClock.length + " under the clock");
+    ok("review 1: the clock hands over at the player",
+       underPlayer.length === 1, underPlayer.length + " under the player");
 
     const nav = doc.querySelector(".c-nav");
     const qs = Array.from(nav ? nav.querySelectorAll(".c-q") : []);
@@ -271,6 +318,71 @@ async function main() {
        marks.length ? JSON.stringify(marks[0].textContent) : "");
     ok("review 1: the highlight is stored under the Review's own id",
        JSON.parse(win.localStorage.getItem("en8:marks:r1-2-p1") || "[]").length === 1);
+  }
+
+  /* ---- what each timer is allowed to switch off ------------------------
+     A Review is the only page carrying two timers, and each one silences the
+     exercises below it when its window shuts. The rule is that a timer owns
+     the tasks under it and above the next timer. Both halves matter, and both
+     are watched here by running the timers to expiry rather than by reading
+     the selector: the player must not reach back over the five Language
+     exercises -- the defect that kept the Reviews from having a Listening
+     section at all -- and the clock must not reach forward into the listening
+     exercise, which is the same defect facing the other way. */
+  {
+    /* Where each task sits, so the two runs below can name them. */
+    const split = doc => {
+      const tasks = Array.from(doc.querySelectorAll('[data-role="task"]'));
+      const clock = doc.querySelector('[data-role="clock"]');
+      const player = doc.querySelector('[data-role="audio"]');
+      const after = (a, b) => !!(a.compareDocumentPosition(b) & 4);
+      return {
+        clock, player,
+        language: tasks.filter(t => !after(clock, t)),
+        reading: tasks.filter(t => after(clock, t) && !after(player, t)),
+        listening: tasks.filter(t => after(player, t)),
+      };
+    };
+    const inputs = ts => ts.flatMap(t => Array.from(t.querySelectorAll(".i-in, .i-opt input")));
+    const allDead = ts => inputs(ts).length > 0 && inputs(ts).every(i => i.disabled);
+    const allLive = ts => inputs(ts).length > 0 && inputs(ts).every(i => !i.disabled);
+
+    {
+      const win = await settled(load("docs/review-1/index.html", null, fastPage));
+      const s = split(win.document);
+      ok("review 1: three groups of tasks to tell apart",
+         s.language.length === 5 && s.reading.length === 3 && s.listening.length === 1,
+         s.language.length + "/" + s.reading.length + "/" + s.listening.length);
+      ok("review 1: everything starts live",
+         allLive(s.language) && allLive(s.reading) && allLive(s.listening));
+
+      const state = s.player.querySelector(".p-state");
+      click(win, s.player.querySelector(".p-start"));
+      const shut = await until(win, () => /Time\./.test(state.textContent));
+      ok("player: the recording runs and the review window closes", shut,
+         JSON.stringify(state.textContent));
+      ok("player: the listening exercise under it stops taking input",
+         allDead(s.listening));
+      ok("player: the Language exercises above it stay live", allLive(s.language),
+         inputs(s.language).filter(i => i.disabled).length + " went dead");
+      ok("player: the reading exercises above it stay live", allLive(s.reading),
+         inputs(s.reading).filter(i => i.disabled).length + " went dead");
+    }
+
+    {
+      const win = await settled(load("docs/review-1/index.html", null, fastPage));
+      const s = split(win.document);
+      const state = s.clock.querySelector(".c-state");
+      click(win, s.clock.querySelector(".c-start"));
+      const shut = await until(win, () => /Time\./.test(state.textContent));
+      ok("clock: it runs out", shut, JSON.stringify(state.textContent));
+      ok("clock: the reading exercises under it stop taking input", allDead(s.reading));
+      ok("clock: the Language exercises above it stay live", allLive(s.language),
+         inputs(s.language).filter(i => i.disabled).length + " went dead");
+      ok("clock: it hands over at the player and leaves the listening alone",
+         allLive(s.listening),
+         inputs(s.listening).filter(i => i.disabled).length + " went dead");
+    }
   }
 
   console.log(fails

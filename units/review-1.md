@@ -179,6 +179,53 @@ once. Three things to listen for:
 Repeat Step 2 until each answer runs from its first word to its last without
 stopping.
 
+### Listening — Two Saturdays, two places
+
+You get **one** play. Read the five gaps first, then fill them in while you
+listen rather than afterwards from memory.
+
+**Nghe một lần duy nhất.** Đọc năm câu hỏi trước, rồi vừa nghe vừa điền.
+
+::: audio orientation="You will hear two students, Tom and Mai, comparing what a Saturday is like in the town where Tom lives and in the village where Mai lives." mode="computer" preview="30" review="120"
+Tom: You have never lived in a city, have you, Mai?
+
+Mai: No. And you have never spent a whole week in a village, so we are even.
+
+Tom: All right. Tell me about a Saturday.
+
+Mai: I am up at half past five. I feed the poultry and carry water out to the
+barn, and by ten the work is finished. After that the day is mine. My cousins
+and I take a kite up to the dyke and stay there until the light goes.
+
+Tom: I am asleep until nine. I live in the middle of town, above my father's
+shop, so everything is close. In the afternoon I meet my friends at the
+shopping centre and we walk around and talk. We hardly spend anything.
+
+Mai: That is the part I could not stand. All those people.
+
+Tom: And the part I could not stand in a village would be the quiet.
+
+Mai: It is not quiet. The noise is birds instead of traffic, that is all.
+People tell me the countryside is boring. It is not boring — the day is simply
+longer here.
+
+Tom: Is there anything you miss?
+
+Mai: A library. The nearest one is in town, so I get there twice a month.
+
+Tom: I would miss space. Our flat has no garden, not even a balcony.
+:::
+
+### 2.4 Fill in the gaps
+
+::: task skill="listening" type="completion" words="1" ask="Write **ONE word** in each gap. Spelling counts here, as it does everywhere else in this course."
+- Before the day is her own, Mai feeds the ___ and carries water to the barn = poultry
+- Mai and her cousins take a kite up to the ___ = dyke
+- Tom lives in the middle of town, above his father's ___ = shop
+- In the afternoon Tom meets his friends at the shopping ___ = centre
+- The one thing Mai says she misses is a ___ = library
+:::
+
 ### Writing — A family member's free time
 
 **Task.** Write **one paragraph of 80–100 words** about the free-time

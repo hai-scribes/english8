@@ -57,17 +57,31 @@ A Review is deliberately not a thirteenth unit. It has no vocabulary table, no
 seven lessons and no progress gate, because it teaches nothing — its words and
 its structures have already been taught three units running. What it has is the
 book's two halves on one page: **Language** (sounds, then vocabulary, then
-grammar) and **Skills** (a text read against one clock, a speaking step, and a
-paragraph of 80–100 words that recombines all three units). Everything is the
-same machinery as a lesson: the same `:::task`, the same clock, the same
-highlightable passage, the same counted checklist.
+grammar) and **Skills** — a text read against one clock, a speaking step, a
+recording that plays once, and a paragraph of 80–100 words that recombines all
+three units. Everything is the same machinery as a lesson: the same `:::task`,
+the same clock, the same single-play player, the same highlightable passage,
+the same counted checklist.
 
-Three rules hold that a unit cannot break. A Review may only reach into the
+A Review is the only page in the course that carries **two timers at once**, and
+that is what kept it from having a Listening half for as long as it did. A unit
+splits across lesson pages — the reading clock on Skills 1, the player on Skills
+2 — so each was alone on its page and could close over every task it found. On
+one page that is wrong in both directions: the player would silence the five
+Language exercises printed above it, and the clock would silence the listening
+exercise printed below. So a timer now owns the tasks under it and above the
+next timer (`owned` in `tools/assets/app.js`), `tools/test_reading.js` runs both
+timers to expiry and checks exactly which exercises went dead, and
+`tools/check_ielts.py` holds the page in the book's order — Reading, then
+Listening — because the scoping is only safe while that order holds.
+
+Four more rules hold that a unit cannot break. A Review may only reach into the
 three units it follows — `tools/check_ielts.py` reads every `Unit N` its prose
 names and fails on a fourth. It must carry its writing task, at the book's
-length. And the set is closed: a `review-9.md`, a heading claiming the wrong
-units, or one of the four simply missing is a build failure, not a file that
-nobody reads.
+length. Every task below its player must be a listening task, and there must be
+one. And the set is closed: a `review-9.md`, a heading claiming the wrong units,
+or one of the four simply missing is a build failure, not a file that nobody
+reads.
 
 ## Repository
 
@@ -82,6 +96,7 @@ nobody reads.
 | `tools/test_marking.js` | Gate: the marking engine, against the published rules. |
 | `tools/check_write.js` | Gate: every model — unit or review — satisfies the checklist printed under it. |
 | `tools/test_reading.js` | Gate: the reading screen — labels, highlighting, notes, question bar. |
+| `tools/index_sgk.py` | Generator: the recorded book's lookup index. `--check` reports drift. |
 | `tools/build.py` | Generator: markdown → the 101-page site. |
 | `tools/assets/` | `app.css` and `app.js`, copied into the build. |
 | `docs/` | Generated output. GitHub Pages serves this directory. |

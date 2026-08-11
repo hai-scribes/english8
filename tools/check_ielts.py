@@ -721,6 +721,50 @@ def units_named(text: str) -> set:
     return out
 
 
+def check_review_listening(tag: str, text: str, problems: list):
+    """A Review's recording has to own the exercises it silences.
+
+    The player stops input on the tasks printed below it and above the next
+    timer. On a Review that is safe only in the book's own order: the Language
+    exercises first, then the timed reading block, then the Listening. Put the
+    player anywhere else and it takes over exercises that are not its own —
+    which is exactly the defect that kept the Reviews from having a Listening
+    half in the first place, and it would come straight back unseen.
+
+    So: every task below the player is a listening task, there is at least one,
+    and the reading clock is above it.
+    """
+    # One pass, in source order — the same reader the generator uses, so this
+    # cannot disagree with it about what comes first.
+    seen = [(m.start(), m.group("kind"), dict(b.RE_ATTR.findall(m.group("attrs"))))
+            for m in b.RE_DIRECTIVE.finditer(text)]
+    audio = [(at, a) for at, kind, a in seen if kind == "audio"]
+    if not audio:
+        return
+    if len(audio) > 1:
+        problems.append(f"{tag}: {len(audio)} :::audio — a Review has one Listening "
+                        f"section, and two players would each silence the other's "
+                        f"exercises")
+        return
+    at = audio[0][0]
+
+    if any(pos > at for pos, kind, _ in seen if kind == "clock"):
+        problems.append(f"{tag}: a reading clock below the :::audio — the Listening "
+                        f"comes after the Reading in a Review, and a clock underneath "
+                        f"the player would time the wrong exercises (C6, C7)")
+
+    below = [(pos, a) for pos, kind, a in seen if kind == "task" and pos > at]
+    if not below:
+        problems.append(f"{tag}: a :::audio with no task under it — the recording plays "
+                        f"once and there is nothing to answer while it does (C6)")
+    for pos, a in below:
+        if a.get("skill") != "listening":
+            line = text[:pos].count("\n") + 1
+            problems.append(f"{tag}:{line}: a {a.get('skill')!r} task below the :::audio — "
+                            f"when the review window closes the player stops input on it, "
+                            f"and a learner who has not reached it loses it (C6)")
+
+
 def check_reviews(units, problems: list) -> list:
     try:
         reviews = b.load_reviews(units)
@@ -778,13 +822,12 @@ def check_reviews(units, problems: list) -> list:
                                 f"to time")
 
         # A Review page carries the Language exercises above the reading block,
-        # and the single-play player closes over every task on the page when
-        # its review window ends. A recording here would silence exercises the
-        # learner has not reached. If that is ever fixed, delete this.
-        if r["audio"]:
-            problems.append(f"{tag}: a :::audio on a Review page — when the review window "
-                            f"closes the player stops input on every task on the page, "
-                            f"including the Language half above it (C6)")
+        # which no lesson page does, and both timers on the page now hand over
+        # at the next timer rather than sweeping the whole document (see
+        # `owned` in assets/app.js). That is what lets a Review have a Listening
+        # half at all. It holds only while the page is in the book's order —
+        # Reading, then Listening — so the order is what gets checked.
+        check_review_listening(tag, text, problems)
 
         # The keys are the tasks', in a Review as in a unit.
         if re.search(r"^##\s+Answer Key\s*$", text, re.M):

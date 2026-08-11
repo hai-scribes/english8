@@ -198,6 +198,47 @@ you had just said: *I said that I used it every evening…*
   *do*, *will* and *is*?
 - When you listed things, did your voice fall on the last item?
 
+### Listening — Round the solar system
+
+You get **one** play. Read the five gaps first, then fill them in while you
+listen rather than afterwards from memory.
+
+**Nghe một lần duy nhất.** Đọc năm câu hỏi trước, rồi vừa nghe vừa điền.
+
+::: audio orientation="You will hear a guide called Mark taking a group of visitors round the solar system before they go into the planetarium." mode="computer" preview="30" review="120"
+Hello, everyone. My name is Mark and I look after the planetarium here. Before
+we go inside, let me take you round the solar system in about two minutes.
+
+Eight planets go round our Sun, and many of them have moons. Jupiter has
+dozens of them.
+
+The four inner planets — Mercury, Venus, Earth and Mars — are quite small, and
+they have rocky surfaces. You could in principle stand on any of them, though
+I would not advise it on Venus.
+
+Between Mars and Jupiter lies the asteroid belt, and it holds millions of
+rocky objects. Some are the size of a house. One or two are the size of a
+small country.
+
+The outer planets are a different thing altogether. They are enormous, and
+they are mostly made up of gas rather than rock, so there is no surface to
+land on at all. They all have thick layers of cloud around them, and what is
+underneath the cloud nobody is entirely sure about.
+
+We are looking for life, naturally. What life seems to need is liquid water —
+which is why, just now, the moons interest us rather more than the planets do.
+:::
+
+### 2.4 Fill in the gaps
+
+::: task skill="listening" type="completion" words="2" ask="Write **NO MORE THAN TWO WORDS** in each gap. Spelling counts here, as it does everywhere else in this course."
+- Eight planets go round the Sun, and many of them have ___ = moons
+- The four inner planets are quite small and have rocky ___ = surfaces
+- The asteroid belt holds millions of rocky ___ = objects
+- The outer planets are mostly made up of ___ rather than rock = gas
+- The outer planets all have thick layers of ___ around them = cloud/clouds
+:::
+
 ### Writing — Your favourite means of communication
 
 **Task.** Write **one paragraph of 80–100 words** about **your favourite means

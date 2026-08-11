@@ -16,3 +16,8 @@ reports/*.status.json
 
 # Node deps for the reading-screen gate (jsdom) ---
 node_modules/
+
+# Atelier /save-progress session snapshots (local-only)
+saved-progress/*.md
+
+saved-progress/archive/*.md

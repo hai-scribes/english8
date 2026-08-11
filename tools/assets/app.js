@@ -1271,6 +1271,36 @@ function speakSeq(lines, onEnd){
   setTimeout(next, 60);
 }
 
+/* ---------------- what a timer covers -------------------------------------
+   Both timing devices on this course -- the reading clock and the single-play
+   player -- stop input when their window closes, and both need the same answer
+   to the same question: which exercises are mine?
+
+   A timer covers the tasks printed BELOW it and ABOVE the next timer.
+
+   Both halves of that are about the Review pages, because a Review is the only
+   page in the course that carries two timers at once. A unit splits across
+   lesson pages -- the reading clock on Skills 1, the player on Skills 2 -- so
+   each of them was alone on its page and "every task on the page" happened to
+   be right. A Review is one page: five Language exercises, then the timed
+   reading block, then the Listening.
+
+   So the player must not reach backwards over the Language half, which is the
+   defect that kept the Reviews from having a Listening section at all; and the
+   clock must not reach forwards into the listening exercises, which is the
+   same defect pointing the other way and would have arrived with them. A timer
+   hands over at the next timer, and on a unit page nothing changes. */
+const TIMERS = '[data-role="clock"], [data-role="audio"]';
+function owned(root){
+  /* querySelectorAll is in document order, so the first timer after this one
+     is where this one's territory ends. */
+  const next = $$(TIMERS).find(t =>
+    root.compareDocumentPosition(t) & Node.DOCUMENT_POSITION_FOLLOWING);
+  const below = (a, b) => !!(a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING);
+  return $$('[data-role="task"]')
+    .filter(x => below(root, x) && !(next && below(next, x)));
+}
+
 function initAudio(){
   const list = DATA.audio || [];
   list.forEach(a => {
@@ -1338,8 +1368,9 @@ function initAudio(){
               /* C6: the review window is a window. When it closes, writing
                  stops -- otherwise "two minutes to review" is decoration and
                  the task has no timing at all. Check stays live, so whatever
-                 is already written can still be submitted. */
-              $$('[data-role="task"]').forEach(x => {
+                 is already written can still be submitted. `owned`, not every
+                 task on the page: see the note above it. */
+              owned(root).forEach(x => {
                 if (x.dataset.done === "1") return;
                 $$(".i-in, .i-opt input", x).forEach(y => { y.disabled = true; });
                 x.dataset.timeup = "1";
@@ -1359,17 +1390,20 @@ function initAudio(){
         + 'the places your answers came apart — that is the part of this worth doing '
         + 'twice.</p>');
     }
-    /* The script also unlocks once every task on the page has been marked, so
-       a learner who finishes early is not held hostage to a countdown -- but
-       only after the recording has been played. Checking blank answers before
-       pressing Start would otherwise hand over the script and turn the whole
-       lesson into a reading exercise. */
+    /* The script also unlocks once every task this player covers has been
+       marked, so a learner who finishes early is not held hostage to a
+       countdown -- but only after the recording has been played. Checking
+       blank answers before pressing Start would otherwise hand over the script
+       and turn the whole lesson into a reading exercise. The exercises above
+       the player are not part of the bargain: on a Review they belong to the
+       Language half, and nobody should have to finish those to read a
+       listening script they have already earned. */
     document.addEventListener("en8:task-done", () => {
       /* `played`, not `used`: submitting blank answers during the orientation
          must not hand over the script before the recording has run. */
       if (!played) return;
-      const all = $$('[data-role="task"]');
-      if (all.length && all.every(x => x.dataset.done === "1")) revealScript();
+      const mine = owned(root);
+      if (mine.length && mine.every(x => x.dataset.done === "1")) revealScript();
     });
   });
 }
@@ -1721,14 +1755,12 @@ function initClock(){
     if (!root) return;
     const btn = $(".c-start", root), state = $(".c-state", root);
     const KEY = "en8:clock:" + p.id;
-    /* Everything BELOW the clock, which is what the clock says it covers --
-       not just the tasks labelled `reading`. The synonym-search that follows
-       the passage is inside the reading block too, and a clock that claims to
-       cover an exercise it does not stop is the loose instruction this
-       replaced. Anything above the clock was never part of the timing. */
-    const covered = () =>
-      $$('[data-role="task"]').filter(x =>
-        root.compareDocumentPosition(x) & Node.DOCUMENT_POSITION_FOLLOWING);
+    /* Everything below the clock and above the next timer -- not just the
+       tasks labelled `reading`. The synonym-search that follows the passage is
+       inside the reading block too, and a clock that claims to cover an
+       exercise it does not stop is the loose instruction this replaced. But it
+       stops at the listening player: see the note on `owned`. */
+    const covered = () => owned(root);
 
     const timeUp = () => {
       state.innerHTML = "<b>Time.</b> Check what you have.";
@@ -1781,9 +1813,10 @@ function initReadingNav(){
     const root = document.querySelector('[data-clock="' + p.id + '"]');
     if (!root) return;
     const items = [];
-    $$('[data-role="task"]')
-      .filter(t => root.compareDocumentPosition(t) & Node.DOCUMENT_POSITION_FOLLOWING)
-      .forEach(t => { $$(".i", t).forEach(li => items.push(li)); });
+    /* The same territory the clock times, for the same reason: a question bar
+       that numbered the listening questions too would promise a learner they
+       are inside the reading block when they are not. */
+    owned(root).forEach(t => { $$(".i", t).forEach(li => items.push(li)); });
     if (!items.length) return;
 
     let flags = {};

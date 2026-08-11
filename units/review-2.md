@@ -171,6 +171,42 @@ one sentence with **unless**.
 - Did you say *the* where the sentence needed nothing at all?
 - Are *sing* and *thin* still ending differently?
 
+### Listening — What changed, and what did not
+
+You get **one** play. Read the five sentences first, then complete them while
+you listen rather than afterwards from memory.
+
+**Nghe một lần duy nhất.** Đọc năm câu trước, rồi vừa nghe vừa hoàn thành.
+
+::: audio orientation="You will hear a student called Phong talking about his family's customs and about the things that have changed in his village in the last few years." mode="computer" preview="30" review="120"
+Hello. My name is Phong, and I have lived in the same village in the north all
+my life, so I am the wrong person to ask about cities.
+
+My family belongs to the Tay ethnic group. My grandmother still weaves, and
+she is teaching my sister, though my sister says the loom is much harder than
+it looks. At Tet the whole family comes back, even the cousins who work far
+away, and we cook together for two days before anybody eats.
+
+What has changed is the ordinary week rather than the festivals. My mother
+used to walk to the market every single morning. Now she orders rice and oil
+on her phone and a van brings them on Thursday. My father used to walk out to
+the fields as well; he rides a motorbike now, and he is home an hour earlier.
+
+I am not sure all of it is better. We used to eat together every evening. Now
+my brother eats in front of a screen, and my grandmother minds that far more
+than she minds the motorbike.
+:::
+
+### 2.4 Complete the sentences
+
+::: task skill="listening" type="sentence-completion" words="1" ask="Write **ONE word** in each gap. Spelling counts here, as it does everywhere else in this course."
+- Phong's family belongs to the ___ ethnic group. = Tay
+- His grandmother still ___ , and she is teaching his sister. = weaves
+- His mother now orders rice and oil on her ___ . = phone
+- His father rides a ___ out to the fields. = motorbike
+- His brother now eats in front of a ___ . = screen
+:::
+
 ### Writing — A custom, and a life that has changed around it
 
 **Task.** Write **one paragraph of 80–100 words** about **one custom your

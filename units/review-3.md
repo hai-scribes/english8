@@ -178,6 +178,47 @@ arrives*, *as soon as the market opens*.
 - Did you say *store* and *speciality* with one syllable at the start, not two?
 - Which of *national*, *natural* and *arrival* did you stress correctly?
 
+### Listening — What is actually in the air
+
+You get **one** play. Read the five gaps first, then fill them in while you
+listen rather than afterwards from memory.
+
+**Nghe một lần duy nhất.** Đọc năm câu hỏi trước, rồi vừa nghe vừa điền.
+
+::: audio orientation="You will hear a speaker at a school assembly explaining what makes the air in the city dirty, who it harms most, and one thing about it that surprises people." mode="computer" preview="30" review="120"
+Good morning. I want to talk about the air in this city, and about one thing
+in particular that surprises people.
+
+Ask anybody what makes the air dirty and they will say traffic. They are not
+wrong. Exhaust fumes from cars and motorbikes are the largest single source,
+and on a still day you can see the result lying over the main road.
+
+But transport is not the only reason. A great deal of what we breathe comes
+from building sites — dust off the cement and the sand, thrown up again every
+time a lorry goes past. Some comes from factories outside the city, and some
+from people burning rubbish in their own yards, which is illegal and extremely
+common.
+
+These gases are especially harmful for children. Children breathe faster than
+adults do, and their lungs are still growing. Doctors at the city hospital say
+they see far more asthma now than they saw ten years ago.
+
+And here is the part that surprises people. Less of today's pollution comes
+from factories than in the past — the old ones have closed or moved away.
+More of it comes from us: from what we drive, what we build, and what we burn
+in the yard on a Sunday.
+:::
+
+### 2.4 Fill in the gaps
+
+::: task skill="listening" type="completion" words="2" ask="Write **NO MORE THAN TWO WORDS** in each gap. Spelling counts here, as it does everywhere else in this course."
+- The largest single source is ___ from cars and motorbikes = exhaust fumes
+- A great deal of the dust comes off the cement and sand at ___ = building sites
+- Burning rubbish in a yard is ___ , and also extremely common = illegal
+- The gases are especially harmful for ___ , whose lungs are still growing = children
+- Less of today's pollution comes from ___ than in the past = factories
+:::
+
 ### Writing — Where your family shops, and why
 
 **Task.** Write **one paragraph of 80–100 words** about **where your family
