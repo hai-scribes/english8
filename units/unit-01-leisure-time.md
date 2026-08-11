@@ -348,7 +348,7 @@ one politely, and give a reason.
 
 *A blog post by Trang, 14, from Da Nang.*
 
-::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
 :::
 
 ::: passage
@@ -436,18 +436,13 @@ Before the 30-second turn in Step 4, say in one short phrase what the turn is
 **for** — *"the hobby I want to start"*, not *"my free time"*. Then drop
 anything that does not serve it, however good the sentence is.
 
-This is not a style preference. One of the official indicators of coherence in
-a spoken turn is the **relevance of each spoken sentence to the general purpose
-of the turn** — and an examiner's published comment on a real Vietnamese
-candidate, speaking on this exact topic, records the whole cost of ignoring it:
-she *"describes several interests rather than one interest"*, which "makes her
-hard to follow at times and leads to some loss of coherence".
+A listener can follow one interest described well. Several interests described
+at once is where a turn becomes hard to follow, however good the sentences are.
 
-**And do not chase silence.** The old version of this exercise asked you to
-speak "without a long pause". That was wrong, and it has been removed. Pausing
-at a stage boundary — with a short marker like *"So that's the first thing."* —
-is listed on the **credit** side of coherence, not the debit side. Pause where
-your talk turns a corner; do not pause in the middle of a clause.
+**And do not chase silence.** Pausing where your talk turns a corner — with a
+short marker like *"So that's the first thing."* — helps your listener. What
+does not help is a pause in the middle of a clause. Pause between your ideas,
+not inside them.
 
 > **Tiếng Việt:** Trước khi nói, hãy gọi tên **một** chủ đề duy nhất cho lượt
 > nói đó, rồi bỏ mọi câu không phục vụ chủ đề ấy. Dừng đúng chỗ chuyển ý là
@@ -462,10 +457,8 @@ Repeat Step 2 until you can answer all five clearly.
 
 ### Listening — Nam's free time
 
-You get **one** play. That is not us being hard on you — it is how the task
-works, and practising it any other way trains a habit that does not exist on
-the day. Read both sets of questions in the preview window, then answer as you
-listen rather than afterwards.
+You get **one** play, so use the preview window: read both sets of questions
+first, then answer while you listen rather than afterwards from memory.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
@@ -499,26 +492,17 @@ Next to every answer in **6.1** and **6.2**, write **● sure** or **○ not sur
 
 **What you are looking for is not the score.** It is whether the **● sure**
 answers are right much more often than the **○ not sure** ones. If they are,
-your sense of your own listening can be trusted, and under time pressure that is
-worth having. If they are not, it cannot be — and knowing *that* is worth more
-than two extra right answers.
-
-A study of 376 test-takers on IELTS Listening found that between **74% and 86%
-of them were miscalibrated**, and that on the hardest questions they were
-substantially overconfident. The researcher's own recommendation was to tell
-learners plainly whether they are realistic, overconfident or underconfident.
-It is the only trainable behaviour in the Listening research with an effect size
-attached to it.
+you can trust your own sense of when you have heard something correctly — and
+under time pressure that is worth having. If they are not, you cannot, and
+knowing *that* is worth more than two extra right answers.
 
 **Every listening exercise in this course carries this column**, and the
-practice engine on each unit page asks you the same question and works the
-calculation out for you.
-
-This describes a tendency in test-takers, not a rule of the test.
+practice on each unit page asks you the same question and works the sums out
+for you.
 
 > **Tiếng Việt:** Trước khi dò đáp án, đánh dấu **● chắc chắn** hoặc **○ không
 > chắc** cho từng câu. Điều đáng quan tâm không phải điểm số, mà là bạn **tự đánh
-> giá có chuẩn không** — 74–86% thí sinh đánh giá sai về chính mình.
+> giá có chuẩn không**.
 :::
 
 ### 6.1 Listen and choose
@@ -580,24 +564,17 @@ in note form. The plan is yours; the sentences come later.
 
 ::: bridge name="Your own life is evidence — but it has to support a point" trains="Task Response" cefr="B1" marker="[C] 3-0" src="05 §3.1"
 There is no phrase list above, and there will not be one anywhere in this
-course. In IELTS, memorised language is not a shortcut that scores badly — it is
-the category that is **removed from the marking**. A wholly memorised answer is
-scored at the bottom of the scale, memorised chunks used inappropriately are a
-band-4 feature of Lexical Resource, and any wording copied from the prompt is
-discounted before the rest is read. A plan you filled in yourself cannot be
-memorised, because it did not exist before you wrote it.
+course. Sentences copied from a list are not yours, and a reader can tell. A
+plan you filled in yourself cannot be borrowed from anyone, because it did not
+exist before you wrote it.
 
-What this task *does* train is worth naming. Personal experience is explicitly
-allowed as evidence in IELTS writing — the criteria state that examples "may be
-drawn from a candidate's own experience" (Writing descriptors, **[2023]**
-version; an older 2013 wording also circulates). The skill is not *having* the
-experience; it is making it **answer the question you were asked**. Every one of
-your six notes should point back at the question in the left-hand column.
+Your own life is the best material you have — but only when it **answers the
+question you were asked**. Every one of your six notes should point back at the
+question in the left-hand column.
 
-> **Tiếng Việt:** Không có bảng "mẫu câu" — vì trong IELTS, câu học thuộc lòng
-> bị **loại khỏi phần chấm**, chứ không phải bị trừ điểm. Hãy tự viết kế hoạch
-> bằng ngôn từ của mình. Trải nghiệm cá nhân được phép dùng làm dẫn chứng, miễn
-> là nó **trả lời đúng câu hỏi**.
+> **Tiếng Việt:** Không có bảng "mẫu câu" ở đây, và cả khoá học cũng không có.
+> Hãy tự viết kế hoạch bằng ngôn từ của mình. Trải nghiệm cá nhân là dẫn chứng
+> tốt, miễn là nó **trả lời đúng câu hỏi**.
 :::
 
 ::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — the email to your friend, in **80–100 words**."

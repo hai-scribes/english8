@@ -401,6 +401,65 @@ function paintProgress(){
   }
 }
 
+/* ---------------- where to begin -----------------------------------------
+   The card at the top of the home page and of every unit page. Its markup
+   ships pointing at the first thing a new learner should open, and this
+   repoints it at the first thing *this* learner has not finished — because
+   "start with Lesson 1" is wrong advice for someone who did Lessons 1 to 4
+   yesterday, and a returning learner should not have to work out where they
+   stopped. */
+function initStart(){
+  const card = $("#startCard");
+  if (!card) return;
+  const title = $("#startTitle", card), lede = $("#startLede", card), link = $("#startLink", card);
+  if (!link) return;
+  const say = (h, l, href, text) => {
+    if (title) title.textContent = h;
+    if (lede) lede.innerHTML = l;
+    link.setAttribute("href", href);
+    link.textContent = text;
+  };
+
+  if (DATA.kind === "unit"){
+    const u = DATA.unit;
+    let next = 0;
+    for (let l = 1; l <= 7; l++) if (!lessonDone(u, l)){ next = l; break; }
+    const done = lessonsDone(u);
+    if (!next){
+      say("This unit is finished",
+        "All seven lessons are marked complete. The word practice and the unit test are "
+        + "open at the bottom of this page.",
+        "#gate", "Go to practice & test");
+    } else if (done){
+      say("Pick up where you left off",
+        "You have finished <b>" + done + " of 7</b> lessons in this unit. The steps below "
+        + "are the same every time.",
+        "lesson-" + next + "/index.html", "Continue with Lesson " + next);
+    }
+    return;
+  }
+
+  if (DATA.kind === "home"){
+    let next = 0, started = 0;
+    for (let n = 1; n <= 12; n++){
+      const u = String(n).padStart(2, "0"), d = lessonsDone(u);
+      if (d < 7){ next = n; started = d; break; }
+    }
+    if (!next){
+      say("Every unit is finished",
+        "All twelve units are complete. Words you have practised keep coming back for "
+        + "review — check the queue above.",
+        "unit-01/index.html", "Back to Unit 01");
+    } else if (started || next > 1){
+      const nn = String(next).padStart(2, "0");
+      say("Pick up where you left off",
+        started ? "You are <b>" + started + " of 7</b> lessons into Unit " + nn + "."
+                : "Unit " + nn + " is next.",
+        "unit-" + nn + "/index.html", "Continue Unit " + nn);
+    }
+  }
+}
+
 /* ---------------- the gate ------------------------------------------------
    The operator's constraint: a test is never presented before the lessons it
    tests. That is enforced twice — structurally, because the generator only
@@ -601,8 +660,8 @@ function runEngine(mode, words, unit, hostSel){
         + '<div class="row"><button class="btn quiet" id="noaudio">No sound — show the meaning</button></div>';
     }
     if (q.fmt === "colloc" || q.fmt === "cloze" || q.fmt === "type" || q.fmt === "listen")
-      note = '<p class="note small">Spelling counts, as it does in the real answer key. '
-           + 'UK and US spellings are both accepted; two answers in one gap score nothing.</p>';
+      note = '<p class="note small">Spelling counts. UK and US spellings are both accepted; '
+           + 'two answers in one gap score nothing.</p>';
     host.innerHTML = chrome(body, note);
     if (q.fmt === "listen") setTimeout(() => speak(sayWord(w)), 200);
     const inp = $("#ans", host);
@@ -687,16 +746,13 @@ function runEngine(mode, words, unit, hostSel){
       + calibrationLine()
       + (ret.checked
           ? '<p class="note"><b>Kept after a week:</b> ' + ret.kept + ' of ' + ret.checked
-            + ' items were still right when they came back after a real gap. That number is the one '
-            + 'that means something — anything you can still do at the end of a session, you can do.</p>'
+            + ' items were still right when they came back after a real gap. That is the number '
+            + 'worth watching.</p>'
           : '<p class="note">Come back in ' + REVIEW_DAYS + ' days and these items will be waiting. '
-            + 'What you can recall after a gap is the only recall worth counting, so nothing is marked '
-            + 'learned today.</p>')
+            + 'What you remember after a gap is what counts, so nothing is marked learned today.</p>')
       + missed
-      + '<p class="note small">This is a score on our own practice, not a measure of your English, '
-      + 'and it is not convertible into an IELTS band — no published table converts anything into one. '
-      + 'The review interval above is our engineering choice: spacing beats cramming, but no research '
-      + 'names a number of days.</p>'
+      + '<p class="note small">This is a score on this unit\'s word list, not a measure of your '
+      + 'English overall.</p>'
       + '<div class="row"><button class="btn" id="again">Go again</button>'
       + '<button class="btn quiet" id="back">Done</button></div></div>';
     $("#again", host).addEventListener("click", () => runEngine(st.mode, words, st.unit, hostSel));
@@ -1047,11 +1103,11 @@ function calibrationLine(marks, conf, unit, record){
     verdict = "Across this unit your sure answers have been right much more often than "
             + "your unsure ones. Watch whether that holds as the unit goes on.";
   else if (hi >= lo)
-    verdict = "Being sure has barely separated right from wrong so far. Most test-takers "
-            + "are miscalibrated, and noticing it is the point of the column.";
+    verdict = "Being sure has barely separated right from wrong so far. Noticing that is "
+            + "the point of the column — keep marking.";
   else
-    verdict = "You have been right more often when you felt unsure. That is the pattern "
-            + "most often found on hard items — worth watching rather than acting on yet.";
+    verdict = "You have been right more often when you felt unsure. That happens most on "
+            + "hard questions — worth watching for now.";
   const row = (label, here, all) =>
     '<tr><td>' + label + '</td><td>' + here.n + '</td><td>'
     + (here.n ? Math.round(here.ok / here.n * 100) + "%" : "—") + '</td><td>' + all.n
@@ -1829,6 +1885,7 @@ function boot(){
   initEntries();
   initLesson();
   paintProgress();
+  initStart();
   initGate();
   paintReview();
   initTasks();

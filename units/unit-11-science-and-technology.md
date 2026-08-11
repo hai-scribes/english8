@@ -227,22 +227,15 @@ the one carrying information the listener does not already have. Say the sentenc
 with that word prominent and everything else flattened. Record it on your phone
 and listen for whether the rest really did get out of the way.
 
-Across 280 benchmark speaking performances, the **proportion** of words a speaker
-makes prominent correlates **−0.42** with rated level: lower-rated speakers made
-roughly 39% of their words prominent, the highest-rated about 31%. Stressing more
-words does not sound more emphatic; it sounds flatter, because nothing stands out
-when everything does.
+Stressing more words does not sound more emphatic. It sounds flatter, because
+nothing stands out when everything does — and your listener loses the one word
+they actually needed.
 
-**Two warnings that travel with this.** The strongest correlate in that study was
-speech *rate* (0.67) — and the researchers call it "the worst teaching target",
-because speeding up to imitate a score is exactly the wrong response. And this is
-Tier-2 research on how candidates behave, never a rule of the test. **No
-pronunciation score exists here and none will:** examiner agreement on
-pronunciation is the weakest of the four criteria, and nothing in this course
-will ever put a number on yours.
+**And do not try to fix this by speaking faster.** Speed is not what makes a
+sentence clear; choosing what to make loud is.
 
 > **Tiếng Việt:** Mỗi câu chỉ nhấn **một** từ — từ mang thông tin mới. Nhấn càng
-> nhiều từ, câu càng **phẳng**. Khoá học này **không** chấm điểm phát âm.
+> nhiều từ, câu càng **phẳng**. Đừng nói nhanh hơn để bù lại.
 :::
 
 ## Lesson 3 — A Closer Look 2
@@ -516,7 +509,7 @@ were repeating it (*He/She said that…*).
 
 *An article from a school science magazine.*
 
-::: clock mins="19" for="19 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+::: clock mins="19" for="You have 19 minutes for the text and every exercise below it."
 :::
 
 ::: passage
@@ -617,10 +610,9 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### Listening — A teacher talks about a robot
 
-This plays **once**. That is the task, not us being hard on you — a second
-play is a habit that does not exist on the day. The talk runs in order and so
-do the questions, so read both 6.1 and 6.2 in the preview window and answer
-while the voice is still moving, not afterwards from memory.
+This plays **once**. The talk runs in order and so do the questions, so read
+both 6.1 and 6.2 in the preview window, then answer while the voice is still
+moving rather than afterwards from memory.
 
 **Bài nghe chỉ phát một lần.** Đọc trước cả 6.1 và 6.2 trong lúc chờ, rồi vừa
 nghe vừa trả lời.
@@ -715,24 +707,17 @@ Then write. **No prepared opening.** If a sentence arrives fully formed before
 you have thought about the question, it is a memorised sentence and it is working
 against you.
 
-This is the sharpest thing in the whole knowledge base and it is worth being
-blunt about, because it contradicts how exam writing is often taught. In IELTS,
-memorised language is not a low-scoring shortcut — it is **removed from the
-marking**:
+This is worth being blunt about, because it is the opposite of how exam writing
+is often taught. A memorised opening does not earn you anything — it only proves
+you can repeat someone else's sentence, and it usually does not quite fit the
+question you were given.
 
-- an answer that is wholly memorised is scored at the **bottom of the scale**;
-- memorised phrases used inappropriately are a **band-4** feature of Lexical
-  Resource (Writing descriptors, **[2023]** version);
-- any wording copied from the prompt "must be discounted" before the response is
-  assessed;
-- memorised utterances are excluded from the language that counts at all.
-
-Saying the question in your own words trains a directly assessed behaviour, and
-it takes ten seconds.
+Saying the question back in your own words takes ten seconds, and it is the
+cheapest way to find out whether you have understood it at all.
 
 > **Tiếng Việt:** Trước khi viết, hãy **nói lại đề bằng lời của mình**. Không
-> dùng câu mở bài học thuộc. Trong IELTS, ngôn ngữ học thuộc **bị loại khỏi phần
-> chấm**, chứ không phải bị điểm thấp.
+> dùng câu mở bài học thuộc — câu học thuộc thường không khớp với đề bạn đang
+> làm, và không chứng minh được điều gì.
 :::
 
 ::: thread id="articles" stage="check"

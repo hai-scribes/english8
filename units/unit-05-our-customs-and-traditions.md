@@ -407,7 +407,7 @@ in one or two sentences, using a phrase from the tables above.
 
 *By Khanh, 14, from a village in Bac Ninh province.*
 
-::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
 :::
 
 ::: passage
@@ -596,18 +596,10 @@ Cover the finished email above. Answer in note form, in your own words.
 | How do you close a message to someone you know but are not close to? | |
 
 ::: bridge name="Articles are a spine, not a single lesson" trains="Grammatical Range & Accuracy" cefr="B1" marker="[S]" src="07 §4.4"
-This is, on the evidence, the highest-leverage grammar lesson in the whole
-twelve-unit course — and one unit is not proportionate to it. So it does not end
-here. **Every writing task from Unit 6 to Unit 12 carries a five-item article
-check**, and this is where that starts.
-
-The reason is a measurement. Across 500 rated IELTS scripts totalling 144,671
-words, determiners were the largest error category at every level from the
-middle of the scale upward, and the one that improved most across the range:
-18.7% → 14.2% → 12.8% → 8.0% → 4.7% of all errors. The knowledge base's verdict
-is quoted rather than paraphrased: *"treat it as a spine, not a one-off."*
-
-This rests on one source that was not independently re-checked.
+Articles are the small words that go wrong most often, and unlike most grammar
+points you meet them in every sentence you write. One lesson is not enough for
+that, so this one does not end here: **every writing task from Unit 6 to Unit 12
+carries a five-item article check**, and this is where that starts.
 
 > **Tiếng Việt:** Mạo từ là **trục chính**, không phải một bài lẻ. Từ Unit 6 trở
 > đi, mỗi bài viết đều có phần kiểm tra 5 mạo từ.
@@ -625,16 +617,11 @@ Find every place an article was obligatory, then count how many you actually
 supplied. That fraction is the measurement — not a percentage, not a grade.
 
 And read it correctly, because this is the part that misleads people. At the
-level you are working at, **the fraction is expected to wobble, and a rising
-error rate is a sign of progress, not of decline.** The CEFR's own reference
-volume states it plainly: "inaccuracy increases at around B1 as the learner is
-beginning to use language more independently and creatively." When you start
-attempting harder sentences, you make more mistakes in them. That is what moving
-up looks like. A tool that told you "your accuracy got worse" would be wrong
-about exactly the transition you are making.
-
-This method is quoted from a source whose matching verification did **not** hold
-— it is well evidenced but singly sourced, and weaker than a verified claim.
+level you are working at, **the fraction is expected to wobble, and more
+mistakes can be a sign of progress rather than of decline.** When you start
+attempting harder sentences, you make more mistakes in them — that is what
+moving up looks like. Watch the fraction over a month, not from one paragraph
+to the next.
 
 > **Tiếng Việt:** Ghi kết quả dạng **phân số** (đúng ___/___ vị trí bắt buộc),
 > không phải điểm số. Ở trình độ này, **tỉ lệ lỗi tăng lên là dấu hiệu tiến bộ**

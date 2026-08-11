@@ -12,10 +12,40 @@ python3 tools/check_ielts.py      # gate: every IELTS claim is legal and cited
 node tools/test_marking.js        # gate: the marking engine obeys the published rules
 node tools/check_write.js         # gate: each model satisfies its own checklist (after build)
 node tools/test_reading.js        # gate: the reading screen behaves (after build; needs jsdom)
+python3 tools/check_coverage.py   # report: what the official textbook covers that we don't
 ```
 
 `test_reading.js` needs `npm install jsdom` and skips loudly without it, so the
 other four still run on a clean checkout.
+
+## Never ship less than the official book
+
+`curriculum/sgk/` is a complete record of the prescribed student's book — all
+twelve units section by section, its 282-word glossary, its four cumulative
+Reviews, and a machine-readable `targets.json`. The standing rule is that this
+site is **at least as complete as that book on every target, and never less**.
+
+Before adding or revising a lesson, read `curriculum/sgk/unit-NN.md` and run:
+
+```sh
+python3 tools/check_coverage.py --unit NN
+```
+
+It checks the unit's lexis, its Everyday English function, its Communication
+content block, and each named grammar and pronunciation target. It **reports and
+exits 0** — coverage is a curriculum decision, and the point is to make the
+decision visible rather than fail a build over it. Do not close a gap by editing
+`targets.json`; that file records what the book does, not what we wish it did.
+
+Two things the book has that our shape has historically dropped, so check them
+first: the **Everyday English function** (the book names a different speech act
+in each unit) and the **Communication content block** (the book's Communication
+section has two halves — Everyday English *and* a named content block with its
+own exercises; ours has had only the first).
+
+`curriculum/sgk/` is reference material. `tools/build.py` never reads it and
+nothing in it is published — see its `README.md` for what "recorded" means and
+why passages are described rather than reproduced.
 
 ## Six directives, and what each one is for
 
@@ -60,8 +90,29 @@ section does not exist in the file it names.
 
 A lesson may make an IELTS claim in exactly one construct — a `:::bridge`
 directive, whose `marker` and `src` are required attributes and whose warrant
-line the generator prints. `README.md` §"The IELTS bridge" has the syntax. Do
-not make IELTS claims in ordinary prose; the gate cannot see them there.
+the build writes to `research/evidence-register.md`. `README.md` §"The IELTS
+bridge" has the syntax. Do not make IELTS claims in ordinary prose; the gate
+cannot see them there.
+
+## The interface is the learner's. The reasoning is ours.
+
+Nothing on a page explains why the page is built the way it is. No criterion
+names, no evidential markers, no CEFR levels, no citations, no "this trains X",
+no accounts of what a study found or how strong its evidence was — not in the
+generator's copy, and not in the prose of a unit. A grade-8 learner opening a
+lesson wants to know what to do and how to do it.
+
+That is a rule about the *audience*, not about rigour: the bridge attributes
+are still required, `check_ielts.py` still refuses an illegal marker or an
+unresolvable citation, and every claim, marker and warrant is written to
+`research/evidence-register.md` on each build — generated from the directives,
+so it cannot drift and cannot be forgotten. Justify a decision there, in the
+knowledge base, or in a code comment. Never on the page.
+
+A `:::bridge` body is therefore an *instruction*, plus at most a plain-English
+reason a thirteen-year-old would accept. "One difference stated clearly beats
+three the reader has to rank" is a reason. "The criterion asks for highlighting
+rather than mechanical description" is a citation wearing a reason's clothes.
 
 ## The IELTS knowledge base — read this before making any IELTS claim
 

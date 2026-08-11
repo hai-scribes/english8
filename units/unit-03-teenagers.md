@@ -388,7 +388,7 @@ reassures them and offers something practical.
 
 *A report from the school magazine of Nguyen Du Secondary School.*
 
-::: clock mins="18" for="18 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+::: clock mins="18" for="You have 18 minutes for the text and every exercise below it."
 :::
 
 ::: passage label="A"
@@ -502,10 +502,8 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### Listening — What makes teenagers stressed
 
-You get **one** play. That is not us being hard on you — it is how the task
-works, and practising it any other way trains a habit that does not exist on
-the day. Read both sets of questions in the preview window, then answer as you
-listen rather than afterwards.
+You get **one** play, so use the preview window: read both sets of questions
+first, then answer while you listen rather than afterwards from memory.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
@@ -598,13 +596,10 @@ habit forms. The rule for the paragraph below, and for every paragraph after it:
 stage — that is correct use. *First, and also, moreover, in addition* inside a
 single cause is four markers inside one stage, and that is the failure.
 
-The criteria genuinely **want** discourse markers; the band-4 description of
-spoken coherence is "can link simple sentences but often with **repetitious use
-of connectives**". But examiner comments on real scripts flag the opposite
-problem just as often — "connectives are overused or inappropriate", "cohesive
-devices are overused", "some mechanical use of linkers" (Writing descriptors,
-**[2023]** version). You are aiming between the two, and the cheapest way to
-land there is a hard count.
+Linking words are worth having: without them the stages of your argument run
+into each other. But too many is just as bad — when every sentence starts with
+a connective, none of them tells the reader anything. You are aiming between
+the two, and the cheapest way to land there is a hard count.
 
 **This upgrade asks you to write less, not more.**
 

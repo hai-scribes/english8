@@ -18,9 +18,17 @@ ninety-two checklist lines are settled from the text rather than from the
 learner's own opinion of it. On top
 of that, twenty-nine tasks carry one changed instruction, checkpoint or
 re-scored drill built from the IELTS research — each cited, each carrying the
-strength of its evidence. See [Marked tasks, one play, and strands](#marked-tasks-one-play-and-strands)
-and [The IELTS bridge](#the-ielts-bridge) below, plus the generated
-[evidence register](docs/evidence/index.html).
+strength of its evidence — recorded in the generated
+[evidence register](research/evidence-register.md), which is a maintainer's
+document and is deliberately not part of the site. See
+[Marked tasks, one play, and strands](#marked-tasks-one-play-and-strands) and
+[The IELTS bridge](#the-ielts-bridge) below.
+
+**The interface itself says none of this.** The pages carry the instruction and
+nothing about where it came from: no criterion names, no evidential markers, no
+CEFR coordinates, no explanation of what any of it is for. A learner opening a
+lesson is there to learn English, not to audit the course. Everything that
+justifies a design decision belongs in this repository.
 
 ## How the site is laid out
 
@@ -43,6 +51,7 @@ above the lessons, and inert until the lessons they cover are complete.
 | `units/*.md` | **Source of truth.** One markdown file per unit. |
 | `data/dict/*.json` | Dictionary entries — senses, definitions, examples, collocations, word families. |
 | `research/ielts/` | The source-verified IELTS knowledge base every bridge cites. |
+| `research/evidence-register.md` | **Generated.** Every bridge's claim, marker and warrant. Not published. |
 | `tools/check_dict.py` | Gate: every vocabulary slot resolves to a complete entry. |
 | `tools/check_ielts.py` | Gate: the knowledge base's audit checklist, enforced. |
 | `tools/test_marking.js` | Gate: the marking engine, against the published rules. |
@@ -52,6 +61,8 @@ above the lessons, and inert until the lessons they cover are complete.
 | `tools/assets/` | `app.css` and `app.js`, copied into the build. |
 | `docs/` | Generated output. GitHub Pages serves this directory. |
 | `curriculum/syllabus.md` | The syllabus map the units are written against. |
+| `curriculum/sgk/` | **The official book, recorded.** Every unit's targets, exercises and glossary, section by section — reference only, never built or published. |
+| `tools/check_coverage.py` | Report: what the official book teaches that our units do not. |
 | `app/` | The earlier single-page artifacts this site replaces. |
 
 ## Building
@@ -64,6 +75,7 @@ python3 tools/check_ielts.py      # gate: every IELTS claim is legal and cited
 node tools/test_marking.js        # gate: the marking engine obeys the published rules
 node tools/check_write.js         # gate: each model satisfies its own checklist (needs docs/)
 node tools/test_reading.js        # gate: the reading screen behaves (needs docs/ and jsdom)
+python3 tools/check_coverage.py   # report: what the official textbook covers that we don't
 ```
 
 Requires `markdown` (`pip install markdown`). Edit the markdown in `units/`,
@@ -139,10 +151,11 @@ failure. Each of these was a route around a rule, not a hypothetical:
 - An instruction to **score** a spoken answer, or any pronunciation score.
   Saying one does not exist is not shipping one, so a disclaimer passes.
 - A bridge whose body admits it is our own reasoning while carrying a marker
-  that says quoted. The footer prints the marker; the two must agree.
+  that says quoted. The register prints the marker; the two must agree.
 
 The same prohibitions are scanned over `tools/build.py`, because the generator
-authors learner-facing copy too — the home page, the unit cards, the register.
+authors learner-facing copy too — the home page, the unit cards, the widget
+that wraps every task.
 
 ### `:::audio` — the recording plays once
 
@@ -314,7 +327,7 @@ that does not serve it.
 
 | Attribute | What it must be |
 | --- | --- |
-| `name` | The instruction, in a phrase. Shown on the unit page and in the register. |
+| `name` | The instruction, in a phrase. Printed above the block, and in the register. |
 | `trains` | One of the descriptors' own criterion names, or `Reading` / `Listening`. |
 | `marker` | The evidential marker, **inherited from the source and never upgraded**. |
 | `src` | `NN §X.Y` — a real section of a real file in `research/ielts/`. |
@@ -324,9 +337,11 @@ that does not serve it.
 cited section does not exist in the file it names, if a unit's writing task
 names no criterion, or if any unit's text contains a band promise, a half-band,
 a template or a Vietnamese-L1 pronunciation claim outside the three permitted
-targets. The generator prints the marker under every bridge, glossed in plain
-English — a weak claim reads as weak on the page, because a caveat that has to
-be remembered is a caveat that gets dropped.
+targets. Every marker, warrant and CEFR level is written to
+`research/evidence-register.md` on each build, glossed in plain English — a weak
+claim reads as weak in the register, and because the register is generated from
+the directives themselves, a caveat cannot be dropped by being forgotten. The
+page prints the instruction only.
 
 Read `CLAUDE.md` and `research/ielts/09-design-principles.md` §1 before adding
 one.
@@ -355,9 +370,28 @@ measured across the installed voices, the /ʊ/–/uː/ contrast Unit 1 teaches c
 out at 1–3% — and backwards on some voices — against the ~2× the lesson
 describes. Use the audio for word identity and the IPA for length.
 
+## Staying level with the prescribed book
+
+The site's job is to be **at least as complete as the official student's book**,
+never less. `curriculum/sgk/` records what that book actually teaches — all
+twelve units section by section, its 282-word glossary, and its four cumulative
+Reviews — and `python3 tools/check_coverage.py` checks our units against it:
+the lexis, the Everyday English function, the Communication content block, and
+each named grammar and pronunciation target.
+
+It reports rather than fails, because coverage is a curriculum decision and the
+point is that the decision is visible instead of silent. Run it before adding or
+revising a lesson, and read `curriculum/sgk/README.md` first.
+
 ## Provenance
 
 Original teaching material written against a curriculum map compiled from public
 sources (NXB Giáo dục Việt Nam × Pearson, GDPT 2018 curriculum; chief editor
 GS.TS. Hoàng Văn Vân). It records structure and targets. It is not the
 textbook's text.
+
+The same is true of `curriculum/sgk/`: it records the book's syllabus at
+exercise resolution — what each task asks, what type it is, what language it
+targets — and describes the reading passages and listening scripts rather than
+reproducing them. That directory is reference material for authors; the build
+never reads it and the site never serves it.

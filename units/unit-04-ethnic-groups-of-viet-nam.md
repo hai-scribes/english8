@@ -172,16 +172,13 @@ That is why the drill is *hold the buzz to the end*, not *say it louder*. The
 sound is not missing from Vietnamese — /ɡ/ is a perfectly ordinary onset. It is
 missing from that **position**.
 
-**Two limits travel with this.** It is a description of the Vietnamese sound
-system, quoted from one source and not independently re-checked, and that
-source describes **Hanoi** Vietnamese specifically. And it says what is
-**hard** — nothing here claims that fixing it raises a score, a band, or how
-well you are understood. No study has measured that.
+So expect it to take a few goes. You are not fixing a sound you cannot make —
+you are putting a sound you make easily into a place your mouth has never had
+to put it.
 
 > **Tiếng Việt:** Âm tiết tiếng Việt chỉ khép lại bằng /p t k m n ŋ j w/, và
 > **không có phụ âm hữu thanh nào** đứng cuối. Vì vậy /ɡ/ cuối từ trong tiếng
-> Anh nằm ngoài hệ thống có sẵn, và dễ trượt về /k/. Đây là mô tả cái **khó**,
-> không phải lời hứa về điểm số.
+> Anh nằm ngoài hệ thống có sẵn, và dễ trượt về /k/.
 :::
 
 ### 2.3 Sort the sounds
@@ -450,7 +447,7 @@ question, and one beginning *Could you tell me…*.
 
 *From a school magazine, written by Hoa, 14.*
 
-::: clock mins="18" for="18 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+::: clock mins="18" for="You have 18 minutes for the text and every exercise below it."
 :::
 
 ::: passage
@@ -519,15 +516,9 @@ part of **one named paragraph** that means the same thing. Speed is the point.
 | Paragraph 2 | *keeps the house cool* |
 | Paragraph 3 | *passed down from parents to children* |
 
-Eye-tracking work on IELTS Reading found that what separated successful readers
-from unsuccessful ones was fixating on the **lexical link** between the question
-and the text: on one item, weak readers "fixated on this target word almost not
-at all". The researcher's own recommendation was to train "the ability to
-identify **lexical matches of various kinds**" — which is this drill.
-
-Two limits worth knowing: only two question types were studied, and on 7 of the
-11 items the strong and weak groups showed no significant difference. This is a
-tendency in readers, not a rule of the test.
+The question almost never uses the same words as the text. Finding the words
+that mean the same thing — fast, without reading every line — is most of what
+reading under a clock actually is.
 
 > **Tiếng Việt:** Tìm **từ đồng nghĩa** giữa câu hỏi và bài đọc, trong đoạn được
 > chỉ định, càng nhanh càng tốt. Đây là kỹ năng phân biệt người đọc tốt và kém.
@@ -568,18 +559,12 @@ Build every peer-interview answer on two beats, rather than on length:
 1. **Beat one** — one sentence that answers the question that was asked.
 2. **Beat two** — one sentence that extends it: a reason, an example, a contrast.
 
-A study of the IELTS Speaking interview found candidates "need to provide an
-answer to the question **and** develop the topic inherent in the question" — and
-noted, in the same breath, that "the ability to answer questions is **not
-specifically included**" in the marking criteria.
-
-Both halves of that matter. Answering-then-developing is a real demand of the
-conversation, so practise it. It is **not** a scored behaviour, so do not treat
-it as one — this is a habit for being understood, not a way to buy marks. It is
-also research on how candidates behave, not a rule of the test.
+One-sentence answers stall a conversation: your partner has to think of a whole
+new question every time. The second beat is what keeps it going, and it is a
+habit, not a trick — build it in until you stop noticing you are doing it.
 
 > **Tiếng Việt:** Mỗi câu trả lời gồm **hai nhịp**: một câu trả lời đúng câu
-> hỏi, một câu mở rộng. Đây là thói quen giao tiếp, **không** phải tiêu chí chấm.
+> hỏi, một câu mở rộng. Đây là thói quen giao tiếp cần luyện thành phản xạ.
 :::
 
 
@@ -589,10 +574,8 @@ also research on how candidates behave, not a rule of the test.
 
 ### Listening — A day in Mai's life
 
-You get **one** play. That is not us being hard on you — it is how the task
-works, and practising it any other way trains a habit that does not exist on
-the day. Read both sets of questions in the preview window, then answer as you
-listen rather than afterwards. The speaker moves through her day in order, so
+You get **one** play, so use the preview window: read both sets of questions
+first, then answer while you listen rather than afterwards from memory. The speaker moves through her day in order, so
 the questions come in that order too.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
@@ -676,16 +659,10 @@ Cover the finished paragraph above. Answer in note form, in your own words.
 Before you write, mark every noun in your plan **C** or **U**. That decision is
 what then fixes *a / an / the / some / much / many / no article at all*.
 
-This matters more than its size in the textbook suggests. Across 500 rated IELTS
-scripts, **determiners were the single largest error category at every level
-from the middle of the scale to the top**, and the category that shrank most as
-scripts improved — from 18.7% of all errors down to 4.7%. No other structure in
-the grade-8 syllabus attacks a bigger target.
-
-Two honest limits. That study did not break determiner errors down by
-countability, so the step from *this* lesson to *that* finding is our own
-reasoning. And the finding comes from a single source that was not
-independently re-checked.
+This matters more than its size in the textbook suggests. Articles and
+quantifiers are the words learners at your level get wrong most often, and they
+turn up in nearly every sentence you write — so deciding **C** or **U** first
+settles a dozen small choices at once.
 
 > **Tiếng Việt:** Đánh dấu **đếm được (C)** hay **không đếm được (U)** cho mọi
 > danh từ trước khi viết — quyết định đó chi phối toàn bộ mạo từ và lượng từ.

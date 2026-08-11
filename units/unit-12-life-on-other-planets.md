@@ -204,19 +204,14 @@ deliberate chunks**, with an audible pause between them:
 
 Same physical drill as the list. Different material.
 
-Why it is worth the extra five minutes: when researchers measured which
-phonological features separate weaker from stronger speakers, **chunking loaded
-highest of all** (.745), just ahead of intonation (.735) and well ahead of
-individual vowel and consonant errors (.551). It is also the first feature named
-in the pronunciation descriptors, and a stage-marking pause is separately
-credited under coherence.
-
-**The extension itself is our own reasoning.** The value of chunking is sourced;
-no source tests whether a list-intonation drill transfers to discourse chunking.
+Why it is worth the extra five minutes: breaking a long sentence into chunks
+does more for how well you are understood than any single vowel or consonant.
+A listener who can hear where your groups of words begin and end will follow you
+even when individual sounds are imperfect.
 
 > **Tiếng Việt:** Nói mô tả theo **3–4 cụm**, dừng rõ giữa các cụm — dùng đúng
-> ngữ điệu vừa luyện ở bài liệt kê. Việc **mở rộng** từ liệt kê sang mô tả là suy
-> luận của chúng tôi, chưa được kiểm chứng.
+> ngữ điệu vừa luyện ở bài liệt kê. Chia cụm rõ giúp người nghe hiểu bạn hơn cả
+> việc phát âm chuẩn từng âm.
 :::
 
 ## Lesson 3 — A Closer Look 2
@@ -472,7 +467,7 @@ Now report all three questions to a friend, starting *She asked me…*
 
 ### Reading — *Looking for a second home*
 
-::: clock mins="20" for="20 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+::: clock mins="20" for="You have 20 minutes for the text and every exercise below it."
 :::
 
 ::: passage
@@ -539,23 +534,17 @@ nothing about space.** For each statement, the only question is whether *this
 passage* says it, contradicts it, or neither.
 
 This unit is the right place for the drill precisely because you *do* arrive
-knowing things about Mars — which is the trap. Both examining boards state the
-rule without hedging: "students need to understand that any knowledge they bring
-with them from outside the passage **should not play a part** when deciding on
-their answers", and, twice over, "the answer is always in the text" / "Do not use
-your own knowledge about the topic." An official worked example marks an item
-**Not Given** *because* the candidate happens to know the fact from elsewhere.
+knowing things about Mars — and that is the trap. **The answer is always in the
+text.** If the passage does not say it, the answer is *Not Given*, even when you
+happen to know it is true.
 
-**Two things not to believe about this task type.** Not Given is not a harder
-kind of logic — the boards state that True/False/Not Given and Yes/No/Not Given
-"can be answered using the SAME strategy", and the difference between them is
-what the statement is *about*, not how you reason. And the vocabulary is not the
-obstacle: IELTS glosses technical words, so "all the words you will need… will be
-given in the text".
+**Not Given** is not a harder kind of thinking, either. It simply means the
+passage neither says the statement nor contradicts it — you have looked, and it
+is not there.
 
 > **Tiếng Việt:** Trả lời **chỉ dựa vào bài đọc** — kiến thức bên ngoài của bạn
-> không được tính. Not Given **không** khó hơn về mặt logic; chỉ khác ở chỗ câu
-> hỏi hướng vào đâu.
+> không được tính. **Not Given** nghĩa là bài đọc không nói tới, chứ không phải
+> câu hỏi khó hơn.
 :::
 
 ### Speaking — What does a planet need for life?
@@ -593,11 +582,9 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### Listening — The planet Verdia
 
-You get **one** play. That is not us being hard on you — it is how the task
-works, and practising it any other way trains a habit that does not exist on
-the day. This recording invents a whole world in five short paragraphs, so read
-both sets of questions in the preview window first and let them tell you which
-details to hold on to.
+You get **one** play. This recording invents a whole world in five short
+paragraphs, so read both sets of questions in the preview window first and let
+them tell you which details to hold on to.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
@@ -699,10 +686,8 @@ to be given, then make every other sentence serve it.
 
 Descriptions are where this slips most easily, because each new detail feels like
 it earns its place on its own. It does not: it earns its place by supporting the
-first impression you opened with. The skill has a name in IELTS Writing — the
-*overview* — and it is described as a summarising skill rather than a slot to
-fill: given five facts, produce the one sentence a reader who reads nothing else
-should get (Writing descriptors, **[2023]** version).
+first impression you opened with. Given five facts, produce the one sentence a
+reader who reads nothing else should still be given.
 
 > **Tiếng Việt:** Viết **một câu** mang toàn bộ ý đoạn văn, rồi để mọi câu còn
 > lại phục vụ nó. Với văn miêu tả, đây là chỗ dễ trượt nhất.

@@ -187,22 +187,16 @@ Read aloud three times, faster each time. Record yourself if you can.
 
 ---
 
-::: bridge name="Same drill as Unit 6 — but the support here is weaker, and this says so" trains="Pronunciation" cefr="A2" marker="[S]" src="07 §5.5.3"
+::: bridge name="The same drill as Unit 6, on two new clusters" trains="Pronunciation" cefr="A2" marker="[S]" src="07 §5.5.3"
 Work /bl/ and /kl/ the way you worked /br/ and /pr/ in Unit 6: **the voice and
 the puff of air on the first consonant**, not the cluster.
 
-The honest difference, stated rather than borrowed: the Vietnamese study behind
-the Unit 6 framing tested five onset clusters — /br/, /kr/, /pr/, /st/, /tr/.
-**/bl/ and /kl/ were not among them.** Applying its finding here is an extension
-from /kr/, not a direct result, and this unit does not get to reuse Unit 6's
-warrant as if it were its own.
+Hand on the throat for /b/ against /p/; strip of paper in front of the mouth for
+the puff of air. Then say *black* and *class* one after the other until the
+first sound of each is doing the work.
 
-What the study does establish, for the clusters it did test, is that the dominant
-error is feature change on the plosive (77.4%) rather than deletion (22.2%). One
-source, 36 learners, not independently re-checked.
-
-> **Tiếng Việt:** Cách luyện giống Unit 6, nhưng bằng chứng ở đây **yếu hơn**:
-> nghiên cứu gốc không kiểm tra /bl/ và /kl/, chỉ suy rộng từ /kr/.
+> **Tiếng Việt:** Cách luyện giống Unit 6: chú ý **thanh** và **hơi bật** ở phụ
+> âm đầu, không phải ở cụm phụ âm.
 :::
 
 ## Lesson 3 — A Closer Look 2
@@ -386,7 +380,7 @@ practical action.
 
 *About Con Dao National Park.*
 
-::: clock mins="19" for="19 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+::: clock mins="19" for="You have 19 minutes for the text and every exercise below it."
 :::
 
 ::: passage
@@ -492,10 +486,9 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### Listening — Why our water gets dirty
 
-You get **one** play, and that is the point rather than a cruelty. The talk
-gives three causes and then their effects, in that order, and the two question
-sets follow it. Read both sets in the preview window, then answer as you listen
-— not afterwards, from memory.
+You get **one** play. The talk gives three causes and then their effects, in
+that order, and the two question sets follow it. Read both sets in the preview
+window, then answer as you listen — not afterwards, from memory.
 
 **Nghe một lần duy nhất.** Đọc trước cả hai phần câu hỏi trong lúc chờ, rồi vừa
 nghe vừa trả lời.
@@ -556,11 +549,9 @@ or *this causes*.
 
 > Factories release waste into the river. **As a result,** fish die downstream.
 
-Cause-and-result is one of three language systems the British Council's own
-teaching material targets for describing a process — alongside purpose (*to*,
-*so that*, *in order to*) and relative clauses — and it pitches them at just
-above the level you are working at. The listening you have already done is about
-causes and effects; the only thing being added is the clause that names the link.
+The listening you have just done is full of causes and effects. The only thing
+being added here is the words that name the link between them — which is what
+turns two facts into an explanation.
 
 > **Tiếng Việt:** Viết **hai** câu nối một nguyên nhân với một kết quả từ bài
 > nghe, dùng *because / as a result / this causes*.
@@ -633,24 +624,13 @@ changed — word choice, sentence length, what you left out.
 > *Notice:* Volunteers should assemble at the main gate by 07:00.
 > *Message:* Meet me at the gate at 7 — don't be late!
 
-Style, formal against informal, is a named indicator inside Lexical Resource, and
-audience-appropriate register is what this unit's notice genuinely trains.
-
-**This one is untested and is labelled as such.** No source in the knowledge base
-tries a paired-register exercise and measures anything. The related idea — saying
-one thing several ways to build flexibility — is grounded in descriptor wording,
-not in any study that taught it and checked. Do it because it is interesting and
-cheap, not because it is proven.
-
-**And one thing this notice is not.** It does **not** train IELTS General
-Training Writing Task 1. That task admits exactly one genre — a letter to a named
-recipient, with a salutation. A notice is neither. What the notice trains is
-register and concision, plus familiarity with a text type that appears in GT
-*Reading*.
+Same facts, different reader. Writing them twice is what makes the difference
+visible: a notice has to be complete and impersonal, a message to a friend can
+leave out anything they already know. Naming what changed is the part that
+sticks.
 
 > **Tiếng Việt:** Viết lại **ba** thông tin dưới dạng tin nhắn cho bạn, rồi nêu
-> **điều gì đã thay đổi**. Bài này **chưa có bằng chứng** — làm vì hữu ích, không
-> phải vì đã được chứng minh.
+> **điều gì đã thay đổi** — cùng một nội dung, khác người đọc.
 :::
 
 ::: thread id="articles" stage="check"

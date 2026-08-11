@@ -197,24 +197,14 @@ Work the **voice and the puff of air**, not the consonants. Put a hand on your
 throat: /b/ buzzes, /p/ does not. Hold a strip of paper in front of your mouth:
 /p/ moves it, /b/ does not.
 
-The reframe comes from a measurement of Vietnamese undergraduates producing
-English onset clusters — 36 learners, 1,080 tokens per cluster type, two raters
-agreeing at r = .98. In two-consonant onsets, **the dominant error was not
-dropping a consonant but changing the voicing of the plosive: 195 of 252 errors,
-77.4%, against deletion at 22.2%.** The authors attribute it to voicing and
-aspiration: learners "had a tendency to change the voicing feature of voiceless
-consonants into the voiced ones". /br/ against /pr/ is precisely that contrast,
-and both were directly tested in that study.
-
-**Three limits travel with this.** One source, not independently re-checked. 36
-learners at a single university, read-aloud and prompted tasks over Zoom — the
-paper's own limitation statement calls the sample "quite small, which
-significantly limits the generalizability of the findings". And it says nothing
-about what any of this is worth to a score.
+Here is why that is the drill. When these clusters go wrong, the usual slip is
+not a missing consonant — it is /p/ coming out as /b/, the voicing changing
+while both consonants stay put. Fixing the voicing fixes the cluster; drilling
+the cluster does not fix the voicing.
 
 > **Tiếng Việt:** Đây là bài luyện **thanh (voicing) và hơi bật (aspiration)**,
-> không phải bài luyện cụm phụ âm. Lỗi phổ biến nhất là đổi /p/ thành /b/ —
-> chiếm 77,4% lỗi — chứ không phải lược bỏ phụ âm.
+> không phải bài luyện cụm phụ âm. Lỗi phổ biến nhất là đổi /p/ thành /b/, chứ
+> không phải lược bỏ phụ âm.
 :::
 
 ## Lesson 3 — A Closer Look 2
@@ -403,7 +393,7 @@ Reply to each person. Use a prediction, a promise and an offer — one of each.
 
 *A school magazine article about Alaska.*
 
-::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
 :::
 
 ::: passage label="A"
@@ -502,10 +492,8 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### Listening — Technology and the way we live
 
-You get **one** play. That is not us being hard on you — it is how the task
-works, and practising it any other way trains a habit that does not exist on
-the day. Read both sets of questions in the preview window, then answer as you
-listen rather than afterwards.
+You get **one** play, so use the preview window: read both sets of questions
+first, then answer while you listen rather than afterwards from memory.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
@@ -593,25 +581,15 @@ Three moves, and this unit is where they get their name:
 - **Close** — leave the reader holding your position, not a new idea.
 
 You will use it again in Unit 8, Unit 10 (spoken) and Unit 11. **Do not turn it
-into sentences you reuse.** The schema is a set of questions you answer — *what
-is my position, and where does the reader first see it?* — never a frame to fill.
-A structure taught four times is one step away from a memorised template, and
-memorised language is the category IELTS removes from the marking altogether.
+into sentences you reuse.** The three moves are questions you answer — *what is
+my position, and where does the reader first see it?* — never a frame to fill
+with the same words every time.
 
-The move itself is a named part of the criteria, not style advice: Task Response
-assesses "how clearly the candidate opens the discourse, **establishes their
-position** and formulates conclusions", and a position is required at every level
-from the middle of the scale upward — its absence is what defines the levels
-below (Writing descriptors, **[2023]** version).
-
-**One thing this task is not.** Your 80–100 words are a **body paragraph**. The
-IELTS essay is 250+ words in about 40 minutes and is a different object. Nothing
-in this course is practice for that essay, and anything claiming to be is
-overselling what the format can carry.
+The middle move is the one people skip. A paragraph that describes both sides
+and never says where the writer stands leaves the reader with nothing to hold.
 
 > **Tiếng Việt:** Ba bước: **mở → nêu quan điểm → chốt**. Đây là bộ **câu hỏi**
-> bạn tự trả lời, **không phải mẫu câu** để chép lại. Đoạn 80–100 từ là một *đoạn
-> thân bài*, không phải bài luận IELTS.
+> bạn tự trả lời, **không phải mẫu câu** để chép lại.
 :::
 
 ::: bridge name="One concession sentence — built from two simple sentences" trains="Task Response" cefr="A2" marker="[INF]" src="05 §5"
@@ -624,14 +602,9 @@ Two simple sentences. **Not** a subordinate clause — you have not met
 subordination yet; that is Unit 7. This is deliberately buildable with the
 grammar you already have.
 
-The behaviour is worth training because it is what examiners credit at the top
-of the range: a script commended near the top of the scale earns it partly
-because "An alternative position is also considered but rejected" (Writing
-descriptors, **[2023]** version).
-
-Whether two coordinated simple sentences at this level do the same job as the
-subordinated version an older learner would write is **our own reasoning**. No
-source tests it.
+Why bother: showing that you know the other side, and then saying why you still
+think what you think, is what makes an opinion convincing instead of stubborn.
+One pair is enough — two starts to sound like you cannot decide.
 
 > **Tiếng Việt:** Thêm đúng **một** cặp câu nhượng bộ, dùng **hai câu đơn** —
 > chưa cần mệnh đề phụ (Unit 7 mới học).

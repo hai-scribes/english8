@@ -448,7 +448,7 @@ then a reason.
 
 *From a school magazine, written by a geography teacher.*
 
-::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
 :::
 
 ::: passage
@@ -562,10 +562,9 @@ Repeat Step 2 until the report runs clearly from start to finish.
 
 ### Listening — The evening storm bulletin
 
-You get **one** play. A radio bulletin in a storm does not rewind for anybody,
-and practising it any other way trains a habit that will not be there on the
-night. Read both sets of questions in the preview window first, then answer as
-you listen rather than afterwards.
+You get **one** play — a radio bulletin in a storm does not rewind for anybody.
+Read both sets of questions in the preview window first, then answer as you
+listen rather than afterwards.
 
 **Nghe một lần duy nhất.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
 
@@ -625,14 +624,9 @@ When you re-record or re-read this unit's bulletin for extra practice, do not
 reach for harder words. **Pack more separate facts into the same ninety
 seconds** — a second river, another road closure, one more time.
 
-The research reason is a neat one: analysing what makes IELTS Listening Part 4
-hard, the investigator concluded that "it is **not the duration** of the
-recording that creates difficulty but the **density of the information** that it
-includes". So a grade-8 listening can be made harder in the IELTS direction
-without raising its vocabulary level at all — which is exactly what you want at
-this stage, since the words are not the thing you are training here.
-
-Tier-2 research on what makes items difficult, not a rule of the test.
+What makes a bulletin hard to follow is how much information it carries, not how
+long it lasts or how difficult the words are. Adding facts makes you work; adding
+vocabulary just sends you to a dictionary.
 
 > **Tiếng Việt:** Muốn bài nghe khó hơn, hãy **nhồi thêm thông tin** vào cùng 90
 > giây — **đừng** dùng từ khó hơn. Độ khó nằm ở mật độ thông tin, không ở độ dài.
@@ -693,24 +687,13 @@ Your instructions run *before → during → after*. Add **one** sentence at the
 > Of the three stages, the preparation before the storm matters most, because
 > nothing you do afterwards can replace it.
 
-That single sentence is a comparison, and comparison is the one clause the IELTS
-Task 1 rubric asks for on **every** visual genre — the instruction "make
-comparisons where relevant" appears word-for-word on all three official sample
-tasks, including the process diagram. Your instructions genre is otherwise
-sequence-only, so this is the cheapest possible way to train the clause the task
-always wants. It also reuses Unit 2's comparative grammar, so it costs no new
-language.
-
-The finding was checked by a three-vote panel and sustained **2–1, not
-unanimously**, and no map task appears in the official sample set at all.
-
-**A note on where this genre actually leads.** Writing instructions trains
-sequencing and procedural language, which feeds **Academic** Task 1
-process-diagram description. It does **not** train General Training Task 1 — that
-task is a letter, and only a letter.
+Instructions on their own only ever say *what happens next*. That last sentence
+is the one place you say *what matters most* — which is the harder and more
+useful thing to be able to write. It reuses the comparatives from Unit 2, so it
+costs you no new grammar.
 
 > **Tiếng Việt:** Thêm **một** câu so sánh ở cuối: giai đoạn nào quan trọng nhất
-> và vì sao. Đây là mệnh đề mà đề IELTS Task 1 luôn yêu cầu.
+> và vì sao — đây mới là câu khó viết và đáng viết nhất.
 :::
 
 ::: thread id="articles" stage="check"

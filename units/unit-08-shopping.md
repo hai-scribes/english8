@@ -439,7 +439,7 @@ the tables above, and one adverb of frequency.
 
 *An article about how shopping centres changed one Vietnamese city.*
 
-::: clock mins="19" for="19 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+::: clock mins="19" for="You have 19 minutes for the text and every exercise below it."
 :::
 
 ::: passage
@@ -533,14 +533,12 @@ Same rule as Unit 1, on the market report-back. Before you speak, name in one
 phrase what the turn is **for** — *"why I still go to the wet market"*, not
 *"shopping"* — then drop everything that does not serve it.
 
-The official indicator is the relevance of each spoken sentence to the general
-purpose of the turn. The published examiner comment that makes it concrete
-concerns a Vietnamese candidate whose long turn was held down not by weak
-language but because she "**describes several interests rather than one
-interest**".
+It is the same failure as in Unit 1, and it is never caused by weak English: a
+turn becomes hard to follow when it describes several things at once instead of
+one thing properly.
 
-And as in Unit 1: **pause between your stages, not inside your sentences.**
-Stage-marking pauses are on the credit side of this criterion.
+And as in Unit 1: **pause between your stages, not inside your sentences.** A
+pause where one idea ends is help for your listener, not a mistake.
 
 > **Tiếng Việt:** Một lượt nói, **một** chủ đề. Dừng giữa các ý — đó là điểm cộng.
 :::
@@ -552,10 +550,9 @@ Stage-marking pauses are on the credit side of this criterion.
 
 ### Listening — Buying online
 
-You get **one** play. That is not us being hard on you — it is how the task
-works, and practising it any other way trains a habit that does not exist on
-the day. Two people are speaking here, so read both sets of questions in the
-preview window first and decide which of them each answer will come from.
+You get **one** play. Two people are speaking here, so read both sets of
+questions in the preview window first and decide which of them each answer will
+come from.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
@@ -653,28 +650,16 @@ Exercise **3.2** does not change. How you run it does:
 2. Mark each sentence **supplied** or **omitted** — did the third-person `-s`
    actually appear? Report the fraction, not a score.
 
-Why aloud first, and why this drill: third-person `-s` is the single grammar
-target with the best case in this whole course for a Vietnamese-speaking learner.
-It is one of only two structures whose accuracy climbs across the *entire* IELTS
-band range, and the one researchers singled out because its path "was not
-affected by the learner's L1". It is also the ending Vietnamese learners omit
-most — **32.26% of written obligatory contexts omitted** in a study of 32
-third-year English majors, with omission rather than wrong choice being
-essentially the whole error.
+Why aloud first: the third-person `-s` goes missing far more often in speech
+than in writing, and you will never hear yourself drop it while your eyes are on
+the page. Recording it first catches the ones writing would hide.
 
-**Spoken before written**, because the same source reports oral omission running
-far higher than written. Carry the caveat: that oral figure is the authors
-*quoting another study*, not their own measurement.
-
-**And one thing this drill does not do.** There are two separate reasons an `-s`
-goes missing — you did not produce the grammar, or you did not pronounce the
-final consonant. Those causes are additive and need two different fixes, and for
-any single missing `-s` it is impossible to tell which one caused it. This drill
-attacks the grammar half only. Nothing here claims to cover the other.
+Almost none of these are wrong choices — they are simply absent. That is why you
+count *supplied* against *required* rather than marking sentences right or wrong.
 
 > **Tiếng Việt:** **Nói trước, viết sau.** Đếm số lần `-s` ngôi thứ ba **có xuất
-> hiện** trên tổng số vị trí bắt buộc. Bài này chỉ xử lý **nửa ngữ pháp** của vấn
-> đề, không xử lý nửa phát âm.
+> hiện** trên tổng số vị trí bắt buộc — lỗi hầu như luôn là **thiếu**, không phải
+> dùng sai.
 :::
 
 ::: thread id="articles" stage="check"

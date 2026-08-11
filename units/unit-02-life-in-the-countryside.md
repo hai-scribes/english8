@@ -413,7 +413,7 @@ to each question. Use a comparative adverb in at least two of your answers.
 
 *An article by Quang, 14, from Ha Noi.*
 
-::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
 :::
 
 ::: passage
@@ -508,10 +508,8 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### Listening — Hoa moved to the countryside
 
-You get **one** play. That is not us being hard on you — it is how the task
-works, and practising it any other way trains a habit that does not exist on
-the day. Read both sets of questions in the preview window, then answer as you
-listen rather than afterwards.
+You get **one** play, so use the preview window: read both sets of questions
+first, then answer while you listen rather than afterwards from memory.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
@@ -601,11 +599,8 @@ else would still have to be given. That is your topic sentence.
 **After you draft:** read each remaining sentence and ask whether it supports
 that one. Delete or rewrite any that does not.
 
-This is one skill wearing two hats. In IELTS Writing it is called the
-*overview*, and it is not a paragraph slot to be filled — it is the ability to
-be given five facts and produce the one sentence that carries them. Paragraphing
-itself sits inside Coherence & Cohesion, and examiner comments on real scripts
-name it as the limiter again and again (Writing descriptors, **[2023]** version).
+This is not a slot to fill at the top of the paragraph. It is the harder thing:
+being given five facts and producing the one sentence that carries all of them.
 
 > **Tiếng Việt:** Trước khi viết, hãy viết **một câu** mà người chỉ đọc đúng câu
 > đó vẫn nắm được ý chính. Viết xong, kiểm tra từng câu còn lại: câu nào không
@@ -617,19 +612,13 @@ In exercise **3.4** and again in your paragraph, give the **biggest** difference
 between the town and the village, stated once and clearly — instead of three
 parallel comparisons of equal weight.
 
-Why one and not three: the criterion that governs comparison asks for
-"comparing or contrasting… by adequately **highlighting** the identifiable
-trends, principal changes or differences… **rather than mechanical description
-reporting detail**" (Writing descriptors, **[2023]** version). "Mechanical" is
-the word that recurs in examiner comments on scripts held down at the middle of
-the scale. Three tidy comparisons is exactly what mechanical looks like.
-
-That this transfers from a grade-8 comparative-adverb drill to the IELTS task is
-our own reasoning, not something a source states — which is why it is marked as
-inference below.
+Why one and not three: three tidy comparisons of equal weight leave your reader
+to work out which one matters. One difference, stated clearly, tells them. A
+list reports; a comparison points.
 
 > **Tiếng Việt:** Hãy nêu **một** khác biệt lớn nhất, thật rõ — đừng liệt kê ba
-> khác biệt ngang nhau. Tiêu chí chấm yêu cầu *làm nổi bật*, không phải *liệt kê*.
+> khác biệt ngang nhau. **Làm nổi bật** một ý quan trọng hơn là *liệt kê* nhiều
+> ý ngang nhau.
 :::
 
 ::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — **one** paragraph of **80–100 words** on what you like and dislike about life in the countryside."

@@ -398,7 +398,7 @@ _______________________________________________
 
 ### Reading — *Will we talk without speaking?*
 
-::: clock mins="17" for="17 minutes for the text and every exercise below it — reading, finding, and typing your answers."
+::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
 :::
 
 *An interview from a school magazine. Linh, 14, talks to Dr Bảo, a brain
@@ -445,7 +445,7 @@ researcher.*
 
 ### 5.1 True, False, or Not Given
 
-::: task skill="reading" type="true-false-not-given" ask="**False** means the interview says the opposite. **Not Given** means it does not say either way — and answering from what you already believe about brain research is exactly the pull this type is built to catch."
+::: task skill="reading" type="true-false-not-given" ask="**False** means the interview says the opposite. **Not Given** means it does not say either way — and answering from what you already believe about the brain is exactly the trap here."
 - Dr Bảo says scientists are building the kind of telepathy shown in films. = F ~ he says that is *not* what scientists are working on
 - The device would be worn above the ear. = T
 - The device changes brain signals into text before sending them. = T
@@ -488,10 +488,9 @@ researcher.*
 | **Family and friends far away** | | |
 
 **Step 2 — Speak.** Talk for **one minute**. There is no sentence frame here on
-purpose: memorised language is the one thing an IELTS examiner is told to
-discount, so a frame would train the habit that costs the most. What you get
-instead is the **order of the questions**. Answer these five, out loud, in your
-own words, using your notes from Step 1:
+purpose — a frame would give you someone else's words to recite instead of your
+own to find. What you get instead is the **order of the questions**. Answer
+these five, out loud, in your own words, using your notes from Step 1:
 
 1. What are the two biggest **advantages** of an online call?
 2. Of those two, which matters more to you — and **why**?
@@ -519,10 +518,9 @@ between stages rather than inside a sentence.
 
 ### Listening — A guide at the communication exhibition
 
-You get **one** play. That is not us being hard on you — it is how the task
-works, and practising it any other way trains a habit that does not exist on
-the day. This recording is dense with times, numbers and room names, so read
-both sets of questions in the preview window first and answer as you listen.
+You get **one** play. This recording is dense with times, numbers and room
+names, so read both sets of questions in the preview window first and answer as
+you listen.
 
 **Nghe một lần duy nhất.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
 
@@ -583,12 +581,10 @@ The schema you named in Unit 6, spoken this time. In the pros-and-cons pair work
 2. **Stand** — *"I think they help more than they hurt."* — **pause.**
 3. **Close** — *"So that is why I would keep them."*
 
-The pause is not hesitation and must not be hidden. The official coherence
-indicator credits "clear marking (**with appropriate use of pausing, and spoken
-discourse markers and fillers**) of stages in a discussion, narration or
-argument". A deliberate silence at a stage boundary is **credited behaviour**.
-A silence in the middle of a clause is not the same thing, and this is the
-distinction worth practising.
+The pause is not hesitation and should not be hidden. A short silence at the end
+of a stage tells your listener that one idea has finished and another is
+starting — it does the work punctuation does in writing. A silence in the middle
+of a sentence does the opposite. That is the distinction worth practising.
 
 > **Tiếng Việt:** Nói theo ba bước, **dừng rõ** giữa mỗi bước. Dừng ở ranh giới ý
 > là **điểm cộng**; dừng giữa câu thì không.
@@ -632,21 +628,14 @@ Same machinery as Unit 5, second structure. On your finished paragraph:
 > **Prepositions correct in ___ of ___ places that required one.**
 
 A fraction, not a mark. And the same reading rule applies: at this level the
-fraction moves around, and going backwards for a while while your range grows is
-what progress looks like.
+fraction moves around, and a lower one this week is not a step backwards.
 
-Prepositions earn this because they are the **second-largest** error category at
-every level from the middle of the IELTS scale upward — 16.2% of all errors
-falling to 5.2% — right behind determiners.
+After articles, prepositions are the small words that go wrong most often — and
+like articles, they are not learned in one lesson but noticed over many. This is
+how you notice them.
 
-**This one is our own reasoning and is labelled that way.** The
-count-in-obligatory-contexts method is recommended for "named structures", and
-the structures actually named are third-person `-s` and determiners. **No source
-tracks prepositions this way.** We extended it because the error table puts
-prepositions second; nobody has checked whether it works.
-
-> **Tiếng Việt:** Ghi kết quả dạng **phân số**, giống Unit 5. Đây là **suy luận
-> của chúng tôi**, chưa có nguồn nào kiểm chứng cách áp dụng này cho giới từ.
+> **Tiếng Việt:** Ghi kết quả dạng **phân số**, giống Unit 5 — đúng bao nhiêu
+> trên tổng số vị trí bắt buộc.
 :::
 
 ::: thread id="articles" stage="check"

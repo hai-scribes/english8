@@ -351,13 +351,12 @@ footer.foot p{margin:0;max-width:74ch}
 }
 @media print{ .e-toggle{display:none!important} .e-full{display:flex!important} }
 
-/* ---------------- the IELTS bridge -------------------------------------
-   A bridge is a changed instruction on a task the lesson already has, so it
-   is styled as a marginal note that has grown into the page rather than as a
-   second lesson: clay rule on the left, the same type scale as the prose it
-   interrupts, and a warrant line that is quiet but never hidden. The strength
-   chip is the one loud element, because the whole design rests on a weak
-   claim being visibly weak. */
+/* ---------------- the "go further" note ---------------------------------
+   One extra instruction on a task the lesson already has, so it is styled as
+   a marginal note that has grown into the page rather than as a second
+   lesson: clay rule on the left, the same type scale as the prose it
+   interrupts. What warrants it is recorded in research/evidence-register.md,
+   which is a maintainer's document and never printed here. */
 .bridge{margin:1.4rem 0;padding:.95rem 1.1rem .8rem;background:var(--raised);
   border:1px solid var(--rule-soft);border-left:3px solid var(--clay);
   border-radius:0 var(--r) var(--r) 0}
@@ -365,58 +364,26 @@ footer.foot p{margin:0;max-width:74ch}
 .b-k{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;
   color:var(--clay)}
 .b-k::before{content:"↗ "}
-.b-t,.b-c{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.05em;
-  padding:.12rem .45rem;border-radius:3px;white-space:nowrap}
-.b-t{background:var(--teal-wash);color:var(--teal)}
-.b-c{background:var(--sunk);color:var(--muted);cursor:help}
 .b-n{font-size:1.02rem;line-height:1.3;margin:0 0 .5rem}
 .bridge .prose>*:first-child{margin-top:0}
 .bridge .prose>*:last-child{margin-bottom:0}
 .bridge .prose{font-size:.93rem}
 .bridge .prose blockquote{border-left:2px solid var(--rule);margin:.7rem 0 0;padding:.1rem 0 .1rem .8rem;
   color:var(--muted);font-size:.88rem}
-.b-src{margin:.75rem 0 0;padding-top:.55rem;border-top:1px dotted var(--rule);
-  display:flex;flex-wrap:wrap;gap:.45rem;align-items:baseline;font-size:.76rem;color:var(--faint)}
-.b-g{color:var(--muted);flex:1 1 14rem;min-width:0}
-.b-w{font-family:var(--f-mono);font-size:.68rem;flex:1 1 100%}
-.b-w code{font-size:.95em;background:var(--sunk);padding:.05rem .3rem;border-radius:3px}
-
-/* Strength chip. Verified and quoted read calm; inference and speculation
-   read as warnings, because that is what they are. */
-.b-m{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.07em;text-transform:uppercase;
-  padding:.14rem .45rem;border-radius:3px;background:var(--sunk);color:var(--muted);white-space:nowrap}
-.b-m[data-strength="q"],.b-m[data-strength="d"]{background:var(--teal-wash);color:var(--teal)}
-.b-m[data-strength="c"],.b-m[data-strength="v"]{background:var(--green-wash);color:var(--green)}
-.b-m[data-strength="t2"],.b-m[data-strength="s"]{background:var(--clay-wash);color:var(--clay)}
-.b-m[data-strength="s/ns"],.b-m[data-strength="inf"]{background:var(--amber-wash);color:var(--amber)}
-.b-m[data-strength="spec"]{background:var(--red-wash);color:var(--red)}
-
-/* The unit page's gathered list of its own bridges. */
-.bridgecard .brows{display:flex;flex-direction:column;gap:.4rem;margin:.3rem 0 .1rem}
-.brow{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:inherit;
-  background:var(--raised);border:1px solid var(--rule-soft);border-radius:var(--r);
-  padding:.55rem .7rem;transition:border-color .15s,transform .15s}
-.brow:hover{border-color:var(--clay);transform:translateX(2px)}
-.brow .n{font-family:var(--f-mono);font-size:.68rem;color:var(--clay);background:var(--clay-wash);
-  border-radius:3px;padding:.14rem .38rem;flex:none}
-.brow .body{min-width:0;display:flex;flex-direction:column;gap:.1rem}
-.brow .t{font-size:.94rem;line-height:1.3}
-.brow .d{font-family:var(--f-mono);font-size:.66rem;color:var(--faint)}
-.brow .go{margin-left:auto;color:var(--faint);flex:none}
-.brow:hover .go{color:var(--clay)}
 .note.small{font-size:.79rem;line-height:1.55}
 
-/* ---------------- evidence register ------------------------------------- */
-.rules{margin:.3rem 0 0;padding-left:1.15rem;display:flex;flex-direction:column;gap:.7rem}
-.rules li{font-size:.92rem;line-height:1.6;padding-left:.2rem}
-.rules li::marker{color:var(--clay);font-family:var(--f-mono);font-size:.8rem}
-table.reg td{vertical-align:top;font-size:.86rem}
-table.reg td.src code{font-size:.76rem;white-space:nowrap}
-table.reg td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+/* ---------------- "where to begin" -------------------------------------
+   The first card on the home page and on every unit page. It answers one
+   question — what do I do now — so it is the only card with a numbered list
+   and it sits above the reference material rather than below it. */
+.card.start{border-left:3px solid var(--teal)}
+.steps{margin:.6rem 0 .9rem;padding-left:1.15rem;display:flex;flex-direction:column;gap:.5rem}
+.steps li{font-size:.92rem;line-height:1.6;padding-left:.2rem}
+.steps li::marker{color:var(--teal);font-family:var(--f-mono);font-size:.8rem}
+.card.start .row{align-items:center;gap:.75rem;flex-wrap:wrap}
 
 /* ---------------- review + calibration ---------------------------------- */
 .review .row{margin-top:.5rem}
-.doubleduty .strands{margin:.55rem 0 .3rem}
 .score-line{margin:.4rem 0 .2rem;font-size:1.05rem}
 .score-line b{font-family:var(--f-mono);font-size:1.5rem;color:var(--teal);
   font-variant-numeric:tabular-nums}
@@ -451,14 +418,14 @@ table.reg td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;whi
 .th-k::before{content:"↻ "}
 .w-k::before{content:"✎ "}
 .c-k::before{content:"◷ "}
-.t-t,.p-t,.th-t,.w-c,.c-t{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.05em;
+.t-t,.p-t,.th-t,.c-t{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.05em;
   padding:.1rem .42rem;border-radius:3px;background:var(--teal-wash);color:var(--teal)}
 .t-ask{margin:0 0 .5rem;font-size:.95rem}
 .t-lim{margin:.2rem 0 .5rem;font-family:var(--f-mono);font-size:.76rem;letter-spacing:.04em;
   color:var(--clay);background:var(--clay-wash);padding:.4rem .6rem;border-radius:var(--r)}
 .t-rules{margin:.2rem 0 .55rem;padding-left:1.05rem;font-size:.82rem;color:var(--muted)}
 .t-rules li{margin:.1rem 0}
-.t-w,.t-conf,.p-mode,.p-say,.th-r,.th-a,.c-say{margin:.35rem 0 .55rem;font-size:.84rem;
+.t-conf,.p-mode,.p-say,.th-r,.th-a,.c-say{margin:.35rem 0 .55rem;font-size:.84rem;
   color:var(--muted)}
 .t-conf{background:var(--sunk);padding:.5rem .65rem;border-radius:var(--r)}
 

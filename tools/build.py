@@ -32,6 +32,9 @@ import markdown
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "units"
 OUT = ROOT / "docs"
+# Generated, but not part of the site: the IELTS evidence register is written
+# for whoever maintains the course, not for the learner using it.
+REGISTER = ROOT / "research" / "evidence-register.md"
 ASSETS = Path(__file__).resolve().parent / "assets"
 
 SITE = "English 8 — Global Success"
@@ -310,7 +313,7 @@ def task_payload(u, lesson, ex_id, a: dict, idx: int = 0) -> dict:
 # mark has been taught too late.
 MARKING_RULES = (
     "<li>One mark each. Nothing is part-marked.</li>"
-    "<li>Spelling and grammar mistakes lose the mark — here, because they do there.</li>"
+    "<li>Spelling and grammar mistakes lose the mark.</li>"
     "<li>British and American spellings are both accepted.</li>"
     "<li>A hyphenated word counts as one word.</li>"
     "<li>Two answers in one gap score <b>zero</b>, even if one of them is right.</li>")
@@ -338,25 +341,20 @@ def task_html(p: dict, a: dict) -> str:
         rules = ("<li>Spelling counts.</li>"
                  "<li>British and American spellings are both accepted.</li>"
                  ) if typed else "<li>One mark each. Nothing is part-marked.</li>"
-        note = ""
     else:
-        head = (f'<span class="t-k">{"Listening" if p["skill"] == "listening" else "Reading"} '
-                f'item type</span><span class="t-t">{e(label)}</span>')
+        head = (f'<span class="t-k">{"Listening" if p["skill"] == "listening" else "Reading"}'
+                f'</span><span class="t-t">{e(label)}</span>')
         rules = MARKING_RULES if typed else PICK_RULES
-        note = ('<p class="t-w">One of the official '
-                f'{"six Listening" if p["skill"] == "listening" else "eleven Reading"} '
-                'question types, marked by the published rules rather than by ours.</p>')
     limit = (f'<p class="t-lim">{word_limit_text(p["words"])}</p>' if p.get("words") else "")
     ask = f'<p class="t-ask">{inline(a["ask"])}</p>' if a.get("ask") else ""
     conf = ('<p class="t-conf">Mark <b>sure</b> or <b>not sure</b> next to each answer '
-            '<i>before</i> you check. The score is not the point — whether your '
-            '<b>sure</b> answers are right more often than your <b>not sure</b> ones '
-            'is.</p>') if p["conf"] else ""
+            '<i>before</i> you check, so you can see whether your <b>sure</b> answers '
+            'really are right more often.</p>') if p["conf"] else ""
     return (f'<div class="task" data-role="task" data-task="{e(p["id"])}">'
             f'<div class="t-h">{head}</div>'
             f'{ask}{limit}'
             f'<ul class="t-rules">{rules}</ul>'
-            f'{note}{conf}'
+            f'{conf}'
             f'<div class="t-items"></div>'
             f'<div class="t-foot"><button class="btn t-check" type="button">Check answers</button>'
             f'<span class="t-score" role="status"></span></div>'
@@ -401,27 +399,24 @@ def audio_payload(u, lesson, a: dict, body: str, idx: int = 0) -> dict:
 
 
 def audio_html(p: dict) -> str:
-    timing = ("You answer <b>as you listen</b>, then have <b>two minutes</b> to review — "
-              "there is no separate transfer time. That is computer-delivered timing, "
-              "which has been the default since mid-2026."
+    timing = ("Answer <b>as you listen</b>. You then have <b>two minutes</b> to check "
+              "what you wrote."
               if p["mode"] == "computer" else
-              "You answer on the question paper, then get <b>ten separate minutes</b> to "
-              "transfer your answers. That is paper timing.")
+              "Answer as you listen, then you get <b>ten minutes</b> to copy your "
+              "answers out neatly.")
     return (f'<div class="player" data-role="audio" data-audio="{e(p["id"])}">'
             f'<div class="p-h"><span class="p-k">Listening</span>'
             f'<span class="p-t">Plays once</span></div>'
             f'<p class="p-mode">{timing}</p>'
-            f'<p class="p-say">You will hear a short spoken introduction first. It is '
-            f'<b>not written down</b> — in the real test it never is — so listen to it. '
-            f'Then you get <b>{p["preview"]} seconds</b> to read the questions, and then '
-            f'the recording plays <b>once</b>.</p>'
+            f'<p class="p-say">First you hear a short spoken introduction — it is '
+            f'<b>not written down</b>, so listen to it. Then you get '
+            f'<b>{p["preview"]} seconds</b> to read the questions, and then the '
+            f'recording plays <b>once</b>.</p>'
             f'<div class="p-ctl"><button class="btn p-start" type="button">Start</button>'
             f'<span class="p-state" role="status"></span></div>'
             f'<div class="p-note"><b>The voice is your device\'s speech synthesiser.</b> '
-            f'It is a fair model of which words are being said and not of a real speaker: '
-            f'no accent range, and none of the connected speech a recording would have. '
-            f'What this trains is the shape of the task — one play, an unwritten '
-            f'orientation, a preview window — not the ear.</div>'
+            f'It says the words clearly, but it is not a real speaker: no accent range, '
+            f'and none of the run-together sounds of natural speech.</div>'
             f'<div class="p-script" hidden><h4>Script</h4>'
             + "".join(f"<p>{inline(ln)}</p>" for ln in p["script"]) +
             f'</div></div>')
@@ -605,8 +600,7 @@ def write_html(p: dict, a: dict) -> str:
         for i, it in enumerate(p["items"]))
     return (
         f'<div class="write" data-role="write" data-write="{e(p["id"])}">'
-        f'<div class="w-h"><span class="w-k">Writing — a committed attempt</span>'
-        f'<span class="w-c">{e(a["trains"])}</span></div>'
+        f'<div class="w-h"><span class="w-k">Write it here</span></div>'
         f'<p class="w-ask">{inline(a["ask"])}</p>'
         f'<textarea class="w-box" rows="10" spellcheck="false" '
         f'placeholder="Write your {p["lo"]}–{p["hi"]} words here. It is saved as you type."'
@@ -615,14 +609,11 @@ def write_html(p: dict, a: dict) -> str:
         f'<span class="w-r">{p["lo"]}–{p["hi"]} words</span></div>'
         f'<h4 class="w-lh">Before you finish</h4>'
         f'<ul class="w-list">{rows}</ul>'
-        f'<p class="w-note"><b>{n_auto} of these {len(p["items"])} are counted for you, '
-        f'from what you actually wrote</b> — the rest are yours to judge, and they stay '
-        f'yours because counting cannot decide them. What is counted is counted: a '
-        f'feature is present or it is not. Nothing here scores the writing, and nothing '
-        f'here is a band — no band exists at this level to give.</p>'
-        f'<p class="w-note quiet">As your range grows your error rate usually rises for '
-        f'a while. That is what this stage of progress looks like, not a fault, so '
-        f'nothing on this page reports it as one.</p>'
+        f'<p class="w-note"><b>{n_auto} of these {len(p["items"])} are checked for you</b>, '
+        f'from what you actually wrote. The rest you tick yourself — they need your '
+        f'judgement, not a count. Nothing here gives your writing a score.</p>'
+        f'<p class="w-note quiet">Trying longer sentences and newer words usually means '
+        f'more mistakes for a while. That is normal at this stage — keep going.</p>'
         f'</div>')
 
 
@@ -651,9 +642,8 @@ def clock_html(p: dict) -> str:
             f'<span class="c-t">One clock — {e(shown)} minutes</span></div>'
             f'<p class="c-say">{inline(p["for"]) + " " if p["for"] else ""}'
             f'The clock covers <b>everything</b>: reading the text, finding the answers '
-            f'and typing them in. There is no extra time at the end to write them up — '
-            f'in the real Reading test there is not, and a trainer that pauses while you '
-            f'type is training a test that does not exist.</p>'
+            f'and typing them in. It does not stop while you type, and there is no extra '
+            f'time at the end.</p>'
             f'<div class="c-ctl"><button class="btn c-start" type="button">Start reading</button>'
             f'<span class="c-state" role="status"></span></div>'
             f'</div>')
@@ -725,9 +715,11 @@ def passage_block(u, lesson, a: dict, body: str, idx: int = 0):
         inner = RE_P_OPEN.sub(label, inner)
     title = a.get("title", "")
     kind = a.get("kind", "Reading passage")
-    note = ("Paragraphs are lettered, as they are in the test."
+    note = ("Paragraphs are lettered — the questions below refer to them by letter. "
+            "Select any words to highlight them; select a highlight to take it off."
             if p["label"] == "A" else
-            "Paragraphs are numbered, as they are in the test."
+            "Paragraphs are numbered — the questions below refer to them by number. "
+            "Select any words to highlight them; select a highlight to take it off."
             if p["label"] else
             "Select any words to highlight them; select a highlight to take it off.")
     lab = ' data-labelled="1"' if p["labels"] else ""
@@ -772,64 +764,45 @@ def thread_html(a: dict, threads: dict) -> str:
         units = ", ".join(f"Unit {int(x):02d}" for x in a.get("resumes", "").split(",") if x.strip())
         return (f'<aside class="thread" data-role="thread" data-thread="{e(a["id"])}" '
                 f'data-stage="introduce">'
-                f'<div class="th-h"><span class="th-k">A strand, not a lesson</span>'
+                f'<div class="th-h"><span class="th-k">Something to keep doing</span>'
                 f'<span class="th-t">{inline(name)}</span></div>'
-                f'<p class="th-m">Every time it comes back, you count the same thing: '
+                f'<p class="th-m">Every time this comes back, you count the same thing: '
                 f'<b>{inline(measure)}</b></p>'
-                f'<p class="th-u">It comes back in {e(units)}. Those checks are generated '
-                f'from this declaration, so the strand cannot quietly stop.</p>'
+                f'<p class="th-u">You will do it again in {e(units)}.</p>'
                 f'</aside>')
     return (f'<aside class="thread" data-role="thread" data-thread="{e(a["id"])}" '
             f'data-stage="check">'
-            f'<div class="th-h"><span class="th-k">Strand check</span>'
+            f'<div class="th-h"><span class="th-k">Check it again</span>'
             f'<span class="th-t">{inline(name)}</span></div>'
             f'<p class="th-m">On the paragraph you just wrote: <b>{inline(measure)}</b></p>'
-            f'<p class="th-a">You count this one yourself — finding which places '
-            f'<i>required</i> one is the work, and no counter can do it for you. It is '
-            f'your own judgement, so it sits beside the checks above, which are not: '
-            f'`09` <b>E8</b> asks a self-report to be anchored to something measured, '
-            f'and those are the anchor.</p>'
+            f'<p class="th-a">Count this one yourself. Finding the places that '
+            f'<i>needed</i> one is the work, and no counter can do that for you.</p>'
             f'<div class="th-in"><label>supplied <input type="number" min="0" '
             f'inputmode="numeric" data-th="got"></label>'
             f'<label>of <input type="number" min="0" inputmode="numeric" '
             f'data-th="all"></label>'
             f'<span class="th-out" role="status"></span></div>'
-            f'<p class="th-r">A fraction, not a mark. At this level it moves around, and '
-            f'going backwards for a while as your range grows is what progress looks '
-            f'like — not a fault.</p>'
+            f'<p class="th-r">A fraction, not a mark. It moves around from one piece of '
+            f'writing to the next, and a lower one this time is not a step backwards.</p>'
             f'</aside>')
 
 
 def bridge_html(a: dict, body: str) -> str:
-    """One bridge block: what it trains, the instruction, and its warrant.
+    """One bridge block, as a learner meets it: a name and an instruction.
 
-    The warrant line is generated, never authored. That is the whole point of
-    the directive — `09` G2 requires a weak marker to be declared at the point
-    of use, and a generated footer cannot be forgotten the way a prose caveat
-    can.
+    The evidence apparatus is unchanged where it matters — `marker` and `src`
+    are still required on the directive, `check_ielts.py` still refuses a
+    claim whose citation does not resolve, and `09` G2's demand that a weak
+    marker be declared is met by writing every claim, marker and warrant to
+    `research/evidence-register.md` at build time. What changed is the
+    audience: the register is a note from the authors to themselves, and this
+    page belongs to someone learning English. See `register_md`.
     """
-    mk = RE_MARKER.match(a.get("marker", "").strip())
-    key = mk.group(1) if mk else ""
-    vote = mk.group(2) if mk and mk.group(2) else ""
-    short, gloss = MARKERS.get(key, ("unmarked", "no evidential marker — do not trust this"))
-    sm = RE_SRC.match(a.get("src", "").strip())
-    where = (f"{KB_TITLES[sm.group(1)]} · <code>research/ielts/{KB_FILES[sm.group(1)]}</code> "
-             f"{e(sm.group(2))}") if sm else e(a.get("src", ""))
-    side = TRAINS.get(a.get("trains", ""), ("", ""))[1]
-    cefr = (f'<span class="b-c" title="Levelled by CEFR. IELTS publishes no band '
-            f'below 4.0 and none at all for A2, so no band can label this.">'
-            f'CEFR {e(a.get("cefr"))}</span>') if a.get("cefr") else ""
-    return (
-        f'<aside class="bridge" data-role="bridge">'
-        f'<div class="b-h"><span class="b-k">Beyond the textbook</span>'
-        f'<span class="b-t" title="{e(side)}">{inline(a.get("trains", ""))}</span>{cefr}</div>'
-        f'<h4 class="b-n">{inline(a.get("name", ""))}</h4>'
-        f'<div class="prose">{render(body)}</div>'
-        f'<p class="b-src"><span class="b-m" data-strength="{e(key.strip("[]").lower())}">'
-        f'{e(key)}{(" " + e(vote)) if vote else ""} — {e(short)}</span>'
-        f'<span class="b-g">{e(gloss)}.</span>'
-        f'<span class="b-w">Warrant: {where}</span></p>'
-        f'</aside>')
+    return (f'<aside class="bridge" data-role="bridge">'
+            f'<div class="b-h"><span class="b-k">Go further</span></div>'
+            f'<h4 class="b-n">{inline(a.get("name", ""))}</h4>'
+            f'<div class="prose">{render(body)}</div>'
+            f'</aside>')
 
 
 # ----------------------------------------------------------------- markdown --
@@ -1305,17 +1278,6 @@ def ipa_title(u) -> str:
 
 
 def page_home(units) -> str:
-    n_bridge = sum(len(u["bridges"]) for u in units)
-    # Counted off the parse, never written down: a number in the front-door copy
-    # that drifts from what the course actually contains is the one defect a
-    # reader has no way to catch.
-    n_item = sum(len(t["items"]) for u in units for _, _, t in u["tasks"])
-    n_audio = sum(len(u["audio"]) for u in units)
-    n_ielts = sum(len(t["items"]) for u in units for _, _, t in u["tasks"]
-                  if t["skill"] != "course")
-    n_limit = sum(len(t["items"]) for u in units for _, _, t in u["tasks"] if t.get("words"))
-    n_conf = sum(len(t["items"]) for u in units for _, _, t in u["tasks"]
-                 if t["skill"] == "listening")
     cards = []
     for u in units:
         cards.append(f"""    <a class="unitcard" href="unit-{u['nn']}/index.html" data-unit-progress="{u['nn']}">
@@ -1330,11 +1292,19 @@ def page_home(units) -> str:
     body = f"""  <header class="masthead">
     <p class="eyebrow">Self-study course · 12 units · 84 lessons</p>
     <h1>Tiếng Anh 8 — Global Success</h1>
-    <p class="standfirst">Every unit runs the same seven lessons. Work through them in order:
-    each lesson teaches, then practises what it just taught, and the unit test opens only
-    once all seven are done. {n_bridge} of those tasks carry one extra instruction, so that
-    finishing the syllabus also builds a skill the IELTS criteria name.</p>
+    <p class="standfirst">Twelve units, seven lessons each, in order. Every lesson teaches
+    something and then asks you to use it; when all seven are done, the unit's practice and
+    test open. Your work is saved on this device as you go.</p>
   </header>
+
+  <div class="card start" id="startCard">
+    <h3 id="startTitle">Start here</h3>
+    <p class="lede" id="startLede">Begin with <b>Unit 01, Lesson 1</b> and work down the
+    list. About 20–30 minutes a lesson is plenty.</p>
+    <div class="row">
+      <a class="btn" id="startLink" href="unit-01/index.html">Open Unit 01</a>
+    </div>
+  </div>
 
   <div class="overview">
     <div class="stat"><span class="n" data-units-started>0</span><span class="k">units started</span></div>
@@ -1353,57 +1323,9 @@ def page_home(units) -> str:
     <div id="reviewEngine" hidden></div>
   </div>
 
-  <div class="card doubleduty">
-    <h3>Two jobs, one course</h3>
-    <p class="lede">This is the Tiếng Anh 8 syllabus, taught in full and in its own order.
-    It is also built so that the work counts twice — and the second job is mostly not
-    something the pages <em>say</em>. It is how they behave.</p>
-    <p>{n_item} questions across the twelve units are marked rather than revealed: one mark
-    each, nothing part-marked, spelling costing the mark, both British and American
-    spellings accepted, and two answers in one gap scoring zero. {n_ielts} of them are
-    official IELTS question types, and the {n_limit} whose answers are written carry a word
-    limit printed on the task in the test's own wording and enforced as a hard fail — the
-    rest are grade-8 drills, marked by the same engine but not dressed as IELTS
-    items.</p>
-    <p>{n_audio} recording{"" if n_audio == 1 else "s"}
-    play{"s" if n_audio == 1 else ""} <b>once</b>, after a spoken
-    introduction that is never written down and a window to read the questions — because
-    that is the task, and practising it any other way trains a habit that does not
-    exist on the day. Each of the {n_conf} listening answers carries a <b>how sure are
-    you</b> mark, and the unit keeps a running comparison of how often <i>sure</i> and
-    <i>not sure</i> turned out right.</p>
-    <p>On top of that, {n_bridge} tasks carry a changed instruction, a checkpoint or a
-    re-scored drill built from the IELTS research — each one cited, each one carrying the
-    strength of the evidence behind it, including the ones whose evidence is thin and
-    say so. No new topics, no extra homework.</p>
-    <div class="strands">
-      <div><span class="k">What it adds</span><span class="v">Official item types, marked by the
-      published rules · one play, no replay · confidence and calibration · one turn, one subject ·
-      topic-sentence checkpoints · obligatory-context accuracy · paraphrase search ·
-      evidence-only reading</span></div>
-      <div><span class="k">What it refuses</span><span class="v">Band predictions · half-band
-      rubrics · essay templates and model openers · hours-to-band promises · a speaking score</span></div>
-    </div>
-    <p><a href="evidence/index.html">Read the evidence register — every claim and what backs it →</a></p>
-  </div>
-
-  <div class="sectionhead"><h2>The twelve units</h2><span class="label">phonology in clay · grammar in teal</span></div>
+  <div class="sectionhead"><h2>The twelve units</h2><span class="label">sounds in clay · grammar in teal</span></div>
   <div class="unitgrid">
 {chr(10).join(cards)}
-  </div>
-
-  <div class="card"><h3>How the course is put together</h3>
-    <p class="lede">Seven lessons per unit, always in this shape — material written for one
-    slot transfers to the same slot in all twelve.</p>
-    <div class="strands">
-      <div><span class="k">Lesson 1</span><span class="v">Getting Started — opening dialogue</span></div>
-      <div><span class="k">Lesson 2</span><span class="v">A Closer Look 1 — vocabulary + pronunciation</span></div>
-      <div><span class="k">Lesson 3</span><span class="v">A Closer Look 2 — grammar</span></div>
-      <div><span class="k">Lesson 4</span><span class="v">Communication — everyday English</span></div>
-      <div><span class="k">Lesson 5</span><span class="v">Skills 1 — reading → speaking</span></div>
-      <div><span class="k">Lesson 6</span><span class="v">Skills 2 — listening → writing</span></div>
-      <div><span class="k">Lesson 7</span><span class="v">Looking Back — consolidation + project</span></div>
-    </div>
   </div>"""
     # The review queue spans units, so the home page carries every unit's items.
     # ~216 of them; the alternative is a fetch, and this site has no server.
@@ -1413,33 +1335,35 @@ def page_home(units) -> str:
                  desc="Self-study English 8 course: 12 units, 84 lessons, with practice and unit tests.")
 
 
-def bridge_card(u) -> str:
-    """The unit's bridges, gathered, with the lesson each one lives in.
+def start_card(u) -> str:
+    """The first thing on a unit page: what to do, in the order to do it.
 
-    Deliberately not a separate IELTS section: every row links back into the
-    lesson that carries it, because the whole design claim is that these are
-    changed instructions on existing tasks, not a second course bolted on.
+    Opening on "What this unit teaches" answered a question nobody had asked
+    yet. A learner arriving here needs one instruction — open Lesson 1 — and a
+    short account of what a lesson asks of them; the syllabus strands are
+    reference, and now sit underneath.
+
+    The button is a plain link to Lesson 1 in the HTML and is repointed by
+    app.js to the first lesson not yet marked complete, so a page opened with
+    no progress and a page opened with six lessons done both say the right
+    thing.
     """
-    if not u["bridges"]:
-        return ""
-    rows = "".join(
-        f'<a class="brow" href="lesson-{b["lesson"]}/index.html">'
-        f'<span class="n">L{b["lesson"]}</span>'
-        f'<span class="body"><span class="t">{inline(b.get("name",""))}</span>'
-        f'<span class="d">{inline(b.get("trains",""))}'
-        + (f' · CEFR {e(b["cefr"])}' if b.get("cefr") else "")
-        + f' · {e(b.get("marker",""))}</span></span>'
-          f'<span class="go" aria-hidden="true">→</span></a>'
-        for b in u["bridges"])
-    return f"""  <div class="card bridgecard"><h2>Beyond the textbook</h2>
-    <p class="lede">The same {len(u['bridges'])} tasks you are already doing, with one thing
-    changed in each so that they also build a skill the IELTS criteria name. Every
-    row carries the evidence it rests on, and how strong that evidence is.
-    <a href="../evidence/index.html">How the evidence is graded →</a></p>
-    <div class="brows">{rows}</div>
-    <p class="note small">No IELTS band is claimed anywhere on this site. IELTS publishes
-    no band below 4.0 and none at all for A2 — which is where grade-8 work sits — so a
-    band here would be invented. Levels are labelled by CEFR instead.</p>
+    return f"""  <div class="card start" id="startCard">
+    <h2 id="startTitle">Where to begin</h2>
+    <p class="lede" id="startLede">Start with <b>Lesson 1</b> and work down the list —
+    each lesson builds on the one before it.</p>
+    <ol class="steps">
+      <li><b>Read the teaching part</b> at the top of the lesson: the example, the table,
+      the rule. Nothing to fill in yet.</li>
+      <li><b>Do the exercises.</b> Type or choose your answer, then press
+      <b>Check answers</b>. You will see what was right and, where it helps, why.</li>
+      <li><b>Press “Mark lesson complete”</b> at the bottom before you move on. That is
+      what fills the progress bar and opens the practice and the test.</li>
+    </ol>
+    <div class="row">
+      <a class="btn" id="startLink" href="lesson-1/index.html">Start Lesson 1</a>
+      <span class="label">About 20–30 minutes a lesson.</span>
+    </div>
   </div>
 
 """
@@ -1474,11 +1398,10 @@ def page_unit(u) -> str:
     <p class="vi">{e(u['vi'])}</p>
   </header>
 
-  <div class="card"><h2>What this unit teaches</h2>
+{start_card(u)}  <div class="card"><h2>What this unit teaches</h2>
     <div class="strands">{strands}</div>
   </div>
 
-{bridge_card(u)}
   <div class="sectionhead"><h2>Lessons</h2><span class="label">work through these in order</span></div>
   <div class="lessons" data-role="lesson-index" data-unit-progress="{u['nn']}">
 {chr(10).join(rows)}
@@ -1494,20 +1417,16 @@ def page_unit(u) -> str:
     <div class="gategrid">
       <div class="gatecard" data-role="practice">
         <h3>Practice this unit's words</h3>
-        <p>All {len(u['vocab'])} words from Lesson 2, in five formats: the meaning, the word,
-        what you hear, and — twice as often as the rest — the word inside a phrase it
-        actually lives in. Wrong answers come straight back, then return in a week.</p>
+        <p>All {len(u['vocab'])} words from Lesson 2, asked in five ways: from the meaning,
+        from the word, from what you hear, and — most often — inside a phrase the word
+        really goes in. Anything you get wrong comes straight back, then again in a week.</p>
         <button class="btn" id="startPractice" type="button" aria-disabled="true">Start practice</button>
       </div>
       <div class="gatecard" data-role="test">
         <h3>Unit test</h3>
-        <p>Every word once, no feedback until the end. You mark how sure you are of each
-        answer, and the result shows your <b>calibration</b> next to your score — whether
-        feeling certain actually means being right.</p>
-        <p class="note small">The calibration finding was measured on <b>listening</b>
-        items, and this is a vocabulary test. Carrying it across is our own reasoning,
-        not something the research shows. The listening exercises are where it rests on
-        its evidence.</p>
+        <p>Every word once, with no feedback until the end. Before each answer is checked
+        you say how sure you were, and the result shows whether feeling sure actually
+        meant being right.</p>
         <button class="btn" id="startTest" type="button" aria-disabled="true">Take the test</button>
       </div>
     </div>
@@ -1521,93 +1440,92 @@ def page_unit(u) -> str:
                  desc=f"Unit {u['num']}: {u['title']}. Seven lessons, practice and a unit test.")
 
 
-def page_evidence(units) -> str:
-    """The register: every IELTS claim the course makes, and what backs it.
+def register_md(units) -> str:
+    """The evidence register: every IELTS claim the course makes, and what backs it.
 
-    This page exists because the alternative — trusting each lesson to caveat
-    itself — is exactly the failure `09` G2 is written against. Generated from
-    the same directives the lessons render, so it cannot drift from them.
+    This used to be a page on the site. It is not learner-facing material — a
+    grade-8 learner opening a lesson needs the instruction, not the strength of
+    the evidence behind the instruction — so it is written to the repo instead,
+    for whoever maintains the course.
+
+    Keeping it *generated* is the part that matters. `09` G2 requires a weak
+    marker to be declared rather than quietly carried, and a register built
+    from the same directives the lessons render cannot drift from them the way
+    a hand-kept list would. `check_ielts.py` is the gate; this is the ledger it
+    leaves behind.
     """
-    all_b = [(u, b) for u in units for b in u["bridges"]]
-    by_marker = {}
-    for u, b in all_b:
-        mk = RE_MARKER.match(b.get("marker", "").strip())
-        by_marker.setdefault(mk.group(1) if mk else "?", []).append((u, b))
+    all_b = [(u, x) for u in units for x in u["bridges"]]
+    by_marker: dict = {}
+    for u, x in all_b:
+        mk = RE_MARKER.match(x.get("marker", "").strip())
+        by_marker.setdefault(mk.group(1) if mk else "?", []).append((u, x))
+    weak = sum(len(by_marker.get(k, [])) for k in ("[INF]", "[SPEC]", "[S/NS]", "[T2]", "[S]"))
 
-    legend = "".join(
-        f'<tr><td><span class="b-m" data-strength="{e(k.strip("[]").lower())}">{e(k)} — {e(short)}</span></td>'
-        f'<td>{e(gloss)}</td>'
-        f'<td class="num">{len(by_marker.get(k, []))}</td></tr>'
+    legend = "\n".join(
+        f"| `{k}` | {short} | {gloss} | {len(by_marker.get(k, []))} |"
         for k, (short, gloss) in MARKERS.items())
 
-    cells = []
-    for u, b in all_b:
-        mk = RE_MARKER.match(b.get("marker", "").strip())
-        key = mk.group(1) if mk else ""
-        cells.append(
-            f'<tr><td class="num"><a href="../unit-{u["nn"]}/lesson-{b["lesson"]}/index.html">'
-            f'{u["num"]}.{b["lesson"]}</a></td>'
-            f'<td>{inline(b.get("name",""))}</td>'
-            f'<td>{inline(b.get("trains",""))}</td>'
-            f'<td>{e(b.get("cefr","—"))}</td>'
-            f'<td><span class="b-m" data-strength="{e(key.strip("[]").lower())}">'
-            f'{e(b.get("marker",""))}</span></td>'
-            f'<td class="src"><code>{e(b.get("src",""))}</code></td></tr>')
-    rows = "".join(cells)
+    rows = "\n".join(
+        f"| {u['num']}.{x['lesson']} | {plain(x.get('name',''))} | {x.get('trains','')} | "
+        f"{x.get('cefr','—')} | `{x.get('marker','')}` | `{x.get('src','')}` | "
+        f"`units/{u['src']}` |"
+        for u, x in all_b)
 
-    weak = sum(len(by_marker.get(k, [])) for k in ("[INF]", "[SPEC]", "[S/NS]", "[T2]", "[S]"))
-    body = f"""  <header class="masthead">
-    <p class="eyebrow">Evidence register</p>
-    <h1>What this course claims about IELTS, and what backs it</h1>
-    <p class="standfirst">Every lesson in this course does two jobs: it teaches the
-    Tiếng Anh 8 syllabus, and — with one instruction changed — it builds something the
-    IELTS criteria actually name. This page lists all {len(all_b)} of those claims and
-    grades the evidence behind each one. {weak} of them rest on evidence that is weaker
-    than verified, and each says so where it appears.</p>
-  </header>
+    return f"""# Evidence register — generated, do not hand-edit
 
-  <div class="card"><h2>Three rules this course does not break</h2>
-    <ol class="rules">
-      <li><b>No IELTS band number is ever put on you</b> — not as a score, not as a
-      prediction, not as a progress dial. There is no published table converting
-      raw marks to a band, no half-band descriptors, and no official arithmetic for
-      combining criterion scores. Anything claiming otherwise invented it. A band
-      number appears on this site in one way only: as a coordinate on the published
-      descriptor grid, the way the next rule uses it — never as a measurement of a
-      learner.</li>
-      <li><b>Levels are labelled by CEFR.</b> The official IELTS–CEFR alignment stops
-      at band 4.0 = the B1 threshold and assigns <em>no band at all</em> to A2 or A1.
-      Grade-8 work sits at A2. There is therefore no band to label it with, and none
-      can be derived — so this course labels by CEFR and says why.</li>
-      <li><b>No templates and no model openers.</b> Memorised language is not a
-      shortcut in IELTS; it is the explicitly penalised category — a wholly memorised
-      answer scores zero, and memorised chunks are a band-4 feature of Lexical
-      Resource. Where this course gives a structure, it gives it as questions the
-      writer has to answer, never as sentences to reuse.</li>
-    </ol>
-  </div>
+`python3 tools/build.py` writes this file from the `:::bridge` directives in
+`units/*.md`. It is the audit trail for every IELTS claim the course makes:
+what the claim is, which criterion it trains, the evidential marker it carries,
+and the knowledge-base section that warrants it.
 
-  <div class="card"><h2>How to read the strength labels</h2>
-    <p class="lede">Every claim carries the marker it had in the research, unchanged.
-    Re-stating a finding never makes it stronger, so nothing on this site upgrades one.</p>
-    <div class="scroll"><table><thead><tr><th>Marker</th><th>What it means</th><th>Used</th></tr></thead>
-    <tbody>{legend}</tbody></table></div>
-  </div>
+**It is deliberately not published.** The site is for someone learning English;
+markers, warrants and CEFR coordinates are notes from the authors to
+themselves. `tools/check_ielts.py` still refuses to build a claim whose marker
+is illegal or whose citation does not resolve, so nothing is weakened by the
+register living here instead of on a page.
 
-  <div class="sectionhead"><h2>The register</h2><span class="label">{len(all_b)} claims across 12 units</span></div>
-  <div class="card">
-    <div class="scroll"><table class="reg"><thead><tr>
-      <th>Unit·Lesson</th><th>What changes</th><th>What it trains</th><th>CEFR</th>
-      <th>Strength</th><th>Source</th></tr></thead>
-    <tbody>{rows}</tbody></table></div>
-    <p class="note small">Sources are sections of the course's own IELTS knowledge base
-    (<code>research/ielts/</code>) — a source-verified reference built from ielts.org,
-    British Council, IDP and Cambridge material plus peer-reviewed research. The build
-    refuses to publish a claim whose cited section does not exist.</p>
-  </div>"""
-    return shell(title=f"Evidence register · {SITE}", depth=1, body=body,
-                 crumb=[("Course", "../index.html"), ("Evidence", "")],
-                 desc="Every IELTS claim this course makes, with the evidence and its strength.")
+{len(all_b)} claims across {len(units)} units. **{weak}** of them rest on
+evidence weaker than verified.
+
+## Three rules this course does not break
+
+1. **No IELTS band number is ever put on a learner** — not as a score, not as a
+   prediction, not as a progress dial. There is no published table converting
+   raw marks to a band, no half-band descriptors, and no official arithmetic
+   for combining criterion scores. A band number is legitimate in exactly one
+   place: as a coordinate on the published descriptor grid, inside this
+   repository's own documents. Never in the interface.
+2. **Levels are labelled by CEFR.** The official IELTS–CEFR alignment stops at
+   band 4.0 = the B1 threshold and assigns *no band at all* to A2 or A1.
+   Grade-8 work sits at A2, so there is no band to label it with and none can
+   be derived. The `cefr` attribute records the level; the pages do not print
+   it, because a learner does not need a coordinate to do an exercise.
+3. **No templates and no model openers.** Memorised language is the explicitly
+   penalised category — a wholly memorised answer scores zero, and memorised
+   chunks are a band-4 feature of Lexical Resource. Where a lesson gives a
+   structure, it gives it as questions the writer has to answer, never as
+   sentences to reuse.
+
+## How to read the strength labels
+
+Every claim carries the marker it had in the research, unchanged. Re-stating a
+finding never makes it stronger, so nothing here upgrades one.
+
+| Marker | Short | What it means | Used |
+| --- | --- | --- | --- |
+{legend}
+
+## The register
+
+| Unit·Lesson | What changes | What it trains | CEFR | Strength | Source | Authored in |
+| --- | --- | --- | --- | --- | --- | --- |
+{rows}
+
+Sources are sections of `research/ielts/` — a source-verified reference built
+from ielts.org, British Council, IDP and Cambridge material plus peer-reviewed
+research. `tools/check_ielts.py` fails the build if a cited section does not
+exist in the file it names.
+"""
 
 
 def recap_block(u) -> str:
@@ -1812,13 +1730,15 @@ def main() -> int:
               f"{tot_lab} generated paragraph labels")
         return 0
 
-    # Rebuild the generated tree only. docs/ may legitimately hold hand-written
-    # files (it does), so remove what we own by name rather than nuking docs/.
+    # Rebuild the generated tree only — remove what we own by name rather than
+    # nuking docs/, which also holds .nojekyll and anything a host puts there.
     OUT.mkdir(parents=True, exist_ok=True)
     for u in units:
         d = OUT / f"unit-{u['nn']}"
         if d.is_dir():
             shutil.rmtree(d)
+    # docs/evidence/ was the published register. It is now research/evidence-register.md,
+    # so an existing checkout still carrying the old page has it removed here.
     if (OUT / "evidence").is_dir():
         shutil.rmtree(OUT / "evidence")
     if (OUT / "assets").is_dir():
@@ -1830,9 +1750,10 @@ def main() -> int:
         shutil.copy2(a, OUT / "assets" / a.name)
 
     (OUT / "index.html").write_text(page_home(units), encoding="utf-8")
-    (OUT / "evidence").mkdir(parents=True, exist_ok=True)
-    (OUT / "evidence" / "index.html").write_text(page_evidence(units), encoding="utf-8")
-    pages = 2
+    # The evidence register is a maintainer's document, not a page. It lives in
+    # the repo beside the knowledge base it cites.
+    REGISTER.write_text(register_md(units), encoding="utf-8")
+    pages = 1
     for u in units:
         d = OUT / f"unit-{u['nn']}"
         d.mkdir(parents=True, exist_ok=True)

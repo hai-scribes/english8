@@ -131,7 +131,7 @@ t("calibration: reachable from a real set size",
   /Not enough of each/.test(cal(many(4,true).concat(many(3,false)),
                                 many(4,1).concat(many(3,0)))), true);
 t("calibration: reversed is not a verdict",
-  /worth watching rather than acting on/.test(
+  /worth watching for now/.test(
     cal(many(4,false).concat(many(4,true)), many(4,1).concat(many(4,0)))), true);
 t("calibration: one-sided",
   /nothing to compare/.test(cal(many(4,true), many(4,1))), true);

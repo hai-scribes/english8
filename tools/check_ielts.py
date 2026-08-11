@@ -970,7 +970,7 @@ def main() -> int:
     print(f"PASS: {len(bridges)} IELTS bridges across {len(units)} units · every citation "
           f"resolves · {spread}")
     print(f"      {weak} of {len(bridges)} rest on evidence weaker than verified, and each "
-          f"says so where it appears.")
+          f"says so in research/evidence-register.md.")
     print(f"      {len(tasks)} marked tasks ({items} items), {ielts} of them official IELTS "
           f"question types · {audio} single-play recording(s) · {len(strands)} strand(s), "
           f"each recurring where it says it does.")
