@@ -274,4 +274,238 @@
     ],
     "note": "**Formal.** In everyday speech use *buy*: you *buy* a coffee, but a company *purchases* equipment. Pronounced /ˈpɜːtʃəs/: **PUR**-chuss."
   }
+,
+
+  "price tag": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a small label fixed to something in a shop, showing what it costs",
+        "vi": "nhãn ghi giá một mặt hàng",
+        "examples": ["Every item on the shelf has a **price tag**, so nobody bargains here.",
+                     "Turn the mug over — the **price tag** is on the bottom.",
+                     "She put the shirt back when she saw the **price tag**."],
+        "colloc": ["check the price tag", "look at the price tag", "have a price tag"] },
+      { "pos": "noun", "grammar": "countable, figurative",
+        "en": "the cost of something large, especially when the cost is surprising",
+        "vi": "cái giá phải trả (nghĩa bóng)",
+        "examples": ["The new shopping centre came with a **price tag** of forty million dollars.",
+                     "Free delivery sounds good, but it carries a hidden **price tag**."],
+        "colloc": ["a price tag of", "a hidden price tag"] }
+    ],
+    "note": "Two words. A **price tag** is the label; the **price** is the number on it. Fixed price tags are what tell a supermarket from an open-air market, where goods carry none and buyers bargain."
+  },
+
+  "on sale": {
+    "senses": [
+      { "pos": "phrase",
+        "en": "being sold for less than the usual price, for a short time",
+        "vi": "đang được bán hạ giá",
+        "examples": ["These jeans are **on sale** this week: 400,000 dong instead of 600,000.",
+                     "Winter coats go **on sale** in February.",
+                     "I only bought it because it was **on sale**."],
+        "colloc": ["go on sale", "be on sale", "items on sale"] }
+    ],
+    "note": "In British English **on sale** means *reduced*. To say that something can be bought at all, use **for sale**: *That house is **for sale***. American English blurs the two, so read the price before you celebrate."
+  },
+
+  "home-grown": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "grown at home or in your own garden or fields, not bought from a supplier",
+        "vi": "tự trồng",
+        "examples": ["The tomatoes are **home-grown** — my grandfather grows them behind the house.",
+                     "Most products at the fair were **home-grown** and cost very little.",
+                     "She sells **home-grown** herbs at the farmers' market on Saturdays."],
+        "colloc": ["home-grown vegetables", "home-grown fruit", "home-grown rice"] },
+      { "pos": "adjective", "grammar": "figurative",
+        "en": "coming from your own country or town rather than from abroad",
+        "vi": "cây nhà lá vườn, của địa phương",
+        "examples": ["The team is proud of its **home-grown** players.",
+                     "The festival gives **home-grown** musicians a stage."],
+        "colloc": ["home-grown talent", "a home-grown player"] }
+    ],
+    "note": "Keep the hyphen. Use it for things that **grow**: vegetables, fruit, herbs, rice. Cakes and jam are not grown — they are **home-made**."
+  },
+
+  "home-made": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "made at home rather than bought from a shop or a factory",
+        "vi": "tự làm, làm ở nhà",
+        "examples": ["My aunt bakes the cakes in her own kitchen, so they are **home-made**.",
+                     "The stall sells **home-made** jam in old jam jars.",
+                     "He took a jar of **home-made** chilli sauce back to school with him."],
+        "colloc": ["home-made bread", "home-made jam", "a home-made card"] }
+    ],
+    "note": "Keep the hyphen. **home-made** = made by hand at home; **home-grown** = grown at home. A **home-made** cake may be made from vegetables that are **home-grown**."
+  },
+
+  "shopaholic": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable, informal",
+        "en": "someone who shops far more than they need to and finds it hard to stop",
+        "vi": "người nghiện mua sắm",
+        "examples": ["She buys three pairs of shoes a month — she is a real **shopaholic**.",
+                     "Online shops make it easy to become a **shopaholic**.",
+                     "My cousin calls herself a **shopaholic**, but she never spends much."]
+        ,"colloc": ["become a shopaholic", "a bit of a shopaholic"] }
+    ],
+    "forms": [
+      { "w": "shopaholism", "pos": "noun", "en": "the habit of shopping too much", "vi": "chứng nghiện mua sắm",
+        "ex": "The talk was about **shopaholism** and how to spend less." }
+    ],
+    "note": "Informal, and built from *-aholic*, the ending of **alcoholic**. The same ending gives *workaholic* and *chocoholic*. A shopaholic is **addicted to** shopping."
+  },
+
+  "convenience store": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a small shop that sells food and everyday goods and stays open very long hours",
+        "vi": "cửa hàng tiện ích",
+        "examples": ["I need milk at eleven at night, so I go to the **convenience store** on the corner.",
+                     "The **convenience store** near school is open 24/7.",
+                     "A **convenience store** is quick, but its prices are higher than a supermarket's."],
+        "colloc": ["a 24-hour convenience store", "run to the convenience store"] }
+    ],
+    "note": "You pay for the convenience: the shop is small, the range of products is narrow, and the prices are higher than in a supermarket. Note that the adjective **convenient** loses the *-ce*: *a convenient shop*, but *a convenience store*."
+  },
+
+  "speciality shop": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a shop that sells only one or two particular kinds of goods",
+        "vi": "cửa hàng bán đồ chuyên dụng",
+        "examples": ["A florist's is a **speciality shop**: it sells flowers and very little else.",
+                     "For running shoes she goes to a **speciality shop**, not a department store.",
+                     "The old quarter is full of **speciality shops** — one street sells nothing but lanterns."],
+        "colloc": ["a speciality shop", "a speciality food shop"] }
+    ],
+    "note": "British **speciality** /ˌspeʃiˈæləti/ has five syllables; American English writes and says **specialty** /ˈspeʃəlti/ with three. The opposite kind of shop is a department store, which sells a wide range of products under one roof."
+  },
+
+  "dollar store": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a shop where everything costs the same low price, or close to it",
+        "vi": "cửa hàng đồng giá",
+        "examples": ["Everything in this shop is one dollar, so we call it a **dollar store**.",
+                     "We bought the party plates and cups at a **dollar store**.",
+                     "A **dollar store** is a cheap place to buy things you will only use once."],
+        "colloc": ["shop at a dollar store", "a dollar store item"] }
+    ],
+    "note": "Mainly American. British English says *pound shop*, and Vietnamese shops of this kind advertise as *cửa hàng đồng giá*. It is not the same as a **discount shop**, which sells ordinary goods at reduced prices rather than everything at one price."
+  },
+
+  "farmers' market": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a market, usually held on the same day each week, where farmers sell what they have grown themselves",
+        "vi": "chợ nông sản",
+        "examples": ["The farmers sell their own vegetables at the **farmers' market** every Saturday.",
+                     "My mother loves the **farmers' market** and rarely misses one.",
+                     "Fruit at a **farmers' market** is picked the day before, not a week before."],
+        "colloc": ["a weekly farmers' market", "go to the farmers' market"] }
+    ],
+    "note": "The apostrophe comes **after** the *s*: the market belongs to the farmers, and there is more than one of them. Write *farmers' market*, not *farmer's market* or *farmers market*."
+  },
+
+  "range of products": {
+    "senses": [
+      { "pos": "phrase",
+        "en": "the number of different kinds of goods a shop offers",
+        "vi": "các loại mặt hàng",
+        "examples": ["A big supermarket offers a wide **range of products**, from rice to raincoats.",
+                     "The **range of products** in a convenience store is small.",
+                     "Online shops can carry a huge **range of products** because they need no shelves."],
+        "colloc": ["a wide range of products", "a narrow range of products", "offer a range of products"] }
+    ],
+    "note": "**Wide**, not *big* or *large*: *a **wide** range of products*. The phrase is about **variety**, not quantity — a shop with a thousand identical umbrellas has a very narrow range."
+  },
+
+  "advertisement": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a notice, picture or short film that tries to make people buy something",
+        "vi": "quảng cáo",
+        "examples": ["I saw an **advertisement** for that phone on my brother's tablet.",
+                     "The coat is a different colour in the **advertisement**.",
+                     "The newspaper carries three pages of **advertisements** for used bikes."],
+        "colloc": ["an advertisement for something", "put an advertisement in", "a television advertisement"] }
+    ],
+    "forms": [
+      { "w": "advertise", "pos": "verb", "en": "to tell the public about something you want to sell", "vi": "quảng cáo",
+        "ex": "They **advertise** the sale on the shop window." },
+      { "w": "advertising", "pos": "noun", "en": "the business of making advertisements", "vi": "ngành quảng cáo",
+        "ex": "**Advertising** costs the company more than delivery does." }
+    ],
+    "note": "British English stresses the second syllable: /ədˈvɜːtɪsmənt/, ad-**VER**-tis-ment. Short forms: **advert** (British) and **ad** (both, informal). Countable — *an advertisement*, *two advertisements*."
+  },
+
+  "complaint": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "something you say or write when you are not happy with something you have bought or been given",
+        "vi": "lời phàn nàn, khiếu nại",
+        "examples": ["I'd like to make a **complaint** about the shoes I ordered last week.",
+                     "The shop has had three **complaints** about the same delivery driver.",
+                     "Her **complaint** was polite: she described the problem and asked for a refund."],
+        "colloc": ["make a complaint about", "a complaint about something", "deal with a complaint"] }
+    ],
+    "forms": [
+      { "w": "complain", "pos": "verb", "en": "to say that you are not happy with something", "vi": "phàn nàn, khiếu nại",
+        "ex": "She **complained** about the price and got a discount." }
+    ],
+    "note": "**make** a complaint **about** something — never *for*. ❌ *a complaint for the shoes* ✅ *a complaint **about** the shoes*. With the verb: *complain **about** something* and *complain **to** somebody*."
+  },
+
+  "access": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the chance or the right to use something, especially a service",
+        "vi": "khả năng, quyền truy cập hoặc tiếp cận",
+        "examples": ["Without Internet **access** you cannot shop online at all.",
+                     "Every student has **access** to the reading room after four o'clock.",
+                     "The village got **access** to clean water last year."],
+        "colloc": ["Internet access", "access to something", "have access to", "free access"] },
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "a way of getting into a place",
+        "vi": "lối vào, đường vào",
+        "examples": ["**Access** to the car park is round the back of the centre.",
+                     "The lift gives **access** to all four floors."],
+        "colloc": ["access to a building", "wheelchair access"] }
+    ],
+    "note": "Uncountable: ❌ *an access* ✅ *access*. It takes **to**, not *of*: *access **to** the Internet*. Stress the first syllable, /ˈækses/ — **AC**-cess."
+  },
+
+  "addicted (to)": {
+    "senses": [
+      { "pos": "adjective", "grammar": "not before a noun",
+        "en": "unable to stop doing something, even when it is causing you trouble",
+        "vi": "nghiện, không dứt ra được",
+        "examples": ["He is **addicted** to shopping — he cannot walk past a sale.",
+                     "She says she is **addicted to** her phone and checks it every ten minutes.",
+                     "A shopaholic is someone who is **addicted** to buying things."],
+        "colloc": ["addicted to shopping", "become addicted to", "get addicted"] }
+    ],
+    "forms": [
+      { "w": "addiction", "pos": "noun", "en": "the state of not being able to stop", "vi": "sự nghiện",
+        "ex": "Online shopping can turn into an **addiction**." },
+      { "w": "addictive", "pos": "adjective", "en": "making people unable to stop", "vi": "gây nghiện",
+        "ex": "Those short videos are **addictive**." }
+    ],
+    "note": "Always **addicted to** + noun or **V-ing**: ✅ *addicted **to shopping*** ❌ *addicted to shop*. It goes after *be*, *become* or *get*, not in front of a noun."
+  },
+
+  "shopping list": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a list of the things you plan to buy",
+        "vi": "danh sách những thứ cần mua",
+        "examples": ["Write a **shopping list** before you go, or you will forget the rice again.",
+                     "Rice, fish sauce and two lemons were the whole **shopping list**.",
+                     "A **shopping list** is the cheapest way to stop yourself buying things you do not need."],
+        "colloc": ["make a shopping list", "write a shopping list", "on the shopping list"] }
+    ],
+    "note": "Two words. Things are **on** a shopping list, not *in* it: *Milk is **on** the list*. Used figuratively for any list of wants: *a shopping list of demands*."
+  }
 }

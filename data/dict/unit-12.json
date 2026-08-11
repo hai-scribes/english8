@@ -302,5 +302,113 @@
         "colloc": ["a distant galaxy", "our galaxy", "the milky way galaxy"] }
     ],
     "note": "When we mean our own galaxy we say **the galaxy**. The plural is *galaxies* (y → ies). Do not confuse **galaxy** (one group of stars) with **universe** (everything that exists)."
+  },
+
+  "UFO": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "an object seen in the sky that nobody can explain, and that some people believe comes from another planet",
+        "vi": "vật thể bay không xác định, đĩa bay",
+        "examples": ["My uncle says he saw a **UFO** above the rice fields one night.",
+                     "The photograph of the **UFO** turned out to be a weather balloon.",
+                     "Hundreds of **UFOs** are reported every year, and almost all of them have an ordinary explanation."],
+        "colloc": ["see a UFO", "report a UFO", "a UFO sighting"] }
+    ],
+    "note": "**UFO** stands for *unidentified flying object* — literally an object we have not identified, so calling something a UFO says only that nobody knows what it was, not that it came from space. Write it in capitals with no full stops. Because we say the letters *yoo-ef-oh*, it takes **a**, not *an*: *a UFO*."
+  },
+
+  "Uranus": {
+    "senses": [
+      { "pos": "noun", "grammar": "proper noun",
+        "en": "the seventh planet from the Sun, a very cold blue-green planet that spins on its side",
+        "vi": "sao Thiên Vương",
+        "examples": ["**Uranus** is the seventh planet from the Sun.",
+                     "You cannot see **Uranus** without a telescope.",
+                     "Winter on **Uranus** lasts more than twenty Earth years."],
+        "colloc": ["the rings of Uranus", "the moons of Uranus"] }
+    ],
+    "note": "A planet name, so always a **capital U** and never *the Uranus*. It comes seventh in the mnemonic *My Very Excellent Mother Just Served Us Noodles*, where **U**s stands for Uranus."
+  },
+
+  "Neptune": {
+    "senses": [
+      { "pos": "noun", "grammar": "proper noun",
+        "en": "the eighth and farthest planet from the Sun, a cold dark blue planet with very strong winds",
+        "vi": "sao Hải Vương",
+        "examples": ["**Neptune** is the farthest planet from the Sun.",
+                     "One year on **Neptune** lasts about one hundred and sixty-five Earth years.",
+                     "The winds on **Neptune** are the fastest in the solar system."],
+        "colloc": ["the winds on Neptune", "the moons of Neptune"] }
+    ],
+    "note": "Capital **N**, and no *the*: say *Neptune is cold*, not ~~the Neptune~~. It is the **N**oodles of *My Very Excellent Mother Just Served Us Noodles*, and it is the last of the eight."
+  },
+
+  "commander": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "the person who is in charge of a group of soldiers, a ship or a spacecraft, and who gives the orders",
+        "vi": "người chỉ huy, người cầm đầu",
+        "examples": ["The crew refused to obey their **commander** and turned the ship round.",
+                     "The **commander** ordered the creatures to destroy the planet.",
+                     "She became the first woman to serve as **commander** of the space station."],
+        "colloc": ["obey a commander", "the commander of the ship", "under the commander's orders"] }
+    ],
+    "forms": [
+      { "w": "command", "pos": "verb", "en": "to be in charge of a group and give it orders", "vi": "chỉ huy, ra lệnh", "ex": "She **commands** a crew of six." },
+      { "w": "command", "pos": "noun", "en": "an order that must be obeyed", "vi": "mệnh lệnh", "ex": "The creatures waited for the **command** to move." }
+    ],
+    "note": "The person is a **commander**; the order is a **command**. Do not mix them up: ❌ *He shouted a commander.* ✅ *He shouted a **command**.* Also note the spelling — two **m**s, one **d**."
+  },
+
+  "oppose": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to fight against a person, a plan or an idea, or to try to stop it happening",
+        "vi": "chống lại, phản đối",
+        "examples": ["Tommy and the creatures **opposed** the commander and saved the Earth.",
+                     "Hundreds of people **oppose** the plan to build a road through the forest.",
+                     "Nobody in the room **opposed** the idea of sending a second spacecraft."],
+        "colloc": ["oppose a plan", "strongly oppose", "oppose the idea"] }
+    ],
+    "forms": [
+      { "w": "opposition", "pos": "noun", "en": "the act of disagreeing with something and trying to stop it", "vi": "sự phản đối", "ex": "There was strong **opposition** to the new rule." },
+      { "w": "opposed (to)", "pos": "adjective", "en": "disagreeing with something", "vi": "phản đối, chống lại", "ex": "My parents are **opposed to** long journeys." }
+    ],
+    "note": "**Oppose** takes its object straight after it, with no preposition: ✅ *They **opposed the plan**.* ❌ ~~They opposed to the plan.~~ The *to* only appears in the adjective phrase **be opposed to**: *They **are opposed to** the plan.*"
+  },
+
+  "promising": {
+    "senses": [
+      { "pos": "adjective", "grammar": "gradable",
+        "en": "showing signs that something or somebody is likely to be good or successful in the future",
+        "vi": "đầy hứa hẹn, nhiều triển vọng",
+        "examples": ["Mars is the most **promising** planet in our solar system to look for life.",
+                     "The first results were **promising**, so the team kept working.",
+                     "She is the most **promising** young scientist in the school."],
+        "colloc": ["a promising start", "look promising", "a promising young scientist"] }
+    ],
+    "forms": [
+      { "w": "promise", "pos": "verb", "en": "to say that you will certainly do something", "vi": "hứa", "ex": "He **promised** to bring the telescope back." }
+    ],
+    "note": "Careful — **promising** is not simply the *-ing* form of *promise* meaning \"making a promise\". As an adjective it means *likely to turn out well*: *a **promising** planet* is one worth investigating, not one that has promised anything."
+  },
+
+  "trace": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a mark or sign that shows something existed or happened, even though it has gone",
+        "vi": "dấu vết, vết tích",
+        "examples": ["Scientists have found **traces** of water in the rock on Mars.",
+                     "The creatures left no **trace** at all in the sand.",
+                     "There is not a **trace** of oxygen in that atmosphere."],
+        "colloc": ["traces of water", "leave no trace", "without a trace"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to find out where somebody or something came from, or to follow the path something took",
+        "vi": "lần theo dấu vết, truy tìm nguồn gốc",
+        "examples": ["The team **traced** the signal back to a small telescope in the mountains.",
+                     "We **traced** the dry channels across the surface of the planet."],
+        "colloc": ["trace something back to", "trace a route"] }
+    ],
+    "note": "As a noun, **trace** is usually plural when we mean small amounts of a substance: *traces of water*, *traces of gas*. In the negative it stays singular: *not a **trace** of it*, *without a **trace***."
   }
 }

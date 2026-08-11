@@ -10,7 +10,7 @@
 | Strand | Target |
 | --- | --- |
 | **Pronunciation** | /ʊə/ vs /ɔɪ/ — *tourist* vs *choice* |
-| **Grammar** | **Simple and compound sentences** — coordinating conjunctions *and, but, so, or, yet* |
+| **Grammar** | **Simple and compound sentences** — coordinating conjunctions *and, but, so, or, yet*, and conjunctive adverbs *however, therefore, otherwise* |
 | **Reading** | School clubs and what they do |
 | **Speaking** | Asking and answering about a club |
 | **Listening** | Teen stress and what helps |
@@ -84,7 +84,11 @@ that word doing?
 
 ## Lesson 2 — A Closer Look 1
 
-### Vocabulary — Teen life
+### Vocabulary — Teen life, school clubs, and life online
+
+Four groups, because this unit has four subjects: **who you are** (rows 1–18),
+**the clubs you can join** (rows 19–26), **what you do online** (rows 27–36),
+and **what school does to you** (rows 37–42).
 
 | # | Word | IPA | Type | Nghĩa tiếng Việt |
 | --- | --- | --- | --- | --- |
@@ -106,10 +110,53 @@ that word doing?
 | 16 | keep up with | /ˌkiːp ˈʌp wɪð/ | phr v | theo kịp |
 | 17 | deal with | /ˈdiːl wɪð/ | phr v | giải quyết, xử lý |
 | 18 | hang out (with) | /ˌhæŋ ˈaʊt/ | phr v | đi chơi, la cà |
+| 19 | language club | /ˈlæŋɡwɪdʒ klʌb/ | n | câu lạc bộ ngoại ngữ |
+| 20 | sports club | /ˈspɔːts klʌb/ | n | câu lạc bộ thể thao |
+| 21 | arts and crafts | /ˌɑːts ənd ˈkrɑːfts/ | n | mĩ thuật và thủ công |
+| 22 | session | /ˈseʃn/ | n | buổi (học, sinh hoạt) |
+| 23 | participate (in) | /pɑːˈtɪsɪpeɪt/ | v | tham gia (vào) |
+| 24 | teamwork | /ˈtiːmwɜːk/ | n | sự làm việc nhóm |
+| 25 | community service | /kəˌmjuːnəti ˈsɜːvɪs/ | n | hoạt động phục vụ cộng đồng |
+| 26 | enjoyable | /ɪnˈdʒɔɪəbl/ | adj | thú vị, đáng thích |
+| 27 | social media | /ˌsəʊʃl ˈmiːdiə/ | n | mạng xã hội |
+| 28 | forum | /ˈfɔːrəm/ | n | diễn đàn |
+| 29 | account | /əˈkaʊnt/ | n | tài khoản |
+| 30 | log on (to) | /ˌlɒɡ ˈɒn tə/ | phr v | đăng nhập (vào) |
+| 31 | upload | /ˌʌpˈləʊd/ | v | tải lên |
+| 32 | browse | /braʊz/ | v | đọc lướt, xem (trên mạng) |
+| 33 | notification | /ˌnəʊtɪfɪˈkeɪʃn/ | n | thông báo |
+| 34 | connect (with) | /kəˈnekt/ | v | kết nối (với) |
+| 35 | website | /ˈwebsaɪt/ | n | trang mạng, trang web |
+| 36 | user-friendly | /ˌjuːzə ˈfrendli/ | adj | dễ dùng, thân thiện với người dùng |
+| 37 | midterm | /ˌmɪdˈtɜːm/ | adj | giữa kì |
+| 38 | expectation | /ˌekspekˈteɪʃn/ | n | sự mong đợi, kì vọng |
+| 39 | concentrate (on) | /ˈkɒnsntreɪt/ | v | tập trung (vào) |
+| 40 | focused | /ˈfəʊkəst/ | adj | tập trung, chuyên tâm |
+| 41 | mature | /məˈtʃʊə(r)/ | adj | chín chắn, trưởng thành |
+| 42 | bully | /ˈbʊli/ | n, v | kẻ bắt nạt; bắt nạt |
+
+> ### ▶︎ [**Practise these 42 words**](../app/unit-03-vocab.html)
+>
+> Press 🔊 on any row above to hear the word. When you have finished this
+> lesson, the unit page opens a **practice** session over all forty-two — the
+> meaning, the word, what you hear, and, more often than any of those, **the
+> word inside a phrase it actually lives in**, because *upload a picture* and
+> *log on to an account* are learned as whole phrases or not at all. Wrong
+> answers come straight back, and everything returns a week later, because what
+> you can still recall after a gap is the only recall worth counting. The
+> **unit test** opens once all seven lessons are done.
+>
+> **Luyện 42 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **practice** ở trang bài sẽ mở ra để luyện cả 42 từ — trong đó phần lớn là
+> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
+> ngay, và mọi từ quay lại sau một tuần.
+>
+> Do the written exercises below as well — writing by hand and typing on a
+> screen build different halves of the same knowledge.
 
 ### 2.1 Complete the sentences
 
-::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from rows 1–18 of the table. Change the form if you need to."
 - She never puts her hand up in class. She isn't very ___ . = self-confident
 - My brother refuses to smoke, even though his friends all do. He ignores ___ . = peer pressure
 - I do the ___ every Saturday — washing up, sweeping and ironing. = housework
@@ -127,6 +174,52 @@ that word doing?
 - Your team wins the school football final. = delighted
 - You walk onto the stage and speak clearly, without shaking. = self-confident
 :::
+
+### 2.3 Verb + object: the five pairs
+
+Online, five verbs almost always take the same object. Learn each verb with the
+thing that follows it — separately, they are much harder to remember.
+
+::: task skill="course" type="gap-fill" ask="Complete each phrase with **upload, browse, check, log on to** or **connect with**. Use each verb once."
+- ___ a picture of the club poster = upload
+- ___ a website looking for the timetable = browse
+- ___ your notifications between lessons = check
+- ___ your account with a password = log on to
+- ___ friends in another school = connect with
+:::
+
+> ⚠️ **Bẫy thường gặp:** Đừng dịch từng từ. **upload** đi với *a picture, a
+> video, a file* — thứ bạn **gửi lên**; không nói *upload a website*, vì trang
+> mạng đã ở sẵn trên đó. **browse** đi với *a website, a page*. Và **log on**
+> phải có **to** khi nói rõ tài khoản: *log on **to** your account*.
+
+### 2.4 Life online
+
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from rows 27–36 of the table. Change the form if you need to."
+- Ann ___ three photos of the club poster the same evening. = uploaded
+- I ___ to my account every night and read the class forum. = log on
+- My phone showed forty ___ before I had even had breakfast. = notifications
+- The school ___ tells you which room each club meets in. = website
+- Nobody needed any help with the new app, because it is so ___ . = user-friendly
+- Half of my class use ___ for more than three hours a day. = social media
+:::
+
+### 2.5 Clubs, and the pressure around them
+
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from rows 19–26 or rows 37–42. Change the form if you need to."
+- The ___ club makes greeting cards and paper flowers. = arts and crafts
+- Each club ___ lasts forty minutes. = session
+- My parents have high ___ , and I don't want to disappoint them. = expectations
+- Chess taught me to ___ on one problem at a time. = concentrate
+- Repairing old books for a village school is a kind of ___ . = community service
+- She is only fourteen, but she is more ___ than most of us. = mature
+- I want to ___ in two clubs this year, not five. = participate
+- The ___ tests fall in the middle of the term. = midterm
+:::
+
+> **Ghi chú:** *participate* luôn đi với **in** (*participate **in** a club*),
+> còn *join* thì không cần giới từ (*join the club*). *Concentrate* cũng luôn đi
+> với **on**.
 
 ### Pronunciation — /ʊə/ and /ɔɪ/
 
@@ -149,7 +242,7 @@ and travel in opposite directions.
 > Lưu ý: một số người Anh ngày nay đọc *sure* và *poor* thành /ʃɔː/, /pɔː/.
 > Trong bài này ta chỉ luyện những từ mà /ʊə/ luôn đúng.
 
-### 2.3 Sort the sounds
+### 2.6 Sort the sounds
 
 ::: task skill="course" type="sort" opts="/ʊə/|/ɔɪ/" ask="Which sound is in each word?"
 - tourist = /ʊə/
@@ -166,7 +259,7 @@ and travel in opposite directions.
 - boy = /ɔɪ/
 :::
 
-### 2.4 Odd sound out
+### 2.7 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** vowel sound. Pick it."
 - Line 1 — (a) tourist (b) pure (c) point (d) during = c ~ *point* is /ɔɪ/; the others are /ʊə/
@@ -175,7 +268,7 @@ and travel in opposite directions.
 - Line 4 — (a) jury (b) furious (c) toy (d) curious = c ~ *toy* is /ɔɪ/; the others are /ʊə/
 :::
 
-### 2.5 Say these sentences
+### 2.8 Say these sentences
 
 Read aloud three times, faster each time. Record yourself if you can.
 
@@ -183,6 +276,9 @@ Read aloud three times, faster each time. Record yourself if you can.
 2. I'm **curious** — do you **enjoy** the **noise** of the city?
 3. **During** the film, the **boys** made so much **noise** that I was
    **furious**.
+4. She is **mature**, and her **enjoyable** stories are the best part of the
+   club. *(Both sounds in one sentence: ma-**TURE** is /ʊə/, en-**JOY**-able is
+   /ɔɪ/.)*
 
 ---
 
@@ -239,6 +335,46 @@ because there is only one clause.
 > ✅ I finished my homework **and** my chores. *(one clause, two objects)*
 > ❌ I finished my homework, **and** my chores.
 
+#### The second way to join two clauses — a conjunctive adverb
+
+A conjunction is not the only glue. You can also join two independent clauses
+with a **conjunctive adverb**: *however, therefore, otherwise*.
+
+> Mark is hard-working**; therefore,** he usually gets high scores.
+> Lan wants to join the music club**; however,** she cannot play an instrument.
+> Plan your week on Sunday**; otherwise,** the pile keeps growing in your head.
+
+| Word | What it means | Nearest conjunction |
+| --- | --- | --- |
+| **however** | contrast — the second clause goes against the first | but |
+| **therefore** | result — the second clause follows from the first | so |
+| **otherwise** | the bad alternative — *if you don't do the first, this happens* | or |
+
+#### The punctuation rule, and it is not optional
+
+**Semicolon before. Comma after.**
+
+> ✅ I was exhausted**; therefore,** I went to bed at nine.
+> ❌ I was exhausted, therefore I went to bed at nine. *(a comma splice — see
+> below)*
+> ❌ I was exhausted; therefore I went to bed at nine. *(comma missing)*
+
+A full stop also works, and then the adverb starts a new sentence:
+
+> ✅ I was exhausted. **Therefore,** I went to bed at nine.
+
+> ⚠️ **Bẫy thường gặp:** *however, therefore, otherwise* **không phải** là liên
+> từ. Chúng không đủ sức nối hai mệnh đề bằng một dấu phẩy. Trước chúng phải là
+> **dấu chấm phẩy** (;) hoặc **dấu chấm** (.), sau chúng là **dấu phẩy** (,).
+>
+> ❌ *I revised hard, however I failed.*
+> ✅ *I revised hard**; however,** I failed.*
+> ✅ *I revised hard**,** but I failed.* — nếu muốn dùng dấu phẩy thì phải dùng
+> liên từ **but**.
+>
+> Cách nhớ: **dấu phẩy đi với FANBOYS; dấu chấm phẩy đi với however / therefore
+> / otherwise.**
+
 #### Two ways to break a compound sentence
 
 | Error | What it looks like | Fix |
@@ -285,10 +421,36 @@ its own. This is the single most common mistake in grade-8 writing.
 - The volunteer club repairs old books, ___ it sends them to a primary school. = and
 :::
 
-### 3.3 Join them up
+### 3.3 However, therefore, or otherwise?
 
-Combine each pair into **one compound sentence**. Use a comma and a suitable
-conjunction. More than one answer may be possible.
+::: task skill="course" type="choice" opts="however|therefore|otherwise" ask="The semicolon is already there. Choose the word that fits the meaning."
+- He does very well at school; ___ , he is never satisfied with his marks. = however ~ the second clause goes **against** the first
+- We sometimes feel lonely and sad; ___ , talking to somebody matters. = therefore ~ the second clause **follows from** the first
+- Write your week down on Sunday; ___ , the pile keeps growing in your head. = otherwise ~ *if you don't write it down, this is what happens*
+- Mi wants more friends; ___ , she does not connect well with new people. = however
+- Phong is behind in maths; ___ , he must study harder this term. = therefore
+- Tell a teacher about a bully; ___ , nothing changes. = otherwise
+:::
+
+### 3.4 Comma or semicolon? Conjunction or conjunctive adverb?
+
+The punctuation tells you which kind of word the gap needs. A **comma** takes a
+conjunction; a **semicolon** takes a conjunctive adverb.
+
+::: task skill="course" type="choice" opts="and|but|so|however|therefore|otherwise" ask="Look at the punctuation first, then at the meaning. Each word is used once."
+- Schoolwork causes pressure, ___ many teens feel pressure at home too. = and ~ comma → a conjunction, and the two ideas simply add up
+- The club is free, ___ you have to bring your own racket. = but ~ comma → a conjunction, and the second idea pushes back
+- I had three tests last week, ___ I hardly slept. = so ~ comma → a conjunction, and the second idea is the result
+- Lan wants to join the music club; ___ , she cannot play any instrument. = however ~ semicolon → a conjunctive adverb, contrast
+- She wanted to prepare properly; ___ , she turned off her phone. = therefore ~ semicolon → a conjunctive adverb, result
+- Teenagers should learn to work in a group; ___ , they struggle later. = otherwise ~ semicolon → a conjunctive adverb, the bad alternative
+:::
+
+### 3.5 Join them up
+
+Combine each pair into **one compound sentence**. For 1–5 use a comma and a
+suitable conjunction. For 6–8 use a **semicolon**, the conjunctive adverb given,
+and a **comma** after it. More than one answer may be possible.
 
 1. Teenagers need eight hours of sleep. Most get six.
    → _______________________________
@@ -300,34 +462,80 @@ conjunction. More than one answer may be possible.
    → _______________________________
 5. Khanh could not boil rice in September. Now he cooks dinner every Sunday.
    → _______________________________
+6. *(however)* Phong participates in three clubs. His marks have not fallen.
+   → _______________________________
+7. *(therefore)* Mai wants to be more focused. She leaves her phone downstairs.
+   → _______________________________
+8. *(otherwise)* You should log on and check the notice. You will miss the
+   first session.
+   → _______________________________
 
-### 3.4 Correct the mistake
+### 3.6 Correct the mistake
 
-Each sentence has **one** error — a comma splice, a run-on, a missing comma, or
-a comma that should not be there. Rewrite it correctly.
+Each sentence has **one** error — a comma splice, a run-on, a missing comma, a
+comma that should not be there, or a conjunctive adverb punctuated as if it were
+a conjunction. Rewrite it correctly.
 
 1. I was very stressed, I didn't tell anyone.
 2. She joined the wellbeing club and now she sleeps better.
 3. My parents want good marks, and a tidy room.
 4. Duy went to the club on Thursday he enjoyed it.
 5. Mai and Linh take photos, and put them on the noticeboard.
+6. The app is user-friendly, however I still needed help with it.
+7. She uploaded the photos late; therefore nobody saw them until Monday.
 
-### 3.5 About you
+### 3.7 About you
 
-Write true sentences about yourself. Each one must be a **compound** sentence
-with a comma and the conjunction given.
+Write true sentences about yourself. Sentences 1–5 must be **compound**
+sentences with a comma and the conjunction given. Sentences 6–8 must use a
+semicolon, the conjunctive adverb given, and a comma after it.
 
 1. (and) _______________________________
 2. (but) _______________________________
 3. (so) _______________________________
 4. (or) _______________________________
 5. (yet) _______________________________
+6. (however) _______________________________
+7. (therefore) _______________________________
+8. (otherwise) _______________________________
 
 ---
 
 ## Lesson 4 — Communication
 
-### Everyday English — Worrying and reassuring
+### Everyday English — Making requests, worrying and reassuring
+
+#### Making a request
+
+When you want somebody to do something for you, an order will not do. English
+wraps the job in a question and puts **please** at the end of it.
+
+| Making a request | The answer | Nghĩa |
+| --- | --- | --- |
+| **Can you tell me** more about the language club, **please**? | Certainly. It meets on Fridays in Room 8. | Bạn cho mình biết thêm về... được không? |
+| **Could you show me** the way to the art room, **please**? | Certainly. Go past this block, then turn left. | Bạn chỉ giúp mình đường đến... được không? |
+| **Could you tell me** when the session starts, **please**? | Certainly. At five o'clock. | Cho mình hỏi... bắt đầu lúc mấy giờ ạ? |
+| **Can you show me** how to log on to the forum, **please**? | Certainly. Type your account name here. | Bạn chỉ mình cách... được không? |
+
+**Certainly.** is the full, warm yes. *Of course.* and *Sure.* also work; *Sure*
+is the most casual of the three.
+
+> **Ghi chú:** **Could you…?** lịch sự hơn **Can you…?** một bậc. Cả hai đều
+> đúng, nhưng hãy dùng *could* với người lớn tuổi hơn, thầy cô, hoặc người bạn
+> chưa quen; dùng *can* với bạn cùng lớp. Thêm **please** ở cuối câu là bắt
+> buộc trong cả hai trường hợp — thiếu nó, câu nghe như một mệnh lệnh.
+>
+> *Could* ở đây **không** phải thì quá khứ. Nó chỉ làm câu nhẹ đi.
+
+> ⚠️ **Bẫy thường gặp:** Sau *Can/Could you tell me…* và *…show me…*, phần sau
+> giữ **trật tự câu kể**, không đảo như câu hỏi.
+>
+> ✅ *Could you tell me **when the club meets**, please?*
+> ❌ *Could you tell me **when does the club meet**, please?*
+> ✅ *Can you show me **how I log on**, please?*
+> ❌ *Can you show me **how do I log on**, please?*
+
+#### Saying you are worried
 
 | Saying you are worried | Nghĩa |
 | --- | --- |
@@ -335,6 +543,8 @@ with a comma and the conjunction given.
 | I'm not sure I can keep up. | Mình không chắc mình theo kịp. |
 | What if I make a mistake? | Nhỡ mình làm sai thì sao? |
 | I've got so much on at the moment. | Dạo này mình bận quá nhiều thứ. |
+
+#### Reassuring someone
 
 | Reassuring someone | Nghĩa |
 | --- | --- |
@@ -349,6 +559,8 @@ with a comma and the conjunction given.
 > *It happens to everyone, **so** please stop apologising.*
 > *You could revise tonight, **or** you could get some sleep and start early.*
 
+#### Showing interest
+
 | Showing interest | Nghĩa |
 | --- | --- |
 | Really? Tell me more. | Thật à? Kể thêm đi. |
@@ -356,7 +568,38 @@ with a comma and the conjunction given.
 | How did that go? | Chuyện đó thế nào rồi? |
 | I know exactly what you mean. | Mình hiểu chính xác ý bạn. |
 
-### 4.1 Complete the mini-dialogues
+### 4.1 Ask for it politely
+
+::: task skill="course" type="gap-fill" ask="Complete each request or answer with **one** word. Every answer comes from the request table above."
+- **A:** Could you ___ me the way to the art room, please? **B:** Certainly. = show
+- **A:** Can you ___ me more about the sports club, please? **B:** Certainly. = tell
+- **A:** Could you show me how to upload a photo, ___ ? **B:** Certainly. = please
+- **A:** Can you tell me when the language club ___ (meet), please? **B:** On Fridays. = meets ~ statement order after *tell me* — *when the club **meets***, never *when does the club meet*
+- **A:** Could you tell me where the forum ___ (be), please? **B:** On the school website. = is
+- **A:** Can you show me how I ___ (log) on to my account, please? = log
+- **A:** Could you tell me more about community service, please? **B:** ___ . It's every second Saturday. = Certainly
+:::
+
+### 4.2 Ask for what you need
+
+Write **one** request for each situation, then write the answer you would hope
+to get back. Use *Could you…, please?* when the person is a teacher or a
+stranger, and *Can you…, please?* with a classmate.
+
+1. A classmate has an account on the class forum and you do not know how to get
+   one.
+   → Request: _______________________________
+   → Answer: _______________________________
+2. You have never met the school secretary, and you need to know which room the
+   arts and crafts club uses.
+   → Request: _______________________________
+   → Answer: _______________________________
+3. Your art teacher knows how to upload a picture to the school website, and
+   you do not.
+   → Request: _______________________________
+   → Answer: _______________________________
+
+### 4.3 Complete the mini-dialogues
 
 1. **A:** I'm a bit ____________ about the maths test tomorrow.
    **B:** Don't ____________ — you've revised for a week.
@@ -368,7 +611,7 @@ with a comma and the conjunction given.
    ____________ everything.
    **B:** Take it one ____________ at a time. Let me give you a ____________ .
 
-### 4.2 Write your own
+### 4.4 Write your own
 
 A friend says each of these to you. Reply with **one compound sentence** that
 reassures them and offers something practical.
@@ -378,6 +621,58 @@ reassures them and offers something practical.
 2. "I've got three tests and a project this week."
    → _______________________________
 3. "Everyone in my class has a better phone than me."
+   → _______________________________
+
+### Social media popular among teens
+
+One question went up on a class forum: *Which social media do you use, and what
+do you actually do on it?* Four members of 8A answered.
+
+> **Vinh, 14.** "I log on to a video site almost every evening. I watch other
+> people's clips for half an hour, and about once a month I upload one of my
+> own — usually the chess club playing far too fast to follow. It is enjoyable;
+> however, it eats my evening. So I set an alarm now, and when it rings I
+> stop."
+>
+> **Quyen, 13.** "A photo app, and only that. Every Sunday I post a picture of
+> whatever I have drawn that week, and then I check my notifications far more
+> often than I should. When somebody I have never met likes a drawing, my whole
+> afternoon improves. I don't browse for hours — I just want the comments."
+>
+> **Bao, 14.** "I don't have a social media account at all. My parents said not
+> until I am fifteen, and honestly I don't mind much. I use our class forum on
+> the school website for homework questions, and that is enough for me. It is
+> not user-friendly, and it looks about twenty years old, but it works."
+>
+> **Diep, 14.** "A messaging app, all day. I connect with my cousins in Hue and
+> with two friends who moved to another school last year. We never post
+> anything in public. Before the midterm tests we made a group and asked each
+> other questions in it every night; therefore, nobody in that group panicked."
+
+### 4.5 Who does what?
+
+::: task skill="course" type="choice" opts="Vinh|Quyen|Bao|Diep" ask="Which of the four does each sentence describe? Two of them are described twice."
+- This person uploads something they made themselves. = Vinh ~ *about once a month I upload one of my own*
+- This person checks their notifications more often than they want to. = Quyen
+- This person has no social media account. = Bao
+- This person uses social media mostly to stay in touch with family. = Diep
+- This person says the site they use is not user-friendly. = Bao
+- This person has changed how long they spend online. = Vinh ~ he sets an alarm and stops when it rings
+- This person used social media to prepare for the midterm tests. = Diep
+- This person posts once a week, on the same day. = Quyen ~ *every Sunday I post a picture*
+:::
+
+### 4.6 And you?
+
+Answer in full sentences. Use at least **three** words from rows 27–36 of the
+Lesson 2 table.
+
+1. Which social media do you use most, and what do you actually do on it?
+   → _______________________________
+2. Whose answer above is closest to yours, and what is different about yours?
+   → _______________________________
+3. Bao has no account at all. Would a year without one be easy or hard for you?
+   Say why.
    → _______________________________
 
 ---
@@ -485,7 +780,9 @@ imaginary one you would like to start. Write short notes (not full sentences).
 
 **Step 2 — Speak.** Answer each question **aloud** from your notes, in full
 sentences. Use at least one **compound sentence** in every answer — join two
-ideas with *and, but, so, or,* or *yet*.
+ideas with *and, but, so, or,* or *yet*. In at least one answer, join them the
+other way instead: a pause where the semicolon would be, then *however*,
+*therefore* or *otherwise*.
 
 **Step 3 — Record and check.** Record yourself on your phone. Listen back and
 check three things:
@@ -659,6 +956,13 @@ correct.
 7. You can come on Thursday or you can come next week.
 8. He does his homework and his chores before dinner.
 
+**Part C.** Join each pair with the word in capitals. Punctuate it correctly.
+
+9. **HOWEVER** — The website is user-friendly. I still could not find the form.
+10. **THEREFORE** — Duy wants to be more focused. He has joined the chess club.
+11. **OTHERWISE** — Log on before Friday. You will miss the first session.
+12. **SO** — I had four tests in one week. I did not sleep much.
+
 ### 7.4 Error hunt
 
 Find and correct **six** errors in this paragraph. Five are about joining
@@ -678,6 +982,22 @@ agreement slip.
 - Error 4 = week, or she can/week, or she/week, or ~ missing comma before *or*
 - Error 5 = club, but she said/club, but she/club, but ~ comma splice — *but* joins the two clauses
 - Error 6 = she goes ~ *she go* → *she goes* — subject–verb agreement
+:::
+
+### 7.5 Word formation
+
+Most of this unit's words come in a family — *decide* and *decision*, *enjoy*
+and *enjoyable*. The sentence around the gap tells you which member it wants.
+
+::: task skill="course" type="gap-fill" ask="Complete each sentence with the right form of the word in brackets. Some gaps want a noun, some want an adjective."
+- My parents have high ___ of me, and that is where most of my pressure comes from. *(expect)* = expectations
+- Talking it over with someone you trust helps you make an informed ___ . *(decide)* = decision
+- Regular ___ in one club is worth more than signing up for five. *(participate)* = participation
+- The arts and crafts sessions are the most ___ two hours of my week. *(enjoy)* = enjoyable
+- Her ___ about other people's photos keeps her scrolling until midnight. *(curious)* = curiosity
+- He is only fourteen, but he deals with problems with real ___ . *(mature)* = maturity
+- A good forum keeps the ___ between its members alive all year. *(connect)* = connection
+- Being ___ gets easier once you have spoken in front of the club a few times. *(confidence)* = confident
 :::
 
 ### Project — Start a club
@@ -715,6 +1035,30 @@ many compound sentences you actually produced.
 > for permission. Keep it under 100 words, be polite, and answer the question
 > they will certainly ask: *who will supervise it?*
 
+### Now I can …
+
+Eight things this unit set out to teach. Beside each one is the place your own
+answer to it is already sitting — open that exercise again and look at what you
+actually put, which tells you far more than a feeling does. Where nothing on the
+page can settle it, the row says so, and that one is yours to judge.
+
+| Now I can … | Where my answer already is |
+| --- | --- |
+| use the words for school clubs, life online and teen stress | Lesson 2, exercises 2.1, 2.4 and 2.5 · Lesson 7, exercises 7.1 and 7.5 |
+| hear /ʊə/ and /ɔɪ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.6 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.8 and listen back. |
+| write simple sentences and compound sentences | Lesson 3, exercises 3.1 and 3.5 · Lesson 7, exercises 7.3 and 7.4 |
+| make a request politely | Lesson 4, exercise 4.1 |
+| read about what school clubs do | Lesson 5, exercises 5.1 and 5.2 |
+| ask and answer questions about a club | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
+| listen to a conversation about teen stress | Lesson 6, exercises 6.1 and 6.2 |
+| write a paragraph about what makes me stressed and what helps | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+
+> **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
+> Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
+> xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
+> trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
+> đánh giá.
+
 ---
 
 ## Answer Key
@@ -731,13 +1075,13 @@ out two cameras.
 
 ### Lesson 2
 
-**2.5** Answers will vary. Check: your lips **spread into a smile** at the end
-of *choice, enjoy, noise, boys*, and **relax back to the centre** at the end of
-*tourist, curious, during, furious*.
+**2.8** Answers will vary. Check: your lips **spread into a smile** at the end
+of *choice, enjoy, noise, boys, enjoyable*, and **relax back to the centre** at
+the end of *tourist, curious, during, furious, mature*.
 
 ### Lesson 3
 
-**3.3** *(other conjunctions may work — check that each answer has a comma and
+**3.5** *(other conjunctions may work — check that each answer has a comma and
 two full clauses)*
 1. Teenagers need eight hours of sleep, but most get six.
 2. I felt frustrated, so I asked my brother for help.
@@ -745,8 +1089,14 @@ two full clauses)*
 4. The wellbeing club is new, yet it is already the most popular.
 5. Khanh could not boil rice in September, and now he cooks dinner every
    Sunday.
+6. Phong participates in three clubs; however, his marks have not fallen.
+7. Mai wants to be more focused; therefore, she leaves her phone downstairs.
+8. You should log on and check the notice; otherwise, you will miss the first
+   session.
+*(For 6–8, check the punctuation as carefully as the meaning: **semicolon**
+before the word, **comma** after it.)*
 
-**3.4**
+**3.6**
 1. I was very stressed, **but** I didn't tell anyone. *(comma splice — a
    conjunction was missing)*
 2. She joined the wellbeing club, **and** now she sleeps better. *(comma added
@@ -756,19 +1106,39 @@ two full clauses)*
 4. Duy went to the club on Thursday, **and** he enjoyed it. *(run-on)*
 5. Mai and Linh take photos **and** put them on the noticeboard. *(comma
    removed — compound verb, still a simple sentence)*
+6. The app is user-friendly**;** however**,** I still needed help with it.
+   *(a comma is not strong enough before* however *— semicolon before, comma
+   after. Or: The app is user-friendly,* **but** *I still needed help with it.)*
+7. She uploaded the photos late; therefore**,** nobody saw them until Monday.
+   *(the comma after* therefore *was missing)*
 
-**3.5** Answers will vary. Check: each sentence has **two** independent
-clauses (cover the conjunction — does the second half have its own subject and
-verb?), a **comma before** the conjunction, and the conjunction asked for.
+**3.7** Answers will vary. Check: each sentence has **two** independent
+clauses (cover the joining word — does the second half have its own subject and
+verb?). For 1–5, a **comma before** the conjunction asked for. For 6–8, a
+**semicolon before** the adverb and a **comma after** it.
 
 ### Lesson 4
 
-**4.1** 1. worried / worry 2. if / happens 3. on / up / with — step / hand
+**4.2** Answers will vary. Check three things in every request: it is a
+**question** (*Can you…? / Could you…?*), it ends with **please**, and the part
+after *tell me* or *show me* keeps **statement word order**. Check one more in
+1–3: *could* in 2 and 3 (a stranger and a teacher), *can* or *could* in 1 (a
+classmate). A good answer starts *Certainly.* Model for 2: *Could you tell me
+which room the arts and crafts club uses, please?* — *Certainly. Room 14, on
+Wednesdays.*
 
-**4.2** Answers will vary. Check that each reply is **one compound sentence**
+**4.3** 1. worried / worry 2. if / happens 3. on / up / with — step / hand
+
+**4.4** Answers will vary. Check that each reply is **one compound sentence**
 with a comma before *and, but, so, or,* or *yet*, and that it both reassures
 and suggests something practical. Model for 1: *Don't worry, and I'll sit next
 to you for the first meeting.*
+
+**4.6** Answers will vary. Check: full sentences, at least three words from
+rows 27–36 (*social media, forum, account, log on, upload, browse,
+notification, connect, website, user-friendly*), and that question 2 names a
+real difference rather than only a similarity. Question 3 needs a reason, not
+just *easy* or *hard*.
 
 ### Lesson 5
 
@@ -781,4 +1151,10 @@ to you for the first meeting.*
 **Part B.** 5. I felt stressed**,** so I went for a walk. 6. ✓ (compound verb —
 no comma) 7. You can come on Thursday**,** or you can come next week. 8. ✓ (one
 clause, two objects)
+**Part C.** 9. The website is user-friendly**;** however**,** I still could not
+find the form. 10. Duy wants to be more focused**;** therefore**,** he has
+joined the chess club. 11. Log on before Friday**;** otherwise**,** you will
+miss the first session. 12. I had four tests in one week**,** so I did not sleep
+much. *(9–11 take a semicolon and then a comma; only 12 is a conjunction, so it
+takes a comma and nothing else.)*
 

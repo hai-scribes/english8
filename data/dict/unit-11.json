@@ -431,5 +431,406 @@
       }
     ],
     "note": "**Drawback** is the opposite of **benefit** / *advantage*. It is countable, and it is often used in the pattern *The (main) drawback of X is that…*"
+  },
+
+  "application": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a program written for a phone or computer to do one particular job",
+        "vi": "ứng dụng (phần mềm)",
+        "examples": [
+          "I downloaded an **application** that tests me on ten new words a day.",
+          "This **application** turns your handwriting into typed text.",
+          "Our maths teacher has built a small **application** for practising fractions."
+        ],
+        "colloc": ["download an application", "open an application", "a free application"]
+      },
+      {
+        "pos": "noun",
+        "grammar": "countable or uncountable",
+        "en": "a practical use that a piece of science or technology is put to",
+        "vi": "sự ứng dụng, việc áp dụng",
+        "examples": [
+          "Eye-tracking has a surprising **application** in the classroom.",
+          "The **application** of biometrics to school gates began about ten years ago."
+        ],
+        "colloc": ["a practical application", "the application of something to something"]
+      },
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a formal written request for a place, a job or permission",
+        "vi": "đơn xin, hồ sơ xin",
+        "examples": [
+          "She sent an **application** to the science summer school in Hue.",
+          "My **application** for a library card was accepted the same afternoon."
+        ],
+        "colloc": ["an application form", "make an application", "an application for something"]
+      }
+    ],
+    "forms": [
+      { "w": "apply", "pos": "verb", "en": "to use something for a purpose, or to make a formal request", "vi": "áp dụng; nộp đơn", "ex": "Scientists **apply** the same test to every sample." },
+      { "w": "app", "pos": "noun", "en": "the short everyday word for a phone or computer application", "vi": "ứng dụng (nói tắt)", "ex": "There is an **app** for booking a badminton court." }
+    ],
+    "note": "In everyday speech nobody says the long word for a phone program — say **app**. Keep **application** for writing, for the *use of a technology* meaning, and for the *form you fill in* meaning."
+  },
+
+  "platform": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a system or website that people use online to do something together, such as learn, meet or share work",
+        "vi": "nền tảng (trực tuyến)",
+        "examples": [
+          "Our school has put every subject on the same **platform**.",
+          "Which **platform** does your class use for online lessons?",
+          "The **platform** records the lesson so you can watch it again."
+        ],
+        "colloc": ["a learning platform", "an online platform", "use a platform"]
+      },
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "the raised part of a railway station where you stand to get on a train",
+        "vi": "sân ga",
+        "examples": [
+          "The train to Hue leaves from **platform** four.",
+          "We waited on a cold **platform** for forty minutes."
+        ],
+        "colloc": ["on the platform", "platform three"]
+      },
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a flat surface built higher than the floor for somebody to stand on",
+        "vi": "bục, bệ",
+        "examples": [
+          "The speaker climbed onto a small wooden **platform**.",
+          "They built a **platform** in the yard for the science fair."
+        ],
+        "colloc": ["build a platform", "stand on a platform"]
+      }
+    ],
+    "note": "Say lessons are **on** a platform, not ~~in~~ a platform: *We study **on** Google Meet.* The name of the platform is capitalised; the word **platform** itself is not."
+  },
+
+  "develop": {
+    "senses": [
+      {
+        "pos": "verb",
+        "grammar": "transitive",
+        "en": "to work on something that already exists over a period of time until it is good enough to use",
+        "vi": "phát triển, hoàn thiện",
+        "examples": [
+          "Engineers spent nine years **developing** this battery before it was safe to sell.",
+          "The company is **developing** a cheaper fingerprint scanner for schools.",
+          "It takes years to **develop** a technology that ordinary people can afford."
+        ],
+        "colloc": ["develop a technology", "develop an application", "develop a system"]
+      },
+      {
+        "pos": "verb",
+        "grammar": "transitive",
+        "en": "to make a skill or a quality of yours stronger by using it",
+        "vi": "rèn luyện, bồi dưỡng",
+        "examples": [
+          "Reading every night **develops** your vocabulary faster than any app.",
+          "Group work **develops** the habit of listening before you answer."
+        ],
+        "colloc": ["develop a skill", "develop an interest in something", "develop a habit"]
+      },
+      {
+        "pos": "verb",
+        "grammar": "intransitive",
+        "en": "to grow bigger, stronger or more advanced",
+        "vi": "phát triển, lớn lên",
+        "examples": [
+          "The town has **developed** quickly since the new road opened.",
+          "A small idea can **develop** into a real invention."
+        ],
+        "colloc": ["develop quickly", "develop into something"]
+      }
+    ],
+    "forms": [
+      { "w": "development", "pos": "noun", "en": "the process of growing or of making something better over time", "vi": "sự phát triển", "ex": "The **development** of the vaccine took eleven months." },
+      { "w": "developer", "pos": "noun", "en": "a person or company that builds software or land", "vi": "nhà phát triển (phần mềm)", "ex": "The **developer** fixed the bug in a day." },
+      { "w": "developed", "pos": "adjective", "en": "advanced, with modern industry and services", "vi": "phát triển (đã phát triển)", "ex": "Robot teachers appeared first in **developed** countries." }
+    ],
+    "note": "Keep the four apart. You **invent** what never existed, you **discover** what was already there, you **create** something you make yourself, and you **develop** something that exists until it works properly: *Bell **invented** the telephone, and engineers have been **developing** it ever since.* Spelling: one *p* — **developing**, **developed**, never ~~developping~~."
+  },
+
+  "digital": {
+    "senses": [
+      {
+        "pos": "adjective",
+        "en": "using information stored as numbers in a computer, rather than on paper, film or tape",
+        "vi": "(thuộc) kĩ thuật số",
+        "examples": [
+          "The library is now completely **digital** — there is not one paper card left.",
+          "**Digital** communication means we can send a report to Ha Noi in a second.",
+          "She keeps a **digital** copy of every experiment she has done."
+        ],
+        "colloc": ["a digital camera", "digital communication", "a digital copy"]
+      },
+      {
+        "pos": "adjective",
+        "en": "showing information as numbers rather than with hands on a dial",
+        "vi": "hiển thị số (đồng hồ, nhiệt kế…)",
+        "examples": [
+          "My grandfather still cannot read a **digital** clock quickly.",
+          "The **digital** thermometer beeps when it has finished."
+        ],
+        "colloc": ["a digital clock", "a digital watch", "a digital display"]
+      }
+    ],
+    "forms": [
+      { "w": "digitally", "pos": "adverb", "en": "by computer, in a digital way", "vi": "bằng kĩ thuật số", "ex": "The whole test is marked **digitally**." },
+      { "w": "digit", "pos": "noun", "en": "any of the numbers from 0 to 9", "vi": "chữ số", "ex": "A phone number in Viet Nam usually has ten **digits**." }
+    ],
+    "note": "The opposite is *analogue*, and for books and letters we usually just say *paper*: *a paper diary* rather than a **digital** one. Note the stress on the first syllable: **DIG**-i-tal."
+  },
+
+  "eye-tracking": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "technology that follows where a person's eyes are looking and for how long",
+        "vi": "công nghệ theo dõi cử động mắt",
+        "examples": [
+          "**Eye-tracking** can show which line of the page a reader stopped at.",
+          "Teachers use **eye-tracking** to see whether a class has understood a diagram.",
+          "**Eye-tracking** was first used to study how people read, not how they learn."
+        ],
+        "colloc": ["eye-tracking technology", "an eye-tracking application", "use eye-tracking"]
+      }
+    ],
+    "note": "Written with a hyphen when it sits in front of a noun: *an **eye-tracking** application*. It tells you **where** somebody looked, not what they were thinking — so it is evidence about attention, not about understanding."
+  },
+
+  "attendance": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "the fact of being present at school, at a class or at an event",
+        "vi": "sự có mặt, việc đi học đầy đủ",
+        "examples": [
+          "The school uses a fingerprint scanner to check **attendance** every morning.",
+          "Her **attendance** has been perfect since September.",
+          "Poor **attendance** is usually the first sign that something is wrong."
+        ],
+        "colloc": ["check attendance", "take attendance", "poor attendance", "regular attendance"]
+      },
+      {
+        "pos": "noun",
+        "grammar": "countable, usually singular",
+        "en": "the number of people who come to an event",
+        "vi": "số người dự, sĩ số",
+        "examples": [
+          "The **attendance** at the science fair was over four hundred.",
+          "Rain always cuts the **attendance** at our Saturday club."
+        ],
+        "colloc": ["a large attendance", "the attendance at something"]
+      }
+    ],
+    "forms": [
+      { "w": "attend", "pos": "verb", "en": "to go to an event, a class or a school", "vi": "tham dự, đi học", "ex": "About sixty students **attend** the coding club." },
+      { "w": "attendant", "pos": "noun", "en": "a person whose job is to help people in a public place", "vi": "nhân viên phục vụ", "ex": "The car park **attendant** showed us where to wait." }
+    ],
+    "note": "In a school the fixed phrase is **check attendance** or **take attendance** — the moment the teacher finds out who is absent. Note the spelling: *-ance*, not ~~attendence~~."
+  },
+
+  "truancy": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "the act of staying away from school without permission",
+        "vi": "việc trốn học",
+        "examples": [
+          "Biometrics is meant to put an end to **truancy** and to copying in tests.",
+          "**Truancy** fell sharply once parents got a message the moment a class began.",
+          "The head teacher treats **truancy** as a problem to solve, not only to punish."
+        ],
+        "colloc": ["reduce truancy", "a truancy problem", "worries about truancy"]
+      }
+    ],
+    "forms": [
+      { "w": "truant", "pos": "noun", "en": "a student who stays away from school without permission", "vi": "học sinh trốn học", "ex": "Two **truants** were found at the market." },
+      { "w": "play truant", "pos": "phrase", "en": "to stay away from school without permission", "vi": "trốn học", "ex": "He **played truant** twice and regretted it." }
+    ],
+    "note": "**Truancy** is the behaviour and it is uncountable — never ~~a truancy~~, ~~truancies~~. It always means *without permission*: a day off for a dentist's appointment is not **truancy**."
+  },
+
+  "cheating": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "the act of breaking the rules of a test or a game in order to gain an advantage",
+        "vi": "sự gian lận",
+        "examples": [
+          "The new system was bought to stop **cheating** in end-of-term tests.",
+          "**Cheating** in an online exam is harder than students think.",
+          "Copying one line of a friend's homework is still **cheating**."
+        ],
+        "colloc": ["stop cheating", "cheating in an exam", "accused of cheating"]
+      }
+    ],
+    "forms": [
+      { "w": "cheat", "pos": "verb", "en": "to break the rules of a test or game in order to win or pass", "vi": "gian lận, quay cóp", "ex": "Nobody **cheats** when the questions are all different." },
+      { "w": "cheat", "pos": "noun", "en": "a person who breaks the rules to win", "vi": "kẻ gian lận", "ex": "No one wants to play cards with a **cheat**." }
+    ],
+    "note": "You **cheat in** a test or an exam, and you **cheat at** a game: *cheat **in** the maths test*, *cheat **at** chess*. **Cheating** is uncountable — never ~~a cheating~~."
+  },
+
+  "feedback": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "what somebody tells you about your work, so that you know what to keep and what to change",
+        "vi": "ý kiến phản hồi, nhận xét",
+        "examples": [
+          "The teacher marks my work and sends **feedback** the next morning.",
+          "Her **feedback** was short: two good sentences and one thing to fix.",
+          "A robot can give **feedback** on spelling, but not on an idea."
+        ],
+        "colloc": ["give feedback", "get feedback", "useful feedback", "feedback on something"]
+      },
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "opinions that users give about a product or a service",
+        "vi": "ý kiến người dùng",
+        "examples": [
+          "The app changed its colours after **feedback** from teachers.",
+          "We collected **feedback** from every class before choosing a platform."
+        ],
+        "colloc": ["collect feedback", "positive feedback", "customer feedback"]
+      }
+    ],
+    "note": "Uncountable: **feedback**, never ~~a feedback~~ or ~~feedbacks~~. If you need to count, say *a piece of **feedback*** or *some comments*. Use **on**: *feedback **on** my essay*."
+  },
+
+  "breakout room": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a small separate space in an online class where a few students go to work together",
+        "vi": "phòng thảo luận nhóm trực tuyến",
+        "examples": [
+          "Our teacher puts us into **breakout rooms** so that four of us can discuss one question.",
+          "In the **breakout room** we argued about the answer for ten minutes.",
+          "She visits every **breakout room** once and then calls us all back."
+        ],
+        "colloc": ["put students into breakout rooms", "join a breakout room", "in a breakout room"]
+      }
+    ],
+    "note": "Two words, and usually plural because a class is split into several: *into **breakout rooms***. The teacher **puts** or **sends** students **into** them, and the students **go into** or **join** one."
+  },
+
+  "face to face": {
+    "senses": [
+      {
+        "pos": "adverb",
+        "en": "with the other person really there in the room, not on a screen or a phone",
+        "vi": "trực tiếp, mặt đối mặt",
+        "examples": [
+          "I would rather meet my classmates **face to face** than in twenty small squares.",
+          "We had emailed for a year before we finally met **face to face**.",
+          "Some things are easier to say **face to face**."
+        ],
+        "colloc": ["meet face to face", "talk face to face", "learn face to face"]
+      },
+      {
+        "pos": "adjective",
+        "grammar": "before a noun, usually written face-to-face",
+        "en": "happening with people together in the same place",
+        "vi": "(thuộc hình thức) trực tiếp",
+        "examples": [
+          "Ann prefers **face-to-face** classes because she likes talking to her friends.",
+          "Our club runs one online meeting and one **face-to-face** meeting a month."
+        ],
+        "colloc": ["a face-to-face class", "a face-to-face meeting", "face-to-face teaching"]
+      }
+    ],
+    "note": "Three separate words after the verb (*we met **face to face***), but hyphenated in front of a noun (*a **face-to-face** class*). The opposite in a school is *online* or *remote*."
+  },
+
+  "complain": {
+    "senses": [
+      {
+        "pos": "verb",
+        "grammar": "intransitive, + about / that",
+        "en": "to say that you are not happy about something, or that something is wrong",
+        "vi": "phàn nàn, than phiền",
+        "examples": [
+          "Half the class **complain** about the Internet connection every single week.",
+          "He **complained** that the robot never explained anything twice.",
+          "Nobody **complains** when the lesson finishes early."
+        ],
+        "colloc": ["complain about something", "complain that…", "complain to somebody"]
+      },
+      {
+        "pos": "verb",
+        "grammar": "transitive, + to",
+        "en": "to tell somebody in charge, formally, that something is wrong",
+        "vi": "khiếu nại",
+        "examples": [
+          "My father **complained** to the school about the broken projector.",
+          "If the app charges you twice, **complain** at once."
+        ],
+        "colloc": ["complain to the manager", "complain in writing"]
+      }
+    ],
+    "forms": [
+      { "w": "complaint", "pos": "noun", "en": "a statement that something is wrong or unsatisfactory", "vi": "lời phàn nàn, đơn khiếu nại", "ex": "The commonest **complaint** was about the noise." }
+    ],
+    "note": "**Complain about** a thing, **complain to** a person: *She **complained to** the teacher **about** the noise.* Never ~~complain something~~. The noun changes its ending: **complaint**, not ~~complainment~~."
+  },
+
+  "epidemic": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a disease that spreads quickly through a lot of people in one area at the same time",
+        "vi": "dịch bệnh",
+        "examples": [
+          "My class moved onto Zoom during the **epidemic** and never fully moved back.",
+          "The village closed its market for a month during the **epidemic**.",
+          "Clean water stopped the **epidemic** faster than any medicine."
+        ],
+        "colloc": ["during an epidemic", "a flu epidemic", "stop an epidemic"]
+      }
+    ],
+    "forms": [
+      { "w": "epidemic", "pos": "adjective", "en": "spreading very quickly among many people", "vi": "mang tính dịch", "ex": "The illness became **epidemic** within three weeks." }
+    ],
+    "note": "An **epidemic** is in one country or area; a *pandemic* has spread across the world. Stress the third syllable: ep-i-**DEM**-ic."
+  },
+
+  "contact lens": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable, usually plural",
+        "en": "a small round piece of thin plastic that you wear on your eye to help you see clearly",
+        "vi": "kính áp tròng",
+        "examples": [
+          "My aunt wears **contact lenses** instead of glasses when she plays badminton.",
+          "One **contact lens** fell out during the experiment.",
+          "Scientists say a 3D **contact lens** will one day show a whole film."
+        ],
+        "colloc": ["wear contact lenses", "put in a contact lens", "a pair of contact lenses"]
+      }
+    ],
+    "note": "Plural **contact lenses**, with *-es*. You **wear** them and you **put** them **in**; you do not ~~use~~ them. Two words in British English, and the everyday short form is just *contacts*."
   }
 }

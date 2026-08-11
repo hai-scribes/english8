@@ -13,3 +13,6 @@ reports/*.status.json
 
 # /rigor drive scaffolding — sealed contract + checkers, not the deliverable
 .rigor/
+
+# Node deps for the reading-screen gate (jsdom) ---
+node_modules/

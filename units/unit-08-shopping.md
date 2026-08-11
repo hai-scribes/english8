@@ -107,6 +107,21 @@ Answer in full sentences.
 | 16 | convenient | /kənˈviːniənt/ | adj | tiện lợi |
 | 17 | expensive | /ɪkˈspensɪv/ | adj | đắt, đắt tiền |
 | 18 | purchase | /ˈpɜːtʃəs/ | n, v | món hàng đã mua; mua |
+| 19 | price tag | /ˈpraɪs tæɡ/ | n | nhãn ghi giá một mặt hàng |
+| 20 | on sale | /ɒn ˈseɪl/ | phr | đang được bán hạ giá |
+| 21 | home-grown | /ˌhəʊm ˈɡrəʊn/ | adj | tự trồng |
+| 22 | home-made | /ˌhəʊm ˈmeɪd/ | adj | tự làm |
+| 23 | shopaholic | /ˌʃɒpəˈhɒlɪk/ | n | người nghiện mua sắm |
+| 24 | convenience store | /kənˈviːniəns stɔː(r)/ | n | cửa hàng tiện ích |
+| 25 | speciality shop | /ˌspeʃiˈæləti ʃɒp/ | n | cửa hàng bán đồ chuyên dụng |
+| 26 | dollar store | /ˈdɒlə(r) ˌstɔː(r)/ | n | cửa hàng đồng giá |
+| 27 | farmers' market | /ˈfɑːməz ˌmɑːkɪt/ | n | chợ nông sản |
+| 28 | range of products | /ˌreɪndʒ əv ˈprɒdʌkts/ | phr | các loại mặt hàng |
+| 29 | advertisement | /ədˈvɜːtɪsmənt/ | n | quảng cáo |
+| 30 | complaint | /kəmˈpleɪnt/ | n | lời phàn nàn, khiếu nại |
+| 31 | access | /ˈækses/ | n | quyền/khả năng truy cập, tiếp cận |
+| 32 | addicted (to) | /əˈdɪktɪd/ | adj | nghiện, say mê |
+| 33 | shopping list | /ˈʃɒpɪŋ lɪst/ | n | danh sách những thứ cần mua |
 
 ### 2.1 Complete the sentences
 
@@ -126,6 +141,48 @@ Answer in full sentences.
 - Line 2 — (a) cash (b) receipt (c) card (d) coin = b ~ the others are ways of paying; a receipt is proof you paid
 - Line 3 — (a) discount (b) bargain (c) sale (d) delivery = d ~ the others all mean a lower price
 :::
+
+### 2.3 Which shopping place?
+
+Five kinds of shopping place, and the one thing that tells each of them apart
+from the others.
+
+::: task skill="course" type="choice" opts="a speciality shop|a discount shop|a supermarket|an online shop|an open-air market" ask="Read what makes each place different and choose the place."
+- It offers only one or two specific kinds of goods. = a speciality shop ~ a florist's sells flowers and very little else
+- It offers lower prices on all its products, all year round. = a discount shop
+- It is a large indoor shopping place, and every item has a fixed price. = a supermarket ~ the price tag is the giveaway — nobody bargains here
+- It uses the Internet to sell goods and services. = an online shop
+- It is often outdoors, offers a wide range of goods, and buyers can bargain. = an open-air market
+:::
+
+> **Ghi chú:** **speciality shop** = cửa hàng chuyên bán một hai loại hàng
+> (hiệu sách, hàng hoa, hàng giày). **discount shop** = cửa hàng bán hạ giá mọi
+> mặt hàng. Đừng nhầm **discount shop** (cửa hàng) với **discount** (sự giảm
+> giá) — siêu thị nào cũng có *a discount*, nhưng nó không phải *a discount shop*.
+
+### 2.4 The new words
+
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from rows 19–33 of the table. Change the form if you need to."
+- Everything in this shop is one dollar, so we call it a ___ . = dollar store
+- My aunt bakes the cakes in her own kitchen, so they are ___ . = home-made
+- The tomatoes are ___ — my grandfather grows them behind the house. = home-grown
+- Look at the ___ before you take it to the till. = price tag
+- These jeans are ___ this week: 400,000 dong instead of 600,000. = on sale
+- She buys three pairs of shoes a month. She is a real ___ . = shopaholic
+- I need milk at eleven at night, so I go to the ___ on the corner. = convenience store
+- Write a ___ before you go, or you will forget the rice again. = shopping list
+- I saw an ___ for that phone on my brother's tablet. = advertisement
+- Without Internet ___ , you cannot shop online at all. = access
+- I'd like to make a ___ about the shoes I ordered last week. = complaint
+- The farmers sell their own vegetables at the ___ every Saturday. = farmers' market
+- A big supermarket offers a wide ___ , from rice to raincoats. = range of products
+- He is ___ to shopping — he cannot walk past a sale. = addicted
+:::
+
+> ⚠️ **Bẫy thường gặp:** **home-grown** là *tự trồng* (rau, quả), **home-made**
+> là *tự làm* (bánh, mứt, đồ thủ công). Đừng nói ❌ *home-made vegetables*.
+> Và **on sale** trong tiếng Anh–Anh nghĩa là **đang hạ giá**, không phải
+> "đang được bày bán" — muốn nói bày bán thì dùng *for sale*.
 
 ### Pronunciation — /sp/ and /st/
 
@@ -149,7 +206,7 @@ Notice that the cluster does not have to start the word: *di**sp**lay*,
 > Việt. Đó là điều bình thường — đừng cố bật hơi mạnh. Điều quan trọng là
 > **không thêm nguyên âm** vào giữa /s/ và phụ âm sau nó.
 
-### 2.3 Sort the sounds
+### 2.5 Sort the sounds
 
 ::: task skill="course" type="sort" opts="/sp/|/st/" ask="Which sound is in each word?"
 - spend = /sp/
@@ -167,7 +224,7 @@ Notice that the cluster does not have to start the word: *di**sp**lay*,
 - expensive = /sp/
 :::
 
-### 2.4 Odd sound out
+### 2.6 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** cluster. Pick it."
 - Line 1 — (a) spend (b) special (c) store (d) sport = c ~ *store* is /st/; the others are /sp/
@@ -176,7 +233,7 @@ Notice that the cluster does not have to start the word: *di**sp**lay*,
 - Line 4 — (a) expensive (b) display (c) spare (d) stock = d ~ *stock* is /st/; the others are /sp/
 :::
 
-### 2.5 Say these sentences
+### 2.7 Say these sentences
 
 Read aloud three times, faster each time. Do not put a vowel before the /p/
 or the /t/. Record yourself if you can.
@@ -366,7 +423,9 @@ position.
 
 ## Lesson 4 — Communication
 
-### Everyday English — In a shop
+### Everyday English — In a shop, bargaining, and making complaints
+
+#### In a shop
 
 | Customer says | Nghĩa |
 | --- | --- |
@@ -389,7 +448,7 @@ position.
 | Would you like a bag? | Bạn có cần túi không? |
 | **Delivery takes** two to three days. | Giao hàng mất hai đến ba ngày. |
 
-### Bargaining at a market
+#### Bargaining at a market
 
 At a market — but **not** in a shopping centre — you can bargain.
 
@@ -400,6 +459,38 @@ At a market — but **not** in a shopping centre — you can bargain.
 | Could you make it a bit cheaper? | Bác bớt cho cháu một chút được không? |
 | I'll take two if you give me a **discount**. | Cháu lấy hai cái nếu bác giảm giá. |
 | It's a **bargain**! | Thật là món hời! |
+
+#### Making complaints
+
+Something you bought is wrong — the wrong size, the wrong colour, out of date,
+broken. In English you say what the problem **is**, and you stay polite while
+you say it.
+
+| Making a complaint | Nghĩa |
+| --- | --- |
+| I'm calling to **make a complaint about** the backpack I ordered last week. | Tôi gọi để khiếu nại về chiếc ba lô tôi đặt tuần trước. |
+| I'd like to **make a complaint about** the delivery, please. | Tôi muốn phàn nàn về việc giao hàng ạ. |
+| **I'm not happy with** the colour. It's much darker in your advertisement. | Tôi không hài lòng về màu. Trong quảng cáo màu đậm hơn nhiều. |
+| **There's a problem with** this jar of jam — it's two weeks past its date. | Lọ mứt này có vấn đề — nó quá hạn hai tuần rồi ạ. |
+| **It doesn't** match the picture on your website. | Nó không giống ảnh trên trang web của bạn. |
+| **Could you** replace it **or** give me a refund? | Bạn đổi cái khác hoặc hoàn tiền giúp tôi được không? |
+
+| Answering a complaint | Nghĩa |
+| --- | --- |
+| Well … let me check it. | Vâng… để tôi kiểm tra ạ. |
+| **I'm sorry about that.** I'll send you another one. | Tôi rất xin lỗi. Tôi sẽ gửi bạn cái khác. |
+| **I'm sorry to hear that.** Do you have the receipt? | Rất tiếc khi nghe điều đó. Bạn có hoá đơn không ạ? |
+| We'll give you a full refund today. | Hôm nay chúng tôi sẽ hoàn lại toàn bộ tiền cho bạn. |
+
+> **Ghi chú:** Danh từ **complaint** đi với động từ **make** và giới từ
+> **about**: *make a complaint **about** something*. ❌ *make a complaint for
+> the shoes.* ✅ *make a complaint **about** the shoes.* Động từ tương ứng là
+> **complain about**: *She complained about the price.*
+
+> **Mẹo:** Lời phàn nàn trong tiếng Anh **mô tả vấn đề**, không đổ lỗi cho
+> người đang nghe. Nói *"There's a problem with this order"* thay vì
+> *"You sent me the wrong thing"*. Người bán hàng thường không phải người gây
+> ra lỗi, và câu nói lịch sự thì được giúp nhanh hơn.
 
 ### 4.1 Complete the mini-dialogues
 
@@ -430,6 +521,80 @@ the tables above, and one adverb of frequency.
 **Vendor:** _______________________________
 **You:** _______________________________
 **Vendor:** _______________________________
+
+### 4.3 Make the complaint
+
+::: task skill="course" type="gap-fill" ask="Complete each line with **one** word. The phrases are all in the *Making complaints* table above."
+- I'm calling to make a ___ about the shoes I ordered on Monday. = complaint
+- I'd like to make a complaint ___ the delivery, please. = about
+- I'm not ___ with the colour — it looked dark brown online. = happy
+- There's a ___ with this box of biscuits: it went out of date last week. = problem
+- **A:** It doesn't match the picture. **B:** I'm ___ about that. I'll send you another one. = sorry
+- **A:** The tin was already open. **B:** I'm sorry to ___ that. Do you have the receipt? = hear
+- Could you ___ it or give me a refund? = replace
+:::
+
+### 4.4 Your turn to complain
+
+Write **two** lines for each situation: what you say, and what the shop says
+back. Say what the problem is, and stay polite — describe the goods, not the
+person you are speaking to.
+
+1. You ordered a T-shirt online. It arrived two sizes smaller than the one in
+   the advertisement.
+   → **You:** _______________________________
+   → **Shop:** _______________________________
+2. The milk you bought this morning is five days past its date.
+   → **You:** _______________________________
+   → **Shop:** _______________________________
+3. An assistant in the shop was not helpful when you asked for a larger size.
+   → **You:** _______________________________
+   → **Shop:** _______________________________
+
+### My favourite shopping place
+
+Three people, three very different places — and each of them has one clear
+reason.
+
+> **Trang, 14.** "My favourite place is the open-air market at the end of our
+> lane. My mother and I go every Sunday morning. The vegetables are home-grown
+> and the sellers bring them in before six, so nothing is more than a day old.
+> And you can bargain there. Nothing has a price tag, so the price you pay
+> depends on how well you ask."
+>
+> **Bảo, 13.** "I like the discount shop behind the school best. Everything
+> costs less than it does in the supermarket — notebooks, pens, sports socks,
+> all of it. I get my pocket money on the first of the month, and it goes twice
+> as far there. My sister says the bags fall apart, but mine hasn't yet."
+>
+> **Khanh, 14.** "For me it's the convenience store on our corner. It's open
+> 24/7, it's ninety seconds from my front door, and I can be back before the
+> rice boils over. It's not cheap and the range of products is small, but when
+> my mother has forgotten the fish sauce again, it saves me half an hour."
+
+### 4.5 Who said it?
+
+::: task skill="course" type="choice" opts="Trang|Bảo|Khanh" ask="Which of the three people does each sentence describe?"
+- This person shops where the goods have no price tag. = Trang ~ that is why bargaining is possible
+- This person's reason is that the place saves time. = Khanh ~ ninety seconds from the door
+- This person's reason is the price of everything in the shop. = Bảo
+- This person's reason is that the food is fresh. = Trang
+- This person admits the range of products is small. = Khanh
+- This person shops there once a week. = Trang ~ *"every Sunday morning"*
+- This person names something bad about the place and buys there anyway. = Bảo ~ *"my sister says the bags fall apart"*
+:::
+
+### 4.6 And your favourite?
+
+Answer in full sentences.
+
+1. What is your own favourite shopping place? Name it, and say what kind of
+   place it is.
+   → _______________________________
+2. Give **one** clear reason why you like it — not three.
+   → _______________________________
+3. Name one thing you do **not** like about it.
+   → _______________________________
 
 ---
 
@@ -778,6 +943,30 @@ positions.
 > **Stretch:** Ask the same eight people again in six months. Has online
 > shopping gone up or down? Write three sentences comparing the two surveys.
 
+### Now I can …
+
+Eight things this unit set out to teach. Beside each one is the place your own
+answer to it is already sitting — open that exercise again and look at what you
+actually put, which tells you far more than a feeling does. Where nothing on the
+page can settle it, the row says so, and that one is yours to judge.
+
+| Now I can … | Where my answer already is |
+| --- | --- |
+| use the words for shopping | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercise 7.1 |
+| hear /sp/ and /st/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
+| put an adverb of frequency in the right place, and use the present simple for a fixed future | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
+| make a complaint | Lesson 4, exercise 4.3 |
+| read about why people go to shopping centres | Lesson 5, exercises 5.1 and 5.2 |
+| talk about a place where I shop | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
+| listen to a talk about shopping online | Lesson 6, exercises 6.1 and 6.2 |
+| write a paragraph about the good and the bad side of one kind of shopping | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+
+> **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
+> Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
+> xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
+> trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
+> đánh giá.
+
 ---
 
 ## Answer Key
@@ -795,7 +984,7 @@ market is much cheaper.)*
 
 ### Lesson 2
 
-**2.5** Answers will vary — this is a speaking task. Check: no vowel sound
+**2.7** Answers will vary — this is a speaking task. Check: no vowel sound
 between /s/ and /p/ or between /s/ and /t/ (*not* "sờ-pend"), and no aspiration
 puff on the /p/ or /t/.
 
@@ -839,6 +1028,17 @@ the front in item 3; the frequency expression at the **end** in item 5.
 the tables, one adverb of frequency in the correct position, and a clear
 attempt to bargain the price down from 150,000 to 100,000.
 
+**4.4** Answers will vary. Check: each complaint names the problem (*smaller
+than the one in the advertisement*, *five days past its date*, *nobody helped
+me find a larger size*); *complaint* is followed by **about**, never *for*;
+nothing blames the person you are speaking to; and each shop line offers
+something — a check, a replacement, a refund, or an apology.
+
+**4.6** Answers will vary. Check: item 1 names the place *and* says what kind
+of place it is (market, supermarket, convenience store, online shop…); item 2
+gives **one** reason with a detail, not a list of three; item 3 is a real
+drawback, not a second reason to like it.
+
 ### Lesson 5
 
 ### Lesson 6
@@ -854,3 +1054,21 @@ attempt to bargain the price down from 150,000 to 100,000.
 6. will rain
 7. leaves
 
+
+> ### ▶︎ [**Practise these 33 words**](../app/unit-08-vocab.html)
+>
+> Press 🔊 on any row above to hear the word. When you have finished this
+> lesson, the unit page opens a **practice** session over all thirty-three —
+> the meaning, the word, what you hear, and, more often than any of those,
+> **the word inside a phrase it actually lives in**. Wrong answers come
+> straight back, and everything returns a week later, because what you can
+> still recall after a gap is the only recall worth counting. The **unit
+> test** opens once all seven lessons are done.
+>
+> **Luyện 33 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **practice** ở trang bài sẽ mở ra để luyện cả 33 từ — trong đó phần lớn là
+> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
+> ngay, và mọi từ quay lại sau một tuần.
+>
+> Do the written exercises below as well — writing by hand and typing on a
+> screen build different halves of the same knowledge.

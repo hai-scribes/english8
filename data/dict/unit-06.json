@@ -269,5 +269,345 @@
         "colloc": ["mental well-being", "improve well-being", "health and well-being"] }
     ],
     "note": "Usually hyphenated in British English (*well-being*); Americans often write *wellbeing* or *well being*. Uncountable."
+  },
+
+  "maintain": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to make something continue in the same way as before, so that it does not weaken or disappear",
+        "vi": "duy trì, gìn giữ",
+        "examples": ["The villagers work hard to **maintain** their traditional lifestyle.",
+                     "Only a few families still **maintain** the old weaving skills.",
+                     "It is not easy to **maintain** a friendship across two countries."],
+        "colloc": ["maintain a traditional lifestyle", "maintain a tradition", "maintain contact"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to keep a machine, road or building in good condition by repairing and checking it",
+        "vi": "bảo trì, bảo dưỡng",
+        "examples": ["Someone has to **maintain** the village bridge every spring.",
+                     "The bikes are cheap to **maintain**."],
+        "colloc": ["maintain a road", "well maintained"] }
+    ],
+    "forms": [
+      { "w": "maintenance", "pos": "noun", "en": "the work of keeping something in good condition", "vi": "sự bảo trì", "ex": "The school pays for the **maintenance** of the sports field." }
+    ],
+    "note": "Careful with the stress and the spelling: the verb is main-**TAIN**, but the noun is **MAIN**-te-nance — and it has an *e*, not *ai*, in the middle."
+  },
+
+  "revive": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to bring back something from the past that had almost disappeared",
+        "vi": "làm sống lại, phục hồi",
+        "examples": ["A group of students is trying to **revive** the old folk songs.",
+                     "The festival was **revived** after forty years.",
+                     "Museums cannot **revive** a language; only speakers can."],
+        "colloc": ["revive a tradition", "revive a custom", "revive interest in something"] },
+      { "pos": "verb", "grammar": "transitive / intransitive",
+        "en": "to become strong, healthy or conscious again, or to make someone do so",
+        "vi": "hồi tỉnh, tươi lại",
+        "examples": ["The flowers **revived** as soon as we watered them.",
+                     "Cold water on the face soon **revived** him."],
+        "colloc": ["revive quickly"] }
+    ],
+    "note": "**Revive** always points at something that was already there and faded. You *revive* an old dance; you *start* a new one."
+  },
+
+  "tribal": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "belonging to a group of families who share a language, a place and the same customs",
+        "vi": "thuộc bộ tộc, thuộc bộ lạc",
+        "examples": ["We watched a **tribal** dance at the village festival.",
+                     "Each group has its own **tribal** patterns and colours.",
+                     "**Tribal** drumming can be heard across the valley at night."],
+        "colloc": ["a tribal dance", "a tribal group", "tribal customs"] }
+    ],
+    "forms": [
+      { "w": "tribe", "pos": "noun", "en": "a group of people of the same origin living together under a leader", "vi": "bộ tộc, bộ lạc", "ex": "Several **tribes** share the same river valley." }
+    ],
+    "note": "Adjective only — you say *a **tribal** dance*, never *a tribe dance*."
+  },
+
+  "nomadic": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "moving from place to place instead of living in one fixed home, usually with animals",
+        "vi": "du mục, nay đây mai đó",
+        "examples": ["Some families in Mongolia still lead a **nomadic** life.",
+                     "**Nomadic** herders follow the grass from valley to valley.",
+                     "Their **nomadic** lifestyle changes with the seasons."],
+        "colloc": ["a nomadic life", "a nomadic lifestyle", "nomadic people"] }
+    ],
+    "forms": [
+      { "w": "nomad", "pos": "noun", "en": "a member of a group that moves from place to place", "vi": "người du mục", "ex": "The **nomads** pack their tents in a single morning." }
+    ],
+    "note": "Stress the middle syllable: no-**MAD**-ic. The noun **nomad** stresses the first: **NO**-mad."
+  },
+
+  "native art": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "painting, carving and decorated craft made by the first people of a place, in their own style",
+        "vi": "nghệ thuật bản địa",
+        "examples": ["The museum has a fine collection of **native art**.",
+                     "You can buy **native art** in the village gallery.",
+                     "Much of the **native art** here is carved from bone or wood."],
+        "colloc": ["a collection of native art", "traditional native art"] }
+    ],
+    "note": "**Native** here means *of the first people of a place*. In *my native language* it means something else — the language you grew up speaking."
+  },
+
+  "weaving": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the craft of making cloth by passing threads over and under each other",
+        "vi": "nghề dệt, việc dệt vải",
+        "examples": ["**Weaving** is taught to the girls of the village by their grandmothers.",
+                     "The **weaving** on this scarf took three weeks.",
+                     "She sells her **weaving** at the Sunday market."],
+        "colloc": ["traditional weaving", "learn weaving", "weaving patterns"] }
+    ],
+    "forms": [
+      { "w": "weave", "pos": "verb", "en": "to make cloth by crossing threads over and under each other", "vi": "dệt", "ex": "They **weave** these threads into beautiful clothes." },
+      { "w": "weaver", "pos": "noun", "en": "a person who weaves cloth", "vi": "thợ dệt", "ex": "The **weaver** works at a wooden loom." }
+    ],
+    "note": "Irregular verb: weave → wove → woven."
+  },
+
+  "dogsled": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a vehicle with no wheels that a team of dogs pulls across snow and ice",
+        "vi": "xe trượt tuyết do chó kéo",
+        "examples": ["The **dogsled** is still used as a means of transport in Alaska today.",
+                     "Eight dogs pull the **dogsled** across the frozen river.",
+                     "We loaded the **dogsled** with food for six days."],
+        "colloc": ["drive a dogsled", "a dogsled race", "travel by dogsled"] }
+    ],
+    "note": "Written as one word in American English, and often as **dog sled** in British English. The sport itself is called *dog sledding* or *mushing*."
+  },
+
+  "musher": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a person who drives a team of dogs pulling a sled",
+        "vi": "người điều khiển xe chó kéo",
+        "examples": ["**Mushers** from all over the world come to the race each March.",
+                     "A good **musher** knows every dog in the team by name.",
+                     "The **musher** stands at the back and calls to the dogs."],
+        "colloc": ["an experienced musher", "a champion musher"] }
+    ],
+    "forms": [
+      { "w": "mush", "pos": "verb", "en": "to travel over snow on a sled pulled by dogs", "vi": "đi xe chó kéo", "ex": "They **mushed** for eleven hours without stopping." }
+    ],
+    "note": "Nothing to do with *mushy* food. The word comes from the shout drivers once used to start the dogs."
+  },
+
+  "igloo": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a round shelter built from blocks of hard snow",
+        "vi": "lều tuyết",
+        "examples": ["Will they stay in an **igloo** when they visit Alaska?",
+                     "An **igloo** stays surprisingly warm inside.",
+                     "Hunters could build an **igloo** in about an hour."],
+        "colloc": ["build an igloo", "stay in an igloo"] }
+    ],
+    "note": "Plural **igloos**. It is a shelter for a night or two on a journey, not the year-round home that films often suggest."
+  },
+
+  "common practice": {
+    "senses": [
+      { "pos": "noun", "grammar": "usually uncountable",
+        "en": "something that most people in a place do, so that nobody finds it unusual",
+        "vi": "việc thường làm, thông lệ",
+        "examples": ["Buying breakfast on the street is **common practice** in this city.",
+                     "Taking off your shoes indoors is **common practice** here.",
+                     "It has become **common practice** to send an invitation by phone."],
+        "colloc": ["become common practice", "it is common practice to do something"] }
+    ],
+    "note": "Usually with no article: *It is **common practice** here.* With *a* it means one particular custom: *a **common practice** among students*. **Practice** is the noun; **practise** is the verb in British English."
+  },
+
+  "in the habit of": {
+    "senses": [
+      { "pos": "phrase", "grammar": "be + in the habit of + V-ing",
+        "en": "used to say that someone regularly does something, because they have done it many times before",
+        "vi": "có thói quen làm gì",
+        "examples": ["My mum is **in the habit of** keeping the kitchen bright and clean.",
+                     "Many adults here are **in the habit of** having breakfast outside their homes.",
+                     "I am not **in the habit of** checking my phone at the table."],
+        "colloc": ["be in the habit of doing something", "get in the habit of doing something"] }
+    ],
+    "forms": [
+      { "w": "habit", "pos": "noun", "en": "something you do often and almost without thinking", "vi": "thói quen", "ex": "Reading before bed is a good **habit**." }
+    ],
+    "note": "Always **V-ing** after *of*: ✅ *in the habit of **getting** up early*, ❌ *in the habit of get up early*."
+  },
+
+  "street food": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "ready-to-eat food or drink sold from a stall or cart in a street or other public place",
+        "vi": "thức ăn đường phố",
+        "examples": ["People here buy and sell a lot of **street food**.",
+                     "**Street food** is cheap, quick and often better than a restaurant meal.",
+                     "The best **street food** in our town is sold before seven in the morning."],
+        "colloc": ["sell street food", "a street food stall", "street food vendors"] }
+    ],
+    "note": "Uncountable: *some **street food***, never *a street food*. For one item, say *a street food dish* or name it."
+  },
+
+  "staple": {
+    "senses": [
+      { "pos": "adjective", "grammar": "before a noun",
+        "en": "forming the main and regular part of what people eat or use",
+        "vi": "chủ yếu, chính",
+        "examples": ["Rice is the **staple** food in most of Viet Nam.",
+                     "Maize is a **staple** crop in parts of Africa.",
+                     "Bread and potatoes were the **staple** diet here for centuries."],
+        "colloc": ["staple food", "a staple crop", "the staple diet"] },
+      { "pos": "noun", "grammar": "countable",
+        "en": "a food that people eat very often and depend on",
+        "vi": "lương thực chính",
+        "examples": ["Rice and fish are the two **staples** of the region.",
+                     "Noodles are a **staple** in her kitchen."],
+        "colloc": ["a staple of the diet"] }
+    ],
+    "note": "A different word from the small piece of metal that holds paper together, which is spelled the same way."
+  },
+
+  "greet": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to say hello to someone, or to welcome them, in words or with a movement",
+        "vi": "chào, chào hỏi",
+        "examples": ["Handshaking, bowing and hugging are ways people **greet** one another.",
+                     "In Japan people **greet** each other by bowing.",
+                     "She **greeted** us at the door with a wide smile."],
+        "colloc": ["greet someone warmly", "greet a guest", "greet one another"] }
+    ],
+    "forms": [
+      { "w": "greeting", "pos": "noun", "en": "the words or action you use when you meet someone", "vi": "lời chào", "ex": "A handshake is the commonest **greeting** in the world." }
+    ],
+    "note": "Transitive — it needs an object: ✅ *She **greeted** me.* ❌ *She greeted.*"
+  },
+
+  "greeting": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "the words or the action you use when you meet someone",
+        "vi": "lời chào, cách chào",
+        "examples": ["Shaking hands is probably the commonest **greeting** in the world.",
+                     "Pressing noses together is the traditional Maori **greeting**.",
+                     "A bow is a **greeting** that needs no words at all."],
+        "colloc": ["a traditional greeting", "a warm greeting", "exchange greetings"] },
+      { "pos": "noun", "grammar": "plural",
+        "en": "friendly words sent to someone in a message or on a card",
+        "vi": "lời chúc",
+        "examples": ["Send my **greetings** to your grandmother.",
+                     "The card carried **greetings** from the whole class."],
+        "colloc": ["send greetings", "season's greetings"] }
+    ]
+  },
+
+  "interact": {
+    "senses": [
+      { "pos": "verb", "grammar": "intransitive, + with",
+        "en": "to talk to other people and work or spend time together with them",
+        "vi": "tương tác, giao tiếp qua lại",
+        "examples": ["Mai wants to go to class because she likes to **interact with** her teachers and friends.",
+                     "Online, students **interact** far less than they think.",
+                     "Small children learn to **interact** by playing together."],
+        "colloc": ["interact with someone", "interact face to face"] }
+    ],
+    "forms": [
+      { "w": "interaction", "pos": "noun", "en": "the act of talking to and working with other people", "vi": "sự tương tác", "ex": "A screen gives you no real **interaction**." },
+      { "w": "interactive", "pos": "adjective", "en": "allowing information to pass both ways between a person and a machine", "vi": "có tính tương tác", "ex": "The lesson uses an **interactive** map." }
+    ],
+    "note": "Goes with **with**, not *to*: ✅ *interact **with** my classmates*."
+  },
+
+  "impact": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable, usually singular, + on",
+        "en": "the effect that one thing has on another, especially a strong one",
+        "vi": "tác động, sự ảnh hưởng",
+        "examples": ["The talk was about the **impact** of modern technology on our lifestyles.",
+                     "Screen time has a real **impact** on sleep.",
+                     "The new road had a huge **impact** on the village."],
+        "colloc": ["the impact of something on something", "have an impact on", "a huge impact"] },
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the force of one object hitting another",
+        "vi": "sự va chạm",
+        "examples": ["The glass broke on **impact** with the floor.",
+                     "The **impact** bent the front wheel."],
+        "colloc": ["on impact"] }
+    ],
+    "note": "The noun stresses the first syllable (**IM**-pact); the verb stresses the second (im-**PACT**). Use **on**, not *to*: *an impact **on** learning*."
+  },
+
+  "offline": {
+    "senses": [
+      { "pos": "adjective, adverb",
+        "en": "not connected to the internet; done in person rather than through a screen",
+        "vi": "ngoại tuyến, không qua mạng, trực tiếp",
+        "examples": ["We had two **offline** lessons a week and three online ones.",
+                     "My phone was **offline** all weekend and I did not miss it.",
+                     "Some friendships only really work **offline**."],
+        "colloc": ["go offline", "an offline lesson", "stay offline"] }
+    ],
+    "note": "Opposite: **online**. In Vietnamese classrooms *học offline* means the face-to-face lesson, and English uses the word the same way here."
+  },
+
+  "experience": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to do or feel something yourself, rather than hear about it",
+        "vi": "trải nghiệm, nếm trải",
+        "examples": ["Visitors can **experience** some of the local culture in the villages.",
+                     "I **experienced** real cold for the first time that winter.",
+                     "You cannot **experience** a festival through a screen."],
+        "colloc": ["experience a culture", "experience life in another country"] },
+      { "pos": "noun", "grammar": "countable",
+        "en": "something that happens to you and that you remember",
+        "vi": "trải nghiệm, kỷ niệm",
+        "examples": ["Riding a dogsled was an **experience** I will never forget.",
+                     "The trip was a wonderful **experience** for the whole class."],
+        "colloc": ["an unforgettable experience", "a good experience"] },
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the knowledge and skill you get from doing something over a long time",
+        "vi": "kinh nghiệm",
+        "examples": ["She has years of **experience** as a weaver.",
+                     "He got the job because of his **experience**, not his marks."],
+        "colloc": ["work experience", "years of experience", "gain experience"] }
+    ],
+    "forms": [
+      { "w": "experienced", "pos": "adjective", "en": "having a lot of skill from doing something for a long time", "vi": "có kinh nghiệm", "ex": "An **experienced** musher reads the ice easily." }
+    ],
+    "note": "Countable when it means one event (*a strange **experience***); uncountable when it means skill (*five years' **experience***, never *five experiences*)."
+  },
+
+  "independent": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "able to do things and make decisions without help from other people",
+        "vi": "độc lập, tự chủ",
+        "examples": ["Online learning makes some students far more **independent**.",
+                     "She has been **independent** since she was fifteen.",
+                     "My little brother wants to be **independent** and walk to school alone."],
+        "colloc": ["become independent", "an independent learner", "independent of your parents"] },
+      { "pos": "adjective",
+        "en": "not controlled or paid for by another country, organisation or person",
+        "vi": "độc lập (về chính trị, tổ chức)",
+        "examples": ["The country became **independent** in 1945.",
+                     "It is a small **independent** bookshop, not part of a chain."],
+        "colloc": ["an independent country", "an independent school"] }
+    ],
+    "forms": [
+      { "w": "independence", "pos": "noun", "en": "the state of being free from the control of others", "vi": "sự độc lập", "ex": "Living away from home gave her real **independence**." },
+      { "w": "independently", "pos": "adverb", "en": "without help or control from others", "vi": "một cách độc lập", "ex": "The class worked **independently** for twenty minutes." }
+    ],
+    "note": "Spelled with **-ent**, not *-ant*, and the opposite is **dependent** — which is spelled *-ent* too."
   }
 }

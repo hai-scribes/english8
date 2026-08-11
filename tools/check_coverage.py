@@ -149,11 +149,14 @@ GRAMMAR_PROBES = {
     "prepositions of time": ["preposition"],
 }
 
+# A suffix-stress target is only covered if the *suffix itself* is taught, so
+# these probes need the hyphenated form. Bare "dangerous" or "Vietnamese" turns
+# up in any unit on the topic and would pass a target that is not taught at all.
 PRON_PROBES = {
-    "-al and -ous": ["-al", "-ous", "dangerous", "poisonous"],
-    "-ese and -ee": ["-ese", "-ee", "vietnamese"],
-    "sentence stress": ["sentence stress", "content word"],
-    "intonation for making lists": ["intonation", "list"],
+    "-al and -ous": [("-al", "-ous")],
+    "-ese and -ee": [("-ese", "-ee")],
+    "sentence stress": [("sentence stress",), ("content word",)],
+    "intonation for making lists": [("intonation",)],
 }
 
 
@@ -168,10 +171,11 @@ def grammar_covered(hay, target):
 
 
 def pron_covered(hay, target):
+    """Each probe is a tuple whose members must ALL appear; any tuple satisfies."""
     t = target.lower()
     for key, probes in PRON_PROBES.items():
         if key in t:
-            return any(p in hay for p in probes)
+            return any(all(part in hay for part in combo) for combo in probes)
     # A phoneme pair like "/ʊ/ and /uː/" — both symbols must be taught.
     symbols = re.findall(r"/[^/]+/", target)
     return all(s in hay for s in symbols) if symbols else True

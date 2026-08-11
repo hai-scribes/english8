@@ -689,6 +689,124 @@ def check_not_printed(where: str, script: str, text: str, problems: list):
             return
 
 
+# ------------------------------------------------------------------ reviews --
+# The four cumulative sections are new ground for this gate: everything above
+# assumes a unit, and a Review is not one. What it *is* is three units asked at
+# once, so every Group C rule applies to it unchanged — the tasks are the same
+# construct, the clock is the same clock, the passage is the same screen — and
+# the only new rules are the ones a cumulative section can break that a unit
+# cannot.
+#
+# There are three of those. A Review may only draw on the three units it
+# follows: a question about Unit 7 inside Review 1 is unanswerable, because the
+# learner has not met it, and no existing check could see it. A Review must
+# actually carry the writing task the book gives it, at the length the book
+# gives it. And a Review the generator cannot place — a stray `review-9.md`, a
+# heading claiming the wrong units — has to be a failure rather than a file
+# nobody reads; `build.load_reviews` raises there, and this reports it instead
+# of dying, so one bad Review does not hide the rest of the run.
+RE_UNIT_REF = re.compile(r"\bUnits?\s+(\d+(?:\s*(?:[–—-]|,|\band\b|\s)\s*\d+)*)", re.I)
+
+
+def units_named(text: str) -> set:
+    """Every unit number a Review's prose points the learner at."""
+    out: set = set()
+    for m in RE_UNIT_REF.finditer(text):
+        s = m.group(1)
+        nums = [int(x) for x in re.findall(r"\d+", s)]
+        if re.search(r"[–—-]", s) and len(nums) == 2:
+            out |= set(range(min(nums), max(nums) + 1))
+        else:
+            out |= set(nums)
+    return out
+
+
+def check_reviews(units, problems: list) -> list:
+    try:
+        reviews = b.load_reviews(units)
+    except SystemExit as exc:
+        problems.append(f"units/: {exc}")
+        return []
+
+    for r in reviews:
+        tag = f"review {r['num']}"
+        text = r["text"]
+        check_directives(tag, text, problems)
+
+        # A Review is a cumulative section, and "cumulative" has an edge: only
+        # the three units behind it. Naming a fourth is either a mis-filed
+        # exercise or material the learner has not been taught yet.
+        stray = sorted(n for n in units_named(text) if n not in r["covers"])
+        if stray:
+            problems.append(
+                f"{tag}: names Unit {', '.join(str(n) for n in stray)}, which is outside "
+                f"Units {r['covers'][0]}–{r['covers'][-1]}. A Review only asks about the "
+                f"three units it follows")
+
+        for part, blk, t in r["tasks"]:
+            check_task(f"{tag} part {part} ex {blk['id'] or blk['title']}", t, problems)
+        for part, a, body in r["writes"]:
+            where = f"{tag} part {part} (write)"
+            check_write(where, a, body, problems)
+            # The book's Review writing task is a paragraph of 80-100 words
+            # every time, and the point of matching it is that the learner
+            # meets the same target three units running.
+            if a.get("words", "").strip() not in ("80-100",):
+                problems.append(f"{where}: a Review's writing task is a paragraph of "
+                                f"80–100 words, not {a.get('words')!r}")
+        if not r["writes"]:
+            problems.append(f"{tag}: no :::write — every Review in the book ends on a "
+                            f"paragraph that recombines its three units (E8, C9)")
+        for part, a in r["clocks"]:
+            check_clock(f"{tag} part {part} (clock)", a, problems)
+        for part, a, body in r["passages"]:
+            check_passage(f"{tag} part {part} (passage)", a, body, problems)
+        check_reading_screen(tag, r, problems)
+
+        # C7, per part rather than per lesson: a part is what a Review has
+        # instead of a lesson, and the clock covers everything below it.
+        read_at = {part for part, _, t in r["tasks"] if t.get("skill") == "reading"}
+        clock_at = [part for part, _ in r["clocks"]]
+        for part in sorted(read_at):
+            n = clock_at.count(part)
+            if n != 1:
+                problems.append(f"{tag} part {part}: {n} reading clock(s) for a part with "
+                                f"reading tasks — C7 wants exactly one (`04` §1.1)")
+        for part in clock_at:
+            if part not in read_at:
+                problems.append(f"{tag} part {part}: a reading clock with no reading task "
+                                f"to time")
+
+        # A Review page carries the Language exercises above the reading block,
+        # and the single-play player closes over every task on the page when
+        # its review window ends. A recording here would silence exercises the
+        # learner has not reached. If that is ever fixed, delete this.
+        if r["audio"]:
+            problems.append(f"{tag}: a :::audio on a Review page — when the review window "
+                            f"closes the player stops input on every task on the page, "
+                            f"including the Language half above it (C6)")
+
+        # The keys are the tasks', in a Review as in a unit.
+        if re.search(r"^##\s+Answer Key\s*$", text, re.M):
+            problems.append(f"{tag}: a hand-written Answer Key — a Review's exercises are "
+                            f"all :::task, and the generator writes their keys")
+
+        for rx, why in (BAND_PROMISE + GENRE_OVERCLAIM + TEMPLATE_LANGUAGE
+                        + VN_PROHIBITED + TYPE_CONFUSION + SPEAKING_SCORING):
+            for m in rx.finditer(text):
+                if (rx, why) in SPEAKING_SCORING and negated(text, m.start()):
+                    continue
+                line = text[:m.start()].count("\n") + 1
+                problems.append(f"{tag}:{line}: {why}\n      → {m.group(0).strip()[:70]!r}")
+
+        for i, bm in enumerate(RE_BRIDGE.finditer(text), 1):
+            line = text[:bm.start()].count("\n") + 1
+            check_bridge(f"{tag}:{line} (bridge {i})", b.bridge_attrs(bm),
+                         bm.group("body"), problems)
+
+    return reviews
+
+
 def check_threads(units, problems: list):
     """A strand that says it comes back has to come back.
 
@@ -945,6 +1063,7 @@ def main() -> int:
                                 f"→ {m.group(0).strip()[:70]!r}")
 
     check_threads(units, problems)
+    reviews = check_reviews(units, problems)
 
     if problems:
         print(f"FAIL: {len(problems)} problem(s)")
@@ -974,6 +1093,11 @@ def main() -> int:
     print(f"      {len(tasks)} marked tasks ({items} items), {ielts} of them official IELTS "
           f"question types · {audio} single-play recording(s) · {len(strands)} strand(s), "
           f"each recurring where it says it does.")
+    if reviews:
+        rt = [t for r in reviews for _, _, t in r["tasks"]]
+        print(f"      {len(reviews)} cumulative review(s), {len(rt)} marked tasks "
+              f"({sum(len(t['items']) for t in rt)} items) · none of them reaches outside "
+              f"the three units it follows.")
     return 0
 
 

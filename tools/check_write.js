@@ -55,6 +55,16 @@ function detag(html){
 let checked = 0, problems = [];
 const pages = [];
 for (const d of fs.readdirSync(DOCS)){
+  /* A Review's writing task is one page deep rather than two, and it is held
+     to exactly the same rule: the model printed above it has to satisfy the
+     checklist printed below it. A cumulative section is the last place a model
+     may be aspirational, because it is the third time the learner has met the
+     same target. */
+  if (/^review-\d$/.test(d)){
+    const f = path.join(DOCS, d, "index.html");
+    if (fs.existsSync(f)) pages.push(f);
+    continue;
+  }
   if (!/^unit-\d\d$/.test(d)) continue;
   for (const l of fs.readdirSync(path.join(DOCS, d))){
     const f = path.join(DOCS, d, l, "index.html");

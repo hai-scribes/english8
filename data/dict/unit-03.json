@@ -273,5 +273,352 @@
         "colloc": ["hang out with friends", "hang out after school"] }
     ],
     "note": "Informal. Use *with* for people and *at / in* for places. Irregular: hang → hung → hung."
+  },
+
+  "forum": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a place on the internet where a group of people leave messages for each other about a shared subject",
+        "vi": "diễn đàn (trên mạng)",
+        "examples": ["Our class has its own **forum** for homework questions.",
+                     "She asked about the arts and crafts club on the school **forum**.",
+                     "I read the **forum** every evening, but I rarely post anything."],
+        "colloc": ["a class forum", "post on a forum", "an online forum"] }
+    ],
+    "note": "Plural *forums*. Messages go **on** a forum, not *in* one. In this unit it means an online message board, not a hall or a meeting."
+  },
+
+  "language club": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a school club whose members meet to practise a foreign language together",
+        "vi": "câu lạc bộ ngoại ngữ",
+        "examples": ["The **language club** meets in Room 8 every Friday.",
+                     "I joined the **language club** because I never speak English outside lessons.",
+                     "Members of the **language club** share their own stories in English."],
+        "colloc": ["join the language club", "the language club meets"] }
+    ],
+    "note": "Club names are built the same way: *chess club*, *sports club*, *music club*. The first noun says what happens there and stays **singular** — *a **book** club*, never *a books club*."
+  },
+
+  "arts and crafts": {
+    "senses": [
+      { "pos": "noun", "grammar": "plural, no singular",
+        "en": "making things by hand — drawing, painting, paper folding, simple woodwork and so on",
+        "vi": "mĩ thuật và thủ công",
+        "examples": ["The **arts and crafts** club makes greeting cards for the school fair.",
+                     "She spends Saturday mornings on **arts and crafts**.",
+                     "Our **arts and crafts** teacher showed us how to fold a paper bird."],
+        "colloc": ["an arts and crafts club", "do arts and crafts"] }
+    ],
+    "note": "A fixed phrase: both nouns stay plural and *and* never drops out. Before another noun it behaves as one adjective — *an **arts and crafts** lesson*."
+  },
+
+  "sports club": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a club whose members meet to play or train at a sport together",
+        "vi": "câu lạc bộ thể thao",
+        "examples": ["Our **sports club** trains twice a week after school.",
+                     "The coach of the **sports club** used to play for the city team.",
+                     "He joined a **sports club** to keep fit and to meet people."],
+        "colloc": ["join a sports club", "the coach of the sports club"] }
+    ],
+    "note": "*Sport* keeps its **-s** inside this compound: *a **sports** club*, *a **sports** teacher*. On its own, British English says *I play **sport*** with no -s."
+  },
+
+  "participate (in)": {
+    "senses": [
+      { "pos": "verb", "grammar": "+ in",
+        "en": "to take part in an activity together with other people",
+        "vi": "tham gia (vào)",
+        "examples": ["About forty students **participate in** the wellbeing club.",
+                     "She **participates in** every competition the school runs.",
+                     "I want to **participate in** two clubs this year, not four."],
+        "colloc": ["participate in a club", "participate in an activity", "participate fully"] }
+    ],
+    "forms": [
+      { "w": "participation", "pos": "noun", "en": "the act of taking part", "vi": "sự tham gia", "ex": "The teacher gives marks for **participation**, not only for tests." }
+    ],
+    "note": "Always **in** before the activity. ⚠️ Compare with *join*, which takes the club straight after it: *I **joined** the club* but *I **participate in** the club*."
+  },
+
+  "community service": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "unpaid work done to help the people who live in your area",
+        "vi": "hoạt động phục vụ cộng đồng",
+        "examples": ["The club does **community service** at the local library once a month.",
+                     "**Community service** takes a whole Saturday, and none of us mind.",
+                     "They repaired the benches in the park as **community service**."],
+        "colloc": ["do community service", "a community service project"] }
+    ],
+    "note": "Uncountable: *some **community service***, never *a community service*. For one piece of it, say *a **community service** project*."
+  },
+
+  "teamwork": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "working well together so that a group does better than its members would alone",
+        "vi": "sự làm việc nhóm, tinh thần đồng đội",
+        "examples": ["Cooking for thirty people takes real **teamwork**.",
+                     "The club improved my **teamwork** far more than my drawing.",
+                     "Good **teamwork** turned a slow job into a short one."],
+        "colloc": ["good teamwork", "teamwork skills"] }
+    ],
+    "note": "One word and **uncountable** — *good **teamwork***, never *a teamwork* or *teamworks*. The people are *a **team***; what they do together is *teamwork*."
+  },
+
+  "session": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "one period of time spent doing a particular activity",
+        "vi": "buổi (học, tập, sinh hoạt)",
+        "examples": ["Each club **session** lasts forty minutes.",
+                     "We held an extra practice **session** before the competition.",
+                     "I missed one **session** and fell behind everybody else."],
+        "colloc": ["a practice session", "a club session", "a session lasts"] }
+    ],
+    "note": "A *session* is **one** meeting. The whole series of them is a *course*, a *club* or a *term*."
+  },
+
+  "enjoyable": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "pleasant, so that you are glad you did it",
+        "vi": "thú vị, dễ chịu, đáng thích",
+        "examples": ["The first club meeting was surprisingly **enjoyable**.",
+                     "She makes even grammar **enjoyable**.",
+                     "It was an **enjoyable** afternoon, and nobody wanted to go home."],
+        "colloc": ["an enjoyable afternoon", "make something enjoyable"] }
+    ],
+    "forms": [
+      { "w": "enjoy", "pos": "verb", "en": "to get pleasure from something", "vi": "thích, tận hưởng", "ex": "I **enjoy** cooking at the weekend." }
+    ],
+    "note": "**Things** are enjoyable; **people** are pleased or happy. ❌ *I was enjoyable.* ✅ *I **enjoyed** it.* The /ɔɪ/ of *enjoy* stays in *enjoyable*."
+  },
+
+  "social media": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the websites and apps where people post messages, pictures and videos for other people to see",
+        "vi": "mạng xã hội",
+        "examples": ["Most of my classmates use **social media** every day.",
+                     "**Social media** is the fastest way to tell everyone about the club.",
+                     "He stayed off **social media** for a month during the midterm tests."],
+        "colloc": ["use social media", "on social media", "a social media account"] }
+    ],
+    "forms": [
+      { "w": "media", "pos": "noun", "en": "the ways news and messages reach large numbers of people", "vi": "(phương tiện) truyền thông", "ex": "The **media** reported the flood within an hour." }
+    ],
+    "note": "Treated as **uncountable** in everyday English: *social media **is** …*. Never *a social media* — say *a **social media** site* or *an app*. (*Media* began as the plural of *medium*, so formal writing sometimes keeps *the media **are** …*.)"
+  },
+
+  "upload": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to move a file from your own device onto the internet so that other people can see it",
+        "vi": "tải lên",
+        "examples": ["He **uploaded** the club photos the same evening.",
+                     "I can't **upload** the video — the file is too big.",
+                     "She **uploads** a new drawing every Sunday."],
+        "colloc": ["upload a picture", "upload a video", "upload a file"] }
+    ],
+    "forms": [
+      { "w": "download", "pos": "verb", "en": "to move a file from the internet onto your own device", "vi": "tải xuống", "ex": "I **downloaded** the club timetable to my phone." }
+    ],
+    "note": "*Up* = away from your device, out to the internet; *down* = the other way. ⚠️ What follows is the **file you send**: *upload **a picture***, never *upload **the website***."
+  },
+
+  "notification": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a short message from an app or a site telling you that something new has happened",
+        "vi": "thông báo (từ ứng dụng)",
+        "examples": ["My phone shows twenty **notifications** every morning.",
+                     "She checks her **notifications** between lessons.",
+                     "Turn your **notifications** off while you are revising."],
+        "colloc": ["check notifications", "turn off notifications", "get a notification"] }
+    ],
+    "forms": [
+      { "w": "notify", "pos": "verb", "en": "to tell someone officially about something", "vi": "thông báo cho", "ex": "The club will **notify** members by email." }
+    ],
+    "note": "The usual verb is **check**: *I **check** my notifications*. Countable, so it takes the plural **-s** — and in practice it is nearly always plural."
+  },
+
+  "log on (to)": {
+    "senses": [
+      { "pos": "phrasal verb", "grammar": "+ to",
+        "en": "to type your name and password so that you can start using a computer system or an account",
+        "vi": "đăng nhập (vào)",
+        "examples": ["I **log on to** my account every evening.",
+                     "She **logged on** and found nine new messages waiting.",
+                     "You have to **log on** before you can post on the forum."],
+        "colloc": ["log on to an account", "log on to a website"] }
+    ],
+    "forms": [
+      { "w": "log out / log off", "pos": "phrasal verb", "en": "to stop using an account and close it safely", "vi": "đăng xuất", "ex": "Always **log out** on a school computer." }
+    ],
+    "note": "Name the account or the site and you need **to**: *log on **to** your account*. With nothing after it, plain *log on*. ⚠️ Never *log on your account*."
+  },
+
+  "account": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "an arrangement that lets you use a website or an app, with your own name and password",
+        "vi": "tài khoản",
+        "examples": ["She opened an **account** on the photo app last week.",
+                     "Keep your **account** password to yourself.",
+                     "He has two **accounts** — one for his family and one for the club."],
+        "colloc": ["open an account", "log on to an account", "a social media account"] }
+    ],
+    "note": "You **open** or **create** an account; you do not *make* one. The money kind is *a **bank** account* — same word, different world."
+  },
+
+  "website": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a set of pages on the internet kept in one place by a person, a school or a company",
+        "vi": "trang mạng, trang web",
+        "examples": ["The school **website** lists every club and its meeting day.",
+                     "I browsed three **websites** before I found the right form.",
+                     "Their **website** is slow, but the information on it is good."],
+        "colloc": ["browse a website", "the school website", "on a website"] }
+    ],
+    "note": "One word. Things sit **on** a website: *the timetable is **on** the school website*. One page is a *web page*; the whole set is a *website*."
+  },
+
+  "user-friendly": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "easy to use, even the first time you try it",
+        "vi": "dễ dùng, thân thiện với người dùng",
+        "examples": ["The new club app is **user-friendly**, so nobody needed help.",
+                     "A **user-friendly** site does not make you read instructions first.",
+                     "She chose that one because it was the most **user-friendly** of the three."],
+        "colloc": ["a user-friendly app", "user-friendly design"] }
+    ],
+    "note": "Keep the hyphen. The pattern *noun + -friendly* means 'easy or kind for that thing': *child-friendly*, *eco-friendly*."
+  },
+
+  "connect (with)": {
+    "senses": [
+      { "pos": "verb", "grammar": "+ with",
+        "en": "to get in touch with people, or stay in touch with them, especially online",
+        "vi": "kết nối, liên lạc (với)",
+        "examples": ["I **connect with** my cousins in Hue almost every day.",
+                     "The forum lets us **connect with** students in the other classes.",
+                     "She **connected with** three friends from her old primary school."],
+        "colloc": ["connect with friends", "connect with people"] },
+      { "pos": "verb", "grammar": "+ to",
+        "en": "to join one thing to another",
+        "vi": "nối, kết nối",
+        "examples": ["This cable **connects** the camera to the computer.",
+                     "A short path **connects** the two school buildings."],
+        "colloc": ["connect A to B"] }
+    ],
+    "forms": [
+      { "w": "connection", "pos": "noun", "en": "a link between two people or two things", "vi": "sự kết nối, mối liên hệ", "ex": "The **connection** dropped in the middle of the call." }
+    ],
+    "note": "People take **with**, machines and places take **to**. ⚠️ *connect **with** friends*, not *connect friends*."
+  },
+
+  "midterm": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "happening in the middle of a school term",
+        "vi": "giữa kì",
+        "examples": ["Our **midterm** tests start on Monday.",
+                     "She was calm before the **midterm** exam and surprised afterwards.",
+                     "**Midterm** week is the most stressful week of the year."],
+        "colloc": ["midterm tests", "the midterm exam"] }
+    ],
+    "note": "Used **before** a noun: *a **midterm** test*. British English also writes it *mid-term*. The one at the end of the term is the *final* test."
+  },
+
+  "expectation": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable, usually plural",
+        "en": "what someone believes you will do, or should be able to do",
+        "vi": "sự mong đợi, kì vọng",
+        "examples": ["My parents have high **expectations**, and that is hard on a bad week.",
+                     "He met every **expectation** his teachers had of him.",
+                     "Her only **expectation** was that we would try."],
+        "colloc": ["high expectations", "meet expectations", "live up to expectations"] }
+    ],
+    "forms": [
+      { "w": "expect", "pos": "verb", "en": "to believe that something will happen", "vi": "mong đợi, trông đợi", "ex": "They **expect** me to come first in every subject." }
+    ],
+    "note": "Expectations **of** a person (what you want from them), but expectations **for** a year or a term. ⚠️ You **meet** expectations — you do not *reach* them."
+  },
+
+  "concentrate (on)": {
+    "senses": [
+      { "pos": "verb", "grammar": "+ on",
+        "en": "to give all your attention to one thing",
+        "vi": "tập trung (vào)",
+        "examples": ["I can't **concentrate** when my phone keeps buzzing.",
+                     "Chess taught him to **concentrate on** one problem at a time.",
+                     "She **concentrated** so hard that she forgot the time."],
+        "colloc": ["concentrate on your work", "concentrate hard", "find it hard to concentrate"] }
+    ],
+    "forms": [
+      { "w": "concentration", "pos": "noun", "en": "the ability to give something your full attention", "vi": "sự tập trung", "ex": "Forty minutes is a long time for full **concentration**." }
+    ],
+    "note": "The thing you attend to follows **on**: *concentrate **on** the lesson*. ⚠️ Never *concentrate to* or *concentrate in*."
+  },
+
+  "focused": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "giving your full attention to what you are doing",
+        "vi": "tập trung, chuyên tâm",
+        "examples": ["He has been much more **focused** since he joined the chess club.",
+                     "A **focused** half-hour beats a whole distracted evening.",
+                     "She stays **focused** even when the room is noisy."],
+        "colloc": ["stay focused", "become more focused", "a focused student"] }
+    ],
+    "forms": [
+      { "w": "focus", "pos": "verb, noun", "en": "to give your attention to one thing; that attention", "vi": "tập trung; sự tập trung", "ex": "Try to **focus** on one subject at a time." }
+    ],
+    "note": "One **-s-** in every form: *focus → focused → focusing*. Use the adjective for the person — *he is **focused*** — and the verb *concentrate* for the action: *he **concentrates** well*."
+  },
+
+  "mature": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "behaving sensibly and thinking of other people, the way an adult is expected to",
+        "vi": "chín chắn, trưởng thành",
+        "examples": ["She is very **mature** for fourteen.",
+                     "Saying sorry first is the **mature** thing to do.",
+                     "He became more **mature** after a year of looking after his brother."],
+        "colloc": ["mature for your age", "a mature attitude"] }
+    ],
+    "forms": [
+      { "w": "maturity", "pos": "noun", "en": "sensible adult behaviour", "vi": "sự chín chắn, trưởng thành", "ex": "He handled the argument with surprising **maturity**." }
+    ],
+    "note": "The stressed vowel is /ʊə/ — ma-**TURE**, the same sound as *tourist*. The opposite is *immature*."
+  },
+
+  "bully": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "someone who frightens or hurts a weaker person again and again",
+        "vi": "kẻ bắt nạt",
+        "examples": ["A **bully** never picks on someone their own size.",
+                     "The **bully** in that story is lonelier than anyone else in it.",
+                     "Tell a teacher if a **bully** is making school miserable."],
+        "colloc": ["stand up to a bully", "avoid bullies"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to frighten or hurt a weaker person again and again",
+        "vi": "bắt nạt",
+        "examples": ["Nobody should be **bullied** for the way they look.",
+                     "He **bullied** younger students until the school stepped in."],
+        "colloc": ["bully someone into doing something"] }
+    ],
+    "forms": [
+      { "w": "bullying", "pos": "noun", "en": "the behaviour of a bully", "vi": "sự bắt nạt", "ex": "The school has clear rules about **bullying**." }
+    ],
+    "note": "Watch the vowel: /ˈbʊli/, the short sound of *book* — not /ˈbʌli/. Plural *bullies*; past tense *bullied*."
   }
 }

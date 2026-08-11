@@ -1,6 +1,6 @@
 /* =========================================================================
    English 8 — Global Success
-   One stylesheet for all 97 pages. Tokens first; nothing below the token
+   One stylesheet for all 101 pages. Tokens first; nothing below the token
    blocks hard-codes a colour, which is what lets all three theme states
    (system, explicit light, explicit dark) resolve as a set.
    ========================================================================= */
@@ -143,6 +143,13 @@ main{padding:2rem 0 5rem;display:flex;flex-direction:column;gap:1.5rem}
 .unitcard .tags{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:auto;padding-top:.5rem}
 .unitcard .foot{display:flex;align-items:center;gap:.6rem;font-family:var(--f-mono);font-size:.68rem;color:var(--faint);min-width:0}
 .unitcard .foot>span:first-child{flex:none;white-space:nowrap}
+/* The four cumulative reviews. Same card, minus the strand chips and the
+   progress bar: a Review introduces no sound and no grammar of its own, and
+   there are no lessons in it to be part-way through. Clay rather than ink on
+   the badge, so the checkpoints read as a different kind of thing at a glance. */
+.unitcard.rv .num{background:var(--clay);color:var(--paper)}
+.unitcard.rv:hover .num{background:var(--teal);color:var(--teal-ink)}
+.unitcard.rv .foot{margin-top:auto;padding-top:.5rem}
 .bar{height:4px;background:var(--rule-soft);border-radius:3px;overflow:hidden;flex:1}
 .bar i{display:block;height:100%;background:var(--teal);width:0;transition:width .3s}
 

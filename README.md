@@ -33,9 +33,10 @@ justifies a design decision belongs in this repository.
 ## How the site is laid out
 
 ```
-/                          the twelve units
+/                          the twelve units, then the four reviews
 /unit-NN/                  that unit's seven lessons, then practice + test
 /unit-NN/lesson-M/         one lesson: teaching blocks, then its exercises
+/review-N/                 units 3N-2 to 3N, asked together
 ```
 
 Exercises are inline with the lesson that teaches them. Most are marked: you
@@ -44,20 +45,44 @@ reveal, and where an exercise is marked its reveal stays shut until it has been
 checked. Practice and the unit test live at the foot of the unit page — never
 above the lessons, and inert until the lessons they cover are complete.
 
+## The four reviews
+
+The prescribed book has a two-page cumulative section after Units 3, 6, 9 and
+12, and it is the only place in it where more than one unit is tested at once.
+This site had nothing cross-unit at all: every exercise, every practice set and
+every unit test stopped at the edge of its own unit. `units/review-N.md` closes
+that, and `/review-N/` is where it lands.
+
+A Review is deliberately not a thirteenth unit. It has no vocabulary table, no
+seven lessons and no progress gate, because it teaches nothing — its words and
+its structures have already been taught three units running. What it has is the
+book's two halves on one page: **Language** (sounds, then vocabulary, then
+grammar) and **Skills** (a text read against one clock, a speaking step, and a
+paragraph of 80–100 words that recombines all three units). Everything is the
+same machinery as a lesson: the same `:::task`, the same clock, the same
+highlightable passage, the same counted checklist.
+
+Three rules hold that a unit cannot break. A Review may only reach into the
+three units it follows — `tools/check_ielts.py` reads every `Unit N` its prose
+names and fails on a fourth. It must carry its writing task, at the book's
+length. And the set is closed: a `review-9.md`, a heading claiming the wrong
+units, or one of the four simply missing is a build failure, not a file that
+nobody reads.
+
 ## Repository
 
 | Path | What it is |
 | --- | --- |
-| `units/*.md` | **Source of truth.** One markdown file per unit. |
+| `units/*.md` | **Source of truth.** One markdown file per unit, plus `review-1..4.md`. |
 | `data/dict/*.json` | Dictionary entries — senses, definitions, examples, collocations, word families. |
 | `research/ielts/` | The source-verified IELTS knowledge base every bridge cites. |
 | `research/evidence-register.md` | **Generated.** Every bridge's claim, marker and warrant. Not published. |
 | `tools/check_dict.py` | Gate: every vocabulary slot resolves to a complete entry. |
 | `tools/check_ielts.py` | Gate: the knowledge base's audit checklist, enforced. |
 | `tools/test_marking.js` | Gate: the marking engine, against the published rules. |
-| `tools/check_write.js` | Gate: every unit's model satisfies the checklist that unit prints. |
+| `tools/check_write.js` | Gate: every model — unit or review — satisfies the checklist printed under it. |
 | `tools/test_reading.js` | Gate: the reading screen — labels, highlighting, notes, question bar. |
-| `tools/build.py` | Generator: markdown → the 98-page site. |
+| `tools/build.py` | Generator: markdown → the 101-page site. |
 | `tools/assets/` | `app.css` and `app.js`, copied into the build. |
 | `docs/` | Generated output. GitHub Pages serves this directory. |
 | `curriculum/syllabus.md` | The syllabus map the units are written against. |
@@ -378,6 +403,10 @@ twelve units section by section, its 282-word glossary, and its four cumulative
 Reviews — and `python3 tools/check_coverage.py` checks our units against it:
 the lexis, the Everyday English function, the Communication content block, and
 each named grammar and pronunciation target.
+
+The Reviews are the one part of that record the site used to have no shape
+for, and `units/review-1..4.md` now carry them — see
+[The four reviews](#the-four-reviews).
 
 It reports rather than fails, because coverage is a curriculum decision and the
 point is that the decision is visible instead of silent. Run it before adding or

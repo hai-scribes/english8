@@ -273,5 +273,314 @@
     "forms": [
       { "w": "nomadic", "pos": "adjective", "en": "moving from place to place rather than living in one", "vi": "du mục, nay đây mai đó", "ex": "They lead a **nomadic** life." }
     ]
+  },
+
+  "hospitable": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "friendly and generous towards guests and visitors",
+        "vi": "hiếu khách, mến khách",
+        "examples": ["The people here are so **hospitable** that a stranger is offered tea within a minute.",
+                     "Her family was **hospitable** to us for a whole week.",
+                     "Everyone had told me the village was **hospitable**, and it was."],
+        "colloc": ["a hospitable family", "hospitable to visitors", "a warm and hospitable welcome"] },
+      { "pos": "adjective",
+        "en": "(of a place or weather) pleasant enough to live in or travel through",
+        "vi": "dễ chịu, thuận lợi (nơi chốn, thời tiết)",
+        "examples": ["The valley is far more **hospitable** in spring than in December.",
+                     "Few plants grow there; it is not a **hospitable** place."],
+        "colloc": ["a hospitable climate"] }
+    ],
+    "forms": [
+      { "w": "hospitality", "pos": "noun", "en": "friendly, generous treatment of guests", "vi": "lòng hiếu khách", "ex": "We thanked them for their **hospitality**." }
+    ],
+    "note": "Nothing to do with a **hospital**. The stress is on the second syllable: *hos-**PI**-ta-ble*. Opposite: **inhospitable**."
+  },
+
+  "picturesque": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "pretty to look at, especially in an old-fashioned way",
+        "vi": "đẹp như tranh (phong cảnh, làng mạc)",
+        "examples": ["Wooden houses stand along the water in the most **picturesque** part of the village.",
+                     "We stopped to photograph a **picturesque** stone bridge.",
+                     "The road to the coast is slow, but it is **picturesque**."],
+        "colloc": ["a picturesque village", "picturesque scenery", "a picturesque view"] }
+    ],
+    "note": "Used for places, buildings and views — not for people. Stress the **last** syllable, which rhymes with *desk*: /ˌpɪktʃəˈresk/."
+  },
+
+  "well-trained": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "having had a lot of good training, and so able to do a job properly",
+        "vi": "lành nghề, được đào tạo tốt",
+        "examples": ["A **well-trained** buffalo will stop at one word.",
+                     "The farm needs **well-trained** workers who can drive the machines.",
+                     "Their dog is **well-trained** — it never goes near the chickens."],
+        "colloc": ["well-trained staff", "a well-trained team", "a well-trained animal"] }
+    ],
+    "forms": [
+      { "w": "training", "pos": "noun", "en": "the process of learning the skills for a job", "vi": "sự đào tạo, sự huấn luyện", "ex": "The drivers get two weeks' **training**." }
+    ],
+    "note": "Keep the hyphen before a noun: *a **well-trained** dog*. Opposites: *badly trained*, *untrained*."
+  },
+
+  "surrounded (by)": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "with something on every side",
+        "vi": "được bao quanh bởi",
+        "examples": ["The house is **surrounded by** green trees.",
+                     "Their village is **surrounded** by water on three sides.",
+                     "We ate in a small yard **surrounded** by flowers."],
+        "colloc": ["surrounded by trees", "surrounded by water", "completely surrounded"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to be all round something",
+        "vi": "bao quanh, vây quanh",
+        "examples": ["A low brick wall **surrounds** the temple.",
+                     "Paddy fields **surround** the village on every side."],
+        "colloc": ["surround a village", "surround a building"] }
+    ],
+    "forms": [
+      { "w": "surroundings", "pos": "noun (plural)", "en": "everything around a place or a person", "vi": "khung cảnh xung quanh", "ex": "The school has beautiful **surroundings**." }
+    ],
+    "note": "The partner word is **by**: *surrounded **by** trees*, never ❌ *surrounded around trees*."
+  },
+
+  "scenery": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the hills, fields, water and trees you can see in a country area, especially when they are beautiful",
+        "vi": "phong cảnh, cảnh vật",
+        "examples": ["The train slows down where the **scenery** is best.",
+                     "Nobody spoke for ten minutes; we just looked at the **scenery**.",
+                     "I miss the **scenery** more than anything else about my grandparents' village."],
+        "colloc": ["beautiful scenery", "mountain scenery", "enjoy the scenery"] }
+    ],
+    "forms": [
+      { "w": "scenic", "pos": "adjective", "en": "with beautiful natural views", "vi": "có phong cảnh đẹp", "ex": "We took the **scenic** road along the river." }
+    ],
+    "note": "**Uncountable** — never ❌ *sceneries* and never ❌ *a scenery*. Say *beautiful **scenery***. A **scene** is one single view or one part of a film; **scenery** is the whole countryside you can see."
+  },
+
+  "combine harvester": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a large farm machine that cuts a crop and separates the grain from the stalks in one operation",
+        "vi": "máy gặt đập liên hợp",
+        "examples": ["Two **combine harvesters** finished the whole field before lunch.",
+                     "Before the **combine harvester** arrived, the village cut the rice by hand.",
+                     "A **combine harvester** does in an hour what once took my grandfather a day."],
+        "colloc": ["drive a combine harvester", "harvest rice with a combine harvester"] }
+    ],
+    "note": "Often shortened to just **combine**. The first word is stressed on its first syllable here — /ˈkɒmbaɪn/ — unlike the verb *to combine* /kəmˈbaɪn/."
+  },
+
+  "plough": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to break up and turn over soil so that seeds can be planted",
+        "vi": "cày (ruộng, đất)",
+        "examples": ["The farmers **plough** the fields before the rains come.",
+                     "He **ploughed** four hectares with one buffalo.",
+                     "This heavy soil is easier to **plough** after a wet night."],
+        "colloc": ["plough a field", "plough the land"] },
+      { "pos": "noun", "grammar": "countable",
+        "en": "a farm tool with a curved blade, pulled by an animal or a tractor, that turns over soil",
+        "vi": "cái cày",
+        "examples": ["An old wooden **plough** hangs on the barn wall.",
+                     "The buffalo pulled the **plough** slowly to the end of the row."],
+        "colloc": ["pull a plough", "a wooden plough"] }
+    ],
+    "note": "British spelling **plough**, American spelling **plow** — both are accepted. It rhymes with *now*, not with *though*."
+  },
+
+  "cultivate": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to prepare land and grow crops on it",
+        "vi": "trồng trọt, canh tác",
+        "examples": ["The land beside the river has been **cultivated** for hundreds of years.",
+                     "They **cultivate** rice on the flat ground and tea on the slopes.",
+                     "Only a narrow strip of the valley can be **cultivated**."],
+        "colloc": ["cultivate rice", "cultivate the land", "cultivate crops"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to develop a habit, a skill or a friendship slowly and on purpose",
+        "vi": "rèn luyện, gây dựng (thói quen, quan hệ)",
+        "examples": ["He **cultivated** the habit of reading half an hour before bed.",
+                     "She has **cultivated** a friendship with everyone on the lane."],
+        "colloc": ["cultivate a habit", "cultivate a friendship"] }
+    ],
+    "forms": [
+      { "w": "cultivation", "pos": "noun", "en": "the growing of crops on land", "vi": "sự trồng trọt, sự canh tác", "ex": "Rice **cultivation** here goes back a thousand years." }
+    ],
+    "note": "More formal than *grow*. You **cultivate** land or a crop; you **grow** a plant."
+  },
+
+  "crop": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a plant such as rice, maize or coffee that farmers grow in large amounts",
+        "vi": "cây trồng, hoa màu",
+        "examples": ["Coffee is the most important **crop** in the highlands.",
+                     "This village grows two **crops** of rice a year.",
+                     "A week of heavy rain damaged the **crops**."],
+        "colloc": ["grow a crop", "harvest the crops", "a cash crop"] },
+      { "pos": "noun", "grammar": "countable",
+        "en": "the amount of a plant that is gathered in one season",
+        "vi": "vụ mùa, sản lượng thu hoạch",
+        "examples": ["Last year's rice **crop** was the best for a decade.",
+                     "A cold spring ruined the fruit **crop**."],
+        "colloc": ["a good crop", "a poor crop"] }
+    ],
+    "note": "Countable: *one crop, two **crops***. The **crops** are what stands in the field; the **harvest** is the gathering of them."
+  },
+
+  "poultry": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "birds such as chickens, ducks and geese that are kept on a farm for their eggs or meat",
+        "vi": "gia cầm",
+        "examples": ["The family sells eggs and **poultry** at the Sunday market.",
+                     "The **poultry** are shut in at night because of the foxes.",
+                     "He keeps cattle at one end of the farm and **poultry** at the other."],
+        "colloc": ["keep poultry", "a poultry farm", "poultry and cattle"] },
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the meat of these birds, as food",
+        "vi": "thịt gia cầm",
+        "examples": ["The recipe works with **poultry** or with pork.",
+                     "She eats no red meat, only fish and **poultry**."],
+        "colloc": ["fresh poultry", "poultry and fish"] }
+    ],
+    "note": "Uncountable — never ❌ *a poultry* or ❌ *poultries*. When it means the live birds it takes a plural verb: *The **poultry are** fed at six.*"
+  },
+
+  "catch fish": {
+    "senses": [
+      { "pos": "phrase", "grammar": "verb + noun",
+        "en": "to take fish out of water with a net, a line or a trap",
+        "vi": "bắt cá, đánh bắt cá",
+        "examples": ["Some families here live by **catching fish** in the canals.",
+                     "We **caught** six small **fish** before breakfast.",
+                     "You can **catch fish** in the pond behind the temple."],
+        "colloc": ["catch fish with a net", "go out to catch fish"] }
+    ],
+    "note": "Irregular: catch → **caught** → **caught**. The plural of *fish* is usually **fish**: *three **fish***, not ❌ *three fishes*. **Catch fish** is the action; **fishing** is the activity — *go **fishing***."
+  },
+
+  "milk (a cow)": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to take milk from a cow, a buffalo or a goat",
+        "vi": "vắt sữa",
+        "examples": ["She **milks** the cows at five every morning.",
+                     "My cousin showed me how to **milk** a goat.",
+                     "The buffalo has already been **milked** today."],
+        "colloc": ["milk a cow", "milk the goats", "milking time"] },
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the white liquid that cows and other animals produce as food for their young",
+        "vi": "sữa",
+        "examples": ["We carried the fresh **milk** home in a metal can.",
+                     "Buffalo **milk** is thicker than cow's **milk**."],
+        "colloc": ["fresh milk", "a glass of milk"] }
+    ],
+    "note": "As a verb the animal is the object: ***milk** the cow*. Say *get milk **from** a cow* only when you mean the liquid, not the job."
+  },
+
+  "dry (rice)": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to make something lose the water in it, usually by leaving it in the sun or the air",
+        "vi": "phơi khô, sấy khô",
+        "examples": ["After the harvest they **dry** the rice on the road in front of the houses.",
+                     "We **dried** the chillies on a mat in the yard.",
+                     "Fish is **dried** in the sun and then kept for months."],
+        "colloc": ["dry rice in the sun", "dry the washing"] },
+      { "pos": "adjective",
+        "en": "with no water in it or on it",
+        "vi": "khô, khô ráo",
+        "examples": ["The path is **dry** enough to cycle on now.",
+                     "Keep the seed somewhere **dry** until spring."],
+        "colloc": ["a dry season", "bone dry"] }
+    ],
+    "note": "Verb forms: dry → **dried** → **dried**; *he **dries***. Keep the verb and the adjective apart: *They **dry** the rice* (an action) / *The rice is **dry*** (a state)."
+  },
+
+  "unload": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to take goods off a vehicle, a boat or an animal",
+        "vi": "dỡ hàng xuống",
+        "examples": ["It took the three of us an hour to **unload** the rice.",
+                     "The truck was **unloaded** in the yard behind the barn.",
+                     "Wait until the boat has been **unloaded** before you get on."],
+        "colloc": ["unload a truck", "unload the rice from a cart"] }
+    ],
+    "note": "The opposite of **load**. Two patterns: ***unload** the truck* (the vehicle) and ***unload** the rice **from** the truck* (the goods)."
+  },
+
+  "canal": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a narrow passage of water dug by people, either for boats or to carry water to fields",
+        "vi": "kênh, mương",
+        "examples": ["The **canal** is just deep enough for a small boat.",
+                     "Boys were swimming in the **canal** beside the road.",
+                     "Every field on this side is fed by a **canal**."],
+        "colloc": ["dig a canal", "along the canal", "an irrigation canal"] }
+    ],
+    "note": "Stress the **second** syllable: *ca-**NAL*** /kəˈnæl/. A **canal** is made by people; a natural one is a **stream** or a **river**."
+  },
+
+  "ferry": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable, plural: ferries",
+        "en": "a boat that carries people, cars or goods across water on a regular route",
+        "vi": "phà",
+        "examples": ["The **ferry** to the island leaves every two hours.",
+                     "We pushed the motorbikes onto the **ferry** and crossed the river.",
+                     "There was a **ferry** here before they built the bridge."],
+        "colloc": ["take the ferry", "a car ferry", "travel by ferry"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to carry people or things a short distance, again and again",
+        "vi": "chở qua lại, đưa đón",
+        "examples": ["A small boat **ferries** visitors across the canal all day.",
+                     "Her father **ferried** the whole team to the match."],
+        "colloc": ["ferry passengers across"] }
+    ],
+    "note": "*Travel **by ferry*** has no *the*, but *take **the** ferry* does. Plural: **ferries**."
+  },
+
+  "lighthouse": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a tall tower by the sea with a strong light at the top that warns ships away from danger",
+        "vi": "hải đăng, đèn biển",
+        "examples": ["A white **lighthouse** stands at the far end of the beach.",
+                     "The **lighthouse** has kept ships off these rocks for a century.",
+                     "You can climb to the top of the **lighthouse** and see the whole island."],
+        "colloc": ["climb a lighthouse", "a lighthouse keeper"] }
+    ],
+    "note": "One word, no space. The *gh* is silent: /ˈlaɪthaʊs/."
+  },
+
+  "speciality": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a food or product that a place is famous for making well",
+        "vi": "đặc sản",
+        "examples": ["Every village along this road has its own **speciality**.",
+                     "Green bean cake is the **speciality** of my grandmother's town.",
+                     "Visitors buy the local **specialities** to take home to their families."],
+        "colloc": ["a local speciality", "the speciality of the house"] },
+      { "pos": "noun", "grammar": "countable",
+        "en": "a subject or a skill that somebody knows a great deal about",
+        "vi": "chuyên môn, sở trường",
+        "examples": ["Vietnamese history is his **speciality**.",
+                     "Mending old bicycles is my uncle's **speciality**."],
+        "colloc": ["somebody's speciality"] }
+    ],
+    "note": "British English **speciality** /ˌspeʃiˈæləti/; American English **specialty** /ˈspeʃəlti/ — both are accepted. Plural: **specialities**."
   }
 }

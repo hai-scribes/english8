@@ -97,19 +97,38 @@ Answer in full sentences.
 | 16 | choose | /tʃuːz/ | v | chọn, lựa chọn |
 | 17 | relax | /rɪˈlæks/ | v | thư giãn |
 | 18 | can't stand | /kɑːnt ˈstænd/ | phr | không chịu được |
+| 19 | be keen on | /biː ˈkiːn ɒn/ | phr | say mê, ham thích |
+| 20 | be fond of | /biː ˈfɒnd əv/ | phr | thích, mến |
+| 21 | be crazy about | /biː ˈkreɪzi əˌbaʊt/ | phr | rất thích, mê mẩn |
+| 22 | be interested in | /biː ˈɪntrəstɪd ɪn/ | phr | quan tâm đến, thấy thú vị |
+| 23 | be into | /biː ˈɪntə/ | phr | mê, khoái (thân mật) |
+| 24 | detest | /dɪˈtest/ | v | ghét cay ghét đắng |
+| 25 | surf the net | /ˌsɜːf ðə ˈnet/ | phr | lướt mạng |
+| 26 | message | /ˈmesɪdʒ/ | v, n | nhắn tin; tin nhắn |
+| 27 | knit | /nɪt/ | v | đan (len) |
+| 28 | origami | /ˌɒrɪˈɡɑːmi/ | n | nghệ thuật gấp giấy Nhật Bản |
+| 29 | badminton | /ˈbædmɪntən/ | n | cầu lông |
+| 30 | keep in touch | /ˌkiːp ɪn ˈtʌtʃ/ | phr | giữ liên lạc |
+| 31 | outdoors | /ˌaʊtˈdɔːz/ | adv | ngoài trời |
+| 32 | stay in shape | /ˌsteɪ ɪn ˈʃeɪp/ | phr | giữ dáng, giữ sức khoẻ |
+| 33 | play sport | /ˌpleɪ ˈspɔːt/ | phr | chơi thể thao |
+| 34 | comic book | /ˈkɒmɪk bʊk/ | n | truyện tranh |
+| 35 | bracelet | /ˈbreɪslət/ | n | vòng đeo tay |
+| 36 | judo | /ˈdʒuːdəʊ/ | n | võ judo |
+| 37 | dollhouse | /ˈdɒlhaʊs/ | n | nhà búp bê |
 
-> ### ▶︎ [**Practise these 18 words**](../app/unit-01-vocab.html)
+> ### ▶︎ [**Practise these 37 words**](../app/unit-01-vocab.html)
 >
 > Press 🔊 on any row above to hear the word. When you have finished this
-> lesson, the unit page opens a **practice** session over all eighteen — the
+> lesson, the unit page opens a **practice** session over all thirty-seven — the
 > meaning, the word, what you hear, and, more often than any of those, **the
 > word inside a phrase it actually lives in**. Wrong answers come straight
 > back, and everything returns a week later, because what you can still recall
 > after a gap is the only recall worth counting. The **unit test** opens once
 > all seven lessons are done.
 >
-> **Luyện 18 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
-> **practice** ở trang bài sẽ mở ra để luyện cả 18 từ — trong đó phần lớn là
+> **Luyện 37 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **practice** ở trang bài sẽ mở ra để luyện cả 37 từ — trong đó phần lớn là
 > luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
 > ngay, và mọi từ quay lại sau một tuần.
 >
@@ -133,6 +152,34 @@ Answer in full sentences.
 - cook · bake · relax · fry = relax ~ the others are ways of cooking
 - football · swimming · cycling · bookshop = bookshop ~ the others are sports or physical activities
 - movie · music · craft · concert = craft ~ the others involve listening or watching
+:::
+
+### 2.3 Which preposition?
+
+Five of the commonest ways to say you like something are **be** + adjective +
+preposition. The preposition is fixed — learn the whole phrase, not the parts.
+
+::: task skill="course" type="choice" opts="on|of|about|in|into" ask="Which preposition completes each expression?"
+- I'm keen ___ playing badminton. = on
+- She's fond ___ making paper flowers. = of
+- My cousin is crazy ___ football. = about
+- Are you interested ___ joining the chess club? = in
+- He's really ___ snowboarding. = into ~ *be into* is the only one with no adjective — the preposition follows *be* directly
+:::
+
+> ⚠️ **Bẫy thường gặp:** Cả năm cụm này đều đi với **V-ing**, không bao giờ với
+> *to*. ❌ *I'm keen on to play.* ✅ *I'm keen on **playing**.*
+> Muốn nói điều mình **không** thích, thêm **not** sau *be*:
+> *I'm **not** keen on it. · She's **not** into cooking.*
+
+### 2.4 Say it about yourself
+
+::: task skill="course" type="gap-fill" ask="Complete with an expression from 2.3. Use a different one each time, and keep the *-ing* form."
+- I'm ___ on cooking — I make lunch every Sunday. = keen
+- My sister is ___ of doing jigsaw puzzles. = fond
+- They're ___ about playing football after school. = crazy
+- We're not ___ in watching long films. = interested
+- He's not ___ knitting at all. = into
 :::
 
 ### Pronunciation — /ʊ/ and /uː/
@@ -160,7 +207,7 @@ The difference is **length** and **tension**.
 > **từ nào**, nhưng đọc sai **dài bao nhiêu** — nhiều giọng đọc *food* và
 > *book* dài gần bằng nhau. Hãy tin vào bảng trên và vào giọng người thật.
 
-### 2.3 Sort the sounds
+### 2.5 Sort the sounds
 
 ::: task skill="course" type="sort" opts="/ʊ/|/uː/" ask="Which sound is in each word?"
 - cool = /uː/
@@ -179,7 +226,7 @@ The difference is **length** and **tension**.
 
 *Compare **foot** /fʊt/ with **boot** /buːt/ — same consonants, and the vowel
 is the only thing that tells them apart.*
-### 2.4 Odd sound out
+### 2.6 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** vowel sound. Pick it."
 - book · cook · food · look = food ~ *food* is the long /uː/; the other three are short /ʊ/
@@ -188,7 +235,7 @@ is the only thing that tells them apart.*
 - music · sugar · blue · movie = sugar ~ *sugar* is the short /ʊ/; the other three are long /uː/
 :::
 
-### 2.5 Say these sentences
+### 2.7 Say these sentences
 
 Read aloud three times, faster each time. Record yourself if you can.
 
@@ -298,16 +345,45 @@ Write true sentences about yourself. Use a different verb each time.
 
 ## Lesson 4 — Communication
 
-### Everyday English — Suggesting and responding
+### Everyday English — Inviting, suggesting, and responding
+
+#### Inviting someone
+
+An **invitation** names a plan and asks the other person to join it. The two
+most common openings both take a different form after them:
+
+| Inviting | Nghĩa |
+| --- | --- |
+| **Would you like to** **come** to the cooking club with me on Sunday? | Bạn có muốn... không? |
+| **Do you fancy** **going** for a walk? | Bạn có thích... không? |
+| **Would you like to** **try** my home-made pizza? | Bạn có muốn thử... không? |
+
+> ⚠️ **Would you like to** takes **to + verb**. **Do you fancy** takes **V-ing**.
+> This is the Lesson 3 rule again: *would like* → to-V, *fancy* → V-ing.
+
+#### Accepting an invitation
+
+| Accepting | Nghĩa |
+| --- | --- |
+| **I'd love to. Thanks.** | Mình rất muốn. Cảm ơn nhé. |
+| **That's great. Thanks.** | Tuyệt quá. Cảm ơn bạn. |
+| **Yes, I'd love to.** | Có chứ, mình rất muốn. |
+| **Sounds good — count me in.** | Nghe hay đấy — cho mình tham gia với. |
+
+> **Ghi chú:** Sau **I'd love to** thường không nhắc lại động từ. Người ta nói
+> *"I'd love to."* chứ không nói *"I'd love to come to the cooking club."*
+
+#### Suggesting something
+
+A **suggestion** proposes something for *both* of you, so it usually says *we*:
 
 | Making a suggestion | Nghĩa |
 | --- | --- |
 | How about **going** to the cinema? | Đi xem phim thì sao? |
 | Why don't we **try** that new café? | Sao chúng ta không thử...? |
 | Shall we **meet** at ten? | Chúng ta gặp lúc 10 giờ nhé? |
-| Do you fancy **playing** a board game? | Bạn có muốn chơi...? |
 
-> ⚠️ Note the forms: **How about** and **fancy** take **V-ing**.
+> ⚠️ Note the forms: **How about** takes **V-ing**.
 > **Why don't we** and **Shall we** take the **bare infinitive**.
 
 | Accepting | Refusing politely |
@@ -338,6 +414,82 @@ one politely, and give a reason.
 2. "Shall we cook lunch together?"
    → _______________________________
 3. "Do you fancy watching a three-hour film?"
+   → _______________________________
+
+### 4.3 Invite, then accept
+
+::: task skill="course" type="gap-fill" ask="Complete each invitation or reply. Watch the form of the verb — **would you like** takes *to*, **fancy** takes *-ing*."
+- Would you like ___ (come) to the board game club with me? = to come
+- Do you fancy ___ (make) paper flowers this afternoon? = making
+- **A:** Would you like to try my home-made pizza? **B:** I'd ___ to. Thanks. = love
+- **A:** Do you fancy going for a swim? **B:** That's ___ . Thanks. = great
+- Would you like ___ (play) badminton with us on Sunday? = to play
+:::
+
+### 4.4 Write the invitation
+
+Write **one** invitation for each situation, then write the acceptance you would
+like to get back.
+
+1. You want your friend to come to the new bookshop café.
+   → Invitation: _______________________________
+   → Reply: _______________________________
+2. You want your cousin to take up jigsaw puzzles with you.
+   → Invitation: _______________________________
+   → Reply: _______________________________
+
+### Teens' leisure activities around the world
+
+Three teenagers, in three countries, spend their free time very differently —
+and each of them can say **why**.
+
+> **Sakura, 14 — Kyoto, Japan.** "I'm fond of origami, the art of paper folding.
+> I do it on my own, usually in the evening. With a few sheets of paper I can
+> make a bird, a flower, or a box. It costs almost nothing, and it makes me calm
+> when I have too much schoolwork."
+>
+> **Eric, 13 — St. Gallen, Switzerland.** "I'm keen on snowboarding. My town is
+> near the mountains, so my parents take me to a ski resort most weekends in
+> winter. It's hard on the legs, but my balance has got much better since I
+> started."
+>
+> **Lan, 14 — Quang Binh, Viet Nam.** "I'm crazy about badminton. My best friend
+> lives next door, so we play almost every afternoon in the yard. It's an easy
+> sport to start — you only need two rackets — and it takes the stress out of a
+> long school day."
+
+### 4.5 Complete the table
+
+::: task skill="course" type="gap-fill" ask="Read the three profiles again and complete each row. Write the words the teenager uses."
+- Sakura's activity = origami
+- Sakura does it with = on her own/nobody/alone
+- The benefit Sakura names = it makes her calm/calm
+- Eric's activity = snowboarding
+- Eric does it with = his parents/parents
+- The benefit Eric names = balance/his balance
+- Lan's activity = badminton
+- Lan does it with = her best friend/best friend/friend
+- The benefit Lan names = it takes the stress out/less stress/stress
+:::
+
+### 4.6 Which teenager?
+
+::: task skill="course" type="choice" opts="Sakura|Eric|Lan" ask="Which of the three does each sentence describe?"
+- This person's activity costs almost nothing to start. = Sakura ~ *"It costs almost nothing"* — Lan needs two rackets, and Eric needs a ski resort
+- This person does the activity alone. = Sakura ~ *"I do it on my own"*
+- This person's activity depends on where they live. = Eric ~ his town is near the mountains
+- This person does the activity nearly every day. = Lan ~ *"almost every afternoon"*
+- This person says the activity has made a part of the body stronger. = Eric ~ his balance has improved
+:::
+
+### 4.7 And you?
+
+Answer in full sentences, using an expression from Lesson 2 (*be keen on, be
+fond of, be crazy about, be into*).
+
+1. Which of the three activities would you most like to try, and why?
+   → _______________________________
+2. Which one would you never take up? Say why, politely.
    → _______________________________
 
 ---
@@ -391,7 +543,7 @@ one politely, and give a reason.
 - What is Trang's mother teaching her to make? = paper flowers
 - What hobby has Trang's brother taken up? = woodwork
 - What did her brother build for her room? = (a) (small) bookshelf
-- What does Trang's father build for her room? = (a) (small) bookshelf
+- What does Trang's father refuse to follow when he cooks? = (a) recipe
 :::
 
 ### 5.3 Vocabulary in context
@@ -405,7 +557,7 @@ one politely, and give a reason.
 
 ### Speaking — Talking about your leisure time
 
-> **Working alone:** You have no partner, so do this in three steps. It still
+> **Working alone:** You have no partner, so do this in four steps. It still
 > works — speaking practice is mostly about producing language out loud.
 
 **Step 1 — Prepare.** Write short notes (not full sentences) for each question.
@@ -421,18 +573,18 @@ one politely, and give a reason.
 **Step 2 — Speak.** Answer each question **aloud** from your notes, in full
 sentences. Use at least one verb of liking or disliking in every answer.
 
-**Step 4 — Report back.** Pick **one** of the five questions and talk about it
+**Step 3 — Report back.** Pick **one** of the five questions and talk about it
 alone for 30 seconds, as if telling someone who was not there.
 
-**Step 5 — Record and check.** Record yourself on your phone. Listen back and
+**Step 4 — Record and check.** Record yourself on your phone. Listen back and
 check three things:
 
 - Did you use **V-ing** or **to-V** correctly after each liking verb?
 - Did you pronounce /ʊ/ and /uː/ differently in words like *book* and *food*?
-- In Step 4, did every sentence serve the one subject you chose?
+- In Step 3, did every sentence serve the one subject you chose?
 
 ::: bridge name="One turn, one subject" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
-Before the 30-second turn in Step 4, say in one short phrase what the turn is
+Before the 30-second turn in Step 3, say in one short phrase what the turn is
 **for** — *"the hobby I want to start"*, not *"my free time"*. Then drop
 anything that does not serve it, however good the sentence is.
 
@@ -669,6 +821,30 @@ reading word for word. Record it. Listen back once.
 
 > **Stretch:** Do Step 1 again in three months and compare. Did anything change?
 
+### Now I can …
+
+Eight things this unit set out to teach. Beside each one is the place your own
+answer to it is already sitting — open that exercise again and look at what you
+actually put, which tells you far more than a feeling does. Where nothing on the
+page can settle it, the row says so, and that one is yours to judge.
+
+| Now I can … | Where my answer already is |
+| --- | --- |
+| use the words for leisure activities, and the expressions for saying what I like and dislike | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercise 7.1 |
+| hear /ʊ/ and /uː/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
+| use verbs of liking and disliking with **V-ing** and with **to-V** | Lesson 3, exercises 3.1 and 3.2 · Lesson 7, exercises 7.3 and 7.4 |
+| invite someone, and accept an invitation | Lesson 4, exercise 4.3 |
+| read about the leisure time a family spends together | Lesson 5, exercises 5.1 and 5.2 |
+| talk about my own leisure time with my family | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
+| listen to someone describing their free time | Lesson 6, exercises 6.1 and 6.2 |
+| write an email about my leisure time | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+
+> **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
+> Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
+> xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
+> trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
+> đánh giá.
+
 ---
 
 ## Answer Key
@@ -707,6 +883,16 @@ go for a swim.
 
 **4.2** Answers will vary. Check that two replies accept and one refuses
 politely with a reason.
+
+**4.4** Answers will vary. Check the form: **Would you like to** + verb
+(*Would you like to come to the bookshop café with me?*) or **Do you fancy** +
+V-ing (*Do you fancy taking up jigsaw puzzles with me?*). The reply should be a
+short acceptance — *I'd love to. Thanks.* / *That's great. Thanks.* — and should
+**not** repeat the whole invitation.
+
+**4.7** Answers will vary. Check that each sentence uses one of the five
+expressions from 2.3 with a **V-ing** form after it, and that the refusal in 2 is
+polite: *I'm not really into snowboarding, I'm afraid* rather than *I hate it.*
 
 ### Lesson 5
 

@@ -255,5 +255,385 @@
         "colloc": ["choose a first-footer", "be the first-footer"] }
     ],
     "note": "The custom itself is *first-footing*. In Viet Nam it is *xông đất* at Tet; the same belief exists in Scotland at New Year."
+  },
+
+  "admire": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to look at something and enjoy how beautiful or impressive it is",
+        "vi": "ngắm, chiêm ngưỡng",
+        "examples": ["We stopped on the bridge to **admire** the lanterns on the water.",
+                     "Visitors come to the village to **admire** the blooming peach blossom.",
+                     "She stood back and **admired** the decorated altar."],
+        "colloc": ["admire the view", "stop to admire something"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to respect somebody for what they are or for what they have done",
+        "vi": "ngưỡng mộ, khâm phục",
+        "examples": ["I **admire** my grandmother for keeping every one of these customs alive.",
+                     "The whole village **admires** the old drum maker."],
+        "colloc": ["admire somebody for something", "greatly admire"] }
+    ],
+    "forms": [
+      { "w": "admiration", "pos": "noun", "en": "the feeling of admiring somebody or something", "vi": "sự ngưỡng mộ", "ex": "She spoke of her teacher with real **admiration**." }
+    ],
+    "note": "Two different meanings that share one word: you **admire** a view with your eyes, and you **admire** a person with your respect. Stress the second syllable: ad-**MIRE**."
+  },
+
+  "pray": {
+    "senses": [
+      { "pos": "verb", "grammar": "intransitive",
+        "en": "to speak to a god, or to those you worship, to give thanks or to ask for something",
+        "vi": "cầu nguyện, khấn",
+        "examples": ["Many families go to the pagoda to **pray** for good luck at the start of the year.",
+                     "My grandmother **prays** in front of the altar every morning.",
+                     "They **prayed** for a good harvest and for the health of the elders."],
+        "colloc": ["pray for good luck", "pray for somebody", "pray at a temple"] }
+    ],
+    "forms": [
+      { "w": "prayer", "pos": "noun", "en": "the words you say when you pray", "vi": "lời cầu nguyện", "ex": "He said a short **prayer** and lit the incense." }
+    ],
+    "note": "**Pray for** what you want, not *pray something*. ✅ *pray for good luck* ❌ *pray good luck*. Do not confuse it with **prey** (an animal that is hunted) — the two sound the same."
+  },
+
+  "chase away": {
+    "senses": [
+      { "pos": "phrasal verb", "grammar": "transitive",
+        "en": "to make a person, an animal or a bad thing go away by frightening it",
+        "vi": "xua đuổi, đuổi đi",
+        "examples": ["The noise of the drums is meant to **chase away** bad spirits.",
+                     "A bamboo pole in the yard **chases away** bad luck for the coming year.",
+                     "The dogs **chased** the birds **away** from the rice."],
+        "colloc": ["chase away bad spirits", "chase away bad luck"] }
+    ],
+    "note": "Separable: *chase the birds away* and *chase away the birds* are both correct, but a pronoun must go in the middle — ✅ *chase them away*, ❌ *chase away them*."
+  },
+
+  "release": {
+    "senses": [
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to let a person or an animal go free",
+        "vi": "thả, phóng thích",
+        "examples": ["The referee **releases** a duck into the middle of the river.",
+                     "Families **release** live carp into the lake before Tet.",
+                     "The bird was **released** at the temple gate."],
+        "colloc": ["release a bird", "release somebody from prison"] },
+      { "pos": "verb", "grammar": "transitive",
+        "en": "to make a film, a record or a piece of news available to everyone",
+        "vi": "phát hành, công bố",
+        "examples": ["The programme was **released** the week before the festival.",
+                     "They **release** the results on Monday morning."],
+        "colloc": ["release a film", "release the results"] }
+    ],
+    "note": "Stress the second syllable: re-**LEASE**, /rɪˈliːs/. The *s* at the end is /s/, not /z/."
+  },
+
+  "bad spirit": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable, usually plural",
+        "en": "a being that people believe cannot be seen and brings harm or bad luck",
+        "vi": "tà ma, điều xấu xa",
+        "examples": ["The lion dance is performed to drive **bad spirits** out of the house.",
+                     "People once hung small bells on the pole to keep **bad spirits** away.",
+                     "Nobody in the village will move house on that day, for fear of **bad spirits**."],
+        "colloc": ["chase away bad spirits", "keep bad spirits away"] }
+    ],
+    "note": "Nearly always plural: *bad spirits*. In this sense **spirit** is a being, not the *spirit* that means someone's mood — compare *team spirit*."
+  },
+
+  "bamboo pole": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a long straight bamboo stem stood up in a yard at Tet and hung with small objects",
+        "vi": "cây nêu",
+        "examples": ["My uncle put up the **bamboo pole** on the morning of the twenty-third.",
+                     "Small bells and lanterns hang from the **bamboo pole** in the yard.",
+                     "The **bamboo pole** stays up until the seventh day of the new year."],
+        "colloc": ["put up a bamboo pole", "hang something on a bamboo pole"] }
+    ],
+    "note": "English has no single word for *cây nêu*, so this two-word phrase does the job; say what it is for when you use it with a foreign visitor."
+  },
+
+  "ornamental tree": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a small tree grown for how it looks rather than for fruit or wood",
+        "vi": "cây cảnh",
+        "examples": ["He carried the **ornamental tree** home on the back of his motorbike.",
+                     "A kumquat is the **ornamental tree** most families choose at Tet.",
+                     "The **ornamental trees** are sold at the flower market for a week."],
+        "colloc": ["buy an ornamental tree", "an ornamental kumquat tree"] }
+    ],
+    "note": "**Ornamental** describes anything grown or made to be looked at: *an ornamental tree*, *an ornamental pond*. A tree grown for its fruit is a *fruit tree*."
+  },
+
+  "decorative": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "made or added to make something look attractive rather than to be useful",
+        "vi": "dùng để trang trí, có tính trang trí",
+        "examples": ["The pole is hung with **decorative** items: bells, small fish, and strips of red paper.",
+                     "These bowls are **decorative** — nobody eats out of them.",
+                     "She sewed a **decorative** border along the edge of the cloth."],
+        "colloc": ["decorative items", "purely decorative"] }
+    ],
+    "forms": [
+      { "w": "decoration", "pos": "noun", "en": "something added to make a place look attractive", "vi": "đồ trang trí", "ex": "The **decorations** go up a week before the festival." }
+    ],
+    "note": "**Decorative** is an adjective and goes before the noun: *decorative items*. Do not use it where you mean the verb — ❌ *we decorative the house* → ✅ *we **decorate** the house*."
+  },
+
+  "blooming": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "with flowers fully open",
+        "vi": "đang nở, đang nở rộ",
+        "examples": ["People drive out to the flower village to photograph the **blooming** peach trees.",
+                     "The **blooming** apricot branches were sold out by noon.",
+                     "A **blooming** kumquat tree stood at the door of every house."],
+        "colloc": ["blooming flowers", "a blooming tree"] }
+    ],
+    "forms": [
+      { "w": "bloom", "pos": "verb", "en": "to produce flowers", "vi": "nở hoa", "ex": "The apricot trees **bloom** in the first week of the lunar year." },
+      { "w": "in bloom", "pos": "phrase", "en": "with its flowers open", "vi": "đang nở hoa", "ex": "The whole hillside was **in bloom**." }
+    ],
+    "note": "Use **blooming** before the noun (*blooming flowers*) and **in bloom** after the verb (*the flowers are in bloom*). ❌ *the flowers are blooming beautiful*."
+  },
+
+  "carp": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable, plural usually *carp*",
+        "en": "a large freshwater fish, kept in ponds and used in Vietnamese offerings",
+        "vi": "cá chép",
+        "examples": ["The offerings include three live **carp** in a bowl of water.",
+                     "On the twenty-third day, families release the **carp** into a river or a lake.",
+                     "He caught a **carp** almost as long as his arm."],
+        "colloc": ["a live carp", "release a carp"] }
+    ],
+    "note": "The plural is usually **carp**, not *carps*: *three carp*. Like *fish*, *sheep* and *deer*."
+  },
+
+  "young rice": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "green rice picked before it hardens and then flattened, eaten as a delicacy in autumn",
+        "vi": "cốm",
+        "examples": ["The elders put a little **young rice** into each child's mouth and ask what they wish for.",
+                     "**Young rice** is wrapped in lotus leaves and sold by the roadside in autumn.",
+                     "Refusing **young rice** when an elder offers it would be rude."],
+        "colloc": ["a handful of young rice", "offer somebody young rice"] }
+    ],
+    "note": "Uncountable, like *rice* itself: *some young rice*, never *a young rice*. Vietnamese *cốm*; the Khmer name at the Ok Om Bok Festival is *om bok*."
+  },
+
+  "wedding ceremony": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "the formal part of a wedding, in which two people are married in front of their families",
+        "vi": "lễ cưới",
+        "examples": ["A lion dance is often performed outside a **wedding ceremony**.",
+                     "The **wedding ceremony** was held at the bride's family home.",
+                     "Photographs of both **wedding ceremonies** hang in the front room."],
+        "colloc": ["hold a wedding ceremony", "attend a wedding ceremony"] }
+    ],
+    "note": "The **wedding ceremony** is the formal part; the meal and the music afterwards are the *wedding reception* or simply *the wedding party*."
+  },
+
+  "family reunion": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "an occasion when members of a family who live apart come together again",
+        "vi": "cuộc sum họp gia đình",
+        "examples": ["The first day of Tet is a **family reunion** more than anything else.",
+                     "Everyone travels home for the **family reunion**, however far it is.",
+                     "We held a small **family reunion** at my aunt's house in July."],
+        "colloc": ["a family reunion dinner", "hold a family reunion"] }
+    ],
+    "forms": [
+      { "w": "reunite", "pos": "verb", "en": "to bring people together again after a time apart", "vi": "đoàn tụ", "ex": "Tet **reunites** families who have not met all year." }
+    ],
+    "note": "Built from *re-* + *union*: a coming together **again**. The people already knew each other — a first meeting is not a reunion."
+  },
+
+  "family bonding": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the building of close feelings between members of a family by spending time together",
+        "vi": "sự gắn kết tình cảm gia đình",
+        "examples": ["These parties are a great time for **family bonding**.",
+                     "Cooking the cakes together is really **family bonding**, not just work.",
+                     "She says the long drive home is the best **family bonding** of the year."],
+        "colloc": ["a time for family bonding", "good for family bonding"] }
+    ],
+    "forms": [
+      { "w": "bond", "pos": "verb", "en": "to form a close relationship with somebody", "vi": "gắn bó", "ex": "The two cousins **bonded** over a board game." },
+      { "w": "bond", "pos": "noun", "en": "a close connection between people", "vi": "mối gắn kết", "ex": "There is a strong **bond** between the three sisters." }
+    ],
+    "note": "Uncountable — ❌ *a family bonding*. Related but not the same: *family bonds* (countable) are the connections themselves; *family bonding* is the making of them."
+  },
+
+  "festival goer": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "somebody who goes to a festival",
+        "vi": "người đi xem lễ hội",
+        "examples": ["The riverside was packed with **festival goers** by seven in the morning.",
+                     "Drums, cheering, and a thousand **festival goers** all shouting at once.",
+                     "Most of the **festival goers** had come from the next province."],
+        "colloc": ["crowds of festival goers", "a festival goer"] }
+    ],
+    "note": "**-goer** builds freely: *a cinema goer*, *a churchgoer*, *a theatre goer*. Written as two words, or with a hyphen (*festival-goer*); both are accepted."
+  },
+
+  "contestant": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "somebody who takes part in a competition",
+        "vi": "thí sinh, người dự thi",
+        "examples": ["The **contestants** jump into the river to catch the duck.",
+                     "Each **contestant** in the rice-cooking race has one hour.",
+                     "Twelve **contestants** came from our village alone."],
+        "colloc": ["a contestant in a competition", "the winning contestant"] }
+    ],
+    "forms": [
+      { "w": "contest", "pos": "noun", "en": "a competition", "vi": "cuộc thi", "ex": "The rice-cooking **contest** starts at noon." }
+    ],
+    "note": "A **contestant** enters a contest; a *competitor* enters a competition or a race; a *candidate* sits an exam or stands for election."
+  },
+
+  "martial arts": {
+    "senses": [
+      { "pos": "noun", "grammar": "plural",
+        "en": "the traditional Asian fighting sports, such as karate, judo or Vietnamese vovinam",
+        "vi": "võ thuật",
+        "examples": ["The unicorn dancers are trained in **martial arts** as well as acrobatics.",
+                     "He broke with family tradition by not practising **martial arts**.",
+                     "**Martial arts** are taught in the yard behind the communal house."],
+        "colloc": ["practise martial arts", "a martial arts club"] }
+    ],
+    "note": "Plural in form and usually in agreement: *martial arts **are** popular*. The first word is /ˈmɑːʃl/ — no *r* sound in British English, and nothing to do with *marital*."
+  },
+
+  "acrobatics": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "difficult jumps, turns and balancing done as a performance",
+        "vi": "các động tác nhào lộn, xiếc",
+        "examples": ["Whoever wears the head has to be excellent at **acrobatics**.",
+                     "The **acrobatics** at the end of the dance brought the crowd to its feet.",
+                     "She learned **acrobatics** before she ever learned to dance."],
+        "colloc": ["be good at acrobatics", "perform acrobatics"] }
+    ],
+    "forms": [
+      { "w": "acrobat", "pos": "noun", "en": "a performer who does acrobatics", "vi": "diễn viên nhào lộn", "ex": "Two **acrobats** balanced on a bamboo pole." },
+      { "w": "acrobatic", "pos": "adjective", "en": "involving acrobatics", "vi": "thuộc về nhào lộn", "ex": "An **acrobatic** jump ended the performance." }
+    ],
+    "note": "Ends in *-s* but takes a singular verb: *acrobatics **is** hard on the knees*. Stress the third syllable: ac-ro-**BAT**-ics."
+  },
+
+  "lion dance": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a dance performed in a lion costume at New Year and other big occasions in several Asian countries",
+        "vi": "múa sư tử",
+        "examples": ["A **lion dance** was performed at their opening ceremony.",
+                     "The Japanese **lion dance** is called *shishi-mai*.",
+                     "Two **lion dances** passed our street before breakfast."],
+        "colloc": ["perform a lion dance", "a lion dance team"] }
+    ],
+    "note": "Say **do** or **perform** a lion dance, not *dance a lion dance*. The performers are a *lion dance troupe* or *team*."
+  },
+
+  "unicorn dance": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "the Vietnamese dance performed in a *lân* costume at the Mid-Autumn and New Year Festivals",
+        "vi": "múa lân",
+        "examples": ["The **unicorn dance** comes down our street on the night of the full moon.",
+                     "A **unicorn dance** has a partner, *ông Địa*, who walks in front and fans the head.",
+                     "The drum for the **unicorn dance** can be heard three streets away."],
+        "colloc": ["perform a unicorn dance", "a unicorn dance troupe"] }
+    ],
+    "note": "*Múa lân* is translated into English in several ways — **unicorn dance** and *lion dance* are both used. Note the article: *a unicorn dance*, because *unicorn* begins with the consonant sound /j/."
+  },
+
+  "whale worship": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the custom among Vietnamese coastal fishing communities of honouring whales as protectors at sea",
+        "vi": "tục thờ cá Ông",
+        "examples": ["**Whale worship** is practised in fishing villages all down the coast.",
+                     "The tradition of **whale worship** goes back many generations here.",
+                     "A temple for **whale worship** stands at the end of the beach."],
+        "colloc": ["the tradition of whale worship", "a whale worship festival"] }
+    ],
+    "note": "Uncountable. The verb pattern doubles the *p*: *the village has **worshipped** whales for centuries*."
+  },
+
+  "monk": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a man who lives in a temple or monastery and has given his life to his religion",
+        "vi": "nhà sư, thầy tu",
+        "examples": ["Keep quiet while the **monks** and the elders are talking.",
+                     "A young **monk** swept the temple ground before the ceremony.",
+                     "The **monks** eat their last meal of the day before noon."],
+        "colloc": ["a Buddhist monk", "show respect to the monks"] }
+    ],
+    "note": "Rhymes with *drunk*; the *n* before /k/ is /ŋ/, so it is /mʌŋk/ — not /mʌnk/. The word for a woman is **nun**."
+  },
+
+  "longevity": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "long life, or the fact of living a long time",
+        "vi": "sự sống lâu, tuổi thọ",
+        "examples": ["Noodles are served at the party as a wish for **longevity**.",
+                     "The old couple were given a red banner wishing them health and **longevity**.",
+                     "Every one of these symbols stands for luck, wealth or **longevity**."],
+        "colloc": ["wish somebody longevity", "a symbol of longevity"] }
+    ],
+    "note": "Uncountable and rather formal — in everyday speech people say *a long life*. Stress the second syllable: lon-**GEV**-ity, /lɒnˈdʒevəti/, with a /dʒ/ in the middle."
+  },
+
+  "coastal": {
+    "senses": [
+      { "pos": "adjective", "grammar": "before a noun",
+        "en": "on or near the sea shore, or belonging to it",
+        "vi": "thuộc miền ven biển, duyên hải",
+        "examples": ["Whale worship is a custom of the **coastal** provinces.",
+                     "Our village is **coastal**, so the sea decides everything.",
+                     "The festival is held in **coastal** towns from Da Nang southwards."],
+        "colloc": ["a coastal village", "a coastal province", "coastal waters"] }
+    ],
+    "forms": [
+      { "w": "coast", "pos": "noun", "en": "the land beside the sea", "vi": "bờ biển", "ex": "They drove the whole length of the **coast**." }
+    ],
+    "note": "The *oa* is one long sound, /əʊ/: **COAST**-al. Compare *inland* (away from the sea)."
+  },
+
+  "table manners": {
+    "senses": [
+      { "pos": "noun", "grammar": "plural",
+        "en": "the way you are expected to behave while eating with other people",
+        "vi": "phép tắc ăn uống",
+        "examples": ["Tom asked Mai about Vietnamese **table manners** before the dinner.",
+                     "Good **table manners** here start with waiting for the oldest person.",
+                     "His **table manners** improved after a week at his grandmother's."],
+        "colloc": ["good table manners", "bad table manners"] }
+    ],
+    "note": "Always plural — ❌ *a table manner*. In this phrase **manners** means polite behaviour, not the *manner* that means a way of doing something."
+  },
+
+  "traditionally": {
+    "senses": [
+      { "pos": "adverb",
+        "en": "in the way something has been done for a long time; according to tradition",
+        "vi": "theo truyền thống, theo lệ xưa",
+        "examples": ["**Traditionally**, children in the US go from house to house asking for sweets at Halloween.",
+                     "The pole is **traditionally** put up seven days before the new year.",
+                     "This dish is **traditionally** eaten cold."],
+        "colloc": ["traditionally, …", "be traditionally made"] }
+    ],
+    "note": "Very often the first word of the sentence, with a comma after it: ***Traditionally**, we visit our father's family first.* That opening position is what makes it useful in writing."
   }
 }

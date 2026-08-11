@@ -105,6 +105,21 @@ Look at the **bold** words.
 | 16 | holographic | /ˌhɒləˈɡræfɪk/ | adj | (thuộc) ảnh nổi ba chiều |
 | 17 | smartphone | /ˈsmɑːtfəʊn/ | n | điện thoại thông minh |
 | 18 | interviewee | /ˌɪntəvjuːˈiː/ | n | người được phỏng vấn |
+| 19 | emoji | /ɪˈməʊdʒi/ | n | biểu tượng cảm xúc |
+| 20 | video conference | /ˈvɪdiəʊ ˌkɒnfərəns/ | n | cuộc họp trực tuyến |
+| 21 | voice message | /ˈvɔɪs ˌmesɪdʒ/ | n | tin nhắn thoại |
+| 22 | webcam | /ˈwebkæm/ | n | máy quay gắn với máy tính |
+| 23 | zoom in | /ˌzuːm ˈɪn/ | phr v | phóng to |
+| 24 | holography | /hɒˈlɒɡrəfi/ | n | kĩ thuật ảnh nổi ba chiều |
+| 25 | translation machine | /trænzˈleɪʃn məˌʃiːn/ | n | máy dịch thuật |
+| 26 | language barrier | /ˈlæŋɡwɪdʒ ˌbæriə/ | n | rào cản ngôn ngữ |
+| 27 | carrier pigeon | /ˈkæriə ˌpɪdʒɪn/ | n | bồ câu đưa thư |
+| 28 | group call | /ˈɡruːp kɔːl/ | n | cuộc gọi nhóm |
+| 29 | private message | /ˌpraɪvət ˈmesɪdʒ/ | n | tin nhắn riêng |
+| 30 | chatbot | /ˈtʃætbɒt/ | n | phần mềm trò chuyện tự động |
+| 31 | instantly | /ˈɪnstəntli/ | adv | ngay lập tức |
+| 32 | advanced | /ədˈvɑːnst/ | adj | tiên tiến, hiện đại |
+| 33 | transmit | /trænzˈmɪt/ | v | truyền, chuyển đi |
 
 ### 2.1 Complete the sentences
 
@@ -137,6 +152,36 @@ Look at the **bold** words.
 - holographic = d
 :::
 
+### 2.3 Communication technology
+
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from rows 19–33 of the table. Change the form if you need to."
+- Many people add an ___ to a message to show how they feel. = emoji
+- Our club had a ___ with a school in Japan last Thursday. = video conference
+- I send a ___ when I don't feel like typing. = voice message
+- Move the ___ down a little — I can only see your forehead. = webcam
+- By using ___ , a speaker can appear in the room as a three-dimensional image. = holography
+- Five of us talked at the same time in one ___ . = group call
+- Don't put your phone number in a comment — send me a ___ instead. = private message
+- Learning English helped my aunt get past the ___ in Australia. = language barrier
+:::
+
+### 2.4 Which one fits?
+
+::: task skill="course" type="choice" ask="Pick the option that completes each sentence."
+- In the fifth century, an important message often travelled by ___ . (a) chatbot (b) carrier pigeon (c) webcam = b ~ a bird carried it; the other two are electronic
+- The shop answers customers at midnight because its ___ never sleeps. (a) chatbot (b) group call (c) translation machine = a
+- A tourist who speaks no German can carry a small ___ . (a) carrier pigeon (b) translation machine (c) private message = b
+- A single cable can ___ live pictures to every screen in the hall. (a) transmit (b) zoom in (c) charge = a
+- The reply arrived ___ — I had not even put my phone down. (a) advanced (b) instantly (c) opposite = b
+- In fifty years we will use far more ___ ways of talking to each other. (a) advanced (b) instant (c) private = a
+- ___ on the map so that we can read the street names. (a) Charge (b) Zoom in (c) Transmit = b
+:::
+
+> **Mẹo:** Nhiều từ trong nhóm này là **cụm hai từ**, và phải học cả cụm:
+> *video conference*, *voice message*, *group call*, *private message*,
+> *language barrier*, *carrier pigeon*, *translation machine*. Học riêng lẻ
+> từng từ thì khi cần dùng sẽ ghép sai.
+
 ### Pronunciation — Stress in *-ese* and *-ee* words
 
 This is a **stress** rule, not a new sound. When a word ends in the suffix
@@ -159,17 +204,24 @@ syllable becomes long and loud: /iːz/ or /iː/.
 > /ˌemplɔɪˈiː/ nhấn cuối, và /ɪmˈplɔɪiː/ nhấn giữa. Bài tập dưới đây không
 > dùng từ này.)*
 
-### 2.3 Sort by stress
+### 2.5 Sort by stress
 
-Write each word in the correct column: **Chinese · coffee · refugee ·
-committee · Japanese · toffee · guarantee · Portuguese · trainee · agree ·
-Vietnamese · interviewee**
+::: task skill="course" type="sort" opts="last syllable|not the last" ask="Does the stress fall on the **last** syllable, or not? Spelling in *-ese* or *-ee* is a strong clue, but it is not a law."
+- Chinese = last syllable
+- coffee = not the last ~ **ˈcof**fee — an old word, not one of the *-ee* family
+- refugee = last syllable
+- committee = not the last ~ com**ˈmit**tee — the stress sits in the middle
+- Japanese = last syllable
+- toffee = not the last ~ **ˈtof**fee — the final *-ee* is a short, weak /i/
+- guarantee = last syllable
+- Portuguese = last syllable
+- trainee = last syllable
+- agree = last syllable
+- Vietnamese = last syllable
+- interviewee = last syllable
+:::
 
-| Stress on the LAST syllable | Stress NOT on the last syllable |
-| --- | --- |
-| | |
-
-### 2.4 Odd stress out
+### 2.6 Odd stress out
 
 ::: task skill="course" type="choice" ask="In each line, one word does **not** have the stress on its last syllable. Pick it."
 - Line 1 — (a) Japanese (b) Chinese (c) coffee (d) Portuguese = c ~ **ˈcof**fee — the stress is on the first syllable
@@ -178,7 +230,7 @@ Vietnamese · interviewee**
 - Line 4 — (a) interviewee (b) Frisbee (c) trainee (d) degree = b ~ **ˈFris**bee — spelt *-ee*, but not stressed at the end
 :::
 
-### 2.5 Say these sentences
+### 2.7 Say these sentences
 
 Read aloud three times, faster each time. Tap the desk on the stressed
 syllable. Record yourself if you can.
@@ -340,7 +392,9 @@ Write true sentences about yourself. Use the word in brackets.
 
 ## Lesson 4 — Communication
 
-### Everyday English — Making an online call work
+### Everyday English — Making an online call work, and interrupting politely
+
+#### Making an online call work
 
 | Starting the call | Nghĩa |
 | --- | --- |
@@ -366,6 +420,39 @@ Write true sentences about yourself. Use the word in brackets.
 > ⚠️ Note the prepositions inside these phrases: *on mute*, *on Friday*,
 > *for a second*, *for now*. Learn the whole phrase, not the single word.
 
+#### Interrupting politely
+
+Sometimes you have to break into what somebody is saying — you missed a step,
+or you want to suggest something different. English does this in two moves:
+**say sorry, then say the thing**, in one breath.
+
+| Breaking in | Nghĩa |
+| --- | --- |
+| **Sorry for interrupting, but** I think we should meet at nine. | Xin lỗi vì đã ngắt lời, nhưng… |
+| **Sorry to interrupt, but** we need to test the devices first. | Xin lỗi phải ngắt lời, nhưng… |
+| **Hold on.** Can you repeat that, please? | Khoan đã. Bạn nhắc lại được không? |
+| **Can I just say** something here? | Mình nói xen một câu được không? |
+| **Excuse me for a second.** | Cho mình xin một giây. |
+
+| Giving the turn back | Nghĩa |
+| --- | --- |
+| Sorry — please **go on**. | Xin lỗi — bạn nói tiếp đi. |
+| **Sorry about that.** You were saying? | Xin lỗi nhé. Bạn đang nói dở gì ấy nhỉ? |
+
+Both openings are polite, and the two forms after *sorry* are different:
+**Sorry for interrupt*ing*** (*for* + V-ing) and **Sorry *to* interrupt**
+(*to* + verb). After either one comes **but**, and then your point.
+
+> **Ghi chú:** Người nói tiếng Anh xin lỗi **trước khi** ngắt lời, chứ không
+> phải sau khi đã nói xong ý của mình. Câu *"Sorry for interrupting, but…"*
+> đứng **trước** điều bạn muốn nói. Nói hết ý rồi mới xin lỗi thì đã muộn, và
+> người nghe sẽ thấy bạn cắt ngang chứ không thấy bạn lịch sự.
+
+> ⚠️ **Bẫy thường gặp:** *Hold on.* là cách nói **thân mật**. Dùng với bạn bè,
+> anh chị em, bạn cùng nhóm thì bình thường, nhưng đừng dùng với thầy cô hay
+> người lớn mà bạn không quen. *Sorry for interrupting, but…* thì dùng ở đâu
+> cũng được — với bạn bè, trong lớp, hay trong một cuộc họp trực tuyến.
+
 ### 4.1 Complete the mini-dialogues
 
 Use a phrase from the tables above.
@@ -386,6 +473,82 @@ Use at least one phrase from each of the three tables, and at least two
 prepositions of time.
 
 _______________________________________________
+_______________________________________________
+_______________________________________________
+_______________________________________________
+_______________________________________________
+_______________________________________________
+
+### 4.3 Break in politely
+
+::: task skill="course" type="choice" opts="Sorry for interrupting, but|Hold on|Can I just say|Sorry about that|Go on" ask="Which phrase fits the situation? Use each one once."
+- In an online meeting a classmate is reading out the rules, and you want to suggest a different starting time. You begin… = Sorry for interrupting, but ~ it works with anybody, and it puts the apology before the idea
+- Your best friend is telling you how to move the webcam and you missed one step. You say… = Hold on ~ short and informal, which is fine with a friend
+- Everybody in the group has spoken and you have one short point to add. You ask… = Can I just say
+- You broke into your sister's story and now she has stopped talking. You say… = Sorry about that
+- You have made your point and you want your friend to carry on. You say, "Sorry — please …" = Go on
+:::
+
+### 4.4 Interrupt, and say why
+
+Write what you would actually say. Use a different phrase each time, and put
+the reason in the same sentence as the apology.
+
+1. Your friend is explaining how to make a video call and you did not hear the
+   step about the webcam. You want that step again.
+   → _______________________________
+2. Your group is deciding where to meet on Saturday. Someone is still talking,
+   but you want to suggest the library instead of the café.
+   → _______________________________
+3. Write the one line you say afterwards to give the speaker the turn back.
+   → _______________________________
+
+### The future of language
+
+Mark, 14, was asked what will change about the way people talk to each other.
+This is what he said.
+
+> **Mark:** "In twenty years I think everybody will be using emojis — not only
+> teenagers, but grandparents, teachers and bank managers too. An emoji carries
+> a feeling, and a feeling does not need a language: a smiling face means the
+> same thing in Hà Nội, in Tokyo and in London, so nobody has to translate it.
+> That is why more and more people will use them. Emojis can even replace
+> words, up to a point — I often answer my sister with one picture and no
+> letters at all. So one day you may open an email and find nothing inside it
+> but emojis, and you will still understand every line."
+
+Here are two more predictions, in note form. Each one answers the same four
+questions Mark answered: **when**, **who**, **how** and **why**.
+
+| | **An automatic translation function** | **A chatbot** |
+| --- | --- | --- |
+| **When?** | in ten years | in ten years |
+| **Who will use it?** | people who use social networks | people who sell things in online shops |
+| **How will it help?** | it translates comments and private messages in every language | it replies to customers instantly in every language |
+| **Why will it spread?** | it removes the language barrier | it helps them sell to customers in other countries |
+
+### 4.5 Read the predictions
+
+::: task skill="course" type="short-answer" ask="Answer from Mark's prediction and from the two fact-files. Short answers, not full sentences."
+- What means of communication is Mark talking about? = emojis/emoji
+- When does Mark think everybody will be using them? = in twenty years/twenty years/in 20 years/20 years
+- Apart from teenagers, who does Mark name? = grandparents, teachers and bank managers/grandparents/teachers/bank managers
+- Why does an emoji work in every country? = it carries a feeling/a feeling does not need a language/it needs no language
+- Who will use the automatic translation function? = social network users/people who use social networks
+- Why will the automatic translation function spread? = it removes the language barrier/the language barrier
+- How will a chatbot help the people who use it? = it replies to customers instantly/it replies instantly/replies instantly
+- Why will sellers want one? = it helps them sell to customers in other countries/to sell to customers in other countries/to sell more
+:::
+
+### 4.6 Your own prediction
+
+Make a prediction of your own, in the same shape as Mark's. Take **one** of the
+two fact-files above, or invent a way of communicating yourself, and write
+**four or five sentences** answering the four questions in order: **when**,
+**who**, **how**, **why**.
+
+Start like this: *"In ten years, I think…"*
+
 _______________________________________________
 _______________________________________________
 _______________________________________________
@@ -743,6 +906,30 @@ times you said *in*, *on* and *at* correctly.
 > cost. Add their answer to your display as a short quotation, and mark them as
 > the *interviewee*.
 
+### Now I can …
+
+Eight things this unit set out to teach. Beside each one is the place your own
+answer to it is already sitting — open that exercise again and look at what you
+actually put, which tells you far more than a feeling does. Where nothing on the
+page can settle it, the row says so, and that one is yours to judge.
+
+| Now I can … | Where my answer already is |
+| --- | --- |
+| use the words for communication technology | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercise 7.1 |
+| put the stress in the right place in words ending *-ese* and *-ee* | Lesson 2, exercises 2.5 and 2.6 · Lesson 7, exercise 7.2. Saying them aloud is yours — record Lesson 2, exercise 2.7 and listen back. |
+| use prepositions of place and time, and possessive pronouns | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
+| interrupt politely | Lesson 4, exercise 4.3 |
+| read about a way people may communicate in the future | Lesson 5, exercises 5.1 and 5.2 |
+| talk about what is good and what is bad about a way of communicating | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
+| listen to a guide at a communication exhibition | Lesson 6, exercises 6.1 and 6.2 |
+| write a paragraph describing a modern way of communicating | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+
+> **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
+> Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
+> xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
+> trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
+> đánh giá.
+
 ---
 
 ## Answer Key
@@ -759,12 +946,7 @@ late in the morning but that she is often late at night.
 
 ### Lesson 2
 
-**2.3**
-- **Stress on the LAST syllable** — Chinese, refugee, Japanese, guarantee,
-  Portuguese, trainee, agree, Vietnamese, interviewee
-- **Stress NOT on the last syllable** — coffee, committee, toffee
-
-**2.5** Answers will vary (this is a speaking task). Check: the stress lands on
+**2.7** Answers will vary (this is a speaking task). Check: the stress lands on
 *-nese*, *-nee*, *-tee*, *-gee*, *-ee* in *Japanese, trainee, Vietnamese,
 interviewee, guarantee, Portuguese, refugee, agree, Chinese* — and on the FIRST
 syllable of *coffee*, and the SECOND of *committee*.
@@ -798,6 +980,19 @@ before a place, and item 5 uses *mine* or *ours* with **no** noun after it.
 (starting / going wrong / ending), and two correct prepositions of time —
 for example *at eight*, *on Sunday*, *in the evening*.
 
+**4.4** Answers will vary. Check: the apology comes **before** the point, never
+after it; a different phrase in each of the three answers; item 1 asks for
+something to be said again (*Hold on. Can you repeat that, please?* — fine with
+a friend); item 2 begins *Sorry for interrupting, but…* or *Sorry to interrupt,
+but…* and then names the library; item 3 hands the turn back (*Sorry about that.
+Please go on.*).
+
+**4.6** Answers will vary. Check: the four questions are answered in that order
+— a time (*in ten years*), the people who will use it, what it will do, and the
+reason it will spread; every sentence is about the future, so each one needs
+*will* or *is going to*; and at least two words come from the Lesson 2 table
+(*chatbot, translation machine, private message, language barrier, instantly*).
+
 ### Lesson 5
 
 **Speaking** Answers will vary. Check: you spoke for a full minute, used the
@@ -812,3 +1007,21 @@ picture.
 
 ### Lesson 7
 
+
+> ### ▶︎ [**Practise these 33 words**](../app/unit-10-vocab.html)
+>
+> Press 🔊 on any row above to hear the word. When you have finished this
+> lesson, the unit page opens a **practice** session over all thirty-three —
+> the meaning, the word, what you hear, and, more often than any of those,
+> **the word inside a phrase it actually lives in**. Wrong answers come
+> straight back, and everything returns a week later, because what you can
+> still recall after a gap is the only recall worth counting. The **unit
+> test** opens once all seven lessons are done.
+>
+> **Luyện 33 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **practice** ở trang bài sẽ mở ra để luyện cả 33 từ — trong đó phần lớn là
+> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
+> ngay, và mọi từ quay lại sau một tuần.
+>
+> Do the written exercises below as well — writing by hand and typing on a
+> screen build different halves of the same knowledge.

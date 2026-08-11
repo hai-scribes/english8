@@ -688,5 +688,415 @@
       }
     ],
     "note": "The ending **-ee** shows the person who *receives* the action: interview**ee** = the one who is asked, employ**ee** = the one who is employed, train**ee** = the one who is trained. The ending **-er** shows the person who *does* it: interview**er**, employ**er**, train**er**. Pronunciation: **-ee** is stressed and long — in-ter-view-**EE** — while **-er** is weak: **IN**-ter-view-er."
+  },
+
+  "emoji": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a small picture of a face or an object that you put into a message to show a feeling or an idea",
+        "vi": "biểu tượng cảm xúc",
+        "examples": [
+          "She ended every line with a laughing **emoji**.",
+          "My grandfather sends one **emoji** and no words at all.",
+          "A smiling **emoji** means the same thing in every country."
+        ],
+        "colloc": [
+          "send an emoji",
+          "add an emoji",
+          "a smiling emoji",
+          "use emojis"
+        ]
+      }
+    ],
+    "note": "Plural: **emojis** — not *emojies*. It is countable, so *an emoji*, *three emojis*. Do not mix it up with **emotion**, which is the feeling itself: the emoji is only the picture of it."
+  },
+  "video conference": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a meeting in which people in different places see and hear each other on screens",
+        "vi": "cuộc họp trực tuyến",
+        "examples": [
+          "Our club had a **video conference** with a school in Japan.",
+          "The teachers hold a **video conference** every Monday morning.",
+          "Sixty people joined the **video conference** from four countries."
+        ],
+        "colloc": [
+          "have a video conference",
+          "hold a video conference",
+          "join a video conference",
+          "a video conference call"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "video conferencing",
+        "pos": "noun",
+        "en": "the practice of holding meetings by video, as an activity in general",
+        "vi": "việc họp trực tuyến",
+        "ex": "**Video conferencing** saved the company a lot of travel."
+      }
+    ],
+    "note": "Two words, no hyphen. You **have**, **hold** or **join** a video conference — never *do* one. A **video call** is usually two people; a **video conference** is a whole group meeting."
+  },
+  "voice message": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a short recording of your own voice that you send to somebody instead of typing",
+        "vi": "tin nhắn thoại",
+        "examples": [
+          "I send a **voice message** when my hands are full.",
+          "Her **voice message** lasted two minutes and said almost nothing.",
+          "He left me a **voice message** from the top of the mountain."
+        ],
+        "colloc": [
+          "send a voice message",
+          "leave a voice message",
+          "listen to a voice message"
+        ]
+      }
+    ],
+    "note": "You **send** or **leave** a voice message, and you **listen to** it — not *hear* it and certainly not *read* it. Compare a **text message**, which you type and read."
+  },
+  "webcam": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a small camera on or inside a computer that sends live pictures across the Internet",
+        "vi": "máy quay gắn với máy tính, dùng để truyền hình ảnh trực tiếp",
+        "examples": [
+          "Move the **webcam** down — I can only see your forehead.",
+          "The **webcam** on this old laptop still works perfectly.",
+          "She covers her **webcam** with a piece of paper when she is not using it."
+        ],
+        "colloc": [
+          "turn on the webcam",
+          "move the webcam",
+          "a webcam on a laptop"
+        ]
+      }
+    ],
+    "note": "One word: **webcam**, not *web cam*. Stress the first syllable: **WEB**-cam. It is the camera itself, not the picture it sends."
+  },
+  "zoom in": {
+    "senses": [
+      {
+        "pos": "phrasal verb",
+        "en": "to make a picture on a screen look bigger and closer",
+        "vi": "phóng to (hình ảnh trên màn hình)",
+        "examples": [
+          "**Zoom in** a little so that we can read the street names.",
+          "If you **zoom in** too far, the photograph goes blurry.",
+          "He **zoomed in** on the tiny bag tied to the bird's leg."
+        ],
+        "colloc": [
+          "zoom in on something",
+          "zoom in and out",
+          "zoom in a little"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "zoom out",
+        "pos": "phrasal verb",
+        "en": "to make a picture look smaller, so that you see more of it",
+        "vi": "thu nhỏ (hình ảnh trên màn hình)",
+        "ex": "**Zoom out** — I want to see the whole room."
+      }
+    ],
+    "note": "To name the thing you are making bigger, add **on**: *zoom in **on** the map*. ❌ *zoom in the map*. The opposite is **zoom out**."
+  },
+  "holography": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "the making of pictures out of light that look solid and can be walked around",
+        "vi": "kĩ thuật tạo ảnh nổi ba chiều bằng ánh sáng",
+        "examples": [
+          "With **holography**, a speaker can appear in a room she is not really in.",
+          "The exhibition has a whole floor about **holography**.",
+          "**Holography** may one day replace the meeting room altogether."
+        ],
+        "colloc": [
+          "use holography",
+          "by using holography",
+          "a room about holography"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "hologram",
+        "pos": "noun",
+        "en": "one picture made in this way",
+        "vi": "ảnh nổi ba chiều",
+        "ex": "A **hologram** of the singer stood on the empty stage."
+      },
+      {
+        "w": "holographic",
+        "pos": "adjective",
+        "en": "made of light so that it looks solid and three-dimensional",
+        "vi": "thuộc ảnh nổi ba chiều",
+        "ex": "The teacher appeared as a **holographic** image at the front of the class."
+      }
+    ],
+    "note": "Uncountable — a single picture made this way is a **hologram**, never *a holography*. The stress moves across the family: ho-**LOG**-ra-phy, **HO**-lo-gram, ho-lo-**GRAPH**-ic."
+  },
+  "translation machine": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a device that turns speech or writing from one language into another",
+        "vi": "máy dịch thuật",
+        "examples": [
+          "He carried a small **translation machine** around Tokyo for a week.",
+          "A **translation machine** gets the words right and the joke wrong.",
+          "Will translators lose their jobs when **translation machines** become cheap?"
+        ],
+        "colloc": [
+          "use a translation machine",
+          "carry a translation machine",
+          "a pocket translation machine"
+        ]
+      }
+    ],
+    "note": "The first word is the noun **translation**: ❌ *translate machine*. Countable — *a translation machine*, *two translation machines*."
+  },
+  "language barrier": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "the trouble people have in understanding each other when they do not share a language",
+        "vi": "rào cản ngôn ngữ",
+        "examples": [
+          "My aunt met a **language barrier** on her very first day in Germany.",
+          "Pictures on the menu got us past the **language barrier**.",
+          "Good translation software may remove the **language barrier** completely."
+        ],
+        "colloc": [
+          "break down the language barrier",
+          "remove the language barrier",
+          "overcome the language barrier",
+          "face a language barrier"
+        ]
+      }
+    ],
+    "note": "The usual verbs are **break down**, **remove** and **overcome** — not *open* or *destroy*. Note the spelling **barrier**, with two *r*s in the middle."
+  },
+  "carrier pigeon": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a bird trained to fly home carrying a written message tied to its leg",
+        "vi": "bồ câu đưa thư",
+        "examples": [
+          "In the fifth century a **carrier pigeon** was faster than a rider on a horse.",
+          "The museum shows a photograph of a **carrier pigeon** with a tiny bag on its leg.",
+          "Two **carrier pigeons** were kept on every ship."
+        ],
+        "colloc": [
+          "send a message by carrier pigeon",
+          "train a carrier pigeon",
+          "release a carrier pigeon"
+        ]
+      }
+    ],
+    "note": "After *by* there is no article: *by **carrier pigeon***, exactly like *by post* and *by email*. The first word is **carrier** (the one that carries), not *carry*."
+  },
+  "group call": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a phone or Internet call in which three or more people talk together at the same time",
+        "vi": "cuộc gọi nhóm",
+        "examples": [
+          "We planned the whole trip in one **group call**.",
+          "A **group call** with six cousins is very loud.",
+          "She started a **group call** so that nobody had to be told twice."
+        ],
+        "colloc": [
+          "make a group call",
+          "start a group call",
+          "join a group call",
+          "be on a group call"
+        ]
+      }
+    ],
+    "note": "You **make**, **start** or **join** a group call — never *do* a call. Two people is just a *call*; a group call needs at least three."
+  },
+  "private message": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a message sent to one person on a social network, which other users cannot see",
+        "vi": "tin nhắn riêng",
+        "examples": [
+          "She asked for the address in a **private message**.",
+          "Do not put your phone number in a comment — send a **private message**.",
+          "He answers comments in public and **private messages** at night."
+        ],
+        "colloc": [
+          "send a private message",
+          "reply to a private message",
+          "in a private message"
+        ]
+      }
+    ],
+    "note": "The opposite here is a **comment**, which everyone on the network can read. Countable: *send **a** private message*."
+  },
+  "chatbot": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a computer program that answers people's questions in writing, as though it were a person",
+        "vi": "phần mềm trò chuyện tự động",
+        "examples": [
+          "The shop's **chatbot** answered me at two in the morning.",
+          "A **chatbot** replies in seconds, but it cannot help with a strange problem.",
+          "Every online shop on that street now uses a **chatbot**."
+        ],
+        "colloc": [
+          "talk to a chatbot",
+          "use a chatbot",
+          "a chatbot replies",
+          "the shop's chatbot"
+        ]
+      }
+    ],
+    "note": "One word and countable: *a chatbot*, *two chatbots*. Stress the first syllable: **CHAT**-bot. It writes; it does not speak."
+  },
+  "instantly": {
+    "senses": [
+      {
+        "pos": "adverb",
+        "en": "at once, with no wait at all",
+        "vi": "ngay lập tức",
+        "examples": [
+          "The message arrived **instantly**.",
+          "She **instantly** knew whose phone it was.",
+          "The chatbot answers **instantly**, whatever the hour."
+        ],
+        "colloc": [
+          "reply instantly",
+          "arrive instantly",
+          "almost instantly",
+          "recognise somebody instantly"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "instant",
+        "pos": "adjective",
+        "en": "happening with no wait",
+        "vi": "tức thì",
+        "ex": "The app gives you an **instant** reply."
+      },
+      {
+        "w": "instant",
+        "pos": "noun",
+        "en": "a moment; a very short piece of time",
+        "vi": "khoảnh khắc",
+        "ex": "For an **instant** the screen went black."
+      }
+    ],
+    "note": "Put **instantly** before the main verb (*she **instantly** replied*) or at the very end (*she replied **instantly***) — but never between the verb and its object: ❌ *she answered instantly the message*."
+  },
+  "advanced": {
+    "senses": [
+      {
+        "pos": "adjective",
+        "en": "using the newest ideas and methods; ahead of what most people have",
+        "vi": "tiên tiến, hiện đại",
+        "examples": [
+          "In fifty years we will use far more **advanced** ways of talking to each other.",
+          "This is the most **advanced** camera in the shop.",
+          "Their laboratory is ten years more **advanced** than ours."
+        ],
+        "colloc": [
+          "advanced technology",
+          "an advanced device",
+          "highly advanced",
+          "more advanced than"
+        ]
+      },
+      {
+        "pos": "adjective",
+        "en": "at a high level, for people who already know the basics",
+        "vi": "(trình độ) nâng cao",
+        "examples": [
+          "She has moved up into the **advanced** English class.",
+          "The **advanced** exercises are at the back of the book."
+        ],
+        "colloc": [
+          "an advanced class",
+          "advanced learners",
+          "an advanced level"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "advance",
+        "pos": "noun",
+        "en": "a step forward in knowledge or technology",
+        "vi": "bước tiến",
+        "ex": "The telephone was the biggest **advance** of the century."
+      }
+    ],
+    "note": "Do not confuse **advanced** with **advantage** (= a good point) — they look alike and mean different things. And *modern* only means *of today*, while **advanced** means *ahead of what most people have*."
+  },
+  "transmit": {
+    "senses": [
+      {
+        "pos": "verb",
+        "grammar": "transitive",
+        "en": "to send signals, pictures or information from one place to another by wire, radio or the Internet",
+        "vi": "truyền, chuyển đi (tín hiệu, hình ảnh, thông tin)",
+        "examples": [
+          "The device **transmits** your voice as a stream of numbers.",
+          "A single cable **transmitted** the pictures to every screen in the hall.",
+          "A webcam **transmits** live images of whoever is sitting in front of it."
+        ],
+        "colloc": [
+          "transmit a signal",
+          "transmit data",
+          "transmit live images",
+          "transmit information"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "transmission",
+        "pos": "noun",
+        "en": "the act of sending signals or information from one place to another",
+        "vi": "sự truyền đi",
+        "ex": "Bad weather stopped the **transmission** for an hour."
+      },
+      {
+        "w": "transmitter",
+        "pos": "noun",
+        "en": "the piece of equipment that sends the signal out",
+        "vi": "máy phát",
+        "ex": "The **transmitter** on the hill covers the whole valley."
+      }
+    ],
+    "note": "Double the **t** before an ending: transmit → transmi**tt**ed, transmi**tt**ing. Stress the second syllable: trans-**MIT**. It takes an object — you transmit *something*."
   }
 }

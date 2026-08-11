@@ -107,6 +107,34 @@ sentence.
 | 16 | national park | /ˌnæʃnəl ˈpɑːk/ | n | vườn quốc gia |
 | 17 | wildlife | /ˈwaɪldlaɪf/ | n | động vật hoang dã |
 | 18 | awareness | /əˈweənəs/ | n | sự nhận thức, sự hiểu biết |
+| 19 | ecosystem | /ˈiːkəʊsɪstəm/ | n | hệ sinh thái |
+| 20 | carbon dioxide | /ˌkɑːbən daɪˈɒksaɪd/ | n | khí đi-ô-xít các-bon |
+| 21 | carbon footprint | /ˌkɑːbən ˈfʊtprɪnt/ | n | dấu chân các-bon |
+| 22 | global warming | /ˌɡləʊbl ˈwɔːmɪŋ/ | n | sự nóng lên toàn cầu |
+| 23 | extinction | /ɪkˈstɪŋkʃn/ | n | sự tuyệt chủng |
+| 24 | coral | /ˈkɒrəl/ | n | san hô |
+| 25 | toxic | /ˈtɒksɪk/ | adj | độc hại |
+| 26 | single-use | /ˌsɪŋɡl ˈjuːs/ | adj | dùng một lần rồi bỏ |
+| 27 | campfire | /ˈkæmpfaɪə(r)/ | n | lửa trại |
+| 28 | participate | /pɑːˈtɪsɪpeɪt/ | v | tham gia |
+
+> ### ▶︎ [**Practise these 28 words**](../app/unit-07-vocab.html)
+>
+> Press 🔊 on any row above to hear the word. When you have finished this
+> lesson, the unit page opens a **practice** session over all twenty-eight —
+> the meaning, the word, what you hear, and, more often than any of those,
+> **the word inside a phrase it actually lives in**. Wrong answers come
+> straight back, and everything returns a week later, because what you can
+> still recall after a gap is the only recall worth counting. The **unit
+> test** opens once all seven lessons are done.
+>
+> **Luyện 28 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **practice** ở trang bài sẽ mở ra để luyện cả 28 từ — trong đó phần lớn là
+> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
+> ngay, và mọi từ quay lại sau một tuần.
+>
+> Do the written exercises below as well — writing by hand and typing on a
+> screen build different halves of the same knowledge.
 
 ### 2.1 Complete the sentences
 
@@ -126,6 +154,39 @@ sentence.
 - Line 2 — (a) habitat (b) species (c) sewage (d) wildlife = c ~ the others are about living things and where they live
 - Line 3 — (a) protect (b) preserve (c) conserve (d) pollute = d ~ the others mean to look after or keep something safe
 :::
+
+### 2.3 One word, one meaning
+
+The five terms below are the ones this unit is built on. Each has a meaning you
+can say in a single sentence — learn the sentence, not just the translation.
+
+::: task skill="course" type="choice" opts="ecosystem|habitat|carbon footprint|extinction|single-use" ask="Which term does each meaning describe?"
+- the way the living and non-living things in one area are all connected to each other = ecosystem ~ a whole area working together — a lake, a forest, a reef
+- the place where a particular kind of plant or animal lives = habitat ~ one species, one home
+- the amount of carbon dioxide a person or an activity releases into the environment = carbon footprint
+- the point at which the last animal of a kind dies and the kind is gone for ever = extinction
+- made to be used once and then thrown away = single-use
+:::
+
+> **Ghi chú:** **Ecosystem** rộng hơn **habitat**: một hệ sinh thái gồm nhiều
+> môi trường sống và cả những thứ không sống (nước, đất, ánh sáng). Một loài
+> chỉ có một **habitat**, nhưng sống trong cả một **ecosystem**.
+
+### 2.4 Complete the sentences
+
+::: task skill="course" type="gap-fill" ask="Use one of the new words from rows 19–28. Change the form if you need to."
+- Trees take in ___ and release oxygen. = carbon dioxide
+- Warmer seas have turned the ___ around the islands white. = coral/corals
+- The waste behind the workshop is ___ , so nobody should touch it. = toxic
+- Burning coal, oil and gas is the main cause of ___ . = global warming
+- Put out your ___ with water before you leave the campsite. = campfire
+- More than three hundred students ___ in the clean-up last Sunday. = participated
+:::
+
+> ⚠️ **Bẫy thường gặp:** **participate** luôn đi với **in**: *participate **in**
+> a clean-up*. ❌ *participate a clean-up*. Còn **coral** vừa đếm được vừa
+> không: *a coral reef* (rạn san hô) nhưng *the coral is dying* (san hô nói
+> chung).
 
 ### Pronunciation — /bl/ and /kl/
 
@@ -150,7 +211,7 @@ between them. The second sound is /l/ in both. Only the first sound differs.
 > **chemical** /ˈkemɪkl/ — *ch* ở đầu đọc là /k/ **không có** /l/ theo sau.
 > (Cụm /kl/ trong từ này nằm ở cuối, phần *-cal*.)
 
-### 2.3 Sort the sounds
+### 2.5 Sort the sounds
 
 ::: task skill="course" type="sort" opts="/bl/|/kl/" ask="Which sound is in each word?"
 - blue = /bl/
@@ -167,7 +228,7 @@ between them. The second sound is /l/ in both. Only the first sound differs.
 - include = /kl/
 :::
 
-### 2.4 Odd cluster out
+### 2.6 Odd cluster out
 
 ::: task skill="course" type="choice" ask="In each line, three words share a cluster. Pick the one that does not."
 - Line 1 — (a) blue (b) black (c) clean (d) blame = c ~ *clean* is /kl/; the others are /bl/
@@ -176,7 +237,7 @@ between them. The second sound is /l/ in both. Only the first sound differs.
 - Line 4 — (a) clothes (b) blossom (c) climb (d) clever = b ~ *blossom* is /bl/; the others are /kl/
 :::
 
-### 2.5 Say these sentences
+### 2.7 Say these sentences
 
 Read aloud three times, faster each time. Record yourself if you can.
 
@@ -323,7 +384,9 @@ present simple.
 
 ## Lesson 4 — Communication
 
-### Everyday English — Expressing concern and giving reasons
+### Everyday English — Concern, reasons, and asking what a word means
+
+#### Expressing concern and giving reasons
 
 | Expressing concern | Nghĩa |
 | --- | --- |
@@ -349,6 +412,42 @@ present simple.
 > infinitive** (*talk*, *start*); after **start by** use **V-ing**
 > (*collecting*).
 
+#### Asking for clarification
+
+This unit is full of terms nobody is born knowing — *endangered species*, *in
+the wild*, *carbon footprint*. Stopping to ask what one means is not a sign
+that your English is weak. It is what people who use a second language well do
+all day.
+
+| Asking what a word means | Nghĩa |
+| --- | --- |
+| **What does** 'endangered species' **mean**? | '...' nghĩa là gì? |
+| **What do you mean by** 'in the wild'? | Ý bạn nói '...' là gì? |
+| **Could you explain** what a carbon footprint is? | Bạn giải thích... được không? |
+| Sorry, **what is** a dugong? | Xin lỗi, ... là gì vậy? |
+
+| Giving the clarification | Nghĩa |
+| --- | --- |
+| **That means** animals that live in their natural habitats, not in zoos. | Điều đó có nghĩa là... |
+| **It means** the amount of carbon dioxide we release into the environment. | Nó có nghĩa là... |
+| **In other words**, the last one has died and there are none left. | Nói cách khác,... |
+
+| Showing you have understood | Nghĩa |
+| --- | --- |
+| **Oh, I get it now.** Thanks. | À, giờ mình hiểu rồi. Cảm ơn nhé. |
+| **Ah, I see.** | À, mình hiểu rồi. |
+| **Right, that's much clearer.** | Ừ, rõ hơn nhiều rồi. |
+
+> ⚠️ **Bẫy thường gặp:** Câu hỏi này cần trợ động từ **do/does**, và động từ
+> chính giữ nguyên dạng:
+> ✅ *What **does** 'toxic' **mean**?* ❌ *What means 'toxic'?*
+> ✅ *What **do** these words **mean**?* ❌ *What mean these words?*
+> Và sau *what do you mean* luôn có **by**:
+> ✅ *What do you mean **by** 'single-use'?* ❌ *What do you mean 'single-use'?*
+
+> **Mẹo:** Khi trả lời, dùng **That means…** hoặc **It means…** rồi giải thích
+> bằng lời của mình. Không cần một định nghĩa hoàn hảo — một câu dễ hiểu là đủ.
+
 ### 4.1 Complete the mini-dialogues
 
 1. **A:** I'm ______ about the smoke from the brick kiln.
@@ -371,6 +470,73 @@ practical action.
    → _____________________ → _____________________
 3. Your classmates throw away half-full water bottles every day.
    → _____________________ → _____________________
+
+### 4.3 Ask, explain, understand
+
+::: task skill="course" type="gap-fill" ask="Complete each line. Watch the word order in the questions — the plain form of the verb comes last."
+- **A:** What ___ 'habitat' mean? **B:** The place where a kind of animal lives. = does
+- **A:** What do you mean ___ 'single-use'? **B:** You use it once and throw it away. = by
+- **A:** What does 'toxic' mean? **B:** It ___ poisonous — it can make you ill. = means
+- **A:** Could you ___ what a carbon footprint is? **B:** It's the carbon dioxide we release. = explain
+- **A:** In other ___ , the coral dies when the sea gets too warm. **B:** Ah, I see. = words
+- **A:** So extinction means there are none left anywhere. **B:** Yes. **A:** Oh, I ___ it now. = get
+:::
+
+### 4.4 Three words a friend does not know
+
+A friend reads the Green Club poster and stops at three terms. For each one,
+write the **question** they would ask and the **answer** you would give. Use a
+different way of asking each time, and keep each answer to one sentence.
+
+1. *global warming*
+   → Question: _______________________________
+   → Answer: _______________________________
+2. *ecosystem*
+   → Question: _______________________________
+   → Answer: _______________________________
+3. *participate*
+   → Question: _______________________________
+   → Answer: _______________________________
+
+### Earth Day
+
+One day a year, the same idea turns up in more than 190 countries at once.
+
+> Earth Day falls on **22 April**. It began in **1970**, in America, when
+> millions of people came out on the same day to say that the air and the water
+> around them were getting worse and that somebody should act. It was one
+> country and one day. It did not stay that way.
+>
+> Today more than **190 countries** mark it, and more than **one billion**
+> people take part each year — which makes Earth Day one of the largest
+> movements on the planet. What people actually do on the day is small and
+> ordinary. They pick up litter along a road, a river or a beach. They plant
+> trees. They look for green products in the shops instead of the cheapest
+> thing on the shelf. They practise the three Rs: **reduce, reuse, recycle**.
+>
+> And that is the catch in it. A beach cleaned on 22 April is dirty again by
+> May if nobody comes back. The point of the day is not the day. It is to
+> start something you keep doing on the other 364.
+
+### 4.5 What does each action do?
+
+::: task skill="course" type="choice" opts="less global warming, and safer animal habitats|better health, and less pollution|a clean environment, and less pollution|electricity and natural resources saved" ask="Match each Earth Day action to what it does."
+- planting trees = less global warming, and safer animal habitats ~ trees take in carbon dioxide, and a grown tree is somewhere for animals to live
+- buying green products = better health, and less pollution
+- picking up litter = a clean environment, and less pollution
+- turning off the lights = electricity and natural resources saved
+:::
+
+### 4.6 Your own 22 April
+
+Answer in full sentences.
+
+1. Which **two** of the four actions in 4.5 could you really do this year, and
+   where would you do them?
+   → _______________________________
+2. Pick one of the two. How would you keep doing it after 22 April, on an
+   ordinary week in June?
+   → _______________________________
 
 ---
 
@@ -743,6 +909,30 @@ board, inviting classmates to a clean-up. Reuse the Lesson 6 structure.
 > **Stretch:** Repeat Step 1 in three months and compare your six columns. Did
 > anything change after your notice went up?
 
+### Now I can …
+
+Eight things this unit set out to teach. Beside each one is the place your own
+answer to it is already sitting — open that exercise again and look at what you
+actually put, which tells you far more than a feeling does. Where nothing on the
+page can settle it, the row says so, and that one is yours to judge.
+
+| Now I can … | Where my answer already is |
+| --- | --- |
+| use the words for protecting the environment | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercise 7.1 |
+| hear /bl/ and /kl/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
+| build complex sentences with a time clause | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
+| ask someone to explain what they mean | Lesson 4, exercise 4.3 |
+| read about Con Dao National Park | Lesson 5, exercises 5.1 and 5.2 |
+| talk about Vu Quang National Park | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
+| listen to a talk about water pollution | Lesson 6, exercises 6.1 and 6.2 |
+| write a notice | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+
+> **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
+> Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
+> xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
+> trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
+> đánh giá.
+
 ---
 
 ## Answer Key
@@ -758,7 +948,7 @@ the lake as well. 4. She will ask them for evidence — photographs and dates.
 
 ### Lesson 2
 
-**2.5** Answers will vary — this is a speaking drill. Check: your /b/ buzzes and
+**2.7** Answers will vary — this is a speaking drill. Check: your /b/ buzzes and
 your /k/ does not, and there is no vowel between the consonant and the /l/.
 Item 4 is a knowledge check: *rubbish* is /ˈrʌbɪʃ/ (no /bl/) and *chemical* is
 /ˈkemɪkl/ (the *ch* is a plain /k/).
@@ -793,6 +983,20 @@ blows from the factory**,** the whole street smells of chemicals.
 **4.2** Answers will vary. Check: line 1 uses a concern phrase (*I'm worried
 about…*, *It's terrible that…*, *What worries me is…*) and line 2 suggests one
 concrete, doable action (*We could start by…*, *Why don't we…*).
+
+**4.4** Answers will vary. Check the questions first: each one keeps **do** or
+**does** and leaves *mean* in its plain form (*What **does** 'ecosystem'
+**mean**?*, *What **do** you **mean by** 'participate'?*, *Could you **explain**
+what global warming is?*) — never *What means…?*, and never *What do you mean
+'…'?* without **by**. Then check the answers: one sentence each, starting *It
+means…* / *That means…*, and using your own words rather than the wording of
+the table in 2.3.
+
+**4.6** Answers will vary. Check: question 1 names **two** of the four actions
+and says **where** — a road, a beach, the school yard, your street — not just
+"in my area". Question 2 has to describe a habit rather than a single day: a
+day each month, every time you walk home past the canal, one bag kept in your
+schoolbag. If your answer to 2 only works on 22 April, write it again.
 
 ### Lesson 5
 

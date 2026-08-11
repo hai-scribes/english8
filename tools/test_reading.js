@@ -228,6 +228,51 @@ async function main() {
        !win.document.querySelector('[data-pg="notepad"]').hidden);
   }
 
+  /* ---- the Review page: a second page type, same reading screen ---------
+     A Review puts the Language exercises above the reading block, which no
+     lesson page does. Two things have to hold there and hold nowhere else:
+     the clock must cover the reading exercises and NOT the five Language
+     tasks printed above it, and the question bar must number the questions
+     it does cover from 1. */
+  {
+    const win = await settled(load("docs/review-1/index.html"));
+    const doc = win.document;
+    const pg = doc.querySelector('[data-role="passage"]');
+    ok("review 1: the passage renders", !!pg);
+    const paras = Array.from(pg.querySelectorAll('[data-pg="body"] p'));
+    ok("review 1: five paragraphs, lettered A to E",
+       paras.map(p => p.querySelector(".pg-l") && p.querySelector(".pg-l").textContent)
+            .join("") === "ABCDE");
+
+    const clock = doc.querySelector('[data-role="clock"]');
+    ok("review 1: one clock on the page",
+       doc.querySelectorAll('[data-role="clock"]').length === 1);
+
+    const tasks = Array.from(doc.querySelectorAll('[data-role="task"]'));
+    const under = tasks.filter(t =>
+      clock.compareDocumentPosition(t) & win.Node.DOCUMENT_POSITION_FOLLOWING);
+    ok("review 1: the Language half is above the clock and not timed by it",
+       tasks.length === 8 && under.length === 3, tasks.length + " tasks, " + under.length
+       + " under the clock");
+
+    const nav = doc.querySelector(".c-nav");
+    const qs = Array.from(nav ? nav.querySelectorAll(".c-q") : []);
+    ok("review 1: the question bar covers only the reading exercises",
+       qs.length === 15, qs.length);
+    ok("review 1: numbered from 1 across the reading block",
+       qs.length && qs[0].textContent === "1"
+       && qs[qs.length - 1].textContent === String(qs.length));
+
+    const txt = plain(paras[2]);
+    drag(win, paras, 2, 6, 2, 22);
+    const marks = pg.querySelectorAll("mark");
+    ok("review 1: highlighting works on a Review passage too",
+       marks.length === 1 && marks[0].textContent === txt.slice(6, 22),
+       marks.length ? JSON.stringify(marks[0].textContent) : "");
+    ok("review 1: the highlight is stored under the Review's own id",
+       JSON.parse(win.localStorage.getItem("en8:marks:r1-2-p1") || "[]").length === 1);
+  }
+
   console.log(fails
     ? "\n" + passes + " passed, " + fails + " FAILED"
     : "PASS: " + passes + " reading-screen checks — paragraph labels, highlighting, "

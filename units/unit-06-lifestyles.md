@@ -109,6 +109,44 @@ Answer in full sentences.
 | 16 | gadget | /ˈɡædʒɪt/ | n | thiết bị điện tử nhỏ gọn |
 | 17 | screen time | /ˈskriːn taɪm/ | n | thời gian dùng màn hình |
 | 18 | well-being | /ˌwel ˈbiːɪŋ/ | n | sự khoẻ mạnh về thể chất và tinh thần |
+| 19 | maintain | /meɪnˈteɪn/ | v | duy trì, gìn giữ |
+| 20 | revive | /rɪˈvaɪv/ | v | làm sống lại, phục hồi |
+| 21 | tribal | /ˈtraɪbl/ | adj | thuộc bộ tộc, bộ lạc |
+| 22 | nomadic | /nəʊˈmædɪk/ | adj | du mục |
+| 23 | native art | /ˌneɪtɪv ˈɑːt/ | n | nghệ thuật bản địa |
+| 24 | weaving | /ˈwiːvɪŋ/ | n | nghề dệt, việc dệt vải |
+| 25 | dogsled | /ˈdɒɡsled/ | n | xe trượt tuyết do chó kéo |
+| 26 | musher | /ˈmʌʃə(r)/ | n | người điều khiển xe chó kéo |
+| 27 | igloo | /ˈɪɡluː/ | n | lều tuyết |
+| 28 | common practice | /ˌkɒmən ˈpræktɪs/ | n | việc thường làm, thông lệ |
+| 29 | in the habit of | /ɪn ðə ˈhæbɪt əv/ | phr | có thói quen làm gì |
+| 30 | street food | /ˌstriːt ˈfuːd/ | n | thức ăn đường phố |
+| 31 | staple | /ˈsteɪpl/ | adj, n | chủ yếu, chính; lương thực chính |
+| 32 | greet | /ɡriːt/ | v | chào, chào hỏi |
+| 33 | greeting | /ˈɡriːtɪŋ/ | n | lời chào, cách chào |
+| 34 | interact | /ˌɪntərˈækt/ | v | tương tác, giao tiếp qua lại |
+| 35 | impact | /ˈɪmpækt/ | n | tác động, sự ảnh hưởng |
+| 36 | offline | /ˈɒflaɪn/ | adj, adv | ngoại tuyến, trực tiếp (không qua mạng) |
+| 37 | experience | /ɪkˈspɪəriəns/ | v, n | trải nghiệm; kinh nghiệm |
+| 38 | independent | /ˌɪndɪˈpendənt/ | adj | độc lập, tự chủ |
+
+> ### ▶︎ [**Practise these 38 words**](../app/unit-06-vocab.html)
+>
+> Press 🔊 on any row above to hear the word. When you have finished this
+> lesson, the unit page opens a **practice** session over all thirty-eight — the
+> meaning, the word, what you hear, and, more often than any of those, **the
+> word inside a phrase it actually lives in**. Wrong answers come straight
+> back, and everything returns a week later, because what you can still recall
+> after a gap is the only recall worth counting. The **unit test** opens once
+> all seven lessons are done.
+>
+> **Luyện 38 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **practice** ở trang bài sẽ mở ra để luyện cả 38 từ — trong đó phần lớn là
+> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
+> ngay, và mọi từ quay lại sau một tuần.
+>
+> Do the written exercises below as well — writing by hand and typing on a
+> screen build different halves of the same knowledge.
 
 ### 2.1 Complete the sentences
 
@@ -127,6 +165,38 @@ Answer in full sentences.
 - rural · remote · peaceful · urban = urban ~ the other three are about the countryside or places far from a city
 - sled · hunt · whaling · gadget = gadget ~ the other three belong to a traditional Arctic lifestyle
 - active · fit · healthy · sedentary = sedentary ~ the other three describe a healthy lifestyle
+:::
+
+### 2.3 The phrases these words live in
+
+Four of the new words almost never turn up alone. Learn the whole phrase:
+**maintain a traditional lifestyle** · **be in the habit of** doing something ·
+**a common practice** · **staple food**.
+
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
+- The elders work hard to ___ their traditional lifestyle. = maintain
+- Rice is the ___ food of most families in this part of the country. = staple
+- Buying breakfast on the way to school is ___ here — almost nobody cooks at home. = common practice
+- My uncle is ___ walking by the river before six every morning. = in the habit of
+- A group of young singers is trying to ___ the folk songs their grandparents sang. = revive
+- Families in that region still lead a ___ life, moving with their animals. = nomadic
+:::
+
+> **Ghi chú:** Sau *in the habit of* luôn là **V-ing**: ✅ *in the habit of
+> **walking***, ❌ *in the habit of walk*. Còn *common practice* thường đứng
+> **không có mạo từ**: *It is **common practice** here.*
+
+### 2.4 Which word?
+
+::: task skill="course" type="choice" opts="dogsled|musher|igloo|weaving|native art|tribal|greeting|impact" ask="Which word does each description point to?"
+- a shelter built from blocks of hard snow = igloo
+- the person who drives a team of dogs across the snow = musher
+- making cloth by passing threads over and under each other = weaving
+- a vehicle with no wheels that dogs pull over ice = dogsled
+- carving, painting and craft made by the first people of a place = native art
+- belonging to a group of families who share a language and customs = tribal
+- what you say or do when you meet someone = greeting
+- the effect one thing has on another = impact
 :::
 
 ### Pronunciation — /br/ and /pr/
@@ -156,7 +226,7 @@ of this block gives the measurement behind that claim.
 > từ đầu; với **/pr/** (*price*) thì không rung, và có một luồng hơi nhỏ bật
 > ra. Thử đặt tờ giấy trước miệng: *price* làm giấy động, *bright* thì không.
 
-### 2.3 Sort the sounds
+### 2.5 Sort the sounds
 
 ::: task skill="course" type="sort" opts="/br/|/pr/" ask="Which sound is in each word?"
 - bright = /br/
@@ -173,7 +243,7 @@ of this block gives the measurement behind that claim.
 - celebrate = /br/
 :::
 
-### 2.4 Odd sound out
+### 2.6 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** cluster. Pick it."
 - Line 1 — bring · brave · print · brush = print ~ *print* is /pr/; the others are /br/
@@ -182,7 +252,7 @@ of this block gives the measurement behind that claim.
 - Line 4 — celebrate · break · bright · produce = produce ~ *produce* is /pr/; the others are /br/
 :::
 
-### 2.5 Say these sentences
+### 2.7 Say these sentences
 
 Read aloud three times, faster each time. Record yourself if you can.
 
@@ -339,7 +409,35 @@ Write true sentences about yourself. Use the structure given each time.
 
 ## Lesson 4 — Communication
 
-### Everyday English — Predicting, promising, offering
+### Everyday English — Expressing certainty, predicting, promising, offering
+
+#### Expressing certainty
+
+Someone asks you for something, or tells you something and waits for you to
+agree. If the answer is yes and you have no doubt at all, English has a set of
+short replies that say so:
+
+| Expressing certainty | Nghĩa |
+| --- | --- |
+| **Sure.** You're welcome. | Được chứ. Cứ tự nhiên. |
+| **Yes, certainly.** | Vâng, chắc chắn rồi. |
+| **Certainly.** I'll bring it tomorrow. | Chắc chắn rồi. Mai mình mang đến. |
+| **Of course.** | Tất nhiên rồi. |
+| **Definitely.** | Chắc chắn luôn. |
+| **I'm sure it will.** | Mình chắc là sẽ như vậy. |
+| **No doubt about it.** | Không nghi ngờ gì nữa. |
+
+> **Ghi chú:** Hãy so sánh hai nhóm câu trả lời.
+> **Chắc chắn:** *Definitely. · Yes, certainly. · I'm sure it will.*
+> **Chưa chắc:** *I'm not so sure. · I doubt it. · We'll see. · Maybe.*
+> Nhóm thứ hai nằm ở bảng **Doubting** phía dưới. Chọn nhầm nhóm là người nghe
+> hiểu ngược lại điều bạn muốn nói.
+
+> ⚠️ **Bẫy thường gặp:** **"Sure."** đứng một mình rất thân thiện nhưng cũng
+> rất **suồng sã** — chỉ dùng với bạn bè, người thân. Khi nói với thầy cô,
+> người lớn, hoặc khi viết, hãy dùng **"Yes, certainly."** hay **"Of course."**
+
+#### Predicting
 
 | Making a prediction | Nghĩa |
 | --- | --- |
@@ -347,6 +445,8 @@ Write true sentences about yourself. Use the structure given each time.
 | I'm **sure** you**'ll love** it. | Mình chắc là bạn sẽ thích nó. |
 | It **probably won't be** easy. | Chắc là sẽ không dễ đâu. |
 | **Perhaps** we**'ll see** them there. | Có lẽ chúng ta sẽ gặp họ ở đó. |
+
+#### Promising and offering
 
 | Promising and offering | Nghĩa |
 | --- | --- |
@@ -357,6 +457,8 @@ Write true sentences about yourself. Use the structure given each time.
 
 > ⚠️ Note the forms: after **will / won't / shall** comes the **bare
 > infinitive** — *I'll **help***, not *I'll to help* or *I'll helps*.
+
+#### Agreeing, hoping, doubting
 
 | Agreeing / hoping | Doubting |
 | --- | --- |
@@ -374,7 +476,33 @@ Write true sentences about yourself. Use the structure given each time.
 - **A:** I promise I ___ tell anyone your secret. — **B:** Thanks, that's kind of you. = won't
 :::
 
-### 4.2 Write your own
+### 4.2 Certain, or not certain?
+
+::: task skill="course" type="choice" opts="certain|not certain" ask="Does the second speaker sound certain, or not?"
+- "Will the market be open at six?" — "Yes, certainly. It opens at five." = certain
+- "Do you think it will snow here one day?" — "I'm not so sure." = not certain
+- "Can you help me with my maths homework?" — "Sure. Bring it round after lunch." = certain
+- "Will your cousin come to the festival with us?" — "We'll see." = not certain
+- "Is rice the staple food in your area?" — "Definitely. We eat it twice a day." = certain
+- "Do you think our team will win on Sunday?" — "I doubt it." = not certain
+- "Are you in the habit of walking to school?" — "Of course. Every morning." = certain
+- "Will the old weaving skills survive?" — "Perhaps. Nobody knows." = not certain
+:::
+
+### 4.3 Say it with certainty
+
+Someone asks you something and you have no doubt about the answer. Write a
+short reply that says so, then add **one** sentence of your own explaining why.
+Use a different expression each time, and remember who you are talking to.
+
+1. Your friend asks: "Can I borrow your dictionary until Friday?"
+   → _______________________________
+2. Your teacher asks: "Is street food really cheaper than a restaurant here?"
+   → _______________________________
+3. A visitor asks: "Will your family be at the village festival on Sunday?"
+   → _______________________________
+
+### 4.4 Write your own
 
 Reply to each person. Use a prediction, a promise and an offer — one of each.
 
@@ -383,6 +511,72 @@ Reply to each person. Use a prediction, a promise and an offer — one of each.
 2. "Do you think our village will change a lot in ten years?"
    → _______________________________
 3. "Please don't tell my parents about my marks."
+   → _______________________________
+
+### Greetings and cuisines around the world
+
+Every country says hello, and every country eats. Almost nothing about *how*
+they do it is the same.
+
+#### How people say hello
+
+Shaking hands is probably the commonest greeting on Earth: two people meet,
+take each other's right hand, and shake it once or twice. In the USA that
+handshake usually arrives with a word attached — people greet one another by
+saying **"Hello"**. But the hand is not the only part of the body that greets.
+In Thailand, a young person greeting an older one says **sawadee** and bows the
+head slightly at the same time. The Maori people of New Zealand press their
+noses together, so that two people share one breath. And in Japan nobody needs
+to touch at all: people bow, and how deeply they bow says how much respect they
+mean.
+
+None of these is polite everywhere. A greeting that is warm in one country can
+look strange, or even rude, in the next one — which is why careful visitors
+watch first and copy second.
+
+#### What people eat
+
+**Italy** is famous for two dishes the whole world now cooks. A pizza is a flat
+round base of bread baked with cheese, meat or vegetables on top; pasta comes
+in dozens of shapes and almost as many sauces. Italians are just as proud of
+their cheese, and they have plenty to be proud of — the country makes more than
+four hundred kinds. One of them is left out for flies to lay their eggs in, and
+its taste is not something visitors forget.
+
+**India** does not really have one cuisine; it has a great many. Curry — meat or
+vegetables cooked in a thick sauce and eaten with rice or bread — is common
+almost everywhere, but the sauce changes from region to region. In some areas
+most people prefer vegetarian food, while in others chicken, lamb or goat is
+normal. Beef, though, is generally avoided.
+
+Other countries are known for one dish above all the rest: **fish and chips** in
+England, **sushi** in Japan, **kimchi** in Korea.
+
+### 4.5 The quiz
+
+::: task skill="course" type="choice" ask="How much do you know about greetings and cuisines around the world? Everything you need is in the two texts above."
+- The commonest way of greeting people around the world is probably (a) sticking out your tongue (b) shaking hands (c) pressing noses together = b ~ two people take each other's right hand and shake it
+- In the USA people greet one another by (a) shaking their heads (b) saying "Hello" (c) bowing low = b
+- In Thailand a young person greets an older one by saying *sawadee* and (a) bowing slightly (b) saying their surname (c) kissing their cheeks = a
+- The Maori of New Zealand greet by (a) kissing cheeks (b) shaking hands twice (c) pressing their noses together = c ~ the two people share one breath
+- In Japan people normally (a) hug (b) bow to each other (c) touch hands = b ~ how deeply you bow shows how much respect you mean
+- Which country is famous for pasta and pizza? (a) Thailand (b) Italy (c) Brazil = b
+- Which country is famous for kimchi? (a) Korea (b) Portugal (c) Australia = a
+- England is well known for (a) dim sum (b) spaghetti (c) fish and chips = c
+- Sushi comes from (a) Japan (b) Korea (c) Taiwan = a
+- Which food do people in India generally avoid? (a) beef (b) rice (c) bread = a
+:::
+
+### 4.6 The food where you live
+
+Now answer for your own area, in full sentences.
+
+1. What is the staple food in your area, and how often do people eat it?
+   → _______________________________
+2. What is your own favourite food, and where do you get it — at home, from a
+   restaurant, or as street food?
+   → _______________________________
+3. Which food is eaten on special occasions, and which occasion is it?
    → _______________________________
 
 ---
@@ -684,6 +878,21 @@ simple or the first conditional.
 - Error 6 = I will visit/will visit ~ the main clause of a first conditional takes *will*
 :::
 
+### 7.5 Say it the other way
+
+*If* and *unless* say the same thing from opposite ends, so turning a sentence
+from one into the other is the quickest way to find out whether the negative is
+where you think it is.
+
+::: task skill="course" type="gap-fill" ask="Complete the second sentence so that it means the same as the first. Write only the missing words."
+- We'll go to the beach unless it rains. → If it ___ , we'll go to the beach. = doesn't rain/does not rain
+- If you don't hurry up, you will be late. → ___ you hurry up, you will be late. = Unless
+- Unless the teacher explains it again, we won't understand it. → If the teacher ___ explain it again, we won't understand it. = doesn't/does not
+- They won't be welcome here unless they behave. → If they ___ behave, they won't be welcome here. = don't/do not
+- Be careful with your diet, or you will put on weight. → If you ___ careful with your diet, you will put on weight. = aren't/are not
+- Don't play computer games for too long. You will harm your eyes. → If you ___ computer games for too long, you will harm your eyes. = play
+:::
+
 ### Project — Two lifestyles, one week
 
 Compare a traditional lifestyle with your own, using real data about yourself.
@@ -720,6 +929,30 @@ you said *will*.
 > think was better than yours. Try it for two weeks and write three sentences
 > about what changed.
 
+### Now I can …
+
+Eight things this unit set out to teach. Beside each one is the place your own
+answer to it is already sitting — open that exercise again and look at what you
+actually put, which tells you far more than a feeling does. Where nothing on the
+page can settle it, the row says so, and that one is yours to judge.
+
+| Now I can … | Where my answer already is |
+| --- | --- |
+| use the words for different lifestyles | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercise 7.1 |
+| hear /br/ and /pr/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
+| use *will* and the first conditional, *unless* included | Lesson 3, exercises 3.2 and 3.3 · Lesson 7, exercises 7.3, 7.4 and 7.5 |
+| say how certain I am | Lesson 4, exercises 4.1 and 4.2 |
+| read about an unusual way of life and how it is kept going | Lesson 5, exercises 5.1 and 5.2 |
+| talk about keeping a traditional way of life | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
+| listen to how technology has changed the way we live | Lesson 6, exercises 6.1 and 6.2 |
+| write a paragraph about the good or the bad side of online learning | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+
+> **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
+> Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
+> xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
+> trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
+> đánh giá.
+
 ---
 
 ## Answer Key
@@ -736,7 +969,7 @@ Sunday morning unless it rains.
 
 ### Lesson 2
 
-**2.5** Answers will vary (spoken). Check: your throat buzzes on the **br** of
+**2.7** Answers will vary (spoken). Check: your throat buzzes on the **br** of
 *brother, bright, bring, brush, celebrate, umbrella* — at the very start in the
 first four, and in the middle of *celebrate* and *umbrella* — and does not buzz
 on the **pr** of *practise, improve, price, print*.
@@ -760,9 +993,21 @@ a comma only when the *if*-clause comes first.
 
 ### Lesson 4
 
-**4.2** Answers will vary. Check that you used one prediction (*I think… will*,
+**4.3** Answers will vary. Check: each reply opens with a **certainty**
+expression — *Sure. · Yes, certainly. · Certainly. · Of course. · Definitely. ·
+I'm sure…* — and never with a doubting one (*I'm not so sure. · I doubt it. ·
+We'll see.*). A bare *Sure.* is fine for the friend in 1, but not for the
+teacher in 2 or the visitor in 3; use *Yes, certainly.* or *Of course.* there.
+Each answer should be two sentences: the reply, then your reason.
+
+**4.4** Answers will vary. Check that you used one prediction (*I think… will*,
 *I'm sure… will*), one promise (*I promise I'll… / I won't…*) and one offer
 (*I'll… / Shall I…*), each with a bare infinitive after *will* or *shall*.
+
+**4.6** Answers will vary. Check: full sentences, not single words; the word
+**staple** used as an adjective before *food* in 1 (*The staple food in my area
+is…*); and a named occasion in 3, not just "a party" — Tet, a wedding, a
+birthday, the mid-autumn festival.
 
 ### Lesson 5
 

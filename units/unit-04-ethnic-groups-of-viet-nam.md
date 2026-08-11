@@ -92,7 +92,7 @@ Answer in full sentences.
 
 ## Lesson 2 — A Closer Look 1
 
-### Vocabulary — Ethnic groups and their homes
+### Vocabulary — Ethnic groups, their homes and their way of life
 
 | # | Word | IPA | Type | Nghĩa tiếng Việt |
 | --- | --- | --- | --- | --- |
@@ -114,6 +114,37 @@ Answer in full sentences.
 | 16 | unique | /juˈniːk/ | adj | độc đáo, có một không hai |
 | 17 | diverse | /daɪˈvɜːs/ | adj | đa dạng, phong phú |
 | 18 | traditional | /trəˈdɪʃənl/ | adj | truyền thống |
+| 19 | communal house | /kəˈmjuːnl haʊs/ | n | nhà rông, nhà sinh hoạt cộng đồng |
+| 20 | livestock | /ˈlaɪvstɒk/ | n | gia súc, vật nuôi |
+| 21 | raise | /reɪz/ | v | chăn nuôi, nuôi lớn |
+| 22 | gardening | /ˈɡɑːdnɪŋ/ | n | việc làm vườn |
+| 23 | soil | /sɔɪl/ | n | đất trồng |
+| 24 | overlook | /ˌəʊvəˈlʊk/ | v | nhìn ra, hướng ra |
+| 25 | open fire | /ˌəʊpən ˈfaɪə/ | n | bếp lửa giữa nhà |
+| 26 | statue | /ˈstætʃuː/ | n | bức tượng |
+| 27 | flute | /fluːt/ | n | cái sáo |
+| 28 | musical instrument | /ˌmjuːzɪkl ˈɪnstrəmənt/ | n | nhạc cụ |
+| 29 | folk dance | /ˈfəʊk dɑːns/ | n | điệu múa dân gian |
+| 30 | sticky rice | /ˌstɪki ˈraɪs/ | n | xôi, gạo nếp |
+| 31 | feature | /ˈfiːtʃə/ | n | nét, đặc điểm |
+
+> ### ▶︎ [**Practise these 31 words**](../app/unit-04-vocab.html)
+>
+> Press 🔊 on any row above to hear the word. When you have finished this
+> lesson, the unit page opens a **practice** session over all thirty-one — the
+> meaning, the word, what you hear, and, more often than any of those, **the
+> word inside a phrase it actually lives in**. Wrong answers come straight
+> back, and everything returns a week later, because what you can still recall
+> after a gap is the only recall worth counting. The **unit test** opens once
+> all seven lessons are done.
+>
+> **Luyện 31 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **practice** ở trang bài sẽ mở ra để luyện cả 31 từ — trong đó phần lớn là
+> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
+> ngay, và mọi từ quay lại sau một tuần.
+>
+> Do the written exercises below as well — writing by hand and typing on a
+> screen build different halves of the same knowledge.
 
 ### 2.1 Complete the sentences
 
@@ -133,6 +164,35 @@ Answer in full sentences.
 - Line 1 — (a) bamboo (b) wood (c) basket (d) palm leaf = c ~ the others are materials; a *basket* is a thing made from them
 - Line 2 — (a) custom (b) ritual (c) folk song (d) market = d ~ the others are cultural traditions; a *market* is a place
 - Line 3 — (a) stilt house (b) terraced field (c) cave (d) costume = d ~ the others are places; a *costume* is clothing
+:::
+
+### 2.3 A day in the village
+
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
+- The whole village meets in the ___ when there is a decision to make. = communal house
+- My uncle keeps buffaloes, goats and pigs, so looking after the ___ takes all day. = livestock
+- Most families here ___ chickens and pigs behind the house. = raise
+- The ___ on the hillside is thin, so every crop needs care. = soil
+- My grandmother spends the whole morning ___ — watering, weeding and cutting back. = gardening
+- Their house ___ the terraced fields, so you see the valley from the door. = overlooks
+- In the middle of the kitchen there is an ___ and the family sits around it. = open fire
+- The Jrai carve a wooden ___ for each grave. = statue
+- He cut a ___ from a piece of bamboo and played us a tune on it. = flute
+- The gong and the đàn tính are both a kind of ___ . = musical instrument
+- At the festival the whole village joins in a ___ . = folk dance
+- We ate ___ that had been dyed five colours with leaves and roots. = sticky rice
+- The tall roof is the first ___ you notice about a Rong house. = feature
+:::
+
+### 2.4 Which word?
+
+::: task skill="course" type="choice" opts="livestock|gardening|communal house|statue|feature|open fire" ask="Which word does each description name?"
+- the animals a family keeps on its land — cows, buffaloes, pigs, chickens = livestock
+- growing, watering, weeding and cutting back the plants around a house = gardening
+- a large building where the whole village gathers for a meeting or a festival = communal house
+- a figure of a person or an animal, carved from wood or cut from stone = statue
+- one part of a thing that you notice first, and that makes it different from others = feature
+- a fire that burns in the open air, or in the middle of a room, with nothing round it = open fire
 :::
 
 ### Pronunciation — /k/ and /ɡ/
@@ -181,7 +241,7 @@ to put it.
 > Anh nằm ngoài hệ thống có sẵn, và dễ trượt về /k/.
 :::
 
-### 2.3 Sort the sounds
+### 2.5 Sort the sounds
 
 ::: task skill="course" type="sort" opts="/k/|/ɡ/" ask="Which sound is in each word?"
 - cave = /k/
@@ -198,7 +258,7 @@ to put it.
 - group = /ɡ/
 :::
 
-### 2.4 Odd sound out
+### 2.6 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** sound for the bold letter. Pick it."
 - Line 1 — (a) **c**ave (b) **c**ustom (c) **g**ong (d) **c**oat = c ~ *gong* is /ɡ/; the others are /k/
@@ -207,7 +267,7 @@ to put it.
 - Line 4 — (a) **c**eremony (b) **c**ave (c) **c**oat (d) **c**ulture = a ~ *ceremony* is /s/; the others are /k/
 :::
 
-### 2.5 Say these sentences
+### 2.7 Say these sentences
 
 Read aloud three times, faster each time. Record yourself if you can.
 
@@ -393,7 +453,9 @@ would like to ask a classmate from a different ethnic group.
 
 ## Lesson 4 — Communication
 
-### Everyday English — Asking politely and showing interest
+### Everyday English — Asking politely, showing interest, and giving opinions
+
+#### Asking politely and showing interest
 
 When you interview someone about their family or their community, a direct
 question can sound blunt. Soften it.
@@ -417,6 +479,45 @@ question can sound blunt. Soften it.
 | That sounds unique. | Well, it's hard to explain, but… |
 | Tell me more about that. | I'd rather not say, if that's OK. |
 
+#### Giving your opinion
+
+Once someone has answered your questions, they will usually turn the question
+round: *and what do you think?* Here is how to ask, and how to answer.
+
+| Asking for an opinion | Nghĩa |
+| --- | --- |
+| **What do you think about** life in the mountains? | Bạn nghĩ sao về cuộc sống ở miền núi? |
+| **What do you think of** the new communal house? | Bạn thấy nhà rông mới thế nào? |
+| **What about you? What do you think?** | Còn bạn thì sao? Bạn nghĩ thế nào? |
+| **Do you agree?** | Bạn có đồng ý không? |
+
+| Giving your opinion | Nghĩa |
+| --- | --- |
+| **I think** the gong is the finest instrument of them all. | Mình nghĩ... |
+| **In my opinion**, every village should keep one stilt house. | Theo ý mình... |
+| **To my way of thinking**, a house should face the fields. | Theo cách nghĩ của mình... |
+| **I don't think** the old houses will disappear. | Mình không nghĩ là... |
+
+> **Ghi chú:** *I think* dùng được ở mọi lúc. *To my way of thinking* trang
+> trọng hơn — hợp với bài thuyết trình, bài viết, hoặc khi bạn muốn nhấn mạnh
+> rằng đây là **cách nhìn riêng** của mình, chứ không nói chuyện suồng sã với
+> bạn bè.
+
+> ⚠️ **Bẫy thường gặp:** Khi muốn nói điều ngược lại, tiếng Anh đưa *not* lên
+> động từ **think**, chứ không để ở mệnh đề sau.
+> ❌ *I think the roof is not strong enough.*
+> ✅ **I don't think** the roof **is** strong enough.
+
+**Disagreeing without a fight.** English speakers almost never answer an
+opinion with a flat *no*. They agree with a part of it first, then turn:
+
+| Softening a disagreement | Nghĩa |
+| --- | --- |
+| **I see what you mean, but** the walls would not last. | Mình hiểu ý bạn, nhưng... |
+| **I'm not sure about that.** | Mình không chắc lắm. |
+| **That's true, though** the village is a long way from the school. | Đúng là vậy, tuy nhiên... |
+| **I'd say** it depends on the weather. | Mình thì cho rằng... |
+
 ### 4.1 Complete the mini-dialogues
 
 1. **A:** Could you tell me where your village ____________ (be)?
@@ -438,6 +539,88 @@ question, and one beginning *Could you tell me…*.
 2. (Wh-) _______________________________
 3. (Subject) _______________________________
 4. (Could you tell me…) _______________________________
+
+### 4.3 Say what you think
+
+::: task skill="course" type="gap-fill" ask="Fill each gap so that the line means what the Vietnamese in brackets says. One word is enough everywhere."
+- What do you ___ about living close to nature? *(Bạn nghĩ sao về…?)* = think
+- ___ about you? What do you think? *(Còn bạn thì sao?)* = What
+- ___ my opinion, a stilt house is cooler than a brick one. *(Theo ý mình…)* = In
+- To my ___ of thinking, every school should teach a folk dance. *(Theo cách nghĩ của mình…)* = way
+- I ___ think the gong is hard to play. *(Mình không nghĩ là…)* = don't/do not
+- I see ___ you mean, but the path is dangerous in the rain. *(Mình hiểu ý bạn, nhưng…)* = what
+- I'm not ___ about that — the roof leaked all last summer. *(Mình không chắc lắm.)* = sure
+:::
+
+### 4.4 Three opinions of your own
+
+Write **one** full sentence for each. Use a different opening each time — *I
+think…*, *In my opinion…*, *To my way of thinking…* — and give a reason after it.
+
+1. What do you think about living in a house with only one big room?
+   → _______________________________
+2. What do you think of learning a musical instrument at school?
+   → _______________________________
+3. A friend says, "Village life is boring." Disagree politely.
+   → _______________________________
+
+### Lifestyle of the ethnic minority groups
+
+Fifty-four ethnic groups live in Viet Nam. Fifty-three of them are called
+**ethnic minorities**, and together they make up roughly **13%** of the
+country's people — about one person in eight. Most of them live in the
+**mountains**: the high north, the long chain of hills down the middle of the
+country, and the Central Highlands. That is why so many of the words in this
+unit are about slopes, wood, weather and animals.
+
+Living in the mountains shapes everything else. Flat ground is scarce, so rice
+is grown on terraced fields. Rain is heavy, so houses stand on posts. Villages
+are far apart, so each one needs a communal house of its own. And because a
+family cannot buy everything it needs, it grows, weaves, carves or raises most
+of it.
+
+#### One group: the Jrai
+
+> **The Jrai.** In 2019 there were **513,930** Jrai people, which makes them the
+> largest minority group in the Central Highlands. Most of them live in **Gia
+> Lai**. They build **stilt houses**, and they live from the land in several
+> ways at once: they grow food crops, they weave, they plant industrial trees
+> such as coffee, cacao and rubber, and they raise buffaloes and elephants.
+> Their traditional culture is rich in folk dances, folk songs, games and
+> musical instruments. Inside a Jrai family, it is the **women** who hold the
+> dominant role.
+
+Two details there are worth stopping on. First, the Jrai economy is not one
+job but four, and each one answers a different risk: a bad harvest does not
+empty the house if there is cloth to sell. Second, the elephants are not
+decoration — they were, and in places still are, working animals.
+
+### 4.5 How much do you know?
+
+::: task skill="course" type="choice" ask="Pick the right answer. Everything you need is in the two texts above."
+- There are ___ ethnic groups in Viet Nam. (a) 63 (b) 45 (c) 54 = c
+- Ethnic minority groups make up about ___ of the population. (a) 7% (b) 13% (c) 25% = b
+- They live mainly ___ . (a) in the lowlands (b) in the mountains (c) in the Mekong Delta = b
+- In 2019 the Jrai numbered about ___ . (a) 51,000 (b) 513,930 (c) 5,130,000 = b
+- Most Jrai people live in ___ . (a) Gia Lai (b) Cao Bang (c) Ninh Thuan = a
+- A Jrai family lives in a ___ . (a) brick flat (b) stilt house (c) cave = b
+- Coffee, cacao and rubber are ___ the Jrai plant. (a) industrial trees (b) food crops (c) flowers = a
+- The two large animals the Jrai raise are buffaloes and ___ . (a) horses (b) sheep (c) elephants = c
+- In a Jrai family the dominant role belongs to the ___ . (a) women (b) eldest son (c) village head = a
+:::
+
+### 4.6 What interests you?
+
+Answer in full sentences, and begin each one with an opinion expression from the
+tables above.
+
+1. Which fact about the Jrai surprised you most, and why?
+   → _______________________________
+2. The Jrai earn a living in four different ways. Which one would you like to
+   learn, and why?
+   → _______________________________
+3. What is one question about the Jrai that neither text answers?
+   → _______________________________
 
 ---
 
@@ -772,6 +955,30 @@ word for word. Then invite three questions and answer them.
 > that their page does **not** answer, and give them back. A good fact file
 > should leave you curious, not finished.
 
+### Now I can …
+
+Eight things this unit set out to teach. Beside each one is the place your own
+answer to it is already sitting — open that exercise again and look at what you
+actually put, which tells you far more than a feeling does. Where nothing on the
+page can settle it, the row says so, and that one is yours to judge.
+
+| Now I can … | Where my answer already is |
+| --- | --- |
+| use the words for the way ethnic groups live | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercise 7.1 |
+| hear /k/ and /ɡ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
+| ask *Yes/No* and *Wh-* questions, and use countable and uncountable nouns | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
+| give my opinion | Lesson 4, exercise 4.3 |
+| read about stilt houses | Lesson 5, exercises 5.1 and 5.2 |
+| talk about the kind of home I live in | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
+| listen to a day in the life of a minority child | Lesson 6, exercises 6.1 and 6.2 |
+| write a paragraph about the things I do for my family | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+
+> **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
+> Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
+> xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
+> trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
+> đánh giá.
+
 ---
 
 ## Answer Key
@@ -788,7 +995,7 @@ says she does not have much (yet).
 
 ### Lesson 2
 
-**2.5** Answers will vary. Check: the bold letters in *goat, group, grandmother*
+**2.7** Answers will vary. Check: the bold letters in *goat, group, grandmother*
 buzz (put a hand on your throat), while *coat, cave, customs, costumes, basket*
 are silent at the throat and start with a small puff of air.
 
@@ -824,6 +1031,21 @@ questions, which take no *do/does*.
 or *do/does/did*; the Wh- question has an operator before the subject; the
 subject question has **no** *do/does/did*; and after *Could you tell me…* the
 clause is in **statement** order.
+
+**4.4** Answers will vary. Check: three different openings — one *I think…*,
+one *In my opinion,…*, one *To my way of thinking,…* — each followed by a
+complete sentence, not a phrase. In 3, the disagreement agrees with something
+first (*I see what you mean, but…*, *That's true, though…*) rather than starting
+with *No*. And if you wanted to say the opposite of *I think*, check you moved
+*not* onto *think*: **I don't think** village life is boring, not *I think
+village life is not boring*.
+
+**4.6** Answers will vary. Check: every answer is a full sentence that opens
+with an opinion expression; each one gives a **reason** as well as a choice; and
+your question in 3 really is unanswered by the two texts — population, province,
+type of house, the four kinds of work, the culture and the role of women are all
+stated there, so a good question asks about something else (the language, the
+festivals, the school, the crops eaten at home).
 
 ### Lesson 5
 

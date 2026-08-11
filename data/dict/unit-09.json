@@ -326,5 +326,425 @@
       { "w": "survival", "pos": "noun", "en": "the state of continuing to live after danger", "vi": "sự sống sót", "ex": "Clean water is the key to **survival** after a disaster." }
     ],
     "note": "Note the spelling: **surviv-or**, not *surviver*. Stress the middle part: sur-**VI**-vor."
+  },
+
+  "tornado": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a small but extremely strong storm in which the wind turns in a circle and travels across the land in a narrow path",
+        "vi": "lốc xoáy",
+        "examples": [
+          "A **tornado** crossed the field and pulled up every young tree in its path.",
+          "The **tornado** lasted only four minutes, but it took the roof off the school.",
+          "Two **tornadoes** were reported in the same province on the same afternoon."
+        ],
+        "colloc": [
+          "a tornado hits",
+          "a tornado forms",
+          "the path of a tornado"
+        ]
+      }
+    ],
+    "note": "Plural **tornadoes**, with an *e*. Stress the middle syllable: tor-**NA**-do. A tornado crosses land in a narrow line; a huge turning storm that forms over the sea is a *typhoon* or a *hurricane*."
+  },
+
+  "funnel": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a tube that is wide at the top and narrow at the bottom, used for pouring something into a small opening",
+        "vi": "cái phễu",
+        "examples": [
+          "She poured the cooking oil through a **funnel** so that none of it spilled.",
+          "There is a plastic **funnel** in the second kitchen drawer."
+        ],
+        "colloc": [
+          "a plastic funnel",
+          "pour through a funnel"
+        ]
+      },
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "the funnel-shaped column of turning wind you can see when a tornado forms",
+        "vi": "cột xoáy hình phễu",
+        "examples": [
+          "We saw a grey **funnel** of wind moving across the field towards the fence.",
+          "The **funnel** touched the ground for less than a minute and then lifted again."
+        ],
+        "colloc": [
+          "a funnel of wind",
+          "a funnel cloud"
+        ]
+      }
+    ],
+    "note": "Two *n*s, one *l*: **funnel**. Stress the first syllable, ˈfunnel, and keep the second one short and light."
+  },
+
+  "tremble": {
+    "senses": [
+      {
+        "pos": "verb",
+        "grammar": "intransitive",
+        "en": "to shake slightly, in small quick movements",
+        "vi": "rung nhẹ, rung lên",
+        "examples": [
+          "The whole building **trembled** for about thirty seconds.",
+          "Books and lights **trembled** on the shelves, but nothing fell."
+        ],
+        "colloc": [
+          "the ground trembles",
+          "tremble slightly",
+          "start to tremble"
+        ]
+      },
+      {
+        "pos": "verb",
+        "grammar": "intransitive",
+        "en": "to shake because you are frightened, cold or upset",
+        "vi": "run (vì sợ, vì lạnh)",
+        "examples": [
+          "Her hands were **trembling** as she read the message from the village.",
+          "The little boy was **trembling** with cold when the boat reached him."
+        ],
+        "colloc": [
+          "tremble with fear",
+          "tremble with cold",
+          "your hands tremble"
+        ]
+      }
+    ],
+    "note": "**Tremble** is small and quick; **shake** can be much bigger. A building *trembles* in a slight earthquake and *shakes* in a strong one. Vietnamese *rung* covers both, so choose by size."
+  },
+
+  "shake": {
+    "senses": [
+      {
+        "pos": "verb",
+        "grammar": "intransitive",
+        "en": "to move quickly from side to side or up and down",
+        "vi": "rung, lắc",
+        "examples": [
+          "Everything in the room began to **shake** just after midnight.",
+          "The old bridge **shook** every time a lorry crossed it."
+        ],
+        "colloc": [
+          "the ground shakes",
+          "begin to shake",
+          "shake violently"
+        ]
+      },
+      {
+        "pos": "verb",
+        "grammar": "transitive",
+        "en": "to hold something and move it quickly backwards and forwards",
+        "vi": "lắc, rung (cái gì đó)",
+        "examples": [
+          "**Shake** the bottle of medicine before you open it.",
+          "He **shook** the branch until the last of the fruit came down."
+        ],
+        "colloc": [
+          "shake a bottle",
+          "shake your head",
+          "shake hands"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "shaking",
+        "pos": "noun",
+        "en": "the movement of something that shakes",
+        "vi": "sự rung lắc",
+        "ex": "The **shaking** lasted half a minute and then stopped."
+      }
+    ],
+    "note": "Irregular: shake – **shook** – **shaken**. ❌ *shaked*. Note the two nouns: *a shake* is one movement, *shaking* is the whole event."
+  },
+
+  "predict": {
+    "senses": [
+      {
+        "pos": "verb",
+        "grammar": "transitive",
+        "en": "to say what you think will happen before it happens",
+        "vi": "dự đoán",
+        "examples": [
+          "Scientists still cannot **predict** exactly when an earthquake will happen.",
+          "The weather service **predicted** three days of heavy rain, and it was right.",
+          "Nobody **predicted** that the river would rise as fast as it did."
+        ],
+        "colloc": [
+          "predict an earthquake",
+          "hard to predict",
+          "predict correctly"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "prediction",
+        "pos": "noun",
+        "en": "a statement about what you think will happen",
+        "vi": "lời dự đoán",
+        "ex": "Her **prediction** about the storm turned out to be exactly right."
+      },
+      {
+        "w": "predictable",
+        "pos": "adjective",
+        "en": "happening in a way you can know about in advance",
+        "vi": "có thể đoán trước",
+        "ex": "Floods here are **predictable** — they arrive every October."
+      }
+    ],
+    "note": "**Predict** takes a noun or a *that*-clause, never *to* + verb: ✅ *They predicted that the storm would turn north.* ❌ *They predicted the storm to turn north.* Stress the second syllable: preˈdict."
+  },
+
+  "whistle": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a small object that you blow into to make a loud high sound",
+        "vi": "cái còi",
+        "examples": [
+          "Keep a **whistle** in your bag so that you can call for help in the dark.",
+          "The rescue worker blew his **whistle** twice and waited for an answer."
+        ],
+        "colloc": [
+          "blow a whistle",
+          "a plastic whistle"
+        ]
+      },
+      {
+        "pos": "verb",
+        "grammar": "intransitive",
+        "en": "to make a high sound by blowing air through your lips or through a whistle",
+        "vi": "huýt sáo; thổi còi",
+        "examples": [
+          "The wind was **whistling** through the gaps in the door all night.",
+          "He **whistled** to his dog from the top of the steps."
+        ],
+        "colloc": [
+          "whistle for help",
+          "the wind whistles"
+        ]
+      }
+    ],
+    "note": "The *t* is silent: /ˈwɪsl/, like *wissle*. Same silent *t* in *listen* and *castle*."
+  },
+
+  "emergency kit": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a bag or box of things you may need immediately in a disaster, such as water, a torch, medicine and a whistle",
+        "vi": "bộ đồ dùng khẩn cấp",
+        "examples": [
+          "Every family in the village keeps an **emergency kit** by the front door.",
+          "We packed an **emergency kit** with rice, matches, batteries and clean water.",
+          "Check your **emergency kit** twice a year and replace the old medicine."
+        ],
+        "colloc": [
+          "prepare an emergency kit",
+          "pack an emergency kit",
+          "keep an emergency kit"
+        ]
+      }
+    ],
+    "note": "Countable, so it takes *an*: *an emergency kit*. *Kit* here means a set of useful things gathered for one purpose."
+  },
+
+  "rescue worker": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a person whose job is to find and help people who are in danger after an accident or a disaster",
+        "vi": "nhân viên cứu hộ",
+        "examples": [
+          "**Rescue workers** carried an old woman out of the flooded house.",
+          "Two **rescue workers** walked for a whole day to reach the village.",
+          "A **rescue worker** found the boy under the fallen roof."
+        ],
+        "colloc": [
+          "rescue workers arrive",
+          "a team of rescue workers",
+          "rescue workers search for"
+        ]
+      }
+    ],
+    "note": "Usually plural in news reports, because they work in teams. Stress the first word: **RES**cue worker."
+  },
+
+  "richter scale": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "singular, with *the*",
+        "en": "the set of numbers used to say how strong an earthquake is",
+        "vi": "thang đo rích-te",
+        "examples": [
+          "The earthquake measured 6.2 on the **Richter scale**.",
+          "Anything above seven on the **Richter scale** does serious damage.",
+          "Scientists gave last night's shaking a low number on the **Richter scale**."
+        ],
+        "colloc": [
+          "on the Richter scale",
+          "measure on the Richter scale"
+        ]
+      }
+    ],
+    "note": "Always *on **the** Richter scale*. Capital **R**: it is the surname of the scientist who designed it. It measures the strength of an earthquake, so a temperature scale is never the right answer here."
+  },
+
+  "authority": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable, usually plural",
+        "en": "the people or organisations with official power in a place, such as the local government",
+        "vi": "chính quyền, nhà chức trách",
+        "examples": [
+          "The local **authorities** told every family near the river to move upstairs.",
+          "Wait for a message from the **authorities** before you go home.",
+          "The **authorities** closed every school in the district for two days."
+        ],
+        "colloc": [
+          "the local authorities",
+          "listen to the authorities",
+          "report it to the authorities"
+        ]
+      },
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "the official power to give orders and make people follow them",
+        "vi": "quyền hành, thẩm quyền",
+        "examples": [
+          "A rescue worker has the **authority** to close a road.",
+          "Nobody has the **authority** to reopen the bridge yet."
+        ],
+        "colloc": [
+          "have the authority to",
+          "in authority"
+        ]
+      }
+    ],
+    "note": "In disaster news it is almost always plural and takes *the*: *the authorities*. Plural spelling **authorities** (*-y* → *-ies*). Stress the second syllable: auˈthority."
+  },
+
+  "pull up": {
+    "senses": [
+      {
+        "pos": "phrasal verb",
+        "grammar": "transitive, separable",
+        "en": "to take something out of the ground, roots and all, by pulling hard",
+        "vi": "nhổ bật lên, kéo bật lên",
+        "examples": [
+          "The wind **pulled up** two young trees in our yard.",
+          "We **pulled up** the small plants and moved them inside before the storm.",
+          "The water **pulled** several fence posts **up** out of the soft ground."
+        ],
+        "colloc": [
+          "pull up a tree",
+          "pull up plants",
+          "pull up by the roots"
+        ]
+      },
+      {
+        "pos": "phrasal verb",
+        "grammar": "intransitive",
+        "en": "to stop, used about a vehicle and its driver",
+        "vi": "dừng lại, tấp vào lề",
+        "examples": [
+          "A lorry **pulled up** beside us and the driver shouted a warning.",
+          "The bus **pulled up** at the end of the flooded street and everyone walked."
+        ],
+        "colloc": [
+          "pull up outside",
+          "pull up beside"
+        ]
+      }
+    ],
+    "note": "Separable in the first meaning: *pull the tree up* and *pull up the tree* are both fine, but with a pronoun only one order works — ✅ *pull it up*, ❌ *pull up it*."
+  },
+
+  "missing": {
+    "senses": [
+      {
+        "pos": "adjective",
+        "grammar": "",
+        "en": "not in the place where people expect, and not yet found",
+        "vi": "mất tích, chưa tìm thấy",
+        "examples": [
+          "Four fishermen are still **missing** after Saturday's storm.",
+          "The family reported their grandfather **missing** on Tuesday morning.",
+          "Rescue workers searched all night for the **missing** children."
+        ],
+        "colloc": [
+          "go missing",
+          "still missing",
+          "report someone missing"
+        ]
+      },
+      {
+        "pos": "adjective",
+        "grammar": "",
+        "en": "not there, when it ought to be",
+        "vi": "thiếu, bị mất",
+        "examples": [
+          "Two pages are **missing** from this book.",
+          "There is a **missing** roof sheet on the classroom next door."
+        ],
+        "colloc": [
+          "a missing page",
+          "something is missing"
+        ]
+      }
+    ],
+    "note": "The usual verb is **go missing**: *Three boats went missing.* Do not confuse it with *lost*: a person who is **lost** does not know where they are, while a person who is **missing** cannot be found by anyone else."
+  },
+
+  "violently": {
+    "senses": [
+      {
+        "pos": "adverb",
+        "grammar": "",
+        "en": "with very great force",
+        "vi": "dữ dội, mãnh liệt",
+        "examples": [
+          "The volcano erupted **violently** and sent ash twenty kilometres into the air.",
+          "The small boat was rocking **violently** in the waves.",
+          "The door shook so **violently** that two of us had to hold it shut."
+        ],
+        "colloc": [
+          "erupt violently",
+          "shake violently",
+          "blow violently"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "violent",
+        "pos": "adjective",
+        "en": "using or having very great force",
+        "vi": "dữ dội, mãnh liệt",
+        "ex": "A **violent** wind tore the roof off the market that night."
+      },
+      {
+        "w": "violence",
+        "pos": "noun",
+        "en": "very great force",
+        "vi": "sức mạnh dữ dội",
+        "ex": "The **violence** of the water surprised everyone in the village."
+      }
+    ],
+    "note": "In a report about nature, **violently** describes force, not anger or fighting. Four syllables, stressed on the first: ˈvi-o-lent-ly."
   }
 }

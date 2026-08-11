@@ -9,7 +9,7 @@
 
 | Strand | Target |
 | --- | --- |
-| **Pronunciation** | **Word stress** in multi-syllable words |
+| **Pronunciation** | **Word stress** in multi-syllable words, and in words ending *-al* and *-ous* |
 | **Grammar** | **Past continuous** — and past continuous with past simple |
 | **Reading** | Natural disasters and what they leave behind |
 | **Speaking** | Preparing and delivering a news report |
@@ -105,6 +105,37 @@ Answer in full sentences.
 | 16 | victim | /ˈvɪktɪm/ | n | nạn nhân |
 | 17 | relief | /rɪˈliːf/ | n | cứu trợ |
 | 18 | survivor | /səˈvaɪvə(r)/ | n | người sống sót |
+| 19 | tornado | /tɔːˈneɪdəʊ/ | n | lốc xoáy |
+| 20 | funnel | /ˈfʌnl/ | n | cái phễu; cột xoáy hình phễu |
+| 21 | tremble | /ˈtrembl/ | v | rung nhẹ, run lên |
+| 22 | shake | /ʃeɪk/ | v | rung, lắc |
+| 23 | predict | /prɪˈdɪkt/ | v | dự đoán |
+| 24 | whistle | /ˈwɪsl/ | n, v | cái còi; thổi còi, huýt sáo |
+| 25 | emergency kit | /ɪˈmɜːdʒənsi kɪt/ | n | bộ đồ dùng khẩn cấp |
+| 26 | rescue worker | /ˈreskjuː ˌwɜːkə(r)/ | n | nhân viên cứu hộ |
+| 27 | Richter scale | /ˈrɪktə skeɪl/ | n | thang đo rích-te (độ mạnh động đất) |
+| 28 | authority | /ɔːˈθɒrəti/ | n | chính quyền, nhà chức trách |
+| 29 | pull up | /ˌpʊl ˈʌp/ | phr v | nhổ bật lên, kéo lên |
+| 30 | missing | /ˈmɪsɪŋ/ | adj | mất tích, chưa tìm thấy |
+| 31 | violently | /ˈvaɪələntli/ | adv | dữ dội, mãnh liệt |
+
+> ### ▶︎ [**Practise these 31 words**](../app/unit-09-vocab.html)
+>
+> Press 🔊 on any row above to hear the word. When you have finished this
+> lesson, the unit page opens a **practice** session over all thirty-one — the
+> meaning, the word, what you hear, and, more often than any of those, **the
+> word inside a phrase it actually lives in**. Wrong answers come straight
+> back, and everything returns a week later, because what you can still recall
+> after a gap is the only recall worth counting. The **unit test** opens once
+> all seven lessons are done.
+>
+> **Luyện 31 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **practice** ở trang bài sẽ mở ra để luyện cả 31 từ — trong đó phần lớn là
+> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
+> ngay, và mọi từ quay lại sau một tuần.
+>
+> Do the written exercises below as well — writing by hand and typing on a
+> screen build different halves of the same knowledge.
 
 ### 2.1 Complete the sentences
 
@@ -118,14 +149,54 @@ Answer in full sentences.
 - Lorries brought ___ supplies — rice, blankets and clean water — to the village. = relief
 :::
 
-### 2.2 Odd one out
+### 2.2 The words a report actually uses
+
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
+- A ___ looks like a huge funnel of wind, and it can move at 480 kilometres an hour. = tornado
+- The wind was so strong that it ___ two young trees in our yard. = pulled up
+- The whole floor began to ___ , and the glasses fell off the shelf. = shake
+- I woke up because my bed was ___ slightly. = trembling
+- Scientists still cannot ___ exactly when an earthquake will happen. = predict
+- The local ___ told every family near the river to move upstairs. = authorities/authority
+- Keep a ___ in your pocket, so you can call for help when nobody can see you. = whistle
+- Every family should prepare an ___ with a torch, water and medicine. = emergency kit
+- Two ___ carried an old woman out of the flooded house. = rescue workers/rescue worker
+- The earthquake measured 6.2 on the ___ . = Richter scale
+- Four fishermen are still ___ , and the boats are looking for them. = missing
+- The volcano erupted ___ , and the ash reached the next province. = violently
+:::
+
+### 2.3 Odd one out
 
 ::: task skill="course" type="choice" ask="One word in each line does not belong. Pick it — the reason tells you why."
 - Line 1 — (a) earthquake (b) flood (c) landslide (d) shelter = d ~ the others are natural disasters; a shelter is a safe place
 - Line 2 — (a) destroy (b) damage (c) collapse (d) rescue = d ~ the others mean to break or harm something
 - Line 3 — (a) warning (b) forecast (c) siren (d) drought = d ~ the others tell you that something dangerous is coming
 - Line 4 — (a) victim (b) survivor (c) volcano (d) rescue team = c ~ the others are people
+- Line 5 — (a) tremble (b) shake (c) predict (d) rattle = c ~ the others describe something moving quickly from side to side
 :::
+
+### 2.4 From verb to noun
+
+A news report needs the noun far more often than the verb: *the volcano
+**erupted*** becomes *the **eruption** lasted three days*. Four endings do most
+of the work — **-tion**, **-ion**, **-ing**, **-er** — and a few nouns do not
+change at all.
+
+::: task skill="course" type="gap-fill" ask="Write the noun that goes with each verb. Two of them do not change."
+- destroy = destruction
+- erupt = eruption
+- warn = warning
+- predict = prediction
+- damage = damage
+- collapse = collapse
+- survive = survivor
+- rescue = rescuer/rescue worker
+:::
+
+> **Ghi chú:** *warning* và *flooding* là danh từ tạo từ đuôi **-ing**, không
+> phải động từ đang chia. *The radio gave a **warning*** — "một lời cảnh báo",
+> chứ không phải "đang cảnh báo".
 
 ### Pronunciation — Word stress in multi-syllable words
 
@@ -182,6 +253,48 @@ families easy. But when the stem is stressed somewhere else, the ending
 **pulls** the stress onto the syllable in front of it: *ˈphotograph* →
 *photoˈgraphic*, *eˈlectric* → *elecˈtricity*.
 
+#### Rule 4 — the two endings that leave the stress alone: **-al** and **-ous**
+
+Rule 3 endings move things. The endings **-al** and **-ous** do the opposite.
+Neither one is ever stressed itself, and neither one pulls the stress forward.
+The stress simply **stays where it already was in the stem word**.
+
+| Stem word | + **-al** | Where the stress went |
+| --- | --- | --- |
+| ˈnature | ˈnatural | nowhere — still on *na-* |
+| ˈnation | ˈnational | nowhere — still on *na-* |
+| ˈperson | ˈpersonal | nowhere — still on *per-* |
+| ˈpractice | ˈpractical | nowhere — still on *prac-* |
+| ˈtropic | ˈtropical | nowhere — still on *tro-* |
+| ˈmusic | ˈmusical | nowhere — still on *mu-* |
+
+| Stem word | + **-ous** | Where the stress went |
+| --- | --- | --- |
+| ˈdanger | ˈdangerous | nowhere — still on *dan-* |
+| ˈhumour | ˈhumorous | nowhere — still on *hu-* |
+| ˈpoison | ˈpoisonous | nowhere — still on *poi-* |
+| ˈmountain | ˈmountainous | nowhere — still on *moun-* |
+| ˈnumber | ˈnumerous | nowhere — still on *nu-* |
+
+Put the two behaviours side by side and the difference is easy to hear:
+
+| Same stem | with a **Rule 3** ending — the stress moves | with **-al** or **-ous** — the stress stays |
+| --- | --- | --- |
+| ˈmusic | — | ˈmusical |
+| eˈlectric | elecˈtricity | eˈlectrical |
+| ˈnation | — | ˈnational |
+| ˈtropic | — | ˈtropical |
+| ˈphotograph | photoˈgraphic | — |
+
+> ⚠️ **Bẫy thường gặp:** Có những từ *-ous* nghe như trọng âm rơi vào âm tiết
+> thứ hai: **treˈmendous**, **amˈbitious**, **deˈlicious**, **eˈnormous**. Đó
+> **không phải** do đuôi *-ous* kéo trọng âm — gốc của chúng vốn đã mang trọng
+> âm ở âm tiết thứ hai rồi. Quy tắc vẫn đúng: *-al* và *-ous* **không bao giờ**
+> làm trọng âm dịch chuyển.
+>
+> So sánh: ˈhumour → ˈhumorous (đứng yên) · ˈnumber → ˈnumerous (đứng yên) ·
+> nhưng treˈmendous thì trọng âm ở âm tiết thứ hai ngay từ đầu.
+
 #### The unit's key words, marked
 
 | Word | Marked | Pattern |
@@ -200,17 +313,24 @@ families easy. But when the stem is stressed somewhere else, the ending
 > nhẹ và nhanh. Mẹo kiểm tra: vỗ tay một cái mạnh đúng vào âm tiết đó —
 > *dis-**AS**-ter*, chứ không phải *DIS-as-ter*.
 
-### 2.3 Sort by stress pattern
+### 2.5 Sort by stress pattern
 
-Write each two-syllable word in the correct column: **damage · destroy ·
-shelter · erupt · warning · collapse · victim · prepare · flooding · survive ·
-danger · escape**
+::: task skill="course" type="sort" opts="Oo|oO" ask="Which stress pattern does each two-syllable word have? **Oo** = stress on the 1st syllable · **oO** = stress on the 2nd."
+- damage = Oo
+- destroy = oO
+- shelter = Oo
+- erupt = oO
+- warning = Oo
+- collapse = oO
+- victim = Oo
+- prepare = oO
+- flooding = Oo
+- survive = oO
+- danger = Oo
+- escape = oO
+:::
 
-| Oo — stress on the 1st syllable | oO — stress on the 2nd syllable |
-| --- | --- |
-| | |
-
-### 2.4 Use the suffix rule
+### 2.6 Use the suffix rule
 
 ::: task skill="course" type="gap-fill" ask="Write each word out with `ˈ` in front of its stressed syllable. Do not use a dictionary — use Rule 3."
 - destruction = deˈstruction
@@ -223,7 +343,35 @@ danger · escape**
 - evacuation = evacuˈation
 :::
 
-### 2.5 Say these aloud
+### 2.7 Which syllable? — *-al* and *-ous*
+
+::: task skill="course" type="choice" opts="1|2|3" ask="Which syllable takes the stress? Pick **1**, **2** or **3**. Use Rule 4: find the stem first, and keep the stress where the stem had it."
+- natural = 1 ~ from ˈnature
+- dangerous = 1 ~ from ˈdanger
+- national = 1 ~ from ˈnation
+- numerous = 1 ~ from ˈnumber
+- mountainous = 1 ~ from ˈmountain
+- practical = 1 ~ from ˈpractice
+- poisonous = 1 ~ from ˈpoison
+- tremendous = 2 ~ the stem already carried its stress on the second syllable, so *-ous* had nothing to move
+- ambitious = 2 ~ the stem already carried its stress on the second syllable, so *-ous* had nothing to move
+- tropical = 1 ~ from ˈtropic
+:::
+
+### 2.8 Odd stress out
+
+::: task skill="course" type="choice" ask="In each line, three words share one stress pattern and one does not. Pick the odd one."
+- humorous · tremendous · numerous · generous = tremendous ~ the other three are stressed on the first syllable
+- natural · national · personal · original = original ~ oˈriginal keeps the stress of oˈrigin; the other three keep a first-syllable stem
+- dangerous · poisonous · mountainous · delicious = delicious ~ the other three are stressed on the first syllable
+- musical · practical · tropical · additional = additional ~ aˈdditional keeps the stress of aˈddition; the other three keep a first-syllable stem
+:::
+
+> **Mẹo:** Muốn đọc đúng một từ *-al* hoặc *-ous*, đừng nhìn vào đuôi — hãy tìm
+> **từ gốc** trước: *ˈnature* → *ˈnatural*, *ˈdanger* → *ˈdangerous*. Trọng âm
+> của từ gốc là trọng âm của từ mới.
+
+### 2.9 Say these aloud
 
 The stressed syllable is in CAPITALS. Read each sentence three times, faster
 each time. Record yourself if you can.
@@ -232,6 +380,9 @@ each time. Record yourself if you can.
 2. A **HUR**-ri-cane and a tsu-**NA**-mi are very different di-**SAS**-ters.
 3. The de-**STRUC**-tion was so bad that they had to e-**VAC**-u-ate the town.
 4. There was no e-lec-**TRI**-ci-ty, so we could not re-**CORD** the **WARN**-ing.
+5. A **MOUN**-tain-ous province with **NU**-mer-ous storms is a **DAN**-ger-ous
+   place to build.
+6. The **NA**-tion-al **PRAC**-ti-cal advice is short: keep away from **POI**-son-ous water.
 
 ---
 
@@ -378,7 +529,42 @@ Write true sentences. Use the past continuous at least once in each.
 
 ## Lesson 4 — Communication
 
-### Everyday English — Warning, worrying and reassuring
+### Everyday English — Giving and responding to bad news, warning, worrying and reassuring
+
+#### Giving bad news
+
+Bad news is normally given in two moves: a short sentence that says where the
+news came from, then the news itself.
+
+| English | Nghĩa |
+| --- | --- |
+| My grandparents called this morning. **A flood destroyed their house.** | Ông bà mình gọi sáng nay. Lũ đã cuốn mất nhà ông bà. |
+| **It also damaged all of their crops.** | Lũ còn làm hỏng hết hoa màu của ông bà nữa. |
+| **I'm afraid I've got some bad news.** | Mình e là mình có tin xấu. |
+| **Did you hear about** the landslide on the mountain road? | Cậu nghe tin vụ sạt lở trên đường núi chưa? |
+
+#### Responding to bad news
+
+| English | Nghĩa |
+| --- | --- |
+| **I'm sorry to hear that.** | Mình rất tiếc khi nghe tin đó. |
+| **That's awful.** | Thật kinh khủng. |
+| **That's terrible.** | Thật khủng khiếp. |
+| **Oh no! Is everyone all right?** | Ôi không! Mọi người có sao không? |
+| **I hope your grandparents are safe.** | Mong ông bà bạn bình an. |
+
+> **Ghi chú:** Những câu đáp trên là **công thức ngắn cố định**. Người ta nói
+> nguyên cả câu như vậy, không đổi từ, không thêm bớt. Học thuộc cả cụm —
+> *That's awful.* chứ không phải *That is very awful.*
+>
+> Thường có **hai** phần trong lời đáp: một câu cảm thông (*I'm sorry to hear
+> that.*) rồi một câu hỏi thăm hoặc mong ước (*I hope they are safe.*).
+
+> ⚠️ **Bẫy thường gặp:** ***I'm sorry to hear that*** không phải là lời **xin
+> lỗi**. Ở đây *sorry* nghĩa là "thương cảm, tiếc cho bạn", không phải "tôi có
+> lỗi". Người nói không hề gây ra chuyện đó. Đừng dịch thành "Tôi xin lỗi".
+> Cũng đừng đáp *"No problem."* hay *"It's OK."* — đó là câu trả lời cho một
+> lời xin lỗi thật, và ở đây nghe rất lạ.
 
 #### Warning someone
 
@@ -439,6 +625,94 @@ then a reason.
    → _______________________________
 3. "There's a wire hanging down from the pole outside our gate."
    → _______________________________
+
+### 4.3 Say the right thing back
+
+::: task skill="course" type="gap-fill" ask="Complete each reply with **one** word. The replies are fixed short formulas — write them exactly as they are given in the tables above."
+- **A:** My grandparents called this morning. A flood destroyed their house. **B:** I'm sorry to ___ that. = hear
+- **A:** It also damaged all of their crops. **B:** That's ___ . I hope they are safe. = awful/terrible
+- **A:** A landslide blocked the only road into my village last night. **B:** Oh ___ ! Is everyone all right? = no
+- **A:** I'm ___ I've got some bad news. The school roof came off. = afraid
+- **A:** Did you ___ about the earthquake in the north? **B:** Yes. That's terrible. = hear
+- **A:** Two of the fishermen are still missing. **B:** I'm sorry to hear ___ . = that
+:::
+
+### 4.4 Bad news, and an answer to it
+
+Write a short exchange for each situation: **two** lines from A giving the news,
+and **two** lines from B answering it — one line of sympathy, one question or
+wish.
+
+1. Your cousin's village was flooded and the rice crop is gone.
+   → **A:** _______________________________
+   → **B:** _______________________________
+2. A storm pulled up the old tree in your friend's yard and it fell on the roof.
+   → **A:** _______________________________
+   → **B:** _______________________________
+3. An earthquake shook your penfriend's city and their school is closed.
+   → **A:** _______________________________
+   → **B:** _______________________________
+
+### Knowledge of natural disasters
+
+Three people describe something they saw. None of them names the disaster —
+each one only says what it looked like, which is how most people describe one.
+
+> **Nam.** "I was cycling home on the road under the hill. The rain had not
+> stopped for two days. Then the man in front of me put his foot down and
+> shouted. A wall of wet earth and big rocks was coming down the mountain and
+> spreading across the road in front of us. We turned round and rode back."
+>
+> **Ann.** "I was picking beans in the garden with my mother. The sky went a
+> strange green colour. Then I saw a huge grey funnel of wind moving across the
+> field towards our fence, very quickly. My mother pulled me down the cellar
+> steps and shut the door."
+>
+> **Tom.** "I was drawing at the table when everything in the room began to
+> shake. The glasses on the shelf were rattling and one of them fell. My little
+> sister and I hid under the table until it stopped. It lasted about twenty
+> seconds."
+
+Now some facts. Rocks and earth slide down a hill when the ground is too wet to
+hold together, so **heavy rain** is the commonest cause — and **cutting down
+trees** makes it far more likely, because roots are what hold the soil. The
+strength of an earthquake is given on the **Richter scale**, not in degrees; a
+big one can shake a hillside loose or push a wall of sea water towards the
+coast, so **one disaster often causes another**. Tornadoes are different again:
+they grow out of **thunderstorms**, and although they happen on every continent
+except Antarctica, far more of them are recorded in the **USA** than anywhere
+else.
+
+### 4.5 Name it, then test yourself
+
+::: task skill="course" type="choice" opts="landslide|tornado|earthquake" ask="Which natural disaster is each person describing?"
+- Nam = landslide ~ earth and rocks coming down a hill onto the road below
+- Ann = tornado ~ a funnel of wind crossing a field
+- Tom = earthquake ~ the ground and everything on it shaking for a few seconds
+:::
+
+::: task skill="course" type="choice" ask="How much do you know about natural disasters? Pick one answer in each line."
+- Which of these may cause a landslide? (a) heavy rain (b) wind (c) lightning = a
+- Which human activity may cause a landslide? (a) littering (b) cutting down trees (c) polluting the air = b
+- What is used for measuring the strength of an earthquake? (a) Fahrenheit (b) Celsius (c) the Richter scale = c
+- Which of these can an earthquake cause? (a) a drought (b) a landslide (c) a hurricane = b
+- What do tornadoes form from? (a) an earthquake (b) a flood (c) a thunderstorm = c
+- Where are most tornadoes recorded? (a) in the USA (b) in the UK (c) in Viet Nam = a
+:::
+
+### 4.6 Describe one without naming it
+
+Think of a natural disaster that has happened where you live, or one you have
+seen on the news. Write **three or four sentences** describing what a person
+there saw and heard — but do **not** write the name of the disaster. Use the
+past continuous at least once. Then write the name upside down at the bottom of
+the page and give it to someone else to guess.
+
+→ _______________________________________________________________
+
+→ _______________________________________________________________
+
+→ _______________________________________________________________
 
 ---
 
@@ -800,6 +1074,30 @@ imperatives and your word stress.
 > or flood they remember. Ask what they were doing when it started, and write
 > their story in 120 words. Use at least four past continuous verbs.
 
+### Now I can …
+
+Eight things this unit set out to teach. Beside each one is the place your own
+answer to it is already sitting — open that exercise again and look at what you
+actually put, which tells you far more than a feeling does. Where nothing on the
+page can settle it, the row says so, and that one is yours to judge.
+
+| Now I can … | Where my answer already is |
+| --- | --- |
+| use the words for the types of natural disaster and for describing them | Lesson 2, exercises 2.1, 2.2 and 2.4 · Lesson 7, exercise 7.1 |
+| put the stress in the right place in words ending *-al* and *-ous* | Lesson 2, exercises 2.5 and 2.7 · Lesson 7, exercise 7.2. Saying them aloud is yours — record Lesson 2, exercise 2.9 and listen back. |
+| use the past continuous, on its own and beside the past simple | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
+| give bad news, and answer it | Lesson 4, exercise 4.3 |
+| read about what a disaster leaves behind | Lesson 5, exercises 5.1 and 5.2 |
+| talk about a natural disaster | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
+| listen to what to do before, during and after a disaster | Lesson 6, exercises 6.1 and 6.2 |
+| write instructions for staying safe in a flood | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+
+> **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
+> Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
+> xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
+> trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
+> đánh giá.
+
 ---
 
 ## Answer Key
@@ -816,13 +1114,11 @@ torches.
 
 ### Lesson 2
 
-**2.3**
-- Oo (1st syllable): damage, shelter, warning, victim, flooding, danger
-- oO (2nd syllable): destroy, erupt, collapse, prepare, survive, escape
-
-**2.5** Spoken. Check: the capitalised syllable is longer, louder and clearer,
+**2.9** Spoken. Check: the capitalised syllable is longer, louder and clearer,
 and every other syllable is short and light. If *disaster* comes out as
-*DIS-as-ter*, slow down and try again.
+*DIS-as-ter*, slow down and try again. In sentences 5 and 6, check that the
+*-al* and *-ous* words keep the stress of their stem — *ˈmountainous*,
+*ˈnumerous*, *ˈdangerous*, *ˈnational*, *ˈpractical*, *ˈpoisonous*.
 
 ### Lesson 3
 
@@ -858,6 +1154,20 @@ what is under it."
 2. "Try not to panic. Come downstairs away from the windows — the roof was
 repaired last year."
 3. "Whatever you do, don't touch that wire. Tell an adult and stay inside."
+
+**4.4** Answers will vary. Check: A gives the news in two moves — where it came
+from, then what happened (*My aunt phoned last night. The flood took the whole
+rice crop.*); B answers with one of the fixed formulas exactly as written
+(*I'm sorry to hear that. · That's awful. · That's terrible.*) and then a
+question or a wish (*Is everyone all right? · I hope they are safe.*). Check
+that B has **not** replied *No problem* or *It's OK*, and that the formula has
+not been stretched into a longer sentence.
+
+**4.6** Answers will vary. Check: the description says what was seen and heard
+and never names the disaster; at least one past continuous verb with the right
+*was/were* (*I was cooking when…* · *the water was rising*); three or four
+sentences, not one long one. A good test is whether another reader can name the
+disaster from your sentences alone.
 
 ### Lesson 5
 

@@ -105,6 +105,42 @@ Answer in full sentences.
 | 16 | ride a horse | /ˌraɪd ə ˈhɔːs/ | phr | cưỡi ngựa |
 | 17 | fly a kite | /ˌflaɪ ə ˈkaɪt/ | phr | thả diều |
 | 18 | nomad | /ˈnəʊmæd/ | n | người du mục |
+| 19 | hospitable | /hɒˈspɪtəbl/ | adj | hiếu khách, mến khách |
+| 20 | picturesque | /ˌpɪktʃəˈresk/ | adj | đẹp như tranh (phong cảnh) |
+| 21 | well-trained | /ˌwel ˈtreɪnd/ | adj | lành nghề, có tay nghề |
+| 22 | surrounded (by) | /səˈraʊndɪd/ | adj | được bao quanh bởi |
+| 23 | scenery | /ˈsiːnəri/ | n | phong cảnh |
+| 24 | combine harvester | /ˈkɒmbaɪn ˌhɑːvɪstə/ | n | máy gặt đập liên hợp |
+| 25 | plough | /plaʊ/ | v | cày (ruộng) |
+| 26 | cultivate | /ˈkʌltɪveɪt/ | v | trồng trọt, canh tác |
+| 27 | crop | /krɒp/ | n | vụ mùa, cây trồng |
+| 28 | poultry | /ˈpəʊltri/ | n | gia cầm |
+| 29 | catch fish | /ˌkætʃ ˈfɪʃ/ | phr | bắt cá, đánh cá |
+| 30 | milk (a cow) | /mɪlk/ | v | vắt sữa |
+| 31 | dry (rice) | /draɪ/ | v | phơi khô, sấy khô |
+| 32 | unload | /ˌʌnˈləʊd/ | v | dỡ hàng xuống |
+| 33 | canal | /kəˈnæl/ | n | kênh, mương |
+| 34 | ferry | /ˈferi/ | n | phà |
+| 35 | lighthouse | /ˈlaɪthaʊs/ | n | hải đăng, đèn biển |
+| 36 | speciality | /ˌspeʃiˈæləti/ | n | đặc sản |
+
+> ### ▶︎ [**Practise these 36 words**](../app/unit-02-vocab.html)
+>
+> Press 🔊 on any row above to hear the word. When you have finished this
+> lesson, the unit page opens a **practice** session over all thirty-six — the
+> meaning, the word, what you hear, and, more often than any of those, **the
+> word inside a phrase it actually lives in**. Wrong answers come straight
+> back, and everything returns a week later, because what you can still recall
+> after a gap is the only recall worth counting. The **unit test** opens once
+> all seven lessons are done.
+>
+> **Luyện 36 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **practice** ở trang bài sẽ mở ra để luyện cả 36 từ — trong đó phần lớn là
+> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
+> ngay, và mọi từ quay lại sau một tuần.
+>
+> Do the written exercises below as well — writing by hand and typing on a
+> screen build different halves of the same knowledge.
 
 ### 2.1 Complete the sentences
 
@@ -126,6 +162,45 @@ Answer in full sentences.
 - someone who moves from place to place with animals = nomad
 - a wet field where rice is grown = paddy field
 - a tall, hard grass used for building and furniture = bamboo
+:::
+
+### 2.3 Five adjectives for a place and its people
+
+::: task skill="course" type="gap-fill" ask="One word from the table fits each gap. All five are adjectives."
+- The people in this village are kind and ___ to visitors. = hospitable
+- The farm needs ___ workers who can drive the new machines. = well-trained
+- Tourists come from Ha Noi to photograph the ___ old houses by the water. = picturesque
+- The Sahara is a ___ desert — you can travel for days and see nothing. = vast
+- The lake is ___ by tall bamboo on three sides. = surrounded
+:::
+
+> **Ghi chú:** **surrounded** hầu như luôn đi với **by**: *surrounded **by**
+> trees*. **Picturesque** chỉ dùng cho cảnh vật, nhà cửa — không dùng cho người.
+> Còn **hospitable** không liên quan gì đến *hospital* (bệnh viện).
+
+### 2.4 Farm work
+
+::: task skill="course" type="choice" opts="ploughing a field|milking cows|feeding pigs|catching fish|drying rice|unloading rice" ask="What is each person doing?"
+- Two men are lifting heavy sacks down from the back of a truck. = unloading rice
+- A buffalo pulls a curved blade slowly through the wet soil. = ploughing a field
+- My aunt sits beside the animal at five in the morning with a metal bucket. = milking cows
+- Grandfather throws a net from the bank into the canal. = catching fish
+- After the harvest the grain is spread out on the road in the sun. = drying rice
+- She carries a bucket of kitchen scraps out to the shed. = feeding pigs
+:::
+
+### 2.5 Around the countryside
+
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
+- Coffee is the main ___ on these hills. = crop
+- My grandmother keeps ___ behind the house — hens, ducks and two geese. = poultry
+- Water reaches the fields along a narrow ___ dug by hand. = canal
+- There is no bridge, so we crossed to the island by ___ . = ferry
+- On a clear night, ships can see the light from the ___ far out at sea. = lighthouse
+- Every visitor buys a box of the local ___ to take home. = speciality
+- His family has ___ this hillside for four generations. = cultivated
+- We stopped at the top of the pass just to look at the ___ . = scenery
+- One ___ can cut a whole field of rice in a single morning. = combine harvester
 :::
 
 ### Pronunciation — /ə/ and /ɪ/
@@ -157,19 +232,24 @@ superlative:
 > trọng âm. Còn /ɪ/ thì lưỡi nâng cao hơn, môi hơi bè ra. Hãy so sánh đuôi
 > **-er** (/ə/) với đuôi **-est** và **-ing** (/ɪ/): *bigger* — *biggest*.
 
-### 2.3 Sort the sounds
+### 2.6 Sort the sounds
 
-Write each word in the correct column. The sound to listen for is in the
-**bold** part.
+::: task skill="course" type="sort" opts="/ə/|/ɪ/" ask="Which of the two sounds is in the **bold** part of each word?"
+- farm**er** = /ə/
+- v**i**llage = /ɪ/
+- wat**er** = /ə/
+- ch**i**cken = /ɪ/
+- broth**er** = /ə/
+- p**i**ck = /ɪ/
+- orch**ar**d = /ə/
+- h**i**ll = /ɪ/
+- c**o**llect = /ə/
+- m**i**lk = /ɪ/
+- neighb**our** = /ə/
+- br**i**dge = /ɪ/
+:::
 
-**farm*er* · v*i*llage · wat*er* · ch*i*cken · broth*er* · p*i*ck · orch*ar*d ·
-h*i*ll · c*o*llect · m*i*lk · neighb*our* · br*i*dge**
-
-| /ə/ | /ɪ/ |
-| --- | --- |
-| | |
-
-### 2.4 Odd sound out
+### 2.7 Odd sound out
 
 ::: task skill="course" type="choice" ask="In each line, one word has a **different** vowel in the *italic* part. Pick it."
 - Line 1 — (a) farm*er* (b) farm*ing* (c) wat*er* (d) broth*er* = b ~ *farming* ends in /ɪ/; the others are /ə/
@@ -178,7 +258,7 @@ h*i*ll · c*o*llect · m*i*lk · neighb*our* · br*i*dge**
 - Line 4 — (a) p*i*ck (b) m*i*lk (c) broth*er* (d) br*i*dge = c ~ *brother* ends in /ə/; the others are /ɪ/
 :::
 
-### 2.5 Say these sentences
+### 2.8 Say these sentences
 
 Read aloud three times, faster each time. Record yourself if you can.
 
@@ -352,6 +432,37 @@ Write true sentences about yourself. Use **than** in every sentence.
 
 ## Lesson 4 — Communication
 
+### Everyday English — Compliments, and asking about a place
+
+#### Giving a compliment
+
+A **compliment** says you admire something that belongs to someone, or something
+they did. Two patterns cover almost every case:
+
+| Giving a compliment | Nghĩa |
+| --- | --- |
+| **What a beautiful** kite you have! | Con diều của bạn đẹp quá! |
+| **What a lovely** garden this is! | Khu vườn này đẹp quá! |
+| **You really have a nice** dress. | Chiếc váy của bạn đẹp thật đấy. |
+| **Your** rice cakes **are delicious.** | Bánh của bạn ngon thật. |
+
+> ⚠️ Note the word order after **What a…** — it is *not* a question, so the verb
+> stays at the end: *What a beautiful kite **you have**!*, never
+> ❌ *What a beautiful kite **do you have**?*
+
+#### Responding to a compliment
+
+| Responding | Nghĩa |
+| --- | --- |
+| **Thank you.** My dad made it for me last weekend. | Cảm ơn bạn. Bố mình làm cho đấy. |
+| **I'm glad you like it.** | Mình vui vì bạn thích nó. |
+| **Thanks. That's very kind of you.** | Cảm ơn. Bạn thật tốt bụng. |
+| **Thank you — I made it myself.** | Cảm ơn — mình tự làm đấy. |
+
+> **Ghi chú:** Trong tiếng Anh, khi được khen bạn hãy **cảm ơn** rồi nói thêm một
+> câu ngắn, đừng chối. ❌ *"No, no, it's not nice."* nghe rất lạ với người bản
+> ngữ. ✅ *"Thank you. I'm glad you like it."*
+
 ### Everyday English — Asking about a place and reacting
 
 | Asking about a place | Nghĩa |
@@ -404,6 +515,71 @@ to each question. Use a comparative adverb in at least two of your answers.
    → _______________________________
 3. "Could you live there for a year?"
    → _______________________________
+
+### 4.3 Compliment, then reply
+
+::: task skill="course" type="gap-fill" ask="Complete each compliment or reply. The first word of each gap is given by the pattern."
+- ___ a beautiful garden you have! = What
+- You really ___ a nice bicycle. = have
+- **A:** Your sticky rice is delicious. **B:** Thank you. I'm ___ you like it. = glad
+- **A:** What a lovely kite! **B:** ___ you. My grandfather made it. = Thank
+- **A:** You really have a nice school bag. **B:** Thanks. That's very ___ of you. = kind
+:::
+
+### 4.4 Say it back
+
+Someone compliments you on each of these. Write a reply of **one or two
+sentences** — thank them, then add a detail.
+
+1. "What a picturesque village this is!"
+   → _______________________________
+2. "You really have a nice bicycle."
+   → _______________________________
+3. "Your grandmother's fruit is delicious."
+   → _______________________________
+
+### Two villages, two countries
+
+Villages look different around the world, but the reasons people love them are
+surprisingly similar. Read these two short adverts.
+
+> **Duong Lam, Viet Nam**
+> One of the oldest villages near Ha Noi, in Son Tay. You can get there from the
+> centre of Ha Noi by car, by bus, or even by bicycle. Duong Lam is famous for
+> its ancient pagoda, its temples, and its traditional houses built of laterite
+> stone. The people are hospitable, and visitors are welcome to watch the locals
+> making their specialities — *kẹo dồi*, *chè lam* — and then to taste them.
+
+> **Giethoorn, the Netherlands**
+> A small village in the north of the Netherlands with almost no roads. People
+> travel along the **canals** by small boat, and cross them on more than 170
+> wooden bridges. The houses have thatched roofs and are surrounded by gardens
+> and water. Visitors reach the village by road or by **ferry**, and most of
+> them hire a boat for the day. The scenery is at its most picturesque in early
+> summer.
+
+### 4.5 Which village?
+
+::: task skill="course" type="choice" opts="Duong Lam|Giethoorn|Both" ask="Which village does each statement describe? Some describe both."
+- It is an old village. = Both
+- You can get there by bicycle. = Duong Lam
+- People travel around it by boat. = Giethoorn
+- Visitors can taste local specialities. = Duong Lam
+- You can reach it by ferry. = Giethoorn
+- It is a place tourists like to visit. = Both
+- It has more than 170 bridges. = Giethoorn
+- Its houses are built of stone. = Duong Lam
+:::
+
+### 4.6 Compare them
+
+Write **four** sentences comparing the two villages. Use a comparative adverb
+and **than** in at least two of them.
+
+1. Both villages _______________________________
+2. In Duong Lam, people _______________________________
+3. In Giethoorn, people _______________________________
+4. I would rather visit _______________________________ because _______________________________
 
 ---
 
@@ -720,6 +896,30 @@ adverbs you actually used.
 > comparative adverbs: *People travel farther than they did. Children start
 > school earlier than they used to.*
 
+### Now I can …
+
+Eight things this unit set out to teach. Beside each one is the place your own
+answer to it is already sitting — open that exercise again and look at what you
+actually put, which tells you far more than a feeling does. Where nothing on the
+page can settle it, the row says so, and that one is yours to judge.
+
+| Now I can … | Where my answer already is |
+| --- | --- |
+| use the words for life in the countryside | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercise 7.1 |
+| hear /ə/ and /ɪ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.6 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.8 and listen back. |
+| make and use comparative adverbs | Lesson 3, exercises 3.1 and 3.2 · Lesson 7, exercises 7.3 and 7.4 |
+| give a compliment, and answer one | Lesson 4, exercises 4.1 and 4.3 |
+| read about the different sides of a Vietnamese village | Lesson 5, exercises 5.1 and 5.2 |
+| talk about the village or town I know | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
+| listen to someone's opinion of life in the countryside | Lesson 6, exercises 6.1 and 6.2 |
+| write a paragraph about what I like and dislike about rural life | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+
+> **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
+> Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
+> xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
+> trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
+> đánh giá.
+
 ---
 
 ## Answer Key
@@ -737,11 +937,7 @@ by lunchtime.
 
 ### Lesson 2
 
-**2.3**
-- /ə/ — farm**er**, wat**er**, broth**er**, orch**ard**, c**o**llect, neighb**our**
-- /ɪ/ — v**i**llage, ch**i**cken, p**i**ck, h**i**ll, m**i**lk, br**i**dge
-
-**2.5** Answers will vary — this is a speaking drill. Check: every *-er* ending
+**2.8** Answers will vary — this is a speaking drill. Check: every *-er* ending
 (*farmer, brother, water, neighbour, bigger*) is the relaxed /ə/, never a full
 "e" sound; *village, pick, chicken, bridge, biggest* all keep the short, bright
 /ɪ/.
@@ -772,6 +968,14 @@ sentence contains **than**.
 **4.2** Answers will vary. Check: answer 1 describes the place (it does not say
 "I like it"), and at least two of the three answers contain a comparative
 adverb with *than*.
+
+**4.4** Answers will vary. Check: every reply **thanks** the speaker first and
+then adds one detail (who made it, where it came from, how long you have had
+it); no reply refuses the compliment — ❌ *"No, it isn't nice."*
+
+**4.6** Answers will vary. Check: sentence 1 says something that is true of
+**both** villages; at least two of the four sentences contain a comparative
+adverb with *than*; sentence 4 gives a reason after *because*.
 
 ### Lesson 5
 

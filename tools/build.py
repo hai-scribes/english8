@@ -4,18 +4,23 @@
     python3 tools/build.py            # write docs/
     python3 tools/build.py --check    # parse only, report counts, write nothing
 
-Three levels, one page each:
+Three levels, one page each, plus the four cumulative reviews:
 
-    docs/index.html                        every unit
+    docs/index.html                        every unit, then the four reviews
     docs/unit-NN/index.html                that unit's seven lessons, then
                                            the gated practice + test
     docs/unit-NN/lesson-M/index.html       one lesson: teaching blocks and
                                            its exercises, inline, in order
+    docs/review-N/index.html               units 3N-2 to 3N, asked together
 
 The ordering rule the site is built around: a lesson page never opens with
 an exercise, and a unit page never places practice or test above its lesson
 links. Lesson 7 ("Looking Back") is all checks in the source, so it is given
 a real recap block first -- you should know what you are being checked on.
+
+The reviews follow from the same rule read one level up. Nothing in a Review
+is new, so it is placed after the three units it draws on and nowhere else:
+on the home page under the grid, and on the unit page of the third unit.
 """
 from __future__ import annotations
 
@@ -1064,6 +1069,72 @@ def short_strand(s) -> str:
 
 
 # -------------------------------------------------------------------- parse --
+def parse_block_run(body: str):
+    """One run of "### " blocks -> its opening prose block and the rest.
+
+    A lesson and a Review part have exactly the same internal shape — some
+    opening prose, then numbered exercises and named teaching blocks — so they
+    share one parser. The alternative was a second copy of this loop, and a
+    second copy is a place for a directive to stop being seen: the intro block
+    below is only parsed at all because a `:::task` written above the first
+    heading once rendered as raw markdown, answer keys and all.
+    """
+    heads = list(RE_BLOCK.finditer(body))
+    opening = body[:heads[0].start()] if heads else body
+    blocks, intro = [], None
+    for j, h in enumerate([None] + heads):
+        if h is None:
+            # The opening prose is parsed as a block too. It was a blind spot:
+            # a directive placed above the first heading rendered as raw
+            # markdown and was invisible to every gate.
+            head, em, md = "", None, opening.strip()
+            if not md:
+                continue
+        else:
+            b_start = h.end()
+            b_end = heads[j].start() if j < len(heads) else len(body)
+            head = h.group(1).strip()
+            em = re.match(r"^(\d+\.\d+)\s+(.*)$", head)
+            md = body[b_start:b_end].strip("\n")
+
+        # The instrumented constructs are lifted out of the prose in one
+        # ordered pass and replaced by a token, so a widget renders exactly
+        # where it was written rather than after everything else.
+        widgets: list = []
+
+        def stash(m, _w=widgets):
+            kind = m.group("kind")
+            a = dict(RE_ATTR.findall(m.group("attrs")))
+            if kind == "task":
+                _w.append((kind, parse_task_body(a, m.group("body"))))
+            elif kind in ("audio", "write", "passage"):
+                _w.append((kind, (a, m.group("body"))))
+            else:
+                _w.append((kind, a))
+            return WIDGET % (len(_w) - 1)
+
+        md = RE_DIRECTIVE.sub(stash, md)
+        blk = {
+            "kind": "exercise" if em else "teach",
+            "id": em.group(1) if em else "",
+            "title": em.group(2).strip() if em else head,
+            "md": md.strip("\n"),
+            "widgets": widgets,
+            "tasks": [d for k, d in widgets if k == "task"],
+            "audio": [d for k, d in widgets if k == "audio"],
+            "writes": [d for k, d in widgets if k == "write"],
+            "clocks": [d for k, d in widgets if k == "clock"],
+            "threads": [d for k, d in widgets if k == "thread"],
+            "passages": [d for k, d in widgets if k == "passage"],
+        }
+        if h is None:
+            blk["kind"] = "intro"
+            intro = blk
+        else:
+            blocks.append(blk)
+    return intro, blocks
+
+
 def parse_unit(path: Path) -> dict:
     text = path.read_text(encoding="utf-8")
 
@@ -1093,59 +1164,7 @@ def parse_unit(path: Path) -> dict:
         start = mk.end()
         end = marks[i + 1].start() if i + 1 < len(marks) else ak_start
         body = text[start:end]
-        heads = list(RE_BLOCK.finditer(body))
-        intro = body[:heads[0].start()] if heads else body
-        blocks, lesson_intro = [], None
-        for j, h in enumerate([None] + heads):
-            if h is None:
-                # The lesson's opening prose is parsed as a block too. It was
-                # a blind spot: a directive placed above the first heading
-                # rendered as raw markdown and was invisible to every gate.
-                head, em, md = "", None, intro.strip()
-                if not md:
-                    continue
-            else:
-                b_start = h.end()
-                b_end = heads[j].start() if j < len(heads) else len(body)
-                head = h.group(1).strip()
-                em = re.match(r"^(\d+\.\d+)\s+(.*)$", head)
-                md = body[b_start:b_end].strip("\n")
-
-            # The three instrumented constructs are lifted out of the prose in
-            # one ordered pass and replaced by a token, so a widget renders
-            # exactly where it was written rather than after everything else.
-            widgets: list = []
-
-            def stash(m, _w=widgets):
-                kind = m.group("kind")
-                a = dict(RE_ATTR.findall(m.group("attrs")))
-                if kind == "task":
-                    _w.append((kind, parse_task_body(a, m.group("body"))))
-                elif kind in ("audio", "write", "passage"):
-                    _w.append((kind, (a, m.group("body"))))
-                else:
-                    _w.append((kind, a))
-                return WIDGET % (len(_w) - 1)
-
-            md = RE_DIRECTIVE.sub(stash, md)
-            blk = {
-                "kind": "exercise" if em else "teach",
-                "id": em.group(1) if em else "",
-                "title": em.group(2).strip() if em else head,
-                "md": md.strip("\n"),
-                "widgets": widgets,
-                "tasks": [d for k, d in widgets if k == "task"],
-                "audio": [d for k, d in widgets if k == "audio"],
-                "writes": [d for k, d in widgets if k == "write"],
-                "clocks": [d for k, d in widgets if k == "clock"],
-                "threads": [d for k, d in widgets if k == "thread"],
-                "passages": [d for k, d in widgets if k == "passage"],
-            }
-            if h is None:
-                blk["kind"] = "intro"
-                lesson_intro = blk
-            else:
-                blocks.append(blk)
+        lesson_intro, blocks = parse_block_run(body)
         lessons.append({
             "n": int(mk.group(1)),
             "title": mk.group(2).strip(),
@@ -1190,6 +1209,117 @@ def parse_unit(path: Path) -> dict:
                         for t in blk["threads"]],
             "passages": [(L["n"], a, s) for L in lessons for blk in lesson_blocks(L)
                          for a, s in blk["passages"]]}
+
+
+# ------------------------------------------------------------------ reviews --
+# The book has four two-page cumulative sections, after Units 3, 6, 9 and 12,
+# and they are the only place in it where more than one unit is tested at once.
+# This site had nothing cross-unit at all: every practice set and every unit
+# test stopped at the edge of its own unit.
+#
+# A Review is deliberately NOT a thirteenth unit. It has no vocabulary table of
+# its own, no seven lessons and no progress gate — it re-tests words and
+# structures that three units have already taught, so its `vocab` is the union
+# of those three tables and its parts are halves of one page, the way the book
+# prints them. Everything else is the same machinery: the same directives, the
+# same marking engine, the same gates.
+RE_REVIEW_TITLE = re.compile(r"^#\s+Review\s+(\d+)\s+—\s+Units\s+(\d+)–(\d+)\s*$", re.M)
+RE_REVIEW_VI = re.compile(r"^>\s*\*\*Ôn\s+tập\s+\d+\s*—\s*(.+?)\*\*\s*$", re.M)
+RE_PART = re.compile(r"^##\s+Part\s+(\d)\s+—\s+(.+)$", re.M)
+# Every "Unit N" a Review's prose names. A Review that points at a unit outside
+# its own three is either mis-filed or borrowing material the learner has not
+# met yet, and both are worse discovered by a reader than by the build.
+RE_UNIT_REF = re.compile(r"\bUnits?\s+(\d+)(?:\s*[–-]\s*(\d+))?", re.I)
+
+REVIEWS = 4          # the book has four, after units 3, 6, 9 and 12
+PER_REVIEW = 3       # each covers the three units before it
+
+
+def review_span(n: int) -> tuple:
+    return (PER_REVIEW * n - (PER_REVIEW - 1), PER_REVIEW * n)
+
+
+def parse_review(path: Path) -> dict:
+    """One units/review-N.md -> the same shape a unit exposes to the gates.
+
+    The keys the checkers reach for — `tasks`, `writes`, `clocks`, `passages`,
+    `audio`, `bridges` — carry the part number where a unit carries the lesson
+    number, so every gate written for a lesson applies unchanged to a part.
+    """
+    m = re.fullmatch(r"review-(\d+)\.md", path.name)
+    if not m:
+        raise SystemExit(f"{path.name}: a review file is named review-N.md, N from 1 to "
+                         f"{REVIEWS} — the build would not know what to do with this one")
+    num = int(m.group(1))
+    if not 1 <= num <= REVIEWS:
+        raise SystemExit(f"{path.name}: there are {REVIEWS} Reviews, so N runs 1 to {REVIEWS}")
+
+    text = path.read_text(encoding="utf-8")
+    t = RE_REVIEW_TITLE.search(text)
+    if not t:
+        raise SystemExit(f"{path.name}: no '# Review N — Units A–B' heading (an en dash "
+                         f"between the unit numbers)")
+    if int(t.group(1)) != num:
+        raise SystemExit(f"{path.name}: the heading says Review {t.group(1)}")
+    lo, hi = int(t.group(2)), int(t.group(3))
+    want = review_span(num)
+    if (lo, hi) != want:
+        raise SystemExit(f"{path.name}: Review {num} covers Units {want[0]}–{want[1]}, "
+                         f"not {lo}–{hi}")
+    covers = list(range(lo, hi + 1))
+    vi = (RE_REVIEW_VI.search(text).group(1).strip() if RE_REVIEW_VI.search(text) else "")
+
+    marks = list(RE_PART.finditer(text))
+    if not marks:
+        raise SystemExit(f"{path.name}: no '## Part N — Title' sections")
+    parts = []
+    for i, mk in enumerate(marks):
+        end = marks[i + 1].start() if i + 1 < len(marks) else len(text)
+        body = text[mk.end():end]
+        intro, blocks = parse_block_run(body)
+        parts.append({"n": int(mk.group(1)), "title": mk.group(2).strip(),
+                      "intro": intro, "blocks": blocks,
+                      "bridges": [dict(bridge_attrs(bm), body=bm.group("body"),
+                                       lesson=int(mk.group(1)))
+                                  for bm in RE_BRIDGE.finditer(body)]})
+
+    r = {"num": num, "nn": f"r{num}", "title": f"Review {num}",
+         "vi": vi, "covers": covers, "parts": parts, "answers": {},
+         "vocab": [], "src": path.name, "text": text,
+         "bridges": [b for P in parts for b in P["bridges"]]}
+    r["tasks"] = [(P["n"], blk, t) for P in parts for blk in part_blocks(P)
+                  for t in blk["tasks"]]
+    for key in ("clocks", "threads"):
+        r[key] = [(P["n"], d) for P in parts for blk in part_blocks(P) for d in blk[key]]
+    for key in ("audio", "writes", "passages"):
+        r[key] = [(P["n"], a, s) for P in parts for blk in part_blocks(P)
+                  for a, s in blk[key]]
+    return r
+
+
+def part_blocks(P):
+    return ([P["intro"]] if P["intro"] else []) + P["blocks"]
+
+
+def review_vocab(r, units) -> list:
+    """The three covered units' vocabulary tables, merged, renumbered.
+
+    `vocab:N` on a Review's writing task has to mean "words from the units this
+    Review covers" — that is the whole point of a cumulative section — so the
+    list is built here rather than authored, and cannot drift from the tables
+    it is drawn from.
+    """
+    seen, out = set(), []
+    for u in units:
+        if u["num"] not in r["covers"]:
+            continue
+        for w in u["vocab"]:
+            k = w["word"].lower()
+            if k in seen:
+                continue
+            seen.add(k)
+            out.append(dict(w, n=len(out) + 1))
+    return out
 
 
 def lesson_blocks(L):
@@ -1277,7 +1407,34 @@ def ipa_title(u) -> str:
     return "" if plain(full) == plain(short_strand(full)) else f' title="{e(plain(full))}"'
 
 
-def page_home(units) -> str:
+def review_cards(reviews, units, up="") -> str:
+    """The four cumulative sections, on the home page.
+
+    They sit under the twelve units rather than between them: the grid is the
+    course, and a Review is what you do once three of its units are behind you.
+    """
+    if not reviews:
+        return ""
+    by_num = {u["num"]: u for u in units}
+    cards = []
+    for r in reviews:
+        names = " · ".join(by_num[n]["title"] for n in r["covers"] if n in by_num)
+        cards.append(
+            f'    <a class="unitcard rv" href="{up}review-{r["num"]}/index.html">\n'
+            f'      <div class="hd"><span class="num">R{r["num"]}</span>'
+            f'<h3>{e(review_span_text(r))}</h3></div>\n'
+            f'      <p class="vi">{e(names)}</p>\n'
+            f'      <div class="foot"><span>after Unit {r["covers"][-1]:02d}</span></div>\n'
+            f'    </a>')
+    return ('\n  <div class="sectionhead"><h2>Four checkpoints</h2>'
+            '<span class="label">after Units 03, 06, 09 and 12</span></div>\n'
+            '  <p class="standfirst">Each one asks about three finished units at the same '
+            'time — sounds, words, grammar, a text and a paragraph of your own. Everything '
+            'in them has already been taught.</p>\n'
+            '  <div class="unitgrid">\n' + "\n".join(cards) + "\n  </div>")
+
+
+def page_home(units, reviews=()) -> str:
     cards = []
     for u in units:
         cards.append(f"""    <a class="unitcard" href="unit-{u['nn']}/index.html" data-unit-progress="{u['nn']}">
@@ -1326,7 +1483,8 @@ def page_home(units) -> str:
   <div class="sectionhead"><h2>The twelve units</h2><span class="label">sounds in clay · grammar in teal</span></div>
   <div class="unitgrid">
 {chr(10).join(cards)}
-  </div>"""
+  </div>
+{review_cards(reviews, units)}"""
     # The review queue spans units, so the home page carries every unit's items.
     # ~216 of them; the alternative is a fetch, and this site has no server.
     return shell(title=SITE, depth=0, body=body, crumb=[("Course", "")],
@@ -1369,7 +1527,7 @@ def start_card(u) -> str:
 """
 
 
-def page_unit(u) -> str:
+def page_unit(u, reviews=()) -> str:
     rows = []
     for L in u["lessons"]:
         n_ex = sum(1 for b in L["blocks"] if b["kind"] == "exercise")
@@ -1433,6 +1591,24 @@ def page_unit(u) -> str:
   </div>
   <div id="engine" hidden></div>
   <p class="note" id="ttsNote" hidden></p>"""
+
+    # The Review that closes on this unit is signposted from it. A cumulative
+    # section nobody can find from the unit it follows is a page, not a
+    # checkpoint.
+    here = next((r for r in reviews if r["covers"][-1] == u["num"]), None)
+    if here:
+        body += f"""
+
+  <div class="sectionhead"><h2>Review {here['num']}</h2><span class="label">three units at once</span></div>
+  <div class="card">
+    <h3>{e(review_span_text(here))}, mixed together</h3>
+    <p class="lede">This unit is the last of three. Review {here['num']} asks about all
+    three at the same time — the sounds, the words, the grammar, a text to read against
+    the clock and a paragraph of your own. Nothing in it is new.</p>
+    <div class="row">
+      <a class="btn" href="../review-{here['num']}/index.html">Open Review {here['num']}</a>
+    </div>
+  </div>"""
 
     return shell(title=f"Unit {u['num']:02d} — {u['title']} · {SITE}", depth=1, body=body,
                  crumb=[("Course", "../index.html"), (f"Unit {u['num']:02d}", "")],
@@ -1546,98 +1722,106 @@ def recap_block(u) -> str:
   </section>"""
 
 
+def block_prose(u, lesson, b, payload) -> str:
+    """One block's markdown, with each directive rendered where it stands.
+
+    The widget HTML is substituted for the token render() carried through, the
+    same way a bridge is, so source order survives: a warning written between a
+    task and its recording still prints between them.
+
+    `lesson` is a lesson number on a unit page and a part number on a Review
+    page. It is only ever an id component, so the two can share this.
+    """
+    out = render(b["md"])
+    n_task = n_audio = n_write = n_clock = n_pass = 0
+    for i, (kind, d) in enumerate(b["widgets"]):
+        if kind == "passage":
+            p, html_ = passage_block(u, lesson, d[0], d[1], n_pass)
+            n_pass += 1
+            payload["passage"].append(p)
+        elif kind == "audio":
+            p = audio_payload(u, lesson, d[0], d[1], n_audio)
+            n_audio += 1
+            payload["audio"].append(p)
+            html_ = audio_html(p)
+        elif kind == "write":
+            p = write_payload(u, lesson, d[0], d[1], n_write)
+            n_write += 1
+            payload["write"].append(p)
+            html_ = write_html(p, d[0])
+        elif kind == "clock":
+            p = clock_payload(u, lesson, d, n_clock)
+            n_clock += 1
+            payload["clock"].append(p)
+            html_ = clock_html(p)
+        elif kind == "thread":
+            html_ = thread_html(d, THREADS)
+        else:
+            p = task_payload(u, lesson, b["id"] or slug(b["title"]), d, n_task)
+            n_task += 1
+            payload["tasks"].append(p)
+            html_ = task_html(p, d)
+        tok = WIDGET % i
+        out = out.replace(f"<p>{tok}</p>", html_).replace(tok, html_)
+    return out
+
+
+def block_section(u, lesson, b, payload, *, where="") -> str:
+    """One teaching block or one exercise, as a <section>.
+
+    Shared by the lesson page and the Review page. The vocabulary swap is a
+    unit-only affair — a Review has no table of its own, only the three tables
+    it re-tests — and is guarded by `u["vocab"]` being the unit's own list.
+    """
+    if b["kind"] != "exercise":
+        inner = block_prose(u, lesson, b, payload)
+        # The vocabulary block's table is swapped for the rebuilt one, so
+        # every row carries its marker and its own audio button.
+        if b["title"].lower().startswith("vocabulary") and u["vocab"]:
+            inner, n = RE_FIRST_TABLE.subn(lambda _: vocab_entries(u), inner, count=1)
+            if n != 1:
+                raise SystemExit(f"{where}: vocabulary block has no table to replace")
+        head = f"    <h2>{inline(b['title'])}</h2>\n" if b["title"] else ""
+        return (f'  <section class="block" data-role="teach">\n{head}'
+                f'    <div class="prose">{inner}</div>\n  </section>')
+
+    ans_html = ""
+    if b["tasks"]:
+        # A task carries its own key, so the generator writes the answer
+        # entry. A hand-written entry for the same exercise would be a second
+        # copy of the same fact, and the gate rejects having both.
+        #
+        # data-locked: the reveal opens only once the task has been checked. A
+        # key readable beside an unanswered task makes the attempt optional,
+        # and an optional attempt is the reveal button this construct replaced.
+        body = "".join(task_answer_html(task_payload(u, lesson, b["id"], t, i))
+                       for i, t in enumerate(b["tasks"]))
+        ans_html = f"""
+    <div class="answer" data-role="answer" data-locked="1">
+      <button type="button">Show answer</button>
+      <div class="body prose" hidden>{body}</div>
+    </div>"""
+    elif u["answers"].get(b["id"]):
+        ans_html = f"""
+    <div class="answer" data-role="answer">
+      <button type="button">Show answer</button>
+      <div class="body prose" hidden>{render(u["answers"][b["id"]])}</div>
+    </div>"""
+    return f"""  <section class="block ex" data-role="exercise" data-ex="{e(b['id'])}">
+    <div class="exhead"><span class="exno">{e(b['id'])}</span><h2>{inline(b['title'])}</h2></div>
+    <div class="prose">{block_prose(u, lesson, b, payload)}</div>{ans_html}
+  </section>"""
+
+
 def page_lesson(u, L) -> str:
     parts = []
     payload: dict = {"tasks": [], "audio": [], "write": [], "clock": [], "passage": []}
     if L["n"] == LESSONS:
         parts.append(recap_block(u))
-    def prose(b) -> str:
-        """One block's markdown, with each directive rendered where it stands.
 
-        The widget HTML is substituted for the token render() carried through,
-        the same way a bridge is, so source order survives: a warning written
-        between a task and its recording still prints between them.
-        """
-        out = render(b["md"])
-        n_task = n_audio = n_write = n_clock = n_pass = 0
-        for i, (kind, d) in enumerate(b["widgets"]):
-            if kind == "passage":
-                p, html_ = passage_block(u, L["n"], d[0], d[1], n_pass)
-                n_pass += 1
-                payload["passage"].append(p)
-            elif kind == "audio":
-                p = audio_payload(u, L["n"], d[0], d[1], n_audio)
-                n_audio += 1
-                payload["audio"].append(p)
-                html_ = audio_html(p)
-            elif kind == "write":
-                p = write_payload(u, L["n"], d[0], d[1], n_write)
-                n_write += 1
-                payload["write"].append(p)
-                html_ = write_html(p, d[0])
-            elif kind == "clock":
-                p = clock_payload(u, L["n"], d, n_clock)
-                n_clock += 1
-                payload["clock"].append(p)
-                html_ = clock_html(p)
-            elif kind == "thread":
-                html_ = thread_html(d, THREADS)
-            else:
-                p = task_payload(u, L["n"], b["id"] or slug(b["title"]), d, n_task)
-                n_task += 1
-                payload["tasks"].append(p)
-                html_ = task_html(p, d)
-            tok = WIDGET % i
-            out = out.replace(f"<p>{tok}</p>", html_).replace(tok, html_)
-        return out
-
-    if L["intro"]:
-        parts.append(f'  <section class="block" data-role="teach">\n'
-                     f'    <div class="prose">{prose(L["intro"])}</div>\n  </section>')
-
-    for b in L["blocks"]:
-        if b["kind"] == "teach":
-            inner = prose(b)
-            # The vocabulary block's table is swapped for the rebuilt one, so
-            # every row carries its marker and its own audio button.
-            if b["title"].lower().startswith("vocabulary") and u["vocab"]:
-                inner, n = RE_FIRST_TABLE.subn(lambda _: vocab_entries(u), inner, count=1)
-                if n != 1:
-                    raise SystemExit(
-                        f"unit {u['nn']} lesson {L['n']}: vocabulary block has no table to replace")
-            parts.append(f"""  <section class="block" data-role="teach">
-    <h2>{e(b['title'])}</h2>
-    <div class="prose">{inner}</div>
-  </section>""")
-        else:
-            ans_html = ""
-            if b["tasks"]:
-                # A task carries its own key, so the generator writes the
-                # answer entry. parse_unit's hand-written entry for the same
-                # exercise would be a second copy of the same fact, and the
-                # gate rejects having both.
-                #
-                # data-locked: the reveal opens only once the task has been
-                # checked. A key readable beside an unanswered task makes the
-                # attempt optional, and an optional attempt is the reveal
-                # button this construct replaced.
-                body = "".join(task_answer_html(task_payload(u, L["n"], b["id"], t, i))
-                               for i, t in enumerate(b["tasks"]))
-                ans_html = f"""
-    <div class="answer" data-role="answer" data-locked="1">
-      <button type="button">Show answer</button>
-      <div class="body prose" hidden>{body}</div>
-    </div>"""
-            elif u["answers"].get(b["id"]):
-                ans_html = f"""
-    <div class="answer" data-role="answer">
-      <button type="button">Show answer</button>
-      <div class="body prose" hidden>{render(u["answers"][b["id"]])}</div>
-    </div>"""
-            parts.append(f"""  <section class="block ex" data-role="exercise" data-ex="{e(b['id'])}">
-    <div class="exhead"><span class="exno">{e(b['id'])}</span><h2>{e(b['title'])}</h2></div>
-    <div class="prose">{prose(b)}</div>{ans_html}
-  </section>""")
+    where = f"unit {u['nn']} lesson {L['n']}"
+    for b in lesson_blocks(L):
+        parts.append(block_section(u, L["n"], b, payload, where=where))
 
     rail = "".join(
         f'<span class="cur" data-lesson="{i}">{i}</span>' if i == L["n"]
@@ -1677,6 +1861,104 @@ def page_lesson(u, L) -> str:
                  desc=f"Unit {u['num']} Lesson {L['n']}: {L['title']}.")
 
 
+def review_span_text(r) -> str:
+    return f"Units {r['covers'][0]:02d}–{r['covers'][-1]:02d}"
+
+
+def page_review(r, units) -> str:
+    """One Review: everything on one page, in the two halves the book prints.
+
+    There is no progress gate and no "mark complete" button. A Review is not a
+    lesson the learner is working through — it is the point at which three
+    finished units are asked about together, which is the one thing this site
+    had no shape for at all.
+    """
+    parts = []
+    payload: dict = {"tasks": [], "audio": [], "write": [], "clock": [], "passage": []}
+    for P in r["parts"]:
+        parts.append(f'  <div class="sectionhead"><h2>{inline(P["title"])}</h2>'
+                     f'<span class="label">Part {P["n"]} of {len(r["parts"])}</span></div>')
+        where = f"review {r['num']} part {P['n']}"
+        for b in part_blocks(P):
+            parts.append(block_section(r, P["n"], b, payload, where=where))
+
+    covered = [u for u in units if u["num"] in r["covers"]]
+    links = "".join(
+        f'<a class="lesson" href="../unit-{u["nn"]}/index.html">'
+        f'<span class="n">{u["num"]:02d}</span>'
+        f'<span class="body"><span class="t">{e(u["title"])}</span>'
+        f'<span class="d">{e(u["vi"])}</span></span>'
+        f'<span class="go" aria-hidden="true">→</span></a>' for u in covered)
+
+    last = r["covers"][-1]
+    prev_l = f'<a class="btn quiet" href="../unit-{last:02d}/index.html">← Unit {last:02d}</a>'
+    nxt = last + 1
+    next_l = (f'<a class="btn" href="../unit-{nxt:02d}/index.html">Unit {nxt:02d} →</a>'
+              if nxt <= 12 else '<a class="btn" href="../index.html">Back to the course →</a>')
+
+    body = f"""  <header class="masthead">
+    <p class="eyebrow">Review {r['num']} of {REVIEWS} · after Unit {last:02d}</p>
+    <h1>{e(r['title'])} — {review_span_text(r)}</h1>
+    <p class="vi">{e(r['vi'])}</p>
+  </header>
+
+  <div class="card start">
+    <h2>What this is</h2>
+    <p class="lede">Everything here comes from the three units below, mixed together.
+    Nothing new is taught — if an answer will not come, the unit it came from is one
+    click away.</p>
+    <div class="lessons">{links}</div>
+  </div>
+
+{chr(10).join(parts)}
+
+  <div class="pager">
+    {prev_l}
+    <span class="sp"></span>
+    {next_l}
+  </div>"""
+
+    return shell(title=f"Review {r['num']} — {review_span_text(r)} · {SITE}",
+                 depth=1, body=body,
+                 crumb=[("Course", "../index.html"), (f"Review {r['num']}", "")],
+                 data={"kind": "review", "unit": r["nn"], "review": r["num"],
+                       "tasks": payload["tasks"], "audio": payload["audio"],
+                       "write": payload["write"], "clock": payload["clock"],
+                       "passage": payload["passage"]},
+                 desc=f"Review {r['num']}: {review_span_text(r)} tested together.")
+
+
+def load_reviews(units) -> list:
+    """The four Reviews, or a loud failure.
+
+    Discovery is by name and the set is closed, deliberately. A `review-*.md`
+    the generator does not recognise, a Review whose heading claims the wrong
+    units, or one of the four simply missing are all silent-vanish defects
+    otherwise: the file sits in `units/`, nothing reads it, and no page is ever
+    short enough to notice.
+    """
+    found = {}
+    for f in sorted(SRC.glob("review-*.md")):
+        r = parse_review(f)                # raises on a name or heading it cannot place
+        if r["num"] in found:
+            raise SystemExit(f"{f.name}: Review {r['num']} is already built from "
+                             f"{found[r['num']]['src']}")
+        found[r["num"]] = r
+    if not found:
+        return []
+    missing = [n for n in range(1, REVIEWS + 1) if n not in found]
+    if missing:
+        raise SystemExit("units/: the book has "
+                         + f"{REVIEWS} Reviews and this checkout is missing "
+                         + ", ".join(f"review-{n}.md" for n in missing)
+                         + " — a cumulative section that quietly disappears is the "
+                           "defect, not the fix")
+    out = [found[n] for n in sorted(found)]
+    for r in out:
+        r["vocab"] = review_vocab(r, units)
+    return out
+
+
 # -------------------------------------------------------------------- main ---
 def main() -> int:
     ap = argparse.ArgumentParser()
@@ -1688,6 +1970,7 @@ def main() -> int:
         print(f"FAIL: no unit markdown under {SRC}", file=sys.stderr)
         return 2
     units = [parse_unit(f) for f in files]
+    reviews = load_reviews(units)
     # A thread's check in a later unit renders from the declaration made where
     # the strand was introduced, so the registry has to exist before any page
     # does.
@@ -1711,6 +1994,11 @@ def main() -> int:
                    for it in write_payload(u, 0, a, body)["items"]]
     tot_checked = sum(1 for it in write_items if it.get("c"))
 
+    rv_ex = sum(len([b for P in r["parts"] for b in P["blocks"] if b["kind"] == "exercise"])
+                for r in reviews)
+    rv_task = sum(len(r["tasks"]) for r in reviews)
+    rv_item = sum(len(t["items"]) for r in reviews for _, _, t in r["tasks"])
+
     if args.check:
         for u in units:
             ex = len([b for L in u["lessons"] for b in L["blocks"] if b["kind"] == "exercise"])
@@ -1728,6 +2016,15 @@ def main() -> int:
               f"checklist lines decided from the learner's own text · {tot_clock} reading clocks")
         print(f"{tot_pass} reading passages, highlightable and annotatable · "
               f"{tot_lab} generated paragraph labels")
+        for r in reviews:
+            print(f"  review {r['num']}  {review_span_text(r):16} parts={len(r['parts'])} "
+                  f"ex={len([b for P in r['parts'] for b in P['blocks'] if b['kind'] == 'exercise']):3} "
+                  f"marked={len(r['tasks']):2} items={sum(len(t['items']) for _, _, t in r['tasks']):3} "
+                  f"write={len(r['writes'])} clock={len(r['clocks'])} "
+                  f"passage={len(r['passages'])} words={len(r['vocab'])}")
+        if reviews:
+            print(f"{len(reviews)} cumulative reviews · {rv_ex} exercises · {rv_task} marked "
+                  f"tasks · {rv_item} marked items, every one of them across three units")
         return 0
 
     # Rebuild the generated tree only — remove what we own by name rather than
@@ -1735,6 +2032,10 @@ def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     for u in units:
         d = OUT / f"unit-{u['nn']}"
+        if d.is_dir():
+            shutil.rmtree(d)
+    for n in range(1, REVIEWS + 1):
+        d = OUT / f"review-{n}"
         if d.is_dir():
             shutil.rmtree(d)
     # docs/evidence/ was the published register. It is now research/evidence-register.md,
@@ -1749,7 +2050,7 @@ def main() -> int:
     for a in ASSETS.iterdir():
         shutil.copy2(a, OUT / "assets" / a.name)
 
-    (OUT / "index.html").write_text(page_home(units), encoding="utf-8")
+    (OUT / "index.html").write_text(page_home(units, reviews), encoding="utf-8")
     # The evidence register is a maintainer's document, not a page. It lives in
     # the repo beside the knowledge base it cites.
     REGISTER.write_text(register_md(units), encoding="utf-8")
@@ -1757,19 +2058,27 @@ def main() -> int:
     for u in units:
         d = OUT / f"unit-{u['nn']}"
         d.mkdir(parents=True, exist_ok=True)
-        (d / "index.html").write_text(page_unit(u), encoding="utf-8")
+        (d / "index.html").write_text(page_unit(u, reviews), encoding="utf-8")
         pages += 1
         for L in u["lessons"]:
             ld = d / f"lesson-{L['n']}"
             ld.mkdir(parents=True, exist_ok=True)
             (ld / "index.html").write_text(page_lesson(u, L), encoding="utf-8")
             pages += 1
+    for r in reviews:
+        d = OUT / f"review-{r['num']}"
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "index.html").write_text(page_review(r, units), encoding="utf-8")
+        pages += 1
 
     print(f"built {pages} pages into {OUT.relative_to(ROOT)}/ — "
           f"{len(units)} units, {tot_ex} exercises, {tot_ans} answers, "
           f"{tot_vocab} vocabulary rows, {tot_bridge} IELTS bridges")
     print(f"        {tot_task} marked tasks ({tot_item} items), {tot_audio} single-play "
           f"recordings, {len(THREADS)} strands")
+    if reviews:
+        print(f"        {len(reviews)} cumulative reviews, {rv_task} marked tasks "
+              f"({rv_item} items) drawn across three units each")
     return 0
 
 

@@ -260,5 +260,145 @@
       { "w": "aware", "pos": "adjective", "en": "knowing that something exists or is true", "vi": "nhận thức được, biết", "ex": "Are you **aware** of the new rules?" }
     ],
     "note": "The usual verb is **raise** awareness, not *make* or *rise*."
+  },
+
+  "ecosystem": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "all the living things in one area together with the water, soil and air they depend on, seen as one connected whole",
+        "vi": "hệ sinh thái",
+        "examples": ["A rice field is a small **ecosystem** of its own.",
+                     "Warmer water is changing the whole **ecosystem** of the reef.",
+                     "One missing insect can upset a forest **ecosystem**."],
+        "colloc": ["a rich ecosystem", "a marine ecosystem", "damage an ecosystem", "a fragile ecosystem"] }
+    ],
+    "note": "Wider than **habitat**: a habitat is where one species lives, an **ecosystem** is the whole set of living and non-living things and the links between them."
+  },
+
+  "carbon dioxide": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the gas that people and animals breathe out and that burning fuel gives off; plants take it in",
+        "vi": "khí đi-ô-xít các-bon (CO₂)",
+        "examples": ["Forests absorb **carbon dioxide** and give out oxygen.",
+                     "Cars and factories release millions of tonnes of **carbon dioxide** every year.",
+                     "There is more **carbon dioxide** in the air now than a century ago."],
+        "colloc": ["absorb carbon dioxide", "release carbon dioxide", "carbon dioxide emissions"] }
+    ],
+    "note": "Two words, no hyphen, and **uncountable** — never *carbon dioxides*. Often shortened to **CO₂**, read aloud as \"C-O-two\"."
+  },
+
+  "carbon footprint": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "the amount of carbon dioxide that a person, a journey or an activity puts into the environment",
+        "vi": "dấu chân các-bon (lượng khí thải mình gây ra)",
+        "examples": ["Cycling to school cuts your **carbon footprint**.",
+                     "A flight to Europe has a huge **carbon footprint**.",
+                     "The club measured the school's **carbon footprint** for a month."],
+        "colloc": ["reduce your carbon footprint", "a large carbon footprint", "measure a carbon footprint"] }
+    ],
+    "note": "The usual verb is **reduce** (or *cut*, or *lower*) a carbon footprint — not *decrease down* and not *destroy*. It belongs to somebody: *my/your/the school's* **carbon footprint**."
+  },
+
+  "global warming": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the slow rise in the temperature of the whole planet, caused mainly by gases from burning fuel",
+        "vi": "sự nóng lên toàn cầu",
+        "examples": ["**Global warming** is melting ice at both poles.",
+                     "Planting trees is one way of slowing **global warming**.",
+                     "Scientists warned about **global warming** long before most people listened."],
+        "colloc": ["cause global warming", "slow global warming", "the effects of global warming"] }
+    ],
+    "note": "**Uncountable** and used with **no article** — *global warming is a problem*, never *the global warming* or *a global warming*."
+  },
+
+  "extinction": {
+    "senses": [
+      { "pos": "noun", "grammar": "uncountable",
+        "en": "the situation in which a kind of animal or plant has died out completely and none are left anywhere",
+        "vi": "sự tuyệt chủng",
+        "examples": ["Hunting drove the rhino close to **extinction** in Viet Nam.",
+                     "These frogs face **extinction** within twenty years.",
+                     "**Extinction** is final — a lost species does not come back."],
+        "colloc": ["face extinction", "be threatened with extinction", "save a species from extinction", "close to extinction"] }
+    ],
+    "forms": [
+      { "w": "extinct", "pos": "adjective", "en": "no longer existing anywhere", "vi": "đã tuyệt chủng", "ex": "The bird has been **extinct** since 1890." }
+    ],
+    "note": "Careful with the two words: the noun is **extinction**, the adjective is **extinct**. *The species faces extinction* but *the species is extinct*."
+  },
+
+  "coral": {
+    "senses": [
+      { "pos": "noun", "grammar": "usually uncountable; countable for kinds of coral",
+        "en": "a hard, often brightly coloured substance built up on the sea floor by very small sea animals living together",
+        "vi": "san hô",
+        "examples": ["Divers come to Con Dao to photograph the **coral**.",
+                     "Warmer water turns the **coral** white and then kills it.",
+                     "Hundreds of **corals** of different kinds grow around the islands."],
+        "colloc": ["a coral reef", "coral bleaching", "protect the coral"] }
+    ],
+    "note": "**Coral** is an animal, not a plant or a stone, however much it looks like both. Say *the coral is dying* for coral in general, and *corals* only when you mean different kinds."
+  },
+
+  "toxic": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "containing poison, and able to harm or kill living things",
+        "vi": "độc, độc hại",
+        "examples": ["The workshop pours **toxic** waste into the stream.",
+                     "Some cleaning liquids are **toxic** if you breathe them in.",
+                     "Fish cannot survive in **toxic** water."],
+        "colloc": ["toxic waste", "toxic chemicals", "highly toxic", "toxic to fish"] }
+    ],
+    "forms": [
+      { "w": "toxin", "pos": "noun", "en": "a poisonous substance, especially one produced by a living thing", "vi": "độc tố", "ex": "The algae release a **toxin** into the water." }
+    ],
+    "note": "Use **toxic to** for what it harms: *toxic **to** bees*. Stronger and more scientific than *harmful*, weaker than nothing — a *toxic* substance is a poison, so do not use it for litter or noise."
+  },
+
+  "single-use": {
+    "senses": [
+      { "pos": "adjective",
+        "en": "made to be used once and then thrown away",
+        "vi": "dùng một lần rồi bỏ",
+        "examples": ["Our canteen has stopped handing out **single-use** cups.",
+                     "**Single-use** plastic bags are the easiest thing to give up.",
+                     "Bring a bottle from home instead of buying a **single-use** one."],
+        "colloc": ["single-use plastic", "single-use products", "ban single-use bags"] }
+    ],
+    "note": "Always **hyphenated** and always **before** the noun: *a single-use straw* ✅, but not *this straw is single-use* in careful writing — say *this straw is used once and thrown away*."
+  },
+
+  "campfire": {
+    "senses": [
+      { "pos": "noun", "grammar": "countable",
+        "en": "a small outdoor fire that people build to cook on or sit around when camping",
+        "vi": "lửa trại",
+        "examples": ["We sang around the **campfire** until midnight.",
+                     "Never leave a **campfire** burning when you go to sleep.",
+                     "A **campfire** left alight can set a whole hillside on fire."],
+        "colloc": ["build a campfire", "put out a campfire", "sit around a campfire"] }
+    ],
+    "note": "One word, no space. You **build** or **light** a campfire and you **put it out** — not *close* it or *turn it off*."
+  },
+
+  "participate": {
+    "senses": [
+      { "pos": "verb", "grammar": "intransitive, + in",
+        "en": "to take part in an activity or event together with other people",
+        "vi": "tham gia",
+        "examples": ["Over a thousand students **participated** in the clean-up.",
+                     "Anyone in Grade 8 may **participate** in the poster contest.",
+                     "She **participates** in every activity the Green Club runs."],
+        "colloc": ["participate in a programme", "participate fully", "actively participate"] }
+    ],
+    "forms": [
+      { "w": "participant", "pos": "noun", "en": "a person who takes part in something", "vi": "người tham gia", "ex": "Each **participant** was given a pair of gloves." },
+      { "w": "participation", "pos": "noun", "en": "the act of taking part", "vi": "sự tham gia", "ex": "**Participation** is free but you must sign up." }
+    ],
+    "note": "Never without **in**: ❌ *participate the contest* → ✅ *participate **in** the contest*. In speech *take part in* is commoner; *participate* is the more formal of the two."
   }
 }

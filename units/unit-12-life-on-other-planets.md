@@ -110,6 +110,31 @@ Each sentence below reports a **question**. What did the person actually ask?
 | 16 | launch | /lɔːntʃ/ | v, n | phóng (tàu vũ trụ); vụ phóng |
 | 17 | solar system | /ˌsəʊlə ˈsɪstəm/ | n | hệ Mặt Trời |
 | 18 | galaxy | /ˈɡæləksi/ | n | thiên hà |
+| 19 | UFO | /ˌjuː ef ˈəʊ/ | n | vật thể bay không xác định |
+| 20 | Uranus | /ˈjʊərənəs/ | n | sao Thiên Vương |
+| 21 | Neptune | /ˈneptjuːn/ | n | sao Hải Vương |
+| 22 | commander | /kəˈmɑːndə(r)/ | n | người chỉ huy, người cầm đầu |
+| 23 | oppose | /əˈpəʊz/ | v | chống lại, phản đối |
+| 24 | promising | /ˈprɒmɪsɪŋ/ | adj | đầy hứa hẹn, nhiều triển vọng |
+| 25 | trace | /treɪs/ | n | dấu vết, vết tích |
+
+> ### ▶︎ [**Practise these 25 words**](../app/unit-12-vocab.html)
+>
+> Press 🔊 on any row above to hear the word. When you have finished this
+> lesson, the unit page opens a **practice** session over all twenty-five — the
+> meaning, the word, what you hear, and, more often than any of those, **the
+> word inside a phrase it actually lives in**. Wrong answers come straight
+> back, and everything returns a week later, because what you can still recall
+> after a gap is the only recall worth counting. The **unit test** opens once
+> all seven lessons are done.
+>
+> **Luyện 25 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **practice** ở trang bài sẽ mở ra để luyện cả 25 từ — trong đó phần lớn là
+> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
+> ngay, và mọi từ quay lại sau một tuần.
+>
+> Do the written exercises below as well — writing by hand and typing on a
+> screen build different halves of the same knowledge.
 
 ### 2.1 Complete the sentences
 
@@ -135,6 +160,43 @@ Each sentence below reports a **question**. What did the person actually ask?
 - Line 4 — (a) oxygen (b) atmosphere (c) astronaut (d) air = c ~ the others are gases or the layer of gas; an astronaut is a person
 :::
 
+### 2.3 Words from the far end of the table
+
+::: task skill="course" type="gap-fill" ask="Use one word from rows 19–25 of the table. Change the form if you need to."
+- Something bright crossed the sky, and nobody could say what it was — the newspaper called it a ___ . = UFO
+- The seventh planet from the Sun is ___ , and it spins on its side. = Uranus
+- ___ is the eighth planet from the Sun and the coldest of them all. = Neptune
+- The crew refused to obey their ___ and turned the ship round. = commander
+- Hundreds of people ___ the plan to build a road through the forest. = oppose
+- Of all the planets we know, Mars is the most ___ place to look for life. = promising
+- There is no water on the surface today, but there are ___ of it in the rock. = traces
+:::
+
+### 2.4 The eight planets in order
+
+The eight planets always come in the same order, counting outwards from the
+Sun. English speakers remember it with one silly sentence, where each word
+starts with the same letter as a planet:
+
+> **M**y **V**ery **E**xcellent **M**other **J**ust **S**erved **U**s **N**oodles.
+
+::: task skill="course" type="short-answer" ask="Write the English name of each planet, counting outwards from the Sun. The Vietnamese name is given, and the silly sentence above gives you every first letter."
+- 1st from the Sun — *sao Thuỷ* = Mercury
+- 2nd — *sao Kim* = Venus
+- 3rd — *Trái Đất* = Earth
+- 4th — *sao Hoả* = Mars
+- 5th — *sao Mộc* = Jupiter
+- 6th — *sao Thổ* = Saturn
+- 7th — *sao Thiên Vương* = Uranus
+- 8th — *sao Hải Vương* = Neptune
+:::
+
+> **Mẹo:** Tên hành tinh trong tiếng Anh **luôn viết hoa**: *Mercury, Venus,
+> Mars, Jupiter, Saturn, Uranus, Neptune*. Hãy học thuộc câu *My Very Excellent
+> Mother Just Served Us Noodles* — mỗi chữ cái đầu là một hành tinh, theo đúng
+> thứ tự từ trong ra ngoài. Bốn hành tinh đầu là nhóm **inner planets**, bốn
+> hành tinh sau là **outer planets**.
+
 ### Pronunciation — Intonation in lists
 
 When you say a list in English, your voice does the same thing every time.
@@ -159,7 +221,7 @@ Compare these two:
 > tiếng Anh: giữ giọng đi lên ở mục cuối thì câu vẫn còn để ngỏ, như bảng
 > trên đã nói.
 
-### 2.3 Mark the intonation
+### 2.5 Mark the intonation
 
 Write ↗ or ↘ above each underlined item.
 
@@ -169,7 +231,7 @@ Write ↗ or ↘ above each underlined item.
 4. I'd like to visit __Mars__, __Jupiter__ and __Saturn__.
 5. She studies __stars__, __planets__ and __galaxies__.
 
-### 2.4 Open or closed?
+### 2.6 Open or closed?
 
 ::: task skill="course" type="choice" opts="closed|open" ask="Look at the arrow on the **last** item. **closed** = the list is complete; **open** = there is more to come."
 - I've packed my notebook, my camera and my ↘telescope. = closed
@@ -180,7 +242,7 @@ Write ↗ or ↘ above each underlined item.
 - He named three moons: Io, Europa ↗… = open
 :::
 
-### 2.5 Say these aloud
+### 2.7 Say these aloud
 
 Read each list three times — first slowly with big steps in your voice, then at
 normal speed. Record yourself and check that the last item really falls.
@@ -401,11 +463,33 @@ full sentence, using *asked me*.
 When you talk about life on other planets, nobody knows the answer. English
 has a whole ladder of phrases for how certain you are.
 
+#### Very sure
+
 | Very sure | Nghĩa |
 | --- | --- |
 | I'm **certain** there's life out there. | Tôi chắc chắn là… |
 | There's **definitely** water under the ice. | Chắc chắn là… |
 | It **must be** true — look at the photographs. | Chắc hẳn là… |
+
+#### The two you need most — and the reason that follows them
+
+These are the two answers you will give again and again. On their own they
+sound like a shrug. Say the phrase, then say **why**, and it becomes a real
+answer:
+
+| Someone asks | You answer |
+| --- | --- |
+| Do you think Mars can support life? | I'm not sure about it. Scientists are still looking for water there. |
+| Do you think Ha will win on Saturday? | I doubt it. She hurt her arm last week. |
+| Will the rocket launch on Friday? | I'm not sure about it. The weather forecast is bad. |
+| Can that photograph really be a UFO? | I doubt it. It looks exactly like a plane at night. |
+
+> **Ghi chú:** Công thức là **cụm từ + lý do**. *I'm not sure about it.* dùng
+> khi bạn **chưa biết**, còn *I doubt it.* dùng khi bạn **nghiêng về "không"**.
+> Cả hai đều kết thúc bằng **it** — đừng thêm tân ngữ dài phía sau:
+> ❌ *I doubt it that Mars has life.* ✅ *I doubt it. Mars is far too cold.*
+
+#### Not sure
 
 | Not sure | Nghĩa |
 | --- | --- |
@@ -413,6 +497,8 @@ has a whole ladder of phrases for how certain you are.
 | There **may / might be** creatures we can't see. | Có thể có… |
 | I **suppose** so. | Tôi cho là vậy. |
 | It **depends on** the temperature. | Còn tuỳ vào… |
+
+#### Doubting
 
 | Doubting | Nghĩa |
 | --- | --- |
@@ -443,7 +529,30 @@ the frames you need most:
 - **A:** She asked ___ you were joining the science club. = if/whether
 :::
 
-### 4.2 Write your own
+### 4.2 Phrase first, then the reason
+
+::: task skill="course" type="choice" opts="I'm not sure about it.|I doubt it." ask="Which phrase fits in front of the reason that follows it? **I'm not sure about it.** = you simply do not know. **I doubt it.** = you think the answer is probably no."
+- ___ Nobody has ever brought a rock back from that planet. = I'm not sure about it. ~ the speaker has no information either way
+- ___ There is no oxygen at all in the air there. = I doubt it. ~ the reason points firmly towards *no*
+- ___ Scientists are still arguing about the photographs. = I'm not sure about it. ~ even the experts have not settled it
+- ___ The ticket costs more than a house. = I doubt it. ~ the reason makes it very unlikely
+- ___ It depends on how much money the space agency gets. = I'm not sure about it. ~ the answer is still open
+- ___ She has never once finished a race. = I doubt it. ~ the evidence leans towards *no*
+:::
+
+### 4.3 Say how sure you are
+
+Answer each question in **two sentences**: the phrase first, then the reason.
+Use *I'm not sure about it.* twice and *I doubt it.* once.
+
+1. "Is there water on Mars?"
+   → _______________________________________________
+2. "Will your friend get a good mark in the English test?"
+   → _______________________________________________
+3. "Will the weather be fine tomorrow?"
+   → _______________________________________________
+
+### 4.4 Write your own
 
 Someone asks you these three questions. Write a reply that shows **how sure**
 you are, and give a reason.
@@ -460,6 +569,59 @@ Now report all three questions to a friend, starting *She asked me…*
 4. → _______________________________________________
 5. → _______________________________________________
 6. → _______________________________________________
+
+### Three planets in the solar system
+
+Three of our neighbours, in three short fact-files. Read them once, then cover
+them and see how much you can still say.
+
+> **MERCURY**
+> The smallest of the eight planets, and the one that sits closest to the Sun.
+> It travels alone: not a single moon goes round it. Standing on the daytime
+> side would roast you, and yet the night side turns bitterly cold, because
+> there is no atmosphere to hold the heat in. That missing air has one other
+> effect worth knowing — with no air, there is no wind and no weather of any
+> kind. Nothing on Mercury has ever blown, rained or snowed.
+
+> **JUPITER**
+> The giant of the family. Jupiter is the largest planet by a long way, and
+> about sixty-three moons travel round it, so it is more like a small solar
+> system of its own. It is also the stormiest place we know: enormous storms
+> turn in its clouds for years at a time. Even from here it is easy to find,
+> because after the Moon and Venus it is the third brightest object in the
+> night sky.
+
+> **VENUS**
+> Our nearest neighbour in size — Venus is very nearly as big as the Earth, and
+> people once called it our twin. The likeness stops at the surface. Venus is
+> the hottest planet of all, hotter even than Mercury, and like Mercury it has
+> no moon. Look east just before sunrise and you may see a steady white point
+> hanging low above the fields. That is Venus, and it is why people have called
+> it the **morning star** for thousands of years.
+
+### 4.5 Read the fact-files
+
+::: task skill="course" type="short-answer" ask="Answer from the three fact-files above. Write the planet's name, or a short phrase."
+- Which two planets have no moon? = Mercury and Venus/Venus and Mercury
+- Which planet is similar in size to the Earth? = Venus
+- Which planet is the smallest and the closest to the Sun? = Mercury
+- Which planet do people call the morning star? = Venus
+- Which planet is the largest and the stormiest? = Jupiter
+- About how many moons does Jupiter have? = (about) sixty-three/63
+- Why is there no wind or weather on Mercury? = (because) it has no atmosphere/no atmosphere ~ no air means nothing for the wind to be made of
+- When is the best time to look for Venus? = (just) before sunrise/in the early morning
+:::
+
+### 4.6 Tell someone about one of them
+
+Choose **one** of the three planets and talk about it for about thirty seconds,
+without reading the fact-file. Start like this, then keep going from memory:
+
+> *I would like to tell you about Mercury. It is the smallest planet, and…*
+
+Give at least **three** facts, and say **one** thing that surprised you. Record
+yourself, listen back, and check that your list of facts ends with a falling
+tone — that is the Lesson 2 target, used for real.
 
 ---
 
@@ -771,6 +933,27 @@ questions; one is a subject–verb agreement slip.
 - Error 6 = wants ~ *Everyone* takes a singular verb
 :::
 
+### 7.5 Word formation
+
+::: task skill="course" type="gap-fill" ask="Complete each sentence with the right form of the word in brackets. One of them does not change at all."
+- Space ___ costs a great deal of money and takes a great deal of time. *(explore)* = exploration
+- Water is the first thing a crew would need for ___ on Mars. *(survive)* = survival
+- Nobody has ruled out the ___ of life on other planets. *(possible)* = possibility
+- Two members of the crew voiced their ___ to the plan. *(oppose)* = opposition
+- Scientists look for signs that a planet might be ___ . *(inhabit)* = habitable
+- The ___ of the new telescope is planned for next March. *(launch)* = launch
+:::
+
+### 7.6 Report the question
+
+::: task skill="course" type="gap-fill" ask="Rewrite each question as a reported question. Write only the missing words."
+- "What planet do you want to visit?" my friend asked me. → My friend asked me what planet I ___ to visit. = wanted
+- "Is there water on Mars?" Mai asked. → Mai asked ___ there was water on Mars. = if/whether
+- "When will the spacecraft land?" the students wondered. → The students wondered when the spacecraft ___ land. = would
+- "Do aliens really exist?" I asked my brother. → I asked my brother ___ aliens really existed. = if/whether
+- "Who is the commander of the mission?" Mai wondered. → Mai wondered who the commander of the mission ___ . = was
+:::
+
 ### Project — Design a habitable planet
 
 Invent a planet that could really support life, and present it.
@@ -804,6 +987,30 @@ Record it. Listen back and check that every list ends with a falling tone.
 > family member — and ask them to find one reason why life on your planet
 > would be difficult. Then redesign the planet to fix it.
 
+### Now I can …
+
+Eight things this unit set out to teach. Beside each one is the place your own
+answer to it is already sitting — open that exercise again and look at what you
+actually put, which tells you far more than a feeling does. Where nothing on the
+page can settle it, the row says so, and that one is yours to judge.
+
+| Now I can … | Where my answer already is |
+| --- | --- |
+| use the words for space and for life beyond Earth | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercises 7.1 and 7.5 |
+| use the right intonation when I read a list aloud | Lesson 2, exercises 2.5 and 2.6 · Lesson 7, exercise 7.2. Saying them aloud is yours — record Lesson 2, exercise 2.7 and listen back. |
+| report a question somebody asked | Lesson 3, exercises 3.2, 3.3 and 3.4 · Lesson 7, exercises 7.3, 7.4 and 7.6 |
+| say how sure, or how unsure, I am | Lesson 4, exercises 4.1 and 4.2 |
+| read about whether there could be life on other planets | Lesson 5, exercises 5.1 and 5.2 |
+| talk about what a planet needs before people could live on it | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
+| listen to a description of an imaginary planet and its creatures | Lesson 6, exercises 6.1 and 6.2 |
+| write a paragraph describing creatures on another planet | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+
+> **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
+> Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
+> xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
+> trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
+> đánh giá.
+
 ---
 
 ## Answer Key
@@ -820,14 +1027,14 @@ speaker asked their teacher when the club meets next month.
 
 ### Lesson 2
 
-**2.3** In every list, all items except the last rise ↗; the final item falls ↘.
+**2.5** In every list, all items except the last rise ↗; the final item falls ↘.
 1. water ↗, warmth ↗, an atmosphere ↘
 2. food ↗, water ↗, warm clothes ↗, a camera ↘
 3. Vietnamese ↗, Japanese ↗, Brazilian ↘
 4. Mars ↗, Jupiter ↗, Saturn ↘
 5. stars ↗, planets ↗, galaxies ↘
 
-**2.5** Answers will vary. Check: in items 1–3 your voice steps **up** on
+**2.7** Answers will vary. Check: in items 1–3 your voice steps **up** on
 every item except the last, and clearly **down** on the last one; in item 4 the "open" version
 ends with a rise, which should sound as though you were about to continue.
 
@@ -871,11 +1078,23 @@ asked me why I was awake so late.
 
 ### Lesson 4
 
-**4.2** Answers will vary. Check: items 1–3 each contain one phrase from the
+**4.3** Answers will vary. Check: each answer is **two sentences** — the phrase,
+then a full stop, then a reason — and that *I doubt it.* appears exactly once,
+on the answer where you really do lean towards "no". Model answers:
+1. *I'm not sure about it. Scientists have found traces of water but no water
+itself.* 2. *I doubt it. She hasn't opened the book all week.* 3. *I'm not sure
+about it. The forecast keeps changing.*
+
+**4.4** Answers will vary. Check: items 1–3 each contain one phrase from the
 certainty tables plus a reason; items 4–6 are correctly reported questions —
 *She asked me if there was life on other planets. / She asked me if I would
 ever travel into space. / She asked me if humans could survive on Mars for ten
 years.*
+
+**4.6** Answers will vary. Check: you named the planet in your first sentence,
+gave **three** facts that the fact-file really contains, added one reaction of
+your own, and — if you listed the facts in one sentence — let your voice fall ↘
+on the last item.
 
 ### Lesson 5
 

@@ -113,6 +113,39 @@ difference is most of what Lesson 3 is about.
 | 16 | replace | /rɪˈpleɪs/ | v | thay thế |
 | 17 | benefit | /ˈbenɪfɪt/ | n | lợi ích |
 | 18 | drawback | /ˈdrɔːbæk/ | n | nhược điểm, mặt hạn chế |
+| 19 | application | /ˌæplɪˈkeɪʃn/ | n | ứng dụng |
+| 20 | platform | /ˈplætfɔːm/ | n | nền tảng (học, họp trực tuyến) |
+| 21 | develop | /dɪˈveləp/ | v | phát triển, hoàn thiện |
+| 22 | digital | /ˈdɪdʒɪtl/ | adj | (thuộc) kĩ thuật số |
+| 23 | eye-tracking | /ˈaɪ ˌtrækɪŋ/ | n | công nghệ theo dõi cử động mắt |
+| 24 | attendance | /əˈtendəns/ | n | sự có mặt, sĩ số |
+| 25 | truancy | /ˈtruːənsi/ | n | việc trốn học |
+| 26 | cheating | /ˈtʃiːtɪŋ/ | n | sự gian lận |
+| 27 | feedback | /ˈfiːdbæk/ | n | ý kiến phản hồi, nhận xét |
+| 28 | breakout room | /ˈbreɪkaʊt ruːm/ | n | phòng thảo luận nhóm (trực tuyến) |
+| 29 | face to face | /ˌfeɪs tə ˈfeɪs/ | adv, adj | trực tiếp, mặt đối mặt |
+| 30 | convenient | /kənˈviːniənt/ | adj | thuận tiện, tiện lợi |
+| 31 | complain | /kəmˈpleɪn/ | v | phàn nàn, than phiền |
+| 32 | epidemic | /ˌepɪˈdemɪk/ | n | dịch bệnh |
+| 33 | contact lens | /ˈkɒntækt lenz/ | n | kính áp tròng |
+
+> ### ▶︎ [**Practise these 33 words**](../app/unit-11-vocab.html)
+>
+> Press 🔊 on any row above to hear the word. When you have finished this
+> lesson, the unit page opens a **practice** session over all thirty-three — the
+> meaning, the word, what you hear, and, more often than any of those, **the
+> word inside a phrase it actually lives in**. Wrong answers come straight
+> back, and everything returns a week later, because what you can still recall
+> after a gap is the only recall worth counting. The **unit test** opens once
+> all seven lessons are done.
+>
+> **Luyện 33 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **practice** ở trang bài sẽ mở ra để luyện cả 33 từ — trong đó phần lớn là
+> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
+> ngay, và mọi từ quay lại sau một tuần.
+>
+> Do the written exercises below as well — writing by hand and typing on a
+> screen build different halves of the same knowledge.
 
 ### 2.1 Complete the sentences
 
@@ -138,6 +171,56 @@ difference is most of what Lesson 3 is about.
 - studying in very short, focused bursts = nanolearning
 - to take the place of someone or something = replace
 - new and full of fresh ideas = innovative
+:::
+
+### 2.3 Which verb?
+
+Four verbs sit very close together in English and are kept strictly apart. You
+**invent** something that never existed. You **discover** something that was
+always there and nobody had found. You **create** something new that you made
+yourself. You **develop** something that already exists until it works properly.
+
+> **Mẹo:** Nhớ theo vật đi kèm, đừng nhớ theo nghĩa tiếng Việt.
+> **invent** + *a device, a machine, the telephone* — thứ trước đó chưa hề có.
+> **discover** + *a chemical element, a planet, a cure* — thứ vốn đã tồn tại.
+> **create** + *a medicine, a vaccine, a design* — thứ chính mình làm ra.
+> **develop** + *a technology, an application, a skill* — thứ đã có, nay
+> làm cho tốt hơn, hoàn thiện hơn.
+
+::: task skill="course" type="choice" opts="invent|discover|create|develop" ask="Which verb goes with each phrase? Only **one** of the four fits."
+- ___ a device = invent ~ a device did not exist before somebody built it
+- ___ a chemical element = discover ~ the element was already there; somebody found it
+- ___ a medicine = create ~ a medicine is made by the person who works it out
+- ___ a technology = develop ~ a technology is improved over years, not made in one moment
+- ___ a new planet = discover ~ the planet was in the sky long before the telescope
+- ___ an application = develop ~ an app is built, tested and improved over time
+- ___ the telephone = invent ~ nothing like it existed before Bell
+- ___ a vaccine = create
+:::
+
+> ⚠️ **Bẫy thường gặp:** Tiếng Việt dùng chung "phát minh / phát hiện / tạo ra"
+> khá linh hoạt, nên học sinh hay viết ❌ *Marie Curie invented radium.*
+> Radium đã có sẵn trong tự nhiên → ✅ *Marie Curie **discovered** radium.*
+> Ngược lại ❌ *Bell discovered the telephone.* → ✅ *Bell **invented** the
+> telephone.*
+
+### 2.4 Learning, checking, complaining
+
+::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
+- Our teacher puts us into ___ so that four of us can discuss one question. = breakout rooms/breakout room
+- The school uses a fingerprint scanner to check ___ every morning. = attendance
+- Biometrics is meant to put an end to ___ and to copying in tests. = truancy
+- My aunt wears ___ instead of glasses when she plays badminton. = contact lenses/contact lens
+- Classes moved online during the ___ and never fully moved back. = epidemic
+- I would rather meet my classmates ___ than in twenty small squares. = face to face
+- Studying at home is ___ : I save an hour of travelling every day. = convenient
+- Half the class ___ about the Internet connection every single week. = complain/complains
+- The teacher marks my work and sends ___ the next morning. = feedback
+- Our school has put every subject on the same ___ . = platform
+- ___ can show which line of the page a reader stopped at. = eye-tracking
+- The library is now completely ___ — there is not one paper card left. = digital
+- Engineers spent nine years ___ this battery before it was safe to sell. = developing
+- I downloaded an ___ that tests me on ten new words a day. = application
 :::
 
 ### Pronunciation — Stress in statements and questions
@@ -178,7 +261,7 @@ Three things to notice:
 > từ chức năng đọc lướt qua. Câu trần thuật và câu hỏi Wh- **hạ giọng** ở cuối;
 > câu hỏi Yes/No **lên giọng**.
 
-### 2.3 Content or function?
+### 2.5 Content or function?
 
 ::: task skill="course" type="choice" opts="C|F" ask="**C** for a content word (stressed), **F** for a function word (weak)."
 - laboratory = C
@@ -193,7 +276,7 @@ Three things to notice:
 - and = F
 :::
 
-### 2.4 Which words are stressed?
+### 2.6 Which words are stressed?
 
 Write out the stressed (content) words of each sentence, in order.
 
@@ -204,7 +287,7 @@ Write out the stressed (content) words of each sentence, in order.
 5. My new phone is very efficient.
 6. Where do they test the devices?
 
-### 2.5 Say these aloud
+### 2.7 Say these aloud
 
 Read each line three times, faster each time, beating the stressed words with
 your hand. Decide where your voice goes at the end **before** you speak, commit
@@ -222,7 +305,7 @@ to it below, then record yourself and listen back for whether it really did.
 ---
 
 ::: bridge name="One new-information word per sentence — and unstress the rest" trains="Pronunciation" cefr="B1" marker="[T2]" src="06 §6.2"
-Go back through exercise **2.4**. In each sentence, circle **exactly one** word:
+Go back through exercise **2.6**. In each sentence, circle **exactly one** word:
 the one carrying information the listener does not already have. Say the sentence
 with that word prominent and everything else flattened. Record it on your phone
 and listen for whether the rest really did get out of the way.
@@ -437,7 +520,7 @@ time, and remember the pronoun shift.
 
 ## Lesson 4 — Communication
 
-### Everyday English — Talking about technology
+### Everyday English — Talking about technology, and giving and responding to good news
 
 #### Asking about someone's technology
 
@@ -473,6 +556,45 @@ time, and remember the pronoun shift.
 > ⚠️ Note the pattern once more: **said that…** (no person) but **told me
 > that…** (person required). This is the single most tested point in the unit.
 
+#### Giving good news
+
+Good news is usually announced before it is explained. You put a short opening
+first, and the news itself in the sentence after it.
+
+| English | Nghĩa |
+| --- | --- |
+| **Great news for us.** We'll have school clouds, so we won't have to carry all these books. | Tin vui cho chúng mình đây. |
+| **Guess what!** I won first prize in the essay contest. | Đoán xem nào! |
+| **You'll never guess what happened.** Our class is getting new laptops. | Cậu không đoán được đâu. |
+| **I've got some good news.** The science club is moving to Friday. | Mình có tin vui này. |
+| **Have you heard?** They've fixed the Internet in the library. | Cậu nghe tin gì chưa? |
+
+#### Responding to good news
+
+| English | Nghĩa | Khi nào dùng |
+| --- | --- | --- |
+| **Congratulations!** | Chúc mừng cậu! | Người nghe **đã tự làm được** điều đó |
+| **Well done!** | Giỏi quá! | Người nghe đã cố gắng và thành công |
+| **Great!** | Tuyệt quá! | Tin vui nói chung |
+| **That's great!** | Hay quá! | Tin vui nói chung |
+| **That's wonderful news.** | Tin tuyệt vời đấy. | Tin vui lớn, trang trọng hơn |
+| **I'm so happy for you.** | Mình mừng cho cậu lắm. | Tin vui của riêng người nghe |
+| **Lucky you!** | Cậu may thật đấy! | Tin vui **tự nhiên đến**, không do cố gắng |
+
+> **Ghi chú:** Hai câu trả lời hay bị dùng lẫn nhau.
+> **Congratulations!** dùng cho điều người kia **tự đạt được** — thi đỗ, đoạt
+> giải, thắng một cuộc thi.
+> **That's great!** / **Lucky you!** dùng cho vận may **tự đến** với người kia —
+> trời mưa nên được nghỉ, bố mẹ mua cho cái máy tính mới.
+> *I won first prize in the essay contest.* → **Congratulations!**
+> *My dad gave me a new laptop for my birthday.* → **That's great!**
+
+> ⚠️ **Bẫy thường gặp:** Từ này **luôn** có **-s**: **Congratulations!**
+> ❌ *Congratulation!* — không bao giờ dùng số ít.
+> Muốn nói rõ chúc mừng về việc gì, dùng **on + V-ing / danh từ**:
+> *Congratulations **on winning** the prize!* · *Congratulations **on your new
+> phone**!*
+
 ### 4.1 Complete the mini-dialogues
 
 ::: task skill="course" type="gap-fill" ask="One word per gap. The four short exchanges run in order — read each one whole before you fill it in."
@@ -499,6 +621,98 @@ were repeating it (*He/She said that…*).
 3. "What's the biggest drawback of spending a lot of time online?"
    → _______________________________
 4. Now report answer 1 in the third person.
+   → _______________________________
+
+### 4.3 Which reply?
+
+::: task skill="course" type="choice" opts="Congratulations!|That's great!" ask="Your friend tells you each of these. Which reply fits? Ask yourself one question: did your friend **do** it, or did it simply **happen** to them?"
+- I passed the entrance exam! = Congratulations! ~ she sat the exam and passed it herself
+- Great news — school is closed tomorrow because of the storm. = That's great! ~ the storm did it, not your friend
+- I won first prize in the science competition. = Congratulations! ~ a prize she won
+- My uncle has given me his old laptop. = That's great! ~ good luck that arrived from someone else
+- Our team came top of the whole province. = Congratulations! ~ the team earned it
+- Guess what — the new library has free Wi-Fi. = That's great! ~ nothing your friend achieved
+- I've finally finished my invention project. = Congratulations! ~ months of her own work
+- They've put contact lenses on the school prize list. = That's great!
+:::
+
+### 4.4 Break the good news
+
+Write the **two** lines of each short exchange: the good news, then the reply.
+Choose the reply that fits — *Congratulations!* if the person achieved it,
+*That's great!* or *Lucky you!* if it simply happened to them.
+
+1. You tell your classmate that a vending machine has been installed at school.
+   → You: _______________________________
+   → Your classmate: _______________________________
+2. You tell your classmate that your dad gave you a new laptop for your birthday.
+   → You: _______________________________
+   → Your classmate: _______________________________
+3. Your classmate tells you she has been chosen for the national maths team.
+   → Your classmate: _______________________________
+   → You: _______________________________
+
+### Online learning
+
+Four students, four platforms. Each of them names one thing that works and one
+thing that does not.
+
+> **Lan.** "My class moved onto Zoom during the epidemic and I have kept it for
+> my extra English lessons. It is very convenient — I save nearly an hour of
+> travelling every evening and I start the moment I put my school bag down. The
+> trouble is the connection at my house. It drops in the middle of a sentence,
+> and I have to ask the teacher to say everything twice."
+>
+> **Bảo.** "Our extra maths class is on Google Meet. The best part is the
+> breakout rooms: four of us go into one and argue about a problem until
+> somebody proves it, so I still talk to my classmates properly. What I do not
+> like is what it does to my eyes. After two hours in front of a screen they get
+> tired, and I cannot read anything else that night."
+>
+> **Khánh.** "My school put every subject on Microsoft Teams. I have become much
+> more independent — nobody stands behind me, so I plan my own week, hand my
+> work in on time, and the teacher's feedback appears under it the next morning.
+> On the other hand, it is hard to concentrate at home. My little sister sings in
+> the next room, and I feel more stressed than I ever did in a real classroom."
+>
+> **Nga.** "Our English club meets on Skype on Sunday mornings, so nobody has to
+> cross the city and nobody sits in a traffic jam. But two of our members have no
+> computer or smartphone of their own. They can only join when an older brother
+> is free, and they complain — fairly — that they miss half of every club. I
+> would still rather meet face to face."
+
+### 4.5 Benefit or problem?
+
+::: task skill="course" type="sort" opts="Benefit|Problem" ask="Read the four posts again. Is each idea something good about online learning, or something wrong with it?"
+- It saves you nearly an hour of travelling. = Benefit
+- The connection drops in the middle of a sentence. = Problem
+- You can discuss a question with four classmates in a breakout room. = Benefit
+- Your eyes get tired after two hours in front of a screen. = Problem
+- You become more independent and plan your own week. = Benefit
+- The teacher's feedback appears under your work the next morning. = Benefit
+- It is hard to concentrate with a family at home around you. = Problem
+- Nobody has to sit in a traffic jam. = Benefit
+- Some students have no computer or smartphone of their own. = Problem
+- You can feel more stressed than in a real classroom. = Problem
+:::
+
+### 4.6 Report what they said
+
+Choose **two** of the four students. For each one, write **three** reported
+sentences: the platform their class uses, the benefit they name, and the problem
+they name. Shift the tense and the pronouns.
+
+> Lan said that her class used Zoom. She said that it saved her nearly an hour
+> of travelling. She also said that the connection at her house dropped in the
+> middle of a sentence.
+
+1. Student: __________
+   → _______________________________
+   → _______________________________
+   → _______________________________
+2. Student: __________
+   → _______________________________
+   → _______________________________
    → _______________________________
 
 ---
@@ -801,6 +1015,32 @@ agreement slip.
 - Error 6 = his sister said ~ *say* → *said* — and it is a report
 :::
 
+### 7.5 Word formation
+
+The words this unit uses most are the ones that change shape — *invent* becomes
+*invention*, *convenience* becomes *convenient*.
+
+::: task skill="course" type="gap-fill" ask="Complete each sentence with the right form of the word in brackets. Some gaps want a noun, some want an adjective."
+- Iris ___ opens the laboratory door faster than any key does. *(recognise)* = recognition
+- The school is testing a new ___ for checking attendance. *(apply)* = application
+- Edison's best-known ___ is the light bulb. *(invent)* = invention
+- Our teacher takes ___ on a tablet now instead of on paper. *(attend)* = attendance
+- The company spent ten years on the ___ of this one device. *(develop)* = development
+- Online lessons are ___ , but they are not always better. *(convenience)* = convenient
+- A robot does the same job again and again with far greater ___ . *(efficient)* = efficiency
+- The science club is full of ___ ideas this year. *(innovate)* = innovative
+:::
+
+### 7.6 Rewrite with the word given
+
+::: task skill="course" type="gap-fill" ask="Report what each person said, keeping the meaning. The word in capitals is the one the gap needs."
+- "I will show you the robot tomorrow," Nam said. (**WOULD**) → Nam said that he ___ show me the robot the next day. = would
+- "We are doing the experiment here," the teacher said. (**THERE**) → The teacher said that they were doing the experiment ___ . = there
+- "I don't understand this application," Mai said. (**DIDN'T**) → Mai said that she ___ understand that application. = didn't/did not
+- "We are having a video conference now," Lan said. (**THEN**) → Lan said that they were having a video conference ___ . = then
+- Minh said, "Robots will replace some teachers." (**THAT**) → Minh said ___ robots would replace some teachers. = that
+:::
+
 ### Project — An invention file
 
 Build a one-page file on a piece of technology you actually use.
@@ -841,6 +1081,30 @@ stress: are the content words louder than the function words?
 > might refuse to use your chosen technology at all. A good persuasive writer
 > can build the opposite case before knocking it down.
 
+### Now I can …
+
+Eight things this unit set out to teach. Beside each one is the place your own
+answer to it is already sitting — open that exercise again and look at what you
+actually put, which tells you far more than a feeling does. Where nothing on the
+page can settle it, the row says so, and that one is yours to judge.
+
+| Now I can … | Where my answer already is |
+| --- | --- |
+| use the words for science and technology | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercises 7.1 and 7.5 |
+| say a statement and a question with the stress in the right places | Lesson 2, exercises 2.5 and 2.6 · Lesson 7, exercise 7.2. Saying them aloud is yours — record Lesson 2, exercise 2.7 and listen back. |
+| report what somebody said | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3, 7.4 and 7.6 |
+| give good news, and answer it | Lesson 4, exercises 4.1 and 4.3 |
+| read advertisements for new technology | Lesson 5, exercises 5.1 and 5.2 |
+| talk about a piece of technology or an invention | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
+| listen to a teacher talking about a robot | Lesson 6, exercises 6.1 and 6.2 |
+| write a paragraph saying whether robots will replace teachers | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+
+> **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
+> Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
+> xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
+> trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
+> đánh giá.
+
 ---
 
 ## Answer Key
@@ -856,7 +1120,7 @@ replace her. 5. He is going to put it in the science club magazine.
 
 ### Lesson 2
 
-**2.4**
+**2.6**
 1. scientist, finished, experiment
 2. robot, cannot (the *not* part), understand, joke
 3. What, teacher, say
@@ -898,6 +1162,22 @@ truth; (5) the pronoun changed from *I/my* to *he/she/his/her*.
 **4.2** Answers will vary. Check: each of 1–3 gives an opinion **and** a reason
 (*because…* / *so…*); answer 4 uses *He/She said that…* with the pronouns
 shifted out of the first person, and no person after *said*.
+
+**4.4** Answers will vary. Check: each piece of news opens with a phrase from
+the table (*Great news for us…* / *Guess what!* / *I've got some good news…*),
+and the reply matches the kind of news. Items 1 and 2 are luck rather than
+achievement, so *That's great!* or *Lucky you!* — **not** *Congratulations!*
+Item 3 is an achievement, so *Congratulations!* or *Well done!* And it is always
+**Congratulations** with an **-s**.
+
+**4.6** Answers will vary with the two students chosen. Check three things in
+every sentence: a reporting verb with the right pattern (*said that…* with no
+person, *told me that…* with one), the verb moved one tense back (*uses* →
+*used*, *saves* → *saved*, *is* → *was*), and the pronouns shifted out of the
+first person (*I* → *he/she*, *my* → *his/her*). Bảo: Google Meet · breakout
+rooms · tired eyes. Khánh: Microsoft Teams · independence and quick feedback ·
+cannot concentrate at home. Nga: Skype · no traffic jam · members without a
+computer or smartphone.
 
 ### Lesson 5
 

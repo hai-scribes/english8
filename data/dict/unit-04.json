@@ -259,5 +259,355 @@
       { "w": "tradition", "pos": "noun", "en": "a belief or custom passed from one generation to the next", "vi": "truyền thống", "ex": "It is a **tradition** to visit relatives at Tet." },
       { "w": "traditionally", "pos": "adverb", "en": "in the way that has been usual for a long time", "vi": "theo truyền thống", "ex": "**Traditionally**, the house faces south." }
     ]
+  },
+
+  "communal house": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a large building that belongs to a whole village and is used for meetings, festivals and ceremonies",
+        "vi": "nhà rông, nhà sinh hoạt cộng đồng",
+        "examples": [
+          "The Bahnar build the tallest **communal house** in the middle of the village.",
+          "Every decision about the harvest is made in the **communal house**.",
+          "Visitors are welcomed at the **communal house** before they go to anyone's home."
+        ],
+        "colloc": [
+          "build a communal house",
+          "meet at the communal house",
+          "the village communal house"
+        ]
+      }
+    ],
+    "note": "Two words, and the stress falls on the second syllable of *communal*: /kəˈmjuːnl/. It is a building for the whole community, not a house anybody lives in — so *my communal house* is almost never right."
+  },
+
+  "livestock": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "uncountable, plural verb",
+        "en": "the animals a farm keeps for work, food or wool — cattle, buffaloes, pigs, goats, sheep",
+        "vi": "gia súc, vật nuôi",
+        "examples": [
+          "Her family's **livestock** graze on the hillside above the village.",
+          "In the dry season there is not much grass for the **livestock**.",
+          "Under the floor of the stilt house they used to keep tools and **livestock**."
+        ],
+        "colloc": [
+          "keep livestock",
+          "raise livestock",
+          "feed the livestock"
+        ]
+      }
+    ],
+    "note": "No plural *-s*: ❌ *many livestocks* → ✅ **a lot of livestock**. The word looks singular but takes a plural verb: *the livestock **are** in the field*. It does not cover chickens and ducks — those are *poultry*."
+  },
+
+  "raise": {
+    "senses": [
+      {
+        "pos": "verb",
+        "en": "to keep and feed animals so that they grow, usually in order to sell them or use them",
+        "vi": "chăn nuôi",
+        "examples": [
+          "Most families here **raise** pigs and chickens behind the house.",
+          "The Jrai **raise** buffaloes, and in some villages elephants too.",
+          "My aunt **raised** goats for twenty years before she moved to town."
+        ],
+        "colloc": [
+          "raise cattle",
+          "raise livestock",
+          "raise pigs"
+        ]
+      },
+      {
+        "pos": "verb",
+        "en": "to lift something to a higher position",
+        "vi": "nâng lên, giơ lên",
+        "examples": [
+          "**Raise** your hand if you have visited a stilt house.",
+          "They **raised** the roof beam with ropes and a dozen pairs of hands."
+        ],
+        "colloc": [
+          "raise your hand",
+          "raise your voice"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "raising",
+        "pos": "noun",
+        "en": "the work of keeping and feeding animals",
+        "vi": "việc chăn nuôi",
+        "ex": "Cattle **raising** is the main work of the village."
+      }
+    ],
+    "note": "*Raise* always takes an object — you raise *something*. The verb for going up by itself is *rise*: *the river **rises** in the rainy season*, but *they **raise** the roof*."
+  },
+
+  "gardening": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "the work of looking after a garden — planting, watering, weeding and cutting back",
+        "vi": "việc làm vườn",
+        "examples": [
+          "My grandmother spends every morning **gardening** behind the kitchen.",
+          "**Gardening** is the first job the younger children are given.",
+          "He grew fond of **gardening** after his family moved to the countryside."
+        ],
+        "colloc": [
+          "do the gardening",
+          "gardening tools",
+          "be good at gardening"
+        ]
+      }
+    ],
+    "note": "English says **do the gardening**, not *make the gardening* and not *do gardening work*. Note the spelling: one *d*, and no *e* before the *-ing*."
+  },
+
+  "soil": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "the top layer of the earth that plants grow in",
+        "vi": "đất trồng",
+        "examples": [
+          "The **soil** on a steep slope is thin and washes away in heavy rain.",
+          "Coffee grows well in the red **soil** of the Central Highlands.",
+          "They spread ash over the field to feed the **soil**."
+        ],
+        "colloc": [
+          "rich soil",
+          "poor soil",
+          "dry soil"
+        ]
+      }
+    ],
+    "note": "Uncountable: ❌ *many soils* → ✅ **a lot of soil**. *Soil* is what you grow things in; *ground* is what you stand on; *land* is an area you own or farm. Rice grows in the *soil*, on someone's *land*."
+  },
+
+  "overlook": {
+    "senses": [
+      {
+        "pos": "verb",
+        "en": "to have a view down over something, because of standing higher than it",
+        "vi": "nhìn ra, hướng ra",
+        "examples": [
+          "Their stilt house **overlooks** the terraced fields.",
+          "The communal house **overlooked** the whole valley from the top of the hill.",
+          "We ate on a balcony **overlooking** the river."
+        ],
+        "colloc": [
+          "overlook the fields",
+          "overlook a valley",
+          "a room overlooking the sea"
+        ]
+      },
+      {
+        "pos": "verb",
+        "en": "to fail to notice something, or to decide not to punish a small mistake",
+        "vi": "bỏ sót, bỏ qua",
+        "examples": [
+          "It is easy to **overlook** the smallest groups when you count fifty-four.",
+          "The teacher **overlooked** one spelling mistake and marked the rest."
+        ],
+        "colloc": [
+          "overlook a detail",
+          "overlook a mistake"
+        ]
+      }
+    ],
+    "note": "The two senses are almost opposites — one is *see very well*, the other is *not see at all*. What follows the verb tells you which: a house *overlooks* a place, a person *overlooks* a mistake."
+  },
+
+  "open fire": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a fire burning in the open, with no stove or chimney around it",
+        "vi": "bếp lửa (giữa nhà), lửa trại",
+        "examples": [
+          "An **open fire** burns in the middle of the kitchen floor all winter.",
+          "The family sits round the **open fire**, and guests are seated nearest it.",
+          "Sticky rice cooked over an **open fire** tastes of smoke."
+        ],
+        "colloc": [
+          "cook over an open fire",
+          "sit round an open fire",
+          "light an open fire"
+        ]
+      }
+    ],
+    "note": "The preposition after it is **over** for cooking (*cook over an open fire*) and **round** or **around** for sitting. Not the same as a *fireplace*, which is built into a wall."
+  },
+
+  "statue": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a figure of a person or an animal, carved from wood or stone or cast in metal",
+        "vi": "bức tượng",
+        "examples": [
+          "Wooden **statues** stand round the grave, one for each member of the family.",
+          "The **statue** by the gate was cut from a single trunk.",
+          "He carves a small **statue** of a bird for every grandchild."
+        ],
+        "colloc": [
+          "a wooden statue",
+          "carve a statue",
+          "a stone statue"
+        ]
+      }
+    ],
+    "note": "Say /ˈstætʃuː/ — the *t* sounds like the *ch* in *church*, not like a plain /t/. Do not confuse it with *status* /ˈsteɪtəs/, which means a position or rank."
+  },
+
+  "flute": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a musical instrument shaped like a tube, which you play by blowing across or into a hole",
+        "vi": "cái sáo",
+        "examples": [
+          "He cut a **flute** from a length of bamboo and played us a tune.",
+          "The **flute** and the gong are played together at the harvest festival.",
+          "She has been learning the **flute** since she was seven."
+        ],
+        "colloc": [
+          "play the flute",
+          "a bamboo flute",
+          "learn the flute"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "flautist",
+        "pos": "noun",
+        "en": "a person who plays the flute",
+        "vi": "người thổi sáo",
+        "ex": "The **flautist** stood at the front of the group."
+      }
+    ],
+    "note": "Instruments take **the** after *play*: *play **the** flute*, *play **the** gong*. Sports do not: *play football*. And it is *play the flute*, never *blow the flute*."
+  },
+
+  "musical instrument": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "an object made for producing music, such as a flute, a gong or a guitar",
+        "vi": "nhạc cụ",
+        "examples": [
+          "The đàn tính is the **musical instrument** most closely tied to the Tay.",
+          "Every child in the village learns at least one **musical instrument**.",
+          "Their **musical instruments** are made from bamboo, wood and bronze."
+        ],
+        "colloc": [
+          "play a musical instrument",
+          "a traditional musical instrument",
+          "learn a musical instrument"
+        ]
+      }
+    ],
+    "note": "Countable, so it takes *a* and a plural *-s*: *two **musical instruments***. *Musical* here means *for making music*; a *musical person* is something else — someone good at music."
+  },
+
+  "folk dance": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a traditional dance of a particular people, learnt from older dancers rather than at a school",
+        "vi": "điệu múa dân gian",
+        "examples": [
+          "Múa sạp is the **folk dance** everyone knows, and the bamboo poles do half the work.",
+          "The village performs three **folk dances** at the spring festival.",
+          "She learnt the **folk dance** from her grandmother, step by step."
+        ],
+        "colloc": [
+          "perform a folk dance",
+          "a traditional folk dance",
+          "learn a folk dance"
+        ]
+      }
+    ],
+    "note": "*Folk* /fəʊk/ has a silent *l* — say it like *joke* with an *f*. The same word builds *folk song*, *folk music* and *folk tale*, and in all of them it means *belonging to ordinary people, passed down by ear*."
+  },
+
+  "sticky rice": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "uncountable",
+        "en": "a kind of rice whose grains hold together after cooking, used for festival food and cakes",
+        "vi": "xôi, gạo nếp",
+        "examples": [
+          "**Sticky rice** dyed five colours is served at Tay weddings.",
+          "She steams the **sticky rice** in a wooden pot over an open fire.",
+          "Bánh chưng is made of **sticky rice**, pork and green beans."
+        ],
+        "colloc": [
+          "steam sticky rice",
+          "five-colour sticky rice",
+          "a bowl of sticky rice"
+        ]
+      }
+    ],
+    "note": "Uncountable, like *rice* itself: ❌ *two sticky rices* → ✅ **two bowls of sticky rice**. The colours come from leaves and roots boiled with the grains, not from anything artificial."
+  },
+
+  "feature": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a part of something that you notice, and that makes it different from other things of its kind",
+        "vi": "nét, đặc điểm",
+        "examples": [
+          "The tall roof is the first **feature** you notice about a Rong house.",
+          "Each group's costume has **features** that nobody else's has.",
+          "One useful **feature** of a stilt house is the dry space underneath."
+        ],
+        "colloc": [
+          "a unique feature",
+          "the main feature",
+          "a common feature"
+        ]
+      },
+      {
+        "pos": "verb",
+        "en": "to include something as an important part",
+        "vi": "có, trưng bày, làm nổi bật",
+        "examples": [
+          "The exhibition **features** costumes from all fifty-four groups.",
+          "Their folk songs often **feature** a bamboo flute."
+        ],
+        "colloc": [
+          "feature a design",
+          "feature prominently"
+        ]
+      }
+    ],
+    "forms": [
+      {
+        "w": "featured",
+        "pos": "adjective",
+        "en": "given a place of importance",
+        "vi": "được giới thiệu nổi bật",
+        "ex": "The **featured** photograph shows a terraced field at dawn."
+      }
+    ],
+    "note": "In the plural, *someone's features* means the parts of their face. *The features of the house* is fine; *the features of my sister* means her eyes, nose and mouth."
   }
 }
