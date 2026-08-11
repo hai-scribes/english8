@@ -1,0 +1,705 @@
+{
+  "_comment": "Machine-readable official targets, extracted from the SGK student's book. Read by tools/check_coverage.py. 'lexis' merges the book's glossary with the words each unit's A Closer Look 1 / Getting Started teaches but does not gloss. 'everyday_english.exponents' are the phrases the model dialogue actually prints — a unit counts as covering the function only if at least one exponent appears.",
+  "source": {
+    "title": "Tiếng Anh 8 — Global Success, Sách học sinh",
+    "publisher": "NXB Giáo dục Việt Nam × Pearson, 2023",
+    "isbn": "978-604-0-35127-2",
+    "pages": 143,
+    "read_on": "2026-08-10"
+  },
+  "units": [
+    {
+      "unit": 1,
+      "title": "Leisure Time",
+      "pages": [
+        8,
+        17
+      ],
+      "pronunciation": "/ʊ/ and /uː/",
+      "grammar": [
+        "Verbs of liking / disliking + gerunds",
+        "Verbs of liking / disliking + to-infinitives"
+      ],
+      "everyday_english": {
+        "function": "Inviting and accepting invitations",
+        "exponents": [
+          "would you like to",
+          "do you fancy"
+        ]
+      },
+      "culture_block": "Teens' leisure activities around the world — Japan, Switzerland, Viet Nam",
+      "writing_genre": "email",
+      "lexis": [
+        "leisure",
+        "DIY",
+        "puzzle",
+        "surf the net",
+        "playing sport",
+        "messaging",
+        "knitting",
+        "dollhouse",
+        "paper flower",
+        "cycling",
+        "origami",
+        "snowboarding",
+        "badminton",
+        "judo",
+        "bracelet",
+        "comic book",
+        "keen",
+        "fond",
+        "crazy about",
+        "interested in",
+        "into",
+        "detest",
+        "fancy",
+        "prefer",
+        "keep in touch",
+        "muscle",
+        "outdoors",
+        "stay in shape",
+        "balance",
+        "cruel",
+        "fold",
+        "kit",
+        "resort"
+      ]
+    },
+    {
+      "unit": 2,
+      "title": "Life in the Countryside",
+      "pages": [
+        18,
+        27
+      ],
+      "pronunciation": "/ə/ and /ɪ/",
+      "grammar": [
+        "Comparative forms of adverbs"
+      ],
+      "everyday_english": {
+        "function": "Giving and responding to compliments",
+        "exponents": [
+          "what a beautiful",
+          "what a nice",
+          "glad you like it",
+          "you really have a nice"
+        ]
+      },
+      "culture_block": "Adverts for beautiful villages — Duong Lam (Viet Nam) vs Hollum (Netherlands)",
+      "writing_genre": "paragraph",
+      "lexis": [
+        "cattle",
+        "poultry",
+        "orchard",
+        "crop",
+        "load",
+        "unload",
+        "catch fish",
+        "paddy field",
+        "herd",
+        "harvest",
+        "combine harvester",
+        "plough",
+        "milk",
+        "feed",
+        "dry",
+        "cultivate",
+        "canal",
+        "stretch",
+        "vast",
+        "hospitable",
+        "well-trained",
+        "surround",
+        "picturesque",
+        "ferry",
+        "lighthouse",
+        "speciality",
+        "scenery"
+      ]
+    },
+    {
+      "unit": 3,
+      "title": "Teenagers",
+      "pages": [
+        28,
+        37
+      ],
+      "pronunciation": "/ʊə/ and /ɔɪ/",
+      "grammar": [
+        "Simple sentences",
+        "Compound sentences with coordinating conjunctions (for, and, but, or, so)",
+        "Compound sentences with conjunctive adverbs (however, therefore, otherwise)"
+      ],
+      "everyday_english": {
+        "function": "Making requests",
+        "exponents": [
+          "can you tell me",
+          "could you show me",
+          "could you tell me",
+          "can you show me"
+        ]
+      },
+      "culture_block": "Social media popular among teens — four forum posts",
+      "writing_genre": "paragraph",
+      "lexis": [
+        "forum",
+        "chess club",
+        "language club",
+        "arts and crafts",
+        "sports club",
+        "pressure",
+        "peer",
+        "bully",
+        "concentrate",
+        "expectation",
+        "focused",
+        "mature",
+        "upload",
+        "browse",
+        "notification",
+        "log on",
+        "connect",
+        "account",
+        "media",
+        "midterm",
+        "schoolwork",
+        "session",
+        "stress",
+        "enjoyable",
+        "user-friendly",
+        "website",
+        "participate",
+        "teamwork",
+        "community service"
+      ]
+    },
+    {
+      "unit": 4,
+      "title": "Ethnic Groups of Viet Nam",
+      "pages": [
+        40,
+        49
+      ],
+      "pronunciation": "/k/ and /ɡ/",
+      "grammar": [
+        "Yes/No questions",
+        "Wh-questions",
+        "Countable and uncountable nouns (a, much, many, a little, a few)"
+      ],
+      "everyday_english": {
+        "function": "Giving opinions",
+        "exponents": [
+          "to my way of thinking",
+          "what do you think about",
+          "in my opinion"
+        ]
+      },
+      "culture_block": "Ethnic groups quiz (54 groups, ~13% of the population) + the Jrai fact-file",
+      "writing_genre": "paragraph",
+      "lexis": [
+        "communal house",
+        "costume",
+        "ethnic",
+        "feature",
+        "flute",
+        "folk",
+        "gong",
+        "highland",
+        "livestock",
+        "minority",
+        "overlook",
+        "post",
+        "raise",
+        "soil",
+        "staircase",
+        "statue",
+        "stilt house",
+        "terraced",
+        "weave",
+        "wooden",
+        "gardening",
+        "open fire",
+        "sticky rice",
+        "folk dance",
+        "musical instrument",
+        "folk song"
+      ]
+    },
+    {
+      "unit": 5,
+      "title": "Our Customs and Traditions",
+      "pages": [
+        50,
+        59
+      ],
+      "pronunciation": "/n/ and /ŋ/",
+      "grammar": [
+        "Zero article",
+        "a / an / the contrasted with the zero article"
+      ],
+      "everyday_english": {
+        "function": "Giving advice",
+        "exponents": [
+          "perhaps you should",
+          "a good idea to"
+        ]
+      },
+      "culture_block": "Japanese lion dance (shishi-mai) vs Vietnamese unicorn dance (múa lân)",
+      "writing_genre": "email",
+      "lexis": [
+        "acrobatic",
+        "admire",
+        "bad spirit",
+        "bamboo pole",
+        "carp",
+        "coastal",
+        "ceremony",
+        "chase away",
+        "contestant",
+        "decorative",
+        "family bonding",
+        "family reunion",
+        "festival goer",
+        "lantern",
+        "longevity",
+        "martial arts",
+        "monk",
+        "offering",
+        "ornamental tree",
+        "pray",
+        "release",
+        "table manners",
+        "worship",
+        "young rice",
+        "custom",
+        "tradition",
+        "traditionally",
+        "wedding ceremony",
+        "whale worship",
+        "blooming",
+        "lion dance",
+        "unicorn dance"
+      ]
+    },
+    {
+      "unit": 6,
+      "title": "Lifestyles",
+      "pages": [
+        60,
+        69
+      ],
+      "pronunciation": "/br/ and /pr/",
+      "grammar": [
+        "Future simple",
+        "First conditional",
+        "unless"
+      ],
+      "everyday_english": {
+        "function": "Expressing certainty",
+        "exponents": [
+          "yes, certainly",
+          "certainly."
+        ]
+      },
+      "culture_block": "Greetings around the world quiz + Cuisines around the world (Italy, India)",
+      "writing_genre": "paragraph",
+      "lexis": [
+        "dogsled",
+        "experience",
+        "greet",
+        "greeting",
+        "habit",
+        "hurry",
+        "igloo",
+        "impact",
+        "independent",
+        "interact",
+        "lifestyle",
+        "maintain",
+        "musher",
+        "nomadic",
+        "offline",
+        "online learning",
+        "revive",
+        "serve",
+        "staple",
+        "street food",
+        "tribal",
+        "native art",
+        "weaving",
+        "common practice",
+        "unless"
+      ]
+    },
+    {
+      "unit": 7,
+      "title": "Environmental Protection",
+      "pages": [
+        72,
+        81
+      ],
+      "pronunciation": "/bl/ and /kl/",
+      "grammar": [
+        "Complex sentences with adverb clauses of time (before, after, when, while, until, as soon as)"
+      ],
+      "everyday_english": {
+        "function": "Asking for clarification",
+        "exponents": [
+          "what do you mean by",
+          "what does it mean",
+          "could you explain"
+        ]
+      },
+      "culture_block": "Earth Day — April 22nd, 190 countries, 1 billion participants",
+      "writing_genre": "notice",
+      "lexis": [
+        "carbon dioxide",
+        "carbon footprint",
+        "coral",
+        "dugong",
+        "ecosystem",
+        "endangered species",
+        "extinction",
+        "habitat",
+        "oxygen",
+        "participate",
+        "protect",
+        "release",
+        "resident",
+        "single-use",
+        "species",
+        "substance",
+        "toxic",
+        "pollution",
+        "campfire",
+        "litter",
+        "national park",
+        "global warming"
+      ]
+    },
+    {
+      "unit": 8,
+      "title": "Shopping",
+      "pages": [
+        82,
+        91
+      ],
+      "pronunciation": "/sp/ and /st/",
+      "grammar": [
+        "Adverbs of frequency",
+        "Present simple for future events (timetables and schedules)"
+      ],
+      "everyday_english": {
+        "function": "Making complaints",
+        "exponents": [
+          "make a complaint",
+          "not happy with",
+          "like to complain"
+        ]
+      },
+      "culture_block": "My favourite shopping place — three speakers on open-air markets, discount shops, convenience stores",
+      "writing_genre": "paragraph",
+      "lexis": [
+        "access",
+        "addicted",
+        "advertisement",
+        "bargain",
+        "complaint",
+        "convenience store",
+        "customer",
+        "discount",
+        "display",
+        "dollar store",
+        "fair",
+        "farmers",
+        "goods",
+        "home-grown",
+        "home-made",
+        "item",
+        "on sale",
+        "open-air market",
+        "price tag",
+        "schedule",
+        "shopaholic",
+        "shopping centre",
+        "shopping list",
+        "speciality shop",
+        "browsing",
+        "range of products",
+        "supermarket"
+      ]
+    },
+    {
+      "unit": 9,
+      "title": "Natural Disasters",
+      "pages": [
+        92,
+        101
+      ],
+      "pronunciation": "Stress in words ending in -al and -ous",
+      "grammar": [
+        "Past continuous",
+        "Past continuous interrupted by past simple (when / while)"
+      ],
+      "everyday_english": {
+        "function": "Giving and responding to bad news",
+        "exponents": [
+          "sorry to hear that",
+          "that's awful",
+          "that's terrible"
+        ]
+      },
+      "culture_block": "Knowledge of natural disasters + a six-item questionnaire with a scored key",
+      "writing_genre": "instructions",
+      "lexis": [
+        "authority",
+        "damage",
+        "destroy",
+        "disaster",
+        "earthquake",
+        "emergency kit",
+        "erupt",
+        "funnel",
+        "landslide",
+        "predict",
+        "property",
+        "pull up",
+        "rescue worker",
+        "Richter",
+        "shake",
+        "storm",
+        "tornado",
+        "tremble",
+        "tsunami",
+        "victim",
+        "volcanic",
+        "warn",
+        "whistle",
+        "flood",
+        "missing",
+        "violently",
+        "drought"
+      ]
+    },
+    {
+      "unit": 10,
+      "title": "Communication in the Future",
+      "pages": [
+        104,
+        113
+      ],
+      "pronunciation": "Stress in words ending in -ese and -ee",
+      "grammar": [
+        "Prepositions of place",
+        "Prepositions of time (in, for, by)",
+        "Possessive pronouns (a friend of mine)"
+      ],
+      "everyday_english": {
+        "function": "Interrupting politely",
+        "exponents": [
+          "sorry for interrupting",
+          "sorry to interrupt",
+          "can i just say"
+        ]
+      },
+      "culture_block": "The future of language — emojis replacing words",
+      "writing_genre": "paragraph",
+      "lexis": [
+        "account",
+        "advanced",
+        "carrier pigeon",
+        "charge",
+        "emoji",
+        "holography",
+        "instantly",
+        "Internet connection",
+        "language barrier",
+        "smartphone",
+        "social network",
+        "tablet",
+        "telepathy",
+        "text",
+        "thought",
+        "translation machine",
+        "transmit",
+        "video conference",
+        "voice message",
+        "webcam",
+        "zoom in",
+        "group call",
+        "private message",
+        "chatbot"
+      ]
+    },
+    {
+      "unit": 11,
+      "title": "Science and Technology",
+      "pages": [
+        114,
+        123
+      ],
+      "pronunciation": "Sentence stress",
+      "grammar": [
+        "Reported speech (statements)"
+      ],
+      "everyday_english": {
+        "function": "Giving and responding to good news",
+        "exponents": [
+          "great news",
+          "congratulations"
+        ]
+      },
+      "culture_block": "Online learning — four students on four platforms",
+      "writing_genre": "opinion paragraph",
+      "lexis": [
+        "application",
+        "attendance",
+        "biometric",
+        "breakout room",
+        "cheating",
+        "complain",
+        "contact lens",
+        "convenient",
+        "develop",
+        "digital",
+        "discover",
+        "epidemic",
+        "experiment",
+        "eye-tracking",
+        "face to face",
+        "feedback",
+        "fingerprint",
+        "invent",
+        "invention",
+        "mark",
+        "platform",
+        "recognition",
+        "scanner",
+        "science",
+        "screen",
+        "solution",
+        "technology",
+        "truancy",
+        "robot teacher",
+        "face recognition",
+        "nanolearning"
+      ]
+    },
+    {
+      "unit": 12,
+      "title": "Life on Other Planets",
+      "pages": [
+        124,
+        133
+      ],
+      "pronunciation": "Intonation for making lists",
+      "grammar": [
+        "Reported speech (questions) with ask / wonder / want to know"
+      ],
+      "everyday_english": {
+        "function": "Expressing uncertainty",
+        "exponents": [
+          "i'm not sure about",
+          "i doubt it",
+          "i'm not certain"
+        ]
+      },
+      "culture_block": "Three planets in the solar system — Mercury, Jupiter, Venus fact-files",
+      "writing_genre": "paragraph",
+      "lexis": [
+        "alien",
+        "commander",
+        "crater",
+        "creature",
+        "galaxy",
+        "gravity",
+        "habitable",
+        "Jupiter",
+        "Mars",
+        "Mercury",
+        "Neptune",
+        "oppose",
+        "possibility",
+        "promising",
+        "rocket",
+        "Saturn",
+        "telescope",
+        "trace",
+        "UFO",
+        "Uranus",
+        "Venus",
+        "planet",
+        "solar system",
+        "atmosphere",
+        "Milky Way"
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "review": 1,
+      "covers": [
+        1,
+        2,
+        3
+      ],
+      "pages": [
+        38,
+        39
+      ]
+    },
+    {
+      "review": 2,
+      "covers": [
+        4,
+        5,
+        6
+      ],
+      "pages": [
+        70,
+        71
+      ]
+    },
+    {
+      "review": 3,
+      "covers": [
+        7,
+        8,
+        9
+      ],
+      "pages": [
+        102,
+        103
+      ]
+    },
+    {
+      "review": 4,
+      "covers": [
+        10,
+        11,
+        12
+      ],
+      "pages": [
+        134,
+        135
+      ]
+    }
+  ],
+  "exercise_types_used_by_the_book": [
+    "word formation (verb → noun, adjective → noun)",
+    "sentence transformation (keep the meaning / use the word in CAPITALS)",
+    "error identification (which underlined part A/B/C is wrong)",
+    "information-gap speaking (Card A / Card B)",
+    "mind-map and word-web completion",
+    "matching features across two or more short texts",
+    "matching speakers to opinions",
+    "vocabulary in context (the word X is closest in meaning to)",
+    "text-type identification (the texts are from advertisements / manuals)",
+    "word ordering into a sentence",
+    "reference questions (the word 'it' refers to)",
+    "sorting into before / during / after columns",
+    "advantages / disadvantages sorting",
+    "dos and don'ts sorting",
+    "dialogue ordering (put questions A-E into blanks 1-5)"
+  ]
+}
