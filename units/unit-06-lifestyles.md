@@ -27,7 +27,7 @@
 ::: dialogue title="Everybody wants something" gramen="will — the future simple" gramvi="**will** + động từ nguyên thể để nói về tương lai. Câu điều kiện loại 1: *If* + hiện tại đơn, **will** + nguyên thể." gramco="If it rains, we will stay in"
 **Thảo:** Four people stopped me on the way here, and every one of them asked about you.
 **Tí:** Five stopped me. A woman at the market wants her mother's ring back. A man wants his father's boat.
-**Thảo:** It's the festival. Somebody saw the lamp burning that night, and now the whole lane knows.
+**Thảo:** It's the festival. You sent it back on the Sunday and the lanterns went out one by one, but somebody saw the lamp burning that night, and now the whole lane knows.
 **Tí:** Mun keeps telling them the same thing. Light the lamp, and the nearest lost thing comes back — you don't get to choose what.
 **Thảo:** Then say it again. If you explain the rule, they will stop asking.
 **Tí:** They won't. They think I am hiding something better.

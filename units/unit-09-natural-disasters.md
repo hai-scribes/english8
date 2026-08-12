@@ -38,9 +38,13 @@
 **Thảo:** Is the [[shelter]] at the school open? Bà Sáu was asking about it at the market.
 **Tí:** From eight. I went down to look this morning and turned back, because the bottom of the lane was already under water.
 **Thảo:** And the lamp?
-**Tí:** Under the bed, in the rice sack. Light the lamp, and the nearest lost thing comes back — and you never choose what. I am not touching it in a storm.
+**Tí:** On the kitchen shelf, in the rice sack, where the whole lane can see it. Light the lamp, and the nearest lost thing comes back — and you never choose what. I am not touching it in a storm.
 **Thảo:** What did the white cat say, exactly?
-**Tí:** That Mun's instructions are wrong. Mun was washing his ear while she said it, and he has not talked about it since.
+**Tí:** That Mun's instructions are wrong. Then she sent the market back herself on Sunday, in front of him, in about four seconds. Every dead note in Bến Sẻ went cold in people's hands at the same moment, and Bà Sáu's tin was empty and she laughed.
+**Thảo:** Did she show him how she did it?
+**Tí:** No. That is the part he was still sitting with last night.
+**Thảo:** And what does Mun say now?
+**Tí:** Nothing for two days. Then he told me he can do it correctly, that he was only giving me the short version, and if it ever goes over again he will prove it. He was practising the words on the shutter while the wind was pushing at it.
 :::
 
 ### 1.1 Comprehension
@@ -725,7 +729,7 @@ the page and give it to someone else to guess.
 > The storm came in at nine, and by ten the siren at the school was sounding.
 > Bà Sáu sent me down to the landing to pull our boat higher up the bank. I
 > took the lamp with me, because the house was empty and I was not leaving it
-> under a bed in a flood. I know exactly how that sounds.
+> on a shelf in a flood. I know exactly how that sounds.
 >
 > I was dragging the rope when the water lifted the whole boat and put it down
 > on top of me. My knee hit the stone. The lamp came out of the rice sack,
@@ -745,6 +749,11 @@ the page and give it to someone else to guess.
 > It reached our step in about four minutes. It was carrying fence posts,
 > chairs and a great deal of mud, and mud ruins whatever it touches. While the
 > men were shouting for boats, the women were pulling children onto the roofs.
+>
+> Mun got in front of the lamp and said the words. He said them twice more, and
+> then again with his voice going thin, and nothing moved at all. He had been
+> telling me all week that he could do it correctly, that the white cat was
+> wrong about him. He was still saying it while the water came up the lane.
 >
 > I was still holding the rope. The lamp was burning on the stones, and I could
 > not make myself blow it out.

@@ -752,6 +752,12 @@ they name. Shift the tense and the pronouns.
 > crossing, and how long the walk takes. He can be reached. He simply cannot be
 > called.
 >
+> I read the rest of it front to back, and Khoa read it after me, and the thing
+> we came for is not in it. There is nothing about Minh — nothing anywhere
+> about what happens to a person who was called back and stayed, or how long he
+> gets to stay. Sixty years of careful pages about lamps and lines, and not one
+> page about that.
+>
 > Mun read it over my shoulder and said nothing for a long time. Then he said
 > the keeper had never got as far as giving him a name.
 :::

@@ -36,9 +36,15 @@
 **Thảo:** He isn't unkind about it, though.
 **Tí:** I know. That's the part I hate. Anyway, the market opens at five tomorrow and Bà Sáu wants me carrying the basket.
 **Thảo:** Then I'll come. The rice truck comes at six, and the fish sellers never put their good baskets out twice.
-**Tí:** Bring your own money. I'm counting hers to the last coin.
-**Thảo:** And the lamp?
-**Tí:** Under the bed, in the rice sack, where it stays. Light the lamp, and the nearest lost thing comes back — you never choose what. I'm not doing that again.
+**Tí:** Bring your own money — I'm counting hers to the last coin. And that's if the road is open. The men were still cutting the last of the branches on Thursday.
+**Thảo:** Eleven days with hand saws for one morning of trees.
+**Tí:** You can't say "Go well." to a forest. Nobody called it, so nothing sends it back — we just cut it. Bà Sáu paid two days' rice towards the blades, which is why we are counting coins.
+**Thảo:** And the lamp? Did Cô Yến take it in the end?
+**Tí:** Cô Yến came to our kitchen on Sunday and asked Bà Sáu to hand it over. They sat there for an hour and neither of them gave way.
+**Thảo:** So where is it now?
+**Tí:** On the kitchen shelf, in front of the tea, where anybody who walks in can see it. Bà Sáu says a thing you hide under a bed is a thing you are still planning to use.
+**Thảo:** Đạt has already been in to look at it. So has Hùng. They both know exactly which shelf.
+**Tí:** Everybody does. Light the lamp, and the nearest lost thing comes back — you never choose what. I'm not doing that again.
 **Thảo:** Nobody asked you to, Tí.
 :::
 
@@ -609,9 +615,16 @@ Answer in full sentences.
 
 ::: passage
 > Bà Sáu sent me to the market at five with two hundred thousand dong and a
-> list. I took the lamp with me. I know exactly how that sounds. The house was
-> empty and I did not want to leave it there, and that is the same thing I
-> wrote in October, and it was not the whole truth either time.
+> list. I took the lamp with me. I lifted it off the kitchen shelf in front of
+> her and she said nothing. I know exactly how that sounds.
+>
+> On Friday Đạt walked past our gate wearing my father's watch. Bà Sáu sold it
+> in July, to a man at the centre, for four weeks of rice, and it was the one
+> thing in the house that was going to be mine. Đạt did not mention it. He does
+> not have to. He was kind to me all the way to the corner.
+>
+> So I told myself I was carrying the lamp because the house was empty, which is
+> what I wrote in October, and it was not the whole truth either time.
 >
 > A woman dropped a tray of glasses behind me. I turned, my elbow went into
 > the rice sack, and the lamp came out onto the stones and lit.
@@ -755,6 +768,12 @@ told you twelve measures and stopped there. That is half a sentence. This
 lamp was never meant to be used this way. It was made to bring back one thing
 to one person who has lost it. Not a whole market, with its sellers and its
 prices, to a town that has moved on and spent thirty years learning to.
+
+**The white cat:** And you have been steering it. He told you that you cannot
+choose what comes back. He did not tell you the rest, because he does not know
+it: you have been choosing where you stand when you light it. Upriver. The
+landing. This car park. That is not the same rule, and it is not allowed
+either.
 
 **Tí:** Then say the other half. Please.
 

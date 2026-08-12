@@ -31,12 +31,14 @@
 **Tí:** My uncle says one workshop can pour enough [[sewage]] into a canal to kill it before anybody reports it.
 **Thảo:** [[When|gram:when]] we were small we caught fish there. Now the water looks [[toxic]].
 **Tí:** Not any more. As soon as the fish went, the birds stopped coming too.
-**Thảo:** Cô Yến is organising a clean-up on Saturday. She says [[awareness]] is where every clean-up starts.
+**Thảo:** Cô Yến is organising a clean-up on Saturday. Our lane could not agree about anything else for a whole week, so she gave us the canal instead. She says [[awareness]] is where every clean-up starts.
 **Tí:** Then she'll want evidence. Once we have photographs and dates, she can take them to the district office.
 **Thảo:** I'll photograph the water every morning while I walk to school.
 **Tí:** And I'll carry the sacks. Bà Sáu says we shouldn't wait until the canal is completely dead.
 **Thảo:** Nobody in this town does anything until it's too late. And the lamp? People still stop me about it.
-**Tí:** It stays under the bed. Light the lamp, and the nearest lost thing comes back — you never choose what. I'm not lighting it again.
+**Tí:** I sent the week back on Sunday night. I stood on our step and said "Go well.", and the wires were live again before breakfast, and half the lane still isn't speaking to the other half.
+**Thảo:** So you're finished with it?
+**Tí:** Light the lamp, and the nearest lost thing comes back — you never choose what. So on Saturday I'm carrying it down to the canal and putting it into Cô Yến's hands in front of everybody. Then it's the town's argument, not mine.
 **Thảo:** Good. Whenever I walk past that water now, I feel angry.
 **Tí:** Keep the anger. Bring gloves on Saturday.
 :::
@@ -554,7 +556,8 @@ Answer in full sentences.
 > On Saturday morning thirty of us cleared the canal behind the school. We
 > started at seven, and by ten we had filled forty sacks with plastic, glass and
 > rope. I brought the lamp with me. I know how that sounds. I did not mean to
-> light it — I only did not want to leave it under the bed in an empty house.
+> light it — I brought it because I meant to hand it in, to put it into Cô Yến's
+> hands in front of the whole lane and be finished with it.
 >
 > The rice sack was standing on the wall above the water. When Hùng swung a full
 > bag onto his shoulder, he knocked the sack off the wall and the lamp went over
@@ -651,7 +654,7 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 You have already read *The morning the forest came back* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
 
-::: fluency mode="read" words="262" secs="150|120|90" ask="Read *The morning the forest came back* again from the top. Stop the clock the moment you reach the end."
+::: fluency mode="read" words="275" secs="150|120|90" ask="Read *The morning the forest came back* again from the top. Stop the clock the moment you reach the end."
 - Do not stop to look anything up — you have met all of it
 - Read for the sense of it, not word by word
 - Press **I finished** the moment you reach the last line

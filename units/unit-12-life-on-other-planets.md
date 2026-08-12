@@ -39,6 +39,8 @@
 **Tí:** Nine days on foot. A river, a crossing, nine days. He can be reached. He cannot be called.
 **Thảo:** Because of the rule.
 **Tí:** Because of the rule. Light the lamp and the nearest lost thing comes back — you never choose what — and there is one measure of oil left.
+**Thảo:** Minh wants to come with us. He asked me whether the old man would know about him.
+**Tí:** Nobody knows about him. The green notebook did not have one word about him, so now we ask a person. That is half of why we are walking.
 **Thảo:** What does Mun say about it?
 **Tí:** He says spend it on anything else. Then he goes quiet. Thảo, last night he asked me what my name means.
 **Thảo:** He is asking the wrong person a question about himself.
@@ -645,6 +647,10 @@ tone — that is the Lesson 2 target, used for real.
 > Out there, nothing is lost for a long way in any direction. No houses, no
 > bank, no market. Nothing lost anywhere near us except one cat.
 >
+> Bạch warned me about this months ago, in a car park: the half of the rule
+> nobody passes on, and not allowed either. She was right. I went out there
+> anyway, on purpose, for somebody else.
+>
 > "You never choose what comes back," I said. "But you do choose where you are
 > standing when you light it."
 >
@@ -664,6 +670,14 @@ tone — that is the Lesson 2 target, used for real.
 >
 > Khoa asked whether he would go back for his training now that the name was
 > his. Sao said he would walk up with us and come home after. He lives here.
+>
+> Bạch was on the bank when we came in, and nobody had asked her to come.
+>
+> "Sao," she said. "That is a keeper's name."
+>
+> "I know," he said.
+>
+> She said nothing about the rule I broke. She will. It can wait.
 >
 > Thảo asked how long the walk would take. Khoa already knew.
 :::
@@ -752,7 +766,7 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 You have already read *The last of the oil* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
 
-::: fluency mode="read" words="306" secs="150|120|90" ask="Read *The last of the oil* again from the top. Stop the clock the moment you reach the end."
+::: fluency mode="read" words="383" secs="190|150|115" ask="Read *The last of the oil* again from the top. Stop the clock the moment you reach the end."
 - Do not stop to look anything up — you have met all of it
 - Read for the sense of it, not word by word
 - Press **I finished** the moment you reach the last line
@@ -792,6 +806,13 @@ The boy asked whether I was angry about the twelve lightings. I am not. I
 asked him what he had spent them on, and he told me the lot: a game, a path, a
 friend, a house, a festival, a way of living, a forest, a market, a town, a
 voice and a workroom. Eleven. And then a name. I would have spent them worse.
+
+Minh asked me the one none of the others would ask out loud. He wanted to know
+how long a person who has been called back is allowed to stay. As long as
+somebody keeps a good hold of who he was — that is the whole of it, and I am
+told the boy beside him has never in his life forgotten a face. So he stays.
+He will be thirteen a good while yet, which is a strange thing to be, and I
+have nothing that mends it and nothing that needs mending.
 
 Somebody asked whether the lamp can be filled again. It cannot. It was never
 yours, and it is not mine either — I only carry it. It goes home with me
@@ -947,7 +968,8 @@ questions; one is a subject–verb agreement slip.
 > The lamp is cold, and last week it went home in a rice sack. Bà Sáu asked me
 > did I know where the cat had got to. Then she asked where have I been all
 > afternoon. Sao asked her if he could stay for dinner? I asked him when will
-> he go back for his training. He said not yet. My uncle asked me why did I
+> he go back for his training. He said not yet. Minh comes over on Sundays now,
+> and we play the wooden game in the yard. My uncle asked me why did I
 > keep the old path clear. Everyone use it now.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."

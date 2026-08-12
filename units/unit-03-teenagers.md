@@ -34,6 +34,10 @@
 **Thảo:** You're [[stressed]], and stressed people read lists four times.
 **Tí:** Everyone in that room is [[keeping up|keep up with]]. I'm not. That's the part I can't [[deal with]].
 **Thảo:** Half of them are behind too, **but** nobody says it out loud.
+**Tí:** Can I tell you what I actually keep thinking about? The path.
+**Thảo:** The one we walked on Sunday.
+**Tí:** It was lost before I was born, **and** it came back anyway. Thirty years, Thảo. Not thirty days.
+**Thảo:** …
 **Tí:** Minh used to say things out loud.
 **Thảo:** …
 **Tí:** Second row, by the window. He would have read that list and laughed at it.

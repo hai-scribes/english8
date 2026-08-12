@@ -25,7 +25,9 @@
 *Read the conversation aloud. Then answer the questions below.*
 
 ::: dialogue title="The long way round" gramen="earlier / more slowly — comparative adverbs" gramvi="So sánh hơn với trạng từ: trạng từ ngắn thêm **-er** (*earlier*), trạng từ dài dùng **more** (*more slowly*). Sau đó dùng **than**." gramco="earlier than · more slowly than"
-**Bà Sáu:** Tí. Take this to Chú Bảy in Bến Vàng, and be back before dark.
+**Bà Sáu:** Tí. Your uncle sent word down this morning. He wants to see you about a game.
+**Tí:** A game? Chú Bảy said *game*?
+**Bà Sáu:** That is the whole message, and I did not ask. So take this to him in Bến Vàng while you are going, and be back before dark.
 **Tí:** Bến Vàng? That's your village. That's miles.
 **Bà Sáu:** Nine kilometres by the new road. Your uncle needs his medicine today, not tomorrow.
 **Tí:** I'll take the [[ferry]].
@@ -40,6 +42,8 @@
 **Bà Sáu:** You can't. The new road went through it thirty years ago. Nobody has walked it since.
 **Tí:** Somebody must know where it begins.
 **Bà Sáu:** I couldn't find the start of it now if you paid me, child, and I am the last one left who ever used it. Take the bus. Take a hat.
+**Tí:** The bus stops at every gate. He'll be asleep before I get there, and I want to hear about that game today, not next month.
+**Bà Sáu:** Then start walking to the stop.
 **Tí:** …
 **Bà Sáu:** And put that rice sack down. Whatever you keep in it can stay under the bed.
 :::
@@ -613,8 +617,14 @@ and **than** in at least two of them.
 > top so much more quickly than the two o'clock bus ever could have that I
 > reached my uncle's gate with dry shoes and shaking legs.
 >
-> Chú Bảy took the medicine. Then he looked past me at the hill for a long
-> time.
+> Chú Bảy took the medicine. Then he looked at the board game under my arm for
+> a while and did not ask me where it came from.
+>
+> "I was bottom of my class every year I was in it," he said. "I made that
+> board instead of my homework, and I am forty-six, and I am perfectly all
+> right. Tell your grandmother that."
+>
+> Then he looked past me at the hill for a long time.
 >
 > "Which way did you come?" he asked.
 >
@@ -687,7 +697,7 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 You have already read *The old way to Bến Vàng* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
 
-::: fluency mode="read" words="259" secs="150|120|90" ask="Read *The old way to Bến Vàng* again from the top. Stop the clock the moment you reach the end."
+::: fluency mode="read" words="317" secs="180|145|110" ask="Read *The old way to Bến Vàng* again from the top. Stop the clock the moment you reach the end."
 - Do not stop to look anything up — you have met all of it
 - Read for the sense of it, not word by word
 - Press **I finished** the moment you reach the last line

@@ -597,6 +597,11 @@ that it is the thing your reader is left holding.
 > like fish. A woman put one into my hand and told me to eat it before it got
 > cold, and then asked whose grandson I was.
 >
+> Minh was standing under the gate post with his hands in his pockets, watching
+> the lanterns go past him. Thảo saw him first and stopped walking. She has
+> grown a whole head since last September and he has not grown at all, and for
+> a moment she could not look at him.
+>
 > Bà Sáu came out onto the step in her nightclothes and stood there for a long
 > time without saying anything at all.
 >
@@ -866,7 +871,9 @@ is a subject–verb agreement slip.
 > Last night my grandmother went to the bed at midnight, still folding leaves.
 > She says the customs like ours never really die. She is oldest person on our
 > lane, so she lit an first stick of incense at dawn. Nobody sweep the yard
-> afterwards, and we ate the breakfast very late.
+> afterwards, and we ate the breakfast very late. Lanterns were still burning at
+> our gate when we finished. Mun taught me how to send a thing back, so I stood
+> there and said it out loud — "Go well." — and they went out, one by one.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
 - Error 1 = bed/to bed ~ *go to bed* is the activity, not the furniture
