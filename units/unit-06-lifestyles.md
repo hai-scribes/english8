@@ -24,30 +24,23 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-> **Duy:** Have you started the geography homework? We have to describe a
-> lifestyle completely different from ours.
-> **Mai:** Not yet, but I know what I'll write about. Alaska. I watched a
-> documentary about it last night.
-> **Duy:** Alaska? What's life like there?
-> **Mai:** Very remote. Some villages have no roads at all — you can only get
-> there by plane. Families still hunt and fish for most of their food, and in
-> winter they travel by sled.
-> **Duy:** That sounds hard. I won't complain about my old bicycle again.
-> **Mai:** Ha! The winters are long and dark, so people share everything. If
-> you move there, you will learn to depend on your community very quickly.
-> **Duy:** I like that idea. Our lifestyle is the opposite — everybody stares
-> at a screen on their own.
-> **Mai:** True. My screen time was six hours yesterday. I'll be honest, it
-> frightened me a bit.
-> **Duy:** Mine is worse. Right — a promise. If I finish my homework before
-> eight tonight, I'll go for a run.
-> **Mai:** And if you don't finish it?
-> **Duy:** Then I won't watch anything at the weekend. Not one video.
-> **Mai:** Brave. I'll join you, then. Unless it rains, we'll run together on
-> Sunday morning.
-> **Duy:** It won't rain. I checked.
-> **Mai:** You checked the weather for Sunday? That's very organised of you.
-> **Duy:** I'll surprise you one day, Mai.
+::: dialogue title="A very different life" gramen="will — the future simple" gramvi="**will** + động từ nguyên thể để nói về tương lai. Câu điều kiện loại 1: *If* + hiện tại đơn, **will** + nguyên thể." gramco="If it rains, we will stay in"
+**Duy:** Have you started the geography homework? We have to describe a [[lifestyle]] completely different from ours.
+**Mai:** Not yet, but I know what I'll write about. Alaska. I watched a documentary about it last night.
+**Duy:** Alaska? What's life like there?
+**Mai:** Very [[remote]]. Some villages have no roads at all — you can only get there by plane. Families still [[hunt]] and fish for most of their food, and in winter they travel by [[sled]].
+**Duy:** That sounds hard. I won't complain about my old bicycle again.
+**Mai:** Ha! The winters are long and dark, so people share everything. If you move there, you [[will|gram:will]] learn to depend on your [[community]] very quickly.
+**Duy:** I like that idea. Our lifestyle is the opposite — everybody stares at a screen on their own.
+**Mai:** True. My screen time was six hours yesterday. I'll be honest, it frightened me a bit.
+**Duy:** Mine is worse. Right — a promise. If I finish my homework before eight tonight, I'll go for a run.
+**Mai:** And if you don't finish it?
+**Duy:** Then I won't watch anything at the weekend. Not one video.
+**Mai:** Brave. I'll join you, then. Unless it rains, we'll run together on Sunday morning.
+**Duy:** It won't rain. I checked.
+**Mai:** You checked the weather for Sunday? That's very organised of you.
+**Duy:** I'll surprise you one day, Mai.
+:::
 
 ### 1.1 Comprehension
 
@@ -679,6 +672,15 @@ check three things:
 - Did your pauses fall **between** points rather than inside a sentence?
 
 Repeat Step 2 until each answer runs clearly from its first word to its last.
+
+### 5.4 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about how your life differs from your grandparents' at your age."
+- What they did at thirteen
+- What you do
+- One thing that is better now
+- One thing that was better then
+:::
 
 ---
 

@@ -24,24 +24,22 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-> **Duy:** Look at this, Vy — there's a communication exhibition at the museum
-> on Saturday.
-> **Vy:** On Saturday? I'm free in the morning. Where exactly is the museum?
-> **Duy:** It's on Lê Lợi Street, opposite the old post office. The entrance is
-> between a bookshop and a café.
-> **Vy:** I know it. My cousin works in the café next to it.
-> **Duy:** Perfect. The exhibition opens at nine and closes at five.
-> **Vy:** Is this ticket yours?
-> **Duy:** No, that one's mine — the blue one. Yours is in the envelope on the
-> table.
-> **Vy:** Got it. Hey, whose phone is this under the chair?
-> **Duy:** It isn't mine and it isn't yours. It might be Minh's… no, his is much
-> older than that.
-> **Vy:** Then it's probably theirs — those two girls left about a minute ago.
-> **Duy:** Take it to the desk downstairs. Someone will come back for it.
-> **Vy:** Right. So — nine o'clock at the gate, in front of the big screen?
-> **Duy:** In front of the screen. Don't be late: the first talk starts at 9.15.
-> **Vy:** I'm never late in the morning. At night, that's a different story.
+::: dialogue title="Two tickets and a lost phone" gramen="mine / yours — possessive pronouns" gramvi="Đại từ sở hữu đứng một mình, không có danh từ theo sau: *my phone* → **mine**." gramco="That one is mine"
+**Duy:** Look at this, Vy — there's a [[communicate|communicate]] exhibition at the museum on Saturday. Every [[device]] from the last hundred years is in it.
+**Vy:** On Saturday? I'm free in the morning. Where exactly is the museum?
+**Duy:** It's on Lê Lợi Street, opposite the old post office. The entrance is between a bookshop and a café.
+**Vy:** I know it. My cousin works in the café next to it.
+**Duy:** Perfect. The exhibition opens at nine and closes at five.
+**Vy:** Is this ticket yours?
+**Duy:** No, that one's [[mine|gram:mine]] — the blue one. Yours is in the envelope on the table.
+**Vy:** Got it. Hey, whose [[smartphone]] is this under the chair?
+**Duy:** It isn't mine and it isn't yours. It might be Minh's… no, his is much older than that.
+**Vy:** Then it's probably theirs — those two girls left about a minute ago.
+**Duy:** Take it to the desk downstairs. Someone will come back for it.
+**Vy:** Right. So — nine o'clock at the gate, in front of the big screen?
+**Duy:** In front of the screen. Don't be late: the first talk starts at 9.15.
+**Vy:** I'm never late in the morning. At night, that's a different story.
+:::
 
 ### 1.1 Comprehension
 
@@ -674,6 +672,15 @@ check three things:
 
 Repeat Step 2 until you can speak for a full minute with your pauses falling
 between stages rather than inside a sentence.
+
+### 5.4 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about how you keep in touch with people."
+- Which device you use most
+- Who you contact, and how often
+- What you use it for
+- How it may change in ten years
+:::
 
 ---
 

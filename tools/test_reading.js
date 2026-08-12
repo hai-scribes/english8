@@ -53,8 +53,14 @@ function load(rel, store, beforeParse) {
                       () => "<script>" + APP + "<\/script>");
   const dom = new JSDOM(html, { runScripts: "dangerously", pretendToBeVisual: true,
                                 url: "https://example.org/" + rel,
-                                beforeParse: w => { w.scrollTo = () => {};
-                                                    if (beforeParse) beforeParse(w); } });
+                                beforeParse: w => {
+                                  /* jsdom implements neither, and the app calls
+                                     both; without these a click throws before
+                                     the behaviour under test ever runs. */
+                                  w.scrollTo = () => {};
+                                  w.Element.prototype.scrollIntoView = function(){};
+                                  if (beforeParse) beforeParse(w);
+                                } });
   dom.window.scrollTo = () => {};
   if (store) for (const k of Object.keys(store)) dom.window.localStorage.setItem(k, store[k]);
   return dom;
@@ -383,6 +389,206 @@ async function main() {
          allLive(s.listening),
          inputs(s.listening).filter(i => i.disabled).length + " went dead");
     }
+  }
+
+  /* ---- the learning pass hands questions back; the test pass never does ---
+     Phase 3's whole point is that a first exposure is practice, not an exam:
+     attempt, see what went wrong, go again. The risk is the opposite one —
+     that "go again" reaches a COMMITTED attempt, at which point the word
+     limit, the spelling rule and the single play all stop meaning anything.
+     So this drives both passes for real and checks the boundary from both
+     sides. */
+  {
+    const win = await settled(load("docs/unit-01/lesson-6/index.html", null, fastPage));
+    const doc = win.document;
+    const player = doc.querySelector('[data-role="audio"]');
+    const task = doc.querySelector('[data-task="01-6-6.2-1"]');
+    ok("learn: the page has a player and a listening task", !!player && !!task);
+
+    const inputs = () => Array.from(task.querySelectorAll(".i-in, .i-opt input"));
+    const retry = () => player.querySelector(".p-retry");
+    const check = task.querySelector(".t-check") || task.querySelector("button.btn");
+
+    ok("learn: no Try-again before anything has been played",
+       !retry() || retry().hidden);
+
+    click(win, player.querySelector(".p-learn"));
+    const played = await until(win, () =>
+      /Practised/.test(player.querySelector(".p-lstate").textContent));
+    ok("learn: practising plays and reports itself", played,
+       JSON.stringify(player.querySelector(".p-lstate").textContent));
+    ok("learn: practising does NOT spend the single play",
+       win.localStorage.getItem("en8:played:01-6-1") === null,
+       String(win.localStorage.getItem("en8:played:01-6-1")));
+
+    /* Answer wrong on purpose, then commit it. */
+    const first = inputs()[0];
+    if (first){
+      if (first.type === "radio"){ first.checked = true;
+        first.dispatchEvent(new win.Event("change", { bubbles:true })); }
+      else { first.value = "definitely-wrong";
+        first.dispatchEvent(new win.Event("input", { bubbles:true })); }
+    }
+    click(win, check);
+    ok("learn: checking locks the answers, as it always has",
+       task.dataset.done === "1" && inputs().every(i => i.disabled));
+    ok("learn: and the attempt is stored",
+       /01-6-6\.2-1/.test(win.localStorage.getItem("en8:tasks:v1") || ""));
+
+    const r = retry();
+    ok("learn: Try-again appears once there is something to hand back",
+       !!r && !r.hidden);
+    click(win, r);
+    ok("learn: it re-opens the inputs", inputs().every(i => !i.disabled));
+    ok("learn: it clears the marks", task.dataset.done !== "1");
+    ok("learn: it forgets the stored attempt, so a refresh cannot restore it",
+       !/01-6-6\.2-1/.test(win.localStorage.getItem("en8:tasks:v1") || ""));
+
+    /* Now the committed pass. From here nothing may be handed back. */
+    click(win, player.querySelector(".p-start"));
+    ok("test: starting the one play removes Try-again for good", !retry());
+    const spent = await until(win, () =>
+      win.localStorage.getItem("en8:played:01-6-1") !== null);
+    ok("test: the single play is recorded as spent", spent);
+    const shut = await until(win, () =>
+      /Time\./.test(player.querySelector(".p-state").textContent), 6000);
+    ok("test: the review window closes", shut,
+       JSON.stringify(player.querySelector(".p-state").textContent));
+    ok("test: no Try-again ever comes back", !retry());
+  }
+
+  /* ---- Try-again respects the player's territory --------------------------
+     A Review is the one page where the player has exercises ABOVE it that are
+     none of its business. Marking one of those must not offer to hand back the
+     listening questions, must not unlock the script, and above all must not
+     have its own committed mark cleared by a control belonging to a different
+     block. */
+  {
+    const win = await settled(load("docs/review-1/index.html", null, fastPage));
+    const doc = win.document;
+    const player = doc.querySelector('[data-role="audio"]');
+    const tasks = Array.from(doc.querySelectorAll('[data-role="task"]'));
+    const language = tasks[0];
+    ok("review page: a player with Language exercises above it",
+       !!player && tasks.length > 1);
+
+    click(win, player.querySelector(".p-learn"));
+    await until(win, () => /Practised/.test(player.querySelector(".p-lstate").textContent));
+
+    const inp = language.querySelector(".i-in") || language.querySelector(".i-opt input");
+    if (inp){
+      if (inp.type === "radio"){ inp.checked = true;
+        inp.dispatchEvent(new win.Event("change", { bubbles:true })); }
+      else { inp.value = "zz"; inp.dispatchEvent(new win.Event("input", { bubbles:true })); }
+    }
+    click(win, language.querySelector(".t-check") || language.querySelector("button.btn"));
+    await new Promise(r => setTimeout(r, 40));
+
+    const r = player.querySelector(".p-retry");
+    ok("territory: marking a Language task offers no Try-again on the player",
+       !r || r.hidden);
+    ok("territory: and does not unlock the listening script",
+       doc.querySelector(".p-script").hidden);
+    ok("territory: the Language task keeps its committed mark",
+       language.dataset.done === "1");
+  }
+
+  /* ---- the review queue is interleaved, not grouped ----------------------
+     Blocked practice — one kind of thing at a time — wins while a distinction
+     is new; interleaved practice wins on a delayed test. The course gets that
+     shape for free: a lesson exercise drills one thing, and the spaced queue
+     is the delayed test, so it should MIX.
+
+     Nothing enforced it, which is the gap. Grouping the queue by type is the
+     tidy-looking change that would quietly put it on the wrong side of that
+     trade-off, and no other check here would notice. */
+  {
+    const seeded = {};
+    const day = Math.floor(Date.now() / 86400000);
+    /* Make one item of each kind due, from several units. */
+    const want = [["01", "grammar", "3.1-1"], ["01", "function", "4.3-1"],
+                  ["01", "pron", "2.5-1"], ["02", "grammar", "3.1-1"],
+                  ["02", "function", "4.1-1"], ["02", "pron", "2.5-1"],
+                  ["03", "grammar", "3.1-1"], ["03", "pron", "2.6-1"]];
+    const rec = {};
+    for (const [u, kind, id] of want)
+      rec[u + ":" + kind + ":" + id] = { due: day - 1, seen: 1, kept: 0, delayed: 0 };
+    seeded["en8:review:v1"] = JSON.stringify(rec);
+
+    /* Seeded in beforeParse, not after: REVIEW is read at module scope while
+       the scripts execute, so anything written afterwards is invisible to it. */
+    const win = await settled(load("docs/index.html", seeded, w => {
+      /* fastPage as well as the seed: a choice item defers its confidence
+         prompt by 300ms, and a walk that does not wait for it re-reads the
+         same question and reports a queue that looks grouped when it is not. */
+      fastPage(w);
+      for (const k of Object.keys(seeded)) w.localStorage.setItem(k, seeded[k]);
+    }));
+    const doc = win.document;
+    const payload = JSON.parse(doc.getElementById("page-data").textContent);
+    const byKey = {};
+    for (const r of payload.review)
+      byKey[r.unit + ":" + (r.type === "word" ? "" : r.type + ":") + String(r.id).toLowerCase()] = r;
+
+    const due = Object.keys(rec).filter(k => byKey[k]);
+    ok("review: the seeded records match real payload items", due.length >= 6,
+       due.length + " of " + want.length + " resolved");
+
+    const kinds = due.map(k => byKey[k].type);
+    ok("review: more than one kind is due at once", new Set(kinds).size >= 2,
+       JSON.stringify(kinds));
+
+    const card = doc.querySelector("#reviewCard");
+    ok("review: the review card is shown when items are due", card && !card.hidden);
+    const kindTable = doc.querySelector("#reviewKinds table");
+    ok("review: the per-kind table renders", !!kindTable);
+    ok("review: the per-kind table totals nothing",
+       !kindTable || !/total|overall|mastery|\bscore\b/i.test(kindTable.textContent),
+       kindTable ? JSON.stringify(kindTable.textContent.slice(0, 80)) : "");
+
+    /* Run the queue and read the order of kinds off the rendered prompts. */
+    const start = doc.querySelector("#startReview");
+    ok("review: there is a start control", !!start);
+    click(win, start);
+    await new Promise(r => setTimeout(r, 40));
+    const host = doc.querySelector("#reviewEngine");
+    ok("review: the engine opens", host && !host.hidden);
+
+    /* The engine shows one item at a time, so walk it: read the kind label,
+       then answer to advance. Ten steps is plenty to catch grouping. */
+    /* Exactly one pass over the pool. A missed item is re-queued at the END,
+       and those repeats would break any grouping pattern by themselves — so a
+       walk that ran past the first pass could not tell a grouped queue from a
+       shuffled one, and would pass either way. */
+    const seen = [];
+    for (let step = 0; step < due.length; step++) {
+      const lede = host.querySelector(".lede");
+      if (!lede) break;
+      seen.push(lede.textContent.split("·")[0].trim());
+      const opt = host.querySelector(".choices button");
+      const inp = host.querySelector("#ans");
+      if (opt) click(win, opt);
+      else if (inp) { inp.value = "x"; click(win, host.querySelector("#go")); }
+      else break;
+      await new Promise(r => setTimeout(r, 20));
+      const conf = host.querySelector('[data-conf="0"]');
+      if (conf) click(win, conf);
+      await new Promise(r => setTimeout(r, 10));
+      const next = host.querySelector("#next");
+      if (next) click(win, next);
+      await new Promise(r => setTimeout(r, 10));
+    }
+    const labels = seen.filter(Boolean);
+    ok("review: the queue presented the whole pool once",
+       labels.length === due.length, labels.length + " of " + due.length);
+    /* Grouped would mean every run of one kind is contiguous. Interleaved
+       means at least one kind reappears after a different kind. */
+    /* Grouped = every run of a kind is contiguous, i.e. no kind ever comes
+       back after a different kind has intervened. */
+    const grouped = labels.every((l, i) => i === 0 || l === labels[i - 1]
+      || !labels.slice(0, i).includes(l));
+    ok("review: kinds are interleaved, not grouped into blocks", !grouped,
+       JSON.stringify(labels));
   }
 
   console.log(fails

@@ -24,26 +24,23 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-> **Linh:** You look tired, Duy. Are you all right?
-> **Duy:** I'm fine, but I didn't sleep much. I had three tests this week.
-> **Linh:** Three? That's a lot. You should slow down, or you'll burn out.
-> **Duy:** I know, yet I can't stop. Everyone in my class is studying harder
-> than me.
-> **Linh:** That's just peer pressure talking. Half of them are exhausted too,
-> and nobody admits it.
-> **Duy:** Maybe. What do you do when you feel stressed?
-> **Linh:** I joined the photography club last term, so now I have one
-> afternoon a week that belongs to me.
-> **Duy:** A club? I don't have time for a club.
-> **Linh:** That's exactly what I said in September. But the club gives me time
-> back — I come home calmer, and I finish my homework faster.
-> **Duy:** Hmm. I'm curious now. What do you actually do there?
-> **Linh:** We take photos around the school, and then we choose the best ones
-> for the noticeboard. It's a small thing, but it makes me feel useful.
-> **Duy:** Can anyone join, or do you need a good camera?
-> **Linh:** Anyone can join. A phone is fine, and Mr Hung lends out two cameras.
-> **Duy:** All right. I'll come on Thursday, but don't expect me to be good.
-> **Linh:** Nobody is good at first. Just get involved, and the rest follows.
+::: dialogue title="You look tired" gramen="so — a compound sentence" gramvi="Hai mệnh đề đầy đủ nối với nhau bằng dấu phẩy + **and / but / so / or / yet**. Vế sau **so** là kết quả của vế trước." gramco="I was tired, so I stopped"
+**Linh:** You look tired, Duy. Are you all right?
+**Duy:** I'm fine, but I didn't sleep much. I had three tests this week.
+**Linh:** Three? That's a lot. You should slow down, or you'll burn out.
+**Duy:** I know, yet I can't stop. Everyone in my class is studying harder than me.
+**Linh:** That's just [[peer pressure]] talking. Half of them are exhausted too, and nobody admits it.
+**Duy:** Maybe. What do you do when you feel [[stressed]]?
+**Linh:** I joined the photography club last term, [[so|gram:so]] now I have one afternoon a week that belongs to me.
+**Duy:** A club? I don't have time for a club.
+**Linh:** That's exactly what I said in September. But the club gives me time back — I come home calmer, and I finish my homework faster.
+**Duy:** Hmm. I'm [[curious]] now. What do you actually do there?
+**Linh:** We take photos around the school, and then we choose the best ones for the noticeboard. It's a small thing, but it makes me feel useful.
+**Duy:** Can anyone join, or do you need a good camera?
+**Linh:** Anyone can join. A phone is fine, and Mr Hung lends out two cameras.
+**Duy:** All right. I'll come on Thursday, but don't expect me to be good.
+**Linh:** Nobody is good at first. Just get involved, and the rest follows.
+:::
 
 ### 1.1 Comprehension
 
@@ -792,6 +789,15 @@ check three things:
 - Did your pauses fall **between** points rather than inside a sentence?
 
 Repeat Step 2 until each answer runs clearly from its first word to its last.
+
+### 5.4 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about the pressures on someone your age, and what helps."
+- What makes a school week stressful
+- What you do about it
+- One thing adults get wrong about it
+- One thing that genuinely helps
+:::
 
 ---
 

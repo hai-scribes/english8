@@ -24,28 +24,24 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-> **Duy:** You're really sunburnt, Linh. Where have you been?
-> **Linh:** My grandparents' village in Ha Nam. Three weeks.
-> **Duy:** Three weeks with no wifi? I'd go mad.
-> **Linh:** There is wifi. It just works **more slowly** than ours.
-> **Duy:** So what did you actually do all day?
-> **Linh:** I got up **earlier** than I ever do here — half past five. My
-> grandfather takes the buffalo out before the sun gets hot.
-> **Duy:** Half past five? In the holidays?
-> **Linh:** I know. But I slept **better** there than I sleep at home. It's
-> quiet at night.
-> **Duy:** Fair enough. Was the work hard?
-> **Linh:** Picking fruit in the orchard, collecting eggs, carrying water from
-> the well. My cousin does all of it **much faster** than me — she's been doing
-> it since she was six.
-> **Duy:** Did you learn anything useful?
-> **Linh:** I learned to ride a bicycle on a mud path, which is far harder than
-> riding on a road. And I can tell now when it's going to rain.
-> **Duy:** And the bad parts? Be honest.
-> **Linh:** The nearest shop is three kilometres away. And everyone knows
-> everything about you by lunchtime.
-> **Duy:** So would you live there?
-> **Linh:** Not all year. But I'd go back tomorrow.
+::: dialogue title="Three weeks in Ha Nam" gramen="earlier / more slowly — comparative adverbs" gramvi="So sánh hơn với trạng từ: trạng từ ngắn thêm **-er** (*earlier*), trạng từ dài dùng **more** (*more slowly*). Sau đó dùng **than**." gramco="earlier than · more slowly than"
+**Duy:** You're really sunburnt, Linh. Where have you been?
+**Linh:** My grandparents' village in Ha Nam. Three weeks.
+**Duy:** Three weeks with no wifi? I'd go mad.
+**Linh:** There is wifi. It just works **more slowly** than ours.
+**Duy:** So what did you actually do all day?
+**Linh:** I got up **earlier** than I ever do here — half past five. My grandfather takes the [[buffalo]] out before the sun gets hot.
+**Duy:** Half past five? In the holidays?
+**Linh:** I know. But I slept **better** there than I sleep at home. It's quiet at night.
+**Duy:** Fair enough. Was the work hard?
+**Linh:** Picking fruit in the [[orchard]], collecting eggs, carrying water from the [[well]]. My cousin does all of it **much faster** than me — she's been doing it since she was six.
+**Duy:** Did you learn anything useful?
+**Linh:** I learned to ride a bicycle on a mud path, which is far harder than riding on a road. And I can tell now when it's going to rain.
+**Duy:** And the bad parts? Be honest.
+**Linh:** The nearest shop is three kilometres away. And everyone knows everything about you by lunchtime.
+**Duy:** So would you live there?
+**Linh:** Not all year. But I'd go back tomorrow.
+:::
 
 ### 1.1 Comprehension
 
@@ -677,6 +673,25 @@ check three things:
 - Did your pauses fall **between** points rather than inside a sentence?
 
 Repeat Step 2 until each answer runs clearly from its first word to its last.
+
+### 5.4 Read it again, against the clock
+
+You have already read *Sixty-one years in the same village* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
+
+::: fluency mode="read" words="249" secs="150|120|90" ask="Read *Sixty-one years in the same village* again from the top. Stop the clock the moment you reach the end."
+- Do not stop to look anything up — you have met all of it
+- Read for the sense of it, not word by word
+- Press **I finished** the moment you reach the last line
+:::
+
+### 5.5 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about a place in the countryside you know — or would like to know."
+- What it looks like
+- What people there do all day
+- One thing you like about it
+- One thing you could not get used to
+:::
 
 ---
 

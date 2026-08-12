@@ -151,7 +151,7 @@ RE_THREAD = re.compile(r"^:::[ \t]*thread\b(?P<attrs>[^\n]*)\n(?P<body>.*?)"
 # a misspelled directive name (":::taskk") fails to match instead of matching
 # ":::task" with the rest silently dropped.
 RE_DIRECTIVE = re.compile(
-    r"^:::[ \t]*(?P<kind>task|audio|write|clock|thread|passage)\b(?P<attrs>[^\n]*)\n"
+    r"^:::[ \t]*(?P<kind>task|audio|write|clock|thread|passage|dialogue|fluency)\b(?P<attrs>[^\n]*)\n"
     r"(?P<body>.*?)\n?:::[ \t]*$", re.M | re.S)
 WIDGET = "\x00W%d\x00"
 
@@ -403,6 +403,157 @@ def audio_payload(u, lesson, a: dict, body: str, idx: int = 0) -> dict:
     }
 
 
+# ------------------------------------------------------- the glossed dialogue --
+# Getting Started prints the dialogue in Lesson 1, and the vocabulary that
+# explains it arrived in Lesson 2 — so the Lesson 1 comprehension exercise was
+# partly a vocabulary test. Moving the table earlier is the wrong fix: a
+# pre-taught word list stops the lesson to deliver support, and the measured
+# cost of that is a drop in enjoyment.
+#
+# A gloss puts the meaning where the word is. It is VIETNAMESE, because L1
+# glosses beat L2 glosses across two independent meta-analyses, and every
+# dictionary entry here already carries `vi`. It opens on TAP, not hover: the
+# learner is on a phone, and hover reaches neither touch nor a keyboard.
+#
+# The support is deliberately scoped to this one lesson. A gloss is lookup, not
+# retrieval, and support that is never withdrawn makes Lesson 1 feel easy and
+# teach less — so the same items come back bare in later lessons and in the
+# spaced review. Half the mechanism on its own is a regression.
+RE_MARK = re.compile(r"\[\[([^\]|]+)(?:\|([^\]]+))?\]\]")
+
+
+def gloss_payload(body: str, a: dict, where: str) -> tuple:
+    """(rendered body, gloss records). Raises on a token nothing can explain."""
+    out = []
+
+    def one(m):
+        surface, key = m.group(1), (m.group(2) or m.group(1)).strip()
+        i = len(out)
+        if key == "gram" or key.startswith("gram:"):
+            # One grammar pattern per dialogue, authored on the directive: the
+            # dictionary has no entry for a construction.
+            if not a.get("gramvi"):
+                raise SystemExit(f"{where}: [[{surface}|gram]] but the directive "
+                                 f"carries no gramvi= gloss")
+            out.append({"kind": "gram", "hw": a.get("gramen") or surface,
+                        "ipa": "", "vi": a["gramvi"], "co": a.get("gramco", "")})
+        else:
+            entry = DICT.get(key.lower())
+            if not entry:
+                raise SystemExit(f"{where}: glossed token {key!r} has no entry in "
+                                 f"data/dict — a gloss the build cannot resolve "
+                                 f"would ship as a dead button")
+            sense = next((s for s in entry.get("senses") or [] if s.get("vi")), None)
+            if not sense:
+                raise SystemExit(f"{where}: {key!r} has no Vietnamese gloss, and an "
+                                 f"English paraphrase is not what the evidence supports")
+            out.append({"kind": "word", "hw": key,
+                        "ipa": IPA_BY_WORD.get(key.lower(), ""),
+                        "vi": sense["vi"],
+                        "co": " · ".join((sense.get("colloc") or [])[:2])})
+        return (f'<button class="gl" type="button" aria-expanded="false" '
+                f'data-g="{i}"{" data-kind=gram" if key == "gram" else ""}>'
+                f'{inline(surface)}</button>')
+
+    return RE_MARK.sub(one, body), out
+
+
+def dialogue_html(a: dict, body: str, did: str, where: str) -> str:
+    rendered, glosses = gloss_payload(body, a, where)
+    lines = []
+    for raw in rendered.split("\n"):
+        s = raw.strip()
+        if not s:
+            continue
+        lines.append(f'<p>{md_inline_keep(s)}</p>')
+    title = a.get("title", "")
+    return (f'<div class="dlg" data-role="dialogue" data-dialogue="{e(did)}" '
+            f'data-glosses="{e(json.dumps(glosses, ensure_ascii=False))}">'
+            + (f'<div class="d-h"><span class="d-k">Dialogue</span>'
+               f'<span class="d-t">{e(title)}</span></div>' if title else "")
+            + '<p class="d-say">Tap any <u>underlined</u> word to see what it means. '
+              'The meaning is here so you can stay in the conversation — later '
+              'lessons ask for the same words without it.</p>'
+            + '<div class="d-body">' + "".join(lines) + '</div></div>')
+
+
+def md_inline_keep(s: str) -> str:
+    """Inline markdown, but the gloss buttons are already HTML and survive."""
+    parts = re.split(r"(<button class=\"gl\".*?</button>)", s)
+    return "".join(p if p.startswith('<button class="gl"') else inline(p)
+                   for p in parts)
+
+
+# --------------------------------------------------------- the fluency strand --
+# Nation's four strands give roughly equal time to meaning-focused input,
+# meaning-focused output, language-focused learning and FLUENCY DEVELOPMENT —
+# working with material you already know, to get faster at it. This course was
+# heavy on the first and third, and its fluency work existed only as printed
+# instructions ("repeat until you can say it without stopping"), which by this
+# repository's own standard is not an attempt at all.
+#
+# Two modes, both on known material only:
+#   talk  the 4/3/2 shape — the same talk three times, in less time each round
+#   read  a timed re-read of a passage already studied, reporting words a minute
+#
+# What it may report is bounded exactly as every other panel is: rate and
+# coverage, listed SEPARATELY, never combined into one figure and never scored.
+FLUENCY_MODES = {"talk", "read"}
+
+
+def fluency_payload(u, lesson, a: dict, body: str, fid: str) -> dict:
+    where = f"{u['src']} lesson {lesson} (fluency)"
+    mode = a.get("mode", "talk")
+    if mode not in FLUENCY_MODES:
+        raise SystemExit(f"{where}: mode={mode!r} — a fluency task is 'talk' or 'read'")
+    try:
+        rounds = [int(x) for x in a.get("secs", "240|180|120").split("|") if x.strip()]
+    except ValueError:
+        raise SystemExit(f"{where}: secs= must be seconds separated by '|'")
+    if len(rounds) < 2:
+        raise SystemExit(f"{where}: a fluency task needs at least two rounds — "
+                         f"one performance is not fluency practice")
+    if sorted(rounds, reverse=True) != rounds:
+        raise SystemExit(f"{where}: rounds must get SHORTER, not longer — the "
+                         f"whole shape is the same content in less time")
+    p = {"id": fid, "mode": mode, "rounds": rounds,
+         "ask": a.get("ask", ""), "cues": [c.strip(" -") for c in body.split("\n") if c.strip()]}
+    if mode == "read":
+        if not a.get("words"):
+            raise SystemExit(f"{where}: a read-mode fluency task needs words= so "
+                             f"a rate can be worked out from something real")
+        p["words"] = int(a["words"])
+    return p
+
+
+def fluency_html(p: dict) -> str:
+    rounds = "".join(f'<li data-secs="{r}">Round {i}: <b>{r // 60}:{r % 60:02d}</b></li>'
+                     for i, r in enumerate(p["rounds"], 1))
+    cues = ("".join(f"<li>{inline(c)}</li>" for c in p["cues"])
+            if p["cues"] else "")
+    lede = ("Say the same thing three times, and give yourself less time each "
+            "round. Nothing here is new — that is the point. You are getting "
+            "faster at what you already know."
+            if p["mode"] == "talk" else
+            "Read the same text again, against the clock. You have read it "
+            "before, so this is not about understanding it. It is about speed.")
+    return (f'<div class="fluency" data-role="fluency" data-fluency="{e(p["id"])}" '
+            f'data-mode="{e(p["mode"])}"'
+            + (f' data-words="{p["words"]}"' if p.get("words") else "")
+            + f'><div class="f-h"><span class="f-k">Fluency</span>'
+              f'<span class="f-t">Known material only</span></div>'
+            + f'<p class="f-say">{lede}</p>'
+            + (f'<p class="f-ask">{inline(p["ask"])}</p>' if p["ask"] else "")
+            + (f'<ul class="f-cues">{cues}</ul>' if cues else "")
+            + f'<ol class="f-rounds">{rounds}</ol>'
+            + '<div class="f-ctl"><button class="btn f-start" type="button">Start round 1</button>'
+              '<span class="f-state" role="status"></span></div>'
+            + '<div class="f-log"></div>'
+            + '<p class="note small">Each round is listed on its own. Nothing here '
+              'is added up or scored — what you are watching is whether the same '
+              'material comes out in less time.</p></div>')
+
+
 def audio_html(p: dict) -> str:
     timing = ("Answer <b>as you listen</b>. You then have <b>two minutes</b> to check "
               "what you wrote."
@@ -417,7 +568,18 @@ def audio_html(p: dict) -> str:
             f'<b>not written down</b>, so listen to it. Then you get '
             f'<b>{p["preview"]} seconds</b> to read the questions, and then the '
             f'recording plays <b>once</b>.</p>'
-            f'<div class="p-ctl"><button class="btn p-start" type="button">Start</button>'
+            # Two passes over one recording. The LEARN pass is supported —
+            # replay, and the script once an attempt has been made — because a
+            # single play is excellent assessment and poor first exposure. The
+            # TEST pass is the one that was always here, unchanged: one
+            # orientation, one preview, one play, one review window.
+            f'<div class="p-ctl" data-pass="learn">'
+            f'<button class="btn quiet p-learn" type="button">Practise it first</button>'
+            f'<span class="p-lstate" role="status"></span></div>'
+            f'<p class="p-say small">Practising does not use up your one play. '
+            f'When you want the real thing, take it once below.</p>'
+            f'<div class="p-ctl" data-pass="test">'
+            f'<button class="btn p-start" type="button">Take it once</button>'
             f'<span class="p-state" role="status"></span></div>'
             f'<div class="p-note"><b>The voice is your device\'s speech synthesiser.</b> '
             f'It says the words clearly, but it is not a real speaker: no accent range, '
@@ -890,6 +1052,12 @@ def load_dictionary() -> dict:
 
 DICT = load_dictionary()
 
+# The book's IPA lives on the vocabulary TABLE, not in the dictionary entry, so
+# a gloss that wants to show it needs an index across every unit's table. Filled
+# once the units are parsed; empty until then, and an empty IPA is simply not
+# printed rather than being a build failure.
+IPA_BY_WORD: dict = {}
+
 
 def sense_html(sn, n=None) -> str:
     """One numbered sense: definition, Vietnamese subtitle, examples."""
@@ -1027,6 +1195,128 @@ def practice_data(u) -> list:
     return out
 
 
+# ---------------------------------------------------------- spaced review ---
+# The scheduler in app.js was correct and narrow: it enrolled `practice_data`
+# and therefore words, so a unit's grammar, its Everyday English function and
+# its sound contrast were taught once and never came back. Spacing beats massing
+# for grammar as well as vocabulary, and the strand that never returns is the
+# one the learner has forgotten by the Review.
+#
+# Nothing here is authored. Every non-word item is an item the unit ALREADY
+# asks, lifted from its own marked tasks, so the review queue cannot claim to
+# rehearse something the lessons never taught. The book's seven-section shape
+# fixes which lesson teaches which target, which is what makes the selection
+# mechanical rather than a guess:
+#
+#   Lesson 2  A Closer Look 1  -> vocabulary and PRONUNCIATION
+#   Lesson 3  A Closer Look 2  -> GRAMMAR
+#   Lesson 4  Communication    -> Everyday English (the FUNCTION) first, then
+#                                 the content block
+#
+# Caps are per unit and deliberately small: the queue is a spaced review, not a
+# second sitting of the unit.
+REVIEW_CAP = {"pron": 3, "grammar": 4, "function": 3, "colloc": 3}
+# Finding the pronunciation exercises needs three signals, not one, because the
+# syllabus changes what "pronunciation" MEANS half way through the book: units
+# 1-8 teach sound contrasts and label them in IPA, while units 9-12 teach stress
+# and intonation and never write a phoneme. An IPA-only rule silently enrolled
+# eight units and skipped four. The third signal is structural and catches the
+# rest: A Closer Look 1 is vocabulary first, pronunciation last.
+RE_IPA_OPT = re.compile(r"/[^/\s]+/")
+RE_PRON_TITLE = re.compile(r"(stress|syllab|sound|aloud|intonation|pronunc)", re.I)
+
+
+def _review_row(nn, kind, lesson, blk, item, n, t=None):
+    """One typed review record.
+
+    `id` is the exercise id plus the item's index rather than the prompt text.
+
+    The OPTIONS travel with the item, and they have to: an imported choice item
+    whose key is "1" or "S" is unanswerable on its own, because the legend that
+    gave those letters meaning was in the exercise instruction. A review queue
+    that asked "enjoy" and wanted "1" would mark every honest answer wrong.
+    """
+    row = {"unit": nn, "type": kind, "lesson": lesson,
+           "id": f"{blk.get('id') or blk.get('title')}-{n}",
+           "q": item["q"], "a": item["key"]}
+    opts = (item.get("options") or (t or {}).get("opts"))
+    if isinstance(opts, str):
+        opts = [x.strip() for x in opts.split("|") if x.strip()]
+    if opts:
+        row["opts"] = [o[1] if isinstance(o, (list, tuple)) else str(o) for o in opts]
+    if (t or {}).get("ask"):
+        row["ask"] = t["ask"]
+    if item.get("why"):
+        row["why"] = item["why"]
+    if blk.get("title"):
+        row["from"] = blk["title"]
+    return row
+
+
+def review_items(u) -> list:
+    """Every spaced-review item this unit contributes, typed.
+
+    Words keep the shape the practice engine already understands; the other
+    four kinds carry a prompt and a key and are marked by the same rules.
+    """
+    out = []
+    for w in practice_data(u):
+        row = dict(w)
+        row["unit"], row["type"], row["id"] = u["nn"], "word", w["word"]
+        out.append(row)
+
+    # A collocation is the form the vocabulary evidence actually supports
+    # teaching, so it is reviewed as its own item rather than as a hint.
+    n_col = 0
+    for w in practice_data(u):
+        for c in (w.get("colloc") or []):
+            if n_col >= REVIEW_CAP["colloc"]:
+                break
+            # The headword is blanked OUT of the phrase. Printing the whole
+            # collocation and asking for a word inside it hands over the answer.
+            gap = re.sub(r"(?<!\w)" + re.escape(w["word"]) + r"(?!\w)", "___", c,
+                         count=1, flags=re.I)
+            if gap == c:
+                continue                   # headword not literally in the phrase
+            out.append({"unit": u["nn"], "type": "colloc", "lesson": 2,
+                        "id": f"col-{slug(c)}", "q": gap, "a": w["word"],
+                        "vi": w.get("vi", ""), "from": "Collocation"})
+            n_col += 1
+
+    picked = {"pron": 0, "grammar": 0, "function": 0}
+    fn_block = None
+    l2 = [blk.get("id") for lesson, blk, _ in u["tasks"] if lesson == 2]
+    last_l2 = l2[-1] if l2 else None
+    for lesson, blk, t in u["tasks"]:
+        kind = None
+        title = str(blk.get("title") or "")
+        if (RE_IPA_OPT.search(str(t.get("opts") or ""))
+                or RE_PRON_TITLE.search(title)
+                or (lesson == 2 and blk.get("id") == last_l2)):
+            kind = "pron"                      # a sound set, wherever it sits
+        elif lesson == 3:
+            kind = "grammar"
+        elif lesson == 4:
+            # Everyday English comes first in the book's Communication section;
+            # the named content block follows it. Only the first block is the
+            # speech act, so the queue does not rehearse the culture reading as
+            # if it were a function.
+            if fn_block is None:
+                fn_block = blk.get("id")
+            if blk.get("id") == fn_block:
+                kind = "function"
+        if not kind or picked[kind] >= REVIEW_CAP[kind]:
+            continue
+        for n, item in enumerate(t["items"], 1):
+            if picked[kind] >= REVIEW_CAP[kind]:
+                break
+            if not item.get("key"):
+                continue
+            out.append(_review_row(u["nn"], kind, lesson, blk, item, n, t))
+            picked[kind] += 1
+    return out
+
+
 def e(s) -> str:
     return html.escape(str(s), quote=True)
 
@@ -1107,7 +1397,7 @@ def parse_block_run(body: str):
             a = dict(RE_ATTR.findall(m.group("attrs")))
             if kind == "task":
                 _w.append((kind, parse_task_body(a, m.group("body"))))
-            elif kind in ("audio", "write", "passage"):
+            elif kind in ("audio", "write", "passage", "dialogue", "fluency"):
                 _w.append((kind, (a, m.group("body"))))
             else:
                 _w.append((kind, a))
@@ -1126,6 +1416,8 @@ def parse_block_run(body: str):
             "clocks": [d for k, d in widgets if k == "clock"],
             "threads": [d for k, d in widgets if k == "thread"],
             "passages": [d for k, d in widgets if k == "passage"],
+            "dialogues": [d for k, d in widgets if k == "dialogue"],
+            "fluency": [d for k, d in widgets if k == "fluency"],
         }
         if h is None:
             blk["kind"] = "intro"
@@ -1471,8 +1763,9 @@ def page_home(units, reviews=()) -> str:
   </div>
 
   <div class="card review" id="reviewCard" hidden>
-    <h3>Words due for review</h3>
+    <h3>Due for review</h3>
     <p class="lede" id="reviewLede"></p>
+    <div id="reviewKinds"></div>
     <div class="row">
       <button class="btn" id="startReview" type="button">Start review</button>
       <span class="label" id="reviewBreak"></span>
@@ -1489,7 +1782,10 @@ def page_home(units, reviews=()) -> str:
     # ~216 of them; the alternative is a fetch, and this site has no server.
     return shell(title=SITE, depth=0, body=body, crumb=[("Course", "")],
                  data={"kind": "home",
-                       "vocab": {u["nn"]: practice_data(u) for u in units}},
+                       "vocab": {u["nn"]: practice_data(u) for u in units},
+                       # Flat and typed: the review queue spans units and kinds,
+                       # and the scheduler keys on (unit, type, id).
+                       "review": [r for u in units for r in review_items(u)]},
                  desc="Self-study English 8 course: 12 units, 84 lessons, with practice and unit tests.")
 
 
@@ -1734,6 +2030,7 @@ def block_prose(u, lesson, b, payload) -> str:
     """
     out = render(b["md"])
     n_task = n_audio = n_write = n_clock = n_pass = 0
+    n_dlg, n_flu = [0], [0]
     for i, (kind, d) in enumerate(b["widgets"]):
         if kind == "passage":
             p, html_ = passage_block(u, lesson, d[0], d[1], n_pass)
@@ -1754,6 +2051,17 @@ def block_prose(u, lesson, b, payload) -> str:
             n_clock += 1
             payload["clock"].append(p)
             html_ = clock_html(p)
+        elif kind == "dialogue":
+            did = f"{u['nn']}-{lesson}-d{n_dlg[0] + 1}"
+            n_dlg[0] += 1
+            html_ = dialogue_html(d[0], d[1], did,
+                                  f"{u['src']} lesson {lesson} (dialogue)")
+        elif kind == "fluency":
+            fid = f"{u['nn']}-{lesson}-f{n_flu[0] + 1}"
+            n_flu[0] += 1
+            p = fluency_payload(u, lesson, d[0], d[1], fid)
+            payload.setdefault("fluency", []).append(p)
+            html_ = fluency_html(p)
         elif kind == "thread":
             html_ = thread_html(d, THREADS)
         else:
@@ -1970,6 +2278,10 @@ def main() -> int:
         print(f"FAIL: no unit markdown under {SRC}", file=sys.stderr)
         return 2
     units = [parse_unit(f) for f in files]
+    # The book's IPA is on each unit's vocabulary table; the gloss wants it, and
+    # it can only be indexed once every table has been parsed.
+    IPA_BY_WORD.update({w["word"].lower(): w["ipa"]
+                        for u in units for w in u["vocab"] if w.get("ipa")})
     reviews = load_reviews(units)
     # A thread's check in a later unit renders from the declaration made where
     # the strand was introduced, so the registry has to exist before any page

@@ -24,28 +24,23 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-> **Chi:** You missed the science club yesterday, Duy. We had a speaker from
-> the university.
-> **Duy:** I know — I had a dentist appointment. What did she talk about?
-> **Chi:** Mars, mostly. Whether people could ever live there.
-> **Duy:** And? Could they?
-> **Chi:** Not easily. She asked us what a planet needs before life can
-> survive, and nobody could list everything.
-> **Duy:** Water, air, the right temperature…
-> **Chi:** That's exactly what we said. Then she asked if we knew how strong
-> gravity is on Mars.
-> **Duy:** No idea.
-> **Chi:** About thirty-eight per cent of ours. You'd weigh less than half what
-> you weigh here.
-> **Duy:** I'd enjoy that. Did anyone ask her about aliens?
-> **Chi:** Of course. Minh asked her whether she believed in extraterrestrial
-> life.
-> **Duy:** And what did she say?
-> **Chi:** She said the galaxy is enormous, so she wouldn't be surprised. But
-> then she asked him what evidence he had, and he went quiet.
-> **Duy:** Fair enough. Is she coming back?
-> **Chi:** She asked our teacher when the club meets next month, so I think so.
-> Bring a question.
+::: dialogue title="You missed the science club" gramen="asked if / asked what — reported questions" gramvi="Khi thuật lại câu hỏi, đưa về trật tự câu kể (chủ ngữ đứng trước động từ) và bỏ dấu hỏi. Câu Yes/No dùng **if**." gramco="He asked if I had seen it"
+**Chi:** You missed the science club yesterday, Duy. We had a speaker from the university.
+**Duy:** I know — I had a dentist appointment. What did she talk about?
+**Chi:** Mars, mostly. Whether people could ever live there.
+**Duy:** And? Could they?
+**Chi:** Not easily. She [[asked|gram:asked]] us what a [[planet]] needs before life can [[survive]], and nobody could list everything.
+**Duy:** Water, air, the right temperature…
+**Chi:** That's exactly what we said. Then she asked if we knew how strong [[gravity]] is on Mars.
+**Duy:** No idea.
+**Chi:** About thirty-eight per cent of ours. You'd weigh less than half what you weigh here.
+**Duy:** I'd enjoy that. Did anyone ask her about aliens?
+**Chi:** Of course. Minh asked her whether she believed in [[extraterrestrial]] life.
+**Duy:** And what did she say?
+**Chi:** She said the [[galaxy]] is enormous, so she wouldn't be surprised. But then she asked him what evidence he had, and he went quiet.
+**Duy:** Fair enough. Is she coming back?
+**Chi:** She asked our teacher when the club meets next month, so I think so. Bring a question.
+:::
 
 ### 1.1 Comprehension
 
@@ -737,6 +732,25 @@ check three things:
 - Did your pauses fall **between** points rather than inside a sentence?
 
 Repeat Step 2 until each answer runs clearly from its first word to its last.
+
+### 5.4 Read it again, against the clock
+
+You have already read *Looking for a second home* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
+
+::: fluency mode="read" words="236" secs="150|120|90" ask="Read *Looking for a second home* again from the top. Stop the clock the moment you reach the end."
+- Do not stop to look anything up — you have met all of it
+- Read for the sense of it, not word by word
+- Press **I finished** the moment you reach the last line
+:::
+
+### 5.5 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about living somewhere other than Earth."
+- Which planet, and why
+- What you would need to survive
+- What you would miss
+- Whether you would actually go
+:::
 
 ---
 

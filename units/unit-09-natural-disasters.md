@@ -24,28 +24,22 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-> **Duy:** You look tired, Hà. Did you sleep at all last night?
-> **Hà:** Not much. The wind was hitting our window all night. At two o'clock a
-> branch fell on the roof.
-> **Duy:** Were you awake when it happened?
-> **Hà:** I was lying in bed listening to the rain. Then there was a huge bang
-> and the whole family got up.
-> **Duy:** Was your mother frightened?
-> **Hà:** A bit. While my dad was checking the roof, she was filling every
-> bucket in the house with clean water.
-> **Duy:** That was sensible. Our street was already under water at six this
-> morning. I was cycling to school when I saw two men pushing a motorbike
-> through it.
-> **Hà:** Did you get through?
-> **Duy:** No. I turned back, and my brother brought me here in his boat. It's
-> the first time I have ever arrived at school by boat.
-> **Hà:** Lucky you. The radio was warning people about the storm all yesterday
-> afternoon, but nobody in my street moved anything upstairs.
-> **Duy:** People never believe a forecast until they can see the water.
-> **Hà:** My grandmother does. While we were watching television yesterday
-> evening, she was quietly packing a bag with our papers and two torches.
-> **Duy:** Your grandmother has been through more storms than the radio has.
-> **Hà:** That is exactly what she said.
+::: dialogue title="The night of the storm" gramen="was / were + V-ing — the past continuous" gramvi="Quá khứ tiếp diễn tả việc **đang** xảy ra tại một thời điểm trong quá khứ. Thường đi cùng quá khứ đơn: *while* + tiếp diễn, *when* + đơn." gramco="I was sleeping when it started"
+**Duy:** You look tired, Hà. Did you sleep at all last night?
+**Hà:** Not much. The wind [[was|gram:was]] hitting our window all night. At two o'clock a branch fell on the roof.
+**Duy:** Were you awake when it happened?
+**Hà:** I was lying in bed listening to the rain. Then there was a huge bang and the whole family got up.
+**Duy:** Was your mother frightened?
+**Hà:** A bit. While my dad was checking the roof, she was filling every bucket in the house with clean water.
+**Duy:** That was sensible. Our street was already under water at six this morning. I was cycling to school when I saw two men pushing a motorbike through it.
+**Hà:** Did you get through?
+**Duy:** No. I turned back, and my brother brought me here in his boat. It's the first time I have ever arrived at school by boat.
+**Hà:** Lucky you. The radio was [[warning]] people about the storm all yesterday afternoon, but nobody in my street moved anything upstairs.
+**Duy:** People never believe a [[forecast]] until they can see the water.
+**Hà:** My grandmother does. While we were watching television yesterday evening, she was quietly packing a bag with our papers and two torches.
+**Duy:** Your grandmother has been through more storms than the radio has.
+**Hà:** That is exactly what she said.
+:::
 
 ### 1.1 Comprehension
 
@@ -829,6 +823,15 @@ check three things:
 - Did you pause **at each new stage** of the report, and not inside a sentence?
 
 Repeat Step 2 until the report runs clearly from start to finish.
+
+### 5.4 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about a storm, a flood or a drought you know about."
+- What happened, and when
+- What people did before it
+- What the damage was
+- What helped afterwards
+:::
 
 ---
 

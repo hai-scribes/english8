@@ -9,6 +9,13 @@ Checks, all fail-closed:
   3. every entry has at least one sense with pos, en, vi and >= 2 examples
   4. every example actually contains the **bolded** target word
   5. no entry is orphaned (defined but never used by any unit)
+  6. every token glossed in a :::dialogue resolves here, and to a sense that
+     carries a Vietnamese gloss
+
+Check 6 is the dialogue's half. `tools/build.py` also refuses an unresolvable
+token, so the site cannot ship one either way; this is the check somebody
+auditing the vocabulary layer will actually look for, and it states the extra
+requirement the build does not: an L1 gloss, not merely an entry.
 """
 import json
 import re
@@ -24,6 +31,10 @@ b = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(b)
 
 REQ_SENSE = ("pos", "en", "vi")
+
+RE_DIALOGUE = re.compile(r"^:::[ \t]*dialogue\b[^\n]*\n(?P<body>.*?)\n:::[ \t]*$",
+                         re.M | re.S)
+RE_MARK = re.compile(r"\[\[([^\]|]+)(?:\|([^\]]+))?\]\]")
 
 
 def main() -> int:
@@ -73,6 +84,27 @@ def main() -> int:
                     if "**" not in eg:
                         problems.append(f"{key!r} sense {i}: example has no bolded target — {eg[:48]!r}")
 
+    # ---- 6: the glossed dialogue tokens ----------------------------------
+    glossed = 0
+    for md in sorted((ROOT / "units").glob("unit-*.md")):
+        text = md.read_text(encoding="utf-8")
+        for dm in RE_DIALOGUE.finditer(text):
+            for surface, alt in RE_MARK.findall(dm.group("body")):
+                key = (alt or surface).strip().lower()
+                if key.startswith("gram"):
+                    continue          # a construction, authored on the directive
+                glossed += 1
+                e = entries.get(key)
+                if not e:
+                    problems.append(f"unit {md.name}: glossed token {key!r} has no "
+                                    f"dictionary entry")
+                    continue
+                used.add(key)
+                if not any(s.get("vi") for s in (e.get("senses") or [])):
+                    problems.append(f"unit {md.name}: glossed token {key!r} has no "
+                                    f"Vietnamese gloss — an L1 gloss is the point "
+                                    f"of the construct")
+
     orphans = sorted(set(entries) - used)
     for o in orphans:
         problems.append(f"{o!r} defined in {where[o]} but no unit uses it")
@@ -90,7 +122,8 @@ def main() -> int:
     notes = sum(1 for e in entries.values() if e.get("note"))
     senses = sum(len(e.get("senses", [])) for e in entries.values())
     egs = sum(len(s.get("examples", [])) for e in entries.values() for s in e.get("senses", []))
-    print(f"PASS: {slots} vocabulary slots all resolve · {len(entries)} distinct entries · "
+    print(f"PASS: {slots} vocabulary slots and {glossed} dialogue glosses all "
+          f"resolve · {len(entries)} distinct entries · "
           f"{senses} senses ({multi} words with 2+) · {egs} examples · "
           f"{forms} word-family blocks · {notes} usage notes")
     return 0

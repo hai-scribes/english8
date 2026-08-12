@@ -24,30 +24,24 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-> **Ben:** You're up early, Hoa. Is something happening today?
-> **Hoa:** Tomorrow is the village festival. My grandmother wants everything
-> ready tonight.
-> **Ben:** A festival? What kind?
-> **Hoa:** It's a festival for the village guardian spirit. We hold it in the
-> second lunar month, every year.
-> **Ben:** What are all those things on the table?
-> **Hoa:** Offerings. The fruit, the flowers and the sticky rice all go to the
-> communal house in the morning.
-> **Ben:** Can I help? I've got an hour before my class.
-> **Hoa:** Please. Wrap these cakes in banana leaves — but wrap them tightly,
-> or they open in the pot.
-> **Ben:** Like this? … Is there a rule about the incense?
-> **Hoa:** Yes. My grandfather lights the first stick, because he is the oldest
-> person in the family. Then we bow three times.
-> **Ben:** Should I bow too? I don't want to make a mistake.
-> **Hoa:** Just copy me. And don't wear a hat inside the communal house —
-> that's the one thing people really mind.
-> **Ben:** Noted. What happens after the offerings?
-> **Hoa:** Games in the yard, and a gong that nobody can sleep through. Last
-> year an old man from the next village sang for two hours.
-> **Ben:** Was he any good?
-> **Hoa:** He was the loudest singer I have ever heard. Come and see for
-> yourself.
+::: dialogue title="The night before the festival" gramen="a / an / the" gramvi="Dùng **a/an** khi nhắc đến lần đầu; dùng **the** khi cả người nói và người nghe đều biết đang nói về cái nào." gramco="a festival → the festival"
+**Ben:** You're up early, Hoa. Is something happening today?
+**Hoa:** Tomorrow is [[the|gram:the]] village [[festival]]. My grandmother wants everything ready tonight.
+**Ben:** A festival? What kind?
+**Hoa:** It's a festival for the village guardian spirit. We hold it in the second [[lunar]] month, every year.
+**Ben:** What are all those things on the table?
+**Hoa:** Offerings. The fruit, the flowers and the sticky rice all go to the communal house in the morning.
+**Ben:** Can I help? I've got an hour before my class.
+**Hoa:** Please. [[Wrap]] these cakes in banana leaves — but wrap them tightly, or they open in the pot.
+**Ben:** Like this? … Is there a rule about the [[incense]]?
+**Hoa:** Yes. My grandfather lights the first stick, because he is the oldest person in the family. Then we bow three times.
+**Ben:** Should I bow too? I don't want to make a mistake.
+**Hoa:** Just copy me. And don't wear a hat inside the communal house — that's the one thing people really mind.
+**Ben:** Noted. What happens after the offerings?
+**Hoa:** Games in the yard, and a gong that nobody can sleep through. Last year an old man from the next village sang for two hours.
+**Ben:** Was he any good?
+**Hoa:** He was the loudest singer I have ever heard. Come and see for yourself.
+:::
 
 ### 1.1 Comprehension
 
@@ -671,6 +665,15 @@ check three things:
 - Did your pauses fall **between** turns rather than inside a sentence?
 
 Repeat Step 2 until all six exchanges run clearly.
+
+### 5.4 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about one custom your family keeps."
+- What happens, and when
+- Who does what
+- Why your family keeps it
+- Whether you will keep it yourself
+:::
 
 ---
 

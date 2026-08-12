@@ -24,27 +24,24 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-> **Duy:** Kim, can I ask you some questions for our history project?
-> **Kim:** Of course. What is it about?
-> **Duy:** The ethnic groups of Viet Nam. You're Tay, aren't you? Where does
-> your family live?
-> **Kim:** In a village in Cao Bang, up in the north. My parents and I moved to
-> Ha Noi last year, but my grandparents are still there.
-> **Duy:** Do they live in a stilt house?
-> **Kim:** They do. My great-grandfather built it. It's made of wood and bamboo,
-> and you climb a wooden staircase to get to the door.
-> **Duy:** How many rooms does it have?
-> **Kim:** One big one. We cook, eat, talk and sleep in the same space.
-> **Duy:** Who looks after the house now?
-> **Kim:** My grandparents and my uncle. My uncle repairs the roof every spring.
-> **Duy:** How much rice does your family grow?
-> **Kim:** I don't know the exact amount, but enough for the whole year. We have
-> terraced fields on the hillside behind the house.
-> **Duy:** Is there anything you miss?
-> **Kim:** The folk songs at Tet. And my grandmother's baskets — she weaves them
-> from bamboo and sells them at the market.
-> **Duy:** Can you weave?
-> **Kim:** Not yet. She says it takes a lot of patience, and I don't have much!
+::: dialogue title="A question for the project" gramen="How many …? — a Wh- question" gramvi="Câu hỏi Wh- theo thứ tự: từ để hỏi → trợ động từ → chủ ngữ → động từ chính." gramco="How many people live there?"
+**Duy:** Kim, can I ask you some questions for our history project?
+**Kim:** Of course. What is it about?
+**Duy:** The ethnic groups of Viet Nam. You're Tay, aren't you? Where does your family live?
+**Kim:** In a village in Cao Bang, up in the north. My parents and I moved to Ha Noi last year, but my grandparents are still there.
+**Duy:** Do they live in a [[stilt house]]?
+**Kim:** They do. My great-grandfather built it. It's made of wood and [[bamboo]], and you climb a wooden staircase to get to the door.
+**Duy:** [[How|gram:how]] many rooms does it have?
+**Kim:** One big one. We cook, eat, talk and sleep in the same space.
+**Duy:** Who looks after the house now?
+**Kim:** My grandparents and my uncle. My uncle repairs the roof every spring.
+**Duy:** How much rice does your family grow?
+**Kim:** I don't know the exact amount, but enough for the whole year. We have terraced fields on the hillside behind the house.
+**Duy:** Is there anything you miss?
+**Kim:** The folk songs at Tet. And my grandmother's baskets — she weaves them from bamboo and sells them at the market.
+**Duy:** Can you [[weave]]?
+**Kim:** Not yet. She says it takes a lot of patience, and I don't have much!
+:::
 
 ### 1.1 Comprehension
 
@@ -750,6 +747,15 @@ habit, not a trick — build it in until you stop noticing you are doing it.
 > hỏi, một câu mở rộng. Đây là thói quen giao tiếp cần luyện thành phản xạ.
 :::
 
+
+### 5.4 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about a group of people in Viet Nam and how they live."
+- Where they live
+- What their houses are like
+- One custom of theirs
+- Why it is worth knowing about
+:::
 
 ---
 

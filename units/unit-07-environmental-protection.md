@@ -24,26 +24,22 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-> **Ha:** Have you seen the lake behind the school? The water has gone brown.
-> **Duc:** I noticed it on Monday. It started changing colour after the new
-> workshop opened on the other side.
-> **Ha:** So you think the workshop is putting something into the water?
-> **Duc:** Maybe. My uncle says a factory can pollute a whole lake before
-> anybody reports it.
-> **Ha:** That's terrible. When I was small, we used to catch small fish there.
-> **Duc:** Not any more. As soon as the fish disappeared, the birds stopped
-> coming too.
-> **Ha:** Then we should do something. Mrs Lan runs the Green Club — she'll
-> listen.
-> **Duc:** She will, but she'll ask us for evidence. Once we have photographs
-> and dates, she can take it to the district office.
-> **Ha:** Fine. I'll take a photo every morning while I walk to school.
-> **Duc:** And I'll ask my uncle what to test the water for.
-> **Ha:** Good. We shouldn't wait until the lake is completely dead.
-> **Duc:** Nobody ever does anything until it's too late. Let's not be like
-> that.
-> **Ha:** Agreed. Whenever I walk past that lake now, I feel angry.
-> **Duc:** Keep the anger. It's useful.
+::: dialogue title="The lake behind the school" gramen="when — a time clause" gramvi="Mệnh đề thời gian bắt đầu bằng *when, before, after, until*. Nếu nó đứng trước mệnh đề chính thì có dấu phẩy ngăn cách." gramco="When the rain stops, we will go"
+**Ha:** Have you seen the lake behind the school? The water has gone brown.
+**Duc:** I noticed it on Monday. It started changing colour after the new workshop opened on the other side.
+**Ha:** So you think the workshop is putting something into the water?
+**Duc:** Maybe. My uncle says one factory can put enough [[sewage]] into a lake to kill it before anybody reports it.
+**Ha:** That's terrible. [[When|gram:when]] I was small, we used to catch small fish there — now the water looks [[toxic]].
+**Duc:** Not any more. As soon as the fish disappeared, the birds stopped coming too.
+**Ha:** Then we should do something. Mrs Lan runs the Green Club, and she says [[awareness]] is where every clean-up starts.
+**Duc:** She will, but she'll ask us for evidence. Once we have photographs and dates, she can take it to the district office.
+**Ha:** Fine. I'll take a photo every morning while I walk to school.
+**Duc:** And I'll ask my uncle what to test the water for.
+**Ha:** Good. We shouldn't wait until the lake is completely dead.
+**Duc:** Nobody ever does anything until it's too late. Let's not be like that.
+**Ha:** Agreed. Whenever I walk past that lake now, I feel angry.
+**Duc:** Keep the anger. It's useful.
+:::
 
 ### 1.1 Comprehension
 
@@ -645,6 +641,25 @@ check three things:
 - Did your pauses fall **between** points rather than inside a sentence?
 
 Repeat Step 2 until each answer runs clearly from its first word to its last.
+
+### 5.4 Read it again, against the clock
+
+You have already read *Two worlds in one park* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
+
+::: fluency mode="read" words="246" secs="150|120|90" ask="Read *Two worlds in one park* again from the top. Stop the clock the moment you reach the end."
+- Do not stop to look anything up — you have met all of it
+- Read for the sense of it, not word by word
+- Press **I finished** the moment you reach the last line
+:::
+
+### 5.5 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about one environmental problem near you."
+- What the problem is
+- What is causing it
+- Who it affects
+- One thing that would actually help
+:::
 
 ---
 

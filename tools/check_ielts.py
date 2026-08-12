@@ -484,7 +484,67 @@ def over_limit(given: str, words: str) -> bool:
 # a build failure rather than a block of raw markdown on the page. ":::taskk"
 # used to render its own source, keys and all, and no gate could see it.
 RE_OPENER = re.compile(r"^:::[ \t]*(?P<name>[A-Za-z][\w-]*)", re.M)
-KNOWN_DIRECTIVES = {"bridge", "task", "audio", "write", "clock", "thread", "passage"}
+KNOWN_DIRECTIVES = {"bridge", "task", "audio", "write", "clock", "thread", "passage",
+                    "dialogue", "fluency"}
+
+RE_DLG = re.compile(r"^:::[ \t]*dialogue\b(?P<attrs>[^\n]*)\n(?P<body>.*?)\n:::[ \t]*$",
+                    re.M | re.S)
+RE_FLU = re.compile(r"^:::[ \t]*fluency\b(?P<attrs>[^\n]*)\n(?P<body>.*?)\n?:::[ \t]*$",
+                    re.M | re.S)
+RE_GLOSS = re.compile(r"\[\[([^\]|]+)(?:\|([^\]]+))?\]\]")
+
+# How much support a glossed dialogue has to carry to be worth the construct.
+# Mine, not a source's: below three marked items the dialogue is not carrying
+# the unit's vocabulary and the learner is back to guessing from context.
+MIN_GLOSSES = 3
+
+
+def check_dialogue(tag: str, text: str, problems: list):
+    """A glossed dialogue that glosses nothing is a blockquote with extra steps.
+
+    The build already refuses a token it cannot resolve, so what is left for
+    the gate is the two things a build cannot see: that the support is actually
+    there, and that a grammar marker has a gloss authored for it.
+    """
+    for m in RE_DLG.finditer(text):
+        line = text[:m.start()].count("\n") + 1
+        attrs = dict(b.RE_ATTR.findall(m.group("attrs")))
+        marks = RE_GLOSS.findall(m.group("body"))
+        if len(marks) < MIN_GLOSSES:
+            problems.append(f"{tag}:{line}: :::dialogue marks {len(marks)} item(s) — "
+                            f"below {MIN_GLOSSES} the gloss is decoration and the "
+                            f"comprehension exercise is still a vocabulary test")
+        if any((k or s).startswith("gram") for s, k in marks) and not attrs.get("gramvi"):
+            problems.append(f"{tag}:{line}: a grammar marker with no gramvi= gloss")
+        for s, k in marks:
+            key = (k or s)
+            if not key.startswith("gram") and "**" in s:
+                problems.append(f"{tag}:{line}: glossed token {s!r} contains bold "
+                                f"markup — the marker and the emphasis fight over "
+                                f"the same span")
+
+
+def check_fluency(tag: str, text: str, problems: list):
+    """Known material, in less time each round, and nothing totalled."""
+    for m in RE_FLU.finditer(text):
+        line = text[:m.start()].count("\n") + 1
+        a = dict(b.RE_ATTR.findall(m.group("attrs")))
+        if a.get("mode") not in ("talk", "read"):
+            problems.append(f"{tag}:{line}: fluency mode={a.get('mode')!r} — 'talk' or 'read'")
+        try:
+            rounds = [int(x) for x in a.get("secs", "").split("|") if x.strip()]
+        except ValueError:
+            problems.append(f"{tag}:{line}: fluency secs= is not a '|' list of seconds")
+            continue
+        if len(rounds) < 2:
+            problems.append(f"{tag}:{line}: {len(rounds)} round(s) — one performance is "
+                            f"not fluency practice; the strand is the REPETITION")
+        elif sorted(rounds, reverse=True) != rounds:
+            problems.append(f"{tag}:{line}: fluency rounds do not shorten — the whole "
+                            f"shape is the same content in less time")
+        if a.get("mode") == "read" and not a.get("words"):
+            problems.append(f"{tag}:{line}: read-mode fluency needs words= or its rate "
+                            f"is computed from nothing")
 
 
 def check_directives(tag: str, text: str, problems: list):
@@ -494,6 +554,8 @@ def check_directives(tag: str, text: str, problems: list):
             problems.append(f"{tag}:{line}: {':::' + m.group('name')!r} is not a directive "
                             f"({', '.join(sorted(KNOWN_DIRECTIVES))}) — it would render as "
                             f"raw markdown, answer keys and all")
+    check_dialogue(tag, text, problems)
+    check_fluency(tag, text, problems)
     # A directive that is never closed swallows the rest of the file or, for
     # the ones whose body is optional, silently drops its content.
     opens = len(RE_OPENER.findall(text))

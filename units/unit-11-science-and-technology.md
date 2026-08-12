@@ -24,31 +24,25 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-> **Duy:** You weren't at the science club yesterday, Linh. What happened?
-> **Linh:** I had a dentist's appointment. Was it any good?
-> **Duy:** It was brilliant. Ms Hoa gave a talk about biometrics.
-> **Linh:** Bio— what? I've never heard that word.
-> **Duy:** Biometrics. She said that a machine could identify a person from a
-> fingerprint, a face, or even the iris of the eye.
-> **Linh:** So my phone does biometrics every single morning.
-> **Duy:** Exactly. She told us that no two fingerprints are the same. Then she
-> asked us to guess what was coming next.
-> **Linh:** And what was coming next?
-> **Duy:** Nanolearning. She explained that it meant studying in very short
-> bursts — three or four minutes, one idea at a time.
-> **Linh:** My brother told me he had learned the whole periodic table that way.
-> I didn't believe him.
-> **Duy:** He may be telling the truth. Ms Hoa said that short lessons were
-> easier to remember than long ones.
-> **Linh:** Did anyone ask about robot teachers? Nam is obsessed with that.
-> **Duy:** He asked, of course. Ms Hoa told him that a robot would never replace
-> her.
-> **Linh:** And what did he say to that?
-> **Duy:** Nothing. He wrote it down and said he would put it in the club
-> magazine.
-> **Linh:** Send me your notes tonight, then.
-> **Duy:** I'll send them now. She told me that Friday's test would cover
-> everything.
+::: dialogue title="You missed the science club" gramen="said (that) — reported speech" gramvi="Khi thuật lại lời nói, lùi thì một bậc và đổi đại từ: *“I am tired”* → *He said he **was** tired*." gramco="She said she was busy"
+**Duy:** You weren't at the science club yesterday, Linh. What happened?
+**Linh:** I had a dentist's appointment. Was it any good?
+**Duy:** It was brilliant. Ms Hoa gave a talk about [[biometrics]].
+**Linh:** Bio— what? I've never heard that word.
+**Duy:** Biometrics. She [[said|gram:said]] that a machine could identify a person from a [[fingerprint]], a face, or even the [[iris]] of the eye.
+**Linh:** So my phone does biometrics every single morning.
+**Duy:** Exactly. She told us that no two fingerprints are the same. Then she asked us to guess what was coming next.
+**Linh:** And what was coming next?
+**Duy:** [[Nanolearning]]. She explained that it meant studying in very short bursts — three or four minutes, one idea at a time.
+**Linh:** My brother told me he had learned the whole periodic table that way. I didn't believe him.
+**Duy:** He may be telling the truth. Ms Hoa said that short lessons were easier to remember than long ones.
+**Linh:** Did anyone ask about robot teachers? Nam is obsessed with that.
+**Duy:** He asked, of course. Ms Hoa told him that a robot would never replace her.
+**Linh:** And what did he say to that?
+**Duy:** Nothing. He wrote it down and said he would put it in the club magazine.
+**Linh:** Send me your notes tonight, then.
+**Duy:** I'll send them now. She told me that Friday's test would cover everything.
+:::
 
 ### 1.1 Comprehension
 
@@ -817,6 +811,15 @@ check three things:
 - Did your pauses fall **between** points rather than inside a sentence?
 
 Repeat Step 2 until each answer runs clearly from its first word to its last.
+
+### 5.4 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about one invention you would not want to lose."
+- What it is
+- What life was like before it
+- Who uses it most
+- What might replace it
+:::
 
 ---
 

@@ -391,8 +391,8 @@ footer.foot p{margin:0;max-width:74ch}
 
 /* ---------------- review + calibration ---------------------------------- */
 .review .row{margin-top:.5rem}
-.score-line{margin:.4rem 0 .2rem;font-size:1.05rem}
-.score-line b{font-family:var(--f-mono);font-size:1.5rem;color:var(--teal);
+.tally-line{margin:.4rem 0 .2rem;font-size:1.05rem}
+.tally-line b{font-family:var(--f-mono);font-size:1.5rem;color:var(--teal);
   font-variant-numeric:tabular-nums}
 .calib{margin:.9rem 0;padding:.85rem .95rem;background:var(--sunk);border-radius:var(--r)}
 .calib h3{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;
@@ -605,3 +605,40 @@ footer.foot p{margin:0;max-width:74ch}
   background:var(--surface);color:var(--faint)}
 .i-flag:hover{border-color:var(--clay);color:var(--clay)}
 .i-flag[aria-pressed="true"]{border-color:var(--clay);color:var(--clay);background:var(--clay-wash)}
+
+/* ---- the glossed dialogue (Getting Started) --------------------------------
+   Support in Lesson 1 only: the underline marks a word whose meaning is one
+   tap away, and the same word is bare everywhere after this. */
+.dlg{border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.1rem;margin:1.1rem 0;
+  background:var(--card)}
+.dlg .d-h{display:flex;gap:.6rem;align-items:baseline;margin-bottom:.5rem}
+.dlg .d-k{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--teal)}
+.dlg .d-t{font-weight:600}
+.dlg .d-say{font-size:.87rem;color:var(--muted);margin:0 0 .8rem}
+.dlg .d-body p{margin:0 0 .5rem;line-height:1.75}
+.gl{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;
+  border-bottom:2px solid var(--clay);line-height:inherit}
+.gl[data-kind=gram]{border-bottom-style:dotted;border-bottom-color:var(--teal)}
+.gl[aria-expanded=true]{background:var(--clay-soft,rgba(180,80,60,.12))}
+.gloss{margin:.4rem 0 .8rem;padding:.7rem .85rem;background:var(--soft);
+  border-left:3px solid var(--clay);border-radius:0 var(--r) var(--r) 0;font-size:.92rem}
+.gloss[data-kind=gram]{border-left-color:var(--teal)}
+.gloss .hw{font-weight:650}
+.gloss .ipa{font-family:var(--f-mono);font-size:.85em;color:var(--muted);margin-left:.4rem}
+.gloss .vi{display:block;margin-top:.15rem}
+.gloss .co{display:block;margin-top:.3rem;font-size:.87em;color:var(--muted)}
+
+/* ---- the fluency strand --------------------------------------------------- */
+.fluency{border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.1rem;margin:1.1rem 0;
+  background:var(--card)}
+.fluency .f-h{display:flex;gap:.6rem;align-items:baseline;margin-bottom:.5rem}
+.fluency .f-k{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--teal)}
+.fluency .f-t{font-size:.8rem;color:var(--muted)}
+.fluency .f-say{font-size:.9rem;color:var(--muted);margin:0 0 .7rem}
+.fluency .f-rounds{margin:.5rem 0;padding-left:1.2rem}
+.fluency .f-rounds li[data-done]{color:var(--muted)}
+.fluency .f-ctl{display:flex;gap:.7rem;align-items:center;margin:.7rem 0 .3rem}
+.fluency .f-log{font-size:.9rem}
+.fluency .f-log div{padding:.25rem 0;border-bottom:1px solid var(--line)}

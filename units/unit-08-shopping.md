@@ -24,28 +24,22 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-> **Linh:** Are you free on Saturday? I need new school shoes and I hate
-> choosing alone.
-> **Duy:** I'm always free on Saturday. Where do you want to go — the market or
-> the shopping centre?
-> **Linh:** The centre. There's a sports shop on the second floor. They rarely
-> have my size, but the sale starts on Monday, so they might be putting things
-> out already.
-> **Duy:** Monday? Then everything will be cheaper if we wait.
-> **Linh:** True, but the good sizes never last. My cousin waited last year and
-> got nothing.
-> **Duy:** Fair enough. What time does the centre open?
-> **Linh:** It opens at nine on Saturdays. The bus leaves our stop at 8:40.
-> **Duy:** That's early. I usually don't get up before ten at the weekend.
-> **Linh:** You'll survive. And I sometimes go to the market afterwards — the
-> stalls near the gate sell socks for almost nothing.
-> **Duy:** Do they take cards?
-> **Linh:** At a market? Hardly ever. Bring cash.
-> **Duy:** Right. One more thing — can you return things there if they don't
-> fit?
-> **Linh:** No. You have to try everything on at the stall. In the shopping
-> centre they give you a receipt and you can always ask for a refund.
-> **Duy:** Then I'm buying my shoes upstairs and my socks downstairs.
+::: dialogue title="Two pairs of shoes" gramen="usually — an adverb of frequency" gramvi="Trạng từ tần suất đứng **trước** động từ thường, nhưng **sau** động từ *to be*." gramco="I usually go · She is always late"
+**Linh:** Are you free on Saturday? I need new school shoes and I hate choosing alone.
+**Duy:** I'm always free on Saturday. Where do you want to go — the market or the [[shopping centre]]?
+**Linh:** The centre. There's a sports shop on the second floor. They rarely have my size, but the sale starts on Monday, so they might be putting things out already.
+**Duy:** Monday? Then everything will be cheaper if we wait.
+**Linh:** True, but the good sizes never last. My cousin waited last year and got nothing.
+**Duy:** Fair enough. What time does the centre open?
+**Linh:** It opens at nine on Saturdays. The bus leaves our stop at 8:40.
+**Duy:** That's early. I [[usually|gram:usually]] don't get up before ten at the weekend.
+**Linh:** You'll survive. And I sometimes go to the market afterwards — the stalls near the gate sell socks for almost nothing.
+**Duy:** Do they take cards?
+**Linh:** At a market? Hardly ever. Bring [[cash]].
+**Duy:** Right. One more thing — can you return things there if they don't fit?
+**Linh:** No. You have to try everything on at the [[stall]]. In the shopping centre they give you a [[receipt]] and you can always ask for a [[refund]].
+**Duy:** Then I'm buying my shoes upstairs and my socks downstairs.
+:::
 
 ### 1.1 Comprehension
 
@@ -708,6 +702,15 @@ pause where one idea ends is help for your listener, not a mistake.
 > **Tiếng Việt:** Một lượt nói, **một** chủ đề. Dừng giữa các ý — đó là điểm cộng.
 :::
 
+
+### 5.4 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about how and where you shop."
+- Where your family shops
+- What you buy yourself
+- Online or in a shop, and why
+- One thing that has gone wrong
+:::
 
 ---
 

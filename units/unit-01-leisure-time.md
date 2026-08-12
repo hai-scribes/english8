@@ -24,21 +24,18 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-> **Mai:** What are you doing this weekend, Khang?
-> **Khang:** Nothing yet. I usually stay home and watch movies, but I'm getting
-> bored of that.
-> **Mai:** Same. I love cooking, so I sometimes make lunch for my family on
-> Saturdays. But this week my mum wants to do it herself.
-> **Khang:** Lucky you. My family can't stand my cooking.
-> **Mai:** Ha! Well — a new bookshop opened near the swimming pool. Do you want
-> to go and look around?
-> **Khang:** I don't mind going, but I'm not really a reader. Is there anything
-> else there?
-> **Mai:** They have a café upstairs, and a big table with board games. You can
-> play for free if you buy a drink.
-> **Khang:** Now that sounds good. I'd love to try that. What time?
-> **Mai:** Ten o'clock? Then we could go for a swim afterwards.
-> **Khang:** Perfect. I hate getting up early at the weekend, but I'll manage.
+::: dialogue title="Saturday plans" gramen="love / can't stand + V-ing" gramvi="Sau các động từ chỉ sự thích hoặc không thích (love, like, enjoy, can't stand, hate), động từ theo sau thêm **-ing**." gramco="I love cooking · I can't stand waiting"
+**Mai:** What are you doing this weekend, Khang?
+**Khang:** Nothing yet. I usually stay home and watch movies, but I'm getting bored of that.
+**Mai:** Same. I love [[cooking|cook]], so I sometimes make lunch for my family on Saturdays. But this week my mum wants to do it herself.
+**Khang:** Lucky you. My family [[can't stand]] my cooking.
+**Mai:** Ha! Well — a new [[bookshop]] opened near the [[swimming pool]]. Do you want to go and look around?
+**Khang:** I don't mind going, but I'm not really a reader. Is there anything else there?
+**Mai:** They have a café upstairs, and a big table with [[board games|board game]]. You can play for free if you buy a drink.
+**Khang:** Now that sounds good. I'd [[love|gram:v-ing]] to try that. What time?
+**Mai:** Ten o'clock? Then we could go for a swim afterwards.
+**Khang:** Perfect. I [[can't stand|can't stand]] getting up early at the weekend, but I'll manage.
+:::
 
 ### 1.1 Comprehension
 
@@ -602,6 +599,16 @@ not inside them.
 :::
 
 Repeat Step 2 until you can answer all five clearly.
+
+### 5.4 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about **your own** free time — what you do, when, and what you can't stand. Use the words from this unit."
+- What you do on a weekday evening
+- What you do at the weekend
+- One thing you are keen on, and why
+- One thing you can't stand
+:::
+
 
 ---
 

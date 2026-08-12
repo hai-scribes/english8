@@ -525,13 +525,18 @@ let REVIEW = (() => {
 function saveReview(){
   try { localStorage.setItem(R_KEY, JSON.stringify(REVIEW)); } catch(e){}
 }
-const rKey = (u, w) => u + ":" + String(w).toLowerCase();
+/* The record key carries the TYPE, not just the string. Without it a word and a
+   grammar item that happen to share a spelling — "so" the conjunction against
+   "so" the headword — would share one review record, and answering either would
+   schedule both. Legacy word records were keyed `unit:word`, and that is still
+   what a word produces, so a learner's existing schedule survives the change. */
+const rKey = (u, type, id) => u + ":" + (type && type !== "word" ? type + ":" : "") + String(id).toLowerCase();
 
 /* Delayed retention, not in-session recall. An item only counts toward
    retention when it comes back after a real gap; nothing is ever marked
    "mastered" in the session that taught it. */
-function schedule(unit, word, ok){
-  const k = rKey(unit, word), t = todayNum();
+function schedule(unit, type, id, ok){
+  const k = rKey(unit, type, id), t = todayNum();
   const r = REVIEW[k] || { due:t, seen:0, kept:0, delayed:0 };
   const gap = r.last === undefined ? 0 : t - r.last;
   if (gap >= REVIEW_DAYS){ r.delayed++; if (ok) r.kept++; }
@@ -541,15 +546,53 @@ function schedule(unit, word, ok){
   REVIEW[k] = r;
   saveReview();
 }
+/* Every kind the unit teaches, not only its words. `DATA.review` is a flat,
+   typed list built from the units' own exercises, so nothing here rehearses
+   something the lessons never asked. */
+/* An item joins the cycle when the lesson that TAUGHT it is marked done, and
+   its first return is one interval later — not today. Enrolling on sight would
+   drop five hundred items into the queue on day one, and enrolling only on a
+   right answer (which is how words enter, through practice) would mean a
+   grammar target nobody practised never came back at all.
+   Words keep their existing path and are not touched here. */
+function enrolReview(){
+  if (DATA.kind !== "home") return;
+  const t = todayNum();
+  let added = 0;
+  for (const it of (DATA.review || [])){
+    if (it.type === "word" || !it.lesson) continue;
+    if (!lessonDone(it.unit, it.lesson)) continue;
+    const k = rKey(it.unit, it.type, it.id);
+    if (REVIEW[k]) continue;
+    REVIEW[k] = { due:t + REVIEW_DAYS, seen:0, kept:0, delayed:0 };
+    added++;
+  }
+  if (added) saveReview();
+}
+
 function dueItems(){
   const t = todayNum(), out = [];
-  const all = (DATA.kind === "home" ? DATA.vocab : null);
-  if (!all) return out;
-  for (const u of Object.keys(all))
-    for (const w of all[u]){
-      const r = REVIEW[rKey(u, w.word)];
-      if (r && r.due <= t) out.push(Object.assign({ _u:u }, w));
-    }
+  if (DATA.kind !== "home") return out;
+  const all = DATA.review || [];
+  for (const it of all){
+    const r = REVIEW[rKey(it.unit, it.type, it.id)];
+    if (r && r.due <= t) out.push(Object.assign({ _u:it.unit }, it));
+  }
+  return out;
+}
+
+/* What is in the cycle, per kind. Reported separately and never added up:
+   one combined figure across five different kinds of target is exactly the
+   composite D9 and A2 forbid, and no published scale would make it mean
+   anything anyway. */
+function reviewByKind(){
+  const out = {};
+  for (const it of (DATA.review || [])){
+    const r = REVIEW[rKey(it.unit, it.type, it.id)];
+    if (!r) continue;
+    (out[it.type] = out[it.type] || { seen:0, due:0 }).seen++;
+    if (r.due <= todayNum()) out[it.type].due++;
+  }
   return out;
 }
 function retention(){
@@ -576,9 +619,27 @@ function retention(){
    There is no accuracy-scoring module and no ranking of items by frequency
    band, CEFR level or word-list membership: each of those was checked against
    the evidence and each fails. Order is random. */
+/* A word item names itself; a grammar or function item is a question, so it is
+   labelled by the exercise it came back from rather than by its own prompt. */
+const itemName = w => w.word || (w.from ? w.from : String(w.q || "").slice(0, 40));
+
 function buildItems(words, mode){
   const list = shuffle(words);
   return list.map((w, i) => {
+    /* The four non-word kinds are asked exactly as their own lesson asked
+       them: the prompt the unit printed, marked against the key the unit
+       published. Inventing a new question for a target the learner met in a
+       different form would be testing something else. */
+    if (!w.word && w.a){
+      /* An imported choice item is unanswerable without the option set its own
+         exercise printed — "enjoy" wanting "1" would mark every honest answer
+         wrong. When the item had options, it comes back AS a choice. */
+      if (w.opts && w.opts.length){
+        return { fmt:"recall-mc", w,
+                 options:shuffle(w.opts.map(o => ({ t:o, ok:o === w.a }))) };
+      }
+      return { fmt:"recall", w, keys:[w.a] };
+    }
     const rich = [];
     if (w.colloc && w.colloc.length) rich.push("colloc");
     if (w.cloze) rich.push("cloze");
@@ -637,7 +698,23 @@ function runEngine(mode, words, unit, hostSel){
       + 'autocorrect="off" spellcheck="false" placeholder="' + esc(ph) + '">'
       + '<div class="row"><button class="btn" id="go">Check</button></div>';
     let body = "", note = "";
-    if (q.fmt === "mc"){
+    if (q.fmt === "recall" || q.fmt === "recall-mc"){
+      const KIND = { grammar:"Grammar", function:"Everyday English",
+                     pron:"Pronunciation", colloc:"Collocation" };
+      /* The prompt has already been through the generator's inline renderer, so
+         it is HTML. Escaping it again printed literal <strong> tags and turned
+         &#x27; into visible text. */
+      body = '<p class="lede">' + esc(KIND[w.type] || "From this unit")
+        + (w.from ? ' · ' + esc(w.from) : "") + '</p>'
+        + (w.ask ? '<p class="note small">' + w.ask + '</p>' : "")
+        + '<div class="prompt sent">' + w.q + '</div>'
+        + (q.fmt === "recall-mc"
+            ? '<div class="choices">'
+              + q.options.map((o, i) => '<button data-i="' + i + '">' + esc(o.t)
+                                        + '</button>').join("")
+              + '</div>'
+            : field("your answer"));
+    } else if (q.fmt === "mc"){
       body = '<div class="prompt">' + esc(w.word) + '<span class="ipa">' + esc(w.ipa) + '</span></div>'
         + (audio ? '<div class="row">' + audio + '</div>' : "")
         + '<div class="choices">'
@@ -659,7 +736,8 @@ function runEngine(mode, words, unit, hostSel){
         + '<div class="row">' + audio + '</div>' + field("what you heard")
         + '<div class="row"><button class="btn quiet" id="noaudio">No sound — show the meaning</button></div>';
     }
-    if (q.fmt === "colloc" || q.fmt === "cloze" || q.fmt === "type" || q.fmt === "listen")
+    if (q.fmt === "colloc" || q.fmt === "cloze" || q.fmt === "type"
+        || q.fmt === "listen" || q.fmt === "recall")
       note = '<p class="note small">Spelling counts. UK and US spellings are both accepted; '
            + 'two answers in one gap score nothing.</p>';
     host.innerHTML = chrome(body, note);
@@ -686,7 +764,7 @@ function runEngine(mode, words, unit, hostSel){
     const { res, given } = st.pending;
     const q = st.items[st.i], w = q.w, ok = res.ok;
     if (ok) st.right++; else st.wrong.push({ q, given, why:res.why });
-    schedule(q.w._u || st.unit, w.word, ok);
+    schedule(q.w._u || st.unit, w.type || "word", w.id || w.word, ok);
     if (st.mode === "test"){ st.i++; return paintQ(); }
     const why = res.why === "two"
       ? '<div class="n">Two answers in one gap score nothing, even when one of them is right.</div>'
@@ -694,9 +772,14 @@ function runEngine(mode, words, unit, hostSel){
     host.innerHTML = chrome(
       '<div class="verdict ' + (ok ? "ok" : "no") + '">'
       + '<b>' + (ok ? "Correct" : "Not quite") + '</b>'
-      + '<div>' + esc(w.word) + ' — ' + esc(w.vi) + '</div>' + why + '</div>'
+      + '<div>' + (w.word
+            ? esc(w.word) + ' — ' + esc(w.vi)
+            /* A non-word item has no gloss to show, so the answer IS the
+               feedback — plus the unit's own reason where it wrote one. */
+            : esc(w.a) + (w.why ? ' <span class="ipa">' + esc(w.why) + '</span>' : ""))
+        + '</div>' + why + '</div>'
       + (w.colloc ? '<p class="note small"><b>Goes with:</b> ' + w.colloc.map(esc).join(" · ") + '</p>' : "")
-      + (canListen() ? '<div class="row"><button class="speak" data-say="' + esc(sayWord(w)) + '">🔊 Hear it</button>'
+      + (w.word && canListen() ? '<div class="row"><button class="speak" data-say="' + esc(sayWord(w)) + '">🔊 Hear it</button>'
           + '<button class="speak" data-say="' + esc(sayWord(w)) + '" data-slow="1">🐢 Slowly</button></div>' : "")
       + '<div class="row"><button class="btn" id="next">Continue</button></div>');
     if (!ok) st.items.push(q);                 // wrong items come back
@@ -735,14 +818,17 @@ function runEngine(mode, words, unit, hostSel){
     }
     const ret = retention();
     const names = [];
-    for (const x of st.wrong) if (!names.includes(x.q.w.word)) names.push(x.q.w.word);
+    for (const x of st.wrong){
+      const nm = itemName(x.q.w);
+      if (nm && !names.includes(nm)) names.push(nm);
+    }
     const missed = names.length
       ? '<div class="note"><b>Back tomorrow:</b> ' + names.map(esc).join(" \u00b7 ") + '</div>'
       : '<div class="note">Every item right. They are scheduled to come back in '
         + REVIEW_DAYS + ' days.</div>';
     host.innerHTML = '<div class="card engine"><h2>'
       + (st.mode === "test" ? "Unit test — result" : MODE_LABEL[st.mode] + " finished") + '</h2>'
-      + '<p class="score-line"><b>' + st.right + ' of ' + total + '</b> right in this session.</p>'
+      + '<p class="tally-line"><b>' + st.right + ' of ' + total + '</b> right in this session.</p>'
       + calibrationLine()
       + (ret.checked
           ? '<p class="note"><b>Kept after a week:</b> ' + ret.kept + ' of ' + ret.checked
@@ -809,6 +895,7 @@ function runEngine(mode, words, unit, hostSel){
 /* ---------------- the review card on the home page ----------------------- */
 function paintReview(){
   if (DATA.kind !== "home") return;
+  enrolReview();
   const card = $("#reviewCard"), n = $("[data-review-due]");
   const due = dueItems();
   if (n) n.textContent = due.length;
@@ -825,6 +912,22 @@ function paintReview(){
       + "spacing them out is what makes them stick, so coming back tomorrow beats going again now.";
   if (brk) brk.textContent = ret.checked
     ? ret.kept + "/" + ret.checked + " kept after a real gap" : "";
+  /* What is in the cycle, one line per kind, nothing summed. Five different
+     kinds of target do not share a scale, so a single figure over them would
+     be a number with no meaning as well as a prohibited one. */
+  const kinds = $("#reviewKinds");
+  if (kinds){
+    const LABEL = { word:"Words", colloc:"Collocations", grammar:"Grammar",
+                    function:"Everyday English", pron:"Pronunciation" };
+    const by = reviewByKind();
+    const rows = Object.keys(LABEL).filter(k => by[k])
+      .map(k => '<tr><td>' + LABEL[k] + '</td><td>' + by[k].seen + '</td><td>'
+                + (by[k].due || "—") + '</td></tr>').join("");
+    kinds.innerHTML = rows
+      ? '<div class="scroll"><table><thead><tr><th>In the cycle</th><th>Items</th>'
+        + '<th>Due</th></tr></thead><tbody>' + rows + '</tbody></table></div>'
+      : "";
+  }
   if (btn){
     btn.setAttribute("aria-disabled", String(!due.length));
     btn.textContent = due.length ? "Review " + due.length + " item" + (due.length === 1 ? "" : "s")
@@ -1118,6 +1221,15 @@ function calibrationLine(marks, conf, unit, record){
     + '</table><p>' + verdict + '</p></div>';
 }
 
+/* A task's own "give it back to me" hook, keyed by task id.
+   It exists for exactly one caller — the listening LEARN pass — and it is a
+   registry rather than a button on the task because a task must never offer
+   this to itself. A marked attempt is committed: that is what makes the word
+   limit, the spelling rule and the single play mean anything, and a Try-again
+   the learner can reach on any exercise would quietly undo all three. The
+   learn pass may hand one exercise back because nothing there was spent. */
+const TASK_RESET = {};
+
 function initTasks(){
   const list = DATA.tasks || [];
   if (!list.length) return;
@@ -1218,6 +1330,35 @@ function initTasks(){
       document.dispatchEvent(new CustomEvent("en8:task-done", { detail:{ id:t.id } }));
     });
 
+    /* Undo a marked attempt completely: the stored answers go too, or a
+       refresh would put the old marks straight back and the second attempt
+       would be a suggestion rather than a fact. */
+    TASK_RESET[t.id] = () => {
+      delete TASKS[t.id];
+      saveTasks();
+      t.items.forEach((it, i) => {
+        const li = $('.i[data-i="' + i + '"]', root);
+        if (!li) return;
+        delete li.dataset.ok;
+        const out = $(".i-out", li);
+        if (out) out.innerHTML = "";
+        $$("input", li).forEach(x => {
+          x.disabled = false;
+          if (x.type === "radio" || x.type === "checkbox") x.checked = false;
+          else x.value = "";
+        });
+        $$(".i-conf button", li).forEach(x => { x.disabled = false; x.classList.remove("on"); });
+        conf[i] = null;
+      });
+      const cal = $(".t-cal", root);
+      if (cal) cal.remove();
+      out.innerHTML = "";
+      check.disabled = false;
+      root.dataset.done = "";
+      delete root.dataset.timeup;
+      if (t.conf) gate();
+    };
+
     const was = TASKS[t.id];
     if (was && was.given){
       /* Put the answers back before re-marking, so the learner sees what they
@@ -1301,6 +1442,151 @@ function owned(root){
     .filter(x => below(root, x) && !(next && below(next, x)));
 }
 
+/* ---------------- the glossed dialogue -----------------------------------
+   Tap, never hover: this is read on a phone, and a hover-only gloss reaches
+   neither touch nor a keyboard. The gloss opens AFTER the paragraph rather
+   than inside the line, so revealing one never reflows the sentence being
+   read. One at a time, and Escape closes.
+
+   Support here, withdrawal later — the same items come back bare in the later
+   lessons and in the spaced review. That is the whole mechanism, and the half
+   the build could most easily have shipped alone. */
+function initDialogue(){
+  $$('[data-role="dialogue"]').forEach(root => {
+    let glosses = [];
+    try { glosses = JSON.parse(root.dataset.glosses || "[]"); } catch(e){ return; }
+    let open = null;
+
+    const shut = btn => {
+      btn.setAttribute("aria-expanded", "false");
+      const g = document.getElementById(btn.getAttribute("aria-controls"));
+      if (g) g.hidden = true;
+      open = null;
+    };
+
+    $$(".gl", root).forEach((btn, i) => {
+      const d = glosses[Number(btn.dataset.g)];
+      if (!d) return;
+      const id = (root.dataset.dialogue || "d") + "-g" + i;
+      btn.setAttribute("aria-controls", id);
+
+      const g = document.createElement("div");
+      g.className = "gloss";
+      g.id = id;
+      g.hidden = true;
+      if (d.kind === "gram") g.dataset.kind = "gram";
+      g.innerHTML = '<span class="hw"></span><span class="ipa"></span>'
+                  + '<span class="vi"></span><span class="co"></span>';
+      $(".hw", g).textContent = d.hw || "";
+      $(".ipa", g).textContent = d.ipa || "";
+      $(".vi", g).textContent = d.vi || "";
+      $(".co", g).textContent = d.co || "";
+      const host = btn.closest("p") || root;
+      host.parentNode.insertBefore(g, host.nextSibling);
+
+      btn.addEventListener("click", () => {
+        const was = btn.getAttribute("aria-expanded") === "true";
+        if (open && open !== btn) shut(open);
+        if (was){ shut(btn); return; }
+        btn.setAttribute("aria-expanded", "true");
+        g.hidden = false;
+        open = btn;
+      });
+    });
+
+    root.addEventListener("keydown", ev => {
+      if (ev.key === "Escape" && open) shut(open);
+    });
+  });
+}
+
+/* ---------------- the fluency strand -------------------------------------
+   Known material, repeated, in less time each round. The panel's whole job is
+   to make the repetition happen and to record what it took — so each round is
+   logged on its OWN line, with its own rate. Nothing is averaged and nothing
+   is scored: a single fluency figure over three rounds would be the composite
+   this repository forbids everywhere else, and it would hide the only thing
+   worth seeing, which is whether round 3 beat round 1. */
+function initFluency(){
+  $$('[data-role="fluency"]').forEach(root => {
+    const btn = $(".f-start", root), state = $(".f-state", root),
+          log = $(".f-log", root), rounds = $$(".f-rounds li", root);
+    if (!btn || !rounds.length) return;
+    const mode = root.dataset.mode || "talk";
+    const words = Number(root.dataset.words || 0);
+    const KEY = "en8:fluency:" + root.dataset.fluency;
+
+    let done = [];
+    try { done = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch(e){}
+
+    const paint = () => {
+      rounds.forEach((li, i) => {
+        if (done[i]) li.dataset.done = "1";
+      });
+      log.innerHTML = done.map((d, i) => {
+        if (!d) return "";
+        const rate = (mode === "read" && words && d.secs)
+          ? " · <b>" + Math.round(words / (d.secs / 60)) + "</b> words a minute" : "";
+        return '<div>Round ' + (i + 1) + ': finished with <b>' + d.left
+             + 's</b> to spare' + rate + '</div>';
+      }).join("");
+      const next = done.length;
+      if (next >= rounds.length){
+        btn.disabled = false;
+        btn.textContent = "Run it again from round 1";
+        state.innerHTML = "<b>All rounds done.</b> Fluency work is worth repeating — "
+                        + "starting again clears this log.";
+        if (!btn.dataset.rewired){
+          btn.dataset.rewired = "1";
+          btn.addEventListener("click", () => {
+            if (done.length < rounds.length) return;
+            done = [];
+            try { localStorage.removeItem(KEY); } catch(e){}
+            rounds.forEach(li => delete li.dataset.done);
+            paint();
+          });
+        }
+      } else {
+        btn.disabled = false;
+        btn.textContent = "Start round " + (next + 1);
+      }
+    };
+    paint();
+
+    btn.addEventListener("click", () => {
+      const i = done.length;
+      if (i >= rounds.length) return;
+      const secs = Number(rounds[i].dataset.secs || 0);
+      btn.disabled = true;
+      let left = secs;
+      const show = () => {
+        state.textContent = Math.floor(left / 60) + ":" + String(left % 60).padStart(2, "0")
+                          + " left — keep going";
+      };
+      show();
+      const stop = document.createElement("button");
+      stop.className = "btn quiet";
+      stop.type = "button";
+      stop.textContent = "I finished";
+      $(".f-ctl", root).appendChild(stop);
+
+      const finish = left_ => {
+        clearInterval(iv);
+        stop.remove();
+        done[i] = { secs: secs - left_, left: left_ };
+        try { localStorage.setItem(KEY, JSON.stringify(done)); } catch(e){}
+        paint();
+      };
+      const iv = setInterval(() => {
+        left--;
+        if (left <= 0){ finish(0); state.innerHTML = "<b>Time.</b>"; return; }
+        show();
+      }, 1000);
+      stop.addEventListener("click", () => finish(left));
+    });
+  });
+}
+
 function initAudio(){
   const list = DATA.audio || [];
   list.forEach(a => {
@@ -1339,6 +1625,93 @@ function initAudio(){
         : "<b>Already started.</b> It plays once, and that play is spent.";
       if (played) revealScript();
     }
+    /* ---- the learning pass ------------------------------------------------
+       Replayable, and the script opens once a real attempt has been made.
+       It deliberately does NOT touch PLAY_KEY: practising must not spend the
+       single play, or the two passes collapse into one and C6 is decoration.
+       It also never disables a task — nothing here is timed. */
+    const lbtn = $(".p-learn", root), lstate = $(".p-lstate", root);
+    if (lbtn){
+      let plays = 0, running = false;
+      const paintL = () => {
+        lbtn.textContent = plays ? "Play it again" : "Practise it first";
+        lstate.textContent = plays
+          ? "Practised " + plays + (plays === 1 ? " time" : " times")
+            + ". This does not use your one play."
+          : "";
+      };
+      paintL();
+      lbtn.addEventListener("click", () => {
+        /* speakSeq() cancels synthesis globally and a cancelled utterance never
+           fires its completion callback, so starting one pass mid-way through
+           the other stalled the first and could leave the single play spent
+           without ever playing. Neither pass may start while the other runs. */
+        if (running || root.dataset.pass === "test") return;
+        primeSpeech();
+        if (!canListen()){
+          lstate.textContent = "No speech voice on this device — use “Take it "
+                             + "once” below, which shows you the script instead.";
+          lbtn.disabled = true;
+          return;
+        }
+        running = true;
+        root.dataset.pass = "learn";      // which pass is running, for state and styling
+        lbtn.disabled = true;
+        lstate.textContent = "Playing — you can replay this as often as you like";
+        speakSeq(a.script, () => {
+          running = false;
+          root.dataset.pass = "";
+          lbtn.disabled = false;
+          plays++;
+          paintL();
+          /* The script is the answer sheet, so it opens only after an attempt
+             has been marked — otherwise the learning pass hands the listening
+             lesson over as a reading lesson, which is the exact defect the
+             directive exists to prevent. */
+          if (owned(root).some(x => x.dataset.done === "1")) revealScript();
+          paintRetry();
+        });
+      });
+      /* `owned(root)`, not any task on the page: on a Review the Language
+         exercises sit ABOVE the player, and marking one of those revealed a
+         listening script the learner had never attempted. */
+      document.addEventListener("en8:task-done", () => {
+        if (plays > 0 && owned(root).some(x => x.dataset.done === "1")) revealScript();
+        paintRetry();
+      });
+
+      /* The second half of a learning pass. Attempting once and reading the key
+         is not practice — the loop is attempt, see what went wrong, go again.
+         Three conditions, and each one is load-bearing:
+           - only after the recording has been practised, so the questions are
+             never handed back before they have been heard;
+           - only while the single play is UNSPENT (`!used`), so this can never
+             reach a committed attempt;
+           - only over `owned(root)`, so it cannot touch an exercise belonging
+             to another player or to the reading clock. */
+      const retry = document.createElement("button");
+      retry.className = "btn quiet p-retry";
+      retry.type = "button";
+      retry.textContent = "Try those questions again";
+      retry.hidden = true;
+      $(".p-ctl[data-pass='learn']", root).appendChild(retry);
+
+      function paintRetry(){
+        const mine = owned(root);
+        retry.hidden = !(plays > 0 && !used && mine.some(x => x.dataset.done === "1"));
+      }
+      retry.addEventListener("click", () => {
+        if (used) return;                       // the test pass owns them now
+        owned(root).forEach(x => {
+          const id = x.dataset.task;
+          if (id && TASK_RESET[id]) TASK_RESET[id]();
+        });
+        lstate.textContent = "Cleared. Play it again, then answer them again.";
+        paintRetry();
+      });
+      paintRetry();
+    }
+
     const tick = (secs, label, then) => {
       let left = secs;
       state.textContent = label + " — " + left + "s";
@@ -1349,11 +1722,14 @@ function initAudio(){
       }, 1000);
     };
     btn.addEventListener("click", () => {
-      if (used) return;
+      if (used || root.dataset.pass === "learn") return;   // see the note on lbtn
       primeSpeech();
       if (!canListen()){ noVoice(); return; }
       used = true; remember(false);
+      const rt = $(".p-retry", root);
+      if (rt) rt.remove();               // a committed attempt is never handed back
       btn.disabled = true;
+      root.dataset.pass = "test";       // the one-play pass; never written by learn
       root.dataset.playing = "1";
       state.textContent = "Introduction — listen, it is not written down";
       speakSeq([a.orientation], () => {
@@ -1922,6 +2298,8 @@ function boot(){
   initGate();
   paintReview();
   initTasks();
+  initDialogue();
+  initFluency();
   initAudio();
   initPassage();
   initClock();
