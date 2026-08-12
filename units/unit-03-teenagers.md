@@ -11,54 +11,60 @@
 | --- | --- |
 | **Pronunciation** | /ʊə/ vs /ɔɪ/ — *tourist* vs *choice* |
 | **Grammar** | **Simple and compound sentences** — coordinating conjunctions *and, but, so, or, yet*, and conjunctive adverbs *however, therefore, otherwise* |
-| **Reading** | School clubs and what they do |
+| **Reading** | A teenager's account of the evening a friend came back |
 | **Speaking** | Asking and answering about a club |
-| **Listening** | Teen stress and what helps |
+| **Listening** | A girl describing that evening, and the choice that was not made |
 | **Writing** | A **paragraph**, 80–100 words — causes of stress and solutions |
 
 ---
 
 ## Lesson 1 — Getting Started
 
-### Dialogue: You look tired
+### Dialogue: The list on the wall
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="You look tired" gramen="so — a compound sentence" gramvi="Hai mệnh đề đầy đủ nối với nhau bằng dấu phẩy + **and / but / so / or / yet**. Vế sau **so** là kết quả của vế trước." gramco="I was tired, so I stopped"
-**Linh:** You look tired, Duy. Are you all right?
-**Duy:** I'm fine, but I didn't sleep much. I had three tests this week.
-**Linh:** Three? That's a lot. You should slow down, or you'll burn out.
-**Duy:** I know, yet I can't stop. Everyone in my class is studying harder than me.
-**Linh:** That's just [[peer pressure]] talking. Half of them are exhausted too, and nobody admits it.
-**Duy:** Maybe. What do you do when you feel [[stressed]]?
-**Linh:** I joined the photography club last term, [[so|gram:so]] now I have one afternoon a week that belongs to me.
-**Duy:** A club? I don't have time for a club.
-**Linh:** That's exactly what I said in September. But the club gives me time back — I come home calmer, and I finish my homework faster.
-**Duy:** Hmm. I'm [[curious]] now. What do you actually do there?
-**Linh:** We take photos around the school, and then we choose the best ones for the noticeboard. It's a small thing, but it makes me feel useful.
-**Duy:** Can anyone join, or do you need a good camera?
-**Linh:** Anyone can join. A phone is fine, and Mr Hung lends out two cameras.
-**Duy:** All right. I'll come on Thursday, but don't expect me to be good.
-**Linh:** Nobody is good at first. Just get involved, and the rest follows.
+::: dialogue title="The list on the wall" gramen="so — a compound sentence" gramvi="Hai mệnh đề đầy đủ nối với nhau bằng dấu phẩy + **and / but / so / or / yet**. Vế sau **so** là kết quả của vế trước." gramco="I was tired, so I stopped"
+**Thảo:** You have read that list four times, Tí. It says the same thing every time.
+**Tí:** I know what it says. I'm bottom in maths again.
+**Thảo:** The [[midterm]] tests are next week. Nothing on that wall counts yet.
+**Tí:** It counts in the yard. Cô Yến read the whole list out at lunch.
+**Thảo:** She reads everybody's out. That's her, not you.
+**Tí:** Khoa was top, and that's fair, because he works. Hùng did no work at all, **yet** he came out two places above me.
+**Thảo:** You're [[stressed]], and stressed people read lists four times.
+**Tí:** Everyone in that room is [[keeping up|keep up with]]. I'm not. That's the part I can't [[deal with]].
+**Thảo:** Half of them are behind too, **but** nobody says it out loud.
+**Tí:** Minh used to say things out loud.
+**Thảo:** …
+**Tí:** Second row, by the window. He would have read that list and laughed at it.
+**Thảo:** He would.
+**Tí:** Cô Yến moved his desk in September, **and** now the room just looks normal.
+**Thảo:** We don't talk about that at school. You know we don't.
+**Tí:** I'm not upset. I'm [[curious]]. A whole year, and not one person has asked where he went.
+**Thảo:** Asking never brought anybody back, Tí.
+**Tí:** …
+**Thảo:** So. You can stand here and read that wall again, **or** you can walk down to the water with me.
+**Tí:** I'll go on my own.
+**Thảo:** You always go on your own, [[so|gram:so]] today I'm coming too.
 :::
 
 ### 1.1 Comprehension
 
 Answer in full sentences.
 
-1. Why is Duy tired this week?
-2. What does Linh say about Duy's classmates?
-3. When did Linh join the photography club?
-4. According to Linh, how does the club help her with her homework?
-5. What equipment does a student need in order to join the club?
+1. What has Tí been reading, and how many times?
+2. Why does Thảo say that nothing on the wall counts yet?
+3. What does Tí say about Hùng's result?
+4. What happened to Minh's desk in September?
+5. What two choices does Thảo offer Tí at the end?
 
 ### 1.2 Find the phrase
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
-- become ill or exhausted from working too hard = burn out
-- the feeling that you must do what your friends do = peer pressure
-- very, very tired = exhausted
-- start taking part in an activity = get involved
+- said where everybody could hear it = out loud
+- the tests that fall in the middle of the term = midterm
+- staying level with the rest of the class = keeping up
+- with nobody else, by yourself = on my own
 :::
 
 ### 1.3 Notice the grammar
@@ -67,11 +73,11 @@ Each sentence below joins **two** ideas with a small word in **bold**. What is
 that word doing?
 
 ::: task skill="course" type="choice" opts="addition|contrast|result|choice" ask="What relation does the **bold** conjunction set up between the two ideas?"
-- I'm fine, **but** I didn't sleep much. = contrast
-- You should slow down, **or** you'll burn out. = choice
-- I joined the photography club, **so** now I have one afternoon a week. = result
-- I know, **yet** I can't stop. = contrast
-- A phone is fine, **and** Mr Hung lends out two cameras. = addition
+- Half of them are behind too, **but** nobody says it out loud. = contrast
+- You can read that wall again, **or** you can walk down to the water with me. = choice
+- You always go on your own, **so** today I'm coming too. = result
+- Hùng did no work at all, **yet** he came out two places above me. = contrast
+- Cô Yến moved his desk in September, **and** now the room just looks normal. = addition
 :::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **câu đơn** và **câu
@@ -287,18 +293,18 @@ Everything in this lesson rests on one idea: the **independent clause**.
 
 > An **independent clause** has a subject and a verb, and it makes complete
 > sense on its own.
-> *Nam joined the chess club.* ✅ — complete
-> *Because Nam joined the chess club* ❌ — not complete, it leaves you waiting
+> *Khoa joined the chess club.* ✅ — complete
+> *Because Khoa joined the chess club* ❌ — not complete, it leaves you waiting
 
 #### A simple sentence = ONE independent clause
 
-> **Mai** **plays** the guitar.
+> **Thảo** **plays** the guitar.
 > **The wellbeing club** **meets** on Thursdays.
 > **I** **felt** embarrassed.
 
 #### A compound sentence = TWO independent clauses, joined by a coordinating conjunction
 
-> **Mai plays the guitar**, **and** **her brother sings**.
+> **Thảo plays the guitar**, **and** **her brother sings**.
 > **I revised for six hours**, **but** **I still felt frustrated**.
 
 Both halves could stand alone as sentences. The conjunction glues them
@@ -386,10 +392,10 @@ its own. This is the single most common mistake in grade-8 writing.
 > chỉ nối hai **chủ ngữ** hoặc hai **động từ** thì câu vẫn là **câu đơn**, và
 > **không có dấu phẩy**.
 >
-> *Mai **and** Nam joined the club **and** won a prize.* → **CÂU ĐƠN**
-> (một chủ ngữ ghép *Mai and Nam* + một vị ngữ ghép *joined … and won …*).
+> *Thảo **and** Khoa joined the club **and** won a prize.* → **CÂU ĐƠN**
+> (một chủ ngữ ghép *Thảo and Khoa* + một vị ngữ ghép *joined … and won …*).
 >
-> *Mai joined the club, **and** Nam won a prize.* → **CÂU GHÉP**
+> *Thảo joined the club, **and** Khoa won a prize.* → **CÂU GHÉP**
 > (hai mệnh đề độc lập, mỗi mệnh đề có chủ ngữ và động từ riêng).
 >
 > Cách kiểm tra: che phần sau liên từ. Phần đó có **chủ ngữ riêng** không? Có
@@ -401,10 +407,10 @@ its own. This is the single most common mistake in grade-8 writing.
 - My sister and I do the housework together. = S ~ compound subject *My sister and I*, one verb
 - My sister does the housework, and I cook. = C
 - Teenagers need sleep, yet most of them stay up late. = C
-- Duy joined the club and made three new friends. = S ~ one subject *Duy*, compound verb *joined … and made*
+- Hùng joined the club and made three new friends. = S ~ one subject *Hùng*, compound verb *joined … and made*
 - You can walk to school, or you can take the bus. = C
 - Peer pressure is powerful, but it is not unbeatable. = C
-- Linh takes photos and edits them on her phone. = S ~ compound verb
+- Đạt takes photos and edits them on her phone. = S ~ compound verb
 - I was exhausted, so I went to bed at nine. = C
 :::
 
@@ -412,7 +418,7 @@ its own. This is the single most common mistake in grade-8 writing.
 
 ::: task skill="course" type="gap-fill" ask="Complete each compound sentence with **and, but, so, or,** or **yet**. Each one is used at least once."
 - I had four tests last week, ___ I hardly slept. = so
-- Nam wanted to join the debate club, ___ it was already full. = but
+- Khoa wanted to join the debate club, ___ it was already full. = but
 - You can talk to a teacher, ___ you can talk to your parents. = or
 - She does two hours of homework every evening, ___ she still finds time for the cooking club. = yet
 - The volunteer club repairs old books, ___ it sends them to a primary school. = and
@@ -461,7 +467,7 @@ and a **comma** after it. More than one answer may be possible.
    → _______________________________
 6. *(however)* Phong participates in three clubs. His marks have not fallen.
    → _______________________________
-7. *(therefore)* Mai wants to be more focused. She leaves her phone downstairs.
+7. *(therefore)* Thảo wants to be more focused. She leaves her phone downstairs.
    → _______________________________
 8. *(otherwise)* You should log on and check the notice. You will miss the
    first session.
@@ -476,8 +482,8 @@ a conjunction. Rewrite it correctly.
 1. I was very stressed, I didn't tell anyone.
 2. She joined the wellbeing club and now she sleeps better.
 3. My parents want good marks, and a tidy room.
-4. Duy went to the club on Thursday he enjoyed it.
-5. Mai and Linh take photos, and put them on the noticeboard.
+4. Hùng went to the club on Thursday he enjoyed it.
+5. Thảo and Đạt take photos, and put them on the noticeboard.
 6. The app is user-friendly, however I still needed help with it.
 7. She uploaded the photos late; therefore nobody saw them until Monday.
 
@@ -676,86 +682,87 @@ Lesson 2 table.
 
 ## Lesson 5 — Skills 1: Reading & Speaking
 
-### Reading — *Four clubs, one Thursday afternoon*
+### Reading — *The evening at the landing*
 
-*A report from the school magazine of Nguyen Du Secondary School.*
+*Tí, 13, writes down what happened while he still remembers all of it.*
 
 ::: clock mins="18" for="You have 18 minutes for the text and every exercise below it."
 :::
 
 ::: passage label="A"
-> At Nguyen Du Secondary School, Thursday afternoon belongs to the clubs.
-> Lessons finish at half past two, and by three o'clock the classrooms have
-> changed completely.
+> I went down to the landing on my own. The water was flat and brown and
+> ordinary, and nothing at all was going to happen. I had the rice sack in my
+> lap. I did not plan it. I said the two words, and the wick caught.
 >
-> Room 12 is the debate club. Twenty students sit in two lines facing each
-> other, and the topic is written on the board. Last week it was "Should
-> students choose their own subjects?" Nobody wins a prize, but the members say
-> they are far more self-confident than they were in September.
+> Mun climbed out and sat on the step beside me. Then somebody was standing at
+> the top of the bank, with a school bag over one shoulder, looking down at us.
+> It was Minh.
 >
-> The cooking club works in the school kitchen. Ms Lan teaches one simple dish
-> each week, and the members eat it together afterwards. "Some of us could not
-> boil rice in September," says Khanh, 14. "Now I cook dinner on Sundays, so my
-> mother gets an evening off." Cooking is a life skill, not only a hobby.
+> He was exactly the same. That is the part I keep coming back to. He was the
+> height he was last September, his shirt was the old blue one, and his hair was
+> cut the way Cô Yến used to complain about. I have grown four centimetres since
+> then. He looked at the school on the hill, and he worked something out.
+> "You've all got older," he said.
 >
-> Downstairs, the volunteer club is quieter. The members collect old books,
-> repair them, and send them to a primary school in the mountains. The work is
-> slow, yet nobody gives up.
+> "Light the lamp, and the nearest lost thing comes back," Mun said. "You don't
+> choose which, and it comes back the way it was lost. Nine measures left, and
+> I would think about that before I said anything else."
 >
-> The newest club is the wellbeing club, and it may be the most useful one of
-> all. Members meet for forty minutes, talk about their week, and learn one way
-> to deal with stress: planning, breathing, or simply going to bed earlier.
+> Minh sat down on the step. He knew. Nobody had to tell him, and nobody did.
+> He asked me one question, and it was a year out of date, and he heard that
+> himself before I could answer. So he stopped asking. He is not frightening. He
+> is out of step, and he is the only one of us who can feel it.
 >
-> Not every student joins a club, and that is fine. But Ms Lan has noticed
-> something. "The ones who get involved keep up with their schoolwork better,"
-> she says. "They are busier, yet they seem calmer."
+> We walked up the lane at seven, past the market and the water tank, the way we
+> used to. Bà Sáu put a third bowl on the table and asked nothing. Behind me, in
+> the sack, the lamp was still burning.
 :::
 
 ### 5.1 Matching headings
 
-The report has **six** paragraphs, **A** to **F**, lettered in the text above.
+The account has **six** paragraphs, **A** to **F**, lettered in the text above.
 Below are **eight** headings — two of them match no paragraph at all. That is
 how this question type is always built, and it is the whole difficulty: a
 heading that fits nothing still looks plausible.
 
 | | Heading |
 | --- | --- |
-| **i** | A skill that helps at home |
-| **ii** | The afternoon the school changes |
-| **iii** | Books repaired for somebody else |
-| **iv** | A prize worth winning |
-| **v** | Talking your way to confidence |
-| **vi** | Learning to handle a hard week |
-| **vii** | What a teacher has noticed |
-| **viii** | Why some students stay away |
+| **i** | Questions that are a year out of date |
+| **ii** | The night the lamp went out |
+| **iii** | An ordinary evening by the water |
+| **iv** | A year that did not touch him |
+| **v** | A promise nobody kept |
+| **vi** | Somebody at the top of the bank |
+| **vii** | What the lamp will and will not do |
+| **viii** | The walk up the lane |
 
 ::: task skill="reading" type="matching-headings" opts="i|ii|iii|iv|v|vi|vii|viii" ask="Choose the correct heading for each paragraph. Read the whole paragraph before you choose: a heading that matches one sentence of it is the commonest way to get this wrong."
-- Paragraph A = ii ~ lessons end and the classrooms change completely
-- Paragraph B = v ~ the debate club — members are *far more self-confident than they were*
-- Paragraph C = i ~ Khanh now cooks dinner at home on Sundays
-- Paragraph D = iii ~ the volunteer club repairs old books and sends them away
-- Paragraph E = vi ~ the wellbeing club teaches ways to deal with stress
-- Paragraph F = vii ~ Ms Lan's observation about the students who get involved
+- Paragraph A = iii ~ the water is flat and brown and ordinary, and nothing at all was going to happen
+- Paragraph B = vi ~ a figure appears above them with a school bag over one shoulder
+- Paragraph C = iv ~ he is the height, shirt and haircut of last September
+- Paragraph D = vii ~ Mun states the rule and its catch
+- Paragraph E = i ~ the one question he asks belongs to last year
+- Paragraph F = viii ~ they go up past the market and the water tank to the kitchen
 :::
 
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="3+number" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- What time do the clubs begin? = (by) three o'clock ~ lessons finish at half past two
-- How do debate club members say they have changed since September? = (far) more self-confident
-- What does the cooking club do with the food it makes? = eat it together/eats it together
-- Where do the repaired books go? = (a) primary school
-- What does the volunteer club do to the old books before sending them? = repair them/repairs them
+- What did Tí have in his lap at the landing? = (the) rice sack
+- Who was standing at the top of the bank? = Minh
+- What colour was his shirt? = (old) blue/blue
+- How much has Tí grown since September? = four centimetres/4 centimetres
+- What did his grandmother put on the table? = (a) third bowl
 :::
 
 ### 5.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- sure of yourself = self-confident
-- something useful you need in everyday life = life skill
-- stop trying = give up/gives up
-- take part in something = get involved
-- manage to stay level with something = keep up with
+- began to burn = caught
+- the sloping ground at the side of the water = bank
+- with nothing unusual about it = ordinary
+- not moving at the same time as everybody else = out of step
+- a narrow road between houses = lane
 :::
 
 ### Speaking — Asking and answering about a club
@@ -803,58 +810,57 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ## Lesson 6 — Skills 2: Listening & Writing
 
-### Listening — What makes teenagers stressed
+### Listening — Thảo, later the same evening
 
 You get **one** play, so use the preview window: read both sets of questions
 first, then answer while you listen rather than afterwards from memory.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a member of the school staff talking to students about what causes stress, and about what helps." mode="computer" preview="30" review="120"
-Hello. I'm Ms Trang, and I'm the school counsellor here. Today I want to talk
-about stress: what causes it, and what actually helps.
+::: audio orientation="You will hear a girl telling a friend about an evening she spent with two boys and a cat, and about a decision that one of them had to make." mode="computer" preview="30" review="120"
+I want to say first that I was the one who told him to put it out, so if
+anybody is angry, be angry with me.
 
-Last month we asked two hundred students in Years 8 and 9 one question. What
-makes you feel stressed? The biggest answer, by far, was tests, at sixty per
-cent. The second was too little sleep, at forty-five per cent. Then came
-arguments at home, and after that peer pressure, which means feeling that you
-must look, dress or think like everybody else.
+I came down after eight. They were both on the step, and neither of them was
+talking. Mun says there are twelve lightings in that lamp altogether. This was
+the third.
 
-Now, the solutions. Students told us that three things work.
+Minh was very calm about it. He worked out that a whole year had gone
+past, and after that he asked us almost nothing, because every question he
+started belonged to last September and he could hear it. Then he said the thing
+that finished me. He said we should not keep him. He said one breath would end
+it, and nobody would be blamed for anything.
 
-First: planning. If you write down what you have to do, the pile stops
-growing in your head. Students who plan their week report much less stress.
+Tí picked the lamp up. He held it in both hands, close, for about a minute.
+His face did not move at all.
 
-Second: exercise. It does not have to be a sport. A twenty-minute walk after
-dinner is enough, and it helps you sleep.
+Then he set it down again, still burning.
 
-Third, and this was the strongest answer of all, talking to somebody. Half
-the students said they felt better simply after telling a friend, a parent or
-a teacher. Nobody solved the problem for them. Those people just listened.
-
-One last thing. Do not give up your free time completely. Students who join a
-club are busy, yet they usually cope better, because they have one part of
-the week that belongs to them.
+Neither of us said one word about it afterwards, and I don't think we ever
+will. On the way home Minh told us something else. His family went north,
+up the river, and there are people up there who tell a story about a light like
+ours. He says this has happened before, more than once, and long before any of
+us were born.
 :::
 
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- Ms Trang is the school's (a) head teacher (b) counsellor (c) PE teacher = b
-- The survey asked students in (a) Years 6 and 7 (b) Years 8 and 9 (c) Year 12 = b
-- The biggest cause of stress was (a) tests (b) too little sleep (c) peer pressure = a
-- Ms Trang says exercise (a) must be a team sport (b) can be a short walk (c) does not help = b
-- The strongest solution of all was (a) planning (b) exercise (c) talking to somebody = c
+- The speaker says the blame should fall on (a) Tí (b) herself (c) the cat = b
+- She arrived at the water (a) before six (b) after eight (c) at midnight = b
+- The lamp had now been lit (a) once (b) twice (c) three times = c
+- Minh asked them very little because (a) he was angry (b) his questions belonged to last year (c) he could not speak = b
+- Tí held the lamp and then (a) blew it out (b) set it down still burning (c) threw it in the water = b
 :::
 
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="2+number"
-- The school asked ___ students. = two hundred/200
-- Too little sleep was named by ___ per cent. = forty-five/45
-- A ___-minute walk after dinner is enough. = twenty/20
-- ___ the students felt better after telling someone. = Half
-- Students who join a club are busy, ___ they usually cope better. = yet
+- Lightings in the lamp altogether: ___ = twelve/12
+- What neither of the two was doing when she came down: ___ = talking
+- Minh said that nobody would be ___ for anything. = blamed
+- Length of time Tí held the lamp: about a ___ = minute
+- Direction his family went: ___ = north
 :::
 
 ### Writing — A paragraph about stress
@@ -865,15 +871,15 @@ stress and **two solutions**.
 
 #### Model paragraph — read this first
 
-> Many teenagers in my class feel stressed, and there are three main reasons.
-> First, we get too much homework, so we cannot keep up with every subject.
-> Second, our parents expect high marks, and we do not want to disappoint them.
-> Third, peer pressure is strong, and then we feel that we are not good enough.
-> There are simple solutions. We can plan the week on Sunday, or we can ask a
-> teacher for help. Exercise helps too, and joining a club helps most. Stress
-> is normal, yet nobody has to deal with it alone.
+> Everyone in my class is stressed this term, and there are three reasons.
+> First, the midterm tests are next week, so we cannot keep up with every
+> subject. Second, our teacher reads the marks out in the yard, and nobody
+> wants to be at the bottom of that list. Third, peer pressure is strong, yet
+> nobody admits it. Two things help. You can plan the week on Sunday, or you
+> can tell one person what is wrong. Talking is better. Somebody listened to me
+> for an hour last night, and that was enough.
 
-*(95 words)*
+*(93 words)*
 
 #### Plan it — 6 questions your paragraph has to answer
 
@@ -949,8 +955,8 @@ the two, and the cheapest way to land there is a hard count.
 
 **Part A.** Write **S** (simple) or **C** (compound).
 
-1. Nam and Duy joined the wellbeing club. ___
-2. Nam joined the wellbeing club, and Duy joined the debate club. ___
+1. Khoa and Hùng joined the wellbeing club. ___
+2. Khoa joined the wellbeing club, and Hùng joined the debate club. ___
 3. I was frustrated, yet I kept trying. ___
 4. She takes photos and edits them at home. ___
 
@@ -958,14 +964,14 @@ the two, and the cheapest way to land there is a hard count.
 correct.
 
 5. I felt stressed so I went for a walk.
-6. Linh takes photos and posts the best ones.
+6. Đạt takes photos and posts the best ones.
 7. You can come on Thursday or you can come next week.
 8. He does his homework and his chores before dinner.
 
 **Part C.** Join each pair with the word in capitals. Punctuate it correctly.
 
 9. **HOWEVER** — The website is user-friendly. I still could not find the form.
-10. **THEREFORE** — Duy wants to be more focused. He has joined the chess club.
+10. **THEREFORE** — Hùng wants to be more focused. He has joined the chess club.
 11. **OTHERWISE** — Log on before Friday. You will miss the first session.
 12. **SO** — I had four tests in one week. I did not sleep much.
 
@@ -975,19 +981,19 @@ Find and correct **six** errors in this paragraph. Five are about joining
 clauses (comma splices, run-ons, missing commas); one is a subject–verb
 agreement slip.
 
-> My sister is fourteen and she is always stressed. She has too much homework,
-> she never goes to bed before midnight. Her friends all study late so she
-> thinks she must do the same. She can plan her week or she can ask a teacher
-> for help. I told her to join a club, she said she had no time. Last week she
-> came to the chess club with me, and now she go every Thursday.
+> Minh came back on Tuesday and he has not changed at all. He asked about the
+> football final, there was no final this year. The rest of us are a year older
+> so he had to hear it from us. Tí could have sent him back or he could keep
+> him. He did not blow the lamp out, he put it down. Now Minh sit with us at
+> lunch every day.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
-- Error 1 = fourteen, and she/fourteen, and ~ a comma is needed before *and* joining two clauses
-- Error 2 = homework, so she never goes/homework, so she/homework, so ~ comma splice — *so* joins the two clauses
-- Error 3 = late, so she thinks/late, so she/late, so ~ missing comma before *so*
-- Error 4 = week, or she can/week, or she/week, or ~ missing comma before *or*
-- Error 5 = club, but she said/club, but she/club, but ~ comma splice — *but* joins the two clauses
-- Error 6 = she goes ~ *she go* → *she goes* — subject–verb agreement
+- Error 1 = Tuesday, and he/Tuesday, and ~ a comma is needed before *and* joining two clauses
+- Error 2 = final, but there/final, but ~ comma splice — *but* joins the two clauses
+- Error 3 = older, so he/older, so ~ missing comma before *so*
+- Error 4 = back, or he/back, or ~ missing comma before *or*
+- Error 5 = out, and he/out, and ~ comma splice — *and* joins the two clauses
+- Error 6 = sits ~ *sit* → *sits* — subject–verb agreement
 :::
 
 ### 7.5 Word formation
@@ -1054,9 +1060,9 @@ page can settle it, the row says so, and that one is yours to judge.
 | hear /ʊə/ and /ɔɪ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.6 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.8 and listen back. |
 | write simple sentences and compound sentences | Lesson 3, exercises 3.1 and 3.5 · Lesson 7, exercises 7.3 and 7.4 |
 | make a request politely | Lesson 4, exercise 4.1 |
-| read about what school clubs do | Lesson 5, exercises 5.1 and 5.2 |
+| read a teenager's account of the evening a friend came back | Lesson 5, exercises 5.1 and 5.2 |
 | ask and answer questions about a club | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to a conversation about teen stress | Lesson 6, exercises 6.1 and 6.2 |
+| listen to someone describing an evening and a hard choice | Lesson 6, exercises 6.1 and 6.2 |
 | write a paragraph about what makes me stressed and what helps | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
@@ -1073,11 +1079,11 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. Because he had three tests that week and didn't sleep much. 2. She
-says half of them are exhausted too, but nobody admits it — it is just peer
-pressure. 3. She joined it last term. 4. She comes home calmer, so she finishes
-her homework faster. 5. Nothing special — a phone is fine, and Mr Hung lends
-out two cameras.
+**1.1** 1. The list of marks on the wall, four times. 2. Because the midterm
+tests are next week, so nothing on that wall counts yet. 3. Hùng did no work at
+all, yet he came out two places above Tí. 4. Cô Yến moved it, and now the room
+just looks normal. 5. He can stand there and read the wall again, or he can
+walk down to the water with her.
 
 ### Lesson 2
 
@@ -1096,7 +1102,7 @@ two full clauses)*
 5. Khanh could not boil rice in September, and now he cooks dinner every
    Sunday.
 6. Phong participates in three clubs; however, his marks have not fallen.
-7. Mai wants to be more focused; therefore, she leaves her phone downstairs.
+7. Thảo wants to be more focused; therefore, she leaves her phone downstairs.
 8. You should log on and check the notice; otherwise, you will miss the first
    session.
 *(For 6–8, check the punctuation as carefully as the meaning: **semicolon**
@@ -1109,8 +1115,8 @@ before the word, **comma** after it.)*
    before* and *— two independent clauses)*
 3. My parents want good marks **and** a tidy room. *(comma removed — one
    clause, two objects)*
-4. Duy went to the club on Thursday, **and** he enjoyed it. *(run-on)*
-5. Mai and Linh take photos **and** put them on the noticeboard. *(comma
+4. Hùng went to the club on Thursday, **and** he enjoyed it. *(run-on)*
+5. Thảo and Đạt take photos **and** put them on the noticeboard. *(comma
    removed — compound verb, still a simple sentence)*
 6. The app is user-friendly**;** however**,** I still needed help with it.
    *(a comma is not strong enough before* however *— semicolon before, comma
@@ -1158,7 +1164,7 @@ just *easy* or *hard*.
 no comma) 7. You can come on Thursday**,** or you can come next week. 8. ✓ (one
 clause, two objects)
 **Part C.** 9. The website is user-friendly**;** however**,** I still could not
-find the form. 10. Duy wants to be more focused**;** therefore**,** he has
+find the form. 10. Hùng wants to be more focused**;** therefore**,** he has
 joined the chess club. 11. Log on before Friday**;** otherwise**,** you will
 miss the first session. 12. I had four tests in one week**,** so I did not sleep
 much. *(9–11 take a semicolon and then a comma; only 12 is a conjunction, so it

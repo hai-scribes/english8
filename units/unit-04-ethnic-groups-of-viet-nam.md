@@ -11,47 +11,52 @@
 | --- | --- |
 | **Pronunciation** | /k/ vs /ɡ/ — *coat* vs *goat* |
 | **Grammar** | **Yes/No and Wh- questions**; countable and uncountable nouns |
-| **Reading** | Ethnic groups of Viet Nam; stilt houses |
+| **Reading** | Ethnic groups of Viet Nam; a stilt house, and how one is built |
 | **Speaking** | Discussing stilt houses and types of home |
-| **Listening** | A day in the life of an ethnic-minority child |
+| **Listening** | An older woman answering questions about the families upriver |
 | **Writing** | A **paragraph**, 80–100 words — what you do for your family |
 
 ---
 
 ## Lesson 1 — Getting Started
 
-### Dialogue: A question for the project
+### Dialogue: Ten questions for a stranger
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="A question for the project" gramen="How many …? — a Wh- question" gramvi="Câu hỏi Wh- theo thứ tự: từ để hỏi → trợ động từ → chủ ngữ → động từ chính." gramco="How many people live there?"
-**Duy:** Kim, can I ask you some questions for our history project?
-**Kim:** Of course. What is it about?
-**Duy:** The ethnic groups of Viet Nam. You're Tay, aren't you? Where does your family live?
-**Kim:** In a village in Cao Bang, up in the north. My parents and I moved to Ha Noi last year, but my grandparents are still there.
-**Duy:** Do they live in a [[stilt house]]?
-**Kim:** They do. My great-grandfather built it. It's made of wood and [[bamboo]], and you climb a wooden staircase to get to the door.
-**Duy:** [[How|gram:how]] many rooms does it have?
-**Kim:** One big one. We cook, eat, talk and sleep in the same space.
-**Duy:** Who looks after the house now?
-**Kim:** My grandparents and my uncle. My uncle repairs the roof every spring.
-**Duy:** How much rice does your family grow?
-**Kim:** I don't know the exact amount, but enough for the whole year. We have terraced fields on the hillside behind the house.
-**Duy:** Is there anything you miss?
-**Kim:** The folk songs at Tet. And my grandmother's baskets — she weaves them from bamboo and sells them at the market.
-**Duy:** Can you [[weave]]?
-**Kim:** Not yet. She says it takes a lot of patience, and I don't have much!
+::: dialogue title="Ten questions for a stranger" gramen="How many …? — a Wh- question" gramvi="Câu hỏi Wh- theo thứ tự: từ để hỏi → trợ động từ → chủ ngữ → động từ chính." gramco="How many people live there?"
+**Thảo:** Cô Yến gave out the project on Friday. Ten questions, and you have to ask a real person.
+**Tí:** I have written none of them. I am no good at asking strangers anything.
+**Thảo:** Then practise on me. I am a woman at the market who [[weaves|weave]] baskets. Begin.
+**Tí:** Hello.
+**Thảo:** That is not a question, Tí.
+**Tí:** Where does your family live?
+**Thảo:** Up the river, in a [[stilt house]] my grandfather built. Better. Keep going.
+**Tí:** Do they live there all year?
+**Thảo:** They do. It is made of wood and [[bamboo]], and you climb a wooden staircase to the door.
+**Tí:** [[How|gram:how]] many rooms does it have?
+**Thảo:** One big one. We cook, eat, talk and sleep in the same space.
+**Tí:** How much rice does your family grow?
+**Thảo:** Enough for the year. We have [[terraced fields|terraced field]] on the hillside.
+**Tí:** Who looks after the house now?
+**Thảo:** Careful — that one takes no *does*. My uncle looks after it.
+**Tí:** Can you weave?
+**Thảo:** Not yet. It takes a lot of patience, and I do not have much.
+**Tí:** You are inventing every word of this.
+**Thảo:** Of course I am. But Minh's family went up that river, and there are [[folk songs|folk song]] up there that nobody down here knows. On Saturday we walk it, and you ask somebody real.
+**Tí:** And if there is nobody up there to ask?
+**Thảo:** Then you have ten questions and no answers, which is exactly what you have now.
 :::
 
 ### 1.1 Comprehension
 
 Answer in full sentences.
 
-1. Where does Kim's family come from?
-2. What is her grandparents' house made of?
-3. How many rooms does the house have, and how does the family use the space?
-4. What does Kim miss about her village?
-5. Why can Kim not weave baskets yet?
+1. What has Cô Yến asked the class to do?
+2. Why does Tí say the project is hard for him?
+3. In Thảo's answers, what is the house made of, and how do you reach the door?
+4. How does the family in her answers use the one big room?
+5. What does Thảo want the two of them to do on Saturday?
 
 ### 1.2 Find the phrase
 
@@ -67,7 +72,7 @@ Answer in full sentences.
 **A.** What kind of question is each one from the dialogue?
 
 ::: task skill="course" type="choice" opts="Yes/No|Wh-|Subject" ask="Yes/No, Wh-, or Subject?"
-- **Do** they live in a stilt house? = Yes/No
+- **Do** they live there all year? = Yes/No
 - **Where** does your family live? = Wh-
 - **Who** looks after the house now? = Subject ~ *who* is the subject, so there is no *does*
 - **Can** you weave? = Yes/No
@@ -625,35 +630,36 @@ tables above.
 
 ### Reading — *The house that stands on legs*
 
-*From a school magazine, written by Hoa, 14.*
+*Tí, 13, writes down the Saturday he went up the river with ten questions.*
 
 ::: clock mins="18" for="You have 18 minutes for the text and every exercise below it."
 :::
 
-::: passage
-> Viet Nam is home to 54 ethnic groups. The Kinh are the majority, and the other
-> 53 groups are called ethnic minorities. Some — the Tay, the Thai, the Muong,
-> the Khmer, the H'Mong, the Dao — have quite large populations.
-> Others are very small. Each group has its own customs, its own
-> costumes, and in many cases its own language.
+::: passage label="A"
+> We walked the old path for two hours and passed nothing — no village, no gate,
+> no person. Ten questions in my pocket and nobody to ask them. So I sat on the
+> bank, said the two words, and the wick caught. The bamboo across the water
+> moved and stopped, because a house was standing in it: a stilt house, clear of
+> the ground on tall wooden legs, with a wooden staircase to the door.
 >
-> Travel into the mountains of the north and you will see wooden houses standing
-> above the ground on tall legs. These are stilt houses — *nhà sàn*. Why build a
-> house in the air? There are good reasons. The floor stays dry in the rainy
-> season. Insects and animals find it harder to get in. Cool air moves under the
-> floor on hot days. And the space underneath is useful: families keep tools,
-> firewood and sometimes animals there.
+> It was built of wood and bamboo, and the roof was palm leaves. Underneath it
+> people had kept tools and firewood and, by the smell, animals, and the floor
+> above was dry, the way a floor stays dry in the rainy season. Cool air moved
+> under it while we stood in the sun. Inside was one large room, an open fire in
+> the middle, three baskets and a gong on the wall.
 >
-> A stilt house is usually built of wood and bamboo, and the roof may be palm
-> leaves or tiles. You climb a wooden staircase to reach the door. Inside there
-> is often one large room instead of several small ones. The family cooks, eats,
-> talks and sleeps in that single space, and guests are welcomed near the fire.
+> "Light the lamp, and the nearest lost thing comes back," Mun said. "You don't choose
+> which, and it comes back the way it was lost. Eight measures now." Cô Yến's sheet says there are
+> fifty-four ethnic groups, that the Kinh are the majority, and that the other
+> fifty-three are ethnic minorities. Down in Bến Sẻ the new houses go up in a
+> month in brick and concrete; a few villages upriver have begun to restore
+> their old ones. Nobody restored this one. Cô Yến calls a house like that
+> heritage, and I did not understand the word until Saturday.
 >
-> Life in the mountains is changing. Some families now build houses of brick and
-> concrete, which are quicker to put up and easier to repair. But many young
-> people are proud of the old houses, and a few villages have begun to restore
-> them. A stilt house is not only somewhere to sleep. It is a piece of heritage
-> that a family can stand inside.
+> Then I asked it my questions. Who lived here? How many people slept in this
+> room? How much rice did they grow, and how many years did they grow it for?
+> Thảo left the answer column empty. Two of the baskets were half finished.
+> Somebody had put the work down meaning to come back to it.
 :::
 
 ### 5.1 True, False, or Not Given
@@ -661,10 +667,10 @@ tables above.
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you already know about ethnic groups is exactly the pull this type is built to catch."
 - There are 54 ethnic groups in Viet Nam. = T
 - The Kinh are one of the ethnic minorities. = F ~ the Kinh are the majority
-- Every ethnic minority group has a small population. = F ~ some, such as the Tay and the Thai, have quite large populations
+- The house on the path was built of brick and concrete. = F ~ it was built of wood and bamboo; brick and concrete are the new houses down in Bến Sẻ
 - A stilt house is cooler because air moves under the floor. = T
-- Most mountain families now live in brick houses. = NG ~ the text says *some* families now build brick houses; it does not say most
-- Hoa's own family lives in a stilt house. = NG ~ the text never says where Hoa lives
+- The family who lived in the house grew rice. = NG ~ the writer asks how much rice they grew, and the text never answers
+- The writer's own family lives in a stilt house. = NG ~ the text never says what kind of home the writer lives in
 :::
 
 ### 5.2 Answer the questions
@@ -672,9 +678,9 @@ tables above.
 ::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
 - What are the 53 groups other than the Kinh called? = (ethnic) minorities
 - In which season does the floor of a stilt house stay dry? = (the) rainy season
-- Which two materials is a stilt house usually built of? = wood and bamboo
+- Which two materials was the house built of? = wood and bamboo
 - What do you climb to reach the door? = (a) wooden staircase
-- Which two modern materials do some families now build with? = brick and concrete
+- Which two materials do the new houses in Bến Sẻ go up in? = brick and concrete
 :::
 
 ### 5.3 Vocabulary in context
@@ -692,9 +698,9 @@ part of **one named paragraph** that means the same thing. Speed is the point.
 
 | Look in | Find the words that mean… |
 | --- | --- |
-| Paragraph 1 | *built above the ground* |
-| Paragraph 2 | *keeps the house cool* |
-| Paragraph 3 | *passed down from parents to children* |
+| Paragraph A | *built above the ground* |
+| Paragraph B | *keeps the house cool* |
+| Paragraph C | *passed down from parents to children* |
 
 The question almost never uses the same words as the text. Finding the words
 that mean the same thing — fast, without reading every line — is most of what
@@ -761,57 +767,55 @@ habit, not a trick — build it in until you stop noticing you are doing it.
 
 ## Lesson 6 — Skills 2: Listening & Writing
 
-### Listening — A day in Mai's life
+### Listening — Bà Sáu answers the four questions
 
 You get **one** play, so use the preview window: read both sets of questions
-first, then answer while you listen rather than afterwards from memory. The speaker moves through her day in order, so
-the questions come in that order too.
+first, then answer while you listen rather than afterwards from memory. The speaker takes the questions one at a time, in
+order, so the questions below come in that order too.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a girl from a mountain village in the north describing an ordinary day, from before school until the evening meal." mode="computer" preview="30" review="120"
-Hello. My name is Mai. I'm thirteen and I'm Dao. I live with my parents, my
-grandmother and my little brother in a village in the north.
+::: audio orientation="You will hear a grandmother taking a boy's four project questions one at a time, and telling him what she knows about the families who lived along one stretch of the river." mode="computer" preview="30" review="120"
+Read them out again. Slowly. I am old, not deaf.
 
-My day starts at half past five. That sounds early, but the mountain is cold
-in the morning and nobody wants to be the last one out of bed. Before school I
-sweep the yard and feed the chickens. My brother carries the water, though he
-spills half of it.
+Who lived there. Well, I can name every family on that stretch of the river,
+because my mother came from it and she said the names to me until I could say
+them in my sleep. Above the ford there stood nine houses, and I know all nine.
 
-School is four kilometres away. In the dry season I walk there in fifty
-minutes with three friends. In the rainy season the path turns to mud and my
-father takes me on his motorbike.
+How many people. In a house of that size, ten or eleven. But you tell me there
+were three baskets on the floor. Ten or eleven people wear out more than three
+baskets, child. That is none of my nine.
 
-I like maths best, and English second. Our teacher plays us songs in English
-and we write down the words we catch.
+How much rice. Nobody along there ever grew enough to sell — enough for the
+year and no more. So a family with rice to spare is not a family my mother ever
+told me about.
 
-After school I do my homework first, because once it is dark it is hard to
-read. Then I help my grandmother. She weaves baskets from bamboo and sells
-them at the market on Sundays. She is teaching me, but my baskets are still
-crooked.
+How many years. Now stop. You are asking how long a house stood that nobody
+remembers standing, and I am telling you it did not stand there, not in my
+mother's time and not in hers.
 
-In the evening we all eat together on the floor of the big room. My
-grandmother tells stories. Some of them are about our family, and some, I
-think, she invents.
+One thing, and then go and eat. My mother said the people above the ford held
+a festival in the ninth month. Three days of it, with gongs. Nobody has held
+it since before I was born, and nobody left can tell you what it was for.
 :::
 
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- Mai gets up at (a) 5.00 (b) 5.30 (c) 6.30 = b
-- Before school she (a) sweeps the yard and feeds the chickens (b) carries the water (c) cooks breakfast = a
-- In the dry season the walk to school takes (a) fifteen minutes (b) fifty minutes (c) an hour and a half = b
-- She does her homework straight after school because (a) her mother tells her to (b) it is hard to read after dark (c) she has no time later = b
-- Her grandmother sells the baskets (a) at the school (b) to neighbours (c) at the market on Sundays = c
+- She learned the names of the families from (a) a school book (b) her mother (c) the people at the ford = b
+- Above the ford there stood (a) nine houses (b) three houses (c) eleven houses = a
+- She says the number of baskets is wrong for a household of (a) two (b) ten or eleven (c) thirty = b
+- Families along that stretch of the river grew rice (a) to sell at the market (b) for the year and no more (c) only in a bad year = b
+- She believes the house the boy describes (a) burned down (b) belonged to her mother (c) was never one of the nine = c
 :::
 
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="2+number"
-- Mai is ___ years old and belongs to the Dao ethnic group. = thirteen/13
-- Her school is ___ kilometres from her village. = four/4
-- Her grandmother weaves baskets from ___ . = bamboo
-- In the evening the family eats together on the floor of the ___ . = big room
+- She heard the names until she could say them in her ___ . = sleep
+- A family with rice to ___ is not one her mother knew. = spare
+- Nobody has held the festival since before she was ___ . = born
+- The festival was held in the ___ month of the year. = ninth/9th
 :::
 
 ### Writing — A paragraph about what you do for your family
@@ -824,13 +828,13 @@ every day, what you do at the weekend, and how you feel about it.
 
 > In my family everyone has a job to do, and mine is not the hardest one. Every
 > morning I sweep the yard and feed the chickens before school. After dinner I
-> wash the bowls with my sister, and I help my younger brother with his homework
-> because he cannot read well yet. At the weekend I go to the market with
-> my mother and carry the heavy baskets home. My grandmother is teaching me to
-> weave bamboo in the traditional way, because it is an old custom here. My
-> baskets are still crooked, but she says I am patient.
+> carry the water in and wash the bowls, because my grandmother's knees hurt on
+> the stairs. At the weekend I go with her to the market and carry the heavy
+> baskets home. She is teaching me to weave bamboo in the traditional way,
+> because it is an old custom here. My baskets are still crooked, but she says I
+> ask better questions than I did.
 
-*(99 words)*
+*(96 words)*
 
 #### Plan it — 5 questions your paragraph has to answer
 
@@ -916,15 +920,16 @@ settles a dozen small choices at once.
 Find and correct **five** errors in this paragraph. Two are about question
 forms; three are about countable and uncountable nouns.
 
-> My cousin lives in a stilt house in Cao Bang. How many rooms it has? Only one!
-> Her mother gets up at five and cooks many rice for the whole family. I asked
-> her, "Do you can weave?" She said yes, and she showed me. She told me a lot of
-> informations about her village, and she gave me an advice: be patient.
+> The house came back on Saturday, two hours up the river. How many rooms it
+> has? One! Somebody had cooked many rice on the open fire in the middle of it,
+> and nobody in this town knows the family. I asked Chú Bảy, "Do you can
+> remember them?" He gave me a lot of informations about the old villages, and
+> an advice: ask the oldest person first.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
 - Error 1 = how many rooms does it have ~ a question needs *does* + the bare verb
 - Error 2 = a lot of rice/much rice ~ *rice* is uncountable — not *many*
-- Error 3 = can you weave ~ *can* is already the auxiliary — no *do*
+- Error 3 = can you remember them ~ *can* is already the auxiliary — no *do*
 - Error 4 = a lot of information ~ *information* is uncountable — no plural *-s*
 - Error 5 = some advice/a piece of advice ~ *advice* is uncountable — no *an*
 :::
@@ -974,9 +979,9 @@ page can settle it, the row says so, and that one is yours to judge.
 | hear /k/ and /ɡ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
 | ask *Yes/No* and *Wh-* questions, and use countable and uncountable nouns | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
 | give my opinion | Lesson 4, exercise 4.3 |
-| read about stilt houses | Lesson 5, exercises 5.1 and 5.2 |
+| read about a stilt house and how one is built | Lesson 5, exercises 5.1 and 5.2 |
 | talk about the kind of home I live in | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to a day in the life of a minority child | Lesson 6, exercises 6.1 and 6.2 |
+| listen to someone answering questions about how a family lived | Lesson 6, exercises 6.1 and 6.2 |
 | write a paragraph about the things I do for my family | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
@@ -993,11 +998,12 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. From a village in Cao Bang, in the north of Viet Nam. 2. It is made
-of wood and bamboo. 3. It has one big room; the family cooks, eats, talks and
-sleeps in the same space. 4. She misses the folk songs at Tet and her
-grandmother's bamboo baskets. 5. Because weaving takes a lot of patience and she
-says she does not have much (yet).
+**1.1** 1. She has given the class a project: ten questions, put to a real
+person. 2. Because he is no good at asking strangers anything, and he has not
+written a single question. 3. It is made of wood and bamboo, and you climb a
+wooden staircase to the door. 4. It has one big room; they cook, eat, talk and
+sleep in the same space. 5. She wants them to walk up the river on Saturday so
+that he can ask somebody real.
 
 ### Lesson 2
 

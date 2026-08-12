@@ -11,64 +11,65 @@
 | --- | --- |
 | **Pronunciation** | /ə/ vs /ɪ/ — the weak vowel in *farmer* vs the short vowel in *village* |
 | **Grammar** | **Comparative adverbs** — *-er* and *more* |
-| **Reading** | An article about life in the countryside |
+| **Reading** | A teenager's account of getting to a village the old way |
 | **Speaking** | Describing a village or town you know |
-| **Listening** | What life in the countryside is really like |
+| **Listening** | Someone describing a walk out of the village, and where the path led |
 | **Writing** | A **paragraph**, 80–100 words — what you like and dislike about rural life |
 
 ---
 
 ## Lesson 1 — Getting Started
 
-### Dialogue: Three weeks in Ha Nam
+### Dialogue: The long way round
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="Three weeks in Ha Nam" gramen="earlier / more slowly — comparative adverbs" gramvi="So sánh hơn với trạng từ: trạng từ ngắn thêm **-er** (*earlier*), trạng từ dài dùng **more** (*more slowly*). Sau đó dùng **than**." gramco="earlier than · more slowly than"
-**Duy:** You're really sunburnt, Linh. Where have you been?
-**Linh:** My grandparents' village in Ha Nam. Three weeks.
-**Duy:** Three weeks with no wifi? I'd go mad.
-**Linh:** There is wifi. It just works **more slowly** than ours.
-**Duy:** So what did you actually do all day?
-**Linh:** I got up **earlier** than I ever do here — half past five. My grandfather takes the [[buffalo]] out before the sun gets hot.
-**Duy:** Half past five? In the holidays?
-**Linh:** I know. But I slept **better** there than I sleep at home. It's quiet at night.
-**Duy:** Fair enough. Was the work hard?
-**Linh:** Picking fruit in the [[orchard]], collecting eggs, carrying water from the [[well]]. My cousin does all of it **much faster** than me — she's been doing it since she was six.
-**Duy:** Did you learn anything useful?
-**Linh:** I learned to ride a bicycle on a mud path, which is far harder than riding on a road. And I can tell now when it's going to rain.
-**Duy:** And the bad parts? Be honest.
-**Linh:** The nearest shop is three kilometres away. And everyone knows everything about you by lunchtime.
-**Duy:** So would you live there?
-**Linh:** Not all year. But I'd go back tomorrow.
+::: dialogue title="The long way round" gramen="earlier / more slowly — comparative adverbs" gramvi="So sánh hơn với trạng từ: trạng từ ngắn thêm **-er** (*earlier*), trạng từ dài dùng **more** (*more slowly*). Sau đó dùng **than**." gramco="earlier than · more slowly than"
+**Bà Sáu:** Tí. Take this to Chú Bảy in Bến Vàng, and be back before dark.
+**Tí:** Bến Vàng? That's your village. That's miles.
+**Bà Sáu:** Nine kilometres by the new road. Your uncle needs his medicine today, not tomorrow.
+**Tí:** I'll take the [[ferry]].
+**Bà Sáu:** The ferry runs **later** than it used to. You would stand on that bank for an hour.
+**Tí:** The bus, then.
+**Bà Sáu:** The bus goes **more slowly** than you walk. It stops at every gate between here and the [[canal]].
+**Tí:** So how did you get there when you were thirteen?
+**Bà Sáu:** There was a path. Behind the [[paddy fields|paddy field]], along the [[stream]], straight up over the hill and down the other side.
+**Tí:** Was it any quicker?
+**Bà Sáu:** We got there far **more quickly** than the boats did, and we started **earlier** than anybody. I knew that hill **better** than I know this kitchen.
+**Tí:** Then I'll take the path.
+**Bà Sáu:** You can't. The new road went through it thirty years ago. Nobody has walked it since.
+**Tí:** Somebody must know where it begins.
+**Bà Sáu:** I couldn't find the start of it now if you paid me, child, and I am the last one left who ever used it. Take the bus. Take a hat.
+**Tí:** …
+**Bà Sáu:** And put that rice sack down. Whatever you keep in it can stay under the bed.
 :::
 
 ### 1.1 Comprehension
 
 Answer in full sentences.
 
-1. How long did Linh stay in her grandparents' village?
-2. What does Linh say about the wifi there?
-3. What time did Linh get up, and why does her grandfather go out so early?
-4. Name three jobs Linh did in the village.
-5. Give one thing Linh did not like about village life.
+1. Where does Bà Sáu send Tí, and what does he have to take?
+2. Why does she say the ferry is no use to him?
+3. What was behind the paddy fields when Bà Sáu was a girl?
+4. Why can nobody take that way today?
+5. What does Bà Sáu tell Tí to leave at home?
 
 ### 1.2 Find the phrase
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these. Give yourself **two minutes** for all four — searching against a clock is the point, not reading carefully."
-- become very annoyed or bored = go mad
-- a piece of land where fruit trees are grown = orchard
-- much more quickly than me = much faster than me
-- by the middle of the day = by lunchtime
+- a very long way to travel = miles
+- the point where something begins = the start of it
+- not even for money = if you paid me
+- built straight across it = went through it
 :::
 
 ### 1.3 Notice the grammar
 
 ::: task skill="course" type="choice" opts="-er|more + adverb|irregular" ask="Look at the **bold** words. Which of the three groups does each one belong to?"
-- It works **more slowly** than ours. = more + adverb
-- I got up **earlier** than I ever do here. = -er
-- I slept **better** there. = irregular
-- She does it **much faster** than me. = -er
+- The bus goes **more slowly** than you walk. = more + adverb
+- The ferry runs **later** than it used to. = -er
+- I knew that hill **better** than I know this kitchen. = irregular
+- We started **earlier** than anybody. = -er
 :::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **trạng từ so sánh hơn**
@@ -581,66 +582,74 @@ and **than** in at least two of them.
 
 ## Lesson 5 — Skills 1: Reading & Speaking
 
-### Reading — *Sixty-one years in the same village*
+### Reading — *The old way to Bến Vàng*
 
-*An article by Quang, 14, from Ha Noi.*
+*Tí, 13, writes about a road he did not take.*
 
 ::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
 :::
 
 ::: passage
-> My grandmother has lived in the same village in Ha Nam for sixty-one years.
-> She has never wanted to leave it, and after three weeks there last summer I
-> began to understand why.
+> I missed the ten o'clock bus to Bến Vàng by four minutes. The next one was at
+> two, and my grandmother had said *before dark* twice, in the voice she keeps
+> for when she means it.
 >
-> The village sits between a bend in the river and a hill covered in bamboo.
-> There are about ninety houses, one primary school, two shops and a very old
-> well that nobody uses any more. Behind the houses the paddy fields spread
-> out, vast and flat, all the way to the next village. In April they are bright
-> green. In September, at harvest time, everything turns gold and the whole
-> village works from five in the morning until it is too dark to see.
+> So I sat down at the edge of a paddy field with the rice sack in my lap and
+> did the only stupid thing I had left. I lit the lamp and said, "Come back."
 >
-> Life there does not move more slowly than life in the city, whatever people
-> say. It moves differently. My grandmother still gets
-> up earlier than I do, feeds the chickens, collects the eggs and walks to the
-> orchard before breakfast. Her neighbour, Mr Tuan, drives his cattle along the
-> lane at six. Nobody is idle. But nobody rushes either, and that is not the
-> same thing.
+> Mun climbed out and looked at the vast green fields with no interest at all.
 >
-> What surprised me most was the noise. I had imagined silence. Instead there
-> were buffaloes, dogs, a radio somewhere, children shouting on the bridge over
-> the stream. The evening was the quiet part. We sat outside, my cousins flew a
-> kite until the light went, and my grandmother told the same three stories she
-> tells every year. I listened much more carefully than I used to.
+> "You know the rule by now," he said. "Light it, and the nearest lost thing
+> comes back. You don't choose which. Ten measures after this one."
+>
+> Nothing happened for a long minute. Then the bamboo behind me moved, and
+> there was a gap in it, and behind the gap there was a path.
+>
+> It was narrow and hard and swept clean, as if a hundred people had walked it
+> that morning. It ran along the stream, climbed the hill far more steeply than
+> any road climbs anything, and dropped down the other side.
+>
+> I took it. It was shorter than the road by half, and it carried me over the
+> top so much more quickly than the two o'clock bus ever could have that I
+> reached my uncle's gate with dry shoes and shaking legs.
+>
+> Chú Bảy took the medicine. Then he looked past me at the hill for a long
+> time.
+>
+> "Which way did you come?" he asked.
+>
+> "The road," I said.
+>
+> "You came more quickly than the road allows," he said.
 :::
 
 ### 5.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you know about villages is exactly the pull this type is built to catch."
-- Quang's grandmother was born in the village. = NG ~ we are told she has lived there sixty-one years, not that she was born there
-- The village has more than one shop. = T ~ "two shops"
-- The old well is still used every day. = F ~ "nobody uses [it] any more"
-- Quang thinks life in the village is slower than life in the city. = F ~ he says it does **not** move more slowly — it moves differently
-- Quang expected the village to be silent. = T ~ "I had imagined silence"
+- Tí missed the ten o'clock bus by four minutes. = T ~ "by four minutes"
+- The cat was excited by the fields around them. = F ~ he looked at them "with no interest at all"
+- The path was hard to walk on because nobody had used it. = F ~ it was hard and swept clean, as if a hundred people had walked it that morning
+- Tí had walked that path once before. = NG ~ the text never says either way
+- His uncle accepted that he had come by the road. = F ~ his uncle says he came more quickly than the road allows
 :::
 
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="2+number" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- What is the hill beside the village covered in? = bamboo
-- How many houses are there in the village? = (about) ninety
-- Who uses the very old well now? = nobody
-- In which month does the harvest happen? = September
-- What had Quang imagined the village would be full of? = silence
+- What time was the next bus? = (at) two
+- What two words did he say over the sack? = come back
+- What moved behind him just before the path appeared? = (the) bamboo
+- What did the path run along? = (the) stream
+- What did he tell his uncle he had come by? = (the) road
 :::
 
 ### 5.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word in the article that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- a curve in a river = bend
-- doing nothing, not busy = idle
-- moves in a great hurry = rushes
-- a structure built over a stream so you can cross it = bridge
+- brushed clean of leaves and dust = swept
+- an opening in something = gap
+- rising very sharply = steeply
+- the way in through a wall or fence = gate
 :::
 
 ### Speaking — Describing a village or town you know
@@ -676,9 +685,9 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### 5.4 Read it again, against the clock
 
-You have already read *Sixty-one years in the same village* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
+You have already read *The old way to Bến Vàng* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
 
-::: fluency mode="read" words="249" secs="150|120|90" ask="Read *Sixty-one years in the same village* again from the top. Stop the clock the moment you reach the end."
+::: fluency mode="read" words="259" secs="150|120|90" ask="Read *The old way to Bến Vàng* again from the top. Stop the clock the moment you reach the end."
 - Do not stop to look anything up — you have met all of it
 - Read for the sense of it, not word by word
 - Press **I finished** the moment you reach the last line
@@ -697,44 +706,44 @@ You have already read *Sixty-one years in the same village* and answered questio
 
 ## Lesson 6 — Skills 2: Listening & Writing
 
-### Listening — Hoa moved to the countryside
+### Listening — Thảo walks the path
 
 You get **one** play, so use the preview window: read both sets of questions
 first, then answer while you listen rather than afterwards from memory.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a girl called Hoa describing what changed when her family left the city for a village, and whether she would go back." mode="computer" preview="30" review="120"
-Hello. My name is Hoa and I moved from Ha Noi to a small village in Thanh Hoa
-two years ago, when my mother changed her job. People always ask me the same
-question: is it boring? So let me answer honestly.
+::: audio orientation="You will hear a girl describing a walk she took with a friend along a path outside the village, and what happened when they followed it the other way." mode="computer" preview="30" review="120"
+I want to say first that I believed him before I saw anything. He does not
+invent things. He is not clever enough to keep it up for a whole week.
 
-Yes, sometimes. On a wet Sunday afternoon there is nothing at all to do. The
-nearest cinema is forty kilometres away. My old friends message me about
-places I have never seen, and I feel a long way from everything.
+So we went on Sunday morning, early, with two bottles of water. The opening in
+the bamboo is exactly where he told me it would be. The ground under your feet
+is hard, and it is clean, and that is the part I cannot explain. Clean. Every
+day. By nobody.
 
-But I sleep better here than I ever slept in the city, and I get to school
-more easily too. It is a ten-minute walk along the stream instead of half an
-hour on a bus. My class has nineteen students, so the teachers know all of us
-properly. My marks have improved. I read much more than I used to, mostly
-because my phone signal is terrible.
+Going down towards the village it behaves itself. It cuts the distance in half,
+it goes over the top instead of round, and it brings you out beside the well at
+the bottom of the lane. Fine.
 
-The thing nobody tells you is how hard people work. My neighbours are up
-before five during the harvest. My grandmother, who is eighty, still carries
-water from the well faster than I can.
+Then we turned round and followed it the other way, uphill, and it does not
+end. It runs beside the river and keeps going north for an hour and a half,
+much further than either of us has ever been from home. There are steps cut
+into the bank. There is an old landing, and wooden posts standing out in the
+water.
 
-Would I move back? I do not know. I think I would miss the fields more than I
-ever missed the city.
+Nothing has tied up there in my lifetime. Nothing goes up that river any more.
+The path does.
 :::
 
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- Hoa moved to the village (a) last year (b) two years ago (c) when she was a small child = b
-- The nearest cinema is ___ kilometres away. (a) ten (b) nineteen (c) forty = c
-- Her journey to school now takes (a) ten minutes (b) half an hour (c) an hour = a
-- She reads more than before mainly because (a) she has more homework (b) her phone signal is bad (c) there is a new library = b
-- At the end, Hoa says she (a) definitely wants to move back (b) is not sure (c) hates the city = b
+- She believed her friend (a) only after she saw it (b) before she saw anything (c) never = b
+- They walked the path on (a) Saturday evening (b) Sunday morning (c) Monday morning = b
+- The thing she cannot explain is that the path is (a) new (b) clean (c) narrow = b
+- Going uphill they followed it for about (a) half an hour (b) one hour (c) an hour and a half = c
+- At the far end of the path they found (a) another village (b) an old landing (c) a bridge = b
 :::
 
 ### 6.2 Note completion
@@ -744,12 +753,12 @@ never full sentences. Fill each gap **as you listen** — there is no transfer
 time at the end.
 
 ::: task skill="listening" type="completion" words="2+number"
-- Moved from Ha Noi to a village in ___ = Thanh Hoa
-- Length of time since the move: ___ years = two/2
-- Journey to school: a ___ walk along the stream = ten-minute
-- Number of students in her class: ___ = nineteen/19
-- During the harvest, neighbours are up before ___ = five/5
-- Grandmother's age: ___ = eighty/80
+- Day of the walk: ___ morning = Sunday
+- Bottles of water they carried: ___ = two/2
+- Going down, the path comes out beside the ___ = well
+- Time spent following it uphill: an hour and a ___ = half
+- Direction it keeps going: ___ = north
+- Cut into the bank: ___ = steps
 :::
 
 ### Writing — A paragraph about rural life
@@ -760,15 +769,15 @@ adverbs.
 
 #### Model paragraph — read this first
 
-> I have spent every summer of my life in my grandparents' village, so I know
-> it well. What I like most is the space: vast paddy fields, and a stream
-> behind the barn where the buffalo drink. In the city I walk more slowly than
-> everyone; in the village nobody hurries. At night I sleep far better there
-> than at home, because it is so peaceful. What I dislike is
-> the distance: the nearest shop is three kilometres away, so I have to plan
-> much more carefully. Even so, I always leave more sadly than I arrive.
+> I have only walked out to Bến Vàng once, but I have thought about it more
+> often since than about anywhere else. What I like is the space. The paddy
+> fields are vast, a stream runs the whole way down beside you, and the old
+> well at the bottom of the lane still gives water. People there move more
+> slowly than we do and work far harder than we do, which is not the same
+> thing. What I dislike is the distance: the last bus home leaves earlier than
+> it should. Even so, I sleep better out there.
 
-*(97 words)*
+*(98 words)*
 
 #### Plan it — 5 questions your paragraph has to answer
 
@@ -864,18 +873,19 @@ list reports; a comparison points.
 Find and correct **six** errors in this paragraph. Five are comparative-adverb
 errors; one is a subject–verb agreement slip.
 
-> My cousin live in a village near Ninh Binh. She gets up more early than me
-> and she works more hard all day. She rides her bicycle more fast than I can
-> run, and she speaks English more good than her teacher expects. In the
-> evening she studies more careful than anybody in her class.
+> My friend walk faster than I do, so she reached the bamboo more early than
+> me. She climbs more quick than a goat and she reads a map more good than
+> anybody in our class. She believed my story more easy than I believed it
+> myself, and now she wants to follow the path more far than we went on
+> Sunday.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
-- Error 1 = lives ~ *live* → *lives* — subject–verb agreement
+- Error 1 = walks ~ *walk* → *walks* — subject–verb agreement
 - Error 2 = earlier ~ *more early* → *earlier* — a short adverb takes *-er*
-- Error 3 = harder ~ *more hard* → *harder*
-- Error 4 = faster ~ *more fast* → *faster*
-- Error 5 = better ~ *more good* → *better* — irregular
-- Error 6 = more carefully ~ *more careful* → *more carefully* — it modifies a verb
+- Error 3 = more quickly ~ *more quick* → *more quickly* — it modifies a verb
+- Error 4 = better ~ *more good* → *better* — irregular
+- Error 5 = more easily ~ *more easy* → *more easily* — it modifies a verb
+- Error 6 = farther/further ~ *more far* → *farther* (or *further*) — irregular
 :::
 
 ### Project — A village profile
@@ -924,9 +934,9 @@ page can settle it, the row says so, and that one is yours to judge.
 | hear /ə/ and /ɪ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.6 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.8 and listen back. |
 | make and use comparative adverbs | Lesson 3, exercises 3.1 and 3.2 · Lesson 7, exercises 7.3 and 7.4 |
 | give a compliment, and answer one | Lesson 4, exercises 4.1 and 4.3 |
-| read about the different sides of a Vietnamese village | Lesson 5, exercises 5.1 and 5.2 |
+| read a teenager's account of a journey through the countryside | Lesson 5, exercises 5.1 and 5.2 |
 | talk about the village or town I know | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to someone's opinion of life in the countryside | Lesson 6, exercises 6.1 and 6.2 |
+| listen to someone describing a walk in the countryside | Lesson 6, exercises 6.1 and 6.2 |
 | write a paragraph about what I like and dislike about rural life | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
@@ -943,12 +953,12 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. She stayed for three weeks. 2. There is wifi, but it works more
-slowly than the wifi at home. 3. She got up at half past five, because her
-grandfather takes the buffalo out before the sun gets hot. 4. She picked fruit
-in the orchard, collected eggs, and carried water from the well. 5. Any one of:
-the nearest shop is three kilometres away; everyone knows everything about you
-by lunchtime.
+**1.1** 1. She sends him to Bến Vàng, her own village, to take his uncle's
+medicine. 2. Because the ferry runs later than it used to, so he would wait on
+the bank for an hour. 3. There was a path, which ran along the stream and
+straight over the hill. 4. Because the new road was built through it thirty
+years ago, and nobody has walked it since — she says she could not even find
+where it started. 5. The rice sack, which he keeps under his bed.
 
 ### Lesson 2
 

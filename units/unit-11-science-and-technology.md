@@ -11,69 +11,70 @@
 | --- | --- |
 | **Pronunciation** | **Stress** in statements and in questions |
 | **Grammar** | **Reported speech** — statements |
-| **Reading** | Inventions — biometrics and nanolearning |
+| **Reading** | An inventor's workroom, and the rule he wrote on the last page |
 | **Speaking** | Talking about the technology you use and why |
-| **Listening** | Robot teachers |
-| **Writing** | A **persuasive paragraph**, 80–100 words — will robots replace teachers? |
+| **Listening** | An apprentice on what he was taught, and what he was never taught |
+| **Writing** | An **opinion paragraph**, 80–100 words — will robots replace teachers? |
 
 ---
 
 ## Lesson 1 — Getting Started
 
-### Dialogue: You missed the science club
+### Dialogue: The box that will not open
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="You missed the science club" gramen="said (that) — reported speech" gramvi="Khi thuật lại lời nói, lùi thì một bậc và đổi đại từ: *“I am tired”* → *He said he **was** tired*." gramco="She said she was busy"
-**Duy:** You weren't at the science club yesterday, Linh. What happened?
-**Linh:** I had a dentist's appointment. Was it any good?
-**Duy:** It was brilliant. Ms Hoa gave a talk about [[biometrics]].
-**Linh:** Bio— what? I've never heard that word.
-**Duy:** Biometrics. She [[said|gram:said]] that a machine could identify a person from a [[fingerprint]], a face, or even the [[iris]] of the eye.
-**Linh:** So my phone does biometrics every single morning.
-**Duy:** Exactly. She told us that no two fingerprints are the same. Then she asked us to guess what was coming next.
-**Linh:** And what was coming next?
-**Duy:** [[Nanolearning]]. She explained that it meant studying in very short bursts — three or four minutes, one idea at a time.
-**Linh:** My brother told me he had learned the whole periodic table that way. I didn't believe him.
-**Duy:** He may be telling the truth. Ms Hoa said that short lessons were easier to remember than long ones.
-**Linh:** Did anyone ask about robot teachers? Nam is obsessed with that.
-**Duy:** He asked, of course. Ms Hoa told him that a robot would never replace her.
-**Linh:** And what did he say to that?
-**Duy:** Nothing. He wrote it down and said he would put it in the club magazine.
-**Linh:** Send me your notes tonight, then.
-**Duy:** I'll send them now. She told me that Friday's test would cover everything.
+::: dialogue title="The box that will not open" gramen="said (that) — reported speech" gramvi="Khi thuật lại lời nói, lùi thì một bậc và đổi đại từ: *“I am tired”* → *He said he **was** tired*." gramco="She said she was busy"
+**Khoa:** Try it again, Tí. Thumb flat on the glass, not the tip.
+**Tí:** I have put my thumb on that glass eleven times this morning.
+**Khoa:** And?
+**Tí:** Nothing. The [[device]] blinks twice and stays shut. Đạt says the science club has built a very expensive shoe box.
+**Khoa:** Đạt would say that. Cô Yến told us that the club had until Friday, so we have three days.
+**Tí:** She told me that the whole school would come and look at it.
+**Khoa:** She tells everybody that. Where does it fail — the reading or the lock?
+**Tí:** The [[fingerprint]] part is fine. It is the wire behind it.
+**Khoa:** Show me your [[experiment]] sheet. What did you write down on Monday?
+**Tí:** I wrote that the box opened four times out of ten. Hùng [[said|gram:said]] that four out of ten was worse than a key.
+**Khoa:** Hùng is not wrong, for once.
+**Tí:** Thảo says we should carry it to Chú Bảy. He mends boat engines all day; a small lock cannot be harder than that.
+**Khoa:** Ask him tonight, then. And what did Mun say about it?
+**Tí:** He said the lamp would not help us. Light the lamp and the nearest lost thing comes back — you never choose what, and there are two measures of oil left.
+**Khoa:** So we mend it ourselves.
+**Tí:** We mend it ourselves. Bring a screwdriver on Thursday.
+**Khoa:** And bring the green notebook.
+**Tí:** I have brought it every day. The last page is the one that matters, and the last page is not there.
 :::
 
 ### 1.1 Comprehension
 
 Answer in full sentences.
 
-1. Why was Linh not at the science club?
-2. Name the three body parts a biometric machine can use, according to Ms Hoa.
-3. What does *nanolearning* mean?
-4. What did Ms Hoa say to Nam about robot teachers?
-5. What is Nam going to do with what Ms Hoa said?
+1. How many times has Tí put his thumb on the glass?
+2. What does Khoa say Cô Yến told the club about Friday?
+3. Which part of the box works, and which part does not?
+4. Why does Thảo want them to carry the box to Chú Bảy?
+5. What did Mun say about the lamp, and how much oil is left?
 
 ### 1.2 Find the phrase
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
-- very good, excellent = brilliant
-- thinks about one thing all the time = is obsessed with
-- short periods of activity = bursts
-- to know who someone is = identify
+- a machine or piece of equipment built for one job = device
+- repairs something that is broken = mends
+- a careful test done to find something out = experiment
+- the mark the tip of your thumb leaves = fingerprint
 :::
 
 ### 1.3 Notice the grammar
 
 ::: task skill="course" type="choice" opts="say|tell" ask="Which reporting verb is each sentence using?"
-- She **said** that a machine **could** identify a person. = say
-- She **told us** that no two fingerprints **are** the same. = tell
-- Ms Hoa **told him** that a robot **would** never replace her. = tell
-- He **said** he **would** put it in the magazine. = say
+- He **said** the lamp **would** not help us. = say
+- Cô Yến **told us** that the club **had** until Friday. = tell
+- She **told me** that the whole school **would** come. = tell
+- Hùng **said** that four out of ten **was** worse than a key. = say
 :::
 
 Now look at what follows each verb. Sentences 2 and 3 have an extra word
-straight after it — *us*, *him*. Sentences 1 and 4 have nothing there, and
+straight after it — *us*, *me*. Sentences 1 and 4 have nothing there, and
 cannot: **only *tell* takes a person after it.** *Say* never does. That single
 difference is most of what Lesson 3 is about.
 
@@ -290,7 +291,7 @@ to it below, then record yourself and listen back for whether it really did.
 ::: task skill="course" type="choice" opts="↘|↗" ask="Does the voice **fall** (↘) or **rise** (↗) at the end of each line?"
 - **BIOMETRICS** can **IDENTIFY** a **PERSON**. = ↘
 - **WHY** did they **AUTOMATE** the **FACTORY**? = ↘ ~ a Wh- question falls, exactly like a statement
-- Did **NAM** **FINISH** his **PROJECT**? = ↗ ~ a Yes/No question rises
+- Did **KHOA** **FINISH** his **PROJECT**? = ↗ ~ a Yes/No question rises
 - Yes, he **DID**. = ↘ ~ a short answer falls, and *DID* is strong
 - **HOW** does **NANOLEARNING** **WORK**? = ↘
 - The **NEW** **DEVICE** is **NOT** **CHEAP**. = ↘
@@ -322,8 +323,8 @@ sentence clear; choosing what to make loud is.
 When you tell someone what another person said, you do not repeat their exact
 words. You **report** them.
 
-> **Direct:** Mai said, "I am tired."
-> **Reported:** Mai said **that she was** tired.
+> **Direct:** Thảo said, "I am tired."
+> **Reported:** Thảo said **that she was** tired.
 
 Four things can change. Learn them in this order.
 
@@ -381,8 +382,8 @@ The speaker changes, so the pronouns must change with them.
 | our | → | their |
 | you (= the listener) | → | me / us |
 
-> Linh said, "**I** have lost **my** notes."
-> → Linh said that **she** had lost **her** notes.
+> Thảo said, "**I** have lost **my** notes."
+> → Thảo said that **she** had lost **her** notes.
 > The teacher said, "**We** will help **you**."
 > → The teacher told us that **they** would help **us**.
 
@@ -403,8 +404,8 @@ You are reporting later, and somewhere else.
 | this | → | that |
 | these | → | those |
 
-> Duy said, "I bought **this** device **yesterday**."
-> → Duy said that he had bought **that** device **the day before**.
+> Tí said, "I bought **this** device **yesterday**."
+> → Tí said that he had bought **that** device **the day before**.
 
 #### (e) When NOT to backshift
 
@@ -412,7 +413,7 @@ If the statement is a **general truth** that is **still true now**, you may keep
 the present tense. Vietnamese textbooks accept both, but the present sounds more
 natural.
 
-> Ms Hoa said that water **boils** at 100 degrees Celsius. ✅
+> Cô Yến said that water **boils** at 100 degrees Celsius. ✅
 > She told us that no two fingerprints **are** the same. ✅
 
 The same applies when the situation has not changed yet: *He said he **lives**
@@ -426,20 +427,20 @@ in Hue* — and he still does.
 > ❌ *He said me that he was busy.* → ✅ He **told me** that he was busy.
 >
 > **2. Quên đổi đại từ.** Lùi thì xong rồi vẫn để nguyên *I, my, we*.
-> ❌ *Mai said that I was doing my homework.* (nghĩa đã sai hoàn toàn!)
-> → ✅ Mai said that **she** was doing **her** homework.
+> ❌ *Thảo said that I was doing my homework.* (nghĩa đã sai hoàn toàn!)
+> → ✅ Thảo said that **she** was doing **her** homework.
 
 ### 3.1 Say or tell?
 
 ::: task skill="course" type="choice" opts="said|told" ask="Which reporting verb fits? Look for a person straight after the gap."
-- Nam ___ that the experiment had failed. = said
-- Nam ___ me that the experiment had failed. = told
+- Khoa ___ that the experiment had failed. = said
+- Khoa ___ me that the experiment had failed. = told
 - The scientist ___ the students that the laboratory was closed. = told
 - The scientist ___ that the laboratory was closed. = said
 - My father ___ he would buy me a new device. = said
 - My father ___ my brother he would buy him a new device. = told
-- Ms Hoa ___ us that robots could not feel anything. = told
-- Ms Hoa ___ that robots could not feel anything. = said
+- Cô Yến ___ us that robots could not feel anything. = told
+- Cô Yến ___ that robots could not feel anything. = said
 - Who ___ you that? = told
 - Nobody ___ anything about the test. = said
 :::
@@ -464,21 +465,21 @@ in Hue* — and he still does.
 Change everything that needs to change — verb, pronouns, time and place words.
 Use the reporting verb in brackets.
 
-1. "I am doing an experiment now." (Mai / say)
+1. "I am doing an experiment now." (Thảo / say)
    → _______________________________
 2. "We will show you our robot tomorrow." (The students / tell me)
    → _______________________________
-3. "I bought this device yesterday." (Duy / tell Linh)
+3. "I bought this device yesterday." (Tí / tell Khoa)
    → _______________________________
-4. "My sister can speak three languages." (Nam / say)
+4. "My sister can speak three languages." (Khoa / say)
    → _______________________________
-5. "I have finished my project." (Hoa / tell us)
+5. "I have finished my project." (Thảo / tell us)
    → _______________________________
 6. "You must wear safety glasses here." (The teacher / tell us)
    → _______________________________
-7. "Water boils at 100 degrees Celsius." (Ms Hoa / say)
+7. "Water boils at 100 degrees Celsius." (Cô Yến / say)
    → _______________________________
-8. "I may visit the laboratory this week." (Linh / say)
+8. "I may visit the laboratory this week." (Đạt / say)
    → _______________________________
 
 ### 3.4 Correct the mistake
@@ -487,10 +488,10 @@ Each sentence has **one** error. Rewrite it correctly.
 
 1. She told that the new phone was expensive.
 2. He said me that he had finished the report.
-3. Mai said that I was tired, so she went to bed early. *(Mai was talking about herself)*
+3. Thảo said that I was tired, so she went to bed early. *(Thảo was talking about herself)*
 4. The teacher said us that we had to bring our books.
-5. Nam told me that he will come to the club the next day.
-6. Linh said that she has already seen the film.
+5. Khoa told me that he will come to the club the next day.
+6. Thảo said that she has already seen the film.
 7. My brother said that he bought that laptop the day before.
 8. They told us that we can use the laboratory the next day.
 
@@ -541,7 +542,7 @@ time, and remember the pronoun shift.
 
 | English | Nghĩa |
 | --- | --- |
-| Guess what — Ms Hoa **said that** we'd have a test. | Đoán xem — cô Hoa nói rằng chúng ta sẽ có bài kiểm tra. |
+| Guess what — Cô Yến **said that** we'd have a test. | Đoán xem — cô Yến nói rằng chúng ta sẽ có bài kiểm tra. |
 | My brother **told me that** the app was free. | Anh trai tôi bảo tôi rằng ứng dụng đó miễn phí. |
 | Did you hear? They **said that** the club was cancelled. | Cậu nghe chưa? Người ta nói câu lạc bộ bị huỷ. |
 | She didn't **say** anything about it. | Cô ấy không nói gì về việc đó. |
@@ -595,7 +596,7 @@ first, and the news itself in the sentence after it.
 - **A:** What do you use that app ___ ? = for
 - **B:** Homework, mostly. The main ___ is that it checks my spelling. = benefit
 - **A:** Are there any ___ ? (**B:** Yes — it drains my battery in about an hour.) = drawbacks
-- **A:** Guess what! Ms Hoa ___ us that the science club was moving to Friday. = told
+- **A:** Guess what! Cô Yến ___ us that the science club was moving to Friday. = told
 - **B:** Really? Who ___ you that? = told
 - **A:** She ___ it herself, at the end of the lesson. = said
 - **A:** Could you ___ without your phone for a week? = live
@@ -713,37 +714,46 @@ they name. Shift the tense and the pronouns.
 
 ## Lesson 5 — Skills 1: Reading & Speaking
 
-### Reading — *Two ideas that are changing everyday life*
+### Reading — *The workroom under the wheel*
 
-*An article from a school science magazine.*
+*Tí writes down what they found upriver, six days after the voice in the box.*
 
 ::: clock mins="19" for="You have 19 minutes for the text and every exercise below it."
 :::
 
 ::: passage
-> Think about the last time you unlocked your phone. You probably did not type
-> a password. You put your thumb on a small square, or you simply looked at the
-> screen and it opened. That is biometrics: technology that identifies a person
-> by a part of the body instead of by something the person has to remember.
+> We went upriver past the stilt house to the old mill, and the door under the
+> wheel was the colour of the water, so we walked past it twice.
 >
-> Fingerprints are the most familiar example, but they are not the only one.
-> Some devices use face recognition, and some read the iris, the coloured ring
-> around the pupil of the eye. The idea behind all of them is the same. A
-> password can be stolen or forgotten. A body is much harder to copy.
+> Inside there was a bench, a shelf, and nothing else at all. Somebody had
+> carried every tool out of that workroom years ago. The green notebook was
+> still on the shelf, and its last page had been torn out.
 >
-> Biometrics is not perfect. A cut finger, a new pair of glasses or a very dark
-> room can confuse a scanner. There are also questions about privacy. Once a
-> company stores your face, you cannot change it the way you change a password.
+> "This is his room," Mun said. "It is not his work."
 >
-> A second idea is changing the way we study. Nanolearning breaks a subject
-> into very short lessons, often two or three minutes long, with one clear
-> point in each. Instead of sitting through a whole hour, you learn one thing,
-> use it, and stop. Learners who are busy, or who lose concentration easily,
-> often find this easier than a long class.
+> So I lit the lamp. Two measures, and then one.
 >
-> Nanolearning has a drawback too. Short bursts are excellent for facts and
-> small skills, but a difficult idea still needs long, slow, uncomfortable
-> thinking. No app removes that.
+> What came back was the work. Drawings unrolled themselves along the bench. A
+> wooden box with a glass eye in it, built to read a fingerprint. A brass
+> scanner as long as my arm, with an iris painted on the lid. And a small frame
+> he had made to know a person by the face alone — face recognition, sixty
+> years before anybody sold such a thing in a shop. He had spent his life
+> building a machine to do the one thing I do for nothing.
+>
+> The torn page was back in the notebook too. His writing is small and it
+> leans.
+>
+> *I have taught this to every apprentice. The lamp calls a lost thing home
+> along a line, and a keeper holds the far end of that line open. So the lamp
+> must never be spent on a keeper. Call one back and the line shuts behind him,
+> and everything still lost stays lost.*
+>
+> Under that, in the same small hand, is the way to the far end: a river, a
+> crossing, and how long the walk takes. He can be reached. He simply cannot be
+> called.
+>
+> Mun read it over my shoulder and said nothing for a long time. Then he said
+> the keeper had never got as far as giving him a name.
 :::
 
 ### 5.1 Yes, No, or Not Given
@@ -753,32 +763,32 @@ a different target. **True/False/Not Given** asks about **facts** in a text;
 **Yes/No/Not Given** asks whether the **writer** would agree with a claim. The
 reasoning is the same; what you are matching against is not.
 
-::: task skill="reading" type="yes-no-not-given" ask="Does the writer agree? **YES** if the article supports the claim, **NO** if it takes the opposite view, **NG** if the article never takes a position either way."
-- A password is easier to steal than a body is to copy. = YES ~ *A password can be stolen or forgotten. A body is much harder to copy.*
-- Biometrics can be relied on in any situation. = NO ~ *Biometrics is not perfect* — a cut finger, new glasses or a dark room can confuse a scanner
-- Companies should not be allowed to store people's faces. = NG ~ the article raises the privacy question and recommends nothing
-- Nanolearning suits every kind of learning equally well. = NO ~ short bursts are excellent for facts, but a difficult idea still needs long, slow thinking
-- Nanolearning helps people who lose concentration easily. = YES ~ *Learners who are busy, or who lose concentration easily, often find this easier*
+::: task skill="reading" type="yes-no-not-given" ask="Does the writer agree? **YES** if the passage supports the claim, **NO** if it takes the opposite view, **NG** if the passage never takes a position either way."
+- The workroom had already been emptied before they got to it. = YES ~ *Somebody had carried every tool out of that workroom years ago*
+- The keeper's rule allows the lamp to be spent on calling a keeper back. = NO ~ *the lamp must never be spent on a keeper*
+- The keeper built his face frame after machines like it were being sold. = NO ~ he built it sixty years before anybody sold such a thing in a shop
+- The writer thinks the keeper was wrong to forbid it. = NG ~ he copies the page out and never says what he thinks of the rule
+- The keeper can still be reached by somebody willing to travel. = YES ~ the page gives a river, a crossing and how long the walk takes
 :::
 
 ### 5.2 Answer the questions
 
-::: task skill="reading" type="short-answer" words="3" ask="Take the words from the article. Do not rephrase them — this is the one place in the course where putting it in your own words costs you the mark."
-- Apart from fingerprints, what kind of recognition do some devices use? = face (recognition)
-- The iris is the coloured ring around which part of the eye? = (the) pupil
-- Besides being stolen, what can happen to a password? = forgotten
-- What does the article say a company might store that you cannot then change? = (your) face
-- What does nanolearning break a subject into? = (very) short lessons
+::: task skill="reading" type="short-answer" words="3" ask="Take the words from the passage. Do not rephrase them — this is the one place in the course where putting it in your own words costs you the mark."
+- How many times did they walk past the door? = twice
+- What was still on the shelf? = (the) green notebook
+- What had happened to the notebook's last page? = torn out
+- What was inside the wooden box, built to read a fingerprint? = (a) glass eye
+- What does the writer say a lost thing is called home along? = (a) line
 :::
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word in the article that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the passage that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - a machine that reads or scans something = scanner
-- the coloured ring around the pupil = iris
-- the ability to keep personal information to yourself = privacy
-- the ability to keep your mind on one thing = concentration
-- a disadvantage = drawback
+- the coloured ring around the pupil of the eye = iris
+- a room fitted out for making and mending things = workroom
+- somebody learning a trade from a person who already knows it = apprentice
+- knowing a person by the face alone = face recognition
 :::
 
 ### Speaking — The technology you use, and why
@@ -825,7 +835,7 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ## Lesson 6 — Skills 2: Listening & Writing
 
-### Listening — A teacher talks about a robot
+### Listening — The apprentice says what he was taught
 
 This plays **once**. The talk runs in order and so do the questions, so read
 both 6.1 and 6.2 in the preview window, then answer while the voice is still
@@ -834,70 +844,67 @@ moving rather than afterwards from memory.
 **Bài nghe chỉ phát một lần.** Đọc trước cả 6.1 và 6.2 trong lúc chờ, rồi vừa
 nghe vừa trả lời.
 
-::: audio orientation="You will hear a secondary-school teacher describing what happened when her school borrowed a teaching robot, and what she now thinks robots are good for." mode="computer" preview="30" review="120"
-Good afternoon. My name is Ms Trang and I teach science at a secondary
-school. Last term my school borrowed a teaching robot for six weeks, and
-people keep asking me what it was like.
+::: audio orientation="You will hear one speaker, sitting in the workroom, telling the others what his teacher taught him, what he was never taught, and what he thinks they should do with what is left." mode="computer" preview="30" review="120"
+**Mun:** He was not a kind man to work for. He said the same things every
+morning until I could say them back to him in my sleep.
 
-The robot was about a metre tall. It could speak English and Vietnamese, it
-never got tired, and it never lost its temper. It marked our quizzes
-instantly. My students loved it for the first two weeks.
+He told me that a lamp is not a wish and never was. He said that everything
+the lamp brings home belonged to somebody once. He said it travels home along
+a line, and that a line has two ends. He told me my end was the near one. He
+said his was the far one, and that his was the harder one.
 
-Then things changed. The robot could answer a question, but it could not tell
-the difference between a student who was thinking hard and a student who had
-given up. One boy in my class stopped working completely, and the robot did
-not notice for three lessons. I noticed on the first day.
+He told me I would be given a name on the day I had learned the whole of it. I
+never learned the whole of it. He went, and the name went with him, and I have
+been standing at the near end ever since with half a lesson.
 
-So do I think robots will replace teachers? No. I think they will replace
-parts of the job: the marking, the repeating, the recording of results. That
-is not a bad thing. Those parts take my evenings.
+Now listen to me, both of you. There is one measure of oil in that lamp. I
+know what you are going to say, because I want the same thing you want. But he
+wrote that page and he underlined it, and I heard him say it out loud more
+times than I can count.
 
-What a robot cannot do is care. It cannot see that a quiet student is
-worried, or decide to change the whole lesson because the class is tired. My
-advice is simple. Let the machine do the boring work, and let the teacher do
-the human work.
+Spend it on anything in the world. Do not spend it on him.
 :::
 
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- Ms Trang teaches (a) English (b) science (c) mathematics = b
-- The school had the robot for (a) six days (b) six weeks (c) six months = b
-- The students liked the robot (a) all term (b) for the first two weeks (c) not at all = b
-- The robot could not tell the difference between a student who was thinking and one who (a) was talking (b) had given up (c) was absent = b
-- Ms Trang thinks robots will replace (a) teachers (b) parts of a teacher's job (c) nothing at all = b
-- The one thing she says a robot cannot do is (a) mark work (b) speak Vietnamese (c) care = c
+- The speaker says his teacher was (a) kind to work for (b) not kind to work for (c) hardly ever there = b
+- He was told that a lamp is (a) a wish (b) not a wish (c) a machine = b
+- A line, he says, has (a) one end (b) two ends (c) no end at all = b
+- His own end of the line was (a) the near one (b) the far one (c) neither = a
+- He was to be given a name on the day he had (a) found his teacher (b) learned the whole of it (c) filled the lamp = b
+- His advice about the last measure is to spend it on (a) his teacher (b) anything else (c) nothing at all = b
 :::
 
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="1"
-- The robot was about a ___ tall. = metre
-- It could speak English and ___ . = Vietnamese
-- It marked the quizzes ___ . = instantly
-- The robot did not notice the boy for ___ lessons. = three/3
-- Ms Trang noticed on the ___ day. = first
-- Her advice: let the machine do the ___ work. = boring
-- And let the teacher do the ___ work. = human
+- He heard the same things every ___ . = morning
+- Everything the lamp brings home ___ to somebody once. = belonged
+- He said a lost thing ___ home along a line. = travels
+- His teacher said his own end was the ___ one. = harder
+- He has stood at his end ever since with half a ___ . = lesson
+- There is one measure of ___ in that lamp. = oil
+- His teacher wrote the page and ___ it. = underlined
 :::
 
-### Writing — A persuasive paragraph
+### Writing — An opinion paragraph
 
-**Task.** Your school magazine asks: **Will robots replace teachers?** Write a
-**persuasive paragraph** of **80–100 words**. Take a clear position, admit one
+**Task.** Your school magazine asks: **Will robots replace teachers?** Write an
+**opinion paragraph** of **80–100 words**. Take a clear position, admit one
 point on the other side, then argue your own.
 
 #### Model paragraph — read this first
 
-> Some people believe that robots will soon replace teachers, but I disagree.
-> It is true that artificial intelligence can mark our work in seconds, and
-> that is far more efficient than any person. However, learning is not only
-> about information. Last year, for example, I was worried before an exam, and
-> my teacher noticed my face and said something kind. No device can do that.
-> Afterwards she told me that she had seen the same look on her own son. For
-> these reasons, robots will help teachers, but they will never replace them.
+> Robots will never replace teachers, and I do not want them to. It is true
+> that a machine is more efficient than a person: an application can mark
+> thirty tests in a second and give feedback the same evening. However, a
+> device only answers the question you type into it. Last year a teacher looked
+> at my face across a laboratory and told me that I had understood nothing, and
+> she was right. No invention I have seen can do that. Robots will take the
+> boring half of teaching, but the human half is not theirs.
 
-*(93 words)*
+*(96 words)*
 
 #### Plan it — 6 questions your paragraph has to answer
 
@@ -917,7 +924,7 @@ the most damaging thing on the page.
 | Where does the reader see your position for the second time? | |
 
 ::: bridge name="Say the prompt in your own words before you answer it" trains="Lexical Resource" cefr="B1" marker="[D]" src="02 §7"
-Before you write a single sentence of the persuasive paragraph, do this out loud:
+Before you write a single sentence of the opinion paragraph, do this out loud:
 **say the task back in your own words.** Not the wording above — yours.
 
 Then write. **No prepared opening.** If a sentence arrives fully formed before
@@ -940,7 +947,7 @@ cheapest way to find out whether you have understood it at all.
 ::: thread id="articles" stage="check"
 :::
 
-::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours — the persuasive paragraph, **80–100 words**. A clear position, one point admitted, then your own argument."
+::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours — the opinion paragraph, **80–100 words**. A clear position, one point admitted, then your own argument."
 - [ ] 80–100 words ~ words
 - [ ] One paragraph, not a list ~ para:1
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
@@ -989,14 +996,14 @@ cheapest way to find out whether you have understood it at all.
 
 Rewrite in reported speech.
 
-1. "I am reading about biometrics." (Duy / say)
+1. "I am reading about biometrics." (Tí / say)
 2. "We have built a robot." (The club / tell us)
-3. "I will send you the file tomorrow." (Linh / tell me)
+3. "I will send you the file tomorrow." (Khoa / tell me)
 4. "You must finish this today." (My teacher / tell me)
-5. "I can't come to the laboratory." (Nam / say)
-6. "The Earth goes round the Sun." (Ms Hoa / say)
-7. "I saw this device here yesterday." (Mai / say)
-8. "My parents may buy me a laptop next week." (Hoa / tell her friend)
+5. "I can't come to the laboratory." (Đạt / say)
+6. "The Earth goes round the Sun." (Cô Yến / say)
+7. "I saw this device here yesterday." (Thảo / say)
+8. "My parents may buy me a laptop next week." (Thảo / tell her friend)
 
 ### 7.4 Error hunt
 
@@ -1004,18 +1011,19 @@ Find and correct **six** errors in this paragraph. Four are about reported
 speech, one is a pronoun that was never shifted, and one is a subject–verb
 agreement slip.
 
-> Yesterday Ms Hoa told that the science club would meet on Friday. She said us
-> that we should bring our notebooks. Nam said that I was building a robot at
-> home, which surprised everybody. He told me that he will finish it next
-> month. His sister say that the whole kitchen was full of wires.
+> One measure of oil is left. Mun told that the keeper had underlined the rule.
+> He said us that we should shut the notebook and go home. Thảo said that I
+> wanted to call the keeper back, which was true of all three of us. Khoa told
+> me that he will read the last page again tomorrow. His brother say that
+> nobody upriver remembers the mill.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
 - Error 1 = told us that/told us ~ *tell* needs a person after it
-- Error 2 = she told us ~ *said us* → *told us*
-- Error 3 = he was building ~ the pronoun shifts — Nam is reporting about himself
-- Error 4 = he would finish ~ *will* backshifts to *would*
-- Error 5 = the following month ~ *next month* shifts to *the following month*
-- Error 6 = his sister said ~ *say* → *said* — and it is a report
+- Error 2 = he told us ~ *said us* → *told us*
+- Error 3 = she wanted ~ the pronoun shifts — she is reporting what she said about herself
+- Error 4 = he would read ~ *will* backshifts to *would*
+- Error 5 = the next day/the following day ~ *tomorrow* shifts to *the next day*
+- Error 6 = his brother said ~ *say* → *said* — and it is a report
 :::
 
 ### 7.5 Word formation
@@ -1037,10 +1045,10 @@ The words this unit uses most are the ones that change shape — *invent* become
 ### 7.6 Rewrite with the word given
 
 ::: task skill="course" type="gap-fill" ask="Report what each person said, keeping the meaning. The word in capitals is the one the gap needs."
-- "I will show you the robot tomorrow," Nam said. (**WOULD**) → Nam said that he ___ show me the robot the next day. = would
+- "I will show you the robot tomorrow," Khoa said. (**WOULD**) → Khoa said that he ___ show me the robot the next day. = would
 - "We are doing the experiment here," the teacher said. (**THERE**) → The teacher said that they were doing the experiment ___ . = there
-- "I don't understand this application," Mai said. (**DIDN'T**) → Mai said that she ___ understand that application. = didn't/did not
-- "We are having a video conference now," Lan said. (**THEN**) → Lan said that they were having a video conference ___ . = then
+- "I don't understand this application," Thảo said. (**DIDN'T**) → Thảo said that she ___ understand that application. = didn't/did not
+- "We are having a video conference now," Đạt said. (**THEN**) → Đạt said that they were having a video conference ___ . = then
 - Minh said, "Robots will replace some teachers." (**THAT**) → Minh said ___ robots would replace some teachers. = that
 :::
 
@@ -1081,8 +1089,8 @@ reading word for word. Record it, then listen back once and check your sentence
 stress: are the content words louder than the function words?
 
 > **Stretch:** Now argue the other side. Write 60 words explaining why someone
-> might refuse to use your chosen technology at all. A good persuasive writer
-> can build the opposite case before knocking it down.
+> might refuse to use your chosen technology at all. A good opinion paragraph
+> builds the opposite case before knocking it down.
 
 ### Now I can …
 
@@ -1097,9 +1105,9 @@ page can settle it, the row says so, and that one is yours to judge.
 | say a statement and a question with the stress in the right places | Lesson 2, exercises 2.5 and 2.6 · Lesson 7, exercise 7.2. Saying them aloud is yours — record Lesson 2, exercise 2.7 and listen back. |
 | report what somebody said | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3, 7.4 and 7.6 |
 | give good news, and answer it | Lesson 4, exercises 4.1 and 4.3 |
-| read advertisements for new technology | Lesson 5, exercises 5.1 and 5.2 |
+| read a text closely and answer it in the writer's own words | Lesson 5, exercises 5.1 and 5.2 |
 | talk about a piece of technology or an invention | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to a teacher talking about a robot | Lesson 6, exercises 6.1 and 6.2 |
+| listen once to a spoken account and catch what was reported in it | Lesson 6, exercises 6.1 and 6.2 |
 | write a paragraph saying whether robots will replace teachers | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
@@ -1116,10 +1124,11 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. Because she had a dentist's appointment. 2. A fingerprint, a face,
-and the iris of the eye. 3. It means studying in very short bursts — three or
-four minutes, one idea at a time. 4. She told him that a robot would never
-replace her. 5. He is going to put it in the science club magazine.
+**1.1** 1. Eleven times that morning. 2. He says she told them that the club
+had until Friday. 3. The fingerprint part works; the wire behind it does not.
+4. Because Chú Bảy mends boat engines all day, so a small lock cannot be harder
+than that. 5. He said the lamp would not help them, and there are two measures
+of oil left.
 
 ### Lesson 2
 
@@ -1134,24 +1143,24 @@ replace her. 5. He is going to put it in the science club magazine.
 ### Lesson 3
 
 **3.3**
-1. Mai said that she was doing an experiment then.
+1. Thảo said that she was doing an experiment then.
 2. The students told me that they would show me their robot the next day.
-3. Duy told Linh that he had bought that device the day before.
-4. Nam said that his sister could speak three languages.
-5. Hoa told us that she had finished her project.
+3. Tí told Khoa that he had bought that device the day before.
+4. Khoa said that his sister could speak three languages.
+5. Thảo told us that she had finished her project.
 6. The teacher told us that we had to wear safety glasses there.
-7. Ms Hoa said that water boils at 100 degrees Celsius. *(general truth — no
+7. Cô Yến said that water boils at 100 degrees Celsius. *(general truth — no
    backshift)*
-8. Linh said that she might visit the laboratory that week.
+8. Đạt said that he might visit the laboratory that week.
 
 **3.4**
 1. She **said** that the new phone was expensive. *(or: She **told me** that…)*
 2. He **told me** that he had finished the report. *(or: He **said** that…)*
-3. Mai said that **she** was tired, so she went to bed early. *(pronoun shift)*
+3. Thảo said that **she** was tired, so she went to bed early. *(pronoun shift)*
 4. The teacher **told us** that we had to bring our books. *(*say* cannot take a
    person; *tell* must)*
-5. Nam told me that he **would** come to the club the next day.
-6. Linh said that she **had** already seen the film.
+5. Khoa told me that he **would** come to the club the next day.
+6. Thảo said that she **had** already seen the film.
 7. My brother said that he **had bought** that laptop the day before.
 8. They told us that we **could** use the laboratory the next day.
 
@@ -1203,14 +1212,14 @@ device
 **Part B.** 3. ↘ 4. ↗ 5. ↘ 6. ↗ 7. ↘ 8. ↗
 
 **7.3**
-1. Duy said that he was reading about biometrics.
+1. Tí said that he was reading about biometrics.
 2. The club told us that they had built a robot.
-3. Linh told me that she would send me the file the next day.
+3. Khoa told me that he would send me the file the next day.
 4. My teacher told me that I had to finish it that day.
-5. Nam said that he couldn't come to the laboratory.
-6. Ms Hoa said that the Earth goes round the Sun. *(general truth — no
+5. Đạt said that he couldn't come to the laboratory.
+6. Cô Yến said that the Earth goes round the Sun. *(general truth — no
    backshift)*
-7. Mai said that she had seen that device there the day before.
-8. Hoa told her friend that her parents might buy her a laptop the following
+7. Thảo said that she had seen that device there the day before.
+8. Thảo told her friend that her parents might buy her a laptop the following
    week.
 

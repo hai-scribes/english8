@@ -11,45 +11,47 @@
 | --- | --- |
 | **Pronunciation** | **Word stress** in multi-syllable words, and in words ending *-al* and *-ous* |
 | **Grammar** | **Past continuous** — and past continuous with past simple |
-| **Reading** | Natural disasters and what they leave behind |
+| **Reading** | The night a drowned town came back, and where its water went |
 | **Speaking** | Preparing and delivering a news report |
-| **Listening** | Getting ready for a storm or a flood |
+| **Listening** | Two people in the dark, looking for someone in a flood |
 | **Writing** | **Instructions**, 80–100 words — flood safety before, during and after |
 
 ---
 
 ## Lesson 1 — Getting Started
 
-### Dialogue: The night of the storm
+### Dialogue: The forecast turns west
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="The night of the storm" gramen="was / were + V-ing — the past continuous" gramvi="Quá khứ tiếp diễn tả việc **đang** xảy ra tại một thời điểm trong quá khứ. Thường đi cùng quá khứ đơn: *while* + tiếp diễn, *when* + đơn." gramco="I was sleeping when it started"
-**Duy:** You look tired, Hà. Did you sleep at all last night?
-**Hà:** Not much. The wind [[was|gram:was]] hitting our window all night. At two o'clock a branch fell on the roof.
-**Duy:** Were you awake when it happened?
-**Hà:** I was lying in bed listening to the rain. Then there was a huge bang and the whole family got up.
-**Duy:** Was your mother frightened?
-**Hà:** A bit. While my dad was checking the roof, she was filling every bucket in the house with clean water.
-**Duy:** That was sensible. Our street was already under water at six this morning. I was cycling to school when I saw two men pushing a motorbike through it.
-**Hà:** Did you get through?
-**Duy:** No. I turned back, and my brother brought me here in his boat. It's the first time I have ever arrived at school by boat.
-**Hà:** Lucky you. The radio was [[warning]] people about the storm all yesterday afternoon, but nobody in my street moved anything upstairs.
-**Duy:** People never believe a [[forecast]] until they can see the water.
-**Hà:** My grandmother does. While we were watching television yesterday evening, she was quietly packing a bag with our papers and two torches.
-**Duy:** Your grandmother has been through more storms than the radio has.
-**Hà:** That is exactly what she said.
+::: dialogue title="The forecast turns west" gramen="was / were + V-ing — the past continuous" gramvi="Quá khứ tiếp diễn tả việc **đang** xảy ra tại một thời điểm trong quá khứ. Thường đi cùng quá khứ đơn: *while* + tiếp diễn, *when* + đơn." gramco="I was sleeping when it started"
+**Thảo:** You look tired, Tí. Were you awake all night again?
+**Tí:** Nearly. The wind [[was|gram:was]] pushing at our shutters from about two o'clock. Then a branch came down on the roof.
+**Thảo:** Did it break anything?
+**Tí:** One tile. While Bà Sáu was up the ladder counting the damage, I was filling every bucket in the house with clean water.
+**Thảo:** She let you go up the ladder?
+**Tí:** She did not. I was holding it. That is a different job.
+**Thảo:** Did you hear the six o'clock [[forecast]]? The storm turns west tonight.
+**Tí:** I heard it. The radio was giving the same [[warning]] all yesterday afternoon, and nobody in our lane moved a thing upstairs.
+**Thảo:** My uncle did. He was carrying rice up to the loft before breakfast.
+**Tí:** Then your uncle has been through more storms than the radio has.
+**Thảo:** Is the [[shelter]] at the school open? Bà Sáu was asking about it at the market.
+**Tí:** From eight. I went down to look this morning and turned back, because the bottom of the lane was already under water.
+**Thảo:** And the lamp?
+**Tí:** Under the bed, in the rice sack. Light the lamp, and the nearest lost thing comes back — and you never choose what. I am not touching it in a storm.
+**Thảo:** What did the white cat say, exactly?
+**Tí:** That Mun's instructions are wrong. Mun was washing his ear while she said it, and he has not talked about it since.
 :::
 
 ### 1.1 Comprehension
 
 Answer in full sentences.
 
-1. What woke Hà's family up at two o'clock?
-2. What was Hà's mother doing while her father was checking the roof?
-3. How did Duy get to school in the end, and why?
-4. What was the radio doing all yesterday afternoon?
-5. What did Hà's grandmother put in her bag?
+1. What was the wind doing from about two o'clock?
+2. What was Tí doing while his grandmother was up the ladder?
+3. What does the six o'clock forecast say the storm will do tonight?
+4. What was Thảo's uncle doing before breakfast?
+5. Why did Tí turn back on his way to the school this morning?
 
 ### 1.2 Find the phrase
 
@@ -63,10 +65,10 @@ Answer in full sentences.
 ### 1.3 Notice the grammar
 
 ::: task skill="course" type="choice" opts="past continuous|past simple" ask="Look at the **bold** verb in each line. Which tense is it?"
-- The wind **was hitting** our window all night. = past continuous
-- A branch **fell** on the roof. = past simple
-- I **was cycling** to school. = past continuous
-- I **saw** two men pushing a motorbike. = past simple
+- The wind **was pushing** at our shutters. = past continuous
+- A branch **came** down on the roof. = past simple
+- The radio **was giving** the same warning. = past continuous
+- I **turned** back at the bottom of the lane. = past simple
 :::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **thì quá khứ tiếp diễn**
@@ -712,58 +714,60 @@ the page and give it to someone else to guess.
 
 ## Lesson 5 — Skills 1: Reading & Speaking
 
-### Reading — *What a disaster leaves behind*
+### Reading — *The night the town came back*
 
-*From a school magazine, written by a geography teacher.*
+*Tí writes it down two days later, sitting in the school shelter.*
 
 ::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
 :::
 
 ::: passage
-> Every country has its own disasters. Viet Nam has storms and floods, Japan has
-> earthquakes, and parts of Africa have droughts that last for years. The event
-> itself may be over in a few hours. What it leaves behind is not.
+> The storm came in at nine, and by ten the siren at the school was sounding.
+> Bà Sáu sent me down to the landing to pull our boat higher up the bank. I
+> took the lamp with me, because the house was empty and I was not leaving it
+> under a bed in a flood. I know exactly how that sounds.
 >
-> Think about a flood in a small town. While the water was rising in the fields,
-> families were carrying their furniture upstairs. When the river finally broke
-> through the bank, it took less than an hour to fill the ground floor of every
-> house on the street. The water went down after three days. The mud stayed for
-> three weeks.
+> I was dragging the rope when the water lifted the whole boat and put it down
+> on top of me. My knee hit the stone. The lamp came out of the rice sack,
+> rolled twice, and lit.
 >
-> That mud is the part people forget. It ruins school books, seeds and stored
-> rice. It blocks wells, so clean water becomes hard to find. Doctors are often
-> busier a month after a flood than during it, because dirty water makes people
-> ill.
+> Mun said, "Oh no." He said it very quietly, which is worse.
 >
-> An earthquake leaves a different kind of damage. Buildings that look safe may
-> be weak inside, so engineers must check every school and hospital before
-> anyone goes back in. A landslide can block the only road into a village, and
-> rescue teams sometimes walk for a whole day with food on their backs.
+> What came back was the town under the river — the one the dam drowned when
+> Bà Sáu was a girl. It came back whole: a street of low houses, a school with
+> a green gate, a post office, a well with a bucket still on it. It stood in
+> the fields where thirty years of water had been standing.
 >
-> There is good news too. Better warnings save lives. In many coastal villages a
-> siren now sounds long before a big wave arrives, and children practise
-> evacuation at school twice a year. Nobody can stop a disaster. Being ready for
-> one is something you can learn.
+> Nobody thinks about the next part, and I had not thought about it either.
+> The river was already full. The town took its place, and the water it pushed
+> out had to go somewhere. It went over the bank and into Bến Sẻ.
+>
+> It reached our step in about four minutes. It was carrying fence posts,
+> chairs and a great deal of mud, and mud ruins whatever it touches. While the
+> men were shouting for boats, the women were pulling children onto the roofs.
+>
+> I was still holding the rope. The lamp was burning on the stones, and I could
+> not make myself blow it out.
 :::
 
 ### 5.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and what you already know about storms and floods is exactly the pull this type is built to catch."
-- The flood filled the ground floor of every house on that street. = T
-- The mud went away as soon as the water did. = F ~ the water went down after three days; the mud stayed three weeks
-- Japan has more earthquakes than any other country. = NG ~ the text says Japan has earthquakes, never that it has the most
-- Rescue teams sometimes have to reach a village on foot. = T
-- In coastal villages the siren sounds after the big wave has arrived. = F ~ it sounds long before the wave arrives
+- The siren was sounding before the water came over the bank. = T
+- Tí lit the lamp on purpose that night. = F ~ it came out of the sack, rolled twice and lit by itself
+- The dam was built before Bà Sáu was born. = F ~ the town was drowned when she was a girl, so she was already alive
+- More people lived in the drowned town than live in Bến Sẻ now. = NG ~ the text never compares the two
+- The water reached the house in about four minutes. = T
 :::
 
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="2" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- What were the families carrying upstairs? = (their) furniture
-- How long did the mud stay? = three weeks
-- What makes people ill after a flood? = dirty water
-- Buildings that look safe may be what, inside? = weak
-- What sounds in many coastal villages before a big wave? = (a) siren
+- What was sounding at the school by ten o'clock? = (the) siren
+- What did the writer hit on the stone? = (my) knee
+- What colour was the gate of the school that came back? = green
+- How long had the water been standing over the fields? = thirty years
+- How long did the water take to reach the step? = four minutes
 :::
 
 ### 5.3 Vocabulary in context
@@ -837,73 +841,85 @@ Repeat Step 2 until the report runs clearly from start to finish.
 
 ## Lesson 6 — Skills 2: Listening & Writing
 
-### Listening — The evening storm bulletin
+### Listening — On the wall in the dark
 
-You get **one** play — a radio bulletin in a storm does not rewind for anybody.
-Read both sets of questions in the preview window first, then answer as you
-listen rather than afterwards.
+You get **one** play — nobody in a flood says it twice. Two people are speaking
+here, so read both sets of questions in the preview window first and decide
+which of them each answer will come from.
 
 **Nghe một lần duy nhất.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a local radio weather bulletin about a storm that is approaching the coast, and about what people are being asked to do before it arrives." mode="computer" preview="30" review="120"
-Good evening. This is the seven o'clock weather bulletin.
+::: audio orientation="You will hear two speakers outdoors at night, standing above deep water. Somebody they know is not where he was, and they are trying to find him." mode="computer" preview="30" review="120"
+**Bạch:** Hold it first, then say the words. Holding it is not a
+detail. The apprentice never told you that, which is why nothing went back an
+hour ago.
 
-Storm Number Six is now about two hundred kilometres off the coast and moving
-west. It should reach us tomorrow morning. Winds of a hundred kilometres an
-hour are expected, with heavy rain for two days after that.
+**Tí:** Go well.
 
-Here is what we are asking you to do tonight.
+**Bạch:** Good. Now watch the wall. It is going, and the river is
+coming into the space it leaves.
 
-If you live near the river, move upstairs now. Do not wait until the morning.
-Take your documents, your medicine and a torch with you, and put them in a
-plastic bag.
+**Tí:** Đạt was sitting on the low wall by the gate twenty minutes ago. He is
+not there now.
 
-Check your roof. This afternoon our reporter was driving through Phu Loc and
-saw dozens of loose roof sheets. While she was filming, one of them came off
-in the wind.
+**Bạch:** Was he alone?
 
-Fill every container you have with clean water. When the flood arrives, the
-tap water will not be safe to drink.
+**Tí:** Hùng went in after him with a rope. Nobody has shouted since.
 
-Charge your phone tonight. The electricity may go off tomorrow.
+**Bạch:** Then stop staring at the water and look at the roofs.
+Children climb. They almost always climb.
 
-Schools in the coastal districts will be closed tomorrow and Thursday. Buses
-to the mountains have already stopped.
+**Tí:** I can't see anything. It's black out there.
 
-Finally, please check on your neighbours, especially the older ones. Last year
-most of the people we rescued were over seventy.
+**Bạch:** Whistle. You told me the small one knows your whistle.
 
-We will be back with another bulletin at six in the morning.
+**Tí:** *(whistles)*
+
+**Hùng:** *(far off)* We're up here! On the post office! He's cold and he's
+shouting at me, so he's fine!
+
+**Bạch:** There. Twenty minutes is nothing. Twenty minutes is a boy
+on a roof being rude to his friend.
+
+**Tí:** I think I'm going to be sick.
+
+**Bạch:** Later. Look down first — by your foot, in the mud.
+
+**Tí:** It's a tin box. There's a name on it, and a date, and it is still
+sealed.
+
+**Bạch:** That came out of the post office. It was sent, and it never
+arrived. Bring it, and do not open it in the rain. Three measures left.
 :::
 
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- The storm is expected to arrive (a) tonight (b) tomorrow morning (c) on Thursday = b
-- The expected wind speed is (a) 100 km/h (b) 200 km/h (c) 70 km/h = a ~ the bulletin gives two numbers — one is a wind speed, the other a distance
-- People who live near the river should (a) leave the town (b) move upstairs tonight (c) wait until morning = b
-- Once the flood arrives, the tap water will be (a) safe (b) unsafe to drink (c) free = b
-- Last year, most of the people who were rescued were (a) children (b) over seventy (c) fishermen = b
+- Tí says Đạt was last sitting (a) in a boat (b) on the low wall (c) on the school roof = b
+- Hùng went in after him carrying (a) a torch (b) a rope (c) a ladder = b
+- Bạch tells Tí to stop looking at the water and look at (a) the sky (b) the gate (c) the roofs = c ~ two places are named in that line — only one is the one she tells him to look at
+- Hùng shouts that Đạt is (a) hurt (b) still missing (c) cold and complaining = c
+- The tin box they find is (a) open and empty (b) still sealed (c) broken in half = b
 :::
 
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="2+number"
-- The storm is about ___ kilometres off the coast. = two hundred/200
-- Put your documents, medicine and torch in a ___ bag. = plastic
-- While the reporter ___, a roof sheet came off in the wind. = was filming
-- Schools in the ___ districts will be closed tomorrow and Thursday. = coastal
-- The next bulletin is at ___ in the morning. = six/6
+- Đạt had been on the wall ___ minutes earlier. = twenty/20
+- Tí is told to ___ , because the smallest boy knows the sound. = whistle
+- Bạch tells Tí to look down by his ___ , in the mud. = foot
+- As well as a name, the box has a ___ written on it. = date
+- Bạch says there are ___ measures of oil left. = three/3
 :::
 
 ::: bridge name="Same ninety seconds, more facts in it" trains="Listening" cefr="B1" marker="[T2]" src="03 §2.1"
-When you re-record or re-read this unit's bulletin for extra practice, do not
+When you re-record or re-read this unit's recording for extra practice, do not
 reach for harder words. **Pack more separate facts into the same ninety
-seconds** — a second river, another road closure, one more time.
+seconds** — a second name, another place, one more time.
 
-What makes a bulletin hard to follow is how much information it carries, not how
-long it lasts or how difficult the words are. Adding facts makes you work; adding
-vocabulary just sends you to a dictionary.
+What makes a recording hard to follow is how much information it carries, not
+how long it lasts or how difficult the words are. Adding facts makes you work;
+adding vocabulary just sends you to a dictionary.
 
 > **Tiếng Việt:** Muốn bài nghe khó hơn, hãy **nhồi thêm thông tin** vào cùng 90
 > giây — **đừng** dùng từ khó hơn. Độ khó nằm ở mật độ thông tin, không ở độ dài.
@@ -930,20 +946,20 @@ and **after** a flood.
 
 #### Model instructions — read this first
 
-> **Flood safety — what to do**
+> **Flood safety — pinned up at the school shelter**
 >
-> **Before the flood.** First, listen to the forecast and to any official
-> warning. Next, put your papers, a torch and medicine in a plastic bag on
-> a high shelf. Then turn off the electricity at the main switch.
+> **Before the flood.** First, listen to the forecast and to every official
+> warning. Next, put your papers, a torch and medicine in a plastic bag on a
+> high shelf. Then turn off the electricity at the main switch.
 >
 > **During the flood.** Go to the shelter if the authorities say so. If you
-> stay, move upstairs — never into a closed loft. Never walk through moving
-> water. Never touch a switch when wet.
+> stay, move upstairs. Never walk through moving water. Never touch a switch
+> with wet hands.
 >
-> **After the flood.** Wait for an official message before going home. Then boil
-> all drinking water. Finally, wear boots while you clean.
+> **After the flood.** Wait for an official message before going home. Then
+> boil all drinking water. Finally, wear boots while you clean the mud.
 
-*(98 words)*
+*(100 words)*
 
 #### Plan it — 5 questions your instructions has to answer
 
@@ -1032,19 +1048,19 @@ Find and correct **six** errors in this paragraph. They are all connected to the
 past continuous: its *-ing* form, its *was/were*, or a verb that should not be
 in the continuous at all.
 
-> Last November a big storm was hit our village. At nine o'clock in the evening
-> my family were sit in the kitchen. While my father was listen to the radio, my
-> mother was packing our documents. I was knowing that the water would come, but
-> I said nothing. Suddenly the lights went out. My little sister were crying, so
-> I took her upstairs. We was watching the water from the window until midnight.
+> Three measures of oil are left. On Tuesday the storm was hit our roof at nine
+> o'clock. Later I was stand on the landing when the boat came down on my knee.
+> While Bạch was tell me what to do, Hùng were swimming to the post office. I
+> was knowing that the town would push the river out, but I said nothing. We was
+> carrying the tin box home before midnight, and it is still shut.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
 - Error 1 = hit ~ a single completed action — past simple, not continuous
-- Error 2 = were sitting ~ *were sit* → *were sitting*
-- Error 3 = was listening ~ *was listen* → *was listening*
-- Error 4 = knew ~ *know* is not used in the continuous
-- Error 5 = was crying ~ *My little sister* is singular — *was*
-- Error 6 = were watching ~ *We* is plural — *were*
+- Error 2 = was standing ~ *was stand* → *was standing*
+- Error 3 = was telling ~ *was tell* → *was telling*
+- Error 4 = was swimming ~ the swimmer is one person — *was*, not *were*
+- Error 5 = knew ~ *know* is not used in the continuous
+- Error 6 = were carrying ~ *We* is plural — *were*
 :::
 
 ### Project — Your family's disaster plan
@@ -1090,9 +1106,9 @@ page can settle it, the row says so, and that one is yours to judge.
 | put the stress in the right place in words ending *-al* and *-ous* | Lesson 2, exercises 2.5 and 2.7 · Lesson 7, exercise 7.2. Saying them aloud is yours — record Lesson 2, exercise 2.9 and listen back. |
 | use the past continuous, on its own and beside the past simple | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
 | give bad news, and answer it | Lesson 4, exercise 4.3 |
-| read about what a disaster leaves behind | Lesson 5, exercises 5.1 and 5.2 |
+| read a first-hand account of a flood night | Lesson 5, exercises 5.1 and 5.2 |
 | talk about a natural disaster | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to what to do before, during and after a disaster | Lesson 6, exercises 6.1 and 6.2 |
+| follow two people talking in the middle of a flood, and catch the details | Lesson 6, exercises 6.1 and 6.2 |
 | write instructions for staying safe in a flood | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
@@ -1109,11 +1125,10 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. A branch fell on the roof and made a huge bang. 2. She was filling
-every bucket in the house with clean water. 3. His brother brought him in his
-boat, because the street was under water and he could not cycle through it.
-4. It was warning people about the storm. 5. The family's papers and two
-torches.
+**1.1** 1. It was pushing at their shutters. 2. He was filling every bucket in
+the house with clean water. 3. It says the storm turns west tonight. 4. He was
+carrying rice up to the loft. 5. Because the bottom of the lane was already
+under water.
 
 ### Lesson 2
 

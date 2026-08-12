@@ -81,7 +81,7 @@ finding never makes it stronger, so nothing here upgrades one.
 | 11.2 | One new-information word per sentence — and unstress the rest | Pronunciation | B1 | `[T2]` | `06 §6.2` | `units/unit-11-science-and-technology.md` |
 | 11.6 | Say the prompt in your own words before you answer it | Lexical Resource | B1 | `[D]` | `02 §7` | `units/unit-11-science-and-technology.md` |
 | 12.2 | A list read aloud is chunking in miniature | Pronunciation | B1 | `[INF]` | `07 §5.2` | `units/unit-12-life-on-other-planets.md` |
-| 12.5 | Only what the text says — and space is the hardest place to obey that | Reading | B1 | `[Q]` | `04 §4.2` | `units/unit-12-life-on-other-planets.md` |
+| 12.5 | Only what the text says — and a story you have followed is the hardest place to obey that | Reading | B1 | `[Q]` | `04 §4.2` | `units/unit-12-life-on-other-planets.md` |
 | 12.6 | One sentence that carries the whole paragraph | Coherence & Cohesion | B1 | `[Q]` | `05 §2.5` | `units/unit-12-life-on-other-planets.md` |
 
 Sources are sections of `research/ielts/` — a source-verified reference built

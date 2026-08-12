@@ -11,58 +11,66 @@
 | --- | --- |
 | **Pronunciation** | /ʊ/ vs /uː/ — short *book* vs long *food* |
 | **Grammar** | Verbs of liking & disliking + **V-ing** vs **to-V** |
-| **Reading** | A blog post about a teenager's leisure time with family |
+| **Reading** | A teenager's account of an afternoon spent playing with family and friends |
 | **Speaking** | Asking and answering about leisure activities |
-| **Listening** | How someone spends free time with family and friends |
+| **Listening** | How someone spent their free time as a boy, and something they lost |
 | **Writing** | An **email** to a friend, 80–100 words |
 
 ---
 
 ## Lesson 1 — Getting Started
 
-### Dialogue: Saturday plans
+### Dialogue: The list in the yard
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="Saturday plans" gramen="love / can't stand + V-ing" gramvi="Sau các động từ chỉ sự thích hoặc không thích (love, like, enjoy, can't stand, hate), động từ theo sau thêm **-ing**." gramco="I love cooking · I can't stand waiting"
-**Mai:** What are you doing this weekend, Khang?
-**Khang:** Nothing yet. I usually stay home and watch movies, but I'm getting bored of that.
-**Mai:** Same. I love [[cooking|cook]], so I sometimes make lunch for my family on Saturdays. But this week my mum wants to do it herself.
-**Khang:** Lucky you. My family [[can't stand]] my cooking.
-**Mai:** Ha! Well — a new [[bookshop]] opened near the [[swimming pool]]. Do you want to go and look around?
-**Khang:** I don't mind going, but I'm not really a reader. Is there anything else there?
-**Mai:** They have a café upstairs, and a big table with [[board games|board game]]. You can play for free if you buy a drink.
-**Khang:** Now that sounds good. I'd [[love|gram:v-ing]] to try that. What time?
-**Mai:** Ten o'clock? Then we could go for a swim afterwards.
-**Khang:** Perfect. I [[can't stand|can't stand]] getting up early at the weekend, but I'll manage.
+::: dialogue title="The list in the yard" gramen="love / can't stand + V-ing" gramvi="Sau các động từ chỉ sự thích hoặc không thích (love, like, enjoy, can't stand, hate), động từ theo sau thêm **-ing**." gramco="I love cooking · I can't stand waiting"
+**Thảo:** You've been down here at the water all morning. What's wrong?
+**Tí:** Nothing's wrong.
+**Thảo:** Tí.
+**Tí:** Hùng got a new [[board game|board game]] for his birthday. He read out the list of who's coming on Saturday. In the yard. Out loud.
+**Thảo:** And you weren't on it.
+**Tí:** I wasn't on it.
+**Thảo:** I [[can't stand]] hearing him read things out like that.
+**Tí:** It doesn't matter. I don't even like playing [[board games|board game]].
+**Thảo:** You beat everyone in our class at every game we have ever played.
+**Tí:** That was ages ago.
+**Thảo:** So you would like to go.
+**Tí:** I'd [[love|gram:v-ing]] to go. There. Are you happy now?
+**Thảo:** No. Come to my house on Saturday instead. We can [[hang out|hang out (with)]] all afternoon, and I don't mind teaching you a card game.
+**Tí:** You're only asking me because of the list.
+**Thảo:** I enjoy sitting here with you and I would enjoy sitting there with you. Both things are true.
+**Tí:** …
+**Thảo:** Are you coming up, or are you staying down here to [[relax]] in the mud?
+**Tí:** In a minute. There's something shiny down there.
 :::
 
 ### 1.1 Comprehension
 
 Answer in full sentences.
 
-1. What does Khang usually do at the weekend?
-2. Why can't Mai cook lunch this Saturday?
-3. What two things can you do at the new bookshop?
-4. How does Khang feel about getting up early at the weekend?
-5. What do the two friends plan to do after the bookshop?
+1. What did Hùng get for his birthday?
+2. What did Hùng do in the yard?
+3. Why does Thảo invite Tí to her house on Saturday?
+4. What does Tí admit he would love to do?
+5. What does Tí say is in the water?
 
 ### 1.2 Find the phrase
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
-- I am tired of doing this now = getting bored of that
-- I have no strong objection = I don't mind
-- I really dislike it = can't stand/hate
-- explore a place casually = look around
+- I really dislike it = can't stand
+- it is not important = it doesn't matter
+- a very long time ago = ages ago
+- spend time together with no particular plan = hang out
 :::
 
 ### 1.3 Notice the grammar
 
 ::: task skill="course" type="choice" opts="V-ing|to-V" ask="Look at the **bold** verbs. Which form follows the verb of liking or disliking?"
-- I **love cooking**. = V-ing
-- I don't mind **going**. = V-ing
-- I'd love **to try** that. = to-V
-- I **hate getting** up early. = V-ing
+- I **can't stand hearing** him read things out. = V-ing
+- I don't mind **teaching** you a card game. = V-ing
+- I'd love **to go**. = to-V
+- I **enjoy sitting** here. = V-ing
 :::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — động từ chỉ sự yêu
@@ -493,63 +501,76 @@ fond of, be crazy about, be into*).
 
 ## Lesson 5 — Skills 1: Reading & Speaking
 
-### Reading — *Sunday is our day*
+### Reading — *The best afternoon of the year*
 
-*A blog post by Trang, 14, from Da Nang.*
+*Tí, 13, writes about a Saturday in Bến Sẻ.*
 
 ::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
 :::
 
 ::: passage
-> Everyone in my family is busy from Monday to Saturday. My parents work, my
-> brother has extra classes, and I have school and homework. So we made a rule
-> last year: Sunday belongs to all of us together.
+> I am not going to explain where the lamp came from, because nobody believes
+> that part. I will write down what happened afterwards instead.
 >
-> We start with the market. My mum and I choose the food, and my dad and my
-> brother cook it. My dad can't stand following a recipe, so lunch is always a
-> surprise. Sometimes it is wonderful. Sometimes we eat rice and laugh a lot.
+> It was Saturday. Hùng's house had my whole class in it, and our canal landing
+> had me. I was pulling things out of the water — a bicycle wheel, half a chair
+> — when I found something heavy under the mud. I sat on the bank and rubbed it
+> clean, and I am not ashamed to say that I cried a little. That is when it lit.
 >
-> In the afternoon we do something with our hands. My mum is teaching me to
-> make paper flowers, and my brother has taken up woodwork — he built a small
-> bookshelf for my room last month. It leans slightly to the left, but I would
-> not change it for anything.
+> A cat came out of it. A thin black one, with a torn ear, who looked around at
+> the water and the mud and said, "Right. Light the lamp, and the nearest lost
+> thing comes back. You don't get to choose which. It holds twelve measures of
+> oil and you have just burned one, so do the arithmetic before you do that
+> again."
 >
-> In the evening we play board games. Nobody in my family enjoys losing, so
-> these games can get very loud. My grandmother usually wins, which nobody can
-> explain.
+> "What's your name?" I asked.
 >
-> My friends sometimes ask me to hang out on Sundays and I say no. They think
-> this is strange. But I only get one Sunday a week, and I would rather spend
-> it at home.
+> He opened his mouth. Then he shut it again, and for a moment he looked like
+> somebody who has put something down and cannot think where. "I'll come back
+> to that," he said.
+>
+> So I call him Mun, because he is black all over, and he did not argue.
+>
+> What came back was a board game.
+>
+> Not a new one. A wooden one, hand-cut, with a lid that does not fit and four
+> counters cut from bottle tops. It was lying on the bank as if it had been
+> there the whole morning.
+>
+> We played until it got dark. Bà Sáu came down to shout at me for missing
+> dinner and stayed for four games. Thảo arrived and did not ask one question
+> about the cat, which is why she is my friend. Even the cat played, badly.
+>
+> Nobody from Hùng's house was there. I did not think about them once.
 :::
 
 ### 5.1 True, False, or Not Given
 
-::: task skill="reading" type="true-false-not-given" ask="**False** means the blog says the opposite. **Not Given** means the blog does not say either way — and answering from what feels likely about families is exactly the pull this type is built to catch."
-- Trang's family made the Sunday rule many years ago. = F ~ they made it last year
-- Trang's father follows recipes carefully. = F ~ he "can't stand following a recipe"
-- Trang's brother made a piece of furniture for her. = T ~ he built her a bookshelf
-- Trang's grandmother is the best board game player in the family. = NG ~ she usually wins, but the blog never calls her the best
-- Trang's friends understand why she stays at home on Sundays. = F ~ they think it is strange
+::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and answering from what feels likely is exactly the pull this type is built to catch."
+- Tí found the heavy thing inside his house. = F ~ he pulled it out of the water at the canal landing
+- The cat explains what the lamp does. = T ~ "Light the lamp, and the nearest lost thing comes back"
+- The board game that came back was new. = F ~ it is wooden and hand-cut, with a lid that does not fit
+- Tí had played this game before. = NG ~ he never says whether he had; only that it came back
+- Thảo wanted to know about the cat. = F ~ she did not ask one question about it
 :::
 
 ### 5.2 Answer the questions
 
-::: task skill="reading" type="short-answer" words="3" ask="Take the words from the blog. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- Where does the family go first on Sunday? = (the) market
-- What is Trang's mother teaching her to make? = paper flowers
-- What hobby has Trang's brother taken up? = woodwork
-- What did her brother build for her room? = (a) (small) bookshelf
-- What does Trang's father refuse to follow when he cooks? = (a) recipe
+::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
+- What did Tí pull out of the water, besides a bicycle wheel? = half a chair
+- What came out of the lamp? = (a) cat
+- What are the four counters cut from? = bottle tops
+- How many games did Bà Sáu stay for? = four/4
+- What came back? = (a) board game
 :::
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the blog that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- a new hobby someone has started = taken up
-- spend time socially = hang out
-- tilts, is not straight = leans
-- a set of instructions for cooking = recipe
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
+- cut by hand, not by machine = hand-cut
+- the ground along the edge of the water = bank
+- embarrassed about something you have done = ashamed
+- the metal caps from drinks = bottle tops
 :::
 
 ### Speaking — Talking about your leisure time
@@ -614,30 +635,33 @@ Repeat Step 2 until you can answer all five clearly.
 
 ## Lesson 6 — Skills 2: Listening & Writing
 
-### Listening — Nam's free time
+### Listening — What Chú Bảy used to do
 
 You get **one** play, so use the preview window: read both sets of questions
 first, then answer while you listen rather than afterwards from memory.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a student called Nam describing how he spends his free time on weekday evenings, on Saturdays and on Sundays." mode="computer" preview="30" review="120"
-Hi, I'm Nam. People think I have a lot of free time because I don't play
-sport, but my week is quite full.
+::: audio orientation="You will hear a man talking about how he spent his free time when he was a boy, and about something he made and then lost." mode="computer" preview="30" review="120"
+When I was thirteen there was nothing to do in this town and we did all of
+it. We swam, we fished, and when it rained we sat under the house and played
+games we had made ourselves.
 
-On weekday evenings I usually stay in. I like listening to music while I do
-my homework — my mother says this is impossible, but my marks are fine. After
-that I sometimes watch a short film, though I can't stand anything longer
-than an hour on a school night.
+I made one. It took me a whole wet season. I cut the board out of a plank and
+the counters out of bottle tops, and the lid never fitted properly, which
+annoyed me for about twenty years.
 
-Saturdays are for my friends. We meet at the shopping centre near the
-swimming pool and just walk around. We don't spend much money. Mostly we
-talk. Last month we started playing football in the park instead, and now
-half of us are too tired to do anything on Sunday.
+I kept it in a tin box under my bed until I was about twenty-five. Then I
+married and moved to my wife's village, and somewhere between the two houses
+that box stopped being anywhere at all. I looked for it every time we moved.
+I asked my mother about it twice.
 
-Sunday belongs to my grandparents. I go to their house for lunch and my
-grandfather teaches me to cook one new dish each week. So far I have learned
-six. Two of them were good.
+Anyway. Last Saturday my nephew was playing a game down at the landing with
+half the street, and I walked past, and I stopped. Because I know that board.
+I cut it. There is a mark on the back where the knife slipped.
+
+I didn't say anything. I sat down and played, and I lost, and I still have
+not asked him where he got it.
 :::
 
 ::: bridge name="Mark how sure you are, then check your calibration" trains="Listening" cefr="A2→B1" marker="[T2]" src="03 §6.6"
@@ -667,20 +691,20 @@ for you.
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- Nam says his week is (a) empty (b) quite full (c) too busy = b
-- He listens to music while he (a) cooks (b) exercises (c) does homework = c
-- On a school night he won't watch anything longer than (a) 30 minutes (b) an hour (c) two hours = b
-- On Saturdays he mainly (a) spends money (b) talks with friends (c) studies = b
-- His grandfather teaches him (a) to cook (b) to play football (c) to fix things = a
+- When it rained, the boys (a) went home (b) played games they had made (c) went fishing = b
+- Making the game took him (a) one week (b) a whole wet season (c) twenty years = b
+- He kept the game in (a) a cupboard (b) a tin box (c) his school bag = b
+- He lost the game when he (a) moved house (b) sold it (c) gave it away = a
+- When he saw the game again he (a) took it back (b) said nothing and played (c) told the boy's grandmother = b
 :::
 
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="2+number"
-- Nam meets his friends at the shopping centre near the ___ . = swimming pool
-- Last month they started playing ___ in the park. = football
-- He has learned ___ new dishes so far. = six/6
-- He says ___ of them were good. = Two/2
+- He cut the board out of ___ . = (a) plank
+- He kept the box under his bed until he was about ___ . = twenty-five/25
+- There is a mark on the back where the ___ slipped. = knife
+- He says he lost it somewhere between the ___ . = two houses
 :::
 
 ### Writing — An email about your leisure time
@@ -690,26 +714,28 @@ time. Write an email of **80–100 words**.
 
 #### One finished email — read it, then cover it
 
-> Hi Linh,
+> Hi Ngọc,
 >
-> Thanks for your message! You asked what I do at the weekend, so here it is.
+> Thanks for your message! You asked what we do here at the weekend, so here
+> it is.
 >
-> I don't have much free time during the week, but Saturdays are mine. I
-> usually hang out with two friends from my class. We enjoy walking around the
-> bookshops in the old quarter, and we always end up in the same café.
+> Usually nothing. But last Saturday my friend found an old wooden board game
+> by the canal, and nine of us played it on the bank until dark. His
+> grandmother came to shout and stayed for four games. I enjoy winning and I
+> can't stand losing, so I was not very polite.
 >
-> I've also taken up cooking this year. I can't stand following recipes, so my
-> food is unpredictable! Next I'd love to learn how to make bánh xèo.
+> Sitting by the water is how I relax. I'd love to take up card games next.
+> Do you know a good one?
 >
-> What about you? Write soon.
+> Write soon,
 >
-> Mai
+> Thảo
 
-*(93 words)*
+*(95 words)*
 
 #### Plan it — six questions your email has to answer
 
-Cover Mai's email. Answer these in the right-hand column **in your own words**,
+Cover Thảo's email. Answer these in the right-hand column **in your own words**,
 in note form. The plan is yours; the sentences come later.
 
 | The question | Your answer (notes, not sentences) |
@@ -788,15 +814,15 @@ question in the left-hand column.
 Find and correct **six** errors in this paragraph. Five are about verb forms
 after liking/disliking verbs; one is a subject–verb agreement slip.
 
-> My cousin enjoy to play football every Saturday. He can't stand to lose, so
-> he practises to shoot for an hour before each match. I don't mind watch him,
-> but I would like doing something else sometimes.
+> My friend enjoy to play board games every Saturday. He can't stand to lose,
+> so he practises to move the counters quickly before each game. I don't mind
+> watch him, but I would like doing something else sometimes.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
 - Error 1 = enjoys ~ *enjoy* → *enjoys* — subject–verb agreement
 - Error 2 = playing ~ *to play* → *playing* after *enjoy*
 - Error 3 = losing ~ *to lose* → *losing* after *can't stand*
-- Error 4 = shooting ~ *to shoot* → *shooting* after *practise*
+- Error 4 = moving ~ *to move* → *moving* after *practise*
 - Error 5 = watching ~ *watch* → *watching* after *don't mind*
 - Error 6 = would like to do/to do ~ *would like doing* → *would like to do*
 :::
@@ -841,9 +867,9 @@ page can settle it, the row says so, and that one is yours to judge.
 | hear /ʊ/ and /uː/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
 | use verbs of liking and disliking with **V-ing** and with **to-V** | Lesson 3, exercises 3.1 and 3.2 · Lesson 7, exercises 7.3 and 7.4 |
 | invite someone, and accept an invitation | Lesson 4, exercise 4.3 |
-| read about the leisure time a family spends together | Lesson 5, exercises 5.1 and 5.2 |
+| read about an afternoon a family and friends spent playing together | Lesson 5, exercises 5.1 and 5.2 |
 | talk about my own leisure time with my family | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to someone describing their free time | Lesson 6, exercises 6.1 and 6.2 |
+| listen to someone describing how they spent their free time | Lesson 6, exercises 6.1 and 6.2 |
 | write an email about my leisure time | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
@@ -860,10 +886,10 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. He usually stays home and watches movies. 2. Because his/her mother
-wants to make lunch herself. 3. You can buy books, and play board games for
-free if you buy a drink (there is also a café). 4. He hates it. 5. They plan to
-go for a swim.
+**1.1** 1. He got a new board game. 2. He read out the list of everyone who was
+coming to his house on Saturday. 3. Because Tí was left off Hùng's list — and
+because she enjoys spending time with him. 4. He would love to go to Hùng's on
+Saturday. 5. He says there is something shiny in the water.
 
 ### Lesson 2
 

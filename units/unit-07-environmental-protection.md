@@ -11,45 +11,45 @@
 | --- | --- |
 | **Pronunciation** | /bl/ vs /kl/ — *blue* vs *clean* |
 | **Grammar** | **Complex sentences** with adverbial clauses of time |
-| **Reading** | Con Dao National Park |
+| **Reading** | The morning a forest came back through the town |
 | **Speaking** | Asking and answering about Vu Quang National Park |
-| **Listening** | Causes and effects of water pollution |
+| **Listening** | A teacher tells the school what the trees have damaged |
 | **Writing** | A **notice**, 100–120 words — inviting students to an environment lecture |
 
 ---
 
 ## Lesson 1 — Getting Started
 
-### Dialogue: The lake behind the school
+### Dialogue: The canal behind the school
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="The lake behind the school" gramen="when — a time clause" gramvi="Mệnh đề thời gian bắt đầu bằng *when, before, after, until*. Nếu nó đứng trước mệnh đề chính thì có dấu phẩy ngăn cách." gramco="When the rain stops, we will go"
-**Ha:** Have you seen the lake behind the school? The water has gone brown.
-**Duc:** I noticed it on Monday. It started changing colour after the new workshop opened on the other side.
-**Ha:** So you think the workshop is putting something into the water?
-**Duc:** Maybe. My uncle says one factory can put enough [[sewage]] into a lake to kill it before anybody reports it.
-**Ha:** That's terrible. [[When|gram:when]] I was small, we used to catch small fish there — now the water looks [[toxic]].
-**Duc:** Not any more. As soon as the fish disappeared, the birds stopped coming too.
-**Ha:** Then we should do something. Mrs Lan runs the Green Club, and she says [[awareness]] is where every clean-up starts.
-**Duc:** She will, but she'll ask us for evidence. Once we have photographs and dates, she can take it to the district office.
-**Ha:** Fine. I'll take a photo every morning while I walk to school.
-**Duc:** And I'll ask my uncle what to test the water for.
-**Ha:** Good. We shouldn't wait until the lake is completely dead.
-**Duc:** Nobody ever does anything until it's too late. Let's not be like that.
-**Ha:** Agreed. Whenever I walk past that lake now, I feel angry.
-**Duc:** Keep the anger. It's useful.
+::: dialogue title="The canal behind the school" gramen="when — a time clause" gramvi="Mệnh đề thời gian bắt đầu bằng *when, before, after, until*. Nếu nó đứng trước mệnh đề chính thì có dấu phẩy ngăn cách." gramco="When the rain stops, we will go"
+**Thảo:** Have you seen the canal behind the school? The water has gone brown.
+**Tí:** I noticed it on Monday. It started changing colour after the workshop opened on the other bank.
+**Thảo:** So the workshop is allowed to pollute our canal and nobody says anything?
+**Tí:** My uncle says one workshop can pour enough [[sewage]] into a canal to kill it before anybody reports it.
+**Thảo:** [[When|gram:when]] we were small we caught fish there. Now the water looks [[toxic]].
+**Tí:** Not any more. As soon as the fish went, the birds stopped coming too.
+**Thảo:** Cô Yến is organising a clean-up on Saturday. She says [[awareness]] is where every clean-up starts.
+**Tí:** Then she'll want evidence. Once we have photographs and dates, she can take them to the district office.
+**Thảo:** I'll photograph the water every morning while I walk to school.
+**Tí:** And I'll carry the sacks. Bà Sáu says we shouldn't wait until the canal is completely dead.
+**Thảo:** Nobody in this town does anything until it's too late. And the lamp? People still stop me about it.
+**Tí:** It stays under the bed. Light the lamp, and the nearest lost thing comes back — you never choose what. I'm not lighting it again.
+**Thảo:** Good. Whenever I walk past that water now, I feel angry.
+**Tí:** Keep the anger. Bring gloves on Saturday.
 :::
 
 ### 1.1 Comprehension
 
 Answer in full sentences.
 
-1. What has happened to the water in the lake?
+1. What has happened to the water in the canal?
 2. When did the water start to change colour?
-3. What happened after the fish disappeared?
-4. What will Mrs Lan ask the two students for?
-5. What is Ha going to do every morning?
+3. What happened after the fish went?
+4. What will Cô Yến want before she goes to the district office?
+5. What is Thảo going to do every morning?
 
 ### 1.2 Find the phrase
 
@@ -66,11 +66,11 @@ Look at the **bold** words. Each one joins a **time clause** to the rest of the
 sentence.
 
 ::: task skill="course" type="short-answer" ask="Write the **time clause only** — the bold word and everything that belongs with it, and nothing else."
-- It started changing colour **after** the new workshop opened. = after the new workshop opened
-- **As soon as** the fish disappeared, the birds stopped coming. = as soon as the fish disappeared
-- **Once** we have photographs, she can take it to the office. = once we have photographs
-- We shouldn't wait **until** the lake is completely dead. = until the lake is completely dead
-- **Whenever** I walk past that lake now, I feel angry. = whenever I walk past that lake now
+- It started changing colour **after** the workshop opened. = after the workshop opened
+- **As soon as** the fish went, the birds stopped coming. = as soon as the fish went
+- **Once** we have photographs, she can take them to the office. = once we have photographs
+- We shouldn't wait **until** the canal is completely dead. = until the canal is completely dead
+- **Whenever** I walk past that water now, I feel angry. = whenever I walk past that water now
 :::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **câu phức** với mệnh
@@ -176,13 +176,18 @@ can say in a single sentence — learn the sentence, not just the translation.
 - The waste behind the workshop is ___ , so nobody should touch it. = toxic
 - Burning coal, oil and gas is the main cause of ___ . = global warming
 - Put out your ___ with water before you leave the campsite. = campfire
-- More than three hundred students ___ in the clean-up last Sunday. = participated
+- More than three hundred residents ___ in the clean-up last Sunday. = participated
 :::
 
 > ⚠️ **Bẫy thường gặp:** **participate** luôn đi với **in**: *participate **in**
 > a clean-up*. ❌ *participate a clean-up*. Còn **coral** vừa đếm được vừa
 > không: *a coral reef* (rạn san hô) nhưng *the coral is dying* (san hô nói
 > chung).
+
+> **Ghi chú:** **resident** /ˈrezɪdənt/ (n) = người dân sống ở một nơi.
+> *The **residents** of this street cleared the canal themselves.* Một
+> **resident** *sống* ở đó; một **visitor** chỉ đến rồi đi. Con vật cũng dùng
+> được: *the residents of the forest* = các loài sống trong rừng.
 
 ### Pronunciation — /bl/ and /kl/
 
@@ -538,68 +543,68 @@ Answer in full sentences.
 
 ## Lesson 5 — Skills 1: Reading & Speaking
 
-### Reading — *Two worlds in one park*
+### Reading — *The morning the forest came back*
 
-*About Con Dao National Park.*
+*Tí writes down what happened on the day of the clean-up.*
 
 ::: clock mins="19" for="You have 19 minutes for the text and every exercise below it."
 :::
 
 ::: passage
-> Con Dao National Park lies on a group of islands off the southern coast of
-> Viet Nam. It is unusual among Vietnamese
-> national parks because it protects two worlds at once: the forest on the
-> islands and the sea around them.
+> On Saturday morning thirty of us cleared the canal behind the school. We
+> started at seven, and by ten we had filled forty sacks with plastic, glass and
+> rope. I brought the lamp with me. I know how that sounds. I did not mean to
+> light it — I only did not want to leave it under the bed in an empty house.
 >
-> Once you step off the boat, the forest begins almost immediately. Tall trees
-> grow down towards the beaches, and the paths are quiet. But the most famous
-> residents of Con Dao live in the water. Every year, when the warm season
-> comes, sea turtles swim back to the beaches where they were born and lay
-> their eggs in the sand at night.
+> The rice sack was standing on the wall above the water. When Hùng swung a full
+> bag onto his shoulder, he knocked the sack off the wall and the lamp went over
+> onto the stones. Before anyone could reach it, it was burning. Mun came out
+> with his ears flat, and for the first time he said nothing at all.
 >
-> This is where the rangers do their most patient work. After a turtle has
-> finished laying, they carefully move the eggs to a protected hatchery, away
-> from dogs, crabs and rising tides. Weeks later, once the young turtles have
-> hatched, they are released at the edge of the sea and allowed to walk down to
-> the water themselves. The sea grass beds near the islands matter too. Dugongs
-> — large, gentle sea mammals — feed on that grass, and there are very few
-> places left in Viet Nam where they can still be found.
+> Then the ground moved. A forest came back — not slowly, the way a forest grows,
+> but all at once, the way a light comes on. Trees came up through the road,
+> through the school yard, through the market. Roots lifted the concrete and
+> broke it like a biscuit. Branches closed over the lane until the whole town
+> went dark at half past ten in the morning.
 >
-> Visitors are welcome, but the rules are strict. Do not touch the turtles. Do
-> not shine lights on the nesting beaches at night. Take your litter home.
-> Con Dao has survived because people agreed to leave it alone, and that
-> agreement has to be renewed by everyone who arrives.
+> It was the old delta forest, the one this town was built on top of. Cô Yến
+> calls that deforestation, and she says it took our great-grandparents a
+> generation. It came back in about a minute, and it brought its residents with
+> it: birds, insects, and something heavy we could hear moving and never saw.
+>
+> Nobody laughed. We stood in our own market in the dark, and we were frightened
+> of it.
 :::
 
 ### 5.1 True, False, or Not Given
 
-::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you already know about national parks is exactly the pull this type is built to catch."
-- Con Dao National Park protects only the forest on the islands. = F ~ it protects the forest **and** the sea around it
-- Sea turtles return to the beaches where they hatched. = T
-- The rangers move turtle eggs to a safer place. = T
-- More tourists visit Con Dao than any other national park in Viet Nam. = NG ~ the text never compares visitor numbers
-- Dugongs feed on the sea grass near the islands. = T
-- Visitors are asked not to use lights on the nesting beaches at night. = T
+::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you already assume happened is exactly the pull this type is built to catch."
+- The writer meant to light the lamp that morning. = F ~ he says he did not mean to light it
+- By ten o'clock the students had filled forty sacks. = T
+- The forest came back slowly, over several days. = F ~ it came back all at once
+- Trees came up in the road, the school yard and the market. = T
+- More trees came up in the market than in the school yard. = NG ~ the text never compares the two places
+- Mun said nothing when the lamp began to burn. = T
 :::
 
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- Which coast of Viet Nam are the islands off? = (the) southern (coast)
-- As well as the forest, what does the park protect? = (the) sea
-- At what time do the turtles lay their eggs? = (at) night
-- Where do the rangers move the eggs to? = (a) (protected) hatchery
-- Which animals feed on the sea grass beds? = dugongs
-- What are visitors told to take home? = (your) litter
+- What did the thirty students clear on Saturday morning? = (the) canal
+- How many sacks had they filled by ten? = forty (sacks)
+- Where was the rice sack standing? = (on) the wall
+- What lifted the concrete and broke it? = roots/the roots
+- What came up through the road and the school yard? = trees/the trees
+- At what time did the town go dark? = half past ten
 :::
 
 ### 5.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- a protected place where eggs are kept safe until they hatch = hatchery
-- animals or people that live in a particular place = residents
-- come out of the egg = hatch/hatched
-- very firm, allowing no exceptions = strict
+- large rough bags for carrying heavy things = sacks
+- the parts of a plant that hold it in the ground = roots
+- the hard grey material a road is made of = concrete
+- the cutting down of a whole forest = deforestation
 :::
 
 ### Speaking — Asking and answering about Vu Quang National Park
@@ -644,9 +649,9 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### 5.4 Read it again, against the clock
 
-You have already read *Two worlds in one park* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
+You have already read *The morning the forest came back* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
 
-::: fluency mode="read" words="246" secs="150|120|90" ask="Read *Two worlds in one park* again from the top. Stop the clock the moment you reach the end."
+::: fluency mode="read" words="262" secs="150|120|90" ask="Read *The morning the forest came back* again from the top. Stop the clock the moment you reach the end."
 - Do not stop to look anything up — you have met all of it
 - Read for the sense of it, not word by word
 - Press **I finished** the moment you reach the last line
@@ -665,47 +670,47 @@ You have already read *Two worlds in one park* and answered questions on it, so 
 
 ## Lesson 6 — Skills 2: Listening & Writing
 
-### Listening — Why our water gets dirty
+### Listening — What the trees did
 
-You get **one** play. The talk gives three causes and then their effects, in
-that order, and the two question sets follow it. Read both sets in the preview
-window, then answer as you listen — not afterwards, from memory.
+You get **one** play. The talk gives the damage first and then what the school
+must do, in that order, and the two question sets follow it. Read both sets in
+the preview window, then answer as you listen — not afterwards, from memory.
 
 **Nghe một lần duy nhất.** Đọc trước cả hai phần câu hỏi trong lúc chờ, rồi vừa
 nghe vừa trả lời.
 
-::: audio orientation="You will hear a woman explaining to students what makes rivers dirty and what follows once they are." mode="computer" preview="30" review="120"
-Good morning, everyone. My name is Hoa, and I work for a water testing
-laboratory. Today I want to talk about how water becomes polluted, and what
-happens afterwards.
+::: audio orientation="You will hear a teacher speaking to students about the damage the new trees have done, and about something she wants brought to her." mode="computer" preview="30" review="120"
+Good morning, everyone. Sit down, please. Nobody is going home yet, so listen.
 
-There are three main causes. The first is untreated sewage. When a town grows
-faster than its drains, waste water goes straight into the nearest river. The
-second cause is farming. Rain washes pesticide off the fields, and once it
-reaches the water, it stays there for a long time. The third is factory
-waste. Some factories release chemicals at night, when nobody is watching.
+You have all seen the trees. I am going to tell you what they have done, and
+then I am going to tell you what happens next.
 
-Now the effects. Fish die first, because dirty water carries less oxygen.
-After the fish disappear, the birds that feed on them leave as well.
-Villagers who use the river for washing get skin problems. And once a river
-is badly contaminated, cleaning it takes years and costs far more than
-preventing the damage would have cost.
+First, the damage. The road to the market is broken from end to end; a root
+lifted it like a lid. Two shops on that road have lost their front walls. The
+water pipe under the yard is cracked, so there is no clean water in this school
+today, and sewage from the broken drain is running into the canal we cleaned on
+Saturday. Three families cannot get out of their lane at all.
 
-So what can you do? Use less plastic. Never pour oil or paint down a drain.
-And when you see something wrong with your local water, report it — take a
-photograph, note the date, and tell an adult. Young people notice these
-things first.
+Second, and I want you to hear this clearly: nobody was hurt. A branch came
+through the window of Room 6 at four in the morning, when the room was empty.
+
+Third. The adults of this town met last night, and we know that what happened
+was not the weather. We are not angry with anyone yet. But somebody carried
+something down to the canal on Saturday, and that person knows exactly what I am
+talking about.
+
+Bring it to me. Bring it to me before it goes over a second time.
 :::
 
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- Hoa works for (a) a school (b) a water testing laboratory (c) a factory = b
-- The first cause she gives is (a) untreated sewage (b) farming (c) factory waste = a
-- Pesticide reaches the water when (a) farmers pour it in (b) rain washes it off the fields (c) the river floods = b
-- Some factories release chemicals (a) at night (b) at the weekend (c) in the rainy season = a
-- Fish die first because dirty water (a) is too warm (b) carries less oxygen (c) moves too slowly = b
-- Hoa's final advice is to (a) stop swimming (b) report what you see (c) move away = b
+- The speaker begins by telling everybody to (a) sit down (b) go home (c) open a book = a
+- The road to the market was broken by (a) a lorry (b) a root (c) the rain = b
+- There is no clean water in the school because (a) the pipe is cracked (b) the well is dry (c) the pump was stolen = a
+- Sewage from the broken drain is running into (a) the market (b) the canal (c) the school yard = b
+- The branch came through the window of Room 6 (a) during a lesson (b) at four in the morning (c) at midday = b
+- The adults of the town met (a) last night (b) on Saturday (c) this morning = a
 :::
 
 ### 6.2 Note completion
@@ -715,12 +720,12 @@ never full sentences. Fill each gap **as you listen** — there is no transfer
 time at the end.
 
 ::: task skill="listening" type="completion" words="1"
-- Cause 1 — untreated ___ goes straight into the nearest river = sewage
-- Cause 2 — rain washes ___ off the fields = pesticide
-- Cause 3 — some factories release chemicals at ___ = night
-- Effect — fish die first, because dirty water carries less ___ = oxygen
-- Effect — villagers who wash in the river get ___ problems = skin
-- Advice — never pour oil or ___ down a drain = paint
+- Damage — the road to the ___ is broken from end to end = market
+- Damage — two shops have lost their front ___ = walls
+- Damage — the water ___ under the yard is cracked = pipe
+- Damage — ___ from the broken drain is reaching the canal = sewage
+- Damage — ___ families cannot get out of their lane = three
+- Safety — a branch came through the window of Room ___ = 6
 :::
 
 ::: bridge name="Two cause-and-result sentences on what you just heard" trains="Grammatical Range & Accuracy" cefr="B1" marker="[Q]" src="05 §2.6"
@@ -746,34 +751,36 @@ Write a **notice** of **100–120 words** inviting students to come.
 #### What a notice is — and how it differs from an email
 
 A notice is a **public** text pinned to a board or posted online. Anyone may
-read it, so it is **impersonal**: no *Hi Linh*, no *Write soon*, no jokes. Look
+read it, so it is **impersonal**: no *Hi Thảo*, no *Write soon*, no jokes. Look
 back at the friendly email you wrote in Unit 1 and notice the difference.
 
 | | Email (Unit 1) | Notice (this unit) |
 | --- | --- | --- |
 | **Reader** | one named friend | anybody who passes the board |
-| **Opening** | *Hi Linh,* | a heading in capitals: **NOTICE** |
+| **Opening** | *Hi Thảo,* | a heading in capitals: **NOTICE** |
 | **Register** | friendly, contractions, exclamation marks | neutral, formal, no jokes |
 | **Layout** | paragraphs | short blocks and labelled lines |
-| **Ending** | *Write soon, Mai* | a contact line + the group's name |
+| **Ending** | *Write soon, Tí* | a contact line + the group's name |
+
+*This is the notice the Green Club pinned to the school board that week.*
 
 #### Model notice — read this first
 
 > **NOTICE**
 >
-> **Talk: "Our River, Our Responsibility"**
+> **Talk: "Our Canal, and What We Owe It"**
 >
-> The Green Club invites students in Grades 8 and 9 to a lecture on water
-> pollution: where the sewage in our river comes from, and how to protect it.
+> The Green Club invites students in Grades 8 and 9 to a talk on water
+> pollution: where the sewage in our canal comes from, and how to protect it.
 >
-> **Speaker:** Dr Le Minh Hoa, Institute of Environmental Science
+> **Speaker:** an officer from the district water office
 > **Date:** Saturday, 12 October
 > **Time:** 8.30 a.m. – 10.00 a.m.
 > **Place:** School Hall, Block B
 >
-> Bring a notebook and a question for the speaker. After the talk finishes,
-> the club will clear the litter from the bank of the school lake, so those who
-> want to join should bring gloves.
+> Bring a notebook and a question. After the talk finishes,
+> the club will clear the litter from the bank below the broken road, so anyone
+> who wants to join should bring gloves.
 >
 > Places are limited. Give your name to your class monitor before 10 October.
 >
@@ -874,21 +881,21 @@ Complete with the correct form of the verb, and add a comma if one is needed.
 ### 7.4 Error hunt
 
 Find and correct **five** errors in this paragraph. Three are about time
-clauses — wrong tense or wrong punctuation. One is a missing comma before a
-clause of purpose. One is a vocabulary slip.
+clauses — wrong tense or wrong punctuation. One is a comma that does not belong,
+before a clause of purpose. One is a vocabulary slip.
 
-> Our class started a recycling project last term. When we will collect enough
-> paper, we will sell it and buy young trees for the school yard. We keep the
-> bins near the gate, so that everyone can see them. Whenever somebody drops
-> rubbish in the wrong bin the monitor takes it out again. We will not stop
-> until the whole school will join in. Our teacher says that small habits
-> pollute the environment more than big speeches do.
+> Five measures of oil are left, and the lamp sits on the kitchen shelf where
+> everybody can see it. When we will clear the last of the branches, the road
+> will be open again. We stacked the broken concrete by the gate, so that the
+> lorry can take it away. Whenever anybody asks me about that morning I say
+> nothing. Bà Sáu will not sleep until the lamp will leave this house. Cô Yến
+> says our job now is to pollute what is left of the canal.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
-- Error 1 = when we collect ~ no *will* inside a time clause
+- Error 1 = when we clear ~ no *will* inside a time clause
 - Error 2 = the gate so that/gate so that ~ no comma before *so that*
-- Error 3 = wrong bin, the monitor/bin, the monitor ~ a fronted time clause takes a comma after it
-- Error 4 = joins ~ no *will* inside a time clause — *until the whole school joins*
+- Error 3 = that morning, I say/morning, I say ~ a fronted time clause takes a comma after it
+- Error 4 = leaves ~ no *will* inside a time clause — *until the lamp leaves this house*
 - Error 5 = protect ~ *pollute* is the opposite of what the sentence means
 :::
 
@@ -937,9 +944,9 @@ page can settle it, the row says so, and that one is yours to judge.
 | hear /bl/ and /kl/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
 | build complex sentences with a time clause | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
 | ask someone to explain what they mean | Lesson 4, exercise 4.3 |
-| read about Con Dao National Park | Lesson 5, exercises 5.1 and 5.2 |
+| read a first-hand account of the morning the forest came back | Lesson 5, exercises 5.1 and 5.2 |
 | talk about Vu Quang National Park | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to a talk about water pollution | Lesson 6, exercises 6.1 and 6.2 |
+| listen to a teacher listing damage and giving an instruction | Lesson 6, exercises 6.1 and 6.2 |
 | write a notice | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
@@ -956,10 +963,10 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. It has gone brown. 2. It started changing colour after the new
-workshop opened on the other side of the lake. 3. The birds stopped coming to
-the lake as well. 4. She will ask them for evidence — photographs and dates.
-5. She is going to take a photo of the lake while she walks to school.
+**1.1** 1. It has gone brown. 2. It started changing colour after the workshop
+opened on the other bank. 3. The birds stopped coming to the canal as well.
+4. She will want evidence — photographs and dates. 5. She is going to photograph
+the water every morning while she walks to school.
 
 ### Lesson 2
 

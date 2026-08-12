@@ -11,64 +11,65 @@
 | --- | --- |
 | **Pronunciation** | /br/ vs /pr/ — *bright* vs *price* |
 | **Grammar** | **Future simple** and the **first conditional** |
-| **Reading** | A traditional lifestyle in Alaska |
+| **Reading** | A way of living that came back to one lane |
 | **Speaking** | How communities keep their traditions |
-| **Listening** | How technology has changed the way we live and learn |
+| **Listening** | A neighbour on a week with no electricity |
 | **Writing** | A **paragraph**, 80–100 words — the pros *or* cons of online learning |
 
 ---
 
 ## Lesson 1 — Getting Started
 
-### Dialogue: A very different life
+### Dialogue: Everybody wants something
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="A very different life" gramen="will — the future simple" gramvi="**will** + động từ nguyên thể để nói về tương lai. Câu điều kiện loại 1: *If* + hiện tại đơn, **will** + nguyên thể." gramco="If it rains, we will stay in"
-**Duy:** Have you started the geography homework? We have to describe a [[lifestyle]] completely different from ours.
-**Mai:** Not yet, but I know what I'll write about. Alaska. I watched a documentary about it last night.
-**Duy:** Alaska? What's life like there?
-**Mai:** Very [[remote]]. Some villages have no roads at all — you can only get there by plane. Families still [[hunt]] and fish for most of their food, and in winter they travel by [[sled]].
-**Duy:** That sounds hard. I won't complain about my old bicycle again.
-**Mai:** Ha! The winters are long and dark, so people share everything. If you move there, you [[will|gram:will]] learn to depend on your [[community]] very quickly.
-**Duy:** I like that idea. Our lifestyle is the opposite — everybody stares at a screen on their own.
-**Mai:** True. My screen time was six hours yesterday. I'll be honest, it frightened me a bit.
-**Duy:** Mine is worse. Right — a promise. If I finish my homework before eight tonight, I'll go for a run.
-**Mai:** And if you don't finish it?
-**Duy:** Then I won't watch anything at the weekend. Not one video.
-**Mai:** Brave. I'll join you, then. Unless it rains, we'll run together on Sunday morning.
-**Duy:** It won't rain. I checked.
-**Mai:** You checked the weather for Sunday? That's very organised of you.
-**Duy:** I'll surprise you one day, Mai.
+::: dialogue title="Everybody wants something" gramen="will — the future simple" gramvi="**will** + động từ nguyên thể để nói về tương lai. Câu điều kiện loại 1: *If* + hiện tại đơn, **will** + nguyên thể." gramco="If it rains, we will stay in"
+**Thảo:** Four people stopped me on the way here, and every one of them asked about you.
+**Tí:** Five stopped me. A woman at the market wants her mother's ring back. A man wants his father's boat.
+**Thảo:** It's the festival. Somebody saw the lamp burning that night, and now the whole lane knows.
+**Tí:** Mun keeps telling them the same thing. Light the lamp, and the nearest lost thing comes back — you don't get to choose what.
+**Thảo:** Then say it again. If you explain the rule, they will stop asking.
+**Tí:** They won't. They think I am hiding something better.
+**Thảo:** Bà Sáu says the older [[generation]] on our lane want more than a ring. They want the whole [[lifestyle]] they grew up inside.
+**Tí:** I know. Chú Bảy asked me to [[revive]] the boat market. The whole boat market.
+**Thảo:** And what [[will|gram:will]] you tell him?
+**Tí:** Nothing yet. If I light it once for one person, they will queue at our door tomorrow morning.
+**Thảo:** And if you never light it again?
+**Tí:** Then it is only a lamp, and nobody in this [[community]] will look at me the same way.
+**Thảo:** Nobody? Bà Sáu will. I will.
+**Tí:** Seven measures of oil. That is all there is. I won't waste one on a ring.
+**Thảo:** Good. Unless you are certain, don't light it at all.
+**Tí:** I'll be certain by Sunday. I promise.
 :::
 
 ### 1.1 Comprehension
 
 Answer in full sentences.
 
-1. Why is Mai going to write about Alaska?
-2. How do people reach some Alaskan villages?
-3. What does Mai say people there learn to do?
-4. What will Duy do if he finishes his homework before eight?
-5. Under what condition will the two friends run on Sunday?
+1. Why are people stopping Tí and Thảo in the street?
+2. What does the woman at the market want back?
+3. What does Mun keep telling people about the lamp?
+4. What does Tí think will happen if he lights the lamp for one person?
+5. What does Thảo tell him to do unless he is certain?
 
 ### 1.2 Find the phrase
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
-- far away and difficult to reach = remote
-- the number of hours you spend looking at a phone or computer = screen time
-- to rely on someone for help = depend on
-- good at planning things carefully = organised
+- a way of living = lifestyle
+- to bring something back to life again = revive
+- the people who live around you = community
+- to stand in a line and wait your turn = queue
 :::
 
 ### 1.3 Notice the grammar
 
 ::: task skill="course" type="choice" opts="will|won't|if-clause" ask="Look at the **bold** part of each line and label it."
-- I know what **I'll write** about. = will
-- **I won't complain** about my old bicycle again. = won't
-- **If you move there**, you will learn to depend on your community. = if-clause
-- **If I finish** my homework before eight, I'll go for a run. = if-clause
-- **It won't rain.** I checked. = won't
+- If you explain the rule, they **will stop** asking. = will
+- **They won't.** They think I am hiding something better. = won't
+- **If I light it once** for one person, they will queue at our door. = if-clause
+- And **if you never light it again**? = if-clause
+- Seven measures of oil. **I won't waste** one on a ring. = won't
 :::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **thì tương lai đơn**
@@ -414,7 +415,7 @@ short replies that say so:
 | --- | --- |
 | **Sure.** You're welcome. | Được chứ. Cứ tự nhiên. |
 | **Yes, certainly.** | Vâng, chắc chắn rồi. |
-| **Certainly.** I'll bring it tomorrow. | Chắc chắn rồi. Mai mình mang đến. |
+| **Certainly.** I'll bring it tomorrow. | Chắc chắn rồi. Ngày mai mình mang đến. |
 | **Of course.** | Tất nhiên rồi. |
 | **Definitely.** | Chắc chắn luôn. |
 | **I'm sure it will.** | Mình chắc là sẽ như vậy. |
@@ -576,72 +577,75 @@ Now answer for your own area, in full sentences.
 
 ## Lesson 5 — Skills 1: Reading & Speaking
 
-### Reading — *Life at the top of the map*
+### Reading — *The week our lane went back*
 
-*A school magazine article about Alaska.*
+*Tí writes down what happened on his lane after he lit the lamp.*
 
 ::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
 :::
 
 ::: passage label="A"
-> For thousands of years, the Inupiat people of northern Alaska and the Yupik
-> people of western Alaska have lived in one of the coldest places on Earth.
-> Their villages are small and remote. Some can only be reached by plane or by
-> boat, and in the far north the sun hardly rises at all in midwinter.
+> I lit the lamp at the landing on Tuesday, and I did not choose what came
+> back. Nobody chooses. It was not a ring and it was not a boat. What came back
+> was a way of living, and it settled on our lane and on no other street in the
+> town.
 >
-> Traditionally, families live from the land and the sea. They hunt caribou
-> and seals, fish through holes in the ice, and pick berries during the short
-> summer. On the northern coast, whaling is the heart of the year. A crew goes
-> out in a skin boat, and when a whale is caught, the meat is shared across the
-> whole village. Nobody is left out. That sharing is not a rule written on
-> paper — it is simply how the community stays alive.
+> By Wednesday morning there was no electricity here at all. The televisions
+> were dark, the telephones were flat, and there was no screen time for
+> anybody. Instead there were oil lamps in every window, a well at the corner,
+> and rice pounded by hand in the yards. It was our own street, a hundred years
+> earlier, with all our own people still inside it.
 >
-> Travel once meant dog sleds. Teams of dogs pulled people and supplies across
-> the snow for days at a time. Today most families use snowmobiles, but sled
-> dogs are still trained and raced, and the skill has not been lost.
+> Some of it was better than I expected. People sat outside until late, because
+> there was nothing indoors to sit in front of. Old women taught weaving on the
+> step, and my grandmother walked further in three days than she usually walks
+> in a month. Her knees hurt less, not more. Nobody was sedentary here. Nobody
+> ate alone.
 >
-> Modern life arrived quickly. There are schools, shops, mobile phones and
-> satellite internet. Young people watch the same videos as teenagers in New
-> York. Some leave for the cities.
+> Some of it was much worse. There was no fridge on the whole lane, so the fish
+> went bad by noon and Chú Bảy could not keep his medicine cold. Every drop of
+> water had to be carried. The school is two lanes away, and the children on
+> ours could not print their homework or join a single online lesson.
 >
-> So the elders face a hard question: if the old skills disappear, what will be
-> left? Many of them now teach hunting, sewing and their own language to
-> children after school. They believe a community can be modern and traditional
-> at the same time.
+> So the lane argues, all day, in the same two sentences. "If we let it go, we
+> will lose the best week we have had in years." "If we keep it, somebody will
+> be seriously ill by Friday." Nobody agrees. And the question is no longer
+> what we will call back next. It is what will happen to the life we already
+> have, if we keep doing this.
 :::
 
 ### 5.1 Matching information
 
-The article has **five** paragraphs, **A** to **E**, in the order they are
+The text has **five** paragraphs, **A** to **E**, in the order they are
 printed. Each statement below is somewhere in one of them — but never in the
 same words, which is the point of the type. You are looking for the
 information, not for the sentence.
 
 ::: task skill="reading" type="matching-information" opts="A|B|C|D|E" ask="Which paragraph contains each piece of information? A paragraph may be used once, more than once, or not at all."
-- a description of how a catch is divided up = B ~ *the meat is shared across the whole village*
-- a form of transport that has been replaced but not forgotten = C ~ dog sleds: most families now use snowmobiles, yet the dogs are still trained
-- a comparison between young people in two different places = D ~ they *watch the same videos as teenagers in New York*
-- a mention of places that cannot be reached by road = A ~ *some can only be reached by plane or by boat*
-- a belief that two ways of living can exist at once = E ~ *modern and traditional at the same time*
+- a description of what replaced the electric light = B ~ *oil lamps in every window*
+- an example of somebody whose health improved = C ~ the grandmother's knees *hurt less, not more*
+- a problem caused by having nowhere cold to store things = D ~ *the fish went bad by noon*
+- a statement that only one street was affected = A ~ *it settled on our lane and on no other street*
+- two opposite predictions about what will happen = E ~ the two sentences the lane argues in
 :::
 
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- Where do the Yupik people live? = (in) western Alaska
-- What do families fish through in the ice? = holes
-- What is shared across the whole village when a whale is caught? = (the) meat
-- What do most families travel by today? = snowmobiles
-- Besides sewing and language, what do elders now teach after school? = hunting
+- What did the writer light at the landing on Tuesday? = (the) lamp
+- What stood in every window instead of electric light? = oil lamps
+- Where did the old women teach weaving? = (on) the step
+- What went bad by noon? = (the) fish
+- How far away is the school? = two lanes
 :::
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the article that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- far away and hard to reach = remote
-- a group of people who work together on a boat = crew
-- not included, forgotten = left out
-- the older, respected members of a community = elders
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
+- sitting still and hardly moving at all = sedentary
+- making cloth by hand = weaving
+- with no electricity left in it = flat
+- a deep hole in the ground that gives water = well
 :::
 
 ### Speaking — How communities keep their traditions
@@ -686,56 +690,57 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ## Lesson 6 — Skills 2: Listening & Writing
 
-### Listening — Technology and the way we live
+### Listening — A neighbour weighs up the week
 
 You get **one** play, so use the preview window: read both sets of questions
 first, then answer while you listen rather than afterwards from memory.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a speaker giving a talk about how technology has changed the way we live and learn." mode="computer" preview="30" review="120"
-Good morning. Today I want to ask one question: has technology made our
-lives better or worse?
+::: audio orientation="You will hear a man from the lane telling a visitor what the week was like, and what his neighbours now cannot agree about." mode="computer" preview="30" review="120"
+Good evening. You want to know about our lane, so I will tell you honestly,
+and then you can decide for yourself.
 
-Think about my grandmother. When she was fourteen, she walked four
-kilometres to school. There was no fridge in the house, and the family grew
-most of their own food. Her lifestyle was active — not because she went to a
-gym, but because everything took effort.
+For six days there was no electricity here. Not a power cut — there was
+simply nothing to cut. Oil lamps in the windows and a well at the corner, the
+way it was when my mother was a girl.
 
-Now think about a teenager today. You order food on an app. You message a
-friend who lives two streets away. You study, watch films and talk to people
-on the same small screen. Life is easier, and it is also far more sedentary.
+Some of it I loved. I slept properly for the first time in years. My
+neighbours came out after supper and sat with me on the step until it was
+late. Nobody stared at a small screen all evening. The children learned to
+make things with their hands.
 
-Learning has changed most of all. A few years ago, millions of students
-studied online for the first time. Some loved it. They could pause the video,
-replay the difficult part, and learn at their own speed. Others hated it.
-They missed their classmates, their internet was slow, and nobody noticed
-when they stopped understanding.
+But my medicine has to stay cold, and for six days it was not cold. My sister
+is sixty-eight, and she filled two buckets at that well every morning. The
+market lost a whole morning of fish. And the students on this lane missed
+their lessons — every single one of them.
 
-So the honest answer is this. Technology has not made us better or worse. It
-has given us choices our grandparents never had. If we choose well, we will
-get the benefits without losing our health or our friendships. That choice is
-yours, and you will make it every single day.
+Now we cannot agree. Half of us say that if this goes on, somebody will be
+seriously ill. The other half say that if it ends, we will go straight back to
+sitting alone in the blue light of a telephone.
+
+Nobody is asking what we will bring back next. We are asking what will happen
+to the life we already have.
 :::
 
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- The speaker's main question is whether technology has made our lives (a) faster (b) better or worse (c) more expensive = b
-- The grandmother's family (a) bought all their food (b) grew most of their food (c) had a large fridge = b
-- The grandmother's lifestyle was active because (a) she went to a gym (b) everything took effort (c) she played sport = b
-- Students who liked online learning could (a) pause and replay the video (b) finish school early (c) choose their teacher = a
-- The speaker concludes that (a) technology is bad for us (b) technology is always good (c) what matters is how we choose = c
+- The lane had no electricity for (a) six days (b) two days (c) a month = a
+- In the evenings the neighbours (a) stayed indoors (b) came out and sat together (c) went to the market = b
+- The speaker's medicine (a) ran out (b) was not kept cold (c) cost too much = b
+- One half of the lane predicts that somebody will (a) be seriously ill (b) move away (c) lose money = a
+- The speaker says the lane is no longer asking (a) who lit the lamp (b) what they will bring back next (c) where the well is = b
 :::
 
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="1"
-- The speaker's grandmother walked ___ kilometres to school. = four/4
-- Life today is easier, and also far more ___ . = sedentary
-- Some students loved online learning because they could learn at their own ___ . = speed
-- Others missed their ___ and their internet was slow. = classmates
-- Technology has given us ___ our grandparents never had. = choices
+- The speaker says it was not a power ___ . = cut
+- The speaker slept ___ for the first time in years. = properly
+- The speaker's sister is ___ years old. = sixty-eight/68
+- His sister filled two ___ every morning. = buckets
+- The students on the lane missed their ___ . = lessons
 :::
 
 ### Writing — A paragraph about online learning
@@ -743,18 +748,20 @@ yours, and you will make it every single day.
 **Task.** Write a paragraph of **80–100 words** about the **advantages** *or*
 the **disadvantages** of online learning. Choose **one** side only.
 
+*This is the paragraph Tí handed in at the end of that week.*
+
 #### Model paragraph — read this first
 
 > In my opinion, online learning has several disadvantages. First, it increases
-> our screen time, and too many hours in front of a computer are bad for our
-> eyes and our well-being. Second, students sit still all day, so their
-> lifestyle becomes sedentary. Third, if the internet connection is weak, we
-> will miss part of the lesson and fall behind. Finally, we lose the sense of
-> community that a real classroom gives us. Unless schools are careful, online
-> learning will make students feel lonely. For me, a normal classroom is still
-> better.
+> our screen time, and long hours in front of a small screen are bad for our
+> well-being. Second, students sit still all day, so their lifestyle becomes
+> sedentary. Third, if the electricity fails, we will miss the whole lesson and
+> fall behind the rest of the class. Finally, we lose the community that a real
+> classroom gives us, and nobody notices when we stop understanding. Unless our
+> schools plan carefully, online learning will leave students lonely. For me, a
+> room full of people is still better.
 
-*(91 words)*
+*(97 words)*
 
 #### Plan it — 6 questions your paragraph has to answer
 
@@ -864,20 +871,19 @@ One pair is enough — two starts to sound like you cannot decide.
 Find and correct **six** errors in this paragraph. All six are about the future
 simple or the first conditional.
 
-> Next year my family will moves to a village in the countryside. If we will
-> live there, we will have a much healthier lifestyle. My father says he will
-> to grow vegetables, and my mother says she won't misses the city at all.
-> Unless we don't find a good school, I will go to the village school with my
-> cousins. I think I will be happy there — if I get bored, I visit my friends
-> in town at the weekend.
+> Six measures of oil are left, and I will not lights the lamp again. If we
+> will bring back another week like that one, half the lane will be ill and the
+> other half won't speaks to us. My grandmother says she will to keep the oil
+> lamps anyway. Unless we don't stop now, somebody will get hurt. I think I
+> sleep better when the lamp stays under the bed.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
-- Error 1 = will move ~ *will* is followed by the bare infinitive
-- Error 2 = if we live ~ no *will* inside the *if*-clause
-- Error 3 = he will grow ~ *will* + bare infinitive — no *to*
-- Error 4 = she won't miss ~ *won't* + bare infinitive
-- Error 5 = unless we find ~ *unless* is already negative
-- Error 6 = I will visit/will visit ~ the main clause of a first conditional takes *will*
+- Error 1 = will not light/won't light ~ *will* is followed by the bare infinitive
+- Error 2 = if we bring ~ no *will* inside the *if*-clause
+- Error 3 = won't speak ~ *won't* + bare infinitive
+- Error 4 = she will keep/will keep ~ *will* + bare infinitive — no *to*
+- Error 5 = unless we stop ~ *unless* is already negative
+- Error 6 = I will sleep/will sleep ~ a prediction about the future takes *will*
 :::
 
 ### 7.5 Say it the other way
@@ -944,9 +950,9 @@ page can settle it, the row says so, and that one is yours to judge.
 | hear /br/ and /pr/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
 | use *will* and the first conditional, *unless* included | Lesson 3, exercises 3.2 and 3.3 · Lesson 7, exercises 7.3, 7.4 and 7.5 |
 | say how certain I am | Lesson 4, exercises 4.1 and 4.2 |
-| read about an unusual way of life and how it is kept going | Lesson 5, exercises 5.1 and 5.2 |
+| read about a way of living that came back, and what it cost | Lesson 5, exercises 5.1 and 5.2 |
 | talk about keeping a traditional way of life | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to how technology has changed the way we live | Lesson 6, exercises 6.1 and 6.2 |
+| listen to somebody weighing up the good and bad sides of a way of living | Lesson 6, exercises 6.1 and 6.2 |
 | write a paragraph about the good or the bad side of online learning | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
@@ -963,11 +969,12 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. Because she watched a documentary about Alaska last night and it
-shows a lifestyle completely different from hers. 2. Some villages have no
-roads, so you can only get there by plane. 3. They learn to depend on their
-community very quickly. 4. He will go for a run. 5. They will run together on
-Sunday morning unless it rains.
+**1.1** 1. Because somebody saw the lamp burning at the festival, so now the
+whole lane knows about it and people want to ask for things. 2. She wants her
+mother's ring back. 3. He tells them that if you light the lamp, the nearest
+lost thing comes back, and you do not get to choose what. 4. He thinks people
+will queue at their door the next morning. 5. She tells him not to light it at
+all.
 
 ### Lesson 2
 

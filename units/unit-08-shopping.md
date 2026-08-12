@@ -11,45 +11,46 @@
 | --- | --- |
 | **Pronunciation** | /sp/ vs /st/ — *spend* vs *store* |
 | **Grammar** | **Adverbs of frequency**; present simple for future events |
-| **Reading** | Shopping centres |
+| **Reading** | A market, its sellers and its prices |
 | **Speaking** | Asking and answering about a local market or centre |
-| **Listening** | Online shopping |
+| **Listening** | Money a shop will not take |
 | **Writing** | A **paragraph**, 80–100 words — the pros *or* cons of one kind of shopping |
 
 ---
 
 ## Lesson 1 — Getting Started
 
-### Dialogue: Two pairs of shoes
+### Dialogue: Four days until the fifteenth
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="Two pairs of shoes" gramen="usually — an adverb of frequency" gramvi="Trạng từ tần suất đứng **trước** động từ thường, nhưng **sau** động từ *to be*." gramco="I usually go · She is always late"
-**Linh:** Are you free on Saturday? I need new school shoes and I hate choosing alone.
-**Duy:** I'm always free on Saturday. Where do you want to go — the market or the [[shopping centre]]?
-**Linh:** The centre. There's a sports shop on the second floor. They rarely have my size, but the sale starts on Monday, so they might be putting things out already.
-**Duy:** Monday? Then everything will be cheaper if we wait.
-**Linh:** True, but the good sizes never last. My cousin waited last year and got nothing.
-**Duy:** Fair enough. What time does the centre open?
-**Linh:** It opens at nine on Saturdays. The bus leaves our stop at 8:40.
-**Duy:** That's early. I [[usually|gram:usually]] don't get up before ten at the weekend.
-**Linh:** You'll survive. And I sometimes go to the market afterwards — the stalls near the gate sell socks for almost nothing.
-**Duy:** Do they take cards?
-**Linh:** At a market? Hardly ever. Bring [[cash]].
-**Duy:** Right. One more thing — can you return things there if they don't fit?
-**Linh:** No. You have to try everything on at the [[stall]]. In the shopping centre they give you a [[receipt]] and you can always ask for a [[refund]].
-**Duy:** Then I'm buying my shoes upstairs and my socks downstairs.
+::: dialogue title="Four days until the fifteenth" gramen="usually — an adverb of frequency" gramvi="Trạng từ tần suất đứng **trước** động từ thường, nhưng **sau** động từ *to be*." gramco="I usually go · She is always late"
+**Thảo:** Your grandmother was counting coins at the kitchen table when I came in.
+**Tí:** She counts them every morning now. Rice went up, and the money from my parents arrives on the fifteenth.
+**Thảo:** That's four days away. What do you do until then?
+**Tí:** We buy less. She [[usually|gram:usually]] goes to the [[stall]] at the end of our lane, because the woman there lets her pay on Friday.
+**Thảo:** Does she ever go to the [[shopping centre]] on the ring road?
+**Tí:** Hardly ever. Everything there costs more, and they want [[cash]] or a card at a counter where nobody knows your face.
+**Thảo:** Đạt was at the centre yesterday. He bought two pairs of trainers and kept the [[receipt]] for both, so he can ask for a [[refund]] on the pair he likes less.
+**Tí:** Of course he did. He always has money on a Tuesday.
+**Thảo:** He isn't unkind about it, though.
+**Tí:** I know. That's the part I hate. Anyway, the market opens at five tomorrow and Bà Sáu wants me carrying the basket.
+**Thảo:** Then I'll come. The rice truck comes at six, and the fish sellers never put their good baskets out twice.
+**Tí:** Bring your own money. I'm counting hers to the last coin.
+**Thảo:** And the lamp?
+**Tí:** Under the bed, in the rice sack, where it stays. Light the lamp, and the nearest lost thing comes back — you never choose what. I'm not doing that again.
+**Thảo:** Nobody asked you to, Tí.
 :::
 
 ### 1.1 Comprehension
 
 Answer in full sentences.
 
-1. Why does Linh want Duy to come with her?
-2. When does the sale at the shopping centre start?
-3. Why doesn't Linh want to wait for the sale?
-4. What time does the shopping centre open on Saturdays?
-5. What is one difference between buying at the market and buying at the centre?
+1. Why is Tí's grandmother counting coins every morning?
+2. When does the money from Tí's parents arrive?
+3. Why does she usually buy from the stall at the end of the lane?
+4. Why did Đạt keep the receipt for both pairs of trainers?
+5. What two things happen early tomorrow at the market?
 
 ### 1.2 Find the phrase
 
@@ -63,12 +64,12 @@ Answer in full sentences.
 ### 1.3 Notice the grammar
 
 ::: task skill="course" type="choice" opts="A|F" ask="Look at the **bold** word. Write **A** if it is an adverb of frequency, or **F** if it is a present simple verb used for a **future** event."
-- I'm **always** free on Saturday. = A
-- The sale **starts** on Monday. = F
-- They **rarely** have my size. = A
-- It **opens** at nine on Saturdays. = F
-- The bus **leaves** our stop at 8:40. = F
-- The good sizes **never** last. = A
+- He **always** has money on a Tuesday. = A
+- The money from my parents **arrives** on the fifteenth. = F
+- She **usually** goes to the stall at the end of our lane. = A
+- The market **opens** at five tomorrow. = F
+- The rice truck **comes** at six. = F
+- The fish sellers **never** put their good baskets out twice. = A
 :::
 
 > **Ghi chú:** Bạn vừa gặp hai trọng tâm ngữ pháp của bài — **trạng từ chỉ tần
@@ -452,7 +453,12 @@ At a market — but **not** in a shopping centre — you can bargain.
 | That's a bit **too much** for me. | Với tôi thì hơi đắt quá. |
 | Could you make it a bit cheaper? | Bác bớt cho cháu một chút được không? |
 | I'll take two if you give me a **discount**. | Cháu lấy hai cái nếu bác giảm giá. |
+| That seems **fair**. I'll take it. | Vậy thì hợp lý ạ. Cháu lấy cái này. |
 | It's a **bargain**! | Thật là món hời! |
+
+> **Ghi chú:** **fair** có hai nghĩa hay gặp khi mua bán: tính từ *hợp lý, phải
+> chăng* (*a **fair** price* · *That seems **fair**.*) và danh từ *hội chợ*
+> (*a school **fair*** · *the spring **fair***).
 
 #### Making complaints
 
@@ -594,66 +600,68 @@ Answer in full sentences.
 
 ## Lesson 5 — Skills 1: Reading & Speaking
 
-### Reading — *The building that sells everything*
+### Reading — *The morning the market came back*
 
-*An article about how shopping centres changed one Vietnamese city.*
+*Tí writes down what happened at five o'clock on the fifteenth.*
 
 ::: clock mins="19" for="You have 19 minutes for the text and every exercise below it."
 :::
 
 ::: passage
-> Thirty years ago, my grandmother did all her shopping at one place: the wet
-> market at the end of our street. She went every morning, she always paid in
-> cash, and she knew every vendor by name. Today my little brother has never
-> been to that market. He shops at the centre on the ring road, where a
-> supermarket, forty shops, a cinema and a food court sit under one roof.
+> Bà Sáu sent me to the market at five with two hundred thousand dong and a
+> list. I took the lamp with me. I know exactly how that sounds. The house was
+> empty and I did not want to leave it there, and that is the same thing I
+> wrote in October, and it was not the whole truth either time.
 >
-> Shopping centres arrived in our city in the 2000s and they spread quickly.
-> Their advantages are obvious. Everything is in one building, so a family can
-> buy rice, shoes and a birthday present in an hour. The prices are fixed, so
-> nobody has to bargain. Every purchase comes with a receipt, and if something
-> is wrong you can ask for a refund. It is air-conditioned, which matters in
-> June. And the centre opens at nine and closes at ten, seven days a week.
+> A woman dropped a tray of glasses behind me. I turned, my elbow went into
+> the rice sack, and the lamp came out onto the stones and lit.
 >
-> But something is lost too. Goods in a centre are usually more expensive than
-> the same goods on a stall. Small shopkeepers cannot pay the rent, so they
-> disappear. And nobody talks. My grandmother's morning at the market took two
-> hours because half of it was conversation.
+> The market that came back was our market, and it was not. It stood where the
+> car park is now: forty stalls under palm leaves, a fish row, a cloth row,
+> and a street of sellers calling prices I had never heard in my life. Mun sat
+> on my shoulder and said nothing, which is what he does now when he is
+> frightened.
 >
-> Most families now use both. They buy fresh food at the market and everything
-> else at the centre. My grandmother says this is sensible. She still goes to
-> the market at six, and she still knows every vendor by name.
+> The sellers were not ghosts. They were busy. They weighed things, they
+> argued about weight, they gave change. A woman sold me four mangoes for
+> eight hundred dong and dropped the coins into a wooden box.
+>
+> Then I tried to buy bread at the shop on the corner — our shop, the one that
+> is still there — and the man looked at the note in my hand and pushed it
+> back across the counter. It was old money. No shop in Bến Sẻ will take it,
+> and by seven o'clock half the town was holding notes that buy nothing at
+> all.
 :::
 
 ### 5.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and answering from what you already know about markets and shopping centres is exactly the pull this type is built to catch."
-- The writer's grandmother used to shop at a wet market. = T
-- The writer's brother goes to the wet market twice a week. = F ~ he has never been
-- You cannot bargain in a shopping centre because prices are fixed. = T
-- The shopping centre on the ring road is the largest in the city. = NG ~ the text never compares its size with any other
-- Goods at a stall are usually cheaper than the same goods in a centre. = T
-- The grandmother has stopped going to the market. = F ~ she still goes at six
+- The writer took the lamp to the market with him. = T
+- The writer lit the lamp on purpose. = F ~ his elbow went into the rice sack and it came out onto the stones
+- The market that came back stood where the car park is now. = T
+- There were more stalls in the fish row than in the cloth row. = NG ~ the text never compares the two rows
+- The sellers in that market gave change to their customers. = T
+- The man at the corner shop accepted the writer's note. = F ~ he pushed it back across the counter
 :::
 
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- Besides a supermarket, forty shops and a cinema, what is under the centre's roof? = (a) food court
-- What are the prices in a shopping centre, so that nobody has to bargain? = fixed
-- What can small shopkeepers not pay, so that they disappear? = (the) rent
-- What was half of the grandmother's two hours at the market? = conversation
-- Where do most families buy their fresh food now? = (at) the market
+- Besides two hundred thousand dong, what did the writer take to the market? = (a) list
+- How many stalls stood under palm leaves? = forty (stalls)
+- Who sat on the writer's shoulder and said nothing? = Mun
+- What did the woman drop the coins into? = (a) wooden box
+- What kind of money was the note the shopkeeper pushed back? = old money
 :::
 
 ### 5.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- an open-air market selling fresh food = wet market
-- an area with many places to eat = food court
-- not changing; the same for everybody = fixed
-- something you have bought = purchase
-- money paid regularly to use a shop or a flat = rent
+- an open space where cars are left = car park
+- a line of stalls selling the same kind of goods = row
+- the money you get back when you have paid too much = change
+- notes and coins that no shop uses any more = old money
+- a large rough bag that rice is carried in = rice sack
 :::
 
 ### Speaking — Your local market or shopping centre
@@ -716,7 +724,7 @@ pause where one idea ends is help for your listener, not a mistake.
 
 ## Lesson 6 — Skills 2: Listening & Writing
 
-### Listening — Buying online
+### Listening — The stranger by the car park
 
 You get **one** play. Two people are speaking here, so read both sets of
 questions in the preview window first and decide which of them each answer will
@@ -724,56 +732,55 @@ come from.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear an interviewer asking a secondary-school student about why she buys things online and what has gone wrong when she has." mode="computer" preview="30" review="120"
-**Interviewer:** Thanks for coming in, Hà. You buy almost everything online,
-is that right?
+::: audio orientation="You will hear a stranger speaking to a boy beside a market, and a short reply from the boy. She has come a long way and she is not pleased with him." mode="computer" preview="30" review="120"
+**The white cat:** Put it down. You are carrying it wrong, and you have been
+carrying it wrong for eight lightings.
 
-**Hà:** Not everything. But yes, most of my clothes and all my books.
+**Tí:** Who are you?
 
-**Interviewer:** Why online and not in a shop?
+**The white cat:** My name is not the useful part. I keep lamps. I have kept
+them for a long time, and I always come when a town starts paying for its
+vegetables with money that stopped existing before its grandparents were
+born.
 
-**Hà:** Two reasons. Price first — things are usually about twenty per cent
-cheaper, and there's nearly always a discount code somewhere. And time. I
-finish school at half past five, and the shops near me close at eight, so I
-hardly ever get there.
+**Tí:** It fell. I didn't —
 
-**Interviewer:** What's the worst part?
+**The white cat:** It burned on those stones for eleven minutes. Eleven. A
+trained keeper closes it in four. Where is the apprentice?
 
-**Hà:** You can't try anything on. I once bought a jacket that was three
-sizes too big. Sending it back took two weeks and I never got the full
-refund — I paid for the return delivery myself.
+**Tí:** Mun isn't an apprentice. He's my —
 
-**Interviewer:** So do you have a rule now?
+**The white cat:** He is an apprentice, and his instructions are wrong. He
+told you twelve measures and stopped there. That is half a sentence. This
+lamp was never meant to be used this way. It was made to bring back one thing
+to one person who has lost it. Not a whole market, with its sellers and its
+prices, to a town that has moved on and spent thirty years learning to.
 
-**Hà:** Yes. I never buy shoes online. Shoes I always try on in a store. And
-I always read the reviews, especially the bad ones.
+**Tí:** Then say the other half. Please.
 
-**Interviewer:** Anything you miss about ordinary shopping?
-
-**Hà:** Going out with my friends, honestly. We used to spend a whole
-Saturday just browsing. Now a parcel arrives on Thursday and that's it. It's
-convenient, but it isn't a day out.
+**The white cat:** I usually don't explain myself to boys who drop things.
+Count your oil. You have four measures left.
 :::
 
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- Hà buys most of her (a) food (b) clothes and books (c) furniture online = b
-- Online prices are usually about ___ cheaper. (a) 10% (b) 20% (c) 50% = b
-- She hardly ever reaches the shops because they close at (a) six (b) seven (c) eight = c
-- The jacket she bought was (a) the wrong colour (b) three sizes too big (c) damaged = b
-- Her rule now is that she never buys ___ online. (a) shoes (b) books (c) jackets = a
-- What she misses most is (a) the discounts (b) trying things on (c) going out with friends = c
+- The stranger says the boy has been carrying it wrong for (a) eight lightings (b) two lightings (c) twelve lightings = a
+- She says that what she keeps is (a) markets (b) lamps (c) apprentices = b
+- It burned on the stones for (a) four minutes (b) eleven minutes (c) thirty minutes = b
+- A trained keeper closes it in (a) four minutes (b) eleven minutes (c) half an hour = a
+- She says the apprentice's instructions are (a) old (b) wrong (c) missing = b
+- She says it was made to bring back one thing to (a) one person (b) one family (c) one town = a
 :::
 
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="3"
-- Hà finishes school at ___ . = half past five/5.30/5:30
-- Sending the jacket back took ___ . = two weeks
-- She paid for the return ___ herself. = delivery
-- She always reads the ___ , especially the bad ones. = reviews
-- A parcel ___ on Thursday. = arrives
+- She says she has kept them for ___ . = a long time
+- The money stopped existing before the town's ___ were born. = grandparents
+- The stranger calls the apprentice's instructions ___ . = half a sentence
+- The town has spent ___ learning to move on. = thirty years
+- The stranger tells the boy to count his ___ . = oil
 :::
 
 ### Writing — A paragraph about one kind of shopping
@@ -782,17 +789,20 @@ convenient, but it isn't a day out.
 the **disadvantages** of **one** kind of shopping: a local market, a shopping
 centre, or online shopping. Choose one side only — do not write both.
 
+*This is the paragraph Tí handed in the week after the market came back.*
+
 #### Model paragraph — read this first
 
-> Shopping at a local market has three clear advantages. First, it is cheap.
+> Shopping at our local market has three clear advantages. First, it is cheap.
 > Vegetables and fruit usually cost less than in a department store, and you
 > can always bargain with the seller. Second, the food is fresh, because the
-> stalls get their delivery early every morning. Third, a market is friendly.
-> My mother rarely goes anywhere else, and the vendors know her name. Of
-> course, you often have to queue, and you hardly ever get a receipt. Even so,
-> I think a market is still the most convenient place for a family to shop.
+> stalls get their delivery before five every morning. Third, a market
+> remembers you. Bà Sáu rarely goes anywhere else, and the sellers let her pay
+> on Friday. Of course, you often have to queue, and you hardly ever get a
+> receipt. Even so, I think a market is still the most convenient place for a
+> family with little cash.
 
-*(94 words)*
+*(98 words)*
 
 #### Plan it — 6 questions your paragraph has to answer
 
@@ -892,11 +902,11 @@ Find and correct **seven** errors in this paragraph. Five are about adverbs of
 frequency (position or double negative); two are about present simple for
 scheduled future events.
 
-> My mother always is at the market by six o'clock. She goes twice a week
-> there, and she doesn't never pay by card. Tomorrow is different: the new
-> shopping centre will open at nine, and the big sale will start at ten. Always
-> I go with her when there is a discount, but I hardly ever don't find anything
-> in my size.
+> Four measures of oil are left, and Mun says the white cat is called Bạch.
+> Bà Sáu always is at the market by six o'clock. She goes twice a week there,
+> and she doesn't never pay by card. Tomorrow is different: the new stalls will
+> open at nine, and the big sale will start at ten. Always I go with her when
+> there is a discount, but I hardly ever don't find anything I can afford.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
 - Error 1 = is always ~ an adverb of frequency goes after *be*
@@ -959,9 +969,9 @@ page can settle it, the row says so, and that one is yours to judge.
 | hear /sp/ and /st/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
 | put an adverb of frequency in the right place, and use the present simple for a fixed future | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
 | make a complaint | Lesson 4, exercise 4.3 |
-| read about why people go to shopping centres | Lesson 5, exercises 5.1 and 5.2 |
+| read about a market, its sellers and its prices | Lesson 5, exercises 5.1 and 5.2 |
 | talk about a place where I shop | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to a talk about shopping online | Lesson 6, exercises 6.1 and 6.2 |
+| follow a listening in which two people argue and pick out the facts and numbers in it | Lesson 6, exercises 6.1 and 6.2 |
 | write a paragraph about the good and the bad side of one kind of shopping | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
@@ -978,12 +988,11 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. Because she needs new school shoes and she hates choosing alone.
-2. It starts on Monday. 3. Because the good sizes never last — her cousin
-waited last year and got nothing. 4. It opens at nine on Saturdays.
-5. At the market you must pay in cash and you cannot return things; at the
-centre you get a receipt and can ask for a refund. *(Also acceptable: the
-market is much cheaper.)*
+**1.1** 1. Because rice has gone up and the money from Tí's parents has not
+arrived yet. 2. It arrives on the fifteenth, four days away. 3. Because the
+woman there lets her pay on Friday. 4. So that he can ask for a refund on the
+pair he likes less. 5. The market opens at five and the rice truck comes at
+six. *(Also acceptable: the fish sellers put their good baskets out once.)*
 
 ### Lesson 2
 

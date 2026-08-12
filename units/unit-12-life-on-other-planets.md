@@ -11,56 +11,58 @@
 | --- | --- |
 | **Pronunciation** | **Intonation** in lists |
 | **Grammar** | **Reported speech** — questions |
-| **Reading** | Habitable planets; Mars |
+| **Reading** | The twelfth lighting, and the name that came back |
 | **Speaking** | What conditions does a planet need for life? |
-| **Listening** | An imaginary planet that supports life |
+| **Listening** | A traveller answering the questions his visitors brought him |
 | **Writing** | A **descriptive paragraph**, 80–100 words — aliens on another planet |
 
 ---
 
 ## Lesson 1 — Getting Started
 
-### Dialogue: You missed the science club
+### Dialogue: The last question on the sheet
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="You missed the science club" gramen="asked if / asked what — reported questions" gramvi="Khi thuật lại câu hỏi, đưa về trật tự câu kể (chủ ngữ đứng trước động từ) và bỏ dấu hỏi. Câu Yes/No dùng **if**." gramco="He asked if I had seen it"
-**Chi:** You missed the science club yesterday, Duy. We had a speaker from the university.
-**Duy:** I know — I had a dentist appointment. What did she talk about?
-**Chi:** Mars, mostly. Whether people could ever live there.
-**Duy:** And? Could they?
-**Chi:** Not easily. She [[asked|gram:asked]] us what a [[planet]] needs before life can [[survive]], and nobody could list everything.
-**Duy:** Water, air, the right temperature…
-**Chi:** That's exactly what we said. Then she asked if we knew how strong [[gravity]] is on Mars.
-**Duy:** No idea.
-**Chi:** About thirty-eight per cent of ours. You'd weigh less than half what you weigh here.
-**Duy:** I'd enjoy that. Did anyone ask her about aliens?
-**Chi:** Of course. Minh asked her whether she believed in [[extraterrestrial]] life.
-**Duy:** And what did she say?
-**Chi:** She said the [[galaxy]] is enormous, so she wouldn't be surprised. But then she asked him what evidence he had, and he went quiet.
-**Duy:** Fair enough. Is she coming back?
-**Chi:** She asked our teacher when the club meets next month, so I think so. Bring a question.
+::: dialogue title="The last question on the sheet" gramen="asked if / asked what — reported questions" gramvi="Khi thuật lại câu hỏi, đưa về trật tự câu kể (chủ ngữ đứng trước động từ) và bỏ dấu hỏi. Câu Yes/No dùng **if**." gramco="He asked if I had seen it"
+**Thảo:** Cô Yến asked me at the gate whether you were coming in today.
+**Tí:** What did you tell her?
+**Thảo:** That you were behind me on the road. Then she asked why you had missed Monday, and I said I had no idea.
+**Tí:** Thank you.
+**Thảo:** She also wanted to know what your project was about, so I said [[planets|planet]].
+**Tí:** It is about planets. Question one asks what a [[planet]] needs before anything can [[survive]] on it — water, air, the right temperature, [[gravity]].
+**Thảo:** And question two?
+**Tí:** Whether anything else in this [[galaxy]] has ever answered us. Đạt [[asked|gram:asked]] that out loud at break, and Cô Yến said nobody knows.
+**Thảo:** Đạt asks that every year.
+**Tí:** Khoa asked me how far the crossing is.
+**Thảo:** And?
+**Tí:** Nine days on foot. A river, a crossing, nine days. He can be reached. He cannot be called.
+**Thảo:** Because of the rule.
+**Tí:** Because of the rule. Light the lamp and the nearest lost thing comes back — you never choose what — and there is one measure of oil left.
+**Thảo:** What does Mun say about it?
+**Tí:** He says spend it on anything else. Then he goes quiet. Thảo, last night he asked me what my name means.
+**Thảo:** He is asking the wrong person a question about himself.
 :::
 
 ### 1.1 Comprehension
 
 Answer in full sentences.
 
-1. Why wasn't Duy at the science club?
-2. What was the main topic of the talk?
-3. What did the speaker ask the students about a planet?
-4. How strong is gravity on Mars compared with Earth's?
-5. Why did Minh go quiet?
-6. What makes Chi think the speaker will come back?
+1. What did Cô Yến ask Thảo at the gate?
+2. What did Thảo say when Cô Yến asked about Monday?
+3. What does question one on the project sheet ask?
+4. What did Đạt ask out loud at break?
+5. How long is the walk to the crossing, and what is on the way?
+6. What does Mun say they should do with the last measure of oil?
 
 ### 1.2 Find the phrase
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
-- an arranged visit to the dentist = dentist appointment
-- extremely large = enormous
-- proof that something is true = evidence
-- stopped talking suddenly = went quiet
-- that is a reasonable point = fair enough
+- I do not know at all = no idea
+- so that everybody nearby can hear = out loud
+- in the short rest between lessons = at break
+- walking, not in any vehicle = on foot
+- stops talking suddenly = goes quiet
 :::
 
 ### 1.3 Notice the grammar
@@ -68,10 +70,10 @@ Answer in full sentences.
 Each sentence below reports a **question**. What did the person actually ask?
 
 ::: task skill="course" type="short-answer" ask="Write the direct question — the words the speaker really used. Put the subject and verb back in question order."
-- She asked us **what a planet needs** before life can survive. = what does a planet need before life can survive
-- She asked **if we knew** how strong gravity is on Mars. = do you know how strong gravity is on mars
-- Minh asked her **whether she believed** in extraterrestrial life. = do you believe in extraterrestrial life
-- She asked him **what evidence he had**. = what evidence do you have
+- Cô Yến asked me **whether you were coming in** today. = are you coming in today
+- She asked **why you had missed** Monday. = why did you miss monday
+- Khoa asked me **how far the crossing is**. = how far is the crossing
+- He asked me **what my name means**. = what does your name mean
 :::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **câu hỏi tường
@@ -256,7 +258,7 @@ Once the list intonation is comfortable, take the same contour discipline off th
 list and onto real description. Say your imaginary planet in **three or four
 deliberate chunks**, with an audible pause between them:
 
-> There are creatures on Verdia ↗ | about a metre tall ↗ | with soft blue-grey
+> There are creatures on Zonia ↗ | about a metre tall ↗ | with soft blue-grey
 > skin ↘
 
 Same physical drill as the list. Different material.
@@ -365,9 +367,9 @@ Keep the question word. Everything after it becomes a plain statement.
 - He asked where the spacecraft had landed. = W
 - They asked whether life could survive there. = Y
 - My teacher asked why I was late. = W
-- Lan asked me how far Mars is from the Sun. = W
+- Thảo asked me how far Mars is from the Sun. = W
 - The scientist asked if we knew about the habitable zone. = Y
-- Nam asked what an astronaut eats in space. = W
+- Khoa asked what an astronaut eats in space. = W
 - She asked whether the atmosphere contained oxygen. = Y
 :::
 
@@ -379,7 +381,7 @@ Keep the question word. Everything after it becomes a plain statement.
 - They asked ___ the planet was habitable. *(whether / what)* = whether
 - My father asked me why ___ awake at midnight. *(was I / I was)* = I was
 - The teacher asked how many moons ___ . *(does Mars have / Mars had)* = Mars had
-- Chi asked Duy ___ he believed in aliens. *(if / that)* = if
+- Thảo asked Khoa ___ he believed in aliens. *(if / that)* = if
 - He asked when the spacecraft ___ return. *(will / would)* = would
 - Nobody asked ___ the creatures ate. *(what / if)* = what
 :::
@@ -396,7 +398,7 @@ Begin each answer with the words given.
    → _______________________________________________
 4. "Can you see the galaxy without a telescope?" (She asked whether…)
    → _______________________________________________
-5. "Are you coming to the club tomorrow?" (Minh asked me…)
+5. "Are you coming to the club tomorrow?" (Khoa asked me…)
    → _______________________________________________
 6. "Have you ever used a telescope?" (My teacher asked…)
    → _______________________________________________
@@ -415,7 +417,7 @@ Begin each answer with the words given.
    → _______________________________________________
 5. "How did the creatures survive the winter?" (The reporter asked…)
    → _______________________________________________
-6. "Who launched the first spacecraft?" (Duy asked…)
+6. "Who launched the first spacecraft?" (Hùng asked…)
    → _______________________________________________
 7. "How much does a telescope cost?" (I asked the shop assistant…)
    → _______________________________________________
@@ -428,7 +430,7 @@ Each sentence has **one** error. Rewrite it correctly.
 2. He asked if what the planet was called.
 3. They asked me whether do I want to be an astronaut.
 4. My teacher asked when will the club meet again.
-5. Lan asked me why was I so interested in Mars.
+5. Thảo asked me why was I so interested in Mars.
 6. He asked me that I had seen the photographs.
 7. The scientist asked us what do we know about gravity.
 8. She asked me if I am tired.
@@ -622,78 +624,91 @@ tone — that is the Lesson 2 target, used for real.
 
 ## Lesson 5 — Skills 1: Reading & Speaking
 
-### Reading — *Looking for a second home*
+### Reading — *The last of the oil*
+
+*Tí, 13, writes about the twelfth time the lamp was lit.*
 
 ::: clock mins="20" for="You have 20 minutes for the text and every exercise below it."
 :::
 
 ::: passage
-> Astronomers have found thousands of planets outside our solar system, and the
-> first question they ask about each one is simple: could anything live there?
+> I have told this story eleven times and nobody believes the first part, so
+> this time I will start at the end.
 >
-> To answer it, they look for the **habitable zone**. This is the band of space
-> around a star where a planet is neither too hot nor too cold, so water can
-> stay liquid on its surface. Too close to the star and the water boils away;
-> too far and it freezes for ever. Earth sits comfortably inside our Sun's
-> habitable zone. So, almost, does Mars.
+> We took the lamp out to the middle of the river on a clear night. Khoa wanted
+> it clear so that he could name things. He pointed at Venus, low and steady
+> over the fields, and said that it sits inside the **habitable zone** and is
+> still far too hot for anybody. Then he asked me twice whether I could see it.
+> I could not. Thảo rowed. Mun sat on the lid of the basket and asked us three
+> times whether we were sure.
 >
-> Mars is the fourth planet from the Sun, and it is the one we know best.
-> Spacecraft have been photographing it for decades. In some ways it feels
-> familiar: a Martian day is only about forty minutes longer than ours, and
-> there are ice caps at both poles. Dry channels cut across the surface, and
-> they tell us that liquid water once flowed there.
+> Out there, nothing is lost for a long way in any direction. No houses, no
+> bank, no market. Nothing lost anywhere near us except one cat.
 >
-> But Mars is a hard place to survive. Its atmosphere is thin and made mostly
-> of carbon dioxide, so there is almost nothing to breathe and very little
-> protection from the Sun. Gravity is only about thirty-eight per cent of
-> Earth's, and nobody yet knows what years of that would do to a human body.
-> There is no liquid water on the surface today.
+> "You never choose what comes back," I said. "But you do choose where you are
+> standing when you light it."
 >
-> Astronauts will probably walk on Mars in your lifetime. Whether anyone will
-> stay is a completely different question.
+> One measure. It went up in about four seconds, and after that the lamp was
+> cold and has stayed cold.
+>
+> Nothing landed in the boat. Nothing rose out of the water. Mun lifted his
+> head the way a cat does when somebody calls him from the kitchen, and said,
+> "Sao."
+>
+> Then he sat down very suddenly, because a name does not come home by itself.
+> Everything walked in behind it: the workroom, the far end of the line, the
+> lesson he was never given, and the old man who never got as far as handing it
+> over.
+>
+> "I know where he is," Sao said. "And I know what he kept asking me."
+>
+> Khoa asked whether he would go back for his training now that the name was
+> his. Sao said he would walk up with us and come home after. He lives here.
+>
+> Thảo asked how long the walk would take. Khoa already knew.
 :::
 
 ### 5.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and this is a topic you already know things about, which is exactly the pull this type is built to catch."
-- The habitable zone is the area where water can stay liquid. = T
-- Mars is the third planet from the Sun. = F ~ the text says it is the fourth
-- A day on Mars is a little longer than a day on Earth. = T ~ "about forty minutes longer than ours"
-- The dry channels are evidence that water once flowed on Mars. = T
-- Mars has more gravity than Earth. = F ~ about thirty-eight per cent of Earth's
-- Scientists have already sent astronauts to Mars. = F ~ spacecraft have photographed it; astronauts *will probably* walk there
-- The writer thinks people will walk on Mars during the reader's lifetime. = T
+- The writer has told this story before. = T ~ he says he has told it eleven times
+- Khoa wanted a cloudy night. = F ~ he wanted it clear so that he could name things
+- The writer could see Venus when Khoa pointed at it. = F ~ "I could not"
+- Mun wanted to be sure before they lit the lamp. = T ~ he asked them three times whether they were sure
+- Something landed in the boat when the lamp was lit. = F ~ nothing landed in the boat and nothing rose out of the water
+- Thảo had rowed a boat on that river before. = NG ~ she rows them out, but the text never says whether she had done it before
+- The writer thinks he can decide what the lamp brings back. = F ~ "You never choose what comes back"
 :::
 
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- What happens to the water on a planet that orbits too close to its star? = it boils away/boils away
-- Which planet is the one we know best? = Mars
-- What is the Martian atmosphere made mostly of? = carbon dioxide
-- What is there at both of Mars's poles? = ice caps
-- What does the writer say once flowed on Mars? = liquid water
+- Which planet did Khoa point at, low over the fields? = Venus
+- What did Mun sit on in the boat? = the lid/lid
+- How long did the last measure take to go up? = (about) four seconds
+- What did Mun say when he lifted his head? = Sao
+- What was the lamp like after that, and has stayed? = cold
 :::
 
 ### 5.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the reading that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- the band of space where life is possible = habitable zone
-- turns to gas because of heat = boils away
-- periods of ten years = decades
-- narrow paths cut by flowing water = channels ~ the text calls them *dry channels*
-- keeping something safe from harm = protection
+- burned away completely = went up
+- with no clouds in it = clear
+- without any help from anybody = by itself
+- passing something over to the person it belongs to = handing it over
+- the flat cover on the top of a basket = the lid
 :::
 
-::: bridge name="Only what the text says — and space is the hardest place to obey that" trains="Reading" cefr="B1" marker="[Q]" src="04 §4.2"
-Go back to exercise **5.1** and re-answer it under one extra rule: **you know
-nothing about space.** For each statement, the only question is whether *this
-passage* says it, contradicts it, or neither.
+::: bridge name="Only what the text says — and a story you have followed is the hardest place to obey that" trains="Reading" cefr="B1" marker="[Q]" src="04 §4.2"
+Go back to exercise **5.1** and re-answer it under one extra rule: **you have
+never met these people before.** For each statement, the only question is
+whether *this passage* says it, contradicts it, or neither.
 
-This unit is the right place for the drill precisely because you *do* arrive
-knowing things about Mars — and that is the trap. **The answer is always in the
-text.** If the passage does not say it, the answer is *Not Given*, even when you
-happen to know it is true.
+This is the right place for the drill precisely because you *do* arrive knowing
+things about them — and that is the trap. **The answer is always in the text.**
+If the passage does not say it, the answer is *Not Given*, even when you happen
+to know it is true.
 
 **Not Given** is not a harder kind of thinking, either. It simply means the
 passage neither says the statement nor contradicts it — you have looked, and it
@@ -735,9 +750,9 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### 5.4 Read it again, against the clock
 
-You have already read *Looking for a second home* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
+You have already read *The last of the oil* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
 
-::: fluency mode="read" words="236" secs="150|120|90" ask="Read *Looking for a second home* again from the top. Stop the clock the moment you reach the end."
+::: fluency mode="read" words="306" secs="150|120|90" ask="Read *The last of the oil* again from the top. Stop the clock the moment you reach the end."
 - Do not stop to look anything up — you have met all of it
 - Read for the sense of it, not word by word
 - Press **I finished** the moment you reach the last line
@@ -756,59 +771,56 @@ You have already read *Looking for a second home* and answered questions on it, 
 
 ## Lesson 6 — Skills 2: Listening & Writing
 
-### Listening — The planet Verdia
+### Listening — The man at the far end
 
-You get **one** play. This recording invents a whole world in five short
-paragraphs, so read both sets of questions in the preview window first and let
-them tell you which details to hold on to.
+You get **one** play. The speaker answers his visitors' questions in the order
+they put them to him, and so do the exercises, so read both sets in the preview
+window first and let them tell you which details to hold on to.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear part of a radio programme in which the presenter describes an imaginary planet invented by a listener, and the creatures that live on it." mode="computer" preview="30" review="120"
-Good evening, and welcome to *Young Astronomers*. Last month we asked our
-listeners to invent a planet that could support life. Here is the winning
-entry, from Hà, who is fourteen.
+::: audio orientation="You will hear one speaker at the end of a long walk, replying to the visitors who have come to find him and saying what he intends to do with what they have carried to him." mode="computer" preview="30" review="120"
+Sit down, all of you. You walked nine days to give me back a thing I put down
+myself, so the least I can do is answer you in order.
 
-Hà calls her planet Verdia. It orbits a small orange star, and one year there
-lasts about four hundred Earth days. Verdia is slightly larger than Earth, so
-gravity is a little stronger — you would feel heavy for your first week.
+The girl asked me first why I never came home. Because the line only opens
+from this end. If I had let go of it, every lost thing still travelling would
+have stopped where it was, halfway, for ever. That is the whole answer, and it
+is not a brave one.
 
-The atmosphere is thick with oxygen and water vapour, and the sky looks green
-rather than blue. Most of the surface is shallow ocean, only two or three
-metres deep, with thousands of small islands.
+The boy asked whether I was angry about the twelve lightings. I am not. I
+asked him what he had spent them on, and he told me the lot: a game, a path, a
+friend, a house, a festival, a way of living, a forest, a market, a town, a
+voice and a workroom. Eleven. And then a name. I would have spent them worse.
 
-The creatures Hà describes live in that shallow water. They are flat and
-wide, like living carpets, and they breathe through their skin. They have no
-bones at all. When the two moons pull the water away at low tide, the
-creatures fold themselves into the sand and wait.
+Somebody asked whether the lamp can be filled again. It cannot. It was never
+yours, and it is not mine either — I only carry it. It goes home with me
+tonight, empty, wrapped in a rice sack.
 
-We asked Hà why she chose water instead of land. She said that life on Earth
-began in water, so it seemed the safest guess. We also asked whether her
-creatures were intelligent. She said they build nothing and say nothing — but
-they always know when a storm is coming, and no scientist on Verdia can
-explain how.
+And the cat asked me nothing at all, which is how I knew he had it back. Sao.
+I am sorry it took so long to reach him.
 :::
 
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- Verdia orbits (a) a small orange star (b) two suns (c) a dying white star = a
-- Gravity on Verdia is (a) weaker than Earth's (b) the same as Earth's (c) a little stronger than Earth's = c
-- The sky on Verdia looks (a) blue (b) green (c) orange = b
-- The creatures breathe (a) through their skin (b) through gills (c) through two mouths = a
-- Hà chose water because (a) she likes swimming (b) life on Earth began in water (c) there is no land on Verdia = b
-- According to Hà, the creatures (a) build cities (b) speak a language (c) can sense a coming storm = c
+- The speaker says his visitors walked (a) two days (b) nine days (c) a month = b
+- He says the line only opens (a) from both ends (b) from this end (c) from neither end = b
+- He says he is (a) angry about the twelve lightings (b) not angry about them (c) unable to remember them = b
+- About the way the lightings were spent, he says he would have spent them (a) better (b) worse (c) exactly the same = b
+- He says the lamp (a) can be filled again (b) cannot be filled again (c) is already full = b
+- He knew about the cat because the cat (a) shouted at him (b) ran away (c) asked him nothing = c
 :::
 
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="2+number"
-- One year on Verdia lasts about ___ Earth days. = four hundred/400 ~ the speaker says it in words
-- The atmosphere is thick with oxygen and water ___ . = vapour
-- Most of the surface is ___ ocean, only two or three metres deep. = shallow
-- The creatures are flat and wide, like living ___ . = carpets
-- Verdia has ___ moons. = two/2
-- The creatures fold themselves into the ___ at low tide. = sand
+- He says the least he can do is answer them in ___ . = order
+- Every lost thing still travelling would have ___ where it was. = stopped
+- The boy's list began with a game, a path and a ___ . = friend
+- The lamp goes home with him wrapped in a rice ___ . = sack
+- It goes home tonight, ___ . = empty
+- He is sorry it took so long to ___ him. = reach
 :::
 
 ### Writing — A descriptive paragraph about aliens
@@ -819,16 +831,16 @@ they look like, how they live, and one strange thing about them.
 
 #### Model paragraph — read this first
 
-> The creatures on Zonia are small, but nobody who meets one ever forgets
-> them. An adult stands about a metre tall, with soft blue-grey skin and four
-> thin arms. Their eyes are enormous and completely black, because the planet
-> orbits a weak star and its surface is always dark. They have no mouths; they
-> take in food through their skin, and the thin atmosphere is enough for them
-> to survive. When they are happy, tiny lights run along their
-> backs like sparks. They move slowly, they hum instead of speaking, and they
-> seem endlessly curious about everything.
+> The creatures on Zonia are small, and not one of them ever forgets a face.
+> An adult stands about a metre tall, with soft blue-grey skin and four thin
+> arms. Their eyes are enormous and completely black, because the planet orbits
+> a weak star and its surface is always dark. They have no mouths; they take in
+> food through their skin, and the thin atmosphere is enough for them to
+> survive. When they are happy, tiny lights run along their backs like sparks.
+> They move slowly, they hum instead of speaking, and they seem endlessly
+> curious about every visitor.
 
-*(97 words)*
+*(99 words)*
 
 #### Plan it — 5 questions your paragraph has to answer
 
@@ -922,7 +934,7 @@ Report each question. Use the words given.
    → _______________________________________________
 4. "Why are the creatures blue?" (The teacher asked us…)
    → _______________________________________________
-5. "Will you come with us tomorrow?" (Lan asked me…)
+5. "Will you come with us tomorrow?" (Thảo asked me…)
    → _______________________________________________
 6. "How far is Mars from the Earth?" (I asked my father…)
    → _______________________________________________
@@ -932,19 +944,19 @@ Report each question. Use the words given.
 Find and correct **six** errors in this paragraph. Five are about reported
 questions; one is a subject–verb agreement slip.
 
-> Last week a scientist visited our school. She asked us did we know how many
-> planets there are in the solar system. Then she asked what do we think life
-> needs. Lan asked her if Mars had water? She said there was ice at the poles.
-> I asked her when will humans land there. Later my brother asked me why did I
-> look so excited. Everyone want to be an astronaut now.
+> The lamp is cold, and last week it went home in a rice sack. Bà Sáu asked me
+> did I know where the cat had got to. Then she asked where have I been all
+> afternoon. Sao asked her if he could stay for dinner? I asked him when will
+> he go back for his training. He said not yet. My uncle asked me why did I
+> keep the old path clear. Everyone use it now.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
-- Error 1 = asked us if we knew/asked us whether we knew ~ a reported Yes/No question takes *if* or *whether*
-- Error 2 = asked what we thought ~ no *do* and no inversion in a reported question
-- Error 3 = asked her if Mars had water ~ and it ends in a full stop, not a question mark
-- Error 4 = asked her when humans would land ~ statement order, and *will* backshifts
-- Error 5 = asked me why I looked ~ no *did*, and statement order
-- Error 6 = wants ~ *Everyone* takes a singular verb
+- Error 1 = asked me if I knew/asked me whether I knew ~ a reported Yes/No question takes *if* or *whether*
+- Error 2 = asked where I had been ~ no inversion in a reported question, and the tense shifts back
+- Error 3 = asked her if he could stay for dinner ~ and it ends in a full stop, not a question mark
+- Error 4 = asked him when he would go back ~ statement order, and *will* backshifts
+- Error 5 = asked me why I kept ~ no *did*, and statement order
+- Error 6 = uses ~ *Everyone* takes a singular verb
 :::
 
 ### 7.5 Word formation
@@ -962,10 +974,10 @@ questions; one is a subject–verb agreement slip.
 
 ::: task skill="course" type="gap-fill" ask="Rewrite each question as a reported question. Write only the missing words."
 - "What planet do you want to visit?" my friend asked me. → My friend asked me what planet I ___ to visit. = wanted
-- "Is there water on Mars?" Mai asked. → Mai asked ___ there was water on Mars. = if/whether
+- "Is there water on Mars?" Khoa asked. → Khoa asked ___ there was water on Mars. = if/whether
 - "When will the spacecraft land?" the students wondered. → The students wondered when the spacecraft ___ land. = would
 - "Do aliens really exist?" I asked my brother. → I asked my brother ___ aliens really existed. = if/whether
-- "Who is the commander of the mission?" Mai wondered. → Mai wondered who the commander of the mission ___ . = was
+- "Who is the commander of the mission?" Hùng wondered. → Hùng wondered who the commander of the mission ___ . = was
 :::
 
 ### Project — Design a habitable planet
@@ -1014,9 +1026,9 @@ page can settle it, the row says so, and that one is yours to judge.
 | use the right intonation when I read a list aloud | Lesson 2, exercises 2.5 and 2.6 · Lesson 7, exercise 7.2. Saying them aloud is yours — record Lesson 2, exercise 2.7 and listen back. |
 | report a question somebody asked | Lesson 3, exercises 3.2, 3.3 and 3.4 · Lesson 7, exercises 7.3, 7.4 and 7.6 |
 | say how sure, or how unsure, I am | Lesson 4, exercises 4.1 and 4.2 |
-| read about whether there could be life on other planets | Lesson 5, exercises 5.1 and 5.2 |
+| read a first-person account closely and answer it in the writer's own words | Lesson 5, exercises 5.1 and 5.2 |
 | talk about what a planet needs before people could live on it | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to a description of an imaginary planet and its creatures | Lesson 6, exercises 6.1 and 6.2 |
+| listen once to a spoken account and catch the questions reported in it | Lesson 6, exercises 6.1 and 6.2 |
 | write a paragraph describing creatures on another planet | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
@@ -1033,11 +1045,11 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. Because he had a dentist appointment. 2. Mars — mostly whether
-people could ever live there. 3. She asked what a planet needs before life can
-survive. 4. It is about thirty-eight per cent of Earth's gravity. 5. Because
-the speaker asked him what evidence he had, and he had none. 6. Because the
-speaker asked their teacher when the club meets next month.
+**1.1** 1. She asked whether Tí was coming in that day. 2. She said she had no
+idea why he had missed Monday. 3. It asks what a planet needs before anything
+can survive on it. 4. He asked whether anything else in the galaxy has ever
+answered us. 5. Nine days on foot — a river, then a crossing. 6. He says they
+should spend it on anything else.
 
 ### Lesson 2
 
@@ -1059,7 +1071,7 @@ ends with a rise, which should sound as though you were about to continue.
 2. He asked if/whether there was water on Mars.
 3. I asked if/whether the astronauts had taken photographs.
 4. She asked whether I could see the galaxy without a telescope.
-5. Minh asked me if/whether I was coming to the club the next day.
+5. Khoa asked me if/whether I was coming to the club the next day.
 6. My teacher asked if/whether I had ever used a telescope.
 
 **3.4**
@@ -1069,7 +1081,7 @@ general truth may keep the present tense; both are accepted, as in 1.1)*
 3. They asked when humans would land on Mars.
 4. My aunt asked me why I was studying astronomy.
 5. The reporter asked how the creatures had survived the winter.
-6. Duy asked who had launched the first spacecraft.
+6. Hùng asked who had launched the first spacecraft.
 7. I asked the shop assistant how much a telescope cost.
 
 **3.5**
@@ -1077,7 +1089,7 @@ general truth may keep the present tense; both are accepted, as in 1.1)*
 2. He asked **what** the planet was called. *(delete* if*)*
 3. They asked me whether **I wanted** to be an astronaut.
 4. My teacher asked when the club **would meet** again.
-5. Lan asked me why **I was** so interested in Mars.
+5. Thảo asked me why **I was** so interested in Mars.
 6. He asked me **if/whether** I had seen the photographs.
 7. The scientist asked us what **we knew** about gravity.
 8. She asked me if I **was** tired.
@@ -1133,6 +1145,6 @@ throughout.
 2. She asked where the science club was.
 3. My brother asked me if/whether I had watched the launch.
 4. The teacher asked us why the creatures were blue.
-5. Lan asked me if/whether I would go with them the next day.
+5. Thảo asked me if/whether I would go with them the next day.
 6. I asked my father how far Mars was from the Earth.
 

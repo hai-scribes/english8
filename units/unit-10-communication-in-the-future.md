@@ -11,45 +11,49 @@
 | --- | --- |
 | **Pronunciation** | **Stress** in words ending *-ese* and *-ee* |
 | **Grammar** | **Prepositions** of place and time; possessive pronouns |
-| **Reading** | An interview — telepathy as future communication |
+| **Reading** | A voice out of a sealed box, and what it says the lamp really is |
 | **Speaking** | The pros and cons of online calls |
-| **Listening** | An exhibition on communication through history |
+| **Listening** | The rest of a recorded message — an address, and where it stops |
 | **Writing** | A **descriptive paragraph**, 80–100 words — video calls or social media |
 
 ---
 
 ## Lesson 1 — Getting Started
 
-### Dialogue: Two tickets and a lost phone
+### Dialogue: Nothing is getting through
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="Two tickets and a lost phone" gramen="mine / yours — possessive pronouns" gramvi="Đại từ sở hữu đứng một mình, không có danh từ theo sau: *my phone* → **mine**." gramco="That one is mine"
-**Duy:** Look at this, Vy — there's a [[communicate|communicate]] exhibition at the museum on Saturday. Every [[device]] from the last hundred years is in it.
-**Vy:** On Saturday? I'm free in the morning. Where exactly is the museum?
-**Duy:** It's on Lê Lợi Street, opposite the old post office. The entrance is between a bookshop and a café.
-**Vy:** I know it. My cousin works in the café next to it.
-**Duy:** Perfect. The exhibition opens at nine and closes at five.
-**Vy:** Is this ticket yours?
-**Duy:** No, that one's [[mine|gram:mine]] — the blue one. Yours is in the envelope on the table.
-**Vy:** Got it. Hey, whose [[smartphone]] is this under the chair?
-**Duy:** It isn't mine and it isn't yours. It might be Minh's… no, his is much older than that.
-**Vy:** Then it's probably theirs — those two girls left about a minute ago.
-**Duy:** Take it to the desk downstairs. Someone will come back for it.
-**Vy:** Right. So — nine o'clock at the gate, in front of the big screen?
-**Duy:** In front of the screen. Don't be late: the first talk starts at 9.15.
-**Vy:** I'm never late in the morning. At night, that's a different story.
+::: dialogue title="Nothing is getting through" gramen="mine / yours — possessive pronouns" gramvi="Đại từ sở hữu đứng một mình, không có danh từ theo sau: *my phone* → **mine**." gramco="That one is mine"
+**Thảo:** Any [[signal]] yet?
+**Tí:** Nothing. I've been on this wall since six.
+**Thảo:** The mast is still down. It stands opposite the old post office, and half of it is in the canal now.
+**Tí:** My mother rings at seven every Sunday evening. If she gets nothing, she'll think the water took the house.
+**Thảo:** Is that phone yours?
+**Tí:** No. It's Bà Sáu's. The blue one was [[mine|gram:mine]], and it went into the mud on Tuesday, so hers is the only phone left in the house.
+**Thảo:** Then send a [[voice message]]. It waits in the [[network]] and goes the moment the [[connection]] comes back.
+**Tí:** I've sent four. All four are still sitting there with a little grey clock next to them.
+**Thảo:** Try the school gate. Đạt says there's one bar at the top of the steps, between the two big trees.
+**Tí:** Đạt says a lot of things. The far bank has a signal all day — theirs works, ours doesn't.
+**Thảo:** And the box?
+**Tí:** Still shut. It's under the bed with the lamp, in the rice sack.
+**Thảo:** Open it, then.
+**Tí:** In front of Bà Sáu? No.
+**Thảo:** Use the lamp, then. Faster than a wall and a dead phone.
+**Tí:** Light the lamp, and the nearest lost thing comes back — and you never choose what. Three measures left. I'm not spending one on a phone call.
+**Thảo:** Fine. The gate, at four o'clock.
+**Tí:** I'm never late in the morning. At night, that's a different story.
 :::
 
 ### 1.1 Comprehension
 
 Answer in full sentences.
 
-1. Where is the museum, and what building is it opposite?
-2. What is between the bookshop and the café?
-3. Why is Duy sure that the phone under the chair is not Minh's?
-4. Where exactly will the two friends meet, and at what time?
-5. What does Vy admit about herself at the end of the dialogue?
+1. Where does the mast stand, and what building is it opposite?
+2. Why is Tí using Bà Sáu's phone and not his own?
+3. What does Thảo tell him to send, and why will it get through later?
+4. Where exactly does Đạt say there is a signal?
+5. Why will Tí not light the lamp for this?
 
 ### 1.2 Find the phrase
 
@@ -65,12 +69,12 @@ Answer in full sentences.
 Look at the **bold** words.
 
 ::: task skill="course" type="choice" opts="place|time|possessive" ask="Is the bold word telling you **where**, **when**, or **whose**?"
-- The museum is **opposite** the old post office. = place
-- The exhibition opens **at** nine. = time
-- Is this ticket **yours**? = possessive
-- That one's **mine**. = possessive
-- I'm free **in** the morning. = time
-- The phone is **under** the chair. = place
+- The mast stands **opposite** the old post office. = place
+- My mother rings **at** seven. = time
+- Is that phone **yours**? = possessive
+- The blue one was **mine**. = possessive
+- I'm never late **in** the morning. = time
+- The box is **under** the bed. = place
 :::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **giới từ chỉ nơi chốn
@@ -324,11 +328,11 @@ A possessive **adjective** comes **before a noun**. A possessive **pronoun**
 - My phone is ___ (on / in) the table, next to the lamp. = on
 - The cat is sleeping ___ (under / above) the desk. = under
 - There is a big clock ___ (above / between) the whiteboard. = above
-- Lan sits ___ (in front of / behind) me, so I can see the back of her head. = in front of
+- Thảo sits ___ (in front of / behind) me, so I can see the back of her head. = in front of
 - The post office is ___ (opposite / under) the museum, on the other side of the road. = opposite
 - The café is ___ (next to / above) the bookshop — the two doors are side by side. = next to
 - The letter is ___ (in / on) the envelope. = in
-- Minh is standing ___ (between / behind) Vy and Duy. = between
+- Minh is standing ___ (between / behind) Thảo and Khoa. = between
 :::
 
 ### 3.2 Time — *in*, *on*, or *at*?
@@ -557,77 +561,68 @@ _______________________________________________
 
 ## Lesson 5 — Skills 1: Reading & Speaking
 
-### Reading — *Will we talk without speaking?*
+### Reading — *The voice in the box*
 
 ::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
 :::
 
-*An interview from a school magazine. Linh, 14, talks to Dr Bảo, a brain
-researcher.*
+*Tí writes down what happened on the landing, four days after the flood.*
 
 ::: passage
-> **Linh:** Dr Bảo, thank you for coming. Some people say that in fifty years we
-> will not need phones at all. Is that possible?
+> We opened the tin box on the landing at four o'clock, with the mud still
+> drying on everything. Inside there was no letter. There was one small brass
+> thing the size of my thumb, and it was warm.
 >
-> **Dr Bảo:** It is possible, but not in the way films imagine. Telepathy in
-> films means one person reading another person's private thoughts. That is not
-> what scientists are working on.
+> "Put it down," Mun said. "That is not ours."
 >
-> **Linh:** What are they working on, then?
+> I put it on the stones next to the lamp, and the lamp lit itself. Two
+> measures now.
 >
-> **Dr Bảo:** A small device that sits above the ear. It reads the electrical
-> signals your brain makes when you plan to say a word. The device translates
-> those signals into text and sends the text across a network. Your friend's
-> device turns the text back into a voice. Nobody reads your thoughts. You still
-> choose every word.
+> What came back was a voice. It came out of the air above the box, with nobody
+> in front of us and nobody behind us. It spoke first in Vietnamese and then in
+> English, and something between the two was translating it as it went.
 >
-> **Linh:** So it is really a very fast text message?
+> "To whoever finds this," the voice said. "This is the keeper of the lamp. The
+> lamp is not a wishing lamp. It is a station on a network, and a lost thing is
+> never made out of nothing. It is carried back along the line, from wherever it
+> went, and somebody has to hold that line open at the far end. That is a
+> keeper's work. The lamp is yours. The line is mine."
 >
-> **Dr Bảo:** Exactly. A silent one.
+> Thảo said it was telepathy. It was not. It was not a signal from any mast in
+> the province either.
 >
-> **Linh:** Would that be better than a video call?
+> And it gave us nothing to read. When Bà Sáu talks to my mother she uses her
+> hands the whole time, and half of what she means is in the gesture. A voice
+> with no face and no hands is not face-to-face. It is less than a phone call.
 >
-> **Dr Bảo:** Faster, certainly. Better, I am not sure. When we talk
-> face-to-face we send hundreds of small signals — a gesture, a pause, a look at
-> the wrong moment. Those signals carry about half the meaning. A machine that
-> sends only words would lose the other half.
->
-> **Linh:** What worries you most?
->
-> **Dr Bảo:** Privacy. If a device can read a signal before you speak, someone
-> must decide who owns that signal. My answer is simple: it is yours. It belongs
-> to nobody else.
->
-> **Linh:** And when will we see it in the shops?
->
-> **Dr Bảo:** In the laboratory, now. In your pocket — not in my lifetime, and
-> possibly not in yours.
+> Mun sat down on the wet stone. "That is the man who taught me," he said, "and
+> I cannot remember his face."
 :::
 
 ### 5.1 True, False, or Not Given
 
-::: task skill="reading" type="true-false-not-given" ask="**False** means the interview says the opposite. **Not Given** means it does not say either way — and answering from what you already believe about the brain is exactly the trap here."
-- Dr Bảo says scientists are building the kind of telepathy shown in films. = F ~ he says that is *not* what scientists are working on
-- The device would be worn above the ear. = T
-- The device changes brain signals into text before sending them. = T
-- Dr Bảo believes silent messages would carry more meaning than face-to-face talk. = F ~ he says such a machine would lose about half the meaning
-- Dr Bảo has already tested the device on schoolchildren. = NG ~ the interview never mentions testing on anybody
+::: task skill="reading" type="true-false-not-given" ask="**False** means the passage says the opposite. **Not Given** means it does not say either way — and answering from what you would expect to be in an old sealed box is exactly the trap here."
+- There was a letter inside the tin box. = F ~ there was no letter — only one small brass thing the size of a thumb
+- The voice spoke in Vietnamese before it spoke in English. = T
+- The voice says the lamp is a station on a network. = T
+- Mun can remember his teacher's face. = F ~ he says he cannot remember it
+- The keeper made the recording before the flood. = NG ~ the passage never says when he made it
 :::
 
 ### 5.2 Answer the questions
 
-::: task skill="reading" type="short-answer" words="3" ask="Take the words from the interview. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- Where on the head does the device sit? = above the ear
-- What does the device translate the brain's signals into? = text
-- What does the device send the text across? = (a) network
-- How much of the meaning do face-to-face signals carry? = (about) half
-- What worries Dr Bảo most? = privacy
+::: task skill="reading" type="short-answer" words="3" ask="Take the words from the passage. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
+- What did the lamp do when the brass thing was put down beside it? = lit itself
+- Which language did the voice speak first? = Vietnamese
+- What does the voice say the lamp is a station on? = (a) network
+- Whose does the voice say the line is? = mine
+- Where did Mun sit down? = the wet stone
 :::
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the interview that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- changes words from one form or language into another = translate/translates
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the passage that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
+- changes words from one language into another = translating/translate/translates
 - a system of connected computers, devices or people = network
 - a movement of the hand, head or face that carries meaning = gesture
 - in person, with the other person in the same room = face-to-face
@@ -686,48 +681,47 @@ between stages rather than inside a sentence.
 
 ## Lesson 6 — Skills 2: Listening & Writing
 
-### Listening — A guide at the communication exhibition
+### Listening — The rest of the message
 
-You get **one** play. This recording is dense with times, numbers and room
-names, so read both sets of questions in the preview window first and answer as
-you listen.
+You get **one** play. This recording is dense with dates, numbers and places,
+so read both sets of questions in the preview window first and answer as you
+listen.
 
 **Nghe một lần duy nhất.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a museum guide welcoming visitors to a new exhibition about the history of communication, and taking them through it room by room." mode="computer" preview="30" review="120"
-Good morning, and welcome to *Six Thousand Years of Talking*, our new
-exhibition on the second floor. It opens at nine every day except Monday, and
-the last entry is at half past four.
+::: audio orientation="You will hear one speaker recording a message for somebody he has never met. He says where he sent it from, where he is now, and what he wants the listener to go and find." mode="computer" preview="30" review="120"
+**The keeper:** …to whoever is holding this now. My name does not matter. The
+work does.
 
-The exhibition has four rooms. In Room One you will find the oldest tools:
-drums, smoke and clay tablets. A message that crossed a mountain by drum took
-minutes; the same message on a clay tablet, carried by a runner, took days.
+I posted this at the post office in a town that is not there any more, on the
+ninth of June, and that was sixty years ago. I paid for it in coins. I have
+been waiting ever since to learn whether it arrived, and I know now that it did
+not, because you are only hearing it today.
 
-Room Two is about paper and the post. Look for the wooden letter box near the
-window — it stood outside a village post office for ninety years.
+Listen carefully. I am on the far side of the water. I cannot cross back while
+the line is open, and the line has to stay open, or everything lost between
+here and there stays lost. That is the whole of it.
 
-Room Three is the electric room, and it is the loudest one. The telegraph, the
-telephone and the radio are all here. Our guides give a short talk in this
-room at eleven o'clock and again at three.
+And if the apprentice is still with the lamp — boy, you were never taught the
+second half. That is my fault and not yours.
 
-Room Four is the one most visitors remember. It is dark, and the walls are
-screens. You can send an instant message to a stranger standing on the other
-side of the room, make a video call to the room next door, and stand inside a
-holographic image of yourself.
+Everything I built is in my workroom. Go upriver, past the stilt house, to the
+old mill. The workroom is under the mill, behind the wheel, and the door is the
+colour of the water, so you will walk past it twice.
 
-Before you leave, please write one sentence on the wall by the exit: how will
-your grandchildren talk to each other? The best answers go on our website in
-September.
+My notebooks are on the shelf above the bench. The green one is the one that
+matters; the rest are copies. Take them, and read the last page first, because
+the last page tells you what the lamp must never—
 :::
 
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- The exhibition is on the (a) ground floor (b) second floor (c) fourth floor = b
-- The last entry is at (a) half past four (b) four o'clock (c) nine o'clock = a
-- A drum message crossing a mountain took (a) minutes (b) days (c) weeks = a
-- The guides talk in Room Three at eleven o'clock and again at (a) one (b) two (c) three = c
-- In Room Four you can stand inside (a) a clay tablet (b) a letter box (c) a holographic image of yourself = c
+- The speaker says he posted the message at (a) a railway station (b) a post office (c) a market = b
+- He says he is now (a) upriver at the mill (b) on the far side of the water (c) in his workroom = b
+- The workroom is (a) above the mill (b) under the mill (c) opposite the mill = b ~ three prepositions are used about that building; only one of them says where the room is
+- The notebook that matters is (a) the green one (b) the last one (c) the one on the bench = a
+- The message (a) ends with a goodbye (b) stops in the middle of a sentence (c) repeats the address = b
 :::
 
 ### 6.2 Note completion
@@ -737,11 +731,11 @@ never full sentences. Fill each gap **as you listen** — there is no transfer
 time at the end.
 
 ::: task skill="listening" type="completion" words="1+number"
-- Number of rooms in the exhibition: ___ = four/4
-- Room One — a message carried by drum took ___ = minutes
-- Room Two — the wooden letter box stood outside a post office for ___ years = ninety/90
-- Room Three — guides talk at eleven o'clock and again at ___ = three/3
-- Room Four — the walls are ___ = screens
+- Message posted ___ years ago = sixty/60
+- Where to go — upriver, past the stilt house, to the old ___ = mill
+- The workroom — under the mill, behind the ___ = wheel
+- The notebooks — on the shelf above the ___ = bench
+- Read this page first — the ___ page = last
 :::
 
 ::: bridge name="Open → stand → close, out loud, with an audible pause at each turn" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
@@ -768,16 +762,15 @@ what you see and hear, not only what you think.
 
 #### Model paragraph — read this first
 
-> Video calls have changed the way my family communicates. My aunt lives in
-> Australia, so at the weekend, always in the evening, her face appears on the
-> tablet next to our kitchen window. Behind her a green garden is still wet
-> with rain: in the morning it is already tomorrow there. She waves; my
-> grandmother copies
-> the gesture and leans too close to the screen. Sometimes the connection drops
-> and her voice arrives a second late, but nobody minds. Her laugh is so like
-> my mother's that I can never tell whether it is hers or ours.
+> On Sunday my mother makes a video call from the factory city, always in the
+> evening. Bà Sáu puts the smartphone on the table, next to the rice, and leans
+> in until only her forehead is on the screen. Behind my mother there is a grey
+> wall and a row of coats that are not ours. The connection is poor, so her
+> voice arrives a second after her mouth moves, and she waves at the wrong
+> moment. At night I play the voice message she leaves. It is short, and it is
+> mine.
 
-*(97 words)*
+*(93 words)*
 
 #### Plan it — 6 questions your paragraph has to answer
 
@@ -864,21 +857,19 @@ how you notice them.
 Find and correct **six** errors in this paragraph. Three are prepositions of
 place or time; three are possessive forms.
 
-> My family has a video call every Sunday in seven o'clock in the evening. My
-> aunt lives in Sydney, so morning for her is night for us. Last week the
-> connection was terrible. My little brother sat in the sofa with his tablet,
-> and my cousin held her phone in front of the window, so we saw only her hair.
-> "Is this camera your's?" my father asked. She laughed and said hers camera was
-> fine — the problem was ours. Its true: our network is slow in the evening.
-> Next time we will call in Sunday morning instead.
+> Two measures of oil are left. The tin box came home in my pocket in Tuesday
+> evening, and the small brass thing from inside it sits in the shelf above my
+> bed. Thảo says hers grandmother still remembers the old post office. "Is this
+> box your's?" Bà Sáu asked at breakfast. Its not mine, and it is not hers
+> either. We are walking upriver in Saturday morning.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
-- Error 1 = at seven o'clock/at ~ clock time takes *at*
-- Error 2 = on the sofa/on ~ a surface takes *on*
-- Error 3 = yours ~ a possessive pronoun takes no apostrophe
-- Error 4 = her camera/her ~ *hers* takes no noun after it
-- Error 5 = It's true/it is true ~ *it's* = *it is*; *its* is the possessive
-- Error 6 = on sunday morning/on ~ a named day takes *on*
+- Error 1 = on Tuesday evening/on ~ a named day takes *on*
+- Error 2 = on the shelf/on ~ a surface takes *on*
+- Error 3 = her grandmother/her ~ *hers* takes no noun after it
+- Error 4 = yours ~ a possessive pronoun takes no apostrophe
+- Error 5 = It's not mine/it's/it is ~ *it's* = *it is*; *its* is the possessive
+- Error 6 = on Saturday morning/on ~ a named day takes *on*
 :::
 
 ### Project — A message across a hundred years
@@ -926,9 +917,9 @@ page can settle it, the row says so, and that one is yours to judge.
 | put the stress in the right place in words ending *-ese* and *-ee* | Lesson 2, exercises 2.5 and 2.6 · Lesson 7, exercise 7.2. Saying them aloud is yours — record Lesson 2, exercise 2.7 and listen back. |
 | use prepositions of place and time, and possessive pronouns | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
 | interrupt politely | Lesson 4, exercise 4.3 |
-| read about a way people may communicate in the future | Lesson 5, exercises 5.1 and 5.2 |
+| read a text closely and answer it in the writer's own words | Lesson 5, exercises 5.1 and 5.2 |
 | talk about what is good and what is bad about a way of communicating | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to a guide at a communication exhibition | Lesson 6, exercises 6.1 and 6.2 |
+| listen once to a recorded message and catch its dates, numbers and places | Lesson 6, exercises 6.1 and 6.2 |
 | write a paragraph describing a modern way of communicating | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
@@ -945,11 +936,12 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. It is on Lê Lợi Street, opposite the old post office. 2. The
-entrance to the museum is between the bookshop and the café. 3. Because Minh's
-phone is much older than the one under the chair. 4. They will meet at the gate,
-in front of the big screen, at nine o'clock. 5. She admits that she is never
-late in the morning but that she is often late at night.
+**1.1** 1. It stands opposite the old post office, and half of it is in the
+canal. 2. Because his own phone went into the mud on Tuesday, and hers is the
+only phone left in the house. 3. A voice message, because it waits in the
+network and goes the moment the connection comes back. 4. At the top of the
+steps by the school gate, between the two big trees. 5. Because there are only
+three measures of oil left, and he will not spend one on a phone call.
 
 ### Lesson 2
 

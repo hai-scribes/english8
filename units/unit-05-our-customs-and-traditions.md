@@ -11,47 +11,47 @@
 | --- | --- |
 | **Pronunciation** | /n/ vs /ŋ/ — *thin* vs *thing* |
 | **Grammar** | **Articles** — *a*, *an*, *the*, and the zero article |
-| **Reading** | A village festival day |
+| **Reading** | A village festival, and a night that came back |
 | **Speaking** | Building a dialogue about a family event |
-| **Listening** | Ok Om Bok, the Moon Worshipping festival |
+| **Listening** | A market seller telling a neighbour what she saw |
 | **Writing** | An **email of advice**, 80–100 words — festival dos and don'ts |
 
 ---
 
 ## Lesson 1 — Getting Started
 
-### Dialogue: The night before the festival
+### Dialogue: Forty cakes before breakfast
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="The night before the festival" gramen="a / an / the" gramvi="Dùng **a/an** khi nhắc đến lần đầu; dùng **the** khi cả người nói và người nghe đều biết đang nói về cái nào." gramco="a festival → the festival"
-**Ben:** You're up early, Hoa. Is something happening today?
-**Hoa:** Tomorrow is [[the|gram:the]] village [[festival]]. My grandmother wants everything ready tonight.
-**Ben:** A festival? What kind?
-**Hoa:** It's a festival for the village guardian spirit. We hold it in the second [[lunar]] month, every year.
-**Ben:** What are all those things on the table?
-**Hoa:** Offerings. The fruit, the flowers and the sticky rice all go to the communal house in the morning.
-**Ben:** Can I help? I've got an hour before my class.
-**Hoa:** Please. [[Wrap]] these cakes in banana leaves — but wrap them tightly, or they open in the pot.
-**Ben:** Like this? … Is there a rule about the [[incense]]?
-**Hoa:** Yes. My grandfather lights the first stick, because he is the oldest person in the family. Then we bow three times.
-**Ben:** Should I bow too? I don't want to make a mistake.
-**Hoa:** Just copy me. And don't wear a hat inside the communal house — that's the one thing people really mind.
-**Ben:** Noted. What happens after the offerings?
-**Hoa:** Games in the yard, and a gong that nobody can sleep through. Last year an old man from the next village sang for two hours.
-**Ben:** Was he any good?
-**Hoa:** He was the loudest singer I have ever heard. Come and see for yourself.
+::: dialogue title="Forty cakes before breakfast" gramen="a / an / the" gramvi="Dùng **a/an** khi nhắc đến lần đầu; dùng **the** khi cả người nói và người nghe đều biết đang nói về cái nào." gramco="a festival → the festival"
+**Tí:** Why are there banana leaves all over the table?
+**Bà Sáu:** Because tomorrow is [[the|gram:the]] village [[festival]], and I am not letting it pass again.
+**Tí:** Nobody goes any more.
+**Bà Sáu:** Eleven people went last year. When I was your age the whole lane went. We opened it in the second [[lunar]] month with a drum you could hear from the river.
+**Tí:** What are all these for?
+**Bà Sáu:** [[Offerings|offering]]. The fruit, the flowers and the sticky rice go to the communal house in the morning. [[Wrap]] these cakes for me — tightly, or they open in the pot.
+**Tí:** Like this?
+**Bà Sáu:** Tighter. Your great-grandmother could wrap forty before breakfast.
+**Tí:** Is there a rule about the [[incense]]?
+**Bà Sáu:** The oldest person lights the first stick. That is me now, which tells you something.
+**Tí:** Should I bow, or will I get it wrong?
+**Bà Sáu:** Copy me. And don't wear a hat inside the communal house — people really mind that one.
+**Tí:** Thảo says there used to be games afterwards.
+**Bà Sáu:** There used to be an hour of them, and a gong, and singing until it was dark. Now there is one table and six old women.
+**Tí:** So why keep doing it?
+**Bà Sáu:** Customs don't die by themselves. People put them down. Come tomorrow and see for yourself.
 :::
 
 ### 1.1 Comprehension
 
 Answer in full sentences.
 
-1. When does Hoa's village hold its festival?
-2. Which three offerings does Hoa name?
-3. Why does Hoa's grandfather light the first stick of incense?
-4. What must Ben not do inside the communal house?
-5. What happened at last year's festival after the offerings?
+1. When does Bà Sáu's village open its festival?
+2. Which three offerings does Bà Sáu name?
+3. Why does Bà Sáu light the first stick of incense herself now?
+4. What must Tí not do inside the communal house?
+5. What used to happen after the offerings, according to Bà Sáu?
 
 ### 1.2 Find the phrase
 
@@ -65,11 +65,11 @@ Answer in full sentences.
 ### 1.3 Notice the grammar
 
 ::: task skill="course" type="choice" opts="a|an|the|—" ask="Each sentence comes from the dialogue, but the little word before the noun is missing. Pick **a**, **an**, **the**, or **—** if no word is needed."
-- It's ___ festival for the village guardian spirit. = a
-- I've got ___ hour before my class. = an
-- He is ___ oldest person in the family. = the
-- Wrap these cakes in ___ banana leaves. = — ~ plural, general meaning — no article
-- He was ___ loudest singer I have ever heard. = the
+- We opened it with ___ drum you could hear from the river. = a
+- There used to be ___ hour of games. = an
+- ___ oldest person lights the first stick. = the
+- ___ Customs don't die by themselves. = — ~ plural, general meaning — no article
+- We opened it in ___ second lunar month. = the
 :::
 
 > **Ghi chú:** Những từ nhỏ *a*, *an*, *the* gọi là **mạo từ** (articles).
@@ -570,57 +570,62 @@ that it is the thing your reader is left holding.
 
 ## Lesson 5 — Skills 1: Reading & Speaking
 
-### Reading — *The longest day of my year*
+### Reading — *The night the lane filled up*
 
-*By Khanh, 14, from a village in Bac Ninh province.*
+*Tí, 13, writes down what happened the night before his village festival.*
 
 ::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
 :::
 
 ::: passage
-> Our village festival falls in the second lunar month, and for one day the
-> whole place changes.
+> Bà Sáu wrapped cakes until midnight and went to bed with her hands still wet.
+> Six old women and one table. I took the lamp down to the landing and lit it,
+> and I am not sorry.
 >
-> It starts before the sun does. At four in the morning my grandmother is
-> already in the kitchen, and my job is to wrap the cakes she has soaked
-> overnight. She checks every one. If a leaf is loose, I do it again.
+> "Light the lamp, and the nearest lost thing comes back," Mun said, the way he
+> always says it. "You don't get to choose what."
 >
-> By seven the procession is moving. Men from each family carry a red palanquin
-> from the communal house to the temple, and behind them walk the older women,
-> carrying trays of offerings. A gong keeps everyone in step. My little
-> brother's only job is to stay out of the way, and he is very bad at it.
+> What came back was a night.
 >
-> At the temple the oldest man in the village lights the first stick of
-> incense. Nobody speaks. This is the part visitors find strange, because it
-> lasts a long time and nothing seems to happen. My grandmother says the
-> silence is the point.
+> Our lane filled up. Not with our neighbours — with a procession coming up
+> from the water in the dark: men carrying a red palanquin, older women behind
+> them with trays of offerings, and lanterns on poles all the way down to the
+> bank. A gong kept everybody in step. Nobody looked at me once.
 >
-> Then the afternoon is loud. There is a rice-cooking contest, human chess in
-> the yard, and singing that goes on until it is dark.
+> There was food I had only ever heard about. Sticky rice that had been soaked
+> for two days, wrapped so tightly that not one leaf was loose. Cakes shaped
+> like fish. A woman put one into my hand and told me to eat it before it got
+> cold, and then asked whose grandson I was.
 >
-> I used to complain about getting up at four. Last year I noticed something.
-> The people who taught my grandmother these customs are gone, and now she is
-> teaching me. So I get up.
+> Bà Sáu came out onto the step in her nightclothes and stood there for a long
+> time without saying anything at all.
+>
+> "That is the festival," she said. "The lanterns, the gong, the order they
+> walk in — that is the one I keep telling you about. But I have never seen
+> one of those faces before in my life."
+>
+> Then she went in for her tray and joined the back of the procession, in her
+> nightclothes, at two in the morning.
 :::
 
 ### 5.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you already know about village festivals is exactly the pull this type is built to catch."
-- The village festival takes place in the second lunar month. = T
-- Khanh's grandmother checks the cakes he has wrapped. = T
-- Khanh's little brother carries a tray of offerings. = F ~ "his only job is to stay out of the way"
-- The rice-cooking contest is the most popular event of the afternoon. = NG ~ the text names the contest but never ranks it
-- Khanh no longer complains about getting up at four. = T
+- The writer lit the lamp at the landing. = T
+- The people in the procession knew who the writer was. = F ~ "Nobody looked at me once", and a woman asks whose grandson he is
+- The sticky rice had been soaked for two days. = T
+- The cakes shaped like fish tasted better than the sticky rice. = NG ~ the text names both foods but never compares them
+- His grandmother joined the procession in the end. = T
 :::
 
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- What is Khanh's job early in the morning? = wrap the cakes
-- Which building does the procession set out from? = (the) communal house
-- Who lights the first stick of incense at the temple? = (the) oldest man
-- What keeps everyone in step during the procession? = (a) gong
-- What contest is held in the afternoon? = rice-cooking/rice-cooking contest
+- What did the writer take down to the landing? = (the) lamp
+- What came back when he lit it? = (a) night
+- What were the men in the procession carrying? = (a) red palanquin
+- What kept everybody in step? = (a) gong
+- What was his grandmother wearing on the step? = (her) nightclothes
 :::
 
 ### 5.3 Vocabulary in context
@@ -679,55 +684,55 @@ Repeat Step 2 until all six exchanges run clearly.
 
 ## Lesson 6 — Skills 2: Listening & Writing
 
-### Listening — Ok Om Bok, the Moon Worshipping festival
+### Listening — A market seller tells a neighbour what she saw
 
-You get **one** play. Place names and dates go past quickly here, so read both
-sets of questions in the preview window first and answer as you listen rather
-than afterwards. The script stays locked until you have marked every question.
+You get **one** play. The speaker is talking fast and doubling back, so read
+both sets of questions in the preview window first and answer as you listen
+rather than afterwards. The script stays locked until you have marked every
+question.
 
 **Nghe một lần duy nhất.** Đọc trước câu hỏi, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear the presenter of a radio programme about Vietnamese festivals describing Ok Om Bok, a festival held in the south of the country." mode="computer" preview="30" review="120"
-Good evening, and welcome to *Festivals of Viet Nam*. Tonight: Ok Om Bok.
+::: audio orientation="You will hear a woman who sells at the market telling a neighbour what she saw on the night of the village festival, and what her grandmother once told her." mode="computer" preview="30" review="120"
+Listen to me. I am not a woman who invents things, and I am telling you what
+I saw with my own eyes.
 
-Ok Om Bok is a festival of the Khmer people in southern Viet Nam. You will
-see it most clearly in Tra Vinh and Soc Trang, where the Khmer communities
-are large. It falls on the full-moon night of the tenth lunar month, when the
-rice harvest is finished and the sky is usually clear.
+I walked down to the communal house on the night of the festival, the way I
+do every year. Six old women and a plate of fruit — that is what it has been
+since my son was small. Instead there were three hundred people in that lane.
+There were lanterns all the way from the gate down to the water. Drums until
+it was light, and cakes I have not eaten since I was a girl. And I did not
+know one single face. I have lived in this lane for fifty-one years.
 
-The English name is the Moon Worshipping festival, and that is exactly what
-happens. Families build a small bamboo frame in the yard and lay out
-offerings: fruit, coconuts, sweet potatoes, and above all *com dep*, young
-green rice flattened by hand. When the moon is high, the oldest person calls
-the children forward, puts a little *com dep* into each child's mouth and
-asks what they wish for. The answer is supposed to tell the family how the
-coming year will go.
+Near the water there was a boy from our own street, holding a brass lamp. It
+was burning. He was holding it the way you hold something you have taken.
 
-After that, the festival moves outside. People float paper lanterns to carry
-away the bad luck of the old year, and in the days around the full moon there
-are *ngo* boat races on the river. A *ngo* boat is long and narrow, and a
-village will train its crew for weeks.
+Now. My grandmother worked in a house upriver when she was young, and she
+told me about a lamp like that one. She said it called lost things back —
+things that had stopped happening. I laughed at her. I was eleven.
 
-Next week: a festival with no music at all.
+I am not laughing now. Ask anybody who stood in that lane. And then ask
+yourself what else that thing can bring back, because I have been asking
+myself all week, and so has everybody at the market.
 :::
 
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- Ok Om Bok is a festival of the ___ people. (a) Kinh (b) Khmer (c) Tay = b
-- It falls in the ___ lunar month. (a) first (b) eighth (c) tenth = c
-- *Com dep* is (a) young green rice (b) a sweet soup (c) a boat = a
-- The oldest person asks the children (a) to sing (b) what they wish for (c) to bow to the moon = b
-- People float paper lanterns to (a) light the river (b) carry away bad luck (c) show the boats the way = b
+- In recent years the festival has been (a) large and noisy (b) small and quiet (c) cancelled = b
+- Of the people in the lane that night, the speaker knew (a) all of them (b) a few of them (c) none of them = c
+- The boy near the water was holding (a) a tray (b) a drum (c) a brass lamp = c
+- Her grandmother heard about a lamp like that while working (a) upriver (b) at the market (c) abroad = a
+- The speaker now wants to know (a) who the boy is (b) what else the lamp can bring back (c) how the lanterns were made = b
 :::
 
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="2"
-- The festival is easiest to see in Tra Vinh and ___ . = Soc Trang
-- It falls on the ___ night of the tenth lunar month. = full-moon/full moon
-- Families lay the offerings out on a small ___ frame. = bamboo
-- A *ngo* boat is long and ___ . = narrow
+- On the night of the festival the speaker walked down to the ___ house. = communal
+- The speaker has lived in the lane for ___ years. = fifty-one/51
+- The boy she saw was from her own ___ . = street
+- The speaker was ___ when she laughed at her grandmother. = eleven/11
 :::
 
 ### Writing — An email of advice
@@ -738,14 +743,13 @@ what **not** to do.
 
 #### Model email — read this first
 
-> Hi Ben,
+> Hi Khoa,
 >
-> I'm so glad you are coming to our village festival next month! Here is some
+> I'm glad you are coming to our village festival on Saturday! Here is some
 > advice.
 >
 > Do bring a small gift for my grandmother — fruit or flowers is perfect. Do
-> wear long trousers, and do copy me when we light the incense and bow to our
-> ancestors at the altar.
+> copy me when we light the incense and bow to our ancestors at the altar.
 >
 > Don't wear a hat inside the communal house, and please don't point at the
 > offerings. Older people really mind that.
@@ -755,9 +759,9 @@ what **not** to do.
 >
 > See you soon,
 >
-> Hoa
+> Tí
 
-*(93 words)*
+*(88 words)*
 
 #### Plan it — 5 questions your email has to answer
 
@@ -858,20 +862,19 @@ to the next.
 Find and correct **six** errors in this paragraph. Five are about articles; one
 is a subject–verb agreement slip.
 
-> Every year my family goes to my grandparents' house in a Ha Noi for Tet. We
-> arrive on a last evening of the old year and wrap cakes until midnight. On
-> the first morning my grandfather lights the first stick of incense, because
-> he is oldest person in the family. Nobody sweep the floor that day — it is an
-> taboo. We eat the breakfast together, and then the children receive lucky
-> money.
+> Seven measures of oil are left, and now the whole market is asking questions.
+> Last night my grandmother went to the bed at midnight, still folding leaves.
+> She says the customs like ours never really die. She is oldest person on our
+> lane, so she lit an first stick of incense at dawn. Nobody sweep the yard
+> afterwards, and we ate the breakfast very late.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
-- Error 1 = Ha Noi/in Ha Noi ~ most city names take no article
-- Error 2 = the last evening/the ~ there is only one last evening — *the*
+- Error 1 = bed/to bed ~ *go to bed* is the activity, not the furniture
+- Error 2 = customs/customs like ours ~ plural, general meaning — no article
 - Error 3 = the oldest person/the ~ a superlative takes *the*
-- Error 4 = sweeps ~ *Nobody sweep* → *sweeps* — subject–verb agreement
-- Error 5 = a taboo/a ~ *taboo* starts with the consonant sound /t/
-- Error 6 = breakfast/eat breakfast ~ meals take no article
+- Error 4 = the first stick/the ~ an ordinal number takes *the*
+- Error 5 = sweeps ~ *Nobody sweep* → *sweeps* — subject–verb agreement
+- Error 6 = breakfast/ate breakfast ~ meals take no article
 :::
 
 ### 7.5 Word formation
@@ -936,9 +939,9 @@ page can settle it, the row says so, and that one is yours to judge.
 | hear /n/ and /ŋ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
 | use *a*, *an*, *the*, and no article at all | Lesson 3, exercises 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
 | give advice | Lesson 4, exercise 4.3 — marked, and it settles whether you got the form right after *should*, *don't* and *it's a good idea to*. Exercise 4.4 is your own writing; read the Answer Key beside it. |
-| read about a day at a local festival | Lesson 5, exercises 5.1 and 5.2 |
+| read about a village festival night | Lesson 5, exercises 5.1 and 5.2 |
 | talk about a family event I take part in | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to a talk about a festival | Lesson 6, exercises 6.1 and 6.2 |
+| listen to someone describing what they saw at a festival | Lesson 6, exercises 6.1 and 6.2 |
 | write an email of advice about joining a festival | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
@@ -955,10 +958,10 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. In the second lunar month, every year — and this year it is tomorrow.
-2. Fruit, flowers and sticky rice. 3. Because he is the oldest person in the
-family. 4. He must not wear a hat inside the communal house. 5. There were games
-in the yard and a gong, and an old man from the next village sang for two hours.
+**1.1** 1. In the second lunar month — and this year it opens tomorrow.
+2. Fruit, flowers and sticky rice. 3. Because she is the oldest person in the
+family now. 4. He must not wear a hat inside the communal house. 5. There used
+to be an hour of games, a gong, and singing until it was dark.
 
 ### Lesson 2
 
