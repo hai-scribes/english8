@@ -25,22 +25,23 @@ Nothing here goes on a learner's page — this is reference material, and
 
 ## Before you start
 
-**Attach the Doraemon style reference to every generation** and say: *"Match the
-line weight, colouring, shading and background treatment of the attached image.
-Do not copy, quote or resemble any character in it."* The house look is Fujiko
-F. Fujio's line and flat colour applied to a Mekong delta town; the style is the
-borrowed part, the cast is not.
+**Copy one block. Paste it. Generate.** Every prompt below is complete on its
+own — nothing to fill in, nothing to append, no aspect ratio or style note to
+remember, no cast sheet to make first. If you find yourself typing anything into
+a prompt, that is a bug in this file.
 
-That is the only attachment. Each character prompt below carries its own full
-design, so there is no separate cast sheet to generate first and no figure
-numbers to keep straight — a character only has to be consistent across its own
-six panels, and one sheet guarantees that.
+**Optionally attach the Doraemon graphic** as a style reference. Each prompt
+already tells the model what to do with it *and* describes the whole style in
+words, so a prompt works either way — attaching it just makes the line and the
+flat colour land faster. It is the only attachment any prompt wants.
 
-Ask for **16:9** explicitly every time. Gemini defaults to square.
+The house look is Fujiko F. Fujio's line and flat colour applied to a Mekong
+delta town. The style is the borrowed part; the cast is not, which is what the
+**must not** line in every character prompt is defending.
 
-**What unit 1 needs:** Tí, Thảo and `canal-landing`. Everything else is for the
-chapters after it, and the other eleven dialogues read as plain text until they
-are staged.
+**What unit 1 needs:** Part 1 §1 (Tí), Part 1 §2 (Thảo) and Part 2 §1
+(`canal-landing`). Everything else is for the chapters after it, and the other
+eleven dialogues read as plain text until they are staged.
 
 ---
 
@@ -50,65 +51,68 @@ are staged.
 
 **File:** `ti.png` — the **whole sheet, uncut**, saved as one image.
 
-> Match the line weight, colouring, shading and background treatment of the
-> attached style reference. Do not copy, quote or resemble any character in it.
-> The character is described below and appears nowhere in the reference.
+> **If a style reference image is attached**, match its line weight,
+> colouring, shading and background treatment, and do not copy, quote or
+> resemble any character in it — the character below appears nowhere in it.
+> If nothing is attached, follow the written style exactly as described.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
-> tradition of Fujiko F. Fujio — the *Doraemon* look. Simple rounded characters
-> drawn in clean even-weight black ink outlines. Not modern anime, not moe, not
-> Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
+> tradition of Fujiko F. Fujio — the *Doraemon* look. Simple rounded
+> characters drawn in clean even-weight black ink outlines. Not modern
+> anime, not moe, not Ghibli, not American cartoon, not 3D, not
+> photorealistic, not painterly.
 >
-> **Line.** Black contour line of near-constant width, closed and continuous. No
-> tapering brush strokes, no cross-hatching, no stippling, no sketchy or broken
-> linework, no visible pencil. Interior detail is minimal: a face is a handful
-> of lines.
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
 >
-> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
-> one flat shadow tone per surface, shaped as a clean geometric shape, never
-> soft-edged. No gradients, no visible texture, no paper grain, no brush grain,
-> no airbrushing, no ambient occlusion. Bright and clear.
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
 >
-> **Figures.** Head large relative to the body — roughly one to four and a half.
-> Eyes are plain white ovals with a black dot pupil and one thin brow; the nose
-> is a small simple shape; the mouth is one curve that opens to a plain rounded
-> shape when speaking. Hands are simple and rounded, five fingers, no knuckle
-> detail. Hair is one solid flat colour with at most a single flat highlight
-> band — never strand-shaded.
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
 >
-> **The character.** **Tí** — a thirteen-year-old
-> Vietnamese boy, the smallest and thinnest of the children. Narrow and slightly
-> caved-in, one shoulder lower than the other where an oversized shirt slips off
-> it. Black hair in an uneven spiky cluster with **one cowlick standing up at
-> the back of the crown** that never lies flat. Eyes smallish and round under a
-> low flat brow line, giving a permanently slightly wary look. A faded
-> jade-green t-shirt a size too big. Ordinary and a bit closed-off — not cute,
-> not heroic. Reproduce that design exactly, with no change to hair, face,
-> clothing, colour or proportion between panels.
-> **Must not:** wear glasses of any kind; wear a yellow top with blue shorts;
-> resemble any existing Doraemon character.
+> **The character.** **Tí** — a thirteen-year-old Vietnamese boy, the
+> smallest and thinnest of the children. Narrow and slightly caved-in, one
+> shoulder lower than the other where an oversized shirt slips off it. Black
+> hair in an uneven spiky cluster with **one cowlick standing up at the back
+> of the crown** that never lies flat. Eyes smallish and round under a low
+> flat brow line, giving a permanently slightly wary look. A faded
+> jade-green t-shirt a size too big. Ordinary and a bit closed-off — not
+> cute, not heroic. Reproduce that design exactly, with no change to hair,
+> face, clothing, colour or proportion between panels. **Must not:** wear
+> glasses of any kind; wear a yellow top with blue shorts; resemble any
+> existing Doraemon character.
 >
-> **The sheet.** Six panels in one row on a plain white background. **The image
-> must divide into exactly six equal vertical sixths, each holding one panel,
-> with the figure centred in its sixth and the same margin on both sides.** No
-> gap, no border and no gutter between panels — the six sixths are edge to edge
-> and fill the whole width. Identical size, identical framing. Each panel shows the **upper half
-> of the body — head, shoulders, chest, both arms and hands, cropped straight
-> across at the waist** — facing the viewer and turned very slightly to one
-> side. The shirt, the build and both hands are visible in every panel.
+> **The sheet.** Six panels in one row on a plain white background. **The
+> image must divide into exactly six equal vertical sixths, each holding one
+> panel, with the figure centred in its sixth and the same margin on both
+> sides.** No gap, no border and no gutter between panels — the six sixths
+> are edge to edge and fill the whole width. Identical size, identical
+> framing. Each panel shows the **upper half of the body — head, shoulders,
+> chest, both arms and hands, cropped straight across at the waist** —
+> facing the viewer and turned very slightly to one side. The shirt, the
+> build and both hands are visible in every panel.
 >
-> **The head stays exactly the same size and in exactly the same place in all
-> six panels**, at the same scale and under the same flat lighting. The
-> expression changes, and the shoulders, arms and hands may move with it — but
-> the framing, the scale and the eye level never do.
+> **The head stays exactly the same size and in exactly the same place in
+> all six panels**, at the same scale and under the same flat lighting. The
+> expression changes, and the shoulders, arms and hands may move with it —
+> but the framing, the scale and the eye level never do.
 >
 > Left to right, face and body together:
 > **1 — neutral:** an ordinary talking face, mouth slightly open, no strong
 > feeling; arms relaxed at the sides.
 > **2 — happy:** a real open smile, eyes curved; shoulders lifted, one hand
 > raised in a small open gesture.
-> **3 — worried:** brows raised and pulled together, mouth a small flat line;
-> shoulders drawn in, hands close to the body.
+> **3 — worried:** brows raised and pulled together, mouth a small flat
+> line; shoulders drawn in, hands close to the body.
 > **4 — annoyed:** brows down and level, mouth pressed or turned down at one
 > corner; arms folded.
 > **5 — surprised:** eyes wide and round, brows high, mouth open in a small
@@ -116,12 +120,13 @@ are staged.
 > **6 — sad:** eyes lowered, brows slack, mouth a short downward curve;
 > shoulders dropped, arms hanging.
 >
-> **The standing cowlick at the back of the crown must be clearly visible in all
-> six panels** — it is the one feature that identifies him at small size.
+> **The standing cowlick at the back of the crown must be clearly visible in
+> all six panels** — it is the one feature that identifies him at small
+> size.
 >
-> Each panel is cut off cleanly and straight across at the bottom edge of the
-> frame, at the waist, with nothing below it and no legs. Plain white behind
-> every panel and no border between them. 16:9.
+> Each panel is cut off cleanly and straight across at the bottom edge of
+> the frame, at the waist, with nothing below it and no legs. Plain white
+> behind every panel and no border between them. 16:9.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -133,65 +138,67 @@ are staged.
 
 **File:** `thao.png` — the **whole sheet, uncut**, saved as one image.
 
-> Match the line weight, colouring, shading and background treatment of the
-> attached style reference. Do not copy, quote or resemble any character in it.
-> The character is described below and appears nowhere in the reference.
+> **If a style reference image is attached**, match its line weight,
+> colouring, shading and background treatment, and do not copy, quote or
+> resemble any character in it — the character below appears nowhere in it.
+> If nothing is attached, follow the written style exactly as described.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
-> tradition of Fujiko F. Fujio — the *Doraemon* look. Simple rounded characters
-> drawn in clean even-weight black ink outlines. Not modern anime, not moe, not
-> Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
+> tradition of Fujiko F. Fujio — the *Doraemon* look. Simple rounded
+> characters drawn in clean even-weight black ink outlines. Not modern
+> anime, not moe, not Ghibli, not American cartoon, not 3D, not
+> photorealistic, not painterly.
 >
-> **Line.** Black contour line of near-constant width, closed and continuous. No
-> tapering brush strokes, no cross-hatching, no stippling, no sketchy or broken
-> linework, no visible pencil. Interior detail is minimal: a face is a handful
-> of lines.
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
 >
-> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
-> one flat shadow tone per surface, shaped as a clean geometric shape, never
-> soft-edged. No gradients, no visible texture, no paper grain, no brush grain,
-> no airbrushing, no ambient occlusion. Bright and clear.
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
 >
-> **Figures.** Head large relative to the body — roughly one to four and a half.
-> Eyes are plain white ovals with a black dot pupil and one thin brow; the nose
-> is a small simple shape; the mouth is one curve that opens to a plain rounded
-> shape when speaking. Hands are simple and rounded, five fingers, no knuckle
-> detail. Hair is one solid flat colour with at most a single flat highlight
-> band — never strand-shaded.
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
 >
-> **The character.** **Thảo** — a
-> thirteen-year-old Vietnamese girl, the same height as Tí or a little taller.
-> Upright and square-shouldered, deliberately **asymmetric at the head**:
-> straight black hair cut to the jaw with a straight fringe, **tucked behind one
-> ear so that one ear shows and the other is covered.** Eyes large and open,
-> brows set high, a small closed half-smile — she is the one who is sure of
-> things. White short-sleeved school shirt, dark blue skirt. Reproduce that
-> design exactly, with no change to hair, face, clothing, colour or proportion
-> between panels.
-> **Must not:** wear a hairband, ribbon, bow or hairclip; wear pink; resemble
-> any existing Doraemon character.
+> **The character.** **Thảo** — a thirteen-year-old Vietnamese girl, the
+> same height as Tí or a little taller. Upright and square-shouldered,
+> deliberately **asymmetric at the head**: straight black hair cut to the
+> jaw with a straight fringe, **tucked behind one ear so that one ear shows
+> and the other is covered.** Eyes large and open, brows set high, a small
+> closed half-smile — she is the one who is sure of things. White
+> short-sleeved school shirt, dark blue skirt. Reproduce that design
+> exactly, with no change to hair, face, clothing, colour or proportion
+> between panels. **Must not:** wear a hairband, ribbon, bow or hairclip;
+> wear pink; resemble any existing Doraemon character.
 >
-> **The sheet.** Six panels in one row on a plain white background. **The image
-> must divide into exactly six equal vertical sixths, each holding one panel,
-> with the figure centred in its sixth and the same margin on both sides.** No
-> gap, no border and no gutter between panels — the six sixths are edge to edge
-> and fill the whole width. Identical size, identical framing. Each panel shows the **upper half
-> of the body — head, shoulders, chest, both arms and hands, cropped straight
-> across at the waist** — facing the viewer and turned very slightly to one
-> side. The shirt, the build and both hands are visible in every panel.
+> **The sheet.** Six panels in one row on a plain white background. **The
+> image must divide into exactly six equal vertical sixths, each holding one
+> panel, with the figure centred in its sixth and the same margin on both
+> sides.** No gap, no border and no gutter between panels — the six sixths
+> are edge to edge and fill the whole width. Identical size, identical
+> framing. Each panel shows the **upper half of the body — head, shoulders,
+> chest, both arms and hands, cropped straight across at the waist** —
+> facing the viewer and turned very slightly to one side. The shirt, the
+> build and both hands are visible in every panel.
 >
-> **The head stays exactly the same size and in exactly the same place in all
-> six panels**, at the same scale and under the same flat lighting. The
-> expression changes, and the shoulders, arms and hands may move with it — but
-> the framing, the scale and the eye level never do.
+> **The head stays exactly the same size and in exactly the same place in
+> all six panels**, at the same scale and under the same flat lighting. The
+> expression changes, and the shoulders, arms and hands may move with it —
+> but the framing, the scale and the eye level never do.
 >
 > Left to right, face and body together:
 > **1 — neutral:** an ordinary talking face, mouth slightly open, no strong
 > feeling; arms relaxed at the sides.
 > **2 — happy:** a real open smile, eyes curved; shoulders lifted, one hand
 > raised in a small open gesture.
-> **3 — worried:** brows raised and pulled together, mouth a small flat line;
-> shoulders drawn in, hands close to the body.
+> **3 — worried:** brows raised and pulled together, mouth a small flat
+> line; shoulders drawn in, hands close to the body.
 > **4 — annoyed:** brows down and level, mouth pressed or turned down at one
 > corner; arms folded, or one hand on the hip.
 > **5 — surprised:** eyes wide and round, brows high, mouth open in a small
@@ -199,12 +206,12 @@ are staged.
 > **6 — sad:** eyes lowered, brows slack, mouth a short downward curve;
 > shoulders dropped, arms hanging.
 >
-> **The hair tucked behind one ear only — one ear showing, the other covered —
-> must read clearly in all six panels.**
+> **The hair tucked behind one ear only — one ear showing, the other covered
+> — must read clearly in all six panels.**
 >
-> Each panel is cut off cleanly and straight across at the bottom edge of the
-> frame, at the waist, with nothing below it and no legs. Plain white behind
-> every panel and no border between them. 16:9.
+> Each panel is cut off cleanly and straight across at the bottom edge of
+> the frame, at the waist, with nothing below it and no legs. Plain white
+> behind every panel and no border between them. 16:9.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -216,74 +223,77 @@ are staged.
 
 **File:** `basau.png` — the **whole sheet, uncut**, saved as one image.
 
-> Match the line weight, colouring, shading and background treatment of the
-> attached style reference. Do not copy, quote or resemble any character in it.
-> The character is described below and appears nowhere in the reference.
+> **If a style reference image is attached**, match its line weight,
+> colouring, shading and background treatment, and do not copy, quote or
+> resemble any character in it — the character below appears nowhere in it.
+> If nothing is attached, follow the written style exactly as described.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
-> tradition of Fujiko F. Fujio — the *Doraemon* look. Simple rounded characters
-> drawn in clean even-weight black ink outlines. Not modern anime, not moe, not
-> Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
+> tradition of Fujiko F. Fujio — the *Doraemon* look. Simple rounded
+> characters drawn in clean even-weight black ink outlines. Not modern
+> anime, not moe, not Ghibli, not American cartoon, not 3D, not
+> photorealistic, not painterly.
 >
-> **Line.** Black contour line of near-constant width, closed and continuous. No
-> tapering brush strokes, no cross-hatching, no stippling, no sketchy or broken
-> linework, no visible pencil. Interior detail is minimal: a face is a handful
-> of lines.
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
 >
-> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
-> one flat shadow tone per surface, shaped as a clean geometric shape, never
-> soft-edged. No gradients, no texture, no airbrushing. Bright and clear.
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no texture, no airbrushing. Bright and
+> clear.
 >
-> **The character.** **Bà Sáu** — Tí's
-> grandmother, around seventy. The shortest adult but the **widest and most
-> stable** shape in the cast: square, planted, upright. Grey hair pulled back
-> into a tight low bun drawn as one solid shape. Eyes usually drawn as two short
-> downward curves, opening to circles only when startled; one deep line at each
-> side of the mouth, set stern. A loose brown-and-indigo *áo bà ba* style tunic.
-> Reproduce that design exactly, with no change to hair, face, clothing, colour
-> or proportion between panels.
-> **Must not:** be drawn frail, bent or sweet; resemble any existing Doraemon
-> character.
+> **The character.** **Bà Sáu** — Tí's grandmother, around seventy. The
+> shortest adult but the **widest and most stable** shape in the cast:
+> square, planted, upright. Grey hair pulled back into a tight low bun drawn
+> as one solid shape. Eyes usually drawn as two short downward curves,
+> opening to circles only when startled; one deep line at each side of the
+> mouth, set stern. A loose brown-and-indigo *áo bà ba* style tunic.
+> Reproduce that design exactly, with no change to hair, face, clothing,
+> colour or proportion between panels. **Must not:** be drawn frail, bent or
+> sweet; resemble any existing Doraemon character.
 >
-> **The sheet.** Six panels in one row on a plain white background. **The image
-> must divide into exactly six equal vertical sixths, each holding one panel,
-> with the figure centred in its sixth and the same margin on both sides.** No
-> gap, no border and no gutter between panels — the six sixths are edge to edge
-> and fill the whole width. Identical size, identical framing. Each panel shows the **upper half
-> of the body — head, shoulders, chest, both arms and hands, cropped straight
-> across at the waist** — facing the viewer and turned very slightly to one
-> side.
+> **The sheet.** Six panels in one row on a plain white background. **The
+> image must divide into exactly six equal vertical sixths, each holding one
+> panel, with the figure centred in its sixth and the same margin on both
+> sides.** No gap, no border and no gutter between panels — the six sixths
+> are edge to edge and fill the whole width. Identical size, identical
+> framing. Each panel shows the **upper half of the body — head, shoulders,
+> chest, both arms and hands, cropped straight across at the waist** —
+> facing the viewer and turned very slightly to one side.
 >
-> **Her forearms are drawn noticeably thicker and stronger than anyone else's in
-> the cast, and both must be visible in all six panels.** They are what
-> identifies her at small size, and they are the reason this sheet is half-body
-> rather than a headshot.
+> **Her forearms are drawn noticeably thicker and stronger than anyone
+> else's in the cast, and both must be visible in all six panels.** They are
+> what identifies her at small size, and they are the reason this sheet is
+> half-body rather than a headshot.
 >
-> **The head stays exactly the same size and in exactly the same place in all
-> six panels**, at the same scale and under the same flat lighting. The
-> expression changes, and the shoulders, arms and hands may move with it — but
-> the framing, the scale and the eye level never do.
+> **The head stays exactly the same size and in exactly the same place in
+> all six panels**, at the same scale and under the same flat lighting. The
+> expression changes, and the shoulders, arms and hands may move with it —
+> but the framing, the scale and the eye level never do.
 >
 > Left to right, face and body together:
-> **1 — neutral:** an ordinary talking face, mouth slightly open; arms relaxed.
+> **1 — neutral:** an ordinary talking face, mouth slightly open; arms
+> relaxed.
 > **2 — happy:** a real smile, eyes curved — warm but still dry, never soft;
 > one hand raised in a small gesture.
-> **3 — worried:** brows drawn together, mouth a small flat line; hands close
-> to the body.
-> **4 — annoyed:** brows down and level, mouth turned down at one corner; arms
-> folded, forearms prominent.
-> **5 — surprised:** eyes opening to full circles, brows high, mouth open in a
-> small circle; both hands lifted slightly.
-> **6 — sad:** eyes lowered, mouth a short downward curve; shoulders dropped,
-> hands in her lap.
+> **3 — worried:** brows drawn together, mouth a small flat line; hands
+> close to the body.
+> **4 — annoyed:** brows down and level, mouth turned down at one corner;
+> arms folded, forearms prominent.
+> **5 — surprised:** eyes opening to full circles, brows high, mouth open in
+> a small circle; both hands lifted slightly.
+> **6 — sad:** eyes lowered, mouth a short downward curve; shoulders
+> dropped, hands in her lap.
 >
-> Each panel is cut off cleanly and straight across at the bottom edge of the
-> frame, at the waist, with nothing below it. Plain white behind every panel and
-> no border between them. 16:9.
+> Each panel is cut off cleanly and straight across at the bottom edge of
+> the frame, at the waist, with nothing below it. Plain white behind every
+> panel and no border between them. 16:9.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles
-> or glows.
+> signatures, speech bubbles, logos, panel borders or motion lines. No
+> sparkles or glows.
 
 ---
 
@@ -291,59 +301,61 @@ are staged.
 
 **File:** `khoa.png` — the **whole sheet, uncut**, saved as one image.
 
-> Match the line weight, colouring, shading and background treatment of the
-> attached style reference. Do not copy, quote or resemble any character in it.
-> The character is described below and appears nowhere in the reference.
+> **If a style reference image is attached**, match its line weight,
+> colouring, shading and background treatment, and do not copy, quote or
+> resemble any character in it — the character below appears nowhere in it.
+> If nothing is attached, follow the written style exactly as described.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
-> tradition of Fujiko F. Fujio — the *Doraemon* look. Simple rounded characters
-> drawn in clean even-weight black ink outlines. Not modern anime, not moe, not
-> Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
+> tradition of Fujiko F. Fujio — the *Doraemon* look. Simple rounded
+> characters drawn in clean even-weight black ink outlines. Not modern
+> anime, not moe, not Ghibli, not American cartoon, not 3D, not
+> photorealistic, not painterly.
 >
-> **Line.** Black contour line of near-constant width, closed and continuous. No
-> tapering brush strokes, no cross-hatching, no stippling, no sketchy or broken
-> linework. Interior detail is minimal: a face is a handful of lines.
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework. Interior detail is minimal: a face is a
+> handful of lines.
 >
-> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
-> one flat shadow tone per surface, never soft-edged. No gradients, no texture,
-> no airbrushing. Bright and clear.
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, never soft-edged. No gradients, no
+> texture, no airbrushing. Bright and clear.
 >
-> **The character.** **Khoa** — a boy of
-> thirteen, half a head taller than the others, neat and calm. A straight
-> vertical silhouette, arms at rest, the stillest figure in the cast. Black
-> hair, flat and combed, with **a clean side parting** — the only parting in the
-> cast. Eyes even ovals with the pupil centred, and a small level closed-mouth
-> smile. Genuinely kind; **never smug, never sneering.** White shirt buttoned to
-> the collar. Reproduce that design exactly, with no change to hair, face,
-> clothing, colour or proportion between panels.
-> **Must not:** be drawn as a rival or a snob; resemble any existing Doraemon
-> character.
+> **The character.** **Khoa** — a boy of thirteen, half a head taller than
+> the others, neat and calm. A straight vertical silhouette, arms at rest,
+> the stillest figure in the cast. Black hair, flat and combed, with **a
+> clean side parting** — the only parting in the cast. Eyes even ovals with
+> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
+> **never smug, never sneering.** White shirt buttoned to the collar.
+> Reproduce that design exactly, with no change to hair, face, clothing,
+> colour or proportion between panels. **Must not:** be drawn as a rival or
+> a snob; resemble any existing Doraemon character.
 >
-> **The sheet.** Six panels in one row on a plain white background. **The image
-> must divide into exactly six equal vertical sixths, each holding one panel,
-> with the figure centred in its sixth and the same margin on both sides.** No
-> gap, no border and no gutter between panels — the six sixths are edge to edge
-> and fill the whole width. Identical size, identical framing. Each panel shows the **upper half
-> of the body — head, shoulders, chest, both arms and hands, cropped straight
-> across at the waist** — facing the viewer and turned very slightly to one
-> side.
+> **The sheet.** Six panels in one row on a plain white background. **The
+> image must divide into exactly six equal vertical sixths, each holding one
+> panel, with the figure centred in its sixth and the same margin on both
+> sides.** No gap, no border and no gutter between panels — the six sixths
+> are edge to edge and fill the whole width. Identical size, identical
+> framing. Each panel shows the **upper half of the body — head, shoulders,
+> chest, both arms and hands, cropped straight across at the waist** —
+> facing the viewer and turned very slightly to one side.
 >
-> **He carries a green notebook held flat against his side, and it is visible in
-> all six panels.** That and the side parting are what identify him at small
-> size.
+> **He carries a green notebook held flat against his side, and it is
+> visible in all six panels.** That and the side parting are what identify
+> him at small size.
 >
-> **The head stays exactly the same size and in exactly the same place in all
-> six panels**, at the same scale and under the same flat lighting. The
-> expression changes, and the shoulders, arms and hands may move with it — but
-> the framing, the scale and the eye level never do.
+> **The head stays exactly the same size and in exactly the same place in
+> all six panels**, at the same scale and under the same flat lighting. The
+> expression changes, and the shoulders, arms and hands may move with it —
+> but the framing, the scale and the eye level never do.
 >
 > Left to right, face and body together:
-> **1 — neutral:** an ordinary talking face, mouth slightly open; arms at rest,
-> notebook against his side.
+> **1 — neutral:** an ordinary talking face, mouth slightly open; arms at
+> rest, notebook against his side.
 > **2 — happy:** a real open smile, eyes curved; shoulders lifted, free hand
 > raised in a small open gesture.
-> **3 — worried:** brows raised and pulled together, mouth a small flat line;
-> notebook held with both hands.
+> **3 — worried:** brows raised and pulled together, mouth a small flat
+> line; notebook held with both hands.
 > **4 — annoyed:** brows down and level, mouth pressed — mildly, he does not
 > scowl; free hand on the hip.
 > **5 — surprised:** eyes wide and round, brows high, mouth open in a small
@@ -351,13 +363,13 @@ are staged.
 > **6 — sad:** eyes lowered, brows slack, mouth a short downward curve;
 > shoulders dropped, notebook lowered.
 >
-> Each panel is cut off cleanly and straight across at the bottom edge of the
-> frame, at the waist, with nothing below it. Plain white behind every panel and
-> no border between them. 16:9.
+> Each panel is cut off cleanly and straight across at the bottom edge of
+> the frame, at the waist, with nothing below it. Plain white behind every
+> panel and no border between them. 16:9.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles
-> or glows.
+> signatures, speech bubbles, logos, panel borders or motion lines. No
+> sparkles or glows.
 
 ---
 
@@ -369,42 +381,43 @@ Mun does not speak in any Lesson 1 dialogue yet. Generate this sheet anyway —
 he speaks in the passages, he is the character most likely to be given a line
 next, and a cat drawn six months after the rest of the cast will not match it.
 
-> Match the line weight, colouring, shading and background treatment of the
-> attached style reference. Do not copy, quote or resemble any character in it.
-> The character is described below and appears nowhere in the reference.
+> **If a style reference image is attached**, match its line weight,
+> colouring, shading and background treatment, and do not copy, quote or
+> resemble any character in it — the character below appears nowhere in it.
+> If nothing is attached, follow the written style exactly as described.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
-> tradition of Fujiko F. Fujio — the *Doraemon* look, drawn in clean even-weight
-> black ink outlines with flat cel colour. Not modern anime, not moe, not
-> Ghibli, not American cartoon, not 3D, not photorealistic, not painterly. No
-> gradients, no texture, no airbrushing, no soft edges.
+> tradition of Fujiko F. Fujio — the *Doraemon* look, drawn in clean
+> even-weight black ink outlines with flat cel colour. Not modern anime, not
+> moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly. No gradients, no texture, no airbrushing, no soft edges.
 >
-> **The character.** **Mun** — a thin black cat,
-> ordinary house-cat size and build, **on four legs**. Low, lean, slightly
-> scruffy, ribs faintly suggested by two short lines. Solid flat black with a
-> single flat dark-grey band along the spine as its only shading. Amber-gold
-> eyes drawn as full circles with a **vertical slit pupil** — the only slit
-> pupils in the cast. A scholar's air he has not earned. Reproduce that design
-> exactly, with no change to colour or proportion between panels.
-> **Must not:** be blue, or blue-and-white; have a white belly or a pouch; wear
-> a collar, bell, clothing or any prop; stand upright, walk on two legs, sit
+> **The character.** **Mun** — a thin black cat, ordinary house-cat size and
+> build, **on four legs**. Low, lean, slightly scruffy, ribs faintly
+> suggested by two short lines. Solid flat black with a single flat
+> dark-grey band along the spine as its only shading. Amber-gold eyes drawn
+> as full circles with a **vertical slit pupil** — the only slit pupils in
+> the cast. A scholar's air he has not earned. Reproduce that design
+> exactly, with no change to colour or proportion between panels. **Must
+> not:** be blue, or blue-and-white; have a white belly or a pouch; wear a
+> collar, bell, clothing or any prop; stand upright, walk on two legs, sit
 > like a person, or have round mitten paws; resemble any existing Doraemon
 > character.
 >
-> **The sheet.** Six panels in one row on a plain white background. **The image
-> must divide into exactly six equal vertical sixths, each holding one panel,
-> with the figure centred in its sixth and the same margin on both sides.** No
-> gap, no border and no gutter between panels — the six sixths are edge to edge
-> and fill the whole width. Identical size, identical framing. Each panel shows the cat's **head,
-> shoulders and front legs, on four legs, facing the viewer, cropped straight
-> across mid-body.**
+> **The sheet.** Six panels in one row on a plain white background. **The
+> image must divide into exactly six equal vertical sixths, each holding one
+> panel, with the figure centred in its sixth and the same margin on both
+> sides.** No gap, no border and no gutter between panels — the six sixths
+> are edge to edge and fill the whole width. Identical size, identical
+> framing. Each panel shows the cat's **head, shoulders and front legs, on
+> four legs, facing the viewer, cropped straight across mid-body.**
 >
-> **His one torn left ear must be clearly visible in all six panels.** It is the
-> only thing that identifies him at small size.
+> **His one torn left ear must be clearly visible in all six panels.** It is
+> the only thing that identifies him at small size.
 >
-> **The head stays exactly the same size and in exactly the same place in all
-> six panels.** His feelings are carried by the ears, the eyes and the set of
-> the shoulders — never by arms, hands or human posture.
+> **The head stays exactly the same size and in exactly the same place in
+> all six panels.** His feelings are carried by the ears, the eyes and the
+> set of the shoulders — never by arms, hands or human posture.
 >
 > Left to right:
 > **1 — neutral:** ears up, eyes level, mouth slightly open as if talking.
@@ -412,16 +425,17 @@ next, and a cat drawn six months after the rest of the cast will not match it.
 > raised.
 > **3 — worried:** ears half back, eyes wide, head lowered a little.
 > **4 — annoyed:** ears flat back, eyes narrowed to slits, chin down.
-> **5 — surprised:** eyes fully round and large, ears straight up, whiskers out.
+> **5 — surprised:** eyes fully round and large, ears straight up, whiskers
+> out.
 > **6 — sad:** ears down and out, eyes lowered, head dropped.
 >
-> Each panel is cut off cleanly and straight across at the bottom edge of the
-> frame, with nothing below it. Plain white behind every panel and no border
-> between them. 16:9.
+> Each panel is cut off cleanly and straight across at the bottom edge of
+> the frame, with nothing below it. Plain white behind every panel and no
+> border between them. 16:9.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles
-> or glows.
+> signatures, speech bubbles, logos, panel borders or motion lines. No
+> sparkles or glows.
 
 ---
 ---
@@ -442,47 +456,52 @@ chapters after it.
 
 **File:** `canal-landing.jpg`  ·  **this is the one unit 1 needs**
 
-> Match the line weight, colouring, shading and background treatment of the
-> attached style reference. Do not copy or quote any character in it.
+> **If a style reference image is attached**, match its line weight,
+> colouring, shading and background treatment, and do not copy or quote any
+> character in it. If nothing is attached, follow the written style exactly
+> as described.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
 > tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
 > Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
 >
-> **Line.** Black contour line of near-constant width, closed and continuous,
-> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
-> broken linework, no cross-hatching, no visible pencil.
+> **Line.** Black contour line of near-constant width, closed and
+> continuous, and drawn **thinner and lighter than a figure's line would
+> be.** No sketchy or broken linework, no cross-hatching, no visible pencil.
 >
-> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
-> one flat shadow tone per surface, shaped as a clean geometric shape, never
-> soft-edged. No gradients except in the open sky, no texture, no grain, no
-> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
-> shown by **lighter flat colour and thinner line only.**
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients except in the open sky, no texture, no
+> grain, no airbrushing, no ambient occlusion, no blur and no
+> depth-of-field. Depth is shown by **lighter flat colour and thinner line
+> only.**
 >
-> **Backgrounds carry the realism.** This is the defining contrast of the style:
-> the world is literal and fully catalogued even though the people are simple.
-> Correct one- or two-point perspective, real architecture, and everyday objects
-> all in their places — every plank, rope, pot, wire and moored boat.
+> **Backgrounds carry the realism.** This is the defining contrast of the
+> style: the world is literal and fully catalogued even though the people
+> are simple. Correct one- or two-point perspective, real architecture, and
+> everyday objects all in their places — every plank, rope, pot, wire and
+> moored boat.
 >
-> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
-> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
-> given a colour used nowhere else in the frame — that is where the eye lands.
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green
+> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
+> object is given a colour used nowhere else in the frame — that is where
+> the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
-> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
-> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
-> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
-> conical hats as decoration, no dragons.
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
+> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
+> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
+> concrete pipes, no Japanese signage. No temples, no strings of tourist
+> lanterns, no conical hats as decoration, no dragons.
 >
-> **Composition.** An empty background plate, 16:9, camera at standing eye level
-> looking straight ahead. Keep the **lower third of the frame simple and
-> uncluttered** — figures will be placed there and detail behind them is lost.
-> Keep the interest in the middle and upper thirds. Nothing important in the
-> top-left or top-right corners, where speech balloons sit.
+> **Composition.** An empty background plate, 16:9, camera at standing eye
+> level looking straight ahead. Keep the **lower third of the frame simple
+> and uncluttered** — figures will be placed there and detail behind them is
+> lost. Keep the interest in the middle and upper thirds. Nothing important
+> in the top-left or top-right corners, where speech balloons sit.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
-> glows or lens flare.
+> signatures, speech bubbles, logos, panel borders or motion lines. No
+> sparkles, glows or lens flare.
 >
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
@@ -498,47 +517,52 @@ chapters after it.
 
 **File:** `kitchen.jpg`
 
-> Match the line weight, colouring, shading and background treatment of the
-> attached style reference. Do not copy or quote any character in it.
+> **If a style reference image is attached**, match its line weight,
+> colouring, shading and background treatment, and do not copy or quote any
+> character in it. If nothing is attached, follow the written style exactly
+> as described.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
 > tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
 > Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
 >
-> **Line.** Black contour line of near-constant width, closed and continuous,
-> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
-> broken linework, no cross-hatching, no visible pencil.
+> **Line.** Black contour line of near-constant width, closed and
+> continuous, and drawn **thinner and lighter than a figure's line would
+> be.** No sketchy or broken linework, no cross-hatching, no visible pencil.
 >
-> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
-> one flat shadow tone per surface, shaped as a clean geometric shape, never
-> soft-edged. No gradients except in the open sky, no texture, no grain, no
-> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
-> shown by **lighter flat colour and thinner line only.**
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients except in the open sky, no texture, no
+> grain, no airbrushing, no ambient occlusion, no blur and no
+> depth-of-field. Depth is shown by **lighter flat colour and thinner line
+> only.**
 >
-> **Backgrounds carry the realism.** This is the defining contrast of the style:
-> the world is literal and fully catalogued even though the people are simple.
-> Correct one- or two-point perspective, real architecture, and everyday objects
-> all in their places — every plank, rope, pot, wire and moored boat.
+> **Backgrounds carry the realism.** This is the defining contrast of the
+> style: the world is literal and fully catalogued even though the people
+> are simple. Correct one- or two-point perspective, real architecture, and
+> everyday objects all in their places — every plank, rope, pot, wire and
+> moored boat.
 >
-> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
-> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
-> given a colour used nowhere else in the frame — that is where the eye lands.
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green
+> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
+> object is given a colour used nowhere else in the frame — that is where
+> the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
-> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
-> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
-> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
-> conical hats as decoration, no dragons.
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
+> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
+> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
+> concrete pipes, no Japanese signage. No temples, no strings of tourist
+> lanterns, no conical hats as decoration, no dragons.
 >
-> **Composition.** An empty background plate, 16:9, camera at standing eye level
-> looking straight ahead. Keep the **lower third of the frame simple and
-> uncluttered** — figures will be placed there and detail behind them is lost.
-> Keep the interest in the middle and upper thirds. Nothing important in the
-> top-left or top-right corners, where speech balloons sit.
+> **Composition.** An empty background plate, 16:9, camera at standing eye
+> level looking straight ahead. Keep the **lower third of the frame simple
+> and uncluttered** — figures will be placed there and detail behind them is
+> lost. Keep the interest in the middle and upper thirds. Nothing important
+> in the top-left or top-right corners, where speech balloons sit.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
-> glows or lens flare.
+> signatures, speech bubbles, logos, panel borders or motion lines. No
+> sparkles, glows or lens flare.
 >
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
@@ -554,47 +578,52 @@ chapters after it.
 
 **File:** `school-yard.jpg`
 
-> Match the line weight, colouring, shading and background treatment of the
-> attached style reference. Do not copy or quote any character in it.
+> **If a style reference image is attached**, match its line weight,
+> colouring, shading and background treatment, and do not copy or quote any
+> character in it. If nothing is attached, follow the written style exactly
+> as described.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
 > tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
 > Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
 >
-> **Line.** Black contour line of near-constant width, closed and continuous,
-> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
-> broken linework, no cross-hatching, no visible pencil.
+> **Line.** Black contour line of near-constant width, closed and
+> continuous, and drawn **thinner and lighter than a figure's line would
+> be.** No sketchy or broken linework, no cross-hatching, no visible pencil.
 >
-> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
-> one flat shadow tone per surface, shaped as a clean geometric shape, never
-> soft-edged. No gradients except in the open sky, no texture, no grain, no
-> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
-> shown by **lighter flat colour and thinner line only.**
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients except in the open sky, no texture, no
+> grain, no airbrushing, no ambient occlusion, no blur and no
+> depth-of-field. Depth is shown by **lighter flat colour and thinner line
+> only.**
 >
-> **Backgrounds carry the realism.** This is the defining contrast of the style:
-> the world is literal and fully catalogued even though the people are simple.
-> Correct one- or two-point perspective, real architecture, and everyday objects
-> all in their places — every plank, rope, pot, wire and moored boat.
+> **Backgrounds carry the realism.** This is the defining contrast of the
+> style: the world is literal and fully catalogued even though the people
+> are simple. Correct one- or two-point perspective, real architecture, and
+> everyday objects all in their places — every plank, rope, pot, wire and
+> moored boat.
 >
-> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
-> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
-> given a colour used nowhere else in the frame — that is where the eye lands.
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green
+> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
+> object is given a colour used nowhere else in the frame — that is where
+> the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
-> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
-> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
-> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
-> conical hats as decoration, no dragons.
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
+> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
+> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
+> concrete pipes, no Japanese signage. No temples, no strings of tourist
+> lanterns, no conical hats as decoration, no dragons.
 >
-> **Composition.** An empty background plate, 16:9, camera at standing eye level
-> looking straight ahead. Keep the **lower third of the frame simple and
-> uncluttered** — figures will be placed there and detail behind them is lost.
-> Keep the interest in the middle and upper thirds. Nothing important in the
-> top-left or top-right corners, where speech balloons sit.
+> **Composition.** An empty background plate, 16:9, camera at standing eye
+> level looking straight ahead. Keep the **lower third of the frame simple
+> and uncluttered** — figures will be placed there and detail behind them is
+> lost. Keep the interest in the middle and upper thirds. Nothing important
+> in the top-left or top-right corners, where speech balloons sit.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
-> glows or lens flare.
+> signatures, speech bubbles, logos, panel borders or motion lines. No
+> sparkles, glows or lens flare.
 >
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
@@ -610,47 +639,52 @@ chapters after it.
 
 **File:** `market.jpg`
 
-> Match the line weight, colouring, shading and background treatment of the
-> attached style reference. Do not copy or quote any character in it.
+> **If a style reference image is attached**, match its line weight,
+> colouring, shading and background treatment, and do not copy or quote any
+> character in it. If nothing is attached, follow the written style exactly
+> as described.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
 > tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
 > Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
 >
-> **Line.** Black contour line of near-constant width, closed and continuous,
-> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
-> broken linework, no cross-hatching, no visible pencil.
+> **Line.** Black contour line of near-constant width, closed and
+> continuous, and drawn **thinner and lighter than a figure's line would
+> be.** No sketchy or broken linework, no cross-hatching, no visible pencil.
 >
-> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
-> one flat shadow tone per surface, shaped as a clean geometric shape, never
-> soft-edged. No gradients except in the open sky, no texture, no grain, no
-> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
-> shown by **lighter flat colour and thinner line only.**
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients except in the open sky, no texture, no
+> grain, no airbrushing, no ambient occlusion, no blur and no
+> depth-of-field. Depth is shown by **lighter flat colour and thinner line
+> only.**
 >
-> **Backgrounds carry the realism.** This is the defining contrast of the style:
-> the world is literal and fully catalogued even though the people are simple.
-> Correct one- or two-point perspective, real architecture, and everyday objects
-> all in their places — every plank, rope, pot, wire and moored boat.
+> **Backgrounds carry the realism.** This is the defining contrast of the
+> style: the world is literal and fully catalogued even though the people
+> are simple. Correct one- or two-point perspective, real architecture, and
+> everyday objects all in their places — every plank, rope, pot, wire and
+> moored boat.
 >
-> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
-> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
-> given a colour used nowhere else in the frame — that is where the eye lands.
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green
+> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
+> object is given a colour used nowhere else in the frame — that is where
+> the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
-> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
-> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
-> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
-> conical hats as decoration, no dragons.
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
+> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
+> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
+> concrete pipes, no Japanese signage. No temples, no strings of tourist
+> lanterns, no conical hats as decoration, no dragons.
 >
-> **Composition.** An empty background plate, 16:9, camera at standing eye level
-> looking straight ahead. Keep the **lower third of the frame simple and
-> uncluttered** — figures will be placed there and detail behind them is lost.
-> Keep the interest in the middle and upper thirds. Nothing important in the
-> top-left or top-right corners, where speech balloons sit.
+> **Composition.** An empty background plate, 16:9, camera at standing eye
+> level looking straight ahead. Keep the **lower third of the frame simple
+> and uncluttered** — figures will be placed there and detail behind them is
+> lost. Keep the interest in the middle and upper thirds. Nothing important
+> in the top-left or top-right corners, where speech balloons sit.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
-> glows or lens flare.
+> signatures, speech bubbles, logos, panel borders or motion lines. No
+> sparkles, glows or lens flare.
 >
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
@@ -666,47 +700,52 @@ chapters after it.
 
 **File:** `lane.jpg`
 
-> Match the line weight, colouring, shading and background treatment of the
-> attached style reference. Do not copy or quote any character in it.
+> **If a style reference image is attached**, match its line weight,
+> colouring, shading and background treatment, and do not copy or quote any
+> character in it. If nothing is attached, follow the written style exactly
+> as described.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
 > tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
 > Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
 >
-> **Line.** Black contour line of near-constant width, closed and continuous,
-> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
-> broken linework, no cross-hatching, no visible pencil.
+> **Line.** Black contour line of near-constant width, closed and
+> continuous, and drawn **thinner and lighter than a figure's line would
+> be.** No sketchy or broken linework, no cross-hatching, no visible pencil.
 >
-> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
-> one flat shadow tone per surface, shaped as a clean geometric shape, never
-> soft-edged. No gradients except in the open sky, no texture, no grain, no
-> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
-> shown by **lighter flat colour and thinner line only.**
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients except in the open sky, no texture, no
+> grain, no airbrushing, no ambient occlusion, no blur and no
+> depth-of-field. Depth is shown by **lighter flat colour and thinner line
+> only.**
 >
-> **Backgrounds carry the realism.** This is the defining contrast of the style:
-> the world is literal and fully catalogued even though the people are simple.
-> Correct one- or two-point perspective, real architecture, and everyday objects
-> all in their places — every plank, rope, pot, wire and moored boat.
+> **Backgrounds carry the realism.** This is the defining contrast of the
+> style: the world is literal and fully catalogued even though the people
+> are simple. Correct one- or two-point perspective, real architecture, and
+> everyday objects all in their places — every plank, rope, pot, wire and
+> moored boat.
 >
-> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
-> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
-> given a colour used nowhere else in the frame — that is where the eye lands.
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green
+> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
+> object is given a colour used nowhere else in the frame — that is where
+> the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
-> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
-> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
-> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
-> conical hats as decoration, no dragons.
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
+> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
+> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
+> concrete pipes, no Japanese signage. No temples, no strings of tourist
+> lanterns, no conical hats as decoration, no dragons.
 >
-> **Composition.** An empty background plate, 16:9, camera at standing eye level
-> looking straight ahead. Keep the **lower third of the frame simple and
-> uncluttered** — figures will be placed there and detail behind them is lost.
-> Keep the interest in the middle and upper thirds. Nothing important in the
-> top-left or top-right corners, where speech balloons sit.
+> **Composition.** An empty background plate, 16:9, camera at standing eye
+> level looking straight ahead. Keep the **lower third of the frame simple
+> and uncluttered** — figures will be placed there and detail behind them is
+> lost. Keep the interest in the middle and upper thirds. Nothing important
+> in the top-left or top-right corners, where speech balloons sit.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
-> glows or lens flare.
+> signatures, speech bubbles, logos, panel borders or motion lines. No
+> sparkles, glows or lens flare.
 >
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
@@ -722,47 +761,52 @@ chapters after it.
 
 **File:** `canal-school.jpg`
 
-> Match the line weight, colouring, shading and background treatment of the
-> attached style reference. Do not copy or quote any character in it.
+> **If a style reference image is attached**, match its line weight,
+> colouring, shading and background treatment, and do not copy or quote any
+> character in it. If nothing is attached, follow the written style exactly
+> as described.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
 > tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
 > Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
 >
-> **Line.** Black contour line of near-constant width, closed and continuous,
-> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
-> broken linework, no cross-hatching, no visible pencil.
+> **Line.** Black contour line of near-constant width, closed and
+> continuous, and drawn **thinner and lighter than a figure's line would
+> be.** No sketchy or broken linework, no cross-hatching, no visible pencil.
 >
-> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
-> one flat shadow tone per surface, shaped as a clean geometric shape, never
-> soft-edged. No gradients except in the open sky, no texture, no grain, no
-> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
-> shown by **lighter flat colour and thinner line only.**
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients except in the open sky, no texture, no
+> grain, no airbrushing, no ambient occlusion, no blur and no
+> depth-of-field. Depth is shown by **lighter flat colour and thinner line
+> only.**
 >
-> **Backgrounds carry the realism.** This is the defining contrast of the style:
-> the world is literal and fully catalogued even though the people are simple.
-> Correct one- or two-point perspective, real architecture, and everyday objects
-> all in their places — every plank, rope, pot, wire and moored boat.
+> **Backgrounds carry the realism.** This is the defining contrast of the
+> style: the world is literal and fully catalogued even though the people
+> are simple. Correct one- or two-point perspective, real architecture, and
+> everyday objects all in their places — every plank, rope, pot, wire and
+> moored boat.
 >
-> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
-> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
-> given a colour used nowhere else in the frame — that is where the eye lands.
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green
+> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
+> object is given a colour used nowhere else in the frame — that is where
+> the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
-> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
-> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
-> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
-> conical hats as decoration, no dragons.
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
+> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
+> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
+> concrete pipes, no Japanese signage. No temples, no strings of tourist
+> lanterns, no conical hats as decoration, no dragons.
 >
-> **Composition.** An empty background plate, 16:9, camera at standing eye level
-> looking straight ahead. Keep the **lower third of the frame simple and
-> uncluttered** — figures will be placed there and detail behind them is lost.
-> Keep the interest in the middle and upper thirds. Nothing important in the
-> top-left or top-right corners, where speech balloons sit.
+> **Composition.** An empty background plate, 16:9, camera at standing eye
+> level looking straight ahead. Keep the **lower third of the frame simple
+> and uncluttered** — figures will be placed there and detail behind them is
+> lost. Keep the interest in the middle and upper thirds. Nothing important
+> in the top-left or top-right corners, where speech balloons sit.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
-> glows or lens flare.
+> signatures, speech bubbles, logos, panel borders or motion lines. No
+> sparkles, glows or lens flare.
 >
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
@@ -778,47 +822,52 @@ chapters after it.
 
 **File:** `science-room.jpg`
 
-> Match the line weight, colouring, shading and background treatment of the
-> attached style reference. Do not copy or quote any character in it.
+> **If a style reference image is attached**, match its line weight,
+> colouring, shading and background treatment, and do not copy or quote any
+> character in it. If nothing is attached, follow the written style exactly
+> as described.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
 > tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
 > Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
 >
-> **Line.** Black contour line of near-constant width, closed and continuous,
-> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
-> broken linework, no cross-hatching, no visible pencil.
+> **Line.** Black contour line of near-constant width, closed and
+> continuous, and drawn **thinner and lighter than a figure's line would
+> be.** No sketchy or broken linework, no cross-hatching, no visible pencil.
 >
-> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
-> one flat shadow tone per surface, shaped as a clean geometric shape, never
-> soft-edged. No gradients except in the open sky, no texture, no grain, no
-> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
-> shown by **lighter flat colour and thinner line only.**
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients except in the open sky, no texture, no
+> grain, no airbrushing, no ambient occlusion, no blur and no
+> depth-of-field. Depth is shown by **lighter flat colour and thinner line
+> only.**
 >
-> **Backgrounds carry the realism.** This is the defining contrast of the style:
-> the world is literal and fully catalogued even though the people are simple.
-> Correct one- or two-point perspective, real architecture, and everyday objects
-> all in their places — every plank, rope, pot, wire and moored boat.
+> **Backgrounds carry the realism.** This is the defining contrast of the
+> style: the world is literal and fully catalogued even though the people
+> are simple. Correct one- or two-point perspective, real architecture, and
+> everyday objects all in their places — every plank, rope, pot, wire and
+> moored boat.
 >
-> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
-> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
-> given a colour used nowhere else in the frame — that is where the eye lands.
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green
+> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
+> object is given a colour used nowhere else in the frame — that is where
+> the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
-> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
-> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
-> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
-> conical hats as decoration, no dragons.
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
+> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
+> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
+> concrete pipes, no Japanese signage. No temples, no strings of tourist
+> lanterns, no conical hats as decoration, no dragons.
 >
-> **Composition.** An empty background plate, 16:9, camera at standing eye level
-> looking straight ahead. Keep the **lower third of the frame simple and
-> uncluttered** — figures will be placed there and detail behind them is lost.
-> Keep the interest in the middle and upper thirds. Nothing important in the
-> top-left or top-right corners, where speech balloons sit.
+> **Composition.** An empty background plate, 16:9, camera at standing eye
+> level looking straight ahead. Keep the **lower third of the frame simple
+> and uncluttered** — figures will be placed there and detail behind them is
+> lost. Keep the interest in the middle and upper thirds. Nothing important
+> in the top-left or top-right corners, where speech balloons sit.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
-> glows or lens flare.
+> signatures, speech bubbles, logos, panel borders or motion lines. No
+> sparkles, glows or lens flare.
 >
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
@@ -834,47 +883,52 @@ chapters after it.
 
 **File:** `storm-yard.jpg`
 
-> Match the line weight, colouring, shading and background treatment of the
-> attached style reference. Do not copy or quote any character in it.
+> **If a style reference image is attached**, match its line weight,
+> colouring, shading and background treatment, and do not copy or quote any
+> character in it. If nothing is attached, follow the written style exactly
+> as described.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
 > tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
 > Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
 >
-> **Line.** Black contour line of near-constant width, closed and continuous,
-> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
-> broken linework, no cross-hatching, no visible pencil.
+> **Line.** Black contour line of near-constant width, closed and
+> continuous, and drawn **thinner and lighter than a figure's line would
+> be.** No sketchy or broken linework, no cross-hatching, no visible pencil.
 >
-> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
-> one flat shadow tone per surface, shaped as a clean geometric shape, never
-> soft-edged. No gradients except in the open sky, no texture, no grain, no
-> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
-> shown by **lighter flat colour and thinner line only.**
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients except in the open sky, no texture, no
+> grain, no airbrushing, no ambient occlusion, no blur and no
+> depth-of-field. Depth is shown by **lighter flat colour and thinner line
+> only.**
 >
-> **Backgrounds carry the realism.** This is the defining contrast of the style:
-> the world is literal and fully catalogued even though the people are simple.
-> Correct one- or two-point perspective, real architecture, and everyday objects
-> all in their places — every plank, rope, pot, wire and moored boat.
+> **Backgrounds carry the realism.** This is the defining contrast of the
+> style: the world is literal and fully catalogued even though the people
+> are simple. Correct one- or two-point perspective, real architecture, and
+> everyday objects all in their places — every plank, rope, pot, wire and
+> moored boat.
 >
-> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
-> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
-> given a colour used nowhere else in the frame — that is where the eye lands.
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green
+> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
+> object is given a colour used nowhere else in the frame — that is where
+> the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
-> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
-> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
-> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
-> conical hats as decoration, no dragons.
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
+> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
+> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
+> concrete pipes, no Japanese signage. No temples, no strings of tourist
+> lanterns, no conical hats as decoration, no dragons.
 >
-> **Composition.** An empty background plate, 16:9, camera at standing eye level
-> looking straight ahead. Keep the **lower third of the frame simple and
-> uncluttered** — figures will be placed there and detail behind them is lost.
-> Keep the interest in the middle and upper thirds. Nothing important in the
-> top-left or top-right corners, where speech balloons sit.
+> **Composition.** An empty background plate, 16:9, camera at standing eye
+> level looking straight ahead. Keep the **lower third of the frame simple
+> and uncluttered** — figures will be placed there and detail behind them is
+> lost. Keep the interest in the middle and upper thirds. Nothing important
+> in the top-left or top-right corners, where speech balloons sit.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
-> glows or lens flare.
+> signatures, speech bubbles, logos, panel borders or motion lines. No
+> sparkles, glows or lens flare.
 >
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
@@ -890,47 +944,52 @@ chapters after it.
 
 **File:** `road.jpg`
 
-> Match the line weight, colouring, shading and background treatment of the
-> attached style reference. Do not copy or quote any character in it.
+> **If a style reference image is attached**, match its line weight,
+> colouring, shading and background treatment, and do not copy or quote any
+> character in it. If nothing is attached, follow the written style exactly
+> as described.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
 > tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
 > Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
 >
-> **Line.** Black contour line of near-constant width, closed and continuous,
-> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
-> broken linework, no cross-hatching, no visible pencil.
+> **Line.** Black contour line of near-constant width, closed and
+> continuous, and drawn **thinner and lighter than a figure's line would
+> be.** No sketchy or broken linework, no cross-hatching, no visible pencil.
 >
-> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
-> one flat shadow tone per surface, shaped as a clean geometric shape, never
-> soft-edged. No gradients except in the open sky, no texture, no grain, no
-> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
-> shown by **lighter flat colour and thinner line only.**
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients except in the open sky, no texture, no
+> grain, no airbrushing, no ambient occlusion, no blur and no
+> depth-of-field. Depth is shown by **lighter flat colour and thinner line
+> only.**
 >
-> **Backgrounds carry the realism.** This is the defining contrast of the style:
-> the world is literal and fully catalogued even though the people are simple.
-> Correct one- or two-point perspective, real architecture, and everyday objects
-> all in their places — every plank, rope, pot, wire and moored boat.
+> **Backgrounds carry the realism.** This is the defining contrast of the
+> style: the world is literal and fully catalogued even though the people
+> are simple. Correct one- or two-point perspective, real architecture, and
+> everyday objects all in their places — every plank, rope, pot, wire and
+> moored boat.
 >
-> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
-> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
-> given a colour used nowhere else in the frame — that is where the eye lands.
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green
+> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
+> object is given a colour used nowhere else in the frame — that is where
+> the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
-> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
-> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
-> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
-> conical hats as decoration, no dragons.
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
+> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
+> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
+> concrete pipes, no Japanese signage. No temples, no strings of tourist
+> lanterns, no conical hats as decoration, no dragons.
 >
-> **Composition.** An empty background plate, 16:9, camera at standing eye level
-> looking straight ahead. Keep the **lower third of the frame simple and
-> uncluttered** — figures will be placed there and detail behind them is lost.
-> Keep the interest in the middle and upper thirds. Nothing important in the
-> top-left or top-right corners, where speech balloons sit.
+> **Composition.** An empty background plate, 16:9, camera at standing eye
+> level looking straight ahead. Keep the **lower third of the frame simple
+> and uncluttered** — figures will be placed there and detail behind them is
+> lost. Keep the interest in the middle and upper thirds. Nothing important
+> in the top-left or top-right corners, where speech balloons sit.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
-> glows or lens flare.
+> signatures, speech bubbles, logos, panel borders or motion lines. No
+> sparkles, glows or lens flare.
 >
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
@@ -939,17 +998,6 @@ chapters after it.
 > blue to peach. The road runs away from the viewer toward a wide pale river
 > and low hills beyond. Two or three stars still out. The town behind is
 > dark.
-
-**When the lamp is lit** — the only place a flame ever appears — add:
-
-> The flame is small, low and domestic: a plain flat teardrop shape with a
-> single lighter shape inside it and the same black contour as everything else.
-> It does not glow, radiate, sparkle, cast rays or light anything beyond arm's
-> reach, and nothing in the frame is tinted by it.
-
-The lamp never fails and never announces itself. A picture that renders it as a
-magic item contradicts the story it sits above, and flat cel makes that
-restraint easy to hold — there is no soft light to leak.
 
 ---
 
