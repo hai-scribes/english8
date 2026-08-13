@@ -9,7 +9,7 @@ scrolls. So there are exactly two kinds of image, and the page composites them:
 
 | | What | Files |
 | --- | --- | --- |
-| **Part 1** | Five character sheets — six square emotion panels in a 3 × 2 grid, chest up, on transparency | `docs/assets/cast/<slug>.png` |
+| **Part 1** | Five character sheets — six square emotion panels in a 3 × 2 grid, chest up, on flat white to key out | `docs/assets/cast/<slug>.png` |
 | **Part 2** | Nine background plates — the story's places, drawn empty | `docs/assets/bg/<slug>.jpg` |
 
 `data/cast.json` is the contract. It declares the slugs, the six emotions and
@@ -129,11 +129,13 @@ eleven dialogues read as plain text until they are staged.
 > size.
 >
 > Every panel is cropped at the **chest**, not the waist — no stomach, no
-> hips, no legs. The background of the whole image is a **single flat
-> colour, pure magenta #FF00FF**, with no shadow, no gradient, no texture
-> and no border between panels. If you can output a **transparent background
-> (PNG with an alpha channel)** then do that instead, and leave everything
-> behind the figures fully transparent. The image is **3:2**.
+> hips, no legs. The background behind and between the figures is **pure flat white
+> #FFFFFF**, edge to edge across the whole image — no shadow, no gradient,
+> no texture, no paper tone, no border and no line between panels. **Do not
+> draw a transparency checkerboard.** Do not render a grey-and-white
+> chequered pattern, a grid, or any other stand-in for transparency: a drawn
+> checkerboard is pixels, not alpha, and is far harder to remove than plain
+> white. Plain white, and nothing else. The image is **3:2**.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -221,11 +223,13 @@ eleven dialogues read as plain text until they are staged.
 > — must read clearly in all six panels.**
 >
 > Every panel is cropped at the **chest**, not the waist — no stomach, no
-> hips, no legs. The background of the whole image is a **single flat
-> colour, pure magenta #FF00FF**, with no shadow, no gradient, no texture
-> and no border between panels. If you can output a **transparent background
-> (PNG with an alpha channel)** then do that instead, and leave everything
-> behind the figures fully transparent. The image is **3:2**.
+> hips, no legs. The background behind and between the figures is **pure flat white
+> #FFFFFF**, edge to edge across the whole image — no shadow, no gradient,
+> no texture, no paper tone, no border and no line between panels. **Do not
+> draw a transparency checkerboard.** Do not render a grey-and-white
+> chequered pattern, a grid, or any other stand-in for transparency: a drawn
+> checkerboard is pixels, not alpha, and is far harder to remove than plain
+> white. Plain white, and nothing else. The image is **3:2**.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -302,11 +306,13 @@ eleven dialogues read as plain text until they are staged.
 > dropped, hands in her lap.
 >
 > Every panel is cropped at the **chest**, not the waist — no stomach, no
-> hips, no legs. The background of the whole image is a **single flat
-> colour, pure magenta #FF00FF**, with no shadow, no gradient, no texture
-> and no border between panels. If you can output a **transparent background
-> (PNG with an alpha channel)** then do that instead, and leave everything
-> behind the figures fully transparent. The image is **3:2**.
+> hips, no legs. The background behind and between the figures is **pure flat white
+> #FFFFFF**, edge to edge across the whole image — no shadow, no gradient,
+> no texture, no paper tone, no border and no line between panels. **Do not
+> draw a transparency checkerboard.** Do not render a grey-and-white
+> chequered pattern, a grid, or any other stand-in for transparency: a drawn
+> checkerboard is pixels, not alpha, and is far harder to remove than plain
+> white. Plain white, and nothing else. The image is **3:2**.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -382,11 +388,13 @@ eleven dialogues read as plain text until they are staged.
 > shoulders dropped, notebook lowered.
 >
 > Every panel is cropped at the **chest**, not the waist — no stomach, no
-> hips, no legs. The background of the whole image is a **single flat
-> colour, pure magenta #FF00FF**, with no shadow, no gradient, no texture
-> and no border between panels. If you can output a **transparent background
-> (PNG with an alpha channel)** then do that instead, and leave everything
-> behind the figures fully transparent. The image is **3:2**.
+> hips, no legs. The background behind and between the figures is **pure flat white
+> #FFFFFF**, edge to edge across the whole image — no shadow, no gradient,
+> no texture, no paper tone, no border and no line between panels. **Do not
+> draw a transparency checkerboard.** Do not render a grey-and-white
+> chequered pattern, a grid, or any other stand-in for transparency: a drawn
+> checkerboard is pixels, not alpha, and is far harder to remove than plain
+> white. Plain white, and nothing else. The image is **3:2**.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -455,11 +463,14 @@ next, and a cat drawn six months after the rest of the cast will not match it.
 > **6 — sad:** ears down and out, eyes lowered, head dropped.
 >
 > Every panel is cropped at the **chest**, showing the head, shoulders and
-> front legs and nothing below them. The background of the whole image is a
-> **single flat colour, pure magenta #FF00FF**, with no shadow, no gradient,
-> no texture and no border between panels. If you can output a **transparent
-> background (PNG with an alpha channel)** then do that instead, and leave
-> everything behind the figures fully transparent. The image is **3:2**.
+> front legs and nothing below them.
+> The background behind and between the figures is **pure flat white
+> #FFFFFF**, edge to edge across the whole image — no shadow, no gradient,
+> no texture, no paper tone, no border and no line between panels. **Do not
+> draw a transparency checkerboard.** Do not render a grey-and-white
+> chequered pattern, a grid, or any other stand-in for transparency: a drawn
+> checkerboard is pixels, not alpha, and is far harder to remove than plain
+> white. Plain white, and nothing else. The image is **3:2**.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -1042,11 +1053,18 @@ have to agree with each other about a baseline.
    a margin down one side — shows a sliver of the neighbouring face. Re-roll
    rather than nudge; if it is close, set the canvas to a round multiple of
    three across and two down and centre each figure in its cell.
-2. **Key the background out**, across the whole sheet. If the generator returned
-   real transparency there is nothing to do; if it returned flat magenta, remove
-   that colour and save with an alpha channel. Magenta is asked for rather than
-   white because **Thảo and Khoa both wear white shirts**, and keying white
-   would eat them.
+2. **Key the white out**, across the whole sheet, then save with an alpha
+   channel. Use a **contiguous** fill or magic wand from outside the figures —
+   not a global "remove all white" — because Thảo and Khoa wear white shirts and
+   a global key would eat them. The style guarantees this works: every figure is
+   drawn with a closed, continuous black contour, so the white *inside* an
+   outline is never connected to the white outside it.
+
+   > Transparency is asked for nowhere in the prompts, deliberately. Generators
+   > asked for a transparent background tend to *draw* the grey-and-white
+   > checkerboard that editors use to depict it — pixels, not alpha, and far
+   > harder to remove than plain white. Every prompt names that failure and
+   > forbids it.
 3. **Do not trim or re-crop the panels.** The grid is what the offsets are
    computed from; cropping to the figure breaks it.
 4. Save sheets as **PNG with transparency** to `docs/assets/cast/`, plates as
@@ -1071,7 +1089,9 @@ Two things you do **not** have to do:
 | A character resembles a Doraemon character — the cat goes blue or bipedal, the boy acquires round glasses | Demote the reference image to *style only*, saying so in the prompt, and paste that character's **must not** line in verbatim. Do not keep a "close enough" variant; it contaminates everything fed from it |
 | It comes back as generic modern anime — soft shading, glossy eyes, strand-shaded hair | Re-paste the **Line** and **Colour** paragraphs in full. They are the whole defence and they degrade the moment they are summarised. Naming what it must *not* be does more work than naming what it should be |
 | The panels do not line up, or a sliver of the next face shows | They are not exactly equal sixths. The page steps by a fixed fraction, so this cannot be fixed by re-cropping — re-roll, or set the canvas to a round multiple of six and centre each figure in its sixth |
-| An avatar has a coloured box behind it | The background was never keyed out. Check the saved PNG against a dark colour — a flat magenta or white field is invisible against the generator's own preview |
+| An avatar has a white box behind it | The white was never keyed out. It is invisible against the generator's own preview — always check the saved PNG against a dark colour |
+| The sheet comes back with a grey-and-white chequered pattern behind the figures | The generator has *drawn* a transparency checkerboard instead of leaving alpha. Re-roll: every prompt already forbids it by name, so this is a miss rather than an ambiguity, and a drawn checkerboard is much harder to key than plain white |
+| Keying the white also ate a white shirt | A global "remove all white" was used. Key with a contiguous fill from outside the figure — the closed black contour keeps the shirt's white separate from the background's |
 | A plate comes back with people in it | Repeat the "no people, no animals" clause as the **first** line of the description rather than the last. It must be re-rolled, not painted out: the cast is composited on top and a drawn figure appears beside itself |
 | A plate comes back vague, empty or blurred | The style's whole contrast is simple figures against a literal world. Re-paste **Backgrounds carry the realism** and name three specific objects the plate must contain |
 | The setting drifts Japanese — sliding doors, a suburban street, a vacant lot with concrete pipes | Expected: it is copying the reference's *world* along with its style. Re-paste **Setting discipline** and add three delta-specific objects |
