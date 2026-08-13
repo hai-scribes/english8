@@ -8,16 +8,17 @@ plate, the speaker's face, and one speech balloon, advancing as the reader
 scrolls. So this file asks for exactly two kinds of image, and both are
 composited by the page rather than drawn as finished scenes:
 
-- **§2.3 — thirty avatars.** Five characters × six emotions, **half-body,
-  cropped at the waist** so the build and the clothes read, cut out on
-  transparency.
+- **§2.3 — five character sheets.** One image each, six emotion panels in a
+  row, **half-body, cropped at the waist** so the build and the clothes read,
+  on transparency. The page shows one panel by offsetting the sheet, so these
+  are saved whole and never cut up.
 - **§3 — nine background plates.** The story's four fixed places plus five
   others, drawn empty.
 
 That is why there are no longer twelve one-per-chapter scene illustrations here:
 a scene with its characters drawn in cannot change expression, and every line of
-every dialogue now needs to. Nine plates and thirty faces cover all twelve
-chapters and recombine; ninety fixed scenes would not.
+every dialogue now needs to. Nine plates and five six-panel sheets cover all
+twelve chapters and recombine; ninety fixed scenes would not.
 
 `data/cast.json` is the contract between this file and the build — §4 has the
 filenames, and `tools/build.py` fails on a dialogue naming anything the manifest
@@ -52,8 +53,8 @@ part. The characters are not, and §2.0 is the guard that keeps it that way.
    reference for the next generation. Consistency compounds.
 6. Run `python3 tools/check_cast.py` to see what is still missing.
 
-Aspect ratio: **16:9** for background plates. Avatar sheets come back as a wide
-strip of six; ask for 16:9 there too and cut them up. Say it explicitly —
+Aspect ratio: **16:9** for both. An avatar sheet is a wide strip of six panels
+in one 16:9 image, saved whole — the page does the cropping. Say it explicitly;
 Gemini defaults to square.
 
 ---
@@ -365,41 +366,49 @@ head, shoulders and front legs, on four legs, facing the viewer, cropped
 mid-body.* He never sits like a person, in any panel, for any emotion, and his
 emotions are carried by ears, eyes and tail rather than by arms.
 
-#### Cutting and naming them
+#### Saving them — the sheet is the asset, uncut
 
-The site loads these by filename, and the names are not negotiable — they are
-the same slugs `data/cast.json` declares, and `python3 tools/check_cast.py`
-lists exactly which are still missing.
+**Do not cut the sheet into six files.** It is saved whole, one file per
+character, and the page shows an emotion by sliding the image sideways behind a
+window one-sixth of its width.
 
 ```
-docs/assets/cast/<character>-<emotion>.png
+docs/assets/cast/<character>.png      ti · thao · basau · khoa · mun
 ```
 
-| Character | Slug | Files |
-| --- | --- | --- |
-| Tí | `ti` | `ti-neutral.png`, `ti-happy.png`, `ti-worried.png`, `ti-annoyed.png`, `ti-surprised.png`, `ti-sad.png` |
-| Thảo | `thao` | `thao-neutral.png` … and the same five |
-| Bà Sáu | `basau` | `basau-neutral.png` … |
-| Khoa | `khoa` | `khoa-neutral.png` … |
-| Mun | `mun` | `mun-neutral.png` … |
+That is five files rather than thirty, and it removes the step that was most
+likely to go wrong. Six separate files had to agree with each other about a
+width, a height and a baseline, and that agreement was made by hand in an image
+editor — get it slightly wrong and the character jumps or resizes every time the
+emotion changes. A single sheet cannot disagree with itself. It also means every
+emotion is already in memory the first time a character speaks, so the face
+never flickers as it changes.
 
-Three requirements on the cut files, all of which the layout depends on:
+What the sprite buys is paid for by one requirement, and it is strict:
 
-- **Transparent background.** The avatar is composited over a background plate.
-  A white box behind a character is the single most visible way to get this
-  wrong, and it is invisible on the generator's white sheet — check it against
-  a dark colour before saving.
-- **Same crop, same scale, every file.** Cut all six from one sheet at the same
-  height and the same width, so the head does not jump or resize between lines.
-  This is why the prompt pins the head's size and position even though the arms
-  are allowed to move.
-- **Cut at the waist, flush with the bottom edge.** No transparent margin along
-  the bottom: the avatar stands on the floor of the panel, and a half-figure
-  with air under it reads as a sticker. Trim any empty rows before saving.
-- **Leave the arms room.** Folded arms and a raised hand are wider than a
-  headshot, so cut every file to the same width as the *widest* of the six
-  rather than tight to each one. A per-file crop makes the character shift
-  sideways when the emotion changes.
+- **The panels must be exactly six equal sixths, edge to edge.** The page steps
+  the image by a fixed fraction, so an uneven sheet — or one with a margin down
+  one side — shows a sliver of the neighbouring face. If a sheet comes back
+  uneven, re-roll it rather than nudging it; if it is close, set the canvas
+  width to a round multiple of six and centre each figure in its sixth.
+
+And three that were always true:
+
+- **Transparent background**, across the whole sheet. A white box behind a
+  character is the single most visible way to get this wrong, and it is
+  invisible on the generator's white sheet — check it against a dark colour.
+- **Flush with the bottom edge.** No transparent margin along the bottom: the
+  avatar stands on the floor of the panel, and a half-figure with air under it
+  reads as a sticker. Trim the empty rows once, for the whole sheet.
+- **The panel order is load-bearing.** Left to right is `neutral · happy ·
+  worried · annoyed · surprised · sad`, and that is the `col` index in
+  `data/cast.json`. Reordering one without the other silently gives every
+  character the wrong face.
+
+The geometry lives in `data/cast.json` under `sheet` — `cols` and `aspect` —
+and the page derives the crop from those two numbers alone. Nothing in the CSS
+or the markup hard-codes six, so a seven-emotion sheet would need a new column
+in the manifest and no code change.
 
 Facing does not need drawing twice. The site mirrors the avatar horizontally
 for whoever is on the right, so **draw every character facing the same way** and

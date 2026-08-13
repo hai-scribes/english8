@@ -29,8 +29,8 @@ faces and come back later without the set drifting.
 python3 tools/check_cast.py    # what is declared, and what is drawn
 ```
 
-After cutting, save to `docs/assets/cast/` and `docs/assets/bg/` with exactly
-the filenames each prompt names. The page shows a dashed placeholder in the
+Save each sheet **whole and uncut** to `docs/assets/cast/`, and the plate to
+`docs/assets/bg/`, with exactly the filenames each prompt names. The page shows a dashed placeholder in the
 avatar's place until the file exists, then swaps to the art on its own.
 
 Ask for **16:9** explicitly every time — Gemini defaults to square.
@@ -39,8 +39,7 @@ Ask for **16:9** explicitly every time — Gemini defaults to square.
 
 ## 1. Tí — six-panel half-body sheet
 
-**Files:** `ti-neutral.png` · `ti-happy.png` · `ti-worried.png` ·
-`ti-annoyed.png` · `ti-surprised.png` · `ti-sad.png`
+**File:** `ti.png` — the **whole sheet, uncut**, saved as one image.
 
 > Match the line weight, colouring, shading and background treatment of the
 > attached style reference. Do not copy, quote or resemble any character in it —
@@ -80,8 +79,11 @@ Ask for **16:9** explicitly every time — Gemini defaults to square.
 > **Must not:** wear glasses of any kind; wear a yellow top with blue shorts;
 > resemble any existing Doraemon character.
 >
-> **The sheet.** Six panels in one row on a plain white background, evenly
-> spaced, identical size, identical framing. Each panel shows the **upper half
+> **The sheet.** Six panels in one row on a plain white background. **The image
+> must divide into exactly six equal vertical sixths, each holding one panel,
+> with the figure centred in its sixth and the same margin on both sides.** No
+> gap, no border and no gutter between panels — the six sixths are edge to edge
+> and fill the whole width. Identical size, identical framing. Each panel shows the **upper half
 > of the body — head, shoulders, chest, both arms and hands, cropped straight
 > across at the waist** — facing the viewer and turned very slightly to one
 > side. The shirt, the build and both hands are visible in every panel.
@@ -120,8 +122,7 @@ Ask for **16:9** explicitly every time — Gemini defaults to square.
 
 ## 2. Thảo — six-panel half-body sheet
 
-**Files:** `thao-neutral.png` · `thao-happy.png` · `thao-worried.png` ·
-`thao-annoyed.png` · `thao-surprised.png` · `thao-sad.png`
+**File:** `thao.png` — the **whole sheet, uncut**, saved as one image.
 
 > Match the line weight, colouring, shading and background treatment of the
 > attached style reference. Do not copy, quote or resemble any character in it —
@@ -161,8 +162,11 @@ Ask for **16:9** explicitly every time — Gemini defaults to square.
 > **Must not:** wear a hairband, ribbon, bow or hairclip; wear pink; resemble
 > any existing Doraemon character.
 >
-> **The sheet.** Six panels in one row on a plain white background, evenly
-> spaced, identical size, identical framing. Each panel shows the **upper half
+> **The sheet.** Six panels in one row on a plain white background. **The image
+> must divide into exactly six equal vertical sixths, each holding one panel,
+> with the figure centred in its sixth and the same margin on both sides.** No
+> gap, no border and no gutter between panels — the six sixths are edge to edge
+> and fill the whole width. Identical size, identical framing. Each panel shows the **upper half
 > of the body — head, shoulders, chest, both arms and hands, cropped straight
 > across at the waist** — facing the viewer and turned very slightly to one
 > side. The shirt, the build and both hands are visible in every panel.
@@ -201,8 +205,7 @@ Ask for **16:9** explicitly every time — Gemini defaults to square.
 
 ## 3. Bà Sáu — six-panel half-body sheet
 
-**Files:** `basau-neutral.png` · `basau-happy.png` · `basau-worried.png` ·
-`basau-annoyed.png` · `basau-surprised.png` · `basau-sad.png`
+**File:** `basau.png` — the **whole sheet, uncut**, saved as one image.
 
 > Match the line weight, colouring, shading and background treatment of the
 > attached style reference. Do not copy, quote or resemble any character in it —
@@ -233,8 +236,11 @@ Ask for **16:9** explicitly every time — Gemini defaults to square.
 > **Must not:** be drawn frail, bent or sweet; resemble any existing Doraemon
 > character.
 >
-> **The sheet.** Six panels in one row on a plain white background, evenly
-> spaced, identical size, identical framing. Each panel shows the **upper half
+> **The sheet.** Six panels in one row on a plain white background. **The image
+> must divide into exactly six equal vertical sixths, each holding one panel,
+> with the figure centred in its sixth and the same margin on both sides.** No
+> gap, no border and no gutter between panels — the six sixths are edge to edge
+> and fill the whole width. Identical size, identical framing. Each panel shows the **upper half
 > of the body — head, shoulders, chest, both arms and hands, cropped straight
 > across at the waist** — facing the viewer and turned very slightly to one
 > side.
@@ -274,8 +280,7 @@ Ask for **16:9** explicitly every time — Gemini defaults to square.
 
 ## 4. Khoa — six-panel half-body sheet
 
-**Files:** `khoa-neutral.png` · `khoa-happy.png` · `khoa-worried.png` ·
-`khoa-annoyed.png` · `khoa-surprised.png` · `khoa-sad.png`
+**File:** `khoa.png` — the **whole sheet, uncut**, saved as one image.
 
 > Match the line weight, colouring, shading and background treatment of the
 > attached style reference. Do not copy, quote or resemble any character in it —
@@ -305,8 +310,11 @@ Ask for **16:9** explicitly every time — Gemini defaults to square.
 > **Must not:** be drawn as a rival or a snob; resemble any existing Doraemon
 > character.
 >
-> **The sheet.** Six panels in one row on a plain white background, evenly
-> spaced, identical size, identical framing. Each panel shows the **upper half
+> **The sheet.** Six panels in one row on a plain white background. **The image
+> must divide into exactly six equal vertical sixths, each holding one panel,
+> with the figure centred in its sixth and the same margin on both sides.** No
+> gap, no border and no gutter between panels — the six sixths are edge to edge
+> and fill the whole width. Identical size, identical framing. Each panel shows the **upper half
 > of the body — head, shoulders, chest, both arms and hands, cropped straight
 > across at the waist** — facing the viewer and turned very slightly to one
 > side.
@@ -346,8 +354,7 @@ Ask for **16:9** explicitly every time — Gemini defaults to square.
 
 ## 5. Mun — six-panel sheet, cropped mid-body
 
-**Files:** `mun-neutral.png` · `mun-happy.png` · `mun-worried.png` ·
-`mun-annoyed.png` · `mun-surprised.png` · `mun-sad.png`
+**File:** `mun.png` — the **whole sheet, uncut**, saved as one image.
 
 Mun does not speak in any Lesson 1 dialogue yet. Generate this sheet anyway —
 he speaks in the passages, he is the character most likely to be given a line
@@ -375,8 +382,11 @@ next, and a cat drawn six months after the rest of the cast will not match it.
 > like a person, or have round mitten paws; resemble any existing Doraemon
 > character.
 >
-> **The sheet.** Six panels in one row on a plain white background, evenly
-> spaced, identical size, identical framing. Each panel shows the cat's **head,
+> **The sheet.** Six panels in one row on a plain white background. **The image
+> must divide into exactly six equal vertical sixths, each holding one panel,
+> with the figure centred in its sixth and the same margin on both sides.** No
+> gap, no border and no gutter between panels — the six sixths are edge to edge
+> and fill the whole width. Identical size, identical framing. Each panel shows the cat's **head,
 > shoulders and front legs, on four legs, facing the viewer, cropped straight
 > across mid-body.**
 >
@@ -470,19 +480,34 @@ would appear beside itself.
 
 ## After you generate
 
-1. **Cut each character sheet into six files** at the same height *and the same
-   width* — cut to the width of the widest of the six, not tight to each one, or
-   the character shifts sideways when the emotion changes.
-2. **Cut the transparency out.** A white box behind a character is invisible on
-   the generator's white sheet and glaring over a background plate — check every
-   file against a dark colour before saving.
-3. **Trim any empty rows off the bottom.** The avatar stands on the floor of the
-   panel; a half-figure with air under it reads as a sticker.
-4. Save as PNG with transparency to `docs/assets/cast/`, and the plate as JPG to
-   `docs/assets/bg/`.
+**Do not cut the sheet up.** The sheet *is* the asset: it is saved whole as
+`<slug>.png`, and the page shows one emotion by sliding the image sideways
+behind a window one-sixth of its width. Five files, not thirty, and no six
+files that have to agree with each other about a baseline.
+
+1. **Check the panels are exactly six equal sixths.** This is the one thing the
+   sprite depends on. The page steps the image by a fixed fraction, so a sheet
+   whose panels are uneven — or which has a margin down one side — shows a
+   sliver of the neighbouring face. If it comes back uneven, re-roll rather
+   than nudge it; if it is close, set the canvas width to a round multiple of
+   six and centre each figure in its sixth.
+2. **Cut the transparency out**, across the whole sheet. A white box behind a
+   character is invisible on the generator's white sheet and glaring over a
+   background plate — check against a dark colour before saving.
+3. **Trim any empty rows off the bottom**, once, for the whole sheet. The avatar
+   stands on the floor of the panel; a half-figure with air under it reads as a
+   sticker.
+4. Save as **PNG with transparency** to `docs/assets/cast/<slug>.png`, and the
+   plate as **JPG** to `docs/assets/bg/<slug>.jpg`.
 5. `python3 tools/check_cast.py` — it lists exactly what is still missing.
 6. `python3 tools/build.py` and reload Unit 1 Lesson 1.
 
-Do **not** draw any character facing left and right separately. The page mirrors
-whoever stands on the right, so every character is drawn facing one way and the
-layout turns them around.
+Two things you do **not** have to do:
+
+- **Do not draw any character facing left and right separately.** The page
+  mirrors whoever stands on the right, so every character is drawn facing one
+  way and the layout turns them around.
+- **Do not reorder the panels.** Left to right is `neutral · happy · worried ·
+  annoyed · surprised · sad`, and that order is the `col` index in
+  `data/cast.json`. Changing one without the other silently gives every
+  character the wrong face.

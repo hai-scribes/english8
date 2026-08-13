@@ -572,7 +572,7 @@ RE_BG = re.compile(r"^@bg[ \t]+(?P<slug>[a-z0-9-]+)[ \t]*$")
 
 CAST = json.loads((ROOT / "data" / "cast.json").read_text(encoding="utf-8"))
 CAST_CHARS, CAST_EMO = CAST["characters"], CAST["emotions"]
-CAST_BG = CAST["backgrounds"]
+CAST_BG, CAST_SHEET = CAST["backgrounds"], CAST["sheet"]
 
 
 def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
@@ -615,6 +615,8 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
         if who not in order:
             order.append(who)
         lines.append({"bg": bg, "who": who, "slug": c["slug"], "emo": emo,
+                      # The panel to show out of the character's one sheet.
+                      "col": CAST_EMO[emo]["col"],
                       "side": "left" if order.index(who) % 2 == 0 else "right",
                       "html": md_inline_keep(m.group("said").strip())})
     if not lines:
@@ -629,6 +631,7 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
         raise SystemExit(f"{where}: some lines are staged and some are not — put "
                          f"the @bg above the first speaker, or drop bg= entirely")
     return {"id": did, "title": a.get("title", ""), "lines": lines, "staged": staged,
+            "sheet": CAST_SHEET["cols"], "aspect": CAST_SHEET["aspect"],
             "glosses": glosses, "backgrounds": sorted(seen_bg | ({bg} if bg else set()))}
 
 

@@ -104,7 +104,13 @@ and C7. That last one is gated in `test_reading.js`.
 balloon, advancing as the reader scrolls. `data/cast.json` declares the five
 characters, the six emotions and the nine backgrounds; the build **fails** on a
 dialogue naming anything outside it, and `tools/check_cast.py` reports which
-images have actually been drawn. `research/story/illustration-prompts.md` is
+images have actually been drawn.
+
+Art is **one sheet per character**, six emotion panels in a row, saved whole and
+never cut up — the page shows a panel by offsetting the sheet. Five files, not
+thirty, and no six files that have to agree about a baseline. The `col` index in
+`data/cast.json` is the panel's position and is load-bearing: reorder it without
+regenerating the art and every character gets the wrong face. `research/story/illustration-prompts.md` is
 the brief, and its filenames and the manifest's slugs must agree.
 
 ```

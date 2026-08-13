@@ -1622,18 +1622,37 @@ function initScene(root, p){
     probe.src = bgSrc;
 
     /* No speaker means narration: the place carries the beat by itself, so the
-       avatar and the bubble both go rather than showing an empty frame. */
+       avatar and the bubble both go rather than showing an empty frame.
+
+       ONE SHEET PER CHARACTER, offset to the panel we want. Six separate files
+       had to agree on a width, a height and a baseline or the character jumped
+       between lines, and that agreement was made by hand with an image editor.
+       A single sheet cannot disagree with itself. It is also five requests
+       instead of thirty, and every emotion is already in memory the first time
+       the character speaks — no flicker when the face changes. */
     cast.innerHTML = ln.who
       ? '<div class="d-ph" data-side="' + ln.side + '"><b></b><span></span></div>'
-        + '<img class="d-av" data-side="' + ln.side + '" alt="" src="'
-        + up + ASSET_CAST + ln.slug + '-' + ln.emo + '.png">'
+        + '<div class="d-av" data-side="' + ln.side + '"></div>'
       : "";
     if (ln.who){
-      const ph = $(".d-ph", cast), img = $(".d-av", cast);
+      const ph = $(".d-ph", cast), av = $(".d-av", cast);
       $("b", ph).textContent = ln.who;
       $("span", ph).textContent = ln.emo;
-      img.addEventListener("load", () => ph.remove());
-      img.addEventListener("error", () => img.remove());
+      const src = up + ASSET_CAST + ln.slug + ".png";
+      const cols = p.sheet || 6;
+      av.style.backgroundImage = 'url("' + src + '")';
+      av.style.backgroundSize = (cols * 100) + "% 100%";
+      /* 0% puts the first panel's left edge at the box's left edge and 100%
+         puts the last panel's RIGHT edge at the box's right edge, so the step
+         between panels is 1/(cols-1), not 1/cols. */
+      av.style.backgroundPositionX = (ln.col / (cols - 1) * 100) + "%";
+      av.style.aspectRatio = String((p.aspect || 1.7778) / cols);
+      /* The sheet is one file, so it is fetched once and cached; the probe is
+         answered from cache for every later line. */
+      const probe = new Image();
+      probe.onload = () => { if (av.isConnected) ph.remove(); };
+      probe.onerror = () => { if (av.isConnected) av.remove(); };
+      probe.src = src;
     }
     bubble.innerHTML = ln.who
       ? '<div class="d-bub" data-side="' + ln.side + '">'

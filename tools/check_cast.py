@@ -21,7 +21,7 @@ complete, and for CI after that.
 Filenames are fixed by this file and by
 `research/story/illustration-prompts.md`, which must agree:
 
-    docs/assets/cast/<character-slug>-<emotion>.png
+    docs/assets/cast/<character-slug>.png     one sheet, all six emotions
     docs/assets/bg/<background-slug>.jpg
 """
 import argparse
@@ -74,8 +74,12 @@ def main() -> int:
                     continue
                 # Only a staged dialogue needs art. An unstaged one still names
                 # its speakers and they still have to be real people.
+                #
+                # One sheet per CHARACTER, not per emotion: the file carries all
+                # six panels, so a character who has spoken once needs the same
+                # single file as one who has used every face.
                 if slugs:
-                    want_av.add((c["slug"], emo))
+                    want_av.add(c["slug"])
 
     if problems:
         print(f"FAIL: {len(problems)} problem(s)")
@@ -84,13 +88,13 @@ def main() -> int:
         return 1
 
     av_dir, bg_dir = ROOT / "docs" / "assets" / "cast", ROOT / "docs" / "assets" / "bg"
-    missing_av = sorted(f"{s}-{e}.png" for s, e in want_av
-                        if not (av_dir / f"{s}-{e}.png").is_file())
+    missing_av = sorted(f"{s}.png" for s in want_av
+                        if not (av_dir / f"{s}.png").is_file())
     missing_bg = sorted(f"{s}.jpg" for s in want_bg
                         if not (bg_dir / f"{s}.jpg").is_file())
 
     have_av, have_bg = len(want_av) - len(missing_av), len(want_bg) - len(missing_bg)
-    print(f"{staged} staged dialogue(s) · {len(want_av)} avatar(s) and "
+    print(f"{staged} staged dialogue(s) · {len(want_av)} character sheet(s) and "
           f"{len(want_bg)} background(s) named · "
           f"{have_av + have_bg} of {len(want_av) + len(want_bg)} drawn")
 
@@ -108,9 +112,8 @@ def main() -> int:
     # The whole cast is what the art brief has to cover, whether a dialogue has
     # reached that character yet or not — knowing the full set up front is what
     # lets somebody draw them in one sitting and keep them consistent.
-    total = len(chars) * len(emos)
-    print(f"\n  the complete sheet is {len(chars)} character(s) x {len(emos)} "
-          f"emotion(s) = {total} avatars, plus {len(bgs)} backgrounds.")
+    print(f"\n  the complete set is {len(chars)} character sheet(s) of "
+          f"{len(emos)} panels each, plus {len(bgs)} backgrounds.")
     return 0
 
 

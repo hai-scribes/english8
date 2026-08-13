@@ -652,9 +652,12 @@ footer.foot p{margin:0;max-width:74ch}
    out of frame on a short viewport. `object-position:top` keeps the FACE when
    something has to be lost — losing a hand costs less than losing the
    expression, which is the whole reason there are six of these. */
-.d-av{position:absolute;bottom:0;height:84%;width:auto;max-width:46%;
-  object-fit:contain;object-position:bottom}
+/* One sheet per character, offset to a panel. Width comes from `aspect-ratio`,
+   set in JS from the sheet's own geometry, so nothing here hard-codes six. */
+.d-av{position:absolute;bottom:0;height:84%;max-width:46%;
+  background-repeat:no-repeat}
 .d-av[data-side=left]{left:.25rem}
+/* Drawn facing one way only; the layout turns them around. */
 .d-av[data-side=right]{right:.25rem;transform:scaleX(-1)}
 
 /* ---- placeholders, until the art lands -----------------------------------

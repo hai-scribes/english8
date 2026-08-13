@@ -19,17 +19,35 @@
     "(Ba Sau's forearms, Khoa's notebook), and the clothes and build are where",
     "most of the characterisation in this style lives.",
     "",
+    "ONE FILE PER CHARACTER, not one per emotion. The generated sheet IS the",
+    "asset: six panels in a row, saved whole as <slug>.png, and the page shows one",
+    "panel by offsetting it. That removes the cutting step, which was the most",
+    "error-prone part of the pipeline — six files that had to share a width, a",
+    "height and a baseline or the character jumped between lines. It also takes",
+    "the cast from thirty files to five.",
+    "",
+    "`col` is the panel's position in the sheet and is therefore LOAD-BEARING:",
+    "it is the offset the page uses. It must match the left-to-right order the",
+    "prompt asks for. Reordering these without regenerating the art silently",
+    "gives every character the wrong face.",
+    "",
     "research/story/illustration-prompts.md is where these are drawn from, and the",
     "slugs here are the filenames it tells you to save."
   ],
 
+  "sheet": {
+    "cols": 6,
+    "aspect": 1.7778,
+    "_comment": "The sheet is one 16:9 image of `cols` equal panels, so a panel is aspect/cols wide for its height. The page derives the crop from these two numbers alone."
+  },
+
   "emotions": {
-    "neutral":   "Talking, unremarkable. The default, and the one used most.",
-    "happy":     "Pleased, warm, amused. A real smile.",
-    "worried":   "Anxious or concerned — brows up and together.",
-    "annoyed":   "Cross, exasperated, digging in. Brows down.",
-    "surprised": "Caught out, startled. Eyes wide, mouth open.",
-    "sad":       "Quiet, downcast, hurt. Eyes lowered."
+    "neutral":   { "col": 0, "is": "Talking, unremarkable. The default, and the one used most." },
+    "happy":     { "col": 1, "is": "Pleased, warm, amused. A real smile." },
+    "worried":   { "col": 2, "is": "Anxious or concerned — brows up and together." },
+    "annoyed":   { "col": 3, "is": "Cross, exasperated, digging in. Brows down." },
+    "surprised": { "col": 4, "is": "Caught out, startled. Eyes wide, mouth open." },
+    "sad":       { "col": 5, "is": "Quiet, downcast, hurt. Eyes lowered." }
   },
 
   "characters": {
