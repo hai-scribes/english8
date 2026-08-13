@@ -136,6 +136,18 @@ function drag(win, paras, a, s, b, e) {
 
 const click = (win, el) => el.dispatchEvent(new win.MouseEvent("click", { bubbles: true }));
 
+/* The app's own `owned()` rule, restated for the test: the tasks below a timer
+   and above the next one. Asking the page rather than trusting a hard-coded
+   index, so a lesson that gains an exercise does not silently test nothing. */
+function owned2(doc, timer) {
+  const all = Array.from(doc.querySelectorAll('[data-role="clock"], [data-role="audio"]'));
+  const next = all.find(t =>
+    timer.compareDocumentPosition(t) & 4 /* DOCUMENT_POSITION_FOLLOWING */);
+  const below = (a, b) => !!(a.compareDocumentPosition(b) & 4);
+  return Array.from(doc.querySelectorAll('[data-role="task"]'))
+    .filter(x => below(timer, x) && !(next && below(next, x)));
+}
+
 async function main() {
   /* ---- paragraph labels, highlighting, notes, and the question bar ------ */
   {
@@ -493,6 +505,130 @@ async function main() {
        language.dataset.done === "1");
   }
 
+  /* ---- the vocabulary intake: meet, recall, list -------------------------
+     Three stages over one set. The stage that matters most is the last one,
+     because it is where a well-meaning "you improved!" would go in and where
+     E3/E9 say it may not. */
+  {
+    const win = await settled(load("docs/unit-01/lesson-2/index.html", null, fastPage));
+    const doc = win.document;
+    const box = doc.querySelector('[data-role="vocab"]');
+    ok("intake: the intake renders on A Closer Look 1", !!box);
+
+    const data = JSON.parse(doc.getElementById("page-data").textContent);
+    const set = data.vocabIntake[0];
+    ok("intake: it is chunked, not run whole",
+       set.size < set.words.length, set.size + " of " + set.words.length);
+
+    /* Stage 1 shows one word, and only one. */
+    const shown = box.querySelectorAll(".v-w");
+    ok("intake: stage one shows exactly one word", shown.length === 1, shown.length);
+    ok("intake: with its Vietnamese", !!box.querySelector(".v-vi"));
+
+    /* Walk the whole first set; the last card hands over to the engine. */
+    for (let i = 0; i < set.size; i++) {
+      const next = box.querySelector('[data-v="next"]');
+      if (!next) break;
+      click(win, next);
+      await new Promise(r => setTimeout(r, 20));
+    }
+    ok("intake: the last card hands over to the question engine",
+       !!box.querySelector(".engine"), box.querySelector(".v-stage").innerHTML.slice(0, 60));
+
+    /* Stage three is reached by seeding a finished attempt rather than by
+       answering through the engine: the engine re-queues a miss on purpose
+       ("wrong answers come straight back"), so a walk that answers everything
+       wrong never terminates. Seeding also exercises the restore path — a
+       learner returning tomorrow lands on the set they finished, not back at
+       word one. */
+    const w2 = await settled(load("docs/unit-01/lesson-2/index.html", {
+      ["en8:intake:" + set.id]: JSON.stringify([
+        { set: 0, right: 5, total: 9, at: Date.now() - 8e4 },
+        { set: 0, right: 7, total: 9, at: Date.now() },
+      ]),
+    }, fastPage));
+    const box2 = w2.document.querySelector('[data-role="vocab"]');
+    ok("intake: a returning learner lands on the set they finished",
+       !!box2.querySelector(".v-list"));
+    ok("intake: and is offered the same set again",
+       !!box2.querySelector('[data-v="retest"]'));
+
+    const log = box2.querySelector(".v-log").textContent;
+    ok("intake: both attempts are listed separately",
+       /#1 — 5\/9/.test(log) && /#2 — 7\/9/.test(log), log.slice(0, 110));
+    ok("intake: nothing is totalled, averaged or called progress",
+       !/total|average|overall|mastered|improv|better|worse|%/i.test(log),
+       log.slice(0, 160));
+  }
+
+  /* ---- a retake is a new attempt, and never reaches a spent timer ---------
+     Repeated retrieval is what builds memory, so an untimed task offers
+     "Try it again". The two things that must hold: the attempt history
+     survives the reset (or the second go is the only one that ever existed),
+     and the button is absent on anything a timer has already spent -- a
+     retake on a single-play listening set repeals C6 without saying so. */
+  {
+    const win = await settled(load("docs/unit-01/lesson-2/index.html", null, fastPage));
+    const doc = win.document;
+    const task = doc.querySelector('[data-role="task"]');
+    const answer = (t, v) => {
+      const box = t.querySelector(".i-in");
+      if (box){ box.value = v; box.dispatchEvent(new win.Event("input", { bubbles:true })); return; }
+      const radio = t.querySelectorAll(".i-opt input")[v === "right" ? 0 : 1];
+      if (radio){ radio.checked = true;
+        radio.dispatchEvent(new win.Event("change", { bubbles:true })); }
+    };
+
+    answer(task, "zz");
+    click(win, task.querySelector(".t-check"));
+    await new Promise(r => setTimeout(r, 40));
+    ok("retake: an untimed task is committed on Check", task.dataset.done === "1");
+
+    const again = task.querySelector(".t-again");
+    ok("retake: an untimed task offers Try it again", again && !again.hidden);
+
+    click(win, again);
+    await new Promise(r => setTimeout(r, 40));
+    ok("retake: the second go starts blank, not editable-in-place",
+       task.dataset.done !== "1"
+       && !task.querySelector(".i-out").innerHTML.trim()
+       && !(task.querySelector(".i-in") || {}).disabled);
+
+    answer(task, "zz");
+    click(win, task.querySelector(".t-check"));
+    await new Promise(r => setTimeout(r, 40));
+    const hist = task.querySelector(".t-log").textContent;
+    ok("retake: both attempts are kept", /#1/.test(hist) && /#2/.test(hist), hist.slice(0, 90));
+    ok("retake: attempts are not totalled, averaged or called an improvement",
+       !/total|average|overall|better|worse|improv|%/i.test(hist), hist.slice(0, 120));
+
+    /* And the half that protects the constitution. */
+    const w2 = await settled(load("docs/unit-01/lesson-6/index.html", null, fastPage));
+    const d2 = w2.document;
+    const player = d2.querySelector('[data-role="audio"]');
+    const listening = owned2(d2, player)[0];
+    ok("retake: the listening page has a player with tasks below it", !!player && !!listening);
+    click(w2, player.querySelector(".p-start"));
+    await new Promise(r => setTimeout(r, 60));
+    const li = listening.querySelector(".i-opt input") || listening.querySelector(".i-in");
+    if (li){
+      if (li.type === "radio"){ li.checked = true;
+        li.dispatchEvent(new w2.Event("change", { bubbles:true })); }
+      else { li.value = "zz"; li.dispatchEvent(new w2.Event("input", { bubbles:true })); }
+    }
+    listening.querySelectorAll(".i-conf button[data-conf='1']")
+      .forEach(b => click(w2, b));
+    click(w2, listening.querySelector(".t-check"));
+    await new Promise(r => setTimeout(r, 40));
+    const a2 = listening.querySelector(".t-again");
+    /* Both halves are load-bearing and were probed: the task really does reach
+       done=1, and `.t-again` really is present in the shell. Without either,
+       this assertion would pass by accident and guard nothing. */
+    ok("retake: the spent-play task is committed", listening.dataset.done === "1");
+    ok("retake: no Try it again on a task whose single play is spent",
+       !a2 || a2.hidden, a2 ? "shown" : "absent");
+  }
+
   /* ---- the review queue is interleaved, not grouped ----------------------
      Blocked practice — one kind of thing at a time — wins while a distinction
      is new; interleaved practice wins on a delayed test. The course gets that
@@ -505,14 +641,35 @@ async function main() {
   {
     const seeded = {};
     const day = Math.floor(Date.now() / 86400000);
-    /* Make one item of each kind due, from several units. */
-    const want = [["01", "grammar", "3.1-1"], ["01", "function", "4.3-1"],
-                  ["01", "pron", "2.5-1"], ["02", "grammar", "3.1-1"],
-                  ["02", "function", "4.1-1"], ["02", "pron", "2.5-1"],
-                  ["03", "grammar", "3.1-1"], ["03", "pron", "2.6-1"]];
+    /* Seeds are READ OFF the built payload, never hand-written. Hard-coded
+       exercise ids ("01:grammar:3.1-1") make this test fail whenever a unit
+       renumbers an exercise or the enrolment rule changes which item it takes
+       — a false alarm about content, dressed as a failure of the queue. What
+       is under test is that the queue interleaves, and that holds whichever
+       items happen to be enrolled. */
+    const home = JSON.parse(/<script id="page-data"[^>]*>([\s\S]*?)<\/script>/
+      .exec(fs.readFileSync(path.join(ROOT, "docs/index.html"), "utf8"))[1]);
+    const perKind = {};
+    for (const r of home.review) {
+      if (r.type === "word" || r.type === "colloc") continue;
+      (perKind[r.type] = perKind[r.type] || []).push(r);
+    }
+    /* One item of each kind, from as many different units as there are kinds,
+       so a queue that grouped by unit would look grouped by kind too. */
+    const want = [];
+    Object.keys(perKind).forEach((kind, i) => {
+      const seen = new Set();
+      for (const r of perKind[kind]) {
+        if (seen.has(r.unit) || want.length >= 8) continue;
+        seen.add(r.unit);
+        want.push(r);
+        if (seen.size >= 3) break;
+      }
+    });
     const rec = {};
-    for (const [u, kind, id] of want)
-      rec[u + ":" + kind + ":" + id] = { due: day - 1, seen: 1, kept: 0, delayed: 0 };
+    for (const r of want)
+      rec[r.unit + ":" + r.type + ":" + String(r.id).toLowerCase()] =
+        { due: day - 1, seen: 1, kept: 0, delayed: 0 };
     seeded["en8:review:v1"] = JSON.stringify(rec);
 
     /* Seeded in beforeParse, not after: REVIEW is read at module scope while

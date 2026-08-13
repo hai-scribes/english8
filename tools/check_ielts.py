@@ -485,7 +485,7 @@ def over_limit(given: str, words: str) -> bool:
 # used to render its own source, keys and all, and no gate could see it.
 RE_OPENER = re.compile(r"^:::[ \t]*(?P<name>[A-Za-z][\w-]*)", re.M)
 KNOWN_DIRECTIVES = {"bridge", "task", "audio", "write", "clock", "thread", "passage",
-                    "dialogue", "fluency"}
+                    "dialogue", "fluency", "vocab"}
 
 RE_DLG = re.compile(r"^:::[ \t]*dialogue\b(?P<attrs>[^\n]*)\n(?P<body>.*?)\n:::[ \t]*$",
                     re.M | re.S)

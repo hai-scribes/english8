@@ -151,11 +151,11 @@ RE_THREAD = re.compile(r"^:::[ \t]*thread\b(?P<attrs>[^\n]*)\n(?P<body>.*?)"
 # a misspelled directive name (":::taskk") fails to match instead of matching
 # ":::task" with the rest silently dropped.
 RE_DIRECTIVE = re.compile(
-    r"^:::[ \t]*(?P<kind>task|audio|write|clock|thread|passage|dialogue|fluency)\b(?P<attrs>[^\n]*)\n"
+    r"^:::[ \t]*(?P<kind>task|audio|write|clock|thread|passage|dialogue|fluency|vocab)\b(?P<attrs>[^\n]*)\n"
     r"(?P<body>.*?)\n?:::[ \t]*$", re.M | re.S)
 WIDGET = "\x00W%d\x00"
 
-TASK_ATTRS = {"type", "skill", "words", "ask", "either", "opts"}
+TASK_ATTRS = {"type", "skill", "words", "ask", "either", "opts", "variant"}
 TASK_REQUIRED = {"type", "skill"}
 
 # The official inventories, verbatim from the two format pages: Listening names
@@ -211,6 +211,51 @@ PICK_SETS = {
     "yes-no-not-given":     ["YES", "NO", "NG"],
 }
 
+# ------------------------------------------------------------- the variants --
+# A `type` says what an exercise IS in the test's own vocabulary. It does not
+# say what the learner does. Five different exercise genres were all shipping as
+# `type="choice"` with their real instruction hand-written into `ask=` prose:
+# odd-one-out, error correction, sentence transformation, preposition choice.
+# Because the instruction lived in the unit, polishing one polished one — and
+# because the widget was inferred from whether `opts=` happened to be present,
+# "Pick the word that does not belong" shipped as a free-text box in which
+# spelling could cost the mark on a task about meaning.
+#
+# A variant is where the genre lives. It owns the canonical instruction, the
+# widget, and the rule that says an item is well-formed. Fix it here and every
+# unit that names it is fixed.
+#
+#   ask         The instruction, authored once. A task's own `ask=` is EXTRA
+#               detail appended to it, never a replacement — so the genre's
+#               wording cannot drift unit by unit.
+#   widget      "pick-from-line" derives the options from the item's own
+#               `·`-separated list; anything else falls through to the existing
+#               inference (shared `opts=`, inline "(a)", or a text box).
+VARIANTS = {
+    "odd-one-out": {
+        "types": {"choice"},
+        "label": "Odd one out",
+        "ask": "One item in each line does not belong with the others. Pick it.",
+        "widget": "pick-from-line",
+    },
+    "error-correction": {
+        "types": {"short-answer"},
+        "label": "Correct the mistake",
+        "ask": "Each sentence has exactly one mistake. Write only the words that "
+               "should replace the wrong ones — not the whole sentence.",
+        "widget": "type",
+    },
+    "sentence-build": {
+        "types": {"short-answer"},
+        "label": "Build the sentence",
+        "ask": "Build a full sentence from the words you are given. Change the "
+               "form of a word where you need to, and write the whole sentence.",
+        "widget": "type",
+    },
+}
+# The separator an odd-one-out line uses between its candidates.
+ODD_SEP = "·"
+
 RE_ITEM = re.compile(
     r"^[-*][ \t]+(?P<prompt>.+?)[ \t]+=[ \t]+(?P<key>[^~\n]+?)"
     r"(?:[ \t]+~[ \t]+(?P<why>.+))?$", re.M)
@@ -248,16 +293,42 @@ def parse_task_body(a: dict, body: str) -> dict:
     what lets the generator author the answer-key entry from the same source
     the widget is built from, so the two cannot drift apart.
     """
+    variant = a.get("variant")
+    if variant:
+        spec = VARIANTS.get(variant)
+        if not spec:
+            raise SystemExit(f"unknown variant={variant!r} — one of "
+                             f"{', '.join(sorted(VARIANTS))}")
+        if a.get("type") not in spec["types"]:
+            raise SystemExit(f"variant={variant!r} does not attach to "
+                             f"type={a.get('type')!r} — it wants "
+                             f"{' or '.join(sorted(spec['types']))}")
     # A fixed option set shared by every item — "S|C", "/ʊə/|/ɔɪ/". Written
     # once on the task rather than repeated on twelve lines.
     shared = [x.strip() for x in a["opts"].split("|")] if a.get("opts") else None
+    pick_line = bool(variant) and VARIANTS[variant]["widget"] == "pick-from-line"
     items = []
     for im in RE_ITEM.finditer(body):
         prompt, key = im.group("prompt").strip(), im.group("key").strip()
         item = {"q": prompt, "key": key}
         if im.group("why"):
             item["why"] = im.group("why").strip()
-        if not shared and RE_MCQ_OPT.search(prompt):
+        if pick_line:
+            # The line IS the question: its candidates are the options, so the
+            # prompt empties out and nothing is left to type. The key must be
+            # one of them, which is the check that catches a candidate edited
+            # in the line but not in the key — silently unanswerable before.
+            cands = [c.strip() for c in prompt.split(ODD_SEP) if c.strip()]
+            if len(cands) < 3:
+                raise SystemExit(f"variant=odd-one-out: {prompt!r} offers "
+                                 f"{len(cands)} candidate(s) — an odd one out "
+                                 f"needs at least three to be odd against")
+            if key not in cands:
+                raise SystemExit(f"variant=odd-one-out: key {key!r} is not one "
+                                 f"of the candidates in {prompt!r}")
+            item["q"] = ""
+            item["opts"] = [{"k": c, "t": c} for c in cands]
+        elif not shared and RE_MCQ_OPT.search(prompt):
             # Inline "(a) … (b) … (c) …", the layout the official sample tasks
             # use. Everything before the first marker is the stem.
             opts = [(o.group("letter"), o.group("text").strip())
@@ -305,6 +376,7 @@ def task_payload(u, lesson, ex_id, a: dict, idx: int = 0) -> dict:
         "ex": ex_id,
         "skill": a["skill"],
         "type": a["type"],
+        "variant": a.get("variant", ""),
         "words": a.get("words", ""),
         "either": a.get("either", ""),
         "conf": a["skill"] == "listening",
@@ -335,7 +407,10 @@ def task_html(p: dict, a: dict) -> str:
     author cannot ship a completion task whose limit is only in their head.
     """
     types = TASK_TYPES[p["skill"]]
-    label = types.get(p["type"], p["type"])
+    spec = VARIANTS.get(p.get("variant") or "")
+    # The variant is what the learner is actually doing, so it wins the label.
+    # "Odd one out" tells them more than "Choose the right one" ever did.
+    label = spec["label"] if spec else types.get(p["type"], p["type"])
     # Rules about *writing* an answer are noise on a task where the answer is
     # picked from buttons. Printing them anyway is how a rules box stops being
     # read.
@@ -351,7 +426,11 @@ def task_html(p: dict, a: dict) -> str:
                 f'</span><span class="t-t">{e(label)}</span>')
         rules = MARKING_RULES if typed else PICK_RULES
     limit = (f'<p class="t-lim">{word_limit_text(p["words"])}</p>' if p.get("words") else "")
-    ask = f'<p class="t-ask">{inline(a["ask"])}</p>' if a.get("ask") else ""
+    # The variant's instruction first, then whatever this task adds — never
+    # instead of. An author who wants different wording for the genre changes
+    # VARIANTS, which changes it everywhere it is used.
+    said = ([spec["ask"]] if spec else []) + ([a["ask"]] if a.get("ask") else [])
+    ask = f'<p class="t-ask">{" ".join(inline(s) for s in said)}</p>' if said else ""
     conf = ('<p class="t-conf">Mark <b>sure</b> or <b>not sure</b> next to each answer '
             '<i>before</i> you check, so you can see whether your <b>sure</b> answers '
             'really are right more often.</p>') if p["conf"] else ""
@@ -362,7 +441,9 @@ def task_html(p: dict, a: dict) -> str:
             f'{conf}'
             f'<div class="t-items"></div>'
             f'<div class="t-foot"><button class="btn t-check" type="button">Check answers</button>'
+            f'<button class="btn quiet t-again" type="button" hidden>Try it again</button>'
             f'<span class="t-score" role="status"></span></div>'
+            f'<div class="t-log"></div>'
             f'</div>')
 
 
@@ -482,6 +563,71 @@ def md_inline_keep(s: str) -> str:
     parts = re.split(r"(<button class=\"gl\".*?</button>)", s)
     return "".join(p if p.startswith('<button class="gl"') else inline(p)
                    for p in parts)
+
+
+# ------------------------------------------------------ the vocabulary intake --
+# A Closer Look 1 printed a thirty-seven-row table and an exercise under it.
+# A table is a reference, not an intake: nothing makes the learner meet a word
+# before being asked to use it, and nothing brings the set back before the
+# exercise has moved on.
+#
+# The intake is three stages over the SAME set, in one place:
+#
+#   meet    one word at a time, with its Vietnamese, its collocation and an
+#           example. Nothing is asked yet.
+#   recall  the set just met, immediately, through the existing engine. This
+#           is retrieval practice, not a report on the learner.
+#   list    the whole set laid out, and the recall stage offered again.
+#
+# Two rules bound what the last stage may say. `09` **E5** — nothing is marked
+# learned in the session that taught it, so this stage never says "mastered"
+# and the delayed check stays the review queue's job. `09` **E9** and **E3** —
+# attempts are listed one per line and never averaged, trended or called an
+# improvement, because a second run of the same set is regression to the mean
+# as much as it is learning, and nothing here can tell the two apart.
+#
+# The set is CHUNKED rather than run whole. Meeting thirty-seven words before
+# the first question is not an intake either, and `size` is the only knob.
+VOCAB_DEFAULT_SIZE = 8
+
+
+def vocab_payload(u, lesson, a: dict, idx: int) -> dict:
+    where = f"{u['src']} lesson {lesson} (vocab)"
+    try:
+        size = int(a.get("size", VOCAB_DEFAULT_SIZE))
+    except ValueError:
+        raise SystemExit(f"{where}: size= must be a whole number")
+    if size < 3:
+        raise SystemExit(f"{where}: size={size} — a set below three words is not "
+                         f"an intake, it is a flashcard")
+    words = practice_data(u)
+    rows = a.get("rows", "")
+    if rows:
+        # "1-18" — the table rows this intake covers, so a unit whose table is
+        # split across two teaching blocks can run one intake per block.
+        try:
+            lo, _, hi = rows.partition("-")
+            lo, hi = int(lo), int(hi or lo)
+        except ValueError:
+            raise SystemExit(f"{where}: rows= must be 'N' or 'N-M'")
+        words = [w for w in words if lo <= int(w["n"]) <= hi]
+        if not words:
+            raise SystemExit(f"{where}: rows={rows!r} selects no word in this "
+                             f"unit's table")
+    return {"id": f"{u['nn']}-{lesson}-v{idx + 1}", "size": size, "words": words}
+
+
+def vocab_html(p: dict) -> str:
+    n = len(p["words"])
+    sets = (n + p["size"] - 1) // p["size"]
+    return (f'<div class="vocab" data-role="vocab" data-vocab="{e(p["id"])}">'
+            f'<div class="v-h"><span class="v-k">New words</span>'
+            f'<span class="v-t">{n} words · {sets} set{"s" if sets != 1 else ""}</span></div>'
+            f'<p class="v-say">Meet them one at a time, then answer on the set you '
+            f'have just met. Nothing is marked learned today — what you still have '
+            f'in a week is the part that counts, and the review queue asks you then.</p>'
+            f'<div class="v-stage"></div>'
+            f'<div class="v-log"></div></div>')
 
 
 # --------------------------------------------------------- the fluency strand --
@@ -1239,13 +1385,25 @@ def _review_row(nn, kind, lesson, blk, item, n, t=None):
     row = {"unit": nn, "type": kind, "lesson": lesson,
            "id": f"{blk.get('id') or blk.get('title')}-{n}",
            "q": item["q"], "a": item["key"]}
-    opts = (item.get("options") or (t or {}).get("opts"))
+    # `item["opts"]` — the parser has never written `item["options"]`, so for
+    # four years this read the shared `opts=` attribute or nothing, and every
+    # item carrying its OWN option set (an inline "(a)(b)(c)" multiple choice,
+    # an odd-one-out line) reached the queue with no options at all. That is the
+    # exact unanswerable item the paragraph above says this exists to prevent.
+    opts = (item.get("opts") or (t or {}).get("opts"))
     if isinstance(opts, str):
         opts = [x.strip() for x in opts.split("|") if x.strip()]
     if opts:
-        row["opts"] = [o[1] if isinstance(o, (list, tuple)) else str(o) for o in opts]
-    if (t or {}).get("ask"):
-        row["ask"] = t["ask"]
+        row["opts"] = [o["k"] if isinstance(o, dict)
+                       else o[1] if isinstance(o, (list, tuple))
+                       else str(o) for o in opts]
+    # The instruction the learner needs is the variant's, plus whatever this
+    # task added. A queued odd-one-out whose prompt is its own candidate list
+    # is four buttons and no question without it.
+    spec = VARIANTS.get((t or {}).get("variant") or "")
+    said = ([spec["ask"]] if spec else []) + ([t["ask"]] if (t or {}).get("ask") else [])
+    if said:
+        row["ask"] = " ".join(said)
     if item.get("why"):
         row["why"] = item["why"]
     if blk.get("title"):
@@ -1283,7 +1441,14 @@ def review_items(u) -> list:
                         "vi": w.get("vi", ""), "from": "Collocation"})
             n_col += 1
 
-    picked = {"pron": 0, "grammar": 0, "function": 0}
+    # Candidates first, cap afterwards. Taking the first N items encountered
+    # made the queue an accident of exercise order: unit 1's entire grammar
+    # review was "enjoy -> 1, would love -> 3", four recalls of an arbitrary
+    # group number, because a classification drill happened to be printed above
+    # the gap-fill. What comes back seven days later should be the item that
+    # asks the learner to PRODUCE the form, so produced items outrank picked
+    # ones and the cap is applied to the ranked list.
+    cand = {"pron": [], "grammar": [], "function": []}
     fn_block = None
     l2 = [blk.get("id") for lesson, blk, _ in u["tasks"] if lesson == 2]
     last_l2 = l2[-1] if l2 else None
@@ -1305,15 +1470,19 @@ def review_items(u) -> list:
                 fn_block = blk.get("id")
             if blk.get("id") == fn_block:
                 kind = "function"
-        if not kind or picked[kind] >= REVIEW_CAP[kind]:
+        if not kind:
             continue
         for n, item in enumerate(t["items"], 1):
-            if picked[kind] >= REVIEW_CAP[kind]:
-                break
             if not item.get("key"):
                 continue
-            out.append(_review_row(u["nn"], kind, lesson, blk, item, n, t))
-            picked[kind] += 1
+            row = _review_row(u["nn"], kind, lesson, blk, item, n, t)
+            cand[kind].append((0 if not row.get("opts") else 1, len(cand[kind]), row))
+
+    for kind, rows in cand.items():
+        # Rank by produced-before-picked, then by the order the unit taught
+        # them, so the queue is stable when a unit has only one sort of item.
+        rows.sort(key=lambda r: (r[0], r[1]))
+        out.extend(r[2] for r in rows[:REVIEW_CAP[kind]])
     return out
 
 
@@ -2030,7 +2199,7 @@ def block_prose(u, lesson, b, payload) -> str:
     """
     out = render(b["md"])
     n_task = n_audio = n_write = n_clock = n_pass = 0
-    n_dlg, n_flu = [0], [0]
+    n_dlg, n_flu, n_voc = [0], [0], [0]
     for i, (kind, d) in enumerate(b["widgets"]):
         if kind == "passage":
             p, html_ = passage_block(u, lesson, d[0], d[1], n_pass)
@@ -2062,6 +2231,11 @@ def block_prose(u, lesson, b, payload) -> str:
             p = fluency_payload(u, lesson, d[0], d[1], fid)
             payload.setdefault("fluency", []).append(p)
             html_ = fluency_html(p)
+        elif kind == "vocab":
+            p = vocab_payload(u, lesson, d, n_voc[0])
+            n_voc[0] += 1
+            payload.setdefault("vocabIntake", []).append(p)
+            html_ = vocab_html(p)
         elif kind == "thread":
             html_ = thread_html(d, THREADS)
         else:
@@ -2165,7 +2339,8 @@ def page_lesson(u, L) -> str:
                        "titles": {str(x["n"]): x["title"] for x in u["lessons"]},
                        "tasks": payload["tasks"], "audio": payload["audio"],
                        "write": payload["write"], "clock": payload["clock"],
-                       "passage": payload["passage"]},
+                       "passage": payload["passage"],
+                       "vocabIntake": payload.get("vocabIntake", [])},
                  desc=f"Unit {u['num']} Lesson {L['n']}: {L['title']}.")
 
 

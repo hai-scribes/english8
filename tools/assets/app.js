@@ -667,7 +667,12 @@ function buildItems(words, mode){
 
 const MODE_LABEL = { practice:"Practice", test:"Unit test", review:"Review" };
 
-function runEngine(mode, words, unit, hostSel){
+/* `opts.onDone({right, total})` lets a caller own what happens at the end
+   instead of the engine's own result card — the vocabulary intake needs the
+   engine's questions but its own next step. Everything up to the last answer
+   is identical, which is the point: one engine, not a second one that drifts. */
+function runEngine(mode, words, unit, hostSel, opts){
+  opts = opts || {};
   const host = $(hostSel || "#engine");
   if (!host || !words || !words.length) return;
   const st = { items:buildItems(words, mode), i:0, right:0, wrong:[], mode, unit,
@@ -810,6 +815,7 @@ function runEngine(mode, words, unit, hostSel){
 
   function paintDone(){
     const total = st.items.length;
+    if (opts.onDone){ opts.onDone({ right: st.right, total }); return; }
     if (st.mode === "test" && st.unit){
       const r = unitRec(st.unit);
       const pct = Math.round(st.right / total * 100);
@@ -1324,10 +1330,70 @@ function initTasks(){
     check.addEventListener("click", () => {
       const answers = read();
       const marks = settle(answers, conf, true);
-      TASKS[t.id] = { score: marks.filter(m => m.ok).length, of: marks.length,
-                      at: Date.now(), given: answers, conf: conf.slice() };
+      const score = marks.filter(m => m.ok).length;
+      const log = ((TASKS[t.id] || {}).log || []).concat(
+        [{ score, of: marks.length, at: Date.now() }]);
+      TASKS[t.id] = { score, of: marks.length,
+                      at: Date.now(), given: answers, conf: conf.slice(), log };
       saveTasks();
+      paintLog();
       document.dispatchEvent(new CustomEvent("en8:task-done", { detail:{ id:t.id } }));
+    });
+
+    /* ---- taking it again ---------------------------------------------------
+       Repeated retrieval is the thing that builds durable memory, so locking a
+       task after one attempt costs learning for nothing. What it must NOT
+       become is an edit: a second go is a second attempt, from blank, and both
+       are kept.
+
+       Three things this deliberately does not do, each from a rule that a
+       friendlier version would break. It does not average the attempts (`09`
+       E3: an accuracy line is not the progress story). It does not draw a
+       trend or say "better" (E9: a single retest is regression to the mean as
+       much as learning, and nothing here can tell them apart). And it does not
+       appear at all on a task a timer has already spent -- otherwise "Try it
+       again" quietly repeals the single play and the one clock. */
+    const again = $(".t-again", root), logBox = $(".t-log", root);
+
+    /* The nearest timer ABOVE this task is the one that owns it -- the inverse
+       of `owned()`, asked from the task's end. */
+    function ownerTimer(){
+      const mine = $$(TIMERS).filter(x =>
+        x.compareDocumentPosition(root) & Node.DOCUMENT_POSITION_FOLLOWING);
+      return mine.length ? mine[mine.length - 1] : null;
+    }
+    function timerSpent(){
+      const tm = ownerTimer();
+      if (!tm) return false;
+      const key = tm.dataset.audio ? "en8:played:" + tm.dataset.audio
+                : tm.dataset.clock ? "en8:clock:" + tm.dataset.clock : null;
+      if (!key) return false;
+      try { return !!JSON.parse(localStorage.getItem(key) || "null"); } catch(e){ return false; }
+    }
+
+    function paintLog(){
+      const rec = TASKS[t.id] || {};
+      const log = rec.log || [];
+      /* One line per attempt, each carrying its own count. Never a total, a
+         percentage or an arrow. */
+      logBox.innerHTML = log.length < 2 ? "" :
+        '<p class="t-hist"><b>Your attempts:</b> '
+        + log.map((a, i) => "#" + (i + 1) + " — " + a.score + "/" + a.of).join(" · ")
+        + '</p><p class="t-hist small">These are separate attempts, not a score '
+        + 'going up or down. What you remember after a few days is the part that '
+        + 'counts, and that is what the review queue checks.</p>';
+      if (!again) return;
+      again.hidden = !(root.dataset.done === "1" && !timerSpent());
+    }
+
+    if (again) again.addEventListener("click", () => {
+      if (timerSpent()) { again.hidden = true; return; }
+      const keep = (TASKS[t.id] || {}).log || [];
+      TASK_RESET[t.id]();
+      TASKS[t.id] = { log: keep };        // the history outlives the answers
+      saveTasks();
+      paintLog();
+      $(".i", root).scrollIntoView({ behavior: "smooth", block: "center" });
     });
 
     /* Undo a marked attempt completely: the stored answers go too, or a
@@ -1357,6 +1423,7 @@ function initTasks(){
       root.dataset.done = "";
       delete root.dataset.timeup;
       if (t.conf) gate();
+      if (again) again.hidden = true;
     };
 
     const was = TASKS[t.id];
@@ -1383,6 +1450,7 @@ function initTasks(){
       });
       settle(was.given, conf, false);
     }
+    paintLog();
   });
 }
 
@@ -1497,6 +1565,116 @@ function initDialogue(){
     root.addEventListener("keydown", ev => {
       if (ev.key === "Escape" && open) shut(open);
     });
+  });
+}
+
+/* ---------------- the vocabulary intake -----------------------------------
+   Meet the words one at a time, answer on the set just met, then see the whole
+   set with the option to run it again.
+
+   The middle stage is the existing engine, called with an `onDone` so this can
+   own the step after it. Reusing it is deliberate: the engine already asks
+   items as collocations and in context (`09` F7), already speaks them (F3),
+   and already schedules what it touches. A second, simpler quiz written here
+   would have none of that and would look identical.
+
+   What the last stage may say is bounded exactly as a task's attempt log is:
+   one line per run, nothing summed, nothing called progress. */
+function initVocab(){
+  (DATA.vocabIntake || []).forEach(p => {
+    const root = document.querySelector('[data-vocab="' + p.id + '"]');
+    if (!root || !p.words.length) return;
+    const stage = $(".v-stage", root), logBox = $(".v-log", root);
+    const KEY = "en8:intake:" + p.id;
+
+    const sets = [];
+    for (let i = 0; i < p.words.length; i += p.size)
+      sets.push(p.words.slice(i, i + p.size));
+
+    let log = [];
+    try { log = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch(e){}
+    const save = () => { try { localStorage.setItem(KEY, JSON.stringify(log)); } catch(e){} };
+
+    function paintLog(){
+      /* Grouped by set, one line per attempt at that set. No total across
+         sets, no average, no arrow: `09` E3 and E9. */
+      const bySet = {};
+      for (const a of log) (bySet[a.set] = bySet[a.set] || []).push(a);
+      const rows = Object.keys(bySet).sort((a, b) => a - b).map(k =>
+        '<div>Set ' + (Number(k) + 1) + ': '
+        + bySet[k].map((a, i) => "#" + (i + 1) + " — " + a.right + "/" + a.total).join(" · ")
+        + '</div>').join("");
+      logBox.innerHTML = rows
+        ? '<p class="t-hist"><b>What you have answered so far</b></p>'
+          + '<div class="v-rows">' + rows + '</div>'
+          + '<p class="t-hist small">Separate attempts, listed as they happened. '
+          + 'Answering the same set again today is worth much less than answering '
+          + 'it again next week, which is what the review queue is for.</p>'
+        : "";
+    }
+
+    /* ---- stage 1: meet them, one at a time ---- */
+    function meet(si, wi){
+      const set = sets[si], w = set[wi];
+      const eg = w.cloze ? w.cloze.replace("\x01", "<b>" + esc(w.clozeKey) + "</b>") : "";
+      stage.innerHTML =
+        '<div class="v-card"><div class="qbar">'
+        + '<span class="chip">Set ' + (si + 1) + ' of ' + sets.length + '</span>'
+        + '<span class="counter">' + (wi + 1) + ' of ' + set.length + '</span></div>'
+        + '<div class="bar"><i style="width:' + (wi / set.length * 100) + '%"></i></div>'
+        + '<p class="v-w">' + esc(w.word)
+        + (w.ipa ? ' <span class="v-ipa">' + esc(w.ipa) + '</span>' : "")
+        + ' <button class="speak" type="button" data-say="' + esc(sayWord(w)) + '">🔊</button></p>'
+        + (w.pos ? '<p class="v-pos">' + esc(w.pos) + '</p>' : "")
+        + '<p class="v-vi">' + esc(w.vi) + '</p>'
+        + (w.colloc && w.colloc.length
+            ? '<p class="v-co"><b>Goes with:</b> ' + w.colloc.map(esc).join(" · ") + '</p>' : "")
+        + (eg ? '<p class="v-eg">' + eg + '</p>' : "")
+        + '<div class="row"><button class="btn" data-v="next">'
+        + (wi + 1 < set.length ? "Next word" : "Answer on these " + set.length) + '</button></div>'
+        + '</div>';
+      $('[data-v="next"]', stage).addEventListener("click", () =>
+        wi + 1 < set.length ? meet(si, wi + 1) : recall(si));
+    }
+
+    /* ---- stage 2: the set just met, through the real engine ---- */
+    function recall(si){
+      stage.innerHTML = '<div id="v-eng-' + p.id + '"></div>';
+      runEngine("practice", sets[si], null, "#v-eng-" + p.id, {
+        onDone: r => {
+          log.push({ set: si, right: r.right, total: r.total, at: Date.now() });
+          save(); paintLog(); listing(si);
+        },
+      });
+    }
+
+    /* ---- stage 3: the whole set, and the offer to go again ---- */
+    function listing(si){
+      const set = sets[si];
+      stage.innerHTML =
+        '<div class="v-card"><h3>Set ' + (si + 1) + ' — all ' + set.length + ' words</h3>'
+        + '<div class="scroll"><table class="v-list"><tbody>'
+        + set.map(w => '<tr><td><b>' + esc(w.word) + '</b>'
+            + (w.ipa ? ' <span class="v-ipa">' + esc(w.ipa) + '</span>' : "")
+            + '</td><td>' + esc(w.vi) + '</td></tr>').join("")
+        + '</tbody></table></div>'
+        + '<div class="row"><button class="btn" data-v="retest">Answer this set again</button>'
+        + (si + 1 < sets.length
+            ? '<button class="btn quiet" data-v="on">Go on to set ' + (si + 2) + '</button>'
+            : '<button class="btn quiet" data-v="restart">Start again from set 1</button>')
+        + '</div></div>';
+      $('[data-v="retest"]', stage).addEventListener("click", () => recall(si));
+      const on = $('[data-v="on"]', stage);
+      if (on) on.addEventListener("click", () => meet(si + 1, 0));
+      const again = $('[data-v="restart"]', stage);
+      if (again) again.addEventListener("click", () => meet(0, 0));
+    }
+
+    paintLog();
+    /* A returning learner lands on the list of the last set they answered,
+       not back at word one of set one. */
+    const last = log.length ? log[log.length - 1].set : null;
+    if (last === null) meet(0, 0); else listing(last);
   });
 }
 
@@ -2299,6 +2477,7 @@ function boot(){
   paintReview();
   initTasks();
   initDialogue();
+  initVocab();
   initFluency();
   initAudio();
   initPassage();
