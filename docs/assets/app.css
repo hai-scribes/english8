@@ -496,6 +496,11 @@ footer.foot p{margin:0;max-width:74ch}
 .t-foot{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin-top:.7rem}
 .t-score{font-size:.9rem}
 .t-score b{font-family:var(--f-mono);color:var(--teal);font-variant-numeric:tabular-nums}
+/* Attempts, one after another on one line. Deliberately plain: no arrow, no
+   colour that reads as better or worse, nothing that adds them up. */
+.t-hist{font-size:.85rem;margin:.7rem 0 0;color:var(--muted)}
+.t-hist b{color:var(--ink);font-weight:600}
+.t-hist.small{font-size:.79rem;line-height:1.5;margin-top:.25rem}
 .t-cal{margin:.8rem 0 .1rem;padding:.75rem .9rem;background:var(--sunk);border-radius:var(--r)}
 .t-cal b{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;
   color:var(--faint);font-weight:400;display:block;margin-bottom:.4rem}
@@ -609,7 +614,7 @@ footer.foot p{margin:0;max-width:74ch}
 /* ---- the glossed dialogue (Getting Started) --------------------------------
    Support in Lesson 1 only: the underline marks a word whose meaning is one
    tap away, and the same word is bare everywhere after this. */
-.dlg{border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.1rem;margin:1.1rem 0;
+.dlg{border:1px solid var(--rule);border-radius:var(--r);padding:1rem 1.1rem;margin:1.1rem 0;
   background:var(--card)}
 .dlg .d-h{display:flex;gap:.6rem;align-items:baseline;margin-bottom:.5rem}
 .dlg .d-k{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
@@ -630,7 +635,7 @@ footer.foot p{margin:0;max-width:74ch}
 .gloss .co{display:block;margin-top:.3rem;font-size:.87em;color:var(--muted)}
 
 /* ---- the fluency strand --------------------------------------------------- */
-.fluency{border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.1rem;margin:1.1rem 0;
+.fluency{border:1px solid var(--rule);border-radius:var(--r);padding:1rem 1.1rem;margin:1.1rem 0;
   background:var(--card)}
 .fluency .f-h{display:flex;gap:.6rem;align-items:baseline;margin-bottom:.5rem}
 .fluency .f-k{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
@@ -641,4 +646,26 @@ footer.foot p{margin:0;max-width:74ch}
 .fluency .f-rounds li[data-done]{color:var(--muted)}
 .fluency .f-ctl{display:flex;gap:.7rem;align-items:center;margin:.7rem 0 .3rem}
 .fluency .f-log{font-size:.9rem}
-.fluency .f-log div{padding:.25rem 0;border-bottom:1px solid var(--line)}
+.fluency .f-log div{padding:.25rem 0;border-bottom:1px solid var(--rule)}
+
+/* ---- the vocabulary intake ------------------------------------------------
+   Deliberately shares the engine's chrome (.qbar, .bar, .card) so the middle
+   stage does not look like a different product from the two around it. */
+.vocab{border:1px solid var(--rule);border-radius:var(--r);padding:1rem 1.1rem;margin:1.1rem 0;
+  background:var(--sunk)}
+.vocab .v-h{display:flex;gap:.6rem;align-items:baseline;margin-bottom:.5rem}
+.vocab .v-k{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--teal)}
+.vocab .v-t{font-size:.8rem;color:var(--muted)}
+.vocab .v-say{font-size:.9rem;color:var(--muted);margin:0 0 .8rem}
+.v-card{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);
+  padding:.9rem 1rem}
+.v-card h3{margin:.1rem 0 .7rem;font-size:1rem}
+.v-w{font-size:1.35rem;font-weight:600;margin:.6rem 0 .1rem}
+.v-ipa{font-family:var(--f-mono);font-size:.8rem;color:var(--muted);font-weight:400}
+.v-pos{font-size:.78rem;color:var(--faint);font-style:italic;margin:0 0 .4rem}
+.v-vi{font-size:1.02rem;margin:0 0 .5rem}
+.v-co,.v-eg{font-size:.88rem;color:var(--muted);margin:.3rem 0}
+.v-eg{padding-left:.7rem;border-left:2px solid var(--rule)}
+.v-list td{padding:.35rem .8rem .35rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.v-rows div{padding:.2rem 0;font-size:.88rem;color:var(--muted)}

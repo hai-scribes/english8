@@ -14,10 +14,119 @@ node tools/check_write.js         # gate: each model satisfies its own checklist
 node tools/test_reading.js        # gate: the reading screen behaves (after build; needs jsdom)
 python3 tools/check_coverage.py   # report: what the official textbook covers that we don't
 python3 tools/index_sgk.py --check  # gate: the recorded book's lookup index is current
+python3 tools/check_level.py --strict-through 3   # gate: story prose stays inside grade 8
 ```
 
 `test_reading.js` needs `npm install jsdom` and skips loudly without it, so the
 other four still run on a clean checkout.
+
+## The unit-1 pilot, and the rules it established
+
+Unit 1 has been rebuilt end to end as the pattern for the other eleven. Nothing
+below is a preference: each line is a defect the pilot found, with the fix that
+was shipped. **Process units 2–12 against this list**, one unit at a time,
+running every gate after each.
+
+### An exercise a machine can mark is a `:::task`, not printed prose
+
+Unit 1 had nine printed exercises with no directive. Four were genuinely open
+(write about yourself, speak, invent an invitation) and stay prose. The rest —
+correct-the-mistake, build-the-sentence, complete-the-mini-dialogue — are now
+marked. A reveal-and-self-mark exercise is the arrangement every directive in
+this repo exists to replace, and `09` §4.4 is the reason: learners cannot
+self-assess accurately. **Expect roughly a dozen per unit; convert the ones a
+key can settle and leave the rest, saying which is which.**
+
+### The genre lives in a `variant`, never in `ask=` prose
+
+`type` says what an exercise is in the test's vocabulary. It does not say what
+the learner does. Five genres were shipping as `type="choice"` with the real
+instruction hand-written into `ask=`, so polishing one polished one — and
+odd-one-out, whose instruction said "pick", rendered as a **free-text box**
+where spelling could cost the mark on a question about meaning.
+
+`VARIANTS` in `tools/build.py` now owns the instruction, the label and the
+widget for `odd-one-out`, `error-correction` and `sentence-build`. A task's own
+`ask=` is *extra* detail appended to the variant's, never a replacement. Add a
+genre by adding a variant, never by writing the instruction into a unit.
+
+> **Still to do:** ten units carry odd-one-out exercises in the old prose form
+> (`a · b · c = key` under `type="choice"`). They are still text boxes. Adding
+> `variant="odd-one-out"` is the whole fix.
+
+### A marked task must not print its own answer
+
+Unit 1's 1.3 bolded `can't stand **hearing**` and asked which form follows —
+the answer was the suffix on the bolded word. Its 3.1 asked which group a verb
+belonged to, with the groups listed twenty lines above. Both are transcription
+wearing retrieval's clothes.
+
+The fixes generalise: **ask for the thing that is not on screen** (1.3 now
+names the verbs and sends the learner back to the dialogue to find the form),
+and **move a classification check away from the box that answers it** (3.1's
+went to Lesson 7, where it is a delayed check instead of a copying exercise).
+
+*Noticing* is a real activity and is worth keeping — but it must not be a
+scored, committed, one-shot attempt, because that is the machinery of
+retrieval and it measures nothing here.
+
+> This one is **not gated**, and deliberately. The defect is semantic, not
+> lexical: a rule matching keys against the text above fires almost entirely on
+> legitimate exercises — inline `(many / much)` choices, `/br/` keys inside
+> the word that contains them, MCQ letters. A gate that cries wolf gets
+> ignored, which costs more than it saves. Check this by reading.
+
+### The review queue takes the productive item, not the first one
+
+`review_items()` used to take the first N keyed items it met in a lesson, so
+unit 1's entire grammar review was `enjoy → 1, would love → 3` — four recalls
+of an arbitrary group number, because a classification drill happened to be
+printed above the gap-fill. Candidates are now ranked **produced before
+picked** and the cap applied afterwards. Check what a unit actually enrols
+before assuming it is teaching anything.
+
+### A retake is a new attempt, never an edit
+
+Every marked task now offers *Try it again*: the answers clear, the attempt
+history survives, and both runs are listed. Repeated retrieval is what builds
+memory, so locking a task after one go cost learning for nothing.
+
+Three things it must never become, each from a rule a friendlier version would
+break — no average across attempts (**E3**), no trend or "better" (**E9**: a
+single retest is regression to the mean as much as learning), and **no retake
+at all on a task a timer has already spent**, or the button quietly repeals C6
+and C7. That last one is gated in `test_reading.js`.
+
+### Lexis is met, not tabled
+
+`:::vocab` runs the three-stage intake in A Closer Look 1 — meet the words a
+few at a time, answer on the set just met through the existing engine, then see
+the whole set with the offer to run it again. The table above it stays, as
+reference. This is **B8** (topic lexis pre-taught as a first-class step) doing
+the job a table never did, and it reuses `runEngine` on purpose: the engine
+already asks items as collocations (**F7**), already speaks them (**F3**) and
+already schedules what it touches.
+
+Bounded by **E5**: nothing is marked learned in the session that taught it, so
+the intake never says "mastered" and the delayed check stays the review queue's
+job.
+
+### The story prose stays inside grade 8
+
+`tools/check_level.py` scans the four story slots for structures the prescribed
+book never teaches. Two severities: **BEYOND** (a second conditional, a perfect
+modal, a modal passive — in no unit, at any point in the year) and **FORWARD**
+(taught, but in a later unit — defensible input, reported and never failed).
+
+`--strict-through N` fails on any BEYOND finding in units 1..N. **That number
+is the progress marker.** It is at 3 because units 1–3 are clean and 4–12 are
+not yet processed; raise it as you process them, and never raise it to silence
+a finding. Fifteen BEYOND findings remain in units 4–12.
+
+What it cannot see, stated plainly: the detectors are regexes, so they find
+structures with a distinctive surface shape and miss the rest. A bare
+hypothetical `would` with no `if`-clause is invisible to it. A clean report is
+evidence, not proof.
 
 ## Never ship less than the official book
 
@@ -55,19 +164,22 @@ own exercises; ours has had only the first).
 nothing in it is published — see its `README.md` for what "recorded" means and
 why passages are described rather than reproduced.
 
-## Six directives, and what each one is for
+## Ten directives, and what each one is for
 
-`:::bridge` makes an IELTS *claim*. The other five make the app *behave* like
+`:::bridge` makes an IELTS *claim*. The other nine make the app *behave* like
 IELTS, which is a different job — see `README.md` for the full syntax.
 
 | | What it does | The rule it stops you breaking |
 | --- | --- | --- |
-| `:::task` | An exercise becomes a committed, marked attempt | C1–C5: official key grammar, per-task word limit, spelling costs the mark |
-| `:::audio` | A script becomes a recording that plays once | C6, C8: declared delivery mode, unwritten orientation, no replay |
+| `:::task` | An exercise becomes a committed, marked attempt — retakeable, as a new attempt | C1–C5: official key grammar, per-task word limit, spelling costs the mark |
+| `:::audio` | A script becomes a recording that plays once, after a replayable learning pass | C6, C8: declared delivery mode, unwritten orientation, no replay |
 | `:::write` | A writing task is attempted on the page, and counted | C9 live word count; E8 + §4.4, a self-report needs an objective anchor |
 | `:::clock` | The reading runs one clock, and it does not stop while you type | C7, from `04` §1.1 |
 | `:::passage` | The reading text can be highlighted and annotated, and its paragraphs carry the labels its questions name | C9's reading half, from `01` §9.1, §12.7 |
 | `:::thread` | A strand that says it recurs is made to recur | the course's promises about itself |
+| `:::dialogue` | The Getting Started text glosses its own words, in Vietnamese, in Lesson 1 only | support where the word is, and withdrawn afterwards |
+| `:::fluency` | Repeated performance on known material against a shrinking clock | Nation's fourth strand, which printed instructions never delivered |
+| `:::vocab` | New words are met a few at a time, then answered on | B8: lexis pre-taught as a first-class step, not tabled |
 
 Four things follow for anyone adding lessons. **Prefer a `:::task` to a printed
 gap** — a reveal button is not an attempt, and the whole Group C half of the

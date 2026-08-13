@@ -66,11 +66,11 @@ Answer in full sentences.
 
 ### 1.3 Notice the grammar
 
-::: task skill="course" type="choice" opts="V-ing|to-V" ask="Look at the **bold** verbs. Which form follows the verb of liking or disliking?"
-- I **can't stand hearing** him read things out. = V-ing
-- I don't mind **teaching** you a card game. = V-ing
-- I'd love **to go**. = to-V
-- I **enjoy sitting** here. = V-ing
+::: task skill="course" type="choice" opts="V-ing|to-V" ask="Each of these verbs appears in the dialogue above. Go back and find it. Which form follows it **there**?"
+- can't stand = V-ing
+- don't mind = V-ing
+- would love = to-V
+- enjoy = V-ing
 :::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — động từ chỉ sự yêu
@@ -140,6 +140,14 @@ Answer in full sentences.
 > Do the written exercises below as well — writing by hand and typing on a
 > screen build different halves of the same knowledge.
 
+### Meet the words
+
+The table above is there to look things up in. This is where you actually meet
+them: a few at a time, then answer on the few you have just met.
+
+::: vocab size="8"
+:::
+
 ### 2.1 Complete the sentences
 
 ::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
@@ -153,7 +161,7 @@ Answer in full sentences.
 
 ### 2.2 Odd one out
 
-::: task skill="course" type="choice" ask="Pick the word that does not belong. The reason appears when you check."
+::: task skill="course" type="choice" variant="odd-one-out" ask="The reason appears when you check."
 - cook · bake · relax · fry = relax ~ the others are ways of cooking
 - football · swimming · cycling · bookshop = bookshop ~ the others are sports or physical activities
 - movie · music · craft · concert = craft ~ the others involve listening or watching
@@ -233,7 +241,7 @@ The difference is **length** and **tension**.
 is the only thing that tells them apart.*
 ### 2.6 Odd sound out
 
-::: task skill="course" type="choice" ask="In each line, one word has a **different** vowel sound. Pick it."
+::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **vowel sound**, not the meaning."
 - book · cook · food · look = food ~ *food* is the long /uː/; the other three are short /ʊ/
 - school · pool · good · cool = good ~ *good* is the short /ʊ/; the other three are long /uː/
 - would · could · should · choose = choose ~ *choose* is the long /uː/; the other three are short /ʊ/
@@ -292,20 +300,7 @@ are **three groups**. Learn which group each verb belongs to.
 > *I **like swimming**.* — Tôi thích bơi (nói chung).
 > *I **would like to swim**.* — Tôi muốn đi bơi (bây giờ).
 
-### 3.1 Recognise the group
-
-::: task skill="course" type="choice" opts="1|2|3" ask="Which group does each verb belong to? **1** = always V-ing, **2** = both forms, **3** = always to-V."
-- enjoy = 1
-- would love = 3
-- hate = 2
-- can't stand = 1
-- prefer = 2
-- don't mind = 1
-- would prefer = 3
-- avoid = 1
-:::
-
-### 3.2 One form only
+### 3.1 One form only
 
 ::: task skill="course" type="gap-fill" ask="Put the verb in brackets into the correct form. Only **one** answer is possible."
 - I can't stand ___ (queue) for tickets. = queuing
@@ -316,28 +311,26 @@ are **three groups**. Learn which group each verb belongs to.
 - He practises ___ (play) the piano every evening. = playing
 :::
 
-### 3.3 Two forms possible
+### 3.2 Two forms possible
 
-Write the sentence **twice** — once with V-ing, once with to-V.
+::: task skill="course" type="short-answer" variant="sentence-build" ask="These two verbs take **both** forms. Write each sentence twice."
+- I / love / watch / films with my dad — use **V-ing** = I love watching films with my dad
+- I / love / watch / films with my dad — use **to-V** = I love to watch films with my dad
+- She / hate / get up / before seven — use **V-ing** = She hates getting up before seven
+- She / hate / get up / before seven — use **to-V** = She hates to get up before seven
+:::
 
-1. I / love / watch / films with my dad
-   - _______________________________
-   - _______________________________
-2. She / hate / get up / before seven
-   - _______________________________
-   - _______________________________
+### 3.3 Correct the mistake
 
-### 3.4 Correct the mistake
+::: task skill="course" type="short-answer" variant="error-correction" ask="Every mistake here is the **form of the second verb**."
+- I would like going to the new bookshop. = to go
+- My sister enjoys to make paper crafts. = making
+- They can't stand to be late. = being
+- He doesn't mind to help with the cooking. = helping
+- Would you love watching a movie tonight? = to watch
+:::
 
-Each sentence has **one** error. Rewrite it correctly.
-
-1. I would like going to the new bookshop.
-2. My sister enjoys to make paper crafts.
-3. They can't stand to be late.
-4. He doesn't mind to help with the cooking.
-5. Would you love watching a movie tonight?
-
-### 3.5 About you
+### 3.4 About you
 
 Write true sentences about yourself. Use a different verb each time.
 
@@ -400,14 +393,14 @@ A **suggestion** proposes something for *both* of you, so it usually says *we*:
 
 ### 4.1 Complete the mini-dialogues
 
-1. **A:** How about ____________ (go) swimming?
-   **B:** ____________ — I love the pool in summer.
-
-2. **A:** Why don't we ____________ (watch) a movie?
-   **B:** Sorry, I ____________ make it. I'm busy tonight.
-
-3. **A:** Do you fancy ____________ (play) football?
-   **B:** I'd ____________ not — I hurt my ankle yesterday.
+::: task skill="course" type="gap-fill" ask="**A** suggests, **B** answers. The replies come from the two lists above — any one that fits is accepted."
+- **A:** How about ___ (go) swimming? = going
+- **B:** ___ — I love the pool in summer. = That sounds great/Good idea/Sure, why not/I'd love to
+- **A:** Why don't we ___ (watch) a movie? = watch
+- **B:** Sorry, I ___ make it. I'm busy tonight. = can't
+- **A:** Do you fancy ___ (play) football? = playing
+- **B:** I'd ___ not — I hurt my ankle yesterday. = rather
+:::
 
 ### 4.2 Write your own
 
@@ -809,7 +802,21 @@ question in the left-hand column.
 - My father hates ___ (drive) in the rain. = driving/to drive
 :::
 
-### 7.4 Error hunt
+### 7.4 Which group?
+
+Lesson 3 sorted these verbs into three groups. Do not look back — this only
+tells you something if you answer it from memory.
+
+::: task skill="course" type="choice" opts="1|2|3" ask="**1** = always V-ing · **2** = both forms · **3** = always to-V."
+- enjoy = 1
+- would love = 3
+- hate = 2
+- can't stand = 1
+- prefer = 2
+- avoid = 1
+:::
+
+### 7.5 Error hunt
 
 Find and correct **six** errors in this paragraph. Five are about verb forms
 after liking/disliking verbs; one is a subject–verb agreement slip.
@@ -865,7 +872,7 @@ page can settle it, the row says so, and that one is yours to judge.
 | --- | --- |
 | use the words for leisure activities, and the expressions for saying what I like and dislike | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercise 7.1 |
 | hear /ʊ/ and /uː/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
-| use verbs of liking and disliking with **V-ing** and with **to-V** | Lesson 3, exercises 3.1 and 3.2 · Lesson 7, exercises 7.3 and 7.4 |
+| use verbs of liking and disliking with **V-ing** and with **to-V** | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
 | invite someone, and accept an invitation | Lesson 4, exercise 4.3 |
 | read about an afternoon a family and friends spent playing together | Lesson 5, exercises 5.1 and 5.2 |
 | talk about my own leisure time with my family | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
@@ -895,24 +902,10 @@ Saturday. 5. He says there is something shiny in the water.
 
 ### Lesson 3
 
-**3.3**
-1. I love watching films with my dad. / I love to watch films with my dad.
-2. She hates getting up before seven. / She hates to get up before seven.
-
-**3.4**
-1. I would like **to go** to the new bookshop.
-2. My sister enjoys **making** paper crafts.
-3. They can't stand **being** late.
-4. He doesn't mind **helping** with the cooking.
-5. Would you love **to watch** a movie tonight? *(or: Would you **like** to watch…)*
-
-**3.5** Answers will vary. Check: *enjoy* + V-ing, *can't stand* + V-ing,
+**3.4** Answers will vary. Check: *enjoy* + V-ing, *can't stand* + V-ing,
 *would love* + to-V, *don't mind* + V-ing.
 
 ### Lesson 4
-
-**4.1** 1. going / That sounds great (or: Good idea / I'd love to)
-2. watch / can't 3. playing / rather
 
 **4.2** Answers will vary. Check that two replies accept and one refuses
 politely with a reason.

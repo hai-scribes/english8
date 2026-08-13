@@ -40,8 +40,8 @@
 **Thảo:** …
 **Tí:** Minh used to say things out loud.
 **Thảo:** …
-**Tí:** Second row, by the window. He would have read that list and laughed at it.
-**Thảo:** He would.
+**Tí:** Second row, by the window. He always laughed at lists like that.
+**Thảo:** He did.
 **Tí:** Cô Yến moved his desk in September, **and** now the room just looks normal.
 **Thảo:** We don't talk about that at school. You know we don't.
 **Tí:** I'm not upset. I'm [[curious]]. A whole year, and not one person has asked where he went.
@@ -833,7 +833,7 @@ Minh was very calm about it. He worked out that a whole year had gone
 past, and after that he asked us almost nothing, because every question he
 started belonged to last September and he could hear it. Then he said the thing
 that finished me. He said we should not keep him. He said one breath would end
-it, and nobody would be blamed for anything.
+it, and nobody would blame us for anything.
 
 Tí picked the lamp up. He held it in both hands, close, for about a minute.
 His face did not move at all.
@@ -862,7 +862,7 @@ us were born.
 ::: task skill="listening" type="sentence-completion" words="2+number"
 - Lightings in the lamp altogether: ___ = twelve/12
 - What neither of the two was doing when she came down: ___ = talking
-- Minh said that nobody would be ___ for anything. = blamed
+- Minh said that nobody would ___ them for anything. = blame
 - Length of time Tí held the lamp: about a ___ = minute
 - Direction his family went: ___ = north
 :::

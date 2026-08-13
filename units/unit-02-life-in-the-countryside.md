@@ -31,7 +31,7 @@
 **Tí:** Bến Vàng? That's your village. That's miles.
 **Bà Sáu:** Nine kilometres by the new road. Your uncle needs his medicine today, not tomorrow.
 **Tí:** I'll take the [[ferry]].
-**Bà Sáu:** The ferry runs **later** than it used to. You would stand on that bank for an hour.
+**Bà Sáu:** The ferry runs **later** than it used to. That means an hour on the bank.
 **Tí:** The bus, then.
 **Bà Sáu:** The bus goes **more slowly** than you walk. It stops at every gate between here and the [[canal]].
 **Tí:** So how did you get there when you were thirteen?
@@ -41,7 +41,7 @@
 **Tí:** Then I'll take the path.
 **Bà Sáu:** You can't. The new road went through it thirty years ago. Nobody has walked it since.
 **Tí:** Somebody must know where it begins.
-**Bà Sáu:** I couldn't find the start of it now if you paid me, child, and I am the last one left who ever used it. Take the bus. Take a hat.
+**Bà Sáu:** I cannot find the start of it now, child, and I am the last one left who ever used it. Take the bus. Take a hat.
 **Tí:** The bus stops at every gate. He'll be asleep before I get there, and I want to hear about that game today, not next month.
 **Bà Sáu:** Then start walking to the stop.
 **Tí:** …
@@ -614,8 +614,8 @@ and **than** in at least two of them.
 > any road climbs anything, and dropped down the other side.
 >
 > I took it. It was shorter than the road by half, and it carried me over the
-> top so much more quickly than the two o'clock bus ever could have that I
-> reached my uncle's gate with dry shoes and shaking legs.
+> top so much more quickly than the two o'clock bus that I reached my uncle's
+> gate with dry shoes and shaking legs.
 >
 > Chú Bảy took the medicine. Then he looked at the board game under my arm for
 > a while and did not ask me where it came from.
