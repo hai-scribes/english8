@@ -9,7 +9,8 @@ scrolls. So there are exactly two kinds of image, and the page composites them:
 
 | | What | Files |
 | --- | --- | --- |
-| **Part 1** | Five character sheets — six square emotion panels in a 3 × 2 grid, chest up, on flat white to key out | `docs/assets/cast/<slug>.png` |
+| **Part 1** | Thirty drawings — five characters × six expressions, one square picture each, chest up, on flat white | `docs/assets/cast/<slug>/<emotion>.png` |
+| | …composed by `tools/make_sheet.py` into the 3 × 2 sheet the page loads | `docs/assets/cast/<slug>.png` |
 | **Part 2** | Nine background plates — the story's places, drawn empty | `docs/assets/bg/<slug>.jpg` |
 
 `data/cast.json` is the contract. It declares the slugs, the six emotions and
@@ -27,8 +28,12 @@ Nothing here goes on a learner's page — this is reference material, and
 
 **Copy one block. Paste it. Generate.** Every prompt below is complete on its
 own — nothing to fill in, nothing to append, no aspect ratio or style note to
-remember, no cast sheet to make first. If you find yourself typing anything into
-a prompt, that is a bug in this file.
+remember. If you find yourself typing anything into a prompt, that is a bug in
+this file.
+
+**Each prompt asks for exactly one picture**, which is the thing image models
+are reliable at. Nothing asks for a grid, a sheet or a set of panels — see
+*Why one drawing at a time* below.
 
 **Optionally attach the Doraemon graphic** as a style reference. Each prompt
 already tells the model what to do with it *and* describes the whole style in
@@ -45,28 +50,34 @@ eleven dialogues read as plain text until they are staged.
 
 ---
 
-# Part 1 — the character sheets
+# Part 1 — the character drawings
 
-## 1. Tí — six-panel chest-up sheet
+**Thirty drawings: five characters × six expressions, one image each.** Each is
+a single square picture of one character — no grids, no sheets, no panels.
+`tools/make_sheet.py` composes each set of six into the 3 × 2 sheet the page
+loads, so the layout is arithmetic rather than something a generator has to get
+right.
 
-**File:** `ti.png` — the **whole sheet, uncut**, saved as one image.
+Save each one as `docs/assets/cast/<slug>/<emotion>.png`, then run
+`python3 tools/make_sheet.py <slug>`.
 
-> **Draw exactly SIX panels — six and only six — laid out as a grid of three
-> columns across and two rows down, in one image. Six. Not four, not eight,
-> not nine. Do not add a seventh panel, an extra pose, an alternative angle,
-> a close-up, a colour variant or a blank cell.** The six are listed further
-> down and are the whole deliverable.
->
-> **If a style reference image is attached**, match its line weight,
-> colouring, shading and background treatment, and do not copy, quote or
-> resemble any character in it — the character below appears nowhere in it.
-> If nothing is attached, follow the written style exactly as described.
+---
+
+## Tí — six drawings, `docs/assets/cast/ti/`
+
+### Tí · neutral
+
+**File:** `docs/assets/cast/ti/neutral.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
-> tradition of Fujiko F. Fujio — the *Doraemon* look. Simple rounded
-> characters drawn in clean even-weight black ink outlines. Not modern
-> anime, not moe, not Ghibli, not American cartoon, not 3D, not
-> photorealistic, not painterly.
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
 >
 > **Line.** Black contour line of near-constant width, closed and
 > continuous. No tapering brush strokes, no cross-hatching, no stippling, no
@@ -93,91 +104,398 @@ eleven dialogues read as plain text until they are staged.
 > flat brow line, giving a permanently slightly wary look. A faded
 > jade-green t-shirt a size too big. Ordinary and a bit closed-off — not
 > cute, not heroic. Reproduce that design exactly, with no change to hair,
-> face, clothing, colour or proportion between panels. **Must not:** wear
+> face, clothing, colour or proportion. **Must not:** wear
 > glasses of any kind; wear a yellow top with blue shorts; resemble any
 > existing Doraemon character.
 >
-> **The sheet.** Six square panels arranged as a grid of **three across and
-> two down**, filling one 3:2 image edge to edge. The image must divide into
-> exactly three equal columns and two equal rows, with **every panel exactly
-> square** and no gap, border, gutter or margin anywhere — the six squares
-> tile the whole image. Each panel shows the character from the **chest
-> up**: head, shoulders, upper chest, and both arms and hands wherever they
-> are, drawn in **three-quarter view, not facing the camera**. The body and
-> the head are turned about 30 to 45 degrees away from straight-on, and the
-> character **looks toward the right-hand side of the frame** — as if
-> speaking to somebody standing off to their right, never out at the reader.
-> Manga stages a conversation this way: the two speakers are angled toward
-> each other, and a character square to the camera reads as posing rather
-> than talking. **Every one of the six panels uses the same three-quarter
-> angle, turned the same way** — only the expression changes. The panel is
-> square precisely so that folded arms and a raised hand fit inside it —
-> **nothing may be cropped by the edge of a panel, least of all a hand.**
-> Keep a little clear space on all four sides of the figure.
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
 >
-> **The head stays exactly the same size and in exactly the same place in
-> all six panels**, at the same scale and under the same flat lighting. The
-> expression changes, and the shoulders, arms and hands may move with it —
-> but the framing, the scale and the eye level never do. Because the crop is
-> at the chest, keep every gesture at chest height or above, so hands stay
-> inside the frame.
+> **The expression.** The expression is **neutral**: an ordinary talking
+> face, mouth slightly open, no strong feeling; hands resting together in
+> front of the chest. Keep every gesture at chest height or above.
 >
-> Reading order — left to right along the top row, then left to right along
-> the bottom row:
-> **1 — neutral:** an ordinary talking face, mouth slightly open, no strong
-> feeling; hands resting together in front of the chest.
-> **2 — happy:** a real open smile, eyes curved; shoulders lifted, one hand
-> raised in a small open gesture.
-> **3 — worried:** brows raised and pulled together, mouth a small flat
-> line; shoulders drawn in, hands close to the body.
-> **4 — annoyed:** brows down and level, mouth pressed or turned down at one
-> corner; arms folded.
-> **5 — surprised:** eyes wide and round, brows high, mouth open in a small
-> circle; shoulders up, both hands lifted slightly.
-> **6 — sad:** eyes lowered, brows slack, mouth a short downward curve;
-> shoulders dropped, one hand held loosely at the collarbone.
+> **Keep visible:** the single cowlick standing up at the back of the crown.
 >
-> **The standing cowlick at the back of the crown must be clearly visible in
-> all six panels** — it is the one feature that identifies him at small
-> size.
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
 >
-> Every panel is cropped at the **chest**, not the waist — no stomach, no
-> hips, no legs. The background behind and between the figures is **pure
-> flat white #FFFFFF**, edge to edge across the whole image — no shadow, no
-> gradient, no texture, no paper tone, no border and no line between panels.
-> **Do not draw a transparency checkerboard.** Do not render a
-> grey-and-white chequered pattern, a grid, or any other stand-in for
-> transparency: a drawn checkerboard is pixels, not alpha, and is far harder
-> to remove than plain white. Plain white, and nothing else. The image is
-> **3:2**.
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Tí · happy
+
+**File:** `docs/assets/cast/ti/happy.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
 >
-> **Do not include:** a seventh or eighth panel, or any panel beyond the six
-> listed; any text, letters, numbers, captions, watermarks, signatures,
-> speech bubbles, logos, panel borders or motion lines. No exaggerated
-> screaming-face gags. No sparkles or glows.
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Tí** — a thirteen-year-old Vietnamese boy, the
+> smallest and thinnest of the children. Narrow and slightly caved-in, one
+> shoulder lower than the other where an oversized shirt slips off it. Black
+> hair in an uneven spiky cluster with **one cowlick standing up at the back
+> of the crown** that never lies flat. Eyes smallish and round under a low
+> flat brow line, giving a permanently slightly wary look. A faded
+> jade-green t-shirt a size too big. Ordinary and a bit closed-off — not
+> cute, not heroic. Reproduce that design exactly, with no change to hair,
+> face, clothing, colour or proportion. **Must not:** wear
+> glasses of any kind; wear a yellow top with blue shorts; resemble any
+> existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **happy**: a real open smile, eyes
+> curved; shoulders lifted, one hand raised in a small open gesture. Keep
+> every gesture at chest height or above.
+>
+> **Keep visible:** the single cowlick standing up at the back of the crown.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Tí · worried
+
+**File:** `docs/assets/cast/ti/worried.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Tí** — a thirteen-year-old Vietnamese boy, the
+> smallest and thinnest of the children. Narrow and slightly caved-in, one
+> shoulder lower than the other where an oversized shirt slips off it. Black
+> hair in an uneven spiky cluster with **one cowlick standing up at the back
+> of the crown** that never lies flat. Eyes smallish and round under a low
+> flat brow line, giving a permanently slightly wary look. A faded
+> jade-green t-shirt a size too big. Ordinary and a bit closed-off — not
+> cute, not heroic. Reproduce that design exactly, with no change to hair,
+> face, clothing, colour or proportion. **Must not:** wear
+> glasses of any kind; wear a yellow top with blue shorts; resemble any
+> existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **worried**: brows raised and pulled
+> together, mouth a small flat line; shoulders drawn in, hands close to the
+> body. Keep every gesture at chest height or above.
+>
+> **Keep visible:** the single cowlick standing up at the back of the crown.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Tí · annoyed
+
+**File:** `docs/assets/cast/ti/annoyed.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Tí** — a thirteen-year-old Vietnamese boy, the
+> smallest and thinnest of the children. Narrow and slightly caved-in, one
+> shoulder lower than the other where an oversized shirt slips off it. Black
+> hair in an uneven spiky cluster with **one cowlick standing up at the back
+> of the crown** that never lies flat. Eyes smallish and round under a low
+> flat brow line, giving a permanently slightly wary look. A faded
+> jade-green t-shirt a size too big. Ordinary and a bit closed-off — not
+> cute, not heroic. Reproduce that design exactly, with no change to hair,
+> face, clothing, colour or proportion. **Must not:** wear
+> glasses of any kind; wear a yellow top with blue shorts; resemble any
+> existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **annoyed**: brows down and level,
+> mouth pressed or turned down at one corner; arms folded. Keep every
+> gesture at chest height or above.
+>
+> **Keep visible:** the single cowlick standing up at the back of the crown.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Tí · surprised
+
+**File:** `docs/assets/cast/ti/surprised.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Tí** — a thirteen-year-old Vietnamese boy, the
+> smallest and thinnest of the children. Narrow and slightly caved-in, one
+> shoulder lower than the other where an oversized shirt slips off it. Black
+> hair in an uneven spiky cluster with **one cowlick standing up at the back
+> of the crown** that never lies flat. Eyes smallish and round under a low
+> flat brow line, giving a permanently slightly wary look. A faded
+> jade-green t-shirt a size too big. Ordinary and a bit closed-off — not
+> cute, not heroic. Reproduce that design exactly, with no change to hair,
+> face, clothing, colour or proportion. **Must not:** wear
+> glasses of any kind; wear a yellow top with blue shorts; resemble any
+> existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **surprised**: eyes wide and round,
+> brows high, mouth open in a small circle; shoulders up, both hands lifted
+> slightly. Keep every gesture at chest height or above.
+>
+> **Keep visible:** the single cowlick standing up at the back of the crown.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Tí · sad
+
+**File:** `docs/assets/cast/ti/sad.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Tí** — a thirteen-year-old Vietnamese boy, the
+> smallest and thinnest of the children. Narrow and slightly caved-in, one
+> shoulder lower than the other where an oversized shirt slips off it. Black
+> hair in an uneven spiky cluster with **one cowlick standing up at the back
+> of the crown** that never lies flat. Eyes smallish and round under a low
+> flat brow line, giving a permanently slightly wary look. A faded
+> jade-green t-shirt a size too big. Ordinary and a bit closed-off — not
+> cute, not heroic. Reproduce that design exactly, with no change to hair,
+> face, clothing, colour or proportion. **Must not:** wear
+> glasses of any kind; wear a yellow top with blue shorts; resemble any
+> existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **sad**: eyes lowered, brows slack,
+> mouth a short downward curve; shoulders dropped, one hand held loosely at
+> the collarbone. Keep every gesture at chest height or above.
+>
+> **Keep visible:** the single cowlick standing up at the back of the crown.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
 
 ---
 
-## 2. Thảo — six-panel chest-up sheet
+## Thảo — six drawings, `docs/assets/cast/thao/`
 
-**File:** `thao.png` — the **whole sheet, uncut**, saved as one image.
+### Thảo · neutral
 
-> **Draw exactly SIX panels — six and only six — laid out as a grid of three
-> columns across and two rows down, in one image. Six. Not four, not eight,
-> not nine. Do not add a seventh panel, an extra pose, an alternative angle,
-> a close-up, a colour variant or a blank cell.** The six are listed further
-> down and are the whole deliverable.
->
-> **If a style reference image is attached**, match its line weight,
-> colouring, shading and background treatment, and do not copy, quote or
-> resemble any character in it — the character below appears nowhere in it.
-> If nothing is attached, follow the written style exactly as described.
+**File:** `docs/assets/cast/thao/neutral.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
-> tradition of Fujiko F. Fujio — the *Doraemon* look. Simple rounded
-> characters drawn in clean even-weight black ink outlines. Not modern
-> anime, not moe, not Ghibli, not American cartoon, not 3D, not
-> photorealistic, not painterly.
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
 >
 > **Line.** Black contour line of near-constant width, closed and
 > continuous. No tapering brush strokes, no cross-hatching, no stippling, no
@@ -203,90 +521,50 @@ eleven dialogues read as plain text until they are staged.
 > and the other is covered.** Eyes large and open, brows set high, a small
 > closed half-smile — she is the one who is sure of things. White
 > short-sleeved school shirt, dark blue skirt. Reproduce that design
-> exactly, with no change to hair, face, clothing, colour or proportion
-> between panels. **Must not:** wear a hairband, ribbon, bow or hairclip;
-> wear pink; resemble any existing Doraemon character.
+> exactly, with no change to hair, face, clothing, colour or proportion.
+> **Must not:** wear a hairband, ribbon, bow or hairclip; wear pink;
+> resemble any existing Doraemon character.
 >
-> **The sheet.** Six square panels arranged as a grid of **three across and
-> two down**, filling one 3:2 image edge to edge. The image must divide into
-> exactly three equal columns and two equal rows, with **every panel exactly
-> square** and no gap, border, gutter or margin anywhere — the six squares
-> tile the whole image. Each panel shows the character from the **chest
-> up**: head, shoulders, upper chest, and both arms and hands wherever they
-> are, drawn in **three-quarter view, not facing the camera**. The body and
-> the head are turned about 30 to 45 degrees away from straight-on, and the
-> character **looks toward the right-hand side of the frame** — as if
-> speaking to somebody standing off to their right, never out at the reader.
-> Manga stages a conversation this way: the two speakers are angled toward
-> each other, and a character square to the camera reads as posing rather
-> than talking. **Every one of the six panels uses the same three-quarter
-> angle, turned the same way** — only the expression changes. The panel is
-> square precisely so that folded arms and a raised hand fit inside it —
-> **nothing may be cropped by the edge of a panel, least of all a hand.**
-> Keep a little clear space on all four sides of the figure.
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
 >
-> **The head stays exactly the same size and in exactly the same place in
-> all six panels**, at the same scale and under the same flat lighting. The
-> expression changes, and the shoulders, arms and hands may move with it —
-> but the framing, the scale and the eye level never do. Because the crop is
-> at the chest, keep every gesture at chest height or above, so hands stay
-> inside the frame.
+> **The expression.** The expression is **neutral**: an ordinary talking
+> face, mouth slightly open, no strong feeling; hands resting together in
+> front of the chest. Keep every gesture at chest height or above.
 >
-> Reading order — left to right along the top row, then left to right along
-> the bottom row:
-> **1 — neutral:** an ordinary talking face, mouth slightly open, no strong
-> feeling; hands resting together in front of the chest.
-> **2 — happy:** a real open smile, eyes curved; shoulders lifted, one hand
-> raised in a small open gesture.
-> **3 — worried:** brows raised and pulled together, mouth a small flat
-> line; shoulders drawn in, hands close to the body.
-> **4 — annoyed:** brows down and level, mouth pressed or turned down at one
-> corner; arms folded, or one hand on the hip.
-> **5 — surprised:** eyes wide and round, brows high, mouth open in a small
-> circle; shoulders up, both hands lifted slightly.
-> **6 — sad:** eyes lowered, brows slack, mouth a short downward curve;
-> shoulders dropped, one hand held loosely at the collarbone.
+> **Keep visible:** the hair tucked behind one ear only, so one ear shows
+> and the other is covered.
 >
-> **The hair tucked behind one ear only — one ear showing, the other covered
-> — must read clearly in all six panels.**
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
 >
-> Every panel is cropped at the **chest**, not the waist — no stomach, no
-> hips, no legs. The background behind and between the figures is **pure
-> flat white #FFFFFF**, edge to edge across the whole image — no shadow, no
-> gradient, no texture, no paper tone, no border and no line between panels.
-> **Do not draw a transparency checkerboard.** Do not render a
-> grey-and-white chequered pattern, a grid, or any other stand-in for
-> transparency: a drawn checkerboard is pixels, not alpha, and is far harder
-> to remove than plain white. Plain white, and nothing else. The image is
-> **3:2**.
->
-> **Do not include:** a seventh or eighth panel, or any panel beyond the six
-> listed; any text, letters, numbers, captions, watermarks, signatures,
-> speech bubbles, logos, panel borders or motion lines. No exaggerated
-> screaming-face gags. No sparkles or glows.
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
 
----
+### Thảo · happy
 
-## 3. Bà Sáu — six-panel chest-up sheet
+**File:** `docs/assets/cast/thao/happy.png`
 
-**File:** `basau.png` — the **whole sheet, uncut**, saved as one image.
-
-> **Draw exactly SIX panels — six and only six — laid out as a grid of three
-> columns across and two rows down, in one image. Six. Not four, not eight,
-> not nine. Do not add a seventh panel, an extra pose, an alternative angle,
-> a close-up, a colour variant or a blank cell.** The six are listed further
-> down and are the whole deliverable.
->
-> **If a style reference image is attached**, match its line weight,
-> colouring, shading and background treatment, and do not copy, quote or
-> resemble any character in it — the character below appears nowhere in it.
-> If nothing is attached, follow the written style exactly as described.
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
-> tradition of Fujiko F. Fujio — the *Doraemon* look. Simple rounded
-> characters drawn in clean even-weight black ink outlines. Not modern
-> anime, not moe, not Ghibli, not American cartoon, not 3D, not
-> photorealistic, not painterly.
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
 >
 > **Line.** Black contour line of near-constant width, closed and
 > continuous. No tapering brush strokes, no cross-hatching, no stippling, no
@@ -295,8 +573,364 @@ eleven dialogues read as plain text until they are staged.
 >
 > **Colour.** Flat cel fills — solid areas of colour with hard edges. At
 > most one flat shadow tone per surface, shaped as a clean geometric shape,
-> never soft-edged. No gradients, no texture, no airbrushing. Bright and
-> clear.
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Thảo** — a thirteen-year-old Vietnamese girl, the
+> same height as Tí or a little taller. Upright and square-shouldered,
+> deliberately **asymmetric at the head**: straight black hair cut to the
+> jaw with a straight fringe, **tucked behind one ear so that one ear shows
+> and the other is covered.** Eyes large and open, brows set high, a small
+> closed half-smile — she is the one who is sure of things. White
+> short-sleeved school shirt, dark blue skirt. Reproduce that design
+> exactly, with no change to hair, face, clothing, colour or proportion.
+> **Must not:** wear a hairband, ribbon, bow or hairclip; wear pink;
+> resemble any existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **happy**: a real open smile, eyes
+> curved; shoulders lifted, one hand raised in a small open gesture. Keep
+> every gesture at chest height or above.
+>
+> **Keep visible:** the hair tucked behind one ear only, so one ear shows
+> and the other is covered.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Thảo · worried
+
+**File:** `docs/assets/cast/thao/worried.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Thảo** — a thirteen-year-old Vietnamese girl, the
+> same height as Tí or a little taller. Upright and square-shouldered,
+> deliberately **asymmetric at the head**: straight black hair cut to the
+> jaw with a straight fringe, **tucked behind one ear so that one ear shows
+> and the other is covered.** Eyes large and open, brows set high, a small
+> closed half-smile — she is the one who is sure of things. White
+> short-sleeved school shirt, dark blue skirt. Reproduce that design
+> exactly, with no change to hair, face, clothing, colour or proportion.
+> **Must not:** wear a hairband, ribbon, bow or hairclip; wear pink;
+> resemble any existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **worried**: brows raised and pulled
+> together, mouth a small flat line; shoulders drawn in, hands close to the
+> body. Keep every gesture at chest height or above.
+>
+> **Keep visible:** the hair tucked behind one ear only, so one ear shows
+> and the other is covered.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Thảo · annoyed
+
+**File:** `docs/assets/cast/thao/annoyed.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Thảo** — a thirteen-year-old Vietnamese girl, the
+> same height as Tí or a little taller. Upright and square-shouldered,
+> deliberately **asymmetric at the head**: straight black hair cut to the
+> jaw with a straight fringe, **tucked behind one ear so that one ear shows
+> and the other is covered.** Eyes large and open, brows set high, a small
+> closed half-smile — she is the one who is sure of things. White
+> short-sleeved school shirt, dark blue skirt. Reproduce that design
+> exactly, with no change to hair, face, clothing, colour or proportion.
+> **Must not:** wear a hairband, ribbon, bow or hairclip; wear pink;
+> resemble any existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **annoyed**: brows down and level,
+> mouth pressed or turned down at one corner; arms folded. Keep every
+> gesture at chest height or above.
+>
+> **Keep visible:** the hair tucked behind one ear only, so one ear shows
+> and the other is covered.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Thảo · surprised
+
+**File:** `docs/assets/cast/thao/surprised.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Thảo** — a thirteen-year-old Vietnamese girl, the
+> same height as Tí or a little taller. Upright and square-shouldered,
+> deliberately **asymmetric at the head**: straight black hair cut to the
+> jaw with a straight fringe, **tucked behind one ear so that one ear shows
+> and the other is covered.** Eyes large and open, brows set high, a small
+> closed half-smile — she is the one who is sure of things. White
+> short-sleeved school shirt, dark blue skirt. Reproduce that design
+> exactly, with no change to hair, face, clothing, colour or proportion.
+> **Must not:** wear a hairband, ribbon, bow or hairclip; wear pink;
+> resemble any existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **surprised**: eyes wide and round,
+> brows high, mouth open in a small circle; shoulders up, both hands lifted
+> slightly. Keep every gesture at chest height or above.
+>
+> **Keep visible:** the hair tucked behind one ear only, so one ear shows
+> and the other is covered.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Thảo · sad
+
+**File:** `docs/assets/cast/thao/sad.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Thảo** — a thirteen-year-old Vietnamese girl, the
+> same height as Tí or a little taller. Upright and square-shouldered,
+> deliberately **asymmetric at the head**: straight black hair cut to the
+> jaw with a straight fringe, **tucked behind one ear so that one ear shows
+> and the other is covered.** Eyes large and open, brows set high, a small
+> closed half-smile — she is the one who is sure of things. White
+> short-sleeved school shirt, dark blue skirt. Reproduce that design
+> exactly, with no change to hair, face, clothing, colour or proportion.
+> **Must not:** wear a hairband, ribbon, bow or hairclip; wear pink;
+> resemble any existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **sad**: eyes lowered, brows slack,
+> mouth a short downward curve; shoulders dropped, one hand held loosely at
+> the collarbone. Keep every gesture at chest height or above.
+>
+> **Keep visible:** the hair tucked behind one ear only, so one ear shows
+> and the other is covered.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+---
+
+## Bà Sáu — six drawings, `docs/assets/cast/basau/`
+
+### Bà Sáu · neutral
+
+**File:** `docs/assets/cast/basau/neutral.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
 >
 > **The character.** **Bà Sáu** — Tí's grandmother, around seventy. The
 > shortest adult but the **widest and most stable** shape in the cast:
@@ -305,95 +939,410 @@ eleven dialogues read as plain text until they are staged.
 > opening to circles only when startled; one deep line at each side of the
 > mouth, set stern. A loose brown-and-indigo *áo bà ba* style tunic.
 > Reproduce that design exactly, with no change to hair, face, clothing,
-> colour or proportion between panels. **Must not:** be drawn frail, bent or
-> sweet; resemble any existing Doraemon character.
+> colour or proportion. **Must not:** be drawn frail, bent or sweet;
+> resemble any existing Doraemon character.
 >
-> **The sheet.** Six square panels arranged as a grid of **three across and
-> two down**, filling one 3:2 image edge to edge. The image must divide into
-> exactly three equal columns and two equal rows, with **every panel exactly
-> square** and no gap, border, gutter or margin anywhere — the six squares
-> tile the whole image. Each panel shows the character from the **chest
-> up**: head, shoulders, upper chest, and both arms and hands wherever they
-> are, drawn in **three-quarter view, not facing the camera**. The body and
-> the head are turned about 30 to 45 degrees away from straight-on, and the
-> character **looks toward the right-hand side of the frame** — as if
-> speaking to somebody standing off to their right, never out at the reader.
-> Manga stages a conversation this way: the two speakers are angled toward
-> each other, and a character square to the camera reads as posing rather
-> than talking. **Every one of the six panels uses the same three-quarter
-> angle, turned the same way** — only the expression changes. The panel is
-> square precisely so that folded arms and a raised hand fit inside it —
-> **nothing may be cropped by the edge of a panel, least of all a hand.**
-> Keep a little clear space on all four sides of the figure.
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
 >
-> **The head stays exactly the same size and in exactly the same place in
-> all six panels**, at the same scale and under the same flat lighting. The
-> expression changes, and the shoulders, arms and hands may move with it —
-> but the framing, the scale and the eye level never do. Because the crop is
-> at the chest, keep every gesture at chest height or above, so hands stay
-> inside the frame.
+> **The expression.** The expression is **neutral**: an ordinary talking
+> face, mouth slightly open, no strong feeling; hands resting together in
+> front of the chest. Keep every gesture at chest height or above.
 >
-> Reading order — left to right along the top row, then left to right along
-> the bottom row:
-> **1 — neutral:** an ordinary talking face, mouth slightly open; arms
-> relaxed.
-> **2 — happy:** a real smile, eyes curved — warm but still dry, never soft;
-> one hand raised in a small gesture.
-> **3 — worried:** brows drawn together, mouth a small flat line; hands
-> close to the body.
-> **4 — annoyed:** brows down and level, mouth turned down at one corner;
-> arms folded, forearms prominent.
-> **5 — surprised:** eyes opening to full circles, brows high, mouth open in
-> a small circle; both hands lifted slightly.
-> **6 — sad:** eyes lowered, mouth a short downward curve; shoulders
-> dropped, hands in her lap.
+> **Keep visible:** the forearms, drawn noticeably thicker and stronger than
+> anyone else's.
 >
-> Every panel is cropped at the **chest**, not the waist — no stomach, no
-> hips, no legs. The background behind and between the figures is **pure
-> flat white #FFFFFF**, edge to edge across the whole image — no shadow, no
-> gradient, no texture, no paper tone, no border and no line between panels.
-> **Do not draw a transparency checkerboard.** Do not render a
-> grey-and-white chequered pattern, a grid, or any other stand-in for
-> transparency: a drawn checkerboard is pixels, not alpha, and is far harder
-> to remove than plain white. Plain white, and nothing else. The image is
-> **3:2**.
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
 >
-> **Do not include:** a seventh or eighth panel, or any panel beyond the six
-> listed; any text, letters, numbers, captions, watermarks, signatures,
-> speech bubbles, logos, panel borders or motion lines. No sparkles or
-> glows.
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
 
----
+### Bà Sáu · happy
 
-## 4. Khoa — six-panel chest-up sheet
+**File:** `docs/assets/cast/basau/happy.png`
 
-**File:** `khoa.png` — the **whole sheet, uncut**, saved as one image.
-
-> **Draw exactly SIX panels — six and only six — laid out as a grid of three
-> columns across and two rows down, in one image. Six. Not four, not eight,
-> not nine. Do not add a seventh panel, an extra pose, an alternative angle,
-> a close-up, a colour variant or a blank cell.** The six are listed further
-> down and are the whole deliverable.
->
-> **If a style reference image is attached**, match its line weight,
-> colouring, shading and background treatment, and do not copy, quote or
-> resemble any character in it — the character below appears nowhere in it.
-> If nothing is attached, follow the written style exactly as described.
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
-> tradition of Fujiko F. Fujio — the *Doraemon* look. Simple rounded
-> characters drawn in clean even-weight black ink outlines. Not modern
-> anime, not moe, not Ghibli, not American cartoon, not 3D, not
-> photorealistic, not painterly.
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
 >
 > **Line.** Black contour line of near-constant width, closed and
 > continuous. No tapering brush strokes, no cross-hatching, no stippling, no
-> sketchy or broken linework. Interior detail is minimal: a face is a
-> handful of lines.
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
 >
 > **Colour.** Flat cel fills — solid areas of colour with hard edges. At
-> most one flat shadow tone per surface, never soft-edged. No gradients, no
-> texture, no airbrushing. Bright and clear.
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Bà Sáu** — Tí's grandmother, around seventy. The
+> shortest adult but the **widest and most stable** shape in the cast:
+> square, planted, upright. Grey hair pulled back into a tight low bun drawn
+> as one solid shape. Eyes usually drawn as two short downward curves,
+> opening to circles only when startled; one deep line at each side of the
+> mouth, set stern. A loose brown-and-indigo *áo bà ba* style tunic.
+> Reproduce that design exactly, with no change to hair, face, clothing,
+> colour or proportion. **Must not:** be drawn frail, bent or sweet;
+> resemble any existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **happy**: a real open smile, eyes
+> curved; shoulders lifted, one hand raised in a small open gesture. Keep
+> every gesture at chest height or above.
+>
+> **Keep visible:** the forearms, drawn noticeably thicker and stronger than
+> anyone else's.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Bà Sáu · worried
+
+**File:** `docs/assets/cast/basau/worried.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Bà Sáu** — Tí's grandmother, around seventy. The
+> shortest adult but the **widest and most stable** shape in the cast:
+> square, planted, upright. Grey hair pulled back into a tight low bun drawn
+> as one solid shape. Eyes usually drawn as two short downward curves,
+> opening to circles only when startled; one deep line at each side of the
+> mouth, set stern. A loose brown-and-indigo *áo bà ba* style tunic.
+> Reproduce that design exactly, with no change to hair, face, clothing,
+> colour or proportion. **Must not:** be drawn frail, bent or sweet;
+> resemble any existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **worried**: brows raised and pulled
+> together, mouth a small flat line; shoulders drawn in, hands close to the
+> body. Keep every gesture at chest height or above.
+>
+> **Keep visible:** the forearms, drawn noticeably thicker and stronger than
+> anyone else's.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Bà Sáu · annoyed
+
+**File:** `docs/assets/cast/basau/annoyed.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Bà Sáu** — Tí's grandmother, around seventy. The
+> shortest adult but the **widest and most stable** shape in the cast:
+> square, planted, upright. Grey hair pulled back into a tight low bun drawn
+> as one solid shape. Eyes usually drawn as two short downward curves,
+> opening to circles only when startled; one deep line at each side of the
+> mouth, set stern. A loose brown-and-indigo *áo bà ba* style tunic.
+> Reproduce that design exactly, with no change to hair, face, clothing,
+> colour or proportion. **Must not:** be drawn frail, bent or sweet;
+> resemble any existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **annoyed**: brows down and level,
+> mouth pressed or turned down at one corner; arms folded. Keep every
+> gesture at chest height or above.
+>
+> **Keep visible:** the forearms, drawn noticeably thicker and stronger than
+> anyone else's.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Bà Sáu · surprised
+
+**File:** `docs/assets/cast/basau/surprised.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Bà Sáu** — Tí's grandmother, around seventy. The
+> shortest adult but the **widest and most stable** shape in the cast:
+> square, planted, upright. Grey hair pulled back into a tight low bun drawn
+> as one solid shape. Eyes usually drawn as two short downward curves,
+> opening to circles only when startled; one deep line at each side of the
+> mouth, set stern. A loose brown-and-indigo *áo bà ba* style tunic.
+> Reproduce that design exactly, with no change to hair, face, clothing,
+> colour or proportion. **Must not:** be drawn frail, bent or sweet;
+> resemble any existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **surprised**: eyes wide and round,
+> brows high, mouth open in a small circle; shoulders up, both hands lifted
+> slightly. Keep every gesture at chest height or above.
+>
+> **Keep visible:** the forearms, drawn noticeably thicker and stronger than
+> anyone else's.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Bà Sáu · sad
+
+**File:** `docs/assets/cast/basau/sad.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Bà Sáu** — Tí's grandmother, around seventy. The
+> shortest adult but the **widest and most stable** shape in the cast:
+> square, planted, upright. Grey hair pulled back into a tight low bun drawn
+> as one solid shape. Eyes usually drawn as two short downward curves,
+> opening to circles only when startled; one deep line at each side of the
+> mouth, set stern. A loose brown-and-indigo *áo bà ba* style tunic.
+> Reproduce that design exactly, with no change to hair, face, clothing,
+> colour or proportion. **Must not:** be drawn frail, bent or sweet;
+> resemble any existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **sad**: eyes lowered, brows slack,
+> mouth a short downward curve; shoulders dropped, one hand held loosely at
+> the collarbone. Keep every gesture at chest height or above.
+>
+> **Keep visible:** the forearms, drawn noticeably thicker and stronger than
+> anyone else's.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+---
+
+## Khoa — six drawings, `docs/assets/cast/khoa/`
+
+### Khoa · neutral
+
+**File:** `docs/assets/cast/khoa/neutral.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
 >
 > **The character.** **Khoa** — a boy of thirteen, half a head taller than
 > the others, neat and calm. A straight vertical silhouette, arms at rest,
@@ -402,90 +1351,410 @@ eleven dialogues read as plain text until they are staged.
 > the pupil centred, and a small level closed-mouth smile. Genuinely kind;
 > **never smug, never sneering.** White shirt buttoned to the collar.
 > Reproduce that design exactly, with no change to hair, face, clothing,
-> colour or proportion between panels. **Must not:** be drawn as a rival or
-> a snob; resemble any existing Doraemon character.
+> colour or proportion. **Must not:** be drawn as a rival or a snob;
+> resemble any existing Doraemon character.
 >
-> **The sheet.** Six square panels arranged as a grid of **three across and
-> two down**, filling one 3:2 image edge to edge. The image must divide into
-> exactly three equal columns and two equal rows, with **every panel exactly
-> square** and no gap, border, gutter or margin anywhere — the six squares
-> tile the whole image. Each panel shows the character from the **chest
-> up**: head, shoulders, upper chest, and both arms and hands wherever they
-> are, drawn in **three-quarter view, not facing the camera**. The body and
-> the head are turned about 30 to 45 degrees away from straight-on, and the
-> character **looks toward the right-hand side of the frame** — as if
-> speaking to somebody standing off to their right, never out at the reader.
-> Manga stages a conversation this way: the two speakers are angled toward
-> each other, and a character square to the camera reads as posing rather
-> than talking. **Every one of the six panels uses the same three-quarter
-> angle, turned the same way** — only the expression changes. The panel is
-> square precisely so that folded arms and a raised hand fit inside it —
-> **nothing may be cropped by the edge of a panel, least of all a hand.**
-> Keep a little clear space on all four sides of the figure.
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
 >
-> **The head stays exactly the same size and in exactly the same place in
-> all six panels**, at the same scale and under the same flat lighting. The
-> expression changes, and the shoulders, arms and hands may move with it —
-> but the framing, the scale and the eye level never do. Because the crop is
-> at the chest, keep every gesture at chest height or above, so hands stay
-> inside the frame.
+> **The expression.** The expression is **neutral**: an ordinary talking
+> face, mouth slightly open, no strong feeling; hands resting together in
+> front of the chest. Keep every gesture at chest height or above.
 >
-> Reading order — left to right along the top row, then left to right along
-> the bottom row:
-> **1 — neutral:** an ordinary talking face, mouth slightly open; arms at
-> rest, notebook against his side.
-> **2 — happy:** a real open smile, eyes curved; shoulders lifted, free hand
-> raised in a small open gesture.
-> **3 — worried:** brows raised and pulled together, mouth a small flat
-> line; notebook held with both hands.
-> **4 — annoyed:** brows down and level, mouth pressed — mildly, he does not
-> scowl; free hand on the hip.
-> **5 — surprised:** eyes wide and round, brows high, mouth open in a small
-> circle; free hand lifted.
-> **6 — sad:** eyes lowered, brows slack, mouth a short downward curve;
-> shoulders dropped, notebook lowered.
+> **Keep visible:** the clean side parting, and the green notebook held flat
+> against his side.
 >
-> Every panel is cropped at the **chest**, not the waist — no stomach, no
-> hips, no legs. The background behind and between the figures is **pure
-> flat white #FFFFFF**, edge to edge across the whole image — no shadow, no
-> gradient, no texture, no paper tone, no border and no line between panels.
-> **Do not draw a transparency checkerboard.** Do not render a
-> grey-and-white chequered pattern, a grid, or any other stand-in for
-> transparency: a drawn checkerboard is pixels, not alpha, and is far harder
-> to remove than plain white. Plain white, and nothing else. The image is
-> **3:2**.
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
 >
-> **Do not include:** a seventh or eighth panel, or any panel beyond the six
-> listed; any text, letters, numbers, captions, watermarks, signatures,
-> speech bubbles, logos, panel borders or motion lines. No sparkles or
-> glows.
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Khoa · happy
+
+**File:** `docs/assets/cast/khoa/happy.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Khoa** — a boy of thirteen, half a head taller than
+> the others, neat and calm. A straight vertical silhouette, arms at rest,
+> the stillest figure in the cast. Black hair, flat and combed, with **a
+> clean side parting** — the only parting in the cast. Eyes even ovals with
+> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
+> **never smug, never sneering.** White shirt buttoned to the collar.
+> Reproduce that design exactly, with no change to hair, face, clothing,
+> colour or proportion. **Must not:** be drawn as a rival or a snob;
+> resemble any existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **happy**: a real open smile, eyes
+> curved; shoulders lifted, one hand raised in a small open gesture. Keep
+> every gesture at chest height or above.
+>
+> **Keep visible:** the clean side parting, and the green notebook held flat
+> against his side.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Khoa · worried
+
+**File:** `docs/assets/cast/khoa/worried.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Khoa** — a boy of thirteen, half a head taller than
+> the others, neat and calm. A straight vertical silhouette, arms at rest,
+> the stillest figure in the cast. Black hair, flat and combed, with **a
+> clean side parting** — the only parting in the cast. Eyes even ovals with
+> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
+> **never smug, never sneering.** White shirt buttoned to the collar.
+> Reproduce that design exactly, with no change to hair, face, clothing,
+> colour or proportion. **Must not:** be drawn as a rival or a snob;
+> resemble any existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **worried**: brows raised and pulled
+> together, mouth a small flat line; shoulders drawn in, hands close to the
+> body. Keep every gesture at chest height or above.
+>
+> **Keep visible:** the clean side parting, and the green notebook held flat
+> against his side.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Khoa · annoyed
+
+**File:** `docs/assets/cast/khoa/annoyed.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Khoa** — a boy of thirteen, half a head taller than
+> the others, neat and calm. A straight vertical silhouette, arms at rest,
+> the stillest figure in the cast. Black hair, flat and combed, with **a
+> clean side parting** — the only parting in the cast. Eyes even ovals with
+> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
+> **never smug, never sneering.** White shirt buttoned to the collar.
+> Reproduce that design exactly, with no change to hair, face, clothing,
+> colour or proportion. **Must not:** be drawn as a rival or a snob;
+> resemble any existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **annoyed**: brows down and level,
+> mouth pressed or turned down at one corner; arms folded. Keep every
+> gesture at chest height or above.
+>
+> **Keep visible:** the clean side parting, and the green notebook held flat
+> against his side.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Khoa · surprised
+
+**File:** `docs/assets/cast/khoa/surprised.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Khoa** — a boy of thirteen, half a head taller than
+> the others, neat and calm. A straight vertical silhouette, arms at rest,
+> the stillest figure in the cast. Black hair, flat and combed, with **a
+> clean side parting** — the only parting in the cast. Eyes even ovals with
+> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
+> **never smug, never sneering.** White shirt buttoned to the collar.
+> Reproduce that design exactly, with no change to hair, face, clothing,
+> colour or proportion. **Must not:** be drawn as a rival or a snob;
+> resemble any existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **surprised**: eyes wide and round,
+> brows high, mouth open in a small circle; shoulders up, both hands lifted
+> slightly. Keep every gesture at chest height or above.
+>
+> **Keep visible:** the clean side parting, and the green notebook held flat
+> against his side.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Khoa · sad
+
+**File:** `docs/assets/cast/khoa/sad.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Khoa** — a boy of thirteen, half a head taller than
+> the others, neat and calm. A straight vertical silhouette, arms at rest,
+> the stillest figure in the cast. Black hair, flat and combed, with **a
+> clean side parting** — the only parting in the cast. Eyes even ovals with
+> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
+> **never smug, never sneering.** White shirt buttoned to the collar.
+> Reproduce that design exactly, with no change to hair, face, clothing,
+> colour or proportion. **Must not:** be drawn as a rival or a snob;
+> resemble any existing Doraemon character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **sad**: eyes lowered, brows slack,
+> mouth a short downward curve; shoulders dropped, one hand held loosely at
+> the collarbone. Keep every gesture at chest height or above.
+>
+> **Keep visible:** the clean side parting, and the green notebook held flat
+> against his side.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
 
 ---
 
-## 5. Mun — six-panel chest-up sheet
+## Mun — six drawings, `docs/assets/cast/mun/`
 
-**File:** `mun.png` — the **whole sheet, uncut**, saved as one image.
+### Mun · neutral
 
-Mun does not speak in any Lesson 1 dialogue yet. Generate this sheet anyway —
-he speaks in the passages, he is the character most likely to be given a line
-next, and a cat drawn six months after the rest of the cast will not match it.
+**File:** `docs/assets/cast/mun/neutral.png`
 
-> **Draw exactly SIX panels — six and only six — laid out as a grid of three
-> columns across and two rows down, in one image. Six. Not four, not eight,
-> not nine. Do not add a seventh panel, an extra pose, an alternative angle,
-> a close-up, a colour variant or a blank cell.** The six are listed further
-> down and are the whole deliverable.
->
-> **If a style reference image is attached**, match its line weight,
-> colouring, shading and background treatment, and do not copy, quote or
-> resemble any character in it — the character below appears nowhere in it.
-> If nothing is attached, follow the written style exactly as described.
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
 >
 > **Art style.** Classic Japanese children's-manga and TV-anime style in the
-> tradition of Fujiko F. Fujio — the *Doraemon* look, drawn in clean
-> even-weight black ink outlines with flat cel colour. Not modern anime, not
-> moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
-> painterly. No gradients, no texture, no airbrushing, no soft edges.
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
 >
 > **The character.** **Mun** — a thin black cat, ordinary house-cat size and
 > build, **on four legs**. Low, lean, slightly scruffy, ribs faintly
@@ -493,64 +1762,391 @@ next, and a cat drawn six months after the rest of the cast will not match it.
 > dark-grey band along the spine as its only shading. Amber-gold eyes drawn
 > as full circles with a **vertical slit pupil** — the only slit pupils in
 > the cast. A scholar's air he has not earned. Reproduce that design
-> exactly, with no change to colour or proportion between panels. **Must
+> exactly, with no change to colour or proportion. **Must
 > not:** be blue, or blue-and-white; have a white belly or a pouch; wear a
 > collar, bell, clothing or any prop; stand upright, walk on two legs, sit
 > like a person, or have round mitten paws; resemble any existing Doraemon
 > character.
 >
-> **The sheet.** Six square panels arranged as a grid of **three across and
-> two down**, filling one 3:2 image edge to edge. The image must divide into
-> exactly three equal columns and two equal rows, with **every panel exactly
-> square** and no gap, border, gutter or margin anywhere — the six squares
-> tile the whole image. Each panel shows the character from the **chest
-> up**: head, shoulders, upper chest, and both arms and hands wherever they
-> are, drawn in **three-quarter view, not facing the camera**. The body and
-> the head are turned about 30 to 45 degrees away from straight-on, and the
-> character **looks toward the right-hand side of the frame** — as if
-> speaking to somebody standing off to their right, never out at the reader.
-> Manga stages a conversation this way: the two speakers are angled toward
-> each other, and a character square to the camera reads as posing rather
-> than talking. **Every one of the six panels uses the same three-quarter
-> angle, turned the same way** — only the expression changes. The panel is
-> square precisely so that folded arms and a raised hand fit inside it —
-> **nothing may be cropped by the edge of a panel, least of all a hand.**
-> Keep a little clear space on all four sides of the figure.
+> **Framing.** Draw the cat's head, shoulders and front legs, on four legs,
+> cropped straight across mid-body. He never sits like a person and never
+> stands on two legs. The character is in **three-quarter view, not facing
+> the camera**: body and head turned about 30 to 45 degrees off straight-on,
+> **looking toward the right-hand side of the frame**, as if speaking to
+> somebody standing off to their right — never out at the reader. The
+> picture is **square, 1:1**, with the figure centred across it and sitting
+> on the bottom edge. Leave a little clear space at the top and both sides:
+> **nothing may be cropped by the edge, least of all a hand.**
 >
-> **The head stays exactly the same size and in exactly the same place in
-> all six panels**, at the same scale and under the same flat lighting. The
-> expression changes, and the shoulders, arms and hands may move with it —
-> but the framing, the scale and the eye level never do. Because the crop is
-> at the chest, keep every gesture at chest height or above, so hands stay
-> inside the frame.
+> **The expression.** His expression is **neutral**: ears up, eyes level,
+> mouth slightly open as if talking. The feeling is carried by the ears, the
+> eyes and the set of the shoulders — never by arms, hands or human posture.
 >
-> Reading order — left to right along the top row, then left to right along
-> the bottom row:
-> **1 — neutral:** ears up, eyes level, mouth slightly open as if talking.
-> **2 — happy:** eyes curved to two upward arcs, ears forward, head slightly
-> raised.
-> **3 — worried:** ears half back, eyes wide, head lowered a little.
-> **4 — annoyed:** ears flat back, eyes narrowed to slits, chin down.
-> **5 — surprised:** eyes fully round and large, ears straight up, whiskers
-> out.
-> **6 — sad:** ears down and out, eyes lowered, head dropped.
+> **Keep visible:** the one torn left ear.
 >
-> Every panel is cropped at the **chest**, showing the head, shoulders and
-> front legs and nothing below them.
-> The background behind and between the figures is **pure flat white
-> #FFFFFF**, edge to edge across the whole image — no shadow, no gradient,
-> no texture, no paper tone, no border and no line between panels. **Do not
-> draw a transparency checkerboard.** Do not render a grey-and-white
-> chequered pattern, a grid, or any other stand-in for transparency: a drawn
-> checkerboard is pixels, not alpha, and is far harder to remove than plain
-> white. Plain white, and nothing else. The image is **3:2**.
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
 >
-> **Do not include:** a seventh or eighth panel, or any panel beyond the six
-> listed; any text, letters, numbers, captions, watermarks, signatures,
-> speech bubbles, logos, panel borders or motion lines. No sparkles or
-> glows.
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
 
----
+### Mun · happy
+
+**File:** `docs/assets/cast/mun/happy.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Mun** — a thin black cat, ordinary house-cat size and
+> build, **on four legs**. Low, lean, slightly scruffy, ribs faintly
+> suggested by two short lines. Solid flat black with a single flat
+> dark-grey band along the spine as its only shading. Amber-gold eyes drawn
+> as full circles with a **vertical slit pupil** — the only slit pupils in
+> the cast. A scholar's air he has not earned. Reproduce that design
+> exactly, with no change to colour or proportion. **Must
+> not:** be blue, or blue-and-white; have a white belly or a pouch; wear a
+> collar, bell, clothing or any prop; stand upright, walk on two legs, sit
+> like a person, or have round mitten paws; resemble any existing Doraemon
+> character.
+>
+> **Framing.** Draw the cat's head, shoulders and front legs, on four legs,
+> cropped straight across mid-body. He never sits like a person and never
+> stands on two legs. The character is in **three-quarter view, not facing
+> the camera**: body and head turned about 30 to 45 degrees off straight-on,
+> **looking toward the right-hand side of the frame**, as if speaking to
+> somebody standing off to their right — never out at the reader. The
+> picture is **square, 1:1**, with the figure centred across it and sitting
+> on the bottom edge. Leave a little clear space at the top and both sides:
+> **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** His expression is **happy**: eyes curved to two upward
+> arcs, ears forward, head slightly raised. The feeling is carried by the
+> ears, the eyes and the set of the shoulders — never by arms, hands or
+> human posture.
+>
+> **Keep visible:** the one torn left ear.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Mun · worried
+
+**File:** `docs/assets/cast/mun/worried.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Mun** — a thin black cat, ordinary house-cat size and
+> build, **on four legs**. Low, lean, slightly scruffy, ribs faintly
+> suggested by two short lines. Solid flat black with a single flat
+> dark-grey band along the spine as its only shading. Amber-gold eyes drawn
+> as full circles with a **vertical slit pupil** — the only slit pupils in
+> the cast. A scholar's air he has not earned. Reproduce that design
+> exactly, with no change to colour or proportion. **Must
+> not:** be blue, or blue-and-white; have a white belly or a pouch; wear a
+> collar, bell, clothing or any prop; stand upright, walk on two legs, sit
+> like a person, or have round mitten paws; resemble any existing Doraemon
+> character.
+>
+> **Framing.** Draw the cat's head, shoulders and front legs, on four legs,
+> cropped straight across mid-body. He never sits like a person and never
+> stands on two legs. The character is in **three-quarter view, not facing
+> the camera**: body and head turned about 30 to 45 degrees off straight-on,
+> **looking toward the right-hand side of the frame**, as if speaking to
+> somebody standing off to their right — never out at the reader. The
+> picture is **square, 1:1**, with the figure centred across it and sitting
+> on the bottom edge. Leave a little clear space at the top and both sides:
+> **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** His expression is **worried**: ears half back, eyes
+> wide, head lowered a little. The feeling is carried by the ears, the eyes
+> and the set of the shoulders — never by arms, hands or human posture.
+>
+> **Keep visible:** the one torn left ear.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Mun · annoyed
+
+**File:** `docs/assets/cast/mun/annoyed.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Mun** — a thin black cat, ordinary house-cat size and
+> build, **on four legs**. Low, lean, slightly scruffy, ribs faintly
+> suggested by two short lines. Solid flat black with a single flat
+> dark-grey band along the spine as its only shading. Amber-gold eyes drawn
+> as full circles with a **vertical slit pupil** — the only slit pupils in
+> the cast. A scholar's air he has not earned. Reproduce that design
+> exactly, with no change to colour or proportion. **Must
+> not:** be blue, or blue-and-white; have a white belly or a pouch; wear a
+> collar, bell, clothing or any prop; stand upright, walk on two legs, sit
+> like a person, or have round mitten paws; resemble any existing Doraemon
+> character.
+>
+> **Framing.** Draw the cat's head, shoulders and front legs, on four legs,
+> cropped straight across mid-body. He never sits like a person and never
+> stands on two legs. The character is in **three-quarter view, not facing
+> the camera**: body and head turned about 30 to 45 degrees off straight-on,
+> **looking toward the right-hand side of the frame**, as if speaking to
+> somebody standing off to their right — never out at the reader. The
+> picture is **square, 1:1**, with the figure centred across it and sitting
+> on the bottom edge. Leave a little clear space at the top and both sides:
+> **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** His expression is **annoyed**: ears flat back, eyes
+> narrowed to slits, chin down. The feeling is carried by the ears, the eyes
+> and the set of the shoulders — never by arms, hands or human posture.
+>
+> **Keep visible:** the one torn left ear.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Mun · surprised
+
+**File:** `docs/assets/cast/mun/surprised.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Mun** — a thin black cat, ordinary house-cat size and
+> build, **on four legs**. Low, lean, slightly scruffy, ribs faintly
+> suggested by two short lines. Solid flat black with a single flat
+> dark-grey band along the spine as its only shading. Amber-gold eyes drawn
+> as full circles with a **vertical slit pupil** — the only slit pupils in
+> the cast. A scholar's air he has not earned. Reproduce that design
+> exactly, with no change to colour or proportion. **Must
+> not:** be blue, or blue-and-white; have a white belly or a pouch; wear a
+> collar, bell, clothing or any prop; stand upright, walk on two legs, sit
+> like a person, or have round mitten paws; resemble any existing Doraemon
+> character.
+>
+> **Framing.** Draw the cat's head, shoulders and front legs, on four legs,
+> cropped straight across mid-body. He never sits like a person and never
+> stands on two legs. The character is in **three-quarter view, not facing
+> the camera**: body and head turned about 30 to 45 degrees off straight-on,
+> **looking toward the right-hand side of the frame**, as if speaking to
+> somebody standing off to their right — never out at the reader. The
+> picture is **square, 1:1**, with the figure centred across it and sitting
+> on the bottom edge. Leave a little clear space at the top and both sides:
+> **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** His expression is **surprised**: eyes fully round and
+> large, ears straight up, whiskers out. The feeling is carried by the ears,
+> the eyes and the set of the shoulders — never by arms, hands or human
+> posture.
+>
+> **Keep visible:** the one torn left ear.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
+### Mun · sad
+
+**File:** `docs/assets/cast/mun/sad.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. A simple rounded
+> character drawn in clean even-weight black ink outlines. Not modern anime,
+> not moe, not Ghibli, not American cartoon, not 3D, not photorealistic, not
+> painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and
+> continuous. No tapering brush strokes, no cross-hatching, no stippling, no
+> sketchy or broken linework, no visible pencil. Interior detail is minimal:
+> a face is a handful of lines.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At
+> most one flat shadow tone per surface, shaped as a clean geometric shape,
+> never soft-edged. No gradients, no visible texture, no paper grain, no
+> brush grain, no airbrushing, no ambient occlusion. Bright and clear.
+>
+> **Figures.** Head large relative to the body — roughly one to four and a
+> half. Eyes are plain white ovals with a black dot pupil and one thin brow;
+> the nose is a small simple shape; the mouth is one curve that opens to a
+> plain rounded shape when speaking. Hands are simple and rounded, five
+> fingers, no knuckle detail. Hair is one solid flat colour with at most a
+> single flat highlight band — never strand-shaded.
+>
+> **The character.** **Mun** — a thin black cat, ordinary house-cat size and
+> build, **on four legs**. Low, lean, slightly scruffy, ribs faintly
+> suggested by two short lines. Solid flat black with a single flat
+> dark-grey band along the spine as its only shading. Amber-gold eyes drawn
+> as full circles with a **vertical slit pupil** — the only slit pupils in
+> the cast. A scholar's air he has not earned. Reproduce that design
+> exactly, with no change to colour or proportion. **Must
+> not:** be blue, or blue-and-white; have a white belly or a pouch; wear a
+> collar, bell, clothing or any prop; stand upright, walk on two legs, sit
+> like a person, or have round mitten paws; resemble any existing Doraemon
+> character.
+>
+> **Framing.** Draw the cat's head, shoulders and front legs, on four legs,
+> cropped straight across mid-body. He never sits like a person and never
+> stands on two legs. The character is in **three-quarter view, not facing
+> the camera**: body and head turned about 30 to 45 degrees off straight-on,
+> **looking toward the right-hand side of the frame**, as if speaking to
+> somebody standing off to their right — never out at the reader. The
+> picture is **square, 1:1**, with the figure centred across it and sitting
+> on the bottom edge. Leave a little clear space at the top and both sides:
+> **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** His expression is **sad**: ears down and out, eyes
+> lowered, head dropped. The feeling is carried by the ears, the eyes and
+> the set of the shoulders — never by arms, hands or human posture.
+>
+> **Keep visible:** the one torn left ear.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
 ---
 
 # Part 2 — the background plates
@@ -1116,37 +2712,53 @@ chapters after it.
 
 # After you generate
 
-**Do not cut a character sheet up.** The sheet *is* the asset: saved whole as
-`<slug>.png`, and the page shows one emotion by sliding it behind a window one
-panel wide and one panel tall. Five files, not thirty, and no six files that
-have to agree with each other about a baseline.
+Save each drawing as `docs/assets/cast/<slug>/<emotion>.png` — a folder per
+character, the emotion as the filename — then compose:
 
-1. **Check the grid is exactly three equal columns by two equal rows**, with the
-   panels square and tiling the image edge to edge. This is the one thing the
-   sprite depends on: the page steps by a fixed fraction, so an uneven grid — or
-   a margin down one side — shows a sliver of the neighbouring face. Re-roll
-   rather than nudge; if it is close, set the canvas to a round multiple of
-   three across and two down and centre each figure in its cell.
-2. **Key the white out**, across the whole sheet, then save with an alpha
-   channel. Use a **contiguous** fill or magic wand from outside the figures —
-   not a global "remove all white" — because Thảo and Khoa wear white shirts and
-   a global key would eat them. The style guarantees this works: every figure is
-   drawn with a closed, continuous black contour, so the white *inside* an
-   outline is never connected to the white outside it.
+```sh
+python3 tools/make_sheet.py ti        # one character
+python3 tools/make_sheet.py --all     # everybody who has a full set
+python3 tools/check_cast.py           # what is declared, and what is drawn
+python3 tools/build.py                # then reload Unit 1 Lesson 1
+```
 
-   > Transparency is asked for nowhere in the prompts, deliberately. Generators
-   > asked for a transparent background tend to *draw* the grey-and-white
-   > checkerboard that editors use to depict it — pixels, not alpha, and far
-   > harder to remove than plain white. Every prompt names that failure and
-   > forbids it.
-3. **Do not trim or re-crop the panels.** The grid is what the offsets are
-   computed from; cropping to the figure breaks it.
-4. Save sheets as **PNG with transparency** to `docs/assets/cast/`, plates as
-   **JPG** to `docs/assets/bg/`.
-5. `python3 tools/check_cast.py`, then `python3 tools/build.py`, then reload
-   Unit 1 Lesson 1.
+`make_sheet.py` does three things you therefore do not have to:
 
-Two things you do **not** have to do:
+1. **Squares each drawing** by padding, never cropping and never stretching,
+   centred across and sitting on the bottom edge — so the character stands on
+   the floor of the panel instead of floating like a sticker.
+2. **Keys the white out** and saves with an alpha channel. It floods inward from
+   the border rather than removing all white globally, so Thảo's and Khoa's
+   white shirts survive: the style's closed black contour is what separates the
+   white inside an outline from the white outside it.
+3. **Composes the 3 × 2 grid** at one cell size, in the panel order
+   `data/cast.json` declares. Six equal squares, identically placed, by
+   arithmetic.
+
+So the geometry the page depends on is now guaranteed rather than hoped for, and
+none of it is the generator's job.
+
+## Why one drawing at a time
+
+The first version of this file asked for the whole six-panel sheet in one
+generation. It came back with **eight panels, four times running.** Two reasons,
+and both are worth knowing before writing any image prompt:
+
+- **Multi-panel layout is the weakest thing these models do.** A four-across
+  contact sheet is far commoner in training data than three-across, and a long
+  prompt full of style and character constraints leaves layout competing for
+  what attention is left.
+- **Negation does not work.** The prompt said "not four, not eight, not nine",
+  which put those numbers *in* the prompt. Diffusion models have no reliable
+  representation of "not", so naming a number raises its salience however the
+  sentence is phrased. That instruction was making the problem worse.
+
+The fix is not a better-worded grid instruction. It is to ask for the one thing
+the model is good at — a single figure with a single expression — and do the
+layout in code, where six equal squares is four lines of arithmetic that cannot
+come back as eight.
+
+Two things you still do **not** have to do:
 
 - **Do not draw a character facing both ways.** The page mirrors whoever stands
   on the right, so each character is drawn once, looking toward the right of the
@@ -1164,13 +2776,13 @@ Two things you do **not** have to do:
   > asymmetry reversed: Thảo's tucked ear swaps sides, Khoa's parting swaps
   > sides, and Mun's torn *left* ear reads as a torn right ear whenever he
   > speaks second. Nobody has ever noticed this in a comic, and the alternative
-  > is drawing every character twice — ten sheets instead of five, each pair
-  > having to match. Accepted deliberately; do not "fix" it by drawing a second
-  > facing.
-- **Do not reorder the panels.** Reading order is `neutral · happy · worried`
-  along the top row, then `annoyed · surprised · sad` along the bottom, and that
-  is the `col` index in `data/cast.json`. Changing one without the other
-  silently gives every character the wrong face.
+  > is drawing every character twice. Accepted deliberately; do not "fix" it by
+  > drawing a second facing.
+
+- **Do not rename or reorder anything.** The emotion filenames and their panel
+  order are the `col` index in `data/cast.json`; the composer reads that order
+  and the page reads it back. Changing one without the other silently gives
+  every character the wrong face.
 
 # If a generation drifts
 
@@ -1178,12 +2790,12 @@ Two things you do **not** have to do:
 | --- | --- |
 | A character resembles a Doraemon character — the cat goes blue or bipedal, the boy acquires round glasses | Demote the reference image to *style only*, saying so in the prompt, and paste that character's **must not** line in verbatim. Do not keep a "close enough" variant; it contaminates everything fed from it |
 | It comes back as generic modern anime — soft shading, glossy eyes, strand-shaded hair | Re-paste the **Line** and **Colour** paragraphs in full. They are the whole defence and they degrade the moment they are summarised. Naming what it must *not* be does more work than naming what it should be |
-| The sheet comes back with eight panels, or four, instead of six | Generators default to familiar grids and will pad a set out. The count is now the first line of every character prompt and is repeated in the prohibitions, so this is a miss rather than an ambiguity — re-roll. Do **not** keep an eight-panel sheet and ignore two: the page computes the offsets from a 3 × 2 grid, so every face would be cropped wrong |
-| The panels do not line up, or a sliver of the next face shows | They are not exactly equal sixths. The page steps by a fixed fraction, so this cannot be fixed by re-cropping — re-roll, or set the canvas to a round multiple of six and centre each figure in its sixth |
-| An avatar has a white box behind it | The white was never keyed out. It is invisible against the generator's own preview — always check the saved PNG against a dark colour |
-| The sheet comes back with a grey-and-white chequered pattern behind the figures | The generator has *drawn* a transparency checkerboard instead of leaving alpha. Re-roll: every prompt already forbids it by name, so this is a miss rather than an ambiguity, and a drawn checkerboard is much harder to key than plain white |
-| The characters look out at the reader, or the two speakers face away from each other | The sheet was drawn square to the camera, or drawn looking *left*. Both must be three-quarter and looking toward the **right** of the frame — the page flips the right-hand speaker, so a left-looking sheet points both of them off the edges. Re-roll; it cannot be fixed by flipping the file, which would reverse the character's own asymmetry (Thảo's exposed ear, Khoa's parting, Mun's torn left ear) |
-| Keying the white also ate a white shirt | A global "remove all white" was used. Key with a contiguous fill from outside the figure — the closed black contour keeps the shirt's white separate from the background's |
+| A drawing comes back as a grid, a sheet or a set of panels | Every prompt asks for one figure with one expression. Re-roll rather than cropping a panel out of it — a cropped cell will not share a scale or an eye level with the other five, and `make_sheet.py` cannot fix a mismatch it was never given |
+| The head jumps or resizes between expressions | The six drawings were framed differently. `make_sheet.py` squares and scales them to one cell but cannot re-frame a head — re-roll the odd one out, matching the head size and eye level of the `neutral` drawing, which is the one to draw first and judge the rest against |
+| An avatar has a white box behind it | `make_sheet.py` keys the white itself, so this means it found none to key — check the drawing's background really is white and not a very pale grey, or re-run with the tolerance in mind |
+| A drawing comes back with a grey-and-white chequered pattern behind the figure | The generator has *drawn* a transparency checkerboard instead of leaving alpha. Re-roll: every prompt already forbids it by name, so this is a miss rather than an ambiguity, and a drawn checkerboard is much harder to key than plain white |
+| The characters look out at the reader, or the two speakers face away from each other | It was drawn square to the camera, or drawn looking *left*. Both must be three-quarter and looking toward the **right** of the frame — the page flips the right-hand speaker, so a left-looking sheet points both of them off the edges. Re-roll; it cannot be fixed by flipping the file, which would reverse the character's own asymmetry (Thảo's exposed ear, Khoa's parting, Mun's torn left ear) |
+| Keying the white also ate a white shirt | Something other than `make_sheet.py` was used, globally. The composer floods inward from the border instead, so the closed black contour keeps the shirt's white separate from the background's |
 | A plate comes back with people in it | Repeat the "no people, no animals" clause as the **first** line of the description rather than the last. It must be re-rolled, not painted out: the cast is composited on top and a drawn figure appears beside itself |
 | A plate comes back vague, empty or blurred | The style's whole contrast is simple figures against a literal world. Re-paste **Backgrounds carry the realism** and name three specific objects the plate must contain |
 | The setting drifts Japanese — sliding doors, a suburban street, a vacant lot with concrete pipes | Expected: it is copying the reference's *world* along with its style. Re-paste **Setting discipline** and add three delta-specific objects |

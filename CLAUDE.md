@@ -16,6 +16,7 @@ python3 tools/check_coverage.py   # report: what the official textbook covers th
 python3 tools/index_sgk.py --check  # gate: the recorded book's lookup index is current
 python3 tools/check_level.py --strict-through 3   # gate: story prose stays inside grade 8
 python3 tools/check_cast.py       # report: which dialogue avatars and backgrounds exist
+python3 tools/make_sheet.py --all # compose the drawn expressions into character sheets
 ```
 
 `test_reading.js` needs `npm install jsdom` and skips loudly without it, so the
@@ -106,13 +107,17 @@ characters, the six emotions and the nine backgrounds; the build **fails** on a
 dialogue naming anything outside it, and `tools/check_cast.py` reports which
 images have actually been drawn.
 
-Art is **one sheet per character**: six square emotion panels in a 3 x 2 grid
-filling one 3:2 image, chest up, saved whole and never cut up — the page shows a
-panel by offsetting the sheet. Square panels because a hand raised or folded is
-wider than a head, and a taller-than-wide panel clipped them. Five files, not
-thirty, and no six files that have to agree about a baseline. The `col` index in
-`data/cast.json` is the panel's position and is load-bearing: reorder it without
-regenerating the art and every character gets the wrong face. `research/story/illustration-prompts.md` is the
+Art is **one drawing per expression** — thirty square pictures — composed into a
+3 x 2 sheet per character by `tools/make_sheet.py`, which squares each drawing,
+keys the white to transparency by flooding in from the border, and lays out the
+grid. Asking a generator for the six-panel sheet directly returned eight panels
+four times running: multi-panel layout is the weakest thing these models do, and
+"not eight" made it worse, because diffusion models have no representation of
+negation and naming a number only raises its salience. Layout is arithmetic; ask
+a generator only for what it is good at. The `col` index in `data/cast.json` is
+the panel's position and is load-bearing twice over — the composer writes to it
+and the page reads from it — so reordering it without regenerating the art gives
+every character the wrong face. `research/story/illustration-prompts.md` is the
 brief — every prompt the art needs, and nothing else — and its filenames and the
 manifest's slugs must agree.
 
