@@ -97,7 +97,14 @@ eleven dialogues read as plain text until they are staged.
 > square** and no gap, border, gutter or margin anywhere — the six squares
 > tile the whole image. Each panel shows the character from the **chest
 > up**: head, shoulders, upper chest, and both arms and hands wherever they
-> are, facing the viewer and turned very slightly to one side. The panel is
+> are, drawn in **three-quarter view, not facing the camera**. The body and
+> the head are turned about 30 to 45 degrees away from straight-on, and the
+> character **looks toward the right-hand side of the frame** — as if
+> speaking to somebody standing off to their right, never out at the reader.
+> Manga stages a conversation this way: the two speakers are angled toward
+> each other, and a character square to the camera reads as posing rather
+> than talking. **Every one of the six panels uses the same three-quarter
+> angle, turned the same way** — only the expression changes. The panel is
 > square precisely so that folded arms and a raised hand fit inside it —
 > **nothing may be cropped by the edge of a panel, least of all a hand.**
 > Keep a little clear space on all four sides of the figure.
@@ -129,13 +136,14 @@ eleven dialogues read as plain text until they are staged.
 > size.
 >
 > Every panel is cropped at the **chest**, not the waist — no stomach, no
-> hips, no legs. The background behind and between the figures is **pure flat white
-> #FFFFFF**, edge to edge across the whole image — no shadow, no gradient,
-> no texture, no paper tone, no border and no line between panels. **Do not
-> draw a transparency checkerboard.** Do not render a grey-and-white
-> chequered pattern, a grid, or any other stand-in for transparency: a drawn
-> checkerboard is pixels, not alpha, and is far harder to remove than plain
-> white. Plain white, and nothing else. The image is **3:2**.
+> hips, no legs. The background behind and between the figures is **pure
+> flat white #FFFFFF**, edge to edge across the whole image — no shadow, no
+> gradient, no texture, no paper tone, no border and no line between panels.
+> **Do not draw a transparency checkerboard.** Do not render a
+> grey-and-white chequered pattern, a grid, or any other stand-in for
+> transparency: a drawn checkerboard is pixels, not alpha, and is far harder
+> to remove than plain white. Plain white, and nothing else. The image is
+> **3:2**.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -192,7 +200,14 @@ eleven dialogues read as plain text until they are staged.
 > square** and no gap, border, gutter or margin anywhere — the six squares
 > tile the whole image. Each panel shows the character from the **chest
 > up**: head, shoulders, upper chest, and both arms and hands wherever they
-> are, facing the viewer and turned very slightly to one side. The panel is
+> are, drawn in **three-quarter view, not facing the camera**. The body and
+> the head are turned about 30 to 45 degrees away from straight-on, and the
+> character **looks toward the right-hand side of the frame** — as if
+> speaking to somebody standing off to their right, never out at the reader.
+> Manga stages a conversation this way: the two speakers are angled toward
+> each other, and a character square to the camera reads as posing rather
+> than talking. **Every one of the six panels uses the same three-quarter
+> angle, turned the same way** — only the expression changes. The panel is
 > square precisely so that folded arms and a raised hand fit inside it —
 > **nothing may be cropped by the edge of a panel, least of all a hand.**
 > Keep a little clear space on all four sides of the figure.
@@ -223,13 +238,14 @@ eleven dialogues read as plain text until they are staged.
 > — must read clearly in all six panels.**
 >
 > Every panel is cropped at the **chest**, not the waist — no stomach, no
-> hips, no legs. The background behind and between the figures is **pure flat white
-> #FFFFFF**, edge to edge across the whole image — no shadow, no gradient,
-> no texture, no paper tone, no border and no line between panels. **Do not
-> draw a transparency checkerboard.** Do not render a grey-and-white
-> chequered pattern, a grid, or any other stand-in for transparency: a drawn
-> checkerboard is pixels, not alpha, and is far harder to remove than plain
-> white. Plain white, and nothing else. The image is **3:2**.
+> hips, no legs. The background behind and between the figures is **pure
+> flat white #FFFFFF**, edge to edge across the whole image — no shadow, no
+> gradient, no texture, no paper tone, no border and no line between panels.
+> **Do not draw a transparency checkerboard.** Do not render a
+> grey-and-white chequered pattern, a grid, or any other stand-in for
+> transparency: a drawn checkerboard is pixels, not alpha, and is far harder
+> to remove than plain white. Plain white, and nothing else. The image is
+> **3:2**.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -278,7 +294,14 @@ eleven dialogues read as plain text until they are staged.
 > square** and no gap, border, gutter or margin anywhere — the six squares
 > tile the whole image. Each panel shows the character from the **chest
 > up**: head, shoulders, upper chest, and both arms and hands wherever they
-> are, facing the viewer and turned very slightly to one side. The panel is
+> are, drawn in **three-quarter view, not facing the camera**. The body and
+> the head are turned about 30 to 45 degrees away from straight-on, and the
+> character **looks toward the right-hand side of the frame** — as if
+> speaking to somebody standing off to their right, never out at the reader.
+> Manga stages a conversation this way: the two speakers are angled toward
+> each other, and a character square to the camera reads as posing rather
+> than talking. **Every one of the six panels uses the same three-quarter
+> angle, turned the same way** — only the expression changes. The panel is
 > square precisely so that folded arms and a raised hand fit inside it —
 > **nothing may be cropped by the edge of a panel, least of all a hand.**
 > Keep a little clear space on all four sides of the figure.
@@ -306,13 +329,14 @@ eleven dialogues read as plain text until they are staged.
 > dropped, hands in her lap.
 >
 > Every panel is cropped at the **chest**, not the waist — no stomach, no
-> hips, no legs. The background behind and between the figures is **pure flat white
-> #FFFFFF**, edge to edge across the whole image — no shadow, no gradient,
-> no texture, no paper tone, no border and no line between panels. **Do not
-> draw a transparency checkerboard.** Do not render a grey-and-white
-> chequered pattern, a grid, or any other stand-in for transparency: a drawn
-> checkerboard is pixels, not alpha, and is far harder to remove than plain
-> white. Plain white, and nothing else. The image is **3:2**.
+> hips, no legs. The background behind and between the figures is **pure
+> flat white #FFFFFF**, edge to edge across the whole image — no shadow, no
+> gradient, no texture, no paper tone, no border and no line between panels.
+> **Do not draw a transparency checkerboard.** Do not render a
+> grey-and-white chequered pattern, a grid, or any other stand-in for
+> transparency: a drawn checkerboard is pixels, not alpha, and is far harder
+> to remove than plain white. Plain white, and nothing else. The image is
+> **3:2**.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -360,7 +384,14 @@ eleven dialogues read as plain text until they are staged.
 > square** and no gap, border, gutter or margin anywhere — the six squares
 > tile the whole image. Each panel shows the character from the **chest
 > up**: head, shoulders, upper chest, and both arms and hands wherever they
-> are, facing the viewer and turned very slightly to one side. The panel is
+> are, drawn in **three-quarter view, not facing the camera**. The body and
+> the head are turned about 30 to 45 degrees away from straight-on, and the
+> character **looks toward the right-hand side of the frame** — as if
+> speaking to somebody standing off to their right, never out at the reader.
+> Manga stages a conversation this way: the two speakers are angled toward
+> each other, and a character square to the camera reads as posing rather
+> than talking. **Every one of the six panels uses the same three-quarter
+> angle, turned the same way** — only the expression changes. The panel is
 > square precisely so that folded arms and a raised hand fit inside it —
 > **nothing may be cropped by the edge of a panel, least of all a hand.**
 > Keep a little clear space on all four sides of the figure.
@@ -388,13 +419,14 @@ eleven dialogues read as plain text until they are staged.
 > shoulders dropped, notebook lowered.
 >
 > Every panel is cropped at the **chest**, not the waist — no stomach, no
-> hips, no legs. The background behind and between the figures is **pure flat white
-> #FFFFFF**, edge to edge across the whole image — no shadow, no gradient,
-> no texture, no paper tone, no border and no line between panels. **Do not
-> draw a transparency checkerboard.** Do not render a grey-and-white
-> chequered pattern, a grid, or any other stand-in for transparency: a drawn
-> checkerboard is pixels, not alpha, and is far harder to remove than plain
-> white. Plain white, and nothing else. The image is **3:2**.
+> hips, no legs. The background behind and between the figures is **pure
+> flat white #FFFFFF**, edge to edge across the whole image — no shadow, no
+> gradient, no texture, no paper tone, no border and no line between panels.
+> **Do not draw a transparency checkerboard.** Do not render a
+> grey-and-white chequered pattern, a grid, or any other stand-in for
+> transparency: a drawn checkerboard is pixels, not alpha, and is far harder
+> to remove than plain white. Plain white, and nothing else. The image is
+> **3:2**.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -439,7 +471,14 @@ next, and a cat drawn six months after the rest of the cast will not match it.
 > square** and no gap, border, gutter or margin anywhere — the six squares
 > tile the whole image. Each panel shows the character from the **chest
 > up**: head, shoulders, upper chest, and both arms and hands wherever they
-> are, facing the viewer and turned very slightly to one side. The panel is
+> are, drawn in **three-quarter view, not facing the camera**. The body and
+> the head are turned about 30 to 45 degrees away from straight-on, and the
+> character **looks toward the right-hand side of the frame** — as if
+> speaking to somebody standing off to their right, never out at the reader.
+> Manga stages a conversation this way: the two speakers are angled toward
+> each other, and a character square to the camera reads as posing rather
+> than talking. **Every one of the six panels uses the same three-quarter
+> angle, turned the same way** — only the expression changes. The panel is
 > square precisely so that folded arms and a raised hand fit inside it —
 > **nothing may be cropped by the edge of a panel, least of all a hand.**
 > Keep a little clear space on all four sides of the figure.
@@ -1075,8 +1114,24 @@ have to agree with each other about a baseline.
 Two things you do **not** have to do:
 
 - **Do not draw a character facing both ways.** The page mirrors whoever stands
-  on the right, so each character is drawn facing one way and the layout turns
-  them around.
+  on the right, so each character is drawn once, looking toward the right of the
+  frame, and the layout turns them around.
+
+  > **Why that direction and not the other.** The left-hand speaker is drawn as
+  > it comes; the right-hand speaker is flipped horizontally. A character drawn
+  > looking right therefore looks *inward* on the left of the panel, and —
+  > flipped — looks inward on the right of it too, so the two speakers face each
+  > other across the balloon. Drawn looking left, both would stare off the edge
+  > of the frame away from the person they are talking to. This is the one place
+  > where getting the art backwards is invisible until it is composited.
+  >
+  > **What mirroring costs, stated plainly.** A flipped character has their
+  > asymmetry reversed: Thảo's tucked ear swaps sides, Khoa's parting swaps
+  > sides, and Mun's torn *left* ear reads as a torn right ear whenever he
+  > speaks second. Nobody has ever noticed this in a comic, and the alternative
+  > is drawing every character twice — ten sheets instead of five, each pair
+  > having to match. Accepted deliberately; do not "fix" it by drawing a second
+  > facing.
 - **Do not reorder the panels.** Reading order is `neutral · happy · worried`
   along the top row, then `annoyed · surprised · sad` along the bottom, and that
   is the `col` index in `data/cast.json`. Changing one without the other
@@ -1091,6 +1146,7 @@ Two things you do **not** have to do:
 | The panels do not line up, or a sliver of the next face shows | They are not exactly equal sixths. The page steps by a fixed fraction, so this cannot be fixed by re-cropping — re-roll, or set the canvas to a round multiple of six and centre each figure in its sixth |
 | An avatar has a white box behind it | The white was never keyed out. It is invisible against the generator's own preview — always check the saved PNG against a dark colour |
 | The sheet comes back with a grey-and-white chequered pattern behind the figures | The generator has *drawn* a transparency checkerboard instead of leaving alpha. Re-roll: every prompt already forbids it by name, so this is a miss rather than an ambiguity, and a drawn checkerboard is much harder to key than plain white |
+| The characters look out at the reader, or the two speakers face away from each other | The sheet was drawn square to the camera, or drawn looking *left*. Both must be three-quarter and looking toward the **right** of the frame — the page flips the right-hand speaker, so a left-looking sheet points both of them off the edges. Re-roll; it cannot be fixed by flipping the file, which would reverse the character's own asymmetry (Thảo's exposed ear, Khoa's parting, Mun's torn left ear) |
 | Keying the white also ate a white shirt | A global "remove all white" was used. Key with a contiguous fill from outside the figure — the closed black contour keeps the shirt's white separate from the background's |
 | A plate comes back with people in it | Repeat the "no people, no animals" clause as the **first** line of the description rather than the last. It must be re-rolled, not painted out: the cast is composited on top and a drawn figure appears beside itself |
 | A plate comes back vague, empty or blurred | The style's whole contrast is simple figures against a literal world. Re-paste **Backgrounds carry the realism** and name three specific objects the plate must contain |
