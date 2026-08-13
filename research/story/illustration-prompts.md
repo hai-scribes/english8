@@ -431,15 +431,16 @@ next, and a cat drawn six months after the rest of the cast will not match it.
 A plate is the place with **nobody in it**: the cast is composited on top, so a
 figure drawn into the plate would appear beside itself.
 
-All nine share one prompt. Paste the frame below, then replace the last
-paragraph with one row from the table — that is the only thing that differs
-between them, and nine near-identical copies of a five-hundred-word block would
-be harder to keep in step, not easier.
+Attach **the style reference only.** There are no characters in a plate.
 
-Attach **the style reference only.** No character sheet: there are no characters
-in a plate.
+Unit 1 needs `canal-landing` and nothing else. The other eight are for the
+chapters after it.
 
-## The frame
+---
+
+## 1. The canal landing — background plate
+
+**File:** `canal-landing.jpg`  ·  **this is the one unit 1 needs**
 
 > Match the line weight, colouring, shading and background treatment of the
 > attached style reference. Do not copy or quote any character in it.
@@ -483,22 +484,462 @@ in a plate.
 > signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
 > glows or lens flare.
 >
-> **No people, no animals, and no characters of any kind anywhere in the frame.
-> Draw the place only.** [PASTE ONE ROW FROM THE TABLE HERE]
+> **No people, no animals, and no characters of any kind anywhere in the
+> frame. Draw the place only.**
+>
+> A wooden landing stage on a jade-green canal, late morning, hot and still.
+> Worn planks in the near ground, thick ochre mud at the waterline, water
+> hyacinth drifting. A long wooden boat moored at one side. The far bank is
+> a low line of banana and areca palms under a wide bright sky.
 
-## The nine plates
+---
 
-| File | Paste this as the last paragraph |
-| --- | --- |
-| `canal-landing.jpg` | A wooden landing stage on a jade-green canal, late morning, hot and still. Worn planks in the near ground, thick ochre mud at the waterline, water hyacinth drifting. A long wooden boat moored at one side. The far bank is a low line of banana and areca palms under a wide bright sky. |
-| `kitchen.jpg` | A small delta kitchen interior, morning. A low table, enamel bowls, a tin of tea on a shelf, a bunch of bananas hanging from a beam, a large pot on the floor. One doorway on the right opens onto a bleached-white hot road outside. Warm interior against bright outdoor light. |
-| `school-yard.jpg` | A school yard, late afternoon, long low shadows on concrete. A yellow-ochre wall with a painted noticeboard on it, empty. A flame tree at one side, one bicycle leaning against the wall, a low gate at the back. Nobody in it. |
-| `market.jpg` | A covered market lane, early morning. Stalls on both sides heaped with green oranges, herbs and fish baskets, scales hanging, tarpaulins overhead, plastic stools stacked. Crowded with goods and completely empty of people. |
-| `lane.jpg` | A narrow lane between two-storey concrete houses, blue hour. Warm light spilling from two open doorways, overhead wires tangled between the walls, a motorbike parked against one house, a few collapsed paper lanterns in the gutter. |
-| `canal-school.jpg` | A narrow canal behind a school's back wall, flat hard midday light. The water is opaque brown-ochre with a dull scum at the edge and plastic caught in the reeds. On the far bank a low corrugated-iron workshop with a pipe discharging into the water. No birds. |
-| `science-room.jpg` | A school science room after hours, warm desk-lamp light against a darkening window. A worktable with a tangle of jumper wires, a small circuit board, a screwdriver, a battery pack and two enamel cups. Shelves of jars behind. |
-| `storm-yard.jpg` | The yard of a delta house under a low bruised storm sky, wind visible in everything. A tiled roof with one broken tile, a wooden ladder against the eaves, a snapped branch across the yard, buckets and basins lined along the wall, water standing at the bottom of the lane. No sunlight. |
-| `road.jpg` | A dirt road at the edge of town at first light, the sky going from deep blue to peach. The road runs away from the viewer toward a wide pale river and low hills beyond. Two or three stars still out. The town behind is dark. |
+## 2. Bà Sáu's kitchen — background plate
+
+**File:** `kitchen.jpg`
+
+> Match the line weight, colouring, shading and background treatment of the
+> attached style reference. Do not copy or quote any character in it.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
+> Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and continuous,
+> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
+> broken linework, no cross-hatching, no visible pencil.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
+> one flat shadow tone per surface, shaped as a clean geometric shape, never
+> soft-edged. No gradients except in the open sky, no texture, no grain, no
+> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
+> shown by **lighter flat colour and thinner line only.**
+>
+> **Backgrounds carry the realism.** This is the defining contrast of the style:
+> the world is literal and fully catalogued even though the people are simple.
+> Correct one- or two-point perspective, real architecture, and everyday objects
+> all in their places — every plank, rope, pot, wire and moored boat.
+>
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
+> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
+> given a colour used nowhere else in the frame — that is where the eye lands.
+>
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
+> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
+> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
+> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
+>
+> **Composition.** An empty background plate, 16:9, camera at standing eye level
+> looking straight ahead. Keep the **lower third of the frame simple and
+> uncluttered** — figures will be placed there and detail behind them is lost.
+> Keep the interest in the middle and upper thirds. Nothing important in the
+> top-left or top-right corners, where speech balloons sit.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
+> glows or lens flare.
+>
+> **No people, no animals, and no characters of any kind anywhere in the
+> frame. Draw the place only.**
+>
+> A small delta kitchen interior, morning. A low table, enamel bowls, a tin
+> of tea on a shelf, a bunch of bananas hanging from a beam, a large pot on
+> the floor. One doorway on the right opens onto a bleached-white hot road
+> outside. Warm interior against bright outdoor light.
+
+---
+
+## 3. The school yard — background plate
+
+**File:** `school-yard.jpg`
+
+> Match the line weight, colouring, shading and background treatment of the
+> attached style reference. Do not copy or quote any character in it.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
+> Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and continuous,
+> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
+> broken linework, no cross-hatching, no visible pencil.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
+> one flat shadow tone per surface, shaped as a clean geometric shape, never
+> soft-edged. No gradients except in the open sky, no texture, no grain, no
+> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
+> shown by **lighter flat colour and thinner line only.**
+>
+> **Backgrounds carry the realism.** This is the defining contrast of the style:
+> the world is literal and fully catalogued even though the people are simple.
+> Correct one- or two-point perspective, real architecture, and everyday objects
+> all in their places — every plank, rope, pot, wire and moored boat.
+>
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
+> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
+> given a colour used nowhere else in the frame — that is where the eye lands.
+>
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
+> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
+> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
+> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
+>
+> **Composition.** An empty background plate, 16:9, camera at standing eye level
+> looking straight ahead. Keep the **lower third of the frame simple and
+> uncluttered** — figures will be placed there and detail behind them is lost.
+> Keep the interest in the middle and upper thirds. Nothing important in the
+> top-left or top-right corners, where speech balloons sit.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
+> glows or lens flare.
+>
+> **No people, no animals, and no characters of any kind anywhere in the
+> frame. Draw the place only.**
+>
+> A school yard, late afternoon, long low shadows on concrete. A yellow-
+> ochre wall with a painted noticeboard on it, empty. A flame tree at one
+> side, one bicycle leaning against the wall, a low gate at the back. Nobody
+> in it.
+
+---
+
+## 4. The market — background plate
+
+**File:** `market.jpg`
+
+> Match the line weight, colouring, shading and background treatment of the
+> attached style reference. Do not copy or quote any character in it.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
+> Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and continuous,
+> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
+> broken linework, no cross-hatching, no visible pencil.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
+> one flat shadow tone per surface, shaped as a clean geometric shape, never
+> soft-edged. No gradients except in the open sky, no texture, no grain, no
+> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
+> shown by **lighter flat colour and thinner line only.**
+>
+> **Backgrounds carry the realism.** This is the defining contrast of the style:
+> the world is literal and fully catalogued even though the people are simple.
+> Correct one- or two-point perspective, real architecture, and everyday objects
+> all in their places — every plank, rope, pot, wire and moored boat.
+>
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
+> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
+> given a colour used nowhere else in the frame — that is where the eye lands.
+>
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
+> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
+> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
+> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
+>
+> **Composition.** An empty background plate, 16:9, camera at standing eye level
+> looking straight ahead. Keep the **lower third of the frame simple and
+> uncluttered** — figures will be placed there and detail behind them is lost.
+> Keep the interest in the middle and upper thirds. Nothing important in the
+> top-left or top-right corners, where speech balloons sit.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
+> glows or lens flare.
+>
+> **No people, no animals, and no characters of any kind anywhere in the
+> frame. Draw the place only.**
+>
+> A covered market lane, early morning. Stalls on both sides heaped with
+> green oranges, herbs and fish baskets, scales hanging, tarpaulins
+> overhead, plastic stools stacked. Crowded with goods and completely empty
+> of people.
+
+---
+
+## 5. The lane — background plate
+
+**File:** `lane.jpg`
+
+> Match the line weight, colouring, shading and background treatment of the
+> attached style reference. Do not copy or quote any character in it.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
+> Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and continuous,
+> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
+> broken linework, no cross-hatching, no visible pencil.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
+> one flat shadow tone per surface, shaped as a clean geometric shape, never
+> soft-edged. No gradients except in the open sky, no texture, no grain, no
+> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
+> shown by **lighter flat colour and thinner line only.**
+>
+> **Backgrounds carry the realism.** This is the defining contrast of the style:
+> the world is literal and fully catalogued even though the people are simple.
+> Correct one- or two-point perspective, real architecture, and everyday objects
+> all in their places — every plank, rope, pot, wire and moored boat.
+>
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
+> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
+> given a colour used nowhere else in the frame — that is where the eye lands.
+>
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
+> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
+> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
+> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
+>
+> **Composition.** An empty background plate, 16:9, camera at standing eye level
+> looking straight ahead. Keep the **lower third of the frame simple and
+> uncluttered** — figures will be placed there and detail behind them is lost.
+> Keep the interest in the middle and upper thirds. Nothing important in the
+> top-left or top-right corners, where speech balloons sit.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
+> glows or lens flare.
+>
+> **No people, no animals, and no characters of any kind anywhere in the
+> frame. Draw the place only.**
+>
+> A narrow lane between two-storey concrete houses, blue hour. Warm light
+> spilling from two open doorways, overhead wires tangled between the walls,
+> a motorbike parked against one house, a few collapsed paper lanterns in
+> the gutter.
+
+---
+
+## 6. The canal behind the school — background plate
+
+**File:** `canal-school.jpg`
+
+> Match the line weight, colouring, shading and background treatment of the
+> attached style reference. Do not copy or quote any character in it.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
+> Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and continuous,
+> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
+> broken linework, no cross-hatching, no visible pencil.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
+> one flat shadow tone per surface, shaped as a clean geometric shape, never
+> soft-edged. No gradients except in the open sky, no texture, no grain, no
+> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
+> shown by **lighter flat colour and thinner line only.**
+>
+> **Backgrounds carry the realism.** This is the defining contrast of the style:
+> the world is literal and fully catalogued even though the people are simple.
+> Correct one- or two-point perspective, real architecture, and everyday objects
+> all in their places — every plank, rope, pot, wire and moored boat.
+>
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
+> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
+> given a colour used nowhere else in the frame — that is where the eye lands.
+>
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
+> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
+> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
+> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
+>
+> **Composition.** An empty background plate, 16:9, camera at standing eye level
+> looking straight ahead. Keep the **lower third of the frame simple and
+> uncluttered** — figures will be placed there and detail behind them is lost.
+> Keep the interest in the middle and upper thirds. Nothing important in the
+> top-left or top-right corners, where speech balloons sit.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
+> glows or lens flare.
+>
+> **No people, no animals, and no characters of any kind anywhere in the
+> frame. Draw the place only.**
+>
+> A narrow canal behind a school's back wall, flat hard midday light. The
+> water is opaque brown-ochre with a dull scum at the edge and plastic
+> caught in the reeds. On the far bank a low corrugated-iron workshop with a
+> pipe discharging into the water. No birds.
+
+---
+
+## 7. The science room — background plate
+
+**File:** `science-room.jpg`
+
+> Match the line weight, colouring, shading and background treatment of the
+> attached style reference. Do not copy or quote any character in it.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
+> Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and continuous,
+> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
+> broken linework, no cross-hatching, no visible pencil.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
+> one flat shadow tone per surface, shaped as a clean geometric shape, never
+> soft-edged. No gradients except in the open sky, no texture, no grain, no
+> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
+> shown by **lighter flat colour and thinner line only.**
+>
+> **Backgrounds carry the realism.** This is the defining contrast of the style:
+> the world is literal and fully catalogued even though the people are simple.
+> Correct one- or two-point perspective, real architecture, and everyday objects
+> all in their places — every plank, rope, pot, wire and moored boat.
+>
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
+> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
+> given a colour used nowhere else in the frame — that is where the eye lands.
+>
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
+> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
+> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
+> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
+>
+> **Composition.** An empty background plate, 16:9, camera at standing eye level
+> looking straight ahead. Keep the **lower third of the frame simple and
+> uncluttered** — figures will be placed there and detail behind them is lost.
+> Keep the interest in the middle and upper thirds. Nothing important in the
+> top-left or top-right corners, where speech balloons sit.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
+> glows or lens flare.
+>
+> **No people, no animals, and no characters of any kind anywhere in the
+> frame. Draw the place only.**
+>
+> A school science room after hours, warm desk-lamp light against a
+> darkening window. A worktable with a tangle of jumper wires, a small
+> circuit board, a screwdriver, a battery pack and two enamel cups. Shelves
+> of jars behind.
+
+---
+
+## 8. The yard in the storm — background plate
+
+**File:** `storm-yard.jpg`
+
+> Match the line weight, colouring, shading and background treatment of the
+> attached style reference. Do not copy or quote any character in it.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
+> Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and continuous,
+> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
+> broken linework, no cross-hatching, no visible pencil.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
+> one flat shadow tone per surface, shaped as a clean geometric shape, never
+> soft-edged. No gradients except in the open sky, no texture, no grain, no
+> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
+> shown by **lighter flat colour and thinner line only.**
+>
+> **Backgrounds carry the realism.** This is the defining contrast of the style:
+> the world is literal and fully catalogued even though the people are simple.
+> Correct one- or two-point perspective, real architecture, and everyday objects
+> all in their places — every plank, rope, pot, wire and moored boat.
+>
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
+> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
+> given a colour used nowhere else in the frame — that is where the eye lands.
+>
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
+> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
+> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
+> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
+>
+> **Composition.** An empty background plate, 16:9, camera at standing eye level
+> looking straight ahead. Keep the **lower third of the frame simple and
+> uncluttered** — figures will be placed there and detail behind them is lost.
+> Keep the interest in the middle and upper thirds. Nothing important in the
+> top-left or top-right corners, where speech balloons sit.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
+> glows or lens flare.
+>
+> **No people, no animals, and no characters of any kind anywhere in the
+> frame. Draw the place only.**
+>
+> The yard of a delta house under a low bruised storm sky, wind visible in
+> everything. A tiled roof with one broken tile, a wooden ladder against the
+> eaves, a snapped branch across the yard, buckets and basins lined along
+> the wall, water standing at the bottom of the lane. No sunlight.
+
+---
+
+## 9. The road out of town — background plate
+
+**File:** `road.jpg`
+
+> Match the line weight, colouring, shading and background treatment of the
+> attached style reference. Do not copy or quote any character in it.
+>
+> **Art style.** Classic Japanese children's-manga and TV-anime style in the
+> tradition of Fujiko F. Fujio — the *Doraemon* look. Not modern anime, not
+> Ghibli, not American cartoon, not 3D, not photorealistic, not painterly.
+>
+> **Line.** Black contour line of near-constant width, closed and continuous,
+> and drawn **thinner and lighter than a figure's line would be.** No sketchy or
+> broken linework, no cross-hatching, no visible pencil.
+>
+> **Colour.** Flat cel fills — solid areas of colour with hard edges. At most
+> one flat shadow tone per surface, shaped as a clean geometric shape, never
+> soft-edged. No gradients except in the open sky, no texture, no grain, no
+> airbrushing, no ambient occlusion, no blur and no depth-of-field. Depth is
+> shown by **lighter flat colour and thinner line only.**
+>
+> **Backgrounds carry the realism.** This is the defining contrast of the style:
+> the world is literal and fully catalogued even though the people are simple.
+> Correct one- or two-point perspective, real architecture, and everyday objects
+> all in their places — every plank, rope, pot, wire and moored boat.
+>
+> **Palette.** The Mekong delta's own colours as flat fills: jade-green canal
+> water, ochre mud, terracotta roof tiles, brass, bright blue sky. One object is
+> given a colour used nowhere else in the frame — that is where the eye lands.
+>
+> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of Việt
+> Nam, present day but modest. **Nothing Japanese** — no sliding paper doors, no
+> tatami, no Japanese suburban houses, no vacant lot with stacked concrete
+> pipes, no Japanese signage. No temples, no strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
+>
+> **Composition.** An empty background plate, 16:9, camera at standing eye level
+> looking straight ahead. Keep the **lower third of the frame simple and
+> uncluttered** — figures will be placed there and detail behind them is lost.
+> Keep the interest in the middle and upper thirds. Nothing important in the
+> top-left or top-right corners, where speech balloons sit.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or motion lines. No sparkles,
+> glows or lens flare.
+>
+> **No people, no animals, and no characters of any kind anywhere in the
+> frame. Draw the place only.**
+>
+> A dirt road at the edge of town at first light, the sky going from deep
+> blue to peach. The road runs away from the viewer toward a wide pale river
+> and low hills beyond. Two or three stars still out. The town behind is
+> dark.
+
 **When the lamp is lit** — the only place a flame ever appears — add:
 
 > The flame is small, low and domestic: a plain flat teardrop shape with a
