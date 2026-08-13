@@ -1,8 +1,26 @@
 # Illustration prompts — *The Calling Lamp*
 
-Twelve prompts, one per chapter, for the Getting Started dialogue on each unit's
-Lesson 1 page. Written for **Gemini** (Nano Banana / Imagen in the Gemini app or
-API).
+The art the site loads. Written for **Gemini** (Nano Banana / Imagen in the
+Gemini app or API).
+
+The Getting Started dialogue on every Lesson 1 page is a **comic**: a background
+plate, the speaker's face, and one speech balloon, advancing as the reader
+scrolls. So this file asks for exactly two kinds of image, and both are
+composited by the page rather than drawn as finished scenes:
+
+- **§2.3 — thirty avatars.** Five characters × six emotions, cut out on
+  transparency.
+- **§3 — nine background plates.** The story's four fixed places plus five
+  others, drawn empty.
+
+That is why there are no longer twelve one-per-chapter scene illustrations here:
+a scene with its characters drawn in cannot change expression, and every line of
+every dialogue now needs to. Nine plates and thirty faces cover all twelve
+chapters and recombine; ninety fixed scenes would not.
+
+`data/cast.json` is the contract between this file and the build — §4 has the
+filenames, and `tools/build.py` fails on a dialogue naming anything the manifest
+does not declare.
 
 Nothing here goes on a learner's page. Like the rest of `research/story/`, this
 is reference material: `tools/build.py` never reads it.
@@ -18,21 +36,24 @@ part. The characters are not, and §2.0 is the guard that keeps it that way.
    generation, and say: *"Match the line weight, colouring, shading and
    background treatment of the attached image. Do not copy, quote or resemble
    any character in it — the characters come from the second attached sheet."*
-2. **Generate the character sheets first** (§2). Keep the outputs. §2.1 is the
-   sheet you will attach to all twelve scene generations; §2.2 makes a labelled
-   copy of it for your own use, which is **never attached to anything**.
-3. For every scene prompt, attach **both** the Doraemon style reference **and**
-   the **unlabelled** §2.1 sheet, and say *"Style from image 1, character design
+2. **Generate the group sheet first** (§2.1) and keep it. It is the character
+   reference attached to every avatar generation. §2.2 makes a labelled copy for
+   your own use, which is **never attached to anything**.
+3. For an **avatar sheet** (§2.3), attach the Doraemon style reference **and**
+   the unlabelled §2.1 sheet, and say *"Style from image 1, character design
    from image 2."* Gemini holds identity far better from an image than from
-   text.
-4. Paste **§1 verbatim**, then one scene block from §3. The style block is
-   repeated in full each time on purpose — do not shorten it between runs, or
-   the style drifts back toward generic anime within two or three images.
-5. Generate 3–4 variants per scene, keep one, and feed the keeper back as an
-   additional reference for the next chapter. Consistency compounds.
+   text. For a **background plate** (§3), attach the style reference only —
+   there are no characters in a plate.
+4. Paste **§1 verbatim**, then the block you want. The style block is repeated
+   in full each time on purpose — do not shorten it between runs, or the style
+   drifts back toward generic anime within two or three images.
+5. Generate 3–4 variants, keep one, and feed the keeper back as an additional
+   reference for the next generation. Consistency compounds.
+6. Run `python3 tools/check_cast.py` to see what is still missing.
 
-Aspect ratio: **16:9** for scene illustrations (they sit above the dialogue on a
-phone-width page). Ask for it explicitly — Gemini defaults to square.
+Aspect ratio: **16:9** for background plates. Avatar sheets come back as a wide
+strip of six; ask for 16:9 there too and cut them up. Say it explicitly —
+Gemini defaults to square.
 
 ---
 
@@ -131,7 +152,7 @@ keeping an image, not after building a chapter on it.
 ### 2.1 The primary sheet — generate this once, first, and keep it unlabelled
 
 This is the master reference. It is generated **without a single character of
-text on it**, and it is the image attached to all twelve scene prompts. §2.2
+text on it**, and it is the image attached to every avatar sheet in §2.3. §2.2
 explains why the names go on a *separate copy*.
 
 > [paste the §1 style block]
@@ -199,8 +220,8 @@ explains why the names go on a *separate copy*.
 > Consistent, repeatable character designs suitable for reuse across a
 > twelve-part illustrated story.
 
-Keep the returned image as `cast-sheet.png`. Every scene prompt in §3 assumes it
-is attached.
+Keep the returned image as `cast-sheet.png`. Every avatar sheet in §2.3 assumes
+it is attached.
 
 ### 2.2 The labelled copy — for you, not for the generator
 
@@ -221,7 +242,7 @@ So keep **two files** from one generation:
 
 | File | Has names? | Where it goes |
 | --- | --- | --- |
-| `cast-sheet.png` | no | attached to the style reference on all twelve scene prompts |
+| `cast-sheet.png` | no | attached to the style reference on every avatar sheet |
 | `cast-sheet-labelled.png` | yes | this repo, and your own screen while writing prompts. **Never attached to a generation.** |
 
 **Making the labelled copy** — add the text yourself, outside the generator, so
@@ -263,55 +284,100 @@ Expect to re-roll this several times, and expect the names to still come back
 slightly wrong. Treat it as a convenience, not as the reference — the reference
 is `cast-sheet.png`, and its labels live in Preview or in this file.
 
-### 2.3 Turnarounds — the sheets that actually buy you reuse
+### 2.3 The emotion sheet — this is the one the app actually loads
 
-The front-facing group sheet fixes *identity*. It does not fix what a character
-looks like from behind or in motion, and the scene blocks need both: Chapter 1
-puts Tí three-quarters away from the viewer, Chapter 6 turns Thảo's head in
-profile, and Chapter 12 — the last image of the story — is **entirely from
-behind**. Without a turnaround, the generator invents the back of a head afresh
-each time, and the cowlick, the tucked ear and the torn left ear are the first
-things it loses.
+Everything above fixes *who* a character is. This fixes *what the site
+displays*. The dialogue on every Lesson 1 page is now a comic: a background
+plate, the speaker's face, and one speech balloon, advancing as the reader
+scrolls. The face is chosen per line from six drawn emotions.
 
-Generate one of these per character for at least **Tí, Thảo and Mun**. It is
-three extra generations that pay for themselves by Chapter 4.
+**Six emotions, shared by every character.** Not a per-character set — a
+per-character set is more expressive and also means nobody can remember which
+faces a given character has. Six × five is thirty avatars, which is a set one
+person can draw in a sitting and keep consistent.
+
+| Slug | What it is |
+| --- | --- |
+| `neutral` | Talking, unremarkable. The default, and by far the most used — draw this one first and judge the others against it |
+| `happy` | Pleased, warm, amused. A real smile, not a smirk |
+| `worried` | Anxious, concerned. Brows up and drawn together |
+| `annoyed` | Cross, exasperated, digging in. Brows down |
+| `surprised` | Caught out, startled. Eyes wide, mouth open |
+| `sad` | Quiet, downcast, hurt. Eyes lowered |
+
+Generate **one sheet per character**, then cut it into six files.
 
 > [paste the §1 style block]
 >
-> A single-character turnaround sheet on a plain white background, no text
-> anywhere. **[NAME], figure [N] on the attached sheet** — reproduce that design
-> exactly, with no changes to hair, clothing, colour or proportion.
+> A six-panel expression sheet on a plain white background, no text anywhere.
+> **[NAME], figure [N] on the attached sheet** — reproduce that design exactly,
+> with no change to hair, clothing, colour or proportion between panels.
 >
-> **Top row:** the same figure standing in a neutral pose, full body, at the same
-> scale and under the same flat lighting, shown five times — **front, three-
-> quarter front, side profile, three-quarter back, and straight back view.**
+> Six panels in one row, evenly spaced, identical size, identical framing:
+> each shows the character from **mid-chest up, facing the viewer, turned very
+> slightly to one side**, at the same scale and under the same flat lighting.
+> The body does not move between panels. **Only the face changes.**
 >
-> **Bottom row:** the same character's head only, five times, same size, same
-> front-facing angle, with five expressions — **neutral, pleased, worried,
-> caught out, and asleep.**
+> Left to right: **1 — neutral**, an ordinary talking face, mouth slightly
+> open, no strong feeling. **2 — happy**, a real open smile, eyes curved.
+> **3 — worried**, brows raised and pulled together, mouth a small flat line.
+> **4 — annoyed**, brows down and level, mouth pressed or turned down at one
+> corner. **5 — surprised**, eyes wide and round, brows high, mouth open in a
+> small circle. **6 — sad**, eyes lowered, brows slack, mouth a short downward
+> curve.
 >
-> [for Mun, replace the bottom row with:] **Bottom row:** the same cat, full
-> body, five times — **sitting, walking, crouched low, curled asleep, and
-> looking back over one shoulder.** He is on four legs in all five.
->
-> Every view must keep [GRAPHIC TAG] visible and unchanged.
+> Keep [GRAPHIC TAG] clearly visible in all six panels. Each panel is drawn
+> **cut off cleanly at the bottom edge of the frame**, with nothing below
+> mid-chest. Plain white behind every panel and no border between them.
 
-Fill `[GRAPHIC TAG]` from §2.1: for Tí, *the cowlick standing at the back of the
-crown and the band of dried mud on one shin*; for Thảo, *the hair tucked behind
-one ear only, so one ear shows and the other does not*; for Mun, *the torn left
-ear*. That last one is the reason the back view matters — a torn ear is
-invisible from exactly the angle Chapter 12 is drawn from unless the sheet
-settles how it reads there.
+Fill `[GRAPHIC TAG]` from §2.1 — Tí's standing cowlick, Thảo's single exposed
+ear, Bà Sáu's thick forearms, Khoa's side parting, Mun's torn left ear.
 
-Attach the relevant turnaround **in addition to** the group sheet for any scene
-where that character is turned away, crouching or in profile: Chapters 1, 4, 6,
-10 and 12.
+**For Mun**, replace the framing line with: *each panel shows the cat's head and
+shoulders, on four legs, facing the viewer.* He never sits like a person, in any
+panel, for any emotion.
 
-### 2.4 Secondary sheet — only if the illustrations extend past the dialogues
+#### Cutting and naming them
 
-These six appear in the prose but not in any Lesson 1 dialogue scene below, so
-this sheet is optional. Generate it the same way — §1 style block, same
-six-abreast layout, same *must not* discipline.
+The site loads these by filename, and the names are not negotiable — they are
+the same slugs `data/cast.json` declares, and `python3 tools/check_cast.py`
+lists exactly which are still missing.
+
+```
+docs/assets/cast/<character>-<emotion>.png
+```
+
+| Character | Slug | Files |
+| --- | --- | --- |
+| Tí | `ti` | `ti-neutral.png`, `ti-happy.png`, `ti-worried.png`, `ti-annoyed.png`, `ti-surprised.png`, `ti-sad.png` |
+| Thảo | `thao` | `thao-neutral.png` … and the same five |
+| Bà Sáu | `basau` | `basau-neutral.png` … |
+| Khoa | `khoa` | `khoa-neutral.png` … |
+| Mun | `mun` | `mun-neutral.png` … |
+
+Three requirements on the cut files, all of which the layout depends on:
+
+- **Transparent background.** The avatar is composited over a background plate.
+  A white box behind a character is the single most visible way to get this
+  wrong, and it is invisible on the generator's white sheet — check it against
+  a dark colour before saving.
+- **Same crop, same scale, every file.** Cut all six from one sheet at the same
+  height, so the character does not jump between lines. This is why the prompt
+  fixes the body and moves only the face.
+- **Cut off at mid-chest, flush with the bottom edge.** The avatar sits on the
+  floor of the panel; a floating half-figure with air under it reads as a
+  sticker.
+
+Facing does not need drawing twice. The site mirrors the avatar horizontally
+for whoever is on the right, so **draw every character facing the same way** and
+let the layout turn them around.
+
+### 2.4 Secondary cast — design them when they first speak
+
+These five appear in the prose but do not speak in any Lesson 1 dialogue, so
+they are not in `data/cast.json` and have no avatars. Generate the group sheet
+the same way — §1 style block, same six-abreast layout, same *must not*
+discipline — and then their emotion sheet from §2.3.
 
 | Character | Silhouette rule | Signature colour | Graphic tag | Must not |
 | --- | --- | --- | --- | --- |
@@ -328,204 +394,118 @@ Design him in `story-bible.md` first.
 
 ---
 
-## 3. The twelve scenes
-
-Each block is written to be pasted **after** the §1 style block, with the
-Doraemon style reference and the §2.1 character sheet both attached.
-
-### Chapter 1 — Unit 1 · *The list in the yard*
-
-> Late morning, hot and still, wide blue sky with two or three flat white
-> clouds. A wooden landing stage at the edge of a jade-green canal, mud and
-> water hyacinth at the waterline, every plank and mooring rope drawn in.
-> **Tí** crouches right at the water with his back half-turned, one hand in the
-> mud, shorts wet to the thigh, staring down at something very small and bright
-> just under the surface — the one object in the frame given a colour used
-> nowhere else. **Thảo** stands three steps above him on the dry bank, arms
-> folded, patient rather than cross, looking down at the back of his head. She
-> has clearly been standing there a while. The distance between them is the
-> subject of the picture. Far bank drawn in thinner line and lighter flat green,
-> banana palms fully drawn, no haze. 16:9.
-
-### Chapter 2 — Unit 2 · *The long way round*
-
-> Interior, a small delta kitchen in mid-morning, light coming through an open
-> doorway. **Bà Sáu** stands square in the doorway, filling it, holding out a
-> small paper packet of medicine. **Tí** is caught halfway to the door with a
-> rolled rice sack under one arm that he is plainly trying not to draw attention
-> to. Through the doorway behind her: a bright hot road and, far off, low green
-> hills in a flat lighter green. Inside, drawn in full: a low table, enamel
-> bowls, a tin of tea, a bunch of bananas hanging, a calendar with a blank page.
-> Bà Sáu's body language says *no*; Tí's says *I am going anyway*. The interior
-> is one flat warm tone; the doorway is a hard-edged rectangle of pale outdoor
-> colour. 16:9.
-
-### Chapter 3 — Unit 3 · *The list on the wall*
-
-> A school yard in late afternoon, long flat shadow shapes laid across concrete.
-> A painted noticeboard on a yellow-ochre wall carries a single sheet of paper
-> pinned at the corners — **render it as a blank sheet, no text, no numbers, no
-> marks of any kind.** **Tí** stands close to it, hands at his sides, shoulders
-> down, reading it again. **Thảo** waits a few metres back, half-turned toward
-> the gate, looking at him rather than at the paper. Empty yard, one bicycle
-> against the wall drawn in full detail, a flame tree throwing one clean shadow
-> shape. The emptiness of the yard matters — everyone else has gone. 16:9.
-
-### Chapter 4 — Unit 4 · *Ten questions for a stranger*
-
-> The canal landing, late afternoon, the water a flat warm gold-green. **Thảo**
-> sits cross-legged on the wooden boards with her hands raised and open in front
-> of her, mid-gesture, pretending to weave a basket that is not there — clearly
-> performing, clearly enjoying it. **Tí** sits opposite with a folded exercise
-> book on his knee and a pencil he is not using, caught between embarrassment
-> and interest. **Mun** the black cat sits a little apart on a mooring post on
-> all fours, watching the invisible basket with total seriousness; his torn left
-> ear is clearly visible. A long wooden boat is moored behind them, planks and
-> ropes fully drawn; the far bank rises into green hills with a suggestion of
-> terraced fields in flat lighter green. 16:9.
-
-### Chapter 5 — Unit 5 · *Forty cakes before breakfast*
-
-> Interior, the kitchen, early morning: a cool blue flat tone through the window
-> meeting the warm yellow flat tone of a single bulb, the two colours meeting on
-> a hard edge across the room. The low table is covered in broad green banana
-> leaves, soaked rice, mung bean paste, a heap of small green oranges and a
-> bundle of incense sticks — all drawn item by item. **Bà Sáu** works fast and
-> precisely, hands mid-fold over a square cake, thick forearms clear. **Tí**
-> sits beside her with a badly wrapped, obviously loose cake coming apart in his
-> hands, looking sideways at hers. A large pot waits on the floor. **Mun** is on
-> the windowsill behind them, tail curled, ignoring everything. Green is the
-> dominant colour. 16:9.
-
-### Chapter 6 — Unit 6 · *Everybody wants something*
-
-> Early evening in a narrow lane between houses. Flat deep-blue sky; warm yellow
-> light falls out of open doorways as hard-edged rectangles on the ground.
-> **Tí** and **Thảo** stand close together mid-lane, heads bent toward each
-> other in a private conversation. Behind and around them, at a distance and
-> **drawn smaller, in thinner line, with plain simplified faces**, four or five
-> adult villagers stand in doorways and at the lane's mouth, all facing the two
-> children — not threatening, just *waiting*, all of them wanting something. A
-> few spent paper lanterns lie collapsed in the gutter from the night before.
-> Through an open doorway on the right, deep inside the house, a small ochre
-> shape of brass sits on a shelf. Crowded and slightly airless. No blur
-> anywhere — depth is line weight and flat tone only. 16:9.
-
-### Chapter 7 — Unit 7 · *The canal behind the school*
-
-> Midday, flat hard light, plain pale sky. A narrow canal running behind a
-> school's back wall. The water is opaque **brown-ochre**, drawn as one heavy
-> flat fill with a dull grey scum shape along the edge, plastic caught in the
-> reeds, and a dead grey-white fish belly-up near the bank — a deliberately ugly
-> picture inside a bright, clean style. On the far bank, a low corrugated-iron
-> workshop with a pipe discharging into the water, corrugations drawn line by
-> line. **Thảo** stands at the edge holding up a phone to photograph the water;
-> **Tí** stands behind her with two empty rice sacks over his shoulder. Both are
-> looking at the water, not at each other. No birds anywhere, and no clouds.
-> 16:9.
-
-### Chapter 8 — Unit 8 · *Four days until the fifteenth*
-
-> Interior, the kitchen, early morning. In the near foreground, cropped by the
-> bottom edge of the frame, **Bà Sáu**'s hands on the low table sort small coins
-> into short stacks beside a flat empty tin. Mid-ground, **Tí** and **Thảo**
-> stand together, both turned away from the coins and looking at the shelf
-> behind them. On that shelf, in plain sight in front of the tea tin, sits
-> **the brass lamp** — small, dented, unlit, deliberately unhidden, and **the
-> only object in the frame drawn with a heavier, darker contour line than
-> anything around it.** A hard-edged shaft of morning light falls across it as a
-> flat pale shape. Nobody is touching it. The composition should make the viewer
-> look at the lamp before they look at the people. 16:9.
-
-### Chapter 9 — Unit 9 · *The forecast turns west*
-
-> Grey stormy morning, wind visible in everything. A tiled roof with **one
-> broken tile** and a wooden ladder leaning against the eaves. The rain has
-> stopped but the sky is a flat low grey with one darker grey cloud shape
-> crossing it; a snapped branch lies across the yard. Buckets and basins of
-> clean water are lined up along the wall, counted and drawn. **Tí** stands
-> holding the ladder steady with both hands, looking up. **Bà Sáu** is near the
-> top of it, one arm on the roof edge, examining the damage — small and
-> absolutely unbothered. Water already stands at the bottom of the lane behind
-> them. Wind is shown by **everything bending one way** and by a few clean
-> curved motion lines in the air — nothing else. Cool desaturated flat palette,
-> no sunlight at all. 16:9.
-
-### Chapter 10 — Unit 10 · *Nothing is getting through*
-
-> Late afternoon, an enormous flat high sky with two thin cloud shapes near the
-> horizon. **Tí** sits alone on top of a low concrete wall, knees up, holding an
-> old phone at arm's length above his head, looking at the screen with no
-> expectation. Across the canal behind him, a communications mast lies **broken
-> and half-submerged in the water**, its lattice bent and drawn strut by strut,
-> the top section under the surface. Flood debris along both banks. The far bank
-> is in plain daylight colour; his side of the canal is filled with one flat
-> shadow tone, the edge between them hard and clean. Enormous empty sky over a
-> very small boy. Loneliness, not danger. **Mun** sits on the wall an arm's
-> length away, facing the opposite direction. 16:9.
-
-### Chapter 11 — Unit 11 · *A very expensive shoe box*
-
-> Interior, a school science-club room after hours: a flat warm yellow pool of
-> desk-lamp light against a flat deep-blue window. On the table sits a home-made
-> wooden box the size of a shoe box, its lid held by a small improvised lock, a
-> fingerprint reader glued crookedly to the front, and a nest of jumper wires
-> and a small circuit board spilling out of one side — every wire drawn
-> individually. **Tí** presses his thumb flat on the reader, leaning in.
-> **Khoa** stands beside him, straight and calm, watching the wires rather than
-> the thumb, one hand out to steady the box; his side parting and green notebook
-> are visible. The notebook lies open beside them with **blank pages — no text,
-> no diagrams.** A screwdriver, a battery pack, two enamel cups of tea. Two tiny
-> red indicator lights are the one colour used nowhere else in the frame. 16:9.
-
-### Chapter 12 — Unit 12 · *Nine days on foot*
-
-> Very early morning on a dirt road at the edge of town, first light. The sky is
-> the one permitted gradient in the whole set: deep blue at the top easing to
-> peach at the horizon. **Tí** and **Thảo** walk away from the viewer along the
-> road, seen from behind, small in the frame, a canvas bag over Tí's shoulder.
-> **Mun** trots at their heels on all fours. Ahead of them the road runs toward
-> a wide pale river and, beyond it, hills in flat receding greens under a sky
-> where **two or three stars have not gone out yet**, drawn as plain small white
-> dots. Behind them, the town is still dark and asleep, its houses in one flat
-> deep tone. This is the last image of the story: quiet, open, forward-facing,
-> no goodbye in the frame. Wide, still, unhurried. 16:9.
+These five do not speak in any Lesson 1 dialogue yet, so they have no avatars
+and `data/cast.json` does not list them. Add a character there **and** generate
+their emotion sheet in the same change — a name the site knows with no faces
+behind it fails the build, which is the intended order.
 
 ---
 
-## 4. If a chapter's illustration drifts
+## 3. The background plates
+
+The other half of what the page loads. A plate is the *place* with nobody in it:
+the cast is composited on top, so a figure drawn into the plate would appear
+beside itself.
+
+Nine plates cover all twelve chapters, because the story deliberately reuses
+four places (`story-bible.md` §5). They are 16:9, and they are the only
+full-scene images this file now asks for.
+
+```
+docs/assets/bg/<slug>.jpg
+```
+
+Every plate takes the same prompt frame:
+
+> [paste the §1 style block]
+>
+> An empty background plate, 16:9, in the attached style. **No people, no
+> animals, and no characters of any kind anywhere in the frame.** Draw the
+> place only.
+>
+> Composition: the camera is at standing eye level, looking straight ahead, with
+> the **lower third of the frame kept simple and uncluttered** — figures will be
+> placed there, and detail behind them is lost. Keep the interest in the middle
+> and upper thirds. Nothing important in the top-left or top-right corners,
+> where speech balloons sit.
+>
+> [PLATE DESCRIPTION]
+
+| Slug | Plate description to paste |
+| --- | --- |
+| `canal-landing` | A wooden landing stage on a jade-green canal, late morning, hot and still. Worn planks in the near ground, thick ochre mud at the waterline, water hyacinth drifting. A long wooden boat moored at one side. The far bank is a low line of banana and areca palms under a wide bright sky. |
+| `kitchen` | A small delta kitchen interior, morning. A low table, enamel bowls, a tin of tea on a shelf, a bunch of bananas hanging from a beam, a large pot on the floor. One doorway on the right opens onto a bleached-white hot road outside. Warm interior against bright outdoor light. |
+| `school-yard` | A school yard, late afternoon, long low shadows on concrete. A yellow-ochre wall with a painted noticeboard on it, empty. A flame tree at one side, one bicycle leaning against the wall, a low gate at the back. Nobody in it. |
+| `market` | A covered market lane, early morning. Stalls on both sides heaped with green oranges, herbs and fish baskets, scales hanging, tarpaulins overhead, plastic stools stacked. Crowded with goods and completely empty of people. |
+| `lane` | A narrow lane between two-storey concrete houses, blue hour. Warm light spilling from two open doorways, overhead wires tangled between the walls, a motorbike parked against one house, a few collapsed paper lanterns in the gutter. |
+| `canal-school` | A narrow canal behind a school's back wall, flat hard midday light. The water is opaque brown-ochre with a dull scum at the edge and plastic caught in the reeds. On the far bank a low corrugated-iron workshop with a pipe discharging into the water. No birds. |
+| `science-room` | A school science room after hours, warm desk-lamp light against a darkening window. A worktable with a tangle of jumper wires, a small circuit board, a screwdriver, a battery pack and two enamel cups. Shelves of jars behind. |
+| `storm-yard` | The yard of a delta house under a low bruised storm sky, wind visible in everything. A tiled roof with one broken tile, a wooden ladder against the eaves, a snapped branch across the yard, buckets and basins lined along the wall, water standing at the bottom of the lane. No sunlight. |
+| `road` | A dirt road at the edge of town at first light, the sky going from deep blue to peach. The road runs away from the viewer toward a wide pale river and low hills beyond. Two or three stars still out. The town behind is dark. |
+
+**When the lamp is lit**, in any plate or later illustration, it is the only
+place a flame appears and it stays ordinary:
+
+> The flame is small, low and domestic — a plain flat teardrop shape with a
+> single lighter shape inside it and the same black contour as everything else.
+> It does not glow, radiate, sparkle, cast rays or light anything beyond arm's
+> reach, and nothing in the frame is tinted by it.
+
+That restraint is the point, and flat cel makes it easier to hold than paint
+would: there is no soft light to leak. The lamp never fails and never announces
+itself, and a picture that renders it as a magic item contradicts the story it
+sits above.
+
+---
+
+## 4. Wiring the art to the site
+
+The site reads `data/cast.json`. That file is the contract: it lists the
+characters, the six emotions and the nine background slugs, and `tools/build.py`
+**fails the build** on a dialogue that names anything outside it.
+
+```sh
+python3 tools/check_cast.py            # what is declared, and what is drawn
+python3 tools/check_cast.py --strict   # fail while anything is still missing
+```
+
+Authoring a dialogue against the art looks like this:
+
+```
+::: dialogue title="The list in the yard" bg="canal-landing" gramen="…"
+**Thảo|neutral:** You've been down here all morning. What's wrong?
+**Tí|sad:** Nothing's wrong.
+@bg school-yard
+**Thảo|annoyed:** Tí.
+:::
+```
+
+- `|emotion` picks the avatar. Leave it off and the line uses `neutral`.
+- `@bg <slug>` on its own line moves the scene from there on. Use as many as
+  the chapter needs, or none.
+- A line with **no speaker** is narration: the plate carries the beat alone,
+  with a caption box and no avatar.
+- A dialogue with **no `bg=` at all** is unstaged and ships as plain text. That
+  is the rollout, not a failure — a chapter becomes a comic the day somebody
+  gives it a place and chooses faces.
+
+Missing art degrades to an empty panel with a working balloon, so a half-drawn
+cast never breaks a page.
+
+---
+
+## 5. If a generation drifts
 
 The failures to expect, and the fix for each. The first two are the expensive
 ones — catch them before a chapter is built on the image.
 
 | Symptom | Fix |
 | --- | --- |
-| A character starts resembling a Doraemon character — the cat goes blue or bipedal, the boy acquires round glasses | Re-attach the §2.1 sheet **as the character reference** and demote the Doraemon image to *style only*, saying so in the prompt. Re-read that character's *must not* line and paste it into the prompt verbatim. Do not keep a "close enough" variant; it contaminates every later chapter fed from it |
+| A character starts resembling a Doraemon character — the cat goes blue or bipedal, the boy acquires round glasses | Re-attach the §2.1 sheet **as the character reference** and demote the Doraemon image to *style only*, saying so in the prompt. Re-read that character's *must not* line and paste it into the prompt verbatim. Do not keep a "close enough" variant; it contaminates every later sheet fed from it |
 | It comes back as generic modern anime — soft shading, glossy eyes, strand-shaded hair | Re-paste §1 in full. The **Line** and **Colour** paragraphs are the whole defence, and they degrade the moment they are summarised. Naming what it must *not* be ("not modern anime, not moe, not Ghibli") does more work than naming what it should be |
-| Backgrounds come back vague, empty or blurred | The style's whole contrast is simple figures against a literal world. Re-paste the **Backgrounds carry the realism** paragraph and name three specific objects the scene must contain |
-| Faces change between chapters | Attach the character sheet **and** the two most recent keepers, and name the character in the prompt ("the boy from the reference sheet, Tí, with the cowlick and the muddy shin") |
-| The setting drifts Japanese — sliding doors, a suburban street, a vacant lot with concrete pipes | Expected: it is copying the reference's *world* along with its style. Re-paste the **Setting** paragraph including the "Nothing Japanese" clause, and add three delta-specific objects to the scene block |
-| Text appears in the image | Gemini adds signage unprompted in street scenes. Keep the "no text, no letters" clause and re-roll — it is not reliably fixable by inpainting. **First check you attached `cast-sheet.png` and not `cast-sheet-labelled.png`** (§2.2); an attached sheet with words on it puts words in every scene |
-| The back of a head, or a turned-away figure, looks like someone else | Expected — the group sheet is front-facing only. Attach that character's §2.3 turnaround as well, and name the graphic tag in the prompt. Chapters 1, 4, 6, 10 and 12 all need this |
-
-## 5. Extending this to the other prose slots
-
-Each unit has four story slots (`chapter-briefs.md` §0): the Lesson 1 dialogue,
-the Lesson 5 reading passage, the Lesson 6 recording and its writing model. Only
-the dialogue is prompted here.
-
-The Lesson 5 passages are the ones where **the lamp is actually lit**, so if
-those get illustrated later, the style block needs one added clause — and it
-should be the *only* place a flame ever appears:
-
-> When the lamp is lit, its flame is small, low and ordinary — a domestic oil
-> flame. Draw it as a plain flat teardrop shape with a single lighter shape
-> inside it and the same black contour line as everything else. It does not
-> glow, radiate, sparkle, cast rays, or light anything beyond arm's reach, and
-> nothing in the frame is tinted by it. Whatever has come back is lit by
-> daylight like everything else in the picture.
-
-That restraint is the point, and the flat-cel style makes it easier to hold than
-a painted one would: there is no soft light to leak. The bible's rule is that
-the lamp never fails and never announces itself; an illustration that renders it
-as a magic item contradicts the story it sits above.
+| A background plate comes back vague, empty or blurred | The style's whole contrast is simple figures against a literal world. Re-paste the **Backgrounds carry the realism** paragraph and name three specific objects the plate must contain |
+| A background plate comes back with people in it | Expected, and it must be re-rolled rather than painted out — the cast is composited on top and a drawn figure appears beside itself. Repeat the "no people, no animals" clause as the **first** line of the plate description, not the last |
+| The six faces do not line up when cut | The prompt fixes the body and moves only the face; if a panel drifts, re-roll that sheet rather than re-cutting. A character that jumps a few pixels between lines is very visible on a page that changes one line at a time |
+| An avatar has a white box behind it | The transparency was never cut. Invisible against the generator's white sheet — always check against a dark colour before saving |
+| The setting drifts Japanese — sliding doors, a suburban street, a vacant lot with concrete pipes | Expected: it is copying the reference's *world* along with its style. Re-paste the **Setting** paragraph including the "Nothing Japanese" clause, and add three delta-specific objects |
+| Text appears in the image | Gemini adds signage unprompted in street scenes. Keep the "no text, no letters" clause and re-roll — it is not reliably fixable by inpainting. **First check you attached `cast-sheet.png` and not `cast-sheet-labelled.png`** (§2.2); an attached sheet with words on it puts words in every generation |

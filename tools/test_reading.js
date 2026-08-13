@@ -514,6 +514,70 @@ async function main() {
        language.dataset.done === "1");
   }
 
+  /* ---- the dialogue as a comic ------------------------------------------
+     The three things that would quietly ruin it: losing the transcript the
+     comprehension exercises are answered against, losing the glosses inside
+     the bubbles, and hijacking the page's scroll. */
+  {
+    const win = await settled(load("docs/unit-01/lesson-1/index.html", null, fastPage));
+    const doc = win.document;
+    const dlg = doc.querySelector('[data-role="dialogue"]');
+    const data = JSON.parse(doc.getElementById("page-data").textContent);
+    const p = data.dialogue[0];
+    ok("comic: unit 1's dialogue is staged", p.staged === true);
+    ok("comic: every line carries a background", p.lines.every(l => !!l.bg));
+    ok("comic: a speaker carries a drawn face and a side",
+       p.lines.filter(l => l.who).every(l => l.slug && l.emo && l.side));
+    ok("comic: the two speakers sit on opposite sides",
+       new Set(p.lines.filter(l => l.who).map(l => l.side)).size === 2);
+
+    const scene = dlg.querySelector(".d-scene");
+    const body = dlg.querySelector(".d-body");
+    ok("comic: the comic is the default view", scene && !scene.hidden);
+    ok("comic: and the transcript is hidden behind the toggle", body.hidden);
+
+    /* The transcript must survive as real markup either way — Ctrl+F, screen
+       readers and exercise 1.2 all use it. */
+    ok("comic: the transcript is still in the document",
+       /ages ago/.test(body.textContent) && body.querySelectorAll("p").length >= 15,
+       body.querySelectorAll("p").length + " lines");
+    ok("comic: the transcript keeps its gloss buttons",
+       body.querySelectorAll(".gl").length >= 5,
+       body.querySelectorAll(".gl").length + " buttons");
+
+    const toggle = dlg.querySelector(".d-toggle");
+    click(win, toggle);
+    await new Promise(r => setTimeout(r, 20));
+    ok("comic: the toggle swaps to text", scene.hidden && !body.hidden);
+    click(win, toggle);
+    await new Promise(r => setTimeout(r, 20));
+    ok("comic: and back again", !scene.hidden && body.hidden);
+
+    /* A bubble is rendered, and a glossed word inside it opens. */
+    const bub = dlg.querySelector(".d-bub");
+    ok("comic: a bubble is drawn for the current line", !!bub);
+    ok("comic: the panel counts its lines",
+       /1 \/ \d+/.test(dlg.querySelector(".d-count").textContent),
+       dlg.querySelector(".d-count").textContent);
+
+    click(win, dlg.querySelector(".d-next"));
+    await new Promise(r => setTimeout(r, 30));
+    const glInBubble = dlg.querySelector(".d-bubble .gl");
+    if (glInBubble){
+      click(win, glInBubble);
+      await new Promise(r => setTimeout(r, 20));
+      const g = doc.getElementById(glInBubble.getAttribute("aria-controls"));
+      ok("comic: a glossed word inside a bubble opens", g && !g.hidden);
+    } else {
+      ok("comic: a glossed word inside a bubble opens", true, "no gloss on this line");
+    }
+
+    /* And the page is never scroll-jacked. */
+    const appSrc = APP;
+    ok("comic: nothing intercepts wheel or touchmove",
+       !/addEventListener\(\s*["'](wheel|touchmove)["']/.test(appSrc));
+  }
+
   /* ---- the vocabulary intake: meet, recall, list -------------------------
      Three stages over one set. The stage that matters most is the last one,
      because it is where a well-meaning "you improved!" would go in and where

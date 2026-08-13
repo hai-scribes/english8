@@ -1512,60 +1512,176 @@ function owned(root){
 
 /* ---------------- the glossed dialogue -----------------------------------
    Tap, never hover: this is read on a phone, and a hover-only gloss reaches
-   neither touch nor a keyboard. The gloss opens AFTER the paragraph rather
-   than inside the line, so revealing one never reflows the sentence being
-   read. One at a time, and Escape closes.
+   neither touch nor a keyboard. The gloss opens AFTER the line rather than
+   inside it, so revealing one never reflows the sentence being read. One at a
+   time, and Escape closes.
 
    Support here, withdrawal later — the same items come back bare in the later
    lessons and in the spaced review. That is the whole mechanism, and the half
-   the build could most easily have shipped alone. */
-function initDialogue(){
-  $$('[data-role="dialogue"]').forEach(root => {
-    let glosses = [];
-    try { glosses = JSON.parse(root.dataset.glosses || "[]"); } catch(e){ return; }
-    let open = null;
+   the build could most easily have shipped alone.
 
-    const shut = btn => {
-      btn.setAttribute("aria-expanded", "false");
-      const g = document.getElementById(btn.getAttribute("aria-controls"));
-      if (g) g.hidden = true;
-      open = null;
-    };
+   Glosses are wired per SCOPE rather than once per dialogue, because the same
+   marked word exists twice on a staged page: once in the transcript and once
+   in the speech bubble it is currently being spoken in. Both have to work, and
+   they cannot share a DOM id. */
+function wireGlosses(scope, glosses, prefix){
+  let open = null;
+  const shut = btn => {
+    btn.setAttribute("aria-expanded", "false");
+    const g = document.getElementById(btn.getAttribute("aria-controls"));
+    if (g) g.hidden = true;
+    open = null;
+  };
+  $$(".gl", scope).forEach((btn, i) => {
+    const d = glosses[Number(btn.dataset.g)];
+    if (!d) return;
+    const id = prefix + "-g" + i;
+    btn.setAttribute("aria-controls", id);
 
-    $$(".gl", root).forEach((btn, i) => {
-      const d = glosses[Number(btn.dataset.g)];
-      if (!d) return;
-      const id = (root.dataset.dialogue || "d") + "-g" + i;
-      btn.setAttribute("aria-controls", id);
+    const g = document.createElement("div");
+    g.className = "gloss";
+    g.id = id;
+    g.hidden = true;
+    if (d.kind === "gram") g.dataset.kind = "gram";
+    g.innerHTML = '<span class="hw"></span><span class="ipa"></span>'
+                + '<span class="vi"></span><span class="co"></span>';
+    $(".hw", g).textContent = d.hw || "";
+    $(".ipa", g).textContent = d.ipa || "";
+    $(".vi", g).textContent = d.vi || "";
+    $(".co", g).textContent = d.co || "";
+    /* After the block the word sits in, so opening one never moves the line
+       the reader is on. Inside a bubble that block is the bubble itself. */
+    const host = btn.closest("p") || btn.closest(".d-said") || scope;
+    host.parentNode.insertBefore(g, host.nextSibling);
 
-      const g = document.createElement("div");
-      g.className = "gloss";
-      g.id = id;
-      g.hidden = true;
-      if (d.kind === "gram") g.dataset.kind = "gram";
-      g.innerHTML = '<span class="hw"></span><span class="ipa"></span>'
-                  + '<span class="vi"></span><span class="co"></span>';
-      $(".hw", g).textContent = d.hw || "";
-      $(".ipa", g).textContent = d.ipa || "";
-      $(".vi", g).textContent = d.vi || "";
-      $(".co", g).textContent = d.co || "";
-      const host = btn.closest("p") || root;
-      host.parentNode.insertBefore(g, host.nextSibling);
-
-      btn.addEventListener("click", () => {
-        const was = btn.getAttribute("aria-expanded") === "true";
-        if (open && open !== btn) shut(open);
-        if (was){ shut(btn); return; }
-        btn.setAttribute("aria-expanded", "true");
-        g.hidden = false;
-        open = btn;
-      });
-    });
-
-    root.addEventListener("keydown", ev => {
-      if (ev.key === "Escape" && open) shut(open);
+    btn.addEventListener("click", () => {
+      const was = btn.getAttribute("aria-expanded") === "true";
+      if (open && open !== btn) shut(open);
+      if (was){ shut(btn); return; }
+      btn.setAttribute("aria-expanded", "true");
+      g.hidden = false;
+      open = btn;
     });
   });
+  scope.addEventListener("keydown", ev => {
+    if (ev.key === "Escape" && open) shut(open);
+  });
+}
+
+function initDialogue(){
+  (DATA.dialogue || []).forEach(p => {
+    const root = document.querySelector('[data-dialogue="' + p.id + '"]');
+    if (!root) return;
+    wireGlosses($(".d-body", root) || root, p.glosses || [], p.id);
+    if (p.staged) initScene(root, p);
+  });
+}
+
+/* ---------------- the dialogue as a comic ---------------------------------
+   A background, the speaker's face, one bubble, advancing with the page.
+
+   The stage is STICKY and reads its own position; it never intercepts a wheel
+   or touch event. Hijacking scroll on a reading page breaks the browser's find,
+   breaks keyboard paging, and on a phone breaks the gesture a reader uses to
+   get out of something they do not want. Scrolling stays scrolling; the panel
+   just happens to change while it does.
+
+   Everything here is an ENHANCEMENT over the transcript, which is real markup
+   underneath and stays reachable. Exercise 1.2 asks the learner to find a
+   phrase "in the dialogue" and 1.3 sends them back to look at a verb; neither
+   is answerable one panel at a time, and a comic that hid the text would have
+   broken the two exercises the dialogue exists to feed. */
+const ASSET_BG = "assets/bg/";
+const ASSET_CAST = "assets/cast/";
+
+function initScene(root, p){
+  const scene = $(".d-scene", root), body = $(".d-body", root),
+        toggle = $(".d-toggle", root);
+  if (!scene || !toggle) return;
+  const bg = $(".d-bg", scene), cast = $(".d-cast", scene),
+        bubble = $(".d-bubble", scene), count = $(".d-count", scene),
+        track = $(".d-track", scene), steps = $$(".d-step", scene);
+  const up = (location.pathname.match(/\//g) || []).length >= 4 ? "../../" : "";
+  let at = -1;
+
+  function show(i){
+    i = Math.max(0, Math.min(p.lines.length - 1, i));
+    if (i === at) return;
+    at = i;
+    const ln = p.lines[i];
+    bg.style.backgroundImage = 'url("' + up + ASSET_BG + ln.bg + '.jpg")';
+    bg.dataset.bg = ln.bg;
+    /* No speaker means narration: the place carries the beat by itself, so the
+       avatar and the bubble both go rather than showing an empty frame. */
+    cast.innerHTML = ln.who
+      ? '<img class="d-av" data-side="' + ln.side + '" alt="" src="'
+        + up + ASSET_CAST + ln.slug + '-' + ln.emo + '.png">'
+      : "";
+    bubble.innerHTML = ln.who
+      ? '<div class="d-bub" data-side="' + ln.side + '">'
+        + '<b class="d-name">' + esc(ln.who) + '</b>'
+        + '<div class="d-said">' + ln.html + '</div></div>'
+      : '<div class="d-bub d-nar-bub"><div class="d-said">' + ln.html + '</div></div>';
+    wireGlosses(bubble, p.glosses || [], p.id + "-b" + i);
+    count.textContent = (i + 1) + " / " + p.lines.length;
+    /* The live region is the transcript line, not the bubble: a screen-reader
+       user gets the name and the words in one go. */
+    scene.setAttribute("aria-label", (ln.who ? ln.who + ": " : "") + (bubble.textContent || ""));
+  }
+
+  /* Which step is under the middle of the viewport. Read on scroll, never
+     driven by it. */
+  function sync(){
+    if (scene.hidden) return;
+    const mid = innerHeight / 2;
+    let best = 0, bestD = Infinity;
+    steps.forEach((s, i) => {
+      const r = s.getBoundingClientRect();
+      const d = Math.abs(r.top + r.height / 2 - mid);
+      if (d < bestD){ bestD = d; best = i; }
+    });
+    show(best);
+  }
+
+  /* The buttons move the PAGE, so the panel and the scroll position can never
+     disagree — a nav that only changed the panel would jump back the moment
+     the reader touched the wheel. */
+  const goto = i => {
+    const s = steps[Math.max(0, Math.min(steps.length - 1, i))];
+    if (s) s.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+  $(".d-next", scene).addEventListener("click", () => goto(at + 1));
+  $(".d-prev", scene).addEventListener("click", () => goto(at - 1));
+  scene.addEventListener("keydown", ev => {
+    if (ev.key === "ArrowRight" || ev.key === "ArrowDown"){ ev.preventDefault(); goto(at + 1); }
+    if (ev.key === "ArrowLeft" || ev.key === "ArrowUp"){ ev.preventDefault(); goto(at - 1); }
+  });
+  addEventListener("scroll", sync, { passive: true });
+  addEventListener("resize", sync, { passive: true });
+
+  /* Which view the learner gets is theirs, and it is remembered. The default
+     is the comic; the transcript is one tap away and is what the exercises
+     below are answered against. */
+  const KEY = "en8:comic:" + p.id;
+  function setMode(comic){
+    scene.hidden = !comic;
+    body.hidden = comic;
+    toggle.setAttribute("aria-expanded", String(comic));
+    toggle.textContent = comic ? "Read it as text" : "Read it as a comic";
+    try { localStorage.setItem(KEY, comic ? "1" : "0"); } catch(e){}
+    if (comic){ at = -1; sync(); }
+  }
+  toggle.addEventListener("click", () => setMode(scene.hidden));
+
+  let want = "1";
+  try { want = localStorage.getItem(KEY) || "1"; } catch(e){}
+  /* Reduced motion gets the text by default. The comic is a scroll-driven
+     animation, and someone who has asked for less of that has asked. Guarded
+     by `typeof`, not by truthiness: where the API is absent the bare name
+     throws a ReferenceError and takes the whole dialogue down with it. */
+  if (typeof matchMedia === "function"
+      && matchMedia("(prefers-reduced-motion: reduce)").matches) want = "0";
+  setMode(want === "1");
 }
 
 /* ---------------- the vocabulary intake -----------------------------------

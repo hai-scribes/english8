@@ -24,25 +24,25 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="The list in the yard" gramen="love / can't stand + V-ing" gramvi="Sau các động từ chỉ sự thích hoặc không thích (love, like, enjoy, can't stand, hate), động từ theo sau thêm **-ing**." gramco="I love cooking · I can't stand waiting"
-**Thảo:** You've been down here at the water all morning. What's wrong?
-**Tí:** Nothing's wrong.
-**Thảo:** Tí.
-**Tí:** Hùng got a new [[board game|board game]] for his birthday. He read out the list of who's coming on Saturday. In the yard. Out loud.
-**Thảo:** And you weren't on it.
-**Tí:** I wasn't on it.
-**Thảo:** I [[can't stand]] hearing him read things out like that.
-**Tí:** It doesn't matter. I don't even like playing [[board games|board game]].
-**Thảo:** You beat everyone in our class at every game we have ever played.
-**Tí:** That was ages ago.
-**Thảo:** So you would like to go.
-**Tí:** I'd [[love|gram:v-ing]] to go. There. Are you happy now?
-**Thảo:** No. Come to my house on Saturday instead. We can [[hang out|hang out (with)]] all afternoon, and I don't mind teaching you a card game.
-**Tí:** You're only asking me because of the list.
-**Thảo:** I enjoy sitting here with you and I would enjoy sitting there with you. Both things are true.
-**Tí:** …
-**Thảo:** Are you coming up, or are you staying down here to [[relax]] in the mud?
-**Tí:** In a minute. There's something shiny down there.
+::: dialogue title="The list in the yard" bg="canal-landing" gramen="love / can't stand + V-ing" gramvi="Sau các động từ chỉ sự thích hoặc không thích (love, like, enjoy, can't stand, hate), động từ theo sau thêm **-ing**." gramco="I love cooking · I can't stand waiting"
+**Thảo|neutral:** You've been down here at the water all morning. What's wrong?
+**Tí|sad:** Nothing's wrong.
+**Thảo|annoyed:** Tí.
+**Tí|sad:** Hùng got a new [[board game|board game]] for his birthday. He read out the list of who's coming on Saturday. In the yard. Out loud.
+**Thảo|neutral:** And you weren't on it.
+**Tí|sad:** I wasn't on it.
+**Thảo|annoyed:** I [[can't stand]] hearing him read things out like that.
+**Tí|neutral:** It doesn't matter. I don't even like playing [[board games|board game]].
+**Thảo|surprised:** You beat everyone in our class at every game we have ever played.
+**Tí|sad:** That was ages ago.
+**Thảo|neutral:** So you would like to go.
+**Tí|annoyed:** I'd [[love|gram:v-ing]] to go. There. Are you happy now?
+**Thảo|happy:** No. Come to my house on Saturday instead. We can [[hang out|hang out (with)]] all afternoon, and I don't mind teaching you a card game.
+**Tí|worried:** You're only asking me because of the list.
+**Thảo|happy:** I enjoy sitting here with you and I would enjoy sitting there with you. Both things are true.
+**Tí|neutral:** …
+**Thảo|happy:** Are you coming up, or are you staying down here to [[relax]] in the mud?
+**Tí|surprised:** In a minute. There's something shiny down there.
 :::
 
 ### 1.1 Comprehension

@@ -1,0 +1,49 @@
+{
+  "_comment": [
+    "The cast and locations a :::dialogue may name. tools/build.py validates every",
+    "speaker, every emotion and every background slug against this file and fails",
+    "on one it does not know — a dialogue that names an avatar nobody drew would",
+    "ship as a broken image beside a speech bubble.",
+    "",
+    "This file declares what EXISTS as a design. The image files themselves arrive",
+    "separately; tools/check_cast.py reports which are still missing and does not",
+    "fail, so the dialogues can be authored before the art is drawn.",
+    "",
+    "Emotions are deliberately six and shared by every character. A per-character",
+    "set would be more expressive and would also mean nobody could ever remember",
+    "which ones a given character has. Six x four is twenty-four avatars, which is",
+    "a set one person can actually draw and keep consistent.",
+    "",
+    "research/story/illustration-prompts.md is where these are drawn from, and the",
+    "slugs here are the filenames it tells you to save."
+  ],
+
+  "emotions": {
+    "neutral":   "Talking, unremarkable. The default, and the one used most.",
+    "happy":     "Pleased, warm, amused. A real smile.",
+    "worried":   "Anxious or concerned — brows up and together.",
+    "annoyed":   "Cross, exasperated, digging in. Brows down.",
+    "surprised": "Caught out, startled. Eyes wide, mouth open.",
+    "sad":       "Quiet, downcast, hurt. Eyes lowered."
+  },
+
+  "characters": {
+    "Tí":     { "slug": "ti",    "who": "the boy, 13" },
+    "Thảo":   { "slug": "thao",  "who": "his friend, the one who believes him" },
+    "Bà Sáu": { "slug": "basau", "who": "his grandmother" },
+    "Khoa":   { "slug": "khoa",  "who": "top of everything, and kind about it" },
+    "Mun":    { "slug": "mun",   "who": "the black cat; speaks in the passages, not yet in a dialogue" }
+  },
+
+  "backgrounds": {
+    "canal-landing": "The wooden landing on the canal — mud, water hyacinth, the far bank hazy",
+    "kitchen":       "Bà Sáu's kitchen — low table, enamel bowls, a doorway of hot white light",
+    "school-yard":   "The school yard — concrete, a painted noticeboard, a flame tree",
+    "market":        "The market — stalls, baskets, everyone talking at once",
+    "lane":          "The narrow lane between the houses, evening, light from open doorways",
+    "canal-school":  "The canal behind the school — brown water, a workshop pipe on the far bank",
+    "science-room":  "The school science room after hours — desk lamp, wires, a darkening window",
+    "storm-yard":    "The yard under a storm sky — wind in the banana leaves, water rising",
+    "road":          "The dirt road out of town at first light, the river beyond"
+  }
+}

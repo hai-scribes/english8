@@ -622,6 +622,66 @@ footer.foot p{margin:0;max-width:74ch}
 .dlg .d-t{font-weight:600}
 .dlg .d-say{font-size:.87rem;color:var(--muted);margin:0 0 .8rem}
 .dlg .d-body p{margin:0 0 .5rem;line-height:1.75}
+.dlg .d-who{font-weight:650}
+.dlg .d-nar{color:var(--muted);font-style:italic}
+.dlg .d-alt{margin:.9rem 0 0}
+
+/* ---- the dialogue as a comic --------------------------------------------
+   Manga speech balloons: a hard black contour of even weight, a flat white
+   fill, a solid tail, and the name set outside the balloon rather than inside
+   it. Everything is flat — no gradient, no soft shadow, no blur — because the
+   balloons sit over flat-cel backgrounds drawn to the same rule, and one soft
+   edge in the frame makes the whole panel look like a mistake.
+
+   The stage is STICKY inside a tall track. The track's height is what the page
+   scrolls through; the stage stays put and swaps its contents. Nothing here
+   listens to a wheel event. */
+.d-scene{--stage-h:min(62vh,26rem)}
+.d-track{position:relative}
+/* The steps are spacers pulled back under the sticky stage, so the height the
+   reader scrolls through is theirs and the panel simply stays put inside it. */
+.d-steps{margin-top:calc(-1 * var(--stage-h))}
+.d-step{height:58vh}
+.d-stage{position:sticky;top:4rem;height:var(--stage-h);border-radius:var(--r);
+  overflow:hidden;border:2px solid var(--ink);background:var(--sunk)}
+.d-bg{position:absolute;inset:0;background-size:cover;background-position:center;
+  background-repeat:no-repeat;background-color:var(--sunk)}
+.d-cast{position:absolute;inset:0;pointer-events:none}
+.d-av{position:absolute;bottom:0;height:74%;width:auto;object-fit:contain}
+.d-av[data-side=left]{left:.5rem}
+.d-av[data-side=right]{right:.5rem;transform:scaleX(-1)}
+.d-bubble{position:absolute;inset:.7rem .7rem auto .7rem}
+.d-bub{position:relative;max-width:74%;background:#fff;color:#111;
+  border:2px solid #111;border-radius:1.1rem;padding:.6rem .85rem;
+  font-size:.98rem;line-height:1.5}
+.d-bub[data-side=left]{margin-right:auto}
+.d-bub[data-side=right]{margin-left:auto}
+.d-name{display:block;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;
+  color:#555;margin-bottom:.15rem}
+/* The tail, drawn as two stacked triangles so the outline reads as one
+   continuous contour with the balloon. */
+.d-bub::before,.d-bub::after{content:"";position:absolute;top:100%;
+  border:.55rem solid transparent;border-top-color:#111}
+.d-bub::after{border-top-color:#fff;margin-top:-3px}
+.d-bub[data-side=left]::before,.d-bub[data-side=left]::after{left:1.6rem}
+.d-bub[data-side=right]::before,.d-bub[data-side=right]::after{right:1.6rem}
+/* Narration is a caption box, not a balloon: square, no tail. */
+.d-nar-bub{max-width:100%;border-radius:3px;font-style:italic}
+.d-nar-bub::before,.d-nar-bub::after{display:none}
+.d-bub .gl{border-bottom-color:#b4503c}
+.d-bub .gloss{background:#f4f2ec;color:#111;margin:.5rem 0 0}
+.d-nav{position:absolute;right:.6rem;bottom:.6rem;display:flex;gap:.35rem;
+  align-items:center;background:var(--surface);border:1px solid var(--rule);
+  border-radius:var(--r);padding:.2rem .35rem}
+.d-nav button{font:inherit;font-size:1rem;line-height:1;background:none;border:0;
+  color:var(--ink);cursor:pointer;padding:.2rem .45rem}
+.d-count{font-family:var(--f-mono);font-size:.68rem;color:var(--muted);
+  font-variant-numeric:tabular-nums}
+@media (max-width:34rem){
+  .d-stage{height:min(58vh,20rem)}
+  .d-bub{max-width:86%;font-size:.92rem}
+  .d-av{height:64%}
+}
 .gl{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;
   border-bottom:2px solid var(--clay);line-height:inherit}
 .gl[data-kind=gram]{border-bottom-style:dotted;border-bottom-color:var(--teal)}

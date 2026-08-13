@@ -540,23 +540,144 @@ def gloss_payload(body: str, a: dict, where: str) -> tuple:
     return RE_MARK.sub(one, body), out
 
 
-def dialogue_html(a: dict, body: str, did: str, where: str) -> str:
+# ------------------------------------------------------ the dialogue as a scene --
+# The dialogue is a comic, not a transcript: a background, the speaker's avatar,
+# and one speech bubble, advancing as the page scrolls. The reason is not
+# decoration — a thirteen-year-old reading a manga panel is reading, and a
+# stack of "**Name:** line" is the format they stop reading.
+#
+# What the authoring adds, and nothing more:
+#
+#   **Thảo|worried:** ...   the speaker, and which of the six drawn faces
+#   @bg school-yard         everything after this line is in a new place
+#   a line with no speaker  narration: background, no avatar, no bubble
+#
+# Three things this must not break, and each has cost something to get right.
+#
+# The GLOSSES still work, because they are the construct the lesson is built on
+# — `gloss_payload` runs over the body before any of this, so a marked word is
+# a button inside a bubble exactly as it was inside a paragraph.
+#
+# The WHOLE TEXT stays reachable. Exercise 1.2 asks the learner to find a phrase
+# "in the dialogue" and 1.3 sends them back to look at a verb, and neither is
+# answerable one panel at a time. Every scene therefore ships its transcript
+# too, one tap away, carrying the same buttons.
+#
+# And the page SCROLLS NORMALLY. The stage is sticky and reads its own position;
+# it never intercepts a wheel event. Hijacking the scroll of a reading page
+# breaks the browser's own find, breaks keyboard paging, and on a phone breaks
+# the gesture that gets you out.
+RE_SPEAKER = re.compile(r"^\*\*(?P<who>[^:*|]+?)(?:\|(?P<emo>[a-z]+))?:\*\*[ \t]*(?P<said>.*)$")
+RE_BG = re.compile(r"^@bg[ \t]+(?P<slug>[a-z0-9-]+)[ \t]*$")
+
+CAST = json.loads((ROOT / "data" / "cast.json").read_text(encoding="utf-8"))
+CAST_CHARS, CAST_EMO = CAST["characters"], CAST["emotions"]
+CAST_BG = CAST["backgrounds"]
+
+
+def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
+    """One dialogue -> the scenes it plays as, plus its gloss records."""
     rendered, glosses = gloss_payload(body, a, where)
-    lines = []
+    bg = a.get("bg", "")
+    if bg and bg not in CAST_BG:
+        raise SystemExit(f"{where}: bg={bg!r} is not in data/cast.json "
+                         f"({', '.join(sorted(CAST_BG))})")
+    lines, seen_bg = [], set()
+    # Who spoke last, so a reply can be placed on the other side of the frame.
+    # Sides alternate by SPEAKER rather than by line, or a character answering
+    # themselves twice would hop across the panel for no reason.
+    order = []
     for raw in rendered.split("\n"):
         s = raw.strip()
         if not s:
             continue
-        lines.append(f'<p>{md_inline_keep(s)}</p>')
-    title = a.get("title", "")
-    return (f'<div class="dlg" data-role="dialogue" data-dialogue="{e(did)}" '
-            f'data-glosses="{e(json.dumps(glosses, ensure_ascii=False))}">'
+        bgm = RE_BG.match(s)
+        if bgm:
+            if bgm.group("slug") not in CAST_BG:
+                raise SystemExit(f"{where}: @bg {bgm.group('slug')!r} is not in "
+                                 f"data/cast.json")
+            bg = bgm.group("slug")
+            seen_bg.add(bg)
+            continue
+        m = RE_SPEAKER.match(s)
+        if not m:
+            # Narration. The place carries the beat on its own.
+            lines.append({"bg": bg, "html": md_inline_keep(s)})
+            continue
+        who, emo = m.group("who").strip(), (m.group("emo") or "neutral")
+        c = CAST_CHARS.get(who)
+        if not c:
+            raise SystemExit(f"{where}: {who!r} is not a character in "
+                             f"data/cast.json — add them there before they speak")
+        if emo not in CAST_EMO:
+            raise SystemExit(f"{where}: {who} is {emo!r}, which is not one of the "
+                             f"six drawn faces ({', '.join(sorted(CAST_EMO))})")
+        if who not in order:
+            order.append(who)
+        lines.append({"bg": bg, "who": who, "slug": c["slug"], "emo": emo,
+                      "side": "left" if order.index(who) % 2 == 0 else "right",
+                      "html": md_inline_keep(m.group("said").strip())})
+    if not lines:
+        raise SystemExit(f"{where}: the dialogue has no lines")
+    # A dialogue with no place named is UNSTAGED: it ships as the transcript
+    # and nothing else. That is not a failure state, it is the rollout — a unit
+    # becomes a comic the moment somebody gives it a `bg=` and chooses faces,
+    # and until then it reads exactly as it did before. Half-staging it against
+    # a background nobody picked would be worse than not staging it.
+    staged = bool(bg)
+    if staged and any(ln.get("who") and not ln["bg"] for ln in lines):
+        raise SystemExit(f"{where}: some lines are staged and some are not — put "
+                         f"the @bg above the first speaker, or drop bg= entirely")
+    return {"id": did, "title": a.get("title", ""), "lines": lines, "staged": staged,
+            "glosses": glosses, "backgrounds": sorted(seen_bg | ({bg} if bg else set()))}
+
+
+def dialogue_html(p: dict) -> str:
+    """The stage, plus the transcript underneath it.
+
+    The transcript is real markup rather than something the browser builds,
+    because it is what a screen reader, a printout, `Ctrl+F` and a learner
+    hunting for a phrase in exercise 1.2 all actually use. The stage is the
+    enhancement; this is the page.
+    """
+    rows = []
+    for ln in p["lines"]:
+        if ln.get("who"):
+            rows.append(f'<p><b class="d-who">{e(ln["who"])}</b> {ln["html"]}</p>')
+        else:
+            rows.append(f'<p class="d-nar">{ln["html"]}</p>')
+    # One panel per line, laid out as the scroll track. Each carries only its
+    # index: the stage reads the payload for everything else.
+    track = "".join(f'<div class="d-step" data-step="{i}"></div>'
+                    for i in range(len(p["lines"])))
+    # The stage is sticky INSIDE the track, and the steps are pulled back up
+    # underneath it, so the track's own height is what the reader scrolls
+    # through while the panel stays put. A stage that is a sibling of the track
+    # sticks for the wrong element and slides away halfway down.
+    scene = (f'<div class="d-scene" hidden><div class="d-track">'
+             f'<div class="d-stage" tabindex="0" role="group" '
+             f'aria-roledescription="comic panel"><div class="d-bg"></div>'
+             f'<div class="d-cast"></div><div class="d-bubble"></div>'
+             f'<div class="d-nav"><button class="d-prev" type="button" '
+             f'aria-label="Previous line">&lsaquo;</button>'
+             f'<span class="d-count"></span>'
+             f'<button class="d-next" type="button" aria-label="Next line">&rsaquo;</button>'
+             f'</div></div>'
+             f'<div class="d-steps">{track}</div></div></div>'
+             if p["staged"] else "")
+    toggle = ('<p class="d-alt"><button class="btn quiet d-toggle" type="button" '
+              'aria-expanded="false">Read it as a comic</button></p>'
+              if p["staged"] else "")
+    say = ('Tap any <u>underlined</u> word to see what it means — later lessons '
+           'ask for the same words without it.')
+    return (f'<div class="dlg" data-role="dialogue" data-dialogue="{e(p["id"])}">'
             + (f'<div class="d-h"><span class="d-k">Dialogue</span>'
-               f'<span class="d-t">{e(title)}</span></div>' if title else "")
-            + '<p class="d-say">Tap any <u>underlined</u> word to see what it means. '
-              'The meaning is here so you can stay in the conversation — later '
-              'lessons ask for the same words without it.</p>'
-            + '<div class="d-body">' + "".join(lines) + '</div></div>')
+               f'<span class="d-t">{e(p["title"])}</span></div>' if p["title"] else "")
+            + f'<p class="d-say">{say}</p>'
+            + scene
+            + '<div class="d-body">' + "".join(rows) + '</div>'
+            + toggle
+            + '</div>')
 
 
 def md_inline_keep(s: str) -> str:
@@ -2240,8 +2361,10 @@ def block_prose(u, lesson, b, payload) -> str:
         elif kind == "dialogue":
             did = f"{u['nn']}-{lesson}-d{n_dlg[0] + 1}"
             n_dlg[0] += 1
-            html_ = dialogue_html(d[0], d[1], did,
-                                  f"{u['src']} lesson {lesson} (dialogue)")
+            p = dialogue_payload(d[0], d[1], did,
+                                 f"{u['src']} lesson {lesson} (dialogue)")
+            payload.setdefault("dialogue", []).append(p)
+            html_ = dialogue_html(p)
         elif kind == "fluency":
             fid = f"{u['nn']}-{lesson}-f{n_flu[0] + 1}"
             n_flu[0] += 1
@@ -2357,7 +2480,8 @@ def page_lesson(u, L) -> str:
                        "tasks": payload["tasks"], "audio": payload["audio"],
                        "write": payload["write"], "clock": payload["clock"],
                        "passage": payload["passage"],
-                       "vocabIntake": payload.get("vocabIntake", [])},
+                       "vocabIntake": payload.get("vocabIntake", []),
+                       "dialogue": payload.get("dialogue", [])},
                  desc=f"Unit {u['num']} Lesson {L['n']}: {L['title']}.")
 
 

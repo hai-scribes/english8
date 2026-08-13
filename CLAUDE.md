@@ -15,6 +15,7 @@ node tools/test_reading.js        # gate: the reading screen behaves (after buil
 python3 tools/check_coverage.py   # report: what the official textbook covers that we don't
 python3 tools/index_sgk.py --check  # gate: the recorded book's lookup index is current
 python3 tools/check_level.py --strict-through 3   # gate: story prose stays inside grade 8
+python3 tools/check_cast.py       # report: which dialogue avatars and backgrounds exist
 ```
 
 `test_reading.js` needs `npm install jsdom` and skips loudly without it, so the
@@ -96,6 +97,42 @@ break — no average across attempts (**E3**), no trend or "better" (**E9**: a
 single retest is regression to the mean as much as learning), and **no retake
 at all on a task a timer has already spent**, or the button quietly repeals C6
 and C7. That last one is gated in `test_reading.js`.
+
+### The dialogue is a comic, and the transcript is still the page
+
+`:::dialogue` renders as a background plate, the speaker's face and one speech
+balloon, advancing as the reader scrolls. `data/cast.json` declares the five
+characters, the six emotions and the nine backgrounds; the build **fails** on a
+dialogue naming anything outside it, and `tools/check_cast.py` reports which
+images have actually been drawn. `research/story/illustration-prompts.md` is
+the brief, and its filenames and the manifest's slugs must agree.
+
+```
+::: dialogue title="…" bg="canal-landing"
+**Thảo|neutral:** You've been down here all morning.
+@bg school-yard
+**Tí|sad:** Nothing's wrong.
+:::
+```
+
+`|emotion` defaults to `neutral`. `@bg` moves the scene. A line with no speaker
+is narration — plate, caption box, no avatar. **A dialogue with no `bg=` is
+unstaged and ships as plain text**, which is the rollout rather than a failure:
+only unit 1 is staged so far.
+
+Three things that must survive any change here, because each is load-bearing
+and two of them are exercises:
+
+- **The transcript stays in the document as real markup.** Exercise 1.2 asks
+  the learner to find a phrase "in the dialogue" and 1.3 sends them back to
+  look at a verb; neither is answerable one panel at a time. It is also what
+  `Ctrl+F`, a screen reader and a printout use.
+- **Glosses work inside the balloons**, wired per scope so the same marked word
+  can exist in both views without sharing a DOM id.
+- **Nothing intercepts a wheel or touch event.** The stage is sticky and reads
+  its own position. Hijacking scroll on a reading page breaks the browser's
+  find, breaks keyboard paging, and on a phone breaks the gesture that gets you
+  out. There is a test asserting the app registers no such listener.
 
 ### Lexis is met, not tabled
 
