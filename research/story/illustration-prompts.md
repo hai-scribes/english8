@@ -51,6 +51,12 @@ eleven dialogues read as plain text until they are staged.
 
 **File:** `ti.png` — the **whole sheet, uncut**, saved as one image.
 
+> **Draw exactly SIX panels — six and only six — laid out as a grid of three
+> columns across and two rows down, in one image. Six. Not four, not eight,
+> not nine. Do not add a seventh panel, an extra pose, an alternative angle,
+> a close-up, a colour variant or a blank cell.** The six are listed further
+> down and are the whole deliverable.
+>
 > **If a style reference image is attached**, match its line weight,
 > colouring, shading and background treatment, and do not copy, quote or
 > resemble any character in it — the character below appears nowhere in it.
@@ -145,9 +151,10 @@ eleven dialogues read as plain text until they are staged.
 > to remove than plain white. Plain white, and nothing else. The image is
 > **3:2**.
 >
-> **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No
-> exaggerated screaming-face gags. No sparkles or glows.
+> **Do not include:** a seventh or eighth panel, or any panel beyond the six
+> listed; any text, letters, numbers, captions, watermarks, signatures,
+> speech bubbles, logos, panel borders or motion lines. No exaggerated
+> screaming-face gags. No sparkles or glows.
 
 ---
 
@@ -155,6 +162,12 @@ eleven dialogues read as plain text until they are staged.
 
 **File:** `thao.png` — the **whole sheet, uncut**, saved as one image.
 
+> **Draw exactly SIX panels — six and only six — laid out as a grid of three
+> columns across and two rows down, in one image. Six. Not four, not eight,
+> not nine. Do not add a seventh panel, an extra pose, an alternative angle,
+> a close-up, a colour variant or a blank cell.** The six are listed further
+> down and are the whole deliverable.
+>
 > **If a style reference image is attached**, match its line weight,
 > colouring, shading and background treatment, and do not copy, quote or
 > resemble any character in it — the character below appears nowhere in it.
@@ -247,9 +260,10 @@ eleven dialogues read as plain text until they are staged.
 > to remove than plain white. Plain white, and nothing else. The image is
 > **3:2**.
 >
-> **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No
-> exaggerated screaming-face gags. No sparkles or glows.
+> **Do not include:** a seventh or eighth panel, or any panel beyond the six
+> listed; any text, letters, numbers, captions, watermarks, signatures,
+> speech bubbles, logos, panel borders or motion lines. No exaggerated
+> screaming-face gags. No sparkles or glows.
 
 ---
 
@@ -257,6 +271,12 @@ eleven dialogues read as plain text until they are staged.
 
 **File:** `basau.png` — the **whole sheet, uncut**, saved as one image.
 
+> **Draw exactly SIX panels — six and only six — laid out as a grid of three
+> columns across and two rows down, in one image. Six. Not four, not eight,
+> not nine. Do not add a seventh panel, an extra pose, an alternative angle,
+> a close-up, a colour variant or a blank cell.** The six are listed further
+> down and are the whole deliverable.
+>
 > **If a style reference image is attached**, match its line weight,
 > colouring, shading and background treatment, and do not copy, quote or
 > resemble any character in it — the character below appears nowhere in it.
@@ -338,9 +358,10 @@ eleven dialogues read as plain text until they are staged.
 > to remove than plain white. Plain white, and nothing else. The image is
 > **3:2**.
 >
-> **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No
-> sparkles or glows.
+> **Do not include:** a seventh or eighth panel, or any panel beyond the six
+> listed; any text, letters, numbers, captions, watermarks, signatures,
+> speech bubbles, logos, panel borders or motion lines. No sparkles or
+> glows.
 
 ---
 
@@ -348,6 +369,12 @@ eleven dialogues read as plain text until they are staged.
 
 **File:** `khoa.png` — the **whole sheet, uncut**, saved as one image.
 
+> **Draw exactly SIX panels — six and only six — laid out as a grid of three
+> columns across and two rows down, in one image. Six. Not four, not eight,
+> not nine. Do not add a seventh panel, an extra pose, an alternative angle,
+> a close-up, a colour variant or a blank cell.** The six are listed further
+> down and are the whole deliverable.
+>
 > **If a style reference image is attached**, match its line weight,
 > colouring, shading and background treatment, and do not copy, quote or
 > resemble any character in it — the character below appears nowhere in it.
@@ -428,9 +455,10 @@ eleven dialogues read as plain text until they are staged.
 > to remove than plain white. Plain white, and nothing else. The image is
 > **3:2**.
 >
-> **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No
-> sparkles or glows.
+> **Do not include:** a seventh or eighth panel, or any panel beyond the six
+> listed; any text, letters, numbers, captions, watermarks, signatures,
+> speech bubbles, logos, panel borders or motion lines. No sparkles or
+> glows.
 
 ---
 
@@ -442,6 +470,12 @@ Mun does not speak in any Lesson 1 dialogue yet. Generate this sheet anyway —
 he speaks in the passages, he is the character most likely to be given a line
 next, and a cat drawn six months after the rest of the cast will not match it.
 
+> **Draw exactly SIX panels — six and only six — laid out as a grid of three
+> columns across and two rows down, in one image. Six. Not four, not eight,
+> not nine. Do not add a seventh panel, an extra pose, an alternative angle,
+> a close-up, a colour variant or a blank cell.** The six are listed further
+> down and are the whole deliverable.
+>
 > **If a style reference image is attached**, match its line weight,
 > colouring, shading and background treatment, and do not copy, quote or
 > resemble any character in it — the character below appears nowhere in it.
@@ -511,9 +545,10 @@ next, and a cat drawn six months after the rest of the cast will not match it.
 > checkerboard is pixels, not alpha, and is far harder to remove than plain
 > white. Plain white, and nothing else. The image is **3:2**.
 >
-> **Do not include:** any text, letters, numbers, captions, watermarks,
-> signatures, speech bubbles, logos, panel borders or motion lines. No
-> sparkles or glows.
+> **Do not include:** a seventh or eighth panel, or any panel beyond the six
+> listed; any text, letters, numbers, captions, watermarks, signatures,
+> speech bubbles, logos, panel borders or motion lines. No sparkles or
+> glows.
 
 ---
 ---
@@ -1143,6 +1178,7 @@ Two things you do **not** have to do:
 | --- | --- |
 | A character resembles a Doraemon character — the cat goes blue or bipedal, the boy acquires round glasses | Demote the reference image to *style only*, saying so in the prompt, and paste that character's **must not** line in verbatim. Do not keep a "close enough" variant; it contaminates everything fed from it |
 | It comes back as generic modern anime — soft shading, glossy eyes, strand-shaded hair | Re-paste the **Line** and **Colour** paragraphs in full. They are the whole defence and they degrade the moment they are summarised. Naming what it must *not* be does more work than naming what it should be |
+| The sheet comes back with eight panels, or four, instead of six | Generators default to familiar grids and will pad a set out. The count is now the first line of every character prompt and is repeated in the prohibitions, so this is a miss rather than an ambiguity — re-roll. Do **not** keep an eight-panel sheet and ignore two: the page computes the offsets from a 3 × 2 grid, so every face would be cropped wrong |
 | The panels do not line up, or a sliver of the next face shows | They are not exactly equal sixths. The page steps by a fixed fraction, so this cannot be fixed by re-cropping — re-roll, or set the canvas to a round multiple of six and centre each figure in its sixth |
 | An avatar has a white box behind it | The white was never keyed out. It is invisible against the generator's own preview — always check the saved PNG against a dark colour |
 | The sheet comes back with a grey-and-white chequered pattern behind the figures | The generator has *drawn* a transparency checkerboard instead of leaving alpha. Re-roll: every prompt already forbids it by name, so this is a miss rather than an ambiguity, and a drawn checkerboard is much harder to key than plain white |
