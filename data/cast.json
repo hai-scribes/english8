@@ -36,9 +36,22 @@
   ],
 
   "sheet": {
-    "cols": 6,
-    "aspect": 1.7778,
-    "_comment": "The sheet is one 16:9 image of `cols` equal panels, so a panel is aspect/cols wide for its height. The page derives the crop from these two numbers alone."
+    "cols": 3,
+    "rows": 2,
+    "aspect": 1.5,
+    "_comment": [
+      "One sheet is `cols` x `rows` equal panels in a single image of `aspect`.",
+      "A panel is therefore aspect*rows/cols wide for its height — at 3 x 2 in a",
+      "3:2 image that is exactly 1.0, a SQUARE panel, which is the point: a square",
+      "frame has room for folded arms and a raised hand without clipping them.",
+      "",
+      "A 6 x 1 strip would need a 6:1 image, which is an extreme ratio to ask a",
+      "generator for. 3 x 2 at 3:2 is an ordinary photo ratio and gives the same",
+      "six panels.",
+      "",
+      "The page derives both the crop and the element's shape from these three",
+      "numbers alone, so nothing in the CSS or the markup hard-codes the grid."
+    ]
   },
 
   "emotions": {

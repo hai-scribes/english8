@@ -9,7 +9,7 @@ scrolls. So there are exactly two kinds of image, and the page composites them:
 
 | | What | Files |
 | --- | --- | --- |
-| **Part 1** | Five character sheets — six emotion panels in a row, half-body, on transparency | `docs/assets/cast/<slug>.png` |
+| **Part 1** | Five character sheets — six square emotion panels in a 3 × 2 grid, chest up, on transparency | `docs/assets/cast/<slug>.png` |
 | **Part 2** | Nine background plates — the story's places, drawn empty | `docs/assets/bg/<slug>.jpg` |
 
 `data/cast.json` is the contract. It declares the slugs, the six emotions and
@@ -47,7 +47,7 @@ eleven dialogues read as plain text until they are staged.
 
 # Part 1 — the character sheets
 
-## 1. Tí — six-panel half-body sheet
+## 1. Tí — six-panel chest-up sheet
 
 **File:** `ti.png` — the **whole sheet, uncut**, saved as one image.
 
@@ -91,24 +91,28 @@ eleven dialogues read as plain text until they are staged.
 > glasses of any kind; wear a yellow top with blue shorts; resemble any
 > existing Doraemon character.
 >
-> **The sheet.** Six panels in one row on a plain white background. **The
-> image must divide into exactly six equal vertical sixths, each holding one
-> panel, with the figure centred in its sixth and the same margin on both
-> sides.** No gap, no border and no gutter between panels — the six sixths
-> are edge to edge and fill the whole width. Identical size, identical
-> framing. Each panel shows the **upper half of the body — head, shoulders,
-> chest, both arms and hands, cropped straight across at the waist** —
-> facing the viewer and turned very slightly to one side. The shirt, the
-> build and both hands are visible in every panel.
+> **The sheet.** Six square panels arranged as a grid of **three across and
+> two down**, filling one 3:2 image edge to edge. The image must divide into
+> exactly three equal columns and two equal rows, with **every panel exactly
+> square** and no gap, border, gutter or margin anywhere — the six squares
+> tile the whole image. Each panel shows the character from the **chest
+> up**: head, shoulders, upper chest, and both arms and hands wherever they
+> are, facing the viewer and turned very slightly to one side. The panel is
+> square precisely so that folded arms and a raised hand fit inside it —
+> **nothing may be cropped by the edge of a panel, least of all a hand.**
+> Keep a little clear space on all four sides of the figure.
 >
 > **The head stays exactly the same size and in exactly the same place in
 > all six panels**, at the same scale and under the same flat lighting. The
 > expression changes, and the shoulders, arms and hands may move with it —
-> but the framing, the scale and the eye level never do.
+> but the framing, the scale and the eye level never do. Because the crop is
+> at the chest, keep every gesture at chest height or above, so hands stay
+> inside the frame.
 >
-> Left to right, face and body together:
+> Reading order — left to right along the top row, then left to right along
+> the bottom row:
 > **1 — neutral:** an ordinary talking face, mouth slightly open, no strong
-> feeling; arms relaxed at the sides.
+> feeling; hands resting together in front of the chest.
 > **2 — happy:** a real open smile, eyes curved; shoulders lifted, one hand
 > raised in a small open gesture.
 > **3 — worried:** brows raised and pulled together, mouth a small flat
@@ -118,15 +122,18 @@ eleven dialogues read as plain text until they are staged.
 > **5 — surprised:** eyes wide and round, brows high, mouth open in a small
 > circle; shoulders up, both hands lifted slightly.
 > **6 — sad:** eyes lowered, brows slack, mouth a short downward curve;
-> shoulders dropped, arms hanging.
+> shoulders dropped, one hand held loosely at the collarbone.
 >
 > **The standing cowlick at the back of the crown must be clearly visible in
 > all six panels** — it is the one feature that identifies him at small
 > size.
 >
-> Each panel is cut off cleanly and straight across at the bottom edge of
-> the frame, at the waist, with nothing below it and no legs. Plain white
-> behind every panel and no border between them. 16:9.
+> Every panel is cropped at the **chest**, not the waist — no stomach, no
+> hips, no legs. The background of the whole image is a **single flat
+> colour, pure magenta #FF00FF**, with no shadow, no gradient, no texture
+> and no border between panels. If you can output a **transparent background
+> (PNG with an alpha channel)** then do that instead, and leave everything
+> behind the figures fully transparent. The image is **3:2**.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -134,7 +141,7 @@ eleven dialogues read as plain text until they are staged.
 
 ---
 
-## 2. Thảo — six-panel half-body sheet
+## 2. Thảo — six-panel chest-up sheet
 
 **File:** `thao.png` — the **whole sheet, uncut**, saved as one image.
 
@@ -177,24 +184,28 @@ eleven dialogues read as plain text until they are staged.
 > between panels. **Must not:** wear a hairband, ribbon, bow or hairclip;
 > wear pink; resemble any existing Doraemon character.
 >
-> **The sheet.** Six panels in one row on a plain white background. **The
-> image must divide into exactly six equal vertical sixths, each holding one
-> panel, with the figure centred in its sixth and the same margin on both
-> sides.** No gap, no border and no gutter between panels — the six sixths
-> are edge to edge and fill the whole width. Identical size, identical
-> framing. Each panel shows the **upper half of the body — head, shoulders,
-> chest, both arms and hands, cropped straight across at the waist** —
-> facing the viewer and turned very slightly to one side. The shirt, the
-> build and both hands are visible in every panel.
+> **The sheet.** Six square panels arranged as a grid of **three across and
+> two down**, filling one 3:2 image edge to edge. The image must divide into
+> exactly three equal columns and two equal rows, with **every panel exactly
+> square** and no gap, border, gutter or margin anywhere — the six squares
+> tile the whole image. Each panel shows the character from the **chest
+> up**: head, shoulders, upper chest, and both arms and hands wherever they
+> are, facing the viewer and turned very slightly to one side. The panel is
+> square precisely so that folded arms and a raised hand fit inside it —
+> **nothing may be cropped by the edge of a panel, least of all a hand.**
+> Keep a little clear space on all four sides of the figure.
 >
 > **The head stays exactly the same size and in exactly the same place in
 > all six panels**, at the same scale and under the same flat lighting. The
 > expression changes, and the shoulders, arms and hands may move with it —
-> but the framing, the scale and the eye level never do.
+> but the framing, the scale and the eye level never do. Because the crop is
+> at the chest, keep every gesture at chest height or above, so hands stay
+> inside the frame.
 >
-> Left to right, face and body together:
+> Reading order — left to right along the top row, then left to right along
+> the bottom row:
 > **1 — neutral:** an ordinary talking face, mouth slightly open, no strong
-> feeling; arms relaxed at the sides.
+> feeling; hands resting together in front of the chest.
 > **2 — happy:** a real open smile, eyes curved; shoulders lifted, one hand
 > raised in a small open gesture.
 > **3 — worried:** brows raised and pulled together, mouth a small flat
@@ -204,14 +215,17 @@ eleven dialogues read as plain text until they are staged.
 > **5 — surprised:** eyes wide and round, brows high, mouth open in a small
 > circle; shoulders up, both hands lifted slightly.
 > **6 — sad:** eyes lowered, brows slack, mouth a short downward curve;
-> shoulders dropped, arms hanging.
+> shoulders dropped, one hand held loosely at the collarbone.
 >
 > **The hair tucked behind one ear only — one ear showing, the other covered
 > — must read clearly in all six panels.**
 >
-> Each panel is cut off cleanly and straight across at the bottom edge of
-> the frame, at the waist, with nothing below it and no legs. Plain white
-> behind every panel and no border between them. 16:9.
+> Every panel is cropped at the **chest**, not the waist — no stomach, no
+> hips, no legs. The background of the whole image is a **single flat
+> colour, pure magenta #FF00FF**, with no shadow, no gradient, no texture
+> and no border between panels. If you can output a **transparent background
+> (PNG with an alpha channel)** then do that instead, and leave everything
+> behind the figures fully transparent. The image is **3:2**.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -219,7 +233,7 @@ eleven dialogues read as plain text until they are staged.
 
 ---
 
-## 3. Bà Sáu — six-panel half-body sheet
+## 3. Bà Sáu — six-panel chest-up sheet
 
 **File:** `basau.png` — the **whole sheet, uncut**, saved as one image.
 
@@ -254,26 +268,26 @@ eleven dialogues read as plain text until they are staged.
 > colour or proportion between panels. **Must not:** be drawn frail, bent or
 > sweet; resemble any existing Doraemon character.
 >
-> **The sheet.** Six panels in one row on a plain white background. **The
-> image must divide into exactly six equal vertical sixths, each holding one
-> panel, with the figure centred in its sixth and the same margin on both
-> sides.** No gap, no border and no gutter between panels — the six sixths
-> are edge to edge and fill the whole width. Identical size, identical
-> framing. Each panel shows the **upper half of the body — head, shoulders,
-> chest, both arms and hands, cropped straight across at the waist** —
-> facing the viewer and turned very slightly to one side.
->
-> **Her forearms are drawn noticeably thicker and stronger than anyone
-> else's in the cast, and both must be visible in all six panels.** They are
-> what identifies her at small size, and they are the reason this sheet is
-> half-body rather than a headshot.
+> **The sheet.** Six square panels arranged as a grid of **three across and
+> two down**, filling one 3:2 image edge to edge. The image must divide into
+> exactly three equal columns and two equal rows, with **every panel exactly
+> square** and no gap, border, gutter or margin anywhere — the six squares
+> tile the whole image. Each panel shows the character from the **chest
+> up**: head, shoulders, upper chest, and both arms and hands wherever they
+> are, facing the viewer and turned very slightly to one side. The panel is
+> square precisely so that folded arms and a raised hand fit inside it —
+> **nothing may be cropped by the edge of a panel, least of all a hand.**
+> Keep a little clear space on all four sides of the figure.
 >
 > **The head stays exactly the same size and in exactly the same place in
 > all six panels**, at the same scale and under the same flat lighting. The
 > expression changes, and the shoulders, arms and hands may move with it —
-> but the framing, the scale and the eye level never do.
+> but the framing, the scale and the eye level never do. Because the crop is
+> at the chest, keep every gesture at chest height or above, so hands stay
+> inside the frame.
 >
-> Left to right, face and body together:
+> Reading order — left to right along the top row, then left to right along
+> the bottom row:
 > **1 — neutral:** an ordinary talking face, mouth slightly open; arms
 > relaxed.
 > **2 — happy:** a real smile, eyes curved — warm but still dry, never soft;
@@ -287,9 +301,12 @@ eleven dialogues read as plain text until they are staged.
 > **6 — sad:** eyes lowered, mouth a short downward curve; shoulders
 > dropped, hands in her lap.
 >
-> Each panel is cut off cleanly and straight across at the bottom edge of
-> the frame, at the waist, with nothing below it. Plain white behind every
-> panel and no border between them. 16:9.
+> Every panel is cropped at the **chest**, not the waist — no stomach, no
+> hips, no legs. The background of the whole image is a **single flat
+> colour, pure magenta #FF00FF**, with no shadow, no gradient, no texture
+> and no border between panels. If you can output a **transparent background
+> (PNG with an alpha channel)** then do that instead, and leave everything
+> behind the figures fully transparent. The image is **3:2**.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -297,7 +314,7 @@ eleven dialogues read as plain text until they are staged.
 
 ---
 
-## 4. Khoa — six-panel half-body sheet
+## 4. Khoa — six-panel chest-up sheet
 
 **File:** `khoa.png` — the **whole sheet, uncut**, saved as one image.
 
@@ -331,25 +348,26 @@ eleven dialogues read as plain text until they are staged.
 > colour or proportion between panels. **Must not:** be drawn as a rival or
 > a snob; resemble any existing Doraemon character.
 >
-> **The sheet.** Six panels in one row on a plain white background. **The
-> image must divide into exactly six equal vertical sixths, each holding one
-> panel, with the figure centred in its sixth and the same margin on both
-> sides.** No gap, no border and no gutter between panels — the six sixths
-> are edge to edge and fill the whole width. Identical size, identical
-> framing. Each panel shows the **upper half of the body — head, shoulders,
-> chest, both arms and hands, cropped straight across at the waist** —
-> facing the viewer and turned very slightly to one side.
->
-> **He carries a green notebook held flat against his side, and it is
-> visible in all six panels.** That and the side parting are what identify
-> him at small size.
+> **The sheet.** Six square panels arranged as a grid of **three across and
+> two down**, filling one 3:2 image edge to edge. The image must divide into
+> exactly three equal columns and two equal rows, with **every panel exactly
+> square** and no gap, border, gutter or margin anywhere — the six squares
+> tile the whole image. Each panel shows the character from the **chest
+> up**: head, shoulders, upper chest, and both arms and hands wherever they
+> are, facing the viewer and turned very slightly to one side. The panel is
+> square precisely so that folded arms and a raised hand fit inside it —
+> **nothing may be cropped by the edge of a panel, least of all a hand.**
+> Keep a little clear space on all four sides of the figure.
 >
 > **The head stays exactly the same size and in exactly the same place in
 > all six panels**, at the same scale and under the same flat lighting. The
 > expression changes, and the shoulders, arms and hands may move with it —
-> but the framing, the scale and the eye level never do.
+> but the framing, the scale and the eye level never do. Because the crop is
+> at the chest, keep every gesture at chest height or above, so hands stay
+> inside the frame.
 >
-> Left to right, face and body together:
+> Reading order — left to right along the top row, then left to right along
+> the bottom row:
 > **1 — neutral:** an ordinary talking face, mouth slightly open; arms at
 > rest, notebook against his side.
 > **2 — happy:** a real open smile, eyes curved; shoulders lifted, free hand
@@ -363,9 +381,12 @@ eleven dialogues read as plain text until they are staged.
 > **6 — sad:** eyes lowered, brows slack, mouth a short downward curve;
 > shoulders dropped, notebook lowered.
 >
-> Each panel is cut off cleanly and straight across at the bottom edge of
-> the frame, at the waist, with nothing below it. Plain white behind every
-> panel and no border between them. 16:9.
+> Every panel is cropped at the **chest**, not the waist — no stomach, no
+> hips, no legs. The background of the whole image is a **single flat
+> colour, pure magenta #FF00FF**, with no shadow, no gradient, no texture
+> and no border between panels. If you can output a **transparent background
+> (PNG with an alpha channel)** then do that instead, and leave everything
+> behind the figures fully transparent. The image is **3:2**.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -373,7 +394,7 @@ eleven dialogues read as plain text until they are staged.
 
 ---
 
-## 5. Mun — six-panel sheet, cropped mid-body
+## 5. Mun — six-panel chest-up sheet
 
 **File:** `mun.png` — the **whole sheet, uncut**, saved as one image.
 
@@ -404,22 +425,26 @@ next, and a cat drawn six months after the rest of the cast will not match it.
 > like a person, or have round mitten paws; resemble any existing Doraemon
 > character.
 >
-> **The sheet.** Six panels in one row on a plain white background. **The
-> image must divide into exactly six equal vertical sixths, each holding one
-> panel, with the figure centred in its sixth and the same margin on both
-> sides.** No gap, no border and no gutter between panels — the six sixths
-> are edge to edge and fill the whole width. Identical size, identical
-> framing. Each panel shows the cat's **head, shoulders and front legs, on
-> four legs, facing the viewer, cropped straight across mid-body.**
->
-> **His one torn left ear must be clearly visible in all six panels.** It is
-> the only thing that identifies him at small size.
+> **The sheet.** Six square panels arranged as a grid of **three across and
+> two down**, filling one 3:2 image edge to edge. The image must divide into
+> exactly three equal columns and two equal rows, with **every panel exactly
+> square** and no gap, border, gutter or margin anywhere — the six squares
+> tile the whole image. Each panel shows the character from the **chest
+> up**: head, shoulders, upper chest, and both arms and hands wherever they
+> are, facing the viewer and turned very slightly to one side. The panel is
+> square precisely so that folded arms and a raised hand fit inside it —
+> **nothing may be cropped by the edge of a panel, least of all a hand.**
+> Keep a little clear space on all four sides of the figure.
 >
 > **The head stays exactly the same size and in exactly the same place in
-> all six panels.** His feelings are carried by the ears, the eyes and the
-> set of the shoulders — never by arms, hands or human posture.
+> all six panels**, at the same scale and under the same flat lighting. The
+> expression changes, and the shoulders, arms and hands may move with it —
+> but the framing, the scale and the eye level never do. Because the crop is
+> at the chest, keep every gesture at chest height or above, so hands stay
+> inside the frame.
 >
-> Left to right:
+> Reading order — left to right along the top row, then left to right along
+> the bottom row:
 > **1 — neutral:** ears up, eyes level, mouth slightly open as if talking.
 > **2 — happy:** eyes curved to two upward arcs, ears forward, head slightly
 > raised.
@@ -429,9 +454,12 @@ next, and a cat drawn six months after the rest of the cast will not match it.
 > out.
 > **6 — sad:** ears down and out, eyes lowered, head dropped.
 >
-> Each panel is cut off cleanly and straight across at the bottom edge of
-> the frame, with nothing below it. Plain white behind every panel and no
-> border between them. 16:9.
+> Every panel is cropped at the **chest**, showing the head, shoulders and
+> front legs and nothing below them. The background of the whole image is a
+> **single flat colour, pure magenta #FF00FF**, with no shadow, no gradient,
+> no texture and no border between panels. If you can output a **transparent
+> background (PNG with an alpha channel)** then do that instead, and leave
+> everything behind the figures fully transparent. The image is **3:2**.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -1004,21 +1032,23 @@ chapters after it.
 # After you generate
 
 **Do not cut a character sheet up.** The sheet *is* the asset: saved whole as
-`<slug>.png`, and the page shows one emotion by sliding it sideways behind a
-window one-sixth of its width. Five files, not thirty, and no six files that
+`<slug>.png`, and the page shows one emotion by sliding it behind a window one
+panel wide and one panel tall. Five files, not thirty, and no six files that
 have to agree with each other about a baseline.
 
-1. **Check the panels are exactly six equal sixths.** This is the one thing the
-   sprite depends on. The page steps by a fixed fraction, so an uneven sheet —
-   or one with a margin down one side — shows a sliver of the neighbouring face.
-   Re-roll rather than nudge; if it is close, set the canvas width to a round
-   multiple of six and centre each figure in its sixth.
-2. **Cut the transparency out**, across the whole sheet. A white box behind a
-   character is invisible on the generator's white sheet and glaring over a
-   plate — check against a dark colour before saving.
-3. **Trim empty rows off the bottom**, once, for the whole sheet. The avatar
-   stands on the floor of the panel; a half-figure with air under it reads as a
-   sticker.
+1. **Check the grid is exactly three equal columns by two equal rows**, with the
+   panels square and tiling the image edge to edge. This is the one thing the
+   sprite depends on: the page steps by a fixed fraction, so an uneven grid — or
+   a margin down one side — shows a sliver of the neighbouring face. Re-roll
+   rather than nudge; if it is close, set the canvas to a round multiple of
+   three across and two down and centre each figure in its cell.
+2. **Key the background out**, across the whole sheet. If the generator returned
+   real transparency there is nothing to do; if it returned flat magenta, remove
+   that colour and save with an alpha channel. Magenta is asked for rather than
+   white because **Thảo and Khoa both wear white shirts**, and keying white
+   would eat them.
+3. **Do not trim or re-crop the panels.** The grid is what the offsets are
+   computed from; cropping to the figure breaks it.
 4. Save sheets as **PNG with transparency** to `docs/assets/cast/`, plates as
    **JPG** to `docs/assets/bg/`.
 5. `python3 tools/check_cast.py`, then `python3 tools/build.py`, then reload
@@ -1029,9 +1059,10 @@ Two things you do **not** have to do:
 - **Do not draw a character facing both ways.** The page mirrors whoever stands
   on the right, so each character is drawn facing one way and the layout turns
   them around.
-- **Do not reorder the panels.** Left to right is `neutral · happy · worried ·
-  annoyed · surprised · sad`, and that is the `col` index in `data/cast.json`.
-  Changing one without the other silently gives every character the wrong face.
+- **Do not reorder the panels.** Reading order is `neutral · happy · worried`
+  along the top row, then `annoyed · surprised · sad` along the bottom, and that
+  is the `col` index in `data/cast.json`. Changing one without the other
+  silently gives every character the wrong face.
 
 # If a generation drifts
 
@@ -1040,7 +1071,7 @@ Two things you do **not** have to do:
 | A character resembles a Doraemon character — the cat goes blue or bipedal, the boy acquires round glasses | Demote the reference image to *style only*, saying so in the prompt, and paste that character's **must not** line in verbatim. Do not keep a "close enough" variant; it contaminates everything fed from it |
 | It comes back as generic modern anime — soft shading, glossy eyes, strand-shaded hair | Re-paste the **Line** and **Colour** paragraphs in full. They are the whole defence and they degrade the moment they are summarised. Naming what it must *not* be does more work than naming what it should be |
 | The panels do not line up, or a sliver of the next face shows | They are not exactly equal sixths. The page steps by a fixed fraction, so this cannot be fixed by re-cropping — re-roll, or set the canvas to a round multiple of six and centre each figure in its sixth |
-| An avatar has a white box behind it | The transparency was never cut. Invisible against the generator's white sheet — always check against a dark colour |
+| An avatar has a coloured box behind it | The background was never keyed out. Check the saved PNG against a dark colour — a flat magenta or white field is invisible against the generator's own preview |
 | A plate comes back with people in it | Repeat the "no people, no animals" clause as the **first** line of the description rather than the last. It must be re-rolled, not painted out: the cast is composited on top and a drawn figure appears beside itself |
 | A plate comes back vague, empty or blurred | The style's whole contrast is simple figures against a literal world. Re-paste **Backgrounds carry the realism** and name three specific objects the plate must contain |
 | The setting drifts Japanese — sliding doors, a suburban street, a vacant lot with concrete pipes | Expected: it is copying the reference's *world* along with its style. Re-paste **Setting discipline** and add three delta-specific objects |

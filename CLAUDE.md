@@ -106,8 +106,10 @@ characters, the six emotions and the nine backgrounds; the build **fails** on a
 dialogue naming anything outside it, and `tools/check_cast.py` reports which
 images have actually been drawn.
 
-Art is **one sheet per character**, six emotion panels in a row, saved whole and
-never cut up — the page shows a panel by offsetting the sheet. Five files, not
+Art is **one sheet per character**: six square emotion panels in a 3 x 2 grid
+filling one 3:2 image, chest up, saved whole and never cut up — the page shows a
+panel by offsetting the sheet. Square panels because a hand raised or folded is
+wider than a head, and a taller-than-wide panel clipped them. Five files, not
 thirty, and no six files that have to agree about a baseline. The `col` index in
 `data/cast.json` is the panel's position and is load-bearing: reorder it without
 regenerating the art and every character gets the wrong face. `research/story/illustration-prompts.md` is the

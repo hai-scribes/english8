@@ -1639,14 +1639,21 @@ function initScene(root, p){
       $("b", ph).textContent = ln.who;
       $("span", ph).textContent = ln.emo;
       const src = up + ASSET_CAST + ln.slug + ".png";
-      const cols = p.sheet || 6;
+      /* The sheet is a cols x rows grid read left to right, top to bottom, so
+         a linear emotion index becomes a column and a row. */
+      const cols = p.cols || 3, rows = p.rows || 2;
+      const x = ln.col % cols, y = Math.floor(ln.col / cols);
       av.style.backgroundImage = 'url("' + src + '")';
-      av.style.backgroundSize = (cols * 100) + "% 100%";
-      /* 0% puts the first panel's left edge at the box's left edge and 100%
-         puts the last panel's RIGHT edge at the box's right edge, so the step
-         between panels is 1/(cols-1), not 1/cols. */
-      av.style.backgroundPositionX = (ln.col / (cols - 1) * 100) + "%";
-      av.style.aspectRatio = String((p.aspect || 1.7778) / cols);
+      av.style.backgroundSize = (cols * 100) + "% " + (rows * 100) + "%";
+      /* 0% puts the first panel's edge flush with the box's, and 100% puts the
+         last panel's far edge flush with the far side — so the step between
+         panels is 1/(n-1), not 1/n. A single row or column pins at 0%. */
+      av.style.backgroundPositionX = cols > 1 ? (x / (cols - 1) * 100) + "%" : "0%";
+      av.style.backgroundPositionY = rows > 1 ? (y / (rows - 1) * 100) + "%" : "0%";
+      /* Panel width is sheetW/cols and panel height is sheetH/rows, so the
+         panel's own aspect is the sheet's times rows over cols — 1.0, square,
+         for a 3 x 2 grid in a 3:2 image. */
+      av.style.aspectRatio = String((p.aspect || 1.5) * rows / cols);
       /* The sheet is one file, so it is fetched once and cached; the probe is
          answered from cache for every later line. */
       const probe = new Image();

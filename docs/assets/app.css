@@ -654,8 +654,11 @@ footer.foot p{margin:0;max-width:74ch}
    expression, which is the whole reason there are six of these. */
 /* One sheet per character, offset to a panel. Width comes from `aspect-ratio`,
    set in JS from the sheet's own geometry, so nothing here hard-codes six. */
-.d-av{position:absolute;bottom:0;height:84%;max-width:46%;
-  background-repeat:no-repeat}
+/* Height only, with the width coming from `aspect-ratio` in JS. A max-width
+   would fight the ratio and squash the box, and because the crop is expressed
+   in percentages of the box, a box of the wrong shape stretches the panel
+   rather than clipping it — the art would silently distort. */
+.d-av{position:absolute;bottom:0;height:74%;background-repeat:no-repeat}
 .d-av[data-side=left]{left:.25rem}
 /* Drawn facing one way only; the layout turns them around. */
 .d-av[data-side=right]{right:.25rem;transform:scaleX(-1)}
@@ -665,7 +668,8 @@ footer.foot p{margin:0;max-width:74ch}
    moment it is not. They are deliberately unmistakable as scaffolding — dashed,
    flat, unstyled — because a placeholder that looks like a design decision is
    one nobody replaces. Each names the exact file that would fill it. */
-.d-ph{position:absolute;bottom:0;height:84%;width:34%;max-width:11rem;
+/* Square, like the panel it stands in for, so it shows the true footprint. */
+.d-ph{position:absolute;bottom:0;height:74%;aspect-ratio:1;
   border:2px dashed var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;
   background:color-mix(in srgb,var(--sunk) 82%,transparent);
   display:flex;flex-direction:column;align-items:center;justify-content:flex-end;

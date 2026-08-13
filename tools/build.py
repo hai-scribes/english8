@@ -631,7 +631,8 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
         raise SystemExit(f"{where}: some lines are staged and some are not — put "
                          f"the @bg above the first speaker, or drop bg= entirely")
     return {"id": did, "title": a.get("title", ""), "lines": lines, "staged": staged,
-            "sheet": CAST_SHEET["cols"], "aspect": CAST_SHEET["aspect"],
+            "cols": CAST_SHEET["cols"], "rows": CAST_SHEET["rows"],
+            "aspect": CAST_SHEET["aspect"],
             "glosses": glosses, "backgrounds": sorted(seen_bg | ({bg} if bg else set()))}
 
 
