@@ -647,9 +647,38 @@ footer.foot p{margin:0;max-width:74ch}
 .d-bg{position:absolute;inset:0;background-size:cover;background-position:center;
   background-repeat:no-repeat;background-color:var(--sunk)}
 .d-cast{position:absolute;inset:0;pointer-events:none}
-.d-av{position:absolute;bottom:0;height:74%;width:auto;object-fit:contain}
-.d-av[data-side=left]{left:.5rem}
-.d-av[data-side=right]{right:.5rem;transform:scaleX(-1)}
+/* The avatar is half-body, cut at the waist and flush with the bottom of its
+   file, so it is anchored to the floor of the panel and simply grows downward
+   out of frame on a short viewport. `object-position:top` keeps the FACE when
+   something has to be lost — losing a hand costs less than losing the
+   expression, which is the whole reason there are six of these. */
+.d-av{position:absolute;bottom:0;height:84%;width:auto;max-width:46%;
+  object-fit:contain;object-position:bottom}
+.d-av[data-side=left]{left:.25rem}
+.d-av[data-side=right]{right:.25rem;transform:scaleX(-1)}
+
+/* ---- placeholders, until the art lands -----------------------------------
+   Both of these exist only while a file is missing and remove themselves the
+   moment it is not. They are deliberately unmistakable as scaffolding — dashed,
+   flat, unstyled — because a placeholder that looks like a design decision is
+   one nobody replaces. Each names the exact file that would fill it. */
+.d-ph{position:absolute;bottom:0;height:84%;width:34%;max-width:11rem;
+  border:2px dashed var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;
+  background:color-mix(in srgb,var(--sunk) 82%,transparent);
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+  gap:.15rem;padding:0 .4rem .7rem;text-align:center}
+.d-ph[data-side=left]{left:.25rem}
+.d-ph[data-side=right]{right:.25rem}
+.d-ph b{font-size:.82rem;color:var(--ink)}
+.d-ph span{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--faint)}
+.d-bg[data-missing]{background-image:none!important;
+  background:repeating-linear-gradient(45deg,var(--sunk) 0 10px,var(--rule-soft) 10px 20px)}
+.d-bg[data-missing]::after{content:attr(data-bg);position:absolute;
+  left:50%;top:.6rem;transform:translateX(-50%);
+  font-family:var(--f-mono);font-size:.62rem;letter-spacing:.1em;
+  color:var(--muted);background:var(--surface);border:1px dashed var(--rule);
+  border-radius:3px;padding:.15rem .5rem}
 .d-bubble{position:absolute;inset:.7rem .7rem auto .7rem}
 .d-bub{position:relative;max-width:74%;background:#fff;color:#111;
   border:2px solid #111;border-radius:1.1rem;padding:.6rem .85rem;

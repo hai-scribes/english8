@@ -8,7 +8,8 @@ plate, the speaker's face, and one speech balloon, advancing as the reader
 scrolls. So this file asks for exactly two kinds of image, and both are
 composited by the page rather than drawn as finished scenes:
 
-- **§2.3 — thirty avatars.** Five characters × six emotions, cut out on
+- **§2.3 — thirty avatars.** Five characters × six emotions, **half-body,
+  cropped at the waist** so the build and the clothes read, cut out on
   transparency.
 - **§3 — nine background plates.** The story's four fixed places plus five
   others, drawn empty.
@@ -284,16 +285,27 @@ Expect to re-roll this several times, and expect the names to still come back
 slightly wrong. Treat it as a convenience, not as the reference — the reference
 is `cast-sheet.png`, and its labels live in Preview or in this file.
 
-### 2.3 The emotion sheet — this is the one the app actually loads
+### 2.3 The half-body sheet — this is the one the app actually loads
 
 Everything above fixes *who* a character is. This fixes *what the site
 displays*. The dialogue on every Lesson 1 page is now a comic: a background
-plate, the speaker's face, and one speech balloon, advancing as the reader
-scrolls. The face is chosen per line from six drawn emotions.
+plate, the speaker, and one speech balloon, advancing as the reader scrolls.
+Which drawing appears is chosen per line from six emotions.
+
+**These are half-body, not headshots.** Cropped at the waist, so the reader gets
+the body type, the clothes, the arms and the posture — which is where most of
+the characterisation in this style actually lives. Bà Sáu's forearms and Khoa's
+green notebook are both §2.1 *graphic tags*, and a face-only crop throws both
+away along with every silhouette rule on the sheet.
+
+> One consequence worth knowing before you draw: **Tí's second graphic tag, the
+> band of dried mud across one shin, is below the crop and cannot appear here.**
+> On the avatars the standing cowlick carries him alone, so it has to be
+> unmistakable in all six.
 
 **Six emotions, shared by every character.** Not a per-character set — a
 per-character set is more expressive and also means nobody can remember which
-faces a given character has. Six × five is thirty avatars, which is a set one
+ones a given character has. Six × five is thirty avatars, which is a set one
 person can draw in a sitting and keep consistent.
 
 | Slug | What it is |
@@ -309,33 +321,49 @@ Generate **one sheet per character**, then cut it into six files.
 
 > [paste the §1 style block]
 >
-> A six-panel expression sheet on a plain white background, no text anywhere.
+> A six-panel character sheet on a plain white background, no text anywhere.
 > **[NAME], figure [N] on the attached sheet** — reproduce that design exactly,
-> with no change to hair, clothing, colour or proportion between panels.
+> with no change to hair, face, clothing, colour or proportion between panels.
 >
-> Six panels in one row, evenly spaced, identical size, identical framing:
-> each shows the character from **mid-chest up, facing the viewer, turned very
-> slightly to one side**, at the same scale and under the same flat lighting.
-> The body does not move between panels. **Only the face changes.**
+> Six panels in one row, evenly spaced, identical size, identical framing.
+> Each panel shows the **upper half of the body — head, shoulders, chest, both
+> arms and hands, cropped at the waist** — facing the viewer and turned very
+> slightly to one side. The clothing, the build and both hands are visible in
+> every panel.
 >
-> Left to right: **1 — neutral**, an ordinary talking face, mouth slightly
-> open, no strong feeling. **2 — happy**, a real open smile, eyes curved.
-> **3 — worried**, brows raised and pulled together, mouth a small flat line.
-> **4 — annoyed**, brows down and level, mouth pressed or turned down at one
-> corner. **5 — surprised**, eyes wide and round, brows high, mouth open in a
-> small circle. **6 — sad**, eyes lowered, brows slack, mouth a short downward
-> curve.
+> **The head stays exactly the same size and in exactly the same place in all
+> six panels**, at the same scale and under the same flat lighting. The
+> expression changes, and the shoulders, arms and hands may move with it — but
+> the framing, the scale and the eye level never do.
+>
+> Left to right, face and body together:
+> **1 — neutral:** an ordinary talking face, mouth slightly open; arms relaxed
+> at the sides.
+> **2 — happy:** a real open smile, eyes curved; shoulders lifted, one hand
+> raised in a small open gesture.
+> **3 — worried:** brows raised and pulled together, mouth a small flat line;
+> shoulders drawn in, hands close to the body.
+> **4 — annoyed:** brows down and level, mouth pressed or turned down at one
+> corner; arms folded, or one hand on the hip.
+> **5 — surprised:** eyes wide and round, brows high, mouth open in a small
+> circle; shoulders up, both hands lifted slightly.
+> **6 — sad:** eyes lowered, brows slack, mouth a short downward curve;
+> shoulders dropped, arms hanging.
 >
 > Keep [GRAPHIC TAG] clearly visible in all six panels. Each panel is drawn
-> **cut off cleanly at the bottom edge of the frame**, with nothing below
-> mid-chest. Plain white behind every panel and no border between them.
+> **cut off cleanly and straight across at the bottom edge of the frame**, at
+> the waist, with nothing below it and no legs. Plain white behind every panel
+> and no border between them.
 
 Fill `[GRAPHIC TAG]` from §2.1 — Tí's standing cowlick, Thảo's single exposed
-ear, Bà Sáu's thick forearms, Khoa's side parting, Mun's torn left ear.
+ear, Bà Sáu's thick forearms, Khoa's side parting **and the green notebook held
+flat against his side**, Mun's torn left ear. Two of those five are body tags
+rather than face tags, which is the whole argument for cropping at the waist.
 
-**For Mun**, replace the framing line with: *each panel shows the cat's head and
-shoulders, on four legs, facing the viewer.* He never sits like a person, in any
-panel, for any emotion.
+**For Mun**, replace the framing paragraph with: *each panel shows the cat's
+head, shoulders and front legs, on four legs, facing the viewer, cropped
+mid-body.* He never sits like a person, in any panel, for any emotion, and his
+emotions are carried by ears, eyes and tail rather than by arms.
 
 #### Cutting and naming them
 
@@ -362,11 +390,16 @@ Three requirements on the cut files, all of which the layout depends on:
   wrong, and it is invisible on the generator's white sheet — check it against
   a dark colour before saving.
 - **Same crop, same scale, every file.** Cut all six from one sheet at the same
-  height, so the character does not jump between lines. This is why the prompt
-  fixes the body and moves only the face.
-- **Cut off at mid-chest, flush with the bottom edge.** The avatar sits on the
-  floor of the panel; a floating half-figure with air under it reads as a
-  sticker.
+  height and the same width, so the head does not jump or resize between lines.
+  This is why the prompt pins the head's size and position even though the arms
+  are allowed to move.
+- **Cut at the waist, flush with the bottom edge.** No transparent margin along
+  the bottom: the avatar stands on the floor of the panel, and a half-figure
+  with air under it reads as a sticker. Trim any empty rows before saving.
+- **Leave the arms room.** Folded arms and a raised hand are wider than a
+  headshot, so cut every file to the same width as the *widest* of the six
+  rather than tight to each one. A per-file crop makes the character shift
+  sideways when the emotion changes.
 
 Facing does not need drawing twice. The site mirrors the avatar horizontally
 for whoever is on the right, so **draw every character facing the same way** and

@@ -1609,14 +1609,32 @@ function initScene(root, p){
     if (i === at) return;
     at = i;
     const ln = p.lines[i];
-    bg.style.backgroundImage = 'url("' + up + ASSET_BG + ln.bg + '.jpg")';
+    /* Art that does not exist yet must still show the reader — and the person
+       drawing it — WHERE it will go and WHICH file is missing. The placeholder
+       is drawn first and removed only when the real image reports `load`, so
+       it disappears by itself as the assets land and never needs taking out. */
+    const bgSrc = up + ASSET_BG + ln.bg + ".jpg";
+    bg.style.backgroundImage = 'url("' + bgSrc + '")';
     bg.dataset.bg = ln.bg;
+    bg.dataset.missing = "1";
+    const probe = new Image();
+    probe.onload = () => { if (bg.dataset.bg === ln.bg) delete bg.dataset.missing; };
+    probe.src = bgSrc;
+
     /* No speaker means narration: the place carries the beat by itself, so the
        avatar and the bubble both go rather than showing an empty frame. */
     cast.innerHTML = ln.who
-      ? '<img class="d-av" data-side="' + ln.side + '" alt="" src="'
+      ? '<div class="d-ph" data-side="' + ln.side + '"><b></b><span></span></div>'
+        + '<img class="d-av" data-side="' + ln.side + '" alt="" src="'
         + up + ASSET_CAST + ln.slug + '-' + ln.emo + '.png">'
       : "";
+    if (ln.who){
+      const ph = $(".d-ph", cast), img = $(".d-av", cast);
+      $("b", ph).textContent = ln.who;
+      $("span", ph).textContent = ln.emo;
+      img.addEventListener("load", () => ph.remove());
+      img.addEventListener("error", () => img.remove());
+    }
     bubble.innerHTML = ln.who
       ? '<div class="d-bub" data-side="' + ln.side + '">'
         + '<b class="d-name">' + esc(ln.who) + '</b>'
