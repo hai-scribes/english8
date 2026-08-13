@@ -25,6 +25,7 @@ on the home page under the grid, and on the unit page of the third unit.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import html
 import json
 import re
@@ -1815,6 +1816,22 @@ def strand(u, key, default=""):
 
 
 # ------------------------------------------------------------------ shell ----
+# GitHub Pages serves the assets with `cache-control: max-age=600` and the two
+# filenames never change, so for ten minutes after a deploy a browser can pair
+# the NEW html with the OLD app.js — the retake button present in the markup
+# and dead on the page, which reads as "the deploy did not work". The content
+# hash makes the URL change whenever the file does, so a deploy invalidates
+# itself. Eight characters is plenty to distinguish one build from the next,
+# and it is derived rather than bumped by hand, because a version nobody
+# remembers to bump is worse than none.
+def _asset_hash(name: str) -> str:
+    src = (Path(__file__).resolve().parent / "assets" / name).read_bytes()
+    return hashlib.sha256(src).hexdigest()[:8]
+
+
+ASSET_V = {"css": _asset_hash("app.css"), "js": _asset_hash("app.js")}
+
+
 def shell(*, title, depth, body, crumb, data=None, desc=""):
     up = "../" * depth
     crumb_html = "".join(
@@ -1835,7 +1852,7 @@ def shell(*, title, depth, body, crumb, data=None, desc=""):
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <meta name="color-scheme" content="light dark">
-<link rel="stylesheet" href="{up}assets/app.css">
+<link rel="stylesheet" href="{up}assets/app.css?v={ASSET_V['css']}">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2226%22>📗</text></svg>">
 </head>
 <body>
@@ -1856,7 +1873,7 @@ def shell(*, title, depth, body, crumb, data=None, desc=""):
   a good model of which word you are hearing, and not a reliable model of vowel length.</p>
 </footer></div>
 {data_tag}
-<script src="{up}assets/app.js"></script>
+<script src="{up}assets/app.js?v={ASSET_V['js']}"></script>
 </body>
 </html>
 """

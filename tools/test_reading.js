@@ -49,8 +49,17 @@ function load(rel, store, beforeParse) {
   let html = fs.readFileSync(p, "utf8");
   /* A replacer FUNCTION, not a string: app.js contains "$$", which a
      replacement string would read as a substitution pattern and corrupt. */
-  html = html.replace(/<script src="[^"]*app\.js"[^>]*><\/script>/,
+  /* `app.js` carries a `?v=<hash>` cache-buster, so the src does not end at
+     the filename. Matching to the closing quote instead — otherwise the real
+     app is never injected and every behavioural check below fails at once,
+     which is exactly how this was found. */
+  html = html.replace(/<script src="[^"]*app\.js(\?[^"]*)?"[^>]*><\/script>/,
                       () => "<script>" + APP + "<\/script>");
+  if (html.includes('app.js')) {
+    console.log("FAIL: the app script tag was not replaced — the tests would "
+              + "run against a page with no app on it");
+    process.exit(1);
+  }
   const dom = new JSDOM(html, { runScripts: "dangerously", pretendToBeVisual: true,
                                 url: "https://example.org/" + rel,
                                 beforeParse: w => {
