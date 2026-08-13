@@ -110,8 +110,9 @@ Art is **one sheet per character**, six emotion panels in a row, saved whole and
 never cut up — the page shows a panel by offsetting the sheet. Five files, not
 thirty, and no six files that have to agree about a baseline. The `col` index in
 `data/cast.json` is the panel's position and is load-bearing: reorder it without
-regenerating the art and every character gets the wrong face. `research/story/illustration-prompts.md` is
-the brief, and its filenames and the manifest's slugs must agree.
+regenerating the art and every character gets the wrong face. `research/story/illustration-prompts.md` is the
+brief — every prompt the art needs, and nothing else — and its filenames and the
+manifest's slugs must agree.
 
 ```
 ::: dialogue title="…" bg="canal-landing"
