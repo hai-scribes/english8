@@ -27,7 +27,6 @@
 ::: dialogue title="Nothing is getting through" bg="harbour-wall" gramen="mine / yours — possessive pronouns" gramvi="Đại từ sở hữu đứng một mình, không có danh từ theo sau: *my phone* → **mine**." gramco="That one is mine"
 @cast Tí|annoyed, Thảo|neutral
 @item phone at=Tí
-@item chalk at=left
 **Thảo|neutral:** Any [[signal]] yet?
 **Tí|annoyed:** Nothing. I've been on this wall since six.
 **Thảo|neutral:** The mast is still down. It stands opposite the old post office, and half of it is in the harbour now.

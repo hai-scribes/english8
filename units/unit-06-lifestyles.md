@@ -26,7 +26,6 @@
 
 ::: dialogue title="Everybody wants something" bg="lane" gramen="will — the future simple" gramvi="**will** + động từ nguyên thể để nói về tương lai. Câu điều kiện loại 1: *If* + hiện tại đơn, **will** + nguyên thể." gramco="If it rains, we will stay in"
 @cast Tí|worried, Thảo|annoyed
-@item lantern at=right
 **Thảo|annoyed:** Four people stopped me on the way here, and every one of them asked about you.
 **Tí|worried:** Five stopped me. A woman at the market wants her mother's ring back. A man wants his father's boat.
 **Thảo|neutral:** It's the festival. You sent it back on the Sunday and the lanterns went out one by one, but half the lane saw Bống standing at the water that night, and now everybody knows.

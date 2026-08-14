@@ -144,7 +144,7 @@ before writing or revising a dialogue. What follows is the summary.
 `:::dialogue` renders as a background plate, the people in the scene, the things
 in it, manga overlay marks and speech balloons — **one panel at a time, advanced
 by the reader**. `data/cast.json` declares the five characters, the six
-emotions, the eleven backgrounds, the fourteen props, the twelve effects and the
+emotions, the eleven backgrounds, the ten props, the twelve effects and the
 four balloon shapes; the build **fails** on a dialogue naming anything outside
 it, and `tools/check_cast.py` reports which images have actually been drawn.
 

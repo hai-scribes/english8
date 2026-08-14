@@ -4218,6 +4218,10 @@ away so the file's edges are the object's edges and the number comes out true.
 
 **File:** `art/props/src/bucket.png`  ·  **Chapter 1 — where a fish was, for three days**
 
+> **Not currently placed by any dialogue — do not generate this yet.**
+> Retired because unit 1's dialogue puts it BEHIND the kitchen and unit 2's scene is inside it, so no staged scene contains it — the fish in the bucket lives in the Skills 1 passage, which is not staged. The prompt stays because the object is real; it
+> comes back the day a staged scene actually contains it.
+
 > **If a style reference image is attached**, match the way its *objects* are
 > drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
 > nothing else from it, and do not copy or quote any character in it. If nothing
@@ -4488,6 +4492,10 @@ away so the file's edges are the object's edges and the number comes out true.
 
 **File:** `art/props/src/lantern.png`  ·  **Chapters 5–6 — the festival, and the lane in the evening**
 
+> **Not currently placed by any dialogue — do not generate this yet.**
+> Retired because chapter 5 releases its lanterns onto the water at the end of that chapter, so none is hanging in chapter 6's lane. The prompt stays because the object is real; it
+> comes back the day a staged scene actually contains it.
+
 > **If a style reference image is attached**, match the way its *objects* are
 > drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
 > nothing else from it, and do not copy or quote any character in it. If nothing
@@ -4532,6 +4540,10 @@ away so the file's edges are the object's edges and the number comes out true.
 ## 8. A clear sack of beach litter — prop
 
 **File:** `art/props/src/rubbish-bag.png`  ·  **Chapter 7 — the clean-up**
+
+> **Not currently placed by any dialogue — do not generate this yet.**
+> Retired because chapter 7's clean-up is on Saturday and its dialogue is before it. The prompt stays because the object is real; it
+> comes back the day a staged scene actually contains it.
 
 > **If a style reference image is attached**, match the way its *objects* are
 > drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
@@ -4802,6 +4814,10 @@ away so the file's edges are the object's edges and the number comes out true.
 ## 14. A stub of white chalk — prop
 
 **File:** `art/props/src/chalk.png`  ·  **All twelve chapters — the marks on the harbour wall**
+
+> **Not currently placed by any dialogue — do not generate this yet.**
+> Retired because the marks go on the wall in Lesson 7, which is not staged, so nobody is holding chalk in any dialogue. The prompt stays because the object is real; it
+> comes back the day a staged scene actually contains it.
 
 > **If a style reference image is attached**, match the way its *objects* are
 > drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take

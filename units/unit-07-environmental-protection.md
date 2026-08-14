@@ -26,7 +26,6 @@
 
 ::: dialogue title="The water behind the school" bg="school-yard" gramen="when — a time clause" gramvi="Mệnh đề thời gian bắt đầu bằng *when, before, after, until*. Nếu nó đứng trước mệnh đề chính thì có dấu phẩy ngăn cách." gramco="When the rain stops, we will go"
 @cast Tí|neutral, Thảo|worried
-@item rubbish-bag at=left
 @item phone at=Thảo
 **Thảo|worried:** Have you seen the water behind the school? The whole corner of the harbour has gone brown.
 **Tí|neutral:** I noticed it on Monday. It started changing colour after the workshop opened on the other bank.

@@ -395,7 +395,7 @@ A line with no speaker is narration: the plate, a caption box, no avatar.
 honest reading: a panel has one background, one roster and one set of props.
 
 `data/cast.json` declares the whole vocabulary — five characters, six shared
-expressions, eleven places, fourteen props, twelve effects and four balloon
+expressions, eleven places, ten props, twelve effects and four balloon
 shapes (`say`, `shout`, `think`, `whisper`) — and **the build fails on a
 dialogue naming anything outside it**. It also enforces the two caps that keep a
 panel readable: at most **four** people on stage, and at most **one** effect per

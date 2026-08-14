@@ -27,7 +27,6 @@
 ::: dialogue title="The long way round" bg="kitchen" gramen="earlier / more slowly — comparative adverbs" gramvi="So sánh hơn với trạng từ: trạng từ ngắn thêm **-er** (*earlier*), trạng từ dài dùng **more** (*more slowly*). Sau đó dùng **than**." gramco="earlier than · more slowly than"
 @cast Tí|neutral, Bà Sáu|neutral
 @item board-game at=center
-@item bucket at=left
 **Bà Sáu|neutral:** Tí. Your uncle sent word down this morning. He wants to see you about a game.
 @fx question on=Tí
 **Tí|surprised:** A game? Chú Bảy said *game*?

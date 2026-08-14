@@ -192,24 +192,34 @@
     "",
     "Drawn as ONE cut-out each, on white, and keyed to transparency by",
     "tools/make_overlay.py — the same border-flood as the character sheets, for the",
-    "same reason. Saved as art/props/<slug>.png, published as .webp."
+    "same reason. Saved as art/props/<slug>.png, published as .webp.",
+    "",
+    "FOUR PROPS WERE RETIRED FROM THIS LIST, and the reason is worth keeping. They",
+    "were bucket, lantern, rubbish-bag and chalk, and every one of them was placed",
+    "in a scene to use up the vocabulary rather than because the scene contained",
+    "it — the bucket in a kitchen that unit 1 says it sits behind, a festival",
+    "lantern after chapter 5 released the lanterns onto the water, a sack of beach",
+    "litter days before the clean-up, chalk with nobody marking anything. The test",
+    "a prop has to pass is whether the dialogue gives the reader a reason to",
+    "believe the object is in that place at that moment. Four did not, and four",
+    "drawings nobody needed came off the art bill with them.",
+    "",
+    "Their prompts are still in illustration-prompts.md, marked as not currently",
+    "placed. If the Skills 1 passages are ever staged the bucket comes straight",
+    "back — that is where the fish actually is."
   ],
 
   "props": {
-    "bucket":         { "size": 0.20, "is": "A blue plastic bucket, water to the brim, one small dark fish in it" },
     "board-game":     { "size": 0.18, "is": "A hand-cut wooden board game, bottle-top counters, a lid that does not fit" },
     "class-list":     { "size": 0.26, "hangs": true, "is": "A typed class list on a noticeboard, names down the sheet, a curled corner" },
     "notebook":       { "size": 0.16, "is": "A school exercise book, open, a pencil across it" },
     "green-notebook": { "size": 0.16, "is": "The keeper's notebook — green cloth cover, salt-stained, swollen with writing" },
     "cakes":          { "size": 0.14, "is": "A tray of bánh ít lá gai, dark green leaf parcels, stacked" },
-    "lantern":        { "size": 0.22, "hangs": true, "is": "A paper festival lantern, lit from inside, a candle stub in it" },
-    "rubbish-bag":    { "size": 0.24, "is": "A clear sack of beach litter, bulging, tied at the neck" },
     "money":          { "size": 0.12, "is": "A folded fan of banknotes, soft with handling, the top one old" },
     "radio":          { "size": 0.14, "is": "A battered transistor radio, aerial up, dial worn bare" },
     "phone":          { "size": 0.12, "is": "A cheap phone held up flat, screen showing no signal" },
     "box":            { "size": 0.14, "is": "A small metal box, salt-welded shut, no hinge you can see" },
-    "worksheet":      { "size": 0.16, "is": "A printed school worksheet, questions numbered down it, one left blank" },
-    "chalk":          { "size": 0.08, "is": "A stub of white chalk, worn to a wedge" }
+    "worksheet":      { "size": 0.16, "is": "A printed school worksheet, questions numbered down it, one left blank" }
   },
 
   "_fx_comment": [

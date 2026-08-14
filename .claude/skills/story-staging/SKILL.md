@@ -68,7 +68,7 @@ where this list and that file disagree, that file is right.
 | **People** | Tí · Thảo · Bống · Bà Sáu · Khoa — up to four on stage at once |
 | **Faces** | `neutral` · `happy` · `worried` · `annoyed` · `surprised` · `sad` |
 | **Places** | `harbour-wall` · `kitchen` · `school-yard` · `fish-market` · `lane` · `town-beach` · `science-room` · `flooded-street` · `cliff-road` · `whale-temple` · `under-water` |
-| **Props** (`at=left\|center\|right\|<person>`) | `bucket` · `board-game` · `class-list` · `notebook` · `green-notebook` · `cakes` · `lantern` · `rubbish-bag` · `money` · `radio` · `phone` · `box` · `worksheet` · `chalk` |
+| **Props** (`at=left\|center\|right\|<person>`) | `board-game` · `class-list` · `notebook` · `green-notebook` · `cakes` · `money` · `radio` · `phone` · `box` · `worksheet` |
 | **Effects over one figure** (`on=<person>`) | `impact` · `sparkle` · `dizzy` · `sweat` · `flush` · `anger` · `question` · `gloom` · `speed` |
 | **Effects over the frame** (`on=panel`) | `birds` · `splash` · `rain` |
 | **Panel breaks** | any `@` line |
@@ -106,10 +106,17 @@ aloud does not go in one.
 @item none                      clear the stage
 ```
 
-A prop is furniture: it exists in the scene and a line can point at it. Put one
-on stage **only if it is really there** — a thing a character merely mentions is
-not a prop, and drawing it is a lie the reader will notice. Unit 1 places none,
-because nothing in that scene is on the harbour wall.
+A prop is furniture: it exists in the scene and a line can point at it. The test
+is exact: **does the dialogue give the reader a reason to believe this object is
+in this place, at this moment?** A thing a character merely mentions fails it, a
+thing that will exist on Saturday fails it, and drawing either is a lie the
+reader can check. Unit 1 places none — Hùng's list is in Hùng's pocket in the
+school yard and the bucket is behind the kitchen, so nothing in that chapter is
+on the harbour wall.
+
+Four props were retired for failing exactly that test, having been placed to use
+up the vocabulary rather than because a scene contained them. The list above is
+what is available; it is not a set of boxes to fill.
 
 ### Effects
 
