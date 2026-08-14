@@ -585,6 +585,33 @@ async function main() {
     ok("comic: at the first panel there is nothing to go back to",
        dlg.querySelector(".d-prev").disabled);
 
+    /* ---- the balloons that are a shape rather than a rounded box ---------
+       The burst shipped once as two clip-path polygons with the inner one
+       "inset" by a few pixels, which cannot produce an even outline: a
+       percentage polygon resolves against its own box, so the inner shape is a
+       scaled copy and near a spike the white overshoots the black. It reached
+       the live site with its contour coming and going. It is a drawn path with
+       a non-scaling stroke now, and these three checks are what stop the cheap
+       version coming back. */
+    ok("comic: a shaped balloon is a drawn path, not a clipped box",
+       !/clip-path/.test(CSS.match(/\.d-bub\[data-bub=shout\][^]*?\n\n/) || ""));
+    ok("comic: its outline keeps one weight at any size",
+       /vector-effect:\s*non-scaling-stroke/.test(CSS));
+    {
+      /* Panel 2 is Thảo's one-word shout. */
+      click(win, dlg.querySelector(".d-next"));
+      await new Promise(r => setTimeout(r, 30));
+      const shout = dlg.querySelector('.d-bub[data-bub="shout"]');
+      ok("comic: the shout balloon carries its path", !!shout
+         && !!shout.querySelector("svg.d-shape path")
+         && shout.querySelector(".d-said").classList.contains("is-shaped"));
+      const plain = dlg.querySelector('.d-bub[data-bub="say"] .d-said');
+      ok("comic: an ordinary balloon stays a plain CSS box",
+         !plain || !plain.classList.contains("is-shaped"));
+      win.dispatchEvent(new win.KeyboardEvent("keydown", { key:"ArrowLeft", bubbles:true }));
+      await new Promise(r => setTimeout(r, 30));
+    }
+
     /* ---- the navigation, which is the whole reason this was rewritten ----
        The controls move the PANEL and nothing else. A reader who scrolls down
        to the exercise and back must find the story where they left it, which
@@ -596,8 +623,12 @@ async function main() {
        /2 \/ \d+/.test(dlg.querySelector(".d-count").textContent),
        dlg.querySelector(".d-count").textContent);
     ok("comic: and moves the page not at all", win.pageYOffset === before);
+    /* EVERY control, the expand button included. It sat in the frame's
+       top-right corner once, which is exactly where the first balloon is, and
+       it covered the first thing anybody said. */
     ok("comic: the controls sit outside the frame",
-       !dlg.querySelector(".d-stage .d-nav") && !!dlg.querySelector(".d-scene > .d-nav"));
+       !dlg.querySelector(".d-stage .d-nav") && !!dlg.querySelector(".d-scene > .d-nav")
+       && !dlg.querySelector(".d-stage .d-full"));
     ok("comic: how far through is shown",
        !!dlg.querySelector(".d-rail-fill").style.width);
 

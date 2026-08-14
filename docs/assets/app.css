@@ -757,32 +757,68 @@ footer.foot p{margin:0;max-width:74ch}
    contour with the balloon. `--tail-x` is written by JS from the speaker's
    measured position; the fallback is a sane left-ish tail for the instant
    before the first measurement lands. */
-.d-bub::before,.d-bub::after{content:"";position:absolute;top:100%;
+/* `--tail-lift` is written by JS for a balloon whose contour is drawn, because
+   a drawn contour does not sit on the bottom of its box — a burst's edge is a
+   valley between its spikes. Zero for an ordinary balloon, whose border IS the
+   bottom of the box. */
+.d-bub::before,.d-bub::after{content:"";position:absolute;
+  top:calc(100% - var(--tail-lift,0px));
   left:var(--tail-x,1.7rem);transform:translateX(-50%);
   border:.55rem solid transparent;border-top-color:#111}
 .d-bub::after{border-top-color:#fff;margin-top:-3px}
 
-/* Loud. A spiked contour, drawn as one clip-path on the ink layer and the same
-   clip-path inset by 3px on the white one — which is how you get a stroked
-   irregular shape in CSS without an SVG per balloon. The spikes stretch with
-   the box, and that is correct: a wide burst is a longer shout. */
-.d-bub[data-bub=shout]{--burst:polygon(50% 0%,61% 12%,77% 8%,80% 24%,95% 29%,90% 44%,99% 57%,86% 67%,88% 83%,72% 84%,64% 98%,50% 90%,36% 98%,28% 84%,12% 83%,14% 67%,1% 57%,10% 44%,5% 29%,20% 24%,23% 8%,39% 12%);
-  font-weight:650}
-.d-bub[data-bub=shout] .d-said{background:#111;border:0;border-radius:0;
-  padding:0;clip-path:var(--burst)}
-.d-bub[data-bub=shout] .d-txt{display:block;background:#fff;margin:3px;
-  padding:1.15rem 2rem;clip-path:var(--burst);text-align:center}
+/* ---- balloons that are a SHAPE rather than a rounded box -------------------
+   A burst and a cloud are drawn as an SVG path stretched behind the words, and
+   the stroke is declared `non-scaling-stroke` so it stays one even weight
+   however far the path is stretched. That last part is the whole point of
+   doing it this way.
+
+   > **What was here before, and why it could not be tuned into working.** The
+   > burst was two CSS `clip-path` polygons — ink on the outer element, white on
+   > an inner element inset by `margin:3px` — on the theory that the gap between
+   > them reads as an outline. It does not. A percentage polygon is resolved
+   > against its OWN box, so shrinking the box by 6px scales the whole shape by
+   > about 6px' worth of percentage rather than insetting it by 3px everywhere.
+   > Near a spike, where the contour runs almost parallel to the direction of
+   > the shrink, the white overshot the black completely and the outline
+   > vanished; between spikes it was several pixels thick. The result was a
+   > contour that came and went around the shape. No polygon fixes that,
+   > because the geometry is wrong rather than the numbers: a uniform inset of
+   > an arbitrary polygon is not a scaled copy of it. Drawing one path and
+   > stroking it is the operation that was actually wanted.
+
+   The path is BUILT to the measured box in JS rather than stretched to it, so
+   the spikes and lobes keep a constant size and only their number changes. The
+   note in app.js has the two versions that got this wrong and why. */
+.d-shape{position:absolute;inset:0;width:100%;height:100%;overflow:visible;
+  pointer-events:none}
+.d-shape path{fill:#fff;stroke:#111;stroke-width:2.5;stroke-linejoin:round;
+  vector-effect:non-scaling-stroke}
+/* A shaped balloon draws no box of its own — the path is the balloon — and the
+   words ride above it. The class is set in JS from the same table that picks
+   the path, rather than listed here per shape: adding a fifth balloon should
+   be one entry in one place, not an entry plus a selector somebody forgets. */
+.d-said.is-shaped{background:none;border:0;border-radius:0}
+.d-said .d-txt{position:relative}
+
+/* Loud. Called across a yard, or lost patience. THE PADDING SETS THE SPIKE
+   LENGTH — the shape function reads it and never reaches further in than this,
+   so these two numbers are the whole size control and there is nothing to keep
+   in sync in the JS. Generous here on purpose: a shout wants long spikes. */
+.d-bub[data-bub=shout]{font-weight:650}
+.d-bub[data-bub=shout] .d-said{padding:1.2rem 1.5rem}
+.d-bub[data-bub=shout] .d-txt{text-align:center}
 /* A narrower, longer spike for a tail, to match the contour above it. */
 .d-bub[data-bub=shout]::before,.d-bub[data-bub=shout]::after{
   border-width:.85rem .3rem 0}
 .d-bub[data-bub=shout]::after{margin-top:-4px}
 
-/* Not said. A blob, and the tail is two bubbles trailing back to the thinker —
-   which is the one balloon shape a reader decodes with no instruction at all.
-   Use it for what a character does not say out loud, and never for a line a
-   listening or speaking exercise is built on: a thought is not speech. */
-.d-bub[data-bub=think] .d-said{border-radius:52% 46% 50% 54%/48% 54% 46% 52%;
-  padding:.8rem 1.15rem}
+/* Not said. A scalloped cloud, and the tail is two bubbles trailing back to
+   the thinker — which is the one balloon shape a reader decodes with no
+   instruction at all. Use it for what a character does not say out loud, and
+   never for a line a listening or speaking exercise is built on: a thought is
+   not speech. */
+.d-bub[data-bub=think] .d-said{padding:1.15rem 1.45rem}
 .d-bub[data-bub=think]::before,.d-bub[data-bub=think]::after{
   border:2px solid #111;background:#fff;border-radius:50%}
 .d-bub[data-bub=think]::before{width:.62rem;height:.62rem;margin-top:.18rem}
@@ -812,7 +848,10 @@ footer.foot p{margin:0;max-width:74ch}
    they were a fallback for something the page was really driving. They are the
    only way through the story now, so they get their own room, they are big
    enough to hit with a thumb, and nothing they do covers a face. */
-.d-nav{display:flex;gap:.5rem;align-items:center;justify-content:center}
+/* Symmetric gutters, so the three navigation controls stay optically centred
+   while the expand button sits out in the right-hand one. */
+.d-nav{position:relative;display:flex;gap:.5rem;align-items:center;
+  justify-content:center;padding-inline:2.9rem}
 .d-nav button{font:inherit;font-size:.92rem;line-height:1;cursor:pointer;
   background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);
   color:var(--ink);padding:.5rem .95rem;min-height:2.5rem}
@@ -824,11 +863,14 @@ footer.foot p{margin:0;max-width:74ch}
    already is the number and two of the same thing is one too many. */
 .d-rail{height:3px;border-radius:3px;background:var(--rule-soft);overflow:hidden}
 .d-rail-fill{height:100%;width:0;background:var(--clay);transition:width .18s ease}
-/* The only control inside the frame, and it is in a corner over sky. */
-.d-full{position:absolute;top:.5rem;right:.5rem;z-index:7;
-  width:2rem;height:2rem;padding:0;cursor:pointer;
+/* Out in the right-hand gutter of the control row. It lived in the frame's
+   top-right corner once; the top of a comic frame is where the balloons are,
+   so it covered the first thing anybody said. */
+.d-full{position:absolute;right:0;top:50%;transform:translateY(-50%);
+  width:2.4rem;height:2.4rem;padding:0;cursor:pointer;
   background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);
   color:var(--ink);display:flex;align-items:center;justify-content:center}
+.d-full:hover{border-color:var(--clay);color:var(--clay)}
 .d-full span{width:.85rem;height:.85rem;border:2px solid currentColor;
   border-radius:2px;clip-path:polygon(0 0,42% 0,42% 42%,0 42%,0 0,0 100%,100% 100%,
     100% 58%,58% 58%,58% 100%,0 100%)}
@@ -858,7 +900,8 @@ html.d-locked,html.d-locked body{overflow:hidden}
   .d-bub{max-width:min(92%,28ch);font-size:.92rem}
   .d-said{padding:.45rem .7rem}
   .d-bub[data-bub=shout] .d-txt{padding:.95rem 1.5rem}
-  .d-nav button{flex:1 1 auto;padding:.6rem .5rem}
+  .d-nav{padding-inline:0 2.9rem}
+  .d-nav .d-prev,.d-nav .d-next{flex:1 1 auto;padding:.6rem .5rem}
   .d-count{min-width:3.6rem}
 }
 /* A figure that slides on and a rail that fills are motion, and somebody who

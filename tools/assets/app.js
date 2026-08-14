@@ -1610,6 +1610,149 @@ const ASSET_FX = "assets/fx/";
    speckles the hair and rings the cheek blush. See tools/make_sheet.py. */
 const ASSET_CAST = "assets/cast/";
 
+/* ---------------- balloons that are a shape, not a rounded box -------------
+   Two of the four balloon contours are not expressible as a border-radius, so
+   they are drawn as an SVG path behind the words. The path is GENERATED FROM
+   THE MEASURED BOX rather than stretched to fit it, and that distinction is
+   the whole design — everything below follows from it.
+
+   Two versions of this have been wrong, and both failures are instructive.
+
+   1. **Two clip-path polygons**, ink outside and white inset by `margin:3px`,
+      on the theory that the gap reads as an outline. It cannot: a percentage
+      polygon resolves against its OWN box, so shrinking the box scales the
+      whole shape rather than insetting it, and near a spike — where the
+      contour runs nearly parallel to the shrink — the white overshot the black
+      and the outline vanished. It shipped with a contour that came and went.
+
+   2. **One fixed path, stretched** with `preserveAspectRatio="none"`. The
+      outline was even, and it was still wrong for a different reason: a
+      balloon is as wide as its text, so the stretch was severe, and a star
+      squashed to 3:1 is a row of horizontal shards. Worse, a star's INSCRIBED
+      area is far smaller than its bounding box, so the words ran outside the
+      white and the tail hung detached below a shape that stopped short of the
+      box.
+
+   So the path is built to the box. A shape function takes the measured width
+   and height and returns a path in the element's own pixel coordinates, and
+   the spikes and lobes therefore keep a CONSTANT SIZE while their number
+   adapts to the perimeter — which is exactly how a comic letterer draws one.
+   Both shapes are built on a rounded rectangle rather than an ellipse, so the
+   interior really is the text box and the padding only has to clear the
+   spikes.
+
+   Adding a fifth balloon is one function in this table. */
+
+const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+
+/* Points at roughly even spacing around a rounded rectangle, walked clockwise
+   from the top-left, each with the outward normal at that point. One walk
+   serves every shape: a burst pushes a peak out along the normal between
+   consecutive points, a cloud bulges an arc between them. */
+function walkRoundRect(w, h, inset, r, pitch){
+  const x0 = inset, y0 = inset, x1 = w - inset, y1 = h - inset;
+  r = clamp(r, 0, Math.min((x1 - x0) / 2, (y1 - y0) / 2));
+  const sx = (x1 - x0) - 2 * r, sy = (y1 - y0) - 2 * r, arc = Math.PI * r / 2;
+  const corner = (cx, cy, from) => ({
+    len: arc,
+    at: t => { const a = from + t * Math.PI / 2;
+               return [cx + r * Math.cos(a), cy + r * Math.sin(a),
+                       Math.cos(a), Math.sin(a)]; },
+  });
+  const segs = [
+    { len: sx, at: t => [x0 + r + sx * t, y0, 0, -1] },
+    corner(x1 - r, y0 + r, -Math.PI / 2),
+    { len: sy, at: t => [x1, y0 + r + sy * t, 1, 0] },
+    corner(x1 - r, y1 - r, 0),
+    { len: sx, at: t => [x1 - r - sx * t, y1, 0, 1] },
+    corner(x0 + r, y1 - r, Math.PI / 2),
+    { len: sy, at: t => [x0, y1 - r - sy * t, -1, 0] },
+    corner(x0 + r, y0 + r, Math.PI),
+  ];
+  const total = segs.reduce((s, g) => s + g.len, 0);
+  if (!(total > 0)) return [];
+  const n = Math.max(10, Math.round(total / pitch));
+  const out = [];
+  for (let i = 0; i < n; i++){
+    let d = i * total / n, k = 0;
+    while (k < segs.length - 1 && d > segs[k].len){ d -= segs[k].len; k++; }
+    const g = segs[k];
+    const [x, y, nx, ny] = g.at(g.len ? clamp(d / g.len, 0, 1) : 0);
+    out.push({ x, y, nx, ny });
+  }
+  return out;
+}
+
+const fmt = pts => "M" + pts.map(p => p[0].toFixed(1) + " " + p[1].toFixed(1))
+                           .join(" L") + " Z";
+
+/* How far a spike or a lobe reaches. The CAP is the thing that matters, and it
+   is the balloon's own PADDING, because that is precisely the room between the
+   contour and the words — derive it from anything else and a tall balloon on a
+   narrow phone grows spikes that reach in through its own text. Change the
+   padding in the stylesheet and the shape follows; nothing here is kept in
+   sync by hand. */
+function spikeAmp(w, h, pad, share, max){
+  return clamp(Math.min(w, h) * share, 7, Math.min(max, Math.max(7, pad - 2)));
+}
+
+/* Each shape is three numbers and a path function.
+
+   `share` and `max` set how big a spike or lobe wants to be; `lift` is how far
+   the tail has to climb to MEET the contour, as a fraction of that size. The
+   third one is easy to forget and looks like a bug when it is: the contour of a
+   shaped balloon does not sit on the bottom of its box — a burst's edge is a
+   valley for most of its length and only touches the box at the spike tips —
+   so a tail pinned to the box hangs in mid-air below it. */
+const BUB_SHAPE = {
+  /* Loud: a spike between every pair of boundary points, of alternating length
+     so the contour reads as drawn rather than machined. */
+  shout: { share: 0.20, max: 18, lift: 0.55, path(w, h, amp){
+    const p = walkRoundRect(w, h, amp, amp * 1.1, amp * 1.5);
+    if (!p.length) return "";
+    const out = [];
+    p.forEach((a, i) => {
+      const b = p[(i + 1) % p.length];
+      out.push([a.x, a.y]);
+      const nx = a.nx + b.nx, ny = a.ny + b.ny;
+      const L = Math.hypot(nx, ny) || 1;
+      /* Uneven spikes read as drawn rather than machined, and the long ones
+         are what make it a burst instead of a sawtooth. */
+      const k = amp * (i % 2 ? 1 : 0.62);
+      out.push([(a.x + b.x) / 2 + nx / L * k, (a.y + b.y) / 2 + ny / L * k]);
+    });
+    return fmt(out);
+  } },
+  /* Not said: an outward arc between every pair, which is a scalloped edge.
+     Sweep 1 bulges outward because the walk is clockwise in screen
+     coordinates, where y counts downward. */
+  think: { share: 0.14, max: 15, lift: 0.42, path(w, h, amp){
+    const p = walkRoundRect(w, h, amp, amp * 2, amp * 2.2);
+    if (!p.length) return "";
+    let d = `M${p[0].x.toFixed(1)} ${p[0].y.toFixed(1)}`;
+    for (let i = 1; i <= p.length; i++){
+      const a = p[i - 1], b = p[i % p.length];
+      const r = (Math.hypot(b.x - a.x, b.y - a.y) / 2) * 1.35;
+      d += ` A${r.toFixed(1)} ${r.toFixed(1)} 0 0 1 `
+         + `${b.x.toFixed(1)} ${b.y.toFixed(1)}`;
+    }
+    return d + " Z";
+  } },
+};
+
+function balloonHTML(kind, inner){
+  if (!BUB_SHAPE[kind])
+    return '<div class="d-said"><div class="d-txt">' + inner + "</div></div>";
+  /* The path is empty until it has been measured. That is deliberate: a
+     placeholder shape would be drawn at the wrong size for one frame, and a
+     balloon that visibly changes shape after it appears is worse than one that
+     arrives a frame late. */
+  return '<div class="d-said is-shaped">'
+       + '<svg class="d-shape" aria-hidden="true" focusable="false">'
+       + '<path d=""/></svg>'
+       + '<div class="d-txt">' + inner + "</div></div>";
+}
+
 function initScene(root, p){
   const scene = $(".d-scene", root), body = $(".d-body", root),
         toggle = $(".d-toggle", root);
@@ -1654,16 +1797,19 @@ function initScene(root, p){
      out — and while it is there it names the exact file that would fill it. */
   function paintFigure(el, ph, c, i, n, speaking){
     const x = figX(i, n), h = figH(n);
-    [el, ph].forEach(box => {
+    /* Drawn facing one way only; a figure standing right of the middle is
+       mirrored so that nobody is addressing the edge of the frame. The flip
+       rides on the same transform as the centring, so it composes rather than
+       fighting it — and it is applied to the ARTWORK ONLY. The placeholder
+       carries the character's name and the expression as words, and a mirrored
+       word is unreadable: the flip is a fact about the drawing, not about the
+       box it will arrive in. */
+    const flip = p.faceIn !== false && x > 0.5;
+    [[el, flip], [ph, false]].forEach(([box, mirror]) => {
       if (!box) return;
       box.style.left = (x * 100) + "%";
       box.style.height = (h * 100) + "%";
-      /* Drawn facing one way only; a figure standing right of the middle is
-         mirrored so that nobody is addressing the edge of the frame. The flip
-         rides on the same transform as the centring, so it composes rather
-         than fighting it. */
-      const flip = p.faceIn !== false && x > 0.5;
-      box.style.transform = "translateX(-50%)" + (flip ? " scaleX(-1)" : "");
+      box.style.transform = "translateX(-50%)" + (mirror ? " scaleX(-1)" : "");
       /* The speaker is at full strength and in front; everyone else is held
          back. With the name gone from the balloon this is half of what says
          who is talking — the tail is the other half, and two weak signals
@@ -1847,16 +1993,16 @@ function initScene(root, p){
        of the conversation and nothing has to be numbered — which is what lets
        the name come off them. */
     bubble.innerHTML = lns.map(ln => {
-      /* Three elements, not one, and the nesting is what makes the shapes
-         possible: `.d-bub` positions and carries the tail, `.d-said` is the
-         drawn contour, `.d-txt` is the fill the words sit in. A shout balloon
-         is the ink clip-path on the middle one and the same clip-path inset by
-         three pixels on the inner one — a stroked irregular shape with no SVG
-         and no z-index games. */
-      const inner = '<div class="d-said"><div class="d-txt">' + ln.html
-                  + '</div></div>';
+      /* Three elements, not one, and the nesting is what carries the shapes:
+         `.d-bub` positions the balloon and owns the tail, `.d-said` is the
+         contour — a rounded box in CSS, or a drawn path for the two shapes
+         that are not one — and `.d-txt` is what the words sit in, above it.
+         The tail hangs off the OUTER element on purpose, so a drawn shape can
+         never cut it off. */
+      const kind = ln.who ? (ln.bub || "say") : "narrate";
+      const inner = balloonHTML(kind, ln.html);
       if (!ln.who) return '<div class="d-bub" data-bub="narrate">' + inner + '</div>';
-      return '<div class="d-bub" data-bub="' + esc(ln.bub || "say")
+      return '<div class="d-bub" data-bub="' + esc(kind)
            + '" data-slot="' + ln.slot + '">' + inner + '</div>';
     }).join("");
     wireGlosses(bubble, p.glosses || [], p.id + "-b" + i);
@@ -1872,9 +2018,48 @@ function initScene(root, p){
     stage.setAttribute("aria-label",
       lns.map(ln => (ln.who ? ln.who + ": " : "") + ln.html.replace(/<[^>]+>/g, "")).join(" "));
 
-    /* The tail has to be measured, so it waits for layout. */
-    requestAnimationFrame(aimTails);
+    /* Both of these are measurements, so they wait for layout — and the
+       shapes go first, because a tail is aimed at a balloon whose size the
+       shape does not change but whose presence the observer watches. */
+    if (shapeWatch){
+      shapeWatch.disconnect();
+      $$(".d-said.is-shaped", bubble).forEach(el => shapeWatch.observe(el));
+    }
+    requestAnimationFrame(() => { drawShapes(); aimTails(); });
   }
+
+  /* ---- drawing the shaped balloons ---------------------------------------
+     A shape is built to the box the words ended up needing, so it can only be
+     built after layout. Cheap and idempotent: it remembers the size it drew at
+     and does nothing when asked again at the same one, which is what makes it
+     safe to hang off a ResizeObserver as well as off the paint. */
+  function drawShapes(){
+    if (scene.hidden) return;
+    $$(".d-said.is-shaped", bubble).forEach(said => {
+      const bub = said.parentNode;
+      const spec = BUB_SHAPE[(bub.dataset || {}).bub];
+      const svg = $("svg.d-shape", said), path = svg && $("path", svg);
+      if (!spec || !path) return;
+      const w = said.clientWidth, h = said.clientHeight;
+      if (!w || !h) return;
+      const cs = getComputedStyle(said);
+      const pad = Math.min(parseFloat(cs.paddingTop) || 0,
+                           parseFloat(cs.paddingLeft) || 0);
+      const key = w + "x" + h + "x" + pad;
+      if (said.dataset.drawn === key) return;
+      said.dataset.drawn = key;
+      const amp = spikeAmp(w, h, pad, spec.share, spec.max);
+      svg.setAttribute("viewBox", "0 0 " + w + " " + h);
+      path.setAttribute("d", spec.path(w, h, amp));
+      /* Bring the tail up to where the contour actually is. */
+      bub.style.setProperty("--tail-lift", (amp * spec.lift).toFixed(1) + "px");
+    });
+  }
+  /* A web font landing, or a gloss opening under a balloon, changes the box
+     after the paint that drew it. Guarded by `typeof`, not by truthiness:
+     where the API is absent the bare name throws. */
+  const shapeWatch = typeof ResizeObserver === "function"
+    ? new ResizeObserver(() => drawShapes()) : null;
 
   /* ---- aiming the tails --------------------------------------------------
      The balloon carries no name any more, so the tail is what identifies the
@@ -1919,7 +2104,10 @@ function initScene(root, p){
      page does not move at all, which is the whole point of the rewrite — the
      reader can scroll down to the exercise, scroll back, and find the story
      exactly where they left it. */
-  const goto = i => { show(i); leanBubbles(); requestAnimationFrame(aimTails); };
+  const goto = i => {
+    show(i); leanBubbles();
+    requestAnimationFrame(() => { drawShapes(); aimTails(); });
+  };
   next.addEventListener("click", () => goto(at + 1));
   prev.addEventListener("click", () => goto(at - 1));
   stage.addEventListener("keydown", ev => {
@@ -1980,7 +2168,7 @@ function initScene(root, p){
     const on = document.fullscreenElement === scene || scene.classList.contains("is-full");
     full.setAttribute("aria-pressed", String(on));
     full.setAttribute("aria-label", on ? "Leave full screen" : "Fill the screen");
-    requestAnimationFrame(aimTails);
+    requestAnimationFrame(() => { drawShapes(); aimTails(); });
   }
   full.addEventListener("click", () => {
     const on = document.fullscreenElement === scene || scene.classList.contains("is-full");
@@ -2005,7 +2193,9 @@ function initScene(root, p){
   /* The frame's shape decides where the tails point, so anything that changes
      it re-measures. Resize, not scroll: this panel does not know or care where
      the page is. */
-  addEventListener("resize", () => requestAnimationFrame(aimTails), { passive: true });
+  addEventListener("resize",
+    () => requestAnimationFrame(() => { drawShapes(); aimTails(); }),
+    { passive: true });
 
   /* Which view the learner gets is theirs, and it is remembered. The default
      is the comic; the transcript is one tap away and is what the exercises

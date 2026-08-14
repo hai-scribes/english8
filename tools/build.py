@@ -884,12 +884,17 @@ def dialogue_html(p: dict) -> str:
     # props that hang on a wall, the people, the props that stand on the floor
     # in front of them, the overlay effects, the balloons on top of everything.
     #
-    # The controls are OUTSIDE the frame now. They used to float in the panel's
+    # EVERY control is OUTSIDE the frame. They used to float in the panel's
     # bottom-right corner, over the art, which is where a scroll-driven stage
     # had to put them — they were a fallback for a panel the page was really
     # driving. They are the primary control now, so they get their own room,
     # under the picture, where a reader's thumb already is on a phone and where
     # nothing they do covers a face.
+    #
+    # The expand button was the one exception, kept in the frame's top-right
+    # corner "over sky". There is no sky: the top of the frame is where the
+    # balloons are, always, and it sat on top of the first one. The rule had no
+    # exception in it and now the markup does not either.
     scene = (f'<div class="d-scene" hidden>'
              f'<div class="d-frame">'
              f'<div class="d-stage" tabindex="0" role="group" '
@@ -900,15 +905,18 @@ def dialogue_html(p: dict) -> str:
              f'<div class="d-prop d-prop-front"></div>'
              f'<div class="d-fx"></div>'
              f'<div class="d-bubble" aria-live="polite"></div>'
-             f'<button class="d-full" type="button" aria-pressed="false" '
-             f'aria-label="Fill the screen"><span aria-hidden="true"></span></button>'
              f'</div></div>'
+             # Every control is out of the frame, the expand button included.
+             # It used to sit in the stage's top-right corner and it landed on
+             # top of the first balloon, which is where a balloon always is.
              f'<div class="d-nav">'
              f'<button class="d-prev" type="button">'
              f'<span aria-hidden="true">&lsaquo;</span> Back</button>'
              f'<span class="d-count" role="status"></span>'
              f'<button class="d-next" type="button">'
              f'Next <span aria-hidden="true">&rsaquo;</span></button>'
+             f'<button class="d-full" type="button" aria-pressed="false" '
+             f'aria-label="Fill the screen"><span aria-hidden="true"></span></button>'
              f'</div>'
              f'<div class="d-rail"><div class="d-rail-fill"></div></div>'
              f'</div>'
