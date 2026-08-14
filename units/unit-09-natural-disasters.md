@@ -24,27 +24,32 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="The forecast turns west" gramen="was / were + V-ing — the past continuous" gramvi="Quá khứ tiếp diễn tả việc **đang** xảy ra tại một thời điểm trong quá khứ. Thường đi cùng quá khứ đơn: *while* + tiếp diễn, *when* + đơn." gramco="I was sleeping when it started"
-**Thảo:** You look tired, Tí. Were you awake all night again?
-**Tí:** Nearly. The wind [[was|gram:was]] pushing at our shutters from about two o'clock. Then a branch came down on the roof.
-**Thảo:** Did it break anything?
-**Tí:** One tile. While Bà Sáu was up the ladder counting the damage, I was filling every bucket in the house with clean water.
-**Thảo:** She let you go up the ladder?
-**Tí:** She did not. I was holding it. That is a different job.
-**Thảo:** Did you hear the six o'clock [[forecast]]? The storm turns west tonight.
-**Tí:** I heard it. The radio was giving the same [[warning]] all yesterday afternoon, and nobody in our lane moved a thing upstairs.
-**Thảo:** My uncle did. He was carrying rice up to the loft before breakfast.
-**Tí:** Then your uncle has been through more storms than the radio has.
-**Thảo:** Is the [[shelter]] at the school open? Bà Sáu was asking about it at the market.
-**Tí:** From eight. I went down to look this morning and turned back, because the bottom of the lane was already under water.
-**Thảo:** And Bống?
-**Tí:** At our table, where the whole lane can see her. The sea gives back what it took — and you never choose what. She is not going near that water in a storm.
-**Thảo:** What did the stranger say, exactly?
-**Tí:** That nobody ever finished teaching her. Then he sent the market back himself on Sunday, in front of her, in about four seconds. Every dead note in Bãi Sẻ went cold in people's hands at the same moment, and Bà Sáu's tin was empty and she laughed.
-**Thảo:** Did he show her how he did it?
-**Tí:** No. That is the part she was still sitting with last night.
-**Thảo:** And what does she say now?
-**Tí:** Nothing for two days. Then she told me she can hold it, that she was only giving me the short version, and if it ever goes over again she will prove it. She was practising the words on the shutter while the wind was pushing at it.
+::: dialogue title="The forecast turns west" bg="lane" gramen="was / were + V-ing — the past continuous" gramvi="Quá khứ tiếp diễn tả việc **đang** xảy ra tại một thời điểm trong quá khứ. Thường đi cùng quá khứ đơn: *while* + tiếp diễn, *when* + đơn." gramco="I was sleeping when it started"
+@cast Tí|sad, Thảo|worried
+@item radio at=left
+@fx rain on=panel
+**Thảo|worried:** You look tired, Tí. Were you awake all night again?
+@fx impact on=Tí
+**Tí|sad:** Nearly. The wind [[was|gram:was]] pushing at our shutters from about two o'clock. Then a branch came down on the roof.
+**Thảo|surprised:** Did it break anything?
+**Tí|neutral:** One tile. While Bà Sáu was up the ladder counting the damage, I was filling every bucket in the house with clean water.
+**Thảo|surprised:** She let you go up the ladder?
+**Tí|annoyed:** She did not. I was holding it. That is a different job.
+**Thảo|worried:** Did you hear the six o'clock [[forecast]]? The storm turns west tonight.
+**Tí|worried:** I heard it. The radio was giving the same [[warning]] all yesterday afternoon, and nobody in our lane moved a thing upstairs.
+**Thảo|neutral:** My uncle did. He was carrying rice up to the loft before breakfast.
+**Tí|neutral:** Then your uncle has been through more storms than the radio has.
+**Thảo|worried:** Is the [[shelter]] at the school open? Bà Sáu was asking about it at the market.
+@fx splash on=panel
+**Tí|worried:** From eight. I went down to look this morning and turned back, because the bottom of the lane was already under water.
+**Thảo|worried:** And Bống?
+**Tí|neutral:** At our table, where the whole lane can see her. The sea gives back what it took — and you never choose what. She is not going near that water in a storm.
+**Thảo|neutral:** What did the stranger say, exactly?
+**Tí|sad:** That nobody ever finished teaching her. Then he sent the market back himself on Sunday, in front of her, in about four seconds. Every dead note in Bãi Sẻ went cold in people's hands at the same moment, and Bà Sáu's tin was empty and she laughed.
+**Thảo|surprised:** Did he show her how he did it?
+**Tí|sad:** No. That is the part she was still sitting with last night.
+**Thảo|worried:** And what does she say now?
+**Tí|worried:** Nothing for two days. Then she told me she can hold it, that she was only giving me the short version, and if it ever goes over again she will prove it. She was practising the words on the shutter while the wind was pushing at it.
 :::
 
 ### 1.1 Comprehension

@@ -24,23 +24,27 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="The water behind the school" gramen="when — a time clause" gramvi="Mệnh đề thời gian bắt đầu bằng *when, before, after, until*. Nếu nó đứng trước mệnh đề chính thì có dấu phẩy ngăn cách." gramco="When the rain stops, we will go"
-**Thảo:** Have you seen the water behind the school? The whole corner of the harbour has gone brown.
-**Tí:** I noticed it on Monday. It started changing colour after the workshop opened on the other bank.
-**Thảo:** So the workshop is allowed to pollute our harbour and nobody says anything?
-**Tí:** My uncle says one workshop can pour enough [[sewage]] into a harbour to kill it before anybody reports it.
-**Thảo:** [[When|gram:when]] we were small we caught fish there. Now the water looks [[toxic]].
-**Tí:** Not any more. As soon as the fish went, the birds stopped coming too.
-**Thảo:** Cô Yến is organising a clean-up on Saturday. Our lane could not agree about anything else for a whole week, so she gave us the harbour instead. She says [[awareness]] is where every clean-up starts.
-**Tí:** Then she'll want evidence. Once we have photographs and dates, she can take them to the district office.
-**Thảo:** I'll photograph the water every morning while I walk to school.
-**Tí:** And I'll carry the sacks. Bà Sáu says we shouldn't wait until the harbour is completely dead.
-**Thảo:** Nobody in this town does anything until it's too late. And Bống? People still stop me about her.
-**Tí:** I sent the week back on Sunday night. I stood on our step and said "Go well.", and the wires were live again before breakfast, and half the lane still isn't speaking to the other half.
-**Thảo:** So you're finished with it?
-**Tí:** The sea gives back what it took — you never choose what. So on Saturday I'm walking her down to the water in front of everybody, and I'm telling her to go home. Then it stops, and it stops where people can see it stop.
-**Thảo:** Good. Whenever I walk past that water now, I feel angry.
-**Tí:** Keep the anger. Bring gloves on Saturday.
+::: dialogue title="The water behind the school" bg="school-yard" gramen="when — a time clause" gramvi="Mệnh đề thời gian bắt đầu bằng *when, before, after, until*. Nếu nó đứng trước mệnh đề chính thì có dấu phẩy ngăn cách." gramco="When the rain stops, we will go"
+@cast Tí|neutral, Thảo|worried
+@item rubbish-bag at=left
+@item phone at=Thảo
+**Thảo|worried:** Have you seen the water behind the school? The whole corner of the harbour has gone brown.
+**Tí|neutral:** I noticed it on Monday. It started changing colour after the workshop opened on the other bank.
+**Thảo|annoyed|shout:** So the workshop is allowed to pollute our harbour and nobody says anything?
+**Tí|neutral:** My uncle says one workshop can pour enough [[sewage]] into a harbour to kill it before anybody reports it.
+**Thảo|sad:** [[When|gram:when]] we were small we caught fish there. Now the water looks [[toxic]].
+**Tí|sad:** Not any more. As soon as the fish went, the birds stopped coming too.
+**Thảo|neutral:** Cô Yến is organising a clean-up on Saturday. Our lane could not agree about anything else for a whole week, so she gave us the harbour instead. She says [[awareness]] is where every clean-up starts.
+**Tí|neutral:** Then she'll want evidence. Once we have photographs and dates, she can take them to the district office.
+**Thảo|happy:** I'll photograph the water every morning while I walk to school.
+**Tí|neutral:** And I'll carry the sacks. Bà Sáu says we shouldn't wait until the harbour is completely dead.
+**Thảo|annoyed:** Nobody in this town does anything until it's too late. And Bống? People still stop me about her.
+**Tí|worried:** I sent the week back on Sunday night. I stood on our step and said "Go well.", and the wires were live again before breakfast, and half the lane still isn't speaking to the other half.
+**Thảo|worried:** So you're finished with it?
+**Tí|sad:** The sea gives back what it took — you never choose what. So on Saturday I'm walking her down to the water in front of everybody, and I'm telling her to go home. Then it stops, and it stops where people can see it stop.
+@fx anger on=Thảo
+**Thảo|annoyed:** Good. Whenever I walk past that water now, I feel angry.
+**Tí|neutral:** Keep the anger. Bring gloves on Saturday.
 :::
 
 ### 1.1 Comprehension

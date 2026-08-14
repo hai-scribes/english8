@@ -24,25 +24,29 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="The box that will not open" gramen="said (that) — reported speech" gramvi="Khi thuật lại lời nói, lùi thì một bậc và đổi đại từ: *“I am tired”* → *He said he **was** tired*." gramco="She said she was busy"
-**Khoa:** Try it again, Tí. Thumb flat on the glass, not the tip.
-**Tí:** I have put my thumb on that glass eleven times this morning.
-**Khoa:** And?
-**Tí:** Nothing. The [[device]] blinks twice and stays shut. Đạt says the science club has built a very expensive shoe box.
-**Khoa:** Đạt would say that. Cô Yến told us that the club had until Friday, so we have three days.
-**Tí:** She told me that the whole school would come and look at it.
-**Khoa:** She tells everybody that. Where does it fail — the reading or the lock?
-**Tí:** The [[fingerprint]] part is fine. It is the wire behind it.
-**Khoa:** Show me your [[experiment]] sheet. What did you write down on Monday?
-**Tí:** I wrote that the box opened four times out of ten. Hùng [[said|gram:said]] that four out of ten was worse than a key.
-**Khoa:** Hùng is not wrong, for once.
-**Tí:** Thảo says we should carry it to Chú Bảy. He mends boat engines all day; a small lock cannot be harder than that.
-**Khoa:** Ask him tonight, then. And what did Bống say about it?
-**Tí:** She said the sea would not help us. The sea gives back what it took — you never choose what, and there are two marks left on that wall.
-**Khoa:** So we mend it ourselves.
-**Tí:** We mend it ourselves. Bring a screwdriver on Thursday.
-**Khoa:** And bring the green notebook.
-**Tí:** I have brought it every day. The last page is the one that matters, and the last page is not there.
+::: dialogue title="The box that will not open" bg="science-room" gramen="said (that) — reported speech" gramvi="Khi thuật lại lời nói, lùi thì một bậc và đổi đại từ: *“I am tired”* → *He said he **was** tired*." gramco="She said she was busy"
+@cast Tí|annoyed, Khoa|neutral
+@item box at=center
+**Khoa|neutral:** Try it again, Tí. Thumb flat on the glass, not the tip.
+@fx dizzy on=Tí
+**Tí|annoyed:** I have put my thumb on that glass eleven times this morning.
+**Khoa|neutral:** And?
+**Tí|annoyed:** Nothing. The [[device]] blinks twice and stays shut. Đạt says the science club has built a very expensive shoe box.
+**Khoa|annoyed:** Đạt would say that. Cô Yến told us that the club had until Friday, so we have three days.
+**Tí|worried:** She told me that the whole school would come and look at it.
+**Khoa|neutral:** She tells everybody that. Where does it fail — the reading or the lock?
+**Tí|neutral:** The [[fingerprint]] part is fine. It is the wire behind it.
+**Khoa|neutral:** Show me your [[experiment]] sheet. What did you write down on Monday?
+**Tí|sad:** I wrote that the box opened four times out of ten. Hùng [[said|gram:said]] that four out of ten was worse than a key.
+**Khoa|happy:** Hùng is not wrong, for once.
+**Tí|neutral:** Thảo says we should carry it to Chú Bảy. He mends boat engines all day; a small lock cannot be harder than that.
+**Khoa|neutral:** Ask him tonight, then. And what did Bống say about it?
+**Tí|worried:** She said the sea would not help us. The sea gives back what it took — you never choose what, and there are two marks left on that wall.
+**Khoa|happy:** So we mend it ourselves.
+**Tí|happy:** We mend it ourselves. Bring a screwdriver on Thursday.
+@item green-notebook at=Khoa
+**Khoa|neutral:** And bring the green notebook.
+**Tí|worried:** I have brought it every day. The last page is the one that matters, and the last page is not there.
 :::
 
 ### 1.1 Comprehension

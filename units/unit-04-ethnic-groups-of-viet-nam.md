@@ -24,28 +24,31 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="Ten questions for a stranger" gramen="How many …? — a Wh- question" gramvi="Câu hỏi Wh- theo thứ tự: từ để hỏi → trợ động từ → chủ ngữ → động từ chính." gramco="How many people live there?"
-**Thảo:** Cô Yến gave out the project on Friday. Ten questions, and you have to ask a real person.
-**Tí:** I have written none of them. I am no good at asking strangers anything.
-**Thảo:** Then practise on me. I am a woman at the market who [[weaves|weave]] baskets. Begin.
-**Tí:** Hello.
-**Thảo:** That is not a question, Tí.
-**Tí:** Where does your family live?
-**Thảo:** Up the river, in a [[stilt house]] my grandfather built. Better. Keep going.
-**Tí:** Do they live there all year?
-**Thảo:** They do. It is made of wood and [[bamboo]], and you climb a wooden staircase to the door.
-**Tí:** [[How|gram:how]] many rooms does it have?
-**Thảo:** One big one. We cook, eat, talk and sleep in the same space.
-**Tí:** How much rice does your family grow?
-**Thảo:** Enough for the year. We have [[terraced fields|terraced field]] on the hillside.
-**Tí:** Who looks after the house now?
-**Thảo:** Careful — that one takes no *does*. My uncle looks after it.
-**Tí:** Can you weave?
-**Thảo:** Not yet. It takes a lot of patience, and I do not have much.
-**Tí:** You are inventing every word of this.
-**Thảo:** Of course I am. But Minh's family went up that river, and there are [[folk songs|folk song]] up there that nobody down here knows. On Saturday we walk it, and you ask somebody real.
-**Tí:** And if there is nobody up there to ask?
-**Thảo:** Then you have ten questions and no answers, which is exactly what you have now.
+::: dialogue title="Ten questions for a stranger" bg="town-beach" gramen="How many …? — a Wh- question" gramvi="Câu hỏi Wh- theo thứ tự: từ để hỏi → trợ động từ → chủ ngữ → động từ chính." gramco="How many people live there?"
+@cast Tí|worried, Thảo|happy
+@item notebook at=Tí
+**Thảo|neutral:** Cô Yến gave out the project on Friday. Ten questions, and you have to ask a real person.
+**Tí|worried:** I have written none of them. I am no good at asking strangers anything.
+**Thảo|happy:** Then practise on me. I am a woman at the market who [[weaves|weave]] baskets. Begin.
+@fx sweat on=Tí
+**Tí|worried:** Hello.
+**Thảo|annoyed:** That is not a question, Tí.
+**Tí|neutral:** Where does your family live?
+**Thảo|happy:** Up the river, in a [[stilt house]] my grandfather built. Better. Keep going.
+**Tí|neutral:** Do they live there all year?
+**Thảo|happy:** They do. It is made of wood and [[bamboo]], and you climb a wooden staircase to the door.
+**Tí|neutral:** [[How|gram:how]] many rooms does it have?
+**Thảo|neutral:** One big one. We cook, eat, talk and sleep in the same space.
+**Tí|neutral:** How much rice does your family grow?
+**Thảo|neutral:** Enough for the year. We have [[terraced fields|terraced field]] on the hillside.
+**Tí|neutral:** Who looks after the house now?
+**Thảo|annoyed:** Careful — that one takes no *does*. My uncle looks after it.
+**Tí|neutral:** Can you weave?
+**Thảo|happy:** Not yet. It takes a lot of patience, and I do not have much.
+**Tí|surprised:** You are inventing every word of this.
+**Thảo|happy:** Of course I am. But Minh's family went up that river, and there are [[folk songs|folk song]] up there that nobody down here knows. On Saturday we walk it, and you ask somebody real.
+**Tí|worried:** And if there is nobody up there to ask?
+**Thảo|neutral:** Then you have ten questions and no answers, which is exactly what you have now.
 :::
 
 ### 1.1 Comprehension

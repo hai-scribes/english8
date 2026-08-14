@@ -25,18 +25,22 @@
 *Read the conversation aloud. Then answer the questions below.*
 
 ::: dialogue title="The list in the yard" bg="harbour-wall" gramen="love / can't stand + V-ing" gramvi="Sau các động từ chỉ sự thích hoặc không thích (love, like, enjoy, can't stand, hate), động từ theo sau thêm **-ing**." gramco="I love cooking · I can't stand waiting"
+@cast Tí|sad, Thảo|neutral
+@fx birds on=panel
 **Thảo|neutral:** You've been down on the wall all morning. What's wrong?
 **Tí|sad:** Nothing's wrong.
-**Thảo|annoyed:** Tí.
+**Thảo|annoyed|shout:** Tí.
 **Tí|sad:** Hùng got a new [[board game|board game]] for his birthday. He read out the list of who's coming on Saturday. In the yard. Out loud.
 **Thảo|neutral:** And you weren't on it.
 **Tí|sad:** I wasn't on it.
 **Thảo|annoyed:** I [[can't stand]] hearing him read things out like that.
 **Tí|neutral:** It doesn't matter. I don't even like playing [[board games|board game]].
 **Thảo|surprised:** You beat everyone in our class at every game we have ever played.
+@fx gloom on=Tí
 **Tí|sad:** That was ages ago.
 **Thảo|neutral:** So you would like to go.
-**Tí|annoyed:** I'd [[love|gram:v-ing]] to go. There. Are you happy now?
+@fx flush on=Tí
+**Tí|annoyed|shout:** I'd [[love|gram:v-ing]] to go. There. Are you happy now?
 **Thảo|happy:** No. Come to my house on Saturday instead. We can [[hang out|hang out (with)]] all afternoon, and I don't mind teaching you a card game.
 **Tí|worried:** You're only asking me because of the list.
 **Thảo|happy:** I enjoy sitting here with you and I would enjoy sitting there with you. Both things are true.

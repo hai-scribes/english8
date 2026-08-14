@@ -32,6 +32,11 @@ try {
 
 const ROOT = path.resolve(__dirname, "..");
 const APP = fs.readFileSync(path.join(ROOT, "docs/assets/app.js"), "utf8");
+/* Read as text, not applied: jsdom does no layout, so the only way to hold a
+   stylesheet to a promise is to assert on what it does and does not contain.
+   Two of those promises are load-bearing enough to be worth it — the panel is
+   no longer positioned against the scroll, and there is no scroll track. */
+const CSS = fs.readFileSync(path.join(ROOT, "docs/assets/app.css"), "utf8");
 
 let fails = 0, passes = 0;
 function ok(name, cond, extra) {
@@ -515,9 +520,11 @@ async function main() {
   }
 
   /* ---- the dialogue as a comic ------------------------------------------
-     The three things that would quietly ruin it: losing the transcript the
+     The things that would quietly ruin it: losing the transcript the
      comprehension exercises are answered against, losing the glosses inside
-     the bubbles, and hijacking the page's scroll. */
+     the bubbles, hijacking the page's scroll, and — since the balloons stopped
+     carrying names — losing the speaker's identity for anyone who cannot see
+     which figure is lit. */
   {
     const win = await settled(load("docs/unit-01/lesson-1/index.html", null, fastPage));
     const doc = win.document;
@@ -526,10 +533,21 @@ async function main() {
     const p = data.dialogue[0];
     ok("comic: unit 1's dialogue is staged", p.staged === true);
     ok("comic: every line carries a background", p.lines.every(l => !!l.bg));
-    ok("comic: a speaker carries a drawn face and a side",
-       p.lines.filter(l => l.who).every(l => l.slug && l.emo && l.side));
-    ok("comic: the two speakers sit on opposite sides",
-       new Set(p.lines.filter(l => l.who).map(l => l.side)).size === 2);
+    ok("comic: a speaker carries a drawn face, a balloon and a place to stand",
+       p.lines.filter(l => l.who).every(l =>
+         l.slug && l.emo && l.bub && typeof l.slot === "number"));
+    ok("comic: the two speakers stand in different places",
+       new Set(p.lines.filter(l => l.who).map(l => l.slot)).size === 2);
+    /* Everyone the scene has left standing is in the panel, not only whoever
+       happens to speak in it — a listener who vanishes between lines is the
+       bug this replaced. */
+    ok("comic: a line carries the whole stage, not just its speaker",
+       p.lines.filter(l => l.who).every(l => Array.isArray(l.cast) && l.cast.length)
+       && p.lines[p.lines.length - 1].cast.length === 2);
+    /* The cap is legibility, and it is enforced at build so a scene cannot
+       ship with six silhouettes in it. */
+    ok("comic: never more than four people in one panel",
+       p.lines.every(l => !l.cast || l.cast.length <= 4));
 
     const scene = dlg.querySelector(".d-scene");
     const body = dlg.querySelector(".d-body");
@@ -553,10 +571,39 @@ async function main() {
     await new Promise(r => setTimeout(r, 20));
     ok("comic: and back again", !scene.hidden && body.hidden);
 
-    /* A bubble is rendered, and a glossed word inside it opens. */
+    /* A bubble is rendered, and it does NOT print the speaker's name. */
     const bub = dlg.querySelector(".d-bub");
     ok("comic: a bubble is drawn for the current line", !!bub);
+    ok("comic: the balloon carries no name label",
+       !dlg.querySelector(".d-bubble .d-name"));
+    ok("comic: the balloon still says who is speaking, to a screen reader",
+       /T[íi]:|Th[ảa]o:/.test(dlg.querySelector(".d-stage").getAttribute("aria-label") || ""),
+       dlg.querySelector(".d-stage").getAttribute("aria-label"));
     ok("comic: the panel counts its lines",
+       /1 \/ \d+/.test(dlg.querySelector(".d-count").textContent),
+       dlg.querySelector(".d-count").textContent);
+    ok("comic: at the first panel there is nothing to go back to",
+       dlg.querySelector(".d-prev").disabled);
+
+    /* ---- the navigation, which is the whole reason this was rewritten ----
+       The controls move the PANEL and nothing else. A reader who scrolls down
+       to the exercise and back must find the story where they left it, which
+       is exactly what the old scroll-driven stage could not do. */
+    const before = win.pageYOffset;
+    click(win, dlg.querySelector(".d-next"));
+    await new Promise(r => setTimeout(r, 30));
+    ok("comic: Next moves the panel on",
+       /2 \/ \d+/.test(dlg.querySelector(".d-count").textContent),
+       dlg.querySelector(".d-count").textContent);
+    ok("comic: and moves the page not at all", win.pageYOffset === before);
+    ok("comic: the controls sit outside the frame",
+       !dlg.querySelector(".d-stage .d-nav") && !!dlg.querySelector(".d-scene > .d-nav"));
+    ok("comic: how far through is shown",
+       !!dlg.querySelector(".d-rail-fill").style.width);
+
+    win.dispatchEvent(new win.KeyboardEvent("keydown", { key:"ArrowLeft", bubbles:true }));
+    await new Promise(r => setTimeout(r, 30));
+    ok("comic: the left arrow goes back",
        /1 \/ \d+/.test(dlg.querySelector(".d-count").textContent),
        dlg.querySelector(".d-count").textContent);
 
@@ -568,14 +615,32 @@ async function main() {
       await new Promise(r => setTimeout(r, 20));
       const g = doc.getElementById(glInBubble.getAttribute("aria-controls"));
       ok("comic: a glossed word inside a bubble opens", g && !g.hidden);
+      /* Outside the balloon, or it is drawn inside a contour cut for speech —
+         and inside a shout balloon it would be clipped away by the spikes. */
+      ok("comic: and opens outside the balloon, not inside it",
+         g && !g.closest(".d-said"));
     } else {
       ok("comic: a glossed word inside a bubble opens", true, "no gloss on this line");
+      ok("comic: and opens outside the balloon, not inside it", true, "no gloss");
     }
 
-    /* And the page is never scroll-jacked. */
+    /* Full screen exists and takes the controls with it. A full-screen panel
+       whose Next button stayed behind on the page underneath is a trap. */
+    ok("comic: the frame can fill the screen", !!dlg.querySelector(".d-full"));
+    ok("comic: and the controls are inside what fills it",
+       !!dlg.querySelector(".d-scene .d-nav") && !!dlg.querySelector(".d-scene .d-full"));
+
+    /* And the page's own scrolling is left completely alone — which is now a
+       stronger claim than it was, because the panel does not read the scroll
+       position either. There is no relationship left to hijack. */
     const appSrc = APP;
     ok("comic: nothing intercepts wheel or touchmove",
        !/addEventListener\(\s*["'](wheel|touchmove)["']/.test(appSrc));
+    ok("comic: and nothing drives the panel from the scroll position",
+       !/addEventListener\(\s*["']scroll["']/.test(appSrc));
+    ok("comic: no sticky scroll track is left in the stylesheet",
+       !/\.d-(track|steps|step)\b/.test(CSS) && !/position:sticky/.test(
+         (CSS.match(/\.d-stage\{[^}]*\}/) || [""])[0]));
   }
 
   /* ---- the vocabulary intake: meet, recall, list -------------------------

@@ -628,65 +628,94 @@ footer.foot p{margin:0;max-width:74ch}
 
 /* ---- the dialogue as a comic --------------------------------------------
    Manga speech balloons: a hard black contour of even weight, a flat white
-   fill, a solid tail, and the name set outside the balloon rather than inside
-   it. Everything is flat — no gradient, no soft shadow, no blur — because the
-   balloons sit over flat-cel backgrounds drawn to the same rule, and one soft
-   edge in the frame makes the whole panel look like a mistake.
+   fill, a solid tail. Everything is flat — no gradient, no soft shadow, no
+   blur — because the balloons sit over flat-cel backgrounds drawn to the same
+   rule, and one soft edge in the frame makes the whole panel look like a
+   mistake.
 
-   The stage is STICKY inside a tall track. The track's height is what the page
-   scrolls through; the stage stays put and swaps its contents. Nothing here
-   listens to a wheel event. */
-/* Taller than it was, because a panel now holds an exchange rather than a
-   line: two balloons at the top and two figures along the bottom. */
-.d-scene{--stage-h:min(74vh,32rem)}
-.d-track{position:relative}
-/* The steps are spacers pulled back under the sticky stage, so the height the
-   reader scrolls through is theirs and the panel simply stays put inside it. */
-.d-steps{margin-top:calc(-1 * var(--stage-h))}
-/* Halved. A panel carries twice the words, so the reader should not also
-   have to scroll twice as far for it — 18 lines over 10.4 screen-heights
-   became 9 panels over 2.7. */
-.d-step{height:30vh}
-.d-stage{position:sticky;top:4rem;height:var(--stage-h);border-radius:var(--r);
+   The frame is a FIXED SHAPE with the controls under it, and it does not move
+   with the page. It used to be a sticky stage inside a tall scroll track; see
+   the note in app.js for why that had to go. Nothing here is positioned
+   against the scroll any more, which is also why there is no `sticky` and no
+   viewport-height track left in this file.
+
+   The shape changes with the screen and nothing else does: 3:2 on a desktop,
+   4:3 on a tablet, square on a phone. A comic panel is redrawn for the page it
+   is printed on and this is the same decision — a 3:2 letterbox on a portrait
+   phone leaves the figures two centimetres tall. */
+.d-scene{display:flex;flex-direction:column;gap:.55rem}
+/* The frame carries the shape; max-width rather than max-height is what keeps
+   it, because a max-height against an aspect-ratio just breaks the ratio. */
+.d-frame{position:relative;width:100%;aspect-ratio:3/2;
+  max-width:calc(72vh * 3 / 2);margin-inline:auto}
+.d-stage{position:absolute;inset:0;border-radius:var(--r);
   overflow:hidden;border:2px solid var(--ink);background:var(--sunk)}
+.d-stage:focus-visible{outline:3px solid var(--clay);outline-offset:2px}
 .d-bg{position:absolute;inset:0;background-size:cover;background-position:center;
   background-repeat:no-repeat;background-color:var(--sunk)}
-.d-cast{position:absolute;inset:0;pointer-events:none}
-/* The avatar is half-body, cut at the waist and flush with the bottom of its
-   file, so it is anchored to the floor of the panel and simply grows downward
-   out of frame on a short viewport. `object-position:top` keeps the FACE when
-   something has to be lost — losing a hand costs less than losing the
-   expression, which is the whole reason there are six of these. */
+.d-cast,.d-prop,.d-fx{position:absolute;inset:0;pointer-events:none}
+/* Depth order, and it is the depth order of a real panel. A prop that hangs is
+   on the wall BEHIND the people; a prop on the floor is in front of them,
+   nearer the camera; the effects sit over everything except the words. */
+.d-prop-back{z-index:1}
+.d-cast{z-index:2}
+.d-prop-front{z-index:4}
+.d-fx{z-index:5}
+.d-bubble{z-index:6}
+
 /* One sheet per character, offset to a panel. Width comes from `aspect-ratio`,
-   set in JS from the sheet's own geometry, so nothing here hard-codes six. */
-/* Height only, with the width coming from `aspect-ratio` in JS. A max-width
-   would fight the ratio and squash the box, and because the crop is expressed
-   in percentages of the box, a box of the wrong shape stretches the panel
-   rather than clipping it — the art would silently distort. */
-/* Shorter than it was: with both speakers on stage the balloons need the
-   upper third clear, and two smaller figures read better than two that
-   collide in the middle. */
-.d-av{position:absolute;bottom:0;height:62%;background-repeat:no-repeat}
-.d-av[data-side=left]{left:.25rem}
-/* Drawn facing one way only; the layout turns them around. */
-.d-av[data-side=right]{right:.25rem;transform:scaleX(-1)}
+   set in JS from the sheet's own geometry, so nothing here hard-codes six.
+   Height only, with the width coming from that ratio: a max-width would fight
+   it and squash the box, and because the crop is expressed in percentages of
+   the box, a box of the wrong shape stretches the panel rather than clipping
+   it — the art would silently distort.
+
+   Left, height, transform and opacity are all set in JS, because they depend
+   on how many people are on stage and which of them is talking. */
+.d-fig{position:absolute;bottom:0;background-repeat:no-repeat;
+  transition:opacity .18s ease}
+/* A prop is one cut-out, bottom-anchored on the floor or pinned near the top
+   if it hangs. Contained, not covered: a bucket must not be cropped. */
+.d-it{position:absolute;transform:translateX(-50%);aspect-ratio:1;
+  background-repeat:no-repeat;background-size:contain;background-position:bottom center}
+.d-it[data-missing] .d-it-ph{display:flex}
+/* An effect is a transparent overlay and never has a box of its own. */
+.d-fx-one{position:absolute;background-repeat:no-repeat;background-size:contain;
+  background-position:center}
+.d-fx-one[data-over=figure]{bottom:0;background-position:bottom center}
+.d-fx-one[data-over=panel]{inset:0;background-size:cover}
 
 /* ---- placeholders, until the art lands -----------------------------------
-   Both of these exist only while a file is missing and remove themselves the
-   moment it is not. They are deliberately unmistakable as scaffolding — dashed,
-   flat, unstyled — because a placeholder that looks like a design decision is
-   one nobody replaces. Each names the exact file that would fill it. */
+   Deliberately unmistakable as scaffolding — dashed, flat, unstyled — because a
+   placeholder that looks like a design decision is one nobody replaces. Each
+   names the exact file that would fill it.
+
+   The two are timed oppositely on purpose. A FIGURE's placeholder is drawn
+   first and removed when the image reports `load`, because a panel with a hole
+   where a person should be is unreadable for the instant before the sheet
+   arrives. A PROP's is hidden and shown only when the image reports `error`,
+   because props change from panel to panel and a placeholder that flashed on
+   every one of them would be worse than the thing it stands in for.
+
+   There is no placeholder for an effect at all: a dashed box labelled "dizzy"
+   over somebody's face is worse than no effect, and unlike a prop, nothing in
+   the writing points at one. check_cast.py is where you find out. */
 /* Square, like the panel it stands in for, so it shows the true footprint. */
-.d-ph{position:absolute;bottom:0;height:62%;aspect-ratio:1;
+/* Left, height and transform come from JS, exactly as the real figure's do —
+   the placeholder has to show the true footprint or it is not one. */
+.d-fig-ph{position:absolute;bottom:0;aspect-ratio:1;
   border:2px dashed var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;
   background:color-mix(in srgb,var(--sunk) 82%,transparent);
   display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
   gap:.15rem;padding:0 .4rem .7rem;text-align:center}
-.d-ph[data-side=left]{left:.25rem}
-.d-ph[data-side=right]{right:.25rem}
-.d-ph b{font-size:.82rem;color:var(--ink)}
-.d-ph span{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;
+.d-fig-ph b{font-size:.82rem;color:var(--ink)}
+.d-fig-ph span{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;
   text-transform:uppercase;color:var(--faint)}
+.d-it-ph{display:none;position:absolute;inset:0;align-items:flex-end;
+  justify-content:center;text-align:center;padding:.15rem;
+  border:2px dashed var(--rule);border-radius:var(--r);
+  background:color-mix(in srgb,var(--sunk) 82%,transparent);
+  font-family:var(--f-mono);font-size:.58rem;letter-spacing:.06em;color:var(--faint)}
 .d-bg[data-missing]{background-image:none!important;
   background:repeating-linear-gradient(45deg,var(--sunk) 0 10px,var(--rule-soft) 10px 20px)}
 .d-bg[data-missing]::after{content:attr(data-bg);position:absolute;
@@ -694,39 +723,148 @@ footer.foot p{margin:0;max-width:74ch}
   font-family:var(--f-mono);font-size:.62rem;letter-spacing:.1em;
   color:var(--muted);background:var(--surface);border:1px dashed var(--rule);
   border-radius:3px;padding:.15rem .5rem}
-/* The balloons of one beat, stacked in the order they are spoken. */
+
+/* ---- the balloons --------------------------------------------------------
+   THE NAME IS OFF THE BALLOON. It used to sit above the words in small caps,
+   and it was doing a job the picture should do — a comic that has to label who
+   is speaking has failed at the only thing the form is for. Three things
+   replace it, and they work together rather than one being the fallback for
+   another: the tail is aimed at the speaker (measured in JS, because it is the
+   distance between two boxes nothing in CSS can know), the speaker is the
+   figure at full strength while the others are held back, and the balloon
+   leans toward the side of the frame they are standing on.
+
+   None of that reaches a screen reader, so the whole beat is still announced
+   WITH the names, from the stage's accessible name. The name did not get
+   deleted; it moved to where it was actually needed.
+
+   `.d-bub` is a transparent wrapper and `.d-said` is the drawn balloon. That
+   split is load-bearing twice: the tail hangs off the wrapper so a clip-path
+   on the balloon cannot cut it off, and an opened gloss lands after the
+   balloon instead of inside a shape that was sized for two lines of speech. */
 .d-bubble{position:absolute;inset:.7rem .7rem auto .7rem;
-  display:flex;flex-direction:column;gap:.4rem}
-.d-bub{position:relative;max-width:70%;background:#fff;color:#111;
-  border:2px solid #111;border-radius:1.1rem;padding:.6rem .85rem;
+  display:flex;flex-direction:column;gap:.55rem;align-items:flex-start}
+/* The measure is the point of the cap. `78%` keeps a balloon off the far edge
+   of a wide frame; `34ch` is the line length that stops a reader's eye having
+   to travel — and on a picture, where the text is competing with a face, short
+   lines matter more than they do in a paragraph, not less. */
+.d-bub{position:relative;max-width:min(78%,34ch);color:#111;
   font-size:.98rem;line-height:1.5}
-.d-bub[data-side=left]{margin-right:auto}
-.d-bub[data-side=right]{margin-left:auto}
-.d-name{display:block;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;
-  color:#555;margin-bottom:.15rem}
-/* The tail, drawn as two stacked triangles so the outline reads as one
-   continuous contour with the balloon. */
+.d-said{background:#fff;border:2px solid #111;border-radius:1.15rem;
+  padding:.55rem .85rem}
+.d-txt{text-wrap:pretty}
+/* The tail, two stacked triangles so the outline reads as one continuous
+   contour with the balloon. `--tail-x` is written by JS from the speaker's
+   measured position; the fallback is a sane left-ish tail for the instant
+   before the first measurement lands. */
 .d-bub::before,.d-bub::after{content:"";position:absolute;top:100%;
+  left:var(--tail-x,1.7rem);transform:translateX(-50%);
   border:.55rem solid transparent;border-top-color:#111}
 .d-bub::after{border-top-color:#fff;margin-top:-3px}
-.d-bub[data-side=left]::before,.d-bub[data-side=left]::after{left:1.6rem}
-.d-bub[data-side=right]::before,.d-bub[data-side=right]::after{right:1.6rem}
-/* Narration is a caption box, not a balloon: square, no tail. */
-.d-nar-bub{max-width:100%;border-radius:3px;font-style:italic}
-.d-nar-bub::before,.d-nar-bub::after{display:none}
+
+/* Loud. A spiked contour, drawn as one clip-path on the ink layer and the same
+   clip-path inset by 3px on the white one — which is how you get a stroked
+   irregular shape in CSS without an SVG per balloon. The spikes stretch with
+   the box, and that is correct: a wide burst is a longer shout. */
+.d-bub[data-bub=shout]{--burst:polygon(50% 0%,61% 12%,77% 8%,80% 24%,95% 29%,90% 44%,99% 57%,86% 67%,88% 83%,72% 84%,64% 98%,50% 90%,36% 98%,28% 84%,12% 83%,14% 67%,1% 57%,10% 44%,5% 29%,20% 24%,23% 8%,39% 12%);
+  font-weight:650}
+.d-bub[data-bub=shout] .d-said{background:#111;border:0;border-radius:0;
+  padding:0;clip-path:var(--burst)}
+.d-bub[data-bub=shout] .d-txt{display:block;background:#fff;margin:3px;
+  padding:1.15rem 2rem;clip-path:var(--burst);text-align:center}
+/* A narrower, longer spike for a tail, to match the contour above it. */
+.d-bub[data-bub=shout]::before,.d-bub[data-bub=shout]::after{
+  border-width:.85rem .3rem 0}
+.d-bub[data-bub=shout]::after{margin-top:-4px}
+
+/* Not said. A blob, and the tail is two bubbles trailing back to the thinker —
+   which is the one balloon shape a reader decodes with no instruction at all.
+   Use it for what a character does not say out loud, and never for a line a
+   listening or speaking exercise is built on: a thought is not speech. */
+.d-bub[data-bub=think] .d-said{border-radius:52% 46% 50% 54%/48% 54% 46% 52%;
+  padding:.8rem 1.15rem}
+.d-bub[data-bub=think]::before,.d-bub[data-bub=think]::after{
+  border:2px solid #111;background:#fff;border-radius:50%}
+.d-bub[data-bub=think]::before{width:.62rem;height:.62rem;margin-top:.18rem}
+.d-bub[data-bub=think]::after{width:.36rem;height:.36rem;margin-top:1.05rem;
+  margin-left:-.5rem}
+
+/* Quiet, or not meant to carry. A broken contour, and a smaller tail. */
+.d-bub[data-bub=whisper] .d-said{border-style:dashed;font-size:.93em;color:#333}
+.d-bub[data-bub=whisper]::before,.d-bub[data-bub=whisper]::after{
+  border-width:.38rem}
+.d-bub[data-bub=whisper]::after{margin-top:-2px}
+
+/* Narration is a caption box, not a balloon: square, full width, no tail. */
+.d-bub[data-bub=narrate]{max-width:100%;align-self:stretch;font-style:italic}
+.d-bub[data-bub=narrate] .d-said{border-radius:3px}
+.d-bub[data-bub=narrate]::before,.d-bub[data-bub=narrate]::after{display:none}
+
 .d-bub .gl{border-bottom-color:#b4503c}
-.d-bub .gloss{background:#f4f2ec;color:#111;margin:.5rem 0 0}
-.d-nav{position:absolute;right:.6rem;bottom:.6rem;display:flex;gap:.35rem;
-  align-items:center;background:var(--surface);border:1px solid var(--rule);
-  border-radius:var(--r);padding:.2rem .35rem}
-.d-nav button{font:inherit;font-size:1rem;line-height:1;background:none;border:0;
-  color:var(--ink);cursor:pointer;padding:.2rem .45rem}
-.d-count{font-family:var(--f-mono);font-size:.68rem;color:var(--muted);
-  font-variant-numeric:tabular-nums}
+/* The gloss is a sibling of the balloon, so it is styled as its own card
+   rather than inheriting a shape that was cut for speech. */
+.d-bubble .gloss{background:#f4f2ec;color:#111;margin:0;max-width:min(90%,44ch);
+  border-left-color:#b4503c}
+
+/* ---- the controls, under the picture -------------------------------------
+   Out of the frame and centred. They used to float in the panel's bottom-right
+   corner over the art, which is where a scroll-driven stage had to put them:
+   they were a fallback for something the page was really driving. They are the
+   only way through the story now, so they get their own room, they are big
+   enough to hit with a thumb, and nothing they do covers a face. */
+.d-nav{display:flex;gap:.5rem;align-items:center;justify-content:center}
+.d-nav button{font:inherit;font-size:.92rem;line-height:1;cursor:pointer;
+  background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);
+  color:var(--ink);padding:.5rem .95rem;min-height:2.5rem}
+.d-nav button:hover:not(:disabled){border-color:var(--clay);color:var(--clay)}
+.d-nav button:disabled{opacity:.4;cursor:default}
+.d-count{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);
+  font-variant-numeric:tabular-nums;min-width:4.5rem;text-align:center}
+/* How far through, at a glance. A rail rather than a number, because the count
+   already is the number and two of the same thing is one too many. */
+.d-rail{height:3px;border-radius:3px;background:var(--rule-soft);overflow:hidden}
+.d-rail-fill{height:100%;width:0;background:var(--clay);transition:width .18s ease}
+/* The only control inside the frame, and it is in a corner over sky. */
+.d-full{position:absolute;top:.5rem;right:.5rem;z-index:7;
+  width:2rem;height:2rem;padding:0;cursor:pointer;
+  background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);
+  color:var(--ink);display:flex;align-items:center;justify-content:center}
+.d-full span{width:.85rem;height:.85rem;border:2px solid currentColor;
+  border-radius:2px;clip-path:polygon(0 0,42% 0,42% 42%,0 42%,0 0,0 100%,100% 100%,
+    100% 58%,58% 58%,58% 100%,0 100%)}
+.d-full[aria-pressed=true] span{clip-path:none;border-style:double;border-width:3px}
+
+/* ---- filling the screen --------------------------------------------------
+   Two paths to the same class, because iOS Safari on a phone has no Fullscreen
+   API and that is not a corner case here. The controls come WITH the frame:
+   a full-screen panel whose Next button stayed behind on the page underneath
+   is a trap. */
+.d-scene:fullscreen,.d-scene.is-full{background:var(--bg);padding:.7rem;gap:.7rem;
+  justify-content:center}
+.d-scene.is-full{position:fixed;inset:0;z-index:60}
+.d-scene:fullscreen .d-frame,.d-scene.is-full .d-frame{
+  aspect-ratio:auto;max-width:none;flex:1 1 auto;min-height:0}
+html.d-locked,html.d-locked body{overflow:hidden}
+
+@media (max-width:56rem){
+  .d-frame{aspect-ratio:4/3;max-width:calc(68vh * 4 / 3)}
+}
 @media (max-width:34rem){
-  .d-stage{height:min(58vh,20rem)}
-  .d-bub{max-width:86%;font-size:.92rem}
-  .d-av{height:64%}
+  /* Square on a phone. A 3:2 letterbox in a portrait column leaves the figures
+     about two centimetres tall, which is below the size an expression reads
+     at, and the expressions are the whole reason the art exists. */
+  .d-frame{aspect-ratio:1;max-width:calc(62vh)}
+  .d-bubble{inset:.5rem .5rem auto .5rem}
+  .d-bub{max-width:min(92%,28ch);font-size:.92rem}
+  .d-said{padding:.45rem .7rem}
+  .d-bub[data-bub=shout] .d-txt{padding:.95rem 1.5rem}
+  .d-nav button{flex:1 1 auto;padding:.6rem .5rem}
+  .d-count{min-width:3.6rem}
+}
+/* A figure that slides on and a rail that fills are motion, and somebody who
+   asked for less of it has asked. The comic still works; it just cuts. */
+@media (prefers-reduced-motion:reduce){
+  .d-fig,.d-rail-fill{transition:none}
 }
 .gl{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;
   border-bottom:2px solid var(--clay);line-height:inherit}

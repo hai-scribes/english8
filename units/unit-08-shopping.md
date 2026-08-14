@@ -24,28 +24,32 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="Four days until the fifteenth" gramen="usually — an adverb of frequency" gramvi="Trạng từ tần suất đứng **trước** động từ thường, nhưng **sau** động từ *to be*." gramco="I usually go · She is always late"
-**Thảo:** Your grandmother was counting coins at the kitchen table when I came in.
-**Tí:** She counts them every morning now. Rice went up, and the money from my parents arrives on the fifteenth.
-**Thảo:** That's four days away. What do you do until then?
-**Tí:** We buy less. She [[usually|gram:usually]] goes to the [[stall]] at the end of our lane, because the woman there lets her pay on Friday.
-**Thảo:** Does she ever go to the [[shopping centre]] on the ring road?
-**Tí:** Hardly ever. Everything there costs more, and they want [[cash]] or a card at a counter where nobody knows your face.
-**Thảo:** Đạt was at the centre yesterday. He bought two pairs of trainers and kept the [[receipt]] for both, so he can ask for a [[refund]] on the pair he likes less.
-**Tí:** Of course he did. He always has money on a Tuesday.
-**Thảo:** He isn't unkind about it, though.
-**Tí:** I know. That's the part I hate. Anyway, the market opens at five tomorrow and Bà Sáu wants me carrying the basket.
-**Thảo:** Then I'll come. The rice truck comes at six, and the fish sellers never put their good baskets out twice.
-**Tí:** Bring your own money — I'm counting hers to the last coin. And that's if the boats are running. The men were still cutting the last of the coral out of the channel on Thursday.
-**Thảo:** Eleven days with hand tools for one morning of coral.
-**Tí:** You can't say "Go well." to a reef. It didn't come out of anybody's hands, so nothing takes it back — we just cut it. Bà Sáu paid two days' rice towards the blades, which is why we are counting coins.
-**Thảo:** And Bống? Did Cô Yến get her way in the end?
-**Tí:** Cô Yến came to our kitchen on Sunday and asked Bà Sáu to hand her over. They sat there for an hour and neither of them gave way.
-**Thảo:** So where does she sleep now?
-**Tí:** At the table, in front of everybody, where anybody who walks in can see her. Bà Sáu says a child you hide behind the house is a child you are still planning to use.
-**Thảo:** Đạt has already been in to look at her. So has Hùng. They both know exactly where she is.
-**Tí:** Everybody does. The sea gives back what it took — you never choose what. I'm not doing that again.
-**Thảo:** Nobody asked you to, Tí.
+::: dialogue title="Four days until the fifteenth" bg="kitchen" gramen="usually — an adverb of frequency" gramvi="Trạng từ tần suất đứng **trước** động từ thường, nhưng **sau** động từ *to be*." gramco="I usually go · She is always late"
+@cast Tí|worried, Thảo|neutral
+@item money at=Tí
+**Thảo|neutral:** Your grandmother was counting coins at the kitchen table when I came in.
+**Tí|worried:** She counts them every morning now. Rice went up, and the money from my parents arrives on the fifteenth.
+**Thảo|worried:** That's four days away. What do you do until then?
+**Tí|neutral:** We buy less. She [[usually|gram:usually]] goes to the [[stall]] at the end of our lane, because the woman there lets her pay on Friday.
+**Thảo|neutral:** Does she ever go to the [[shopping centre]] on the ring road?
+**Tí|annoyed:** Hardly ever. Everything there costs more, and they want [[cash]] or a card at a counter where nobody knows your face.
+**Thảo|surprised:** Đạt was at the centre yesterday. He bought two pairs of trainers and kept the [[receipt]] for both, so he can ask for a [[refund]] on the pair he likes less.
+@fx anger on=Tí
+**Tí|annoyed:** Of course he did. He always has money on a Tuesday.
+**Thảo|neutral:** He isn't unkind about it, though.
+@fx flush on=Tí
+**Tí|sad:** I know. That's the part I hate. Anyway, the market opens at five tomorrow and Bà Sáu wants me carrying the basket.
+**Thảo|happy:** Then I'll come. The rice truck comes at six, and the fish sellers never put their good baskets out twice.
+**Tí|neutral:** Bring your own money — I'm counting hers to the last coin. And that's if the boats are running. The men were still cutting the last of the coral out of the channel on Thursday.
+**Thảo|sad:** Eleven days with hand tools for one morning of coral.
+**Tí|sad:** You can't say "Go well." to a reef. It didn't come out of anybody's hands, so nothing takes it back — we just cut it. Bà Sáu paid two days' rice towards the blades, which is why we are counting coins.
+**Thảo|worried:** And Bống? Did Cô Yến get her way in the end?
+**Tí|neutral:** Cô Yến came to our kitchen on Sunday and asked Bà Sáu to hand her over. They sat there for an hour and neither of them gave way.
+**Thảo|surprised:** So where does she sleep now?
+**Tí|neutral:** At the table, in front of everybody, where anybody who walks in can see her. Bà Sáu says a child you hide behind the house is a child you are still planning to use.
+**Thảo|worried:** Đạt has already been in to look at her. So has Hùng. They both know exactly where she is.
+**Tí|annoyed:** Everybody does. The sea gives back what it took — you never choose what. I'm not doing that again.
+**Thảo|neutral:** Nobody asked you to, Tí.
 :::
 
 ### 1.1 Comprehension

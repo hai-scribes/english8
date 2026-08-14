@@ -4,18 +4,21 @@ Every prompt the site's art needs, and nothing else. Written for **Gemini**
 (Nano Banana / Imagen). Each block is complete: paste it, generate, save.
 
 The Getting Started dialogue on every Lesson 1 page is a **comic** — a
-background plate, the speaker, one speech balloon, advancing as the reader
-scrolls. So there are exactly two kinds of image, and the page composites them:
+background plate, the people in the scene, the things in it, the overlay marks
+and the balloons, one panel at a time. So there are four kinds of image, and the
+page composites them in that depth order:
 
 | | What | Files |
 | --- | --- | --- |
 | **Part 1** | Thirty drawings — five characters × six expressions, one square picture each, chest up, on flat white | `art/cast/<slug>/<emotion>.png` |
 | | …composed by `tools/make_sheet.py` into the 3 × 2 sheet the page loads | `art/cast/<slug>.webp` |
 | **Part 2** | Eleven background plates — the story's places, drawn empty | `art/bg/<slug>.jpg` |
+| **Part 3** | Fourteen props — things in the scene a line can point at, cut out | `art/props/src/<slug>.png` → `art/props/<slug>.webp` |
+| **Part 4** | Twelve effects — the manga marks that go *over* a picture | `art/fx/src/<slug>.png` → `art/fx/<slug>.webp` |
 
 `data/cast.json` is the contract. It declares the slugs, the six emotions and
-their panel order, and `tools/build.py` fails the build on a dialogue naming
-anything outside it.
+their panel order, the four balloon shapes, every prop and every effect, and
+`tools/build.py` fails the build on a dialogue naming anything outside it.
 
 ```sh
 python3 tools/check_cast.py     # what is declared, and what is drawn
@@ -75,9 +78,15 @@ resembling a character from the film, it is wrong even when it is beautiful.
 > the way round with no gaps** and that nothing fades out past it. Plates are
 > never keyed, so nothing constrains them.
 
-**What unit 1 needs:** Part 1 §1 (Tí), Part 1 §2 (Thảo) and Part 2 §1
-(`harbour-wall`). Everything else is for the chapters after it, and the other
-eleven dialogues read as plain text until they are staged.
+**What unit 1 needs:** Part 1 §1 (Tí), Part 1 §2 (Thảo), Part 2 §1
+(`harbour-wall`), and from Part 4 `birds`, `gloom` and `flush`. Unit 1 places no
+props.
+
+**All twelve dialogues are now staged**, so nothing here is speculative any
+more: every prompt in this file is named by a chapter that ships, and a unit
+whose art has not landed shows dashed placeholders rather than plain text.
+`python3 tools/check_cast.py` prints exactly what is still missing and what
+happens on the page while it is.
 
 **Tí's six are already drawn and do not change.** His design carries no setting
 on it — a green shirt with a cream collar, charcoal shorts — so moving the story
@@ -4162,17 +4171,1154 @@ extra re-rolls; the rest appear once or twice each.
 
 ---
 
+# Part 3 — the props
+
+A prop is a **thing in the scene that a line can point at**: the bucket, the
+board game, the box that will not open. `@item bucket at=left` puts one on the
+floor of a panel and it stays there until the scene changes.
+
+Attach **the style reference only**, and take only its *objects* from it.
+
+These are cel-painted like the cast rather than watercoloured like the plates,
+and the reason is technical as much as visual: a prop is keyed to transparency
+by the same border flood the character sheets use, and a closed cel contour is
+the wall that flood needs. It also has to sit in front of a painterly plate
+without dissolving into it.
+
+**Every one of these is named by a dialogue that ships.** The list was written
+from `research/story/chapter-briefs.md`, chapter by chapter, and
+`tools/check_cast.py` will tell you if that ever stops being true — it reports
+any prop declared in `data/cast.json` that no dialogue asks for.
+
+**Scale is not your problem.** `data/cast.json` gives every prop a `size`, which
+is its height as a fraction of the panel, and the page uses that number. Draw
+the object filling its square; `make_overlay.py` trims the transparent margin
+away so the file's edges are the object's edges and the number comes out true.
+
+---
+
+## 1. A blue plastic bucket — prop
+
+**File:** `art/props/src/bucket.png`  ·  **Chapter 1 — where a fish was, for three days**
+
+> **If a style reference image is attached**, match the way its *objects* are
+> drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
+> nothing else from it, and do not copy or quote any character in it. If nothing
+> is attached, follow the written style exactly as described.
+>
+> **Art style.** Hand-drawn Studio Ghibli cel art in the manner of Hayao
+> Miyazaki's *Ponyo* (2008): a fine, even dark outline, flat colour inside it,
+> and one hard-edged shadow shape. Painted, not sketched. Not modern TV anime,
+> not manga screentone, not American cartoon, not 3D, not photorealistic, not
+> digital-airbrushed. **No coloured pencil and no watercolour paper texture** —
+> that is how the *backgrounds* are painted, and this object is going to sit in
+> front of one, beside a cel-painted child.
+>
+> **Line — this is the load-bearing one.** The outline must **close all the way
+> round with no gaps**, and the colour must stay inside it and not fade out past
+> it. `tools/make_overlay.py` cuts this object out by flooding the white inward
+> from the border, and the line is the wall that stops the flood: a gap in it
+> hollows the object out, and colour that fades past it comes away at the edge.
+>
+> **Colour.** Two or three flat colours at most, plus the shadow. Warm, clear
+> and slightly worn — every one of these things belongs to somebody who has had
+> it a while. Bright, never dusty: poverty in this story is drawn as *plain and
+> cared for*, never as drab or grubby.
+>
+> **Composition.** **One object, alone**, centred, filling most of the frame, on
+> **flat pure white**, in a **square** picture. Straight-on or a gentle
+> three-quarter view at eye level — whichever makes the thing recognisable at
+> about two centimetres tall, because that is the size it will be seen at. No
+> surface under it, no cast shadow on the ground, no table, no hand holding it,
+> no background of any kind, nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders, motion lines, sparkles or
+> glow. No transparency checkerboard — the background is plain flat white.
+>
+> **No people, no animals, no hands.**
+>
+> A blue plastic bucket, the ordinary kind sold in every hardware shop on this coast, filled almost to the brim with water. One small dark fish hangs in it, seen through the water from slightly above, so the rim is an ellipse and the fish is a soft shape under the surface. The plastic is scuffed pale where the bucket has been dragged. A wire handle, down against one side.
+
+---
+
+## 2. A hand-cut wooden board game — prop
+
+**File:** `art/props/src/board-game.png`  ·  **Chapters 1–2 — the thing the sea gave back first**
+
+> **If a style reference image is attached**, match the way its *objects* are
+> drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
+> nothing else from it, and do not copy or quote any character in it. If nothing
+> is attached, follow the written style exactly as described.
+>
+> **Art style.** Hand-drawn Studio Ghibli cel art in the manner of Hayao
+> Miyazaki's *Ponyo* (2008): a fine, even dark outline, flat colour inside it,
+> and one hard-edged shadow shape. Painted, not sketched. Not modern TV anime,
+> not manga screentone, not American cartoon, not 3D, not photorealistic, not
+> digital-airbrushed. **No coloured pencil and no watercolour paper texture** —
+> that is how the *backgrounds* are painted, and this object is going to sit in
+> front of one, beside a cel-painted child.
+>
+> **Line — this is the load-bearing one.** The outline must **close all the way
+> round with no gaps**, and the colour must stay inside it and not fade out past
+> it. `tools/make_overlay.py` cuts this object out by flooding the white inward
+> from the border, and the line is the wall that stops the flood: a gap in it
+> hollows the object out, and colour that fades past it comes away at the edge.
+>
+> **Colour.** Two or three flat colours at most, plus the shadow. Warm, clear
+> and slightly worn — every one of these things belongs to somebody who has had
+> it a while. Bright, never dusty: poverty in this story is drawn as *plain and
+> cared for*, never as drab or grubby.
+>
+> **Composition.** **One object, alone**, centred, filling most of the frame, on
+> **flat pure white**, in a **square** picture. Straight-on or a gentle
+> three-quarter view at eye level — whichever makes the thing recognisable at
+> about two centimetres tall, because that is the size it will be seen at. No
+> surface under it, no cast shadow on the ground, no table, no hand holding it,
+> no background of any kind, nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders, motion lines, sparkles or
+> glow. No transparency checkerboard — the background is plain flat white.
+>
+> **No people, no animals, no hands.**
+>
+> A home-made wooden board game, small enough to carry under one arm. The board is a plank of pale wood, hand-cut, its playing grid burned or scratched into the surface in uneven lines, the corners rounded by years of handling. Four counters cut from metal bottle tops sit on it, their crimped edges showing. A shallow wooden lid rests half on and half off, visibly the wrong size — it has never fitted and does not fit now. One corner of the board is darker where a hand always holds it.
+
+---
+
+## 3. A typed class list on a noticeboard — prop
+
+**File:** `art/props/src/class-list.png`  ·  **Chapter 3 — the list Tí has read four times**
+
+> **If a style reference image is attached**, match the way its *objects* are
+> drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
+> nothing else from it, and do not copy or quote any character in it. If nothing
+> is attached, follow the written style exactly as described.
+>
+> **Art style.** Hand-drawn Studio Ghibli cel art in the manner of Hayao
+> Miyazaki's *Ponyo* (2008): a fine, even dark outline, flat colour inside it,
+> and one hard-edged shadow shape. Painted, not sketched. Not modern TV anime,
+> not manga screentone, not American cartoon, not 3D, not photorealistic, not
+> digital-airbrushed. **No coloured pencil and no watercolour paper texture** —
+> that is how the *backgrounds* are painted, and this object is going to sit in
+> front of one, beside a cel-painted child.
+>
+> **Line — this is the load-bearing one.** The outline must **close all the way
+> round with no gaps**, and the colour must stay inside it and not fade out past
+> it. `tools/make_overlay.py` cuts this object out by flooding the white inward
+> from the border, and the line is the wall that stops the flood: a gap in it
+> hollows the object out, and colour that fades past it comes away at the edge.
+>
+> **Colour.** Two or three flat colours at most, plus the shadow. Warm, clear
+> and slightly worn — every one of these things belongs to somebody who has had
+> it a while. Bright, never dusty: poverty in this story is drawn as *plain and
+> cared for*, never as drab or grubby.
+>
+> **Composition.** **One object, alone**, centred, filling most of the frame, on
+> **flat pure white**, in a **square** picture. Straight-on or a gentle
+> three-quarter view at eye level — whichever makes the thing recognisable at
+> about two centimetres tall, because that is the size it will be seen at. No
+> surface under it, no cast shadow on the ground, no table, no hand holding it,
+> no background of any kind, nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders, motion lines, sparkles or
+> glow. No transparency checkerboard — the background is plain flat white.
+>
+> **No people, no animals, no hands.**
+>
+> A single sheet of typed paper pinned to a green painted noticeboard, seen straight on. A column of names runs down it with a number beside each, the type small and grey and unreadable at this size — suggest the rows, do not letter them. One drawing pin at the top; the bottom corner has curled forward in the damp. The board's paint is chipped at the edge.
+
+---
+
+## 4. A school exercise book — prop
+
+**File:** `art/props/src/notebook.png`  ·  **Chapter 4 — ten questions, none of them written**
+
+> **If a style reference image is attached**, match the way its *objects* are
+> drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
+> nothing else from it, and do not copy or quote any character in it. If nothing
+> is attached, follow the written style exactly as described.
+>
+> **Art style.** Hand-drawn Studio Ghibli cel art in the manner of Hayao
+> Miyazaki's *Ponyo* (2008): a fine, even dark outline, flat colour inside it,
+> and one hard-edged shadow shape. Painted, not sketched. Not modern TV anime,
+> not manga screentone, not American cartoon, not 3D, not photorealistic, not
+> digital-airbrushed. **No coloured pencil and no watercolour paper texture** —
+> that is how the *backgrounds* are painted, and this object is going to sit in
+> front of one, beside a cel-painted child.
+>
+> **Line — this is the load-bearing one.** The outline must **close all the way
+> round with no gaps**, and the colour must stay inside it and not fade out past
+> it. `tools/make_overlay.py` cuts this object out by flooding the white inward
+> from the border, and the line is the wall that stops the flood: a gap in it
+> hollows the object out, and colour that fades past it comes away at the edge.
+>
+> **Colour.** Two or three flat colours at most, plus the shadow. Warm, clear
+> and slightly worn — every one of these things belongs to somebody who has had
+> it a while. Bright, never dusty: poverty in this story is drawn as *plain and
+> cared for*, never as drab or grubby.
+>
+> **Composition.** **One object, alone**, centred, filling most of the frame, on
+> **flat pure white**, in a **square** picture. Straight-on or a gentle
+> three-quarter view at eye level — whichever makes the thing recognisable at
+> about two centimetres tall, because that is the size it will be seen at. No
+> surface under it, no cast shadow on the ground, no table, no hand holding it,
+> no background of any kind, nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders, motion lines, sparkles or
+> glow. No transparency checkerboard — the background is plain flat white.
+>
+> **No people, no animals, no hands.**
+>
+> A school exercise book lying open, its paper faintly ruled and almost empty — suggest one or two short lines of handwriting near the top and nothing after them. Soft card cover in a plain colour, curled at the corner, the staples showing along the spine. A yellow pencil lies across the open pages at an angle, sharpened short.
+
+---
+
+## 5. The keeper's notebook — prop
+
+**File:** `art/props/src/green-notebook.png`  ·  **Chapters 11–12 — the keeper's own**
+
+> **If a style reference image is attached**, match the way its *objects* are
+> drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
+> nothing else from it, and do not copy or quote any character in it. If nothing
+> is attached, follow the written style exactly as described.
+>
+> **Art style.** Hand-drawn Studio Ghibli cel art in the manner of Hayao
+> Miyazaki's *Ponyo* (2008): a fine, even dark outline, flat colour inside it,
+> and one hard-edged shadow shape. Painted, not sketched. Not modern TV anime,
+> not manga screentone, not American cartoon, not 3D, not photorealistic, not
+> digital-airbrushed. **No coloured pencil and no watercolour paper texture** —
+> that is how the *backgrounds* are painted, and this object is going to sit in
+> front of one, beside a cel-painted child.
+>
+> **Line — this is the load-bearing one.** The outline must **close all the way
+> round with no gaps**, and the colour must stay inside it and not fade out past
+> it. `tools/make_overlay.py` cuts this object out by flooding the white inward
+> from the border, and the line is the wall that stops the flood: a gap in it
+> hollows the object out, and colour that fades past it comes away at the edge.
+>
+> **Colour.** Two or three flat colours at most, plus the shadow. Warm, clear
+> and slightly worn — every one of these things belongs to somebody who has had
+> it a while. Bright, never dusty: poverty in this story is drawn as *plain and
+> cared for*, never as drab or grubby.
+>
+> **Composition.** **One object, alone**, centred, filling most of the frame, on
+> **flat pure white**, in a **square** picture. Straight-on or a gentle
+> three-quarter view at eye level — whichever makes the thing recognisable at
+> about two centimetres tall, because that is the size it will be seen at. No
+> surface under it, no cast shadow on the ground, no table, no hand holding it,
+> no background of any kind, nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders, motion lines, sparkles or
+> glow. No transparency checkerboard — the background is plain flat white.
+>
+> **No people, no animals, no hands.**
+>
+> A small thick notebook, closed, its cover green cloth gone pale and grey-white with dried salt in a tidemark across one corner. The block of pages is swollen and wavy from having been wet and dried, so the closed book will not sit flat; the page edges are foxed and uneven. A perished elastic band lies slack around it. Old, carried for years, and plainly somebody's working book rather than a keepsake.
+
+---
+
+## 6. A tray of bánh ít lá gai — prop
+
+**File:** `art/props/src/cakes.png`  ·  **Chapter 5 — forty before breakfast**
+
+> **If a style reference image is attached**, match the way its *objects* are
+> drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
+> nothing else from it, and do not copy or quote any character in it. If nothing
+> is attached, follow the written style exactly as described.
+>
+> **Art style.** Hand-drawn Studio Ghibli cel art in the manner of Hayao
+> Miyazaki's *Ponyo* (2008): a fine, even dark outline, flat colour inside it,
+> and one hard-edged shadow shape. Painted, not sketched. Not modern TV anime,
+> not manga screentone, not American cartoon, not 3D, not photorealistic, not
+> digital-airbrushed. **No coloured pencil and no watercolour paper texture** —
+> that is how the *backgrounds* are painted, and this object is going to sit in
+> front of one, beside a cel-painted child.
+>
+> **Line — this is the load-bearing one.** The outline must **close all the way
+> round with no gaps**, and the colour must stay inside it and not fade out past
+> it. `tools/make_overlay.py` cuts this object out by flooding the white inward
+> from the border, and the line is the wall that stops the flood: a gap in it
+> hollows the object out, and colour that fades past it comes away at the edge.
+>
+> **Colour.** Two or three flat colours at most, plus the shadow. Warm, clear
+> and slightly worn — every one of these things belongs to somebody who has had
+> it a while. Bright, never dusty: poverty in this story is drawn as *plain and
+> cared for*, never as drab or grubby.
+>
+> **Composition.** **One object, alone**, centred, filling most of the frame, on
+> **flat pure white**, in a **square** picture. Straight-on or a gentle
+> three-quarter view at eye level — whichever makes the thing recognisable at
+> about two centimetres tall, because that is the size it will be seen at. No
+> surface under it, no cast shadow on the ground, no table, no hand holding it,
+> no background of any kind, nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders, motion lines, sparkles or
+> glow. No transparency checkerboard — the background is plain flat white.
+>
+> **No people, no animals, no hands.**
+>
+> A shallow round tray holding a stack of bánh ít lá gai: small pyramid parcels, each wrapped tightly in a dark green banana leaf and tied, arranged in a low pile. The leaves are glossy where the light catches them and matt in the folds. One parcel at the front is a little loose, showing a corner of the leaf standing away from the rest. Plain unpainted tray, worn at the rim.
+
+---
+
+## 7. A paper festival lantern — prop
+
+**File:** `art/props/src/lantern.png`  ·  **Chapters 5–6 — the festival, and the lane in the evening**
+
+> **If a style reference image is attached**, match the way its *objects* are
+> drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
+> nothing else from it, and do not copy or quote any character in it. If nothing
+> is attached, follow the written style exactly as described.
+>
+> **Art style.** Hand-drawn Studio Ghibli cel art in the manner of Hayao
+> Miyazaki's *Ponyo* (2008): a fine, even dark outline, flat colour inside it,
+> and one hard-edged shadow shape. Painted, not sketched. Not modern TV anime,
+> not manga screentone, not American cartoon, not 3D, not photorealistic, not
+> digital-airbrushed. **No coloured pencil and no watercolour paper texture** —
+> that is how the *backgrounds* are painted, and this object is going to sit in
+> front of one, beside a cel-painted child.
+>
+> **Line — this is the load-bearing one.** The outline must **close all the way
+> round with no gaps**, and the colour must stay inside it and not fade out past
+> it. `tools/make_overlay.py` cuts this object out by flooding the white inward
+> from the border, and the line is the wall that stops the flood: a gap in it
+> hollows the object out, and colour that fades past it comes away at the edge.
+>
+> **Colour.** Two or three flat colours at most, plus the shadow. Warm, clear
+> and slightly worn — every one of these things belongs to somebody who has had
+> it a while. Bright, never dusty: poverty in this story is drawn as *plain and
+> cared for*, never as drab or grubby.
+>
+> **Composition.** **One object, alone**, centred, filling most of the frame, on
+> **flat pure white**, in a **square** picture. Straight-on or a gentle
+> three-quarter view at eye level — whichever makes the thing recognisable at
+> about two centimetres tall, because that is the size it will be seen at. No
+> surface under it, no cast shadow on the ground, no table, no hand holding it,
+> no background of any kind, nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders, motion lines, sparkles or
+> glow. No transparency checkerboard — the background is plain flat white.
+>
+> **No people, no animals, no hands.**
+>
+> A round paper festival lantern hanging from a short length of wire, lit from inside by a candle stub so the paper glows warm and even. Bamboo ribs show faintly through the paper as darker vertical lines. The paper is plain red-orange, dented on one side, a little sooty at the top vent. It hangs still, not swinging.
+
+---
+
+## 8. A clear sack of beach litter — prop
+
+**File:** `art/props/src/rubbish-bag.png`  ·  **Chapter 7 — the clean-up**
+
+> **If a style reference image is attached**, match the way its *objects* are
+> drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
+> nothing else from it, and do not copy or quote any character in it. If nothing
+> is attached, follow the written style exactly as described.
+>
+> **Art style.** Hand-drawn Studio Ghibli cel art in the manner of Hayao
+> Miyazaki's *Ponyo* (2008): a fine, even dark outline, flat colour inside it,
+> and one hard-edged shadow shape. Painted, not sketched. Not modern TV anime,
+> not manga screentone, not American cartoon, not 3D, not photorealistic, not
+> digital-airbrushed. **No coloured pencil and no watercolour paper texture** —
+> that is how the *backgrounds* are painted, and this object is going to sit in
+> front of one, beside a cel-painted child.
+>
+> **Line — this is the load-bearing one.** The outline must **close all the way
+> round with no gaps**, and the colour must stay inside it and not fade out past
+> it. `tools/make_overlay.py` cuts this object out by flooding the white inward
+> from the border, and the line is the wall that stops the flood: a gap in it
+> hollows the object out, and colour that fades past it comes away at the edge.
+>
+> **Colour.** Two or three flat colours at most, plus the shadow. Warm, clear
+> and slightly worn — every one of these things belongs to somebody who has had
+> it a while. Bright, never dusty: poverty in this story is drawn as *plain and
+> cared for*, never as drab or grubby.
+>
+> **Composition.** **One object, alone**, centred, filling most of the frame, on
+> **flat pure white**, in a **square** picture. Straight-on or a gentle
+> three-quarter view at eye level — whichever makes the thing recognisable at
+> about two centimetres tall, because that is the size it will be seen at. No
+> surface under it, no cast shadow on the ground, no table, no hand holding it,
+> no background of any kind, nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders, motion lines, sparkles or
+> glow. No transparency checkerboard — the background is plain flat white.
+>
+> **No people, no animals, no hands.**
+>
+> A large clear plastic sack, bulging and tied off at the neck with a twist, standing on its own weight. Through the plastic: crushed drinks bottles, a tangle of blue net, a flip-flop, a length of frayed rope, pale fragments of polystyrene. The plastic is milky rather than transparent, so the contents read as shapes and colours rather than as objects.
+
+---
+
+## 9. A folded fan of banknotes — prop
+
+**File:** `art/props/src/money.png`  ·  **Chapter 8 — counted to the last coin**
+
+> **If a style reference image is attached**, match the way its *objects* are
+> drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
+> nothing else from it, and do not copy or quote any character in it. If nothing
+> is attached, follow the written style exactly as described.
+>
+> **Art style.** Hand-drawn Studio Ghibli cel art in the manner of Hayao
+> Miyazaki's *Ponyo* (2008): a fine, even dark outline, flat colour inside it,
+> and one hard-edged shadow shape. Painted, not sketched. Not modern TV anime,
+> not manga screentone, not American cartoon, not 3D, not photorealistic, not
+> digital-airbrushed. **No coloured pencil and no watercolour paper texture** —
+> that is how the *backgrounds* are painted, and this object is going to sit in
+> front of one, beside a cel-painted child.
+>
+> **Line — this is the load-bearing one.** The outline must **close all the way
+> round with no gaps**, and the colour must stay inside it and not fade out past
+> it. `tools/make_overlay.py` cuts this object out by flooding the white inward
+> from the border, and the line is the wall that stops the flood: a gap in it
+> hollows the object out, and colour that fades past it comes away at the edge.
+>
+> **Colour.** Two or three flat colours at most, plus the shadow. Warm, clear
+> and slightly worn — every one of these things belongs to somebody who has had
+> it a while. Bright, never dusty: poverty in this story is drawn as *plain and
+> cared for*, never as drab or grubby.
+>
+> **Composition.** **One object, alone**, centred, filling most of the frame, on
+> **flat pure white**, in a **square** picture. Straight-on or a gentle
+> three-quarter view at eye level — whichever makes the thing recognisable at
+> about two centimetres tall, because that is the size it will be seen at. No
+> surface under it, no cast shadow on the ground, no table, no hand holding it,
+> no background of any kind, nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders, motion lines, sparkles or
+> glow. No transparency checkerboard — the background is plain flat white.
+>
+> **No people, no animals, no hands.**
+>
+> A small folded fan of Vietnamese banknotes held together, the paper soft and furred at the edges from handling, one note creased across the middle. The topmost note is visibly older than the rest — its colour duller, its printing finer, its size slightly different. Suggest the printed pattern as texture and colour only. A few coins lie beside the fold.
+
+---
+
+## 10. A battered transistor radio — prop
+
+**File:** `art/props/src/radio.png`  ·  **Chapter 9 — the forecast turns west**
+
+> **If a style reference image is attached**, match the way its *objects* are
+> drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
+> nothing else from it, and do not copy or quote any character in it. If nothing
+> is attached, follow the written style exactly as described.
+>
+> **Art style.** Hand-drawn Studio Ghibli cel art in the manner of Hayao
+> Miyazaki's *Ponyo* (2008): a fine, even dark outline, flat colour inside it,
+> and one hard-edged shadow shape. Painted, not sketched. Not modern TV anime,
+> not manga screentone, not American cartoon, not 3D, not photorealistic, not
+> digital-airbrushed. **No coloured pencil and no watercolour paper texture** —
+> that is how the *backgrounds* are painted, and this object is going to sit in
+> front of one, beside a cel-painted child.
+>
+> **Line — this is the load-bearing one.** The outline must **close all the way
+> round with no gaps**, and the colour must stay inside it and not fade out past
+> it. `tools/make_overlay.py` cuts this object out by flooding the white inward
+> from the border, and the line is the wall that stops the flood: a gap in it
+> hollows the object out, and colour that fades past it comes away at the edge.
+>
+> **Colour.** Two or three flat colours at most, plus the shadow. Warm, clear
+> and slightly worn — every one of these things belongs to somebody who has had
+> it a while. Bright, never dusty: poverty in this story is drawn as *plain and
+> cared for*, never as drab or grubby.
+>
+> **Composition.** **One object, alone**, centred, filling most of the frame, on
+> **flat pure white**, in a **square** picture. Straight-on or a gentle
+> three-quarter view at eye level — whichever makes the thing recognisable at
+> about two centimetres tall, because that is the size it will be seen at. No
+> surface under it, no cast shadow on the ground, no table, no hand holding it,
+> no background of any kind, nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders, motion lines, sparkles or
+> glow. No transparency checkerboard — the background is plain flat white.
+>
+> **No people, no animals, no hands.**
+>
+> A battered portable transistor radio, the boxy plastic kind, standing upright. A telescopic aerial is extended at an angle from one corner. The speaker grille is a field of small holes; the tuning dial's markings have worn away to a blank strip and the pointer sits somewhere near the middle. The casing is scuffed at every corner and one edge is cracked.
+
+---
+
+## 11. A cheap phone held up flat — prop
+
+**File:** `art/props/src/phone.png`  ·  **Chapters 7 and 10 — nothing is getting through**
+
+> **If a style reference image is attached**, match the way its *objects* are
+> drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
+> nothing else from it, and do not copy or quote any character in it. If nothing
+> is attached, follow the written style exactly as described.
+>
+> **Art style.** Hand-drawn Studio Ghibli cel art in the manner of Hayao
+> Miyazaki's *Ponyo* (2008): a fine, even dark outline, flat colour inside it,
+> and one hard-edged shadow shape. Painted, not sketched. Not modern TV anime,
+> not manga screentone, not American cartoon, not 3D, not photorealistic, not
+> digital-airbrushed. **No coloured pencil and no watercolour paper texture** —
+> that is how the *backgrounds* are painted, and this object is going to sit in
+> front of one, beside a cel-painted child.
+>
+> **Line — this is the load-bearing one.** The outline must **close all the way
+> round with no gaps**, and the colour must stay inside it and not fade out past
+> it. `tools/make_overlay.py` cuts this object out by flooding the white inward
+> from the border, and the line is the wall that stops the flood: a gap in it
+> hollows the object out, and colour that fades past it comes away at the edge.
+>
+> **Colour.** Two or three flat colours at most, plus the shadow. Warm, clear
+> and slightly worn — every one of these things belongs to somebody who has had
+> it a while. Bright, never dusty: poverty in this story is drawn as *plain and
+> cared for*, never as drab or grubby.
+>
+> **Composition.** **One object, alone**, centred, filling most of the frame, on
+> **flat pure white**, in a **square** picture. Straight-on or a gentle
+> three-quarter view at eye level — whichever makes the thing recognisable at
+> about two centimetres tall, because that is the size it will be seen at. No
+> surface under it, no cast shadow on the ground, no table, no hand holding it,
+> no background of any kind, nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders, motion lines, sparkles or
+> glow. No transparency checkerboard — the background is plain flat white.
+>
+> **No people, no animals, no hands.**
+>
+> A cheap slab-shaped mobile phone, plain and a few years old, held flat and face-up so the screen is fully visible. The screen is dark grey and empty apart from a signal indicator at the top corner showing no bars — draw that as a shape, not as letters or a number. Fine scratches across the glass; a chip out of one corner of the case.
+
+---
+
+## 12. A small metal box — prop
+
+**File:** `art/props/src/box.png`  ·  **Chapter 11 — the box that will not open**
+
+> **If a style reference image is attached**, match the way its *objects* are
+> drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
+> nothing else from it, and do not copy or quote any character in it. If nothing
+> is attached, follow the written style exactly as described.
+>
+> **Art style.** Hand-drawn Studio Ghibli cel art in the manner of Hayao
+> Miyazaki's *Ponyo* (2008): a fine, even dark outline, flat colour inside it,
+> and one hard-edged shadow shape. Painted, not sketched. Not modern TV anime,
+> not manga screentone, not American cartoon, not 3D, not photorealistic, not
+> digital-airbrushed. **No coloured pencil and no watercolour paper texture** —
+> that is how the *backgrounds* are painted, and this object is going to sit in
+> front of one, beside a cel-painted child.
+>
+> **Line — this is the load-bearing one.** The outline must **close all the way
+> round with no gaps**, and the colour must stay inside it and not fade out past
+> it. `tools/make_overlay.py` cuts this object out by flooding the white inward
+> from the border, and the line is the wall that stops the flood: a gap in it
+> hollows the object out, and colour that fades past it comes away at the edge.
+>
+> **Colour.** Two or three flat colours at most, plus the shadow. Warm, clear
+> and slightly worn — every one of these things belongs to somebody who has had
+> it a while. Bright, never dusty: poverty in this story is drawn as *plain and
+> cared for*, never as drab or grubby.
+>
+> **Composition.** **One object, alone**, centred, filling most of the frame, on
+> **flat pure white**, in a **square** picture. Straight-on or a gentle
+> three-quarter view at eye level — whichever makes the thing recognisable at
+> about two centimetres tall, because that is the size it will be seen at. No
+> surface under it, no cast shadow on the ground, no table, no hand holding it,
+> no background of any kind, nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders, motion lines, sparkles or
+> glow. No transparency checkerboard — the background is plain flat white.
+>
+> **No people, no animals, no hands.**
+>
+> A small metal box, about the size of two fists, closed. Steel gone dull grey-brown, rimed pale at the seams with dried salt. **No hinge and no catch is visible from this angle** — the lid meets the body in a single line all the way round and there is nothing to grip. The corners are dented. One face carries a small dark blank plate the size of a thumb, flush with the metal.
+
+---
+
+## 13. A printed school worksheet — prop
+
+**File:** `art/props/src/worksheet.png`  ·  **Chapter 12 — the last question on the sheet**
+
+> **If a style reference image is attached**, match the way its *objects* are
+> drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
+> nothing else from it, and do not copy or quote any character in it. If nothing
+> is attached, follow the written style exactly as described.
+>
+> **Art style.** Hand-drawn Studio Ghibli cel art in the manner of Hayao
+> Miyazaki's *Ponyo* (2008): a fine, even dark outline, flat colour inside it,
+> and one hard-edged shadow shape. Painted, not sketched. Not modern TV anime,
+> not manga screentone, not American cartoon, not 3D, not photorealistic, not
+> digital-airbrushed. **No coloured pencil and no watercolour paper texture** —
+> that is how the *backgrounds* are painted, and this object is going to sit in
+> front of one, beside a cel-painted child.
+>
+> **Line — this is the load-bearing one.** The outline must **close all the way
+> round with no gaps**, and the colour must stay inside it and not fade out past
+> it. `tools/make_overlay.py` cuts this object out by flooding the white inward
+> from the border, and the line is the wall that stops the flood: a gap in it
+> hollows the object out, and colour that fades past it comes away at the edge.
+>
+> **Colour.** Two or three flat colours at most, plus the shadow. Warm, clear
+> and slightly worn — every one of these things belongs to somebody who has had
+> it a while. Bright, never dusty: poverty in this story is drawn as *plain and
+> cared for*, never as drab or grubby.
+>
+> **Composition.** **One object, alone**, centred, filling most of the frame, on
+> **flat pure white**, in a **square** picture. Straight-on or a gentle
+> three-quarter view at eye level — whichever makes the thing recognisable at
+> about two centimetres tall, because that is the size it will be seen at. No
+> surface under it, no cast shadow on the ground, no table, no hand holding it,
+> no background of any kind, nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders, motion lines, sparkles or
+> glow. No transparency checkerboard — the background is plain flat white.
+>
+> **No people, no animals, no hands.**
+>
+> A single printed school worksheet, held straight on, slightly curled. Numbered questions run down it with a ruled answer space after each — suggest the printed lines as grey texture, do not letter them. The first few spaces carry a scribble of handwriting; the last one is completely empty. A soft crease runs across one corner where it was folded into a pocket.
+
+---
+
+## 14. A stub of white chalk — prop
+
+**File:** `art/props/src/chalk.png`  ·  **All twelve chapters — the marks on the harbour wall**
+
+> **If a style reference image is attached**, match the way its *objects* are
+> drawn — the fine dark line, the flat fill, the single hard-edged shadow. Take
+> nothing else from it, and do not copy or quote any character in it. If nothing
+> is attached, follow the written style exactly as described.
+>
+> **Art style.** Hand-drawn Studio Ghibli cel art in the manner of Hayao
+> Miyazaki's *Ponyo* (2008): a fine, even dark outline, flat colour inside it,
+> and one hard-edged shadow shape. Painted, not sketched. Not modern TV anime,
+> not manga screentone, not American cartoon, not 3D, not photorealistic, not
+> digital-airbrushed. **No coloured pencil and no watercolour paper texture** —
+> that is how the *backgrounds* are painted, and this object is going to sit in
+> front of one, beside a cel-painted child.
+>
+> **Line — this is the load-bearing one.** The outline must **close all the way
+> round with no gaps**, and the colour must stay inside it and not fade out past
+> it. `tools/make_overlay.py` cuts this object out by flooding the white inward
+> from the border, and the line is the wall that stops the flood: a gap in it
+> hollows the object out, and colour that fades past it comes away at the edge.
+>
+> **Colour.** Two or three flat colours at most, plus the shadow. Warm, clear
+> and slightly worn — every one of these things belongs to somebody who has had
+> it a while. Bright, never dusty: poverty in this story is drawn as *plain and
+> cared for*, never as drab or grubby.
+>
+> **Composition.** **One object, alone**, centred, filling most of the frame, on
+> **flat pure white**, in a **square** picture. Straight-on or a gentle
+> three-quarter view at eye level — whichever makes the thing recognisable at
+> about two centimetres tall, because that is the size it will be seen at. No
+> surface under it, no cast shadow on the ground, no table, no hand holding it,
+> no background of any kind, nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders, motion lines, sparkles or
+> glow. No transparency checkerboard — the background is plain flat white.
+>
+> **No people, no animals, no hands.**
+>
+> A single stub of white chalk, short, worn to a blunt wedge at one end from being dragged along concrete, the other end snapped square. Chalk dust powders the worn end. Held at a slight angle to the frame so its length reads. It is small — draw it large enough to fill the square, but keep the proportions of something two joints of a finger long.
+
+---
+
+# Part 4 — the effects
+
+An effect is the **manga sign language** a comic puts over a picture: a shock
+burst, a sweat drop, circling birds, rain. `@fx dizzy on=Ti` marks a person and
+`@fx rain on=panel` marks the scene, and either lasts exactly one panel.
+
+**Attach nothing.** These are not Ghibli drawings and a *Ponyo* still drags them
+toward being one. They are ink marks, and they are drawn flat.
+
+Two of them — `flush` and `sweat` — exist to do a job the six drawn faces
+cannot. Embarrassment is not one of the six expressions and adding it would have
+cost five more character drawings; a pink hatch over the cheeks costs one.
+
+**Restraint is the discipline.** The build refuses two effects on the same
+person in one panel, and refuses a second panel-wide one, because a frame
+carrying a shock burst *and* circling birds *and* motion lines is not three
+times as expressive — it is unreadable.
+
+**A missing effect draws nothing at all.** Every other asset here leaves a
+dashed placeholder naming the file; an effect does not, because a labelled box
+sitting over somebody's face is worse than no effect, and unlike a prop, nothing
+in the writing points at one. `tools/check_cast.py` is the only place an undrawn
+effect shows up.
+
+---
+
+## 1. `impact` — over one character
+
+**File:** `art/fx/src/impact.png`  ·  A hard white starburst behind the figure — shock, or a blow landing
+
+> **Do not attach a style reference.** These are not Ghibli drawings and a
+> *Ponyo* still pulls them toward being one. They are the flat graphic marks a
+> comic puts *over* a picture, and they are drawn in ink, not painted.
+>
+> **Art style.** A manga effect mark: solid black ink and flat colour, drawn
+> with a confident brush line of varying weight. Bold, simple and readable at a
+> glance. No shading, no gradient, no glow, no blur, no 3D, no photorealism, no
+> screentone dots, no cross-hatching, no sketchy pencil.
+>
+> **Colour.** Black ink, and white where the mark needs a fill. Colour only
+> where this block asks for it by name, and then one flat colour and no more.
+>
+> **Composition.** A **square** picture on **flat pure white**, with nothing in
+> it but the mark itself.
+>
+> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
+> child standing in the **lower three-quarters** of the square, facing you, seen
+> from the waist up, with the top of their head about a quarter of the way down
+> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> where it would fall on or around that figure, and leave every other part of
+> the square plain white. The page composites this square directly over the
+> character at exactly that scale, so the mark's position inside the frame *is*
+> the information — a mark drawn in the middle of an empty square lands on the
+> character's chest wherever it was meant to go.
+>
+> A hard white starburst — a ragged many-pointed flash — bursting out from behind where the figure's head and shoulders are, its points radiating outward past them to the edges of the frame. Thick black ink outline, white fill, the points uneven in length and sharp. Nothing in the middle of the burst: the character shows through there.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or a transparency
+> checkerboard. **No characters and no scenery of any kind** — this is an
+> overlay and the picture underneath it already exists.
+>
+---
+
+## 2. `sparkle` — over one character
+
+**File:** `art/fx/src/sparkle.png`  ·  Soft rising glints — the sea working, or something arriving
+
+> **Do not attach a style reference.** These are not Ghibli drawings and a
+> *Ponyo* still pulls them toward being one. They are the flat graphic marks a
+> comic puts *over* a picture, and they are drawn in ink, not painted.
+>
+> **Art style.** A manga effect mark: solid black ink and flat colour, drawn
+> with a confident brush line of varying weight. Bold, simple and readable at a
+> glance. No shading, no gradient, no glow, no blur, no 3D, no photorealism, no
+> screentone dots, no cross-hatching, no sketchy pencil.
+>
+> **Colour.** Black ink, and white where the mark needs a fill. Colour only
+> where this block asks for it by name, and then one flat colour and no more.
+>
+> **Composition.** A **square** picture on **flat pure white**, with nothing in
+> it but the mark itself.
+>
+> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
+> child standing in the **lower three-quarters** of the square, facing you, seen
+> from the waist up, with the top of their head about a quarter of the way down
+> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> where it would fall on or around that figure, and leave every other part of
+> the square plain white. The page composites this square directly over the
+> character at exactly that scale, so the mark's position inside the frame *is*
+> the information — a mark drawn in the middle of an empty square lands on the
+> character's chest wherever it was meant to go.
+>
+> Small four-pointed glints rising around the figure — a dozen of them, different sizes, scattered up both sides and over the head, sparser toward the top. Drawn as fine sharp stars with long thin points, in white with a thin dark outline, plus a few tiny solid ones. Light and airy, not a cloud; the figure must be visible between them. One flat colour is allowed here and it is a pale sea-green.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or a transparency
+> checkerboard. **No characters and no scenery of any kind** — this is an
+> overlay and the picture underneath it already exists.
+>
+---
+
+## 3. `dizzy` — over one character
+
+**File:** `art/fx/src/dizzy.png`  ·  Small stars and birds circling above the head, stunned
+
+> **Do not attach a style reference.** These are not Ghibli drawings and a
+> *Ponyo* still pulls them toward being one. They are the flat graphic marks a
+> comic puts *over* a picture, and they are drawn in ink, not painted.
+>
+> **Art style.** A manga effect mark: solid black ink and flat colour, drawn
+> with a confident brush line of varying weight. Bold, simple and readable at a
+> glance. No shading, no gradient, no glow, no blur, no 3D, no photorealism, no
+> screentone dots, no cross-hatching, no sketchy pencil.
+>
+> **Colour.** Black ink, and white where the mark needs a fill. Colour only
+> where this block asks for it by name, and then one flat colour and no more.
+>
+> **Composition.** A **square** picture on **flat pure white**, with nothing in
+> it but the mark itself.
+>
+> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
+> child standing in the **lower three-quarters** of the square, facing you, seen
+> from the waist up, with the top of their head about a quarter of the way down
+> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> where it would fall on or around that figure, and leave every other part of
+> the square plain white. The page composites this square directly over the
+> character at exactly that scale, so the mark's position inside the frame *is*
+> the information — a mark drawn in the middle of an empty square lands on the
+> character's chest wherever it was meant to go.
+>
+> Three or four small birds and a scatter of little stars circling in a flat ring **above the head** of where the figure stands, at the top of the frame. The birds are the simplest possible ink shapes — a shallow double curve each, like a distant gull — and the stars are small five-pointed outlines. The ring reads as going round: the far side of it is drawn smaller. Black ink only. Below the ring the frame is empty.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or a transparency
+> checkerboard. **No characters and no scenery of any kind** — this is an
+> overlay and the picture underneath it already exists.
+>
+---
+
+## 4. `sweat` — over one character
+
+**File:** `art/fx/src/sweat.png`  ·  One large drop at the temple — caught out, or working hard at a lie
+
+> **Do not attach a style reference.** These are not Ghibli drawings and a
+> *Ponyo* still pulls them toward being one. They are the flat graphic marks a
+> comic puts *over* a picture, and they are drawn in ink, not painted.
+>
+> **Art style.** A manga effect mark: solid black ink and flat colour, drawn
+> with a confident brush line of varying weight. Bold, simple and readable at a
+> glance. No shading, no gradient, no glow, no blur, no 3D, no photorealism, no
+> screentone dots, no cross-hatching, no sketchy pencil.
+>
+> **Colour.** Black ink, and white where the mark needs a fill. Colour only
+> where this block asks for it by name, and then one flat colour and no more.
+>
+> **Composition.** A **square** picture on **flat pure white**, with nothing in
+> it but the mark itself.
+>
+> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
+> child standing in the **lower three-quarters** of the square, facing you, seen
+> from the waist up, with the top of their head about a quarter of the way down
+> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> where it would fall on or around that figure, and leave every other part of
+> the square plain white. The page composites this square directly over the
+> character at exactly that scale, so the mark's position inside the frame *is*
+> the information — a mark drawn in the middle of an empty square lands on the
+> character's chest wherever it was meant to go.
+>
+> One large drop hanging **at the side of the head**, near the temple, at the upper right of where the figure stands. Classic manga shape — a fat rounded teardrop with the point up and the bulge down, drawn as a thick black outline with a white fill and one small white highlight. Big enough to be comic. Nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or a transparency
+> checkerboard. **No characters and no scenery of any kind** — this is an
+> overlay and the picture underneath it already exists.
+>
+---
+
+## 5. `flush` — over one character
+
+**File:** `art/fx/src/flush.png`  ·  Pink strokes across the cheeks and ears — embarrassed
+
+> **Do not attach a style reference.** These are not Ghibli drawings and a
+> *Ponyo* still pulls them toward being one. They are the flat graphic marks a
+> comic puts *over* a picture, and they are drawn in ink, not painted.
+>
+> **Art style.** A manga effect mark: solid black ink and flat colour, drawn
+> with a confident brush line of varying weight. Bold, simple and readable at a
+> glance. No shading, no gradient, no glow, no blur, no 3D, no photorealism, no
+> screentone dots, no cross-hatching, no sketchy pencil.
+>
+> **Colour.** Black ink, and white where the mark needs a fill. Colour only
+> where this block asks for it by name, and then one flat colour and no more.
+>
+> **Composition.** A **square** picture on **flat pure white**, with nothing in
+> it but the mark itself.
+>
+> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
+> child standing in the **lower three-quarters** of the square, facing you, seen
+> from the waist up, with the top of their head about a quarter of the way down
+> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> where it would fall on or around that figure, and leave every other part of
+> the square plain white. The page composites this square directly over the
+> character at exactly that scale, so the mark's position inside the frame *is*
+> the information — a mark drawn in the middle of an empty square lands on the
+> character's chest wherever it was meant to go.
+>
+> Three or four short parallel diagonal strokes on each side of the frame, **at the height of the cheeks**, where a face would be — a matched pair of small hatch marks left and right, with the gap between them empty for the nose and eyes. Drawn in a flat warm pink, softly tapered at both ends, no outline. Nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or a transparency
+> checkerboard. **No characters and no scenery of any kind** — this is an
+> overlay and the picture underneath it already exists.
+>
+---
+
+## 6. `anger` — over one character
+
+**File:** `art/fx/src/anger.png`  ·  The cross-shaped popping vein at the temple — lost patience
+
+> **Do not attach a style reference.** These are not Ghibli drawings and a
+> *Ponyo* still pulls them toward being one. They are the flat graphic marks a
+> comic puts *over* a picture, and they are drawn in ink, not painted.
+>
+> **Art style.** A manga effect mark: solid black ink and flat colour, drawn
+> with a confident brush line of varying weight. Bold, simple and readable at a
+> glance. No shading, no gradient, no glow, no blur, no 3D, no photorealism, no
+> screentone dots, no cross-hatching, no sketchy pencil.
+>
+> **Colour.** Black ink, and white where the mark needs a fill. Colour only
+> where this block asks for it by name, and then one flat colour and no more.
+>
+> **Composition.** A **square** picture on **flat pure white**, with nothing in
+> it but the mark itself.
+>
+> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
+> child standing in the **lower three-quarters** of the square, facing you, seen
+> from the waist up, with the top of their head about a quarter of the way down
+> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> where it would fall on or around that figure, and leave every other part of
+> the square plain white. The page composites this square directly over the
+> character at exactly that scale, so the mark's position inside the frame *is*
+> the information — a mark drawn in the middle of an empty square lands on the
+> character's chest wherever it was meant to go.
+>
+> The cross-shaped popping-vein mark — two short crossed lines with a small loop at each of the four ends, the standard manga sign — sitting **at the upper left, beside the temple** of where the figure's head would be. Bold solid black ink, slightly irregular, about a fifth of the frame's width. Nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or a transparency
+> checkerboard. **No characters and no scenery of any kind** — this is an
+> overlay and the picture underneath it already exists.
+>
+---
+
+## 7. `question` — over one character
+
+**File:** `art/fx/src/question.png`  ·  One floating question mark — did not follow that
+
+> **Do not attach a style reference.** These are not Ghibli drawings and a
+> *Ponyo* still pulls them toward being one. They are the flat graphic marks a
+> comic puts *over* a picture, and they are drawn in ink, not painted.
+>
+> **Art style.** A manga effect mark: solid black ink and flat colour, drawn
+> with a confident brush line of varying weight. Bold, simple and readable at a
+> glance. No shading, no gradient, no glow, no blur, no 3D, no photorealism, no
+> screentone dots, no cross-hatching, no sketchy pencil.
+>
+> **Colour.** Black ink, and white where the mark needs a fill. Colour only
+> where this block asks for it by name, and then one flat colour and no more.
+>
+> **Composition.** A **square** picture on **flat pure white**, with nothing in
+> it but the mark itself.
+>
+> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
+> child standing in the **lower three-quarters** of the square, facing you, seen
+> from the waist up, with the top of their head about a quarter of the way down
+> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> where it would fall on or around that figure, and leave every other part of
+> the square plain white. The page composites this square directly over the
+> character at exactly that scale, so the mark's position inside the frame *is*
+> the information — a mark drawn in the middle of an empty square lands on the
+> character's chest wherever it was meant to go.
+>
+> One question mark floating **above and to the right of the head**, near the top of the frame, tilted a few degrees off vertical. Drawn as a fat cartoon glyph with a thick black outline and a white fill, not as a typeface — this is a *drawn symbol*, the only mark in this file that is allowed to be shaped like a character. Nothing else in the frame.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or a transparency
+> checkerboard. **No characters and no scenery of any kind** — this is an
+> overlay and the picture underneath it already exists.
+>
+---
+
+## 8. `gloom` — over one character
+
+**File:** `art/fx/src/gloom.png`  ·  Vertical shadow bars down the figure from above — dread
+
+> **Do not attach a style reference.** These are not Ghibli drawings and a
+> *Ponyo* still pulls them toward being one. They are the flat graphic marks a
+> comic puts *over* a picture, and they are drawn in ink, not painted.
+>
+> **Art style.** A manga effect mark: solid black ink and flat colour, drawn
+> with a confident brush line of varying weight. Bold, simple and readable at a
+> glance. No shading, no gradient, no glow, no blur, no 3D, no photorealism, no
+> screentone dots, no cross-hatching, no sketchy pencil.
+>
+> **Colour.** Black ink, and white where the mark needs a fill. Colour only
+> where this block asks for it by name, and then one flat colour and no more.
+>
+> **Composition.** A **square** picture on **flat pure white**, with nothing in
+> it but the mark itself.
+>
+> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
+> child standing in the **lower three-quarters** of the square, facing you, seen
+> from the waist up, with the top of their head about a quarter of the way down
+> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> where it would fall on or around that figure, and leave every other part of
+> the square plain white. The page composites this square directly over the
+> character at exactly that scale, so the mark's position inside the frame *is*
+> the information — a mark drawn in the middle of an empty square lands on the
+> character's chest wherever it was meant to go.
+>
+> Vertical shadow bars hanging **down from the top edge** over the upper half of the frame — eight to twelve straight lines of uneven width, closely spaced, their lower ends ragged and unequal, like a curtain of dark coming down over somebody. Flat dark blue-grey at about two-thirds opacity where they cover, thinning out as they descend. The lower third of the frame is clear.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or a transparency
+> checkerboard. **No characters and no scenery of any kind** — this is an
+> overlay and the picture underneath it already exists.
+>
+---
+
+## 9. `speed` — over one character
+
+**File:** `art/fx/src/speed.png`  ·  Straight motion lines behind the figure — moving, or moving off
+
+> **Do not attach a style reference.** These are not Ghibli drawings and a
+> *Ponyo* still pulls them toward being one. They are the flat graphic marks a
+> comic puts *over* a picture, and they are drawn in ink, not painted.
+>
+> **Art style.** A manga effect mark: solid black ink and flat colour, drawn
+> with a confident brush line of varying weight. Bold, simple and readable at a
+> glance. No shading, no gradient, no glow, no blur, no 3D, no photorealism, no
+> screentone dots, no cross-hatching, no sketchy pencil.
+>
+> **Colour.** Black ink, and white where the mark needs a fill. Colour only
+> where this block asks for it by name, and then one flat colour and no more.
+>
+> **Composition.** A **square** picture on **flat pure white**, with nothing in
+> it but the mark itself.
+>
+> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
+> child standing in the **lower three-quarters** of the square, facing you, seen
+> from the waist up, with the top of their head about a quarter of the way down
+> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> where it would fall on or around that figure, and leave every other part of
+> the square plain white. The page composites this square directly over the
+> character at exactly that scale, so the mark's position inside the frame *is*
+> the information — a mark drawn in the middle of an empty square lands on the
+> character's chest wherever it was meant to go.
+>
+> Straight horizontal motion lines sweeping in **from the left edge**, behind where the figure stands — twelve or so fine black lines of varying length and weight, densest at the edge and petering out toward the middle of the frame, all strictly parallel. The right half of the frame is empty. Sharp, ruled, ink only.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or a transparency
+> checkerboard. **No characters and no scenery of any kind** — this is an
+> overlay and the picture underneath it already exists.
+>
+---
+
+## 10. `birds` — over the whole frame
+
+**File:** `art/fx/src/birds.png`  ·  Three or four small seabirds crossing the frame
+
+> **Do not attach a style reference.** These are not Ghibli drawings and a
+> *Ponyo* still pulls them toward being one. They are the flat graphic marks a
+> comic puts *over* a picture, and they are drawn in ink, not painted.
+>
+> **Art style.** A manga effect mark: solid black ink and flat colour, drawn
+> with a confident brush line of varying weight. Bold, simple and readable at a
+> glance. No shading, no gradient, no glow, no blur, no 3D, no photorealism, no
+> screentone dots, no cross-hatching, no sketchy pencil.
+>
+> **Colour.** Black ink, and white where the mark needs a fill. Colour only
+> where this block asks for it by name, and then one flat colour and no more.
+>
+> **Composition.** A **square** picture on **flat pure white**, with nothing in
+> it but the mark itself.
+>
+> **Where the mark goes.** It covers the whole frame. Spread it across the
+> square and keep the important parts **away from the extreme edges**: the page
+> scales this to cover panels that are 3:2 on a desktop and square on a phone,
+> so up to a third of one dimension can be cropped away. Anything that only
+> works if the corner survives will not survive.
+>
+> Four or five small seabirds crossing the frame at different heights and distances, drawn as the simplest ink shapes — a shallow double curve each, the nearer ones larger and with a suggestion of a body, the furthest almost a single stroke. Loosely grouped and travelling the same way, well inside the frame. Black ink only. The rest of the square is empty white.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or a transparency
+> checkerboard. **No characters and no scenery of any kind** — this is an
+> overlay and the picture underneath it already exists.
+>
+---
+
+## 11. `splash` — over the whole frame
+
+**File:** `art/fx/src/splash.png`  ·  A white water burst up the near edge of the frame
+
+> **Do not attach a style reference.** These are not Ghibli drawings and a
+> *Ponyo* still pulls them toward being one. They are the flat graphic marks a
+> comic puts *over* a picture, and they are drawn in ink, not painted.
+>
+> **Art style.** A manga effect mark: solid black ink and flat colour, drawn
+> with a confident brush line of varying weight. Bold, simple and readable at a
+> glance. No shading, no gradient, no glow, no blur, no 3D, no photorealism, no
+> screentone dots, no cross-hatching, no sketchy pencil.
+>
+> **Colour.** Black ink, and white where the mark needs a fill. Colour only
+> where this block asks for it by name, and then one flat colour and no more.
+>
+> **Composition.** A **square** picture on **flat pure white**, with nothing in
+> it but the mark itself.
+>
+> **Where the mark goes.** It covers the whole frame. Spread it across the
+> square and keep the important parts **away from the extreme edges**: the page
+> scales this to cover panels that are 3:2 on a desktop and square on a phone,
+> so up to a third of one dimension can be cropped away. Anything that only
+> works if the corner survives will not survive.
+>
+> A burst of white water thrown up across the **lower and near edge** of the frame — one big irregular sheet of spray with a ragged, feathered top edge, breaking into separate flying droplets as it rises. Drawn as flat white with a fine dark blue-grey outline and a few darker shapes inside for the heavier water. It reaches about halfway up the frame at its highest. The upper half is empty white.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or a transparency
+> checkerboard. **No characters and no scenery of any kind** — this is an
+> overlay and the picture underneath it already exists.
+>
+---
+
+## 12. `rain` — over the whole frame
+
+**File:** `art/fx/src/rain.png`  ·  Slanting rain across the whole frame, grey, no colour
+
+> **Do not attach a style reference.** These are not Ghibli drawings and a
+> *Ponyo* still pulls them toward being one. They are the flat graphic marks a
+> comic puts *over* a picture, and they are drawn in ink, not painted.
+>
+> **Art style.** A manga effect mark: solid black ink and flat colour, drawn
+> with a confident brush line of varying weight. Bold, simple and readable at a
+> glance. No shading, no gradient, no glow, no blur, no 3D, no photorealism, no
+> screentone dots, no cross-hatching, no sketchy pencil.
+>
+> **Colour.** Black ink, and white where the mark needs a fill. Colour only
+> where this block asks for it by name, and then one flat colour and no more.
+>
+> **Composition.** A **square** picture on **flat pure white**, with nothing in
+> it but the mark itself.
+>
+> **Where the mark goes.** It covers the whole frame. Spread it across the
+> square and keep the important parts **away from the extreme edges**: the page
+> scales this to cover panels that are 3:2 on a desktop and square on a phone,
+> so up to a third of one dimension can be cropped away. Anything that only
+> works if the corner survives will not survive.
+>
+> Rain falling hard across the whole frame — long fine parallel streaks at a consistent steep slant, maybe seventy degrees, of varying length and weight, thickly enough to read as heavy rain but thinly enough to see through. Grey, with no colour in it at all. Even coverage corner to corner, with no clear patch anywhere. Nothing else.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or a transparency
+> checkerboard. **No characters and no scenery of any kind** — this is an
+> overlay and the picture underneath it already exists.
+>
+---
+
 # After you generate
 
-Save each drawing as `art/cast/<slug>/<emotion>.png` — a folder per character,
-the emotion as the filename — then compose:
+Save each drawing where its own block says, then compose:
 
 ```sh
-python3 tools/make_sheet.py ti        # one character
-python3 tools/make_sheet.py --all     # everybody who has a full set
-python3 tools/check_cast.py           # what is declared, and what is drawn
-python3 tools/build.py                # then reload Unit 1 Lesson 1
+python3 tools/make_sheet.py ti          # one character's six -> one sheet
+python3 tools/make_sheet.py --all       # everybody who has a full set
+python3 tools/make_overlay.py bucket    # one prop or effect -> one cut-out
+python3 tools/make_overlay.py --all     # every prop and effect that has a master
+python3 tools/check_cast.py             # what is declared, and what is drawn
+python3 tools/build.py                  # then reload any Lesson 1
 ```
+
+A background plate is the one thing with no compose step: save it straight to
+`art/bg/<slug>.jpg` and the build copies it.
+
+`make_overlay.py` is `make_sheet.py`'s smaller sibling and shares its keying,
+with two deliberate differences. It **trims a prop** to its content, because
+`data/cast.json`'s `size` is only true if the file's edges are the object's; and
+it **does not trim an effect**, because half of them belong above a figure's
+head and their position inside the square is the information. Trimming one would
+drop the circling stars onto the character's shoes.
 
 `make_sheet.py` does four things you therefore do not have to:
 
@@ -4276,3 +5422,11 @@ Two things you still do **not** have to do:
 | Bống comes back with fins, gills, scales, webbed fingers or a tail | The prompt said *sea-child* somewhere it should not have, or the reference is pulling. Her prompt never says what she is — she is a small girl in a borrowed shirt and that is the whole description. Re-paste her **must not** line verbatim; do not soften it to "no obvious fish features", because a partial version reads as permission |
 | Bống reads as the same age as Tí and Thảo | She is drawn at roughly one-to-four head to body where they are one-to-five, and she is *much* smaller in frame. The two ages are the only thing that separates her silhouette from Thảo's at panel size, so re-roll rather than accepting a tall version |
 | Text appears in the image | Gemini adds signage unprompted in street scenes. Keep the "no text, no letters" clause and re-roll — it is not reliably fixable by inpainting |
+| A prop comes back on a table, on a floor, or with a drop shadow under it | Re-paste **Composition**. A surface is the commonest thing a generator supplies unasked, and it cannot be keyed away: the flood comes in from the border, meets the table, and stops — leaving the prop sitting on a white slab in the middle of the panel |
+| A prop comes back watercoloured, soft-edged or textured like paper | Part 2's vocabulary leaked into a Part 3 prompt. Props are **cel**, like the cast, and for the same technical reason: a soft edge has no closed contour, so the keyer eats into it. Re-paste **Art style** and **Line** |
+| A prop is unrecognisable in the panel | It was drawn with detail that only reads at full size. These are seen at about two centimetres — re-roll asking for the silhouette to carry the object, and check it by looking at the file scaled down before composing |
+| An effect comes back beautiful, shaded and painted | A style reference was attached. Part 4 says attach nothing, and this is why: these are ink marks over a picture, and a *Ponyo* still makes them into a picture of their own |
+| An effect lands in the wrong place on the character — stars on the chest, a sweat drop at the knee | The mark was drawn centred in an empty square instead of positioned. Re-paste **Where the mark goes** in full. The square maps onto the figure at a fixed scale, so the mark's position in the frame *is* its position on the character, and there is nothing in the code that can move it |
+| An effect hides the character underneath it | It was drawn solid where it should be open. Every figure effect leaves the middle clear: a burst radiates from behind the head, a ring of stars sits above it, a hatch of blush has a gap for the face. Re-roll — an overlay that has to be seen through is the whole form |
+| A panel-wide effect loses its point on a phone | The composition depended on a corner. The page crops up to a third off one dimension to cover both panel shapes — re-paste **Where the mark goes** and spread the marks toward the middle |
+| An effect never appears on the page and nothing says why | That is by design: a missing effect renders nothing, because a dashed box labelled "dizzy" over somebody's face is worse than no effect. Run `python3 tools/check_cast.py` — it is the only place an undrawn effect is reported |

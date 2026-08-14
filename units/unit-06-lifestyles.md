@@ -24,23 +24,26 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="Everybody wants something" gramen="will — the future simple" gramvi="**will** + động từ nguyên thể để nói về tương lai. Câu điều kiện loại 1: *If* + hiện tại đơn, **will** + nguyên thể." gramco="If it rains, we will stay in"
-**Thảo:** Four people stopped me on the way here, and every one of them asked about you.
-**Tí:** Five stopped me. A woman at the market wants her mother's ring back. A man wants his father's boat.
-**Thảo:** It's the festival. You sent it back on the Sunday and the lanterns went out one by one, but half the lane saw Bống standing at the water that night, and now everybody knows.
-**Tí:** Bống keeps telling them the same thing. The sea gives back what it took — you don't get to choose what.
-**Thảo:** Then say it again. If you explain the rule, they will stop asking.
-**Tí:** They won't. They think I am hiding something better.
-**Thảo:** Bà Sáu says the older [[generation]] on our lane want more than a ring. They want the whole [[lifestyle]] they grew up inside.
-**Tí:** I know. Chú Bảy asked me to [[revive]] the boat market. The whole boat market.
-**Thảo:** And what [[will|gram:will]] you tell him?
-**Tí:** Nothing yet. If I take her down there once for one person, they will queue at our door tomorrow morning.
-**Thảo:** And if you never do it again?
-**Tí:** Then it never happens again, and nobody in this [[community]] will look at me the same way.
-**Thảo:** Nobody? Bà Sáu will. I will.
-**Tí:** Five marks on that wall already. Seven to go before the water is over the street. I won't spend one on a ring.
-**Thảo:** Good. Unless you are certain, don't do it at all.
-**Tí:** I'll be certain by Sunday. I promise.
+::: dialogue title="Everybody wants something" bg="lane" gramen="will — the future simple" gramvi="**will** + động từ nguyên thể để nói về tương lai. Câu điều kiện loại 1: *If* + hiện tại đơn, **will** + nguyên thể." gramco="If it rains, we will stay in"
+@cast Tí|worried, Thảo|annoyed
+@item lantern at=right
+**Thảo|annoyed:** Four people stopped me on the way here, and every one of them asked about you.
+**Tí|worried:** Five stopped me. A woman at the market wants her mother's ring back. A man wants his father's boat.
+**Thảo|neutral:** It's the festival. You sent it back on the Sunday and the lanterns went out one by one, but half the lane saw Bống standing at the water that night, and now everybody knows.
+**Tí|annoyed:** Bống keeps telling them the same thing. The sea gives back what it took — you don't get to choose what.
+**Thảo|neutral:** Then say it again. If you explain the rule, they will stop asking.
+**Tí|sad:** They won't. They think I am hiding something better.
+**Thảo|worried:** Bà Sáu says the older [[generation]] on our lane want more than a ring. They want the whole [[lifestyle]] they grew up inside.
+**Tí|surprised:** I know. Chú Bảy asked me to [[revive]] the boat market. The whole boat market.
+**Thảo|surprised:** And what [[will|gram:will]] you tell him?
+**Tí|worried:** Nothing yet. If I take her down there once for one person, they will queue at our door tomorrow morning.
+**Thảo|neutral:** And if you never do it again?
+@fx anger on=Tí
+**Tí|annoyed|shout:** Then it never happens again, and nobody in this [[community]] will look at me the same way.
+**Thảo|happy:** Nobody? Bà Sáu will. I will.
+**Tí|neutral:** Five marks on that wall already. Seven to go before the water is over the street. I won't spend one on a ring.
+**Thảo|neutral:** Good. Unless you are certain, don't do it at all.
+**Tí|worried:** I'll be certain by Sunday. I promise.
 :::
 
 ### 1.1 Comprehension

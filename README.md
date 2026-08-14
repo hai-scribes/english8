@@ -99,10 +99,14 @@ reads.
 | `tools/index_sgk.py` | Generator: the recorded book's lookup index. `--check` reports drift. |
 | `tools/build.py` | Generator: markdown → the 101-page site. |
 | `tools/assets/` | `app.css` and `app.js`, copied into the build. |
+| `data/cast.json` | **The comic's contract.** Characters, expressions, places, props, effects and balloon shapes. The build fails on a dialogue naming anything else. |
 | `art/cast/<slug>/<emotion>.png` | **Source.** The thirty drawings, full size and lossless, one per expression. |
-| `art/cast/<slug>.webp` · `art/bg/<slug>.jpg` | **Generated / drawn.** The composed 3 × 2 sheet and the background plates — what the site actually loads. |
+| `art/props/src/` · `art/fx/src/` | **Source.** One drawing per prop and per effect, on white. |
+| `art/cast/<slug>.webp` · `art/bg/<slug>.jpg` · `art/props/*.webp` · `art/fx/*.webp` | **Generated / drawn.** The composed 3 × 2 sheet, the background plates and the transparent cut-outs — what the site actually loads. |
 | `tools/make_sheet.py` | Generator: the six drawings → one sheet. `--all` does every character with a full set. |
-| `tools/check_cast.py` | Report: which declared avatars and backgrounds have been drawn. |
+| `tools/make_overlay.py` | Generator: one prop or effect drawing → its transparent cut-out. |
+| `tools/check_cast.py` | Report: which declared avatars, plates, props and effects have been drawn. |
+| `.claude/skills/story-staging/` | How to stage a dialogue, for an agent working on one. |
 | `docs/` | Generated output. GitHub Pages serves this directory. **Never put art here** — `build.py` deletes `docs/assets/` on every run and copies `art/` in. |
 | `curriculum/syllabus.md` | The syllabus map the units are written against. |
 | `curriculum/sgk/` | **The official book, recorded.** Every unit's targets, exercises and glossary, section by section — reference only, never built or published. |
@@ -120,8 +124,9 @@ node tools/test_marking.js        # gate: the marking engine obeys the published
 node tools/check_write.js         # gate: each model satisfies its own checklist (needs docs/)
 node tools/test_reading.js        # gate: the reading screen behaves (needs docs/ and jsdom)
 python3 tools/check_coverage.py   # report: what the official textbook covers that we don't
-python3 tools/check_cast.py       # report: which dialogue avatars and backgrounds exist
-python3 tools/make_sheet.py --all # compose the drawn expressions into character sheets
+python3 tools/check_cast.py       # report: which comic assets exist, and which do not
+python3 tools/make_sheet.py --all   # compose the drawn expressions into character sheets
+python3 tools/make_overlay.py --all # cut the prop and effect drawings out of their white
 ```
 
 Requires `markdown` (`pip install markdown`). Edit the markdown in `units/`,
@@ -356,6 +361,72 @@ every writing task from Unit 6 to Unit 12 carried a five-item article check,
 and not one of the seven did. The gate could prove the bridge's citation
 resolved. Nothing could prove the course kept its own promise, because the
 promise was prose.
+
+### `:::dialogue` — the Getting Started text, glossed, and staged as a comic
+
+Every unit's Lesson 1 dialogue is a chapter of *The Sea Gives Back*. It renders
+twice from one source: as a **comic** — a background plate, the people in the
+scene, the things in it, manga overlays and speech balloons, one panel at a time
+— and as the **transcript** underneath, which is real markup and is what the
+exercises are answered against.
+
+```markdown
+::: dialogue title="The list in the yard" bg="harbour-wall"
+             gramen="love / can't stand + V-ing" gramvi="…" gramco="…"
+@cast Tí|sad, Thảo|neutral
+@fx birds on=panel
+**Thảo|neutral:** You've been down on the wall all morning. What's [[wrong]]?
+**Thảo|annoyed|shout:** Tí.
+A line with no speaker is narration: the plate, a caption box, no avatar.
+@bg school-yard
+:::
+```
+
+| Line | What it does | How long it lasts |
+| --- | --- | --- |
+| `**Name\|emotion\|balloon:**` | somebody speaks. `emotion` defaults to `neutral` and `balloon` to `say` | the line |
+| no `**Name:**` | narration — plate, caption box, no avatar | the line |
+| `@bg <slug>` | changes the place | persists, and clears the props |
+| `@cast A\|emo, B` | who is on stage, including people saying nothing. `@cast none` empties it | persists |
+| `@item <slug> at=…` | a thing in the scene, at `left`/`center`/`right` or beside a named person. `@item none` clears | persists |
+| `@fx <slug> on=…` | a manga overlay, on a person or `on=panel` | **one panel** |
+
+**Any `@` line breaks the panel**, which is the panel-break tool and the only
+honest reading: a panel has one background, one roster and one set of props.
+
+`data/cast.json` declares the whole vocabulary — five characters, six shared
+expressions, eleven places, fourteen props, twelve effects and four balloon
+shapes (`say`, `shout`, `think`, `whisper`) — and **the build fails on a
+dialogue naming anything outside it**. It also enforces the two caps that keep a
+panel readable: at most **four** people on stage, and at most **one** effect per
+person and one over the frame.
+
+Four things here are load-bearing, and each is a defect that has been paid for:
+
+- **The transcript stays in the document.** Exercise 1.2 asks the learner to
+  find a phrase "in the dialogue" and 1.3 sends them back to look at a verb;
+  neither is answerable one panel at a time. It is also what `Ctrl+F`, a screen
+  reader and a printout use.
+- **The balloon carries no name.** Who is speaking is shown by the picture — the
+  tail is measured to point at them, and the speaker is the figure in focus
+  while the rest are held back. The name is still in the panel's accessible
+  name, because a screen-reader user has no tail to follow.
+- **The panel is not driven by scroll.** It has its own controls under the frame,
+  arrow keys and a swipe, and the page's scrolling is left completely alone —
+  so a reader can scroll to the exercise and back and find the story where they
+  left it. Nothing in the app listens for `scroll`, `wheel` or `touchmove`.
+- **A dialogue with no `bg=` ships as plain text.** That is the rollout, not a
+  failure; props and effects in an unstaged dialogue are a build error, because
+  none of it would be drawn.
+
+`[[word]]` and `[[surface|dictkey]]` mark a gloss — Vietnamese, on tap, from
+`data/dict/`. At least three per dialogue, and **none anywhere in Lessons 2–7**:
+support where the word is, withdrawn afterwards.
+
+Art lives in `art/`; `tools/check_cast.py` reports what is declared and what is
+drawn. While a file is missing, a character, place or prop leaves a dashed
+placeholder naming it — an **effect leaves nothing**, deliberately, because a
+box labelled "dizzy" over somebody's face is worse than no effect.
 
 ## The IELTS bridge
 

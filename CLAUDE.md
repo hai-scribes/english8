@@ -15,8 +15,9 @@ node tools/test_reading.js        # gate: the reading screen behaves (after buil
 python3 tools/check_coverage.py   # report: what the official textbook covers that we don't
 python3 tools/index_sgk.py --check  # gate: the recorded book's lookup index is current
 python3 tools/check_level.py --strict-through 3   # gate: story prose stays inside grade 8
-python3 tools/check_cast.py       # report: which dialogue avatars and backgrounds exist
-python3 tools/make_sheet.py --all # compose the drawn expressions into character sheets
+python3 tools/check_cast.py       # report: which comic assets exist, and which do not
+python3 tools/make_sheet.py --all   # compose the drawn expressions into character sheets
+python3 tools/make_overlay.py --all # cut the prop and effect drawings out of their white
 ```
 
 `test_reading.js` needs `npm install jsdom` and skips loudly without it, so the
@@ -136,11 +137,19 @@ and C7. That last one is gated in `test_reading.js`.
 
 ### The dialogue is a comic, and the transcript is still the page
 
-`:::dialogue` renders as a background plate, the speaker's face and one speech
-balloon, advancing as the reader scrolls. `data/cast.json` declares the five
-characters, the six emotions and the eleven backgrounds; the build **fails** on a
-dialogue naming anything outside it, and `tools/check_cast.py` reports which
-images have actually been drawn.
+**`.claude/skills/story-staging/` is the working guide** — the whole markup
+vocabulary, the rules that bind it and the art pipeline, in one place. Read it
+before writing or revising a dialogue. What follows is the summary.
+
+`:::dialogue` renders as a background plate, the people in the scene, the things
+in it, manga overlay marks and speech balloons — **one panel at a time, advanced
+by the reader**. `data/cast.json` declares the five characters, the six
+emotions, the eleven backgrounds, the fourteen props, the twelve effects and the
+four balloon shapes; the build **fails** on a dialogue naming anything outside
+it, and `tools/check_cast.py` reports which images have actually been drawn.
+
+**All twelve units are staged.** The rollout is finished; what is outstanding is
+art, not authoring.
 
 Art is **one drawing per expression** — thirty square pictures — composed into a
 3 x 2 sheet per character by `tools/make_sheet.py`, which squares each drawing,
@@ -160,32 +169,66 @@ every character the wrong face. `research/story/illustration-prompts.md` is the
 brief — every prompt the art needs, and nothing else — and its filenames and the
 manifest's slugs must agree.
 
+Props and effects are **one cut-out each**, keyed by `tools/make_overlay.py`
+from masters in `art/props/src/` and `art/fx/src/`. It is `make_sheet.py`'s
+smaller sibling and differs in two deliberate ways: it **trims a prop** to its
+content, because the manifest's `size` is its height as a fraction of the panel
+and that is only true if the file's edges are the object's; and it **does not
+trim an effect**, because half of them belong above a figure's head and their
+position inside the square is the information.
+
 ```
 ::: dialogue title="…" bg="harbour-wall"
+@cast Tí|sad, Thảo|neutral
+@item bucket at=left
+@fx sparkle on=ti
 **Thảo|neutral:** You've been down here all morning.
+**Thảo|annoyed|shout:** Tí.
 @bg school-yard
 **Tí|sad:** Nothing's wrong.
 :::
 ```
 
-`|emotion` defaults to `neutral`. `@bg` moves the scene. A line with no speaker
-is narration — plate, caption box, no avatar. **A dialogue with no `bg=` is
-unstaged and ships as plain text**, which is the rollout rather than a failure:
-only unit 1 is staged so far.
+`|emotion` defaults to `neutral` and `|balloon` to `say`. `@bg` moves the scene
+and clears the props; `@cast` sets who is on stage, silent people included;
+`@item` puts a thing in it, which persists; `@fx` puts a manga mark over one
+person or the whole frame, for **one panel only**. **Any `@` line breaks the
+panel** — that is the panel-break tool, and it is the only honest reading, since
+a panel has one background, one roster and one set of props. A line with no
+speaker is narration — plate, caption box, no avatar. A dialogue with no `bg=`
+is unstaged and ships as plain text; that is now an error state rather than the
+rollout, because all twelve are staged.
 
-Three things that must survive any change here, because each is load-bearing
-and two of them are exercises:
+Two caps, enforced at build because both are legibility: **four people** on
+stage (a fifth half-body figure is a silhouette, and a silhouette carries no
+expression), and **one effect** per person plus one over the frame (a frame with
+a shock burst and circling birds and motion lines is unreadable, not expressive).
+
+Four things that must survive any change here, because each is load-bearing and
+two of them are exercises:
 
 - **The transcript stays in the document as real markup.** Exercise 1.2 asks
   the learner to find a phrase "in the dialogue" and 1.3 sends them back to
   look at a verb; neither is answerable one panel at a time. It is also what
   `Ctrl+F`, a screen reader and a printout use.
 - **Glosses work inside the balloons**, wired per scope so the same marked word
-  can exist in both views without sharing a DOM id.
-- **Nothing intercepts a wheel or touch event.** The stage is sticky and reads
-  its own position. Hijacking scroll on a reading page breaks the browser's
-  find, breaks keyboard paging, and on a phone breaks the gesture that gets you
-  out. There is a test asserting the app registers no such listener.
+  can exist in both views without sharing a DOM id. A gloss opens *after* the
+  balloon rather than inside it — inside a shout balloon the spikes would clip
+  it away.
+- **The balloon carries no name.** Who is speaking is shown by the picture: the
+  tail is measured in JS to point at the speaker, and the speaker is the figure
+  at full strength while the rest are held back. The name is still in the
+  panel's accessible name, because a screen-reader user has no tail to follow.
+  Do not put it back on the balloon.
+- **The panel is not driven by scroll, and nothing intercepts a wheel or touch
+  event.** The stage used to be sticky inside a tall track and stepped as the
+  page scrolled past it. That worked and was still wrong: it put two things the
+  reader moves through — the page and the story — on one gesture, so scrolling
+  to the exercise ran the story on and scrolling back landed it somewhere else.
+  The comic now has its own controls, the arrow keys and a swipe, and the scroll
+  position means nothing to it. There is a test asserting the app registers no
+  `scroll`, `wheel` or `touchmove` listener, and one asserting no sticky track
+  is left in the stylesheet.
 
 ### Lexis is met, not tabled
 
@@ -290,7 +333,7 @@ IELTS, which is a different job — see `README.md` for the full syntax.
 | `:::clock` | The reading runs one clock, and it does not stop while you type | C7, from `04` §1.1 |
 | `:::passage` | The reading text can be highlighted and annotated, and its paragraphs carry the labels its questions name | C9's reading half, from `01` §9.1, §12.7 |
 | `:::thread` | A strand that says it recurs is made to recur | the course's promises about itself |
-| `:::dialogue` | The Getting Started text glosses its own words, in Vietnamese, in Lesson 1 only | support where the word is, and withdrawn afterwards |
+| `:::dialogue` | The Getting Started text glosses its own words, in Vietnamese, in Lesson 1 only, and plays as a comic | support where the word is, and withdrawn afterwards |
 | `:::fluency` | Repeated performance on known material against a shrinking clock | Nation's fourth strand, which printed instructions never delivered |
 | `:::vocab` | New words are met a few at a time, then answered on | B8: lexis pre-taught as a first-class step, not tabled |
 

@@ -547,18 +547,23 @@ def gloss_payload(body: str, a: dict, where: str) -> tuple:
 
 
 # ------------------------------------------------------ the dialogue as a scene --
-# The dialogue is a comic, not a transcript: a background, the speaker's avatar,
-# and one speech bubble, advancing as the page scrolls. The reason is not
-# decoration — a thirteen-year-old reading a manga panel is reading, and a
-# stack of "**Name:** line" is the format they stop reading.
+# The dialogue is a comic, not a transcript: a background, the people in the
+# scene, the things in it, and the balloons — one panel at a time, advanced by
+# the reader. The reason is not decoration — a thirteen-year-old reading a manga
+# panel is reading, and a stack of "**Name:** line" is the format they stop
+# reading.
 #
-# What the authoring adds, and nothing more:
+# The authoring vocabulary, in full. Everything is optional except a speaker:
 #
-#   **Thảo|worried:** ...   the speaker, and which of the six drawn faces
-#   @bg school-yard         everything after this line is in a new place
-#   a line with no speaker  narration: background, no avatar, no bubble
+#   **Thảo|worried:** ...       the speaker, and which of the six drawn faces
+#   **Hùng|annoyed|shout:** ... and which of the four balloon shapes
+#   a line with no speaker      narration: plate, caption box, no avatar
+#   @bg school-yard             everything after this is in a new place
+#   @cast Tí|sad, Khoa          who is ON STAGE, including people saying nothing
+#   @item bucket at=left        a thing in the scene, until it is cleared
+#   @fx sparkle on=bong         a manga overlay, for ONE panel
 #
-# Three things this must not break, and each has cost something to get right.
+# Six things this must not break, and each has cost something to get right.
 #
 # The GLOSSES still work, because they are the construct the lesson is built on
 # — `gloss_payload` runs over the body before any of this, so a marked word is
@@ -569,28 +574,84 @@ def gloss_payload(body: str, a: dict, where: str) -> tuple:
 # answerable one panel at a time. Every scene therefore ships its transcript
 # too, one tap away, carrying the same buttons.
 #
-# And the page SCROLLS NORMALLY. The stage is sticky and reads its own position;
-# it never intercepts a wheel event. Hijacking the scroll of a reading page
-# breaks the browser's own find, breaks keyboard paging, and on a phone breaks
-# the gesture that gets you out.
+# The page SCROLLS NORMALLY, and the panel is no longer part of that. It used to
+# be: a sticky stage inside a tall track, advancing as the reader scrolled past
+# it. That worked and was still wrong, for a reason that only shows up in use —
+# a scroll-driven panel means the reader cannot read the page and the comic
+# independently. Scrolling to the exercise below rewound the story; scrolling
+# back to check a line moved the panel somewhere else. Two jobs on one gesture.
+# So the panel is now driven by ITS OWN controls — buttons under the frame, the
+# arrow keys, a swipe — and the scroll position means nothing to it. That also
+# retires the thing the old design had to keep apologising for: there is no
+# scroll relationship left to hijack, so nothing has to promise not to.
+#
 # A panel holds an EXCHANGE, not a line. One line per panel made an 18-line
-# dialogue cost eighteen interactions and ten screen-heights of scrolling to
-# deliver 190 words — the interface, not the reader, was the bottleneck. A comic
-# panel has always held two or three balloons, so it holds two here, which is
-# the natural unit anyway: a thing said and the answer to it.
+# dialogue cost eighteen interactions to deliver 190 words — the interface, not
+# the reader, was the bottleneck. A comic panel has always held two or three
+# balloons, so it holds two here, which is the natural unit anyway: a thing said
+# and the answer to it.
 #
 # The budget is words, not lines. Two balloons of 25 words each is a wall of
-# text in a 26rem panel, so a long line simply travels alone; the median line
-# in unit 1 is ten words, so most panels pair up.
+# text in one frame, so a long line simply travels alone; the median line in
+# unit 1 is ten words, so most panels pair up.
+#
+# And a STAGE DIRECTION BREAKS THE PANEL. Any of the four @-lines starts a new
+# beat, which is what gives an author a panel break with no new syntax to learn:
+# put `@cast` between two lines and they are two panels. It is also the only
+# honest reading — a panel has one background, one roster and one set of props,
+# so a line that changes any of them cannot be in the panel before it.
 BEAT_BALLOONS = 2
 BEAT_WORDS = 40
 
-RE_SPEAKER = re.compile(r"^\*\*(?P<who>[^:*|]+?)(?:\|(?P<emo>[a-z]+))?:\*\*[ \t]*(?P<said>.*)$")
-RE_BG = re.compile(r"^@bg[ \t]+(?P<slug>[a-z0-9-]+)[ \t]*$")
+# The third field is the balloon shape. Optional, and `say` almost always.
+RE_D_SPEAKER = re.compile(r"^\*\*(?P<who>[^:*|]+?)(?:\|(?P<emo>[a-z]+))?"
+                        r"(?:\|(?P<bub>[a-z]+))?:\*\*[ \t]*(?P<said>.*)$")
+RE_D_BG = re.compile(r"^@bg[ \t]+(?P<slug>[a-z0-9-]+)[ \t]*$")
+RE_D_CAST = re.compile(r"^@cast[ \t]+(?P<who>.+?)[ \t]*$")
+RE_D_ITEM = re.compile(r"^@item[ \t]+(?P<rest>.+?)[ \t]*$")
+RE_D_FX = re.compile(r"^@fx[ \t]+(?P<rest>.+?)[ \t]*$")
+# `at=left` and `at="Bà Sáu"` both. A name with a space has to be quotable, and
+# a slug is accepted everywhere a name is, so `at=basau` is the diacritic-free
+# way to write the same thing.
+RE_D_ARG = re.compile(r'(?P<k>[a-z]+)=(?:"(?P<q>[^"]*)"|(?P<v>\S+))')
 
 CAST = json.loads((ROOT / "data" / "cast.json").read_text(encoding="utf-8"))
 CAST_CHARS, CAST_EMO = CAST["characters"], CAST["emotions"]
 CAST_BG, CAST_SHEET = CAST["backgrounds"], CAST["sheet"]
+CAST_PROPS, CAST_FX = CAST["props"], CAST["fx"]
+CAST_BUBBLES, CAST_STAGE = CAST["bubbles"], CAST["stage"]
+# A character is addressable by display name or by slug. The slug is what a
+# filename and a `data-` attribute use, so accepting it in the markup means an
+# author never has to type a diacritic to point at somebody.
+CAST_BY_SLUG = {c["slug"]: n for n, c in CAST_CHARS.items()}
+
+
+def _who(name: str, where: str, what: str) -> str:
+    """A display name or a slug -> the display name. Raises on neither."""
+    name = name.strip()
+    if name in CAST_CHARS:
+        return name
+    if name in CAST_BY_SLUG:
+        return CAST_BY_SLUG[name]
+    raise SystemExit(f"{where}: {what} names {name!r}, who is not a character in "
+                     f"data/cast.json — add them there first "
+                     f"({', '.join(CAST_CHARS)})")
+
+
+def _args(rest: str, allowed: set, where: str, what: str) -> tuple:
+    """`slug k=v k=v` -> (slug, {k: v}). Rejects an argument nobody reads."""
+    head, args = rest.split(None, 1) if " " in rest.strip() else (rest.strip(), "")
+    out = {}
+    for m in RE_D_ARG.finditer(args):
+        k = m.group("k")
+        if k not in allowed:
+            raise SystemExit(f"{where}: {what} takes {' or '.join(sorted(allowed))}"
+                             f", not {k}=")
+        out[k] = m.group("q") if m.group("q") is not None else m.group("v")
+    leftover = RE_D_ARG.sub("", args).strip()
+    if leftover:
+        raise SystemExit(f"{where}: {what} does not understand {leftover!r}")
+    return head, out
 
 
 def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
@@ -600,43 +661,166 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
     if bg and bg not in CAST_BG:
         raise SystemExit(f"{where}: bg={bg!r} is not in data/cast.json "
                          f"({', '.join(sorted(CAST_BG))})")
-    lines, seen_bg = [], set()
-    # Who spoke last, so a reply can be placed on the other side of the frame.
-    # Sides alternate by SPEAKER rather than by line, or a character answering
-    # themselves twice would hop across the panel for no reason.
-    order = []
+    lines, seen_bg, seen_props, seen_fx = [], set(), set(), set()
+
+    # The stage as a running state, because that is what a stage is: people walk
+    # on and stay on, a bucket stays where it was put, and a shock burst is gone
+    # by the next frame. Three lifetimes, and each is the one the thing has in a
+    # real comic — roster and props persist, effects do not.
+    order: list = []          # who is on stage, left to right, in arrival order
+    faces: dict = {}          # their current expression, which persists
+    items: list = []          # the props on stage, as {"slug", "at"}
+    pending_fx: list = []     # effects waiting for the next line, then dropped
+    breaks = False            # a stage direction was seen: the next line is a new panel
+
     for raw in rendered.split("\n"):
         s = raw.strip()
         if not s:
             continue
-        bgm = RE_BG.match(s)
+
+        bgm = RE_D_BG.match(s)
         if bgm:
             if bgm.group("slug") not in CAST_BG:
                 raise SystemExit(f"{where}: @bg {bgm.group('slug')!r} is not in "
                                  f"data/cast.json")
             bg = bgm.group("slug")
             seen_bg.add(bg)
+            # A change of place empties the stage of props. It does NOT empty it
+            # of people: a conversation that walks from the kitchen to the wall
+            # is the same two people, and making the author restate them would
+            # be a papercut on every scene change. A bucket, though, stays in
+            # the yard, and carrying it along silently is the bug.
+            items = []
+            breaks = True
             continue
-        m = RE_SPEAKER.match(s)
+
+        cm = RE_D_CAST.match(s)
+        if cm:
+            spec = cm.group("who").strip()
+            if spec == "none":
+                order, faces = [], {}
+            else:
+                order, keep = [], dict(faces)
+                for part in spec.split(","):
+                    part = part.strip()
+                    if not part:
+                        continue
+                    nm, _, emo = part.partition("|")
+                    nm = _who(nm, where, "@cast")
+                    emo = emo.strip()
+                    if emo and emo not in CAST_EMO:
+                        raise SystemExit(
+                            f"{where}: @cast puts {nm} at {emo!r}, which is not "
+                            f"one of the six drawn faces "
+                            f"({', '.join(CAST_EMO)})")
+                    if nm in order:
+                        raise SystemExit(f"{where}: @cast names {nm} twice")
+                    order.append(nm)
+                    # No expression given keeps the one they already had, so
+                    # `@cast Tí, Khoa` adds Khoa without resetting Tí's face.
+                    faces[nm] = emo or keep.get(nm, "neutral")
+                faces = {n: faces[n] for n in order}
+            if len(order) > CAST_STAGE["max_cast"]:
+                raise SystemExit(
+                    f"{where}: @cast puts {len(order)} people in one panel and the "
+                    f"stage holds {CAST_STAGE['max_cast']} — a fifth half-body "
+                    f"figure is a silhouette, and a silhouette cannot carry an "
+                    f"expression. Split the scene: a second @cast line between two "
+                    f"spoken lines is a panel break.")
+            breaks = True
+            continue
+
+        im = RE_D_ITEM.match(s)
+        if im:
+            slug, args = _args(im.group("rest"), {"at"}, where, "@item")
+            if slug == "none":
+                items = []
+            else:
+                if slug not in CAST_PROPS:
+                    raise SystemExit(f"{where}: @item {slug!r} is not a prop in "
+                                     f"data/cast.json ({', '.join(CAST_PROPS)})")
+                at = args.get("at", "center")
+                if at not in ("left", "center", "right"):
+                    at = _who(at, where, f"@item {slug} at=")
+                if any(it["slug"] == slug for it in items):
+                    raise SystemExit(f"{where}: @item {slug!r} is already on stage")
+                items.append({"slug": slug, "at": at,
+                              "size": CAST_PROPS[slug].get("size", 0.18),
+                              "hangs": bool(CAST_PROPS[slug].get("hangs"))})
+                seen_props.add(slug)
+            breaks = True
+            continue
+
+        fm = RE_D_FX.match(s)
+        if fm:
+            slug, args = _args(fm.group("rest"), {"on"}, where, "@fx")
+            if slug not in CAST_FX:
+                raise SystemExit(f"{where}: @fx {slug!r} is not an effect in "
+                                 f"data/cast.json ({', '.join(CAST_FX)})")
+            over = CAST_FX[slug]["over"]
+            on = args.get("on", "panel" if over == "panel" else "")
+            if over == "panel":
+                if on != "panel":
+                    raise SystemExit(f"{where}: @fx {slug} covers the whole frame, "
+                                     f"so it takes on=panel or nothing, not "
+                                     f"on={on!r}")
+            else:
+                if not on or on == "panel":
+                    raise SystemExit(f"{where}: @fx {slug} marks a person, so it "
+                                     f"needs on=<name>")
+                on = _who(on, where, f"@fx {slug} on=")
+            # One per figure and one per panel, enforced rather than advised. A
+            # frame carrying a shock burst and circling birds and motion lines is
+            # not three times as expressive; it is unreadable.
+            if any(f["on"] == on for f in pending_fx):
+                raise SystemExit(f"{where}: two effects on {on} in one panel — "
+                                 f"one is the limit, and it is the limit because "
+                                 f"two do not read")
+            pending_fx.append({"slug": slug, "on": on})
+            seen_fx.add(slug)
+            breaks = True
+            continue
+
+        m = RE_D_SPEAKER.match(s)
         if not m:
             # Narration. The place carries the beat on its own.
-            lines.append({"bg": bg, "html": md_inline_keep(s)})
+            lines.append({"bg": bg, "html": md_inline_keep(s), "breaks": breaks,
+                          "cast": [], "items": list(items), "fx": pending_fx})
+            pending_fx, breaks = [], False
             continue
-        who, emo = m.group("who").strip(), (m.group("emo") or "neutral")
-        c = CAST_CHARS.get(who)
-        if not c:
-            raise SystemExit(f"{where}: {who!r} is not a character in "
-                             f"data/cast.json — add them there before they speak")
+
+        who = _who(m.group("who"), where, "a speaker")
+        emo, bub = (m.group("emo") or "neutral"), (m.group("bub") or "say")
         if emo not in CAST_EMO:
             raise SystemExit(f"{where}: {who} is {emo!r}, which is not one of the "
-                             f"six drawn faces ({', '.join(sorted(CAST_EMO))})")
+                             f"six drawn faces ({', '.join(CAST_EMO)})")
+        if bub not in CAST_BUBBLES:
+            raise SystemExit(f"{where}: {who}'s line asks for a {bub!r} balloon, "
+                             f"which is not one of the four shapes "
+                             f"({', '.join(CAST_BUBBLES)})")
         if who not in order:
             order.append(who)
-        lines.append({"bg": bg, "who": who, "slug": c["slug"], "emo": emo,
+            if len(order) > CAST_STAGE["max_cast"]:
+                raise SystemExit(
+                    f"{where}: {who} is the {len(order)}th person in this panel and "
+                    f"the stage holds {CAST_STAGE['max_cast']}. Put a @cast line "
+                    f"above their line to set who is on stage — it is also a panel "
+                    f"break.")
+        faces[who] = emo
+        lines.append({"bg": bg, "who": who, "slug": CAST_CHARS[who]["slug"],
+                      "emo": emo, "bub": bub,
                       # The panel to show out of the character's one sheet.
                       "col": CAST_EMO[emo]["col"],
-                      "side": "left" if order.index(who) % 2 == 0 else "right",
+                      # Where the speaker stands, which is what the balloon's
+                      # tail is aimed at now that the name label is gone.
+                      "slot": order.index(who),
+                      "cast": [{"who": n, "slug": CAST_CHARS[n]["slug"],
+                                "emo": faces[n], "col": CAST_EMO[faces[n]]["col"]}
+                               for n in order],
+                      "items": list(items), "fx": pending_fx, "breaks": breaks,
                       "html": md_inline_keep(m.group("said").strip())})
+        pending_fx, breaks = [], False
+
     if not lines:
         raise SystemExit(f"{where}: the dialogue has no lines")
 
@@ -649,6 +833,7 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
     beats, used = [], []
     for i, ln in enumerate(lines):
         joinable = (beats
+                    and not ln["breaks"]
                     and len(beats[-1]) < BEAT_BALLOONS
                     and ln["bg"] == lines[beats[-1][0]]["bg"]
                     and ln.get("who") and lines[beats[-1][-1]].get("who")
@@ -668,11 +853,16 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
     if staged and any(ln.get("who") and not ln["bg"] for ln in lines):
         raise SystemExit(f"{where}: some lines are staged and some are not — put "
                          f"the @bg above the first speaker, or drop bg= entirely")
+    if not staged and (seen_props or seen_fx):
+        raise SystemExit(f"{where}: this dialogue places props or effects but names "
+                         f"no place, so none of it would be drawn — give it a bg=")
     return {"id": did, "title": a.get("title", ""), "lines": lines, "beats": beats,
-            "staged": staged,
+            "staged": staged, "dim": CAST_STAGE["dim"],
+            "faceIn": bool(CAST_STAGE.get("face_in", True)),
             "cols": CAST_SHEET["cols"], "rows": CAST_SHEET["rows"],
             "aspect": CAST_SHEET["aspect"],
-            "glosses": glosses, "backgrounds": sorted(seen_bg | ({bg} if bg else set()))}
+            "glosses": glosses, "backgrounds": sorted(seen_bg | ({bg} if bg else set())),
+            "props": sorted(seen_props), "fx": sorted(seen_fx)}
 
 
 def dialogue_html(p: dict) -> str:
@@ -689,30 +879,51 @@ def dialogue_html(p: dict) -> str:
             rows.append(f'<p><b class="d-who">{e(ln["who"])}</b> {ln["html"]}</p>')
         else:
             rows.append(f'<p class="d-nar">{ln["html"]}</p>')
-    # One panel per line, laid out as the scroll track. Each carries only its
-    # index: the stage reads the payload for everything else.
-    track = "".join(f'<div class="d-step" data-step="{i}"></div>'
-                    for i in range(len(p["beats"])))
-    # The stage is sticky INSIDE the track, and the steps are pulled back up
-    # underneath it, so the track's own height is what the reader scrolls
-    # through while the panel stays put. A stage that is a sibling of the track
-    # sticks for the wrong element and slides away halfway down.
-    scene = (f'<div class="d-scene" hidden><div class="d-track">'
+    # The frame, then the controls UNDER it, centred. Six layers inside the
+    # frame, and the order is the depth order of a real panel: the plate, the
+    # props that hang on a wall, the people, the props that stand on the floor
+    # in front of them, the overlay effects, the balloons on top of everything.
+    #
+    # The controls are OUTSIDE the frame now. They used to float in the panel's
+    # bottom-right corner, over the art, which is where a scroll-driven stage
+    # had to put them — they were a fallback for a panel the page was really
+    # driving. They are the primary control now, so they get their own room,
+    # under the picture, where a reader's thumb already is on a phone and where
+    # nothing they do covers a face.
+    scene = (f'<div class="d-scene" hidden>'
+             f'<div class="d-frame">'
              f'<div class="d-stage" tabindex="0" role="group" '
-             f'aria-roledescription="comic panel"><div class="d-bg"></div>'
-             f'<div class="d-cast"></div><div class="d-bubble"></div>'
-             f'<div class="d-nav"><button class="d-prev" type="button" '
-             f'aria-label="Previous line">&lsaquo;</button>'
-             f'<span class="d-count"></span>'
-             f'<button class="d-next" type="button" aria-label="Next line">&rsaquo;</button>'
+             f'aria-roledescription="comic panel">'
+             f'<div class="d-bg"></div>'
+             f'<div class="d-prop d-prop-back"></div>'
+             f'<div class="d-cast"></div>'
+             f'<div class="d-prop d-prop-front"></div>'
+             f'<div class="d-fx"></div>'
+             f'<div class="d-bubble" aria-live="polite"></div>'
+             f'<button class="d-full" type="button" aria-pressed="false" '
+             f'aria-label="Fill the screen"><span aria-hidden="true"></span></button>'
              f'</div></div>'
-             f'<div class="d-steps">{track}</div></div></div>'
+             f'<div class="d-nav">'
+             f'<button class="d-prev" type="button">'
+             f'<span aria-hidden="true">&lsaquo;</span> Back</button>'
+             f'<span class="d-count" role="status"></span>'
+             f'<button class="d-next" type="button">'
+             f'Next <span aria-hidden="true">&rsaquo;</span></button>'
+             f'</div>'
+             f'<div class="d-rail"><div class="d-rail-fill"></div></div>'
+             f'</div>'
              if p["staged"] else "")
     toggle = ('<p class="d-alt"><button class="btn quiet d-toggle" type="button" '
               'aria-expanded="false">Read it as a comic</button></p>'
               if p["staged"] else "")
+    # Two sentences, and the second one only when there is a comic to move
+    # through. Telling an unstaged dialogue's reader about arrow keys would be
+    # describing a control that is not on their page.
     say = ('Tap any <u>underlined</u> word to see what it means — later lessons '
            'ask for the same words without it.')
+    if p["staged"]:
+        say += (' Use <b>Back</b> and <b>Next</b> under the picture, or the '
+                'left and right arrow keys, or swipe.')
     return (f'<div class="dlg" data-role="dialogue" data-dialogue="{e(p["id"])}">'
             + (f'<div class="d-h"><span class="d-k">Dialogue</span>'
                f'<span class="d-t">{e(p["title"])}</span></div>' if p["title"] else "")
@@ -2721,10 +2932,12 @@ def main() -> int:
     for a in ASSETS.iterdir():
         if a.is_file():
             shutil.copy2(a, OUT / "assets" / a.name)
-    # The cast sheets and the background plates, published under the names
-    # app.js asks for. Per-emotion drawings are not copied: they are masters.
+    # The cast sheets, the background plates, and the prop and effect cut-outs,
+    # published under the names app.js asks for. Per-emotion drawings are not
+    # copied: they are masters, and so are the un-keyed prop originals.
     art = 0
-    for src, dest in ((ART / "cast", "cast"), (ART / "bg", "bg")):
+    for src, dest in ((ART / "cast", "cast"), (ART / "bg", "bg"),
+                      (ART / "props", "props"), (ART / "fx", "fx")):
         if not src.is_dir():
             continue
         (OUT / "assets" / dest).mkdir(parents=True, exist_ok=True)

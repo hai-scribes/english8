@@ -24,26 +24,29 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="The last question on the sheet" gramen="asked if / asked what — reported questions" gramvi="Khi thuật lại câu hỏi, đưa về trật tự câu kể (chủ ngữ đứng trước động từ) và bỏ dấu hỏi. Câu Yes/No dùng **if**." gramco="He asked if I had seen it"
-**Thảo:** Cô Yến asked me at the gate whether you were coming in today.
-**Tí:** What did you tell her?
-**Thảo:** That you were behind me on the road. Then she asked why you had missed Monday, and I said I had no idea.
-**Tí:** Thank you.
-**Thảo:** She also wanted to know what your project was about, so I said [[planets|planet]].
-**Tí:** It is about planets. Question one asks what a [[planet]] needs before anything can [[survive]] on it — water, air, the right temperature, [[gravity]].
-**Thảo:** And question two?
-**Tí:** Whether anything else in this [[galaxy]] has ever answered us. Đạt [[asked|gram:asked]] that out loud at break, and Cô Yến said nobody knows.
-**Thảo:** Đạt asks that every year.
-**Tí:** Khoa asked me how far the crossing is.
-**Thảo:** And?
-**Tí:** Nine days on foot. A river, a crossing, nine days. He can stand on our beach for an hour; he cannot come home. Somebody has to walk to him. Nobody can call him.
-**Thảo:** Because of the rule.
-**Tí:** Because of the rule. The sea gives back what it took — you never choose what — and there is one mark left on that wall.
-**Thảo:** Minh wants to come with us. He asked me whether the old man would know about him.
-**Tí:** Nobody knows about him. The green notebook had one line that might be about him and might be about a chair, so now we ask a person. That is half of why we are walking.
-**Thảo:** What does Bống say about it?
-**Tí:** She says spend it on anything else. Then she goes quiet. Thảo, last night she asked me what my own name means.
-**Thảo:** She is asking the wrong person a question about herself.
+::: dialogue title="The last question on the sheet" bg="school-yard" gramen="asked if / asked what — reported questions" gramvi="Khi thuật lại câu hỏi, đưa về trật tự câu kể (chủ ngữ đứng trước động từ) và bỏ dấu hỏi. Câu Yes/No dùng **if**." gramco="He asked if I had seen it"
+@cast Tí|neutral, Thảo|neutral
+@item worksheet at=Tí
+**Thảo|neutral:** Cô Yến asked me at the gate whether you were coming in today.
+**Tí|worried:** What did you tell her?
+**Thảo|happy:** That you were behind me on the road. Then she asked why you had missed Monday, and I said I had no idea.
+**Tí|happy:** Thank you.
+**Thảo|neutral:** She also wanted to know what your project was about, so I said [[planets|planet]].
+**Tí|neutral:** It is about planets. Question one asks what a [[planet]] needs before anything can [[survive]] on it — water, air, the right temperature, [[gravity]].
+**Thảo|neutral:** And question two?
+**Tí|neutral:** Whether anything else in this [[galaxy]] has ever answered us. Đạt [[asked|gram:asked]] that out loud at break, and Cô Yến said nobody knows.
+**Thảo|annoyed:** Đạt asks that every year.
+**Tí|neutral:** Khoa asked me how far the crossing is.
+**Thảo|neutral:** And?
+**Tí|worried:** Nine days on foot. A river, a crossing, nine days. He can stand on our beach for an hour; he cannot come home. Somebody has to walk to him. Nobody can call him.
+**Thảo|sad:** Because of the rule.
+**Tí|sad:** Because of the rule. The sea gives back what it took — you never choose what — and there is one mark left on that wall.
+**Thảo|worried:** Minh wants to come with us. He asked me whether the old man would know about him.
+**Tí|neutral:** Nobody knows about him. The green notebook had one line that might be about him and might be about a chair, so now we ask a person. That is half of why we are walking.
+**Thảo|neutral:** What does Bống say about it?
+@fx sparkle on=Tí
+**Tí|surprised:** She says spend it on anything else. Then she goes quiet. Thảo, last night she asked me what my own name means.
+**Thảo|surprised:** She is asking the wrong person a question about herself.
 :::
 
 ### 1.1 Comprehension

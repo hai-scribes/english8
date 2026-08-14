@@ -24,25 +24,28 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="Forty cakes before breakfast" gramen="a / an / the" gramvi="Dùng **a/an** khi nhắc đến lần đầu; dùng **the** khi cả người nói và người nghe đều biết đang nói về cái nào." gramco="a festival → the festival"
-**Tí:** Why are there banana leaves all over the table?
-**Bà Sáu:** Because tomorrow is [[the|gram:the]] whale [[festival]], and I am not letting it pass again.
-**Tí:** Nobody goes any more.
-**Bà Sáu:** Eleven people went last year. When I was your age every boat in the bay came in for it and the whole lane went down to the water. We opened it in the second [[lunar]] month with a drum you could hear from the water.
-**Tí:** That house upriver had a shrine in it for a festival in the ninth month. Nobody up there keeps it any more.
-**Bà Sáu:** The ninth month is ours, child. Whoever those people were, they came off this coast before they ever went up that river, and they took our night with them, and then they put it down.
-**Tí:** What are all these for?
-**Bà Sáu:** [[Offerings|offering]]. The fruit, the flowers and the sticky rice go to the communal house in the morning. [[Wrap]] these cakes for me — tightly, or they open in the pot.
-**Tí:** Like this?
-**Bà Sáu:** Tighter. Your great-grandmother could wrap forty before breakfast.
-**Tí:** Is there a rule about the [[incense]]?
-**Bà Sáu:** The oldest person lights the first stick. That is me now, which tells you something.
-**Tí:** Should I bow, or will I get it wrong?
-**Bà Sáu:** Copy me. And don't wear a hat inside the communal house — people really mind that one.
-**Tí:** Thảo says there used to be games afterwards.
-**Bà Sáu:** There used to be an hour of them, and a gong, and singing until it was dark. Now there is one table and six old women.
-**Tí:** So why keep doing it?
-**Bà Sáu:** Customs don't die by themselves. People put them down. Come tomorrow and see for yourself.
+::: dialogue title="Forty cakes before breakfast" bg="kitchen" gramen="a / an / the" gramvi="Dùng **a/an** khi nhắc đến lần đầu; dùng **the** khi cả người nói và người nghe đều biết đang nói về cái nào." gramco="a festival → the festival"
+@cast Bà Sáu|neutral, Tí|surprised
+@item cakes at=center
+**Tí|surprised:** Why are there banana leaves all over the table?
+**Bà Sáu|neutral:** Because tomorrow is [[the|gram:the]] whale [[festival]], and I am not letting it pass again.
+**Tí|neutral:** Nobody goes any more.
+**Bà Sáu|annoyed:** Eleven people went last year. When I was your age every boat in the bay came in for it and the whole lane went down to the water. We opened it in the second [[lunar]] month with a drum you could hear from the water.
+**Tí|neutral:** That house upriver had a shrine in it for a festival in the ninth month. Nobody up there keeps it any more.
+**Bà Sáu|worried:** The ninth month is ours, child. Whoever those people were, they came off this coast before they ever went up that river, and they took our night with them, and then they put it down.
+**Tí|neutral:** What are all these for?
+**Bà Sáu|neutral:** [[Offerings|offering]]. The fruit, the flowers and the sticky rice go to the communal house in the morning. [[Wrap]] these cakes for me — tightly, or they open in the pot.
+@fx sweat on=Tí
+**Tí|worried:** Like this?
+**Bà Sáu|annoyed:** Tighter. Your great-grandmother could wrap forty before breakfast.
+**Tí|neutral:** Is there a rule about the [[incense]]?
+**Bà Sáu|sad:** The oldest person lights the first stick. That is me now, which tells you something.
+**Tí|worried:** Should I bow, or will I get it wrong?
+**Bà Sáu|happy:** Copy me. And don't wear a hat inside the communal house — people really mind that one.
+**Tí|neutral:** Thảo says there used to be games afterwards.
+**Bà Sáu|sad:** There used to be an hour of them, and a gong, and singing until it was dark. Now there is one table and six old women.
+**Tí|neutral:** So why keep doing it?
+**Bà Sáu|neutral:** Customs don't die by themselves. People put them down. Come tomorrow and see for yourself.
 :::
 
 ### 1.1 Comprehension

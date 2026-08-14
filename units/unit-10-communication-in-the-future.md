@@ -24,25 +24,29 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="Nothing is getting through" gramen="mine / yours — possessive pronouns" gramvi="Đại từ sở hữu đứng một mình, không có danh từ theo sau: *my phone* → **mine**." gramco="That one is mine"
-**Thảo:** Any [[signal]] yet?
-**Tí:** Nothing. I've been on this wall since six.
-**Thảo:** The mast is still down. It stands opposite the old post office, and half of it is in the harbour now.
-**Tí:** My mother rings at seven every Sunday evening. If she gets nothing, she'll think the water took the house.
-**Thảo:** Is that phone yours?
-**Tí:** No. It's Bà Sáu's. The blue one was [[mine|gram:mine]], and it went into the mud on Tuesday, so hers is the only phone left in the house.
-**Thảo:** Then send a [[voice message]]. It waits in the [[network]] and goes the moment the [[connection]] comes back.
-**Tí:** I've sent four. All four are still sitting there with a little grey clock next to them.
-**Thảo:** Try the school gate. Đạt says there's one bar at the top of the steps, between the two big trees.
-**Tí:** Đạt says a lot of things. The far bank has a signal all day — theirs works, ours doesn't.
-**Thảo:** And the box?
-**Tí:** Still shut. It's under my bed, in a rice sack, and it has been there four days.
-**Thảo:** Open it, then.
-**Tí:** In front of Bà Sáu? No.
-**Thảo:** Ask Bống, then. Faster than a wall and a dead phone.
-**Tí:** The sea gives back what it took — and you never choose what. Three marks left before it is over the street. I'm not spending one on a phone call.
-**Thảo:** Fine. The gate, at four o'clock.
-**Tí:** I'm never late in the morning. At night, that's a different story.
+::: dialogue title="Nothing is getting through" bg="harbour-wall" gramen="mine / yours — possessive pronouns" gramvi="Đại từ sở hữu đứng một mình, không có danh từ theo sau: *my phone* → **mine**." gramco="That one is mine"
+@cast Tí|annoyed, Thảo|neutral
+@item phone at=Tí
+@item chalk at=left
+**Thảo|neutral:** Any [[signal]] yet?
+**Tí|annoyed:** Nothing. I've been on this wall since six.
+**Thảo|neutral:** The mast is still down. It stands opposite the old post office, and half of it is in the harbour now.
+**Tí|worried:** My mother rings at seven every Sunday evening. If she gets nothing, she'll think the water took the house.
+@fx question on=Thảo
+**Thảo|surprised:** Is that phone yours?
+**Tí|sad:** No. It's Bà Sáu's. The blue one was [[mine|gram:mine]], and it went into the mud on Tuesday, so hers is the only phone left in the house.
+**Thảo|neutral:** Then send a [[voice message]]. It waits in the [[network]] and goes the moment the [[connection]] comes back.
+**Tí|annoyed:** I've sent four. All four are still sitting there with a little grey clock next to them.
+**Thảo|happy:** Try the school gate. Đạt says there's one bar at the top of the steps, between the two big trees.
+**Tí|annoyed:** Đạt says a lot of things. The far bank has a signal all day — theirs works, ours doesn't.
+**Thảo|neutral:** And the box?
+**Tí|worried:** Still shut. It's under my bed, in a rice sack, and it has been there four days.
+**Thảo|annoyed:** Open it, then.
+**Tí|worried|whisper:** In front of Bà Sáu? No.
+**Thảo|neutral:** Ask Bống, then. Faster than a wall and a dead phone.
+**Tí|neutral:** The sea gives back what it took — and you never choose what. Three marks left before it is over the street. I'm not spending one on a phone call.
+**Thảo|neutral:** Fine. The gate, at four o'clock.
+**Tí|happy:** I'm never late in the morning. At night, that's a different story.
 :::
 
 ### 1.1 Comprehension

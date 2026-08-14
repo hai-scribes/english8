@@ -1550,8 +1550,12 @@ function wireGlosses(scope, glosses, prefix){
     $(".vi", g).textContent = d.vi || "";
     $(".co", g).textContent = d.co || "";
     /* After the block the word sits in, so opening one never moves the line
-       the reader is on. Inside a bubble that block is the bubble itself. */
-    const host = btn.closest("p") || btn.closest(".d-said") || scope;
+       the reader is on. Inside a comic that block is the whole balloon, not
+       the text inside it: a gloss opening INSIDE a balloon would have to be
+       drawn in a contour that was cut for two lines of speech, and inside a
+       shout balloon it would be clipped by the spikes. */
+    const host = btn.closest(".d-bub") || btn.closest("p")
+              || btn.closest(".d-said") || scope;
     host.parentNode.insertBefore(g, host.nextSibling);
 
     btn.addEventListener("click", () => {
@@ -1578,13 +1582,19 @@ function initDialogue(){
 }
 
 /* ---------------- the dialogue as a comic ---------------------------------
-   A background, the speaker's face, one bubble, advancing with the page.
+   A background, the people in the scene, the things in it, the manga overlays
+   and the balloons — one panel, advanced by the reader.
 
-   The stage is STICKY and reads its own position; it never intercepts a wheel
-   or touch event. Hijacking scroll on a reading page breaks the browser's find,
-   breaks keyboard paging, and on a phone breaks the gesture a reader uses to
-   get out of something they do not want. Scrolling stays scrolling; the panel
-   just happens to change while it does.
+   THE PANEL IS NOT DRIVEN BY SCROLL, and that is a change from what this used
+   to be. The stage was sticky inside a tall track and stepped as the reader
+   scrolled past it. It worked, and the reason it was still wrong only shows up
+   in use: the reader has two things to move through — the page and the story —
+   and that design put both on one gesture. Scrolling down to the exercise
+   underneath ran the story on; scrolling back to re-read a line landed the
+   panel somewhere else. The comic now has its own controls and the scroll
+   position means nothing to it, which is also why nothing in this file listens
+   for scroll, wheel or touchmove any more. There is no longer a relationship
+   to hijack.
 
    Everything here is an ENHANCEMENT over the transcript, which is real markup
    underneath and stays reachable. Exercise 1.2 asks the learner to find a
@@ -1592,6 +1602,8 @@ function initDialogue(){
    is answerable one panel at a time, and a comic that hid the text would have
    broken the two exercises the dialogue exists to feed. */
 const ASSET_BG = "assets/bg/";
+const ASSET_PROP = "assets/props/";
+const ASSET_FX = "assets/fx/";
 /* WebP, not PNG, and measured rather than assumed: the six-panel sheet is
    1008 KB as RGBA PNG and 209 KB at WebP q90, indistinguishable at 2x zoom.
    The art has soft shading, so palette PNG — the usual answer for cel art —
@@ -1602,9 +1614,12 @@ function initScene(root, p){
   const scene = $(".d-scene", root), body = $(".d-body", root),
         toggle = $(".d-toggle", root);
   if (!scene || !toggle) return;
-  const bg = $(".d-bg", scene), cast = $(".d-cast", scene),
-        bubble = $(".d-bubble", scene), count = $(".d-count", scene),
-        track = $(".d-track", scene), steps = $$(".d-step", scene);
+  const stage = $(".d-stage", scene), bg = $(".d-bg", scene),
+        cast = $(".d-cast", scene), bubble = $(".d-bubble", scene),
+        propBack = $(".d-prop-back", scene), propFront = $(".d-prop-front", scene),
+        fxLayer = $(".d-fx", scene), count = $(".d-count", scene),
+        rail = $(".d-rail-fill", scene), full = $(".d-full", scene),
+        prev = $(".d-prev", scene), next = $(".d-next", scene);
   /* How far up to reach assets/. Taken from the stylesheet link the build
      already wrote — "../../assets/app.css" on a lesson, "assets/app.css" at the
      root — because that is the prefix build.py itself computed for this page.
@@ -1618,49 +1633,192 @@ function initScene(root, p){
   const beats = p.beats && p.beats.length ? p.beats : p.lines.map((_, i) => [i]);
   let at = -1;
 
-  /* A panel is an EXCHANGE: every line in the beat, and an avatar for each of
-     the (at most two) people speaking in it. One line per panel turned 190
-     words into eighteen interactions and ten screen-heights of scroll; a comic
-     panel has always held more than one balloon. */
-  function paintAvatar(av, ph, ln){
-    $("b", ph).textContent = ln.who;
-    $("span", ph).textContent = ln.emo;
-    const src = (window.__SHEETS__ && window.__SHEETS__[ln.slug])
-              || (up + ASSET_CAST + ln.slug + ".webp");
+  /* ---- where things stand ------------------------------------------------
+     One function owns the geometry of the panel, and everything else asks it.
+     Figures are spread evenly across the floor and each is CENTRED on its
+     share of the width, which lands two people at 25% and 75%, three at 17/50/83
+     and four at 12/37/62/87 — the same rule, no special cases. They are allowed
+     to overlap at four, because overlapping figures are how a crowded comic
+     panel has always been drawn and because the alternative is shrinking every
+     face until none of them reads. */
+  const figX = (i, n) => (i + 0.5) / n;
+  /* Height falls as the cast grows, but slowly: the point of the half-body
+     crop is the expression, and an avatar under about 45% of the frame stops
+     delivering one. Four is the cap for that reason and is enforced at build. */
+  const figH = n => n <= 2 ? 0.62 : n === 3 ? 0.55 : 0.48;
+
+  /* ---- the figures -------------------------------------------------------
+     One sheet per character, offset to the panel that holds the wanted face.
+     The placeholder is drawn first and removed only when the real image reports
+     `load`, so it disappears by itself as the art lands and never needs taking
+     out — and while it is there it names the exact file that would fill it. */
+  function paintFigure(el, ph, c, i, n, speaking){
+    const x = figX(i, n), h = figH(n);
+    [el, ph].forEach(box => {
+      if (!box) return;
+      box.style.left = (x * 100) + "%";
+      box.style.height = (h * 100) + "%";
+      /* Drawn facing one way only; a figure standing right of the middle is
+         mirrored so that nobody is addressing the edge of the frame. The flip
+         rides on the same transform as the centring, so it composes rather
+         than fighting it. */
+      const flip = p.faceIn !== false && x > 0.5;
+      box.style.transform = "translateX(-50%)" + (flip ? " scaleX(-1)" : "");
+      /* The speaker is at full strength and in front; everyone else is held
+         back. With the name gone from the balloon this is half of what says
+         who is talking — the tail is the other half, and two weak signals
+         beat one strong one on a small screen. */
+      box.style.opacity = speaking ? "1" : String(p.dim || 0.72);
+      box.style.zIndex = speaking ? "3" : "2";
+    });
+    if (!el) return;
+    const src = (window.__SHEETS__ && window.__SHEETS__[c.slug])
+              || (up + ASSET_CAST + c.slug + ".webp");
     /* The sheet is a cols x rows grid read left to right, top to bottom, so
        a linear emotion index becomes a column and a row. */
     const cols = p.cols || 3, rows = p.rows || 2;
-    const x = ln.col % cols, y = Math.floor(ln.col / cols);
-    av.style.backgroundImage = 'url("' + src + '")';
-    av.style.backgroundSize = (cols * 100) + "% " + (rows * 100) + "%";
+    const cx = c.col % cols, cy = Math.floor(c.col / cols);
+    el.style.backgroundImage = 'url("' + src + '")';
+    el.style.backgroundSize = (cols * 100) + "% " + (rows * 100) + "%";
     /* 0% puts the first panel's edge flush with the box's, and 100% puts the
        last panel's far edge flush with the far side — so the step between
        panels is 1/(n-1), not 1/n. A single row or column pins at 0%. */
-    av.style.backgroundPositionX = cols > 1 ? (x / (cols - 1) * 100) + "%" : "0%";
-    av.style.backgroundPositionY = rows > 1 ? (y / (rows - 1) * 100) + "%" : "0%";
+    el.style.backgroundPositionX = cols > 1 ? (cx / (cols - 1) * 100) + "%" : "0%";
+    el.style.backgroundPositionY = rows > 1 ? (cy / (rows - 1) * 100) + "%" : "0%";
     /* Panel width is sheetW/cols and panel height is sheetH/rows, so the
        panel's own aspect is the sheet's times rows over cols — 1.0, square,
        for a 3 x 2 grid in a 3:2 image. */
-    av.style.aspectRatio = String((p.aspect || 1.5) * rows / cols);
+    el.style.aspectRatio = String((p.aspect || 1.5) * rows / cols);
     /* The sheet is one file, so it is fetched once and cached; the probe is
        answered from cache for every later panel. */
     const probe = new Image();
-    probe.onload = () => { if (av.isConnected) ph.remove(); };
-    probe.onerror = () => { if (av.isConnected) av.remove(); };
+    probe.onload = () => { if (el.isConnected && ph) ph.remove(); };
+    probe.onerror = () => { if (el.isConnected) el.remove(); };
     probe.src = src;
   }
 
+  /* ---- the props ---------------------------------------------------------
+     A thing that is in the scene, so a line can point at it. Two layers: a
+     prop that HANGS is behind the people, because a list on a noticeboard is
+     on the wall they are standing in front of, and everything else is in front
+     of them, nearer the camera. Getting that the wrong way round is the single
+     most obvious way a composited panel looks wrong.
+
+     A prop that has not been drawn keeps a dashed, named box — the same
+     scaffolding rule the avatars follow, and for the same reason: a prop is
+     something a line refers to, so a missing one leaves the line pointing at
+     nothing. Effects do NOT get that treatment; see below. */
+  function paintProps(items, figs){
+    propBack.innerHTML = "";
+    propFront.innerHTML = "";
+    (items || []).forEach(it => {
+      let x;
+      if (it.at === "left") x = 0.15;
+      else if (it.at === "right") x = 0.85;
+      else if (it.at === "center") x = 0.5;
+      else {
+        /* Beside a named person, on their outward side, so it never lands
+           between two people who are talking to each other. */
+        const i = figs.indexOf(it.at);
+        const fx = i < 0 ? 0.5 : figX(i, figs.length);
+        x = fx < 0.5 ? fx - 0.15 : fx + 0.15;
+      }
+      x = Math.max(0.08, Math.min(0.92, x));
+
+      const box = document.createElement("div");
+      box.className = "d-it";
+      box.dataset.item = it.slug;
+      box.style.left = (x * 100) + "%";
+      box.style.height = ((it.size || 0.18) * 100) + "%";
+      /* Hanging props are pinned near the top of the frame; everything else
+         stands on the floor. Neither is centred vertically, because nothing in
+         a real scene floats. */
+      if (it.hangs) box.style.top = "8%"; else box.style.bottom = "4%";
+
+      const ph = document.createElement("div");
+      ph.className = "d-it-ph";
+      ph.textContent = it.slug;
+      box.appendChild(ph);
+
+      const src = up + ASSET_PROP + it.slug + ".webp";
+      box.style.backgroundImage = 'url("' + src + '")';
+      const probe = new Image();
+      probe.onload = () => { if (box.isConnected) ph.remove(); };
+      probe.onerror = () => { if (box.isConnected) box.dataset.missing = "1"; };
+      probe.src = src;
+
+      (it.hangs ? propBack : propFront).appendChild(box);
+    });
+  }
+
+  /* ---- the effects -------------------------------------------------------
+     Manga sign language: a shock burst, a sweat drop, circling birds. Two
+     kinds, and the manifest says which is which — one sits over a person, one
+     over the whole frame.
+
+     A figure effect is drawn to cover the figure's box grown upward, because
+     half of these live above the head and the code should not have to know
+     which. That is a rule the ART carries: the prompts ask for each figure
+     effect on a square canvas with the figure's headroom already in it.
+
+     A missing effect renders NOTHING — no placeholder, deliberately, and this
+     is the one place that differs from every other missing asset here. A
+     dashed box labelled "dizzy" sitting over somebody's face is worse than no
+     effect at all, and unlike a prop, nothing in the writing points at it.
+     Which effects are still undrawn is tools/check_cast.py's question. */
+  function paintFx(fx, figs){
+    fxLayer.innerHTML = "";
+    (fx || []).forEach(f => {
+      const el = document.createElement("div");
+      el.className = "d-fx-one";
+      el.dataset.fx = f.slug;
+      if (f.on === "panel"){
+        el.dataset.over = "panel";
+      } else {
+        const i = figs.indexOf(f.on);
+        if (i < 0) return;
+        const n = figs.length, h = figH(n);
+        el.dataset.over = "figure";
+        el.style.left = (figX(i, n) * 100) + "%";
+        /* The figure's height plus a third again of it, all of the extra
+           growing upward: the drop, the stars and the vein all sit at or above
+           the head. */
+        el.style.height = (h * 1.34 * 100) + "%";
+        el.style.aspectRatio = "1";
+        el.style.transform = "translateX(-50%)";
+      }
+      const src = up + ASSET_FX + f.slug + ".webp";
+      el.style.backgroundImage = 'url("' + src + '")';
+      const probe = new Image();
+      probe.onerror = () => { if (el.isConnected) el.remove(); };
+      probe.src = src;
+      fxLayer.appendChild(el);
+    });
+  }
+
+  /* ---- one panel ---------------------------------------------------------
+     A panel is an EXCHANGE, not a line: every balloon in the beat, and every
+     person the beat leaves standing on the stage — including the ones saying
+     nothing, who are there because a scene with a silent listener in it reads
+     as a scene and a scene without one reads as a monologue.
+
+     The stage state shown is the state at the END of the beat, so a character
+     who reacts on the second line is already wearing that face when the reader
+     arrives at it. That is how a comic panel works: it is the moment after. */
   function show(i){
     i = Math.max(0, Math.min(beats.length - 1, i));
     if (i === at) return;
     at = i;
     const lns = beats[i].map(j => p.lines[j]);
+    const last = lns[lns.length - 1];
     const place = lns[0].bg;
+    const roster = last.cast || [];
+    const figs = roster.map(c => c.who);
+    onStage = roster.length;
+    const speaking = new Set(lns.map(l => l.who).filter(Boolean));
 
     /* Art that does not exist yet must still show the reader — and the person
-       drawing it — WHERE it will go and WHICH file is missing. The placeholder
-       is drawn first and removed only when the real image reports `load`, so
-       it disappears by itself as the assets land and never needs taking out. */
+       drawing it — WHERE it will go and WHICH file is missing. */
     const bgSrc = up + ASSET_BG + place + ".jpg";
     bg.style.backgroundImage = 'url("' + bgSrc + '")';
     bg.dataset.bg = place;
@@ -1669,81 +1827,185 @@ function initScene(root, p){
     bgProbe.onload = () => { if (bg.dataset.bg === place) delete bg.dataset.missing; };
     bgProbe.src = bgSrc;
 
-    /* One avatar per SIDE, not per line: two people talking is one panel with
-       both of them in it, and a speaker who says two things running does not
-       appear twice. The face shown is their LAST line of the beat, because
-       that is the expression the reader should be left holding. */
-    const bySide = new Map();
-    lns.forEach(ln => { if (ln.who) bySide.set(ln.side, ln); });
-    cast.innerHTML = [...bySide.keys()].map(side =>
-      '<div class="d-ph" data-side="' + side + '"><b></b><span></span></div>'
-      + '<div class="d-av" data-side="' + side + '"></div>').join("");
-    [...bySide.entries()].forEach(([side, ln]) => {
-      paintAvatar($('.d-av[data-side="' + side + '"]', cast),
-                  $('.d-ph[data-side="' + side + '"]', cast), ln);
+    cast.innerHTML = roster.map((c, k) =>
+      '<div class="d-fig-ph" data-slot="' + k + '"><b></b><span></span></div>'
+      + '<div class="d-fig" data-slot="' + k + '"></div>').join("");
+    roster.forEach((c, k) => {
+      const ph = $('.d-fig-ph[data-slot="' + k + '"]', cast);
+      if (ph){ $("b", ph).textContent = c.who; $("span", ph).textContent = c.emo; }
+      paintFigure($('.d-fig[data-slot="' + k + '"]', cast), ph, c, k,
+                  roster.length, speaking.has(c.who));
     });
 
-    /* Balloons stack in the order they are said, so reading order is the
-       order of the conversation and nothing has to be numbered. */
-    bubble.innerHTML = lns.map(ln => ln.who
-      ? '<div class="d-bub" data-side="' + ln.side + '">'
-        + '<b class="d-name">' + esc(ln.who) + '</b>'
-        + '<div class="d-said">' + ln.html + '</div></div>'
-      : '<div class="d-bub d-nar-bub"><div class="d-said">' + ln.html + '</div></div>'
-    ).join("");
+    paintProps(last.items, figs);
+    /* Effects are collected across the whole beat rather than taken from its
+       last line, because an effect belongs to the moment and a beat is one
+       moment. The build already refuses two on the same person. */
+    paintFx(lns.reduce((acc, l) => acc.concat(l.fx || []), []), figs);
+
+    /* Balloons stack in the order they are said, so reading order is the order
+       of the conversation and nothing has to be numbered — which is what lets
+       the name come off them. */
+    bubble.innerHTML = lns.map(ln => {
+      /* Three elements, not one, and the nesting is what makes the shapes
+         possible: `.d-bub` positions and carries the tail, `.d-said` is the
+         drawn contour, `.d-txt` is the fill the words sit in. A shout balloon
+         is the ink clip-path on the middle one and the same clip-path inset by
+         three pixels on the inner one — a stroked irregular shape with no SVG
+         and no z-index games. */
+      const inner = '<div class="d-said"><div class="d-txt">' + ln.html
+                  + '</div></div>';
+      if (!ln.who) return '<div class="d-bub" data-bub="narrate">' + inner + '</div>';
+      return '<div class="d-bub" data-bub="' + esc(ln.bub || "say")
+           + '" data-slot="' + ln.slot + '">' + inner + '</div>';
+    }).join("");
     wireGlosses(bubble, p.glosses || [], p.id + "-b" + i);
+
     count.textContent = (i + 1) + " / " + beats.length;
-    /* The live region is the whole beat: a screen-reader user gets both turns
-       in one go, with the names, exactly as the transcript reads. */
-    scene.setAttribute("aria-label",
+    if (rail) rail.style.width = ((i + 1) / beats.length * 100) + "%";
+    prev.disabled = i === 0;
+    next.disabled = i === beats.length - 1;
+    /* The name is gone from the picture, so it must NOT be gone from the
+       accessible name — a screen-reader user has no tail to follow. They get
+       the whole beat in one go, with the speakers, exactly as the transcript
+       reads it. */
+    stage.setAttribute("aria-label",
       lns.map(ln => (ln.who ? ln.who + ": " : "") + ln.html.replace(/<[^>]+>/g, "")).join(" "));
+
+    /* The tail has to be measured, so it waits for layout. */
+    requestAnimationFrame(aimTails);
   }
 
-  /* Which step is under the middle of the viewport. Read on scroll, never
-     driven by it. */
-  function sync(){
+  /* ---- aiming the tails --------------------------------------------------
+     The balloon carries no name any more, so the tail is what identifies the
+     speaker and it has to actually point at them. That cannot be done in CSS:
+     it is the distance between two boxes whose positions depend on the cast
+     size, the frame width and how the text happened to wrap. So it is measured
+     after layout and written back as a custom property, and re-measured
+     whenever the frame changes shape. */
+  function aimTails(){
     if (scene.hidden) return;
-    const mid = innerHeight / 2;
-    let best = 0, bestD = Infinity;
-    steps.forEach((s, i) => {
-      const r = s.getBoundingClientRect();
-      const d = Math.abs(r.top + r.height / 2 - mid);
-      if (d < bestD){ bestD = d; best = i; }
+    $$(".d-bub[data-slot]", bubble).forEach(b => {
+      const k = b.dataset.slot;
+      const fig = $('.d-fig[data-slot="' + k + '"]', cast)
+               || $('.d-fig-ph[data-slot="' + k + '"]', cast);
+      if (!fig) return;
+      const fr = fig.getBoundingClientRect(), br = b.getBoundingClientRect();
+      if (!br.width || !fr.width) return;
+      /* Kept clear of the balloon's own corners, or the tail grows out of the
+         curve and reads as a mistake rather than a tail. */
+      const pad = Math.min(30, br.width * 0.24);
+      const x = fr.left + fr.width / 2 - br.left;
+      b.style.setProperty("--tail-x",
+        Math.max(pad, Math.min(br.width - pad, x)) + "px");
     });
-    show(best);
   }
 
-  /* The buttons move the PAGE, so the panel and the scroll position can never
-     disagree — a nav that only changed the panel would jump back the moment
-     the reader touched the wheel. */
-  const goto = i => {
-    const s = steps[Math.max(0, Math.min(steps.length - 1, i))];
-    if (s) s.scrollIntoView({ behavior: "smooth", block: "center" });
-  };
-  $(".d-next", scene).addEventListener("click", () => goto(at + 1));
-  $(".d-prev", scene).addEventListener("click", () => goto(at - 1));
-  scene.addEventListener("keydown", ev => {
-    if (ev.key === "ArrowRight" || ev.key === "ArrowDown"){ ev.preventDefault(); goto(at + 1); }
-    if (ev.key === "ArrowLeft" || ev.key === "ArrowUp"){ ev.preventDefault(); goto(at - 1); }
+  /* Which way a balloon leans — toward the side its speaker is standing on.
+     Set from the roster rather than measured, because it decides the layout
+     that `aimTails` then measures. Reading the DOM for the count would be
+     wrong as well as slower: a figure whose art 404s removes itself, and the
+     positions must not shift when it does. */
+  let onStage = 0;
+  function leanBubbles(){
+    $$(".d-bub[data-slot]", bubble).forEach(b => {
+      const x = figX(Number(b.dataset.slot), Math.max(1, onStage));
+      b.style.alignSelf = x < 0.42 ? "flex-start" : x > 0.58 ? "flex-end" : "center";
+    });
+  }
+
+  /* ---- moving through it -------------------------------------------------
+     Three ways in, and every one of them moves the SAME thing: the panel. The
+     page does not move at all, which is the whole point of the rewrite — the
+     reader can scroll down to the exercise, scroll back, and find the story
+     exactly where they left it. */
+  const goto = i => { show(i); leanBubbles(); requestAnimationFrame(aimTails); };
+  next.addEventListener("click", () => goto(at + 1));
+  prev.addEventListener("click", () => goto(at - 1));
+  stage.addEventListener("keydown", ev => {
+    if (ev.key === "ArrowRight"){ ev.preventDefault(); goto(at + 1); }
+    if (ev.key === "ArrowLeft"){ ev.preventDefault(); goto(at - 1); }
   });
   /* Left and right also work without first clicking into the stage, while the
      stage is the thing on screen. Deliberately NOT space or the down arrow:
-     those are how a browser pages through a document, and this file's whole
-     position is that a reading page keeps its own scrolling. Never while the
-     reader is typing, which is what the editable check is for. */
+     those are how a browser pages through a document, and a reading page keeps
+     its own scrolling. Never while the reader is typing, which is what the
+     editable check is for. */
   addEventListener("keydown", ev => {
     if (ev.key !== "ArrowRight" && ev.key !== "ArrowLeft") return;
     if (scene.hidden || ev.metaKey || ev.ctrlKey || ev.altKey) return;
     const el = document.activeElement;
     if (el && (el.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName))) return;
     if (scene.contains(el)) return;                 // the stage handler has it
-    const r = $(".d-stage", scene).getBoundingClientRect();
+    const r = stage.getBoundingClientRect();
     if (r.bottom < 0 || r.top > innerHeight) return;
     ev.preventDefault();
     goto(at + (ev.key === "ArrowRight" ? 1 : -1));
   });
-  addEventListener("scroll", sync, { passive: true });
-  addEventListener("resize", sync, { passive: true });
+  /* Swipe, on a phone, where it is the gesture a reader already expects from
+     every comic app there is. `touchstart` and `touchend` only — never
+     `touchmove`, which is the one that would let this cancel a scroll, and
+     cancelling a scroll on a reading page is the thing this file will not do.
+     A swipe that fails these tests simply does nothing and the page keeps it. */
+  let tx = 0, ty = 0, tt = 0;
+  stage.addEventListener("touchstart", ev => {
+    const t = ev.changedTouches[0];
+    tx = t.clientX; ty = t.clientY; tt = Date.now();
+  }, { passive: true });
+  stage.addEventListener("touchend", ev => {
+    const t = ev.changedTouches[0];
+    const dx = t.clientX - tx, dy = t.clientY - ty;
+    if (Date.now() - tt > 800) return;              // a rest, not a swipe
+    if (Math.abs(dx) < 44) return;                  // a tap, or a wobble
+    if (Math.abs(dx) < Math.abs(dy) * 1.4) return;  // that was a scroll
+    goto(at + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+
+  /* ---- filling the screen ------------------------------------------------
+     On a phone the panel is competing with everything else on the page for
+     about six centimetres. Full screen is where a comic actually reads, so it
+     is one tap away — and it takes the controls WITH it, because a full-screen
+     panel with the Next button left behind on the page underneath is a trap.
+
+     The real Fullscreen API where there is one, and a fixed overlay where
+     there is not, which is iOS Safari on a phone and therefore not a corner
+     case. Both paths end in the same class, so the styling and the escape
+     hatch are written once. */
+  function fallbackFull(on){
+    scene.classList.toggle("is-full", on);
+    document.documentElement.classList.toggle("d-locked", on);
+    syncFull();
+  }
+  function syncFull(){
+    const on = document.fullscreenElement === scene || scene.classList.contains("is-full");
+    full.setAttribute("aria-pressed", String(on));
+    full.setAttribute("aria-label", on ? "Leave full screen" : "Fill the screen");
+    requestAnimationFrame(aimTails);
+  }
+  full.addEventListener("click", () => {
+    const on = document.fullscreenElement === scene || scene.classList.contains("is-full");
+    if (on){
+      if (document.fullscreenElement === scene && document.exitFullscreen) document.exitFullscreen();
+      else fallbackFull(false);
+      return;
+    }
+    if (scene.requestFullscreen){
+      scene.requestFullscreen().then(syncFull).catch(() => fallbackFull(true));
+    } else {
+      fallbackFull(true);
+    }
+  });
+  addEventListener("fullscreenchange", syncFull);
+  /* Escape leaves the fallback overlay. The real API does this itself; the
+     fixed-position one has to be told, and a full-screen thing with no way out
+     but the browser's back button is how a reader loses their place. */
+  addEventListener("keydown", ev => {
+    if (ev.key === "Escape" && scene.classList.contains("is-full")) fallbackFull(false);
+  });
+  /* The frame's shape decides where the tails point, so anything that changes
+     it re-measures. Resize, not scroll: this panel does not know or care where
+     the page is. */
+  addEventListener("resize", () => requestAnimationFrame(aimTails), { passive: true });
 
   /* Which view the learner gets is theirs, and it is remembered. The default
      is the comic; the transcript is one tap away and is what the exercises
@@ -1755,16 +2017,16 @@ function initScene(root, p){
     toggle.setAttribute("aria-expanded", String(comic));
     toggle.textContent = comic ? "Read it as text" : "Read it as a comic";
     try { localStorage.setItem(KEY, comic ? "1" : "0"); } catch(e){}
-    if (comic){ at = -1; sync(); }
+    if (comic){ const was = at; at = -1; show(Math.max(0, was)); leanBubbles(); }
+    else if (scene.classList.contains("is-full")) fallbackFull(false);
   }
   toggle.addEventListener("click", () => setMode(scene.hidden));
 
   let want = "1";
   try { want = localStorage.getItem(KEY) || "1"; } catch(e){}
-  /* Reduced motion gets the text by default. The comic is a scroll-driven
-     animation, and someone who has asked for less of that has asked. Guarded
-     by `typeof`, not by truthiness: where the API is absent the bare name
-     throws a ReferenceError and takes the whole dialogue down with it. */
+  /* Reduced motion gets the text by default. Guarded by `typeof`, not by
+     truthiness: where the API is absent the bare name throws a ReferenceError
+     and takes the whole dialogue down with it. */
   if (typeof matchMedia === "function"
       && matchMedia("(prefers-reduced-motion: reduce)").matches) want = "0";
   setMode(want === "1");

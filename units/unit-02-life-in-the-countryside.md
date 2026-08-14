@@ -24,29 +24,34 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="The long way round" gramen="earlier / more slowly — comparative adverbs" gramvi="So sánh hơn với trạng từ: trạng từ ngắn thêm **-er** (*earlier*), trạng từ dài dùng **more** (*more slowly*). Sau đó dùng **than**." gramco="earlier than · more slowly than"
-**Bà Sáu:** Tí. Your uncle sent word down this morning. He wants to see you about a game.
-**Tí:** A game? Chú Bảy said *game*?
-**Bà Sáu:** That is the whole message, and I did not ask. So take this to him in Bến Vàng while you are going, and be back before dark.
-**Tí:** Bến Vàng? That's your village. That's miles.
-**Bà Sáu:** Nine kilometres by the new road. Your uncle needs his medicine today, not tomorrow.
-**Tí:** I'll take the [[ferry]].
-**Bà Sáu:** The ferry runs **later** than it used to. That means an hour on the bank.
-**Tí:** The bus, then.
-**Bà Sáu:** The bus goes **more slowly** than you walk. It stops at every gate between here and the [[canal]].
-**Tí:** So how did you get there when you were thirteen?
-**Bà Sáu:** There was a path. Behind the [[paddy fields|paddy field]], along the [[stream]], straight up over the hill and down the other side.
-**Tí:** Was it any quicker?
-**Bà Sáu:** We got there far **more quickly** than the boats did, and we started **earlier** than anybody. I knew that hill **better** than I know this kitchen.
-**Tí:** Then I'll take the path.
-**Bà Sáu:** You can't. The new road went through it thirty years ago. Nobody has walked it since.
-**Tí:** Somebody must know where it begins.
-**Bà Sáu:** I cannot find the start of it now, child, and I am the last one left who ever used it. Take the bus. Take a hat.
-**Tí:** The bus stops at every gate. He'll be asleep before I get there, and I want to hear about that game today, not next month.
-**Bà Sáu:** Then start walking to the stop.
-**Tí:** …
-**Bà Sáu:** And the child stays here. I am not putting her on a bus.
-**Tí:** She won't stay. I've tried. And I am not leaving her behind that kitchen on her own.
+::: dialogue title="The long way round" bg="kitchen" gramen="earlier / more slowly — comparative adverbs" gramvi="So sánh hơn với trạng từ: trạng từ ngắn thêm **-er** (*earlier*), trạng từ dài dùng **more** (*more slowly*). Sau đó dùng **than**." gramco="earlier than · more slowly than"
+@cast Tí|neutral, Bà Sáu|neutral
+@item board-game at=center
+@item bucket at=left
+**Bà Sáu|neutral:** Tí. Your uncle sent word down this morning. He wants to see you about a game.
+@fx question on=Tí
+**Tí|surprised:** A game? Chú Bảy said *game*?
+**Bà Sáu|neutral:** That is the whole message, and I did not ask. So take this to him in Bến Vàng while you are going, and be back before dark.
+**Tí|surprised:** Bến Vàng? That's your village. That's miles.
+**Bà Sáu|neutral:** Nine kilometres by the new road. Your uncle needs his medicine today, not tomorrow.
+**Tí|neutral:** I'll take the [[ferry]].
+**Bà Sáu|neutral:** The ferry runs **later** than it used to. That means an hour on the bank.
+**Tí|annoyed:** The bus, then.
+@fx speed on=basau
+**Bà Sáu|annoyed:** The bus goes **more slowly** than you walk. It stops at every gate between here and the [[canal]].
+**Tí|neutral:** So how did you get there when you were thirteen?
+**Bà Sáu|happy:** There was a path. Behind the [[paddy fields|paddy field]], along the [[stream]], straight up over the hill and down the other side.
+**Tí|surprised:** Was it any quicker?
+**Bà Sáu|happy:** We got there far **more quickly** than the boats did, and we started **earlier** than anybody. I knew that hill **better** than I know this kitchen.
+**Tí|neutral:** Then I'll take the path.
+**Bà Sáu|sad:** You can't. The new road went through it thirty years ago. Nobody has walked it since.
+**Tí|worried:** Somebody must know where it begins.
+**Bà Sáu|sad:** I cannot find the start of it now, child, and I am the last one left who ever used it. Take the bus. Take a hat.
+**Tí|annoyed|shout:** The bus stops at every gate. He'll be asleep before I get there, and I want to hear about that game today, not next month.
+**Bà Sáu|annoyed:** Then start walking to the stop.
+**Tí|sad:** …
+**Bà Sáu|worried:** And the child stays here. I am not putting her on a bus.
+**Tí|worried:** She won't stay. I've tried. And I am not leaving her behind that kitchen on her own.
 :::
 
 ### 1.1 Comprehension
