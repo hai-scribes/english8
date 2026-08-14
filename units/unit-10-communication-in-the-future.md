@@ -11,7 +11,7 @@
 | --- | --- |
 | **Pronunciation** | **Stress** in words ending *-ese* and *-ee* |
 | **Grammar** | **Prepositions** of place and time; possessive pronouns |
-| **Reading** | A voice out of a sealed box, and what it says the lamp really is |
+| **Reading** | A voice out of a sealed box, and what it says the sea really is |
 | **Speaking** | The pros and cons of online calls |
 | **Listening** | The rest of a recorded message — an address, and where it stops |
 | **Writing** | A **descriptive paragraph**, 80–100 words — video calls or social media |
@@ -27,7 +27,7 @@
 ::: dialogue title="Nothing is getting through" gramen="mine / yours — possessive pronouns" gramvi="Đại từ sở hữu đứng một mình, không có danh từ theo sau: *my phone* → **mine**." gramco="That one is mine"
 **Thảo:** Any [[signal]] yet?
 **Tí:** Nothing. I've been on this wall since six.
-**Thảo:** The mast is still down. It stands opposite the old post office, and half of it is in the canal now.
+**Thảo:** The mast is still down. It stands opposite the old post office, and half of it is in the harbour now.
 **Tí:** My mother rings at seven every Sunday evening. If she gets nothing, she'll think the water took the house.
 **Thảo:** Is that phone yours?
 **Tí:** No. It's Bà Sáu's. The blue one was [[mine|gram:mine]], and it went into the mud on Tuesday, so hers is the only phone left in the house.
@@ -36,11 +36,11 @@
 **Thảo:** Try the school gate. Đạt says there's one bar at the top of the steps, between the two big trees.
 **Tí:** Đạt says a lot of things. The far bank has a signal all day — theirs works, ours doesn't.
 **Thảo:** And the box?
-**Tí:** Still shut. It's under the bed with the lamp, in the rice sack.
+**Tí:** Still shut. It's under my bed, in a rice sack, and it has been there four days.
 **Thảo:** Open it, then.
 **Tí:** In front of Bà Sáu? No.
-**Thảo:** Use the lamp, then. Faster than a wall and a dead phone.
-**Tí:** Light the lamp, and the nearest lost thing comes back — and you never choose what. Three measures left. I'm not spending one on a phone call.
+**Thảo:** Ask Bống, then. Faster than a wall and a dead phone.
+**Tí:** The sea gives back what it took — and you never choose what. Three marks left before it is over the street. I'm not spending one on a phone call.
 **Thảo:** Fine. The gate, at four o'clock.
 **Tí:** I'm never late in the morning. At night, that's a different story.
 :::
@@ -53,7 +53,7 @@ Answer in full sentences.
 2. Why is Tí using Bà Sáu's phone and not his own?
 3. What does Thảo tell him to send, and why will it get through later?
 4. Where exactly does Đạt say there is a signal?
-5. Why will Tí not light the lamp for this?
+5. Why will Tí not ask Bống to do this?
 
 ### 1.2 Find the phrase
 
@@ -566,27 +566,27 @@ _______________________________________________
 ::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
 :::
 
-*Tí writes down what happened on the landing, four days after the flood.*
+*Tí writes down what happened on the harbour wall, four days after the flood.*
 
 ::: passage
-> We opened the tin box on the landing at four o'clock, with the mud still
+> We opened the tin box on the harbour wall at four o'clock, with the mud still
 > drying on everything. Inside there was no letter. There was one small brass
 > thing the size of my thumb, and it was warm.
 >
-> "Put it down," Mun said. "That is not ours."
+> "Put it down," Bống said. "That is not ours."
 >
-> I put it on the stones next to the lamp, and the lamp lit itself. Two
-> measures now.
+> I put it on the concrete, and the tide turned under us without being asked,
+> and the water stood up to the tenth mark.
 >
 > What came back was a voice. It came out of the air above the box, with nobody
 > in front of us and nobody behind us. It spoke first in Vietnamese and then in
 > English, and something between the two was translating it as it went.
 >
-> "To whoever finds this," the voice said. "This is the keeper of the lamp. The
-> lamp is not a wishing lamp. It is a station on a network, and a lost thing is
-> never made out of nothing. It is carried back along the line, from wherever it
-> went, and somebody has to hold that line open at the far end. That is a
-> keeper's work. The lamp is yours. The line is mine."
+> "To whoever finds this," the voice said. "This is the keeper. What she does is
+> not wishing. The sea is a station on a network, and a lost thing is never made
+> out of nothing. It is carried back along the line, from wherever it went, and
+> somebody has to hold that line open at the far end. That is a keeper's work.
+> The calling is hers. The line is mine."
 >
 > Thảo said it was telepathy. It was not. It was not a signal from any mast in
 > the province either.
@@ -595,8 +595,8 @@ _______________________________________________
 > hands the whole time, and half of what she means is in the gesture. A voice
 > with no face and no hands is not face-to-face. It is less than a phone call.
 >
-> Mun sat down on the wet stone. "That is the man who taught me," he said, "and
-> I cannot remember his face."
+> Bống sat down on the wet stone. "That is the man who was going to teach me,"
+> she said, "and I cannot remember his face."
 :::
 
 ### 5.1 True, False, or Not Given
@@ -604,19 +604,19 @@ _______________________________________________
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the passage says the opposite. **Not Given** means it does not say either way — and answering from what you would expect to be in an old sealed box is exactly the trap here."
 - There was a letter inside the tin box. = F ~ there was no letter — only one small brass thing the size of a thumb
 - The voice spoke in Vietnamese before it spoke in English. = T
-- The voice says the lamp is a station on a network. = T
-- Mun can remember his teacher's face. = F ~ he says he cannot remember it
+- The voice says the sea is a station on a network. = T
+- Bống can remember the keeper's face. = F ~ she says she cannot remember it
 - The keeper made the recording before the flood. = NG ~ the passage never says when he made it
 :::
 
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="3" ask="Take the words from the passage. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- What did the lamp do when the brass thing was put down beside it? = lit itself
+- How high did the water stand when the brass thing was put down? = (the) tenth mark
 - Which language did the voice speak first? = Vietnamese
-- What does the voice say the lamp is a station on? = (a) network
+- What does the voice say the sea is a station on? = (a) network
 - Whose does the voice say the line is? = mine
-- Where did Mun sit down? = the wet stone
+- Where did Bống sit down? = the wet stone
 :::
 
 ### 5.3 Vocabulary in context
@@ -698,12 +698,13 @@ ninth of June, and that was sixty years ago. I paid for it in coins. I have
 been waiting ever since to learn whether it arrived, and I know now that it did
 not, because you are only hearing it today.
 
-Listen carefully. I am on the far side of the water. I cannot cross back while
-the line is open, and the line has to stay open, or everything lost between
-here and there stays lost. That is the whole of it.
+Listen carefully. I hold the far end, from the far side of the water. I can
+stand on your shore for an hour at a time and no longer, and I cannot come home
+at all while the line is open — and it has to stay open, or everything lost
+between here and there stays lost. That is the whole of it.
 
-And if the apprentice is still with the lamp — boy, you were never taught the
-second half. That is my fault and not yours.
+And if the child is still with you — boy, she was never taught the second
+half. That is my fault and not hers.
 
 Everything I built is in my workroom. Go upriver, past the stilt house, to the
 old mill. The workroom is under the mill, behind the wheel, and the door is the
@@ -711,7 +712,7 @@ colour of the water, so you will walk past it twice.
 
 My notebooks are on the shelf above the bench. The green one is the one that
 matters; the rest are copies. Take them, and read the last page first, because
-the last page tells you what the lamp must never—
+the last page tells you what the sea must never—
 :::
 
 ### 6.1 Listen and choose
@@ -857,7 +858,7 @@ how you notice them.
 Find and correct **six** errors in this paragraph. Three are prepositions of
 place or time; three are possessive forms.
 
-> Two measures of oil are left. The tin box came home in my pocket in Tuesday
+> Two marks are left on the wall. The tin box came home in my pocket in Tuesday
 > evening, and the small brass thing from inside it sits in the shelf above my
 > bed. Thảo says hers grandmother still remembers the old post office. "Is this
 > box your's?" Bà Sáu asked at breakfast. Its not mine, and it is not hers
@@ -937,11 +938,12 @@ page can settle it, the row says so, and that one is yours to judge.
 ### Lesson 1
 
 **1.1** 1. It stands opposite the old post office, and half of it is in the
-canal. 2. Because his own phone went into the mud on Tuesday, and hers is the
+harbour. 2. Because his own phone went into the mud on Tuesday, and hers is the
 only phone left in the house. 3. A voice message, because it waits in the
 network and goes the moment the connection comes back. 4. At the top of the
 steps by the school gate, between the two big trees. 5. Because there are only
-three measures of oil left, and he will not spend one on a phone call.
+three marks left before the water is over the street, and he will not spend one
+on a phone call.
 
 ### Lesson 2
 

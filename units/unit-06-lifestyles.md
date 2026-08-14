@@ -27,19 +27,19 @@
 ::: dialogue title="Everybody wants something" gramen="will — the future simple" gramvi="**will** + động từ nguyên thể để nói về tương lai. Câu điều kiện loại 1: *If* + hiện tại đơn, **will** + nguyên thể." gramco="If it rains, we will stay in"
 **Thảo:** Four people stopped me on the way here, and every one of them asked about you.
 **Tí:** Five stopped me. A woman at the market wants her mother's ring back. A man wants his father's boat.
-**Thảo:** It's the festival. You sent it back on the Sunday and the lanterns went out one by one, but somebody saw the lamp burning that night, and now the whole lane knows.
-**Tí:** Mun keeps telling them the same thing. Light the lamp, and the nearest lost thing comes back — you don't get to choose what.
+**Thảo:** It's the festival. You sent it back on the Sunday and the lanterns went out one by one, but half the lane saw Bống standing at the water that night, and now everybody knows.
+**Tí:** Bống keeps telling them the same thing. The sea gives back what it took — you don't get to choose what.
 **Thảo:** Then say it again. If you explain the rule, they will stop asking.
 **Tí:** They won't. They think I am hiding something better.
 **Thảo:** Bà Sáu says the older [[generation]] on our lane want more than a ring. They want the whole [[lifestyle]] they grew up inside.
 **Tí:** I know. Chú Bảy asked me to [[revive]] the boat market. The whole boat market.
 **Thảo:** And what [[will|gram:will]] you tell him?
-**Tí:** Nothing yet. If I light it once for one person, they will queue at our door tomorrow morning.
-**Thảo:** And if you never light it again?
-**Tí:** Then it is only a lamp, and nobody in this [[community]] will look at me the same way.
+**Tí:** Nothing yet. If I take her down there once for one person, they will queue at our door tomorrow morning.
+**Thảo:** And if you never do it again?
+**Tí:** Then it never happens again, and nobody in this [[community]] will look at me the same way.
 **Thảo:** Nobody? Bà Sáu will. I will.
-**Tí:** Seven measures of oil. That is all there is. I won't waste one on a ring.
-**Thảo:** Good. Unless you are certain, don't light it at all.
+**Tí:** Five marks on that wall already. Seven to go before the water is over the street. I won't spend one on a ring.
+**Thảo:** Good. Unless you are certain, don't do it at all.
 **Tí:** I'll be certain by Sunday. I promise.
 :::
 
@@ -49,8 +49,8 @@ Answer in full sentences.
 
 1. Why are people stopping Tí and Thảo in the street?
 2. What does the woman at the market want back?
-3. What does Mun keep telling people about the lamp?
-4. What does Tí think will happen if he lights the lamp for one person?
+3. What does Bống keep telling people about the sea?
+4. What does Tí think will happen if he calls something back for one person?
 5. What does Thảo tell him to do unless he is certain?
 
 ### 1.2 Find the phrase
@@ -67,9 +67,9 @@ Answer in full sentences.
 ::: task skill="course" type="choice" opts="will|won't|if-clause" ask="Look at the **bold** part of each line and label it."
 - If you explain the rule, they **will stop** asking. = will
 - **They won't.** They think I am hiding something better. = won't
-- **If I light it once** for one person, they will queue at our door. = if-clause
-- And **if you never light it again**? = if-clause
-- Seven measures of oil. **I won't waste** one on a ring. = won't
+- **If I take her down there once** for one person, they will queue at our door. = if-clause
+- And **if you never do it again**? = if-clause
+- Seven to go before the water is over the street. **I won't spend** one on a ring. = won't
 :::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **thì tương lai đơn**
@@ -579,13 +579,13 @@ Now answer for your own area, in full sentences.
 
 ### Reading — *The week our lane went back*
 
-*Tí writes down what happened on his lane after he lit the lamp.*
+*Tí writes down what happened on his lane after the tide turned on Tuesday.*
 
 ::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
 :::
 
 ::: passage label="A"
-> I lit the lamp at the landing on Tuesday, and I did not choose what came
+> We went down to the harbour wall on Tuesday, and I did not choose what came
 > back. Nobody chooses. It was not a ring and it was not a boat. What came back
 > was a way of living, and it settled on our lane and on no other street in the
 > town.
@@ -632,7 +632,7 @@ information, not for the sentence.
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- What did the writer light at the landing on Tuesday? = (the) lamp
+- Where did they go on Tuesday? = (the) harbour wall
 - What stood in every window instead of electric light? = oil lamps
 - Where did the old women teach weaving? = (on) the step
 - What went bad by noon? = (the) fish
@@ -730,7 +730,7 @@ to the life we already have.
 - In the evenings the neighbours (a) stayed indoors (b) came out and sat together (c) went to the market = b
 - The speaker's medicine (a) ran out (b) was not kept cold (c) cost too much = b
 - One half of the lane predicts that somebody will (a) be seriously ill (b) move away (c) lose money = a
-- The speaker says the lane is no longer asking (a) who lit the lamp (b) what they will bring back next (c) where the well is = b
+- The speaker says the lane is no longer asking (a) who called it back (b) what they will bring back next (c) where the well is = b
 :::
 
 ### 6.2 Listen and complete
@@ -871,14 +871,14 @@ One pair is enough — two starts to sound like you cannot decide.
 Find and correct **six** errors in this paragraph. All six are about the future
 simple or the first conditional.
 
-> Six measures of oil are left, and I will not lights the lamp again. If we
+> Six marks are on our wall now, and I will not calls anything back again. If we
 > will bring back another week like that one, half the lane will be ill and the
 > other half won't speaks to us. My grandmother says she will to keep the oil
 > lamps anyway. Unless we don't stop now, somebody will get hurt. I think I
-> sleep better when the lamp stays under the bed.
+> sleep better when the water stays where it is.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
-- Error 1 = will not light/won't light ~ *will* is followed by the bare infinitive
+- Error 1 = will not call/won't call ~ *will* is followed by the bare infinitive
 - Error 2 = if we bring ~ no *will* inside the *if*-clause
 - Error 3 = won't speak ~ *won't* + bare infinitive
 - Error 4 = she will keep/will keep ~ *will* + bare infinitive — no *to*
@@ -969,12 +969,11 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. Because somebody saw the lamp burning at the festival, so now the
-whole lane knows about it and people want to ask for things. 2. She wants her
-mother's ring back. 3. He tells them that if you light the lamp, the nearest
-lost thing comes back, and you do not get to choose what. 4. He thinks people
-will queue at their door the next morning. 5. She tells him not to light it at
-all.
+**1.1** 1. Because half the lane saw Bống at the water on the night of the
+festival, so now everybody knows and people want to ask for things. 2. She
+wants her mother's ring back. 3. She tells them that the sea gives back what it
+took, and you do not get to choose what. 4. He thinks people will queue at their
+door the next morning. 5. She tells him not to do it at all.
 
 ### Lesson 2
 

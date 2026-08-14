@@ -45,7 +45,8 @@
 **Tí:** The bus stops at every gate. He'll be asleep before I get there, and I want to hear about that game today, not next month.
 **Bà Sáu:** Then start walking to the stop.
 **Tí:** …
-**Bà Sáu:** And put that rice sack down. Whatever you keep in it can stay under the bed.
+**Bà Sáu:** And the child stays here. I am not putting her on a bus.
+**Tí:** She won't stay. I've tried. And I am not leaving her behind that kitchen on her own.
 :::
 
 ### 1.1 Comprehension
@@ -63,7 +64,7 @@ Answer in full sentences.
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these. Give yourself **two minutes** for all four — searching against a clock is the point, not reading carefully."
 - a very long way to travel = miles
 - the point where something begins = the start of it
-- not even for money = if you paid me
+- sent a message to somebody = sent word
 - built straight across it = went through it
 :::
 
@@ -598,13 +599,16 @@ and **than** in at least two of them.
 > two, and my grandmother had said *before dark* twice, in the voice she keeps
 > for when she means it.
 >
-> So I sat down at the edge of a paddy field with the rice sack in my lap and
-> did the only stupid thing I had left. I lit the lamp and said, "Come back."
+> So we sat down at the edge of a paddy field above the ferry landing and
+> waited. The river this far up still belongs to the sea, twice a day.
 >
-> Mun climbed out and looked at the vast green fields with no interest at all.
+> "It's turning," Bống said. She stood up and looked at the vast green fields
+> with no interest at all. Then she said, "Come back," to the middle of a paddy
+> field.
 >
-> "You know the rule by now," he said. "Light it, and the nearest lost thing
-> comes back. You don't choose which. Ten measures after this one."
+> "You know the rule by now," she said. "The sea gives back what it took. You
+> don't choose which. You only choose where you are standing, and look where
+> you have put us."
 >
 > Nothing happened for a long minute. Then the bamboo behind me moved, and
 > there was a gap in it, and behind the gap there was a path.
@@ -613,7 +617,7 @@ and **than** in at least two of them.
 > that morning. It ran along the stream, climbed the hill far more steeply than
 > any road climbs anything, and dropped down the other side.
 >
-> I took it. It was shorter than the road by half, and it carried me over the
+> We took it. It was shorter than the road by half, and it carried us over the
 > top so much more quickly than the two o'clock bus that I reached my uncle's
 > gate with dry shoes and shaking legs.
 >
@@ -631,13 +635,16 @@ and **than** in at least two of them.
 > "The road," I said.
 >
 > "You came more quickly than the road allows," he said.
+>
+> We got home before dark. Bống put a second chalk mark on the harbour wall, a
+> hand's width above the first, and this time she told me what they were for.
 :::
 
 ### 5.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you know about villages is exactly the pull this type is built to catch."
 - Tí missed the ten o'clock bus by four minutes. = T ~ "by four minutes"
-- The cat was excited by the fields around them. = F ~ he looked at them "with no interest at all"
+- Bống was excited by the fields around them. = F ~ she looked at them "with no interest at all"
 - The path was hard to walk on because nobody had used it. = F ~ it was hard and swept clean, as if a hundred people had walked it that morning
 - Tí had walked that path once before. = NG ~ the text never says either way
 - His uncle accepted that he had come by the road. = F ~ his uncle says he came more quickly than the road allows
@@ -647,7 +654,7 @@ and **than** in at least two of them.
 
 ::: task skill="reading" type="short-answer" words="2+number" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
 - What time was the next bus? = (at) two
-- What two words did he say over the sack? = come back
+- What two words did Bống say when the water turned? = come back
 - What moved behind him just before the path appeared? = (the) bamboo
 - What did the path run along? = (the) stream
 - What did he tell his uncle he had come by? = (the) road
@@ -697,7 +704,7 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 You have already read *The old way to Bến Vàng* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
 
-::: fluency mode="read" words="317" secs="180|145|110" ask="Read *The old way to Bến Vàng* again from the top. Stop the clock the moment you reach the end."
+::: fluency mode="read" words="363" secs="180|145|110" ask="Read *The old way to Bến Vàng* again from the top. Stop the clock the moment you reach the end."
 - Do not stop to look anything up — you have met all of it
 - Read for the sense of it, not word by word
 - Press **I finished** the moment you reach the last line
@@ -744,6 +751,10 @@ water.
 
 Nothing has tied up there in my lifetime. Nothing goes up that river any more.
 The path does.
+
+And here is the part I keep coming back to. That path went thirty years before
+either of us was born, and this morning it was under my feet. So whatever is
+doing this is not reaching back a week. It is reaching back years.
 :::
 
 ### 6.1 Listen and choose
@@ -968,7 +979,8 @@ medicine. 2. Because the ferry runs later than it used to, so he would wait on
 the bank for an hour. 3. There was a path, which ran along the stream and
 straight over the hill. 4. Because the new road was built through it thirty
 years ago, and nobody has walked it since — she says she could not even find
-where it started. 5. The rice sack, which he keeps under his bed.
+where it started. 5. Bống — she says the child stays at home, and Tí answers
+that she will not stay.
 
 ### Lesson 2
 

@@ -11,7 +11,7 @@
 | --- | --- |
 | **Pronunciation** | **Intonation** in lists |
 | **Grammar** | **Reported speech** — questions |
-| **Reading** | The twelfth lighting, and the name that came back |
+| **Reading** | The twelfth mark, and the name that came back |
 | **Speaking** | What conditions does a planet need for life? |
 | **Listening** | A traveller answering the questions his visitors brought him |
 | **Writing** | A **descriptive paragraph**, 80–100 words — aliens on another planet |
@@ -36,14 +36,14 @@
 **Thảo:** Đạt asks that every year.
 **Tí:** Khoa asked me how far the crossing is.
 **Thảo:** And?
-**Tí:** Nine days on foot. A river, a crossing, nine days. He can be reached. He cannot be called.
+**Tí:** Nine days on foot. A river, a crossing, nine days. He can stand on our beach for an hour; he cannot come home. Somebody has to walk to him. Nobody can call him.
 **Thảo:** Because of the rule.
-**Tí:** Because of the rule. Light the lamp and the nearest lost thing comes back — you never choose what — and there is one measure of oil left.
+**Tí:** Because of the rule. The sea gives back what it took — you never choose what — and there is one mark left on that wall.
 **Thảo:** Minh wants to come with us. He asked me whether the old man would know about him.
-**Tí:** Nobody knows about him. The green notebook did not have one word about him, so now we ask a person. That is half of why we are walking.
-**Thảo:** What does Mun say about it?
-**Tí:** He says spend it on anything else. Then he goes quiet. Thảo, last night he asked me what my name means.
-**Thảo:** He is asking the wrong person a question about himself.
+**Tí:** Nobody knows about him. The green notebook had one line that might be about him and might be about a chair, so now we ask a person. That is half of why we are walking.
+**Thảo:** What does Bống say about it?
+**Tí:** She says spend it on anything else. Then she goes quiet. Thảo, last night she asked me what my own name means.
+**Thảo:** She is asking the wrong person a question about herself.
 :::
 
 ### 1.1 Comprehension
@@ -55,7 +55,7 @@ Answer in full sentences.
 3. What does question one on the project sheet ask?
 4. What did Đạt ask out loud at break?
 5. How long is the walk to the crossing, and what is on the way?
-6. What does Mun say they should do with the last measure of oil?
+6. What does Bống say they should do with the last mark?
 
 ### 1.2 Find the phrase
 
@@ -626,9 +626,9 @@ tone — that is the Lesson 2 target, used for real.
 
 ## Lesson 5 — Skills 1: Reading & Speaking
 
-### Reading — *The last of the oil*
+### Reading — *The twelfth mark*
 
-*Tí, 13, writes about the twelfth time the lamp was lit.*
+*Tí, 13, writes about the twelfth and last time the sea came back.*
 
 ::: clock mins="20" for="You have 20 minutes for the text and every exercise below it."
 :::
@@ -637,47 +637,57 @@ tone — that is the Lesson 2 target, used for real.
 > I have told this story eleven times and nobody believes the first part, so
 > this time I will start at the end.
 >
-> We took the lamp out to the middle of the river on a clear night. Khoa wanted
-> it clear so that he could name things. He pointed at Venus, low and steady
-> over the fields, and said that it sits inside the **habitable zone** and is
+> The moon came closest on the Thursday. Khoa had the numbers for it: gravity,
+> he said, the moon pulling the water, and this week it pulls hardest. The night
+> was clear, which he wanted, so that he could name things. He pointed at Venus,
+> low over the roofs, and said that it sits inside the **habitable zone** and is
 > still far too hot for anybody. Then he asked me twice whether I could see it.
-> I could not. Thảo rowed. Mun sat on the lid of the basket and asked us three
-> times whether we were sure.
+> I could not.
+>
+> By that night our street was a bay. There were boats where the buses go, and a
+> lamp in every upstairs window, and the whole lane out on the roofs talking,
+> and nobody frightened of it any more. The twelfth mark was four feet under,
+> and Bống would not look at the wall.
+>
+> We rowed out over our own market. Thảo rowed. Minh sat in the bow and did not
+> say much, and Bống asked us three times whether we were sure. Halfway out,
+> something very large came up beside the boat, and stayed a moment, and went
+> down again without hurrying, and nobody said one word.
 >
 > Out there, nothing is lost for a long way in any direction. No houses, no
-> bank, no market. Nothing lost anywhere near us except one cat.
+> wall, no market. Nothing lost anywhere near us except one name.
 >
-> Bạch warned me about this months ago, in a car park: the half of the rule
-> nobody passes on, and not allowed either. She was right. I went out there
+> The keeper warned me about this months ago, in a car park: the half of the
+> rule nobody passes on, and not allowed either. He was right. I went out there
 > anyway, on purpose, for somebody else.
 >
 > "You never choose what comes back," I said. "But you do choose where you are
-> standing when you light it."
+> standing when you call."
 >
-> One measure. It went up in about four seconds, and after that the lamp was
-> cold and has stayed cold.
+> The tide turned. It went over in about four seconds, and after that the water
+> began going out, and it has kept going.
 >
-> Nothing landed in the boat. Nothing rose out of the water. Mun lifted his
-> head the way a cat does when somebody calls him from the kitchen, and said,
-> "Sao."
+> Nothing landed in the boat. The water did not give us one single thing. Bống
+> lifted her head the way you do when somebody calls you from another room, and
+> said, "Sao."
 >
-> Then he sat down very suddenly, because a name does not come home by itself.
+> Then she sat down very suddenly, because a name does not come home by itself.
 > Everything walked in behind it: the workroom, the far end of the line, the
-> lesson he was never given, and the old man who never got as far as handing it
+> lesson she was never given, and the old man who never got as far as handing it
 > over.
 >
 > "I know where he is," Sao said. "And I know what he kept asking me."
 >
-> Khoa asked whether he would go back for his training now that the name was
-> his. Sao said he would walk up with us and come home after. He lives here.
+> Khoa asked whether she would go back for her training now that the name was
+> hers. Sao said she would walk up with us and come home after. She lives here.
 >
-> Bạch was on the bank when we came in, and nobody had asked her to come.
+> The keeper was on the wall when we came in, and nobody had asked him to come.
 >
-> "Sao," she said. "That is a keeper's name."
+> "Sao," he said. "That is a keeper's name."
 >
-> "I know," he said.
+> "I know," she said.
 >
-> She said nothing about the rule I broke. She will. It can wait.
+> He said nothing about the rule I broke. He will. It can wait.
 >
 > Thảo asked how long the walk would take. Khoa already knew.
 :::
@@ -688,30 +698,30 @@ tone — that is the Lesson 2 target, used for real.
 - The writer has told this story before. = T ~ he says he has told it eleven times
 - Khoa wanted a cloudy night. = F ~ he wanted it clear so that he could name things
 - The writer could see Venus when Khoa pointed at it. = F ~ "I could not"
-- Mun wanted to be sure before they lit the lamp. = T ~ he asked them three times whether they were sure
-- Something landed in the boat when the lamp was lit. = F ~ nothing landed in the boat and nothing rose out of the water
+- Bống wanted to be sure before they rowed out. = T ~ she asked them three times whether they were sure
+- Something landed in the boat when the tide turned. = F ~ nothing landed in the boat and the water gave them nothing
 - Thảo had rowed a boat on that river before. = NG ~ she rows them out, but the text never says whether she had done it before
-- The writer thinks he can decide what the lamp brings back. = F ~ "You never choose what comes back"
+- The writer thinks he can decide what the sea brings back. = F ~ "You never choose what comes back"
 :::
 
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
 - Which planet did Khoa point at, low over the fields? = Venus
-- What did Mun sit on in the boat? = the lid/lid
-- How long did the last measure take to go up? = (about) four seconds
-- What did Mun say when he lifted his head? = Sao
-- What was the lamp like after that, and has stayed? = cold
+- Who sat in the bow of the boat? = Minh
+- How long did the water take to go over? = (about) four seconds
+- What did Bống say when she lifted her head? = Sao
+- Which way did the water go after that? = out
 :::
 
 ### 5.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the reading that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- burned away completely = went up
+- rose past the top of something = went over
 - with no clouds in it = clear
 - without any help from anybody = by itself
 - passing something over to the person it belongs to = handing it over
-- the flat cover on the top of a basket = the lid
+- the front end of a boat = the bow
 :::
 
 ::: bridge name="Only what the text says — and a story you have followed is the hardest place to obey that" trains="Reading" cefr="B1" marker="[Q]" src="04 §4.2"
@@ -764,9 +774,9 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### 5.4 Read it again, against the clock
 
-You have already read *The last of the oil* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
+You have already read *The twelfth mark* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
 
-::: fluency mode="read" words="383" secs="190|150|115" ask="Read *The last of the oil* again from the top. Stop the clock the moment you reach the end."
+::: fluency mode="read" words="490" secs="240|190|145" ask="Read *The twelfth mark* again from the top. Stop the clock the moment you reach the end."
 - Do not stop to look anything up — you have met all of it
 - Read for the sense of it, not word by word
 - Press **I finished** the moment you reach the last line
@@ -802,9 +812,9 @@ from this end. If I had let go of it, every lost thing still travelling would
 have stopped where it was, halfway, for ever. That is the whole answer, and it
 is not a brave one.
 
-The boy asked whether I was angry about the twelve lightings. I am not. I
-asked him what he had spent them on, and he told me the lot: a game, a path, a
-friend, a house, a festival, a way of living, a forest, a market, a town, a
+The boy asked whether I was angry about the twelve marks. I am not. I asked
+him what he had spent them on, and he told me the lot: a game, a path, a
+friend, a house, a festival, a way of living, a reef, a market, a town, a
 voice and a workroom. Eleven. And then a name. I would have spent them worse.
 
 Minh asked me the one none of the others would ask out loud. He wanted to know
@@ -814,12 +824,12 @@ told the boy beside him has never in his life forgotten a face. So he stays.
 He will be thirteen a good while yet, which is a strange thing to be, and I
 have nothing that mends it and nothing that needs mending.
 
-Somebody asked whether the lamp can be filled again. It cannot. It was never
-yours, and it is not mine either — I only carry it. It goes home with me
-tonight, empty, wrapped in a rice sack.
+Somebody asked whether the marks can be made again. They cannot. The line was
+never yours, and it is not mine either — I only hold it open. It closes behind
+me tonight, and the water goes out with me, and by morning the wall will be dry.
 
-And the cat asked me nothing at all, which is how I knew he had it back. Sao.
-I am sorry it took so long to reach him.
+And the girl asked me nothing at all, which is how I knew she had it back. Sao.
+I am sorry it took so long to reach her.
 :::
 
 ### 6.1 Listen and choose
@@ -827,10 +837,10 @@ I am sorry it took so long to reach him.
 ::: task skill="listening" type="multiple-choice"
 - The speaker says his visitors walked (a) two days (b) nine days (c) a month = b
 - He says the line only opens (a) from both ends (b) from this end (c) from neither end = b
-- He says he is (a) angry about the twelve lightings (b) not angry about them (c) unable to remember them = b
-- About the way the lightings were spent, he says he would have spent them (a) better (b) worse (c) exactly the same = b
-- He says the lamp (a) can be filled again (b) cannot be filled again (c) is already full = b
-- He knew about the cat because the cat (a) shouted at him (b) ran away (c) asked him nothing = c
+- He says he is (a) angry about the twelve marks (b) not angry about them (c) unable to remember them = b
+- About the way the marks were spent, he says he would have spent them (a) better (b) worse (c) exactly the same = b
+- He says the marks (a) can be made again (b) cannot be made again (c) are already gone = b
+- He knew about the girl because she (a) shouted at him (b) ran away (c) asked him nothing = c
 :::
 
 ### 6.2 Listen and complete
@@ -839,9 +849,9 @@ I am sorry it took so long to reach him.
 - He says the least he can do is answer them in ___ . = order
 - Every lost thing still travelling would have ___ where it was. = stopped
 - The boy's list began with a game, a path and a ___ . = friend
-- The lamp goes home with him wrapped in a rice ___ . = sack
-- It goes home tonight, ___ . = empty
-- He is sorry it took so long to ___ him. = reach
+- By morning, he says, the harbour ___ will be dry. = wall
+- The line closes behind him ___ . = tonight
+- He is sorry it took so long to ___ her. = reach
 :::
 
 ### Writing — A descriptive paragraph about aliens
@@ -965,18 +975,18 @@ Report each question. Use the words given.
 Find and correct **six** errors in this paragraph. Five are about reported
 questions; one is a subject–verb agreement slip.
 
-> The lamp is cold, and last week it went home in a rice sack. Bà Sáu asked me
-> did I know where the cat had got to. Then she asked where have I been all
-> afternoon. Sao asked her if he could stay for dinner? I asked him when will
-> he go back for his training. He said not yet. Minh comes over on Sundays now,
+> The wall is dry, and last week the water went out for good. Bà Sáu asked me
+> did I know where Sao had got to. Then she asked where have I been all
+> afternoon. Sao asked her if she could stay for dinner? I asked her when will
+> she go back for her training. She said not yet. Minh comes over on Sundays now,
 > and we play the wooden game in the yard. My uncle asked me why did I
 > keep the old path clear. Everyone use it now.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
 - Error 1 = asked me if I knew/asked me whether I knew ~ a reported Yes/No question takes *if* or *whether*
 - Error 2 = asked where I had been ~ no inversion in a reported question, and the tense shifts back
-- Error 3 = asked her if he could stay for dinner ~ and it ends in a full stop, not a question mark
-- Error 4 = asked him when he would go back ~ statement order, and *will* backshifts
+- Error 3 = asked her if she could stay for dinner ~ and it ends in a full stop, not a question mark
+- Error 4 = asked her when she would go back ~ statement order, and *will* backshifts
 - Error 5 = asked me why I kept ~ no *did*, and statement order
 - Error 6 = uses ~ *Everyone* takes a singular verb
 :::

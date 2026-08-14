@@ -36,15 +36,15 @@
 **Thảo:** He isn't unkind about it, though.
 **Tí:** I know. That's the part I hate. Anyway, the market opens at five tomorrow and Bà Sáu wants me carrying the basket.
 **Thảo:** Then I'll come. The rice truck comes at six, and the fish sellers never put their good baskets out twice.
-**Tí:** Bring your own money — I'm counting hers to the last coin. And that's if the road is open. The men were still cutting the last of the branches on Thursday.
-**Thảo:** Eleven days with hand saws for one morning of trees.
-**Tí:** You can't say "Go well." to a forest. Nobody called it, so nothing sends it back — we just cut it. Bà Sáu paid two days' rice towards the blades, which is why we are counting coins.
-**Thảo:** And the lamp? Did Cô Yến take it in the end?
-**Tí:** Cô Yến came to our kitchen on Sunday and asked Bà Sáu to hand it over. They sat there for an hour and neither of them gave way.
-**Thảo:** So where is it now?
-**Tí:** On the kitchen shelf, in front of the tea, where anybody who walks in can see it. Bà Sáu says a thing you hide under a bed is a thing you are still planning to use.
-**Thảo:** Đạt has already been in to look at it. So has Hùng. They both know exactly which shelf.
-**Tí:** Everybody does. Light the lamp, and the nearest lost thing comes back — you never choose what. I'm not doing that again.
+**Tí:** Bring your own money — I'm counting hers to the last coin. And that's if the boats are running. The men were still cutting the last of the coral out of the channel on Thursday.
+**Thảo:** Eleven days with hand tools for one morning of coral.
+**Tí:** You can't say "Go well." to a reef. It didn't come out of anybody's hands, so nothing takes it back — we just cut it. Bà Sáu paid two days' rice towards the blades, which is why we are counting coins.
+**Thảo:** And Bống? Did Cô Yến get her way in the end?
+**Tí:** Cô Yến came to our kitchen on Sunday and asked Bà Sáu to hand her over. They sat there for an hour and neither of them gave way.
+**Thảo:** So where does she sleep now?
+**Tí:** At the table, in front of everybody, where anybody who walks in can see her. Bà Sáu says a child you hide behind the house is a child you are still planning to use.
+**Thảo:** Đạt has already been in to look at her. So has Hùng. They both know exactly where she is.
+**Tí:** Everybody does. The sea gives back what it took — you never choose what. I'm not doing that again.
 **Thảo:** Nobody asked you to, Tí.
 :::
 
@@ -615,24 +615,25 @@ Answer in full sentences.
 
 ::: passage
 > Bà Sáu sent me to the market at five with two hundred thousand dong and a
-> list. I took the lamp with me. I lifted it off the kitchen shelf in front of
-> her and she said nothing. I know exactly how that sounds.
+> list. I took Bống with me. I walked her out of that kitchen in front of
+> Bà Sáu and she said nothing. I know exactly how that sounds.
 >
 > On Friday Đạt walked past our gate wearing my father's watch. Bà Sáu sold it
 > in July, to a man at the centre, for four weeks of rice, and it was the one
 > thing in the house that was going to be mine. Đạt did not mention it. He does
 > not have to. He was kind to me all the way to the corner.
 >
-> So I told myself I was carrying the lamp because the house was empty, which is
+> So I told myself I was taking her because the house was empty, which is
 > what I wrote in October, and it was not the whole truth either time.
 >
-> A woman dropped a tray of glasses behind me. I turned, my elbow went into
-> the rice sack, and the lamp came out onto the stones and lit.
+> The tide turned at twenty past five. I know that because I had looked it up
+> the night before, which is not a thing anybody does by accident. I walked her
+> into the middle of the car park, and I did not stop her.
 >
 > The market that came back was our market, and it was not. It stood where the
 > car park is now: forty stalls under palm leaves, a fish row, a cloth row,
-> and a street of sellers calling prices I had never heard in my life. Mun sat
-> on my shoulder and said nothing, which is what he does now when he is
+> and a street of sellers calling prices I had never heard in my life. Bống put
+> both hands on my arm and said nothing, which is what she does now when she is
 > frightened.
 >
 > The sellers were not ghosts. They were busy. They weighed things, they
@@ -641,7 +642,7 @@ Answer in full sentences.
 >
 > Then I tried to buy bread at the shop on the corner — our shop, the one that
 > is still there — and the man looked at the note in my hand and pushed it
-> back across the counter. It was old money. No shop in Bến Sẻ will take it,
+> back across the counter. It was old money. No shop in Bãi Sẻ will take it,
 > and by seven o'clock half the town was holding notes that buy nothing at
 > all.
 :::
@@ -649,8 +650,8 @@ Answer in full sentences.
 ### 5.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and answering from what you already know about markets and shopping centres is exactly the pull this type is built to catch."
-- The writer took the lamp to the market with him. = T
-- The writer lit the lamp on purpose. = F ~ his elbow went into the rice sack and it came out onto the stones
+- The writer took Bống to the market with him. = T
+- The writer had looked up the time of the tide the night before. = T ~ "which is not a thing anybody does by accident"
 - The market that came back stood where the car park is now. = T
 - There were more stalls in the fish row than in the cloth row. = NG ~ the text never compares the two rows
 - The sellers in that market gave change to their customers. = T
@@ -662,7 +663,7 @@ Answer in full sentences.
 ::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
 - Besides two hundred thousand dong, what did the writer take to the market? = (a) list
 - How many stalls stood under palm leaves? = forty (stalls)
-- Who sat on the writer's shoulder and said nothing? = Mun
+- What turned at twenty past five? = (the) tide
 - What did the woman drop the coins into? = (a) wooden box
 - What kind of money was the note the shopkeeper pushed back? = old money
 :::
@@ -674,7 +675,7 @@ Answer in full sentences.
 - a line of stalls selling the same kind of goods = row
 - the money you get back when you have paid too much = change
 - notes and coins that no shop uses any more = old money
-- a large rough bag that rice is carried in = rice sack
+- the long flat surface you are served across in a shop = counter
 :::
 
 ### Speaking — Your local market or shopping centre
@@ -745,61 +746,62 @@ come from.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a stranger speaking to a boy beside a market, and a short reply from the boy. She has come a long way and she is not pleased with him." mode="computer" preview="30" review="120"
-**The white cat:** Put it down. You are carrying it wrong, and you have been
-carrying it wrong for eight lightings.
+::: audio orientation="You will hear a stranger speaking to a boy beside a market, and short replies from the boy. He has come a long way and he is not pleased with him." mode="computer" preview="30" review="120"
+**The keeper:** Take her home. You are doing this wrong, and you have been
+doing it wrong for eight tides.
 
 **Tí:** Who are you?
 
-**The white cat:** My name is not the useful part. I keep lamps. I have kept
-them for a long time, and I always come when a town starts paying for its
+**The keeper:** My name is not the useful part. I keep the tide tables. I have
+kept them for a long time, and I always come when a town starts paying for its
 vegetables with money that stopped existing before its grandparents were
 born.
 
-**Tí:** It fell. I didn't —
+**Tí:** It was an accident. I didn't —
 
-**The white cat:** It burned on those stones for eleven minutes. Eleven. A
-trained keeper closes it in four. Where is the apprentice?
+**The keeper:** You looked it up. Go and read your own wall. Eight marks, and
+the eighth one is above your knee. Who told her twelve?
 
-**Tí:** Mun isn't an apprentice. He's my —
+**Tí:** Nobody told her anything. She's my —
 
-**The white cat:** He is an apprentice, and his instructions are wrong. He
-told you twelve measures and stopped there. That is half a sentence. This
-lamp was never meant to be used this way. It was made to bring back one thing
-to one person who has lost it. Not a whole market, with its sellers and its
-prices, to a town that has moved on and spent thirty years learning to.
+**The keeper:** She is a child, and she has been ashore eleven days, and
+nobody has finished teaching her one single thing. Twelve is where somebody
+stopped talking. That is half a sentence. This was never meant to be used the
+way you are using it. The sea gives back one thing to one person who lost it.
+Not a whole market, with its sellers and its prices, to a town that has moved
+on and spent thirty years learning to.
 
-**The white cat:** And you have been steering it. He told you that you cannot
-choose what comes back. He did not tell you the rest, because he does not know
-it: you have been choosing where you stand when you light it. Upriver. The
-landing. This car park. That is not the same rule, and it is not allowed
+**The keeper:** And you have been steering it. She told you that you cannot
+choose what comes back. She did not tell you the rest, because she does not
+know it: you have been choosing where you stand when she calls. Upriver. The
+slipway. This car park. That is not the same rule, and it is not allowed
 either.
 
 **Tí:** Then say the other half. Please.
 
-**The white cat:** I usually don't explain myself to boys who drop things.
-Count your oil. You have four measures left.
+**The keeper:** I usually don't explain myself to boys who read tide tables at
+midnight. Go and count your marks. There are four left.
 :::
 
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- The stranger says the boy has been carrying it wrong for (a) eight lightings (b) two lightings (c) twelve lightings = a
-- She says that what she keeps is (a) markets (b) lamps (c) apprentices = b
-- It burned on the stones for (a) four minutes (b) eleven minutes (c) thirty minutes = b
-- A trained keeper closes it in (a) four minutes (b) eleven minutes (c) half an hour = a
-- She says the apprentice's instructions are (a) old (b) wrong (c) missing = b
-- She says it was made to bring back one thing to (a) one person (b) one family (c) one town = a
+- The stranger says the boy has been doing it wrong for (a) eight tides (b) two tides (c) twelve tides = a
+- He says that what he keeps is (a) markets (b) tide tables (c) apprentices = b
+- He says the girl has been ashore for (a) four days (b) eleven days (c) thirty days = b
+- He says the marks still left number (a) four (b) eleven (c) thirty = a
+- He says that what the girl was told is (a) old (b) half a sentence (c) a lie = b
+- He says the sea gives back one thing to (a) one person (b) one family (c) one town = a
 :::
 
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="3"
-- She says she has kept them for ___ . = a long time
+- He says he has kept them for ___ . = a long time
 - The money stopped existing before the town's ___ were born. = grandparents
-- The stranger calls the apprentice's instructions ___ . = half a sentence
+- The stranger calls what she was told ___ . = half a sentence
 - The town has spent ___ learning to move on. = thirty years
-- The stranger tells the boy to count his ___ . = oil
+- The stranger tells the boy to go and count his ___ . = marks
 :::
 
 ### Writing — A paragraph about one kind of shopping
@@ -921,7 +923,7 @@ Find and correct **seven** errors in this paragraph. Five are about adverbs of
 frequency (position or double negative); two are about present simple for
 scheduled future events.
 
-> Four measures of oil are left, and Mun says the white cat is called Bạch.
+> Four marks are left on the wall, and the stranger will not say his name.
 > Bà Sáu always is at the market by six o'clock. She goes twice a week there,
 > and she doesn't never pay by card. Tomorrow is different: the new stalls will
 > open at nine, and the big sale will start at ten. Always I go with her when

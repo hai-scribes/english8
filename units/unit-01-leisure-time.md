@@ -24,8 +24,8 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="The list in the yard" bg="canal-landing" gramen="love / can't stand + V-ing" gramvi="Sau các động từ chỉ sự thích hoặc không thích (love, like, enjoy, can't stand, hate), động từ theo sau thêm **-ing**." gramco="I love cooking · I can't stand waiting"
-**Thảo|neutral:** You've been down here at the water all morning. What's wrong?
+::: dialogue title="The list in the yard" bg="harbour-wall" gramen="love / can't stand + V-ing" gramvi="Sau các động từ chỉ sự thích hoặc không thích (love, like, enjoy, can't stand, hate), động từ theo sau thêm **-ing**." gramco="I love cooking · I can't stand waiting"
+**Thảo|neutral:** You've been down on the wall all morning. What's wrong?
 **Tí|sad:** Nothing's wrong.
 **Thảo|annoyed:** Tí.
 **Tí|sad:** Hùng got a new [[board game|board game]] for his birthday. He read out the list of who's coming on Saturday. In the yard. Out loud.
@@ -41,8 +41,8 @@
 **Tí|worried:** You're only asking me because of the list.
 **Thảo|happy:** I enjoy sitting here with you and I would enjoy sitting there with you. Both things are true.
 **Tí|neutral:** …
-**Thảo|happy:** Are you coming up, or are you staying down here to [[relax]] in the mud?
-**Tí|surprised:** In a minute. There's something shiny down there.
+**Thảo|happy:** Are you coming up, or are you staying down here to [[relax]] on the wet steps?
+**Tí|worried:** In a minute. There's something in the bucket behind our kitchen, and I haven't told anybody.
 :::
 
 ### 1.1 Comprehension
@@ -53,7 +53,7 @@ Answer in full sentences.
 2. What did Hùng do in the yard?
 3. Why does Thảo invite Tí to her house on Saturday?
 4. What does Tí admit he would love to do?
-5. What does Tí say is in the water?
+5. What does Tí say is behind his kitchen?
 
 ### 1.2 Find the phrase
 
@@ -496,62 +496,61 @@ fond of, be crazy about, be into*).
 
 ### Reading — *The best afternoon of the year*
 
-*Tí, 13, writes about a Saturday in Bến Sẻ.*
+*Tí, 13, writes about a Saturday in Bãi Sẻ.*
 
 ::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
 :::
 
 ::: passage
-> I am not going to explain where the lamp came from, because nobody believes
+> I am not going to explain where the girl came from, because nobody believes
 > that part. I will write down what happened afterwards instead.
 >
-> It was Saturday. Hùng's house had my whole class in it, and our canal landing
-> had me. I was pulling things out of the water — a bicycle wheel, half a chair
-> — when I found something heavy under the mud. I sat on the bank and rubbed it
-> clean, and I am not ashamed to say that I cried a little. That is when it lit.
+> It was Saturday. Hùng's house had my whole class in it, and our harbour wall
+> had me. For three days there was a fish in a bucket behind our kitchen, and I
+> fed it, and I told nobody. That morning the bucket was empty. There was a
+> small girl sitting on our step in Thảo's old yellow shirt, eating a cold sweet
+> potato, and she said her name was gone and I could pick one.
 >
-> A cat came out of it. A thin black one, with a torn ear, who looked around at
-> the water and the mud and said, "Right. Light the lamp, and the nearest lost
-> thing comes back. You don't get to choose which. It holds twelve measures of
-> oil and you have just burned one, so do the arithmetic before you do that
-> again."
+> So I call her Bống, because that is what she was, and she did not argue.
 >
-> "What's your name?" I asked.
+> She walked me down to the wall at low water and made me wait there, which I
+> can't stand doing. Then the tide turned, and she said, "Come back," to nobody
+> at all.
 >
-> He opened his mouth. Then he shut it again, and for a moment he looked like
-> somebody who has put something down and cannot think where. "I'll come back
-> to that," he said.
->
-> So I call him Mun, because he is black all over, and he did not argue.
+> "The sea gives back what it took," she said. "You don't get to choose which.
+> You only get to choose where you are standing."
 >
 > What came back was a board game.
 >
 > Not a new one. A wooden one, hand-cut, with a lid that does not fit and four
-> counters cut from bottle tops. It was lying on the bank as if it had been
-> there the whole morning.
+> counters cut from bottle tops. It was lying on the wet concrete as if it had
+> been there the whole morning.
 >
 > We played until it got dark. Bà Sáu came down to shout at me for missing
 > dinner and stayed for four games. Thảo arrived and did not ask one question
-> about the cat, which is why she is my friend. Even the cat played, badly.
+> about Bống, which is why she is my friend. Even Bống played, badly.
 >
 > Nobody from Hùng's house was there. I did not think about them once.
+>
+> Before we went up, Bống found a piece of chalk and made one short mark on the
+> harbour wall, at about my shoulder. She would not say what it was for.
 :::
 
 ### 5.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and answering from what feels likely is exactly the pull this type is built to catch."
-- Tí found the heavy thing inside his house. = F ~ he pulled it out of the water at the canal landing
-- The cat explains what the lamp does. = T ~ "Light the lamp, and the nearest lost thing comes back"
+- The fish was still in the bucket when Tí came home. = F ~ the bucket was empty and a girl was sitting on the step
+- Bống explains what the sea does. = T ~ "The sea gives back what it took"
 - The board game that came back was new. = F ~ it is wooden and hand-cut, with a lid that does not fit
 - Tí had played this game before. = NG ~ he never says whether he had; only that it came back
-- Thảo wanted to know about the cat. = F ~ she did not ask one question about it
+- Thảo wanted to know about Bống. = F ~ she did not ask one question about her
 :::
 
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- What did Tí pull out of the water, besides a bicycle wheel? = half a chair
-- What came out of the lamp? = (a) cat
+- How long was the fish in the bucket? = three days/3 days
+- What was the girl on the step eating? = (a) sweet potato
 - What are the four counters cut from? = bottle tops
 - How many games did Bà Sáu stay for? = four/4
 - What came back? = (a) board game
@@ -561,8 +560,8 @@ fond of, be crazy about, be into*).
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - cut by hand, not by machine = hand-cut
-- the ground along the edge of the water = bank
-- embarrassed about something you have done = ashamed
+- the hard grey material the harbour wall is made of = concrete
+- the time when the sea is at its lowest = low water
 - the metal caps from drinks = bottle tops
 :::
 
@@ -635,7 +634,7 @@ first, then answer while you listen rather than afterwards from memory.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a man talking about how he spent his free time when he was a boy, and about something he made and then lost." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a man talking about how he spent his free time when he was a boy, and about something he made and then lost at sea." mode="computer" preview="30" review="120"
 When I was thirteen there was nothing to do in this town and we did all of
 it. We swam, we fished, and when it rained we sat under the house and played
 games we had made ourselves.
@@ -644,13 +643,13 @@ I made one. It took me a whole wet season. I cut the board out of a plank and
 the counters out of bottle tops, and the lid never fitted properly, which
 annoyed me for about twenty years.
 
-I kept it in a tin box under my bed until I was about twenty-five. Then I
-married and moved to my wife's village, and somewhere between the two houses
-that box stopped being anywhere at all. I looked for it every time we moved.
-I asked my mother about it twice.
+I kept it in a tin box on the boat until I was about twenty-five. Then one
+night off the point we took a wave over the stern, and half of what was not
+tied down went into the water, and the box went with it. I looked for it on
+that beach for a month. I asked my mother about it twice.
 
-Anyway. Last Saturday my nephew was playing a game down at the landing with
-half the street, and I walked past, and I stopped. Because I know that board.
+Anyway. Last Saturday my nephew was playing a game down on the harbour wall
+with half the street, and I walked past, and I stopped. Because I know that board.
 I cut it. There is a mark on the back where the knife slipped.
 
 I didn't say anything. I sat down and played, and I lost, and I still have
@@ -687,7 +686,7 @@ for you.
 - When it rained, the boys (a) went home (b) played games they had made (c) went fishing = b
 - Making the game took him (a) one week (b) a whole wet season (c) twenty years = b
 - He kept the game in (a) a cupboard (b) a tin box (c) his school bag = b
-- He lost the game when he (a) moved house (b) sold it (c) gave it away = a
+- He lost the game when (a) a wave came over the boat (b) he sold it (c) he gave it away = a
 - When he saw the game again he (a) took it back (b) said nothing and played (c) told the boy's grandmother = b
 :::
 
@@ -695,9 +694,9 @@ for you.
 
 ::: task skill="listening" type="sentence-completion" words="2+number"
 - He cut the board out of ___ . = (a) plank
-- He kept the box under his bed until he was about ___ . = twenty-five/25
+- He kept the box on the boat until he was about ___ . = twenty-five/25
 - There is a mark on the back where the ___ slipped. = knife
-- He says he lost it somewhere between the ___ . = two houses
+- He looked for it on that beach for ___ . = (a) month
 :::
 
 ### Writing — An email about your leisure time
@@ -713,7 +712,7 @@ time. Write an email of **80–100 words**.
 > it is.
 >
 > Usually nothing. But last Saturday my friend found an old wooden board game
-> by the canal, and nine of us played it on the bank until dark. His
+> down on the harbour wall, and nine of us played it there until dark. His
 > grandmother came to shout and stayed for four games. I enjoy winning and I
 > can't stand losing, so I was not very polite.
 >
@@ -896,7 +895,8 @@ page can settle it, the row says so, and that one is yours to judge.
 **1.1** 1. He got a new board game. 2. He read out the list of everyone who was
 coming to his house on Saturday. 3. Because Tí was left off Hùng's list — and
 because she enjoys spending time with him. 4. He would love to go to Hùng's on
-Saturday. 5. He says there is something shiny in the water.
+Saturday. 5. He says there is something in the bucket behind his kitchen, and
+that he has not told anybody about it.
 
 ### Lesson 2
 

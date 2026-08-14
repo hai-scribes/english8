@@ -11,34 +11,34 @@
 | --- | --- |
 | **Pronunciation** | /bl/ vs /kl/ — *blue* vs *clean* |
 | **Grammar** | **Complex sentences** with adverbial clauses of time |
-| **Reading** | The morning a forest came back through the town |
+| **Reading** | The morning a reef came back through the harbour |
 | **Speaking** | Asking and answering about Vu Quang National Park |
-| **Listening** | A teacher tells the school what the trees have damaged |
+| **Listening** | A teacher tells the school what the coral has damaged |
 | **Writing** | A **notice**, 100–120 words — inviting students to an environment lecture |
 
 ---
 
 ## Lesson 1 — Getting Started
 
-### Dialogue: The canal behind the school
+### Dialogue: The water behind the school
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="The canal behind the school" gramen="when — a time clause" gramvi="Mệnh đề thời gian bắt đầu bằng *when, before, after, until*. Nếu nó đứng trước mệnh đề chính thì có dấu phẩy ngăn cách." gramco="When the rain stops, we will go"
-**Thảo:** Have you seen the canal behind the school? The water has gone brown.
+::: dialogue title="The water behind the school" gramen="when — a time clause" gramvi="Mệnh đề thời gian bắt đầu bằng *when, before, after, until*. Nếu nó đứng trước mệnh đề chính thì có dấu phẩy ngăn cách." gramco="When the rain stops, we will go"
+**Thảo:** Have you seen the water behind the school? The whole corner of the harbour has gone brown.
 **Tí:** I noticed it on Monday. It started changing colour after the workshop opened on the other bank.
-**Thảo:** So the workshop is allowed to pollute our canal and nobody says anything?
-**Tí:** My uncle says one workshop can pour enough [[sewage]] into a canal to kill it before anybody reports it.
+**Thảo:** So the workshop is allowed to pollute our harbour and nobody says anything?
+**Tí:** My uncle says one workshop can pour enough [[sewage]] into a harbour to kill it before anybody reports it.
 **Thảo:** [[When|gram:when]] we were small we caught fish there. Now the water looks [[toxic]].
 **Tí:** Not any more. As soon as the fish went, the birds stopped coming too.
-**Thảo:** Cô Yến is organising a clean-up on Saturday. Our lane could not agree about anything else for a whole week, so she gave us the canal instead. She says [[awareness]] is where every clean-up starts.
+**Thảo:** Cô Yến is organising a clean-up on Saturday. Our lane could not agree about anything else for a whole week, so she gave us the harbour instead. She says [[awareness]] is where every clean-up starts.
 **Tí:** Then she'll want evidence. Once we have photographs and dates, she can take them to the district office.
 **Thảo:** I'll photograph the water every morning while I walk to school.
-**Tí:** And I'll carry the sacks. Bà Sáu says we shouldn't wait until the canal is completely dead.
-**Thảo:** Nobody in this town does anything until it's too late. And the lamp? People still stop me about it.
+**Tí:** And I'll carry the sacks. Bà Sáu says we shouldn't wait until the harbour is completely dead.
+**Thảo:** Nobody in this town does anything until it's too late. And Bống? People still stop me about her.
 **Tí:** I sent the week back on Sunday night. I stood on our step and said "Go well.", and the wires were live again before breakfast, and half the lane still isn't speaking to the other half.
 **Thảo:** So you're finished with it?
-**Tí:** Light the lamp, and the nearest lost thing comes back — you never choose what. So on Saturday I'm carrying it down to the canal and putting it into Cô Yến's hands in front of everybody. Then it's the town's argument, not mine.
+**Tí:** The sea gives back what it took — you never choose what. So on Saturday I'm walking her down to the water in front of everybody, and I'm telling her to go home. Then it stops, and it stops where people can see it stop.
 **Thảo:** Good. Whenever I walk past that water now, I feel angry.
 **Tí:** Keep the anger. Bring gloves on Saturday.
 :::
@@ -47,7 +47,7 @@
 
 Answer in full sentences.
 
-1. What has happened to the water in the canal?
+1. What has happened to the water behind the school?
 2. When did the water start to change colour?
 3. What happened after the fish went?
 4. What will Cô Yến want before she goes to the district office?
@@ -71,7 +71,7 @@ sentence.
 - It started changing colour **after** the workshop opened. = after the workshop opened
 - **As soon as** the fish went, the birds stopped coming. = as soon as the fish went
 - **Once** we have photographs, she can take them to the office. = once we have photographs
-- We shouldn't wait **until** the canal is completely dead. = until the canal is completely dead
+- We shouldn't wait **until** the harbour is completely dead. = until the harbour is completely dead
 - **Whenever** I walk past that water now, I feel angry. = whenever I walk past that water now
 :::
 
@@ -545,7 +545,7 @@ Answer in full sentences.
 
 ## Lesson 5 — Skills 1: Reading & Speaking
 
-### Reading — *The morning the forest came back*
+### Reading — *The morning the reef came back*
 
 *Tí writes down what happened on the day of the clean-up.*
 
@@ -553,61 +553,60 @@ Answer in full sentences.
 :::
 
 ::: passage
-> On Saturday morning thirty of us cleared the canal behind the school. We
-> started at seven, and by ten we had filled forty sacks with plastic, glass and
-> rope. I brought the lamp with me. I know how that sounds. I did not mean to
-> light it — I brought it because I meant to hand it in, to put it into Cô Yến's
-> hands in front of the whole lane and be finished with it.
+> On Saturday morning thirty of us cleared the harbour steps behind the school.
+> We started at seven, and by ten we had filled forty sacks with plastic, glass
+> and rope. I brought Bống with me. I know how that sounds. I brought her
+> because I meant to walk her down to the water in front of the whole lane and
+> tell her to go home, and be finished with it.
 >
-> The rice sack was standing on the wall above the water. When Hùng swung a full
-> bag onto his shoulder, he knocked the sack off the wall and the lamp went over
-> onto the stones. Before anyone could reach it, it was burning. Mun came out
-> with his ears flat, and for the first time he said nothing at all.
+> I could not do it. We stood out on the breakwater for twenty minutes and I
+> said nothing at all, and while I was saying nothing the tide turned under us.
 >
-> Then the ground moved. A forest came back — not slowly, the way a forest grows,
-> but all at once, the way a light comes on. Trees came up through the road,
-> through the school yard, through the market. Roots lifted the concrete and
-> broke it like a biscuit. Branches closed over the lane until the whole town
-> went dark at half past ten in the morning.
+> Then the water moved. A reef came back — not slowly, the way coral grows, but
+> all at once, the way a light comes on. Coral came up through the moorings,
+> through the channel, against the harbour wall. It lifted one boat clean out of
+> the water and broke a propeller like a biscuit. By eleven there was no way in
+> or out of this harbour for anything that floats.
 >
-> It was the old delta forest, the one this town was built on top of. Cô Yến
-> calls that deforestation, and she says it took our great-grandparents a
-> generation. It came back in about a minute, and it brought its residents with
-> it: birds, insects, and something heavy we could hear moving and never saw.
+> It was the old reef, the one this coast used to sit behind. Chú Bảy says it
+> was broken up before he was born, and that is why the sea reaches the road
+> now. It came back in about a minute, and it brought its residents with it:
+> fish in thousands, and a dugong lying in the shallows by the slipway that
+> nobody dared go near.
 >
-> Nobody laughed. We stood in our own market in the dark, and we were frightened
-> of it.
+> Nobody laughed. We stood on our own harbour wall in the sun, and we were
+> frightened of it.
 :::
 
 ### 5.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you already assume happened is exactly the pull this type is built to catch."
-- The writer meant to light the lamp that morning. = F ~ he says he did not mean to light it
+- The writer brought Bống to the clean-up by accident. = F ~ he brought her on purpose, meaning to send her home
 - By ten o'clock the students had filled forty sacks. = T
-- The forest came back slowly, over several days. = F ~ it came back all at once
-- Trees came up in the road, the school yard and the market. = T
-- More trees came up in the market than in the school yard. = NG ~ the text never compares the two places
-- Mun said nothing when the lamp began to burn. = T
+- The reef came back slowly, over several days. = F ~ it came back all at once
+- Coral came up in the moorings, the channel and against the harbour wall. = T
+- More coral came up in the channel than in the moorings. = NG ~ the text never compares the two places
+- Somebody went close to the dugong. = F ~ nobody dared go near it
 :::
 
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- What did the thirty students clear on Saturday morning? = (the) canal
+- What did the thirty students clear on Saturday morning? = (the) harbour steps
 - How many sacks had they filled by ten? = forty (sacks)
-- Where was the rice sack standing? = (on) the wall
-- What lifted the concrete and broke it? = roots/the roots
-- What came up through the road and the school yard? = trees/the trees
-- At what time did the town go dark? = half past ten
+- Where did they stand for twenty minutes? = (on) the breakwater
+- What did the coral break like a biscuit? = (a) propeller
+- What came up through the moorings and the channel? = coral/the coral
+- What was lying in the shallows by the slipway? = (a) dugong
 :::
 
 ### 5.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - large rough bags for carrying heavy things = sacks
-- the parts of a plant that hold it in the ground = roots
-- the hard grey material a road is made of = concrete
-- the cutting down of a whole forest = deforestation
+- a wall built out into the sea to keep the waves off a harbour = breakwater
+- the deep lane of water that boats come in along = channel
+- the animals and plants that live in a particular place = residents
 :::
 
 ### Speaking — Asking and answering about Vu Quang National Park
@@ -652,9 +651,9 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### 5.4 Read it again, against the clock
 
-You have already read *The morning the forest came back* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
+You have already read *The morning the reef came back* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
 
-::: fluency mode="read" words="275" secs="150|120|90" ask="Read *The morning the forest came back* again from the top. Stop the clock the moment you reach the end."
+::: fluency mode="read" words="255" secs="140|110|85" ask="Read *The morning the reef came back* again from the top. Stop the clock the moment you reach the end."
 - Do not stop to look anything up — you have met all of it
 - Read for the sense of it, not word by word
 - Press **I finished** the moment you reach the last line
@@ -673,7 +672,7 @@ You have already read *The morning the forest came back* and answered questions 
 
 ## Lesson 6 — Skills 2: Listening & Writing
 
-### Listening — What the trees did
+### Listening — What the coral did
 
 You get **one** play. The talk gives the damage first and then what the school
 must do, in that order, and the two question sets follow it. Read both sets in
@@ -682,37 +681,38 @@ the preview window, then answer as you listen — not afterwards, from memory.
 **Nghe một lần duy nhất.** Đọc trước cả hai phần câu hỏi trong lúc chờ, rồi vừa
 nghe vừa trả lời.
 
-::: audio orientation="You will hear a teacher speaking to students about the damage the new trees have done, and about something she wants brought to her." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a teacher speaking to students about the damage the new coral has done, and about somebody she wants to meet." mode="computer" preview="30" review="120"
 Good morning, everyone. Sit down, please. Nobody is going home yet, so listen.
 
-You have all seen the trees. I am going to tell you what they have done, and
+You have all seen the harbour. I am going to tell you what is in it, and
 then I am going to tell you what happens next.
 
-First, the damage. The road to the market is broken from end to end; a root
-lifted it like a lid. Two shops on that road have lost their front walls. The
-water pipe under the yard is cracked, so there is no clean water in this school
-today, and sewage from the broken drain is running into the canal we cleaned on
-Saturday. Three families cannot get out of their lane at all.
+First, the damage. The channel is closed from end to end; nothing can get in
+or out. Two boats have lost their propellers. The water pipe under the yard is
+cracked, so there is no clean water in this school today, and sewage from the
+broken drain is running into the harbour we cleaned on Saturday. Three families
+have no way of working at all.
 
-Second, and I want you to hear this clearly: nobody was hurt. A branch came
-through the window of Room 6 at four in the morning, when the room was empty.
+Second, and I want you to hear this clearly: nobody was hurt. A mooring rope
+parted at four in the morning, when the boat was empty.
 
 Third. The adults of this town met last night, and we know that what happened
-was not the weather. We are not angry with anyone yet. But somebody carried
-something down to the canal on Saturday, and that person knows exactly what I am
+was not the weather. We are not angry with anyone yet. But somebody brought
+somebody down to that water on Saturday, and that person knows exactly what I am
 talking about.
 
-Bring it to me. Bring it to me before it goes over a second time.
+So bring her to my house. Not to the school — to my house, and before this
+goes over a second time.
 :::
 
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
 - The speaker begins by telling everybody to (a) sit down (b) go home (c) open a book = a
-- The road to the market was broken by (a) a lorry (b) a root (c) the rain = b
+- The harbour channel was closed by (a) a lorry (b) the coral (c) the rain = b
 - There is no clean water in the school because (a) the pipe is cracked (b) the well is dry (c) the pump was stolen = a
-- Sewage from the broken drain is running into (a) the market (b) the canal (c) the school yard = b
-- The branch came through the window of Room 6 (a) during a lesson (b) at four in the morning (c) at midday = b
+- Sewage from the broken drain is running into (a) the market (b) the harbour (c) the school yard = b
+- The mooring rope parted (a) during a lesson (b) at four in the morning (c) at midday = b
 - The adults of the town met (a) last night (b) on Saturday (c) this morning = a
 :::
 
@@ -723,12 +723,12 @@ never full sentences. Fill each gap **as you listen** — there is no transfer
 time at the end.
 
 ::: task skill="listening" type="completion" words="1"
-- Damage — the road to the ___ is broken from end to end = market
-- Damage — two shops have lost their front ___ = walls
+- Damage — the ___ is closed from end to end = channel
+- Damage — two boats have lost their ___ = propellers
 - Damage — the water ___ under the yard is cracked = pipe
-- Damage — ___ from the broken drain is reaching the canal = sewage
-- Damage — ___ families cannot get out of their lane = three
-- Safety — a branch came through the window of Room ___ = 6
+- Damage — ___ from the broken drain is reaching the harbour = sewage
+- Damage — ___ families have no way of working = three
+- Safety — a mooring rope parted at ___ in the morning = four
 :::
 
 ::: bridge name="Two cause-and-result sentences on what you just heard" trains="Grammatical Range & Accuracy" cefr="B1" marker="[Q]" src="05 §2.6"
@@ -771,10 +771,10 @@ back at the friendly email you wrote in Unit 1 and notice the difference.
 
 > **NOTICE**
 >
-> **Talk: "Our Canal, and What We Owe It"**
+> **Talk: "Our Harbour, and What We Owe It"**
 >
 > The Green Club invites students in Grades 8 and 9 to a talk on water
-> pollution: where the sewage in our canal comes from, and how to protect it.
+> pollution: where the sewage in our harbour comes from, and how to protect it.
 >
 > **Speaker:** an officer from the district water office
 > **Date:** Saturday, 12 October
@@ -782,7 +782,7 @@ back at the friendly email you wrote in Unit 1 and notice the difference.
 > **Place:** School Hall, Block B
 >
 > Bring a notebook and a question. After the talk finishes,
-> the club will clear the litter from the bank below the broken road, so anyone
+> the club will clear the litter from the beach below the broken road, so anyone
 > who wants to join should bring gloves.
 >
 > Places are limited. Give your name to your class monitor before 10 October.
@@ -887,24 +887,24 @@ Find and correct **five** errors in this paragraph. Three are about time
 clauses — wrong tense or wrong punctuation. One is a comma that does not belong,
 before a clause of purpose. One is a vocabulary slip.
 
-> Five measures of oil are left, and the lamp sits on the kitchen shelf where
-> everybody can see it. When we will clear the last of the branches, the road
-> will be open again. We stacked the broken concrete by the gate, so that the
-> lorry can take it away. Whenever anybody asks me about that morning I say
-> nothing. Bà Sáu will not sleep until the lamp will leave this house. Cô Yến
-> says our job now is to pollute what is left of the canal.
+> Seven marks are on the wall now, and Bống sits in the kitchen where
+> everybody can see her. When we will clear the last of the coral, the channel
+> will be open again. We stacked the broken pieces by the gate, so that the
+> lorry can take them away. Whenever anybody asks me about that morning I say
+> nothing. Bà Sáu will not sleep until this will leave our house. Cô Yến
+> says our job now is to pollute what is left of the harbour.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
 - Error 1 = when we clear ~ no *will* inside a time clause
 - Error 2 = the gate so that/gate so that ~ no comma before *so that*
 - Error 3 = that morning, I say/morning, I say ~ a fronted time clause takes a comma after it
-- Error 4 = leaves ~ no *will* inside a time clause — *until the lamp leaves this house*
+- Error 4 = leaves ~ no *will* inside a time clause — *until this leaves our house*
 - Error 5 = protect ~ *pollute* is the opposite of what the sentence means
 :::
 
 ### Project — A water report for your neighbourhood
 
-Build a one-page report on a river, lake, canal or pond near where you live.
+Build a one-page report on a river, lake, beach or harbour near where you live.
 
 **Step 1 — Observe.** Visit the water four times over two weeks, at the same
 time of day. Each visit, record:
@@ -922,7 +922,7 @@ causes the problem?*
 
 **Step 3 — Explain.** Draw a simple **cause → effect** chain for the biggest
 problem you found. Label each arrow with a time clause, for example:
-*After the market closes, plastic bags blow into the canal.*
+*After the market closes, plastic bags blow into the harbour.*
 
 **Step 4 — Write it up.** Write **120–150 words**: what you saw, what people
 told you, what you think the causes are, and two actions you would suggest.
@@ -947,7 +947,7 @@ page can settle it, the row says so, and that one is yours to judge.
 | hear /bl/ and /kl/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
 | build complex sentences with a time clause | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
 | ask someone to explain what they mean | Lesson 4, exercise 4.3 |
-| read a first-hand account of the morning the forest came back | Lesson 5, exercises 5.1 and 5.2 |
+| read a first-hand account of the morning the reef came back | Lesson 5, exercises 5.1 and 5.2 |
 | talk about Vu Quang National Park | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
 | listen to a teacher listing damage and giving an instruction | Lesson 6, exercises 6.1 and 6.2 |
 | write a notice | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
@@ -966,8 +966,9 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. It has gone brown. 2. It started changing colour after the workshop
-opened on the other bank. 3. The birds stopped coming to the canal as well.
+**1.1** 1. That whole corner of the harbour has gone brown. 2. It started
+changing colour after the workshop opened on the other side. 3. The birds
+stopped coming as well.
 4. She will want evidence — photographs and dates. 5. She is going to photograph
 the water every morning while she walks to school.
 
@@ -1020,7 +1021,7 @@ the table in 2.3.
 **4.6** Answers will vary. Check: question 1 names **two** of the four actions
 and says **where** — a road, a beach, the school yard, your street — not just
 "in my area". Question 2 has to describe a habit rather than a single day: a
-day each month, every time you walk home past the canal, one bag kept in your
+day each month, every time you walk home past the harbour, one bag kept in your
 schoolbag. If your answer to 2 only works on 22 April, write it again.
 
 ### Lesson 5

@@ -103,7 +103,7 @@ and C7. That last one is gated in `test_reading.js`.
 
 `:::dialogue` renders as a background plate, the speaker's face and one speech
 balloon, advancing as the reader scrolls. `data/cast.json` declares the five
-characters, the six emotions and the nine backgrounds; the build **fails** on a
+characters, the six emotions and the eleven backgrounds; the build **fails** on a
 dialogue naming anything outside it, and `tools/check_cast.py` reports which
 images have actually been drawn.
 
@@ -126,7 +126,7 @@ brief — every prompt the art needs, and nothing else — and its filenames and
 manifest's slugs must agree.
 
 ```
-::: dialogue title="…" bg="canal-landing"
+::: dialogue title="…" bg="harbour-wall"
 **Thảo|neutral:** You've been down here all morning.
 @bg school-yard
 **Tí|sad:** Nothing's wrong.
@@ -166,6 +166,29 @@ Bounded by **E5**: nothing is marked learned in the session that taught it, so
 the intake never says "mastered" and the delayed check stays the review queue's
 job.
 
+### The story the twelve units carry
+
+All twelve chapters tell one continuous adventure, **The Sea Gives Back**, set
+in **Quy Nhơn** on the central coast. A boy called Tí keeps a fish in a bucket
+and it will not stay a fish; the sea has come looking for her, and everywhere it
+reaches it puts back what it took. Twelve chalk marks climb the harbour wall,
+one per chapter, and at twelve the water is over the street.
+
+Three documents own it, and they bind in this order:
+
+| | |
+| --- | --- |
+| `research/story/story-bible.md` | world, cast, the one changed rule, the arc, the ending — and §9, what the story deliberately does **not** take from either of the works it learns from |
+| `research/story/chapter-briefs.md` | **the frozen interface.** Twelve briefs, and every hard rule a drafter may not trade away. Where it and the bible differ, the briefs win |
+| `research/story/chain-and-payoff.md` | the audit a finished chapter has to survive: the *because* test, the payoff ledger, what happens to each return |
+
+The house art style is Studio Ghibli's *Ponyo*, and the story shares its shape —
+a sea-child ashore, water that rises without malice, a town that floods and is
+beautiful rather than tragic. **The style is borrowed; the plot is not**, and
+`story-bible.md` §9 lists the specific elements that may never appear. Tí's and
+Thảo's designs carry no setting on them and did not change when the story moved
+from a delta to a coast.
+
 ### The story prose stays inside grade 8
 
 `tools/check_level.py` scans the four story slots for structures the prescribed
@@ -176,7 +199,7 @@ modal, a modal passive — in no unit, at any point in the year) and **FORWARD**
 `--strict-through N` fails on any BEYOND finding in units 1..N. **That number
 is the progress marker.** It is at 3 because units 1–3 are clean and 4–12 are
 not yet processed; raise it as you process them, and never raise it to silence
-a finding. Fifteen BEYOND findings remain in units 4–12.
+a finding. Eight BEYOND findings remain in units 4–12.
 
 What it cannot see, stated plainly: the detectors are regexes, so they find
 structures with a distinctive surface shape and miss the rest. A bare

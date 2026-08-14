@@ -1,4 +1,4 @@
-# Illustration prompts — *The Calling Lamp*
+# Illustration prompts — *The Sea Gives Back*
 
 Every prompt the site's art needs, and nothing else. Written for **Gemini**
 (Nano Banana / Imagen). Each block is complete: paste it, generate, save.
@@ -11,7 +11,7 @@ scrolls. So there are exactly two kinds of image, and the page composites them:
 | --- | --- | --- |
 | **Part 1** | Thirty drawings — five characters × six expressions, one square picture each, chest up, on flat white | `art/cast/<slug>/<emotion>.png` |
 | | …composed by `tools/make_sheet.py` into the 3 × 2 sheet the page loads | `art/cast/<slug>.webp` |
-| **Part 2** | Nine background plates — the story's places, drawn empty | `art/bg/<slug>.jpg` |
+| **Part 2** | Eleven background plates — the story's places, drawn empty | `art/bg/<slug>.jpg` |
 
 `data/cast.json` is the contract. It declares the slugs, the six emotions and
 their panel order, and `tools/build.py` fails the build on a dialogue naming
@@ -46,11 +46,19 @@ prompt copies how the *people* in the still are drawn — the fine line, the fla
 fills, the hard-edged shadows — and a **plate** prompt copies how the *place*
 behind them is painted, and ignores the figures entirely.
 
-The house look is Studio Ghibli's — Miyazaki's *Ponyo* — applied to a Mekong
-delta town. It is a good fit for this story, which is a water story: a canal, a
-boat, a flood, a town under the river. The style is the borrowed part; the cast
-is not, which is what the **must not** line in every character prompt is
-defending.
+The house look is Studio Ghibli's — Miyazaki's *Ponyo* — applied to a Vietnamese
+harbour city. The fit is close on purpose: this is a sea story about a town the
+water comes into, told with the same warmth, and *Ponyo* is the film that
+already knows how to paint bright water and low concrete houses and a flood that
+is not a tragedy.
+
+**The style is the borrowed part; the story and the cast are not.** That is what
+the **must not** line in every character prompt is defending, and it is why
+Bống's own description spends four lines saying what she is *not* — no orange
+hair, no red dress, no fish features. `story-bible.md` §9 lists the plot
+elements that go with them, and the same rule applies here: a reference still is
+for line, colour and light, and for nothing else. If a generation starts
+resembling a character from the film, it is wrong even when it is beautiful.
 
 > **The film paints its people and its places differently, and so do we.**
 > *Ponyo*'s cast is **clean cel** — flat colour and a hard-edged shadow inside
@@ -68,8 +76,14 @@ defending.
 > never keyed, so nothing constrains them.
 
 **What unit 1 needs:** Part 1 §1 (Tí), Part 1 §2 (Thảo) and Part 2 §1
-(`canal-landing`). Everything else is for the chapters after it, and the other
+(`harbour-wall`). Everything else is for the chapters after it, and the other
 eleven dialogues read as plain text until they are staged.
+
+**Tí's six are already drawn and do not change.** His design carries no setting
+on it — a green shirt with a cream collar, charcoal shorts — so moving the story
+from a delta to a coast costs nothing in Part 1. Thảo's six are written and
+unchanged for the same reason. What is new here is **Bống**, who takes the slot
+the cat used to hold.
 
 ---
 
@@ -106,7 +120,8 @@ people doing the same mime. So each character now has their own six, written
 from what that person is like. Thảo is certain and keeps her shoulders square
 even when she is sad; Bà Sáu is planted and her hands are always doing or having
 just done something; Khoa has the notebook in every panel and it is his hands'
-whole vocabulary; Mun has no hands at all and works entirely through his ears.
+whole vocabulary; Bống uses both hands at once for everything, badly, because
+she has not had them long.
 **Do not normalise these back to one description.** The one thing they do share
 is the last line — every gesture stays at chest height or above, because the
 crop is chest-up and a hand below it is a hand nobody sees.
@@ -2649,114 +2664,11 @@ crop is chest-up and a hand below it is a hand nobody sees.
 
 ---
 
-## Mun — six drawings, `art/cast/mun/`
+## Bống — six drawings, `art/cast/bong/`
 
-### Mun · neutral
+### Bống · neutral
 
-**File:** `art/cast/mun/neutral.png`
-
-> **Draw ONE square picture of ONE character.** A single figure, alone in
-> the frame, wearing a single expression. The whole image is that one
-> drawing, filling the frame edge to edge.
->
-> **Art style.** Studio Ghibli feature animation — **exactly the way the
-> characters are drawn and painted in Hayao Miyazaki's *Ponyo* (2008)**:
-> clean hand-drawn cel animation, a fine dark line around flat painted
-> colour, with crisp hard-edged shadow shapes. Warm, soft and simple, but
-> **painted, not sketched**: no pencil texture, no paper grain, no
-> watercolour wash and no visible brushwork anywhere on the figure. Not
-> modern TV anime, not moe, not manga, not American cartoon, not 3D, not
-> photorealistic.
->
-> **Line.** A fine, clean, confident contour of near-constant width,
-> **closed and continuous all the way round the figure with no gaps** —
-> dark, but warmed rather than pure black: a deep brown-black around hair
-> and clothes, a warmer brown where the line meets skin. Never sketchy,
-> never searching, never tapering into a brush stroke; no cross-hatching, no
-> stippling, no visible pencil. Interior detail is minimal: a face is a
-> handful of lines.
->
-> **Colour.** Flat painted cel fills — each area one solid colour, carrying
-> **one hard-edged shadow tone** where the light does not reach, shaped to
-> follow the form: under the chin, beneath the hair, under a sleeve, along
-> the side turned away. Those shadow edges are crisp, never blurred and
-> never faded. **A small round patch of pink on each cheek**, which is the
-> one soft edge the figure is allowed. No gradients, no airbrushing, no
-> glow, no paper texture, no brush grain, no ambient occlusion.
->
-> **Palette.** Few colours, each of them clear and strong, laid down in
-> **big simple blocks** — a whole garment is one colour. Bright and
-> cheerful: clear yellow, warm red, grass green, sky blue, cream, deep
-> charcoal. Never dusty, never greyed-off, never neon. Skin is a light warm
-> peach with a slightly deeper peach as its shadow. Count the colours on a
-> figure: three or four is right, and more than that means something has
-> been over-detailed.
->
-> **Figures.** Round and soft, with real anatomy underneath. Head large
-> relative to the body — roughly one to five — with full cheeks and a
-> rounded jaw. **Eyes are large and round**, with a clear white, a coloured
-> iris, a black pupil and **one small white highlight**, a firm upper lid
-> line above and a thin simple brow. The nose is a tiny curve or a soft dot;
-> the mouth is one simple line that opens to a plain rounded shape when
-> speaking. Hands are small and rounded, five fingers, no knuckle detail.
->
-> **Hair.** One solid mass built from **thick clumped tufts ending in soft
-> points**, the points drawn into the silhouette so the outline itself is
-> tufted — never a smooth helmet, never separate strands, never glossy. The
-> colour is a **warm brown-black rather than a pure flat black**, carrying
-> one **flat lighter patch** in a paler, cooler tone where the light falls,
-> hard-edged like every other shadow shape here.
->
-> **Clothes.** Simple and bold: **one strong colour per garment**, plain
-> shapes, and nothing fussy on them — no pattern, no print, no logo, no
-> piping, no pockets, no visible seams and no buttons unless the character's
-> own description asks for one. Each garment reads at a glance as a single
-> block of colour.
->
-> **The character.** **Mun** — a thin black cat, ordinary house-cat size and
-> build, **on four legs**. Low, lean, slightly scruffy, ribs faintly
-> suggested by two short lines. A deep warm black rather than a flat
-> printer's black, with a single hard-edged dark-grey band along the spine
-> as its only shading. Amber-gold eyes drawn
-> as full circles with a **vertical slit pupil** — the only slit pupils in
-> the cast. A scholar's air he has not earned. Reproduce that design
-> exactly, with no change to colour or proportion. **Must
-> not:** be plump, round or fluffy; have a white belly, a white muzzle or a
-> pouch; wear a collar, bell, clothing or any prop; stand upright, walk on
-> two legs, sit like a person, or have round mitten paws; be drawn as a
-> wide-eyed cartoon cat companion with a permanent grin; resemble any
-> existing Studio Ghibli character or any other well-known cartoon cat.
->
-> **Framing.** Draw the cat's head, shoulders and front legs, on four legs,
-> cropped straight across mid-body. He never sits like a person and never
-> stands on two legs. The character is in **three-quarter view, not facing
-> the camera**: body and head turned about 30 to 45 degrees off straight-on,
-> **looking toward the right-hand side of the frame**, as if speaking to
-> somebody standing off to their right — never out at the reader. The
-> picture is **square, 1:1**, with the figure centred across it and sitting
-> on the bottom edge. Leave a little clear space at the top and both sides:
-> **nothing may be cropped by the edge, least of all a hand.**
->
-> **The expression.** His expression is **neutral**: ears up, eyes level,
-> mouth slightly open as if talking. The feeling is carried by the ears, the
-> eyes and the set of the shoulders — never by arms, hands or human posture.
->
-> **Keep visible:** the one torn left ear.
->
-> **The background** is pure flat white #FFFFFF, edge to edge, with no
-> shadow under or behind the figure, no gradient, no texture and no paper
-> tone. **Do not draw a transparency checkerboard** — the background is one
-> single uniform colour across the whole image. Plain white, and nothing
-> else.
->
-> **Do not include:** a second figure, a second pose, an inset, a border, a
-> frame, or any division of the picture; any text, letters, numbers,
-> captions, watermarks, signatures, speech bubbles or logos; motion lines.
-> No exaggerated screaming-face gags. No sparkles or glows.
-
-### Mun · happy
-
-**File:** `art/cast/mun/happy.png`
+**File:** `art/cast/bong/neutral.png`
 
 > **Draw ONE square picture of ONE character.** A single figure, alone in
 > the frame, wearing a single expression. The whole image is that one
@@ -2816,36 +2728,41 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Mun** — a thin black cat, ordinary house-cat size and
-> build, **on four legs**. Low, lean, slightly scruffy, ribs faintly
-> suggested by two short lines. A deep warm black rather than a flat
-> printer's black, with a single hard-edged dark-grey band along the spine
-> as its only shading. Amber-gold eyes drawn
-> as full circles with a **vertical slit pupil** — the only slit pupils in
-> the cast. A scholar's air he has not earned. Reproduce that design
-> exactly, with no change to colour or proportion. **Must
-> not:** be plump, round or fluffy; have a white belly, a white muzzle or a
-> pouch; wear a collar, bell, clothing or any prop; stand upright, walk on
-> two legs, sit like a person, or have round mitten paws; be drawn as a
-> wide-eyed cartoon cat companion with a permanent grin; resemble any
-> existing Studio Ghibli character or any other well-known cartoon cat.
+> **The character.** **Bống** — a small Vietnamese girl who looks about
+> six or seven, much smaller than the others and drawn a little rounder:
+> head large relative to the body, about one to four, with full cheeks.
+> **Heavy black hair cut blunt at the jaw**, drawn as thick clumped tufts
+> that hang and point downward as though it has just been wet, with **two
+> strands stuck flat across one cheek.** Her eyes are the largest in the
+> cast, drawn as **full circles**, with a clear **sea-green iris** — the only
+> green eyes in the cast. She wears **one pale yellow short-sleeved shirt,
+> several sizes too big**, borrowed: it slips wide across both shoulders and
+> the sleeves are **rolled into thick cuffs at her elbows**. One block of
+> colour, nothing on it. Reproduce that design exactly, with no change to
+> hair, face, clothing, colour or proportion. **Must not:** have orange,
+> ginger or red hair; wear a red dress; have a fish tail, fins, gills,
+> scales, webbed fingers, whiskers or any fish or mermaid feature of any
+> kind; have wings, a halo or a glow; wear a shell, a starfish, a flower or
+> any ornament in her hair; carry a bucket, a jar or a fish; resemble any
+> existing Studio Ghibli character.
 >
-> **Framing.** Draw the cat's head, shoulders and front legs, on four legs,
-> cropped straight across mid-body. He never sits like a person and never
-> stands on two legs. The character is in **three-quarter view, not facing
-> the camera**: body and head turned about 30 to 45 degrees off straight-on,
-> **looking toward the right-hand side of the frame**, as if speaking to
-> somebody standing off to their right — never out at the reader. The
-> picture is **square, 1:1**, with the figure centred across it and sitting
-> on the bottom edge. Leave a little clear space at the top and both sides:
-> **nothing may be cropped by the edge, least of all a hand.**
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
 >
-> **The expression.** His expression is **happy**: eyes curved to two upward
-> arcs, ears forward, head slightly raised. The feeling is carried by the
-> ears, the eyes and the set of the shoulders — never by arms, hands or
-> human posture.
+> **The expression.** The expression is **neutral**: an ordinary talking
+> face, mouth slightly open, no strong feeling. **Both hands held up at
+> chest height, palms turned toward herself, fingers spread**, and her eyes
+> going down to them — she has not had hands very long and has not stopped
+> noticing them. Keep every gesture at chest height or above.
 >
-> **Keep visible:** the one torn left ear.
+> **Keep visible:** the two strands of hair stuck flat across one cheek, and
+> the thick rolled cuffs of a shirt that is too big for her.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper
@@ -2858,9 +2775,10 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > captions, watermarks, signatures, speech bubbles or logos; motion lines.
 > No exaggerated screaming-face gags. No sparkles or glows.
 
-### Mun · worried
 
-**File:** `art/cast/mun/worried.png`
+### Bống · happy
+
+**File:** `art/cast/bong/happy.png`
 
 > **Draw ONE square picture of ONE character.** A single figure, alone in
 > the frame, wearing a single expression. The whole image is that one
@@ -2920,35 +2838,41 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Mun** — a thin black cat, ordinary house-cat size and
-> build, **on four legs**. Low, lean, slightly scruffy, ribs faintly
-> suggested by two short lines. A deep warm black rather than a flat
-> printer's black, with a single hard-edged dark-grey band along the spine
-> as its only shading. Amber-gold eyes drawn
-> as full circles with a **vertical slit pupil** — the only slit pupils in
-> the cast. A scholar's air he has not earned. Reproduce that design
-> exactly, with no change to colour or proportion. **Must
-> not:** be plump, round or fluffy; have a white belly, a white muzzle or a
-> pouch; wear a collar, bell, clothing or any prop; stand upright, walk on
-> two legs, sit like a person, or have round mitten paws; be drawn as a
-> wide-eyed cartoon cat companion with a permanent grin; resemble any
-> existing Studio Ghibli character or any other well-known cartoon cat.
+> **The character.** **Bống** — a small Vietnamese girl who looks about
+> six or seven, much smaller than the others and drawn a little rounder:
+> head large relative to the body, about one to four, with full cheeks.
+> **Heavy black hair cut blunt at the jaw**, drawn as thick clumped tufts
+> that hang and point downward as though it has just been wet, with **two
+> strands stuck flat across one cheek.** Her eyes are the largest in the
+> cast, drawn as **full circles**, with a clear **sea-green iris** — the only
+> green eyes in the cast. She wears **one pale yellow short-sleeved shirt,
+> several sizes too big**, borrowed: it slips wide across both shoulders and
+> the sleeves are **rolled into thick cuffs at her elbows**. One block of
+> colour, nothing on it. Reproduce that design exactly, with no change to
+> hair, face, clothing, colour or proportion. **Must not:** have orange,
+> ginger or red hair; wear a red dress; have a fish tail, fins, gills,
+> scales, webbed fingers, whiskers or any fish or mermaid feature of any
+> kind; have wings, a halo or a glow; wear a shell, a starfish, a flower or
+> any ornament in her hair; carry a bucket, a jar or a fish; resemble any
+> existing Studio Ghibli character.
 >
-> **Framing.** Draw the cat's head, shoulders and front legs, on four legs,
-> cropped straight across mid-body. He never sits like a person and never
-> stands on two legs. The character is in **three-quarter view, not facing
-> the camera**: body and head turned about 30 to 45 degrees off straight-on,
-> **looking toward the right-hand side of the frame**, as if speaking to
-> somebody standing off to their right — never out at the reader. The
-> picture is **square, 1:1**, with the figure centred across it and sitting
-> on the bottom edge. Leave a little clear space at the top and both sides:
-> **nothing may be cropped by the edge, least of all a hand.**
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
 >
-> **The expression.** His expression is **worried**: ears half back, eyes
-> wide, head lowered a little. The feeling is carried by the ears, the eyes
-> and the set of the shoulders — never by arms, hands or human posture.
+> **The expression.** The expression is **happy**: a wide open laugh, eyes
+> squeezed into upward curves, head tipped back a little. **Both fists up
+> beside her face**, shoulders lifted, the whole body in it — she is the
+> only one in the cast who is delighted with her arms as well as her face.
+> Keep every gesture at chest height or above.
 >
-> **Keep visible:** the one torn left ear.
+> **Keep visible:** the two strands of hair stuck flat across one cheek, and
+> the thick rolled cuffs of a shirt that is too big for her.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper
@@ -2961,9 +2885,10 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > captions, watermarks, signatures, speech bubbles or logos; motion lines.
 > No exaggerated screaming-face gags. No sparkles or glows.
 
-### Mun · annoyed
 
-**File:** `art/cast/mun/annoyed.png`
+### Bống · worried
+
+**File:** `art/cast/bong/worried.png`
 
 > **Draw ONE square picture of ONE character.** A single figure, alone in
 > the frame, wearing a single expression. The whole image is that one
@@ -3023,35 +2948,40 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Mun** — a thin black cat, ordinary house-cat size and
-> build, **on four legs**. Low, lean, slightly scruffy, ribs faintly
-> suggested by two short lines. A deep warm black rather than a flat
-> printer's black, with a single hard-edged dark-grey band along the spine
-> as its only shading. Amber-gold eyes drawn
-> as full circles with a **vertical slit pupil** — the only slit pupils in
-> the cast. A scholar's air he has not earned. Reproduce that design
-> exactly, with no change to colour or proportion. **Must
-> not:** be plump, round or fluffy; have a white belly, a white muzzle or a
-> pouch; wear a collar, bell, clothing or any prop; stand upright, walk on
-> two legs, sit like a person, or have round mitten paws; be drawn as a
-> wide-eyed cartoon cat companion with a permanent grin; resemble any
-> existing Studio Ghibli character or any other well-known cartoon cat.
+> **The character.** **Bống** — a small Vietnamese girl who looks about
+> six or seven, much smaller than the others and drawn a little rounder:
+> head large relative to the body, about one to four, with full cheeks.
+> **Heavy black hair cut blunt at the jaw**, drawn as thick clumped tufts
+> that hang and point downward as though it has just been wet, with **two
+> strands stuck flat across one cheek.** Her eyes are the largest in the
+> cast, drawn as **full circles**, with a clear **sea-green iris** — the only
+> green eyes in the cast. She wears **one pale yellow short-sleeved shirt,
+> several sizes too big**, borrowed: it slips wide across both shoulders and
+> the sleeves are **rolled into thick cuffs at her elbows**. One block of
+> colour, nothing on it. Reproduce that design exactly, with no change to
+> hair, face, clothing, colour or proportion. **Must not:** have orange,
+> ginger or red hair; wear a red dress; have a fish tail, fins, gills,
+> scales, webbed fingers, whiskers or any fish or mermaid feature of any
+> kind; have wings, a halo or a glow; wear a shell, a starfish, a flower or
+> any ornament in her hair; carry a bucket, a jar or a fish; resemble any
+> existing Studio Ghibli character.
 >
-> **Framing.** Draw the cat's head, shoulders and front legs, on four legs,
-> cropped straight across mid-body. He never sits like a person and never
-> stands on two legs. The character is in **three-quarter view, not facing
-> the camera**: body and head turned about 30 to 45 degrees off straight-on,
-> **looking toward the right-hand side of the frame**, as if speaking to
-> somebody standing off to their right — never out at the reader. The
-> picture is **square, 1:1**, with the figure centred across it and sitting
-> on the bottom edge. Leave a little clear space at the top and both sides:
-> **nothing may be cropped by the edge, least of all a hand.**
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
 >
-> **The expression.** His expression is **annoyed**: ears flat back, eyes
-> narrowed to slits, chin down. The feeling is carried by the ears, the eyes
-> and the set of the shoulders — never by arms, hands or human posture.
+> **The expression.** The expression is **worried**: brows raised and pulled
+> together, eyes very round, mouth a small flat line. **Both hands laid flat
+> on her own collarbone**, shoulders pulled up toward her ears. Keep every
+> gesture at chest height or above.
 >
-> **Keep visible:** the one torn left ear.
+> **Keep visible:** the two strands of hair stuck flat across one cheek, and
+> the thick rolled cuffs of a shirt that is too big for her.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper
@@ -3064,9 +2994,10 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > captions, watermarks, signatures, speech bubbles or logos; motion lines.
 > No exaggerated screaming-face gags. No sparkles or glows.
 
-### Mun · surprised
 
-**File:** `art/cast/mun/surprised.png`
+### Bống · annoyed
+
+**File:** `art/cast/bong/annoyed.png`
 
 > **Draw ONE square picture of ONE character.** A single figure, alone in
 > the frame, wearing a single expression. The whole image is that one
@@ -3126,36 +3057,41 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Mun** — a thin black cat, ordinary house-cat size and
-> build, **on four legs**. Low, lean, slightly scruffy, ribs faintly
-> suggested by two short lines. A deep warm black rather than a flat
-> printer's black, with a single hard-edged dark-grey band along the spine
-> as its only shading. Amber-gold eyes drawn
-> as full circles with a **vertical slit pupil** — the only slit pupils in
-> the cast. A scholar's air he has not earned. Reproduce that design
-> exactly, with no change to colour or proportion. **Must
-> not:** be plump, round or fluffy; have a white belly, a white muzzle or a
-> pouch; wear a collar, bell, clothing or any prop; stand upright, walk on
-> two legs, sit like a person, or have round mitten paws; be drawn as a
-> wide-eyed cartoon cat companion with a permanent grin; resemble any
-> existing Studio Ghibli character or any other well-known cartoon cat.
+> **The character.** **Bống** — a small Vietnamese girl who looks about
+> six or seven, much smaller than the others and drawn a little rounder:
+> head large relative to the body, about one to four, with full cheeks.
+> **Heavy black hair cut blunt at the jaw**, drawn as thick clumped tufts
+> that hang and point downward as though it has just been wet, with **two
+> strands stuck flat across one cheek.** Her eyes are the largest in the
+> cast, drawn as **full circles**, with a clear **sea-green iris** — the only
+> green eyes in the cast. She wears **one pale yellow short-sleeved shirt,
+> several sizes too big**, borrowed: it slips wide across both shoulders and
+> the sleeves are **rolled into thick cuffs at her elbows**. One block of
+> colour, nothing on it. Reproduce that design exactly, with no change to
+> hair, face, clothing, colour or proportion. **Must not:** have orange,
+> ginger or red hair; wear a red dress; have a fish tail, fins, gills,
+> scales, webbed fingers, whiskers or any fish or mermaid feature of any
+> kind; have wings, a halo or a glow; wear a shell, a starfish, a flower or
+> any ornament in her hair; carry a bucket, a jar or a fish; resemble any
+> existing Studio Ghibli character.
 >
-> **Framing.** Draw the cat's head, shoulders and front legs, on four legs,
-> cropped straight across mid-body. He never sits like a person and never
-> stands on two legs. The character is in **three-quarter view, not facing
-> the camera**: body and head turned about 30 to 45 degrees off straight-on,
-> **looking toward the right-hand side of the frame**, as if speaking to
-> somebody standing off to their right — never out at the reader. The
-> picture is **square, 1:1**, with the figure centred across it and sitting
-> on the bottom edge. Leave a little clear space at the top and both sides:
-> **nothing may be cropped by the edge, least of all a hand.**
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
 >
-> **The expression.** His expression is **surprised**: eyes fully round and
-> large, ears straight up, whiskers out. The feeling is carried by the ears,
-> the eyes and the set of the shoulders — never by arms, hands or human
-> posture.
+> **The expression.** The expression is **annoyed**: brows down and level,
+> chin tucked, **cheeks puffed out** and mouth pushed into a small pout —
+> a small child digging in, never an adult's exasperation. **Both fists
+> closed at chest height**, elbows in. Keep every gesture at chest height or
+> above.
 >
-> **Keep visible:** the one torn left ear.
+> **Keep visible:** the two strands of hair stuck flat across one cheek, and
+> the thick rolled cuffs of a shirt that is too big for her.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper
@@ -3168,9 +3104,10 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > captions, watermarks, signatures, speech bubbles or logos; motion lines.
 > No exaggerated screaming-face gags. No sparkles or glows.
 
-### Mun · sad
 
-**File:** `art/cast/mun/sad.png`
+### Bống · surprised
+
+**File:** `art/cast/bong/surprised.png`
 
 > **Draw ONE square picture of ONE character.** A single figure, alone in
 > the frame, wearing a single expression. The whole image is that one
@@ -3230,35 +3167,40 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Mun** — a thin black cat, ordinary house-cat size and
-> build, **on four legs**. Low, lean, slightly scruffy, ribs faintly
-> suggested by two short lines. A deep warm black rather than a flat
-> printer's black, with a single hard-edged dark-grey band along the spine
-> as its only shading. Amber-gold eyes drawn
-> as full circles with a **vertical slit pupil** — the only slit pupils in
-> the cast. A scholar's air he has not earned. Reproduce that design
-> exactly, with no change to colour or proportion. **Must
-> not:** be plump, round or fluffy; have a white belly, a white muzzle or a
-> pouch; wear a collar, bell, clothing or any prop; stand upright, walk on
-> two legs, sit like a person, or have round mitten paws; be drawn as a
-> wide-eyed cartoon cat companion with a permanent grin; resemble any
-> existing Studio Ghibli character or any other well-known cartoon cat.
+> **The character.** **Bống** — a small Vietnamese girl who looks about
+> six or seven, much smaller than the others and drawn a little rounder:
+> head large relative to the body, about one to four, with full cheeks.
+> **Heavy black hair cut blunt at the jaw**, drawn as thick clumped tufts
+> that hang and point downward as though it has just been wet, with **two
+> strands stuck flat across one cheek.** Her eyes are the largest in the
+> cast, drawn as **full circles**, with a clear **sea-green iris** — the only
+> green eyes in the cast. She wears **one pale yellow short-sleeved shirt,
+> several sizes too big**, borrowed: it slips wide across both shoulders and
+> the sleeves are **rolled into thick cuffs at her elbows**. One block of
+> colour, nothing on it. Reproduce that design exactly, with no change to
+> hair, face, clothing, colour or proportion. **Must not:** have orange,
+> ginger or red hair; wear a red dress; have a fish tail, fins, gills,
+> scales, webbed fingers, whiskers or any fish or mermaid feature of any
+> kind; have wings, a halo or a glow; wear a shell, a starfish, a flower or
+> any ornament in her hair; carry a bucket, a jar or a fish; resemble any
+> existing Studio Ghibli character.
 >
-> **Framing.** Draw the cat's head, shoulders and front legs, on four legs,
-> cropped straight across mid-body. He never sits like a person and never
-> stands on two legs. The character is in **three-quarter view, not facing
-> the camera**: body and head turned about 30 to 45 degrees off straight-on,
-> **looking toward the right-hand side of the frame**, as if speaking to
-> somebody standing off to their right — never out at the reader. The
-> picture is **square, 1:1**, with the figure centred across it and sitting
-> on the bottom edge. Leave a little clear space at the top and both sides:
-> **nothing may be cropped by the edge, least of all a hand.**
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
 >
-> **The expression.** His expression is **sad**: ears down and out, eyes
-> lowered, head dropped. The feeling is carried by the ears, the eyes and
-> the set of the shoulders — never by arms, hands or human posture.
+> **The expression.** The expression is **surprised**: eyes wide and
+> perfectly round, brows high, mouth a round open O. **Both hands flying
+> open on either side of her face, fingers spread wide.** Keep every gesture
+> at chest height or above.
 >
-> **Keep visible:** the one torn left ear.
+> **Keep visible:** the two strands of hair stuck flat across one cheek, and
+> the thick rolled cuffs of a shirt that is too big for her.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper
@@ -3271,7 +3213,116 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > captions, watermarks, signatures, speech bubbles or logos; motion lines.
 > No exaggerated screaming-face gags. No sparkles or glows.
 
----
+
+### Bống · sad
+
+**File:** `art/cast/bong/sad.png`
+
+> **Draw ONE square picture of ONE character.** A single figure, alone in
+> the frame, wearing a single expression. The whole image is that one
+> drawing, filling the frame edge to edge.
+>
+> **Art style.** Studio Ghibli feature animation — **exactly the way the
+> characters are drawn and painted in Hayao Miyazaki's *Ponyo* (2008)**:
+> clean hand-drawn cel animation, a fine dark line around flat painted
+> colour, with crisp hard-edged shadow shapes. Warm, soft and simple, but
+> **painted, not sketched**: no pencil texture, no paper grain, no
+> watercolour wash and no visible brushwork anywhere on the figure. Not
+> modern TV anime, not moe, not manga, not American cartoon, not 3D, not
+> photorealistic.
+>
+> **Line.** A fine, clean, confident contour of near-constant width,
+> **closed and continuous all the way round the figure with no gaps** —
+> dark, but warmed rather than pure black: a deep brown-black around hair
+> and clothes, a warmer brown where the line meets skin. Never sketchy,
+> never searching, never tapering into a brush stroke; no cross-hatching, no
+> stippling, no visible pencil. Interior detail is minimal: a face is a
+> handful of lines.
+>
+> **Colour.** Flat painted cel fills — each area one solid colour, carrying
+> **one hard-edged shadow tone** where the light does not reach, shaped to
+> follow the form: under the chin, beneath the hair, under a sleeve, along
+> the side turned away. Those shadow edges are crisp, never blurred and
+> never faded. **A small round patch of pink on each cheek**, which is the
+> one soft edge the figure is allowed. No gradients, no airbrushing, no
+> glow, no paper texture, no brush grain, no ambient occlusion.
+>
+> **Palette.** Few colours, each of them clear and strong, laid down in
+> **big simple blocks** — a whole garment is one colour. Bright and
+> cheerful: clear yellow, warm red, grass green, sky blue, cream, deep
+> charcoal. Never dusty, never greyed-off, never neon. Skin is a light warm
+> peach with a slightly deeper peach as its shadow. Count the colours on a
+> figure: three or four is right, and more than that means something has
+> been over-detailed.
+>
+> **Figures.** Round and soft, with real anatomy underneath. Head large
+> relative to the body — roughly one to five — with full cheeks and a
+> rounded jaw. **Eyes are large and round**, with a clear white, a coloured
+> iris, a black pupil and **one small white highlight**, a firm upper lid
+> line above and a thin simple brow. The nose is a tiny curve or a soft dot;
+> the mouth is one simple line that opens to a plain rounded shape when
+> speaking. Hands are small and rounded, five fingers, no knuckle detail.
+>
+> **Hair.** One solid mass built from **thick clumped tufts ending in soft
+> points**, the points drawn into the silhouette so the outline itself is
+> tufted — never a smooth helmet, never separate strands, never glossy. The
+> colour is a **warm brown-black rather than a pure flat black**, carrying
+> one **flat lighter patch** in a paler, cooler tone where the light falls,
+> hard-edged like every other shadow shape here.
+>
+> **Clothes.** Simple and bold: **one strong colour per garment**, plain
+> shapes, and nothing fussy on them — no pattern, no print, no logo, no
+> piping, no pockets, no visible seams and no buttons unless the character's
+> own description asks for one. Each garment reads at a glance as a single
+> block of colour.
+>
+> **The character.** **Bống** — a small Vietnamese girl who looks about
+> six or seven, much smaller than the others and drawn a little rounder:
+> head large relative to the body, about one to four, with full cheeks.
+> **Heavy black hair cut blunt at the jaw**, drawn as thick clumped tufts
+> that hang and point downward as though it has just been wet, with **two
+> strands stuck flat across one cheek.** Her eyes are the largest in the
+> cast, drawn as **full circles**, with a clear **sea-green iris** — the only
+> green eyes in the cast. She wears **one pale yellow short-sleeved shirt,
+> several sizes too big**, borrowed: it slips wide across both shoulders and
+> the sleeves are **rolled into thick cuffs at her elbows**. One block of
+> colour, nothing on it. Reproduce that design exactly, with no change to
+> hair, face, clothing, colour or proportion. **Must not:** have orange,
+> ginger or red hair; wear a red dress; have a fish tail, fins, gills,
+> scales, webbed fingers, whiskers or any fish or mermaid feature of any
+> kind; have wings, a halo or a glow; wear a shell, a starfish, a flower or
+> any ornament in her hair; carry a bucket, a jar or a fish; resemble any
+> existing Studio Ghibli character.
+>
+> **Framing.** Draw the character from the **chest up** — head, shoulders,
+> upper chest, and both arms and hands. The character is in **three-quarter
+> view, not facing the camera**: body and head turned about 30 to 45 degrees
+> off straight-on, **looking toward the right-hand side of the frame**, as
+> if speaking to somebody standing off to their right — never out at the
+> reader. The picture is **square, 1:1**, with the figure centred across it
+> and sitting on the bottom edge. Leave a little clear space at the top and
+> both sides: **nothing may be cropped by the edge, least of all a hand.**
+>
+> **The expression.** The expression is **sad**: eyes lowered, brows drawn
+> up in the middle, mouth small and turned down at one corner. **Both hands
+> gripping the rolled cuffs of her sleeves and pulling them down over her
+> knuckles**, arms held close in front of her. Keep every gesture at chest
+> height or above.
+>
+> **Keep visible:** the two strands of hair stuck flat across one cheek, and
+> the thick rolled cuffs of a shirt that is too big for her.
+>
+> **The background** is pure flat white #FFFFFF, edge to edge, with no
+> shadow under or behind the figure, no gradient, no texture and no paper
+> tone. **Do not draw a transparency checkerboard** — the background is one
+> single uniform colour across the whole image. Plain white, and nothing
+> else.
+>
+> **Do not include:** a second figure, a second pose, an inset, a border, a
+> frame, or any division of the picture; any text, letters, numbers,
+> captions, watermarks, signatures, speech bubbles or logos; motion lines.
+> No exaggerated screaming-face gags. No sparkles or glows.
+
 
 # Part 2 — the background plates
 
@@ -3280,14 +3331,18 @@ figure drawn into the plate would appear beside itself.
 
 Attach **the style reference only.** There are no characters in a plate.
 
-Unit 1 needs `canal-landing` and nothing else. The other eight are for the
+Unit 1 needs `harbour-wall` and nothing else. The other ten are for the
 chapters after it.
+
+The four the whole year keeps coming back to are `harbour-wall`, `kitchen`,
+`school-yard` and `fish-market` — the fixed furniture. Those are worth the
+extra re-rolls; the rest appear once or twice each.
 
 ---
 
-## 1. The canal landing — background plate
+## 1. The harbour wall — background plate
 
-**File:** `canal-landing.jpg`  ·  **this is the one unit 1 needs**
+**File:** `harbour-wall.jpg`  ·  **this is the one unit 1 needs**
 
 > **If a style reference image is attached**, match **the way its background
 > is painted** — its colouring, its light, its softness and its texture. Do
@@ -3319,16 +3374,24 @@ chapters after it.
 > everyday objects all in their places — every plank, rope, pot, wire and
 > moored boat.
 >
-> **Palette.** The Mekong delta's own colours in watercolour: jade-green
-> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
-> object is given a colour used nowhere else in the frame — that is where
-> the eye lands.
+> **Palette.** The central Việt Nam coast in watercolour: turquoise
+> shallows going to deep blue, pale gold sand, sun-bleached whitewash and
+> ochre concrete, red-brown roof tiles, the cobalt blue and red of painted
+> boat hulls, bright sky. One object is given a colour used nowhere else in
+> the frame — that is where the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
-> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
-> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
-> concrete pipes, no Japanese signage. No temples, no strings of tourist
-> lanterns, no conical hats as decoration, no dragons.
+> **Setting discipline.** Quy Nhơn, a beach city on the central coast of
+> Việt Nam, present day: a working fish harbour at one end of a wide bay and
+> a hotel promenade at the other, with green headlands closing both ends.
+> Bãi Sẻ, its fishing quarter, is close-packed low concrete houses running
+> steeply down to the water, plain and cared for. The boats are **wooden
+> Vietnamese fishing boats — blue hulls with a red or white stripe, a high
+> curved prow, and an eye painted on each bow** — and small round woven
+> **thúng chai** basket boats pulled up on the sand. **Nothing Japanese** —
+> no sliding paper doors, no tatami, no Japanese suburban houses, no vacant
+> lot with stacked concrete pipes, no Japanese signage. No junks, no mat
+> sails, no Western dinghies or yachts. No strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
 >
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
@@ -3343,10 +3406,14 @@ chapters after it.
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
 >
-> A wooden landing stage on a jade-green canal, late morning, hot and still.
-> Worn planks in the near ground, thick ochre mud at the waterline, water
-> hyacinth drifting. A long wooden boat moored at one side. The far bank is
-> a low line of banana and areca palms under a wide bright sky.
+> The concrete sea wall along a fishing quarter, late morning, hot and
+> bright. Worn concrete across the near ground with a rusted iron ladder set
+> into its face; a metre below the top, the tide line dark and green with
+> weed. Blue-hulled wooden fishing boats with painted eyes ride at their
+> moorings beyond it, and two round woven basket boats lie upturned on the
+> strip of sand at one side. Short chalk marks climb the wall's face in a
+> ragged vertical line. Across the water the far side of the bay is a low
+> green headland under a wide bright sky.
 
 ---
 
@@ -3384,16 +3451,24 @@ chapters after it.
 > everyday objects all in their places — every plank, rope, pot, wire and
 > moored boat.
 >
-> **Palette.** The Mekong delta's own colours in watercolour: jade-green
-> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
-> object is given a colour used nowhere else in the frame — that is where
-> the eye lands.
+> **Palette.** The central Việt Nam coast in watercolour: turquoise
+> shallows going to deep blue, pale gold sand, sun-bleached whitewash and
+> ochre concrete, red-brown roof tiles, the cobalt blue and red of painted
+> boat hulls, bright sky. One object is given a colour used nowhere else in
+> the frame — that is where the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
-> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
-> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
-> concrete pipes, no Japanese signage. No temples, no strings of tourist
-> lanterns, no conical hats as decoration, no dragons.
+> **Setting discipline.** Quy Nhơn, a beach city on the central coast of
+> Việt Nam, present day: a working fish harbour at one end of a wide bay and
+> a hotel promenade at the other, with green headlands closing both ends.
+> Bãi Sẻ, its fishing quarter, is close-packed low concrete houses running
+> steeply down to the water, plain and cared for. The boats are **wooden
+> Vietnamese fishing boats — blue hulls with a red or white stripe, a high
+> curved prow, and an eye painted on each bow** — and small round woven
+> **thúng chai** basket boats pulled up on the sand. **Nothing Japanese** —
+> no sliding paper doors, no tatami, no Japanese suburban houses, no vacant
+> lot with stacked concrete pipes, no Japanese signage. No junks, no mat
+> sails, no Western dinghies or yachts. No strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
 >
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
@@ -3408,10 +3483,12 @@ chapters after it.
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
 >
-> A small delta kitchen interior, morning. A low table, enamel bowls, a tin
-> of tea on a shelf, a bunch of bananas hanging from a beam, a large pot on
-> the floor. One doorway on the right opens onto a bleached-white hot road
-> outside. Warm interior against bright outdoor light.
+> A small coastal kitchen interior, morning, seen from standing height. A
+> low table with enamel bowls and a tin kettle, a blue plastic stool, a
+> string of split dried fish hanging in the window, a cleaver on a board, a
+> gas ring on the floor. Through the open doorway — a rectangle of hot white
+> light — a concrete yard with a big glazed water butt standing in it under
+> a tin lid. Plain, swept, cared for.
 
 ---
 
@@ -3449,16 +3526,24 @@ chapters after it.
 > everyday objects all in their places — every plank, rope, pot, wire and
 > moored boat.
 >
-> **Palette.** The Mekong delta's own colours in watercolour: jade-green
-> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
-> object is given a colour used nowhere else in the frame — that is where
-> the eye lands.
+> **Palette.** The central Việt Nam coast in watercolour: turquoise
+> shallows going to deep blue, pale gold sand, sun-bleached whitewash and
+> ochre concrete, red-brown roof tiles, the cobalt blue and red of painted
+> boat hulls, bright sky. One object is given a colour used nowhere else in
+> the frame — that is where the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
-> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
-> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
-> concrete pipes, no Japanese signage. No temples, no strings of tourist
-> lanterns, no conical hats as decoration, no dragons.
+> **Setting discipline.** Quy Nhơn, a beach city on the central coast of
+> Việt Nam, present day: a working fish harbour at one end of a wide bay and
+> a hotel promenade at the other, with green headlands closing both ends.
+> Bãi Sẻ, its fishing quarter, is close-packed low concrete houses running
+> steeply down to the water, plain and cared for. The boats are **wooden
+> Vietnamese fishing boats — blue hulls with a red or white stripe, a high
+> curved prow, and an eye painted on each bow** — and small round woven
+> **thúng chai** basket boats pulled up on the sand. **Nothing Japanese** —
+> no sliding paper doors, no tatami, no Japanese suburban houses, no vacant
+> lot with stacked concrete pipes, no Japanese signage. No junks, no mat
+> sails, no Western dinghies or yachts. No strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
 >
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
@@ -3473,16 +3558,16 @@ chapters after it.
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
 >
-> A school yard, late afternoon, long low shadows on concrete. A yellow-
-> ochre wall with a painted noticeboard on it, empty. A flame tree at one
-> side, one bicycle leaning against the wall, a low gate at the back. Nobody
-> in it.
+> A concrete school yard in flat hard midday light. A painted noticeboard
+> on a yellow-washed wall, a flame tree in full red flower throwing a hard
+> shadow, a bicycle rack. Along one side a low wall, and below and beyond it
+> the roofs of the fishing quarter and the blue of the bay.
 
 ---
 
-## 4. The market — background plate
+## 4. The fish market — background plate
 
-**File:** `market.jpg`
+**File:** `fish-market.jpg`
 
 > **If a style reference image is attached**, match **the way its background
 > is painted** — its colouring, its light, its softness and its texture. Do
@@ -3514,16 +3599,24 @@ chapters after it.
 > everyday objects all in their places — every plank, rope, pot, wire and
 > moored boat.
 >
-> **Palette.** The Mekong delta's own colours in watercolour: jade-green
-> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
-> object is given a colour used nowhere else in the frame — that is where
-> the eye lands.
+> **Palette.** The central Việt Nam coast in watercolour: turquoise
+> shallows going to deep blue, pale gold sand, sun-bleached whitewash and
+> ochre concrete, red-brown roof tiles, the cobalt blue and red of painted
+> boat hulls, bright sky. One object is given a colour used nowhere else in
+> the frame — that is where the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
-> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
-> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
-> concrete pipes, no Japanese signage. No temples, no strings of tourist
-> lanterns, no conical hats as decoration, no dragons.
+> **Setting discipline.** Quy Nhơn, a beach city on the central coast of
+> Việt Nam, present day: a working fish harbour at one end of a wide bay and
+> a hotel promenade at the other, with green headlands closing both ends.
+> Bãi Sẻ, its fishing quarter, is close-packed low concrete houses running
+> steeply down to the water, plain and cared for. The boats are **wooden
+> Vietnamese fishing boats — blue hulls with a red or white stripe, a high
+> curved prow, and an eye painted on each bow** — and small round woven
+> **thúng chai** basket boats pulled up on the sand. **Nothing Japanese** —
+> no sliding paper doors, no tatami, no Japanese suburban houses, no vacant
+> lot with stacked concrete pipes, no Japanese signage. No junks, no mat
+> sails, no Western dinghies or yachts. No strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
 >
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
@@ -3538,10 +3631,12 @@ chapters after it.
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
 >
-> A covered market lane, early morning. Stalls on both sides heaped with
-> green oranges, herbs and fish baskets, scales hanging, tarpaulins
-> overhead, plastic stools stacked. Crowded with goods and completely empty
-> of people.
+> A covered market lane at the fishing port before dawn, lit by bare bulbs
+> strung down the middle. Shallow round baskets and blue plastic crates on
+> both sides, heaped with crushed ice and fish; wet concrete underfoot
+> throwing the bulbs back; a hanging spring balance; a stack of empty
+> crates; a coil of orange rope. Past the far end of the lane, the dark blue
+> of the harbour before sunrise and the working lights of one boat.
 
 ---
 
@@ -3579,16 +3674,24 @@ chapters after it.
 > everyday objects all in their places — every plank, rope, pot, wire and
 > moored boat.
 >
-> **Palette.** The Mekong delta's own colours in watercolour: jade-green
-> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
-> object is given a colour used nowhere else in the frame — that is where
-> the eye lands.
+> **Palette.** The central Việt Nam coast in watercolour: turquoise
+> shallows going to deep blue, pale gold sand, sun-bleached whitewash and
+> ochre concrete, red-brown roof tiles, the cobalt blue and red of painted
+> boat hulls, bright sky. One object is given a colour used nowhere else in
+> the frame — that is where the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
-> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
-> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
-> concrete pipes, no Japanese signage. No temples, no strings of tourist
-> lanterns, no conical hats as decoration, no dragons.
+> **Setting discipline.** Quy Nhơn, a beach city on the central coast of
+> Việt Nam, present day: a working fish harbour at one end of a wide bay and
+> a hotel promenade at the other, with green headlands closing both ends.
+> Bãi Sẻ, its fishing quarter, is close-packed low concrete houses running
+> steeply down to the water, plain and cared for. The boats are **wooden
+> Vietnamese fishing boats — blue hulls with a red or white stripe, a high
+> curved prow, and an eye painted on each bow** — and small round woven
+> **thúng chai** basket boats pulled up on the sand. **Nothing Japanese** —
+> no sliding paper doors, no tatami, no Japanese suburban houses, no vacant
+> lot with stacked concrete pipes, no Japanese signage. No junks, no mat
+> sails, no Western dinghies or yachts. No strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
 >
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
@@ -3603,16 +3706,17 @@ chapters after it.
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
 >
-> A narrow lane between two-storey concrete houses, blue hour. Warm light
-> spilling from two open doorways, overhead wires tangled between the walls,
-> a motorbike parked against one house, a few collapsed paper lanterns in
-> the gutter.
+> A narrow lane between close-packed low concrete houses, running steeply
+> downhill, early evening. Warm light out of open doorways, washing strung
+> overhead, a motorbike leaned against a wall, a tangle of electrical wires
+> crossing above. At the bottom of the slope, a slot of dark sea and one
+> boat's light on it.
 
 ---
 
-## 6. The canal behind the school — background plate
+## 6. The town beach — background plate
 
-**File:** `canal-school.jpg`
+**File:** `town-beach.jpg`
 
 > **If a style reference image is attached**, match **the way its background
 > is painted** — its colouring, its light, its softness and its texture. Do
@@ -3644,16 +3748,24 @@ chapters after it.
 > everyday objects all in their places — every plank, rope, pot, wire and
 > moored boat.
 >
-> **Palette.** The Mekong delta's own colours in watercolour: jade-green
-> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
-> object is given a colour used nowhere else in the frame — that is where
-> the eye lands.
+> **Palette.** The central Việt Nam coast in watercolour: turquoise
+> shallows going to deep blue, pale gold sand, sun-bleached whitewash and
+> ochre concrete, red-brown roof tiles, the cobalt blue and red of painted
+> boat hulls, bright sky. One object is given a colour used nowhere else in
+> the frame — that is where the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
-> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
-> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
-> concrete pipes, no Japanese signage. No temples, no strings of tourist
-> lanterns, no conical hats as decoration, no dragons.
+> **Setting discipline.** Quy Nhơn, a beach city on the central coast of
+> Việt Nam, present day: a working fish harbour at one end of a wide bay and
+> a hotel promenade at the other, with green headlands closing both ends.
+> Bãi Sẻ, its fishing quarter, is close-packed low concrete houses running
+> steeply down to the water, plain and cared for. The boats are **wooden
+> Vietnamese fishing boats — blue hulls with a red or white stripe, a high
+> curved prow, and an eye painted on each bow** — and small round woven
+> **thúng chai** basket boats pulled up on the sand. **Nothing Japanese** —
+> no sliding paper doors, no tatami, no Japanese suburban houses, no vacant
+> lot with stacked concrete pipes, no Japanese signage. No junks, no mat
+> sails, no Western dinghies or yachts. No strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
 >
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
@@ -3668,10 +3780,10 @@ chapters after it.
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
 >
-> A narrow canal behind a school's back wall, flat hard midday light. The
-> water is opaque brown-ochre with a dull scum at the edge and plastic
-> caught in the reeds. On the far bank a low corrugated-iron workshop with a
-> pipe discharging into the water. No birds.
+> A city beach and its promenade, late afternoon. A long crescent of pale
+> gold sand, coconut palms and a low painted sea wall along a paved walkway,
+> hotel fronts set back behind them. The sea goes turquoise to deep blue. A
+> dark green headland closes the far end of the bay.
 
 ---
 
@@ -3709,16 +3821,24 @@ chapters after it.
 > everyday objects all in their places — every plank, rope, pot, wire and
 > moored boat.
 >
-> **Palette.** The Mekong delta's own colours in watercolour: jade-green
-> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
-> object is given a colour used nowhere else in the frame — that is where
-> the eye lands.
+> **Palette.** The central Việt Nam coast in watercolour: turquoise
+> shallows going to deep blue, pale gold sand, sun-bleached whitewash and
+> ochre concrete, red-brown roof tiles, the cobalt blue and red of painted
+> boat hulls, bright sky. One object is given a colour used nowhere else in
+> the frame — that is where the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
-> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
-> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
-> concrete pipes, no Japanese signage. No temples, no strings of tourist
-> lanterns, no conical hats as decoration, no dragons.
+> **Setting discipline.** Quy Nhơn, a beach city on the central coast of
+> Việt Nam, present day: a working fish harbour at one end of a wide bay and
+> a hotel promenade at the other, with green headlands closing both ends.
+> Bãi Sẻ, its fishing quarter, is close-packed low concrete houses running
+> steeply down to the water, plain and cared for. The boats are **wooden
+> Vietnamese fishing boats — blue hulls with a red or white stripe, a high
+> curved prow, and an eye painted on each bow** — and small round woven
+> **thúng chai** basket boats pulled up on the sand. **Nothing Japanese** —
+> no sliding paper doors, no tatami, no Japanese suburban houses, no vacant
+> lot with stacked concrete pipes, no Japanese signage. No junks, no mat
+> sails, no Western dinghies or yachts. No strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
 >
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
@@ -3733,16 +3853,17 @@ chapters after it.
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
 >
-> A school science room after hours, warm desk-lamp light against a
-> darkening window. A worktable with a tangle of jumper wires, a small
+> A school science room after hours, lit by one desk lamp against a
+> darkening window. A scarred wooden bench in the near ground carrying a
 > circuit board, a screwdriver, a battery pack and two enamel cups. Shelves
-> of jars behind.
+> of jars and glassware behind, a wall chart, a stool pushed back. Outside
+> the window, blue evening and the lights of the harbour below.
 
 ---
 
-## 8. The yard in the storm — background plate
+## 8. The flooded street — background plate
 
-**File:** `storm-yard.jpg`
+**File:** `flooded-street.jpg`
 
 > **If a style reference image is attached**, match **the way its background
 > is painted** — its colouring, its light, its softness and its texture. Do
@@ -3774,16 +3895,24 @@ chapters after it.
 > everyday objects all in their places — every plank, rope, pot, wire and
 > moored boat.
 >
-> **Palette.** The Mekong delta's own colours in watercolour: jade-green
-> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
-> object is given a colour used nowhere else in the frame — that is where
-> the eye lands.
+> **Palette.** The central Việt Nam coast in watercolour: turquoise
+> shallows going to deep blue, pale gold sand, sun-bleached whitewash and
+> ochre concrete, red-brown roof tiles, the cobalt blue and red of painted
+> boat hulls, bright sky. One object is given a colour used nowhere else in
+> the frame — that is where the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
-> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
-> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
-> concrete pipes, no Japanese signage. No temples, no strings of tourist
-> lanterns, no conical hats as decoration, no dragons.
+> **Setting discipline.** Quy Nhơn, a beach city on the central coast of
+> Việt Nam, present day: a working fish harbour at one end of a wide bay and
+> a hotel promenade at the other, with green headlands closing both ends.
+> Bãi Sẻ, its fishing quarter, is close-packed low concrete houses running
+> steeply down to the water, plain and cared for. The boats are **wooden
+> Vietnamese fishing boats — blue hulls with a red or white stripe, a high
+> curved prow, and an eye painted on each bow** — and small round woven
+> **thúng chai** basket boats pulled up on the sand. **Nothing Japanese** —
+> no sliding paper doors, no tatami, no Japanese suburban houses, no vacant
+> lot with stacked concrete pipes, no Japanese signage. No junks, no mat
+> sails, no Western dinghies or yachts. No strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
 >
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
@@ -3798,16 +3927,18 @@ chapters after it.
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
 >
-> The yard of a delta house under a low bruised storm sky, wind visible in
-> everything. A tiled roof with one broken tile, a wooden ladder against the
-> eaves, a snapped branch across the yard, buckets and basins lined along
-> the wall, water standing at the bottom of the lane. No sunlight.
+> A town street under still brown-green water, grey overcast light after a
+> storm, utterly quiet. The water stands halfway up the ground-floor
+> shopfronts. A wooden fishing boat is tied to a lamp post out in the middle
+> of what was the road. The top curve of a market awning, a road sign and a
+> motorbike's mirror break the surface. Washing still hangs from the
+> balconies above, and the sky is beginning to clear at one edge.
 
 ---
 
-## 9. The road out of town — background plate
+## 9. The headland road — background plate
 
-**File:** `road.jpg`
+**File:** `cliff-road.jpg`
 
 > **If a style reference image is attached**, match **the way its background
 > is painted** — its colouring, its light, its softness and its texture. Do
@@ -3839,16 +3970,24 @@ chapters after it.
 > everyday objects all in their places — every plank, rope, pot, wire and
 > moored boat.
 >
-> **Palette.** The Mekong delta's own colours in watercolour: jade-green
-> canal water, ochre mud, terracotta roof tiles, brass, bright blue sky. One
-> object is given a colour used nowhere else in the frame — that is where
-> the eye lands.
+> **Palette.** The central Việt Nam coast in watercolour: turquoise
+> shallows going to deep blue, pale gold sand, sun-bleached whitewash and
+> ochre concrete, red-brown roof tiles, the cobalt blue and red of painted
+> boat hulls, bright sky. One object is given a colour used nowhere else in
+> the frame — that is where the eye lands.
 >
-> **Setting discipline.** Bến Sẻ, a small canal town in the Mekong delta of
-> Việt Nam, present day but modest. **Nothing Japanese** — no sliding paper
-> doors, no tatami, no Japanese suburban houses, no vacant lot with stacked
-> concrete pipes, no Japanese signage. No temples, no strings of tourist
-> lanterns, no conical hats as decoration, no dragons.
+> **Setting discipline.** Quy Nhơn, a beach city on the central coast of
+> Việt Nam, present day: a working fish harbour at one end of a wide bay and
+> a hotel promenade at the other, with green headlands closing both ends.
+> Bãi Sẻ, its fishing quarter, is close-packed low concrete houses running
+> steeply down to the water, plain and cared for. The boats are **wooden
+> Vietnamese fishing boats — blue hulls with a red or white stripe, a high
+> curved prow, and an eye painted on each bow** — and small round woven
+> **thúng chai** basket boats pulled up on the sand. **Nothing Japanese** —
+> no sliding paper doors, no tatami, no Japanese suburban houses, no vacant
+> lot with stacked concrete pipes, no Japanese signage. No junks, no mat
+> sails, no Western dinghies or yachts. No strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
 >
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
@@ -3863,10 +4002,163 @@ chapters after it.
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
 >
-> A dirt road at the edge of town at first light, the sky going from deep
-> blue to peach. The road runs away from the viewer toward a wide pale river
-> and low hills beyond. Two or three stars still out. The town behind is
-> dark.
+> A road along a rocky headland at first light, the sky going from deep
+> blue to peach. Boulders and low wind-cut scrub on the seaward side, the
+> open sea far below and pale, a crash barrier with its paint gone. At the
+> end of the point stands a white lighthouse with a red-brown lantern
+> house.
+
+---
+
+## 10. The whale shrine — background plate
+
+**File:** `whale-temple.jpg`
+
+> **If a style reference image is attached**, match **the way its background
+> is painted** — its colouring, its light, its softness and its texture. Do
+> not copy or quote any character in it, and do not carry the figures' clean
+> cel line into the plate: a plate has almost no line. If nothing is
+> attached, follow the written style exactly as described.
+>
+> **Art style.** Hand-painted Studio Ghibli background art in the manner of
+> Hayao Miyazaki's *Ponyo* (2008) — watercolour and coloured pencil on
+> paper, soft, warm and luminous. Not modern TV anime, not manga, not
+> American cartoon, not 3D, not photorealistic, not digital-airbrushed.
+>
+> **Line.** Almost no outline: form is made by **painted shape and edge**
+> rather than by drawn contour, with at most a soft pencil line catching an
+> important edge. No heavy black ink outline, no cross-hatching, no
+> scribbled linework.
+>
+> **Colour.** Watercolour and coloured pencil — layered, gently uneven
+> washes with the tooth of the paper showing and soft edges where two washes
+> meet. Warm, bright and full without being harsh: the light of a hot
+> morning. Soft gradients in the sky and the water are welcome. No
+> airbrushed glow, no digital gloss, no lens blur and no depth-of-field.
+> Depth is shown by **paler, cooler washes and less detail in the
+> distance.**
+>
+> **Backgrounds carry the realism.** This is the defining contrast of the
+> style: the world is literal and fully catalogued even though the people
+> are simple. Correct one- or two-point perspective, real architecture, and
+> everyday objects all in their places — every plank, rope, pot, wire and
+> moored boat.
+>
+> **Palette.** The central Việt Nam coast in watercolour: turquoise
+> shallows going to deep blue, pale gold sand, sun-bleached whitewash and
+> ochre concrete, red-brown roof tiles, the cobalt blue and red of painted
+> boat hulls, bright sky. One object is given a colour used nowhere else in
+> the frame — that is where the eye lands.
+>
+> **Setting discipline.** Quy Nhơn, a beach city on the central coast of
+> Việt Nam, present day: a working fish harbour at one end of a wide bay and
+> a hotel promenade at the other, with green headlands closing both ends.
+> Bãi Sẻ, its fishing quarter, is close-packed low concrete houses running
+> steeply down to the water, plain and cared for. The boats are **wooden
+> Vietnamese fishing boats — blue hulls with a red or white stripe, a high
+> curved prow, and an eye painted on each bow** — and small round woven
+> **thúng chai** basket boats pulled up on the sand. **Nothing Japanese** —
+> no sliding paper doors, no tatami, no Japanese suburban houses, no vacant
+> lot with stacked concrete pipes, no Japanese signage. No junks, no mat
+> sails, no Western dinghies or yachts. No strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
+>
+> **Composition.** An empty background plate, 16:9, camera at standing eye
+> level looking straight ahead. Keep the **lower third of the frame simple
+> and uncluttered** — figures will be placed there and detail behind them is
+> lost. Keep the interest in the middle and upper thirds. Nothing important
+> in the top-left or top-right corners, where speech balloons sit.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or motion lines. No
+> sparkles, glows or lens flare.
+>
+> **No people, no animals, and no characters of any kind anywhere in the
+> frame. Draw the place only.**
+>
+> A small village whale shrine on the sand at night, lit by lanterns. A low
+> painted gate and a tiled roof over a single open hall; outside it a table
+> under a red cloth carrying fruit, rice and burning incense; inside, dim
+> and deep, the pale curve of very large bones resting on a wooden stand.
+> Painted concrete, faded, swept and cared for — a working village shrine,
+> not a tourist temple. Beyond the sand, small lanterns drifting out on
+> black water.
+
+---
+
+## 11. Under the harbour — background plate
+
+**File:** `under-water.jpg`
+
+> **If a style reference image is attached**, match **the way its background
+> is painted** — its colouring, its light, its softness and its texture. Do
+> not copy or quote any character in it, and do not carry the figures' clean
+> cel line into the plate: a plate has almost no line. If nothing is
+> attached, follow the written style exactly as described.
+>
+> **Art style.** Hand-painted Studio Ghibli background art in the manner of
+> Hayao Miyazaki's *Ponyo* (2008) — watercolour and coloured pencil on
+> paper, soft, warm and luminous. Not modern TV anime, not manga, not
+> American cartoon, not 3D, not photorealistic, not digital-airbrushed.
+>
+> **Line.** Almost no outline: form is made by **painted shape and edge**
+> rather than by drawn contour, with at most a soft pencil line catching an
+> important edge. No heavy black ink outline, no cross-hatching, no
+> scribbled linework.
+>
+> **Colour.** Watercolour and coloured pencil — layered, gently uneven
+> washes with the tooth of the paper showing and soft edges where two washes
+> meet. Warm, bright and full without being harsh: the light of a hot
+> morning. Soft gradients in the sky and the water are welcome. No
+> airbrushed glow, no digital gloss, no lens blur and no depth-of-field.
+> Depth is shown by **paler, cooler washes and less detail in the
+> distance.**
+>
+> **Backgrounds carry the realism.** This is the defining contrast of the
+> style: the world is literal and fully catalogued even though the people
+> are simple. Correct one- or two-point perspective, real architecture, and
+> everyday objects all in their places — every plank, rope, pot, wire and
+> moored boat.
+>
+> **Palette.** The central Việt Nam coast in watercolour: turquoise
+> shallows going to deep blue, pale gold sand, sun-bleached whitewash and
+> ochre concrete, red-brown roof tiles, the cobalt blue and red of painted
+> boat hulls, bright sky. One object is given a colour used nowhere else in
+> the frame — that is where the eye lands.
+>
+> **Setting discipline.** Quy Nhơn, a beach city on the central coast of
+> Việt Nam, present day: a working fish harbour at one end of a wide bay and
+> a hotel promenade at the other, with green headlands closing both ends.
+> Bãi Sẻ, its fishing quarter, is close-packed low concrete houses running
+> steeply down to the water, plain and cared for. The boats are **wooden
+> Vietnamese fishing boats — blue hulls with a red or white stripe, a high
+> curved prow, and an eye painted on each bow** — and small round woven
+> **thúng chai** basket boats pulled up on the sand. **Nothing Japanese** —
+> no sliding paper doors, no tatami, no Japanese suburban houses, no vacant
+> lot with stacked concrete pipes, no Japanese signage. No junks, no mat
+> sails, no Western dinghies or yachts. No strings of tourist lanterns, no
+> conical hats as decoration, no dragons.
+>
+> **Composition.** An empty background plate, 16:9, camera at standing eye
+> level looking straight ahead. Keep the **lower third of the frame simple
+> and uncluttered** — figures will be placed there and detail behind them is
+> lost. Keep the interest in the middle and upper thirds. Nothing important
+> in the top-left or top-right corners, where speech balloons sit.
+>
+> **Do not include:** any text, letters, numbers, captions, watermarks,
+> signatures, speech bubbles, logos, panel borders or motion lines. No
+> sparkles, glows or lens flare.
+>
+> **No people and no characters of any kind anywhere in the frame.** Small
+> reef fish are part of the place and are welcome — nothing bigger than a
+> hand, and nothing that reads as a character.
+>
+> Underwater, looking along a shallow seabed in mid-morning light. Shafts
+> of green-gold light come down through the surface above. Branching and
+> plate coral heads crowd around the barnacled chain and concrete block of a
+> mooring; small bright reef fish hang over them; pale sand and a bed of
+> seagrass run off into a blue-green haze. Above and behind, the dark
+> underside of a moored hull.
 
 ---
 
@@ -3948,8 +4240,8 @@ Two things you still do **not** have to do:
   >
   > **What mirroring costs, stated plainly.** A flipped character has their
   > asymmetry reversed: Thảo's tucked ear swaps sides, Khoa's parting swaps
-  > sides, and Mun's torn *left* ear reads as a torn right ear whenever he
-  > speaks second. Nobody has ever noticed this in a comic, and the alternative
+  > sides, and the two strands of hair stuck to Bống's *left* cheek read as
+  > stuck to her right one whenever she speaks second. Nobody has ever noticed this in a comic, and the alternative
   > is drawing every character twice. Accepted deliberately; do not "fix" it by
   > drawing a second facing.
 
@@ -3962,7 +4254,7 @@ Two things you still do **not** have to do:
 
 | Symptom | Fix |
 | --- | --- |
-| A character resembles a Studio Ghibli character — the cat turns into a wide-eyed grinning familiar, a girl acquires a red dress, a boy a striped shirt and blue shorts | Demote the reference image to *style only*, saying so in the prompt, and paste that character's **must not** line in verbatim. Do not keep a "close enough" variant; it contaminates everything fed from it. A *Ponyo* still pulls harder on the cast than the Doraemon reference did, because its children are the same age as ours |
+| A character resembles a Studio Ghibli character — Bống acquires orange hair or a red dress, a girl acquires a red dress, a boy a striped shirt and blue shorts | Demote the reference image to *style only*, saying so in the prompt, and paste that character's **must not** line in verbatim. Do not keep a "close enough" variant; it contaminates everything fed from it. A *Ponyo* still pulls harder on the cast than the Doraemon reference did, because its children are the same age as ours |
 | The figure comes back hollow, ragged-edged or missing part of a shirt after composing | The outline had a gap and `make_sheet.py`'s flood went through it, or the colour faded out past the line and the keyer took the pale edge with it. Both are drawing faults, not tool faults. Re-paste **Line** and re-roll. This is why the cast is specified as cel rather than painted: a closed line is the wall the transparency step leans on |
 | Tí's shirt sags, gapes at the neck or slips off a shoulder | The clothing description was summarised. Re-paste **his clothes are simple and tidy** in full — the collar square on both shoulders, closed at the neck, the shirt cut to fit. He is a poor child, and poor is drawn as *plain and cared for*, never as unkempt: a sliding neckline reads as neglect, and it is the main character it reads it of |
 | Tí's hair comes back as a shaggy overgrown mop, or his face sours into a scowl | Same defect as the shirt, in the other two places it can happen. The style draws hair as thick pointed tufts, so the line between *tousled* and *unkempt* is the **cut**, not the tufts: his is short, above the ears, clear of the collar, tidy in silhouette, with **one** cowlick standing up at the crown. Involuntary reads as charm; overgrown reads as neglect. The brow is level and the look watchful, not glowering — this is the character the reader has to like for twelve chapters |
@@ -3976,9 +4268,11 @@ Two things you still do **not** have to do:
 | The head jumps or resizes between expressions | The six drawings were framed differently. `make_sheet.py` squares and scales them to one cell but cannot re-frame a head — re-roll the odd one out, matching the head size and eye level of the `neutral` drawing, which is the one to draw first and judge the rest against |
 | An avatar has a white box behind it | `make_sheet.py` keys the white itself, so this means it found none to key — check the drawing's background really is white and not a very pale grey, or re-run with the tolerance in mind |
 | A drawing comes back with a grey-and-white chequered pattern behind the figure | The generator has *drawn* a transparency checkerboard instead of leaving alpha. Re-roll: every prompt already forbids it by name, so this is a miss rather than an ambiguity, and a drawn checkerboard is much harder to key than plain white |
-| The characters look out at the reader, or the two speakers face away from each other | It was drawn square to the camera, or drawn looking *left*. Both must be three-quarter and looking toward the **right** of the frame — the page flips the right-hand speaker, so a left-looking sheet points both of them off the edges. Re-roll; it cannot be fixed by flipping the file, which would reverse the character's own asymmetry (Thảo's exposed ear, Khoa's parting, Mun's torn left ear) |
+| The characters look out at the reader, or the two speakers face away from each other | It was drawn square to the camera, or drawn looking *left*. Both must be three-quarter and looking toward the **right** of the frame — the page flips the right-hand speaker, so a left-looking sheet points both of them off the edges. Re-roll; it cannot be fixed by flipping the file, which would reverse the character's own asymmetry (Thảo's exposed ear, Khoa's parting, the strands on Bống's left cheek) |
 | Keying the white also ate a white shirt | Something other than `make_sheet.py` was used, globally. The composer floods inward from the border instead, so the closed contour keeps the shirt's white separate from the background's — provided the contour is closed |
 | A plate comes back with people in it | Repeat the "no people, no animals" clause as the **first** line of the description rather than the last. It must be re-rolled, not painted out: the cast is composited on top and a drawn figure appears beside itself |
 | A plate comes back vague, empty or blurred | The style's whole contrast is simple figures against a literal world, and "watercolour" is an invitation to be vague that the plates must refuse. Re-paste **Backgrounds carry the realism** and name three specific objects the plate must contain |
-| The setting drifts Japanese — sliding doors, a suburban street, a vacant lot with concrete pipes | Expected: it is copying the reference's *world* along with its style. Re-paste **Setting discipline** and add three delta-specific objects |
+| The setting drifts Japanese — sliding doors, a suburban street, a vacant lot with concrete pipes | Expected: it is copying the reference's *world* along with its style. Re-paste **Setting discipline** and add three objects only this coast has — a blue-hulled boat with an eye painted on the bow, a round woven *thúng chai* on the sand, a glazed water butt under a tin lid |
+| Bống comes back with fins, gills, scales, webbed fingers or a tail | The prompt said *sea-child* somewhere it should not have, or the reference is pulling. Her prompt never says what she is — she is a small girl in a borrowed shirt and that is the whole description. Re-paste her **must not** line verbatim; do not soften it to "no obvious fish features", because a partial version reads as permission |
+| Bống reads as the same age as Tí and Thảo | She is drawn at roughly one-to-four head to body where they are one-to-five, and she is *much* smaller in frame. The two ages are the only thing that separates her silhouette from Thảo's at panel size, so re-roll rather than accepting a tall version |
 | Text appears in the image | Gemini adds signage unprompted in street scenes. Keep the "no text, no letters" clause and re-roll — it is not reliably fixable by inpainting |

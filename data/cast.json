@@ -30,7 +30,8 @@
     "`col` is the panel's position in the sheet and is therefore LOAD-BEARING:",
     "it is the offset the page uses. It must match the left-to-right order the",
     "prompt asks for. Reordering these without regenerating the art silently",
-    "gives every character the wrong face.",
+    "gives every character the wrong face. Ti's six drawings already exist against",
+    "this order — do not touch it.",
     "",
     "research/story/illustration-prompts.md is where these are drawn from, and the",
     "slugs here are the filenames it tells you to save."
@@ -64,23 +65,45 @@
     "sad":       { "col": 5, "is": "Quiet, downcast, hurt. Eyes lowered." }
   },
 
+  "_characters_comment": [
+    "Five, and the same five all year. Ti and Thao are drawn and written and do",
+    "not change. Bong occupies the slot the cat used to: she is the magic, she is",
+    "the one who can call, and she is the reason the sea is coming.",
+    "",
+    "Diacritics matter here for a reason that has nothing to do with art. A key a",
+    "learner has to TYPE must never contain one — Khoa is safe, Bong is not."
+  ],
+
   "characters": {
     "Tí":     { "slug": "ti",    "who": "the boy, 13" },
     "Thảo":   { "slug": "thao",  "who": "his friend, the one who believes him" },
-    "Bà Sáu": { "slug": "basau", "who": "his grandmother" },
-    "Khoa":   { "slug": "khoa",  "who": "top of everything, and kind about it" },
-    "Mun":    { "slug": "mun",   "who": "the black cat; speaks in the passages, not yet in a dialogue" }
+    "Bống":   { "slug": "bong",  "who": "the sea-child; ashore about a week, and only she can call things back" },
+    "Bà Sáu": { "slug": "basau", "who": "his grandmother; sells at the fish market before light" },
+    "Khoa":   { "slug": "khoa",  "who": "top of everything, and kind about it" }
   },
 
+  "_backgrounds_comment": [
+    "Eleven plates for a coastal city. Four of them are the fixed furniture the",
+    "whole year recycles — harbour-wall, kitchen, school-yard, fish-market — and",
+    "the rest are the places a particular chapter needs and then gives back.",
+    "",
+    "The place is Quy Nhon on the central coast, and it is real. Bai Se, the",
+    "fishing quarter these plates are set in, is not: it is invented so that no",
+    "real street is given a fictional poverty. Ghenh Rang, Thap Doi, Nhon Ly and",
+    "the whale shrine at Lang Ong Nam Hai are real and are painted as they are."
+  ],
+
   "backgrounds": {
-    "canal-landing": "The wooden landing on the canal — mud, water hyacinth, the far bank hazy",
-    "kitchen":       "Bà Sáu's kitchen — low table, enamel bowls, a doorway of hot white light",
-    "school-yard":   "The school yard — concrete, a painted noticeboard, a flame tree",
-    "market":        "The market — stalls, baskets, everyone talking at once",
-    "lane":          "The narrow lane between the houses, evening, light from open doorways",
-    "canal-school":  "The canal behind the school — brown water, a workshop pipe on the far bank",
-    "science-room":  "The school science room after hours — desk lamp, wires, a darkening window",
-    "storm-yard":    "The yard under a storm sky — wind in the banana leaves, water rising",
-    "road":          "The dirt road out of town at first light, the river beyond"
+    "harbour-wall":   "The concrete harbour wall at Bãi Sẻ — the tide line, moored boats, chalk marks climbing the wall, the bay beyond",
+    "kitchen":        "Bà Sáu's kitchen — low table, enamel bowls, dried fish, a doorway of hot white light",
+    "school-yard":    "The school yard — concrete, a painted noticeboard, a flame tree, the sea below the wall",
+    "fish-market":    "The port market before light — baskets, crushed ice, bare bulbs, everyone talking at once",
+    "lane":           "The steep lane down to the water, evening, light from open doorways",
+    "town-beach":     "The city beach and its promenade — palms, hotels, a crescent of sand, the headland at the end",
+    "science-room":   "The school science room after hours — desk lamp, wires, a darkening window",
+    "flooded-street": "The street under water — boats where the buses were, people on the roofs, quiet",
+    "cliff-road":     "The headland road at first light, the lighthouse at the end of it, open sea below",
+    "whale-temple":   "The whale shrine on the sand at festival night — lanterns, offerings, the bones in the dark of the hall",
+    "under-water":    "Under the harbour — coral through the moorings, shafts of green light, a slow shape further out"
   }
 }

@@ -44,7 +44,9 @@
 **Thảo:** He did.
 **Tí:** Cô Yến moved his desk in September, **and** now the room just looks normal.
 **Thảo:** We don't talk about that at school. You know we don't.
-**Tí:** I'm not upset. I'm [[curious]]. A whole year, and not one person has asked where he went.
+**Tí:** They sold the boat in the summer and went north in the night, **and** nobody in this town has said one word about it since.
+**Thảo:** Nobody drowned, Tí. It was money. That is all it was.
+**Tí:** I know nobody drowned. That isn't what I'm asking. I'm not upset either. I'm [[curious]]. A whole year, and not one person has asked where he went.
 **Thảo:** Asking never brought anybody back, Tí.
 **Tí:** …
 **Thảo:** So. You can stand here and read that wall again, **or** you can walk down to the water with me.
@@ -694,12 +696,14 @@ Lesson 2 table.
 :::
 
 ::: passage label="A"
-> I went down to the landing on my own. The water was flat and brown and
-> ordinary, and nothing at all was going to happen. I had the rice sack in my
-> lap. I did not plan it. I said the two words, and the wick caught.
+> I went down to the far end of the harbour wall on my own, where the sand
+> starts. The water was flat and grey and ordinary, and nothing at all was going
+> to happen. I did not plan it. I stood on the slipway where their boat used to
+> be pulled up, because I could not think of anywhere else to stand.
 >
-> Mun climbed out and sat on the step beside me. Then somebody was standing at
-> the top of the bank, with a school bag over one shoulder, looking down at us.
+> Bống came after me without being asked, and she waited until the water
+> stopped, and then she said the two words. Then somebody was standing at the
+> top of the slipway, with a school bag over one shoulder, looking down at us.
 > It was Minh.
 >
 > He was exactly the same. That is the part I keep coming back to. He was the
@@ -708,9 +712,9 @@ Lesson 2 table.
 > then. He looked at the school on the hill, and he worked something out.
 > "You've all got older," he said.
 >
-> "Light the lamp, and the nearest lost thing comes back," Mun said. "You don't
-> choose which, and it comes back the way it was lost. Nine measures left, and
-> I would think about that before I said anything else."
+> "The sea gives back what it took," Bống said. "You don't choose which, and it
+> comes back the way it went. That boat went off this beach in November, and I
+> would think about that before I said anything else."
 >
 > Minh sat down on the step. He knew. Nobody had to tell him, and nobody did.
 > He asked me one question, and it was a year out of date, and he heard that
@@ -718,8 +722,8 @@ Lesson 2 table.
 > is out of step, and he is the only one of us who can feel it.
 >
 > We walked up the lane at seven, past the market and the water tank, the way we
-> used to. Bà Sáu put a third bowl on the table and asked nothing. Behind me, in
-> the sack, the lamp was still burning.
+> used to. Bà Sáu put a third bowl on the table and asked nothing. Down at the
+> wall, in the dark, the boat was still there.
 :::
 
 ### 5.1 Matching headings
@@ -732,19 +736,19 @@ heading that fits nothing still looks plausible.
 | | Heading |
 | --- | --- |
 | **i** | Questions that are a year out of date |
-| **ii** | The night the lamp went out |
+| **ii** | The night the tide never turned |
 | **iii** | An ordinary evening by the water |
 | **iv** | A year that did not touch him |
 | **v** | A promise nobody kept |
 | **vi** | Somebody at the top of the bank |
-| **vii** | What the lamp will and will not do |
+| **vii** | What the sea will and will not do |
 | **viii** | The walk up the lane |
 
 ::: task skill="reading" type="matching-headings" opts="i|ii|iii|iv|v|vi|vii|viii" ask="Choose the correct heading for each paragraph. Read the whole paragraph before you choose: a heading that matches one sentence of it is the commonest way to get this wrong."
-- Paragraph A = iii ~ the water is flat and brown and ordinary, and nothing at all was going to happen
+- Paragraph A = iii ~ the water is flat and grey and ordinary, and nothing at all was going to happen
 - Paragraph B = vi ~ a figure appears above them with a school bag over one shoulder
 - Paragraph C = iv ~ he is the height, shirt and haircut of last September
-- Paragraph D = vii ~ Mun states the rule and its catch
+- Paragraph D = vii ~ Bống states the rule and its catch
 - Paragraph E = i ~ the one question he asks belongs to last year
 - Paragraph F = viii ~ they go up past the market and the water tank to the kitchen
 :::
@@ -752,8 +756,8 @@ heading that fits nothing still looks plausible.
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="3+number" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- What did Tí have in his lap at the landing? = (the) rice sack
-- Who was standing at the top of the bank? = Minh
+- What was flat and grey and ordinary? = (the) water
+- Who was standing at the top of the slipway? = Minh
 - What colour was his shirt? = (old) blue/blue
 - How much has Tí grown since September? = four centimetres/4 centimetres
 - What did his grandmother put on the table? = (a) third bowl
@@ -762,8 +766,8 @@ heading that fits nothing still looks plausible.
 ### 5.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- began to burn = caught
-- the sloping ground at the side of the water = bank
+- a sloping ramp for pulling boats out of the water = slipway
+- smooth and level, with no waves on it = flat
 - with nothing unusual about it = ordinary
 - not moving at the same time as everybody else = out of step
 - a narrow road between houses = lane
@@ -821,49 +825,49 @@ first, then answer while you listen rather than afterwards from memory.
 
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a girl telling a friend about an evening she spent with two boys and a cat, and about a decision that one of them had to make." mode="computer" preview="30" review="120"
-I want to say first that I was the one who told him to put it out, so if
+::: audio orientation="You will hear a girl telling a friend about an evening she spent with two boys and a younger girl, and about a decision one of them had to make." mode="computer" preview="30" review="120"
+I want to say first that I was the one who told him to send Minh home, so if
 anybody is angry, be angry with me.
 
 I came down after eight. They were both on the step, and neither of them was
-talking. Mun says there are twelve lightings in that lamp altogether. This was
-the third.
+talking. Bống says there are twelve chalk marks to come on the harbour wall
+altogether. This was the third.
 
 Minh was very calm about it. He worked out that a whole year had gone
 past, and after that he asked us almost nothing, because every question he
 started belonged to last September and he could hear it. Then he said the thing
-that finished me. He said we should not keep him. He said one breath would end
-it, and nobody would blame us for anything.
+that finished me. He said we should not keep him. He said two words at the
+water's edge would end it, and nobody would blame us for anything.
 
-Tí picked the lamp up. He held it in both hands, close, for about a minute.
-His face did not move at all.
+Tí took him down to the water. They stood there, right at the edge, for about
+a minute. His face did not move at all.
 
-Then he set it down again, still burning.
+Then he turned round and walked back up.
 
 Neither of us said one word about it afterwards, and I don't think we ever
-will. On the way home Minh told us something else. His family went north,
-up the river, and there are people up there who tell a story about a light like
-ours. He says this has happened before, more than once, and long before any of
-us were born.
+will. On the way home Minh told us something else. His family went north, up
+the river, and there are people up there who talk about a whole village the
+water took and then gave back for one night. He says this has happened before,
+more than once, and long before any of us were born.
 :::
 
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- The speaker says the blame should fall on (a) Tí (b) herself (c) the cat = b
+- The speaker says the blame should fall on (a) Tí (b) herself (c) Bống = b
 - She arrived at the water (a) before six (b) after eight (c) at midnight = b
-- The lamp had now been lit (a) once (b) twice (c) three times = c
+- The sea had now given something back (a) once (b) twice (c) three times = c
 - Minh asked them very little because (a) he was angry (b) his questions belonged to last year (c) he could not speak = b
-- Tí held the lamp and then (a) blew it out (b) set it down still burning (c) threw it in the water = b
+- Tí took Minh down to the water and then (a) said the two words (b) turned round and walked back up (c) pushed the boat out = b
 :::
 
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="2+number"
-- Lightings in the lamp altogether: ___ = twelve/12
+- Chalk marks to come on the harbour wall: ___ = twelve/12
 - What neither of the two was doing when she came down: ___ = talking
 - Minh said that nobody would ___ them for anything. = blame
-- Length of time Tí held the lamp: about a ___ = minute
+- Length of time they stood at the water's edge: about a ___ = minute
 - Direction his family went: ___ = north
 :::
 
@@ -988,7 +992,7 @@ agreement slip.
 > Minh came back on Tuesday and he has not changed at all. He asked about the
 > football final, there was no final this year. The rest of us are a year older
 > so he had to hear it from us. Tí could have sent him back or he could keep
-> him. He did not blow the lamp out, he put it down. Now Minh sit with us at
+> him. He did not send him back, he walked home. Now Minh sit with us at
 > lunch every day.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
@@ -996,7 +1000,7 @@ agreement slip.
 - Error 2 = final, but there/final, but ~ comma splice — *but* joins the two clauses
 - Error 3 = older, so he/older, so ~ missing comma before *so*
 - Error 4 = back, or he/back, or ~ missing comma before *or*
-- Error 5 = out, and he/out, and ~ comma splice — *and* joins the two clauses
+- Error 5 = back, and he/back, and ~ comma splice — *and* joins the two clauses
 - Error 6 = sits ~ *sit* → *sits* — subject–verb agreement
 :::
 
@@ -1083,7 +1087,7 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. The list of marks on the wall, four times. 2. Because the midterm
+**1.1** 1. The list of marks on the school noticeboard, four times. 2. Because the midterm
 tests are next week, so nothing on that wall counts yet. 3. Hùng did no work at
 all, yet he came out two places above Tí. 4. Cô Yến moved it, and now the room
 just looks normal. 5. He can stand there and read the wall again, or he can

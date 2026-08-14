@@ -638,7 +638,8 @@ tables above.
 ::: passage label="A"
 > We walked the old path for two hours and passed nothing — no village, no gate,
 > no person. Ten questions in my pocket and nobody to ask them. So I sat on the
-> bank, said the two words, and the wick caught. The bamboo across the water
+> bank and waited for the water to turn, and Bống said the two words. This far
+> up the river it still turns, twice a day, the same as at home. The bamboo across the water
 > moved and stopped, because a house was standing in it: a stilt house, clear of
 > the ground on tall wooden legs, with a wooden staircase to the door.
 >
@@ -648,10 +649,10 @@ tables above.
 > under it while we stood in the sun. Inside was one large room, an open fire in
 > the middle, three baskets and a gong on the wall.
 >
-> "Light the lamp, and the nearest lost thing comes back," Mun said. "You don't choose
-> which, and it comes back the way it was lost. Eight measures now." Cô Yến's sheet says there are
+> "The sea gives back what it took," Bống said. "You don't choose
+> which, and it comes back the way it went. That is four marks on our wall now." Cô Yến's sheet says there are
 > fifty-four ethnic groups, that the Kinh are the majority, and that the other
-> fifty-three are ethnic minorities. Down in Bến Sẻ the new houses go up in a
+> fifty-three are ethnic minorities. Down in Bãi Sẻ the new houses go up in a
 > month in brick and concrete; a few villages upriver have begun to restore
 > their old ones. Nobody restored this one. Cô Yến calls a house like that
 > heritage, and I did not understand the word until Saturday.
@@ -667,7 +668,7 @@ tables above.
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you already know about ethnic groups is exactly the pull this type is built to catch."
 - There are 54 ethnic groups in Viet Nam. = T
 - The Kinh are one of the ethnic minorities. = F ~ the Kinh are the majority
-- The house on the path was built of brick and concrete. = F ~ it was built of wood and bamboo; brick and concrete are the new houses down in Bến Sẻ
+- The house on the path was built of brick and concrete. = F ~ it was built of wood and bamboo; brick and concrete are the new houses down in Bãi Sẻ
 - A stilt house is cooler because air moves under the floor. = T
 - The family who lived in the house grew rice. = NG ~ the writer asks how much rice they grew, and the text never answers
 - The writer's own family lives in a stilt house. = NG ~ the text never says what kind of home the writer lives in
@@ -680,7 +681,7 @@ tables above.
 - In which season does the floor of a stilt house stay dry? = (the) rainy season
 - Which two materials was the house built of? = wood and bamboo
 - What do you climb to reach the door? = (a) wooden staircase
-- Which two materials do the new houses in Bến Sẻ go up in? = brick and concrete
+- Which two materials do the new houses in Bãi Sẻ go up in? = brick and concrete
 :::
 
 ### 5.3 Vocabulary in context

@@ -37,14 +37,14 @@
 **Tí:** Then your uncle has been through more storms than the radio has.
 **Thảo:** Is the [[shelter]] at the school open? Bà Sáu was asking about it at the market.
 **Tí:** From eight. I went down to look this morning and turned back, because the bottom of the lane was already under water.
-**Thảo:** And the lamp?
-**Tí:** On the kitchen shelf, in the rice sack, where the whole lane can see it. Light the lamp, and the nearest lost thing comes back — and you never choose what. I am not touching it in a storm.
-**Thảo:** What did the white cat say, exactly?
-**Tí:** That Mun's instructions are wrong. Then she sent the market back herself on Sunday, in front of him, in about four seconds. Every dead note in Bến Sẻ went cold in people's hands at the same moment, and Bà Sáu's tin was empty and she laughed.
-**Thảo:** Did she show him how she did it?
-**Tí:** No. That is the part he was still sitting with last night.
-**Thảo:** And what does Mun say now?
-**Tí:** Nothing for two days. Then he told me he can do it correctly, that he was only giving me the short version, and if it ever goes over again he will prove it. He was practising the words on the shutter while the wind was pushing at it.
+**Thảo:** And Bống?
+**Tí:** At our table, where the whole lane can see her. The sea gives back what it took — and you never choose what. She is not going near that water in a storm.
+**Thảo:** What did the stranger say, exactly?
+**Tí:** That nobody ever finished teaching her. Then he sent the market back himself on Sunday, in front of her, in about four seconds. Every dead note in Bãi Sẻ went cold in people's hands at the same moment, and Bà Sáu's tin was empty and she laughed.
+**Thảo:** Did he show her how he did it?
+**Tí:** No. That is the part she was still sitting with last night.
+**Thảo:** And what does she say now?
+**Tí:** Nothing for two days. Then she told me she can hold it, that she was only giving me the short version, and if it ever goes over again she will prove it. She was practising the words on the shutter while the wind was pushing at it.
 :::
 
 ### 1.1 Comprehension
@@ -727,45 +727,51 @@ the page and give it to someone else to guess.
 
 ::: passage
 > The storm came in at nine, and by ten the siren at the school was sounding.
-> Bà Sáu sent me down to the landing to pull our boat higher up the bank. I
-> took the lamp with me, because the house was empty and I was not leaving it
-> on a shelf in a flood. I know exactly how that sounds.
+> Bà Sáu sent me down to the slipway to pull our boat higher up the sand. Bống
+> came with me, because she was not staying in an empty house in a flood, and
+> because she had something to prove. I know exactly how that sounds.
 >
 > I was dragging the rope when the water lifted the whole boat and put it down
-> on top of me. My knee hit the stone. The lamp came out of the rice sack,
-> rolled twice, and lit.
+> on top of me. My knee hit the stone. And behind me, with nobody asking her to,
+> Bống said the two words.
 >
-> Mun said, "Oh no." He said it very quietly, which is worse.
+> Then she said, "Oh no." She said it very quietly, which is worse.
 >
-> What came back was the town under the river — the one the dam drowned when
+> What came back was the village under the water — the one the sea took when
 > Bà Sáu was a girl. It came back whole: a street of low houses, a school with
-> a green gate, a post office, a well with a bucket still on it. It stood in
-> the fields where thirty years of water had been standing.
+> a green gate, a post office, a well with a bucket still on it. It stood out in
+> the bay where thirty years of water had been standing.
 >
 > Nobody thinks about the next part, and I had not thought about it either.
-> The river was already full. The town took its place, and the water it pushed
-> out had to go somewhere. It went over the bank and into Bến Sẻ.
+> The tide was already high. The village took its place, and the water it pushed
+> out had to go somewhere. It came over the harbour wall and into Bãi Sẻ.
 >
 > It reached our step in about four minutes. It was carrying fence posts,
 > chairs and a great deal of mud, and mud ruins whatever it touches. While the
 > men were shouting for boats, the women were pulling children onto the roofs.
 >
-> Mun got in front of the lamp and said the words. He said them twice more, and
-> then again with his voice going thin, and nothing moved at all. He had been
-> telling me all week that he could do it correctly, that the white cat was
-> wrong about him. He was still saying it while the water came up the lane.
+> Bống got out in front of it and said, "Go well." She said it twice more, and
+> then again with her voice going thin, and nothing moved at all. She told me
+> all week that she could hold it, and that the stranger was wrong about her.
+> She was still saying it while the water came up the lane.
 >
-> I was still holding the rope. The lamp was burning on the stones, and I could
-> not make myself blow it out.
+> I was still holding the rope. The ninth mark went under while I watched, and I
+> could not make myself move.
+>
+> By midnight it had stopped rising, and it had stopped being frightening. Our
+> lane was a canal. There were boats where the motorbikes go, and there was
+> somebody on every roof in the street, and a man two houses down was passing
+> lanterns across on a pole. Bà Sáu made tea up there. Nobody had anywhere to
+> be, and nobody was missing.
 :::
 
 ### 5.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and what you already know about storms and floods is exactly the pull this type is built to catch."
 - The siren was sounding before the water came over the bank. = T
-- Tí lit the lamp on purpose that night. = F ~ it came out of the sack, rolled twice and lit by itself
-- The dam was built before Bà Sáu was born. = F ~ the town was drowned when she was a girl, so she was already alive
-- More people lived in the drowned town than live in Bến Sẻ now. = NG ~ the text never compares the two
+- Tí asked Bống to call that night. = F ~ she said the two words with nobody asking her to
+- The sea took that village before Bà Sáu was born. = F ~ it went when she was a girl, so she was already alive
+- More people lived in the drowned village than live in Bãi Sẻ now. = NG ~ the text never compares the two
 - The water reached the house in about four minutes. = T
 :::
 
@@ -775,7 +781,7 @@ the page and give it to someone else to guess.
 - What was sounding at the school by ten o'clock? = (the) siren
 - What did the writer hit on the stone? = (my) knee
 - What colour was the gate of the school that came back? = green
-- How long had the water been standing over the fields? = thirty years
+- How long had the water been standing over it? = thirty years
 - How long did the water take to reach the step? = four minutes
 :::
 
@@ -784,7 +790,7 @@ the page and give it to someone else to guess.
 ::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - spoils something completely = ruins
 - soft wet earth left behind by water = mud
-- the raised edge of a river = bank
+- a sloping ramp for pulling boats out of the water = slipway
 - a loud machine that gives a warning sound = siren
 :::
 
@@ -859,46 +865,46 @@ which of them each answer will come from.
 **Nghe một lần duy nhất.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
 
 ::: audio orientation="You will hear two speakers outdoors at night, standing above deep water. Somebody they know is not where he was, and they are trying to find him." mode="computer" preview="30" review="120"
-**Bạch:** Hold it first, then say the words. Holding it is not a
-detail. The apprentice never told you that, which is why nothing went back an
+**The keeper:** Face the water first, then say the words. Which way you face is
+not a detail. Nobody ever told her that, which is why nothing went back an
 hour ago.
 
 **Tí:** Go well.
 
-**Bạch:** Good. Now watch the wall. It is going, and the river is
+**The keeper:** Good. Now watch the wall. It is going, and the sea is
 coming into the space it leaves.
 
 **Tí:** Đạt was sitting on the low wall by the gate twenty minutes ago. He is
 not there now.
 
-**Bạch:** Was he alone?
+**The keeper:** Was he alone?
 
 **Tí:** Hùng went in after him with a rope. Nobody has shouted since.
 
-**Bạch:** Then stop staring at the water and look at the roofs.
+**The keeper:** Then stop staring at the water and look at the roofs.
 Children climb. They almost always climb.
 
 **Tí:** I can't see anything. It's black out there.
 
-**Bạch:** Whistle. You told me the small one knows your whistle.
+**The keeper:** Whistle. You told me the small one knows your whistle.
 
 **Tí:** *(whistles)*
 
 **Hùng:** *(far off)* We're up here! On the post office! He's cold and he's
 shouting at me, so he's fine!
 
-**Bạch:** There. Twenty minutes is nothing. Twenty minutes is a boy
+**The keeper:** There. Twenty minutes is nothing. Twenty minutes is a boy
 on a roof being rude to his friend.
 
 **Tí:** I think I'm going to be sick.
 
-**Bạch:** Later. Look down first — by your foot, in the mud.
+**The keeper:** Later. Look down first — by your foot, in the mud.
 
 **Tí:** It's a tin box. There's a name on it, and a date, and it is still
 sealed.
 
-**Bạch:** That came out of the post office. It was sent, and it never
-arrived. Bring it, and do not open it in the rain. Three measures left.
+**The keeper:** That came out of the post office. It was sent, and it never
+arrived. Bring it, and do not open it in the rain. Three marks left.
 :::
 
 ### 6.1 Listen and choose
@@ -906,7 +912,7 @@ arrived. Bring it, and do not open it in the rain. Three measures left.
 ::: task skill="listening" type="multiple-choice"
 - Tí says Đạt was last sitting (a) in a boat (b) on the low wall (c) on the school roof = b
 - Hùng went in after him carrying (a) a torch (b) a rope (c) a ladder = b
-- Bạch tells Tí to stop looking at the water and look at (a) the sky (b) the gate (c) the roofs = c ~ two places are named in that line — only one is the one she tells him to look at
+- The keeper tells Tí to stop looking at the water and look at (a) the sky (b) the gate (c) the roofs = c ~ two places are named in that line — only one is the one he tells him to look at
 - Hùng shouts that Đạt is (a) hurt (b) still missing (c) cold and complaining = c
 - The tin box they find is (a) open and empty (b) still sealed (c) broken in half = b
 :::
@@ -916,9 +922,9 @@ arrived. Bring it, and do not open it in the rain. Three measures left.
 ::: task skill="listening" type="sentence-completion" words="2+number"
 - Đạt had been on the wall ___ minutes earlier. = twenty/20
 - Tí is told to ___ , because the smallest boy knows the sound. = whistle
-- Bạch tells Tí to look down by his ___ , in the mud. = foot
+- The keeper tells Tí to look down by his ___ , in the mud. = foot
 - As well as a name, the box has a ___ written on it. = date
-- Bạch says there are ___ measures of oil left. = three/3
+- The keeper says there are ___ marks left. = three/3
 :::
 
 ::: bridge name="Same ninety seconds, more facts in it" trains="Listening" cefr="B1" marker="[T2]" src="03 §2.1"
@@ -1057,10 +1063,10 @@ Find and correct **six** errors in this paragraph. They are all connected to the
 past continuous: its *-ing* form, its *was/were*, or a verb that should not be
 in the continuous at all.
 
-> Three measures of oil are left. On Tuesday the storm was hit our roof at nine
-> o'clock. Later I was stand on the landing when the boat came down on my knee.
-> While Bạch was tell me what to do, Hùng were swimming to the post office. I
-> was knowing that the town would push the river out, but I said nothing. We was
+> Three marks are left on the wall. On Tuesday the storm was hit our roof at nine
+> o'clock. Later I was stand on the slipway when the boat came down on my knee.
+> While the keeper was tell me what to do, Hùng were swimming to the post office. I
+> was knowing that the village would push the sea out, but I said nothing. We was
 > carrying the tin box home before midnight, and it is still shut.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."

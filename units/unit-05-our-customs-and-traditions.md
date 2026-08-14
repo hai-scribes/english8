@@ -26,9 +26,11 @@
 
 ::: dialogue title="Forty cakes before breakfast" gramen="a / an / the" gramvi="Dùng **a/an** khi nhắc đến lần đầu; dùng **the** khi cả người nói và người nghe đều biết đang nói về cái nào." gramco="a festival → the festival"
 **Tí:** Why are there banana leaves all over the table?
-**Bà Sáu:** Because tomorrow is [[the|gram:the]] village [[festival]], and I am not letting it pass again.
+**Bà Sáu:** Because tomorrow is [[the|gram:the]] whale [[festival]], and I am not letting it pass again.
 **Tí:** Nobody goes any more.
-**Bà Sáu:** Eleven people went last year. When I was your age the whole lane went. We opened it in the second [[lunar]] month with a drum you could hear from the river.
+**Bà Sáu:** Eleven people went last year. When I was your age every boat in the bay came in for it and the whole lane went down to the water. We opened it in the second [[lunar]] month with a drum you could hear from the water.
+**Tí:** That house upriver had a shrine in it for a festival in the ninth month. Nobody up there keeps it any more.
+**Bà Sáu:** The ninth month is ours, child. Whoever those people were, they came off this coast before they ever went up that river, and they took our night with them, and then they put it down.
 **Tí:** What are all these for?
 **Bà Sáu:** [[Offerings|offering]]. The fruit, the flowers and the sticky rice go to the communal house in the morning. [[Wrap]] these cakes for me — tightly, or they open in the pot.
 **Tí:** Like this?
@@ -47,7 +49,7 @@
 
 Answer in full sentences.
 
-1. When does Bà Sáu's village open its festival?
+1. When does Bà Sáu's lane open its festival?
 2. Which three offerings does Bà Sáu name?
 3. Why does Bà Sáu light the first stick of incense herself now?
 4. What must Tí not do inside the communal house?
@@ -65,7 +67,7 @@ Answer in full sentences.
 ### 1.3 Notice the grammar
 
 ::: task skill="course" type="choice" opts="a|an|the|—" ask="Each sentence comes from the dialogue, but the little word before the noun is missing. Pick **a**, **an**, **the**, or **—** if no word is needed."
-- We opened it with ___ drum you could hear from the river. = a
+- We opened it with ___ drum you could hear from the water. = a
 - There used to be ___ hour of games. = an
 - ___ oldest person lights the first stick. = the
 - ___ Customs don't die by themselves. = — ~ plural, general meaning — no article
@@ -572,30 +574,36 @@ that it is the thing your reader is left holding.
 
 ### Reading — *The night the lane filled up*
 
-*Tí, 13, writes down what happened the night before his village festival.*
+*Tí, 13, writes down what happened the night before the whale festival.*
 
 ::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
 :::
 
 ::: passage
 > Bà Sáu wrapped cakes until midnight and went to bed with her hands still wet.
-> Six old women and one table. I took the lamp down to the landing and lit it,
-> and I am not sorry.
+> Six old women and one table. I took Bống down to the harbour wall at the turn
+> of the tide, and I am not sorry.
 >
-> "Light the lamp, and the nearest lost thing comes back," Mun said, the way he
-> always says it. "You don't get to choose what."
+> "The sea gives back what it took," she said, the way she always says it. "You
+> don't get to choose what."
 >
 > What came back was a night.
 >
 > Our lane filled up. Not with our neighbours — with a procession coming up
 > from the water in the dark: men carrying a red palanquin, older women behind
 > them with trays of offerings, and lanterns on poles all the way down to the
-> bank. A gong kept everybody in step. Nobody looked at me once.
+> sand. A gong kept everybody in step. Nobody looked at me once.
 >
 > There was food I had only ever heard about. Sticky rice that had been soaked
 > for two days, wrapped so tightly that not one leaf was loose. Cakes shaped
 > like fish. A woman put one into my hand and told me to eat it before it got
 > cold, and then asked whose grandson I was.
+>
+> Then the procession turned and went back down onto the sand, and the men
+> carried the palanquin out into the shallows and stopped, and everybody
+> stopped. Out past the moorings something very large came up, and stayed a
+> moment, and went down again without hurrying. Nobody said one word. Then the
+> gong started again.
 >
 > Minh was standing under the gate post with his hands in his pockets, watching
 > the lanterns go past him. Thảo saw him first and stopped walking. She has
@@ -616,7 +624,7 @@ that it is the thing your reader is left holding.
 ### 5.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you already know about village festivals is exactly the pull this type is built to catch."
-- The writer lit the lamp at the landing. = T
+- The writer took Bống down to the harbour wall. = T
 - The people in the procession knew who the writer was. = F ~ "Nobody looked at me once", and a woman asks whose grandson he is
 - The sticky rice had been soaked for two days. = T
 - The cakes shaped like fish tasted better than the sticky rice. = NG ~ the text names both foods but never compares them
@@ -626,8 +634,8 @@ that it is the thing your reader is left holding.
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- What did the writer take down to the landing? = (the) lamp
-- What came back when he lit it? = (a) night
+- Where did the writer take Bống? = (the) harbour wall
+- What came back that night? = (a) night
 - What were the men in the procession carrying? = (a) red palanquin
 - What kept everybody in step? = (a) gong
 - What was his grandmother wearing on the step? = (her) nightclothes
@@ -698,7 +706,7 @@ question.
 
 **Nghe một lần duy nhất.** Đọc trước câu hỏi, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a woman who sells at the market telling a neighbour what she saw on the night of the village festival, and what her grandmother once told her." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a woman who sells at the market telling a neighbour what she saw on the night of the whale festival, and what her grandmother once told her." mode="computer" preview="30" review="120"
 Listen to me. I am not a woman who invents things, and I am telling you what
 I saw with my own eyes.
 
@@ -709,16 +717,18 @@ There were lanterns all the way from the gate down to the water. Drums until
 it was light, and cakes I have not eaten since I was a girl. And I did not
 know one single face. I have lived in this lane for fifty-one years.
 
-Near the water there was a boy from our own street, holding a brass lamp. It
-was burning. He was holding it the way you hold something you have taken.
+Near the water there was a boy from our own street, and beside him a small
+girl nobody in this lane has ever seen. Wet hair. A shirt three sizes too big.
+And when the water went out, it went out around her feet last.
 
 Now. My grandmother worked in a house upriver when she was young, and she
-told me about a lamp like that one. She said it called lost things back —
-things that had stopped happening. I laughed at her. I was eleven.
+told me about a child like that one. She said the sea sends them up and then
+comes after them, and everything it ever took comes with it. I laughed at her.
+I was eleven.
 
 I am not laughing now. Ask anybody who stood in that lane. And then ask
-yourself what else that thing can bring back, because I have been asking
-myself all week, and so has everybody at the market.
+yourself what else the sea can bring back, because I asked myself that all
+week, and so did everybody at the market.
 :::
 
 ### 6.1 Listen and choose
@@ -726,9 +736,9 @@ myself all week, and so has everybody at the market.
 ::: task skill="listening" type="multiple-choice"
 - In recent years the festival has been (a) large and noisy (b) small and quiet (c) cancelled = b
 - Of the people in the lane that night, the speaker knew (a) all of them (b) a few of them (c) none of them = c
-- The boy near the water was holding (a) a tray (b) a drum (c) a brass lamp = c
-- Her grandmother heard about a lamp like that while working (a) upriver (b) at the market (c) abroad = a
-- The speaker now wants to know (a) who the boy is (b) what else the lamp can bring back (c) how the lanterns were made = b
+- Beside the boy near the water there was (a) a tray (b) a drum (c) a small girl nobody knew = c
+- Her grandmother heard about a child like that while working (a) upriver (b) at the market (c) abroad = a
+- The speaker now wants to know (a) who the boy is (b) what else the sea can bring back (c) how the lanterns were made = b
 :::
 
 ### 6.2 Listen and complete
@@ -867,13 +877,14 @@ to the next.
 Find and correct **six** errors in this paragraph. Five are about articles; one
 is a subject–verb agreement slip.
 
-> Seven measures of oil are left, and now the whole market is asking questions.
+> Five marks are on our wall now, and the whole market is asking questions.
 > Last night my grandmother went to the bed at midnight, still folding leaves.
 > She says the customs like ours never really die. She is oldest person on our
 > lane, so she lit an first stick of incense at dawn. Nobody sweep the yard
 > afterwards, and we ate the breakfast very late. Lanterns were still burning at
-> our gate when we finished. Mun taught me how to send a thing back, so I stood
-> there and said it out loud — "Go well." — and they went out, one by one.
+> our gate when we finished. Bống showed me how to send a thing back, so I
+> carried them down and set them on the water — "Go well." — and the whole
+> night went out with them, one lantern at a time.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
 - Error 1 = bed/to bed ~ *go to bed* is the activity, not the furniture

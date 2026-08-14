@@ -37,8 +37,8 @@
 **Tí:** I wrote that the box opened four times out of ten. Hùng [[said|gram:said]] that four out of ten was worse than a key.
 **Khoa:** Hùng is not wrong, for once.
 **Tí:** Thảo says we should carry it to Chú Bảy. He mends boat engines all day; a small lock cannot be harder than that.
-**Khoa:** Ask him tonight, then. And what did Mun say about it?
-**Tí:** He said the lamp would not help us. Light the lamp and the nearest lost thing comes back — you never choose what, and there are two measures of oil left.
+**Khoa:** Ask him tonight, then. And what did Bống say about it?
+**Tí:** She said the sea would not help us. The sea gives back what it took — you never choose what, and there are two marks left on that wall.
 **Khoa:** So we mend it ourselves.
 **Tí:** We mend it ourselves. Bring a screwdriver on Thursday.
 **Khoa:** And bring the green notebook.
@@ -53,7 +53,7 @@ Answer in full sentences.
 2. What does Khoa say Cô Yến told the club about Friday?
 3. Which part of the box works, and which part does not?
 4. Why does Thảo want them to carry the box to Chú Bảy?
-5. What did Mun say about the lamp, and how much oil is left?
+5. What did Bống say about the sea, and how many marks are left?
 
 ### 1.2 Find the phrase
 
@@ -67,7 +67,7 @@ Answer in full sentences.
 ### 1.3 Notice the grammar
 
 ::: task skill="course" type="choice" opts="say|tell" ask="Which reporting verb is each sentence using?"
-- He **said** the lamp **would** not help us. = say
+- She **said** the sea **would** not help us. = say
 - Cô Yến **told us** that the club **had** until Friday. = tell
 - She **told me** that the whole school **would** come. = tell
 - Hùng **said** that four out of ten **was** worse than a key. = say
@@ -729,9 +729,10 @@ they name. Shift the tense and the pronouns.
 > carried every tool out of that workroom years ago. The green notebook was
 > still on the shelf, and its last page had been torn out.
 >
-> "This is his room," Mun said. "It is not his work."
+> "This is his room," Bống said. "It is not his work."
 >
-> So I lit the lamp. Two measures, and then one.
+> So we waited on the mill step until the water in the race stopped and turned,
+> and she called.
 >
 > What came back was the work. Drawings unrolled themselves along the bench. A
 > wooden box with a glass eye in it, built to read a fingerprint. A brass
@@ -743,23 +744,24 @@ they name. Shift the tense and the pronouns.
 > The torn page was back in the notebook too. His writing is small and it
 > leans.
 >
-> *I have taught this to every apprentice. The lamp calls a lost thing home
-> along a line, and a keeper holds the far end of that line open. So the lamp
-> must never be spent on a keeper. Call one back and the line shuts behind him,
-> and everything still lost stays lost.*
+> *I have taught this to every apprentice. The sea calls a lost thing home
+> along a line, and a keeper holds the far end of that line open. So she must
+> never call a keeper home. Call one back and the line shuts behind him, and
+> everything still lost stays lost.*
 >
 > Under that, in the same small hand, is the way to the far end: a river, a
-> crossing, and how long the walk takes. He can be reached. He simply cannot be
-> called.
+> crossing, and how long the walk takes. Somebody can still reach him. Nobody
+> can call him.
 >
-> I read the rest of it front to back, and Khoa read it after me, and the thing
-> we came for is not in it. There is nothing about Minh — nothing anywhere
-> about what happens to a person who was called back and stayed, or how long he
-> gets to stay. Sixty years of careful pages about lamps and lines, and not one
-> page about that.
+> I read the rest of it front to back, and Khoa read it after me, looking for
+> the one thing we came for, which is Minh. Sixty years of careful pages about
+> lines and far ends, and his name is not in any of them. The nearest it comes
+> is one line at the foot of the torn page, in the same small hand: *a
+> called-back thing stays as long as somebody keeps hold of what it was.* We
+> read that twice, decided it was about objects, and turned over.
 >
-> Mun read it over my shoulder and said nothing for a long time. Then he said
-> the keeper had never got as far as giving him a name.
+> Bống read it over my shoulder and said nothing for a long time. Then she said
+> the keeper had never got as far as giving her a name.
 :::
 
 ### 5.1 Yes, No, or Not Given
@@ -771,7 +773,7 @@ reasoning is the same; what you are matching against is not.
 
 ::: task skill="reading" type="yes-no-not-given" ask="Does the writer agree? **YES** if the passage supports the claim, **NO** if it takes the opposite view, **NG** if the passage never takes a position either way."
 - The workroom had already been emptied before they got to it. = YES ~ *Somebody had carried every tool out of that workroom years ago*
-- The keeper's rule allows the lamp to be spent on calling a keeper back. = NO ~ *the lamp must never be spent on a keeper*
+- The keeper's rule allows a keeper to be called home. = NO ~ *she must never call a keeper home*
 - The keeper built his face frame after machines like it were being sold. = NO ~ he built it sixty years before anybody sold such a thing in a shop
 - The writer thinks the keeper was wrong to forbid it. = NG ~ he copies the page out and never says what he thinks of the rule
 - The keeper can still be reached by somebody willing to travel. = YES ~ the page gives a river, a crossing and how long the walk takes
@@ -850,21 +852,21 @@ moving rather than afterwards from memory.
 **Bài nghe chỉ phát một lần.** Đọc trước cả 6.1 và 6.2 trong lúc chờ, rồi vừa
 nghe vừa trả lời.
 
-::: audio orientation="You will hear one speaker, sitting in the workroom, telling the others what his teacher taught him, what he was never taught, and what he thinks they should do with what is left." mode="computer" preview="30" review="120"
-**Mun:** He was not a kind man to work for. He said the same things every
+::: audio orientation="You will hear one speaker, sitting in the workroom, telling the others what her teacher taught her, what she was never taught, and what she thinks they should do with what is left." mode="computer" preview="30" review="120"
+**Bống:** He was not a kind man to work for. He said the same things every
 morning until I could say them back to him in my sleep.
 
-He told me that a lamp is not a wish and never was. He said that everything
-the lamp brings home belonged to somebody once. He said it travels home along
-a line, and that a line has two ends. He told me my end was the near one. He
+He told me that this is not a wish and never was. He said that everything the
+sea brings home belonged to somebody once. He said it travels home along a
+line, and that a line has two ends. He told me my end was the near one. He
 said his was the far one, and that his was the harder one.
 
-He told me I would be given a name on the day I had learned the whole of it. I
-never learned the whole of it. He went, and the name went with him, and I have
-been standing at the near end ever since with half a lesson.
+He told me I would get my name back on the day I had learned the whole of it. I
+never learned the whole of it. He went, and my name went with him, and I have
+stood at the near end ever since with half a lesson.
 
-Now listen to me, both of you. There is one measure of oil in that lamp. I
-know what you are going to say, because I want the same thing you want. But he
+Now listen to me, both of you. There is one mark left on that wall. I know
+what you are going to say, because I want the same thing you want. But he
 wrote that page and he underlined it, and I heard him say it out loud more
 times than I can count.
 
@@ -874,24 +876,24 @@ Spend it on anything in the world. Do not spend it on him.
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- The speaker says his teacher was (a) kind to work for (b) not kind to work for (c) hardly ever there = b
-- He was told that a lamp is (a) a wish (b) not a wish (c) a machine = b
-- A line, he says, has (a) one end (b) two ends (c) no end at all = b
-- His own end of the line was (a) the near one (b) the far one (c) neither = a
-- He was to be given a name on the day he had (a) found his teacher (b) learned the whole of it (c) filled the lamp = b
-- His advice about the last measure is to spend it on (a) his teacher (b) anything else (c) nothing at all = b
+- The speaker says her teacher was (a) kind to work for (b) not kind to work for (c) hardly ever there = b
+- She was told that this is (a) a wish (b) not a wish (c) a machine = b
+- A line, she says, has (a) one end (b) two ends (c) no end at all = b
+- Her own end of the line was (a) the near one (b) the far one (c) neither = a
+- She was to get her name back on the day she had (a) found her teacher (b) learned the whole of it (c) crossed the river = b
+- Her advice about the last mark is to spend it on (a) her teacher (b) anything else (c) nothing at all = b
 :::
 
 ### 6.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion" words="1"
-- He heard the same things every ___ . = morning
-- Everything the lamp brings home ___ to somebody once. = belonged
-- He said a lost thing ___ home along a line. = travels
-- His teacher said his own end was the ___ one. = harder
-- He has stood at his end ever since with half a ___ . = lesson
-- There is one measure of ___ in that lamp. = oil
-- His teacher wrote the page and ___ it. = underlined
+- She heard the same things every ___ . = morning
+- Everything the sea brings home ___ to somebody once. = belonged
+- She said a lost thing ___ home along a line. = travels
+- Her teacher said his own end was the ___ one. = harder
+- She has stood at her end ever since with half a ___ . = lesson
+- There is one ___ left on that wall. = mark
+- Her teacher wrote the page and ___ it. = underlined
 :::
 
 ### Writing — An opinion paragraph
@@ -1017,7 +1019,7 @@ Find and correct **six** errors in this paragraph. Four are about reported
 speech, one is a pronoun that was never shifted, and one is a subject–verb
 agreement slip.
 
-> One measure of oil is left. Mun told that the keeper had underlined the rule.
+> One mark is left on the wall. Bống told that the keeper had underlined the rule.
 > He said us that we should shut the notebook and go home. Thảo said that I
 > wanted to call the keeper back, which was true of all three of us. Khoa told
 > me that he will read the last page again tomorrow. His brother say that
@@ -1133,8 +1135,8 @@ page can settle it, the row says so, and that one is yours to judge.
 **1.1** 1. Eleven times that morning. 2. He says she told them that the club
 had until Friday. 3. The fingerprint part works; the wire behind it does not.
 4. Because Chú Bảy mends boat engines all day, so a small lock cannot be harder
-than that. 5. He said the lamp would not help them, and there are two measures
-of oil left.
+than that. 5. She said the sea would not help them, and there are two marks
+left on the wall.
 
 ### Lesson 2
 
