@@ -573,6 +573,18 @@ def gloss_payload(body: str, a: dict, where: str) -> tuple:
 # it never intercepts a wheel event. Hijacking the scroll of a reading page
 # breaks the browser's own find, breaks keyboard paging, and on a phone breaks
 # the gesture that gets you out.
+# A panel holds an EXCHANGE, not a line. One line per panel made an 18-line
+# dialogue cost eighteen interactions and ten screen-heights of scrolling to
+# deliver 190 words — the interface, not the reader, was the bottleneck. A comic
+# panel has always held two or three balloons, so it holds two here, which is
+# the natural unit anyway: a thing said and the answer to it.
+#
+# The budget is words, not lines. Two balloons of 25 words each is a wall of
+# text in a 26rem panel, so a long line simply travels alone; the median line
+# in unit 1 is ten words, so most panels pair up.
+BEAT_BALLOONS = 2
+BEAT_WORDS = 40
+
 RE_SPEAKER = re.compile(r"^\*\*(?P<who>[^:*|]+?)(?:\|(?P<emo>[a-z]+))?:\*\*[ \t]*(?P<said>.*)$")
 RE_BG = re.compile(r"^@bg[ \t]+(?P<slug>[a-z0-9-]+)[ \t]*$")
 
@@ -627,6 +639,26 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
                       "html": md_inline_keep(m.group("said").strip())})
     if not lines:
         raise SystemExit(f"{where}: the dialogue has no lines")
+
+    # Group the lines into the panels they play as. Indices rather than copies:
+    # the transcript below the stage is built from `lines` and must stay the
+    # one source of the words.
+    def words(ln):
+        return len(re.sub(r"<[^>]+>", " ", ln["html"]).split())
+
+    beats, used = [], []
+    for i, ln in enumerate(lines):
+        joinable = (beats
+                    and len(beats[-1]) < BEAT_BALLOONS
+                    and ln["bg"] == lines[beats[-1][0]]["bg"]
+                    and ln.get("who") and lines[beats[-1][-1]].get("who")
+                    and used[-1] + words(ln) <= BEAT_WORDS)
+        if joinable:
+            beats[-1].append(i)
+            used[-1] += words(ln)
+        else:
+            beats.append([i])
+            used.append(words(ln))
     # A dialogue with no place named is UNSTAGED: it ships as the transcript
     # and nothing else. That is not a failure state, it is the rollout — a unit
     # becomes a comic the moment somebody gives it a `bg=` and chooses faces,
@@ -636,7 +668,8 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
     if staged and any(ln.get("who") and not ln["bg"] for ln in lines):
         raise SystemExit(f"{where}: some lines are staged and some are not — put "
                          f"the @bg above the first speaker, or drop bg= entirely")
-    return {"id": did, "title": a.get("title", ""), "lines": lines, "staged": staged,
+    return {"id": did, "title": a.get("title", ""), "lines": lines, "beats": beats,
+            "staged": staged,
             "cols": CAST_SHEET["cols"], "rows": CAST_SHEET["rows"],
             "aspect": CAST_SHEET["aspect"],
             "glosses": glosses, "backgrounds": sorted(seen_bg | ({bg} if bg else set()))}
@@ -659,7 +692,7 @@ def dialogue_html(p: dict) -> str:
     # One panel per line, laid out as the scroll track. Each carries only its
     # index: the stage reads the payload for everything else.
     track = "".join(f'<div class="d-step" data-step="{i}"></div>'
-                    for i in range(len(p["lines"])))
+                    for i in range(len(p["beats"])))
     # The stage is sticky INSIDE the track, and the steps are pulled back up
     # underneath it, so the track's own height is what the reader scrolls
     # through while the panel stays put. A stage that is a sibling of the track

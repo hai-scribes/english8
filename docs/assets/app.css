@@ -636,12 +636,17 @@ footer.foot p{margin:0;max-width:74ch}
    The stage is STICKY inside a tall track. The track's height is what the page
    scrolls through; the stage stays put and swaps its contents. Nothing here
    listens to a wheel event. */
-.d-scene{--stage-h:min(62vh,26rem)}
+/* Taller than it was, because a panel now holds an exchange rather than a
+   line: two balloons at the top and two figures along the bottom. */
+.d-scene{--stage-h:min(74vh,32rem)}
 .d-track{position:relative}
 /* The steps are spacers pulled back under the sticky stage, so the height the
    reader scrolls through is theirs and the panel simply stays put inside it. */
 .d-steps{margin-top:calc(-1 * var(--stage-h))}
-.d-step{height:58vh}
+/* Halved. A panel carries twice the words, so the reader should not also
+   have to scroll twice as far for it — 18 lines over 10.4 screen-heights
+   became 9 panels over 2.7. */
+.d-step{height:30vh}
 .d-stage{position:sticky;top:4rem;height:var(--stage-h);border-radius:var(--r);
   overflow:hidden;border:2px solid var(--ink);background:var(--sunk)}
 .d-bg{position:absolute;inset:0;background-size:cover;background-position:center;
@@ -658,7 +663,10 @@ footer.foot p{margin:0;max-width:74ch}
    would fight the ratio and squash the box, and because the crop is expressed
    in percentages of the box, a box of the wrong shape stretches the panel
    rather than clipping it — the art would silently distort. */
-.d-av{position:absolute;bottom:0;height:74%;background-repeat:no-repeat}
+/* Shorter than it was: with both speakers on stage the balloons need the
+   upper third clear, and two smaller figures read better than two that
+   collide in the middle. */
+.d-av{position:absolute;bottom:0;height:62%;background-repeat:no-repeat}
 .d-av[data-side=left]{left:.25rem}
 /* Drawn facing one way only; the layout turns them around. */
 .d-av[data-side=right]{right:.25rem;transform:scaleX(-1)}
@@ -669,7 +677,7 @@ footer.foot p{margin:0;max-width:74ch}
    flat, unstyled — because a placeholder that looks like a design decision is
    one nobody replaces. Each names the exact file that would fill it. */
 /* Square, like the panel it stands in for, so it shows the true footprint. */
-.d-ph{position:absolute;bottom:0;height:74%;aspect-ratio:1;
+.d-ph{position:absolute;bottom:0;height:62%;aspect-ratio:1;
   border:2px dashed var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;
   background:color-mix(in srgb,var(--sunk) 82%,transparent);
   display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
@@ -686,8 +694,10 @@ footer.foot p{margin:0;max-width:74ch}
   font-family:var(--f-mono);font-size:.62rem;letter-spacing:.1em;
   color:var(--muted);background:var(--surface);border:1px dashed var(--rule);
   border-radius:3px;padding:.15rem .5rem}
-.d-bubble{position:absolute;inset:.7rem .7rem auto .7rem}
-.d-bub{position:relative;max-width:74%;background:#fff;color:#111;
+/* The balloons of one beat, stacked in the order they are spoken. */
+.d-bubble{position:absolute;inset:.7rem .7rem auto .7rem;
+  display:flex;flex-direction:column;gap:.4rem}
+.d-bub{position:relative;max-width:70%;background:#fff;color:#111;
   border:2px solid #111;border-radius:1.1rem;padding:.6rem .85rem;
   font-size:.98rem;line-height:1.5}
 .d-bub[data-side=left]{margin-right:auto}

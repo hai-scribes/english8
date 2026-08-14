@@ -1615,75 +1615,88 @@ function initScene(root, p){
      avatar and background 404'd while the CSS beside them loaded fine. */
   const css = document.querySelector('link[rel="stylesheet"][href*="assets/app.css"]');
   const up = css ? css.getAttribute("href").replace(/assets\/app\.css.*$/, "") : "";
+  const beats = p.beats && p.beats.length ? p.beats : p.lines.map((_, i) => [i]);
   let at = -1;
 
+  /* A panel is an EXCHANGE: every line in the beat, and an avatar for each of
+     the (at most two) people speaking in it. One line per panel turned 190
+     words into eighteen interactions and ten screen-heights of scroll; a comic
+     panel has always held more than one balloon. */
+  function paintAvatar(av, ph, ln){
+    $("b", ph).textContent = ln.who;
+    $("span", ph).textContent = ln.emo;
+    const src = (window.__SHEETS__ && window.__SHEETS__[ln.slug])
+              || (up + ASSET_CAST + ln.slug + ".webp");
+    /* The sheet is a cols x rows grid read left to right, top to bottom, so
+       a linear emotion index becomes a column and a row. */
+    const cols = p.cols || 3, rows = p.rows || 2;
+    const x = ln.col % cols, y = Math.floor(ln.col / cols);
+    av.style.backgroundImage = 'url("' + src + '")';
+    av.style.backgroundSize = (cols * 100) + "% " + (rows * 100) + "%";
+    /* 0% puts the first panel's edge flush with the box's, and 100% puts the
+       last panel's far edge flush with the far side — so the step between
+       panels is 1/(n-1), not 1/n. A single row or column pins at 0%. */
+    av.style.backgroundPositionX = cols > 1 ? (x / (cols - 1) * 100) + "%" : "0%";
+    av.style.backgroundPositionY = rows > 1 ? (y / (rows - 1) * 100) + "%" : "0%";
+    /* Panel width is sheetW/cols and panel height is sheetH/rows, so the
+       panel's own aspect is the sheet's times rows over cols — 1.0, square,
+       for a 3 x 2 grid in a 3:2 image. */
+    av.style.aspectRatio = String((p.aspect || 1.5) * rows / cols);
+    /* The sheet is one file, so it is fetched once and cached; the probe is
+       answered from cache for every later panel. */
+    const probe = new Image();
+    probe.onload = () => { if (av.isConnected) ph.remove(); };
+    probe.onerror = () => { if (av.isConnected) av.remove(); };
+    probe.src = src;
+  }
+
   function show(i){
-    i = Math.max(0, Math.min(p.lines.length - 1, i));
+    i = Math.max(0, Math.min(beats.length - 1, i));
     if (i === at) return;
     at = i;
-    const ln = p.lines[i];
+    const lns = beats[i].map(j => p.lines[j]);
+    const place = lns[0].bg;
+
     /* Art that does not exist yet must still show the reader — and the person
        drawing it — WHERE it will go and WHICH file is missing. The placeholder
        is drawn first and removed only when the real image reports `load`, so
        it disappears by itself as the assets land and never needs taking out. */
-    const bgSrc = up + ASSET_BG + ln.bg + ".jpg";
+    const bgSrc = up + ASSET_BG + place + ".jpg";
     bg.style.backgroundImage = 'url("' + bgSrc + '")';
-    bg.dataset.bg = ln.bg;
+    bg.dataset.bg = place;
     bg.dataset.missing = "1";
-    const probe = new Image();
-    probe.onload = () => { if (bg.dataset.bg === ln.bg) delete bg.dataset.missing; };
-    probe.src = bgSrc;
+    const bgProbe = new Image();
+    bgProbe.onload = () => { if (bg.dataset.bg === place) delete bg.dataset.missing; };
+    bgProbe.src = bgSrc;
 
-    /* No speaker means narration: the place carries the beat by itself, so the
-       avatar and the bubble both go rather than showing an empty frame.
+    /* One avatar per SIDE, not per line: two people talking is one panel with
+       both of them in it, and a speaker who says two things running does not
+       appear twice. The face shown is their LAST line of the beat, because
+       that is the expression the reader should be left holding. */
+    const bySide = new Map();
+    lns.forEach(ln => { if (ln.who) bySide.set(ln.side, ln); });
+    cast.innerHTML = [...bySide.keys()].map(side =>
+      '<div class="d-ph" data-side="' + side + '"><b></b><span></span></div>'
+      + '<div class="d-av" data-side="' + side + '"></div>').join("");
+    [...bySide.entries()].forEach(([side, ln]) => {
+      paintAvatar($('.d-av[data-side="' + side + '"]', cast),
+                  $('.d-ph[data-side="' + side + '"]', cast), ln);
+    });
 
-       ONE SHEET PER CHARACTER, offset to the panel we want. Six separate files
-       had to agree on a width, a height and a baseline or the character jumped
-       between lines, and that agreement was made by hand with an image editor.
-       A single sheet cannot disagree with itself. It is also five requests
-       instead of thirty, and every emotion is already in memory the first time
-       the character speaks — no flicker when the face changes. */
-    cast.innerHTML = ln.who
-      ? '<div class="d-ph" data-side="' + ln.side + '"><b></b><span></span></div>'
-        + '<div class="d-av" data-side="' + ln.side + '"></div>'
-      : "";
-    if (ln.who){
-      const ph = $(".d-ph", cast), av = $(".d-av", cast);
-      $("b", ph).textContent = ln.who;
-      $("span", ph).textContent = ln.emo;
-      const src = up + ASSET_CAST + ln.slug + ".webp";
-      /* The sheet is a cols x rows grid read left to right, top to bottom, so
-         a linear emotion index becomes a column and a row. */
-      const cols = p.cols || 3, rows = p.rows || 2;
-      const x = ln.col % cols, y = Math.floor(ln.col / cols);
-      av.style.backgroundImage = 'url("' + src + '")';
-      av.style.backgroundSize = (cols * 100) + "% " + (rows * 100) + "%";
-      /* 0% puts the first panel's edge flush with the box's, and 100% puts the
-         last panel's far edge flush with the far side — so the step between
-         panels is 1/(n-1), not 1/n. A single row or column pins at 0%. */
-      av.style.backgroundPositionX = cols > 1 ? (x / (cols - 1) * 100) + "%" : "0%";
-      av.style.backgroundPositionY = rows > 1 ? (y / (rows - 1) * 100) + "%" : "0%";
-      /* Panel width is sheetW/cols and panel height is sheetH/rows, so the
-         panel's own aspect is the sheet's times rows over cols — 1.0, square,
-         for a 3 x 2 grid in a 3:2 image. */
-      av.style.aspectRatio = String((p.aspect || 1.5) * rows / cols);
-      /* The sheet is one file, so it is fetched once and cached; the probe is
-         answered from cache for every later line. */
-      const probe = new Image();
-      probe.onload = () => { if (av.isConnected) ph.remove(); };
-      probe.onerror = () => { if (av.isConnected) av.remove(); };
-      probe.src = src;
-    }
-    bubble.innerHTML = ln.who
+    /* Balloons stack in the order they are said, so reading order is the
+       order of the conversation and nothing has to be numbered. */
+    bubble.innerHTML = lns.map(ln => ln.who
       ? '<div class="d-bub" data-side="' + ln.side + '">'
         + '<b class="d-name">' + esc(ln.who) + '</b>'
         + '<div class="d-said">' + ln.html + '</div></div>'
-      : '<div class="d-bub d-nar-bub"><div class="d-said">' + ln.html + '</div></div>';
+      : '<div class="d-bub d-nar-bub"><div class="d-said">' + ln.html + '</div></div>'
+    ).join("");
     wireGlosses(bubble, p.glosses || [], p.id + "-b" + i);
-    count.textContent = (i + 1) + " / " + p.lines.length;
-    /* The live region is the transcript line, not the bubble: a screen-reader
-       user gets the name and the words in one go. */
-    scene.setAttribute("aria-label", (ln.who ? ln.who + ": " : "") + (bubble.textContent || ""));
+    count.textContent = (i + 1) + " / " + beats.length;
+    /* The live region is the whole beat: a screen-reader user gets both turns
+       in one go, with the names, exactly as the transcript reads. */
+    scene.setAttribute("aria-label",
+      lns.map(ln => (ln.who ? ln.who + ": " : "") + ln.html.replace(/<[^>]+>/g, "")).join(" "));
   }
 
   /* Which step is under the middle of the viewport. Read on scroll, never
@@ -1712,6 +1725,22 @@ function initScene(root, p){
   scene.addEventListener("keydown", ev => {
     if (ev.key === "ArrowRight" || ev.key === "ArrowDown"){ ev.preventDefault(); goto(at + 1); }
     if (ev.key === "ArrowLeft" || ev.key === "ArrowUp"){ ev.preventDefault(); goto(at - 1); }
+  });
+  /* Left and right also work without first clicking into the stage, while the
+     stage is the thing on screen. Deliberately NOT space or the down arrow:
+     those are how a browser pages through a document, and this file's whole
+     position is that a reading page keeps its own scrolling. Never while the
+     reader is typing, which is what the editable check is for. */
+  addEventListener("keydown", ev => {
+    if (ev.key !== "ArrowRight" && ev.key !== "ArrowLeft") return;
+    if (scene.hidden || ev.metaKey || ev.ctrlKey || ev.altKey) return;
+    const el = document.activeElement;
+    if (el && (el.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName))) return;
+    if (scene.contains(el)) return;                 // the stage handler has it
+    const r = $(".d-stage", scene).getBoundingClientRect();
+    if (r.bottom < 0 || r.top > innerHeight) return;
+    ev.preventDefault();
+    goto(at + (ev.key === "ArrowRight" ? 1 : -1));
   });
   addEventListener("scroll", sync, { passive: true });
   addEventListener("resize", sync, { passive: true });
