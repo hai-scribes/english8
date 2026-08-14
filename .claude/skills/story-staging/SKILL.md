@@ -107,8 +107,13 @@ going forward looks like. Three consequences worth knowing while writing:
   told it again. So is a reader who taps *Next* while a panel is still typing —
   that finishes the panel rather than skipping it.
 - **Stacking order is not reading order any more.** Balloons appear in speech
-  order whatever their position, so a reply no longer has to sit below the line
-  it answers for the sequence to be clear.
+  order whatever their position, so they no longer have to be pinned to the top
+  of the frame to be read in sequence — the stack now sits just clear of the
+  characters' heads, where a letterer would put it, and falls back to the top of
+  the frame only when a panel has too much text to fit there.
+- **A gloss is not offered until its phrase is complete.** A marked item is
+  often several words, so the underline appears on the character that finishes
+  it rather than creeping out from under a half-typed phrase.
 - **A hesitation is a real pause.** `…` in a line stops the stream for a beat
   before it goes on, and a full stop or a comma rests for a shorter one. This is
   an authoring tool and it costs nothing, because the punctuation is already in

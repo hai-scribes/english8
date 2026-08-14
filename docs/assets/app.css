@@ -742,8 +742,25 @@ footer.foot p{margin:0;max-width:74ch}
    split is load-bearing twice: the tail hangs off the wrapper so a clip-path
    on the balloon cannot cut it off, and an opened gloss lands after the
    balloon instead of inside a shape that was sized for two lines of speech. */
-.d-bubble{position:absolute;inset:.7rem .7rem auto .7rem;
-  display:flex;flex-direction:column;gap:.55rem;align-items:flex-start}
+/* The stack ENDS just above the figures and grows upward, instead of being
+   pinned to the top of the frame. It was pinned there when a balloon's vertical
+   position was the only thing carrying reading order; the balloons type
+   themselves out in speech order now, so that job is done and they are free to
+   sit where a letterer would put them — near the head that is saying them.
+   `--fig-h` is how tall the people are, published by JS because it depends on
+   how many of them there are. */
+.d-bubble{position:absolute;
+  inset:.6rem .6rem calc(var(--fig-h,62%) + .3rem) .6rem;
+  display:flex;flex-direction:column;
+  /* SAFE flex-end, and the keyword is load-bearing. Bottom-aligning a stack
+     that is taller than its box overflows the START edge — upward, into the
+     top of the frame, where `.d-stage`'s overflow:hidden cuts the first
+     balloon's head off. `safe` says "align to the end unless that would
+     overflow, in which case align to the start", so a tall panel gives up the
+     nice position and keeps all of its words. The unprefixed value is left in
+     front of it as the fallback. */
+  justify-content:flex-end;justify-content:safe flex-end;
+  gap:.55rem;align-items:flex-start}
 /* The measure is the point of the cap. `78%` keeps a balloon off the far edge
    of a wide frame; `34ch` is the line length that stops a reader's eye having
    to travel — and on a picture, where the text is competing with a face, short
@@ -801,12 +818,25 @@ footer.foot p{margin:0;max-width:74ch}
 .d-said.is-shaped{background:none;border:0;border-radius:0}
 .d-said .d-txt{position:relative}
 
-/* Loud. Called across a yard, or lost patience. THE PADDING SETS THE SPIKE
-   LENGTH — the shape function reads it and never reaches further in than this,
-   so these two numbers are the whole size control and there is nothing to keep
-   in sync in the JS. Generous here on purpose: a shout wants long spikes. */
+/* A shaped balloon's contour hangs OUTSIDE its box, so it needs panel to hang
+   into: `--spike` is the amplitude the JS actually used, and the margin keeps
+   the neighbouring balloon and the frame edge clear of it. */
+/* The width itself is computed in JS from how much text there is — see
+   `fitShaped`. These two are the bounds it works inside: never wider than the
+   panel can carry, and never narrower than the longest single word, which is
+   what stops a computed width from splitting a word down the middle. */
+.d-bub[data-bub=shout],.d-bub[data-bub=think]{
+  margin:var(--spike,14px);max-width:min(70%,30ch);min-width:min-content}
+
+/* Loud. Called across a yard, or lost patience. KEPT NARROW ON PURPOSE, and
+   this is the fix for the shape that was coming out wrong: a burst is a shape
+   with a roughly square block of text in it, and a one-line shout makes a box
+   six times as wide as it is tall. Spikes are a constant size, so a long thin
+   perimeter simply got more of them — forty small teeth, which is a sawtooth
+   strip and not a shout. Capping the measure makes the text wrap into a chunky
+   block, and the burst has something worth bursting around. */
 .d-bub[data-bub=shout]{font-weight:650}
-.d-bub[data-bub=shout] .d-said{padding:1.2rem 1.5rem}
+.d-bub[data-bub=shout] .d-said{padding:.55rem .8rem}
 .d-bub[data-bub=shout] .d-txt{text-align:center}
 /* A narrower, longer spike for a tail, to match the contour above it. */
 .d-bub[data-bub=shout]::before,.d-bub[data-bub=shout]::after{
@@ -818,7 +848,7 @@ footer.foot p{margin:0;max-width:74ch}
    instruction at all. Use it for what a character does not say out loud, and
    never for a line a listening or speaking exercise is built on: a thought is
    not speech. */
-.d-bub[data-bub=think] .d-said{padding:1.15rem 1.45rem}
+.d-bub[data-bub=think] .d-said{padding:.7rem .95rem}
 .d-bub[data-bub=think]::before,.d-bub[data-bub=think]::after{
   border:2px solid #111;background:#fff;border-radius:50%}
 .d-bub[data-bub=think]::before{width:.62rem;height:.62rem;margin-top:.18rem}
@@ -852,6 +882,11 @@ footer.foot p{margin:0;max-width:74ch}
    is complete on arrival. */
 
 .d-bub .gl{border-bottom-color:#b4503c}
+/* Mid-stream, before the phrase it marks is complete. A gloss often covers
+   several words, and an underline creeping out from under a half-typed phrase
+   marks two of them while the third is still coming — and offers a tap on
+   something that does not mean anything yet. */
+.d-bub .gl[data-armed="0"]{border-bottom-color:transparent;pointer-events:none}
 /* The gloss is a sibling of the balloon, so it is styled as its own card
    rather than inheriting a shape that was cut for speech. */
 .d-bubble .gloss{background:#f4f2ec;color:#111;margin:0;max-width:min(90%,44ch);

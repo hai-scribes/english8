@@ -1686,14 +1686,22 @@ function walkRoundRect(w, h, inset, r, pitch){
 const fmt = pts => "M" + pts.map(p => p[0].toFixed(1) + " " + p[1].toFixed(1))
                            .join(" L") + " Z";
 
-/* How far a spike or a lobe reaches. The CAP is the thing that matters, and it
-   is the balloon's own PADDING, because that is precisely the room between the
-   contour and the words — derive it from anything else and a tall balloon on a
-   narrow phone grows spikes that reach in through its own text. Change the
-   padding in the stylesheet and the shape follows; nothing here is kept in
-   sync by hand. */
-function spikeAmp(w, h, pad, share, max){
-  return clamp(Math.min(w, h) * share, 7, Math.min(max, Math.max(7, pad - 2)));
+/* How far a spike or a lobe reaches BEYOND the text box.
+
+   This used to be measured inward, with the contour drawn inside the element
+   and the padding holding the words clear of it. That coupling was the reason
+   the burst came out wrong: the amplitude was capped by the padding, so on a
+   one-line balloon — which is wide and short — the spikes were tiny and the
+   perimeter was long, and a burst with forty small teeth on it is a sawtooth
+   strip, not a shout.
+
+   So the contour is drawn on the element's own edge and the spikes hang
+   OUTSIDE it, where nothing has to make room for them. The element is exactly
+   the text box, the padding is ordinary text padding, and the amplitude is free
+   to be whatever reads as a burst. `.d-bub` carries a margin so the spikes have
+   panel to hang into. */
+function spikeAmp(w, h, share, max){
+  return clamp(Math.min(w, h) * share, 8, max);
 }
 
 /* Each shape is three numbers and a path function.
@@ -1707,8 +1715,8 @@ function spikeAmp(w, h, pad, share, max){
 const BUB_SHAPE = {
   /* Loud: a spike between every pair of boundary points, of alternating length
      so the contour reads as drawn rather than machined. */
-  shout: { share: 0.20, max: 18, lift: 0.55, path(w, h, amp){
-    const p = walkRoundRect(w, h, amp, amp * 1.1, amp * 1.5);
+  shout: { share: 0.24, max: 17, pitch: 2.9, lift: -0.72, path(w, h, amp){
+    const p = walkRoundRect(w, h, 0, amp * 1.2, amp * 2.9);
     if (!p.length) return "";
     const out = [];
     p.forEach((a, i) => {
@@ -1726,8 +1734,8 @@ const BUB_SHAPE = {
   /* Not said: an outward arc between every pair, which is a scalloped edge.
      Sweep 1 bulges outward because the walk is clockwise in screen
      coordinates, where y counts downward. */
-  think: { share: 0.14, max: 15, lift: 0.42, path(w, h, amp){
-    const p = walkRoundRect(w, h, amp, amp * 2, amp * 2.2);
+  think: { share: 0.17, max: 15, pitch: 3.0, lift: -0.6, path(w, h, amp){
+    const p = walkRoundRect(w, h, 0, amp * 2, amp * 3.0);
     if (!p.length) return "";
     let d = `M${p[0].x.toFixed(1)} ${p[0].y.toFixed(1)}`;
     for (let i = 1; i <= p.length; i++){
@@ -1821,11 +1829,16 @@ function initScene(root, p){
     if (!el) return;
     const src = (window.__SHEETS__ && window.__SHEETS__[c.slug])
               || (up + ASSET_CAST + c.slug + ".webp");
+    /* Setting the same background-image again is cheap but not free, and the
+       probe below is what removes the placeholder — re-running it on a figure
+       that is already drawn is the flicker this avoids. Only the crop moves. */
+    const fresh = el.dataset.sheet !== src;
+    el.dataset.sheet = src;
     /* The sheet is a cols x rows grid read left to right, top to bottom, so
        a linear emotion index becomes a column and a row. */
     const cols = p.cols || 3, rows = p.rows || 2;
     const cx = c.col % cols, cy = Math.floor(c.col / cols);
-    el.style.backgroundImage = 'url("' + src + '")';
+    if (fresh) el.style.backgroundImage = 'url("' + src + '")';
     el.style.backgroundSize = (cols * 100) + "% " + (rows * 100) + "%";
     /* 0% puts the first panel's edge flush with the box's, and 100% puts the
        last panel's far edge flush with the far side — so the step between
@@ -1836,12 +1849,13 @@ function initScene(root, p){
        panel's own aspect is the sheet's times rows over cols — 1.0, square,
        for a 3 x 2 grid in a 3:2 image. */
     el.style.aspectRatio = String((p.aspect || 1.5) * rows / cols);
-    /* The sheet is one file, so it is fetched once and cached; the probe is
-       answered from cache for every later panel. */
-    const probe = new Image();
-    probe.onload = () => { if (el.isConnected && ph) ph.remove(); };
-    probe.onerror = () => { if (el.isConnected) el.remove(); };
-    probe.src = src;
+    /* Probed once per sheet, not once per panel. */
+    if (fresh){
+      const probe = new Image();
+      probe.onload = () => { if (el.isConnected && ph) ph.remove(); };
+      probe.onerror = () => { if (el.isConnected) el.remove(); };
+      probe.src = src;
+    }
   }
 
   /* ---- the props ---------------------------------------------------------
@@ -1987,15 +2001,36 @@ function initScene(root, p){
       bgProbe.src = bgSrc;
     }
 
-    cast.innerHTML = roster.map((c, k) =>
-      '<div class="d-fig-ph" data-slot="' + k + '"><b></b><span></span></div>'
-      + '<div class="d-fig" data-slot="' + k + '"></div>').join("");
+    /* THE FIGURES ARE REUSED WHEN THE CAST HAS NOT CHANGED. Rebuilding this
+       markup on every panel threw away elements that were already correct and
+       created fresh ones — so the dashed placeholder was re-inserted and the
+       sheet re-attached every single time, and both flickered before the
+       browser could paint the cached image back. Two avatars flashing on every
+       tap, for a change that was usually just an expression.
+
+       The roster key is the slugs in order: same people in the same places
+       means the same elements, moved and re-cropped in place. A different cast
+       is a different scene and does rebuild. */
+    const key = roster.map(c => c.slug).join("|");
+    if (cast.dataset.roster !== key){
+      cast.dataset.roster = key;
+      cast.innerHTML = roster.map((c, k) =>
+        '<div class="d-fig-ph" data-slot="' + k + '"><b></b><span></span></div>'
+        + '<div class="d-fig" data-slot="' + k + '"></div>').join("");
+      roster.forEach((c, k) => {
+        const ph = $('.d-fig-ph[data-slot="' + k + '"]', cast);
+        if (ph){ $("b", ph).textContent = c.who; $("span", ph).textContent = c.emo; }
+      });
+    }
     roster.forEach((c, k) => {
-      const ph = $('.d-fig-ph[data-slot="' + k + '"]', cast);
-      if (ph){ $("b", ph).textContent = c.who; $("span", ph).textContent = c.emo; }
-      paintFigure($('.d-fig[data-slot="' + k + '"]', cast), ph, c, k,
+      paintFigure($('.d-fig[data-slot="' + k + '"]', cast),
+                  $('.d-fig-ph[data-slot="' + k + '"]', cast), c, k,
                   roster.length, speaking.has(c.who));
     });
+
+    /* How much of the frame the people occupy, so the balloons can sit just
+       clear of their heads instead of being pinned to the ceiling. */
+    scene.style.setProperty("--fig-h", roster.length ? (figH(roster.length) * 100) + "%" : "0%");
 
     paintProps(last.items, figs);
     /* Effects are collected across the whole beat rather than taken from its
@@ -2071,16 +2106,29 @@ function initScene(root, p){
      Reduced motion gets everything at once, and so does the reader who taps
      Next again mid-stream: a second tap finishes the panel rather than skipping
      it, which is the behaviour every reader already expects from this. */
-  const TYPE_MS = 18;         // per character
-  const REST_MS = { "…": 420, ".": 200, "?": 200, "!": 200, ",": 110, ";": 110 };
-  const BUBBLE_GAP_MS = 260;  // between one balloon finishing and the next
+  /* Fast. This is somebody talking, not a terminal from 1983: at 6ms a
+     ten-word line lands in about a third of a second, which is quick enough
+     that a reader never waits for it and slow enough that the order of the
+     conversation still registers. The rests carry almost all of the character —
+     an ellipsis is worth thirty ordinary letters. */
+  const TYPE_MS = 6;          // per character
+  const REST_MS = { "…": 300, ".": 130, "?": 130, "!": 130, ",": 70, ";": 70 };
+  const BUBBLE_GAP_MS = 170;  // between one balloon finishing and the next
   let typing = null;          // the run in progress, so it can be finished early
 
   const stillMotion = () => typeof matchMedia === "function"
     && matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* Wrap every character of a balloon in its own span, leaving elements — the
-     gloss buttons — intact and in place. Returns the spans in reading order. */
+     gloss buttons — intact and in place. Returns the spans in reading order.
+
+     A marked item is also DISARMED here and re-armed by its own last letter.
+     A gloss covers a phrase as often as a word — "can't work out", "hang out" —
+     and an underline that creeps out from under a half-typed phrase offers the
+     reader something that is not there yet: it marks two words when the third
+     is still coming, and it is tappable before it means anything. So the
+     underline appears, and the button becomes usable, on the character that
+     completes it. */
   function letters(el){
     const out = [];
     const walk = node => {
@@ -2101,13 +2149,23 @@ function initScene(root, p){
       }
     };
     walk(el);
+    $$(".gl", el).forEach(g => {
+      g.dataset.armed = "0";
+      const own = out.filter(sp => g.contains(sp));
+      if (own.length) own[own.length - 1].dataset.arms = "1";
+      else g.dataset.armed = "1";
+      if (own.length) own[own.length - 1].__gl = g;
+    });
     return out;
   }
 
   function finishTyping(){
     if (!typing) return;
     clearTimeout(typing.timer);
-    typing.bubbles.forEach(b => b.removeAttribute("data-typing"));
+    typing.bubbles.forEach(b => {
+      b.removeAttribute("data-typing");
+      $$(".gl", b).forEach(g => { g.dataset.armed = "1"; });
+    });
     typing.all.forEach(sp => sp.classList.remove("d-c-off"));
     typing = null;
   }
@@ -2138,6 +2196,7 @@ function initScene(root, p){
       }
       const sp = runs[bi][ci++];
       sp.classList.remove("d-c-off");
+      if (sp.__gl) sp.__gl.dataset.armed = "1";
       const rest = REST_MS[sp.textContent] || 0;
       typing.timer = setTimeout(tick, TYPE_MS + rest);
     };
@@ -2149,6 +2208,43 @@ function initScene(root, p){
      built after layout. Cheap and idempotent: it remembers the size it drew at
      and does nothing when asked again at the same one, which is what makes it
      safe to hang off a ResizeObserver as well as off the paint. */
+  /* A drawn contour wants a text block of roughly the right SHAPE to wrap
+     around, and a balloon left to its own devices is exactly the wrong shape:
+     it is as wide as its longest sensible line and only as tall as it has to
+     be, so a one-line shout is five times as wide as it is tall. Spikes are a
+     constant size, so a long thin perimeter simply gets more of them — which
+     is a sawtooth strip, not a burst.
+
+     Capping the measure in `ch` does not fix it either. It makes short lines
+     chunky and turns long ones into a tall narrow column, which is the same
+     defect standing up.
+
+     So the width is COMPUTED from how much text there is. Measure the line the
+     text would occupy if it never wrapped, and a block of aspect A has width
+     sqrt(A · lineHeight · thatLength) — the same relation whether the line is
+     three characters or eighty. Measured rather than estimated, because
+     guessing an average character width is what `ch` already did badly. */
+  const SHAPE_ASPECT = { shout: 1.9, think: 2.7 };
+
+  function fitShaped(said, kind){
+    const txt = $(".d-txt", said), bub = said.parentNode;
+    if (!txt) return;
+    const cs = getComputedStyle(txt);
+    const lh = parseFloat(cs.lineHeight) || parseFloat(cs.fontSize) * 1.5;
+    const was = txt.style.whiteSpace;
+    txt.style.whiteSpace = "nowrap";
+    const natural = txt.scrollWidth;
+    txt.style.whiteSpace = was;
+    if (!natural || !lh) return;
+    const sc = getComputedStyle(said);
+    const pad = (parseFloat(sc.paddingLeft) || 0) + (parseFloat(sc.paddingRight) || 0);
+    /* max-width in the stylesheet is still the ceiling, and `min-width:
+       min-content` the floor, so a single long word can never be squeezed
+       narrower than it is. */
+    bub.style.width =
+      Math.round(Math.sqrt((SHAPE_ASPECT[kind] || 2) * lh * natural) + pad) + "px";
+  }
+
   function drawShapes(){
     if (scene.hidden) return;
     $$(".d-said.is-shaped", bubble).forEach(said => {
@@ -2156,19 +2252,20 @@ function initScene(root, p){
       const spec = BUB_SHAPE[(bub.dataset || {}).bub];
       const svg = $("svg.d-shape", said), path = svg && $("path", svg);
       if (!spec || !path) return;
+      fitShaped(said, (bub.dataset || {}).bub);
       const w = said.clientWidth, h = said.clientHeight;
       if (!w || !h) return;
-      const cs = getComputedStyle(said);
-      const pad = Math.min(parseFloat(cs.paddingTop) || 0,
-                           parseFloat(cs.paddingLeft) || 0);
-      const key = w + "x" + h + "x" + pad;
+      const key = w + "x" + h;
       if (said.dataset.drawn === key) return;
       said.dataset.drawn = key;
-      const amp = spikeAmp(w, h, pad, spec.share, spec.max);
+      const amp = spikeAmp(w, h, spec.share, spec.max);
       svg.setAttribute("viewBox", "0 0 " + w + " " + h);
       path.setAttribute("d", spec.path(w, h, amp));
-      /* Bring the tail up to where the contour actually is. */
+      /* Move the tail to where the contour actually is. Negative now, because
+         the contour hangs BELOW the box rather than sitting inside it. */
       bub.style.setProperty("--tail-lift", (amp * spec.lift).toFixed(1) + "px");
+      /* And give the spikes somewhere to hang. */
+      bub.style.setProperty("--spike", amp.toFixed(1) + "px");
     });
   }
   /* A web font landing, or a gloss opening under a balloon, changes the box

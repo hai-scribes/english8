@@ -660,6 +660,27 @@ async function main() {
          dlg.querySelector(".d-count").textContent);
       win.dispatchEvent(new win.KeyboardEvent("keydown", { key:"ArrowLeft", bubbles:true }));
       ok("stream: rewinding shows the text at once", off() === 0);
+
+      /* A gloss covers a phrase as often as a word, so an underline creeping
+         out from under a half-typed one marks two words while the third is
+         still coming — and offers a tap on something that is not there yet. */
+      let armed = null;
+      for (let k = 0; k < 6 && !armed; k++){
+        click(win, dlg.querySelector(".d-next"));
+        armed = dlg.querySelector('.d-bubble .gl[data-armed="0"]');
+        if (!armed) click(win, dlg.querySelector(".d-next"));
+      }
+      ok("stream: a gloss is not offered until its phrase is complete",
+         !!armed, armed ? "held back" : "no glossed panel reached");
+      if (armed){
+        click(win, dlg.querySelector(".d-next"));   // finish the panel
+        ok("stream: and is offered once it is",
+           armed.dataset.armed === "1", armed.dataset.armed);
+      } else {
+        ok("stream: and is offered once it is", true, "skipped");
+      }
+      while (!dlg.querySelector(".d-prev").disabled)
+        click(win, dlg.querySelector(".d-prev"));
       /* A screen reader gets the beat whole, once, however slowly it is typed:
          a live region over a typewriter would announce it letter by letter. */
       const sr = dlg.querySelector(".d-sr");
@@ -690,6 +711,21 @@ async function main() {
        && !dlg.querySelector(".d-stage .d-full"));
     ok("comic: how far through is shown",
        !!dlg.querySelector(".d-rail-fill").style.width);
+
+    /* The figures are REUSED between panels of the same scene. Rebuilding them
+       re-inserted the dashed placeholder and re-attached the sheet every time,
+       and both flickered before the browser could paint the cached image back —
+       two avatars flashing on every tap, usually for a change of expression. */
+    {
+      const before = dlg.querySelector('.d-fig[data-slot="0"]');
+      const roster = dlg.querySelector(".d-cast").dataset.roster;
+      click(win, dlg.querySelector(".d-next"));
+      click(win, dlg.querySelector(".d-next"));
+      const after = dlg.querySelector('.d-fig[data-slot="0"]');
+      ok("comic: the same cast keeps the same elements between panels",
+         !!before && before === after, roster);
+      win.dispatchEvent(new win.KeyboardEvent("keydown", { key:"ArrowLeft", bubbles:true }));
+    }
 
     win.dispatchEvent(new win.KeyboardEvent("keydown", { key:"ArrowLeft", bubbles:true }));
     await new Promise(r => setTimeout(r, 30));
