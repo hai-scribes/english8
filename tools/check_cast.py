@@ -54,6 +54,110 @@ RE_ITEM_LINE = re.compile(r"^@item[ \t]+(?P<slug>[a-z0-9-]+)", re.M)
 RE_FX_LINE = re.compile(r"^@fx[ \t]+(?P<slug>[a-z0-9-]+)", re.M)
 
 
+# ---------------------------------------------------- the brief agrees too --
+# Every slug the manifest declares must have a PROMPT somewhere, and every
+# prompt must be for a slug that exists. This is the drift that costs most and
+# shows least: a slug with no prompt reads as available in every list an author
+# consults, and the first anybody hears of it is a scene naming something nobody
+# can draw. `data/cast.json` says so in its own comment; this is what enforces it.
+#
+# A hard failure rather than a report, unlike "is it drawn". Whether a file
+# exists yet is a work-in-progress state and always will be. Whether a declared
+# thing has been SPECIFIED is decidable, and there is no legitimate state in
+# which it has not.
+PROMPTS = ROOT / "research" / "story" / "illustration-prompts.md"
+RE_FILE = re.compile(r"^\*\*File:\*\* `([^`]+)`", re.M)
+# A prompt kept for an object no scene currently contains. The manifest does not
+# carry it and it must not be generated.
+RETIRED = "Not currently placed by any dialogue"
+
+# Phrases a prompt cannot lose without losing what it is FOR. Each is the one
+# sentence that makes its kind of drawing usable by the pipeline rather than
+# merely pretty — which is exactly the sort of thing a rewrite paraphrases away
+# without noticing, because the prompt still reads well afterwards.
+MUST_SAY = {
+    # make_sheet.py and make_overlay.py flood white inward from the border, and
+    # the figure's own line is the wall that stops it. Lose this and the drawing
+    # comes back hollow.
+    "art/cast/":  ("closed and continuous all the way round",
+                   "the contour rule the transparency step leans on"),
+    "art/props/": ("close all the way round",
+                   "the contour rule the transparency step leans on"),
+    # The cast is composited on top of a plate, so a figure drawn into one
+    # appears beside itself and cannot be painted out. The phrase is about
+    # CHARACTERS and not about animals on purpose: `under-water` welcomes small
+    # reef fish, because they are part of that place and are nobody's avatar.
+    "art/bg/":    ("no characters of any kind",
+                   "a plate is the place with none of the cast in it"),
+}
+
+
+def check_prompts(cast, problems):
+    """Manifest and brief describe the same set, and still say the load-bearing
+    part of it."""
+    if not PROMPTS.is_file():
+        problems.append(f"{PROMPTS.relative_to(ROOT)} is missing — every declared "
+                        f"slug is supposed to have a prompt in it")
+        return
+    doc = PROMPTS.read_text(encoding="utf-8")
+
+    # A block runs from its File line to the next one. The body is FLATTENED —
+    # blockquote markers off, every run of whitespace to one space — before
+    # anything is looked for in it. The prompts are hard-wrapped at 78 columns,
+    # so a phrase that matters straddles a line break about half the time, and a
+    # checker that missed those would fire on wrapping rather than on meaning.
+    # That is the failure mode that gets a check switched off.
+    def flat(t):
+        # Quote markers off FIRST, then collapse — doing it the other way round
+        # splits "> " into its own token and leaves it in the middle of the text.
+        return " ".join(re.sub(r"^\s*>\s?", "", t, flags=re.M).split())
+
+    hits = list(RE_FILE.finditer(doc))
+    blocks = {m.group(1): flat(doc[m.end(): hits[i + 1].start() if i + 1 < len(hits)
+                                   else len(doc)])
+              for i, m in enumerate(hits)}
+
+    want = {}
+    for name, c in cast["characters"].items():
+        for emo in cast["emotions"]:
+            want[f"art/cast/{c['slug']}/{emo}.png"] = f"{name} · {emo}"
+    for slug in cast["backgrounds"]:
+        want[f"art/bg/{slug}.jpg"] = f"the {slug} plate"
+    for slug in cast["props"]:
+        want[f"art/props/src/{slug}.png"] = f"the {slug} prop"
+    for slug in cast["fx"]:
+        want[f"art/fx/src/{slug}.png"] = f"the {slug} effect"
+
+    for path, what in sorted(want.items()):
+        if path not in blocks:
+            problems.append(
+                f"data/cast.json declares {what}, but {PROMPTS.name} has no "
+                f"prompt saving to {path} — write one, or the slug reads as "
+                f"available and nobody can draw it")
+        elif RETIRED in blocks[path]:
+            problems.append(
+                f"{path} is marked {RETIRED!r} in {PROMPTS.name}, but "
+                f"data/cast.json still declares it — one of the two is wrong")
+
+    for path in sorted(blocks):
+        if path in want or RETIRED in blocks[path]:
+            continue
+        problems.append(
+            f"{PROMPTS.name} has a prompt saving to {path}, which "
+            f"data/cast.json does not declare — declare it, or mark the block "
+            f"{RETIRED!r}")
+
+    for path, body in sorted(blocks.items()):
+        if RETIRED in body:
+            continue
+        for prefix, (phrase, why) in MUST_SAY.items():
+            if path.startswith(prefix) and phrase not in body:
+                problems.append(
+                    f"the prompt for {path} no longer says {phrase!r} — that "
+                    f"sentence is {why}, and a prompt which paraphrases it away "
+                    f"produces a drawing the pipeline cannot use")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--strict", action="store_true",
@@ -141,6 +245,8 @@ def main() -> int:
                                     f"data/cast.json")
                 else:
                     want["fx"].add(slug)
+
+    check_prompts(cast, problems)
 
     if problems:
         print(f"FAIL: {len(problems)} problem(s)")

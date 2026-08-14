@@ -34,6 +34,24 @@ own — nothing to fill in, nothing to append, no aspect ratio or style note to
 remember. If you find yourself typing anything into a prompt, that is a bug in
 this file.
 
+> **Adding a prompt, or changing one.** This file is meant to grow: a chapter
+> that needs a prop or an effect nobody has drawn gets one, and a plate whose
+> prose has moved on gets rewritten. Two rules make that safe.
+>
+> **Copy an existing block of the same kind wholesale** and change only the
+> heading, the `**File:**` line and the final subject paragraph. The style,
+> line, colour and composition blocks are identical across every prompt of a
+> kind on purpose — some of their sentences are load-bearing rather than
+> decorative, and *"the outline must close all the way round with no gaps"* is
+> what the white-keying in `make_overlay.py` and `make_sheet.py` leans on.
+>
+> **Add the slug to `data/cast.json` in the same change.** A slug with no prompt
+> reads as available to every author and cannot be drawn by anybody.
+>
+> `python3 tools/check_cast.py` **fails** on either mistake, and on a prompt
+> that has quietly lost one of those load-bearing sentences. There is a full
+> recipe in `.claude/skills/story-staging/`.
+
 **Each prompt asks for exactly one picture**, which is the thing image models
 are reliable at. Nothing asks for a grid, a sheet or a set of panels — see
 *Why one drawing at a time* below.
@@ -3351,7 +3369,7 @@ extra re-rolls; the rest appear once or twice each.
 
 ## 1. The harbour wall — background plate
 
-**File:** `harbour-wall.jpg`  ·  **this is the one unit 1 needs**
+**File:** `art/bg/harbour-wall.jpg`  ·  **this is the one unit 1 needs**
 
 > **If a style reference image is attached**, match **the way its background
 > is painted** — its colouring, its light, its softness and its texture. Do
@@ -3435,7 +3453,7 @@ extra re-rolls; the rest appear once or twice each.
 
 ## 2. Bà Sáu's kitchen — background plate
 
-**File:** `kitchen.jpg`
+**File:** `art/bg/kitchen.jpg`
 
 > **If a style reference image is attached**, match **the way its background
 > is painted** — its colouring, its light, its softness and its texture. Do
@@ -3511,7 +3529,7 @@ extra re-rolls; the rest appear once or twice each.
 
 ## 3. The school yard — background plate
 
-**File:** `school-yard.jpg`
+**File:** `art/bg/school-yard.jpg`
 
 > **If a style reference image is attached**, match **the way its background
 > is painted** — its colouring, its light, its softness and its texture. Do
@@ -3585,7 +3603,7 @@ extra re-rolls; the rest appear once or twice each.
 
 ## 4. The fish market — background plate
 
-**File:** `fish-market.jpg`
+**File:** `art/bg/fish-market.jpg`
 
 > **If a style reference image is attached**, match **the way its background
 > is painted** — its colouring, its light, its softness and its texture. Do
@@ -3661,7 +3679,7 @@ extra re-rolls; the rest appear once or twice each.
 
 ## 5. The lane — background plate
 
-**File:** `lane.jpg`
+**File:** `art/bg/lane.jpg`
 
 > **If a style reference image is attached**, match **the way its background
 > is painted** — its colouring, its light, its softness and its texture. Do
@@ -3736,7 +3754,7 @@ extra re-rolls; the rest appear once or twice each.
 
 ## 6. The town beach — background plate
 
-**File:** `town-beach.jpg`
+**File:** `art/bg/town-beach.jpg`
 
 > **If a style reference image is attached**, match **the way its background
 > is painted** — its colouring, its light, its softness and its texture. Do
@@ -3810,7 +3828,7 @@ extra re-rolls; the rest appear once or twice each.
 
 ## 7. The science room — background plate
 
-**File:** `science-room.jpg`
+**File:** `art/bg/science-room.jpg`
 
 > **If a style reference image is attached**, match **the way its background
 > is painted** — its colouring, its light, its softness and its texture. Do
@@ -3885,7 +3903,7 @@ extra re-rolls; the rest appear once or twice each.
 
 ## 8. The flooded street — background plate
 
-**File:** `flooded-street.jpg`
+**File:** `art/bg/flooded-street.jpg`
 
 > **If a style reference image is attached**, match **the way its background
 > is painted** — its colouring, its light, its softness and its texture. Do
@@ -3961,7 +3979,7 @@ extra re-rolls; the rest appear once or twice each.
 
 ## 9. The headland road — background plate
 
-**File:** `cliff-road.jpg`
+**File:** `art/bg/cliff-road.jpg`
 
 > **If a style reference image is attached**, match **the way its background
 > is painted** — its colouring, its light, its softness and its texture. Do
@@ -4036,7 +4054,7 @@ extra re-rolls; the rest appear once or twice each.
 
 ## 10. The whale shrine — background plate
 
-**File:** `whale-temple.jpg`
+**File:** `art/bg/whale-temple.jpg`
 
 > **If a style reference image is attached**, match **the way its background
 > is painted** — its colouring, its light, its softness and its texture. Do
@@ -4113,7 +4131,7 @@ extra re-rolls; the rest appear once or twice each.
 
 ## 11. Under the harbour — background plate
 
-**File:** `under-water.jpg`
+**File:** `art/bg/under-water.jpg`
 
 > **If a style reference image is attached**, match **the way its background
 > is painted** — its colouring, its light, its softness and its texture. Do

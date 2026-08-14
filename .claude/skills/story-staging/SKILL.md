@@ -181,15 +181,120 @@ These are defects that have already been paid for. None is negotiable.
 7. **Every task key that quotes the dialogue is rewritten with it**, and the
    Answer Key at the foot of the unit with it.
 
-## Adding to the vocabulary
+## Adding to the vocabulary, and editing it
 
-A new character, place, prop or effect goes into `data/cast.json` **and** gets a
-prompt in `research/story/illustration-prompts.md` in the same change — the
-manifest's slug and the prompt's filename must agree, and a slug nobody drew is
-worse than one that is missing, because it reads as available.
+**The vocabulary is yours to extend.** If a scene needs a golden ring, a bicycle
+or a shock effect nobody has drawn yet, add it — that is a normal part of
+writing a chapter, not a change to the system. What is not optional is doing it
+in one piece: a slug that exists in the manifest but has no prompt reads as
+available in every list an author consults, and the first anybody hears of it is
+a scene naming something nobody can draw.
 
-Do not add a prop or an effect speculatively. `tools/check_cast.py` reports
-anything declared that no dialogue names, and that report should stay empty.
+`tools/check_cast.py` **fails** on that, and on the reverse, so you will be told.
+
+### Adding a prop or an effect
+
+Three edits, always in the same change.
+
+**1 — `data/cast.json`.** Add the slug where its kind lives. A prop gives its
+height as a fraction of the panel and says whether it hangs on a wall rather
+than standing on the floor; an effect says whether it goes over one person or
+over the frame.
+
+```jsonc
+"props": {
+  "ring":  { "size": 0.09, "is": "A thin gold ring, worn, catching the light" },
+  "chart": { "size": 0.26, "hangs": true, "is": "A tide chart pinned to a board" }
+},
+"fx": {
+  "shiver": { "over": "figure", "is": "Short vibration strokes down both sides" },
+  "spray":  { "over": "panel",  "is": "Wind-blown spray across the whole frame" }
+}
+```
+
+`size` is the number the page draws with, so it has to be honest: a ring is
+small. `over` is enforced — the build refuses `@fx spray on=ti`.
+
+**2 — `research/story/illustration-prompts.md`.** Add a numbered block in Part 3
+(props) or Part 4 (effects), and **copy an existing block of the same kind
+wholesale**, changing only the heading, the `**File:**` line and the last
+paragraph, which is the subject.
+
+> **Copy the boilerplate verbatim. Do not improve it.** Every prompt in those
+> two parts carries an identical style, line, colour and composition block, and
+> that is deliberate: the file's own rule is that a prompt is complete on its
+> own, with nothing to fill in and nothing to append. Some of those sentences
+> are load-bearing rather than decorative — the props' *"the outline must close
+> all the way round with no gaps"* is what `make_overlay.py`'s white-keying
+> leans on, and a paraphrase of it produces a hollow cut-out. `check_cast.py`
+> checks for those sentences by name and fails when one goes missing, so a
+> tidied-up prompt is caught rather than discovered months later in the art.
+
+Filenames must match the manifest exactly:
+
+| | |
+| --- | --- |
+| a prop | `**File:** \`art/props/src/<slug>.png\`` |
+| an effect | `**File:** \`art/fx/src/<slug>.png\`` |
+| a place | `**File:** \`art/bg/<slug>.jpg\`` |
+| an expression | `**File:** \`art/cast/<slug>/<emotion>.png\`` |
+
+**3 — the scene.** Place it with `@item` or `@fx`, run `python3 tools/build.py`,
+and `python3 tools/check_cast.py` to see it listed as not drawn yet.
+
+### A figure effect has one extra rule
+
+The square it is drawn on maps onto the character at a fixed scale, so **where
+the mark sits in the frame is where it lands on the person.** Every figure
+effect's prompt therefore carries a *"Where the mark goes"* paragraph asking for
+the mark only, positioned against an imagined figure in the lower three-quarters
+of the square. Copy that paragraph and change only the position. Without it the
+generator centres the mark and a sweat drop lands on somebody's chest.
+
+### Editing a prompt when the story changes
+
+Do this whenever the prose starts naming something the picture does not have —
+it is a normal consequence of writing, not a failure. Unit 1's dialogue gained
+*"the wet steps of the harbour wall go all the way down to it"*, and the plate
+had a ladder and no steps, so the plate's last paragraph gained the steps. The
+prose is the authority; the brief follows it.
+
+Two traps, both real:
+
+- **A plate is shared.** `harbour-wall` serves chapters 1, 9 and 10, so anything
+  chapter-specific painted into it contradicts the other two. The twelve chalk
+  marks came out of that plate for exactly this reason — there is a different
+  number of them in every chapter.
+- **Composition follows the markup.** When narration became a full-width caption
+  box, all eleven plates needed their "keep the top corners quiet" note widened
+  to the whole top quarter. A change to how the page lays a panel out is a
+  change to every plate's brief.
+
+### Retiring one
+
+If no scene contains the object any more, take the slug out of
+`data/cast.json`, delete the `@item` or `@fx` lines that placed it, and mark its
+prompt block **`Not currently placed by any dialogue — do not generate this
+yet.`** with a line saying why. `check_cast.py` knows that marker and stops
+asking for it. Keep the block: the prompt is written, and the object usually
+comes back.
+
+Four props were retired this way — `bucket`, `lantern`, `rubbish-bag`, `chalk` —
+each because it had been placed to use up the vocabulary rather than because a
+scene held it.
+
+### What the gate checks
+
+```sh
+python3 tools/check_cast.py
+```
+
+- every declared slug has a prompt block saving to its exact path, and every
+  prompt block is for a declared slug
+- no block is both declared and marked retired
+- the load-bearing sentences are still in the prompts that need them
+- **reported, not failed:** which files are still undrawn, and anything declared
+  that no dialogue names — that last report should stay empty
 
 ## The pipeline
 

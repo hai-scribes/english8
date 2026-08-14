@@ -15,7 +15,7 @@ node tools/test_reading.js        # gate: the reading screen behaves (after buil
 python3 tools/check_coverage.py   # report: what the official textbook covers that we don't
 python3 tools/index_sgk.py --check  # gate: the recorded book's lookup index is current
 python3 tools/check_level.py --strict-through 3   # gate: story prose stays inside grade 8
-python3 tools/check_cast.py       # report: which comic assets exist, and which do not
+python3 tools/check_cast.py       # gate: manifest and art brief agree · report: what is drawn
 python3 tools/make_sheet.py --all   # compose the drawn expressions into character sheets
 python3 tools/make_overlay.py --all # cut the prop and effect drawings out of their white
 ```

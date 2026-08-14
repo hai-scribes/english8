@@ -105,7 +105,7 @@ reads.
 | `art/cast/<slug>.webp` · `art/bg/<slug>.jpg` · `art/props/*.webp` · `art/fx/*.webp` | **Generated / drawn.** The composed 3 × 2 sheet, the background plates and the transparent cut-outs — what the site actually loads. |
 | `tools/make_sheet.py` | Generator: the six drawings → one sheet. `--all` does every character with a full set. |
 | `tools/make_overlay.py` | Generator: one prop or effect drawing → its transparent cut-out. |
-| `tools/check_cast.py` | Report: which declared avatars, plates, props and effects have been drawn. |
+| `tools/check_cast.py` | Gate: every declared slug has a prompt, every prompt is for a declared slug, and no prompt has lost a load-bearing sentence. Reports what is still undrawn. |
 | `.claude/skills/story-staging/` | How to stage a dialogue, for an agent working on one. |
 | `docs/` | Generated output. GitHub Pages serves this directory. **Never put art here** — `build.py` deletes `docs/assets/` on every run and copies `art/` in. |
 | `curriculum/syllabus.md` | The syllabus map the units are written against. |
@@ -124,7 +124,7 @@ node tools/test_marking.js        # gate: the marking engine obeys the published
 node tools/check_write.js         # gate: each model satisfies its own checklist (needs docs/)
 node tools/test_reading.js        # gate: the reading screen behaves (needs docs/ and jsdom)
 python3 tools/check_coverage.py   # report: what the official textbook covers that we don't
-python3 tools/check_cast.py       # report: which comic assets exist, and which do not
+python3 tools/check_cast.py       # gate: manifest and art brief agree · report: what is drawn
 python3 tools/make_sheet.py --all   # compose the drawn expressions into character sheets
 python3 tools/make_overlay.py --all # cut the prop and effect drawings out of their white
 ```
