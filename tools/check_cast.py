@@ -21,8 +21,11 @@ complete, and for CI after that.
 Filenames are fixed by this file and by
 `research/story/illustration-prompts.md`, which must agree:
 
-    docs/assets/cast/<character-slug>.png     one sheet, all six emotions
-    docs/assets/bg/<background-slug>.jpg
+    art/cast/<character-slug>.webp     one sheet, all six emotions
+    art/bg/<background-slug>.jpg
+
+art/ is the source tree; build.py copies both into docs/assets/, which it
+deletes and rewrites on every run.
 """
 import argparse
 import json
@@ -87,9 +90,9 @@ def main() -> int:
             print("  -", p)
         return 1
 
-    av_dir, bg_dir = ROOT / "docs" / "assets" / "cast", ROOT / "docs" / "assets" / "bg"
-    missing_av = sorted(f"{s}.png" for s in want_av
-                        if not (av_dir / f"{s}.png").is_file())
+    av_dir, bg_dir = ROOT / "art" / "cast", ROOT / "art" / "bg"
+    missing_av = sorted(f"{s}.webp" for s in want_av
+                        if not (av_dir / f"{s}.webp").is_file())
     missing_bg = sorted(f"{s}.jpg" for s in want_bg
                         if not (bg_dir / f"{s}.jpg").is_file())
 
@@ -101,9 +104,9 @@ def main() -> int:
     if missing_av or missing_bg:
         print("\n  not drawn yet — the page falls back to a plain panel until they land:")
         for f in missing_av:
-            print(f"    docs/assets/cast/{f}")
+            print(f"    art/cast/{f}")
         for f in missing_bg:
-            print(f"    docs/assets/bg/{f}")
+            print(f"    art/bg/{f}")
         if args.strict:
             print(f"\nFAIL: --strict, and {len(missing_av) + len(missing_bg)} "
                   f"declared asset(s) have no file.")

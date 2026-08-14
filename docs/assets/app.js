@@ -1592,6 +1592,10 @@ function initDialogue(){
    is answerable one panel at a time, and a comic that hid the text would have
    broken the two exercises the dialogue exists to feed. */
 const ASSET_BG = "assets/bg/";
+/* WebP, not PNG, and measured rather than assumed: the six-panel sheet is
+   1008 KB as RGBA PNG and 209 KB at WebP q90, indistinguishable at 2x zoom.
+   The art has soft shading, so palette PNG — the usual answer for cel art —
+   speckles the hair and rings the cheek blush. See tools/make_sheet.py. */
 const ASSET_CAST = "assets/cast/";
 
 function initScene(root, p){
@@ -1601,7 +1605,16 @@ function initScene(root, p){
   const bg = $(".d-bg", scene), cast = $(".d-cast", scene),
         bubble = $(".d-bubble", scene), count = $(".d-count", scene),
         track = $(".d-track", scene), steps = $$(".d-step", scene);
-  const up = (location.pathname.match(/\//g) || []).length >= 4 ? "../../" : "";
+  /* How far up to reach assets/. Taken from the stylesheet link the build
+     already wrote — "../../assets/app.css" on a lesson, "assets/app.css" at the
+     root — because that is the prefix build.py itself computed for this page.
+     This used to count slashes in location.pathname and assume four meant a
+     lesson, which is true on a GitHub Pages PROJECT site (/repo/unit-01/
+     lesson-1/) and false everywhere else: served from a domain root, or from a
+     local http.server, a lesson has three, so `up` came out empty and every
+     avatar and background 404'd while the CSS beside them loaded fine. */
+  const css = document.querySelector('link[rel="stylesheet"][href*="assets/app.css"]');
+  const up = css ? css.getAttribute("href").replace(/assets\/app\.css.*$/, "") : "";
   let at = -1;
 
   function show(i){
@@ -1638,7 +1651,7 @@ function initScene(root, p){
       const ph = $(".d-ph", cast), av = $(".d-av", cast);
       $("b", ph).textContent = ln.who;
       $("span", ph).textContent = ln.emo;
-      const src = up + ASSET_CAST + ln.slug + ".png";
+      const src = up + ASSET_CAST + ln.slug + ".webp";
       /* The sheet is a cols x rows grid read left to right, top to bottom, so
          a linear emotion index becomes a column and a row. */
       const cols = p.cols || 3, rows = p.rows || 2;

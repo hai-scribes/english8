@@ -109,8 +109,12 @@ images have actually been drawn.
 
 Art is **one drawing per expression** — thirty square pictures — composed into a
 3 x 2 sheet per character by `tools/make_sheet.py`, which squares each drawing,
-keys the white to transparency by flooding in from the border, and lays out the
-grid. Asking a generator for the six-panel sheet directly returned eight panels
+keys the white to transparency by flooding in from the border (skipping a
+drawing that already arrives cut out), lays out the grid, and encodes it at
+640 px panels as WebP. The drawings live in **`art/cast/<slug>/<emotion>.png`**
+and the sheet beside them as `art/cast/<slug>.webp`; `art/` is a source tree
+and `build.py` copies the sheets and the plates into `docs/assets/`. **Do not
+put art in `docs/`** — the build deletes `docs/assets/` on every run. Asking a generator for the six-panel sheet directly returned eight panels
 four times running: multi-panel layout is the weakest thing these models do, and
 "not eight" made it worse, because diffusion models have no representation of
 negation and naming a number only raises its salience. Layout is arithmetic; ask

@@ -99,7 +99,11 @@ reads.
 | `tools/index_sgk.py` | Generator: the recorded book's lookup index. `--check` reports drift. |
 | `tools/build.py` | Generator: markdown → the 101-page site. |
 | `tools/assets/` | `app.css` and `app.js`, copied into the build. |
-| `docs/` | Generated output. GitHub Pages serves this directory. |
+| `art/cast/<slug>/<emotion>.png` | **Source.** The thirty drawings, full size and lossless, one per expression. |
+| `art/cast/<slug>.webp` · `art/bg/<slug>.jpg` | **Generated / drawn.** The composed 3 × 2 sheet and the background plates — what the site actually loads. |
+| `tools/make_sheet.py` | Generator: the six drawings → one sheet. `--all` does every character with a full set. |
+| `tools/check_cast.py` | Report: which declared avatars and backgrounds have been drawn. |
+| `docs/` | Generated output. GitHub Pages serves this directory. **Never put art here** — `build.py` deletes `docs/assets/` on every run and copies `art/` in. |
 | `curriculum/syllabus.md` | The syllabus map the units are written against. |
 | `curriculum/sgk/` | **The official book, recorded.** Every unit's targets, exercises and glossary, section by section — reference only, never built or published. |
 | `tools/check_coverage.py` | Report: what the official book teaches that our units do not. |
@@ -116,6 +120,8 @@ node tools/test_marking.js        # gate: the marking engine obeys the published
 node tools/check_write.js         # gate: each model satisfies its own checklist (needs docs/)
 node tools/test_reading.js        # gate: the reading screen behaves (needs docs/ and jsdom)
 python3 tools/check_coverage.py   # report: what the official textbook covers that we don't
+python3 tools/check_cast.py       # report: which dialogue avatars and backgrounds exist
+python3 tools/make_sheet.py --all # compose the drawn expressions into character sheets
 ```
 
 Requires `markdown` (`pip install markdown`). Edit the markdown in `units/`,

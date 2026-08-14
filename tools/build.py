@@ -42,6 +42,12 @@ OUT = ROOT / "docs"
 # for whoever maintains the course, not for the learner using it.
 REGISTER = ROOT / "research" / "evidence-register.md"
 ASSETS = Path(__file__).resolve().parent / "assets"
+# The drawn art. It is a SOURCE tree and lives outside docs/, because docs/ is
+# generated and this build deletes docs/assets/ wholesale on every run — art
+# saved there survives exactly until the next build. Composed sheets and plates
+# are copied out below; the per-emotion drawings under art/cast/<slug>/ are
+# masters that make_sheet.py reads and nothing publishes.
+ART = ROOT / "art"
 
 SITE = "English 8 — Global Success"
 LESSONS = 7
@@ -2680,7 +2686,19 @@ def main() -> int:
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
     (OUT / "assets").mkdir(parents=True, exist_ok=True)
     for a in ASSETS.iterdir():
-        shutil.copy2(a, OUT / "assets" / a.name)
+        if a.is_file():
+            shutil.copy2(a, OUT / "assets" / a.name)
+    # The cast sheets and the background plates, published under the names
+    # app.js asks for. Per-emotion drawings are not copied: they are masters.
+    art = 0
+    for src, dest in ((ART / "cast", "cast"), (ART / "bg", "bg")):
+        if not src.is_dir():
+            continue
+        (OUT / "assets" / dest).mkdir(parents=True, exist_ok=True)
+        for a in sorted(src.iterdir()):
+            if a.is_file() and not a.name.startswith("."):
+                shutil.copy2(a, OUT / "assets" / dest / a.name)
+                art += 1
 
     (OUT / "index.html").write_text(page_home(units, reviews), encoding="utf-8")
     # The evidence register is a maintainer's document, not a page. It lives in
@@ -2708,6 +2726,8 @@ def main() -> int:
           f"{tot_vocab} vocabulary rows, {tot_bridge} IELTS bridges")
     print(f"        {tot_task} marked tasks ({tot_item} items), {tot_audio} single-play "
           f"recordings, {len(THREADS)} strands")
+    if art:
+        print(f"        {art} drawn asset(s) copied from {ART.relative_to(ROOT)}/")
     if reviews:
         print(f"        {len(reviews)} cumulative reviews, {rv_task} marked tasks "
               f"({rv_item} items) drawn across three units each")
