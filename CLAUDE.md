@@ -22,6 +22,41 @@ python3 tools/make_sheet.py --all # compose the drawn expressions into character
 `test_reading.js` needs `npm install jsdom` and skips loudly without it, so the
 other four still run on a clean checkout.
 
+## Publishing, and the account this repo pushes as
+
+**The push is the deploy.** GitHub Pages serves `docs/` from `main` directly —
+there is no CI between a commit and the live site at
+<https://hai-scribes.github.io/english8/>. So `docs/` must be rebuilt and every
+gate green *before* you push, because nothing downstream will catch you.
+
+This repo belongs to **`hai-scribes`**, and pushes must authenticate as that
+account. The trap: `gh` can hold several logged-in accounts, and its git
+credential helper hands git the token of whichever one is **active** —
+it ignores the username git asks for, so `credential.username` will not fix it.
+If the active account is somebody else, the push dies with a 403 that names the
+wrong user.
+
+`.git/config` is not committed, so **a fresh clone has to be pinned again**:
+
+```sh
+git config --local --replace-all 'credential.https://github.com.helper' ''
+git config --local --add 'credential.https://github.com.helper' \
+  '!f() { test "$1" = get && printf "username=hai-scribes\npassword=%s\n" \
+   "$(gh auth token -u hai-scribes)"; }; f'
+git config --local user.name  "hai-scribes"
+git config --local user.email "230175965+hai-scribes@users.noreply.github.com"
+```
+
+The empty first value is load-bearing: it resets the helper list inherited from
+global config so only this one runs. Check it took with
+
+```sh
+printf 'protocol=https\nhost=github.com\n\n' | git credential fill | grep username
+```
+
+This changes nothing globally — other repos keep using whichever account is
+active, and `gh auth switch` is not needed.
+
 ## The unit-1 pilot, and the rules it established
 
 Unit 1 has been rebuilt end to end as the pattern for the other eleven. Nothing
