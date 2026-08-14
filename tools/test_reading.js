@@ -636,6 +636,41 @@ async function main() {
       }
     }
 
+    /* ---- the words arrive as they are said -------------------------------
+       Forward is being told the story; back is looking something up. The
+       assertions are made synchronously after each click, because `stream()`
+       marks every character before its first timer fires — a test that awaited
+       would be racing the typewriter it is meant to be checking. */
+    {
+      const off = () => dlg.querySelectorAll(".d-c-off").length;
+      click(win, dlg.querySelector(".d-next"));
+      const started = off();
+      ok("stream: going forward, the words start hidden and arrive", started > 0,
+         started + " characters waiting");
+      /* Impatience means "show me the rest of what was said", not "I have read
+         it" — so a second tap completes the panel instead of skipping it. */
+      const wasAt = dlg.querySelector(".d-count").textContent;
+      click(win, dlg.querySelector(".d-next"));
+      ok("stream: a second tap finishes the panel rather than skipping it",
+         off() === 0 && dlg.querySelector(".d-count").textContent === wasAt,
+         dlg.querySelector(".d-count").textContent);
+      click(win, dlg.querySelector(".d-next"));
+      ok("stream: and the tap after that moves on",
+         dlg.querySelector(".d-count").textContent !== wasAt,
+         dlg.querySelector(".d-count").textContent);
+      win.dispatchEvent(new win.KeyboardEvent("keydown", { key:"ArrowLeft", bubbles:true }));
+      ok("stream: rewinding shows the text at once", off() === 0);
+      /* A screen reader gets the beat whole, once, however slowly it is typed:
+         a live region over a typewriter would announce it letter by letter. */
+      const sr = dlg.querySelector(".d-sr");
+      ok("stream: the panel is announced whole, off the balloons",
+         !!sr && sr.getAttribute("aria-live") === "polite"
+         && sr.textContent.length > 10 && !dlg.querySelector(".d-bubble[aria-live]"),
+         sr ? sr.textContent.slice(0, 40) : "no live region");
+      while (!dlg.querySelector(".d-prev").disabled)
+        click(win, dlg.querySelector(".d-prev"));
+    }
+
     /* ---- the navigation, which is the whole reason this was rewritten ----
        The controls move the PANEL and nothing else. A reader who scrolls down
        to the exercise and back must find the story where they left it, which

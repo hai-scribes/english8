@@ -90,12 +90,63 @@ the same. Prefer the slug — it is diacritic-free, and a name with a space
 | `shout` | loud — called across a yard, or lost patience. A spiked burst. It is emphatic, so two in a row cancel each other |
 | `think` | not said aloud. A cloud, with bubbles trailing to the thinker |
 | `whisper` | said quietly, or not meant to carry. Broken contour |
-| narration | a line with no `**Name:**` — a caption box over the plate, and no balloon. It does **not** clear the stage: whoever `@cast` has put there stays, none of them lit, which is what a beat with no dialogue in it looks like. For an establishing shot with nobody in it, write `@cast none` above the line |
+| narration | a line with no `**Name:**` — a caption box over the plate, and no balloon. It does **not** clear the stage by itself: whoever `@cast` has put there stays, none of them lit, which is what a beat with no dialogue in it looks like. **An empty stage is the other half of it** — `@cast none` above the line gives a plate with nobody on it, which is what an opening establishing shot and a scene everybody has walked out of both want. Unit 1 opens on one |
 
 One constraint, and it is about exercises rather than about the shape: a
 `think` balloon is interior monologue, so a listening or speaking exercise
 cannot be built on one, and a line the learner is meant to practise saying
 aloud does not go in one.
+
+### How a line is delivered
+
+**The balloons type themselves out**, one at a time, in the order the lines are
+spoken. Nothing is authored for this and nothing can turn it off; it is what
+going forward looks like. Three consequences worth knowing while writing:
+
+- **Going back is instant.** A rewind is somebody looking a line up, not being
+  told it again. So is a reader who taps *Next* while a panel is still typing —
+  that finishes the panel rather than skipping it.
+- **Stacking order is not reading order any more.** Balloons appear in speech
+  order whatever their position, so a reply no longer has to sit below the line
+  it answers for the sequence to be clear.
+- **A hesitation is a real pause.** `…` in a line stops the stream for a beat
+  before it goes on, and a full stop or a comma rests for a shorter one. This is
+  an authoring tool and it costs nothing, because the punctuation is already in
+  the writing:
+
+  ```
+  **Tí|worried:** I've had it three days… and I haven't told anybody.
+  **Tí|neutral:** …
+  ```
+
+  A line that is nothing but `…` is a silence, and reads as one.
+
+Under `prefers-reduced-motion` the panel arrives complete, and a screen reader
+is given the whole beat at once regardless — a live region over a typewriter
+would announce a line one letter at a time.
+
+### Glossing: words, phrases, idioms, grammar
+
+`[[…]]` is not only for single words.
+
+```
+[[relax]]                       a word, keyed on itself
+[[board games|board game]]      a different surface form, keyed on the entry
+[[can't work out|work out]]     a phrase or an idiom
+[[hang out|hang out (with)]]    a phrasal verb, keyed on its dictionary form
+[[love|gram:v-ing]]             the unit's grammar, explained from the directive
+```
+
+Gloss what a grade-8 reader will actually stall on, which is very often **not**
+a single word: the idioms, the phrasal verbs and the fixed phrases are harder
+than the nouns, and this unit's grammar target is worth marking once where the
+dialogue first exhibits it.
+
+**One gloss per item per dialogue, and the build fails on a second.** Marking a
+word again three lines later is not extra support — it is the support failing to
+withdraw, which is the whole point of the construct. At least three marked
+items per dialogue, every key resolving in `data/dict/` with a Vietnamese sense,
+and none at all in Lessons 2–7.
 
 ### Props
 

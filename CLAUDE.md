@@ -198,8 +198,22 @@ panel** — that is the panel-break tool, and it is the only honest reading, sin
 a panel has one background, one roster and one set of props. A line with no
 speaker is narration — a caption box over the plate, no balloon, and **the stage
 stays as it stands**: narration means nobody is speaking, not that nobody is
-there, so the roster survives it with none of its figures lit. `@cast none` is
-how you get an empty establishing shot. A dialogue with no `bg=`
+there, so the roster survives it with none of its figures lit. `@cast none`
+empties it, which is what an opening establishing shot and a scene everybody has
+left both want.
+
+**The balloons type themselves out**, one at a time, in speech order, and an
+`…` in a line is a real pause — a hesitation costs nothing to author because the
+punctuation is already in the writing. Going back is instant, and so is tapping
+*Next* mid-stream, which finishes the panel rather than skipping it. Reduced
+motion gets the panel complete; a screen reader gets the whole beat at once from
+a live region off the balloons, because one over a typewriter announces a line a
+letter at a time.
+
+`[[…]]` marks **words, phrases, idioms, phrasal verbs and the unit's grammar** —
+gloss what a reader will actually stall on, which is usually not a single word.
+**One gloss per item per dialogue**; a second is a build failure, because a word
+handed back three lines later is the support failing to withdraw. A dialogue with no `bg=`
 is unstaged and ships as plain text; that is now an error state rather than the
 rollout, because all twelve are staged.
 

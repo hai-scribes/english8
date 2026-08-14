@@ -31,7 +31,7 @@
 **Tí|worried:** What did you tell her?
 **Thảo|happy:** That you were behind me on the road. Then she asked why you had missed Monday, and I said I had no idea.
 **Tí|happy:** Thank you.
-**Thảo|neutral:** She also wanted to know what your project was about, so I said [[planets|planet]].
+**Thảo|neutral:** She also wanted to know what your project was about, so I said planets.
 **Tí|neutral:** It is about planets. Question one asks what a [[planet]] needs before anything can [[survive]] on it — water, air, the right temperature, [[gravity]].
 **Thảo|neutral:** And question two?
 **Tí|neutral:** Whether anything else in this [[galaxy]] has ever answered us. Đạt [[asked|gram:asked]] that out loud at break, and Cô Yến said nobody knows.

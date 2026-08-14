@@ -25,17 +25,18 @@
 *Read the conversation aloud. Then answer the questions below.*
 
 ::: dialogue title="The list in the yard" bg="harbour-wall" gramen="love / can't stand + V-ing" gramvi="Sau các động từ chỉ sự thích hoặc không thích (love, like, enjoy, can't stand, hate), động từ theo sau thêm **-ing**." gramco="I love cooking · I can't stand waiting"
-@cast Tí|sad, Thảo|neutral
+@cast none
 @fx birds on=panel
 The tide is out. The wet steps of the harbour wall go all the way down to it.
+@cast Tí|sad, Thảo|neutral
 **Thảo|neutral:** You've been down on the wall all morning. What's wrong?
-**Tí|sad:** Nothing's wrong. I come down here to [[relax]].
+**Tí|sad:** Nothing's wrong, Thảo. I come down here to [[relax]].
 **Thảo|annoyed|shout:** Tí.
 **Tí|sad:** Hùng got a new [[board game|board game]] for his birthday. He read out the list of who's coming on Saturday. In the yard. Out loud.
 **Thảo|neutral:** And you weren't on it.
 **Tí|sad:** I wasn't on it. He got as far as Khoa, and then he folded the paper up and put it in his pocket.
 **Thảo|annoyed:** I [[can't stand]] hearing him read things out like that.
-**Tí|neutral:** It doesn't matter. I don't even like playing [[board games|board game]].
+**Tí|neutral:** It doesn't matter. I don't even like playing board games.
 **Tí|worried|think:** That is not true, and she knows it is not true.
 **Thảo|surprised:** You beat everyone in our class at every game we have ever played.
 **Tí|sad:** That was ages ago.
@@ -52,7 +53,7 @@ Below them the water turns over one step of the wall and slides back down.
 **Thảo|surprised:** In a minute means no.
 **Tí|worried:** There's something in the bucket behind our kitchen. I've had it three days and I haven't told anybody.
 **Thảo|surprised:** Told anybody what?
-**Tí|neutral:** That's the part I can't work out.
+**Tí|neutral:** That's the part I [[can't work out|work out]].
 :::
 
 ### 1.1 Comprehension

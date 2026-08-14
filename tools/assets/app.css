@@ -836,6 +836,21 @@ footer.foot p{margin:0;max-width:74ch}
 .d-bub[data-bub=narrate] .d-said{border-radius:3px}
 .d-bub[data-bub=narrate]::before,.d-bub[data-bub=narrate]::after{display:none}
 
+/* ---- the words arriving -----------------------------------------------
+   A character waiting its turn is HIDDEN, not absent: `visibility` keeps the
+   box, so the balloon is its final size from the first frame and nothing
+   reflows while it types. `display:none` here would make the balloon grow as
+   it filled, dragging its measured tail across the panel behind it. */
+.d-c-off{visibility:hidden}
+/* A balloon whose turn has not come is hidden whole. Left visible it would sit
+   there as an empty outline, which reads as a balloon somebody forgot to fill
+   rather than as one about to be spoken. It keeps its space, so the panel does
+   not jump when it arrives. */
+.d-bub[data-typing="wait"]{visibility:hidden}
+/* Nothing above is motion a reader can be hurt by, but the whole effect is
+   opt-out anyway: `stream()` returns early under reduced motion and the panel
+   is complete on arrival. */
+
 .d-bub .gl{border-bottom-color:#b4503c}
 /* The gloss is a sibling of the balloon, so it is styled as its own card
    rather than inheriting a shape that was cut for speech. */
@@ -850,6 +865,12 @@ footer.foot p{margin:0;max-width:74ch}
    enough to hit with a thumb, and nothing they do covers a face. */
 /* Symmetric gutters, so the three navigation controls stay optically centred
    while the expand button sits out in the right-hand one. */
+/* The panel's text, for a screen reader, delivered whole and once. The
+   balloons cannot do this job while they are typing: a character revealed is a
+   change to the accessible tree, and a polite live region over a typewriter
+   announces the line one letter at a time. */
+.d-sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;
+  clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
 .d-nav{position:relative;display:flex;gap:.5rem;align-items:center;
   justify-content:center;padding-inline:2.9rem}
 .d-nav button{font:inherit;font-size:.92rem;line-height:1;cursor:pointer;

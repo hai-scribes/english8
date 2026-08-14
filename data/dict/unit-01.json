@@ -1030,5 +1030,25 @@
       }
     ],
     "note": "Also written **doll's house** in British English. Both are correct."
+  },
+  "work out": {
+    "senses": [
+      {
+        "pos": "phr v",
+        "grammar": "+ noun, or + wh- clause",
+        "en": "to find the answer to something by thinking about it",
+        "vi": "hiểu ra, nghĩ ra, tìm ra (sau khi suy nghĩ)",
+        "examples": [
+          "I can't **work out** why she said that.",
+          "It took me an hour to **work out** the last question.",
+          "We **worked out** how to fix the radio ourselves."
+        ],
+        "colloc": [
+          "work out why",
+          "can't work out"
+        ]
+      }
+    ],
+    "note": "Two very different meanings. This one is *hiểu ra, nghĩ ra*: **work out** *a problem, an answer, why something happened*. The other is *tập thể dục* — *I **work out** at the gym* — and the two never overlap in practice."
   }
 }

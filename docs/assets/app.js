@@ -1762,6 +1762,7 @@ function initScene(root, p){
         propBack = $(".d-prop-back", scene), propFront = $(".d-prop-front", scene),
         fxLayer = $(".d-fx", scene), count = $(".d-count", scene),
         rail = $(".d-rail-fill", scene), full = $(".d-full", scene),
+        sr = $(".d-sr", scene),
         prev = $(".d-prev", scene), next = $(".d-next", scene);
   /* How far up to reach assets/. Taken from the stylesheet link the build
      already wrote — "../../assets/app.css" on a lesson, "assets/app.css" at the
@@ -1954,6 +1955,10 @@ function initScene(root, p){
   function show(i){
     i = Math.max(0, Math.min(beats.length - 1, i));
     if (i === at) return;
+    /* Going FORWARD is being told the story and the words arrive as they are
+       said. Going BACK is looking something up, and a reader who has returned
+       to re-read a line wants it now, not typed at them again. */
+    const forward = i > at;
     at = i;
     const lns = beats[i].map(j => p.lines[j]);
     const last = lns[lns.length - 1];
@@ -1963,15 +1968,24 @@ function initScene(root, p){
     onStage = roster.length;
     const speaking = new Set(lns.map(l => l.who).filter(Boolean));
 
-    /* Art that does not exist yet must still show the reader — and the person
+    /* THE PLATE IS ONLY TOUCHED WHEN THE PLACE CHANGES. It used to be reset on
+       every panel, which re-ran the missing-art probe and flashed the dashed
+       placeholder over a background that was already loaded and correct — most
+       visibly on a slow connection, which is where it could least be afforded.
+       A conversation stays in one place for a dozen panels; only the people in
+       front of it change.
+
+       Art that does not exist yet must still show the reader — and the person
        drawing it — WHERE it will go and WHICH file is missing. */
-    const bgSrc = up + ASSET_BG + place + ".jpg";
-    bg.style.backgroundImage = 'url("' + bgSrc + '")';
-    bg.dataset.bg = place;
-    bg.dataset.missing = "1";
-    const bgProbe = new Image();
-    bgProbe.onload = () => { if (bg.dataset.bg === place) delete bg.dataset.missing; };
-    bgProbe.src = bgSrc;
+    if (bg.dataset.bg !== place){
+      const bgSrc = up + ASSET_BG + place + ".jpg";
+      bg.style.backgroundImage = 'url("' + bgSrc + '")';
+      bg.dataset.bg = place;
+      bg.dataset.missing = "1";
+      const bgProbe = new Image();
+      bgProbe.onload = () => { if (bg.dataset.bg === place) delete bg.dataset.missing; };
+      bgProbe.src = bgSrc;
+    }
 
     cast.innerHTML = roster.map((c, k) =>
       '<div class="d-fig-ph" data-slot="' + k + '"><b></b><span></span></div>'
@@ -2006,6 +2020,7 @@ function initScene(root, p){
            + '" data-slot="' + ln.slot + '">' + inner + '</div>';
     }).join("");
     wireGlosses(bubble, p.glosses || [], p.id + "-b" + i);
+    stream(forward);
 
     count.textContent = (i + 1) + " / " + beats.length;
     if (rail) rail.style.width = ((i + 1) / beats.length * 100) + "%";
@@ -2015,8 +2030,11 @@ function initScene(root, p){
        accessible name — a screen-reader user has no tail to follow. They get
        the whole beat in one go, with the speakers, exactly as the transcript
        reads it. */
-    stage.setAttribute("aria-label",
-      lns.map(ln => (ln.who ? ln.who + ": " : "") + ln.html.replace(/<[^>]+>/g, "")).join(" "));
+    const spoken = lns.map(ln => (ln.who ? ln.who + ": " : "")
+                                + ln.html.replace(/<[^>]+>/g, "")).join(" ");
+    stage.setAttribute("aria-label", spoken);
+    /* Announced whole and at once, however slowly it is being typed. */
+    if (sr) sr.textContent = spoken;
 
     /* Both of these are measurements, so they wait for layout — and the
        shapes go first, because a tail is aimed at a balloon whose size the
@@ -2026,6 +2044,104 @@ function initScene(root, p){
       $$(".d-said.is-shaped", bubble).forEach(el => shapeWatch.observe(el));
     }
     requestAnimationFrame(() => { drawShapes(); aimTails(); });
+  }
+
+  /* ---- the words arrive as they are said ---------------------------------
+     A panel's balloons type themselves out, one balloon at a time, in the order
+     the lines are spoken. It is the one piece of motion in this whole construct
+     and it earns its place: a comic panel drops a finished conversation on the
+     reader all at once, and a reader who is learning the language reads the
+     last balloon first about as often as not. Typing enforces the order the
+     conversation actually happened in, which is also the order the exercises
+     below ask about.
+
+     NOTHING REFLOWS WHILE IT TYPES. Every character is wrapped in its own span
+     up front, so the balloon is laid out at its final size from the first
+     frame; the untyped ones are merely `visibility:hidden`, which occupies
+     space. That matters more here than it would elsewhere — the tails are
+     measured against the balloons' final geometry, so a box that grew while it
+     typed would drag its own tail across the panel behind it.
+
+     A HESITATION IS A REAL PAUSE. An ellipsis in the prose stops the stream for
+     a beat before going on, and a full stop or a comma rests for a shorter one.
+     It costs nothing — the punctuation is already in the writing — and it is
+     the difference between text appearing and somebody speaking. `…` is
+     therefore an authoring tool: see the skill.
+
+     Reduced motion gets everything at once, and so does the reader who taps
+     Next again mid-stream: a second tap finishes the panel rather than skipping
+     it, which is the behaviour every reader already expects from this. */
+  const TYPE_MS = 18;         // per character
+  const REST_MS = { "…": 420, ".": 200, "?": 200, "!": 200, ",": 110, ";": 110 };
+  const BUBBLE_GAP_MS = 260;  // between one balloon finishing and the next
+  let typing = null;          // the run in progress, so it can be finished early
+
+  const stillMotion = () => typeof matchMedia === "function"
+    && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Wrap every character of a balloon in its own span, leaving elements — the
+     gloss buttons — intact and in place. Returns the spans in reading order. */
+  function letters(el){
+    const out = [];
+    const walk = node => {
+      for (const kid of [...node.childNodes]){
+        if (kid.nodeType === 3){
+          const frag = document.createDocumentFragment();
+          for (const ch of kid.data){
+            const sp = document.createElement("span");
+            sp.className = "d-c";
+            sp.textContent = ch;
+            frag.appendChild(sp);
+            out.push(sp);
+          }
+          kid.replaceWith(frag);
+        } else if (kid.nodeType === 1){
+          walk(kid);
+        }
+      }
+    };
+    walk(el);
+    return out;
+  }
+
+  function finishTyping(){
+    if (!typing) return;
+    clearTimeout(typing.timer);
+    typing.bubbles.forEach(b => b.removeAttribute("data-typing"));
+    typing.all.forEach(sp => sp.classList.remove("d-c-off"));
+    typing = null;
+  }
+
+  function stream(forward){
+    finishTyping();
+    const bubbles = $$(".d-bub", bubble);
+    if (!bubbles.length) return;
+    if (!forward || stillMotion()) return;   // instant: rewind, or motion off
+
+    const runs = bubbles.map(b => letters($(".d-txt", b)));
+    const all = runs.flat();
+    all.forEach(sp => sp.classList.add("d-c-off"));
+    /* A balloon that has not started yet is hidden WHOLE — otherwise an empty
+       outline sits there waiting, which reads as a balloon nobody filled in. */
+    bubbles.forEach((b, k) => { if (k) b.setAttribute("data-typing", "wait"); });
+
+    typing = { bubbles, all, timer: 0 };
+    let bi = 0, ci = 0;
+    const tick = () => {
+      if (!typing) return;
+      if (ci >= runs[bi].length){
+        bi += 1; ci = 0;
+        if (bi >= runs.length){ typing = null; return; }
+        bubbles[bi].removeAttribute("data-typing");
+        typing.timer = setTimeout(tick, BUBBLE_GAP_MS);
+        return;
+      }
+      const sp = runs[bi][ci++];
+      sp.classList.remove("d-c-off");
+      const rest = REST_MS[sp.textContent] || 0;
+      typing.timer = setTimeout(tick, TYPE_MS + rest);
+    };
+    typing.timer = setTimeout(tick, 120);
   }
 
   /* ---- drawing the shaped balloons ---------------------------------------
@@ -2105,6 +2221,11 @@ function initScene(root, p){
      reader can scroll down to the exercise, scroll back, and find the story
      exactly where they left it. */
   const goto = i => {
+    /* Asked to go on while a panel is still typing: finish THIS panel rather
+       than skipping to the next one. Impatience means "show me the rest of
+       what was said", not "I have read it". Going back is never intercepted —
+       a rewind is always immediate. */
+    if (typing && i > at){ finishTyping(); return; }
     show(i); leanBubbles();
     requestAnimationFrame(() => { drawShapes(); aimTails(); });
   };
@@ -2208,7 +2329,10 @@ function initScene(root, p){
     toggle.textContent = comic ? "Read it as text" : "Read it as a comic";
     try { localStorage.setItem(KEY, comic ? "1" : "0"); } catch(e){}
     if (comic){ const was = at; at = -1; show(Math.max(0, was)); leanBubbles(); }
-    else if (scene.classList.contains("is-full")) fallbackFull(false);
+    else {
+      finishTyping();
+      if (scene.classList.contains("is-full")) fallbackFull(false);
+    }
   }
   toggle.addEventListener("click", () => setMode(scene.hidden));
 

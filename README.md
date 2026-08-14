@@ -386,7 +386,7 @@ A line with no speaker is narration: the plate, a caption box, no avatar.
 | Line | What it does | How long it lasts |
 | --- | --- | --- |
 | `**Name\|emotion\|balloon:**` | somebody speaks. `emotion` defaults to `neutral` and `balloon` to `say` | the line |
-| no `**Name:**` | narration — a caption box over the plate. Nobody speaks; the stage stays as it stands | the line |
+| no `**Name:**` | narration — a caption box over the plate. Nobody speaks; the stage stays as it stands, and `@cast none` empties it | the line |
 | `@bg <slug>` | changes the place | persists, and clears the props |
 | `@cast A\|emo, B` | who is on stage, including people saying nothing. `@cast none` empties it | persists |
 | `@item <slug> at=…` | a thing in the scene, at `left`/`center`/`right` or beside a named person. `@item none` clears | persists |
@@ -421,8 +421,15 @@ Four things here are load-bearing, and each is a defect that has been paid for:
   none of it would be drawn.
 
 `[[word]]` and `[[surface|dictkey]]` mark a gloss — Vietnamese, on tap, from
-`data/dict/`. At least three per dialogue, and **none anywhere in Lessons 2–7**:
-support where the word is, withdrawn afterwards.
+`data/dict/`. Words, phrases, idioms, phrasal verbs and the unit's grammar
+(`[[love|gram:v-ing]]`), because what a grade-8 reader stalls on is usually not
+a single word. At least three per dialogue, **one per item** — a second is a
+build failure — and **none anywhere in Lessons 2–7**: support where the word is,
+withdrawn afterwards.
+
+The balloons **type themselves out** in speech order, and `…` in a line is a
+real pause. Going back is instant, and tapping *Next* mid-stream finishes the
+panel rather than skipping it. Reduced motion gets it complete.
 
 Art lives in `art/`; `tools/check_cast.py` reports what is declared and what is
 drawn. While a file is missing, a character, place or prop leaves a dashed

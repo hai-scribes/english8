@@ -511,12 +511,32 @@ RE_MARK = re.compile(r"\[\[([^\]|]+)(?:\|([^\]]+))?\]\]")
 
 
 def gloss_payload(body: str, a: dict, where: str) -> tuple:
-    """(rendered body, gloss records). Raises on a token nothing can explain."""
-    out = []
+    """(rendered body, gloss records). Raises on a token nothing can explain.
+
+    ONE GLOSS PER ITEM, and the second is a build failure rather than a
+    duplicate button. Glossing a word twice in the same dialogue is not extra
+    support, it is the support failing to withdraw: the whole construct is
+    meet-it-here, meet-it-bare-afterwards, and a learner who is handed the
+    meaning again three lines later has not been asked to remember anything.
+    It also reads as an oversight, because it is one — unit 1 shipped `board
+    game` marked twice in nine lines.
+    """
+    out, seen = [], {}
 
     def one(m):
         surface, key = m.group(1), (m.group(2) or m.group(1)).strip()
         i = len(out)
+        # `gram` is its own key however it is spelled: there is one grammar
+        # pattern per dialogue, carried on the directive, so two marked
+        # constructions would both point at the same explanation.
+        dedupe = "gram" if key == "gram" or key.startswith("gram:") else key.lower()
+        if dedupe in seen:
+            raise SystemExit(
+                f"{where}: {surface!r} glosses {key!r}, which is already glossed "
+                f"at {seen[dedupe]!r} — one gloss per item per dialogue. The "
+                f"support is met once and withdrawn; a second button hands back "
+                f"the meaning the learner was about to have to remember.")
+        seen[dedupe] = surface
         if key == "gram" or key.startswith("gram:"):
             # One grammar pattern per dialogue, authored on the directive: the
             # dictionary has no entry for a construction.
@@ -920,7 +940,11 @@ def dialogue_html(p: dict) -> str:
              f'<div class="d-cast"></div>'
              f'<div class="d-prop d-prop-front"></div>'
              f'<div class="d-fx"></div>'
-             f'<div class="d-bubble" aria-live="polite"></div>'
+             # No live region on the balloons: they type, and a character
+             # revealed is a change to the accessible tree, so a polite region
+             # here would announce a line one letter at a time. `.d-sr` below
+             # carries the whole beat, once.
+             f'<div class="d-bubble"></div>'
              f'</div></div>'
              # Every control is out of the frame, the expand button included.
              # It used to sit in the stage's top-right corner and it landed on
@@ -934,6 +958,7 @@ def dialogue_html(p: dict) -> str:
              f'<button class="d-full" type="button" aria-pressed="false" '
              f'aria-label="Fill the screen"><span aria-hidden="true"></span></button>'
              f'</div>'
+             f'<p class="d-sr" role="status" aria-live="polite"></p>'
              f'<div class="d-rail"><div class="d-rail-fill"></div></div>'
              f'</div>'
              if p["staged"] else "")
@@ -2906,6 +2931,21 @@ def main() -> int:
     rv_item = sum(len(t["items"]) for r in reviews for _, _, t in r["tasks"])
 
     if args.check:
+        # RENDER EVERYTHING AND THROW IT AWAY. "Parse and report" used to mean
+        # counting what load_units found, which silently excluded every check
+        # that runs while a page is being built — a dialogue naming a face
+        # nobody drew, a gloss marked twice, a prop in an unstaged scene. So
+        # --check reported a clean parse on a unit the real build refuses, which
+        # is the worst thing a fast gate can do. It is now the full build minus
+        # the writing, and costs about a second.
+        page_home(units, reviews)
+        for u in units:
+            page_unit(u, reviews)
+            for L in u["lessons"]:
+                page_lesson(u, L)
+        for r in reviews:
+            page_review(r, units)
+
         for u in units:
             ex = len([b for L in u["lessons"] for b in L["blocks"] if b["kind"] == "exercise"])
             print(f"  unit {u['nn']}  {u['title'][:34]:36} lessons={len(u['lessons'])} "
