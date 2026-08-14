@@ -385,7 +385,7 @@ A line with no speaker is narration: the plate, a caption box, no avatar.
 | Line | What it does | How long it lasts |
 | --- | --- | --- |
 | `**Name\|emotion\|balloon:**` | somebody speaks. `emotion` defaults to `neutral` and `balloon` to `say` | the line |
-| no `**Name:**` | narration — plate, caption box, no avatar | the line |
+| no `**Name:**` | narration — a caption box over the plate. Nobody speaks; the stage stays as it stands | the line |
 | `@bg <slug>` | changes the place | persists, and clears the props |
 | `@cast A\|emo, B` | who is on stage, including people saying nothing. `@cast none` empties it | persists |
 | `@item <slug> at=…` | a thing in the scene, at `left`/`center`/`right` or beside a named person. `@item none` clears | persists |

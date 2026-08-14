@@ -195,7 +195,10 @@ and clears the props; `@cast` sets who is on stage, silent people included;
 person or the whole frame, for **one panel only**. **Any `@` line breaks the
 panel** — that is the panel-break tool, and it is the only honest reading, since
 a panel has one background, one roster and one set of props. A line with no
-speaker is narration — plate, caption box, no avatar. A dialogue with no `bg=`
+speaker is narration — a caption box over the plate, no balloon, and **the stage
+stays as it stands**: narration means nobody is speaking, not that nobody is
+there, so the roster survives it with none of its figures lit. `@cast none` is
+how you get an empty establishing shot. A dialogue with no `bg=`
 is unstaged and ships as plain text; that is now an error state rather than the
 rollout, because all twelve are staged.
 

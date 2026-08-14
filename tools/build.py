@@ -669,6 +669,12 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
     # real comic — roster and props persist, effects do not.
     order: list = []          # who is on stage, left to right, in arrival order
     faces: dict = {}          # their current expression, which persists
+
+    def roster():
+        """The stage as it stands: everyone present, in the order they arrived."""
+        return [{"who": n, "slug": CAST_CHARS[n]["slug"], "emo": faces[n],
+                 "col": CAST_EMO[faces[n]]["col"]} for n in order]
+
     items: list = []          # the props on stage, as {"slug", "at"}
     pending_fx: list = []     # effects waiting for the next line, then dropped
     breaks = False            # a stage direction was seen: the next line is a new panel
@@ -783,9 +789,21 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
 
         m = RE_D_SPEAKER.match(s)
         if not m:
-            # Narration. The place carries the beat on its own.
+            # Narration: a caption box over the plate, and NOBODY SPEAKING —
+            # which is not the same as nobody being there. It used to clear the
+            # stage, and that was right when the only way onto the stage was to
+            # say something. `@cast` changed that: the roster is now an
+            # explicit statement about who is present, so a narration line in
+            # the middle of a scene made both characters vanish and come back.
+            # It carries the roster like any other line, with no speaker in it,
+            # so every figure is held back and none is lit — which is exactly
+            # what a beat with no dialogue in it looks like.
+            #
+            # An establishing shot with nothing in it is still available, and it
+            # is now said rather than implied: `@cast none` above the line.
             lines.append({"bg": bg, "html": md_inline_keep(s), "breaks": breaks,
-                          "cast": [], "items": list(items), "fx": pending_fx})
+                          "cast": roster(), "items": list(items),
+                          "fx": pending_fx})
             pending_fx, breaks = [], False
             continue
 
@@ -814,9 +832,7 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
                       # Where the speaker stands, which is what the balloon's
                       # tail is aimed at now that the name label is gone.
                       "slot": order.index(who),
-                      "cast": [{"who": n, "slug": CAST_CHARS[n]["slug"],
-                                "emo": faces[n], "col": CAST_EMO[faces[n]]["col"]}
-                               for n in order],
+                      "cast": roster(),
                       "items": list(items), "fx": pending_fx, "breaks": breaks,
                       "html": md_inline_keep(m.group("said").strip())})
         pending_fx, breaks = [], False

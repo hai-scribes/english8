@@ -27,16 +27,17 @@
 ::: dialogue title="The list in the yard" bg="harbour-wall" gramen="love / can't stand + V-ing" gramvi="Sau các động từ chỉ sự thích hoặc không thích (love, like, enjoy, can't stand, hate), động từ theo sau thêm **-ing**." gramco="I love cooking · I can't stand waiting"
 @cast Tí|sad, Thảo|neutral
 @fx birds on=panel
+The tide is out. The wet steps of the harbour wall go all the way down to it.
 **Thảo|neutral:** You've been down on the wall all morning. What's wrong?
-**Tí|sad:** Nothing's wrong.
+**Tí|sad:** Nothing's wrong. I come down here to [[relax]].
 **Thảo|annoyed|shout:** Tí.
 **Tí|sad:** Hùng got a new [[board game|board game]] for his birthday. He read out the list of who's coming on Saturday. In the yard. Out loud.
 **Thảo|neutral:** And you weren't on it.
-**Tí|sad:** I wasn't on it.
+**Tí|sad:** I wasn't on it. He got as far as Khoa, and then he folded the paper up and put it in his pocket.
 **Thảo|annoyed:** I [[can't stand]] hearing him read things out like that.
 **Tí|neutral:** It doesn't matter. I don't even like playing [[board games|board game]].
+**Tí|worried|think:** That is not true, and she knows it is not true.
 **Thảo|surprised:** You beat everyone in our class at every game we have ever played.
-@fx gloom on=Tí
 **Tí|sad:** That was ages ago.
 **Thảo|neutral:** So you would like to go.
 @fx flush on=Tí
@@ -45,8 +46,13 @@
 **Tí|worried:** You're only asking me because of the list.
 **Thảo|happy:** I enjoy sitting here with you and I would enjoy sitting there with you. Both things are true.
 **Tí|neutral:** …
-**Thảo|happy:** Are you coming up, or are you staying down here to [[relax]] on the wet steps?
-**Tí|worried:** In a minute. There's something in the bucket behind our kitchen, and I haven't told anybody.
+Below them the water turns over one step of the wall and slides back down.
+**Thảo|neutral:** Are you coming up? My mother is frying fish and I am not missing it for a wet wall.
+**Tí|worried:** In a minute.
+**Thảo|surprised:** In a minute means no.
+**Tí|worried:** There's something in the bucket behind our kitchen. I've had it three days and I haven't told anybody.
+**Thảo|surprised:** Told anybody what?
+**Tí|neutral:** That's the part I can't work out.
 :::
 
 ### 1.1 Comprehension
@@ -506,33 +512,48 @@ fond of, be crazy about, be into*).
 :::
 
 ::: passage
-> I am not going to explain where the girl came from, because nobody believes
-> that part. I will write down what happened afterwards instead.
+> Nobody is going to believe the middle of this. I am writing it down anyway,
+> in the order it happened.
 >
-> It was Saturday. Hùng's house had my whole class in it, and our harbour wall
-> had me. For three days there was a fish in a bucket behind our kitchen, and I
-> fed it, and I told nobody. That morning the bucket was empty. There was a
-> small girl sitting on our step in Thảo's old yellow shirt, eating a cold sweet
-> potato, and she said her name was gone and I could pick one.
+> It started on Wednesday. Chú Bảy's net came up almost empty, with one small
+> grey fish in it that nobody wanted. I don't like throwing things back while
+> they are still moving, so I carried it home in my shirt and put it in the blue
+> bucket behind our kitchen.
 >
-> So I call her Bống, because that is what she was, and she did not argue.
+> I fed it rice, and then a little fried egg, which it liked better. Bà Sáu hates
+> losing food out of her kitchen, so I took a spoon at a time and said nothing.
+> The fish was in that bucket for three days and I told nobody — not Thảo, not
+> anybody. Every afternoon it looked back at me a bit too long.
+>
+> On Saturday morning the bucket was empty. Hùng's house had my whole class in
+> it, and our harbour wall had me.
+>
+> Then I saw our step. There was a small girl sitting on it in Thảo's old yellow
+> shirt, eating a cold sweet potato with both hands. She said her name was gone
+> and I could pick one, so I call her Bống, because that is what she was, and she
+> did not argue.
+>
+> She eats standing up, she eats everything, and she does not enjoy stopping. She
+> can't stand being in a room with the door shut, so she leaves every door open
+> behind her, and Bà Sáu shuts them, and she opens them again. She hates keeping
+> her hands still; there is always a shell or a spoon turning over in them.
 >
 > She walked me down to the wall at low water and made me wait there, which I
 > can't stand doing. Then the tide turned, and she said, "Come back," to nobody
 > at all.
 >
-> "The sea gives back what it took," she said. "You don't get to choose which.
-> You only get to choose where you are standing."
+> "The sea gives back what it took," she said. "You don't get to choose which."
 >
 > What came back was a board game.
 >
 > Not a new one. A wooden one, hand-cut, with a lid that does not fit and four
-> counters cut from bottle tops. It was lying on the wet concrete as if it had
-> been there the whole morning.
+> counters cut from bottle tops. It was lying on the wet concrete with the sea
+> still running off it.
 >
 > We played until it got dark. Bà Sáu came down to shout at me for missing
-> dinner and stayed for four games. Thảo arrived and did not ask one question
-> about Bống, which is why she is my friend. Even Bống played, badly.
+> dinner and stayed for four games; she enjoys winning far too much for a
+> grandmother. Thảo arrived and did not ask one question about Bống, which is why
+> she is my friend. Even Bống played, badly, and she did not mind losing at all.
 >
 > Nobody from Hùng's house was there. I did not think about them once.
 >

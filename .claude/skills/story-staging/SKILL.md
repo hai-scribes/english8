@@ -42,7 +42,7 @@ Narration has no speaker: a plate, a caption box, no avatar.
 | Line | What it does | Lifetime |
 | --- | --- | --- |
 | `**Name\|emotion\|balloon:** text` | somebody speaks. `emotion` defaults to `neutral`, `balloon` to `say` | the line |
-| a line with no `**Name:**` | narration — plate, caption box, no avatar | the line |
+| a line with no `**Name:**` | narration — a caption box over the plate. Nobody speaks; whoever is on stage stays on it | the line |
 | `@bg <slug>` | changes the place | persists; **clears the props** |
 | `@cast A\|emo, B, C` | sets who is on stage, including silent people. `@cast none` empties it | persists |
 | `@item <slug> at=…` | a thing in the scene. `@item none` clears them | persists until cleared or `@bg` |
@@ -53,24 +53,49 @@ other syntax for one, and there does not need to be: a panel has one background,
 one roster and one set of props, so a line that changes any of them cannot be in
 the panel before it.
 
+## Everything available, in one list
+
+The whole vocabulary a chapter can be told with. Nothing here ranks above
+anything else here, and nothing here has to be used: a dialogue that is six
+speech balloons on one background is a complete dialogue. `data/cast.json`
+carries the description of each slug and is what the build validates against —
+where this list and that file disagree, that file is right.
+
+| Kind | What there is |
+| --- | --- |
+| **Ways a line can appear** | a speech balloon, or narration (no `**Name:**` — a caption box over the plate, with the stage still standing behind it) |
+| **Balloon shapes** | `say` · `shout` · `think` · `whisper` |
+| **People** | Tí · Thảo · Bống · Bà Sáu · Khoa — up to four on stage at once |
+| **Faces** | `neutral` · `happy` · `worried` · `annoyed` · `surprised` · `sad` |
+| **Places** | `harbour-wall` · `kitchen` · `school-yard` · `fish-market` · `lane` · `town-beach` · `science-room` · `flooded-street` · `cliff-road` · `whale-temple` · `under-water` |
+| **Props** (`at=left\|center\|right\|<person>`) | `bucket` · `board-game` · `class-list` · `notebook` · `green-notebook` · `cakes` · `lantern` · `rubbish-bag` · `money` · `radio` · `phone` · `box` · `worksheet` · `chalk` |
+| **Effects over one figure** (`on=<person>`) | `impact` · `sparkle` · `dizzy` · `sweat` · `flush` · `anger` · `question` · `gloom` · `speed` |
+| **Effects over the frame** (`on=panel`) | `birds` · `splash` · `rain` |
+| **Panel breaks** | any `@` line |
+
+Adding a slug to any of those rows means adding it to `data/cast.json` and to
+`research/story/illustration-prompts.md` — see *Adding to the vocabulary*.
+
 ### Naming a person
 
 `at=` and `on=` take **the display name or the slug**: `on=Tí` and `on=ti` are
 the same. Prefer the slug — it is diacritic-free, and a name with a space
 (`Bà Sáu`) otherwise has to be quoted as `at="Bà Sáu"`.
 
-### The four balloon shapes
+### The four balloon shapes, and narration
 
-`say` (default) · `shout` · `think` · `whisper`
+| | |
+| --- | --- |
+| `say` | the default. Rounded, hard contour, solid tail |
+| `shout` | loud — called across a yard, or lost patience. A spiked burst. It is emphatic, so two in a row cancel each other |
+| `think` | not said aloud. A cloud, with bubbles trailing to the thinker |
+| `whisper` | said quietly, or not meant to carry. Broken contour |
+| narration | a line with no `**Name:**` — a caption box over the plate, and no balloon. It does **not** clear the stage: whoever `@cast` has put there stays, none of them lit, which is what a beat with no dialogue in it looks like. For an establishing shot with nobody in it, write `@cast none` above the line |
 
-A shape carries tone without spending a word of the ninety a chapter has, and a
-grade-8 reader decodes it for free. Two cautions:
-
-- **`think` is not speech.** Never build a listening or speaking exercise on a
-  thought balloon, and never put a line the learner is meant to practise saying
-  into one.
-- **`shout` is loud, not angry.** Called across a yard, or lost patience. It
-  renders as a spiked burst and it is emphatic; two in a row cancel each other.
+One constraint, and it is about exercises rather than about the shape: a
+`think` balloon is interior monologue, so a listening or speaking exercise
+cannot be built on one, and a line the learner is meant to practise saying
+aloud does not go in one.
 
 ### Props
 
@@ -189,5 +214,6 @@ reported.
   outright.
 - Do not explain the comic, the design or the research on a learner's page. The
   interface is the learner's; the reasoning goes in `research/`.
-- Do not force a prop or an effect into a scene to use up the vocabulary. Unit 1
-  places no props and that is the correct answer for that scene.
+- Do not force a prop or an effect into a scene to use up the vocabulary. The
+  list above is what is available, not a set of boxes to tick — Unit 1 places no
+  props, because the bucket is behind the kitchen and not on the harbour wall.

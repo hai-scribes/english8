@@ -78,9 +78,9 @@ resembling a character from the film, it is wrong even when it is beautiful.
 > the way round with no gaps** and that nothing fades out past it. Plates are
 > never keyed, so nothing constrains them.
 
-**What unit 1 needs:** Part 1 §1 (Tí), Part 1 §2 (Thảo), Part 2 §1
-(`harbour-wall`), and from Part 4 `birds`, `gloom` and `flush`. Unit 1 places no
-props.
+**What unit 1 needs:** Part 2 §1 (`harbour-wall`), and from Part 4 `birds` and
+`flush`. Tí's and Thảo's sheets are already drawn, and unit 1 places no props —
+so that is **three files**, and the unit is complete.
 
 **All twelve dialogues are now staged**, so nothing here is speculative any
 more: every prompt in this file is named by a chapter that ships, and a unit
@@ -3405,24 +3405,31 @@ extra re-rolls; the rest appear once or twice each.
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
 > and uncluttered** — figures will be placed there and detail behind them is
-> lost. Keep the interest in the middle and upper thirds. Nothing important
-> in the top-left or top-right corners, where speech balloons sit.
+> lost. Keep the **top quarter quiet across its whole width**: speech
+> balloons stack down from the top corners, and a narration line is a caption
+> box spanning the entire width of the frame.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
-> sparkles, glows or lens flare.
+> sparkles, glows or lens flare. **No chalk marks or tally marks on the
+> wall** — the twelve marks are the story's counter, there is a different
+> number of them in every chapter, and one plate is reused by all of them, so
+> any particular number contradicts eleven chapters. The prose carries them.
 >
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
 >
 > The concrete sea wall along a fishing quarter, late morning, hot and
-> bright. Worn concrete across the near ground with a rusted iron ladder set
-> into its face; a metre below the top, the tide line dark and green with
-> weed. Blue-hulled wooden fishing boats with painted eyes ride at their
-> moorings beyond it, and two round woven basket boats lie upturned on the
-> strip of sand at one side. Short chalk marks climb the wall's face in a
-> ragged vertical line. Across the water the far side of the bay is a low
-> green headland under a wide bright sky.
+> bright, **at low water**. A **broad flight of concrete steps runs down the
+> face of the wall all the way to the sea**, wide enough to sit on, worn
+> round at the nosings — the lower steps dark and wet and green with weed
+> where the tide has just left them, the upper ones dry and pale. The water
+> is against one of the lowest steps. Worn concrete across the near ground,
+> a rusted iron ladder set into the wall further along. Blue-hulled wooden
+> fishing boats with painted eyes ride at their moorings beyond it, and two
+> round woven basket boats lie upturned on the strip of sand at one side.
+> Across the water the far side of the bay is a low green headland under a
+> wide bright sky.
 
 ---
 
@@ -3482,8 +3489,9 @@ extra re-rolls; the rest appear once or twice each.
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
 > and uncluttered** — figures will be placed there and detail behind them is
-> lost. Keep the interest in the middle and upper thirds. Nothing important
-> in the top-left or top-right corners, where speech balloons sit.
+> lost. Keep the **top quarter quiet across its whole width**: speech
+> balloons stack down from the top corners, and a narration line is a caption
+> box spanning the entire width of the frame.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -3557,8 +3565,9 @@ extra re-rolls; the rest appear once or twice each.
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
 > and uncluttered** — figures will be placed there and detail behind them is
-> lost. Keep the interest in the middle and upper thirds. Nothing important
-> in the top-left or top-right corners, where speech balloons sit.
+> lost. Keep the **top quarter quiet across its whole width**: speech
+> balloons stack down from the top corners, and a narration line is a caption
+> box spanning the entire width of the frame.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -3630,8 +3639,9 @@ extra re-rolls; the rest appear once or twice each.
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
 > and uncluttered** — figures will be placed there and detail behind them is
-> lost. Keep the interest in the middle and upper thirds. Nothing important
-> in the top-left or top-right corners, where speech balloons sit.
+> lost. Keep the **top quarter quiet across its whole width**: speech
+> balloons stack down from the top corners, and a narration line is a caption
+> box spanning the entire width of the frame.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -3705,8 +3715,9 @@ extra re-rolls; the rest appear once or twice each.
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
 > and uncluttered** — figures will be placed there and detail behind them is
-> lost. Keep the interest in the middle and upper thirds. Nothing important
-> in the top-left or top-right corners, where speech balloons sit.
+> lost. Keep the **top quarter quiet across its whole width**: speech
+> balloons stack down from the top corners, and a narration line is a caption
+> box spanning the entire width of the frame.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -3779,8 +3790,9 @@ extra re-rolls; the rest appear once or twice each.
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
 > and uncluttered** — figures will be placed there and detail behind them is
-> lost. Keep the interest in the middle and upper thirds. Nothing important
-> in the top-left or top-right corners, where speech balloons sit.
+> lost. Keep the **top quarter quiet across its whole width**: speech
+> balloons stack down from the top corners, and a narration line is a caption
+> box spanning the entire width of the frame.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -3852,8 +3864,9 @@ extra re-rolls; the rest appear once or twice each.
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
 > and uncluttered** — figures will be placed there and detail behind them is
-> lost. Keep the interest in the middle and upper thirds. Nothing important
-> in the top-left or top-right corners, where speech balloons sit.
+> lost. Keep the **top quarter quiet across its whole width**: speech
+> balloons stack down from the top corners, and a narration line is a caption
+> box spanning the entire width of the frame.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -3926,8 +3939,9 @@ extra re-rolls; the rest appear once or twice each.
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
 > and uncluttered** — figures will be placed there and detail behind them is
-> lost. Keep the interest in the middle and upper thirds. Nothing important
-> in the top-left or top-right corners, where speech balloons sit.
+> lost. Keep the **top quarter quiet across its whole width**: speech
+> balloons stack down from the top corners, and a narration line is a caption
+> box spanning the entire width of the frame.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -4001,8 +4015,9 @@ extra re-rolls; the rest appear once or twice each.
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
 > and uncluttered** — figures will be placed there and detail behind them is
-> lost. Keep the interest in the middle and upper thirds. Nothing important
-> in the top-left or top-right corners, where speech balloons sit.
+> lost. Keep the **top quarter quiet across its whole width**: speech
+> balloons stack down from the top corners, and a narration line is a caption
+> box spanning the entire width of the frame.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -4075,8 +4090,9 @@ extra re-rolls; the rest appear once or twice each.
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
 > and uncluttered** — figures will be placed there and detail behind them is
-> lost. Keep the interest in the middle and upper thirds. Nothing important
-> in the top-left or top-right corners, where speech balloons sit.
+> lost. Keep the **top quarter quiet across its whole width**: speech
+> balloons stack down from the top corners, and a narration line is a caption
+> box spanning the entire width of the frame.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No
@@ -4151,8 +4167,9 @@ extra re-rolls; the rest appear once or twice each.
 > **Composition.** An empty background plate, 16:9, camera at standing eye
 > level looking straight ahead. Keep the **lower third of the frame simple
 > and uncluttered** — figures will be placed there and detail behind them is
-> lost. Keep the interest in the middle and upper thirds. Nothing important
-> in the top-left or top-right corners, where speech balloons sit.
+> lost. Keep the **top quarter quiet across its whole width**: speech
+> balloons stack down from the top corners, and a narration line is a caption
+> box spanning the entire width of the frame.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or motion lines. No

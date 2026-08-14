@@ -576,9 +576,25 @@ async function main() {
     ok("comic: a bubble is drawn for the current line", !!bub);
     ok("comic: the balloon carries no name label",
        !dlg.querySelector(".d-bubble .d-name"));
+    /* The accessible name names the SPEAKER, and a panel may legitimately have
+       none: narration is a caption box over the plate with nobody saying it, and
+       a chapter is allowed to open on one. So walk to the first spoken panel and
+       check that, rather than assuming panel 1 is speech — which was true of one
+       dialogue on one day and is not a contract. Then walk back. */
+    const named = () => /T[íi]:|Th[ảa]o:/.test(
+      dlg.querySelector(".d-stage").getAttribute("aria-label") || "");
+    let toSpoken = 0;
+    while (toSpoken < 6 && !named()) {
+      click(win, dlg.querySelector(".d-next"));
+      await new Promise(r => setTimeout(r, 30));
+      toSpoken++;
+    }
     ok("comic: the balloon still says who is speaking, to a screen reader",
-       /T[íi]:|Th[ảa]o:/.test(dlg.querySelector(".d-stage").getAttribute("aria-label") || ""),
-       dlg.querySelector(".d-stage").getAttribute("aria-label"));
+       named(), dlg.querySelector(".d-stage").getAttribute("aria-label"));
+    while (toSpoken--) {
+      win.dispatchEvent(new win.KeyboardEvent("keydown", { key:"ArrowLeft", bubbles:true }));
+      await new Promise(r => setTimeout(r, 30));
+    }
     ok("comic: the panel counts its lines",
        /1 \/ \d+/.test(dlg.querySelector(".d-count").textContent),
        dlg.querySelector(".d-count").textContent);
@@ -598,9 +614,15 @@ async function main() {
     ok("comic: its outline keeps one weight at any size",
        /vector-effect:\s*non-scaling-stroke/.test(CSS));
     {
-      /* Panel 2 is Thảo's one-word shout. */
-      click(win, dlg.querySelector(".d-next"));
-      await new Promise(r => setTimeout(r, 30));
+      /* Somewhere early in this chapter Thảo shouts one word. Which panel that
+         is depends on how the scene is staged, so find it rather than count to
+         it, then walk back to where we started. */
+      let toShout = 0;
+      while (toShout < 8 && !dlg.querySelector('.d-bub[data-bub="shout"]')) {
+        click(win, dlg.querySelector(".d-next"));
+        await new Promise(r => setTimeout(r, 30));
+        toShout++;
+      }
       const shout = dlg.querySelector('.d-bub[data-bub="shout"]');
       ok("comic: the shout balloon carries its path", !!shout
          && !!shout.querySelector("svg.d-shape path")
@@ -608,8 +630,10 @@ async function main() {
       const plain = dlg.querySelector('.d-bub[data-bub="say"] .d-said');
       ok("comic: an ordinary balloon stays a plain CSS box",
          !plain || !plain.classList.contains("is-shaped"));
-      win.dispatchEvent(new win.KeyboardEvent("keydown", { key:"ArrowLeft", bubbles:true }));
-      await new Promise(r => setTimeout(r, 30));
+      while (toShout--) {
+        win.dispatchEvent(new win.KeyboardEvent("keydown", { key:"ArrowLeft", bubbles:true }));
+        await new Promise(r => setTimeout(r, 30));
+      }
     }
 
     /* ---- the navigation, which is the whole reason this was rewritten ----
