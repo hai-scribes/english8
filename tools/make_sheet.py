@@ -5,7 +5,7 @@ Run: python3 tools/make_sheet.py ti
      python3 tools/make_sheet.py --all
      python3 tools/make_sheet.py ti --keep-white     # skip the transparency step
 
-    in   art/cast/<slug>/<emotion>.png     six square-ish drawings, full size
+    in   art/cast/<slug>/<emotion>.{png,jpg}  six square-ish drawings, full size
     out  art/cast/<slug>.webp               one 3x2 sheet, which build.py
                                             copies to docs/assets/cast/
 
@@ -47,7 +47,7 @@ import sys
 from pathlib import Path
 
 try:
-    from PIL import Image, ImageDraw
+    from PIL import Image, ImageChops, ImageDraw
 except ImportError:
     print("FAIL: this needs Pillow — `pip3 install Pillow`")
     sys.exit(2)
@@ -68,6 +68,16 @@ CELL = 640
 # other. Do not "optimise" this back to PNG-8 without looking at a cheek.
 WEBP_Q = 90
 
+# Masters are whatever the generator returned. Re-encoding a JPEG as a PNG to
+# satisfy a suffix adds nothing and loses the provenance, so both are read.
+MASTER_EXT = (".png", ".jpg", ".jpeg", ".webp")
+
+# How far a drawing's figure may sit from the set's median before the composer
+# rescales it. The panel exists so the head cannot jump between lines, and the
+# commonest way a set breaks that is one re-roll framed a little differently.
+# 1.0% of the frame is under half a head's difference — below it, leave alone.
+ALIGN_TOL = 0.010
+
 # How far from pure white still counts as background. Generators rarely return
 # exactly #FFFFFF — JPEG-ish ringing and faint paper tone drift a few levels —
 # and a threshold this tight still cannot reach a drawn line.
@@ -82,6 +92,38 @@ def is_keyed(im: Image.Image) -> bool:
     underneath, which for a transparent pixel is black."""
     a = im.getchannel("A")
     return a.getextrema()[0] < 250
+
+
+def content_box(im: Image.Image, keyed: bool):
+    """The figure's bounding box — by alpha if it has one, else by what is not
+    white. Returns (top, height) as fractions of the image height."""
+    if keyed:
+        mask = im.getchannel("A").point(lambda v: 255 if v > 20 else 0)
+    else:
+        bg = Image.new("RGB", im.size, (255, 255, 255))
+        mask = ImageChops.difference(im.convert("RGB"), bg).convert("L") \
+                        .point(lambda v: 255 if v > 20 else 0)
+    bb = mask.getbbox()
+    if not bb:
+        return None
+    h = im.size[1]
+    return bb, bb[1] / h, (bb[3] - bb[1]) / h
+
+
+def align(im: Image.Image, bb, top_f: float, h_f: float,
+          want_top: float, want_h: float, fill) -> Image.Image:
+    """Rescale and reposition one drawing so its figure matches the set's
+    median top and height. Uniform scale, never a stretch: a figure squashed to
+    fit would be a worse defect than the one being fixed."""
+    W, H = im.size
+    scale = want_h / h_f
+    cut = im.crop(bb)
+    cw, ch = max(1, round(cut.width * scale)), max(1, round(cut.height * scale))
+    cut = cut.resize((cw, ch), Image.LANCZOS)
+    out = Image.new(im.mode, (W, H), fill)
+    cx = (bb[0] + bb[2]) // 2                      # keep it where it was, across
+    out.paste(cut, (int(cx - cw / 2), int(round(want_top * H))))
+    return out
 
 
 def square(im: Image.Image, fill) -> Image.Image:
@@ -127,22 +169,42 @@ def key_white(im: Image.Image) -> Image.Image:
 
 
 def build(slug: str, emotions: list, cols: int, rows: int, keep_white: bool,
-          cell_px: int = CELL) -> bool:
+          cell_px: int = CELL, do_align: bool = True) -> bool:
     src = CAST_DIR / slug
     if not src.is_dir():
         print(f"  {slug}: no {src.relative_to(ROOT)}/ — nothing to compose")
         return False
-    parts = []
+    # Read the masters first, unsquared: the framing pass below needs to compare
+    # them against each other before any padding changes their proportions.
+    raw = []
     for emo in emotions:
-        f = src / f"{emo}.png"
-        if not f.is_file():
-            print(f"  {slug}: missing {f.relative_to(ROOT)}")
+        found = [src / f"{emo}{e}" for e in MASTER_EXT]
+        f = next((c for c in found if c.is_file()), None)
+        if f is None:
+            print(f"  {slug}: missing {(src / (emo + '.png')).relative_to(ROOT)}")
             return False
         im = Image.open(f).convert("RGBA")
-        if is_keyed(im):
-            parts.append((emo, square(im, (0, 0, 0, 0)), True))
-        else:
-            parts.append((emo, square(im.convert("RGB"), (255, 255, 255)), False))
+        keyed = is_keyed(im)
+        raw.append([emo, im if keyed else im.convert("RGB"), keyed,
+                    content_box(im if keyed else im.convert("RGB"), keyed)])
+
+    # One framing for the whole set. The median is the reference rather than the
+    # first drawing, so a single odd re-roll is corrected towards the other five
+    # instead of dragging them towards it.
+    boxes = [r[3] for r in raw if r[3]]
+    if do_align and len(boxes) == len(raw):
+        med_top = sorted(b[1] for b in boxes)[len(boxes) // 2]
+        med_h = sorted(b[2] for b in boxes)[len(boxes) // 2]
+        for r in raw:
+            bb, top_f, h_f = r[3]
+            if abs(top_f - med_top) > ALIGN_TOL or abs(h_f - med_h) > ALIGN_TOL:
+                fill = (0, 0, 0, 0) if r[2] else (255, 255, 255)
+                r[1] = align(r[1], bb, top_f, h_f, med_top, med_h, fill)
+                print(f"      aligned {r[0]}: figure {h_f * 100:.1f}% high at "
+                      f"{top_f * 100:.1f}% -> {med_h * 100:.1f}% at {med_top * 100:.1f}%")
+
+    parts = [(emo, square(im, (0, 0, 0, 0) if keyed else (255, 255, 255)), keyed)
+             for emo, im, keyed, _ in raw]
 
     # One cell size for all six, so the head cannot jump or resize between
     # lines. The largest wins and the rest are scaled up to meet it.
@@ -170,6 +232,8 @@ def main() -> int:
     ap.add_argument("--all", action="store_true", help="every character in the manifest")
     ap.add_argument("--keep-white", action="store_true",
                     help="compose without keying the background out")
+    ap.add_argument("--no-align", action="store_true",
+                    help="do not rescale an oddly-framed drawing to match the set")
     ap.add_argument("--cell", type=int, default=CELL,
                     help=f"panel size in px (default {CELL}); never upscales")
     args = ap.parse_args()
@@ -192,7 +256,8 @@ def main() -> int:
         if s not in known:
             print(f"  {s}: not a character in data/cast.json")
             continue
-        made += build(s, emotions, cols, rows, args.keep_white, args.cell)
+        made += build(s, emotions, cols, rows, args.keep_white, args.cell,
+                      not args.no_align)
     print(f"\n{made} sheet(s) written")
     return 0 if made else 1
 
