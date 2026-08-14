@@ -11,6 +11,8 @@ Run: python3 tools/make_overlay.py bucket
     in   art/fx/src/<slug>.{png,jpg,jpeg,webp}
     out  art/fx/<slug>.webp
 
+     --plates  art/bg/*.jpg, downscaled in place to the size the page can use
+
 `build.py` copies the top level of each directory into docs/assets/, and only
 files — which is why the masters live in a `src/` subdirectory rather than
 beside their output. Nothing has to be told to skip them.
@@ -57,6 +59,16 @@ ROOT = Path(__file__).resolve().parents[1]
 PROP_PX = 512
 FX_PX = 768
 WEBP_Q = 90
+
+# A plate is the one asset with no compose step — it is saved straight into
+# art/bg/ and published as it is. That is fine until you look at the bytes: a
+# generator returns about 2750 px across and nearly a megabyte, and the frame it
+# lands in is at most ~900 CSS px wide, so 1800 covers it at 2x with nothing
+# spare. The other ~550 KB is a Vietnamese teenager's mobile data, eleven times
+# over. Downscaling is IN PLACE and idempotent: a plate already inside the
+# budget is skipped, so running this twice costs nothing and re-encodes nothing.
+PLATE_PX = 1800
+PLATE_Q = 85
 MASTER_EXT = (".png", ".jpg", ".jpeg", ".webp")
 
 # Shared with make_sheet.py, and deliberately identical: a prop drawn in the
@@ -150,6 +162,32 @@ def build(kind: str, slug: str, keep_white: bool, do_trim: bool) -> bool:
     return True
 
 
+def shrink_plates(px: int, q: int) -> int:
+    """Bring every background plate inside the publishing budget, in place."""
+    d = ROOT / "art" / "bg"
+    if not d.is_dir():
+        print("  no art/bg/ yet — nothing to shrink")
+        return 0
+    done = 0
+    for f in sorted(d.iterdir()):
+        if f.suffix.lower() not in (".jpg", ".jpeg") or f.name.startswith("."):
+            continue
+        im = Image.open(f)
+        was = f.stat().st_size
+        if im.size[0] <= px:
+            print(f"  bg/{f.stem}: {im.size[0]}px, {was // 1024} KB — already inside "
+                  f"the budget")
+            continue
+        im = im.convert("RGB").resize(
+            (px, max(1, round(im.size[1] * px / im.size[0]))), Image.LANCZOS)
+        im.save(f, "JPEG", quality=q, optimize=True, progressive=True)
+        now = f.stat().st_size
+        print(f"  bg/{f.stem}: -> {px}px, {was // 1024} KB -> {now // 1024} KB "
+              f"({100 - now * 100 // was}% off)")
+        done += 1
+    return done
+
+
 def main() -> int:
     cast = json.loads((ROOT / "data" / "cast.json").read_text(encoding="utf-8"))
     props, fx = cast["props"], cast["fx"]
@@ -158,9 +196,16 @@ def main() -> int:
     ap.add_argument("slug", nargs="*", help="a prop or effect slug, e.g. bucket")
     ap.add_argument("--all", action="store_true",
                     help="every prop and effect in data/cast.json")
+    ap.add_argument("--plates", action="store_true",
+                    help="also bring art/bg/*.jpg inside the publishing budget")
     ap.add_argument("--keep-white", action="store_true",
                     help="the drawing is already cut out, or the white is wanted")
     args = ap.parse_args()
+
+    if args.plates:
+        shrink_plates(PLATE_PX, PLATE_Q)
+        if not (args.all or args.slug):
+            return 0
 
     if args.all:
         want = [("props", s) for s in props] + [("fx", s) for s in fx]

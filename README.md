@@ -127,6 +127,7 @@ python3 tools/check_coverage.py   # report: what the official textbook covers th
 python3 tools/check_cast.py       # gate: manifest and art brief agree · report: what is drawn
 python3 tools/make_sheet.py --all   # compose the drawn expressions into character sheets
 python3 tools/make_overlay.py --all # cut the prop and effect drawings out of their white
+python3 tools/make_overlay.py --plates # shrink the background plates to what the page uses
 ```
 
 Requires `markdown` (`pip install markdown`). Edit the markdown in `units/`,

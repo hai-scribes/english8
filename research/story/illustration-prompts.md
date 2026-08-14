@@ -4926,7 +4926,15 @@ effect shows up.
 > **Where the mark goes — read this carefully, it is the whole job.** Imagine a
 > child standing in the **lower three-quarters** of the square, facing you, seen
 > from the waist up, with the top of their head about a quarter of the way down
-> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> from the top edge.
+>
+> **Their head is small, and this is the part that goes wrong.** It occupies
+> only about the middle fifth of the width — roughly from 40% to 60% across —
+> and runs from about a quarter to about half of the way down. The face is
+> inside that. Most of this square is empty background, so a mark meant for a
+> face that drifts outward lands on the scenery beside the character instead
+> of on them. When this block says *beside the face*, it does not mean beside
+> the frame. **Do not draw the child.** Draw only the mark, positioned
 > where it would fall on or around that figure, and leave every other part of
 > the square plain white. The page composites this square directly over the
 > character at exactly that scale, so the mark's position inside the frame *is*
@@ -4964,7 +4972,15 @@ effect shows up.
 > **Where the mark goes — read this carefully, it is the whole job.** Imagine a
 > child standing in the **lower three-quarters** of the square, facing you, seen
 > from the waist up, with the top of their head about a quarter of the way down
-> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> from the top edge.
+>
+> **Their head is small, and this is the part that goes wrong.** It occupies
+> only about the middle fifth of the width — roughly from 40% to 60% across —
+> and runs from about a quarter to about half of the way down. The face is
+> inside that. Most of this square is empty background, so a mark meant for a
+> face that drifts outward lands on the scenery beside the character instead
+> of on them. When this block says *beside the face*, it does not mean beside
+> the frame. **Do not draw the child.** Draw only the mark, positioned
 > where it would fall on or around that figure, and leave every other part of
 > the square plain white. The page composites this square directly over the
 > character at exactly that scale, so the mark's position inside the frame *is*
@@ -5002,7 +5018,15 @@ effect shows up.
 > **Where the mark goes — read this carefully, it is the whole job.** Imagine a
 > child standing in the **lower three-quarters** of the square, facing you, seen
 > from the waist up, with the top of their head about a quarter of the way down
-> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> from the top edge.
+>
+> **Their head is small, and this is the part that goes wrong.** It occupies
+> only about the middle fifth of the width — roughly from 40% to 60% across —
+> and runs from about a quarter to about half of the way down. The face is
+> inside that. Most of this square is empty background, so a mark meant for a
+> face that drifts outward lands on the scenery beside the character instead
+> of on them. When this block says *beside the face*, it does not mean beside
+> the frame. **Do not draw the child.** Draw only the mark, positioned
 > where it would fall on or around that figure, and leave every other part of
 > the square plain white. The page composites this square directly over the
 > character at exactly that scale, so the mark's position inside the frame *is*
@@ -5040,7 +5064,15 @@ effect shows up.
 > **Where the mark goes — read this carefully, it is the whole job.** Imagine a
 > child standing in the **lower three-quarters** of the square, facing you, seen
 > from the waist up, with the top of their head about a quarter of the way down
-> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> from the top edge.
+>
+> **Their head is small, and this is the part that goes wrong.** It occupies
+> only about the middle fifth of the width — roughly from 40% to 60% across —
+> and runs from about a quarter to about half of the way down. The face is
+> inside that. Most of this square is empty background, so a mark meant for a
+> face that drifts outward lands on the scenery beside the character instead
+> of on them. When this block says *beside the face*, it does not mean beside
+> the frame. **Do not draw the child.** Draw only the mark, positioned
 > where it would fall on or around that figure, and leave every other part of
 > the square plain white. The page composites this square directly over the
 > character at exactly that scale, so the mark's position inside the frame *is*
@@ -5078,14 +5110,22 @@ effect shows up.
 > **Where the mark goes — read this carefully, it is the whole job.** Imagine a
 > child standing in the **lower three-quarters** of the square, facing you, seen
 > from the waist up, with the top of their head about a quarter of the way down
-> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> from the top edge.
+>
+> **Their head is small, and this is the part that goes wrong.** It occupies
+> only about the middle fifth of the width — roughly from 40% to 60% across —
+> and runs from about a quarter to about half of the way down. The face is
+> inside that. Most of this square is empty background, so a mark meant for a
+> face that drifts outward lands on the scenery beside the character instead
+> of on them. When this block says *beside the face*, it does not mean beside
+> the frame. **Do not draw the child.** Draw only the mark, positioned
 > where it would fall on or around that figure, and leave every other part of
 > the square plain white. The page composites this square directly over the
 > character at exactly that scale, so the mark's position inside the frame *is*
 > the information — a mark drawn in the middle of an empty square lands on the
 > character's chest wherever it was meant to go.
 >
-> Three or four short parallel diagonal strokes on each side of the frame, **at the height of the cheeks**, where a face would be — a matched pair of small hatch marks left and right, with the gap between them empty for the nose and eyes. Drawn in a flat warm pink, softly tapered at both ends, no outline. Nothing else in the frame.
+> Two small clusters of three or four short parallel diagonal strokes, one on **each side of the FACE — not of the frame**. The left cluster sits at about **40–46% across**, the right at about **54–60% across**, and both at about **38–47% of the way down**, with the gap between them left empty for the nose and eyes. **They are small**: each cluster is about a twentieth of the frame wide, the width of a cheek. Drawn in a flat warm pink, softly tapered at both ends, no outline. The rest of the square is empty white.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -5116,7 +5156,15 @@ effect shows up.
 > **Where the mark goes — read this carefully, it is the whole job.** Imagine a
 > child standing in the **lower three-quarters** of the square, facing you, seen
 > from the waist up, with the top of their head about a quarter of the way down
-> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> from the top edge.
+>
+> **Their head is small, and this is the part that goes wrong.** It occupies
+> only about the middle fifth of the width — roughly from 40% to 60% across —
+> and runs from about a quarter to about half of the way down. The face is
+> inside that. Most of this square is empty background, so a mark meant for a
+> face that drifts outward lands on the scenery beside the character instead
+> of on them. When this block says *beside the face*, it does not mean beside
+> the frame. **Do not draw the child.** Draw only the mark, positioned
 > where it would fall on or around that figure, and leave every other part of
 > the square plain white. The page composites this square directly over the
 > character at exactly that scale, so the mark's position inside the frame *is*
@@ -5154,7 +5202,15 @@ effect shows up.
 > **Where the mark goes — read this carefully, it is the whole job.** Imagine a
 > child standing in the **lower three-quarters** of the square, facing you, seen
 > from the waist up, with the top of their head about a quarter of the way down
-> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> from the top edge.
+>
+> **Their head is small, and this is the part that goes wrong.** It occupies
+> only about the middle fifth of the width — roughly from 40% to 60% across —
+> and runs from about a quarter to about half of the way down. The face is
+> inside that. Most of this square is empty background, so a mark meant for a
+> face that drifts outward lands on the scenery beside the character instead
+> of on them. When this block says *beside the face*, it does not mean beside
+> the frame. **Do not draw the child.** Draw only the mark, positioned
 > where it would fall on or around that figure, and leave every other part of
 > the square plain white. The page composites this square directly over the
 > character at exactly that scale, so the mark's position inside the frame *is*
@@ -5192,7 +5248,15 @@ effect shows up.
 > **Where the mark goes — read this carefully, it is the whole job.** Imagine a
 > child standing in the **lower three-quarters** of the square, facing you, seen
 > from the waist up, with the top of their head about a quarter of the way down
-> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> from the top edge.
+>
+> **Their head is small, and this is the part that goes wrong.** It occupies
+> only about the middle fifth of the width — roughly from 40% to 60% across —
+> and runs from about a quarter to about half of the way down. The face is
+> inside that. Most of this square is empty background, so a mark meant for a
+> face that drifts outward lands on the scenery beside the character instead
+> of on them. When this block says *beside the face*, it does not mean beside
+> the frame. **Do not draw the child.** Draw only the mark, positioned
 > where it would fall on or around that figure, and leave every other part of
 > the square plain white. The page composites this square directly over the
 > character at exactly that scale, so the mark's position inside the frame *is*
@@ -5230,7 +5294,15 @@ effect shows up.
 > **Where the mark goes — read this carefully, it is the whole job.** Imagine a
 > child standing in the **lower three-quarters** of the square, facing you, seen
 > from the waist up, with the top of their head about a quarter of the way down
-> from the top edge. **Do not draw the child.** Draw only the mark, positioned
+> from the top edge.
+>
+> **Their head is small, and this is the part that goes wrong.** It occupies
+> only about the middle fifth of the width — roughly from 40% to 60% across —
+> and runs from about a quarter to about half of the way down. The face is
+> inside that. Most of this square is empty background, so a mark meant for a
+> face that drifts outward lands on the scenery beside the character instead
+> of on them. When this block says *beside the face*, it does not mean beside
+> the frame. **Do not draw the child.** Draw only the mark, positioned
 > where it would fall on or around that figure, and leave every other part of
 > the square plain white. The page composites this square directly over the
 > character at exactly that scale, so the mark's position inside the frame *is*
@@ -5357,12 +5429,19 @@ python3 tools/make_sheet.py ti          # one character's six -> one sheet
 python3 tools/make_sheet.py --all       # everybody who has a full set
 python3 tools/make_overlay.py bucket    # one prop or effect -> one cut-out
 python3 tools/make_overlay.py --all     # every prop and effect that has a master
+python3 tools/make_overlay.py --plates  # every plate down to the size the page uses
 python3 tools/check_cast.py             # what is declared, and what is drawn
 python3 tools/build.py                  # then reload any Lesson 1
 ```
 
-A background plate is the one thing with no compose step: save it straight to
-`art/bg/<slug>.jpg` and the build copies it.
+A background plate has no compose step — save it straight to
+`art/bg/<slug>.jpg` — but it does have a **size** step, and it matters. A
+generator returns about 2750 px across and close to a megabyte, and the frame a
+plate lands in is at most about 900 CSS px wide, so 1800 covers it at 2x with
+nothing spare. `--plates` brings every plate down to that in place and skips any
+already inside it, which took the harbour wall from 920 KB to 400 KB. Eleven
+plates is the difference between four megabytes and eleven, on a phone, on
+mobile data.
 
 `make_overlay.py` is `make_sheet.py`'s smaller sibling and shares its keying,
 with two deliberate differences. It **trims a prop** to its content, because
@@ -5477,6 +5556,7 @@ Two things you still do **not** have to do:
 | A prop comes back watercoloured, soft-edged or textured like paper | Part 2's vocabulary leaked into a Part 3 prompt. Props are **cel**, like the cast, and for the same technical reason: a soft edge has no closed contour, so the keyer eats into it. Re-paste **Art style** and **Line** |
 | A prop is unrecognisable in the panel | It was drawn with detail that only reads at full size. These are seen at about two centimetres — re-roll asking for the silhouette to carry the object, and check it by looking at the file scaled down before composing |
 | An effect comes back beautiful, shaded and painted | A style reference was attached. Part 4 says attach nothing, and this is why: these are ink marks over a picture, and a *Ponyo* still makes them into a picture of their own |
+| An effect lands beside the character rather than on them — blush on the wall either side of a head, a drop out over the scenery | The mark was placed against the frame instead of against the face. The head is only the middle fifth of the square; re-paste **Where the mark goes** in full, including the paragraph about how small it is, and give the cluster explicit percentages as `flush` does |
 | An effect lands in the wrong place on the character — stars on the chest, a sweat drop at the knee | The mark was drawn centred in an empty square instead of positioned. Re-paste **Where the mark goes** in full. The square maps onto the figure at a fixed scale, so the mark's position in the frame *is* its position on the character, and there is nothing in the code that can move it |
 | An effect hides the character underneath it | It was drawn solid where it should be open. Every figure effect leaves the middle clear: a burst radiates from behind the head, a ring of stars sits above it, a hatch of blush has a gap for the face. Re-roll — an overlay that has to be seen through is the whole form |
 | A panel-wide effect loses its point on a phone | The composition depended on a corner. The page crops up to a third off one dimension to cover both panel shapes — re-paste **Where the mark goes** and spread the marks toward the middle |

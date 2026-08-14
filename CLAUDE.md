@@ -18,6 +18,7 @@ python3 tools/check_level.py --strict-through 3   # gate: story prose stays insi
 python3 tools/check_cast.py       # gate: manifest and art brief agree · report: what is drawn
 python3 tools/make_sheet.py --all   # compose the drawn expressions into character sheets
 python3 tools/make_overlay.py --all # cut the prop and effect drawings out of their white
+python3 tools/make_overlay.py --plates # shrink the background plates to what the page uses
 ```
 
 `test_reading.js` needs `npm install jsdom` and skips loudly without it, so the

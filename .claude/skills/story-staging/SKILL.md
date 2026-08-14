@@ -303,6 +303,7 @@ python3 tools/build.py                # regenerate docs/ — validates all of th
 python3 tools/check_cast.py           # what is declared, and what is drawn
 python3 tools/make_sheet.py --all     # six character drawings -> one sheet each
 python3 tools/make_overlay.py --all   # prop and effect drawings -> cut-outs
+python3 tools/make_overlay.py --plates # plates -> the size the page actually uses
 node tools/test_reading.js            # gates the navigation and balloon contract
 python3 tools/check_level.py --strict-through 3   # story prose stays inside grade 8
 ```
