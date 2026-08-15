@@ -984,8 +984,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 > **Đáp án.** Chỉ xem sau khi đã tự làm bài.
 
-### Lesson 1
-
 ### Lesson 2
 
 **2.8** Answers will vary — this is a speaking drill. Check: every *-er* ending
@@ -1012,10 +1010,3 @@ it); no reply refuses the compliment — ❌ *"No, it isn't nice."*
 **4.6** Answers will vary. Check: sentence 1 says something that is true of
 **both** villages; at least two of the four sentences contain a comparative
 adverb with *than*; sentence 4 gives a reason after *because*.
-
-### Lesson 5
-
-### Lesson 6
-
-### Lesson 7
-

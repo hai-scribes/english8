@@ -1004,5 +1004,3 @@ pros/cons frame, and used *in / on / at* correctly with every day and time.
 correct prepositions of time, two of place, one possessive pronoun with no noun
 after it, four unit vocabulary words, and one sentence each about a sound and a
 picture.
-
-### Lesson 7

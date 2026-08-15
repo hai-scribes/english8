@@ -1013,8 +1013,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 > **Đáp án.** Chỉ xem sau khi đã tự làm bài.
 
-### Lesson 1
-
 ### Lesson 2
 
 **2.7** Answers will vary. Check: the bold letters in *goat, group, grandmother*
@@ -1061,6 +1059,3 @@ say *How many rooms* but *How much rice*.
 **Writing** Answers will vary. Check: 80–100 words, one paragraph, present
 simple with correct third-person **-s**, at least four Lesson 2 words, and one
 uncountable noun used with no plural *-s*.
-
-### Lesson 7
-

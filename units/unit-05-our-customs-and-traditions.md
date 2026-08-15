@@ -981,8 +981,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 > **Đáp án.** Chỉ xem sau khi đã tự làm bài.
 
-### Lesson 1
-
 ### Lesson 2
 
 **2.7** Answers will vary in speed. Check: every *-ng* word ends at the **back**
@@ -1018,10 +1016,3 @@ acrobatics; both are about luck), one names a real difference (the partner *ông
 Địa*, the flutes, the Mid-Autumn Festival, the martial arts, chasing bad spirits
 away), and the difference comes **last**. Two clear sentences beat three the
 reader has to sort out.
-
-### Lesson 5
-
-### Lesson 6
-
-### Lesson 7
-

@@ -1090,8 +1090,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 > **Đáp án.** Chỉ xem sau khi đã tự làm bài.
 
-### Lesson 1
-
 ### Lesson 2
 
 **2.8** Answers will vary. Check: your lips **spread into a smile** at the end
@@ -1125,10 +1123,3 @@ rows 27–36 (*social media, forum, account, log on, upload, browse,
 notification, connect, website, user-friendly*), and that question 2 names a
 real difference rather than only a similarity. Question 3 needs a reason, not
 just *easy* or *hard*.
-
-### Lesson 5
-
-### Lesson 6
-
-### Lesson 7
-

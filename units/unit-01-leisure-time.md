@@ -919,10 +919,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 > **Đáp án.** Chỉ xem sau khi đã tự làm bài.
 
-### Lesson 1
-
-### Lesson 2
-
 ### Lesson 3
 
 **3.4** Answers will vary. Check: *enjoy* + V-ing, *can't stand* + V-ing,
@@ -942,10 +938,3 @@ short acceptance — *I'd love to. Thanks.* / *That's great. Thanks.* — and sh
 **4.7** Answers will vary. Check that each sentence uses one of the five
 expressions from 2.3 with a **V-ing** form after it, and that the refusal in 2 is
 polite: *I'm not really into snowboarding, I'm afraid* rather than *I hate it.*
-
-### Lesson 5
-
-### Lesson 6
-
-### Lesson 7
-

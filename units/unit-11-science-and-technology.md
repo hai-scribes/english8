@@ -1198,6 +1198,3 @@ statement.
 position in the first sentence, one *It is true that…* concession, one
 *However*, a concrete personal example, four unit vocabulary words, one
 reported statement, and a conclusion that restates the position.
-
-### Lesson 7
-

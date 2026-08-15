@@ -1075,9 +1075,3 @@ something — a check, a replacement, a refund, or an apology.
 of place it is (market, supermarket, convenience store, online shop…); item 2
 gives **one** reason with a detail, not a list of three; item 3 is a real
 drawback, not a second reason to like it.
-
-### Lesson 5
-
-### Lesson 6
-
-### Lesson 7

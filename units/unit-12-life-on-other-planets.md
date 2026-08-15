@@ -1117,14 +1117,9 @@ gave **three** facts that the fact-file really contains, added one reaction of
 your own, and — if you listed the facts in one sentence — let your voice fall ↘
 on the last item.
 
-### Lesson 5
-
 ### Lesson 6
 
 **Writing** Answers will vary. Check against the checklist: 80–100 words
 counted, a topic sentence naming the planet, six or more adjectives, four or
 more Lesson 2 words, one list of three or more items, and present simple
 throughout.
-
-### Lesson 7
-

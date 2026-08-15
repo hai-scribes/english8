@@ -982,8 +982,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 > **Đáp án.** Chỉ xem sau khi đã tự làm bài.
 
-### Lesson 1
-
 ### Lesson 2
 
 **2.7** Answers will vary (spoken). Check: your throat buzzes on the **br** of
@@ -1026,6 +1024,3 @@ question, at least one correct first conditional, and no *will* inside any
 **Writing** Answers will vary. Check: 80–100 words; one side only; the four
 ordering words; at least one first conditional with the present simple in the
 *if*-clause; at least four words from the Lesson 2 table.
-
-### Lesson 7
-

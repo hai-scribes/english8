@@ -973,8 +973,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 > **Đáp án.** Chỉ xem sau khi đã tự làm bài.
 
-### Lesson 1
-
 ### Lesson 2
 
 **2.7** Answers will vary — this is a speaking drill. Check: your /b/ buzzes and
@@ -1025,6 +1023,3 @@ least one time clause per answer, and kept *will* out of every time clause.
 NOTICE heading, date/time/place all present, at least one time clause with no
 *will* inside it, four unit words, a contact line and a signature, and no
 friendly greeting or sign-off.
-
-### Lesson 7
-

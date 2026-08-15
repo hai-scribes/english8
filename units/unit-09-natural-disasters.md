@@ -1200,6 +1200,3 @@ sentence.
 three headings, every instruction beginning with an imperative verb, at least
 four sequencing signals, at least one *Do not…* or *Never…*, four unit
 vocabulary words, and no *I think* or *you should*.
-
-### Lesson 7
-
