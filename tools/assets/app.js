@@ -1979,7 +1979,6 @@ function initScene(root, p){
     const place = lns[0].bg;
     const roster = last.cast || [];
     const figs = roster.map(c => c.who);
-    onStage = roster.length;
     const speaking = new Set(lns.map(l => l.who).filter(Boolean));
 
     /* THE PLATE IS ONLY TOUCHED WHEN THE PLACE CHANGES. It used to be reset on
@@ -2078,7 +2077,7 @@ function initScene(root, p){
       shapeWatch.disconnect();
       $$(".d-said.is-shaped", bubble).forEach(el => shapeWatch.observe(el));
     }
-    requestAnimationFrame(() => { drawShapes(); aimTails(); });
+    requestAnimationFrame(relayout);
   }
 
   /* ---- the words arrive as they are said ---------------------------------
@@ -2272,7 +2271,7 @@ function initScene(root, p){
      after the paint that drew it. Guarded by `typeof`, not by truthiness:
      where the API is absent the bare name throws. */
   const shapeWatch = typeof ResizeObserver === "function"
-    ? new ResizeObserver(() => drawShapes()) : null;
+    ? new ResizeObserver(() => relayout()) : null;
 
   /* ---- aiming the tails --------------------------------------------------
      The balloon carries no name any more, so the tail is what identifies the
@@ -2281,12 +2280,16 @@ function initScene(root, p){
      size, the frame width and how the text happened to wrap. So it is measured
      after layout and written back as a custom property, and re-measured
      whenever the frame changes shape. */
+  /* The figure a balloon belongs to, or its placeholder when the art has not
+     landed — the placeholder is drawn to the same footprint, so a balloon aimed
+     at one is aimed correctly. */
+  const figFor = k => $('.d-fig[data-slot="' + k + '"]', cast)
+                   || $('.d-fig-ph[data-slot="' + k + '"]', cast);
+
   function aimTails(){
     if (scene.hidden) return;
     $$(".d-bub[data-slot]", bubble).forEach(b => {
-      const k = b.dataset.slot;
-      const fig = $('.d-fig[data-slot="' + k + '"]', cast)
-               || $('.d-fig-ph[data-slot="' + k + '"]', cast);
+      const fig = figFor(b.dataset.slot);
       if (!fig) return;
       const fr = fig.getBoundingClientRect(), br = b.getBoundingClientRect();
       if (!br.width || !fr.width) return;
@@ -2299,18 +2302,51 @@ function initScene(root, p){
     });
   }
 
-  /* Which way a balloon leans — toward the side its speaker is standing on.
-     Set from the roster rather than measured, because it decides the layout
-     that `aimTails` then measures. Reading the DOM for the count would be
-     wrong as well as slower: a figure whose art 404s removes itself, and the
-     positions must not shift when it does. */
-  let onStage = 0;
-  function leanBubbles(){
-    $$(".d-bub[data-slot]", bubble).forEach(b => {
-      const x = figX(Number(b.dataset.slot), Math.max(1, onStage));
-      b.style.alignSelf = x < 0.42 ? "flex-start" : x > 0.58 ? "flex-end" : "center";
+  /* ---- putting the balloon over the person who said it ---------------------
+     A balloon used to be aligned to one of three places — the left edge of the
+     frame, the middle, or the right edge — picked from which side of the stage
+     its speaker was standing on. That is near enough to right that what is
+     wrong with it is easy to miss: it puts the balloon against the EDGE of the
+     panel rather than over the SPEAKER, and in a two-hander those are ninety
+     pixels apart. Tí stands a quarter of the way across a 1084px frame, at 272;
+     flush left his balloon was centred at 179, out in the corner past him, with
+     the tail reaching back. A letterer puts the balloon over the head.
+
+     So it is CENTRED on the figure and then clamped to the frame — a balloon
+     hanging off the edge is a worse fault than one not quite over its speaker,
+     and the tail covers the difference. Measured rather than computed from the
+     roster the way the leaning was, because centring needs the balloon's width
+     and a balloon is as wide as its text happened to need.
+
+     It runs before `aimTails` and after `drawShapes`, and that order is the
+     whole of it: a shaped balloon's width is decided by the shape, the balloon
+     is placed with the width it ends up having, and the tail is aimed at a
+     balloon that has already been put somewhere. */
+  function placeBubbles(){
+    if (scene.hidden) return;
+    const bubs = $$(".d-bub[data-slot]", bubble);
+    if (!bubs.length) return;
+    /* Cleared before measuring so a wide balloon is never sized against the
+       margin the last panel's narrow one left behind. */
+    bubs.forEach(b => { b.style.marginLeft = "0px"; });
+    const box = bubble.getBoundingClientRect();
+    if (!box.width) return;
+    bubs.forEach(b => {
+      const fig = figFor(b.dataset.slot);
+      if (!fig) return;
+      const fr = fig.getBoundingClientRect(), br = b.getBoundingClientRect();
+      if (!fr.width || !br.width) return;
+      const x = fr.left + fr.width / 2 - box.left - br.width / 2;
+      b.style.marginLeft =
+        Math.max(0, Math.min(box.width - br.width, x)).toFixed(1) + "px";
     });
   }
+
+  /* Everything that has to happen after layout, in the order it has to happen
+     in. Four things ask for it — a new panel, a resize, going full screen, and
+     a balloon that changed size under the observer — and every one of them
+     wants all three. */
+  function relayout(){ drawShapes(); placeBubbles(); aimTails(); }
 
   /* ---- moving through it -------------------------------------------------
      Three ways in, and every one of them moves the SAME thing: the panel. The
@@ -2323,8 +2359,7 @@ function initScene(root, p){
        what was said", not "I have read it". Going back is never intercepted —
        a rewind is always immediate. */
     if (typing && i > at){ finishTyping(); return; }
-    show(i); leanBubbles();
-    requestAnimationFrame(() => { drawShapes(); aimTails(); });
+    show(i);
   };
   next.addEventListener("click", () => goto(at + 1));
   prev.addEventListener("click", () => goto(at - 1));
@@ -2353,7 +2388,7 @@ function initScene(root, p){
      `touchmove`, which is the one that would let this cancel a scroll, and
      cancelling a scroll on a reading page is the thing this file will not do.
      A swipe that fails these tests simply does nothing and the page keeps it. */
-  let tx = 0, ty = 0, tt = 0;
+  let tx = 0, ty = 0, tt = 0, swiped = 0;
   stage.addEventListener("touchstart", ev => {
     const t = ev.changedTouches[0];
     tx = t.clientX; ty = t.clientY; tt = Date.now();
@@ -2365,7 +2400,49 @@ function initScene(root, p){
     if (Math.abs(dx) < 44) return;                  // a tap, or a wobble
     if (Math.abs(dx) < Math.abs(dy) * 1.4) return;  // that was a scroll
     goto(at + (dx < 0 ? 1 : -1));
+    swiped = Date.now();
   }, { passive: true });
+
+  /* ---- the two halves of the picture -------------------------------------
+     The panel itself is the control: a tap on its left half goes back, a tap
+     on its right half goes on. There is nothing drawn for this and there is
+     deliberately nothing to draw — the frame is competing with the rest of the
+     lesson for a phone's screen, and any control painted inside it would be
+     sitting on a face or on a balloon. It is the gesture a reader already has
+     from every comic app, and it costs no pixels to offer.
+
+     It replaces nothing. Back and Next are still under the frame, the arrow
+     keys still work, the swipe still works, and this is a fourth way into the
+     same `goto` — so a tap during the typewriter finishes the panel exactly as
+     the button does, and a tap backwards is immediate exactly as Back is.
+
+     Halves rather than a widget, and a click handler rather than two overlay
+     elements, because an overlay is either above the balloons or below them and
+     both are wrong: above, it swallows the glossed words; below, every balloon
+     becomes a dead patch — and on a phone the balloons are a third of the
+     frame. Reading the x off the event leaves the whole picture live and the
+     glosses still theirs.
+
+     Three things it must not take, each a real click that is not a page turn:
+
+     - a glossed word, or an opened gloss. Both are inside the frame and both
+       are the reader asking for something else.
+     - the click a phone synthesises after a swipe. `touchend` has already
+       turned the page by then, and without the guard the swipe turns two.
+     - the click that ends a drag across a balloon. The balloons are selectable
+       text and somebody who has just selected some is not asking for what
+       happens next. */
+  stage.addEventListener("click", ev => {
+    if (!ev.detail) return;                       // keyboard-synthesised
+    if (Date.now() - swiped < 700) return;        // the swipe already moved it
+    const t = ev.target;
+    if (t && t.closest && t.closest("button, a, .gloss")) return;
+    const sel = typeof getSelection === "function" ? getSelection() : null;
+    if (sel && !sel.isCollapsed && sel.anchorNode && stage.contains(sel.anchorNode)) return;
+    const r = stage.getBoundingClientRect();
+    if (!r.width) return;                         // nothing measured, no halves
+    goto(at + (ev.clientX - r.left < r.width / 2 ? -1 : 1));
+  });
 
   /* ---- filling the screen ------------------------------------------------
      On a phone the panel is competing with everything else on the page for
@@ -2386,7 +2463,7 @@ function initScene(root, p){
     const on = document.fullscreenElement === scene || scene.classList.contains("is-full");
     full.setAttribute("aria-pressed", String(on));
     full.setAttribute("aria-label", on ? "Leave full screen" : "Fill the screen");
-    requestAnimationFrame(() => { drawShapes(); aimTails(); });
+    requestAnimationFrame(relayout);
   }
   full.addEventListener("click", () => {
     const on = document.fullscreenElement === scene || scene.classList.contains("is-full");
@@ -2412,7 +2489,7 @@ function initScene(root, p){
      it re-measures. Resize, not scroll: this panel does not know or care where
      the page is. */
   addEventListener("resize",
-    () => requestAnimationFrame(() => { drawShapes(); aimTails(); }),
+    () => requestAnimationFrame(relayout),
     { passive: true });
 
   /* Which view the learner gets is theirs, and it is remembered. The default
@@ -2425,7 +2502,7 @@ function initScene(root, p){
     toggle.setAttribute("aria-expanded", String(comic));
     toggle.textContent = comic ? "Read it as text" : "Read it as a comic";
     try { localStorage.setItem(KEY, comic ? "1" : "0"); } catch(e){}
-    if (comic){ const was = at; at = -1; show(Math.max(0, was)); leanBubbles(); }
+    if (comic){ const was = at; at = -1; show(Math.max(0, was)); }
     else {
       finishTyping();
       if (scene.classList.contains("is-full")) fallbackFull(false);

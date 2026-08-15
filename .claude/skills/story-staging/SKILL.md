@@ -110,7 +110,9 @@ going forward looks like. Three consequences worth knowing while writing:
   order whatever their position, so they no longer have to be pinned to the top
   of the frame to be read in sequence — the stack now sits just clear of the
   characters' heads, where a letterer would put it, and falls back to the top of
-  the frame only when a panel has too much text to fit there.
+  the frame only when a panel has too much text to fit there. Across the frame
+  each balloon is centred **over the person who said it**, and only slides aside
+  when it would otherwise hang off the edge.
 - **A gloss is not offered until its phrase is complete.** A marked item is
   often several words, so the underline appears on the character that finishes
   it rather than creeping out from under a half-typed phrase.
@@ -216,7 +218,8 @@ These are defects that have already been paid for. None is negotiable.
    neither is answerable one panel at a time. It is also what `Ctrl+F`, a screen
    reader and a printout use. The comic is the enhancement, not the page.
 2. **The balloon carries no name.** Who is speaking is shown by the picture —
-   the tail points at them and they are the figure in focus. The name is still
+   the balloon sits over them, the tail points at them, and they are the figure
+   in focus. The name is still
    in the stage's accessible name, because a screen-reader user has no tail to
    follow. Never put it back on the balloon.
 3. **Nothing intercepts scroll, wheel or touchmove.** The panel is driven by its

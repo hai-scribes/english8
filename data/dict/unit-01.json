@@ -1050,5 +1050,88 @@
       }
     ],
     "note": "Two very different meanings. This one is *hiểu ra, nghĩ ra*: **work out** *a problem, an answer, why something happened*. The other is *tập thể dục* — *I **work out** at the gym* — and the two never overlap in practice."
+  },
+  "tide": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable, often *the tide*",
+        "en": "the regular rise and fall of the sea, twice every day",
+        "vi": "thủy triều",
+        "examples": [
+          "The **tide** is out, so you can walk on the sand.",
+          "We came home before the **tide** turned.",
+          "At high **tide** the water covers the bottom step."
+        ],
+        "colloc": [
+          "high tide",
+          "low tide",
+          "the tide turns"
+        ]
+      }
+    ],
+    "note": "Three phrases carry almost all the uses. **The tide is out** = nước rút, the sea has gone back and there is wet sand. **The tide is in** = nước lên. **The tide turns** = the moment it stops going one way and starts going the other."
+  },
+  "harbour": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "countable",
+        "en": "a place on the coast where boats stay safely, out of the open sea",
+        "vi": "cảng, bến tàu",
+        "examples": [
+          "Twenty boats were tied up in the **harbour**.",
+          "We sat on the **harbour** wall and watched them come in.",
+          "The fish market is at the far end of the **harbour**."
+        ],
+        "colloc": [
+          "in the harbour",
+          "the harbour wall",
+          "a fishing harbour"
+        ]
+      }
+    ],
+    "note": "British spelling **harbour**, American **harbor** — both are correct, and this course uses the British one. A **harbour wall** is the long concrete wall built to keep the waves out."
+  },
+  "read out": {
+    "senses": [
+      {
+        "pos": "phr v",
+        "grammar": "separable: read out the list / read the list out",
+        "en": "to say aloud the words of something written, so that other people can hear them",
+        "vi": "đọc to lên (cho người khác nghe)",
+        "examples": [
+          "The teacher **read out** the names one by one.",
+          "He **read** the answers **out** to the whole class.",
+          "Please **read** your sentence **out** so everybody can hear it."
+        ],
+        "colloc": [
+          "read out a list",
+          "read out the names",
+          "read out an answer"
+        ]
+      }
+    ],
+    "note": "Separable, and with a pronoun it **must** split: *He **read it out***, never ✗ *read out it*. Same pattern as **take up** and **hang out** in this unit's table."
+  },
+  "fold up": {
+    "senses": [
+      {
+        "pos": "phr v",
+        "grammar": "separable: fold up the paper / fold the paper up",
+        "en": "to bend something flat, such as paper or cloth, so that it becomes smaller",
+        "vi": "gấp lại, xếp lại",
+        "examples": [
+          "She **folded up** the letter and put it away.",
+          "**Fold** the map **up** before you lose it.",
+          "He **folds** his shirts **up** and stacks them by the bed."
+        ],
+        "colloc": [
+          "fold up a piece of paper",
+          "fold it up"
+        ]
+      }
+    ],
+    "note": "The plain verb **fold** is the one inside **origami** — *the art of paper folding* — which comes up again in Lesson 4."
   }
 }

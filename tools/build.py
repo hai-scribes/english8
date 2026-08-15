@@ -971,8 +971,9 @@ def dialogue_html(p: dict) -> str:
     say = ('Tap any <u>underlined</u> word to see what it means — later lessons '
            'ask for the same words without it.')
     if p["staged"]:
-        say += (' Use <b>Back</b> and <b>Next</b> under the picture, or the '
-                'left and right arrow keys, or swipe.')
+        say += (' Tap the left or right side of the picture to go back or on, '
+                'or use <b>Back</b> and <b>Next</b> under it, the left and '
+                'right arrow keys, or a swipe.')
     return (f'<div class="dlg" data-role="dialogue" data-dialogue="{e(p["id"])}">'
             + (f'<div class="d-h"><span class="d-k">Dialogue</span>'
                f'<span class="d-t">{e(p["title"])}</span></div>' if p["title"] else "")

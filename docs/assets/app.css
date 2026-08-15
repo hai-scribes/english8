@@ -731,8 +731,9 @@ footer.foot p{margin:0;max-width:74ch}
    replace it, and they work together rather than one being the fallback for
    another: the tail is aimed at the speaker (measured in JS, because it is the
    distance between two boxes nothing in CSS can know), the speaker is the
-   figure at full strength while the others are held back, and the balloon
-   leans toward the side of the frame they are standing on.
+   figure at full strength while the others are held back, and the balloon is
+   placed OVER them — centred on the figure and clamped to the frame, which is
+   also measured in JS and for the same reason.
 
    None of that reaches a screen reader, so the whole beat is still announced
    WITH the names, from the stage's accessible name. The name did not get
@@ -760,6 +761,10 @@ footer.foot p{margin:0;max-width:74ch}
      nice position and keeps all of its words. The unprefixed value is left in
      front of it as the fallback. */
   justify-content:flex-end;justify-content:safe flex-end;
+  /* Every balloon starts at the left edge and is then pushed across by a
+     margin JS measures, so that it sits over the person who said it. The
+     alignment is not the position — it is the origin the position is measured
+     from, which is why it is a single value here and not three. */
   gap:.55rem;align-items:flex-start}
 /* The measure is the point of the cap. `78%` keeps a balloon off the far edge
    of a wide frame; `34ch` is the line length that stops a reader's eye having

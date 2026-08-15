@@ -234,8 +234,11 @@ two of them are exercises:
   balloon rather than inside it — inside a shout balloon the spikes would clip
   it away.
 - **The balloon carries no name.** Who is speaking is shown by the picture: the
-  tail is measured in JS to point at the speaker, and the speaker is the figure
-  at full strength while the rest are held back. The name is still in the
+  balloon is placed over the speaker and its tail is measured in JS to point at
+  them, and the speaker is the figure at full strength while the rest are held
+  back. Placement is centred on the figure and clamped to the frame — it was
+  three fixed positions picked from which side of the stage they stood on, which
+  put the balloon against the frame's edge rather than over the person. The name is still in the
   panel's accessible name, because a screen-reader user has no tail to follow.
   Do not put it back on the balloon.
 - **The panel is not driven by scroll, and nothing intercepts a wheel or touch
