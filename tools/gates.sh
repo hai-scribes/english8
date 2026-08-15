@@ -26,9 +26,34 @@
 #
 set -u
 
+# git exports GIT_DIR to its hooks, and an inherited GIT_DIR poisons every git
+# command below — because with GIT_DIR set and GIT_WORK_TREE unset, git takes
+# **the current directory** to be the top of the work tree. So
+# `git -C tools rev-parse --show-toplevel` answered "tools", this script cd'd
+# into tools/, every gate invoked as `tools/build.py` was not found, and
+# `git status -- docs` reported all 271 files outside tools/ as deleted. From a
+# terminal it was invisible; from the pre-push hook it failed everything. It
+# cost a teammate a push and an afternoon, and it always resolved to a *wrong
+# answer* rather than an error, which is the failure mode worth the most care.
+#
+# gates.sh always means the checkout it is part of, so the inherited
+# environment is never what we want. Discovery from the script's own path is.
+unset GIT_DIR GIT_WORK_TREE
+
 ROOT=$(git -C "$(dirname "$0")" rev-parse --show-toplevel 2>/dev/null) \
   || ROOT=$(cd "$(dirname "$0")/.." && pwd)
 cd "$ROOT" || exit 2
+
+# And then say so out loud, because the bug above was silent. If ROOT is ever
+# wrong again, this stops at the door instead of reporting nine red gates and a
+# tree full of phantom deletions.
+for needed in tools/build.py units docs; do
+  if [ ! -e "$needed" ]; then
+    echo "gates.sh: $ROOT is not the repo root — no $needed in it." >&2
+    echo "          Refusing to run: every result from here would be a lie." >&2
+    exit 2
+  fi
+done
 
 DEPLOY=0
 for arg in "$@"; do
