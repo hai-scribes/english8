@@ -441,8 +441,20 @@ IELTS, which is a different job — see `README.md` for the full syntax.
 | `:::passage` | The reading text can be highlighted and annotated, and its paragraphs carry the labels its questions name | C9's reading half, from `01` §9.1, §12.7 |
 | `:::thread` | A strand that says it recurs is made to recur | the course's promises about itself |
 | `:::dialogue` | The Getting Started text glosses its own words, in Vietnamese, in Lesson 1 only, and plays as a comic | support where the word is, and withdrawn afterwards |
-| `:::fluency` | Repeated performance on known material against a shrinking clock | Nation's fourth strand, which printed instructions never delivered |
+| `:::fluency` | Repeated performance on known material against a shrinking clock | fluency practice as an activity in its own right, on material already known — which a printed instruction to "read it again, faster" never actually delivered |
 | `:::vocab` | New words are met a few at a time, then answered on | B8: lexis pre-taught as a first-class step, not tabled |
+
+The right-hand column is **design rationale, not citation**. Where a cell reads
+like a code — **B8**, **D9**, **C1–C5** — it indexes the checklist in `09` §1
+and resolves. Where it does not, it is our own reasoning and should be written
+as such: `:::fluency`'s cell used to read "Nation's fourth strand", which named
+a framework `research/ielts/` does not carry anywhere — zero hits for *four
+strands*, *meaning-focused input* or *fluency development*, Nation appearing
+only as the 2006 coverage paper. The framework is real; our warrant for it was
+not, and an unwarranted attribution reads exactly like a sourced one. **If you
+want to cite it, source it into the knowledge base with a marker and an
+`index.jsonl` row first.** Nothing of this ever reached a page, and it must not:
+that is the separate rule below.
 
 Four things follow for anyone adding lessons. **Prefer a `:::task` to a printed
 gap** — a reveal button is not an attempt, and the whole Group C half of the

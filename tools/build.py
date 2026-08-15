@@ -1923,13 +1923,40 @@ def review_items(u) -> list:
             if not item.get("key"):
                 continue
             row = _review_row(u["nn"], kind, lesson, blk, item, n, t)
-            cand[kind].append((0 if not row.get("opts") else 1, len(cand[kind]), row))
+            cand[kind].append((0 if not row.get("opts") else 1, len(cand[kind]),
+                               row, blk.get("id") or blk.get("title")))
 
     for kind, rows in cand.items():
         # Rank by produced-before-picked, then by the order the unit taught
         # them, so the queue is stable when a unit has only one sort of item.
         rows.sort(key=lambda r: (r[0], r[1]))
-        out.extend(r[2] for r in rows[:REVIEW_CAP[kind]])
+        # Then spread the cap across the exercises rather than spending it on
+        # the best-ranked one. Ranking alone filled all four grammar slots from
+        # a single exercise in **every** unit that teaches more than one
+        # grammar point -- all eight of them -- so unit 4 rehearsed question
+        # formation three times and countable/uncountable never, and unit 5
+        # rehearsed a/the and never the zero article. Raising the cap does not
+        # touch this: the extra slots come off the same ranked list, and an
+        # exercise with enough items still takes them all. The failing thing is
+        # selection, not volume.
+        #
+        # So: one item per exercise per pass, exercises in the order their best
+        # item ranked, going round until the cap is spent. Produced still beats
+        # picked -- between exercises on the first pass, and within an exercise
+        # on every pass -- and a unit with one exercise gets exactly what it
+        # got before.
+        groups = {}
+        for r in rows:
+            groups.setdefault(r[3], []).append(r)
+        picked = []
+        while len(picked) < REVIEW_CAP[kind] and any(groups.values()):
+            for g in groups.values():
+                if not g:
+                    continue
+                picked.append(g.pop(0))
+                if len(picked) >= REVIEW_CAP[kind]:
+                    break
+        out.extend(r[2] for r in picked)
     return out
 
 
