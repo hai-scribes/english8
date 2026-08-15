@@ -2101,7 +2101,9 @@ function initScene(root, p){
       void el.offsetWidth;
       el.setAttribute("data-beat", "1");
       clearTimeout(el.__beat);
-      el.__beat = setTimeout(() => el.removeAttribute("data-beat"), 150);
+      /* Comfortably past the keyframe's own duration. Cut it short and the
+         squash is removed mid-flight, which is a worse artefact than no beat. */
+      el.__beat = setTimeout(() => el.removeAttribute("data-beat"), 320);
     }
     el.dataset.col = String(c.col);
     const src = (window.__SHEETS__ && window.__SHEETS__[c.slug])

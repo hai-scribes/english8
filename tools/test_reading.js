@@ -820,7 +820,7 @@ async function main() {
          element, and a finished one-shot does not hand the shorthand back — so
          an attribute left behind stops that figure breathing for the rest of
          the scene. It is removed on a timer; wait past it and check. */
-      await new Promise(r => setTimeout(r, 260));
+      await new Promise(r => setTimeout(r, 420));
       ok("comic: the expression beat does not leave its attribute behind",
          !dlg.querySelector(".d-fig[data-beat]"),
          dlg.querySelectorAll(".d-fig[data-beat]").length + " still marked");

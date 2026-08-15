@@ -741,11 +741,19 @@ footer.foot p{margin:0;max-width:74ch}
    were the only two things saying who spoke, and on a phone at four-to-a-panel
    that was thin.
 
-   The amplitudes are deliberately at the edge of visible — 0.6% of a figure's
-   height, a third of a degree. Live2D's SDK ships breath as sine waves on
-   periods that share no common factor (3.2345s, 5.5345s) so the loop never
-   visibly repeats, and those tails are the whole trick: two periods that never
-   line up read as a body, and two that do read as a metronome.
+   THE LIFT IS A SIGNAL AND HAS TO BE SEEN. It shipped once at 1.1% of a
+   figure's height, tuned as though it were decoration — and decoration is the
+   thing the reading-disruption research says to keep under the threshold. This
+   is not decoration: it answers who is speaking, which is a question the
+   balloon deliberately refuses to answer, and a signal nobody notices has
+   simply failed. It is 4% now, with the quiet figures at half strength rather
+   than at 0.72, so the difference reads across a phone screen at arm's length.
+
+   The breath stays small, because that one IS decoration — but small is 2% and
+   most of a degree, not a rounding error. Live2D's SDK ships breath as sine
+   waves on periods that share no common factor (3.2345s, 5.5345s) so the loop
+   never visibly repeats, and those tails are the whole trick: two periods that
+   never line up read as a body, and two that do read as a metronome.
 
    ON WCAG 2.2.2 (Pause, Stop, Hide, level A). A loop that auto-starts, runs
    past five seconds and sits beside text is in scope, and needs a mechanism to
@@ -753,8 +761,8 @@ footer.foot p{margin:0;max-width:74ch}
    tested: the transcript toggle takes the whole comic off the screen, and it
    is the same control reduced-motion readers get switched to by default. If
    that control ever goes, this loop goes with it. */
-@keyframes d-breathe{from{scale:1 1}to{scale:1 1.006}}
-@keyframes d-sway{from{rotate:-.3deg}to{rotate:.3deg}}
+@keyframes d-breathe{from{scale:1 1}to{scale:1 1.02}}
+@keyframes d-sway{from{rotate:-.8deg}to{rotate:.8deg}}
 /* Only the real artwork breathes. A dashed placeholder is scaffolding and
    should read as scaffolding — but it still LIFTS, below, because the lift
    carries information and the breath does not, and with 3 of 32 drawings in
@@ -768,7 +776,7 @@ footer.foot p{margin:0;max-width:74ch}
    It stops moving; it does not stop meaning anything. Which is also why it is
    an addition to the dim rather than a replacement for it: whatever survives
    the blanket has to be enough on its own. */
-.d-fig[data-live="1"],.d-fig-ph[data-live="1"]{translate:-50% -1.1%}
+.d-fig[data-live="1"],.d-fig-ph[data-live="1"]{translate:-50% -4%}
 /* The expression already CUTS between panels, which is what limited animation
    does and is worth protecting — a cross-fade between two drawings whose arms
    are in different places is a morph, not a change of face. This is the
@@ -782,8 +790,8 @@ footer.foot p{margin:0;max-width:74ch}
    A finished one-shot does not fall back to the declaration it outranked: it
    sits there with `animation-name:d-beat` and no breath. Left on, a figure that
    changed expression once would stop breathing for the rest of the scene. */
-@keyframes d-beat{0%{scale:1 1}40%{scale:1.022 .978}100%{scale:1 1}}
-.d-fig[data-beat]{animation:d-beat 90ms ease-out}
+@keyframes d-beat{0%{scale:1 1}35%{scale:1.07 .93}100%{scale:1 1}}
+.d-fig[data-beat]{animation:d-beat 220ms cubic-bezier(.2,1.4,.4,1)}
 /* A prop is one cut-out, bottom-anchored on the floor or pinned near the top
    if it hangs. Contained, not covered: a bucket must not be cropped. */
 .d-it{position:absolute;transform:translateX(-50%);aspect-ratio:1;
