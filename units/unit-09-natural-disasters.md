@@ -608,17 +608,14 @@ news came from, then the news itself.
 
 ### 4.1 Complete the mini-dialogues
 
-1. **A:** Watch _______! There's broken glass on the step.
-   **B:** Thanks. I didn't see it.
-
-2. **A:** I'm _______ about my grandmother. She lives near the river.
-   **B:** Don't _______ — my uncle took her to the shelter this morning.
-
-3. **A:** _______ if the electricity goes off tonight?
-   **B:** Then we use the torch. Try not to _______.
-
-4. **A:** Make _______ you charge your phone before you go to bed.
-   **B:** Good idea. I'll do it now.
+::: task skill="course" type="gap-fill" ask="One word in each gap. Every answer is part of a fixed phrase from the tables above — warning, worrying or reassuring."
+- **A:** Watch ___ ! There's broken glass on the step. **B:** Thanks. I didn't see it. = out
+- **A:** I'm ___ about my grandmother. She lives near the river. = worried
+- **B:** Don't ___ — my uncle took her to the shelter this morning. = worry
+- **A:** ___ if the electricity goes off tonight? = What
+- **B:** Then we use the torch. Try not to ___ . = panic
+- **A:** Make ___ you charge your phone before you go to bed. **B:** Good idea. I'll do it now. = sure
+:::
 
 ### 4.2 Write your own
 
@@ -1057,15 +1054,18 @@ costs you no new grammar.
 
 ### 7.3 Grammar check
 
-Complete with the past continuous or the past simple.
-
-1. At six o'clock yesterday evening it ____________ (rain) heavily.
-2. While my mother ____________ (cook), the power ____________ (go) off.
-3. The children ____________ (play) outside when the siren ____________ (sound).
-4. I ____________ (not / know) anything about the warning. *(careful!)*
-5. What ____________ your father ____________ (do) when the landslide happened?
-6. While the men ____________ (fill) sandbags, the women ____________ (move)
-   the rice upstairs.
+::: task skill="course" type="gap-fill" ask="Complete with the past continuous or the past simple. One gap per line — the rest of each sentence is already filled in for you."
+- At six o'clock yesterday evening it ___ (rain) heavily. = was raining
+- While my mother ___ (cook), the power went off. = was cooking
+- While my mother was cooking, the power ___ (go) off. = went
+- The children ___ (play) outside when the siren sounded. = were playing
+- The children were playing outside when the siren ___ (sound). = sounded
+- I ___ (not / know) anything about the warning. = did not know/didn't know ~ *know* is not used in the continuous
+- What ___ your father doing when the landslide happened? = was
+- What was your father ___ (do) when the landslide happened? = doing
+- While the men ___ (fill) sandbags, the women moved the rice upstairs. = were filling
+- While the men were filling sandbags, the women ___ (move) the rice upstairs. = were moving
+:::
 
 ### 7.4 Error hunt
 
@@ -1165,8 +1165,6 @@ simple; in item 3 **both** verbs are past continuous; and no stative verb
 
 ### Lesson 4
 
-**4.1** 1. out 2. worried / worry 3. What / panic 4. sure
-
 **4.2** Answers will vary. Check that each reply contains (a) an imperative
 warning or a reassuring phrase from the tables, and (b) a reason. Sample:
 1. "Don't cycle through it! Moving water can knock you off, and you cannot see
@@ -1204,8 +1202,4 @@ four sequencing signals, at least one *Do not…* or *Never…*, four unit
 vocabulary words, and no *I think* or *you should*.
 
 ### Lesson 7
-
-**7.3** 1. was raining 2. was cooking / went 3. were playing / sounded
-4. did not know (didn't know) — *know* is stative 5. was … doing
-6. were filling / were moving
 

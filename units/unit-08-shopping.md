@@ -530,20 +530,17 @@ you say it.
 
 ### 4.1 Complete the mini-dialogues
 
-1. **A:** Excuse me, do you have these trainers in size 39?
-   **B:** I'm afraid we're ____________ ____________ ____________ in that size.
-
-2. **A:** Can I ____________ this jacket ____________, please?
-   **B:** Of course. The ____________ ____________ are over there.
-
-3. **A:** How much is it ____________?
-   **B:** That ____________ ____________ 180,000 dong. Would you like a bag?
-
-4. **A:** This shirt has a mark on it. I'd like a ____________, please.
-   **B:** No problem. Do you have the ____________?
-
-5. **A:** Can I help you at all?
-   **B:** No, thanks. I'm just ____________.
+::: task skill="course" type="gap-fill" ask="**A** is the customer, **B** is the shop. Some gaps take more than one word — every one of them is a phrase from the tables above."
+- **A:** Excuse me, do you have these trainers in size 39? **B:** I'm afraid we're ___ in that size. = out of stock
+- **A:** Can I ___ this jacket on, please? = try
+- **A:** Can I try this jacket ___ , please? = on
+- **B:** Of course. The ___ are over there. = fitting rooms
+- **A:** How much is it ___ ? = altogether
+- **B:** That ___ 180,000 dong. Would you like a bag? = comes to
+- **A:** This shirt has a mark on it. I'd like a ___ , please. = refund
+- **B:** No problem. Do you have the ___ ? = receipt
+- **A:** Can I help you at all? **B:** No, thanks. I'm just ___ . = browsing
+:::
 
 ### 4.2 Write your own dialogue
 
@@ -940,16 +937,22 @@ count *supplied* against *required* rather than marking sentences right or wrong
 
 ### 7.3 Grammar check
 
-Rewrite the sentence with the word in brackets in the correct position, or
-choose the correct verb form.
+**A.** Put the adverb where it belongs.
 
-1. She is late for school. (never)
-2. We go to the shopping centre. (twice a month)
-3. I have bought anything online. (rarely)
-4. He doesn't buy clothes at the market. (usually)
-5. The sale (starts / will start) on Friday — look at the sign.
-6. I think it (rains / will rain) tomorrow.
-7. Our bus (leaves / will leave) at 6:15 every morning.
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Slot the word or phrase in brackets into the sentence. Change nothing else."
+- She is late for school. (never) = She is never late for school.
+- We go to the shopping centre. (twice a month) = We go to the shopping centre twice a month.
+- I have bought anything online. (rarely) = I have rarely bought anything online.
+- He doesn't buy clothes at the market. (usually) = He doesn't usually buy clothes at the market./He does not usually buy clothes at the market./He usually doesn't buy clothes at the market./He usually does not buy clothes at the market.
+:::
+
+**B.** Present simple or *will*?
+
+::: task skill="course" type="choice" ask="Choose the correct form."
+- The sale ___ on Friday — look at the sign. (a) starts (b) will start = a
+- I think it ___ tomorrow. (a) rains (b) will rain = b
+- Our bus ___ at 6:15 every morning. (a) leaves (b) will leave = a
+:::
 
 ### 7.4 Error hunt
 
@@ -1058,9 +1061,6 @@ the front in item 3; the frequency expression at the **end** in item 5.
 
 ### Lesson 4
 
-**4.1** 1. out of stock 2. try … on / fitting rooms 3. altogether / comes to
-4. refund / receipt 5. browsing
-
 **4.2** Answers will vary. Check: six lines, at least three phrases taken from
 the tables, one adverb of frequency in the correct position, and a clear
 attempt to bargain the price down from 150,000 to 100,000.
@@ -1081,12 +1081,3 @@ drawback, not a second reason to like it.
 ### Lesson 6
 
 ### Lesson 7
-
-**7.3**
-1. She **is never** late for school.
-2. We go to the shopping centre **twice a month**.
-3. I **have rarely bought** anything online.
-4. He **doesn't usually buy** clothes at the market.
-5. starts
-6. will rain
-7. leaves

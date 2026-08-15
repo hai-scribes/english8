@@ -485,14 +485,14 @@ what to do about it. Three ways to say it, from the gentlest to the most direct:
 
 ### 4.1 Complete the mini-dialogues
 
-1. **A:** I'm coming to your house for Tet. Is there anything I ____________ do?
-   **B:** Don't give money in a white envelope — it's ____________ bad luck.
-
-2. **A:** Am I ____________ to take my shoes off at the door?
-   **B:** Yes, please. It's ____________ tradition in every house here.
-
-3. **A:** What ____________ this ritual mean?
-   **B:** We're thanking our ____________ for the harvest.
+::: task skill="course" type="gap-fill" ask="**A** is a visitor asking about a custom, **B** explains it. One word in every gap."
+- **A:** I'm coming to your house for Tet. Is there anything I ___ do? = shouldn't/should not
+- **B:** Don't give money in a white envelope — it's ___ bad luck. = considered
+- **A:** Am I ___ to take my shoes off at the door? = supposed
+- **B:** Yes, please. It's ___ tradition in every house here. = a
+- **A:** What ___ this ritual mean? = does
+- **B:** We're thanking our ___ for the harvest. = ancestors
+:::
 
 ### 4.2 Write your own
 
@@ -998,8 +998,6 @@ article — *I like phở*, not *the phở*; (4) *go to bed*, never *go to the b
 (5) *the sky*, *the moon*, *the sun* — all take *the*.
 
 ### Lesson 4
-
-**4.1** 1. shouldn't / considered 2. supposed / a 3. does / ancestors
 
 **4.2** Answers will vary. Check that each reply uses a phrase from the tables
 (*Is it OK if…*, *You're supposed to…*, *It's considered bad luck to…*,

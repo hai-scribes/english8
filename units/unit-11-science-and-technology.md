@@ -993,32 +993,42 @@ cheapest way to find out whether you have understood it at all.
 
 ### 7.2 Pronunciation check
 
-**Part A.** Write the stressed (content) words of each sentence, in order.
+**Part A.** Which words carry a beat?
 
-1. The students automated the whole experiment.
-2. Why did she replace the old device?
+::: task skill="course" type="choice" opts="C|F" ask="**C** if the **bold** word is a content word (stressed), **F** if it is a function word (weak)."
+- The **students** automated the whole experiment. = C
+- The students automated **the** whole experiment. = F
+- The students **automated** the whole experiment. = C
+- The students automated the **whole** experiment. = C
+- **Why** did she replace the old device? = C
+- Why **did** she replace the old device? = F
+- Why did **she** replace the old device? = F
+- Why did she **replace** the old device? = C
+:::
 
-**Part B.** Write ↘ (falling) or ↗ (rising) for the end of each sentence.
+**Part B.** Where does the voice go at the end?
 
-3. A robot cannot feel tired. ___
-4. Did you see the experiment? ___
-5. What did she say? ___
-6. Is this device efficient? ___
-7. Scientists work in laboratories. ___
-8. Can machines replace teachers? ___
+::: task skill="course" type="choice" opts="↘|↗" ask="Does the voice **fall** (↘) or **rise** (↗) at the end of each sentence?"
+- A robot cannot feel tired. = ↘
+- Did you see the experiment? = ↗ ~ a Yes/No question rises
+- What did she say? = ↘ ~ a Wh- question falls, exactly like a statement
+- Is this device efficient? = ↗
+- Scientists work in laboratories. = ↘
+- Can machines replace teachers? = ↗
+:::
 
 ### 7.3 Grammar check
 
-Rewrite in reported speech.
-
-1. "I am reading about biometrics." (Tí / say)
-2. "We have built a robot." (The club / tell us)
-3. "I will send you the file tomorrow." (Khoa / tell me)
-4. "You must finish this today." (My teacher / tell me)
-5. "I can't come to the laboratory." (Đạt / say)
-6. "The Earth goes round the Sun." (Cô Yến / say)
-7. "I saw this device here yesterday." (Thảo / say)
-8. "My parents may buy me a laptop next week." (Thảo / tell her friend)
+::: task skill="course" type="short-answer" ask="Rewrite each one in reported speech. Write the **whole** sentence, beginning with the reporting verb in brackets, and change everything else that has to change — the verb, the pronouns, and the time and place words. *that* is optional."
+- "I am reading about biometrics." (Tí / say) = Tí said (that) he was reading about biometrics./Ti said (that) he was reading about biometrics.
+- "We have built a robot." (The club / tell us) = The club told us (that) they had built a robot.
+- "I will send you the file tomorrow." (Khoa / tell me) = Khoa told me (that) he would send me the file the next day./Khoa told me (that) he would send me the file the following day. ~ *you* is the person reporting, so it becomes *me*
+- "You must finish this today." (My teacher / tell me) = My teacher told me (that) I had to finish it that day./My teacher told me (that) I had to finish that that day. ~ *must* becomes *had to*
+- "I can't come to the laboratory." (Đạt / say) = Đạt said (that) he couldn't come to the laboratory./Đạt said (that) he could not come to the laboratory./Dat said (that) he couldn't come to the laboratory./Dat said (that) he could not come to the laboratory.
+- "The Earth goes round the Sun." (Cô Yến / say) = Cô Yến said (that) the Earth goes round the Sun./Co Yen said (that) the Earth goes round the Sun./Cô Yến said (that) the Earth went round the Sun./Co Yen said (that) the Earth went round the Sun. ~ a general truth needs no backshift, though the past is accepted too
+- "I saw this device here yesterday." (Thảo / say) = Thảo said (that) she had seen that device there the day before./Thao said (that) she had seen that device there the day before./Thảo said (that) she had seen that device there the previous day./Thao said (that) she had seen that device there the previous day. ~ *this* becomes *that* and *here* becomes *there*
+- "My parents may buy me a laptop next week." (Thảo / tell her friend) = Thảo told her friend (that) her parents might buy her a laptop the following week./Thao told her friend (that) her parents might buy her a laptop the following week./Thảo told her friend (that) her parents might buy her a laptop the next week./Thao told her friend (that) her parents might buy her a laptop the next week.
+:::
 
 ### 7.4 Error hunt
 
@@ -1190,21 +1200,4 @@ position in the first sentence, one *It is true that…* concession, one
 reported statement, and a conclusion that restates the position.
 
 ### Lesson 7
-
-**7.2**
-**Part A.** 1. students, automated, whole, experiment 2. Why, replace, old,
-device
-**Part B.** 3. ↘ 4. ↗ 5. ↘ 6. ↗ 7. ↘ 8. ↗
-
-**7.3**
-1. Tí said that he was reading about biometrics.
-2. The club told us that they had built a robot.
-3. Khoa told me that he would send me the file the next day.
-4. My teacher told me that I had to finish it that day.
-5. Đạt said that he couldn't come to the laboratory.
-6. Cô Yến said that the Earth goes round the Sun. *(general truth — no
-   backshift)*
-7. Thảo said that she had seen that device there the day before.
-8. Thảo told her friend that her parents might buy her a laptop the following
-   week.
 
