@@ -460,14 +460,15 @@ all day.
 
 ### 4.1 Complete the mini-dialogues
 
-1. **A:** I'm ______ about the smoke from the brick kiln.
-   **B:** You're ______ . My little brother coughs every evening.
-2. **A:** ______ causes the brown colour in the lake?
-   **B:** The ______ is that the workshop lets its waste run in.
-3. **A:** ______ don't we write to the district office?
-   **B:** Good idea. We could ______ by taking some photographs.
-4. **A:** The farmers here use a lot of pesticide.
-   **B:** That's ______ there are so few insects now.
+::: task skill="course" type="gap-fill" ask="**A** raises a worry, **B** answers it. One word in every gap, and every one of them is in the tables above."
+- **A:** I'm ___ about the smoke from the brick kiln. = worried
+- **B:** You're ___ . My little brother coughs every evening. = right
+- **A:** ___ causes the brown colour in the lake? = What
+- **B:** The ___ is that the workshop lets its waste run in. = reason
+- **A:** ___ don't we write to the district office? = Why
+- **B:** Good idea. We could ___ by taking some photographs. = start
+- **A:** The farmers here use a lot of pesticide. **B:** That's ___ there are so few insects now. = why
+:::
 
 ### 4.2 Write your own
 
@@ -880,17 +881,14 @@ sticks.
 
 ### 7.3 Grammar check
 
-Complete with the correct form of the verb, and add a comma if one is needed.
-
-1. When the rain ____________ (stop), we ____________ (plant) the seedlings.
-2. I ____________ (call) you as soon as I ____________ (get) home.
-3. Before you ____________ (throw) that away, ____________ (check) whether it
-   can be recycled.
-4. The river has been dirty since the factory ____________ (open) last year.
-5. We ____________ (not give) up until the district office ____________
-   (answer) our letter.
-6. Once the eggs ____________ (hatch), the rangers ____________ (release) the
-   young turtles.
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Every verb in brackets needs putting into the right form. Add a comma where the sentence needs one, and leave it out where it does not."
+- When the rain (stop), we (plant) the seedlings. = When the rain stops, we will plant the seedlings./When the rain stops, we'll plant the seedlings.
+- I (call) you as soon as I (get) home. = I will call you as soon as I get home./I'll call you as soon as I get home.
+- Before you (throw) that away, (check) whether it can be recycled. = Before you throw that away, check whether it can be recycled.
+- The river has been dirty since the factory (open) last year. = The river has been dirty since the factory opened last year.
+- We (not give) up until the district office (answer) our letter. = We will not give up until the district office answers our letter./We won't give up until the district office answers our letter.
+- Once the eggs (hatch), the rangers (release) the young turtles. = Once the eggs hatch, the rangers will release the young turtles.
+:::
 
 ### 7.4 Error hunt
 
@@ -997,8 +995,6 @@ plastic — *while*
 
 ### Lesson 4
 
-**4.1** 1. worried / right 2. What / reason 3. Why / start 4. why
-
 **4.2** Answers will vary. Check: line 1 uses a concern phrase (*I'm worried
 about…*, *It's terrible that…*, *What worries me is…*) and line 2 suggests one
 concrete, doable action (*We could start by…*, *Why don't we…*).
@@ -1031,11 +1027,4 @@ NOTICE heading, date/time/place all present, at least one time clause with no
 friendly greeting or sign-off.
 
 ### Lesson 7
-
-**7.3** 1. When the rain **stops**, we **will plant** the seedlings. *(comma)*
-2. I **will call** you as soon as I **get** home. *(no comma)* 3. Before you
-**throw** that away, **check** whether it can be recycled. *(comma)* 4. …since
-the factory **opened** last year. *(no comma)* 5. We **will not give** up until
-the district office **answers** our letter. *(no comma)* 6. Once the eggs
-**hatch**, the rangers **will release** the young turtles. *(comma)*
 

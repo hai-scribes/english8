@@ -527,14 +527,13 @@ opinion with a flat *no*. They agree with a part of it first, then turn:
 
 ### 4.1 Complete the mini-dialogues
 
-1. **A:** Could you tell me where your village ____________ (be)?
-   **B:** ____________ ahead — it's in Ha Giang, near the border.
-
-2. **A:** Do you ____________ if I ask how many people live in your house?
-   **B:** Not at all. Seven — my parents, my grandparents and my two brothers.
-
-3. **A:** I was ____________ how your grandmother makes the dye for the cloth.
-   **B:** From leaves and roots. **A:** Really? That's ____________.
+::: task skill="course" type="gap-fill" ask="**A** is interviewing **B** about her village. Every answer is a word from the tables above."
+- **A:** Could you tell me where your village ___ (be)? = is
+- **B:** Sure, ___ ahead — it's in Ha Giang, near the border. = go
+- **A:** Do you ___ if I ask how many people live in your house? = mind
+- **A:** I was ___ how your grandmother makes the dye for the cloth. = wondering
+- **A:** Really? That's ___ . = fascinating/interesting/unique
+:::
 
 ### 4.2 Write your own
 
@@ -917,17 +916,21 @@ settles a dozen small choices at once.
 
 **A.** Write the question.
 
-1. ____________________? — Yes, they live in a stilt house.
-2. ____________________? — My uncle repairs the roof. *(ask about the person who does it)*
-3. ____________________? — There are seven people in my family.
-4. ____________________? — Because the floor stays dry in the rainy season.
+::: task skill="course" type="short-answer" ask="You are given the answer. Write the question that would get it, and write the whole question. The note in brackets tells you what to ask about."
+- The answer is *Yes, they live in a stilt house.* — ask a **Yes/No** question. = Do they live in a stilt house
+- The answer is *My uncle repairs the roof.* — ask about **the person who does it**. = Who repairs the roof
+- The answer is *There are seven people in my family.* — ask about **the number**. = How many people are there in your family/How many people are in your family
+- The answer is *Because the floor stays dry in the rainy season.* — ask **why**, and begin *Why do they build…* = Why do they build houses on stilts/Why do they build their houses on stilts/Why do they build stilt houses
+:::
 
 **B.** Choose the correct word.
 
-5. We don't have **(many / much)** information about that group.
-6. How **(many / much)** ethnic groups are there in Viet Nam?
-7. She gave me **(an advice / some advice)** about weaving.
-8. Would you like **(a bowl of / a bowl)** rice?
+::: task skill="course" type="choice" ask="Countable or uncountable — that is what decides every one of these."
+- We don't have ___ information about that group. (a) many (b) much = b
+- How ___ ethnic groups are there in Viet Nam? (a) many (b) much = a
+- She gave me ___ about weaving. (a) an advice (b) some advice = b
+- Would you like ___ rice? (a) a bowl of (b) a bowl = a
+:::
 
 ### 7.4 Error hunt
 
@@ -1027,8 +1030,6 @@ questions, which take no *do/does*.
 
 ### Lesson 4
 
-**4.1** 1. is / Go 2. mind 3. wondering / fascinating (or: interesting, unique)
-
 **4.2** Answers will vary. Check: the Yes/No question starts with *be*, a modal,
 or *do/does/did*; the Wh- question has an operator before the subject; the
 subject question has **no** *do/does/did*; and after *Could you tell me…* the
@@ -1062,9 +1063,4 @@ simple with correct third-person **-s**, at least four Lesson 2 words, and one
 uncountable noun used with no plural *-s*.
 
 ### Lesson 7
-
-**7.3** **A.** 1. Do they live in a stilt house? 2. Who repairs the roof?
-3. How many people are there in your family? 4. Why do they build houses on
-stilts? *(or: Why is the house built on stilts?)*
-**B.** 5. much 6. many 7. some advice 8. a bowl of
 

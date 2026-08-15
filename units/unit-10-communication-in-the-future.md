@@ -486,16 +486,13 @@ Both openings are polite, and the two forms after *sorry* are different:
 
 ### 4.1 Complete the mini-dialogues
 
-Use a phrase from the tables above.
-
-1. **A:** Hello? Hello? I can see you but I can't hear anything.
-   **B:** Oh — sorry, I think ____________________.
-
-2. **A:** …and then we went to the museum ______ Saturday and… sorry, what?
-   **B:** ____________________. Your voice keeps stopping.
-
-3. **A:** It's nearly ten o'clock here.
-   **B:** ____________________. ____________________ to your parents for me.
+::: task skill="course" type="gap-fill" ask="Use a phrase from the tables above. One gap per line — where a line had two gaps, the second one is already filled in for you."
+- **A:** Hello? Hello? I can see you but I can't hear anything. **B:** Oh — sorry, I think ___ . = you're on mute/you are on mute/I'm on mute/I am on mute
+- **A:** …and then we went to the museum ___ Saturday and… sorry, what? = on
+- **B:** ___ . Your voice keeps stopping. = you're breaking up/you are breaking up/you keep breaking up
+- **A:** It's nearly ten o'clock here. **B:** ___ . Say hello to your parents for me. = I'd better go now/I had better go now/I'd better go/let's talk again on Friday/bye for now
+- **B:** I'd better go now. ___ to your parents for me. = say hello
+:::
 
 ### 4.2 Write your own
 
@@ -978,13 +975,6 @@ syllable of *coffee*, and the SECOND of *committee*.
 before a place, and item 5 uses *mine* or *ours* with **no** noun after it.
 
 ### Lesson 4
-
-**4.1**
-1. you're on mute *(or: I'm on mute / your microphone is off)*
-2. You're breaking up *(or: Sorry, I lost you for a second)* — the gap in A's
-   line is **on** Saturday.
-3. I'd better go now. / Say hello — full reply: *"I'd better go now. Say hello
-   to your parents for me."* *(or: Let's talk again on Friday. / Bye for now!)*
 
 **4.2** Answers will vary. Check: one phrase from each of the three tables
 (starting / going wrong / ending), and two correct prepositions of time —

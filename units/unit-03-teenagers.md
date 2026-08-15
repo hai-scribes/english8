@@ -609,15 +609,16 @@ stranger, and *Can you…, please?* with a classmate.
 
 ### 4.3 Complete the mini-dialogues
 
-1. **A:** I'm a bit ____________ about the maths test tomorrow.
-   **B:** Don't ____________ — you've revised for a week.
-
-2. **A:** What ____________ I forget my lines on stage?
-   **B:** It ____________ to everyone. Just breathe and start again.
-
-3. **A:** I've got so much ____________ at the moment. I can't keep ____________
-   ____________ everything.
-   **B:** Take it one ____________ at a time. Let me give you a ____________ .
+::: task skill="course" type="gap-fill" ask="**A** has a worry, **B** reassures them. Every answer comes from the tables above."
+- **A:** I'm a bit ___ about the maths test tomorrow. = worried
+- **B:** Don't ___ — you've revised for a week. = worry
+- **A:** What ___ I forget my lines on stage? = if
+- **B:** It ___ to everyone. Just breathe and start again. = happens
+- **A:** I've got so much ___ at the moment. = on
+- **A:** I can't keep ___ everything. = up with/on top of
+- **B:** Take it one ___ at a time. = step
+- **B:** Let me give you a ___ . = hand
+:::
 
 ### 4.4 Write your own
 
@@ -960,27 +961,32 @@ the two, and the cheapest way to land there is a hard count.
 
 ### 7.3 Grammar check
 
-**Part A.** Write **S** (simple) or **C** (compound).
+**Part A.** Simple or compound?
 
-1. Khoa and Hùng joined the wellbeing club. ___
-2. Khoa joined the wellbeing club, and Hùng joined the debate club. ___
-3. I was frustrated, yet I kept trying. ___
-4. She takes photos and edits them at home. ___
+::: task skill="course" type="choice" opts="S|C" ask="**S** = simple (one clause) · **C** = compound (two clauses joined)."
+- Khoa and Hùng joined the wellbeing club. = S
+- Khoa joined the wellbeing club, and Hùng joined the debate club. = C
+- I was frustrated, yet I kept trying. = C
+- She takes photos and edits them at home. = S
+:::
 
-**Part B.** Add the missing comma, or write **✓** if the sentence is already
-correct.
+**Part B.** The comma.
 
-5. I felt stressed so I went for a walk.
-6. Đạt takes photos and posts the best ones.
-7. You can come on Thursday or you can come next week.
-8. He does his homework and his chores before dinner.
+::: task skill="course" type="choice" ask="Not every sentence needs one."
+- I felt stressed so I went for a walk. (a) a comma before *so* (b) a comma after *so* (c) no comma = a
+- Đạt takes photos and posts the best ones. (a) a comma before *and* (b) a comma after *and* (c) no comma = c
+- You can come on Thursday or you can come next week. (a) a comma before *or* (b) a comma after *or* (c) no comma = a
+- He does his homework and his chores before dinner. (a) a comma before *and* (b) a comma after *and* (c) no comma = c
+:::
 
-**Part C.** Join each pair with the word in capitals. Punctuate it correctly.
+**Part C.** Join them up.
 
-9. **HOWEVER** — The website is user-friendly. I still could not find the form.
-10. **THEREFORE** — Hùng wants to be more focused. He has joined the chess club.
-11. **OTHERWISE** — Log on before Friday. You will miss the first session.
-12. **SO** — I had four tests in one week. I did not sleep much.
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Join each pair with the word you are given, keeping the two halves in that order. Three of these joining words are conjunctive adverbs — **semicolon before, comma after**. One is a conjunction, and takes a comma and nothing else."
+- The website is user-friendly. I still could not find the form. — use **however** = The website is user-friendly; however, I still could not find the form / The website is user-friendly; however, I still couldn't find the form
+- Hùng wants to be more focused. He has joined the chess club. — use **therefore** = Hùng wants to be more focused; therefore, he has joined the chess club / Hung wants to be more focused; therefore, he has joined the chess club / Hùng wants to be more focused; therefore, he's joined the chess club / Hung wants to be more focused; therefore, he's joined the chess club
+- Log on before Friday. You will miss the first session. — use **otherwise** = Log on before Friday; otherwise, you will miss the first session / Log on before Friday; otherwise, you'll miss the first session
+- I had four tests in one week. I did not sleep much. — use **so** = I had four tests in one week, so I did not sleep much / I had four tests in one week, so I didn't sleep much ~ *so* is a conjunction, so a comma before it is all it needs
+:::
 
 ### 7.4 Error hunt
 
@@ -1109,8 +1115,6 @@ classmate). A good answer starts *Certainly.* Model for 2: *Could you tell me
 which room the arts and crafts club uses, please?* — *Certainly. Room 14, on
 Wednesdays.*
 
-**4.3** 1. worried / worry 2. if / happens 3. on / up / with — step / hand
-
 **4.4** Answers will vary. Check that each reply is **one compound sentence**
 with a comma before *and, but, so, or,* or *yet*, and that it both reassures
 and suggests something practical. Model for 1: *Don't worry, and I'll sit next
@@ -1127,16 +1131,4 @@ just *easy* or *hard*.
 ### Lesson 6
 
 ### Lesson 7
-
-**7.3**
-**Part A.** 1. S 2. C 3. C 4. S
-**Part B.** 5. I felt stressed**,** so I went for a walk. 6. ✓ (compound verb —
-no comma) 7. You can come on Thursday**,** or you can come next week. 8. ✓ (one
-clause, two objects)
-**Part C.** 9. The website is user-friendly**;** however**,** I still could not
-find the form. 10. Hùng wants to be more focused**;** therefore**,** he has
-joined the chess club. 11. Log on before Friday**;** otherwise**,** you will
-miss the first session. 12. I had four tests in one week**,** so I did not sleep
-much. *(9–11 take a semicolon and then a comma; only 12 is a conjunction, so it
-takes a comma and nothing else.)*
 

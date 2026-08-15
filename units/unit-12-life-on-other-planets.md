@@ -152,7 +152,7 @@ them: a few at a time, then answer on the few you have just met.
 - Without a thick ___ , a planet cannot hold in heat or block dangerous sunlight. = atmosphere
 - The Moon ___ the Earth once every twenty-seven days or so. = orbits
 - Humans need ___ to breathe; on Mars there is almost none. = oxygen
-- A planet in the habitable zone may be ___ — living things could possibly stay alive there. = habitable
+- A planet at the right distance from its star may be ___ — living things could possibly stay alive there. = habitable
 - She looked at Saturn through a small ___ in her garden. = telescope
 - No plant could ___ for long in temperatures of minus one hundred degrees. = survive
 - The ___ took six hours to put on her suit and leave the station. = astronaut
@@ -947,30 +947,27 @@ reader who reads nothing else should still be given.
 
 ### 7.2 Pronunciation check
 
-Mark the intonation. Write ↗ or ↘ on the line after each item.
-
-1. We need water ___, oxygen ___ and warmth ___.
-2. She visited Ha Noi ___, Hue ___ and Da Nang ___.
-3. Which item in question 1 tells you the list has finished? ____________
-4. What does it mean if the **last** item rises instead of falling?
-   ____________________________________________
+::: task skill="course" type="choice" opts="↗|↘" ask="Which way does your voice go on the **bold** item? The last two are not sentences — they describe what you want the listener to understand."
+- We need **water**, oxygen and warmth. = ↗
+- We need water, **oxygen** and warmth. = ↗
+- We need water, oxygen and **warmth**. = ↘ ~ the fall on the final item is the signal that the list is finished
+- She visited **Ha Noi**, Hue and Da Nang. = ↗
+- She visited Ha Noi, **Hue** and Da Nang. = ↗
+- She visited Ha Noi, Hue and **Da Nang**. = ↘
+- You have named three things and there are more you are not going to name. Your voice on the third one… = ↗ ~ a rise at the end leaves the list open — "…and other things as well"
+- You want the listener to know that the thing you have just named was the last one. Your voice on it… = ↘
+:::
 
 ### 7.3 Grammar check
 
-Report each question. Use the words given.
-
-1. "Do you have a telescope?" (He asked me…)
-   → _______________________________________________
-2. "Where is the science club?" (She asked…)
-   → _______________________________________________
-3. "Did you watch the launch?" (My brother asked me…)
-   → _______________________________________________
-4. "Why are the creatures blue?" (The teacher asked us…)
-   → _______________________________________________
-5. "Will you come with us tomorrow?" (Thảo asked me…)
-   → _______________________________________________
-6. "How far is Mars from the Earth?" (I asked my father…)
-   → _______________________________________________
+::: task skill="course" type="short-answer" ask="Report each question. Write the whole sentence, beginning with the words in brackets. It ends in a full stop, not a question mark. Either *if* or *whether* is accepted."
+- "Do you have a telescope?" (He asked me…) = He asked me if I had a telescope./He asked me whether I had a telescope.
+- "Where is the science club?" (She asked…) = She asked where the science club was.
+- "Did you watch the launch?" (My brother asked me…) = My brother asked me if I had watched the launch./My brother asked me whether I had watched the launch.
+- "Why are the creatures blue?" (The teacher asked us…) = The teacher asked us why the creatures were blue.
+- "Will you come with us tomorrow?" (Thảo asked me…) = Thảo asked me if I would go with them the next day./Thảo asked me whether I would go with them the next day./Thảo asked me if I would come with them the next day./Thảo asked me whether I would come with them the next day./Thảo asked me if I would go with them the following day./Thảo asked me whether I would go with them the following day./Thảo asked me if I would come with them the following day./Thảo asked me whether I would come with them the following day./Thao asked me if I would go with them the next day./Thao asked me whether I would go with them the next day./Thao asked me if I would come with them the next day./Thao asked me whether I would come with them the next day./Thao asked me if I would go with them the following day./Thao asked me whether I would go with them the following day./Thao asked me if I would come with them the following day./Thao asked me whether I would come with them the following day. ~ *tomorrow* shifts as well as the verb, and *us* becomes *them*
+- "How far is Mars from the Earth?" (I asked my father…) = I asked my father how far Mars was from the Earth./I asked my father how far Mars is from the Earth. ~ a distance is a general truth, so the present tense is accepted too
+:::
 
 ### 7.4 Error hunt
 
@@ -1130,19 +1127,4 @@ more Lesson 2 words, one list of three or more items, and present simple
 throughout.
 
 ### Lesson 7
-
-**7.2**
-1. water ↗, oxygen ↗, warmth ↘
-2. Ha Noi ↗, Hue ↗, Da Nang ↘
-3. The last item, *warmth* — the falling tone ↘ signals the end of the list.
-4. It means the list is **open**: there are more items the speaker has not
-   named ("…and so on"), or the speaker has not finished.
-
-**7.3**
-1. He asked me if/whether I had a telescope.
-2. She asked where the science club was.
-3. My brother asked me if/whether I had watched the launch.
-4. The teacher asked us why the creatures were blue.
-5. Thảo asked me if/whether I would go with them the next day.
-6. I asked my father how far Mars was from the Earth.
 
