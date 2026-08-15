@@ -1087,3 +1087,22 @@ html.d-locked,html.d-locked body{overflow:hidden}
   border-top:1px solid var(--rule);padding-top:1.1rem;margin-bottom:2.5rem}
 .sc-said{font-size:.85rem;color:var(--green)}
 @media (max-width:640px){ .sc-ch{max-width:none} .sc-h h2{font-size:1.35rem} }
+
+/* ---------------- the word lookup ---------------- */
+.wd-search{position:sticky;top:0;z-index:5;background:var(--bg);
+  padding:.7rem 0 .8rem;margin-bottom:.4rem;border-bottom:1px solid var(--rule)}
+.wd-lab{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--faint);display:block;margin-bottom:.35rem}
+#wdQ{font:inherit;font-size:1rem;width:100%;padding:.6rem .8rem;
+  background:var(--surface);color:var(--ink);
+  border:1px solid var(--rule);border-radius:var(--r)}
+#wdQ:focus{outline:2px solid var(--teal);outline-offset:1px;border-color:var(--teal)}
+.wd-count{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--faint);margin:.45rem 0 0}
+.wd-row[hidden]{display:none}
+.wd-none{color:var(--muted)}
+
+/* ---------------- hearing the dialogue ---------------- */
+.d-audio{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;margin:0 0 .8rem}
+.d-heard{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--faint)}

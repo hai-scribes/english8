@@ -983,6 +983,22 @@ def dialogue_html(p: dict) -> str:
             + (f'<div class="d-h"><span class="d-k">Dialogue</span>'
                f'<span class="d-t">{e(p["title"])}</span></div>' if p["title"] else "")
             + f'<p class="d-say">{say}</p>'
+            # Audio on the Getting Started text. Every Getting Started in the
+            # prescribed book is a track (track 1, 7, 13, 20 ...) and ours was
+            # silent, so a self-studying learner reached the Lesson 6 listening
+            # never having heard these characters speak.
+            #
+            # It is REPLAYABLE, and that is not an oversight. C6 and C8 govern
+            # the listening TEST: one play, a declared delivery mode, an
+            # unwritten orientation. None of that applies here, because the
+            # transcript is on the page by design — 1.2 sends the learner back
+            # into it and 1.3 asks them to find a verb in it. A text you can
+            # reread is not a listening test, and pretending otherwise would
+            # make this a worse reading page without making it a real
+            # listening one.
+            + '<div class="d-audio"><button class="btn quiet d-hear" type="button">'
+              '&#9654; Hear the conversation</button>'
+              '<span class="d-heard" role="status"></span></div>'
             + scene
             + '<div class="d-body">' + "".join(rows) + '</div>'
             + toggle
@@ -2385,6 +2401,7 @@ def page_home(units, reviews=()) -> str:
     you have done that unit's first lesson.</p>
     <div class="row">
       <a class="btn quiet" href="story/index.html">Open the story</a>
+      <a class="btn quiet" href="words/index.html">Look up a word</a>
       <span class="label"><b data-story-read>0</b> of 12 chapters read</span>
     </div>
   </div>
@@ -2687,6 +2704,84 @@ def page_story(units) -> str:
                                     for c in chapters]},
                  desc="The twelve chapters of The Sea Gives Back, read straight "
                       "through without the exercises.")
+
+
+# ------------------------------------------------------------ the lookup ---
+# The dictionary is 405 entries deep — senses, word families, collocations,
+# usage notes — and until now entry_html() was called from exactly one place:
+# the vocabulary table of the unit you happened to be standing in. A learner
+# who stalled on a word from another unit, or on a word in a reading passage,
+# had nowhere to go.
+#
+# This is deliberately a LOOKUP and not a study tool. It does not schedule, it
+# does not score, it does not track what you searched for. Deliberate study of
+# these words already happens in the practice engine, which teaches them as
+# collocations (F7) and speaks them (F3); duplicating that here would be a
+# second, unscheduled trainer competing with the one the evidence shaped.
+#
+# `04` §2 [Q]: "All the words you will need in order to answer the questions
+# will be given in the text." A dictionary is not a crutch the test punishes —
+# but the index note on that claim matters too: vocabulary is not irrelevant,
+# because synonym recognition under search conditions is what separates strong
+# from weak readers (`04` §8.3). Looking a word up is how that gets built.
+def page_words(units) -> str:
+    # Driven from the DICTIONARY, not from the unit tables. Eleven entries —
+    # tide, harbour, read out, fold up, work out, mend, evidence among them —
+    # are glossed in a dialogue but appear in no unit's vocabulary table, and
+    # those are precisely the words a reader stalls on. A lookup built from the
+    # tables would be missing exactly the words it exists to answer.
+    seen = {}
+    for u in units:
+        for w in u["vocab"]:
+            key = w["word"].lower()
+            seen.setdefault(key, {"w": w, "units": []})["units"].append(u["num"])
+    rows = []
+    for key in sorted(DICT, key=lambda k: k.lower()):
+        if key.startswith("_"):
+            continue                      # _schema / _unit are file metadata
+        rec = seen.get(key.lower())
+        # A dictionary-only entry has no table row to borrow IPA or a gloss
+        # from, so it carries what the entry itself knows.
+        sense0 = (DICT[key].get("senses") or [{}])[0]
+        w = dict(rec["w"]) if rec else {
+            "word": key, "ipa": "", "pos": sense0.get("pos", ""),
+            "vi": sense0.get("vi", "")}
+        # entry_html prints w["n"] in the corner. On a unit page that is the
+        # table row; here the useful coordinate is which unit teaches it.
+        w["n"] = ("U" + "·".join(f"{n:02d}" for n in rec["units"])
+                  if rec else "gloss")
+        entry = DICT[key]
+        # Everything the search box matches on, folded into one attribute:
+        # the headword, the Vietnamese, and the English of the first sense.
+        sense = ((entry or {}).get("senses") or [{}])[0]
+        hay = " ".join([w["word"], w.get("vi", ""), sense.get("en", ""),
+                        sense.get("vi", ""), w.get("pos", "")]).lower()
+        rows.append(f'<div class="wd-row" data-hay="{e(hay)}">'
+                    f'{entry_html(w, entry)}</div>')
+    body = f"""  <header class="masthead">
+    <p class="eyebrow">Look up a word · {len(rows)} entries</p>
+    <h1>Every word the course teaches</h1>
+    <p class="standfirst">Type any part of a word — in English or in Vietnamese —
+    and the list narrows as you type. Each entry says which unit teaches it.
+    Press 🔊 to hear it, 🐢 to hear it slowly.</p>
+  </header>
+
+  <div class="wd-search">
+    <label class="wd-lab" for="wdQ">Search</label>
+    <input id="wdQ" type="search" autocomplete="off" spellcheck="false"
+           placeholder="leisure · thời gian rảnh · phr v">
+    <p class="wd-count" role="status" aria-live="polite"></p>
+  </div>
+
+  <div class="wd-list">{"".join(rows)}</div>
+  <p class="wd-none" id="wdNone" hidden>No word matches that. Try part of the
+  word, or the Vietnamese.</p>
+"""
+    return shell(title=f"Word list · {SITE}", depth=0, body=body,
+                 crumb=[("Course", "index.html"), ("Words", "")],
+                 data={"kind": "words"},
+                 desc="Look up any of the words this course teaches, in English "
+                      "or Vietnamese, with sound.")
 
 
 def register_md(units) -> str:
@@ -3180,10 +3275,12 @@ def main() -> int:
     (OUT / "index.html").write_text(page_home(units, reviews), encoding="utf-8")
     (OUT / "story").mkdir(parents=True, exist_ok=True)
     (OUT / "story" / "index.html").write_text(page_story(units), encoding="utf-8")
+    (OUT / "words").mkdir(parents=True, exist_ok=True)
+    (OUT / "words" / "index.html").write_text(page_words(units), encoding="utf-8")
     # The evidence register is a maintainer's document, not a page. It lives in
     # the repo beside the knowledge base it cites.
     REGISTER.write_text(register_md(units), encoding="utf-8")
-    pages = 2   # index.html and story/index.html
+    pages = 3   # index.html, story/ and words/
     for u in units:
         d = OUT / f"unit-{u['nn']}"
         d.mkdir(parents=True, exist_ok=True)

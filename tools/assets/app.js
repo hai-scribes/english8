@@ -611,6 +611,59 @@ function paintStoryHome(){
   for (const el of $$("[data-story-read]")) el.textContent = n;
 }
 
+/* ---------------- the word lookup ----------------------------------------
+   A lookup, not a trainer: it filters and it stops. Deliberate study of these
+   words is the practice engine's job, where they are asked as collocations and
+   scheduled; a second unscheduled trainer here would compete with the one the
+   evidence actually shaped.
+
+   Diacritics are folded on BOTH sides. The learner is Vietnamese and may be
+   typing on a keyboard with no Vietnamese layout — "thoi gian ranh" has to
+   find "thời gian rảnh", or the Vietnamese half of every entry is unreachable
+   for exactly the people it was written for. đ/Đ is folded by hand because it
+   is a distinct letter, not a base letter plus a combining mark, so NFD leaves
+   it alone. */
+function foldSearch(s){
+  return String(s).toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/\u0111/g, "d");
+}
+
+function initWords(){
+  if (DATA.kind !== "words") return;
+  const q = $("#wdQ"), rows = $$(".wd-row"), none = $("#wdNone"),
+        count = $(".wd-count");
+  if (!q) return;
+  /* Folded once at start-up rather than per keystroke: 411 rows × a normalize()
+     each is wasted work on every character typed. */
+  const hay = rows.map(r => foldSearch(r.dataset.hay || ""));
+  const say = n => {
+    if (count) count.textContent =
+      n === rows.length ? rows.length + " words" : n + " of " + rows.length;
+  };
+
+  const run = () => {
+    const term = foldSearch(q.value).trim();
+    if (!term){
+      for (const r of rows) r.hidden = false;
+      if (none) none.hidden = true;
+      say(rows.length);
+      return;
+    }
+    let n = 0;
+    for (let i = 0; i < rows.length; i++){
+      const hit = hay[i].includes(term);
+      rows[i].hidden = !hit;
+      if (hit) n++;
+    }
+    if (none) none.hidden = n > 0;
+    say(n);
+  };
+
+  q.addEventListener("input", run);
+  run();
+}
+
 /* ---------------- spaced review ------------------------------------------
    Fixed, uniform intervals. Two independent meta-analyses find expanding
    schedules no better than uniform ones, so the simplest thing that spaces
@@ -1569,11 +1622,18 @@ function initTasks(){
    what this course used to do -- deletes the task and leaves a reading
    comprehension exercise wearing its name. */
 
-function speakSeq(lines, onEnd){
+/* `alive` is optional and only matters to a caller that can be interrupted.
+   cancel() empties the queue but cannot reach a speak() that has not happened
+   yet, and this runs the next line off a timer — so a caller that stops mid
+   sequence would still get one more line out loud about 60ms later. The
+   predicate is checked at the two points where that timer lands. */
+function speakSeq(lines, onEnd, alive){
+  const live = () => (typeof alive !== "function" || alive());
   if (!canListen()){ onEnd(false); return; }
   try { speechSynthesis.cancel(); } catch(e){}
   let i = 0;
   const next = () => {
+    if (!live()) return;
     if (i >= lines.length){ onEnd(true); return; }
     const u = new SpeechSynthesisUtterance(lines[i++]);
     u.voice = TTS.voice; u.lang = TTS.voice.lang; u.rate = RATE_NORMAL;
@@ -1581,7 +1641,7 @@ function speakSeq(lines, onEnd){
     u.onerror = ev => {
       const err = ev && ev.error;
       if (err === "interrupted" || err === "canceled") return;
-      TTS.failed = true; onEnd(false);
+      TTS.failed = true; if (live()) onEnd(false);
     };
     speechSynthesis.speak(u);
   };
@@ -1686,6 +1746,70 @@ function initDialogue(){
     if (!root) return;
     wireGlosses($(".d-body", root) || root, p.glosses || [], p.id);
     if (p.staged) initScene(root, p);
+    initDialogueAudio(root, p);
+  });
+}
+
+/* ---------------- hearing the conversation --------------------------------
+   The prescribed book's Getting Started is a recording in every one of the
+   twelve units; ours was text and a comic, so a learner working alone reached
+   the Lesson 6 listening never having heard these people speak.
+
+   Replayable, unlike the :::audio player. C6 and C8 bind the listening TEST —
+   one play, declared timing, an orientation that is not written down. This is
+   a reading text whose transcript is deliberately on the page: 1.2 tells the
+   learner to find a phrase "in the dialogue" and 1.3 sends them back for a
+   verb. Playing it once would not turn it into a listening test; it would just
+   make it a worse reading page.
+
+   The panel follows the voice when the comic is on screen, through the scene's
+   own show(), because a picture that sits still while the words move is worse
+   than no picture. Everything is torn down on a second press, and the sequence
+   checks it is still the current run before touching the DOM — otherwise a
+   stop-then-start leaves two narrators driving one stage. */
+function initDialogueAudio(root, p){
+  const btn = $(".d-hear", root);
+  if (!btn) return;
+  if (!canListen()){ const box = $(".d-audio", root); if (box) box.hidden = true; return; }
+  const said = $(".d-heard", root);
+  const beats = (p.beats && p.beats.length) ? p.beats : p.lines.map((_, i) => [i]);
+  let run = 0;
+
+  const plain = html => {
+    const d = document.createElement("div");
+    d.innerHTML = html;
+    return (d.textContent || "").replace(/\s+/g, " ").trim();
+  };
+
+  const stop = () => {
+    run++;
+    try { speechSynthesis.cancel(); } catch(e){}
+    btn.innerHTML = "&#9654; Hear the conversation";
+    if (said) said.textContent = "";
+  };
+
+  btn.addEventListener("click", () => {
+    if (btn.dataset.on === "1"){ btn.dataset.on = "0"; stop(); return; }
+    btn.dataset.on = "1";
+    const mine = ++run;
+    primeSpeech();
+    btn.innerHTML = "&#9632; Stop";
+    let b = 0;
+    const nextBeat = () => {
+      if (mine !== run) return;                 // a newer run owns the stage
+      if (b >= beats.length){ btn.dataset.on = "0"; stop(); return; }
+      const idx = b++;
+      if (root._scene) root._scene.show(idx);
+      if (said) said.textContent = "Panel " + (idx + 1) + " of " + beats.length;
+      const lines = beats[idx].map(j => plain(p.lines[j].html)).filter(Boolean);
+      if (!lines.length){ nextBeat(); return; }
+      speakSeq(lines, ok => {
+        if (mine !== run) return;
+        if (!ok){ btn.dataset.on = "0"; stop(); return; }
+        nextBeat();
+      }, () => mine === run);
+    };
+    nextBeat();
   });
 }
 
@@ -2469,6 +2593,12 @@ function initScene(root, p){
     if (typing && i > at){ finishTyping(); return; }
     show(i);
   };
+  /* The one handle the scene offers the outside world. The read-aloud pass
+     needs to put the panel on a given beat and must NOT go through goto(),
+     whose whole job is to interpret a READER's impatience — asked to go on
+     mid-type it finishes the panel instead of advancing, which is right for a
+     tap and wrong for a narrator that has already moved on. */
+  root._scene = { show, goto, beats: beats.length };
   next.addEventListener("click", () => goto(at + 1));
   prev.addEventListener("click", () => goto(at - 1));
   stage.addEventListener("keydown", ev => {
@@ -3537,6 +3667,7 @@ function boot(){
   paintReview();
   initStory();
   paintStoryHome();
+  initWords();
   initTasks();
   initDialogue();
   initVocab();
