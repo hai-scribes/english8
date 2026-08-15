@@ -645,6 +645,7 @@ CAST_CHARS, CAST_EMO = CAST["characters"], CAST["emotions"]
 CAST_BG, CAST_SHEET = CAST["backgrounds"], CAST["sheet"]
 CAST_PROPS, CAST_FX = CAST["props"], CAST["fx"]
 CAST_BUBBLES, CAST_STAGE = CAST["bubbles"], CAST["stage"]
+CAST_DEPTH = CAST_STAGE["depths"]
 # A character is addressable by display name or by slug. The slug is what a
 # filename and a `data-` attribute use, so accepting it in the markup means an
 # author never has to type a diacritic to point at somebody.
@@ -694,11 +695,13 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
     # real comic — roster and props persist, effects do not.
     order: list = []          # who is on stage, left to right, in arrival order
     faces: dict = {}          # their current expression, which persists
+    depths: dict = {}         # how far into the scene each of them stands
 
     def roster():
         """The stage as it stands: everyone present, in the order they arrived."""
         return [{"who": n, "slug": CAST_CHARS[n]["slug"], "emo": faces[n],
-                 "col": CAST_EMO[faces[n]]["col"]} for n in order]
+                 "col": CAST_EMO[faces[n]]["col"],
+                 "depth": depths.get(n, "mid")} for n in order]
 
     items: list = []          # the props on stage, as {"slug", "at"}
     pending_fx: list = []     # effects waiting for the next line, then dropped
@@ -729,28 +732,40 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
         if cm:
             spec = cm.group("who").strip()
             if spec == "none":
-                order, faces = [], {}
+                order, faces, depths = [], {}, {}
             else:
-                order, keep = [], dict(faces)
+                order, keep, keep_d = [], dict(faces), dict(depths)
                 for part in spec.split(","):
                     part = part.strip()
                     if not part:
                         continue
-                    nm, _, emo = part.partition("|")
+                    nm, _, rest = part.partition("|")
+                    emo, _, dep = rest.partition("|")
                     nm = _who(nm, where, "@cast")
-                    emo = emo.strip()
+                    emo, dep = emo.strip(), dep.strip()
                     if emo and emo not in CAST_EMO:
                         raise SystemExit(
                             f"{where}: @cast puts {nm} at {emo!r}, which is not "
                             f"one of the six drawn faces "
                             f"({', '.join(CAST_EMO)})")
+                    if dep and dep not in CAST_DEPTH:
+                        raise SystemExit(
+                            f"{where}: @cast stands {nm} at {dep!r}, which is not "
+                            f"one of the three depths ({', '.join(CAST_DEPTH)}). "
+                            f"The third field of an @cast entry is how far into "
+                            f"the scene somebody is standing.")
                     if nm in order:
                         raise SystemExit(f"{where}: @cast names {nm} twice")
                     order.append(nm)
                     # No expression given keeps the one they already had, so
                     # `@cast Tí, Khoa` adds Khoa without resetting Tí's face.
                     faces[nm] = emo or keep.get(nm, "neutral")
+                    # And no depth given keeps where they were standing, so a
+                    # line that only changes a face does not walk anybody back
+                    # to the middle of the stage.
+                    depths[nm] = dep or keep_d.get(nm, "mid")
                 faces = {n: faces[n] for n in order}
+                depths = {n: depths[n] for n in order}
             if len(order) > CAST_STAGE["max_cast"]:
                 raise SystemExit(
                     f"{where}: @cast puts {len(order)} people in one panel and the "
@@ -899,6 +914,11 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
                          f"no place, so none of it would be drawn — give it a bg=")
     return {"id": did, "title": a.get("title", ""), "lines": lines, "beats": beats,
             "staged": staged, "dim": CAST_STAGE["dim"],
+            # The page reads the height multiplier and the stacking order off
+            # this rather than hard-coding three names, so a fourth depth is a
+            # manifest edit and nothing else.
+            "depths": {k: {"scale": v["scale"], "z": v["z"]}
+                       for k, v in CAST_DEPTH.items()},
             "faceIn": bool(CAST_STAGE.get("face_in", True)),
             "cols": CAST_SHEET["cols"], "rows": CAST_SHEET["rows"],
             "aspect": CAST_SHEET["aspect"],

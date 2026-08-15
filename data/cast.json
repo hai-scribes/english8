@@ -142,7 +142,29 @@
   "stage": {
     "max_cast": 4,
     "dim": 0.5,
-    "face_in": true
+    "face_in": true,
+
+    "_depths_comment": [
+      "How far into the scene somebody is standing. The number is a multiplier on",
+      "the height the stage would otherwise give them, and because a figure is",
+      "anchored to the floor, a taller one reads as nearer — which is the whole",
+      "trick. It also sets who is drawn over whom: near covers mid covers far,",
+      "and that ordering beats the small lift a speaker gets inside their own",
+      "band, because a person at the back does not come forward by talking.",
+      "",
+      "Three, not a slider. A continuous value would be a knob nobody could use",
+      "consistently across twelve chapters, and the differences between 0.9 and",
+      "0.95 are invisible anyway. `mid` is the default and is what every scene",
+      "written before this used, so adding this changed no existing panel.",
+      "",
+      "The spread is deliberately narrow. A half-body figure at 0.6 is a face",
+      "too small to carry an expression, which is the same reason max_cast is 4."
+    ],
+    "depths": {
+      "near": { "scale": 1.18, "z": 3, "is": "Stepped forward — closer to the reader than the rest" },
+      "mid":  { "scale": 1.0,  "z": 2, "is": "The default. Where everybody stands unless told otherwise" },
+      "far":  { "scale": 0.82, "z": 1, "is": "Stood back — further into the scene, behind the others" }
+    }
   },
 
   "_bubbles_comment": [

@@ -773,13 +773,19 @@ footer.foot p{margin:0;max-width:74ch}
    Nothing idles now. Everything left moves ON A BEAT and then stops, which is
    also the reading the research supports: motion where reading is not
    happening, and only where it carries information. */
-/* The lift is a static offset that happens to be transitioned, NOT an
-   animation — so under reduced motion, where the blanket rule at the top of
-   this file kills every animation and transition, the speaker is still raised.
-   It stops moving; it does not stop meaning anything. Which is also why it is
-   an addition to the dim rather than a replacement for it: whatever survives
-   the blanket has to be enough on its own. */
-.d-fig[data-live="1"],.d-fig-ph[data-live="1"]{translate:-50% -4%}
+/* THE SPEAKER IS NOT LIFTED, AND NOTHING MAY LIFT THEM. A 4% rise read as the
+   figure floating: a half-body figure is cropped at the waist and stands ON the
+   bottom edge of the frame, so raising it opens a strip of background under
+   somebody who has no feet to be standing on. That is not a tuning problem at
+   any amplitude — the drawing has no bottom, so the floor is the frame.
+
+   The turn is carried by the DIMMING instead, which is opacity and moves
+   nothing. It is also the only property Val Head's motion-sensitivity guidance
+   lists as unlikely to trouble anybody, and it survives the reduced-motion
+   blanket, so what says who is speaking is the same thing in every setting.
+
+   The rule that follows: no `translate` on a figure may have a non-zero Y. The
+   X is the centring and must stay. There is a test holding this. */
 /* The expression already CUTS between panels, which is what limited animation
    does and is worth protecting — a cross-fade between two drawings whose arms
    are in different places is a morph, not a change of face. This is the

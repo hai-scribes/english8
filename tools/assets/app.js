@@ -2036,8 +2036,54 @@ function initScene(root, p){
      The placeholder is drawn first and removed only when the real image reports
      `load`, so it disappears by itself as the art lands and never needs taking
      out — and while it is there it names the exact file that would fill it. */
+  /* How far into the scene somebody is standing. The height multiplier is the
+     whole effect — a figure is anchored to the floor, so a taller one reads as
+     nearer — and the z decides who is drawn over whom. Depth beats the
+     speaker's small bump inside its own band, because somebody at the back does
+     not come forward by talking. Read off the manifest, never hard-coded, so a
+     fourth depth costs a manifest edit and nothing here. */
+  const DEPTH = p.depths || {};
+  const depthOf = c => DEPTH[c && c.depth] || { scale: 1, z: 2 };
+
+  /* ---- a face, and the beat that belongs to a turn ------------------------
+     THE CROP IS THE EXPRESSION. The sheet is a cols x rows grid read left to
+     right, top to bottom, so a linear emotion index becomes a column and a row;
+     0% puts the first panel's edge flush with the box's and 100% the last one's
+     far edge flush with the far side, which is why the step is 1/(n-1).
+
+     `beat` is the squash, and it is optional because WHEN a face changes is not
+     the same question as whether it changed. Arriving at a panel is not a
+     reaction to anything — the whole cast flinching as the panel opens was the
+     "everybody at once" this replaced — so paintFigure sets faces silently and
+     only a turn beats. */
+  function setCrop(el, col, beat){
+    if (!el) return;
+    const cols = p.cols || 3, rows = p.rows || 2;
+    const cx = col % cols, cy = Math.floor(col / cols);
+    const changed = el.dataset.col !== undefined && el.dataset.col !== String(col);
+    el.dataset.col = String(col);
+    el.style.backgroundPositionX = cols > 1 ? (cx / (cols - 1) * 100) + "%" : "0%";
+    el.style.backgroundPositionY = rows > 1 ? (cy / (rows - 1) * 100) + "%" : "0%";
+    if (!beat || !changed) return;
+    /* Removing and re-adding inside one frame does not restart a CSS animation
+       — the browser never saw the attribute leave — and reading a layout
+       property in between is what forces it to. It measures rather than changes
+       geometry, so it is safe against the no-reflow-while-typing rule.
+
+       AND IT IS TAKEN OFF AGAIN, on a timer rather than `animationend`, because
+       under reduced motion the animation never runs and the event never fires.
+       The timer is comfortably past the keyframe's own duration: cut it short
+       and the squash is removed mid-flight, which is worse than no squash. */
+    el.removeAttribute("data-beat");
+    void el.offsetWidth;
+    el.setAttribute("data-beat", "1");
+    clearTimeout(el.__beat);
+    el.__beat = setTimeout(() => el.removeAttribute("data-beat"), 320);
+  }
+
   function paintFigure(el, ph, c, i, n, speaking){
-    const x = figX(i, n), h = figH(n);
+    const d = depthOf(c);
+    const x = figX(i, n), h = figH(n) * (d.scale || 1);
     /* Drawn facing one way only; a figure standing right of the middle is
        mirrored so that nobody is addressing the edge of the frame. The flip
        rides on the same transform as the centring, so it composes rather than
@@ -2063,7 +2109,8 @@ function initScene(root, p){
          who is talking — the tail is the other half, and two weak signals
          beat one strong one on a small screen. */
       box.style.opacity = speaking ? "1" : String(p.dim || 0.72);
-      box.style.zIndex = speaking ? "3" : "2";
+      /* Depth owns the band; the speaker gets the small bump inside it. */
+      box.style.zIndex = String((d.z || 2) * 10 + (speaking ? 1 : 0));
       /* Who is LIVE, at panel granularity. The stylesheet lifts this one and
          lets the rest breathe; stream() narrows it to a single balloon while
          the words are arriving, and finishTyping() hands it back. Panel
@@ -2079,33 +2126,11 @@ function initScene(root, p){
       box.dataset.live = speaking ? "1" : "0";
     });
     if (!el) return;
-    /* A face that changed since the last panel gets the beat. Compared against
-       what this ELEMENT was last painted with, not against the roster, so it
-       cannot fire on a figure that has only just been built — a fresh roster
-       is a new scene, and a whole cast flinching as it arrives is not a
-       reaction to anything. */
-    const was = el.dataset.col;
-    if (was !== undefined && was !== String(c.col)){
-      /* Removing and re-adding inside one frame does not restart a CSS
-         animation; the browser never saw the attribute leave. Reading a layout
-         property in between forces it to, which is the standard restart and is
-         safe here: this runs in show(), before any balloon has begun typing,
-         and it measures rather than changes geometry.
-
-         AND IT IS TAKEN OFF AGAIN. The beat's rule outranks the breath's for as
-         long as the attribute is there, and a finished one-shot does not hand
-         the shorthand back — so a figure left wearing `data-beat` never
-         breathes again. A timer rather than `animationend`, because under
-         reduced motion the animation never runs and the event never fires. */
-      el.removeAttribute("data-beat");
-      void el.offsetWidth;
-      el.setAttribute("data-beat", "1");
-      clearTimeout(el.__beat);
-      /* Comfortably past the keyframe's own duration. Cut it short and the
-         squash is removed mid-flight, which is a worse artefact than no beat. */
-      el.__beat = setTimeout(() => el.removeAttribute("data-beat"), 320);
-    }
-    el.dataset.col = String(c.col);
+    /* The face itself is set by setCrop, WITHOUT a beat: arriving at a panel is
+       not a reaction to anything, and a whole cast flinching as the panel opens
+       is exactly the "everybody at once" this used to do. The beat belongs to a
+       turn, and turnTo() below is what owns it. */
+    setCrop(el, c.col);
     const src = (window.__SHEETS__ && window.__SHEETS__[c.slug])
               || (up + ASSET_CAST + c.slug + ".webp");
     /* Setting the same background-image again is cheap but not free, and the
@@ -2113,17 +2138,9 @@ function initScene(root, p){
        that is already drawn is the flicker this avoids. Only the crop moves. */
     const fresh = el.dataset.sheet !== src;
     el.dataset.sheet = src;
-    /* The sheet is a cols x rows grid read left to right, top to bottom, so
-       a linear emotion index becomes a column and a row. */
     const cols = p.cols || 3, rows = p.rows || 2;
-    const cx = c.col % cols, cy = Math.floor(c.col / cols);
     if (fresh) el.style.backgroundImage = 'url("' + src + '")';
     el.style.backgroundSize = (cols * 100) + "% " + (rows * 100) + "%";
-    /* 0% puts the first panel's edge flush with the box's, and 100% puts the
-       last panel's far edge flush with the far side — so the step between
-       panels is 1/(n-1), not 1/n. A single row or column pins at 0%. */
-    el.style.backgroundPositionX = cols > 1 ? (cx / (cols - 1) * 100) + "%" : "0%";
-    el.style.backgroundPositionY = rows > 1 ? (cy / (rows - 1) * 100) + "%" : "0%";
     /* Panel width is sheetW/cols and panel height is sheetH/rows, so the
        panel's own aspect is the sheet's times rows over cols — 1.0, square,
        for a 3 x 2 grid in a 3:2 image. */
@@ -2170,9 +2187,27 @@ function initScene(root, p){
      new bookkeeping, only the number that is already on the element. A
      narration caption carries no slot, and NaN is in no set, so a beat with
      nobody speaking correctly lifts nobody. */
-  let liveSlots = new Set();
-  const setLive = slots => $$(".d-fig,.d-fig-ph", cast).forEach(el => {
-    el.dataset.live = slots.has(Number(el.dataset.slot)) ? "1" : "0";
+  let liveSlots = new Set();     // who speaks anywhere in this panel
+  let curLines = [];             // the panel's lines, for per-turn faces
+  let curRoster = [];            // and the state it ends in
+
+  /* THE DIMMING IS THE TURN. It used to answer at panel granularity, which in a
+     four-line exchange lights everybody and has stopped saying anything by the
+     third balloon. Now the figure at full strength is the one speaking right
+     now, and it hands over as each balloon begins. Opacity only — no geometry,
+     so nothing lifts off the floor and nothing moves after the tails have been
+     measured. */
+  const setTurn = slots => $$(".d-fig,.d-fig-ph", cast).forEach(el => {
+    const on = slots.has(Number(el.dataset.slot));
+    el.dataset.live = on ? "1" : "0";
+    el.style.opacity = on ? "1" : String(p.dim || 0.72);
+  });
+
+  /* Everyone's face at one line of the beat, beating whoever just changed. The
+     roster's MEMBERSHIP cannot change inside a beat — any @-line breaks the
+     panel — so this only ever moves expressions, and the slot order holds. */
+  const facesAt = (arr, beat) => (arr || []).forEach((c, k) => {
+    setCrop($('.d-fig[data-slot="' + k + '"]', cast), c.col, beat);
   });
 
   /* ---- the props ---------------------------------------------------------
@@ -2368,6 +2403,8 @@ function initScene(root, p){
        or a reduced-motion reader, neither of whom types, lands on it directly. */
     liveSlots = new Set(roster.map((c, k) => speaking.has(c.who) ? k : -1)
                               .filter(k => k >= 0));
+    curLines = lns;
+    curRoster = roster;
 
     /* How much of the frame the people occupy, so the balloons can sit just
        clear of their heads instead of being pinned to the ceiling. */
@@ -2513,7 +2550,12 @@ function initScene(root, p){
        down by a panel change — so the live set goes back to what the panel
        says. Every exit from typing passes through here, which is the only
        reason one line is enough. */
-    setLive(liveSlots);
+    /* The panel ends in the state it ends in, however the run ended. Silently:
+       the reader has already watched these faces change on their turns, and
+       replaying the squashes at the end would be a second performance of a
+       scene they just read. */
+    facesAt(curRoster, false);
+    setTurn(liveSlots);
   }
 
   function stream(forward){
@@ -2533,8 +2575,19 @@ function initScene(root, p){
     /* The focus follows the voice: whoever owns the balloon now being typed is
        the only live figure, so a four-line exchange hands the light back and
        forth instead of leaving both speakers lit throughout. */
-    const liveFor = k => setLive(new Set([Number(bubbles[k].dataset.slot)]));
-    liveFor(0);
+    /* A turn is a balloon: the person saying it comes to full strength, and
+       everyone's face moves to the state that line records — so a listener who
+       reacts to what was just said reacts THEN, on that line, rather than
+       wearing the reaction from the moment the panel opened.
+
+       The first balloon does not beat. Its faces are the ones already on screen
+       from paintFigure, and a beat here would fire the whole cast at once
+       against the previous panel, which is the thing this replaced. */
+    const turnTo = (k, beat) => {
+      if (curLines[k]) facesAt(curLines[k].cast, beat);
+      setTurn(new Set([Number(bubbles[k].dataset.slot)]));
+    };
+    turnTo(0, false);
     let bi = 0, ci = 0;
     const tick = () => {
       if (!typing) return;
@@ -2545,7 +2598,7 @@ function initScene(root, p){
            alone, because at rest the panel's own answer is the honest one. */
         if (bi >= runs.length){ finishTyping(); return; }
         bubbles[bi].removeAttribute("data-typing");
-        liveFor(bi);
+        turnTo(bi, true);
         typing.timer = setTimeout(tick, BUBBLE_GAP_MS);
         return;
       }

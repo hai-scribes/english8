@@ -915,8 +915,17 @@ async function main() {
        their width. The centring therefore lives on `translate` in the
        stylesheet, and NOTHING in the app may write a translate into a transform
        on an element that also carries animated individual transforms. */
-    ok("comic: the speaker lift is declared",
-       /\[data-live="1"\][^{]*\{[^}]*translate:/.test(CSS), "lift rule present");
+    /* A half-body figure is cropped at the waist and stands on the bottom edge
+       of the frame, so ANY upward offset opens a strip of background beneath
+       somebody with no feet. The centring X must stay; the Y must be zero. */
+    const lifted = (CSS.match(/\.d-fig[^{]*\{[^}]*translate:[^;}]*/g) || [])
+                     .filter(r => {
+                       const v = (r.match(/translate:\s*([^;}]*)/) || [])[1] || "";
+                       const y = v.trim().split(/\s+/)[1];
+                       return y && !/^0/.test(y);
+                     });
+    ok("comic: nothing lifts a figure off the floor",
+       lifted.length === 0, lifted.join(" · ") || "all figures seated");
     /* Nothing in the panel idles. The breath and the sway were removed after
        being looked at — a uniform scale on a flat still reads as the body
        inflating, not as breathing — and the rule that replaced them is that

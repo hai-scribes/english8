@@ -44,7 +44,7 @@ Narration has no speaker: a plate, a caption box, no avatar.
 | `**Name\|emotion\|balloon:** text` | somebody speaks. `emotion` defaults to `neutral`, `balloon` to `say` | the line |
 | a line with no `**Name:**` | narration — a caption box over the plate. Nobody speaks; whoever is on stage stays on it | the line |
 | `@bg <slug>` | changes the place | persists; **clears the props** |
-| `@cast A\|emo, B, C` | sets who is on stage, including silent people. `@cast none` empties it | persists |
+| `@cast A\|emo\|depth, B, C` | sets who is on stage, including silent people. `@cast none` empties it | persists |
 | `@item <slug> at=…` | a thing in the scene. `@item none` clears them | persists until cleared or `@bg` |
 | `@fx <slug> on=…` | a manga overlay mark | **one panel**, then gone |
 
@@ -205,9 +205,51 @@ which cannot carry an expression, and the expressions are the entire reason the
 art exists. A scene that genuinely needs five people is two panels, and a
 `@cast` line between two spoken lines is a panel break.
 
-Figures are laid out left to right **in the order they arrive on stage**. The
-speaker is at full strength and in front; everybody else is held back. Order the
-`@cast` line deliberately — it is the blocking of the scene.
+Figures are laid out left to right **in the order they arrive on stage**. Order
+the `@cast` line deliberately — it is the blocking of the scene.
+
+The **speaker is the one at full strength**, and it changes as each balloon is
+typed: the person saying the line now is lit and everybody else is held back, so
+a four-line exchange hands the light around instead of leaving both speakers up
+throughout. That is the whole of who-is-talking, because the balloon carries no
+name. Nothing moves to say it — a half-body figure is cropped at the waist and
+stands on the bottom edge of the frame, so raising it opens a strip of
+background under somebody with no feet.
+
+### Moving somebody forward or back
+
+The third field of an `@cast` entry is **how far into the scene they stand**:
+`near`, `mid` (the default) or `far`. It makes them taller or shorter, and
+because a figure is anchored to the floor, a taller one reads as nearer. It also
+sets who is drawn over whom — near covers mid covers far, and depth wins over
+the speaker, because somebody at the back does not come forward by talking.
+
+```
+@cast Tí|worried|near, Thảo|neutral, Bà Sáu|happy|far
+```
+
+Use it when the **story** puts somebody closer or further, not to decorate a
+panel: a character stepping forward to say the thing they have been holding
+back, one hanging back at the edge of a group, a watcher further down the
+harbour wall. A scene where everybody is at a different depth for no reason
+reads as a mistake, and the spread is deliberately narrow for the same reason
+the cast is capped at four — a figure much smaller than the others is a face too
+small to carry an expression.
+
+Depth **persists** like an expression does, so `@cast Tí, Thảo` after a
+`near`/`far` line leaves everybody standing where they were. Move somebody back
+explicitly when the moment is over.
+
+### Reactions land on the line they belong to
+
+Expressions change **on the turn they happen**, not all at once when the panel
+opens. Write the reaction into the `@cast`-carried face of the line where it
+occurs and it will land there — A speaks, then B answers and changes face as
+their balloon starts, and a silent listener who reacts to what was just said
+reacts on that line rather than wearing it from the beginning of the panel.
+
+A changed face gets a small squash as it changes. That is automatic; there is
+nothing to write for it.
 
 ## Rules that bind a staged dialogue
 
