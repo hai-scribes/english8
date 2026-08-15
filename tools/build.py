@@ -2378,6 +2378,17 @@ def page_home(units, reviews=()) -> str:
     <div class="stat"><span class="n" data-review-due>0</span><span class="k">words due today</span></div>
   </div>
 
+  <div class="card story" id="storyCard">
+    <h3>The Sea Gives Back</h3>
+    <p class="lede">The twelve units tell one story. Here it is with the
+    exercises taken away, to be read straight through — a chapter opens once
+    you have done that unit's first lesson.</p>
+    <div class="row">
+      <a class="btn quiet" href="story/index.html">Open the story</a>
+      <span class="label"><b data-story-read>0</b> of 12 chapters read</span>
+    </div>
+  </div>
+
   <div class="card review" id="reviewCard" hidden>
     <h3>Due for review</h3>
     <p class="lede" id="reviewLede"></p>
@@ -2526,6 +2537,156 @@ def page_unit(u, reviews=()) -> str:
                  crumb=[("Course", "../index.html"), (f"Unit {u['num']:02d}", "")],
                  data={"kind": "unit", "unit": u["nn"], "vocab": practice_data(u)},
                  desc=f"Unit {u['num']}: {u['title']}. Seven lessons, practice and a unit test.")
+
+
+# --------------------------------------------------------------- the story ---
+# The twelve chapters of "The Sea Gives Back" are already written and already
+# level-controlled — check_level.py holds them inside grade 8 — but they are
+# distributed across 36 directive slots and readable only in fragments, each
+# behind an exercise. That is intensive reading, and it is the only reading the
+# course offers.
+#
+# `09` §2.2 rates extensive reading the strongest content-side intervention in
+# the knowledge base (d = 0.46 Nakanishi 2015, d = 0.41 Sangers 2025, both
+# [V 3-0]) and names two moderators [S]: effects are larger when text choice is
+# LIMITED to the right level (d = 0.73 vs 0.22) and when some form of
+# ACCOUNTABILITY is present (d = 0.51 vs 0.01, non-significant). Free,
+# unaccountable reading has an effect indistinguishable from zero.
+#
+# Both moderators are already satisfied by the material: one level-gated story,
+# and a course that knows which lessons the reader has finished. What was
+# missing was the reading. So this page is deliberately not a library — it is
+# one story, chapters open in order, and each one is logged when it is read.
+#
+# The GAP that travels with those numbers, from `09` §2.2: almost the entire
+# evidence base is classroom-mediated, and how much of the effect survives
+# unsupervised self-study is NOT established. The accountability moderator
+# suggests self-study is the harder case. That is the argument for shipping the
+# log with the reader rather than an argument that the reader works without it.
+RE_DIALOGUE_BODY = re.compile(
+    r"^:::[ \t]*dialogue\b[^\n]*\n(?P<body>.*?)\n:::[ \t]*$", re.M | re.S)
+RE_PASSAGE_BODY = re.compile(
+    r"^:::[ \t]*passage\b[^\n]*\n(?P<body>.*?)\n:::[ \t]*$", re.M | re.S)
+RE_STAGE = re.compile(r"^@\w+[^\n]*$", re.M)
+RE_SPEAKER = re.compile(r"^\*\*(?P<who>[^|*]+)(?:\|[^*]*)?:\*\*[ \t]*(?P<line>.*)$")
+RE_TAG = re.compile(r"<[^>]+>")
+
+# The three slots a chapter is told through, and what each one IS. They are not
+# one continuous narrative and must not be run together: unit 1 is a scene at
+# the harbour wall, then Tí's own written account of the week, then a different
+# voice remembering being thirteen. Labelling them is what makes the chapter
+# readable as a chapter rather than as three fragments with no seam.
+STORY_PARTS = (
+    ("scene", "The scene", RE_DIALOGUE_BODY),
+    ("account", "What was written down", RE_PASSAGE_BODY),
+    ("voice", "What someone remembered", RE_AUDIO),
+)
+
+
+def _story_prose(kind: str, body: str) -> str:
+    """One slot's raw markdown -> reading HTML.
+
+    Glosses are stripped to their surface word rather than rendered. Support
+    belongs where the word is first met, in Lesson 1, and is withdrawn
+    afterwards — a reader on the story page has already had it.
+    """
+    body = re.sub(RE_MARK, lambda m: m.group(1), body)
+    body = RE_STAGE.sub("", body)
+    out = []
+    for raw in body.split("\n"):
+        line = raw.strip()
+        if not line:
+            continue
+        if line.startswith(">"):
+            line = line.lstrip("> ").strip()
+            if not line:
+                continue
+        m = RE_SPEAKER.match(line)
+        if m:
+            # The name is printed here, unlike in the comic, because there is
+            # no picture to carry it and no tail to point at the speaker.
+            out.append(f'<p class="sp"><b>{e(m.group("who").strip())}</b> '
+                       f'{inline(m.group("line"))}</p>')
+        elif kind == "scene":
+            out.append(f'<p class="nar">{inline(line)}</p>')
+        else:
+            out.append(f"<p>{inline(line)}</p>")
+    return "".join(out)
+
+
+def story_chapters(units) -> list:
+    out = []
+    for u in units:
+        text = (SRC / u["src"]).read_text(encoding="utf-8")
+        parts, words = [], 0
+        for kind, label, rx in STORY_PARTS:
+            m = rx.search(text)
+            if not m:
+                continue
+            html_ = _story_prose(kind, m.group("body"))
+            words += len(re.findall(r"[^\W\d_]+", RE_TAG.sub(" ", html_), re.UNICODE))
+            parts.append({"kind": kind, "label": label, "html": html_})
+        out.append({"nn": u["nn"], "num": u["num"], "title": u["title"],
+                    "parts": parts, "words": words})
+    return out
+
+
+def page_story(units) -> str:
+    chapters = story_chapters(units)
+    total = sum(c["words"] for c in chapters)
+    secs = []
+    for c in chapters:
+        parts = "".join(
+            f'<section class="sc-part"><h3>{e(p["label"])}</h3>{p["html"]}</section>'
+            for p in c["parts"])
+        secs.append(
+            f'<article class="sc-ch" data-chapter="{c["nn"]}" hidden>'
+            f'<header class="sc-h"><p class="sc-n">Chapter {c["num"]}</p>'
+            f'<h2>{e(c["title"])}</h2>'
+            f'<p class="sc-w">{c["words"]} words</p></header>'
+            f'{parts}'
+            f'<div class="sc-foot">'
+            f'<button class="btn sc-done" type="button" data-chapter="{c["nn"]}">'
+            f'I have read this chapter</button>'
+            f'<span class="sc-said" role="status"></span></div>'
+            f'</article>')
+    cards = "".join(
+        f'<button class="sc-card" type="button" data-open="{c["nn"]}" '
+        f'data-chapter="{c["nn"]}" aria-disabled="true">'
+        f'<span class="n">{c["num"]:02d}</span>'
+        f'<span class="t">{e(c["title"])}</span>'
+        f'<span class="w">{c["words"]} words</span>'
+        f'<span class="st"></span></button>'
+        for c in chapters)
+    body = f"""  <header class="masthead">
+    <p class="eyebrow">The Sea Gives Back · twelve chapters · {total:,} words</p>
+    <h1>Read the whole story</h1>
+    <p class="standfirst">You meet this story in pieces — a conversation here, a
+    page of someone's writing there. This is the same story with the exercises
+    taken away, to be read straight through. A chapter opens once you have done
+    that unit's first lesson, so nothing here spoils a lesson you have not
+    reached.</p>
+  </header>
+
+  <div class="overview">
+    <div class="stat"><span class="n" data-story-read>0</span><span class="k">chapters read</span></div>
+    <div class="stat"><span class="n" data-story-open>0</span><span class="k">open to you</span></div>
+    <div class="stat hot"><span class="n" data-story-words>0</span><span class="k">words read</span></div>
+  </div>
+
+  <div class="sc-list">{cards}</div>
+  <p class="sc-locked" id="scLocked">Chapters open as you work through the
+  units. Finish Unit 01, Lesson 1 to open the first one.</p>
+  <div class="sc-reader">{"".join(secs)}</div>
+"""
+    return shell(title=f"The Sea Gives Back · {SITE}", depth=0, body=body,
+                 crumb=[("Course", "index.html"), ("The story", "")],
+                 data={"kind": "story",
+                       "chapters": [{"nn": c["nn"], "num": c["num"],
+                                     "title": c["title"], "words": c["words"]}
+                                    for c in chapters]},
+                 desc="The twelve chapters of The Sea Gives Back, read straight "
+                      "through without the exercises.")
 
 
 def register_md(units) -> str:
@@ -3017,10 +3178,12 @@ def main() -> int:
                 art += 1
 
     (OUT / "index.html").write_text(page_home(units, reviews), encoding="utf-8")
+    (OUT / "story").mkdir(parents=True, exist_ok=True)
+    (OUT / "story" / "index.html").write_text(page_story(units), encoding="utf-8")
     # The evidence register is a maintainer's document, not a page. It lives in
     # the repo beside the knowledge base it cites.
     REGISTER.write_text(register_md(units), encoding="utf-8")
-    pages = 1
+    pages = 2   # index.html and story/index.html
     for u in units:
         d = OUT / f"unit-{u['nn']}"
         d.mkdir(parents=True, exist_ok=True)

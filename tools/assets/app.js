@@ -503,6 +503,114 @@ function initGate(){
   }
 }
 
+/* ---------------- the story, read straight through -----------------------
+   Two findings from `09` §2.2 are built into this rather than written on it.
+
+   Text choice is LIMITED: a chapter opens only when that unit's Lesson 1 is
+   done. That is not a lock on content — the same words are already on the
+   lesson page, in pieces. It stops chapter 12 spoiling unit 12, and
+   level-limited choice is the moderator worth d = 0.73 against d = 0.22.
+
+   Reading is ACCOUNTED FOR: a chapter is marked read and the count shows here
+   and on the home page. Unaccountable reading measured d = 0.01, which is not
+   significantly different from doing nothing. The log IS the intervention.
+
+   What it must never become: a score, a band, a reading rate, a
+   words-per-minute, a streak or a comparison with anyone. It counts chapters
+   and words and stops there. */
+const S_KEY = "en8:story:v1";
+let STORY = (() => {
+  try { return JSON.parse(localStorage.getItem(S_KEY)) || {}; } catch(e){ return {}; }
+})();
+function saveStory(){
+  try { localStorage.setItem(S_KEY, JSON.stringify(STORY)); } catch(e){}
+}
+/* Open when that unit's first lesson is done — the lesson carrying the
+   dialogue the chapter opens with. */
+const chapterOpen = nn => lessonDone(nn, 1);
+
+function storyCounts(){
+  const chs = DATA.chapters || [];
+  let read = 0, open = 0, words = 0;
+  for (const c of chs){
+    if (chapterOpen(c.nn)) open++;
+    if (STORY[c.nn]){ read++; words += c.words; }
+  }
+  return { read, open, words };
+}
+
+function paintStoryCounts(){
+  const c = storyCounts();
+  for (const el of $$("[data-story-read]")) el.textContent = c.read;
+  for (const el of $$("[data-story-open]")) el.textContent = c.open;
+  for (const el of $$("[data-story-words]")) el.textContent = c.words.toLocaleString();
+}
+
+function initStory(){
+  if (DATA.kind !== "story") return;
+  const cards = $$(".sc-card"), locked = $("#scLocked");
+  let anyOpen = false;
+
+  for (const card of cards){
+    const nn = card.dataset.chapter, open = chapterOpen(nn);
+    card.setAttribute("aria-disabled", open ? "false" : "true");
+    card.disabled = !open;
+    if (open) anyOpen = true;
+    $(".st", card).textContent =
+      STORY[nn] ? "read" : (open ? "" : "opens after Lesson 1");
+    card.classList.toggle("is-read", !!STORY[nn]);
+  }
+  if (locked) locked.hidden = anyOpen;
+
+  const show = nn => {
+    for (const art of $$(".sc-ch")) art.hidden = art.dataset.chapter !== nn;
+    const art = $('.sc-ch[data-chapter="' + nn + '"]');
+    if (!art) return;
+    art.setAttribute("tabindex", "-1");
+    art.focus({ preventScroll: true });
+    /* Guarded: jsdom has no layout, so scrollIntoView is undefined there and
+       an unguarded call throws out of the handler before anything after it
+       runs. The gate that exercises this page runs under jsdom. */
+    if (typeof art.scrollIntoView === "function"){
+      art.scrollIntoView({ block: "start", behavior:
+        matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    }
+  };
+
+  for (const card of cards){
+    card.addEventListener("click", () => {
+      if (!card.disabled) show(card.dataset.chapter);
+    });
+  }
+
+  for (const btn of $$(".sc-done")){
+    const nn = btn.dataset.chapter;
+    if (STORY[nn]) btn.textContent = "Read — undo";
+    btn.addEventListener("click", () => {
+      if (STORY[nn]) delete STORY[nn]; else STORY[nn] = Date.now();
+      saveStory();
+      const said = btn.parentElement.querySelector(".sc-said");
+      if (said) said.textContent = STORY[nn] ? "Marked as read." : "";
+      btn.textContent = STORY[nn] ? "Read — undo" : "I have read this chapter";
+      const card = $('.sc-card[data-chapter="' + nn + '"]');
+      if (card){
+        card.classList.toggle("is-read", !!STORY[nn]);
+        $(".st", card).textContent = STORY[nn] ? "read" : "";
+      }
+      paintStoryCounts();
+    });
+  }
+  paintStoryCounts();
+}
+
+/* The home page carries the same count but not the chapter list, so it counts
+   the log directly rather than joining against DATA.chapters. */
+function paintStoryHome(){
+  if (DATA.kind !== "home") return;
+  const n = Object.keys(STORY).length;
+  for (const el of $$("[data-story-read]")) el.textContent = n;
+}
+
 /* ---------------- spaced review ------------------------------------------
    Fixed, uniform intervals. Two independent meta-analyses find expanding
    schedules no better than uniform ones, so the simplest thing that spaces
@@ -3427,6 +3535,8 @@ function boot(){
   initStart();
   initGate();
   paintReview();
+  initStory();
+  paintStoryHome();
   initTasks();
   initDialogue();
   initVocab();

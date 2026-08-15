@@ -1048,3 +1048,42 @@ html.d-locked,html.d-locked body{overflow:hidden}
 .v-eg{padding-left:.7rem;border-left:2px solid var(--rule)}
 .v-list td{padding:.35rem .8rem .35rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
 .v-rows div{padding:.2rem 0;font-size:.88rem;color:var(--muted)}
+
+/* ---------------- the story, read straight through ----------------
+   A reading page, so it is set for reading: one measure-width column, the
+   display face, and nothing in the margin competing with the prose. The
+   chapter list is the only chrome. */
+.sc-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.55rem;margin:.2rem 0 1rem}
+.sc-card{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;
+  gap:.1rem .7rem;align-items:baseline;text-align:left;font:inherit;cursor:pointer;
+  background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);padding:.7rem .85rem}
+.sc-card:hover:not([aria-disabled="true"]){border-color:var(--teal)}
+.sc-card[aria-disabled="true"]{opacity:.5;cursor:not-allowed}
+.sc-card .n{grid-row:1/3;font-family:var(--f-mono);font-size:1.2rem;color:var(--faint);
+  font-variant-numeric:tabular-nums}
+.sc-card .t{font-weight:600}
+.sc-card .w,.sc-card .st{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--faint)}
+.sc-card .st:not(:empty){color:var(--green)}
+.sc-card.is-read{border-color:var(--green)}
+.sc-locked{color:var(--muted);font-size:.9rem;margin:0 0 1.4rem}
+
+.sc-ch{max-width:34rem;margin:0 auto;padding-top:.5rem}
+.sc-ch:focus{outline:none}
+.sc-h{border-bottom:1px solid var(--rule);padding-bottom:.8rem;margin-bottom:1.4rem}
+.sc-n{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--teal);margin:0 0 .3rem}
+.sc-h h2{font-size:1.7rem;line-height:1.15;margin:0 0 .35rem;text-wrap:balance}
+.sc-w{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--faint);margin:0}
+.sc-part{margin:0 0 2.2rem}
+.sc-part h3{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--faint);font-weight:600;margin:0 0 .9rem;padding-bottom:.4rem;
+  border-bottom:1px solid var(--rule-soft)}
+.sc-part p{font-size:1.02rem;line-height:1.72;margin:0 0 .85rem}
+.sc-part .sp b{font-weight:650;color:var(--teal)}
+.sc-part .nar{color:var(--muted);font-style:italic}
+.sc-foot{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap;
+  border-top:1px solid var(--rule);padding-top:1.1rem;margin-bottom:2.5rem}
+.sc-said{font-size:.85rem;color:var(--green)}
+@media (max-width:640px){ .sc-ch{max-width:none} .sc-h h2{font-size:1.35rem} }
