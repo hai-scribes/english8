@@ -360,14 +360,13 @@ subordinator beside it.
 
 ### 3.3 Join the two sentences
 
-Use the subordinator in brackets. Put the time clause **first** and punctuate it
-correctly.
-
-1. The lesson finishes. We will walk to the lake. *(after)* → ______________
-2. You leave the house. Turn off all the lights. *(before)* → ______________
-3. I see litter in the playground. I pick it up. *(whenever)* → ______________
-4. The rain stops. The volunteers will plant. *(as soon as)* → ______________
-5. The tree grew tall. Nobody watered it. *(while)* → ______________
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Use the subordinator in brackets, put the time clause **first**, and punctuate it correctly."
+- The lesson finishes. We will walk to the lake. *(after)* = After the lesson finishes, we will walk to the lake./After the lesson finishes, we'll walk to the lake. ~ the time clause comes first, so it takes a comma after it
+- You leave the house. Turn off all the lights. *(before)* = Before you leave the house, turn off all the lights.
+- I see litter in the playground. I pick it up. *(whenever)* = Whenever I see litter in the playground, I pick it up.
+- The rain stops. The volunteers will plant. *(as soon as)* = As soon as the rain stops, the volunteers will plant. ~ no *will* inside the time clause, even though the sentence is about the future
+- The tree grew tall. Nobody watered it. *(while)* = While the tree grew tall, nobody watered it./While the tree was growing tall, nobody watered it.
+:::
 
 ### 3.4 Correct the mistake
 
@@ -991,11 +990,6 @@ Item 4 is a knowledge check: *rubbish* is /ˈrʌbɪʃ/ (no /bl/) and *chemical* 
 clean — *until* 3. Whenever it rains heavily — *whenever* 4. after the
 villagers stopped using pesticide — *after* 5. While my sister sorted the
 plastic — *while*
-
-**3.3** 1. After the lesson finishes, we will walk to the lake.
-2. Before you leave the house, turn off all the lights. 3. Whenever I see
-litter in the playground, I pick it up. 4. As soon as the rain stops, the
-volunteers will plant. 5. While the tree grew tall, nobody watered it.
 
 **3.5** Answers will vary. Check: every time clause uses the **present simple**
 (no *will* after *when, whenever, before, until, as soon as*), and sentences

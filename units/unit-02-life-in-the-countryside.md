@@ -408,19 +408,13 @@ comparative.
 
 ### 3.3 Build the sentence
 
-Write one full sentence using a comparative adverb and **than**. Where you see
-**✚**, add **much**, **far** or **a lot**.
-
-1. life in the countryside / move / slowly ✚ / life in the city
-   - _______________________________
-2. my grandmother / get up / early ✚ / I do
-   - _______________________________
-3. the new road / take us / far ✚ / the old one
-   - _______________________________
-4. he / speak English / well ✚ / his sister
-   - _______________________________
-5. it / rain / heavily ✚ / here / in the city
-   - _______________________________
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Every sentence needs a comparative adverb and **than**. Where you see **✚**, put **much**, **far** or **a lot** in front of the comparative."
+- life in the countryside / move / slowly ✚ / life in the city = Life in the countryside moves much more slowly than life in the city / Life in the countryside moves far more slowly than life in the city / Life in the countryside moves a lot more slowly than life in the city
+- my grandmother / get up / early ✚ / I do = My grandmother gets up much earlier than I do / My grandmother gets up far earlier than I do / My grandmother gets up a lot earlier than I do ~ *early* is Group 1, so *earlier* — never *more early*
+- the new road / take us / far ✚ / the old one = The new road takes us much farther than the old one / The new road takes us much further than the old one / The new road takes us far farther than the old one / The new road takes us far further than the old one / The new road takes us a lot farther than the old one / The new road takes us a lot further than the old one ~ *farther* and *further* are both accepted for distance
+- he / speak English / well ✚ / his sister = He speaks English much better than his sister / He speaks English far better than his sister / He speaks English a lot better than his sister ~ *well* → *better*, irregular
+- it / rain / heavily ✚ / here / in the city = It rains much more heavily here than in the city / It rains far more heavily here than in the city / It rains a lot more heavily here than in the city
+:::
 
 ### 3.4 Correct the mistake
 
@@ -1000,13 +994,6 @@ page can settle it, the row says so, and that one is yours to judge.
 /ɪ/.
 
 ### Lesson 3
-
-**3.3** *(the intensifier may be* much*,* far *or* a lot*)*
-1. Life in the countryside moves much more slowly than life in the city.
-2. My grandmother gets up much earlier than I do.
-3. The new road takes us much farther than the old one.
-4. He speaks English a lot better than his sister.
-5. It rains much more heavily here than in the city.
 
 **3.5** Answers will vary. Check: *hard* → **harder** (no *more*), *well* →
 **better**, *early* → **earlier**, *carefully* → **more carefully**; and every

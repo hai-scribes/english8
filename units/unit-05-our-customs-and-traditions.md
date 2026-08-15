@@ -393,18 +393,14 @@ happens in a place*, use no article. When you mean *the building itself*, use
 
 ### 3.3 First mention, then second mention
 
-Write **two** sentences for each prompt. Use **a** or **an** in the first
-sentence and **the** in the second.
-
-1. (an old man / sing at the festival)
-   - _______________________________
-   - _______________________________
-2. (a lantern / float on the river)
-   - _______________________________
-   - _______________________________
-3. (an email / send to my friend)
-   - _______________________________
-   - _______________________________
+::: task skill="course" type="gap-fill" ask="Three pairs, and each pair names the same thing twice. Every line says which mention it is. Write **a**, **an** or **the** in the gap."
+- **First mention** — ___ old man sang two songs at the festival. = An ~ your reader does not know him yet, and *old* starts with a vowel sound
+- **Second mention** — ___ old man was my neighbour's grandfather. = The ~ now your reader knows which old man you mean
+- **First mention** — my sister made ___ lantern out of red paper. = a ~ *lantern* starts with a consonant sound
+- **Second mention** — ___ lantern floated slowly down the river. = The
+- **First mention** — I sent ___ email to my friend in Australia. = an ~ *email* starts with a vowel sound
+- **Second mention** — ___ email took me nearly an hour to write. = The
+:::
 
 ### 3.4 Correct the mistake
 
@@ -995,15 +991,6 @@ of your mouth with the tongue tip **down**, and *thin*, *banners*, *lane*,
 *Thank* has /ŋ/, not /n/.
 
 ### Lesson 3
-
-**3.3** Sample answers — yours will differ.
-1. An old man stood at the temple gate. / The old man sang for two hours.
-2. My sister made a lantern out of red paper. / The lantern floated all the way
-   to the bridge.
-3. I sent an email to my friend in Australia. / The email took me an hour to
-   write.
-Check: **a/an** in the first sentence (your reader does not know it yet),
-**the** in the second (now they do).
 
 **3.5** Answers will vary. Check: (1) *a/an* first, then *the* for the same
 thing; (2) *the* + superlative, e.g. *the youngest*, *the busiest*; (3) **no**

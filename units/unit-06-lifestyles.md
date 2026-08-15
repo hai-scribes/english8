@@ -380,14 +380,14 @@ mean different things:
 
 ### 3.3 First conditional
 
-Put the verbs into the correct form.
-
-1. If it ____________ (rain) tomorrow, we ____________ (not go) to the beach.
-2. If you ____________ (eat) more vegetables, you ____________ (feel) better.
-3. We ____________ (miss) the bus if we ____________ (not leave) now.
-4. Unless she ____________ (practise) every day, she ____________ (not improve).
-5. If the internet ____________ (be) slow, I ____________ (not join) the online lesson.
-6. When I ____________ (be) eighteen, I ____________ (move) to the city.
+::: task skill="course" type="gap-fill" ask="One half of each sentence is already done for you. Put the verb in brackets into the form the **other** half needs."
+- If it ___ (rain) tomorrow, we won't go to the beach. = rains ~ present simple in the *if*-clause, even when the sentence is about the future
+- If you eat more vegetables, you ___ (feel) better. = will feel/'ll feel/you will feel/you'll feel
+- We ___ (miss) the bus if we don't leave now. = will miss/'ll miss/we will miss/we'll miss
+- Unless she ___ (practise) every day, she won't improve. = practises ~ *unless* takes a present-simple verb, and a positive one
+- If the internet is slow, I ___ (not join) the online lesson. = won't join/will not join/I won't join/I will not join
+- When I ___ (be) eighteen, I will move to the city. = am ~ no *will* after *when* in a future clause
+:::
 
 ### 3.4 Correct the mistake
 
@@ -992,9 +992,6 @@ first four, and in the middle of *celebrate* and *umbrella* — and does not buz
 on the **pr** of *practise, improve, price, print*.
 
 ### Lesson 3
-
-**3.3** 1. rains / won't go 2. eat / will feel 3. will miss / don't leave
-4. practises / won't improve 5. is / won't join 6. am / will move
 
 **3.5** Answers will vary. Check: no *will* anywhere in an *if*- or *when*-clause;
 *unless* followed by a **positive** verb; a bare infinitive after *will/won't*;

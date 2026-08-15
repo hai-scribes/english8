@@ -501,20 +501,13 @@ it:
 
 ### 3.3 Join with *when* or *while*
 
-Make one sentence from each pair. Use **when** if a short action interrupted a
-long one, and **while** if the two actions were going on at the same time. Put
-the verbs into the correct tense.
-
-1. I / cook dinner // the storm / hit the village
-   → _______________________________
-2. it / rain hard // we / fill sandbags
-   → _______________________________
-3. they / drive to the shelter // a tree / fall across the road
-   → _______________________________
-4. the children / play in the yard // the siren / sound
-   → _______________________________
-5. my mother / pack our papers // my father / check the roof
-   → _______________________________
+::: task skill="course" type="short-answer" variant="sentence-build" ask="The double slash marks where one half ends and the other begins. Keep the two halves in that order, and join them with **when** if a short action interrupted a long one, or **while** if both were going on at the same time."
+- I / cook dinner // the storm / hit the village = I was cooking dinner when the storm hit the village. ~ the short action interrupts, so it takes *when* and the past simple
+- it / rain hard // we / fill sandbags = While it was raining hard, we were filling sandbags./While it was raining hard we were filling sandbags./It was raining hard while we were filling sandbags. ~ two long actions at once, so both verbs are past continuous
+- they / drive to the shelter // a tree / fall across the road = They were driving to the shelter when a tree fell across the road.
+- the children / play in the yard // the siren / sound = The children were playing in the yard when the siren sounded.
+- my mother / pack our papers // my father / check the roof = While my mother was packing our papers, my father was checking the roof./While my mother was packing our papers my father was checking the roof./My mother was packing our papers while my father was checking the roof.
+:::
 
 ### 3.4 Correct the mistake
 
@@ -1164,15 +1157,6 @@ and every other syllable is short and light. If *disaster* comes out as
 *ˈnumerous*, *ˈdangerous*, *ˈnational*, *ˈpractical*, *ˈpoisonous*.
 
 ### Lesson 3
-
-**3.3**
-1. I was cooking dinner **when** the storm hit the village.
-2. **While** it was raining hard, we were filling sandbags. *(or: We were filling
-   sandbags while it was raining hard.)*
-3. They were driving to the shelter **when** a tree fell across the road.
-4. The children were playing in the yard **when** the siren sounded. *(or: When
-   the siren sounded, the children were playing in the yard.)*
-5. **While** my mother was packing our papers, my father was checking the roof.
 
 **3.5** Answers will vary. Check: *was* with I/he/she/it and *were* with
 you/we/they; a correct *-ing* spelling; in item 2 the *when* clause is past

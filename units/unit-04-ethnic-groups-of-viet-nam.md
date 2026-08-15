@@ -410,20 +410,14 @@ To count an uncountable noun, put a **unit** in front of it:
 
 ### 3.2 Make the question
 
-Ask about the **bold** part.
-
-1. **The Tay** live in the northern mountains.
-   → _______________________________
-2. She weaves baskets **in the evening**.
-   → _______________________________
-3. There are **five** people in his family.
-   → _______________________________
-4. They build houses on stilts **because the floor stays dry**.
-   → _______________________________
-5. **My mother** makes our festival costumes.
-   → _______________________________
-6. We stayed in the village **for a week**.
-   → _______________________________
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Here the words you are given are a statement. Turn it into the question that the **bold** part answers, and write the whole question. Two of them are subject questions, so watch what happens to *do/does/did*."
+- **The Tay** live in the northern mountains. = Who lives in the northern mountains? ~ *who* is the subject here, so no *do* — and the verb takes **-s**
+- She weaves baskets **in the evening**. = When does she weave baskets? / What time does she weave baskets?
+- There are **five** people in his family. = How many people are there in his family?
+- They build houses on stilts **because the floor stays dry**. = Why do they build houses on stilts?
+- **My mother** makes our festival costumes. = Who makes your festival costumes? / Who makes our festival costumes? ~ another subject question: no *does*, and *makes* keeps its **-s**
+- We stayed in the village **for a week**. = How long did you stay in the village? / How long did we stay in the village? ~ after *did*, the main verb goes back to *stay*
+:::
 
 ### 3.3 Countable or uncountable?
 
@@ -1025,14 +1019,6 @@ buzz (put a hand on your throat), while *coat, cave, customs, costumes, basket*
 are silent at the throat and start with a small puff of air.
 
 ### Lesson 3
-
-**3.2**
-1. Who lives in the northern mountains?
-2. When does she weave baskets?
-3. How many people are there in his family?
-4. Why do they build houses on stilts?
-5. Who makes your festival costumes?
-6. How long did you stay in the village?
 
 **3.5** Answers will vary. Check: every answer is a full sentence in the present
 simple with the **-s** where it is needed; and your two new questions have the

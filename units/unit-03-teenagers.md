@@ -469,27 +469,16 @@ conjunction; a **semicolon** takes a conjunctive adverb.
 
 ### 3.5 Join them up
 
-Combine each pair into **one compound sentence**. For 1–5 use a comma and a
-suitable conjunction. For 6–8 use a **semicolon**, the conjunctive adverb given,
-and a **comma** after it. More than one answer may be possible.
-
-1. Teenagers need eight hours of sleep. Most get six.
-   → _______________________________
-2. I felt frustrated. I asked my brother for help.
-   → _______________________________
-3. You can join the chess club. You can join the football club.
-   → _______________________________
-4. The wellbeing club is new. It is already the most popular.
-   → _______________________________
-5. Khanh could not boil rice in September. Now he cooks dinner every Sunday.
-   → _______________________________
-6. *(however)* Phong participates in three clubs. His marks have not fallen.
-   → _______________________________
-7. *(therefore)* Thảo wants to be more focused. She leaves her phone downstairs.
-   → _______________________________
-8. *(otherwise)* You should log on and check the notice. You will miss the
-   first session.
-   → _______________________________
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Here you are given two sentences and the joining word. Combine each pair into **one** compound sentence. For 1–5 the joining word is a conjunction, so it takes a **comma before** it. For 6–8 it is a conjunctive adverb, so it takes a **semicolon before** and a **comma after**."
+- Teenagers need eight hours of sleep. Most get six. — use **but** = Teenagers need eight hours of sleep, but most get six
+- I felt frustrated. I asked my brother for help. — use **so** = I felt frustrated, so I asked my brother for help
+- You can join the chess club. You can join the football club. — use **or** = You can join the chess club, or you can join the football club
+- The wellbeing club is new. It is already the most popular. — use **yet** = The wellbeing club is new, yet it is already the most popular / The wellbeing club is new, yet it's already the most popular
+- Khanh could not boil rice in September. Now he cooks dinner every Sunday. — use **and** = Khanh could not boil rice in September, and now he cooks dinner every Sunday / Khanh couldn't boil rice in September, and now he cooks dinner every Sunday
+- Phong participates in three clubs. His marks have not fallen. — use **however** = Phong participates in three clubs; however, his marks have not fallen / Phong participates in three clubs; however, his marks haven't fallen ~ semicolon before, comma after
+- Thảo wants to be more focused. She leaves her phone downstairs. — use **therefore** = Thảo wants to be more focused; therefore, she leaves her phone downstairs ~ semicolon before, comma after
+- You should log on and check the notice. You will miss the first session. — use **otherwise** = You should log on and check the notice; otherwise, you will miss the first session / You should log on and check the notice; otherwise, you'll miss the first session ~ semicolon before, comma after
+:::
 
 ### 3.6 Correct the mistake
 
@@ -1104,21 +1093,6 @@ of *choice, enjoy, noise, boys, enjoyable*, and **relax back to the centre** at
 the end of *tourist, curious, during, furious, mature*.
 
 ### Lesson 3
-
-**3.5** *(other conjunctions may work — check that each answer has a comma and
-two full clauses)*
-1. Teenagers need eight hours of sleep, but most get six.
-2. I felt frustrated, so I asked my brother for help.
-3. You can join the chess club, or you can join the football club.
-4. The wellbeing club is new, yet it is already the most popular.
-5. Khanh could not boil rice in September, and now he cooks dinner every
-   Sunday.
-6. Phong participates in three clubs; however, his marks have not fallen.
-7. Thảo wants to be more focused; therefore, she leaves her phone downstairs.
-8. You should log on and check the notice; otherwise, you will miss the first
-   session.
-*(For 6–8, check the punctuation as carefully as the meaning: **semicolon**
-before the word, **comma** after it.)*
 
 **3.7** Answers will vary. Check: each sentence has **two** independent
 clauses (cover the joining word — does the second half have its own subject and

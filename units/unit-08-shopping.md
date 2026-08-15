@@ -406,15 +406,15 @@ Put these adverbs in order from **most often (1)** to **least often (7)**:
 
 ### 3.2 Put the adverb in the right place
 
-Rewrite each sentence with the adverb in brackets in the correct position.
-
-1. My sister is at the shopping centre at the weekend. (always)
-2. I browse the stalls before I buy anything. (usually)
-3. He has asked for a refund. (never)
-4. We queue for more than ten minutes. (rarely)
-5. Street vendors take cards. (hardly ever)
-6. You can find a bargain there. (often)
-7. She doesn't shop online. (usually)
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Slot the adverb in brackets into the sentence. Change nothing else."
+- My sister is at the shopping centre at the weekend. (always) = My sister is always at the shopping centre at the weekend. ~ after *be*, not before it
+- I browse the stalls before I buy anything. (usually) = I usually browse the stalls before I buy anything.
+- He has asked for a refund. (never) = He has never asked for a refund. ~ between the auxiliary and the main verb
+- We queue for more than ten minutes. (rarely) = We rarely queue for more than ten minutes.
+- Street vendors take cards. (hardly ever) = Street vendors hardly ever take cards.
+- You can find a bargain there. (often) = You can often find a bargain there. ~ between the modal and the main verb
+- She doesn't shop online. (usually) = She doesn't usually shop online./She does not usually shop online./She usually doesn't shop online./She usually does not shop online.
+:::
 
 ### 3.3 Present simple or *will*?
 
@@ -1051,15 +1051,6 @@ puff on the /p/ or /t/.
 
 **3.1** 1. always 2. usually 3. often 4. sometimes 5. rarely 6. hardly ever
 7. never
-
-**3.2**
-1. My sister **is always** at the shopping centre at the weekend.
-2. I **usually browse** the stalls before I buy anything.
-3. He **has never asked** for a refund.
-4. We **rarely queue** for more than ten minutes.
-5. Street vendors **hardly ever take** cards.
-6. You **can often find** a bargain there.
-7. She **doesn't usually shop** online.
 
 **3.5** Answers will vary. Check: *always/never* directly after *be* or
 directly before a main verb, never at the front of the sentence; *sometimes* at

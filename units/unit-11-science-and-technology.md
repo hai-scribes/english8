@@ -474,25 +474,16 @@ in Hue* — and he still does.
 
 ### 3.3 Report these statements
 
-Change everything that needs to change — verb, pronouns, time and place words.
-Use the reporting verb in brackets.
-
-1. "I am doing an experiment now." (Thảo / say)
-   → _______________________________
-2. "We will show you our robot tomorrow." (The students / tell me)
-   → _______________________________
-3. "I bought this device yesterday." (Tí / tell Khoa)
-   → _______________________________
-4. "My sister can speak three languages." (Khoa / say)
-   → _______________________________
-5. "I have finished my project." (Thảo / tell us)
-   → _______________________________
-6. "You must wear safety glasses here." (The teacher / tell us)
-   → _______________________________
-7. "Water boils at 100 degrees Celsius." (Cô Yến / say)
-   → _______________________________
-8. "I may visit the laboratory this week." (Đạt / say)
-   → _______________________________
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Begin with the reporting verb in brackets, and change everything else that has to change — the verb, the pronouns, the time and place words. *that* is optional."
+- "I am doing an experiment now." (Thảo / say) = Thảo said (that) she was doing an experiment then./Thao said (that) she was doing an experiment then. ~ *now* shifts to *then*, and *I* to *she*
+- "We will show you our robot tomorrow." (The students / tell me) = The students told me (that) they would show me their robot the next day./The students told me (that) they would show me their robot the following day. ~ *you* is the person reporting, so it becomes *me*
+- "I bought this device yesterday." (Tí / tell Khoa) = Tí told Khoa (that) he had bought that device the day before./Ti told Khoa (that) he had bought that device the day before./Tí told Khoa (that) he had bought that device the previous day./Ti told Khoa (that) he had bought that device the previous day. ~ the past simple steps back to the past perfect, and *this* to *that*
+- "My sister can speak three languages." (Khoa / say) = Khoa said (that) his sister could speak three languages.
+- "I have finished my project." (Thảo / tell us) = Thảo told us (that) she had finished her project./Thao told us (that) she had finished her project.
+- "You must wear safety glasses here." (The teacher / tell us) = The teacher told us (that) we had to wear safety glasses there. ~ *must* becomes *had to*, and *here* becomes *there*
+- "Water boils at 100 degrees Celsius." (Cô Yến / say) = Cô Yến said (that) water boils at 100 degrees Celsius./Co Yen said (that) water boils at 100 degrees Celsius./Cô Yến said (that) water boiled at 100 degrees Celsius./Co Yen said (that) water boiled at 100 degrees Celsius. ~ a general truth may keep the present tense, though the past is accepted too
+- "I may visit the laboratory this week." (Đạt / say) = Đạt said (that) he might visit the laboratory that week./Dat said (that) he might visit the laboratory that week.
+:::
 
 ### 3.4 Correct the mistake
 
@@ -1157,17 +1148,6 @@ page can settle it, the row says so, and that one is yours to judge.
 6. Where, test, devices
 
 ### Lesson 3
-
-**3.3**
-1. Thảo said that she was doing an experiment then.
-2. The students told me that they would show me their robot the next day.
-3. Tí told Khoa that he had bought that device the day before.
-4. Khoa said that his sister could speak three languages.
-5. Thảo told us that she had finished her project.
-6. The teacher told us that we had to wear safety glasses there.
-7. Cô Yến said that water boils at 100 degrees Celsius. *(general truth — no
-   backshift)*
-8. Đạt said that he might visit the laboratory that week.
 
 **3.5** Answers will vary. Check: (1) *told us that* — a person after *told*;
 (2) a person after *told* / no person after *said*; (3) *I said that* with the
