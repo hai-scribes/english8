@@ -816,6 +816,31 @@ async function main() {
         ok("comic: and at rest the panel's own answer comes back",
            live() === two.slice().sort().join(","), live());
       }
+      /* A REACTION ON THE FIRST LINE OF A PANEL STILL BEATS. This is where the
+         beat quietly stopped firing once: the face was painted to the panel's
+         end state before any word arrived, so by the first turn there was
+         nothing left to change. Eleven of this scene's fourteen beats change a
+         face on their first line, so a check that only watched later balloons
+         would have called that healthy. Walk forward until a first-line change
+         turns up and require the squash to be on the figure that made it. */
+      while (!dlg.querySelector(".d-prev").disabled)
+        click(win, dlg.querySelector(".d-prev"));
+      let beat = null;
+      for (let k = 0; k < 30 && !beat; k++){
+        const was = dlg.querySelector(".d-count").textContent;
+        click(win, dlg.querySelector(".d-next"));
+        /* A tap during typing finishes the panel instead of advancing, so tap
+           again — and check after EITHER, since the advance is what beats. */
+        if (dlg.querySelector(".d-count").textContent === was)
+          click(win, dlg.querySelector(".d-next"));
+        beat = dlg.querySelector('.d-fig[data-beat]');
+      }
+      ok("comic: a face that changes on a panel's first line still beats",
+         !!beat, beat ? "beat on slot " + beat.dataset.slot
+                      : "no first-line reaction animated in 30 taps");
+      while (!dlg.querySelector(".d-prev").disabled)
+        click(win, dlg.querySelector(".d-prev"));
+
       /* The beat outranks the breath for as long as `data-beat` is on the
          element, and a finished one-shot does not hand the shorthand back — so
          an attribute left behind stops that figure breathing for the rest of

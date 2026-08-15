@@ -2092,7 +2092,7 @@ function initScene(root, p){
     el.__beat = setTimeout(() => el.removeAttribute("data-beat"), 320);
   }
 
-  function paintFigure(el, ph, c, i, n, speaking){
+  function paintFigure(el, ph, c, i, n, speaking, paintFace){
     const x = figX(i, n), h = figH(n);
     /* Drawn facing one way only; a figure standing right of the middle is
        mirrored so that nobody is addressing the edge of the frame. The flip
@@ -2171,11 +2171,18 @@ function initScene(root, p){
       box.dataset.live = speaking ? "1" : "0";
     });
     if (!el) return;
-    /* The face itself is set by setCrop, WITHOUT a beat: arriving at a panel is
-       not a reaction to anything, and a whole cast flinching as the panel opens
-       is exactly the "everybody at once" this used to do. The beat belongs to a
-       turn, and turnTo() below is what owns it. */
-    setCrop(el, c.col);
+    /* THE FACE IS LEFT ALONE WHEN THE PANEL IS ABOUT TO BE TYPED, and that is
+       what makes the first balloon's reaction visible. Painting it here would
+       move the expression to this beat's END state before a word had arrived,
+       so by the time the first turn came round the face had already changed and
+       there was nothing left to react to. Eleven of unit 1's fourteen beats
+       change a face on their first line, five of them ONLY there, so this was
+       most of the reactions in the chapter.
+       Left alone, `dataset.col` still holds the PREVIOUS panel's face, which is
+       exactly the baseline the first turn needs to compare against.
+       When nothing is going to be typed — a rewind, or reduced motion — there
+       is no turn to do it, so the face is set here, silently and at once. */
+    if (paintFace) setCrop(el, c.col);
     const src = (window.__SHEETS__ && window.__SHEETS__[c.slug])
               || (up + ASSET_CAST + c.slug + ".webp");
     /* Setting the same background-image again is cheap but not free, and the
@@ -2378,6 +2385,13 @@ function initScene(root, p){
        said. Going BACK is looking something up, and a reader who has returned
        to re-read a line wants it now, not typed at them again. */
     const forward = i > at;
+    /* ENDED BEFORE THE NEW PANEL EXISTS. finishTyping() settles the faces to
+       `curRoster`, and stream() calls it — by which point curRoster has already
+       been pointed at the panel being opened, so a reader who taps through a
+       half-typed panel had the NEXT panel's final faces painted silently before
+       its first turn could compare against anything. Called here, it still
+       belongs to the panel it is ending. */
+    finishTyping();
     at = i;
     const lns = beats[i].map(j => p.lines[j]);
     const last = lns[lns.length - 1];
@@ -2457,10 +2471,13 @@ function initScene(root, p){
         if (ph){ $("b", ph).textContent = c.who; $("span", ph).textContent = c.emo; }
       });
     }
+    /* The same condition stream() uses to decide whether to type. Computed here
+       because the faces have to know it BEFORE they are painted. */
+    const willStream = forward && !stillMotion();
     roster.forEach((c, k) => {
       paintFigure($('.d-fig[data-slot="' + k + '"]', cast),
                   $('.d-fig-ph[data-slot="' + k + '"]', cast), c, k,
-                  roster.length, speaking.has(c.who));
+                  roster.length, speaking.has(c.who), !willStream);
     });
     /* The resting state of the live set — everybody who speaks anywhere in the
        beat, which is what paintFigure has just written. Kept so that the end
@@ -2653,14 +2670,16 @@ function initScene(root, p){
        reacts to what was just said reacts THEN, on that line, rather than
        wearing the reaction from the moment the panel opened.
 
-       The first balloon does not beat. Its faces are the ones already on screen
-       from paintFigure, and a beat here would fire the whole cast at once
-       against the previous panel, which is the thing this replaced. */
+       THE FIRST BALLOON BEATS TOO, against the face left on screen by the panel
+       before it — paintFigure deliberately did not touch it, so the comparison
+       is a real one. It is not "the whole cast flinching as the panel opens",
+       which was the earlier defect: only somebody whose expression actually
+       differs from the last panel moves, and they move as their line begins. */
     const turnTo = (k, beat) => {
       if (curLines[k]) facesAt(curLines[k].cast, beat);
       setTurn(new Set([Number(bubbles[k].dataset.slot)]));
     };
-    turnTo(0, false);
+    turnTo(0, true);
     let bi = 0, ci = 0;
     const tick = () => {
       if (!typing) return;
