@@ -757,11 +757,15 @@ footer.foot p{margin:0;max-width:74ch}
    is the same control reduced-motion readers get switched to by default. If
    that control ever goes, this loop goes with it. */
 /* THE BREATH IS BACK; THE SWAY IS NOT. A 2% vertical swell, bottom-anchored, on
-   everyone whose turn it is not — so the person speaking holds still and the
-   room around them is alive. That pairing is the anime convention and it does a
-   job here that nothing else does any more: the dimming answers who is in the
-   conversation, not who is talking this second, so stillness is what marks the
-   speaker inside a two-hander where both are lit.
+   everyone who is IN THE CONVERSATION — which is the same set the dimming
+   leaves at full strength, and it runs whether or not it is their turn. A
+   speaker who froze for the length of their own line was the odd one out in
+   the frame at the exact moment the reader was looking at them.
+
+   So the pairing is breathing-and-lit against still-and-dimmed. Somebody who
+   says nothing for the whole panel is held back and does not breathe: they are
+   present, and they are not part of this. Who is speaking at any given instant
+   is left to the balloon and its tail, which is what they are for.
 
    The sway that used to run beside it — 0.8deg about the feet — stays out. Two
    loops on one flat still is a rocking body rather than a breathing one, and it
@@ -778,7 +782,7 @@ footer.foot p{margin:0;max-width:74ch}
    same control a reduced-motion reader is given by default. If that control
    ever goes, this loop goes with it. */
 @keyframes d-breathe{from{scale:1 1}to{scale:1 1.02}}
-.d-fig:not([data-live="1"]){animation:d-breathe 3.2345s ease-in-out infinite alternate}
+.d-fig[data-in="1"]{animation:d-breathe 3.2345s ease-in-out infinite alternate}
 /* THE SPEAKER IS NOT LIFTED, AND NOTHING MAY LIFT THEM. A 4% rise read as the
    figure floating: a half-body figure is cropped at the waist and stands ON the
    bottom edge of the frame, so raising it opens a strip of background under

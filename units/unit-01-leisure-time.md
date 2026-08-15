@@ -28,7 +28,7 @@
 @cast none
 @fx birds on=panel
 The [[tide]] is out. The wet steps of the [[harbour wall|harbour]] go all the way down into the water.
-@cast Tí|sad, Thảo|neutral
+@cast Tí|sad|near, Thảo|neutral|far
 **Thảo|neutral:** You've been down on the wall all morning. What's wrong?
 **Tí|sad:** Nothing's wrong, Thảo. I come down here to [[relax]].
 **Thảo|annoyed|shout:** Tí.
@@ -42,12 +42,14 @@ The [[tide]] is out. The wet steps of the [[harbour wall|harbour]] go all the wa
 **Tí|sad:** That was ages ago.
 **Thảo|neutral:** So you would like to go.
 @fx flush on=Tí
+@cast Tí||near, Thảo||mid
 **Tí|annoyed|shout:** I'd [[love|gram:v-ing]] to go. There. Are you happy now?
 **Thảo|happy:** No. Come to my house on Saturday instead. We can [[hang out|hang out (with)]] all afternoon, and I don't mind teaching you a card game.
 **Tí|worried:** You're only asking me because of the list.
 **Thảo|happy:** I enjoy sitting here with you and I would enjoy sitting there with you. Both things are true.
 **Tí|neutral:** …
 Below them the water climbs one step of the wall, and slides back down.
+@cast Tí||near, Thảo||far
 **Thảo|neutral:** Are you coming up? My mother is cooking fish, and I am not waiting here on wet steps.
 **Tí|worried:** In a minute.
 **Thảo|surprised:** In a minute means no.

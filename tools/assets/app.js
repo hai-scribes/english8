@@ -2109,6 +2109,11 @@ function initScene(root, p){
          who is talking — the tail is the other half, and two weak signals
          beat one strong one on a small screen. */
       box.style.opacity = speaking ? "1" : String(p.dim || 0.72);
+      /* The same fact as the opacity, in a form a selector can reach: inline
+         styles are invisible to CSS, and the breath needs to know who is in the
+         conversation. Set here and nowhere else, so the two can never disagree
+         about who is in it. */
+      box.dataset.in = speaking ? "1" : "0";
       /* Depth owns the band; the speaker gets the small bump inside it. */
       box.style.zIndex = String((d.z || 2) * 10 + (speaking ? 1 : 0));
       /* Who is LIVE, at panel granularity. The stylesheet lifts this one and
