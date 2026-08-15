@@ -745,7 +745,7 @@ the page and give it to someone else to guess.
 > What came back was the village under the water — the one the sea took when
 > Bà Sáu was a girl. It came back whole: a street of low houses, a school with
 > a green gate, a post office, a well with a bucket still on it. It stood out in
-> the bay where thirty years of water had been standing.
+> the bay, where thirty years of water stood before it.
 >
 > Nobody thinks about the next part, and I had not thought about it either.
 > The tide was already high. The village took its place, and the water it pushed

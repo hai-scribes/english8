@@ -755,8 +755,8 @@ come from.
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
 ::: audio orientation="You will hear a stranger speaking to a boy beside a market, and short replies from the boy. He has come a long way and he is not pleased with him." mode="computer" preview="30" review="120"
-**The keeper:** Take her home. You are doing this wrong, and you have been
-doing it wrong for eight tides.
+**The keeper:** Take her home. You are doing this wrong, and you have done it
+wrong for eight tides.
 
 **Tí:** Who are you?
 
@@ -779,9 +779,9 @@ way you are using it. The sea gives back one thing to one person who lost it.
 Not a whole market, with its sellers and its prices, to a town that has moved
 on and spent thirty years learning to.
 
-**The keeper:** And you have been steering it. She told you that you cannot
+**The keeper:** And you have steered it. She told you that you cannot
 choose what comes back. She did not tell you the rest, because she does not
-know it: you have been choosing where you stand when she calls. Upriver. The
+know it: you choose where you stand when she calls. Upriver. The
 slipway. This car park. That is not the same rule, and it is not allowed
 either.
 

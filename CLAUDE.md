@@ -14,7 +14,7 @@ node tools/check_write.js         # gate: each model satisfies its own checklist
 node tools/test_reading.js        # gate: the reading screen behaves (after build; needs jsdom)
 python3 tools/check_coverage.py   # report: what the official textbook covers that we don't
 python3 tools/index_sgk.py --check  # gate: the recorded book's lookup index is current
-python3 tools/check_level.py --strict-through 3   # gate: story prose stays inside grade 8
+python3 tools/check_level.py --strict-through 12  # gate: story prose stays inside grade 8
 python3 tools/check_cast.py       # gate: manifest and art brief agree · report: what is drawn
 python3 tools/make_sheet.py --all   # compose the drawn expressions into character sheets
 python3 tools/make_overlay.py --all # cut the prop and effect drawings out of their white
@@ -296,9 +296,18 @@ modal, a modal passive — in no unit, at any point in the year) and **FORWARD**
 (taught, but in a later unit — defensible input, reported and never failed).
 
 `--strict-through N` fails on any BEYOND finding in units 1..N. **That number
-is the progress marker.** It is at 3 because units 1–3 are clean and 4–12 are
-not yet processed; raise it as you process them, and never raise it to silence
-a finding. Eight BEYOND findings remain in units 4–12.
+is the progress marker, and it is now at 12** — every unit is clean, so the
+gate is at its strictest and any new BEYOND structure anywhere in the book
+fails the build. It moved 3 → 12 by clearing the findings, never by widening
+the exemption, and that is the only way it may ever move.
+
+The eight that were cleared, in case the shapes recur: three present perfect
+continuous in unit 8's recording and one in unit 10's, one past perfect
+continuous in unit 9's passage, and in unit 12's recording a third conditional
+carrying two perfect modals. Every one had a taught equivalent that said the
+same thing — *have done* for *have been doing*, and unit 6's first conditional
+for the counterfactual, which read truer anyway: the keeper is stating a
+standing rule, not a regret.
 
 What it cannot see, stated plainly: the detectors are regexes, so they find
 structures with a distinctive surface shape and miss the rest. A bare

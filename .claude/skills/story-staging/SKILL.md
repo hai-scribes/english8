@@ -364,7 +364,7 @@ python3 tools/make_sheet.py --all     # six character drawings -> one sheet each
 python3 tools/make_overlay.py --all   # prop and effect drawings -> cut-outs
 python3 tools/make_overlay.py --plates # plates -> the size the page actually uses
 node tools/test_reading.js            # gates the navigation and balloon contract
-python3 tools/check_level.py --strict-through 3   # story prose stays inside grade 8
+python3 tools/check_level.py --strict-through 12  # story prose stays inside grade 8
 ```
 
 Art lives in `art/` — masters under `art/cast/<slug>/`, `art/props/src/` and

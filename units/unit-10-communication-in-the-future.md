@@ -698,7 +698,7 @@ work does.
 
 I posted this at the post office in a town that is not there any more, on the
 ninth of June, and that was sixty years ago. I paid for it in coins. I have
-been waiting ever since to learn whether it arrived, and I know now that it did
+waited ever since to learn whether it arrived, and I know now that it did
 not, because you are only hearing it today.
 
 Listen carefully. I hold the far end, from the far side of the water. I can

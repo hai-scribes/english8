@@ -815,14 +815,14 @@ Sit down, all of you. You walked nine days to give me back a thing I put down
 myself, so the least I can do is answer you in order.
 
 The girl asked me first why I never came home. Because the line only opens
-from this end. If I had let go of it, every lost thing still travelling would
-have stopped where it was, halfway, for ever. That is the whole answer, and it
-is not a brave one.
+from this end. If I let go of it, every lost thing still travelling will stop
+where it is, halfway, for ever. That is the whole answer, and it is not a brave
+one.
 
 The boy asked whether I was angry about the twelve marks. I am not. I asked
 him what he had spent them on, and he told me the lot: a game, a path, a
 friend, a house, a festival, a way of living, a reef, a market, a town, a
-voice and a workroom. Eleven. And then a name. I would have spent them worse.
+voice and a workroom. Eleven. And then a name. I would spend them worse.
 
 Minh asked me the one none of the others would ask out loud. He wanted to know
 how long a person who has been called back is allowed to stay. As long as
@@ -845,7 +845,7 @@ I am sorry it took so long to reach her.
 - The speaker says his visitors walked (a) two days (b) nine days (c) a month = b
 - He says the line only opens (a) from both ends (b) from this end (c) from neither end = b
 - He says he is (a) angry about the twelve marks (b) not angry about them (c) unable to remember them = b
-- About the way the marks were spent, he says he would have spent them (a) better (b) worse (c) exactly the same = b
+- About the way the marks were spent, he says he would spend them (a) better (b) worse (c) exactly the same = b
 - He says the marks (a) can be made again (b) cannot be made again (c) are already gone = b
 - He knew about the girl because she (a) shouted at him (b) ran away (c) asked him nothing = c
 :::
@@ -854,7 +854,7 @@ I am sorry it took so long to reach her.
 
 ::: task skill="listening" type="sentence-completion" words="2+number"
 - He says the least he can do is answer them in ___ . = order
-- Every lost thing still travelling would have ___ where it was. = stopped
+- Every lost thing still travelling will ___ where it is. = stop
 - The boy's list began with a game, a path and a ___ . = friend
 - By morning, he says, the harbour ___ will be dry. = wall
 - The line closes behind him ___ . = tonight
