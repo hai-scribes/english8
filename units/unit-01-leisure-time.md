@@ -58,12 +58,12 @@ Below them the water climbs one step of the wall, and slides back down.
 
 ### 1.1 Comprehension
 
-::: task skill="course" type="short-answer" words="3" ask="Look back at the dialogue above. The wording of the question is not always the wording of the answer."
-- When Thảo says "you weren't on it," what does "it" mean? = the list
-- Tí says out loud that he doesn't like board games. Does his private thought agree? = no
-- What single word does Thảo use to say her two reasons for inviting Tí are both real? = true
-- How many days has Tí had the thing in the bucket without telling anyone? = three days/3 days
-- What does Tí actually call the thing in the bucket? = something
+::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- Hùng stopped reading the list at one name. Which name? = Khoa
+- What does Tí say he does not like? = board games/playing board games
+- Tí thinks one person already knows he is not telling the truth. Who? = Thảo
+- Tí believes Thảo is inviting him for one reason only. What reason? = the list
+- Tí will not name the thing he is hiding. Which word does he use instead? = something
 :::
 
 ### 1.2 Find the phrase
@@ -554,7 +554,7 @@ fond of, be crazy about, be into*).
 > We played until it got dark. Bà Sáu came down to shout at me for missing
 > dinner and stayed for four games; she enjoys winning far too much for a
 > grandmother. Thảo arrived and did not ask one question about Bống, which is why
-> she is my friend. Even Bống played, badly, and she did not mind losing at all.
+> she is my friend. Even Bống played, badly, and she did not enjoy losing at all.
 >
 > Nobody from Hùng's house was there. I did not think about them once.
 >
@@ -662,12 +662,14 @@ first, then answer while you listen rather than afterwards from memory.
 
 ::: audio orientation="You will hear a man talking about how he spent his free time when he was a boy, and about something he made and then lost at sea." mode="computer" preview="30" review="120"
 When I was thirteen there was nothing to do in this town and we did all of
-it. We swam, we fished, and when it rained we sat under the house and played
-games we had made ourselves.
+it. I loved swimming, I didn't mind fishing, and when it rained we sat under
+the house and played games we had made ourselves.
 
-I made one. It took me a whole wet season. I cut the board out of a plank and
-the counters out of bottle tops, and the lid never fitted properly, which
-annoyed me for about twenty years.
+I made one. I enjoyed making it far more than I ever enjoyed playing it, which
+is not a thing you understand at thirteen. It took me a whole wet season. I cut
+the board out of a plank and the counters out of bottle tops, and the lid never
+fitted properly. I can't stand seeing a lid that does not sit flat, and that
+one annoyed me for about twenty years.
 
 I kept it in a tin box on the boat until I was about twenty-five. Then one
 night off the point we took a wave over the stern, and half of what was not
@@ -678,8 +680,8 @@ Anyway. Last Saturday my nephew was playing a game down on the harbour wall
 with half the street, and I walked past, and I stopped. Because I know that board.
 I cut it. There is a mark on the back where the knife slipped.
 
-I didn't say anything. I sat down and played, and I lost, and I still have
-not asked him where he got it.
+I didn't say anything. I sat down and played, and I lost. I would love to know
+where he got it, and I still have not asked him.
 :::
 
 ::: bridge name="Mark how sure you are, then check your calibration" trains="Listening" cefr="A2→B1" marker="[T2]" src="03 §6.6"
@@ -846,9 +848,10 @@ tells you something if you answer it from memory.
 Find and correct **six** errors in this paragraph. Five are about verb forms
 after liking/disliking verbs; one is a subject–verb agreement slip.
 
-> My friend enjoy to play board games every Saturday. He can't stand to lose,
-> so he practises to move the counters quickly before each game. I don't mind
-> watch him, but I would like doing something else sometimes.
+> One mark is on the wall now, at my shoulder, and the game stays. Bống enjoy to
+> play it and she is terrible at it. She can't stand to lose, so she practises to
+> move the counters while nobody is looking. I don't mind watch her do it, but I
+> would like doing something about that lid.
 
 ::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
 - Error 1 = enjoys ~ *enjoy* → *enjoys* — subject–verb agreement
