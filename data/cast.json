@@ -144,26 +144,27 @@
     "dim": 0.5,
     "face_in": true,
 
-    "_depths_comment": [
-      "How far into the scene somebody is standing. The number is a multiplier on",
-      "the height the stage would otherwise give them, and because a figure is",
-      "anchored to the floor, a taller one reads as nearer — which is the whole",
-      "trick. It also sets who is drawn over whom: near covers mid covers far,",
-      "and that ordering beats the small lift a speaker gets inside their own",
-      "band, because a person at the back does not come forward by talking.",
+    "_moves_comment": [
+      "Somebody walking on or off the stage, and where they walk from or to.",
       "",
-      "Three, not a slider. A continuous value would be a knob nobody could use",
-      "consistently across twelve chapters, and the differences between 0.9 and",
-      "0.95 are invisible anyway. `mid` is the default and is what every scene",
-      "written before this used, so adding this changed no existing panel.",
+      "THE STAGE HAS NO DEPTH. An earlier version sized figures near/mid/far to",
+      "say how far into the scene they stood, and it was removed: a half-body",
+      "figure cropped at the waist stands ON the bottom edge of the frame, so",
+      "the only honest axis left is across. Blocking here is left, right, and",
+      "on or off — a character cannot be further away, only elsewhere.",
       "",
-      "The spread is deliberately narrow. A half-body figure at 0.6 is a face",
-      "too small to carry an expression, which is the same reason max_cast is 4."
+      "`speed` is the author's, per move, because an arrival is sometimes the",
+      "event of the panel and sometimes furniture. `snap` is there for the",
+      "second kind and costs the reader nothing."
     ],
-    "depths": {
-      "near": { "scale": 1.18, "z": 3, "is": "Stepped forward — closer to the reader than the rest" },
-      "mid":  { "scale": 1.0,  "z": 2, "is": "The default. Where everybody stands unless told otherwise" },
-      "far":  { "scale": 0.82, "z": 1, "is": "Stood back — further into the scene, behind the others" }
+    "sides": {
+      "left":  { "is": "Off the left-hand edge of the frame" },
+      "right": { "is": "Off the right-hand edge of the frame" }
+    },
+    "speeds": {
+      "walk": { "ms": 420, "is": "The default. Somebody arriving at a normal pace" },
+      "slow": { "ms": 900, "is": "A reluctant entrance, or a long goodbye" },
+      "snap": { "ms": 0,   "is": "No movement at all — they are simply there" }
     }
   },
 

@@ -44,7 +44,8 @@ Narration has no speaker: a plate, a caption box, no avatar.
 | `**Name\|emotion\|balloon:** text` | somebody speaks. `emotion` defaults to `neutral`, `balloon` to `say` | the line |
 | a line with no `**Name:**` | narration — a caption box over the plate. Nobody speaks; whoever is on stage stays on it | the line |
 | `@bg <slug>` | changes the place | persists; **clears the props** |
-| `@cast A\|emo\|depth, B, C` | sets who is on stage, including silent people. `@cast none` empties it | persists |
+| `@cast A\|emo, B, C` | sets who is on stage, including silent people. `@cast none` empties it | persists |
+| `@move <Name> in from=… ` | somebody walks on, off or across. `in` / `out to=` / `to=` | **one panel** |
 | `@item <slug> at=…` | a thing in the scene. `@item none` clears them | persists until cleared or `@bg` |
 | `@fx <slug> on=…` | a manga overlay mark | **one panel**, then gone |
 
@@ -216,29 +217,35 @@ name. Nothing moves to say it — a half-body figure is cropped at the waist and
 stands on the bottom edge of the frame, so raising it opens a strip of
 background under somebody with no feet.
 
-### Moving somebody forward or back
+### Walking on, off and across
 
-The third field of an `@cast` entry is **how far into the scene they stand**:
-`near`, `mid` (the default) or `far`. It makes them taller or shorter, and
-because a figure is anchored to the floor, a taller one reads as nearer. It also
-sets who is drawn over whom — near covers mid covers far, and depth wins over
-the speaker, because somebody at the back does not come forward by talking.
+`@move` is a **delta on the roster**, where `@cast` sets the whole stage at
+once. It is the only way somebody arrives or leaves in front of the reader.
 
 ```
-@cast Tí|worried|near, Thảo|neutral, Bà Sáu|happy|far
+@move Bà Sáu in from=right          she walks on from the right
+@move Bà Sáu in from=right slow     …reluctantly
+@move Khoa out to=left              he walks off and is gone next panel
+@move Thảo to=left                  she crosses to the other side
+@move Bống in from=left snap        she is simply there, no movement
 ```
 
-Use it when the **story** puts somebody closer or further, not to decorate a
-panel: a character stepping forward to say the thing they have been holding
-back, one hanging back at the edge of a group, a watcher further down the
-harbour wall. A scene where everybody is at a different depth for no reason
-reads as a mistake, and the spread is deliberately narrow for the same reason
-the cast is capped at four — a figure much smaller than the others is a face too
-small to carry an expression.
+Three speeds — `walk` (the default), `slow`, `snap` — and **the choice is
+yours, per move**. An arrival is sometimes the event of the panel and
+sometimes furniture; `snap` is the honest way to say the second.
 
-Depth **persists** like an expression does, so `@cast Tí, Thảo` after a
-`near`/`far` line leaves everybody standing where they were. Move somebody back
-explicitly when the moment is over.
+**A departure is shown, not assumed.** `@move X out` leaves X on stage for
+that one panel, carrying them off it, and takes them off the roster
+afterwards. Somebody who simply vanishes between panels is a continuity
+error, not an exit — if that is genuinely what you want, use `@cast` without
+them and they are gone.
+
+**THE STAGE HAS NO DEPTH.** There is no near or far, and nobody is ever drawn
+bigger or smaller. A half-body figure is cropped at the waist and stands on
+the bottom edge of the frame, so the only honest axis is across: a character
+cannot be further away, only **elsewhere — or not here yet, or leaving**.
+Write distance into the prose, where it belongs, and use the stage for who is
+present and where they stand relative to each other.
 
 ### Reactions land on the line they belong to
 

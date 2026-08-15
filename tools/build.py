@@ -633,6 +633,7 @@ RE_D_SPEAKER = re.compile(r"^\*\*(?P<who>[^:*|]+?)(?:\|(?P<emo>[a-z]+))?"
                         r"(?:\|(?P<bub>[a-z]+))?:\*\*[ \t]*(?P<said>.*)$")
 RE_D_BG = re.compile(r"^@bg[ \t]+(?P<slug>[a-z0-9-]+)[ \t]*$")
 RE_D_CAST = re.compile(r"^@cast[ \t]+(?P<who>.+?)[ \t]*$")
+RE_D_MOVE = re.compile(r"^@move[ \t]+(?P<rest>.+?)[ \t]*$")
 RE_D_ITEM = re.compile(r"^@item[ \t]+(?P<rest>.+?)[ \t]*$")
 RE_D_FX = re.compile(r"^@fx[ \t]+(?P<rest>.+?)[ \t]*$")
 # `at=left` and `at="Bà Sáu"` both. A name with a space has to be quotable, and
@@ -645,7 +646,7 @@ CAST_CHARS, CAST_EMO = CAST["characters"], CAST["emotions"]
 CAST_BG, CAST_SHEET = CAST["backgrounds"], CAST["sheet"]
 CAST_PROPS, CAST_FX = CAST["props"], CAST["fx"]
 CAST_BUBBLES, CAST_STAGE = CAST["bubbles"], CAST["stage"]
-CAST_DEPTH = CAST_STAGE["depths"]
+CAST_SIDES, CAST_SPEEDS = CAST_STAGE["sides"], CAST_STAGE["speeds"]
 # A character is addressable by display name or by slug. The slug is what a
 # filename and a `data-` attribute use, so accepting it in the markup means an
 # author never has to type a diacritic to point at somebody.
@@ -695,13 +696,13 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
     # real comic — roster and props persist, effects do not.
     order: list = []          # who is on stage, left to right, in arrival order
     faces: dict = {}          # their current expression, which persists
-    depths: dict = {}         # how far into the scene each of them stands
+    moves: dict = {}          # who is walking on or off, for ONE panel
 
     def roster():
         """The stage as it stands: everyone present, in the order they arrived."""
         return [{"who": n, "slug": CAST_CHARS[n]["slug"], "emo": faces[n],
                  "col": CAST_EMO[faces[n]]["col"],
-                 "depth": depths.get(n, "mid")} for n in order]
+                 **({"move": moves[n]} if n in moves else {})} for n in order]
 
     items: list = []          # the props on stage, as {"slug", "at"}
     pending_fx: list = []     # effects waiting for the next line, then dropped
@@ -728,44 +729,87 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
             breaks = True
             continue
 
+        mm = RE_D_MOVE.match(s)
+        if mm:
+            # @move Bà Sáu in from=right slow    walks somebody on
+            # @move Khoa out to=left             walks somebody off
+            # @move Thảo to=left                 crosses the stage
+            #
+            # A DELTA ON THE ROSTER, where @cast is an absolute. Walking on adds
+            # somebody at the end they walk in from; walking off takes them away
+            # AFTER this panel, because a departure the reader never sees is not
+            # a departure, it is a continuity error. So the panel they leave in
+            # still holds them, carrying the mark that says they are going.
+            bits = mm.group("rest").split()
+            verb = next((b for b in bits if b in ("in", "out", "to")), None)
+            if verb is None:
+                raise SystemExit(
+                    f"{where}: @move needs to say what happens — `in`, `out` or "
+                    f"`to`. Got: {mm.group('rest')!r}")
+            nm = _who(" ".join(bits[:bits.index(verb)]), where, "@move")
+            opts = dict(b.split("=", 1) for b in bits if "=" in b)
+            speed = next((b for b in bits if b in CAST_SPEEDS), "walk")
+            side = (opts.get("from") or opts.get("to")
+                    or (bits[bits.index(verb) + 1]
+                        if verb == "to" and len(bits) > bits.index(verb) + 1 else None))
+            if verb == "to" and side is None:
+                side = opts.get("to")
+            if side not in CAST_SIDES:
+                raise SystemExit(
+                    f"{where}: @move {nm} {verb} needs a side — "
+                    f"{' or '.join(CAST_SIDES)}. Write `from=right` for an "
+                    f"entrance, `to=left` for an exit or a cross.")
+            if verb == "in":
+                if nm in order:
+                    raise SystemExit(
+                        f"{where}: @move {nm} in, but {nm} is already on stage. "
+                        f"Somebody already standing there can cross (`to=`) or "
+                        f"leave (`out to=`), not arrive.")
+                order.insert(0 if side == "left" else len(order), nm)
+                faces.setdefault(nm, "neutral")
+            else:
+                if nm not in order:
+                    raise SystemExit(
+                        f"{where}: @move {nm} {verb}, but {nm} is not on stage. "
+                        f"Put them there with @cast or `@move {nm} in` first.")
+                if verb == "to":
+                    order.remove(nm)
+                    order.insert(0 if side == "left" else len(order), nm)
+            moves[nm] = {"go": verb, "side": side, "ms": CAST_SPEEDS[speed]["ms"]}
+            if len(order) > CAST_STAGE["max_cast"]:
+                raise SystemExit(
+                    f"{where}: @move {nm} in makes {len(order)} on stage and the "
+                    f"stage holds {CAST_STAGE['max_cast']}.")
+            faces = {n: faces[n] for n in order}
+            breaks = True
+            continue
+
         cm = RE_D_CAST.match(s)
         if cm:
             spec = cm.group("who").strip()
             if spec == "none":
-                order, faces, depths = [], {}, {}
+                order, faces, moves = [], {}, {}
             else:
-                order, keep, keep_d = [], dict(faces), dict(depths)
+                order, keep = [], dict(faces)
                 for part in spec.split(","):
                     part = part.strip()
                     if not part:
                         continue
-                    nm, _, rest = part.partition("|")
-                    emo, _, dep = rest.partition("|")
+                    nm, _, emo = part.partition("|")
                     nm = _who(nm, where, "@cast")
-                    emo, dep = emo.strip(), dep.strip()
+                    emo = emo.strip()
                     if emo and emo not in CAST_EMO:
                         raise SystemExit(
                             f"{where}: @cast puts {nm} at {emo!r}, which is not "
                             f"one of the six drawn faces "
                             f"({', '.join(CAST_EMO)})")
-                    if dep and dep not in CAST_DEPTH:
-                        raise SystemExit(
-                            f"{where}: @cast stands {nm} at {dep!r}, which is not "
-                            f"one of the three depths ({', '.join(CAST_DEPTH)}). "
-                            f"The third field of an @cast entry is how far into "
-                            f"the scene somebody is standing.")
                     if nm in order:
                         raise SystemExit(f"{where}: @cast names {nm} twice")
                     order.append(nm)
                     # No expression given keeps the one they already had, so
                     # `@cast Tí, Khoa` adds Khoa without resetting Tí's face.
                     faces[nm] = emo or keep.get(nm, "neutral")
-                    # And no depth given keeps where they were standing, so a
-                    # line that only changes a face does not walk anybody back
-                    # to the middle of the stage.
-                    depths[nm] = dep or keep_d.get(nm, "mid")
                 faces = {n: faces[n] for n in order}
-                depths = {n: depths[n] for n in order}
             if len(order) > CAST_STAGE["max_cast"]:
                 raise SystemExit(
                     f"{where}: @cast puts {len(order)} people in one panel and the "
@@ -845,6 +889,13 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
                           "cast": roster(), "items": list(items),
                           "fx": pending_fx})
             pending_fx, breaks = [], False
+            # A move lasts exactly ONE panel, like an effect — and a departure
+            # takes the person off the stage only once that panel has carried
+            # them out, because a leaving nobody saw is a continuity error
+            # rather than an exit.
+            order[:] = [n for n in order if moves.get(n, {}).get("go") != "out"]
+            faces = {n: faces[n] for n in order}
+            moves = {}
             continue
 
         who = _who(m.group("who"), where, "a speaker")
@@ -876,6 +927,14 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
                       "items": list(items), "fx": pending_fx, "breaks": breaks,
                       "html": md_inline_keep(m.group("said").strip())})
         pending_fx, breaks = [], False
+        # A move lasts exactly ONE panel, like an effect — and a departure
+        # takes the person off the stage only once that panel has carried
+        # them out, because a leaving nobody saw is a continuity error
+        # rather than an exit.
+        order[:] = [n for n in order if moves.get(n, {}).get("go") != "out"]
+        faces = {n: faces[n] for n in order}
+        moves = {}
+
 
     if not lines:
         raise SystemExit(f"{where}: the dialogue has no lines")
@@ -914,11 +973,8 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
                          f"no place, so none of it would be drawn — give it a bg=")
     return {"id": did, "title": a.get("title", ""), "lines": lines, "beats": beats,
             "staged": staged, "dim": CAST_STAGE["dim"],
-            # The page reads the height multiplier and the stacking order off
-            # this rather than hard-coding three names, so a fourth depth is a
-            # manifest edit and nothing else.
-            "depths": {k: {"scale": v["scale"], "z": v["z"]}
-                       for k, v in CAST_DEPTH.items()},
+            # How long each named speed takes, so the page never hard-codes one.
+            "speeds": {k: v["ms"] for k, v in CAST_SPEEDS.items()},
             "faceIn": bool(CAST_STAGE.get("face_in", True)),
             "cols": CAST_SHEET["cols"], "rows": CAST_SHEET["rows"],
             "aspect": CAST_SHEET["aspect"],

@@ -2042,8 +2042,19 @@ function initScene(root, p){
      speaker's small bump inside its own band, because somebody at the back does
      not come forward by talking. Read off the manifest, never hard-coded, so a
      fourth depth costs a manifest edit and nothing here. */
-  const DEPTH = p.depths || {};
-  const depthOf = c => DEPTH[c && c.depth] || { scale: 1, z: 2 };
+  /* ---- walking on and off ------------------------------------------------
+     THE STAGE HAS NO DEPTH, and this is what replaced it. Sizing figures to say
+     how far into the scene they stood was removed: a half-body figure cropped
+     at the waist stands ON the bottom edge, so the only honest axis left is
+     across. Somebody cannot be further away, only elsewhere — or not here yet,
+     or leaving.
+
+     The whole mechanism is a transition on `left`. Figures are already placed
+     by a percentage, so crossing the stage is a change of roster index and
+     costs nothing; an entrance is that same move begun from outside the frame
+     and an exit is one that ends there. -40% and 140% clear the frame at every
+     cast size, since a figure is at its widest with one person on stage. */
+  const OFF = { left: "-40%", right: "140%" };
 
   /* ---- a face, and the beat that belongs to a turn ------------------------
      THE CROP IS THE EXPRESSION. The sheet is a cols x rows grid read left to
@@ -2082,8 +2093,7 @@ function initScene(root, p){
   }
 
   function paintFigure(el, ph, c, i, n, speaking){
-    const d = depthOf(c);
-    const x = figX(i, n), h = figH(n) * (d.scale || 1);
+    const x = figX(i, n), h = figH(n);
     /* Drawn facing one way only; a figure standing right of the middle is
        mirrored so that nobody is addressing the edge of the frame. The flip
        rides on the same transform as the centring, so it composes rather than
@@ -2094,7 +2104,30 @@ function initScene(root, p){
     const flip = p.faceIn !== false && x > 0.5;
     [[el, flip], [ph, false]].forEach(([box, mirror]) => {
       if (!box) return;
-      box.style.left = (x * 100) + "%";
+      const mv = c.move, walk = mv && mv.ms ? mv.ms : 0;
+      /* `--walk`, NOT `transition-duration`: the shorthand on this element also
+         carries opacity, translate and scale, so setting the duration inline
+         would retime all of them and a 900ms `slow` entrance would drag the
+         dim and the breath out with it. The custom property is read by the
+         `left` leg alone.
+
+         An entrance is TWO steps, because a transition needs a value to travel
+         from that the browser has actually painted: park the figure off-frame
+         with the walk at zero, then on the next frame turn the walk on and send
+         them to their place. An exit needs one — they are already standing
+         somewhere from the previous panel, so the far edge is already a change. */
+      if (mv && mv.go === "in" && walk){
+        box.style.setProperty("--walk", "0ms");
+        box.style.left = OFF[mv.side];
+        requestAnimationFrame(() => {
+          box.style.setProperty("--walk", walk + "ms");
+          box.style.left = (x * 100) + "%";
+        });
+      } else {
+        box.style.setProperty("--walk", walk + "ms");
+        box.style.left = (mv && mv.go === "out" && walk)
+                       ? OFF[mv.side] : (x * 100) + "%";
+      }
       box.style.height = (h * 100) + "%";
       /* THE CENTRING IS NOT WRITTEN HERE ANY MORE. It is `translate:-50%` in the
          stylesheet, and the long note beside it says why: the individual
@@ -2115,7 +2148,7 @@ function initScene(root, p){
          about who is in it. */
       box.dataset.in = speaking ? "1" : "0";
       /* Depth owns the band; the speaker gets the small bump inside it. */
-      box.style.zIndex = String((d.z || 2) * 10 + (speaking ? 1 : 0));
+      box.style.zIndex = speaking ? "3" : "2";
       /* Who is LIVE, at panel granularity. The stylesheet lifts this one and
          lets the rest breathe; stream() narrows it to a single balloon while
          the words are arriving, and finishTyping() hands it back. Panel
@@ -2192,6 +2225,7 @@ function initScene(root, p){
      new bookkeeping, only the number that is already on the element. A
      narration caption carries no slot, and NaN is in no set, so a beat with
      nobody speaking correctly lifts nobody. */
+  let walkTimer = 0;             // a second tail-aim, for a figure still walking
   let liveSlots = new Set();     // who speaks anywhere in this panel
   let curLines = [];             // the panel's lines, for per-turn faces
   let curRoster = [];            // and the state it ends in
@@ -2341,7 +2375,22 @@ function initScene(root, p){
     const lns = beats[i].map(j => p.lines[j]);
     const last = lns[lns.length - 1];
     const place = lns[0].bg;
-    const roster = last.cast || [];
+    /* A panel normally shows the stage as it stands at the END of the beat —
+       that is what "the moment after" means, and it is why a character who
+       reacts on the second line already wears that face when the reader
+       arrives. A MOVE is the exception, and in both directions: the move is
+       spent on the first line, and a departure has already left the roster by
+       the last one. So a beat that contains a move is built from its START
+       membership, with each person's END face laid over the top — the leaver
+       is on stage to be carried off, and everybody else still reacts. */
+    const endCast = last.cast || [];
+    const startCast = (lns[0] && lns[0].cast) || [];
+    const roster = startCast.some(c => c.move)
+      ? startCast.map(c => {
+          const later = endCast.find(e => e.who === c.who);
+          return later ? Object.assign({}, later, { move: c.move }) : c;
+        })
+      : endCast;
     const figs = roster.map(c => c.who);
     const speaking = new Set(lns.map(l => l.who).filter(Boolean));
 
@@ -2466,6 +2515,14 @@ function initScene(root, p){
       $$(".d-said.is-shaped", bubble).forEach(el => shapeWatch.observe(el));
     }
     requestAnimationFrame(relayout);
+    /* A tail is aimed at the figure it points to, ONCE, off a measurement. A
+       figure still walking to its place would therefore be pointed at where it
+       set off from, so the longest walk in the panel books a second aim for the
+       moment it arrives. Nothing else moves horizontally, which is why this is
+       the only case that needs it. */
+    const walked = roster.reduce((m, c) => Math.max(m, (c.move && c.move.ms) || 0), 0);
+    clearTimeout(walkTimer);
+    if (walked) walkTimer = setTimeout(relayout, walked + 30);
   }
 
   /* ---- the words arrive as they are said ---------------------------------

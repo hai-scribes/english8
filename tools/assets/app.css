@@ -706,7 +706,8 @@ footer.foot p{margin:0;max-width:74ch}
 .d-fig,.d-fig-ph{translate:-50% 0}
 .d-fig{position:absolute;bottom:0;background-repeat:no-repeat;
   transform-origin:bottom center;scale:1;
-  transition:opacity .18s ease,translate .16s ease,scale .3s ease}
+  transition:opacity .18s ease,translate .16s ease,scale .3s ease,
+             left var(--walk,0ms) cubic-bezier(.33,0,.2,1)}
 
 /* ---- the figures are alive, and the live one is the speaker ---------------
    THE CENTRING IS ON `translate`, NOT ON `transform`, AND THAT IS LOAD-BEARING.
@@ -750,13 +751,21 @@ footer.foot p{margin:0;max-width:74ch}
    never visibly repeats, and those tails are the whole trick: two periods that
    never line up read as a body, and two that do read as a metronome.
 
+   THE RATE IS A FULL CYCLE, NOT A HALF ONE. `alternate` runs the keyframes out
+   and back, so the period here is half the breath: 1.7345s each way is a 3.5s
+   cycle, or about seventeen a minute, which is where a resting adult sits. At
+   3.2345s it was a 6.5s cycle — nine a minute — and a body breathing that
+   slowly does not read as calm, it reads as something wrong. The amplitude came
+   down with it, from 2% to 0.8%: at rest the chest moves a little, and the
+   number that looked timid on a slow swell was too much on a real one.
+
    ON WCAG 2.2.2 (Pause, Stop, Hide, level A). A loop that auto-starts, runs
    past five seconds and sits beside text is in scope, and needs a mechanism to
    pause, stop OR HIDE it. The last of those already exists and is already
    tested: the transcript toggle takes the whole comic off the screen, and it
    is the same control reduced-motion readers get switched to by default. If
    that control ever goes, this loop goes with it. */
-/* THE BREATH IS BACK; THE SWAY IS NOT. A 2% vertical swell, bottom-anchored, on
+/* THE BREATH IS BACK; THE SWAY IS NOT. A 0.8% vertical swell, bottom-anchored, on
    everyone who is IN THE CONVERSATION — which is the same set the dimming
    leaves at full strength, and it runs whether or not it is their turn. A
    speaker who froze for the length of their own line was the odd one out in
@@ -775,14 +784,22 @@ footer.foot p{margin:0;max-width:74ch}
    not snap. A cancelled animation drops to its base value in one frame, and a
    figure that jerks as it begins a line would undo the point of it.
 
+   THE RATE IS A FULL CYCLE, NOT A HALF ONE. `alternate` runs the keyframes out
+   and back, so the period here is half the breath: 1.7345s each way is a 3.5s
+   cycle, or about seventeen a minute, which is where a resting adult sits. At
+   3.2345s it was a 6.5s cycle — nine a minute — and a body breathing that
+   slowly does not read as calm, it reads as something wrong. The amplitude came
+   down with it, from 2% to 0.8%: at rest the chest moves a little, and the
+   number that looked timid on a slow swell was too much on a real one.
+
    ON WCAG 2.2.2 (Pause, Stop, Hide, level A). This is a loop that auto-starts,
    runs past five seconds and sits beside text, so it is in scope and needs a
    mechanism to pause, stop OR HIDE it. The last of those exists and is tested:
    the transcript toggle takes the whole comic off the screen, and it is the
    same control a reduced-motion reader is given by default. If that control
    ever goes, this loop goes with it. */
-@keyframes d-breathe{from{scale:1 1}to{scale:1 1.02}}
-.d-fig[data-in="1"]{animation:d-breathe 3.2345s ease-in-out infinite alternate}
+@keyframes d-breathe{from{scale:1 1}to{scale:1 1.008}}
+.d-fig[data-in="1"]{animation:d-breathe 1.7345s ease-in-out infinite alternate}
 /* THE SPEAKER IS NOT LIFTED, AND NOTHING MAY LIFT THEM. A 4% rise read as the
    figure floating: a half-body figure is cropped at the waist and stands ON the
    bottom edge of the frame, so raising it opens a strip of background under
