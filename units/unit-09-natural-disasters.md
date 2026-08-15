@@ -54,13 +54,13 @@
 
 ### 1.1 Comprehension
 
-Answer in full sentences.
-
-1. What was the wind doing from about two o'clock?
-2. What was Tí doing while his grandmother was up the ladder?
-3. What does the six o'clock forecast say the storm will do tonight?
-4. What was Thảo's uncle doing before breakfast?
-5. Why did Tí turn back on his way to the school this morning?
+::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- Thảo assumes Tí was allowed up the ladder. He corrects her. What was his job? = holding it/holding the ladder/holding it steady
+- Tí says his whole lane ignored the warning. Thảo answers him by naming one person who did not. Who? = her uncle/Thảo's uncle/Thao's uncle/my uncle/uncle
+- The stranger's trick left Bà Sáu with none of her own savings. How did she react? = laughed/she laughed/laughs
+- Bống went silent after that Sunday. For how long? = two days/2 days/two
+- Bống makes one promise about the next time the water rises. What will she do? = prove it/prove she can
+:::
 
 ### 1.2 Find the phrase
 
@@ -142,6 +142,14 @@ Answer in full sentences.
 > Do the written exercises below as well — writing by hand and typing on a
 > screen build different halves of the same knowledge.
 
+### Meet the words
+
+The table above is there to look things up in. This is where you actually meet
+them: a few at a time, then answer on the few you have just met.
+
+::: vocab size="8"
+:::
+
 ### 2.1 Complete the sentences
 
 ::: task skill="course" type="gap-fill" ask="Use one word from the table. Change the form if you need to."
@@ -173,12 +181,12 @@ Answer in full sentences.
 
 ### 2.3 Odd one out
 
-::: task skill="course" type="choice" ask="One word in each line does not belong. Pick it — the reason tells you why."
-- Line 1 — (a) earthquake (b) flood (c) landslide (d) shelter = d ~ the others are natural disasters; a shelter is a safe place
-- Line 2 — (a) destroy (b) damage (c) collapse (d) rescue = d ~ the others mean to break or harm something
-- Line 3 — (a) warning (b) forecast (c) siren (d) drought = d ~ the others tell you that something dangerous is coming
-- Line 4 — (a) victim (b) survivor (c) volcano (d) rescue team = c ~ the others are people
-- Line 5 — (a) tremble (b) shake (c) predict (d) rattle = c ~ the others describe something moving quickly from side to side
+::: task skill="course" type="choice" variant="odd-one-out" ask="The reason appears when you check."
+- earthquake · flood · landslide · shelter = shelter ~ the others are natural disasters; a shelter is a safe place
+- destroy · damage · collapse · rescue = rescue ~ the others mean to break or harm something
+- warning · forecast · siren · drought = drought ~ the others tell you that something dangerous is coming
+- victim · survivor · volcano · rescue team = volcano ~ the others are people
+- tremble · shake · predict · rattle = predict ~ the others describe something moving quickly from side to side
 :::
 
 ### 2.4 From verb to noun
@@ -365,7 +373,7 @@ Put the two behaviours side by side and the difference is easy to hear:
 
 ### 2.8 Odd stress out
 
-::: task skill="course" type="choice" ask="In each line, three words share one stress pattern and one does not. Pick the odd one."
+::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **stress pattern**, not the meaning."
 - humorous · tremendous · numerous · generous = tremendous ~ the other three are stressed on the first syllable
 - natural · national · personal · original = original ~ oˈriginal keeps the stress of oˈrigin; the other three keep a first-syllable stem
 - dangerous · poisonous · mountainous · delicious = delicious ~ the other three are stressed on the first syllable
@@ -510,13 +518,13 @@ the verbs into the correct tense.
 
 ### 3.4 Correct the mistake
 
-Each sentence has **one** error. Rewrite it correctly.
-
-1. While the water was rise, we moved everything upstairs.
-2. I was knowing about the storm two days before it arrived.
-3. They were fill buckets when the tap stopped working.
-4. What were you do when the siren sounded?
-5. My brother were carrying a box upstairs when I saw him.
+::: task skill="course" type="short-answer" variant="error-correction" ask="Every mistake here is in the **past continuous** — the form of *be*, the form of the second verb, or a verb that cannot take the continuous at all."
+- While the water was rise, we moved everything upstairs. = was rising ~ *was/were* takes the *-ing* form
+- I was knowing about the storm two days before it arrived. = knew ~ *know* is stative; it does not go in the continuous
+- They were fill buckets when the tap stopped working. = were filling ~ *was/were* takes the *-ing* form
+- What were you do when the siren sounded? = were you doing ~ the question keeps the *-ing* form too
+- My brother were carrying a box upstairs when I saw him. = was ~ one brother, so the singular form of *be*
+:::
 
 ### 3.5 About you
 
@@ -879,12 +887,14 @@ hour ago.
 **The keeper:** Good. Now watch the wall. It is going, and the sea is
 coming into the space it leaves.
 
-**Tí:** Đạt was sitting on the low wall by the gate twenty minutes ago. He is
-not there now.
+**Tí:** Đạt was sitting on the low wall by the gate twenty minutes ago. He was
+throwing stones at the water while the rest of us were carrying things upstairs.
+He is not there now.
 
 **The keeper:** Was he alone?
 
-**Tí:** Hùng went in after him with a rope. Nobody has shouted since.
+**Tí:** Hùng went in after him with a rope while I was still shouting his name.
+Nobody has shouted since.
 
 **The keeper:** Then stop staring at the water and look at the roofs.
 Children climb. They almost always climb.
@@ -895,7 +905,8 @@ Children climb. They almost always climb.
 
 **Tí:** *(whistles)*
 
-**Hùng:** *(far off)* We're up here! On the post office! He's cold and he's
+**Hùng:** *(far off)* We're up here! On the post office! We were climbing the
+drainpipe while the water was coming under the door! He's cold and he's
 shouting at me, so he's fine!
 
 **The keeper:** There. Twenty minutes is nothing. Twenty minutes is a boy
@@ -908,7 +919,8 @@ on a roof being rude to his friend.
 **Tí:** It's a tin box. There's a name on it, and a date, and it is still
 sealed.
 
-**The keeper:** That came out of the post office. It was sent, and it never
+**The keeper:** That came out of the post office. The water was pulling the
+floor out of that building while you were whistling. It was sent, and it never
 arrived. Bring it, and do not open it in the rain. Three marks left.
 :::
 
@@ -1143,13 +1155,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 > **Đáp án.** Chỉ xem sau khi đã tự làm bài.
 
-### Lesson 1
-
-**1.1** 1. It was pushing at their shutters. 2. He was filling every bucket in
-the house with clean water. 3. It says the storm turns west tonight. 4. He was
-carrying rice up to the loft. 5. Because the bottom of the lane was already
-under water.
-
 ### Lesson 2
 
 **2.9** Spoken. Check: the capitalised syllable is longer, louder and clearer,
@@ -1168,13 +1173,6 @@ and every other syllable is short and light. If *disaster* comes out as
 4. The children were playing in the yard **when** the siren sounded. *(or: When
    the siren sounded, the children were playing in the yard.)*
 5. **While** my mother was packing our papers, my father was checking the roof.
-
-**3.4**
-1. While the water **was rising**, we moved everything upstairs.
-2. I **knew** about the storm two days before it arrived. *(know is stative)*
-3. They **were filling** buckets when the tap stopped working.
-4. What **were you doing** when the siren sounded?
-5. My brother **was** carrying a box upstairs when I saw him.
 
 **3.5** Answers will vary. Check: *was* with I/he/she/it and *were* with
 you/we/they; a correct *-ing* spelling; in item 2 the *when* clause is past

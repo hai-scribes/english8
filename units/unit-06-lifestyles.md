@@ -47,13 +47,13 @@
 
 ### 1.1 Comprehension
 
-Answer in full sentences.
-
-1. Why are people stopping Tí and Thảo in the street?
-2. What does the woman at the market want back?
-3. What does Bống keep telling people about the sea?
-4. What does Tí think will happen if he calls something back for one person?
-5. What does Thảo tell him to do unless he is certain?
+::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- Thảo counted four people on her way here. How many stopped Tí? = five/5
+- Two neighbours are named as asking Tí for lost things. One wants a ring. What does the other want? = a boat/boat/the boat/his boat/his father's boat
+- One person's name is the reason the whole lane is now asking Tí for things. Whose name? = Bống/Bong
+- Thảo names two people whose view of Tí will never change. She is one of them. Who is the other? = Bà Sáu/Ba Sau
+- Tí gives Thảo a deadline for making up his mind. Which day? = Sunday
+:::
 
 ### 1.2 Find the phrase
 
@@ -66,12 +66,12 @@ Answer in full sentences.
 
 ### 1.3 Notice the grammar
 
-::: task skill="course" type="choice" opts="will|won't|if-clause" ask="Look at the **bold** part of each line and label it."
-- If you explain the rule, they **will stop** asking. = will
-- **They won't.** They think I am hiding something better. = won't
-- **If I take her down there once** for one person, they will queue at our door. = if-clause
-- And **if you never do it again**? = if-clause
-- Seven to go before the water is over the street. **I won't spend** one on a ring. = won't
+::: task skill="course" type="gap-fill" ask="Each line is from the dialogue with its future words taken out. Go back to the scene, find the line, and write what the speaker actually said. Two of the five are negative."
+- **Thảo:** If you explain the rule, they ___ asking. = will stop/'ll stop
+- **Tí:** They ___ . They think I am hiding something better. = won't/will not
+- **Thảo:** And what ___ you tell him? = will
+- **Tí:** Then it never happens again, and nobody in this community ___ at me the same way. = will look/'ll look
+- **Tí:** Seven to go before the water is over the street. I ___ one on a ring. = won't spend/will not spend
 :::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **thì tương lai đơn**
@@ -144,6 +144,14 @@ Answer in full sentences.
 > Do the written exercises below as well — writing by hand and typing on a
 > screen build different halves of the same knowledge.
 
+### Meet the words
+
+The table above is there to look things up in. This is where you actually meet
+them: a few at a time, then answer on the few you have just met.
+
+::: vocab size="8"
+:::
+
 ### 2.1 Complete the sentences
 
 ::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
@@ -157,7 +165,7 @@ Answer in full sentences.
 
 ### 2.2 Odd one out
 
-::: task skill="course" type="choice" ask="In each line, pick the word that does not belong."
+::: task skill="course" type="choice" variant="odd-one-out" ask="The reason appears when you check."
 - rural · remote · peaceful · urban = urban ~ the other three are about the countryside or places far from a city
 - sled · hunt · whaling · gadget = gadget ~ the other three belong to a traditional Arctic lifestyle
 - active · fit · healthy · sedentary = sedentary ~ the other three describe a healthy lifestyle
@@ -241,11 +249,11 @@ of this block gives the measurement behind that claim.
 
 ### 2.6 Odd sound out
 
-::: task skill="course" type="choice" ask="In each line, one word has a **different** cluster. Pick it."
-- Line 1 — bring · brave · print · brush = print ~ *print* is /pr/; the others are /br/
-- Line 2 — price · practice · brother · protect = brother ~ *brother* is /br/; the others are /pr/
-- Line 3 — surprise · umbrella · improve · prefer = umbrella ~ *umbrella* is /br/; the others are /pr/
-- Line 4 — celebrate · break · bright · produce = produce ~ *produce* is /pr/; the others are /br/
+::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **cluster**, not the meaning."
+- bring · brave · print · brush = print ~ *print* is /pr/; the others are /br/
+- price · practice · brother · protect = brother ~ *brother* is /br/; the others are /pr/
+- surprise · umbrella · improve · prefer = umbrella ~ *umbrella* is /br/; the others are /pr/
+- celebrate · break · bright · produce = produce ~ *produce* is /pr/; the others are /br/
 :::
 
 ### 2.7 Say these sentences
@@ -383,14 +391,14 @@ Put the verbs into the correct form.
 
 ### 3.4 Correct the mistake
 
-Each sentence has **one** error. Rewrite it correctly.
-
-1. If the weather will be good, we will go for a walk.
-2. I think it will rains this afternoon.
-3. Unless you don't wear a coat, you will get cold.
-4. When she will arrive, I will call you.
-5. He won't to come to the party on Saturday.
-6. If you don't hurry up, you miss the train.
+::: task skill="course" type="short-answer" variant="error-correction" ask="Every mistake here is a **verb**: the wrong tense, an extra word, or a missing one."
+- If the weather will be good, we will go for a walk. = is ~ no *will* inside an *if*-clause
+- I think it will rains this afternoon. = rain ~ bare infinitive after *will*
+- Unless you don't wear a coat, you will get cold. = you wear/unless you wear/wear ~ *unless* already means *if … not*
+- When she will arrive, I will call you. = arrives ~ no *will* after *when* in a future clause
+- He won't to come to the party on Saturday. = won't come/come ~ no *to* after *won't*
+- If you don't hurry up, you miss the train. = will miss/'ll miss ~ the result clause needs *will*
+:::
 
 ### 3.5 About you
 
@@ -976,12 +984,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. Because half the lane saw Bống at the water on the night of the
-festival, so now everybody knows and people want to ask for things. 2. She
-wants her mother's ring back. 3. She tells them that the sea gives back what it
-took, and you do not get to choose what. 4. He thinks people will queue at their
-door the next morning. 5. She tells him not to do it at all.
-
 ### Lesson 2
 
 **2.7** Answers will vary (spoken). Check: your throat buzzes on the **br** of
@@ -993,14 +995,6 @@ on the **pr** of *practise, improve, price, print*.
 
 **3.3** 1. rains / won't go 2. eat / will feel 3. will miss / don't leave
 4. practises / won't improve 5. is / won't join 6. am / will move
-
-**3.4**
-1. If the weather **is** good, we will go for a walk.
-2. I think it **will rain** this afternoon.
-3. **Unless you wear** a coat, you will get cold. *(or: If you **don't wear** a coat…)*
-4. **When she arrives**, I will call you.
-5. He **won't come** to the party on Saturday.
-6. If you don't hurry up, you **will miss** the train.
 
 **3.5** Answers will vary. Check: no *will* anywhere in an *if*- or *when*-clause;
 *unless* followed by a **positive** verb; a bare infinitive after *will/won't*;

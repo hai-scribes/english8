@@ -50,13 +50,13 @@
 
 ### 1.1 Comprehension
 
-Answer in full sentences.
-
-1. Where does the mast stand, and what building is it opposite?
-2. Why is Tí using Bà Sáu's phone and not his own?
-3. What does Thảo tell him to send, and why will it get through later?
-4. Where exactly does Đạt say there is a signal?
-5. Why will Tí not ask Bống to do this?
+::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- Thảo tells Tí to open the box. He answers with a question instead of a reason. Who does he not want watching? = Bà Sáu/Ba Sau/his grandmother/grandmother
+- Thảo suggests something Tí has already tried, more than once. How many times has he tried it? = four/4/four times
+- Tí is counting something that runs out before the water reaches the street. How many are left? = three/3/three marks
+- Tí refuses Thảo's second suggestion too. Who was she telling him to go to? = Bống/Bong
+- There is one person whose word Tí will not take about anything. Who? = Đạt/Dat
+:::
 
 ### 1.2 Find the phrase
 
@@ -125,6 +125,32 @@ Look at the **bold** words.
 | 31 | instantly | /ˈɪnstəntli/ | adv | ngay lập tức |
 | 32 | advanced | /ədˈvɑːnst/ | adj | tiên tiến, hiện đại |
 | 33 | transmit | /trænzˈmɪt/ | v | truyền, chuyển đi |
+
+> ### ▶︎ [**Practise these 33 words**](../app/unit-10-vocab.html)
+>
+> Press 🔊 on any row above to hear the word. When you have finished this
+> lesson, the unit page opens a **practice** session over all thirty-three —
+> the meaning, the word, what you hear, and, more often than any of those,
+> **the word inside a phrase it actually lives in**. Wrong answers come
+> straight back, and everything returns a week later, because what you can
+> still recall after a gap is the only recall worth counting. The **unit
+> test** opens once all seven lessons are done.
+>
+> **Luyện 33 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **practice** ở trang bài sẽ mở ra để luyện cả 33 từ — trong đó phần lớn là
+> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
+> ngay, và mọi từ quay lại sau một tuần.
+>
+> Do the written exercises below as well — writing by hand and typing on a
+> screen build different halves of the same knowledge.
+
+### Meet the words
+
+The table above is there to look things up in. This is where you actually meet
+them: a few at a time, then answer on the few you have just met.
+
+::: vocab size="8"
+:::
 
 ### 2.1 Complete the sentences
 
@@ -228,11 +254,11 @@ syllable becomes long and loud: /iːz/ or /iː/.
 
 ### 2.6 Odd stress out
 
-::: task skill="course" type="choice" ask="In each line, one word does **not** have the stress on its last syllable. Pick it."
-- Line 1 — (a) Japanese (b) Chinese (c) coffee (d) Portuguese = c ~ **ˈcof**fee — the stress is on the first syllable
-- Line 2 — (a) refugee (b) committee (c) trainee (d) guarantee = b ~ com**ˈmit**tee — the stress is in the middle
-- Line 3 — (a) agree (b) toffee (c) degree (d) referee = b ~ **ˈtof**fee — the final *-ee* here is a short, weak /i/
-- Line 4 — (a) interviewee (b) Frisbee (c) trainee (d) degree = b ~ **ˈFris**bee — spelt *-ee*, but not stressed at the end
+::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **stress**: three words carry it on the last syllable and one does not."
+- Japanese · Chinese · coffee · Portuguese = coffee ~ **ˈcof**fee — the stress is on the first syllable
+- refugee · committee · trainee · guarantee = committee ~ com**ˈmit**tee — the stress is in the middle
+- agree · toffee · degree · referee = toffee ~ **ˈtof**fee — the final *-ee* here is a short, weak /i/
+- interviewee · Frisbee · trainee · degree = Frisbee ~ **ˈFris**bee — spelt *-ee*, but not stressed at the end
 :::
 
 ### 2.7 Say these sentences
@@ -366,16 +392,16 @@ A possessive **adjective** comes **before a noun**. A possessive **pronoun**
 
 ### 3.4 Correct the mistake
 
-Each sentence has **one** error. Rewrite it correctly.
-
-1. My birthday is in 3 September.
-2. The exhibition opens in nine o'clock.
-3. She studies English on the evening.
-4. I never use my phone in night.
-5. This is mine tablet.
-6. Their's is the red one.
-7. The blue headset is your's.
-8. Its a very good network.
+::: task skill="course" type="short-answer" variant="error-correction" ask="The first four mistakes are prepositions of time; the last four are possessives."
+- My birthday is in 3 September. = on ~ a date takes *on*
+- The exhibition opens in nine o'clock. = at ~ a clock time takes *at*
+- She studies English on the evening. = in ~ a part of the day takes *in*
+- I never use my phone in night. = at ~ *night* is the exception: *at night*
+- This is mine tablet. = my ~ a possessive **pronoun** stands alone; before a noun you need the adjective
+- Their's is the red one. = Theirs ~ possessive pronouns never take an apostrophe
+- The blue headset is your's. = yours ~ possessive pronouns never take an apostrophe
+- Its a very good network. = It's ~ *it's* = *it is*; *its* is the possessive
+:::
 
 ### 3.5 About you
 
@@ -938,16 +964,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 > **Đáp án.** Chỉ xem sau khi đã tự làm bài.
 
-### Lesson 1
-
-**1.1** 1. It stands opposite the old post office, and half of it is in the
-harbour. 2. Because his own phone went into the mud on Tuesday, and hers is the
-only phone left in the house. 3. A voice message, because it waits in the
-network and goes the moment the connection comes back. 4. At the top of the
-steps by the school gate, between the two big trees. 5. Because there are only
-three marks left before the water is over the street, and he will not spend one
-on a phone call.
-
 ### Lesson 2
 
 **2.7** Answers will vary (this is a speaking task). Check: the stress lands on
@@ -956,16 +972,6 @@ interviewee, guarantee, Portuguese, refugee, agree, Chinese* — and on the FIRS
 syllable of *coffee*, and the SECOND of *committee*.
 
 ### Lesson 3
-
-**3.4**
-1. My birthday is **on** 3 September.
-2. The exhibition opens **at** nine o'clock.
-3. She studies English **in** the evening.
-4. I never use my phone **at** night.
-5. This is **my** tablet. *(or: This tablet is **mine**.)*
-6. **Theirs** is the red one. *(no apostrophe)*
-7. The blue headset is **yours**. *(no apostrophe)*
-8. **It's** a very good network. *(it is)*
 
 **3.5** Answers will vary. Check: item 1 uses *at* + a clock time, item 2 uses
 *in* + a year, item 3 uses *on* + a day, item 4 uses *next to* or *opposite*
@@ -1010,22 +1016,3 @@ after it, four unit vocabulary words, and one sentence each about a sound and a
 picture.
 
 ### Lesson 7
-
-
-> ### ▶︎ [**Practise these 33 words**](../app/unit-10-vocab.html)
->
-> Press 🔊 on any row above to hear the word. When you have finished this
-> lesson, the unit page opens a **practice** session over all thirty-three —
-> the meaning, the word, what you hear, and, more often than any of those,
-> **the word inside a phrase it actually lives in**. Wrong answers come
-> straight back, and everything returns a week later, because what you can
-> still recall after a gap is the only recall worth counting. The **unit
-> test** opens once all seven lessons are done.
->
-> **Luyện 33 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
-> **practice** ở trang bài sẽ mở ra để luyện cả 33 từ — trong đó phần lớn là
-> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
-> ngay, và mọi từ quay lại sau một tuần.
->
-> Do the written exercises below as well — writing by hand and typing on a
-> screen build different halves of the same knowledge.

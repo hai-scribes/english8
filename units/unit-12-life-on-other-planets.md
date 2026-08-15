@@ -51,14 +51,14 @@
 
 ### 1.1 Comprehension
 
-Answer in full sentences.
-
-1. What did Cô Yến ask Thảo at the gate?
-2. What did Thảo say when Cô Yến asked about Monday?
-3. What does question one on the project sheet ask?
-4. What did Đạt ask out loud at break?
-5. How long is the walk to the crossing, and what is on the way?
-6. What does Bống say they should do with the last mark?
+::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- Thảo tells Cô Yến something about Tí that is not true, and Tí knows it. How does he answer her? = thank you/thanks
+- Thảo replied to one of Cô Yến's three questions with a single word. Which word? = planets
+- Nobody can telephone Khoa. What do Tí and Thảo blame for that? = the rule/rule
+- One boy raises the same question year after year. Who? = Đạt/Dat
+- Minh is afraid that one person will not have heard of him. Who? = the old man/old man
+- Khoa can get partway back, but not all the way. How far can he get? = the beach/our beach/beach
+:::
 
 ### 1.2 Find the phrase
 
@@ -138,6 +138,14 @@ Each sentence below reports a **question**. What did the person actually ask?
 > Do the written exercises below as well — writing by hand and typing on a
 > screen build different halves of the same knowledge.
 
+### Meet the words
+
+The table above is there to look things up in. This is where you actually meet
+them: a few at a time, then answer on the few you have just met.
+
+::: vocab size="5"
+:::
+
 ### 2.1 Complete the sentences
 
 ::: task skill="course" type="gap-fill" ask="Use one word from the table. Change the form if you need to."
@@ -155,11 +163,11 @@ Each sentence below reports a **question**. What did the person actually ask?
 
 ### 2.2 Odd one out
 
-::: task skill="course" type="choice" ask="In each line, one word does not belong with the others. Pick it."
-- Line 1 — (a) planet (b) galaxy (c) telescope (d) star = c ~ the others are objects in space; a telescope is an instrument we use to look at them
-- Line 2 — (a) alien (b) creature (c) extraterrestrial (d) gravity = d ~ the others are living things; gravity is a force
-- Line 3 — (a) explore (b) survive (c) launch (d) surface = d ~ the others are verbs; *surface* is a noun
-- Line 4 — (a) oxygen (b) atmosphere (c) astronaut (d) air = c ~ the others are gases or the layer of gas; an astronaut is a person
+::: task skill="course" type="choice" variant="odd-one-out" ask="The reason appears when you check."
+- planet · galaxy · telescope · star = telescope ~ the others are objects in space; a telescope is an instrument we use to look at them
+- alien · creature · extraterrestrial · gravity = gravity ~ the others are living things; gravity is a force
+- explore · survive · launch · surface = surface ~ the others are verbs; *surface* is a noun
+- oxygen · atmosphere · astronaut · air = astronaut ~ the others are gases or the layer of gas; an astronaut is a person
 :::
 
 ### 2.3 Words from the far end of the table
@@ -393,52 +401,39 @@ Keep the question word. Everything after it becomes a plain statement.
 
 ### 3.3 Report these Yes/No questions
 
-Begin each answer with the words given.
-
-1. "Do you like science fiction?" (She asked me…)
-   → _______________________________________________
-2. "Is there water on Mars?" (He asked…)
-   → _______________________________________________
-3. "Did the astronauts take photographs?" (I asked…)
-   → _______________________________________________
-4. "Can you see the galaxy without a telescope?" (She asked whether…)
-   → _______________________________________________
-5. "Are you coming to the club tomorrow?" (Khoa asked me…)
-   → _______________________________________________
-6. "Have you ever used a telescope?" (My teacher asked…)
-   → _______________________________________________
+::: task skill="course" type="short-answer" ask="Write the whole reported sentence, beginning with the words in brackets. It ends in a full stop, not a question mark. Either *if* or *whether* is accepted."
+- "Do you like science fiction?" (She asked me…) = She asked me if I liked science fiction./She asked me whether I liked science fiction.
+- "Is there water on Mars?" (He asked…) = He asked if there was water on Mars./He asked whether there was water on Mars.
+- "Did the astronauts take photographs?" (I asked…) = I asked if the astronauts had taken photographs./I asked whether the astronauts had taken photographs.
+- "Can you see the galaxy without a telescope?" (She asked whether…) = She asked whether I could see the galaxy without a telescope.
+- "Are you coming to the club tomorrow?" (Khoa asked me…) = Khoa asked me if I was coming to the club the next day./Khoa asked me whether I was coming to the club the next day./Khoa asked me if I was coming to the club the following day./Khoa asked me whether I was coming to the club the following day. ~ *tomorrow* shifts as well as the verb
+- "Have you ever used a telescope?" (My teacher asked…) = My teacher asked if I had ever used a telescope./My teacher asked whether I had ever used a telescope.
+:::
 
 ### 3.4 Report these Wh- questions
 
-Begin each answer with the words given.
-
-1. "Where do you live?" (He asked me…)
-   → _______________________________________________
-2. "What does a planet need to support life?" (She asked us…)
-   → _______________________________________________
-3. "When will humans land on Mars?" (They asked…)
-   → _______________________________________________
-4. "Why are you studying astronomy?" (My aunt asked me…)
-   → _______________________________________________
-5. "How did the creatures survive the winter?" (The reporter asked…)
-   → _______________________________________________
-6. "Who launched the first spacecraft?" (Hùng asked…)
-   → _______________________________________________
-7. "How much does a telescope cost?" (I asked the shop assistant…)
-   → _______________________________________________
+::: task skill="course" type="short-answer" ask="Write the whole reported sentence, beginning with the words in brackets. The question word stays; the *do/does/did* goes, and the subject comes back in front of the verb."
+- "Where do you live?" (He asked me…) = He asked me where I lived.
+- "What does a planet need to support life?" (She asked us…) = She asked us what a planet needed to support life./She asked us what a planet needs to support life. ~ this one is a general truth, so the present tense is accepted too
+- "When will humans land on Mars?" (They asked…) = They asked when humans would land on Mars.
+- "Why are you studying astronomy?" (My aunt asked me…) = My aunt asked me why I was studying astronomy.
+- "How did the creatures survive the winter?" (The reporter asked…) = The reporter asked how the creatures had survived the winter.
+- "Who launched the first spacecraft?" (Hùng asked…) = Hùng asked who had launched the first spacecraft./Hung asked who had launched the first spacecraft.
+- "How much does a telescope cost?" (I asked the shop assistant…) = I asked the shop assistant how much a telescope cost.
+:::
 
 ### 3.5 Correct the mistake
 
-Each sentence has **one** error. Rewrite it correctly.
-
-1. She asked me where did I put the map.
-2. He asked if what the planet was called.
-3. They asked me whether do I want to be an astronaut.
-4. My teacher asked when will the club meet again.
-5. Thảo asked me why was I so interested in Mars.
-6. He asked me that I had seen the photographs.
-7. The scientist asked us what do we know about gravity.
-8. She asked me if I am tired.
+::: task skill="course" type="short-answer" variant="error-correction" ask="Every mistake here is in the reported question itself — the word order, the tense, or the word that joins the two halves."
+- She asked me where did I put the map. = I had put/I put ~ a reported question has no *did*, and the verb backshifts
+- He asked if what the planet was called. = what ~ a question word does the joining on its own; *if* has no business there
+- They asked me whether do I want to be an astronaut. = I wanted ~ no *do*, statement order, and the tense steps back
+- My teacher asked when will the club meet again. = the club would meet ~ subject before verb, and *will* backshifts
+- Thảo asked me why was I so interested in Mars. = I was ~ statement order, so the subject comes first
+- He asked me that I had seen the photographs. = if/whether ~ a Yes/No question is joined by *if* or *whether*, never *that*
+- The scientist asked us what do we know about gravity. = we knew ~ no *do*, and the present steps back to the past
+- She asked me if I am tired. = was ~ the present steps back to the past
+:::
 
 ### 3.6 About you
 
@@ -1082,14 +1077,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 > **Đáp án.** Chỉ xem sau khi đã tự làm bài.
 
-### Lesson 1
-
-**1.1** 1. She asked whether Tí was coming in that day. 2. She said she had no
-idea why he had missed Monday. 3. It asks what a planet needs before anything
-can survive on it. 4. He asked whether anything else in the galaxy has ever
-answered us. 5. Nine days on foot — a river, then a crossing. 6. He says they
-should spend it on anything else.
-
 ### Lesson 2
 
 **2.5** In every list, all items except the last rise ↗; the final item falls ↘.
@@ -1104,34 +1091,6 @@ every item except the last, and clearly **down** on the last one; in item 4 the 
 ends with a rise, which should sound as though you were about to continue.
 
 ### Lesson 3
-
-**3.3**
-1. She asked me if/whether I liked science fiction.
-2. He asked if/whether there was water on Mars.
-3. I asked if/whether the astronauts had taken photographs.
-4. She asked whether I could see the galaxy without a telescope.
-5. Khoa asked me if/whether I was coming to the club the next day.
-6. My teacher asked if/whether I had ever used a telescope.
-
-**3.4**
-1. He asked me where I lived.
-2. She asked us what a planet needed to support life. *(or: **needs** — a
-general truth may keep the present tense; both are accepted, as in 1.1)*
-3. They asked when humans would land on Mars.
-4. My aunt asked me why I was studying astronomy.
-5. The reporter asked how the creatures had survived the winter.
-6. Hùng asked who had launched the first spacecraft.
-7. I asked the shop assistant how much a telescope cost.
-
-**3.5**
-1. She asked me where **I put / I had put** the map.
-2. He asked **what** the planet was called. *(delete* if*)*
-3. They asked me whether **I wanted** to be an astronaut.
-4. My teacher asked when the club **would meet** again.
-5. Thảo asked me why **I was** so interested in Mars.
-6. He asked me **if/whether** I had seen the photographs.
-7. The scientist asked us what **we knew** about gravity.
-8. She asked me if I **was** tired.
 
 **3.6** Answers will vary. Check: every sentence begins *…asked me*, contains
 **no** *do/does/did*, keeps **statement word order** (subject before verb),

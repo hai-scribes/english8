@@ -50,13 +50,13 @@
 
 ### 1.1 Comprehension
 
-Answer in full sentences.
-
-1. When does Bà Sáu's lane open its festival?
-2. Which three offerings does Bà Sáu name?
-3. Why does Bà Sáu light the first stick of incense herself now?
-4. What must Tí not do inside the communal house?
-5. What used to happen after the offerings, according to Bà Sáu?
+::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- Tí walks in and asks about something spread over the whole table. What is it? = banana leaves
+- Tí says a house upriver has stopped keeping a festival. Bà Sáu answers that it was never theirs to stop. Which month is that festival in? = the ninth/ninth/the ninth month/ninth month
+- Bà Sáu is not satisfied with Tí's cakes, and names one relative who did the job better. Which relative? = great-grandmother/his great-grandmother/your great-grandmother/my great-grandmother
+- Tí is afraid he will bow the wrong way. What does Bà Sáu tell him to do? = copy me/copy her/copy
+- Which animal gives tomorrow's festival its name? = whale/the whale
+:::
 
 ### 1.2 Find the phrase
 
@@ -152,6 +152,14 @@ Answer in full sentences.
 > Do the written exercises below as well — writing by hand and typing on a
 > screen build different halves of the same knowledge.
 
+### Meet the words
+
+The table above is there to look things up in. This is where you actually meet
+them: a few at a time, then answer on the few you have just met.
+
+::: vocab size="8"
+:::
+
 ### 2.1 Complete the sentences
 
 ::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
@@ -165,10 +173,10 @@ Answer in full sentences.
 
 ### 2.2 Odd one out
 
-::: task skill="course" type="choice" ask="In each line, one word does not belong. Pick it — the reason is given when you check."
-- Line 1 — (a) custom (b) tradition (c) ritual (d) taboo = d ~ the others are things people *do*; a taboo is something you must **not** do
-- Line 2 — (a) wrap (b) decorate (c) celebrate (d) ancestor = d ~ the others are verbs; *ancestor* is a noun
-- Line 3 — (a) lunar (b) festival (c) generation (d) offering = a ~ the others are nouns; *lunar* is an adjective
+::: task skill="course" type="choice" variant="odd-one-out" ask="The reason appears when you check."
+- custom · tradition · ritual · taboo = taboo ~ the others are things people *do*; a taboo is something you must **not** do
+- wrap · decorate · celebrate · ancestor = ancestor ~ the others are verbs; *ancestor* is a noun
+- lunar · festival · generation · offering = lunar ~ the others are nouns; *lunar* is an adjective
 :::
 
 ### 2.3 The verb that goes with it
@@ -250,11 +258,11 @@ One more pair worth learning by heart:
 
 ### 2.6 Odd sound out
 
-::: task skill="course" type="choice" ask="In each line, one word has a **different** nasal sound. Pick it."
-- Line 1 — (a) thin (b) win (c) king (d) sun = c ~ *king* ends in /ŋ/; the others end in /n/
-- Line 2 — (a) sing (b) song (c) sun (d) young = c ~ *sun* ends in /n/; the others end in /ŋ/
-- Line 3 — (a) banner (b) dinner (c) finger (d) runner = c ~ *finger* is /ˈfɪŋɡə(r)/, so it has /ŋ/; the others have /n/
-- Line 4 — (a) thank (b) bank (c) ban (d) sink = c ~ *ban* is /bæn/; in *thank*, *bank* and *sink* the *n* comes before /k/, so it is /ŋ/
+::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **nasal sound**, not the meaning."
+- thin · win · king · sun = king ~ *king* ends in /ŋ/; the others end in /n/
+- sing · song · sun · young = sun ~ *sun* ends in /n/; the others end in /ŋ/
+- banner · dinner · finger · runner = finger ~ *finger* is /ˈfɪŋɡə(r)/, so it has /ŋ/; the others have /n/
+- thank · bank · ban · sink = ban ~ *ban* is /bæn/; in *thank*, *bank* and *sink* the *n* comes before /k/, so it is /ŋ/
 :::
 
 ### 2.7 Say these sentences
@@ -400,14 +408,14 @@ sentence and **the** in the second.
 
 ### 3.4 Correct the mistake
 
-Each sentence has **one** article error. Rewrite it correctly.
-
-1. My grandmother goes to the bed early on the night before the festival.
-2. I like the rice more than noodles.
-3. She is an university student in Hue.
-4. It took us a hour to wrap all the cakes.
-5. My father is oldest son in his family.
-6. We ate the breakfast at my aunt's house.
+::: task skill="course" type="short-answer" variant="error-correction" ask="Every mistake here is an **article** — one too many, one missing, or the wrong one of *a* and *an*."
+- My grandmother goes to the bed early on the night before the festival. = to bed/goes to bed/bed ~ *go to bed* is the activity, so no article
+- I like the rice more than noodles. = like rice/rice ~ general meaning, so no article
+- She is an university student in Hue. = a/a university ~ *university* starts with /j/, a consonant sound
+- It took us a hour to wrap all the cakes. = an/an hour ~ the *h* is silent, so it starts with a vowel sound
+- My father is oldest son in his family. = the oldest ~ superlatives take *the*
+- We ate the breakfast at my aunt's house. = ate breakfast/breakfast ~ meals take no article
+:::
 
 ### 3.5 About you
 
@@ -979,11 +987,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. In the second lunar month — and this year it opens tomorrow.
-2. Fruit, flowers and sticky rice. 3. Because she is the oldest person in the
-family now. 4. He must not wear a hat inside the communal house. 5. There used
-to be an hour of games, a gong, and singing until it was dark.
-
 ### Lesson 2
 
 **2.7** Answers will vary in speed. Check: every *-ng* word ends at the **back**
@@ -1001,14 +1004,6 @@ of your mouth with the tongue tip **down**, and *thin*, *banners*, *lane*,
    write.
 Check: **a/an** in the first sentence (your reader does not know it yet),
 **the** in the second (now they do).
-
-**3.4**
-1. My grandmother goes to **bed** early on the night before the festival.
-2. I like **rice** more than noodles. *(general statement — no article)*
-3. She is **a** university student in Hue. *(/j/ is a consonant sound)*
-4. It took us **an** hour to wrap all the cakes. *(silent h → vowel sound)*
-5. My father is **the** oldest son in his family. *(superlative)*
-6. We ate **breakfast** at my aunt's house. *(meals take no article)*
 
 **3.5** Answers will vary. Check: (1) *a/an* first, then *the* for the same
 thing; (2) *the* + superlative, e.g. *the youngest*, *the busiest*; (3) **no**

@@ -55,13 +55,13 @@
 
 ### 1.1 Comprehension
 
-Answer in full sentences.
-
-1. Where does Bà Sáu send Tí, and what does he have to take?
-2. Why does she say the ferry is no use to him?
-3. What was behind the paddy fields when Bà Sáu was a girl?
-4. Why can nobody take that way today?
-5. What does Bà Sáu tell Tí to leave at home?
+::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- Bà Sáu never names the thing she hands over — she says only *take this to him*. What is it? = medicine/his medicine/the medicine/uncle's medicine
+- Tí suggests one way of travelling after another, and each is turned down. How many does he suggest in all? = three/3
+- Bà Sáu once walked to Bến Vàng herself. How old was she then? = thirteen/13
+- As well as the parcel, Bà Sáu tells Tí to take one thing for himself. What? = a hat/hat/his hat
+- Tí argues that the journey will be wasted. In what state does he expect to find Chú Bảy? = asleep/sleeping/fast asleep
+:::
 
 ### 1.2 Find the phrase
 
@@ -147,6 +147,14 @@ Answer in full sentences.
 >
 > Do the written exercises below as well — writing by hand and typing on a
 > screen build different halves of the same knowledge.
+
+### Meet the words
+
+The table above is there to look things up in. This is where you actually meet
+them: a few at a time, then answer on the few you have just met.
+
+::: vocab size="8"
+:::
 
 ### 2.1 Complete the sentences
 
@@ -257,11 +265,11 @@ superlative:
 
 ### 2.7 Odd sound out
 
-::: task skill="course" type="choice" ask="In each line, one word has a **different** vowel in the *italic* part. Pick it."
-- Line 1 — (a) farm*er* (b) farm*ing* (c) wat*er* (d) broth*er* = b ~ *farming* ends in /ɪ/; the others are /ə/
-- Line 2 — (a) v*i*llage (b) ch*i*cken (c) *a*bout (d) h*i*ll = c ~ *about* starts with /ə/; the others are /ɪ/
-- Line 3 — (a) c*o*llect (b) *i*nside (c) *a*bout (d) b*a*nana = b ~ *inside* starts with /ɪ/; the others are /ə/
-- Line 4 — (a) p*i*ck (b) m*i*lk (c) broth*er* (d) br*i*dge = c ~ *brother* ends in /ə/; the others are /ɪ/
+::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **vowel** in the *italic* part, not the meaning."
+- farm*er* · farm*ing* · wat*er* · broth*er* = farm*ing* ~ *farming* ends in /ɪ/; the others are /ə/
+- v*i*llage · ch*i*cken · *a*bout · h*i*ll = *a*bout ~ *about* starts with /ə/; the others are /ɪ/
+- c*o*llect · *i*nside · *a*bout · b*a*nana = *i*nside ~ *inside* starts with /ɪ/; the others are /ə/
+- p*i*ck · m*i*lk · broth*er* · br*i*dge = broth*er* ~ *brother* ends in /ə/; the others are /ɪ/
 :::
 
 ### 2.8 Say these sentences
@@ -416,14 +424,14 @@ Write one full sentence using a comparative adverb and **than**. Where you see
 
 ### 3.4 Correct the mistake
 
-Each sentence has **one** error. Rewrite it correctly.
-
-1. He drives more careful than my uncle.
-2. She works more hard than anybody in the village.
-3. My cousin can run more fast than me.
-4. I speak English more good than last year.
-5. The bus goes slowlier than the train.
-6. We got up early than usual yesterday.
+::: task skill="course" type="short-answer" variant="error-correction" ask="Every mistake here is in the **comparative adverb**."
+- He drives more careful than my uncle. = more carefully ~ *drives* is a verb, so it needs an adverb
+- She works more hard than anybody in the village. = harder ~ *hard* is a Group 1 adverb: add *-er*
+- My cousin can run more fast than me. = faster ~ *fast* is Group 1 too
+- I speak English more good than last year. = better ~ *well* → *better*, irregular
+- The bus goes slowlier than the train. = more slowly ~ an *-ly* adverb takes *more*
+- We got up early than usual yesterday. = earlier ~ *early* is Group 1 despite the *-ly* spelling
+:::
 
 ### 3.5 About you
 
@@ -743,17 +751,18 @@ first, then answer while you listen rather than afterwards from memory.
 I want to say first that I believed him before I saw anything. He does not
 invent things. He is not clever enough to keep it up for a whole week.
 
-So we went on Sunday morning, early, with two bottles of water. The opening in
+So we went on Sunday morning. We started earlier than we needed to, with two
+bottles of water. The opening in
 the bamboo is exactly where he told me it would be. The ground under your feet
 is hard, and it is clean, and that is the part I cannot explain. Clean. Every
 day. By nobody.
 
 Going down towards the village it behaves itself. It cuts the distance in half,
-it goes over the top instead of round, and it brings you out beside the well at
-the bottom of the lane. Fine.
+it climbs more steeply than the road does, and it brings you out beside the well
+at the bottom of the lane far more quickly than the bus would. Fine.
 
-Then we turned round and followed it the other way, uphill, and it does not
-end. It runs beside the river and keeps going north for an hour and a half,
+Then we turned round and followed it the other way, uphill. We went up it a good
+deal more slowly than we had come down, and it does not end. It runs beside the river and keeps going north for an hour and a half,
 much further than either of us has ever been from home. There are steps cut
 into the bank. There is an old landing, and wooden posts standing out in the
 water.
@@ -983,14 +992,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. She sends him to Bến Vàng, her own village, to take his uncle's
-medicine. 2. Because the ferry runs later than it used to, so he would wait on
-the bank for an hour. 3. There was a path, which ran along the stream and
-straight over the hill. 4. Because the new road was built through it thirty
-years ago, and nobody has walked it since — she says she could not even find
-where it started. 5. Bống — she says the child stays at home, and Tí answers
-that she will not stay.
-
 ### Lesson 2
 
 **2.8** Answers will vary — this is a speaking drill. Check: every *-er* ending
@@ -1006,14 +1007,6 @@ that she will not stay.
 3. The new road takes us much farther than the old one.
 4. He speaks English a lot better than his sister.
 5. It rains much more heavily here than in the city.
-
-**3.4**
-1. He drives **more carefully** than my uncle.
-2. She works **harder** than anybody in the village.
-3. My cousin can run **faster** than me.
-4. I speak English **better** than last year.
-5. The bus goes **more slowly** than the train.
-6. We got up **earlier** than usual yesterday.
 
 **3.5** Answers will vary. Check: *hard* → **harder** (no *more*), *well* →
 **better**, *early* → **earlier**, *carefully* → **more carefully**; and every

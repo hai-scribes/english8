@@ -51,13 +51,13 @@
 
 ### 1.1 Comprehension
 
-Answer in full sentences.
-
-1. How many times has Tí put his thumb on the glass?
-2. What does Khoa say Cô Yến told the club about Friday?
-3. Which part of the box works, and which part does not?
-4. Why does Thảo want them to carry the box to Chú Bảy?
-5. What did Bống say about the sea, and how many marks are left?
+::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- Khoa says Tí has been pressing with the wrong part of his thumb. Which part? = the tip/tip
+- Đạt compared the box to one ordinary object. Which object? = a shoe box/shoe box
+- Only one of the people Tí quotes gets any agreement out of Khoa. Who? = Hùng
+- Tí has brought the notebook in every day, but part of it is gone. Which part? = the last page/last page
+- Tí names one tool they will need for the repair. Which tool? = a screwdriver/screwdriver
+:::
 
 ### 1.2 Find the phrase
 
@@ -70,17 +70,17 @@ Answer in full sentences.
 
 ### 1.3 Notice the grammar
 
-::: task skill="course" type="choice" opts="say|tell" ask="Which reporting verb is each sentence using?"
-- She **said** the sea **would** not help us. = say
-- Cô Yến **told us** that the club **had** until Friday. = tell
-- She **told me** that the whole school **would** come. = tell
-- Hùng **said** that four out of ten **was** worse than a key. = say
+::: task skill="course" type="choice" opts="say|tell" ask="Each of these is reported somewhere in the dialogue above. Go back and find the line. Which reporting verb does it use **there**?"
+- Bống, on whether the sea will help them = say
+- Cô Yến, on how long the club has left = tell
+- Cô Yến, on the whole school coming to look = tell
+- Hùng, on four out of ten = say
 :::
 
-Now look at what follows each verb. Sentences 2 and 3 have an extra word
-straight after it — *us*, *me*. Sentences 1 and 4 have nothing there, and
-cannot: **only *tell* takes a person after it.** *Say* never does. That single
-difference is most of what Lesson 3 is about.
+Now look at what follows each verb in the dialogue. Two of the four lines have
+an extra word straight after it — *us*, *me*. The other two have nothing there,
+and cannot: **only *tell* takes a person after it.** *Say* never does. That
+single difference is most of what Lesson 3 is about.
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **câu tường thuật**
 > (reported speech) với câu trần thuật. Chú ý hai điều: *say* và *tell* dùng
@@ -145,6 +145,14 @@ difference is most of what Lesson 3 is about.
 >
 > Do the written exercises below as well — writing by hand and typing on a
 > screen build different halves of the same knowledge.
+
+### Meet the words
+
+The table above is there to look things up in. This is where you actually meet
+them: a few at a time, then answer on the few you have just met.
+
+::: vocab size="7"
+:::
 
 ### 2.1 Complete the sentences
 
@@ -488,16 +496,16 @@ Use the reporting verb in brackets.
 
 ### 3.4 Correct the mistake
 
-Each sentence has **one** error. Rewrite it correctly.
-
-1. She told that the new phone was expensive.
-2. He said me that he had finished the report.
-3. Thảo said that I was tired, so she went to bed early. *(Thảo was talking about herself)*
-4. The teacher said us that we had to bring our books.
-5. Khoa told me that he will come to the club the next day.
-6. Thảo said that she has already seen the film.
-7. My brother said that he bought that laptop the day before.
-8. They told us that we can use the laboratory the next day.
+::: task skill="course" type="short-answer" variant="error-correction" ask="Four of these are about *say* and *tell*; the other four are about backshift."
+- She told that the new phone was expensive. = said/told me/told us ~ *tell* needs a person after it, and there is none here
+- He said me that he had finished the report. = told me/said ~ *say* never takes a person
+- Thảo said that I was tired, so she went to bed early. *(Thảo was talking about herself)* = she ~ the pronoun shifts out of the first person
+- The teacher said us that we had to bring our books. = told us ~ a person after the verb means it must be *tell*
+- Khoa told me that he will come to the club the next day. = would ~ *will* backshifts to *would*
+- Thảo said that she has already seen the film. = had ~ the present perfect backshifts to the past perfect
+- My brother said that he bought that laptop the day before. = had bought ~ the past simple backshifts to the past perfect
+- They told us that we can use the laboratory the next day. = could ~ *can* backshifts to *could*
+:::
 
 ### 3.5 About you
 
@@ -1138,14 +1146,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 > **Đáp án.** Chỉ xem sau khi đã tự làm bài.
 
-### Lesson 1
-
-**1.1** 1. Eleven times that morning. 2. He says she told them that the club
-had until Friday. 3. The fingerprint part works; the wire behind it does not.
-4. Because Chú Bảy mends boat engines all day, so a small lock cannot be harder
-than that. 5. She said the sea would not help them, and there are two marks
-left on the wall.
-
 ### Lesson 2
 
 **2.6**
@@ -1168,17 +1168,6 @@ left on the wall.
 7. Cô Yến said that water boils at 100 degrees Celsius. *(general truth — no
    backshift)*
 8. Đạt said that he might visit the laboratory that week.
-
-**3.4**
-1. She **said** that the new phone was expensive. *(or: She **told me** that…)*
-2. He **told me** that he had finished the report. *(or: He **said** that…)*
-3. Thảo said that **she** was tired, so she went to bed early. *(pronoun shift)*
-4. The teacher **told us** that we had to bring our books. *(*say* cannot take a
-   person; *tell* must)*
-5. Khoa told me that he **would** come to the club the next day.
-6. Thảo said that she **had** already seen the film.
-7. My brother said that he **had bought** that laptop the day before.
-8. They told us that we **could** use the laboratory the next day.
 
 **3.5** Answers will vary. Check: (1) *told us that* — a person after *told*;
 (2) a person after *told* / no person after *said*; (3) *I said that* with the

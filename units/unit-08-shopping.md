@@ -54,13 +54,13 @@
 
 ### 1.1 Comprehension
 
-Answer in full sentences.
-
-1. Why is Tí's grandmother counting coins every morning?
-2. When does the money from Tí's parents arrive?
-3. Why does she usually buy from the stall at the end of the lane?
-4. Why did Đạt keep the receipt for both pairs of trainers?
-5. What two things happen early tomorrow at the market?
+::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- Thảo defends Đạt with a single word. What does she say he is **not**? = unkind
+- A woman came to the house at the weekend and left without what she had asked for. Who was she? = Cô Yến/Co Yen/Yến/Yen
+- Two boys have already been in to see Bống. One of them is Đạt. Who is the other? = Hùng/Hung
+- Tí tells Thảo to pay for herself tomorrow. Whose money is he in charge of? = Bà Sáu's/Bà Sáu/Ba Sau/his grandmother's/his grandmother
+- Something had to be bought before the boats could run again. What was it? = the blades/blades
+:::
 
 ### 1.2 Find the phrase
 
@@ -128,6 +128,32 @@ Answer in full sentences.
 | 32 | addicted (to) | /əˈdɪktɪd/ | adj | nghiện, say mê |
 | 33 | shopping list | /ˈʃɒpɪŋ lɪst/ | n | danh sách những thứ cần mua |
 
+> ### ▶︎ [**Practise these 33 words**](../app/unit-08-vocab.html)
+>
+> Press 🔊 on any row above to hear the word. When you have finished this
+> lesson, the unit page opens a **practice** session over all thirty-three —
+> the meaning, the word, what you hear, and, more often than any of those,
+> **the word inside a phrase it actually lives in**. Wrong answers come
+> straight back, and everything returns a week later, because what you can
+> still recall after a gap is the only recall worth counting. The **unit
+> test** opens once all seven lessons are done.
+>
+> **Luyện 33 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **practice** ở trang bài sẽ mở ra để luyện cả 33 từ — trong đó phần lớn là
+> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
+> ngay, và mọi từ quay lại sau một tuần.
+>
+> Do the written exercises below as well — writing by hand and typing on a
+> screen build different halves of the same knowledge.
+
+### Meet the words
+
+The table above is there to look things up in. This is where you actually meet
+them: a few at a time, then answer on the few you have just met.
+
+::: vocab size="8"
+:::
+
 ### 2.1 Complete the sentences
 
 ::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
@@ -141,10 +167,10 @@ Answer in full sentences.
 
 ### 2.2 Odd one out
 
-::: task skill="course" type="choice" ask="In each line, one word does not belong. Pick it."
-- Line 1 — (a) stall (b) customer (c) street vendor (d) shopkeeper = a ~ the others are people; a stall is a thing
-- Line 2 — (a) cash (b) receipt (c) card (d) coin = b ~ the others are ways of paying; a receipt is proof you paid
-- Line 3 — (a) discount (b) bargain (c) sale (d) delivery = d ~ the others all mean a lower price
+::: task skill="course" type="choice" variant="odd-one-out" ask="The reason appears when you check."
+- stall · customer · street vendor · shopkeeper = stall ~ the others are people; a stall is a thing
+- cash · receipt · card · coin = receipt ~ the others are ways of paying; a receipt is proof you paid
+- discount · bargain · sale · delivery = delivery ~ the others all mean a lower price
 :::
 
 ### 2.3 Which shopping place?
@@ -231,11 +257,11 @@ Notice that the cluster does not have to start the word: *di**sp**lay*,
 
 ### 2.6 Odd sound out
 
-::: task skill="course" type="choice" ask="In each line, one word has a **different** cluster. Pick it."
-- Line 1 — (a) spend (b) special (c) store (d) sport = c ~ *store* is /st/; the others are /sp/
-- Line 2 — (a) stall (b) stock (c) style (d) spare = d ~ *spare* is /sp/; the others are /st/
-- Line 3 — (a) customer (b) mistake (c) display (d) instead = c ~ *display* is /sp/; the others are /st/
-- Line 4 — (a) expensive (b) display (c) spare (d) stock = d ~ *stock* is /st/; the others are /sp/
+::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **cluster**, not the meaning."
+- spend · special · store · sport = store ~ *store* is /st/; the others are /sp/
+- stall · stock · style · spare = spare ~ *spare* is /sp/; the others are /st/
+- customer · mistake · display · instead = display ~ *display* is /sp/; the others are /st/
+- expensive · display · spare · stock = stock ~ *stock* is /st/; the others are /sp/
 :::
 
 ### 2.7 Say these sentences
@@ -403,15 +429,15 @@ Rewrite each sentence with the adverb in brackets in the correct position.
 
 ### 3.4 Correct the mistake
 
-Each sentence has **one** error. Rewrite it correctly.
-
-1. I don't never buy clothes online.
-2. Always I go to the market with my mother.
-3. She is often go to that department store.
-4. He doesn't hardly ever pay in cash.
-5. The shop will open at eight tomorrow — it says so on the door.
-6. We go twice a month to the shopping centre.
-7. I never have asked for a discount at that stall.
+::: task skill="course" type="short-answer" variant="error-correction" ask="Every mistake here is about the **adverb of frequency** — its form, its position, or one negative too many."
+- I don't never buy clothes online. = ever ~ two negatives in one clause; keep one
+- Always I go to the market with my mother. = I always go ~ *always* cannot start the sentence
+- She is often go to that department store. = often goes ~ there is no *be* here; the adverb goes before the main verb
+- He doesn't hardly ever pay in cash. = hardly ever pays ~ *hardly ever* is already negative
+- The shop will open at eight tomorrow — it says so on the door. = opens ~ a fixed opening time takes the present simple
+- He goes to that stall every Tuesdays. = every Tuesday ~ *every* is followed by a singular noun
+- I never have asked for a discount at that stall. = have never asked ~ the adverb goes between the auxiliary and the main verb
+:::
 
 ### 3.5 About you
 
@@ -1015,14 +1041,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 > **Đáp án.** Chỉ xem sau khi đã tự làm bài.
 
-### Lesson 1
-
-**1.1** 1. Because rice has gone up and the money from Tí's parents has not
-arrived yet. 2. It arrives on the fifteenth, four days away. 3. Because the
-woman there lets her pay on Friday. 4. So that he can ask for a refund on the
-pair he likes less. 5. The market opens at five and the rice truck comes at
-six. *(Also acceptable: the fish sellers put their good baskets out once.)*
-
 ### Lesson 2
 
 **2.7** Answers will vary — this is a speaking task. Check: no vowel sound
@@ -1042,19 +1060,6 @@ puff on the /p/ or /t/.
 5. Street vendors **hardly ever take** cards.
 6. You **can often find** a bargain there.
 7. She **doesn't usually shop** online.
-
-**3.4**
-1. I **never** buy clothes online. *(or: I don't **ever** buy clothes online.)*
-2. **I always go** to the market with my mother. *(always cannot start a
-sentence)*
-3. She **often goes** to that department store.
-4. He **hardly ever pays** in cash.
-5. The shop **opens** at eight tomorrow. *(a fixed opening time → present
-simple)*
-6. We go to the shopping centre **twice a month**. *(frequency expression goes
-at the end)*
-7. I **have never asked** for a discount at that stall. *(the adverb goes
-between the auxiliary* have *and the main verb)*
 
 **3.5** Answers will vary. Check: *always/never* directly after *be* or
 directly before a main verb, never at the front of the sentence; *sometimes* at
@@ -1094,22 +1099,3 @@ drawback, not a second reason to like it.
 5. starts
 6. will rain
 7. leaves
-
-
-> ### ▶︎ [**Practise these 33 words**](../app/unit-08-vocab.html)
->
-> Press 🔊 on any row above to hear the word. When you have finished this
-> lesson, the unit page opens a **practice** session over all thirty-three —
-> the meaning, the word, what you hear, and, more often than any of those,
-> **the word inside a phrase it actually lives in**. Wrong answers come
-> straight back, and everything returns a week later, because what you can
-> still recall after a gap is the only recall worth counting. The **unit
-> test** opens once all seven lessons are done.
->
-> **Luyện 33 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
-> **practice** ở trang bài sẽ mở ra để luyện cả 33 từ — trong đó phần lớn là
-> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
-> ngay, và mọi từ quay lại sau một tuần.
->
-> Do the written exercises below as well — writing by hand and typing on a
-> screen build different halves of the same knowledge.

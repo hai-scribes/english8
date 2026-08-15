@@ -53,13 +53,13 @@
 
 ### 1.1 Comprehension
 
-Answer in full sentences.
-
-1. What has Cô Yến asked the class to do?
-2. Why does Tí say the project is hard for him?
-3. In Thảo's answers, what is the house made of, and how do you reach the door?
-4. How does the family in her answers use the one big room?
-5. What does Thảo want the two of them to do on Saturday?
+::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- Tí's first attempt is turned down before it is finished. What one word had he said? = hello
+- On which day was the class given the ten-question task? = Friday/on Friday
+- Thảo's invented character admits she cannot do her own craft yet, and names what she is short of. What is it? = patience
+- Thảo picks that river for a private reason, not a school one. Which classmate is it about? = Minh/Minh's/Minh's family
+- Tí is afraid of coming home with nothing. How many answers does Thảo point out he has at this moment? = none/no answers/zero
+:::
 
 ### 1.2 Find the phrase
 
@@ -151,6 +151,14 @@ Answer in full sentences.
 > Do the written exercises below as well — writing by hand and typing on a
 > screen build different halves of the same knowledge.
 
+### Meet the words
+
+The table above is there to look things up in. This is where you actually meet
+them: a few at a time, then answer on the few you have just met.
+
+::: vocab size="8"
+:::
+
 ### 2.1 Complete the sentences
 
 ::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
@@ -165,10 +173,10 @@ Answer in full sentences.
 
 ### 2.2 Odd one out
 
-::: task skill="course" type="choice" ask="In each line, one word does not belong with the others. Pick it."
-- Line 1 — (a) bamboo (b) wood (c) basket (d) palm leaf = c ~ the others are materials; a *basket* is a thing made from them
-- Line 2 — (a) custom (b) ritual (c) folk song (d) market = d ~ the others are cultural traditions; a *market* is a place
-- Line 3 — (a) stilt house (b) terraced field (c) cave (d) costume = d ~ the others are places; a *costume* is clothing
+::: task skill="course" type="choice" variant="odd-one-out" ask="The reason appears when you check."
+- bamboo · wood · basket · palm leaf = basket ~ the others are materials; a *basket* is a thing made from them
+- custom · ritual · folk song · market = market ~ the others are cultural traditions; a *market* is a place
+- stilt house · terraced field · cave · costume = costume ~ the others are places; a *costume* is clothing
 :::
 
 ### 2.3 A day in the village
@@ -265,11 +273,11 @@ to put it.
 
 ### 2.6 Odd sound out
 
-::: task skill="course" type="choice" ask="In each line, one word has a **different** sound for the bold letter. Pick it."
-- Line 1 — (a) **c**ave (b) **c**ustom (c) **g**ong (d) **c**oat = c ~ *gong* is /ɡ/; the others are /k/
-- Line 2 — (a) **g**oat (b) **g**roup (c) **g**uitar (d) **c**ostume = d ~ *costume* is /k/; the others are /ɡ/
-- Line 3 — (a) **gh**ost (b) **g**arden (c) **g**ong (d) mar**k**et = d ~ *market* is /k/; the others are /ɡ/
-- Line 4 — (a) **c**eremony (b) **c**ave (c) **c**oat (d) **c**ulture = a ~ *ceremony* is /s/; the others are /k/
+::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **sound** of the bold letter, not the meaning."
+- **c**ave · **c**ustom · **g**ong · **c**oat = **g**ong ~ *gong* is /ɡ/; the others are /k/
+- **g**oat · **g**roup · **g**uitar · **c**ostume = **c**ostume ~ *costume* is /k/; the others are /ɡ/
+- **gh**ost · **g**arden · **g**ong · mar**k**et = mar**k**et ~ *market* is /k/; the others are /ɡ/
+- **c**eremony · **c**ave · **c**oat · **c**ulture = **c**eremony ~ *ceremony* is /s/; the others are /k/
 :::
 
 ### 2.7 Say these sentences
@@ -432,14 +440,14 @@ Ask about the **bold** part.
 
 ### 3.4 Correct the mistake
 
-Each sentence has **one** error. Rewrite it correctly.
-
-1. Where your grandparents live?
-2. Does she weaves baskets every day?
-3. Who does live in the stilt house now?
-4. How much rooms are there in the house?
-5. He gave me many useful informations about the festival.
-6. Did you visited the terraced fields last summer?
+::: task skill="course" type="short-answer" variant="error-correction" ask="The mistake is always in the **question form** or in the **countable/uncountable** word."
+- Where your grandparents live? = do your grandparents live/do ~ a Wh- question needs an operator before the subject
+- Does she weaves baskets every day? = weave ~ after *does*, the main verb goes back to its base form
+- Who does live in the stilt house now? = who lives/lives ~ *who* is the subject here, so there is no *does*
+- How much rooms are there in the house? = how many/many ~ *rooms* can be counted
+- He gave me many useful informations about the festival. = much useful information/a lot of useful information/some useful information/much information ~ *information* is uncountable and has no plural
+- Did you visited the terraced fields last summer? = visit ~ after *did*, the main verb goes back to its base form
+:::
 
 ### 3.5 About you
 
@@ -786,21 +794,23 @@ order, so the questions below come in that order too.
 **Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
 
 ::: audio orientation="You will hear a grandmother taking a boy's four project questions one at a time, and telling him what she knows about the families who lived along one stretch of the river." mode="computer" preview="30" review="120"
-Read them out again. Slowly. I am old, not deaf.
+Read them out again. Slowly. Do you think I am deaf? I am old, not deaf.
 
-Who lived there. Well, I can name every family on that stretch of the river,
-because my mother came from it and she said the names to me until I could say
-them in my sleep. Above the ford there stood nine houses, and I know all nine.
+Who lived there? That one I can answer. I can name every family on that stretch
+of the river, because my mother came from it and she said the names to me until
+I could say them in my sleep. Above the ford there stood nine houses, and I know
+all nine.
 
-How many people. In a house of that size, ten or eleven. But you tell me there
-were three baskets on the floor. Ten or eleven people wear out more than three
-baskets, child. That is none of my nine.
+How many people? In a house of that size, ten or eleven. But you tell me there
+were three baskets on the floor. How many baskets does a family of eleven wear
+out in a year, child? More than three. That is none of my nine.
 
-How much rice. Nobody along there ever grew enough to sell — enough for the
-year and no more. So a family with rice to spare is not a family my mother ever
-told me about.
+How much rice? Nobody along there ever grew enough to sell — enough for the
+year and no more. And how much rice does a family of eleven eat in a year, do
+you think? So a family with rice to spare is not a family my mother ever told me
+about.
 
-How many years. Now stop. You are asking how long a house stood that nobody
+How many years? Now stop. You are asking how long a house stood that nobody
 remembers standing, and I am telling you it did not stand there, not in my
 mother's time and not in hers.
 
@@ -1008,13 +1018,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. She has given the class a project: ten questions, put to a real
-person. 2. Because he is no good at asking strangers anything, and he has not
-written a single question. 3. It is made of wood and bamboo, and you climb a
-wooden staircase to the door. 4. It has one big room; they cook, eat, talk and
-sleep in the same space. 5. She wants them to walk up the river on Saturday so
-that he can ask somebody real.
-
 ### Lesson 2
 
 **2.7** Answers will vary. Check: the bold letters in *goat, group, grandmother*
@@ -1030,15 +1033,6 @@ are silent at the throat and start with a small puff of air.
 4. Why do they build houses on stilts?
 5. Who makes your festival costumes?
 6. How long did you stay in the village?
-
-**3.4**
-1. **Where do** your grandparents **live**?
-2. Does she **weave** baskets every day?
-3. **Who lives** in the stilt house now? *(subject question — no* does*)*
-4. **How many** rooms are there in the house?
-5. He gave me **a lot of useful information** about the festival. *(or: some
-useful information)*
-6. Did you **visit** the terraced fields last summer?
 
 **3.5** Answers will vary. Check: every answer is a full sentence in the present
 simple with the **-s** where it is needed; and your two new questions have the

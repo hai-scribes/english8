@@ -48,13 +48,13 @@
 
 ### 1.1 Comprehension
 
-Answer in full sentences.
-
-1. What has happened to the water behind the school?
-2. When did the water start to change colour?
-3. What happened after the fish went?
-4. What will Cô Yến want before she goes to the district office?
-5. What is Thảo going to do every morning?
+::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- Tí saw the change before Thảo did. On which day? = Monday
+- Tí backs his warning with something an adult in his family told him. Which relative? = uncle/his uncle/my uncle
+- Cô Yến put this lane in charge of the harbour after it failed at one thing. What could the lane not do? = agree
+- Tí tells Thảo to bring one thing on the day. What? = gloves
+- As small children the two of them did something in that corner of the harbour. What? = catch fish/caught fish/fish/fishing/go fishing
+:::
 
 ### 1.2 Find the phrase
 
@@ -67,15 +67,15 @@ Answer in full sentences.
 
 ### 1.3 Notice the grammar
 
-Look at the **bold** words. Each one joins a **time clause** to the rest of the
-sentence.
+Every line below is missing the word that joins its **time clause** to the rest
+of the sentence.
 
-::: task skill="course" type="short-answer" ask="Write the **time clause only** — the bold word and everything that belongs with it, and nothing else."
-- It started changing colour **after** the workshop opened. = after the workshop opened
-- **As soon as** the fish went, the birds stopped coming. = as soon as the fish went
-- **Once** we have photographs, she can take them to the office. = once we have photographs
-- We shouldn't wait **until** the harbour is completely dead. = until the harbour is completely dead
-- **Whenever** I walk past that water now, I feel angry. = whenever I walk past that water now
+::: task skill="course" type="choice" opts="after|as soon as|once|until|whenever" ask="Go back to the scene, find the line, and pick the joining word the speaker actually used. Each one is used once."
+- **Tí:** It started changing colour ___ the workshop opened on the other bank. = after
+- **Tí:** ___ the fish went, the birds stopped coming too. = as soon as
+- **Tí:** ___ we have photographs and dates, she can take them to the district office. = once
+- **Tí:** Bà Sáu says we shouldn't wait ___ the harbour is completely dead. = until
+- **Thảo:** ___ I walk past that water now, I feel angry. = whenever
 :::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **câu phức** với mệnh
@@ -137,6 +137,14 @@ sentence.
 > Do the written exercises below as well — writing by hand and typing on a
 > screen build different halves of the same knowledge.
 
+### Meet the words
+
+The table above is there to look things up in. This is where you actually meet
+them: a few at a time, then answer on the few you have just met.
+
+::: vocab size="7"
+:::
+
 ### 2.1 Complete the sentences
 
 ::: task skill="course" type="gap-fill" ask="Use one word from the table. Change the form if you need to."
@@ -150,10 +158,10 @@ sentence.
 
 ### 2.2 Odd one out
 
-::: task skill="course" type="choice" ask="In each line, one word does not belong with the other three. Pick it."
-- Line 1 — (a) reduce (b) contaminate (c) reuse (d) recycle = b ~ the other three are ways of creating less waste
-- Line 2 — (a) habitat (b) species (c) sewage (d) wildlife = c ~ the others are about living things and where they live
-- Line 3 — (a) protect (b) preserve (c) conserve (d) pollute = d ~ the others mean to look after or keep something safe
+::: task skill="course" type="choice" variant="odd-one-out" ask="The reason appears when you check."
+- reduce · contaminate · reuse · recycle = contaminate ~ the other three are ways of creating less waste
+- habitat · species · sewage · wildlife = sewage ~ the others are about living things and where they live
+- protect · preserve · conserve · pollute = pollute ~ the others mean to look after or keep something safe
 :::
 
 ### 2.3 One word, one meaning
@@ -236,11 +244,11 @@ between them. The second sound is /l/ in both. Only the first sound differs.
 
 ### 2.6 Odd cluster out
 
-::: task skill="course" type="choice" ask="In each line, three words share a cluster. Pick the one that does not."
-- Line 1 — (a) blue (b) black (c) clean (d) blame = c ~ *clean* is /kl/; the others are /bl/
-- Line 2 — (a) blow (b) clear (c) climate (d) close = a ~ *blow* is /bl/; the others are /kl/
-- Line 3 — (a) problem (b) possible (c) recycle (d) terrible = c ~ *recycle* is /kl/; the others are /bl/
-- Line 4 — (a) clothes (b) blossom (c) climb (d) clever = b ~ *blossom* is /bl/; the others are /kl/
+::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **cluster**, not the meaning."
+- blue · black · clean · blame = clean ~ *clean* is /kl/; the others are /bl/
+- blow · clear · climate · close = blow ~ *blow* is /bl/; the others are /kl/
+- problem · possible · recycle · terrible = recycle ~ *recycle* is /kl/; the others are /bl/
+- clothes · blossom · climb · clever = blossom ~ *blossom* is /bl/; the others are /kl/
 :::
 
 ### 2.7 Say these sentences
@@ -363,17 +371,14 @@ correctly.
 
 ### 3.4 Correct the mistake
 
-Each sentence has **one** error — a wrong tense in the time clause, or a comma
-in the wrong place. Rewrite it correctly.
-
-1. When I will grow up, I want to work in conservation.
-2. We will plant the seedlings, as soon as the ground is soft.
-3. I will call you after the meeting will end.
-4. Until the government will act, the pollution will continue.
-5. Once the club will collect enough bottles, we will sell them to the
-   recycling centre.
-6. Whenever the wind blows from the factory the whole street smells of
-   chemicals.
+::: task skill="course" type="short-answer" variant="error-correction" ask="Four of these are the wrong tense in the time clause. In the other two the words are right and the **comma** is wrong — there, write the two words the comma sits between, with the comma if it is needed and without it if it is not."
+- When I will grow up, I want to work in conservation. = I grow/when I grow/grow ~ no *will* inside a time clause
+- We will plant the seedlings, as soon as the ground is soft. = seedlings as/seedlings as soon as ~ the time clause comes second, so no comma
+- I will call you after the meeting will end. = ends ~ present simple in the time clause
+- Until the government will act, the pollution will continue. = acts ~ present simple in the time clause
+- Once the club will collect enough bottles, we will sell them to the recycling centre. = collects ~ present simple in the time clause
+- Whenever the wind blows from the factory the whole street smells of chemicals. = factory, the/factory, ~ the time clause comes first, so it needs a comma after it
+:::
 
 ### 3.5 About you
 
@@ -688,13 +693,14 @@ the preview window, then answer as you listen — not afterwards, from memory.
 nghe vừa trả lời.
 
 ::: audio orientation="You will hear a teacher speaking to students about the damage the new coral has done, and about somebody she wants to meet." mode="computer" preview="30" review="120"
-Good morning, everyone. Sit down, please. Nobody is going home yet, so listen.
+Good morning, everyone. Sit down, please. Nobody is going home until I have
+finished, so listen.
 
 You have all seen the harbour. I am going to tell you what is in it, and
 then I am going to tell you what happens next.
 
 First, the damage. The channel is closed from end to end; nothing can get in
-or out. Two boats have lost their propellers. The water pipe under the yard is
+or out until the coral is cut away by hand, and that is weeks of work. Two boats have lost their propellers. The water pipe under the yard is
 cracked, so there is no clean water in this school today, and sewage from the
 broken drain is running into the harbour we cleaned on Saturday. Three families
 have no way of working at all.
@@ -703,12 +709,12 @@ Second, and I want you to hear this clearly: nobody was hurt. A mooring rope
 parted at four in the morning, when the boat was empty.
 
 Third. The adults of this town met last night, and we know that what happened
-was not the weather. We are not angry with anyone yet. But somebody brought
-somebody down to that water on Saturday, and that person knows exactly what I am
-talking about.
+was not the weather. We are not angry with anyone yet, and while I am still
+not angry is the time to come and talk to me. Somebody brought somebody down to
+that water on Saturday, and that person knows exactly what I am talking about.
 
 So bring her to my house. Not to the school — to my house, and before this
-goes over a second time.
+goes over a second time. After that it stops being my decision.
 :::
 
 ### 6.1 Listen and choose
@@ -972,12 +978,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. That whole corner of the harbour has gone brown. 2. It started
-changing colour after the workshop opened on the other side. 3. The birds
-stopped coming as well.
-4. She will want evidence — photographs and dates. 5. She is going to photograph
-the water every morning while she walks to school.
-
 ### Lesson 2
 
 **2.7** Answers will vary — this is a speaking drill. Check: your /b/ buzzes and
@@ -996,13 +996,6 @@ plastic — *while*
 2. Before you leave the house, turn off all the lights. 3. Whenever I see
 litter in the playground, I pick it up. 4. As soon as the rain stops, the
 volunteers will plant. 5. While the tree grew tall, nobody watered it.
-
-**3.4** 1. When I **grow** up, I want to work in conservation. 2. We will plant
-the seedlings **as soon as** the ground is soft. *(no comma — the time clause
-comes second)* 3. I will call you after the meeting **ends**. 4. Until the
-government **acts**, the pollution will continue. 5. Once the club **collects**
-enough bottles, we will sell them to the recycling centre. 6. Whenever the wind
-blows from the factory**,** the whole street smells of chemicals.
 
 **3.5** Answers will vary. Check: every time clause uses the **present simple**
 (no *will* after *when, whenever, before, until, as soon as*), and sentences

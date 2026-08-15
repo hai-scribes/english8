@@ -60,13 +60,13 @@
 
 ### 1.1 Comprehension
 
-Answer in full sentences.
-
-1. What has Tí been reading, and how many times?
-2. Why does Thảo say that nothing on the wall counts yet?
-3. What does Tí say about Hùng's result?
-4. What happened to Minh's desk in September?
-5. What two choices does Thảo offer Tí at the end?
+::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- One teacher is the reason the whole yard knows Tí's mark. Who? = Cô Yến/Co Yen/Yến/Yen
+- Tí thinks one classmate's place at the top was fairly won. Which classmate? = Khoa
+- Thảo insists nothing happened at sea to the family who left. What does she say made them go? = money/it was money
+- Tí turns down the word Thảo has for how he feels and offers his own instead. Which word? = curious
+- Nobody in the town has asked after the boy who left. How long has that lasted? = a year/one year/a whole year/twelve months
+:::
 
 ### 1.2 Find the phrase
 
@@ -166,6 +166,14 @@ and **what school does to you** (rows 37–42).
 >
 > Do the written exercises below as well — writing by hand and typing on a
 > screen build different halves of the same knowledge.
+
+### Meet the words
+
+The table above is there to look things up in. This is where you actually meet
+them: a few at a time, then answer on the few you have just met.
+
+::: vocab size="7"
+:::
 
 ### 2.1 Complete the sentences
 
@@ -274,11 +282,11 @@ and travel in opposite directions.
 
 ### 2.7 Odd sound out
 
-::: task skill="course" type="choice" ask="In each line, one word has a **different** vowel sound. Pick it."
-- Line 1 — (a) tourist (b) pure (c) point (d) during = c ~ *point* is /ɔɪ/; the others are /ʊə/
-- Line 2 — (a) choice (b) noise (c) voice (d) cure = d ~ *cure* is /ʊə/; the others are /ɔɪ/
-- Line 3 — (a) enjoy (b) Europe (c) annoy (d) employ = b ~ *Europe* is /ˈjʊərəp/; the others are /ɔɪ/
-- Line 4 — (a) jury (b) furious (c) toy (d) curious = c ~ *toy* is /ɔɪ/; the others are /ʊə/
+::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **vowel sound**, not the meaning."
+- tourist · pure · point · during = point ~ *point* is /ɔɪ/; the others are /ʊə/
+- choice · noise · voice · cure = cure ~ *cure* is /ʊə/; the others are /ɔɪ/
+- enjoy · Europe · annoy · employ = Europe ~ *Europe* is /ˈjʊərəp/; the others are /ɔɪ/
+- jury · furious · toy · curious = toy ~ *toy* is /ɔɪ/; the others are /ʊə/
 :::
 
 ### 2.8 Say these sentences
@@ -485,17 +493,15 @@ and a **comma** after it. More than one answer may be possible.
 
 ### 3.6 Correct the mistake
 
-Each sentence has **one** error — a comma splice, a run-on, a missing comma, a
-comma that should not be there, or a conjunctive adverb punctuated as if it were
-a conjunction. Rewrite it correctly.
-
-1. I was very stressed, I didn't tell anyone.
-2. She joined the wellbeing club and now she sleeps better.
-3. My parents want good marks, and a tidy room.
-4. Hùng went to the club on Thursday he enjoyed it.
-5. Thảo and Đạt take photos, and put them on the noticeboard.
-6. The app is user-friendly, however I still needed help with it.
-7. She uploaded the photos late; therefore nobody saw them until Monday.
+::: task skill="course" type="short-answer" variant="error-correction" ask="Every mistake here is **punctuation**, or a missing joining word. Write only the words at the join, with the punctuation exactly as it should be — like this: *tired, so I*."
+- I was very stressed, I didn't tell anyone. = stressed, but I/stressed, yet I/stressed, so I/stressed. I/but/yet ~ a comma on its own cannot hold two clauses together
+- She joined the wellbeing club and now she sleeps better. = club, and now/club, and ~ two full clauses, so a comma goes before *and*
+- My parents want good marks, and a tidy room. = marks and a/marks and ~ *and* joins two objects here, not two clauses — no comma
+- Hùng went to the club on Thursday he enjoyed it. = Thursday, and he/Thursday, so he/Thursday. He ~ a run-on: nothing at all is holding the two clauses apart
+- Thảo and Đạt take photos, and put them on the noticeboard. = photos and put ~ one subject, two verbs — still a simple sentence, so no comma
+- The app is user-friendly, however I still needed help with it. = user-friendly; however, I/user-friendly. However, I ~ *however* is not a conjunction: semicolon before, comma after
+- She uploaded the photos late; therefore nobody saw them until Monday. = therefore, nobody ~ the semicolon is right; the comma after *therefore* was missing
+:::
 
 ### 3.7 About you
 
@@ -1091,12 +1097,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 1
 
-**1.1** 1. The list of marks on the school noticeboard, four times. 2. Because the midterm
-tests are next week, so nothing on that wall counts yet. 3. Hùng did no work at
-all, yet he came out two places above Tí. 4. Cô Yến moved it, and now the room
-just looks normal. 5. He can stand there and read the wall again, or he can
-walk down to the water with her.
-
 ### Lesson 2
 
 **2.8** Answers will vary. Check: your lips **spread into a smile** at the end
@@ -1119,22 +1119,6 @@ two full clauses)*
    session.
 *(For 6–8, check the punctuation as carefully as the meaning: **semicolon**
 before the word, **comma** after it.)*
-
-**3.6**
-1. I was very stressed, **but** I didn't tell anyone. *(comma splice — a
-   conjunction was missing)*
-2. She joined the wellbeing club, **and** now she sleeps better. *(comma added
-   before* and *— two independent clauses)*
-3. My parents want good marks **and** a tidy room. *(comma removed — one
-   clause, two objects)*
-4. Hùng went to the club on Thursday, **and** he enjoyed it. *(run-on)*
-5. Thảo and Đạt take photos **and** put them on the noticeboard. *(comma
-   removed — compound verb, still a simple sentence)*
-6. The app is user-friendly**;** however**,** I still needed help with it.
-   *(a comma is not strong enough before* however *— semicolon before, comma
-   after. Or: The app is user-friendly,* **but** *I still needed help with it.)*
-7. She uploaded the photos late; therefore**,** nobody saw them until Monday.
-   *(the comma after* therefore *was missing)*
 
 **3.7** Answers will vary. Check: each sentence has **two** independent
 clauses (cover the joining word — does the second half have its own subject and
