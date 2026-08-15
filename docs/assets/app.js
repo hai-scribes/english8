@@ -2130,9 +2130,29 @@ function initScene(root, p){
     el.style.aspectRatio = String((p.aspect || 1.5) * rows / cols);
     /* Probed once per sheet, not once per panel. */
     if (fresh){
+      /* THE PLACEHOLDER WAITS BEFORE IT SHOWS ITSELF. It used to be painted at
+         once and taken away on `load`, which is right for art that does not
+         exist and wrong for art that does: on the drawn characters it meant the
+         reader opened the story, saw two dashed boxes, and watched them be
+         replaced. The page declares these sheets with `rel=preload` in the
+         head, so on any ordinary visit the image is already there and the
+         placeholder should never have a turn at all.
+         A quarter of a second is the usual threshold for this — under it a
+         reader reads the flash as jank, over it as loading. */
+      if (ph){
+        ph.dataset.wait = "1";
+        clearTimeout(ph.__wait);
+        ph.__wait = setTimeout(() => ph.removeAttribute("data-wait"), 250);
+      }
       const probe = new Image();
-      probe.onload = () => { if (el.isConnected && ph) ph.remove(); };
-      probe.onerror = () => { if (el.isConnected) el.remove(); };
+      probe.onload = () => {
+        if (ph) clearTimeout(ph.__wait);
+        if (el.isConnected && ph) ph.remove();
+      };
+      probe.onerror = () => {
+        if (ph) { clearTimeout(ph.__wait); ph.removeAttribute("data-wait"); }
+        if (el.isConnected) el.remove();
+      };
       probe.src = src;
     }
   }
@@ -2294,9 +2314,25 @@ function initScene(root, p){
       const bgSrc = up + ASSET_BG + place + ".jpg";
       bg.style.backgroundImage = 'url("' + bgSrc + '")';
       bg.dataset.bg = place;
-      bg.dataset.missing = "1";
+      /* Same rule as the figures': the striped "this plate is not drawn" panel
+         is for a plate that is not drawn, not for one that is a few hundred
+         milliseconds away. The first plate of the scene is preloaded from the
+         head, so on an ordinary visit this never fires; while it is pending the
+         stage shows its own flat ground, which is a background, not a defect
+         report. */
+      clearTimeout(bg.__wait);
+      delete bg.dataset.missing;
       const bgProbe = new Image();
-      bgProbe.onload = () => { if (bg.dataset.bg === place) delete bg.dataset.missing; };
+      const settle = miss => {
+        clearTimeout(bg.__wait);
+        if (bg.dataset.bg !== place) return;      // the scene has moved on
+        if (miss) bg.dataset.missing = "1"; else delete bg.dataset.missing;
+      };
+      bgProbe.onload = () => settle(false);
+      bgProbe.onerror = () => settle(true);
+      bg.__wait = setTimeout(() => {
+        if (bg.dataset.bg === place && !bgProbe.complete) bg.dataset.missing = "1";
+      }, 250);
       bgProbe.src = bgSrc;
     }
 

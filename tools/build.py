@@ -2317,6 +2317,28 @@ def shell(*, title, depth, body, crumb, data=None, desc=""):
     payload = json.dumps(data, ensure_ascii=False).replace("<", "\\u003c") if data else ""
     data_tag = (f'<script id="page-data" type="application/json">{payload}</script>'
                 if data else "")
+    # The comic is the DEFAULT view, so its art is above the fold and wanted
+    # immediately — but the browser cannot know that: every image here is named
+    # by a CSS background-image written from JS, which is discovered only after
+    # app.js has parsed, run, and painted a panel. Until then the reader gets
+    # the dashed placeholders, which is what they were built for and not what
+    # they should be doing on a page whose art exists.
+    #
+    # So the assets a staged dialogue will ask for are declared in the head,
+    # where the preload scanner finds them before the parser has even reached
+    # the body. Only the FIRST background is preloaded: a scene that moves has
+    # its later plates fetched as it reaches them, and preloading all eleven
+    # would spend the reader's bandwidth on panels they may never open.
+    preload = []
+    for d in (data or {}).get("dialogue", []):
+        if not d.get("staged"):
+            continue
+        for slug in sorted({ln["slug"] for ln in d.get("lines", []) if ln.get("slug")}):
+            preload.append(f"{up}assets/cast/{slug}.webp")
+        for bg in d.get("backgrounds", [])[:1]:
+            preload.append(f"{up}assets/bg/{bg}.jpg")
+    preload_tags = "\n".join(
+        f'<link rel="preload" as="image" href="{e(h)}">' for h in dict.fromkeys(preload))
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -2326,6 +2348,7 @@ def shell(*, title, depth, body, crumb, data=None, desc=""):
 <meta name="description" content="{e(desc)}">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="{up}assets/app.css?v={ASSET_V['css']}">
+{preload_tags}
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2226%22>📗</text></svg>">
 </head>
 <body>

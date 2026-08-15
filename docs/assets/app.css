@@ -834,6 +834,12 @@ footer.foot p{margin:0;max-width:74ch}
 /* Square, like the panel it stands in for, so it shows the true footprint. */
 /* Left, height and transform come from JS, exactly as the real figure's do —
    the placeholder has to show the true footprint or it is not one. */
+/* Held back for a quarter of a second, so drawn art never shows scaffolding on
+   its way in. `visibility`, not an animation — the reduced-motion blanket kills
+   every animation on the page, and a placeholder faded in by one would stay
+   invisible forever for exactly the readers least able to guess what is
+   missing. JS takes the attribute off; see paintFigure. */
+.d-fig-ph[data-wait]{visibility:hidden}
 .d-fig-ph{position:absolute;bottom:0;aspect-ratio:1;
   border:2px dashed var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;
   background:color-mix(in srgb,var(--sunk) 82%,transparent);
