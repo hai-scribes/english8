@@ -590,7 +590,8 @@ Now answer for your own area, in full sentences.
 > We went down to the harbour wall on Tuesday, and I did not choose what came
 > back. Nobody chooses. It was not a ring and it was not a boat. What came back
 > was a way of living, and it settled on our lane and on no other street in the
-> town.
+> town. If you stand on that wall when the tide turns, you will get whatever the
+> sea has nearest, and that is the whole of it.
 >
 > By Wednesday morning there was no electricity here at all. The televisions
 > were dark, the telephones were flat, and there was no screen time for
@@ -602,16 +603,20 @@ Now answer for your own area, in full sentences.
 > there was nothing indoors to sit in front of. Old women taught weaving on the
 > step, and my grandmother walked further in three days than she usually walks
 > in a month. Her knees hurt less, not more. Nobody was sedentary here. Nobody
-> ate alone.
+> ate alone. If you ask anybody on this lane about the Thursday, they will tell
+> you it was the best evening of the year.
 >
 > Some of it was much worse. There was no fridge on the whole lane, so the fish
 > went bad by noon and Chú Bảy could not keep his medicine cold. Every drop of
 > water had to be carried. The school is two lanes away, and the children on
-> ours could not print their homework or join a single online lesson.
+> ours could not print their homework or join a single online lesson. If this
+> runs on to Monday, every one of them will be behind.
 >
 > So the lane argues, all day, in the same two sentences. "If we let it go, we
 > will lose the best week we have had in years." "If we keep it, somebody will
-> be seriously ill by Friday." Nobody agrees. And the question is no longer
+> be seriously ill by Friday." Bà Sáu says that if the fish goes bad once more
+> she will walk it down to the water herself. Đạt's father says he will not
+> spend another night without a fan. Nobody agrees. And the question is no longer
 > what we will call back next. It is what will happen to the life we already
 > have, if we keep doing this.
 :::

@@ -601,6 +601,57 @@ async function main() {
     ok("comic: at the first panel there is nothing to go back to",
        dlg.querySelector(".d-prev").disabled);
 
+    /* ---- the picture's own two halves ------------------------------------
+       Tapping the left of the frame goes back and the right goes on. It is the
+       one way through the story with no visible control, so it is the one most
+       easily broken by a change somewhere else — an overlay laid over the
+       stage, a handler that stops propagation, a guard that grows too greedy.
+
+       jsdom measures nothing, so the frame is lent a width for the length of
+       this block: WHERE the halves fall is a question for a browser, and what
+       is gated here is the wiring — that a tap moves the panel, that the two
+       halves move it opposite ways, and that a tap landing on a glossed word
+       still belongs to the gloss. That last one is why this is a click handler
+       reading an x rather than two overlay elements: an overlay above the
+       balloons would eat the glosses and one below them would make every
+       balloon a dead patch. */
+    {
+      const st = dlg.querySelector(".d-stage");
+      const real = st.getBoundingClientRect;
+      st.getBoundingClientRect = () => ({ left: 0, top: 0, right: 300, bottom: 200,
+                                          width: 300, height: 200, x: 0, y: 0 });
+      const tap = x => st.dispatchEvent(new win.MouseEvent("click",
+        { bubbles: true, detail: 1, clientX: x, clientY: 100 }));
+      const panel = () => dlg.querySelector(".d-count").textContent;
+
+      const first = panel();
+      tap(250);
+      await new Promise(r => setTimeout(r, 30));
+      const second = panel();
+      ok("comic: tapping the right of the picture goes on",
+         second !== first, first + " -> " + second);
+
+      /* A glossed word inside a balloon, tapped on the going-on half: the
+         gloss opens and the panel stays where it is. */
+      const gl = dlg.querySelector(".d-bubble .gl");
+      if (gl){
+        gl.dispatchEvent(new win.MouseEvent("click",
+          { bubbles: true, detail: 1, clientX: 250, clientY: 100 }));
+        await new Promise(r => setTimeout(r, 30));
+        ok("comic: a tap on a glossed word is the gloss's, not the page's",
+           panel() === second && gl.getAttribute("aria-expanded") === "true",
+           panel() + " · expanded=" + gl.getAttribute("aria-expanded"));
+      } else {
+        ok("comic: a tap on a glossed word is the gloss's, not the page's",
+           false, "no glossed word in this panel to tap");
+      }
+
+      tap(50);
+      await new Promise(r => setTimeout(r, 30));
+      ok("comic: tapping the left of it goes back", panel() === first, panel());
+      st.getBoundingClientRect = real;
+    }
+
     /* ---- the balloons that are a shape rather than a rounded box ---------
        The burst shipped once as two clip-path polygons with the inner one
        "inset" by a few pixels, which cannot produce an even outline: a
@@ -767,6 +818,31 @@ async function main() {
     ok("comic: no sticky scroll track is left in the stylesheet",
        !/\.d-(track|steps|step)\b/.test(CSS) && !/position:sticky/.test(
          (CSS.match(/\.d-stage\{[^}]*\}/) || [""])[0]));
+
+    /* ---- turning the page must not zoom the page ------------------------
+       Tapping the picture to go on means tapping the same spot twice in a
+       second, which is also how a phone is told to zoom. The comic asks for
+       `touch-action:manipulation`, which drops double-tap zoom and nothing
+       else — pinch still zooms and the page still scrolls under a dragging
+       finger.
+
+       The second check is the important one, and it is guarding against the
+       one-line version of this fix rather than against a bug. Putting
+       `user-scalable=no` or a `maximum-scale` in the viewport tag also stops
+       the story zooming, by taking magnification away from every page in the
+       site — from the exercises, the passages and the answer keys, for the
+       readers most likely to need it. The damage lands nowhere near the
+       symptom, so it has to be gated where it would be typed. */
+    ok("comic: turning the page does not double-tap-zoom the panel",
+       /touch-action:\s*manipulation/.test(
+         (CSS.match(/\.d-scene\{[^}]*\}/) || [""])[0]),
+       (CSS.match(/\.d-scene\{[^}]*\}/) || [""])[0]);
+    {
+      const vp = doc.querySelector('meta[name="viewport"]');
+      const content = vp ? vp.getAttribute("content") : "";
+      ok("comic: and the page can still be pinched and magnified",
+         !!vp && !/user-scalable\s*=\s*no|maximum-scale/i.test(content), content);
+    }
   }
 
   /* ---- the vocabulary intake: meet, recall, list -------------------------

@@ -558,27 +558,30 @@ Answer in full sentences.
 ::: passage
 > On Saturday morning thirty of us cleared the harbour steps behind the school.
 > We started at seven, and by ten we had filled forty sacks with plastic, glass
-> and rope. I brought Bống with me. I know how that sounds. I brought her
-> because I meant to walk her down to the water in front of the whole lane and
-> tell her to go home, and be finished with it.
+> and rope. When a sack was full we stacked it against the wall. I brought Bống
+> with me. I know how that sounds. I brought her because I meant to walk her
+> down to the water in front of the whole lane and tell her to go home, and be
+> finished with it before anybody could ask me for anything else.
 >
 > I could not do it. We stood out on the breakwater for twenty minutes and I
 > said nothing at all, and while I was saying nothing the tide turned under us.
 >
 > Then the water moved. A reef came back — not slowly, the way coral grows, but
-> all at once, the way a light comes on. Coral came up through the moorings,
-> through the channel, against the harbour wall. It lifted one boat clean out of
-> the water and broke a propeller like a biscuit. By eleven there was no way in
-> or out of this harbour for anything that floats.
+> all at once, the way a light comes on when somebody finds the switch. Coral
+> came up through the moorings, through the channel, against the harbour wall.
+> Before any of us understood what we were looking at, it lifted one boat clean
+> out of the water and broke a propeller like a biscuit. By eleven there was no
+> way in or out of this harbour for anything that floats.
 >
 > It was the old reef, the one this coast used to sit behind. Chú Bảy says it
-> was broken up before he was born, and that is why the sea reaches the road
+> was broken up before he was born, and that after it went every storm arrived
+> with nothing standing in front of it, which is why the sea reaches the road
 > now. It came back in about a minute, and it brought its residents with it:
 > fish in thousands, and a dugong lying in the shallows by the slipway that
 > nobody dared go near.
 >
-> Nobody laughed. We stood on our own harbour wall in the sun, and we were
-> frightened of it.
+> Nobody laughed. When the shouting stopped we stood on our own harbour wall in
+> the sun, and we were frightened of it.
 :::
 
 ### 5.1 True, False, or Not Given
@@ -656,7 +659,7 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 You have already read *The morning the reef came back* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
 
-::: fluency mode="read" words="255" secs="140|110|85" ask="Read *The morning the reef came back* again from the top. Stop the clock the moment you reach the end."
+::: fluency mode="read" words="307" secs="170|135|105" ask="Read *The morning the reef came back* again from the top. Stop the clock the moment you reach the end."
 - Do not stop to look anything up — you have met all of it
 - Read for the sense of it, not word by word
 - Press **I finished** the moment you reach the last line

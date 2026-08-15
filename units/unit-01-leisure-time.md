@@ -58,13 +58,13 @@ Below them the water climbs one step of the wall, and slides back down.
 
 ### 1.1 Comprehension
 
-Answer in full sentences.
-
-1. What did Hùng get for his birthday?
-2. What did Hùng do in the yard?
-3. Why does Thảo invite Tí to her house on Saturday?
-4. What does Tí admit he would love to do?
-5. What does Tí say is behind his kitchen?
+::: task skill="course" type="short-answer" words="3" ask="Look back at the dialogue above. The wording of the question is not always the wording of the answer."
+- When Thảo says "you weren't on it," what does "it" mean? = the list
+- Tí says out loud that he doesn't like board games. Does his private thought agree? = no
+- What single word does Thảo use to say her two reasons for inviting Tí are both real? = true
+- How many days has Tí had the thing in the bucket without telling anyone? = three days/3 days
+- What does Tí actually call the thing in the bucket? = something
+:::
 
 ### 1.2 Find the phrase
 
@@ -917,12 +917,6 @@ page can settle it, the row says so, and that one is yours to judge.
 > **Đáp án.** Chỉ xem sau khi đã tự làm bài.
 
 ### Lesson 1
-
-**1.1** 1. He got a new board game. 2. He read out the list of everyone who was
-coming to his house on Saturday. 3. Because Tí was left off Hùng's list — and
-because she enjoys spending time with him. 4. He would love to go to Hùng's on
-Saturday. 5. He says there is something in the bucket behind his kitchen, and
-that he has not told anybody about it.
 
 ### Lesson 2
 

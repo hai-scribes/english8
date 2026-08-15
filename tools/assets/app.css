@@ -643,7 +643,38 @@ footer.foot p{margin:0;max-width:74ch}
    4:3 on a tablet, square on a phone. A comic panel is redrawn for the page it
    is printed on and this is the same decision — a 3:2 letterbox on a portrait
    phone leaves the figures two centimetres tall. */
-.d-scene{display:flex;flex-direction:column;gap:.55rem}
+/* Turning the page is now a tap on the picture, so a reader moving through a
+   chapter taps the same spot repeatedly — and two taps in quick succession is
+   how a phone is told to zoom in. The story kept jumping to 200% under a
+   thumb that was only reading on.
+
+   `touch-action:manipulation` is the whole fix and it is deliberately narrow:
+   it removes DOUBLE-TAP zoom, and nothing else. Pinching still zooms, the page
+   still scrolls when a finger drags across the panel, and every one of those is
+   still true outside the comic — a learner who needs the text bigger gets it
+   the same way they always did.
+
+   What must never be done instead: `user-scalable=no` or a `maximum-scale` in
+   the viewport tag. It would fix this by taking zoom away from the whole
+   document, which is a real barrier for anybody who needs to magnify a page and
+   is exactly the thing the meta tag should not carry. There is a check in
+   test_reading.js holding that tag to `width=device-width,initial-scale=1`,
+   because this is a tempting one-line "fix" and the damage it does is
+   somewhere else on the page entirely.
+
+   It is a CSS declaration, not a listener: nothing here intercepts a touch, so
+   the panel still knows nothing about the page's scrolling.
+
+   One declaration, on the scene, and it covers the picture AND the buttons
+   under it — Next is tapped repeatedly too. Do not be talked out of that by
+   the computed style: `touch-action` does not INHERIT, so `.d-stage` and the
+   buttons all still report `auto`, and it looks for all the world as though it
+   has not taken. What a touch is actually allowed to do is the intersection of
+   this property down the whole ancestor chain, so declaring it once here is
+   what covers everything inside it. Copying it onto the descendants changes
+   nothing except how much of this there is to keep true. */
+.d-scene{display:flex;flex-direction:column;gap:.55rem;
+  touch-action:manipulation}
 /* The frame carries the shape; max-width rather than max-height is what keeps
    it, because a max-height against an aspect-ratio just breaks the ratio. */
 .d-frame{position:relative;width:100%;aspect-ratio:3/2;

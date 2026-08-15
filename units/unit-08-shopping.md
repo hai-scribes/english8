@@ -618,34 +618,38 @@ Answer in full sentences.
 :::
 
 ::: passage
-> Bà Sáu sent me to the market at five with two hundred thousand dong and a
-> list. I took Bống with me. I walked her out of that kitchen in front of
-> Bà Sáu and she said nothing. I know exactly how that sounds.
+> Bà Sáu always sends me to the market on the fifteenth, because that is the day
+> the money comes, and she is always awake before anybody else in the lane. This
+> time she sent me at five with two hundred thousand dong and a list. I took
+> Bống with me. I walked her out of that kitchen in front of Bà Sáu and she said
+> nothing. I know exactly how that sounds.
 >
 > On Friday Đạt walked past our gate wearing my father's watch. Bà Sáu sold it
 > in July, to a man at the centre, for four weeks of rice, and it was the one
-> thing in the house that was going to be mine. Đạt did not mention it. He does
-> not have to. He was kind to me all the way to the corner.
+> thing in the house that was going to be mine. Đạt never mentions things like
+> that. He does not have to. He was kind to me all the way to the corner.
 >
 > So I told myself I was taking her because the house was empty, which is
 > what I wrote in October, and it was not the whole truth either time.
 >
-> The tide turned at twenty past five. I know that because I had looked it up
-> the night before, which is not a thing anybody does by accident. I walked her
-> into the middle of the car park, and I did not stop her.
+> I hardly ever look at a tide table. I had looked at one the night before,
+> which is not a thing anybody does by accident. The tide turned at twenty past
+> five. I walked her into the middle of the car park, and I did not stop her.
 >
 > The market that came back was our market, and it was not. It stood where the
 > car park is now: forty stalls under palm leaves, a fish row, a cloth row,
 > and a street of sellers calling prices I had never heard in my life. Bống put
-> both hands on my arm and said nothing, which is what she does now when she is
-> frightened.
+> both hands on my arm and said nothing, which is what she always does now when
+> she is frightened.
 >
 > The sellers were not ghosts. They were busy. They weighed things, they
-> argued about weight, they gave change. A woman sold me four mangoes for
-> eight hundred dong and dropped the coins into a wooden box.
+> argued about weight, and they always gave change. A woman sold me four mangoes
+> for eight hundred dong and dropped the coins into a wooden box. Sellers there
+> usually called the price twice, once to you and once to the whole row.
 >
 > Then I tried to buy bread at the shop on the corner — our shop, the one that
-> is still there — and the man looked at the note in my hand and pushed it
+> is still there. We go in twice a day, and to the centre on the ring road
+> almost never. The man looked at the note in my hand and pushed it
 > back across the counter. It was old money. No shop in Bãi Sẻ will take it,
 > and by seven o'clock half the town was holding notes that buy nothing at
 > all.

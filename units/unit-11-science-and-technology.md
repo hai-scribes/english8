@@ -726,14 +726,14 @@ they name. Shift the tense and the pronouns.
 :::
 
 ::: passage
-> We went upriver past the stilt house to the old mill, and the door under the
-> wheel was the colour of the water, so we walked past it twice.
+> Bống told us that the door was under the wheel. She did not say that it was
+> the colour of the water, so we walked past it twice.
 >
 > Inside there was a bench, a shelf, and nothing else at all. Somebody had
 > carried every tool out of that workroom years ago. The green notebook was
 > still on the shelf, and its last page had been torn out.
 >
-> "This is his room," Bống said. "It is not his work."
+> Bống said that this was his room and that it was not his work.
 >
 > So we waited on the mill step until the water in the race stopped and turned,
 > and she called.
@@ -742,8 +742,9 @@ they name. Shift the tense and the pronouns.
 > wooden box with a glass eye in it, built to read a fingerprint. A brass
 > scanner as long as my arm, with an iris painted on the lid. And a small frame
 > he had made to know a person by the face alone — face recognition, sixty
-> years before anybody sold such a thing in a shop. He had spent his life
-> building a machine to do the one thing I do for nothing.
+> years before anybody sold such a thing in a shop. Khoa said that the brass one
+> was worth more than our whole school. He had spent his life building a machine
+> to do the one thing I do for nothing.
 >
 > The torn page was back in the notebook too. His writing is small and it
 > leans.
@@ -758,14 +759,17 @@ they name. Shift the tense and the pronouns.
 > can call him.
 >
 > I read the rest of it front to back, and Khoa read it after me, looking for
-> the one thing we came for, which is Minh. Sixty years of careful pages about
+> the one thing we came for, which is Minh. Khoa said that a man who wrote
+> everything down would write down a boy. Sixty years of careful pages about
 > lines and far ends, and his name is not in any of them. The nearest it comes
 > is one line at the foot of the torn page, in the same small hand: *a
-> called-back thing stays as long as somebody keeps hold of what it was.* We
-> read that twice, decided it was about objects, and turned over.
+> called-back thing stays as long as somebody keeps hold of what it was.* Khoa
+> said that it was about objects. I said that it was about objects too. We read
+> it twice and turned over.
 >
 > Bống read it over my shoulder and said nothing for a long time. Then she said
-> the keeper had never got as far as giving her a name.
+> the keeper had never got as far as giving her a name, and that nobody had ever
+> told her any of this.
 :::
 
 ### 5.1 Yes, No, or Not Given

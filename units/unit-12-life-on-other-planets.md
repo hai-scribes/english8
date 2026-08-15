@@ -645,15 +645,18 @@ tone — that is the Lesson 2 target, used for real.
 > was clear, which he wanted, so that he could name things. He pointed at Venus,
 > low over the roofs, and said that it sits inside the **habitable zone** and is
 > still far too hot for anybody. Then he asked me twice whether I could see it.
-> I could not.
+> I could not. I asked him what a habitable zone was, and he asked me whether I
+> had been awake in his class on Tuesday.
 >
 > By that night our street was a bay. There were boats where the buses go, and a
 > lamp in every upstairs window, and the whole lane out on the roofs talking,
-> and nobody frightened of it any more. The twelfth mark was four feet under,
-> and Bống would not look at the wall.
+> and somebody two roofs away asked whether anybody had seen her cat, and nobody
+> frightened of it any more. The twelfth mark was four feet under, and Bống
+> would not look at the wall.
 >
 > We rowed out over our own market. Thảo rowed. Minh sat in the bow and did not
-> say much, and Bống asked us three times whether we were sure. Halfway out,
+> say much; he asked once where the market used to be, and after that nothing.
+> Bống asked us three times whether we were sure. Halfway out,
 > something very large came up beside the boat, and stayed a moment, and went
 > down again without hurrying, and nobody said one word.
 >
@@ -690,7 +693,8 @@ tone — that is the Lesson 2 target, used for real.
 >
 > "I know," she said.
 >
-> He said nothing about the rule I broke. He will. It can wait.
+> He said nothing about the rule I broke, and he never asked me why I had done
+> it. He will. It can wait.
 >
 > Thảo asked how long the walk would take. Khoa already knew.
 :::
@@ -710,7 +714,7 @@ tone — that is the Lesson 2 target, used for real.
 ### 5.2 Answer the questions
 
 ::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- Which planet did Khoa point at, low over the fields? = Venus
+- Which planet did Khoa point at, low over the roofs? = Venus
 - Who sat in the bow of the boat? = Minh
 - How long did the water take to go over? = (about) four seconds
 - What did Bống say when she lifted her head? = Sao
@@ -779,7 +783,7 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 You have already read *The twelfth mark* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
 
-::: fluency mode="read" words="490" secs="240|190|145" ask="Read *The twelfth mark* again from the top. Stop the clock the moment you reach the end."
+::: fluency mode="read" words="546" secs="265|210|160" ask="Read *The twelfth mark* again from the top. Stop the clock the moment you reach the end."
 - Do not stop to look anything up — you have met all of it
 - Read for the sense of it, not word by word
 - Press **I finished** the moment you reach the last line

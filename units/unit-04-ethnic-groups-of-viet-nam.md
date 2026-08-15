@@ -640,22 +640,28 @@ tables above.
 
 ::: passage label="A"
 > We walked the old path for two hours and passed nothing — no village, no gate,
-> no person. Ten questions in my pocket and nobody to ask them. So I sat on the
+> no person. Ten questions in my pocket and nobody to ask them. What do you put
+> in an answer column when there is nobody on the path? So I sat on the
 > bank and waited for the water to turn, and Bống said the two words. This far
 > up the river it still turns, twice a day, the same as at home. The bamboo across the water
 > moved and stopped, because a house was standing in it: a stilt house, clear of
 > the ground on tall wooden legs, with a wooden staircase to the door.
 >
+> Thảo got there before I did. "Who built it? How long does wood like that
+> last?" Neither of those was on my sheet.
+>
 > It was built of wood and bamboo, and the roof was palm leaves. Underneath it
 > people had kept tools and firewood and, by the smell, animals, and the floor
 > above was dry, the way a floor stays dry in the rainy season. Cool air moved
 > under it while we stood in the sun. Inside was one large room, an open fire in
-> the middle, three baskets and a gong on the wall.
+> the middle, three baskets and a gong on the wall. How many people sleep around
+> one fire? How much firewood does a room like that need in a wet month?
 >
 > "The sea gives back what it took," Bống said. "You don't choose
 > which, and it comes back the way it went. That is four marks on our wall now." Cô Yến's sheet says there are
 > fifty-four ethnic groups, that the Kinh are the majority, and that the other
-> fifty-three are ethnic minorities. Down in Bãi Sẻ the new houses go up in a
+> fifty-three are ethnic minorities. Which of the fifty-three put this house
+> here? The sheet does not say, and neither did the house. Down in Bãi Sẻ the new houses go up in a
 > month in brick and concrete; a few villages upriver have begun to restore
 > their old ones. Nobody restored this one. Cô Yến calls a house like that
 > heritage, and I did not understand the word until Saturday.

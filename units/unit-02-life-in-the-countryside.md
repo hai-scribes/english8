@@ -600,7 +600,8 @@ and **than** in at least two of them.
 
 ::: passage
 > I missed the ten o'clock bus to Bến Vàng by four minutes. The next one was at
-> two, and my grandmother had said *before dark* twice, in the voice she keeps
+> two, and it runs more slowly than the ten because it stops at every school on
+> the way. My grandmother had said *before dark* twice, in the voice she keeps
 > for when she means it.
 >
 > So we sat down at the edge of a paddy field above the ferry landing and
@@ -619,16 +620,19 @@ and **than** in at least two of them.
 >
 > It was narrow and hard and swept clean, as if a hundred people had walked it
 > that morning. It ran along the stream, climbed the hill far more steeply than
-> any road climbs anything, and dropped down the other side.
+> any road climbs anything, and dropped down the other side far more gently than
+> it had gone up.
 >
-> We took it. It was shorter than the road by half, and it carried us over the
+> We took it. Bống went up it more easily than I did and had to wait for me
+> twice. It was shorter than the road by half, and it carried us over the
 > top so much more quickly than the two o'clock bus that I reached my uncle's
 > gate with dry shoes and shaking legs.
 >
 > Chú Bảy took the medicine. Then he looked at the board game under my arm for
 > a while and did not ask me where it came from.
 >
-> "I was bottom of my class every year I was in it," he said. "I made that
+> "I was bottom of my class every year I was in it," he said. "I learned more
+> slowly than anybody in that room, and I still do. I made that
 > board instead of my homework, and I am forty-six, and I am perfectly all
 > right. Tell your grandmother that."
 >
@@ -640,7 +644,8 @@ and **than** in at least two of them.
 >
 > "You came more quickly than the road allows," he said.
 >
-> We got home before dark. Bống put a second chalk mark on the harbour wall, a
+> We got home earlier than my grandmother had counted on, and well before dark.
+> Bống put a second chalk mark on the harbour wall, a
 > hand's width above the first, and this time she told me what they were for.
 :::
 
@@ -708,7 +713,7 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 You have already read *The old way to Bến Vàng* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
 
-::: fluency mode="read" words="363" secs="180|145|110" ask="Read *The old way to Bến Vàng* again from the top. Stop the clock the moment you reach the end."
+::: fluency mode="read" words="425" secs="210|170|130" ask="Read *The old way to Bến Vàng* again from the top. Stop the clock the moment you reach the end."
 - Do not stop to look anything up — you have met all of it
 - Read for the sense of it, not word by word
 - Press **I finished** the moment you reach the last line
