@@ -5,6 +5,8 @@ Self-study material for Tiếng Anh 8 (Global Success), built as a static site.
 `docs/` is generated — never hand-edit it.
 
 ```sh
+bash tools/gates.sh               # the build, then every gate, in the only order they mean anything in
+bash tools/gates.sh --deploy      # the same, plus docs/ must already match a fresh build
 python3 tools/build.py            # regenerate docs/
 python3 tools/build.py --check    # parse and report counts, write nothing
 python3 tools/check_dict.py       # gate: every vocabulary slot resolves
@@ -21,8 +23,14 @@ python3 tools/make_overlay.py --all # cut the prop and effect drawings out of th
 python3 tools/make_overlay.py --plates # shrink the background plates to what the page uses
 ```
 
+Run them through `tools/gates.sh` rather than one at a time. Two of the nine
+read the *built* pages, so running them before `build.py` marks the previous
+build's output — the runner exists to make that ordering unforgettable, and it
+prints the coverage and art reports underneath without failing on either.
+
 `test_reading.js` needs `npm install jsdom` and skips loudly without it, so the
-other four still run on a clean checkout.
+other eight still run on a clean checkout. `--deploy` refuses that skip, because
+a gate that excused itself has not been run.
 
 ## Publishing, and the account this repo pushes as
 
@@ -30,6 +38,28 @@ other four still run on a clean checkout.
 there is no CI between a commit and the live site at
 <https://hai-scribes.github.io/english8/>. So `docs/` must be rebuilt and every
 gate green *before* you push, because nothing downstream will catch you.
+
+That was a rule with nothing holding it up, so `tools/hooks/pre-push` now holds
+it: a push that moves `main` runs `tools/gates.sh --deploy` and is refused if
+anything is red. It gates `main` only — a branch or a tag publishes nothing.
+On top of the nine gates, `--deploy` adds the check the prose could only ask
+for: **the committed `docs/` must equal what today's sources build.** That is
+one check standing in for two rules — *never hand-edit `docs/`* and *rebuild
+before you push* — and it works because the build is deterministic, so a
+rebuild that changes a tracked file means the published output was stale or
+touched by hand. `research/evidence-register.md` is written by the build too,
+and is checked with it.
+
+Like the credential helper below, **`.git/hooks` is not committed, so a fresh
+clone has to install it again**:
+
+```sh
+ln -sf ../../tools/hooks/pre-push .git/hooks/pre-push
+```
+
+A symlink, not a copy, so editing the tracked file is the whole update. The
+escape hatches are `git push --no-verify` and `GATES_SKIP=1`, and both announce
+themselves — if you take one, you are publishing unchecked.
 
 This repo belongs to **`hai-scribes`**, and pushes must authenticate as that
 account. The trap: `gh` can hold several logged-in accounts, and its git
@@ -58,6 +88,43 @@ printf 'protocol=https\nhost=github.com\n\n' | git credential fill | grep userna
 
 This changes nothing globally — other repos keep using whichever account is
 active, and `gh auth switch` is not needed.
+
+## Editing a unit: the order of work
+
+Everything below has its reasoning somewhere in this file. This is the order,
+so that nothing load-bearing is discovered after the fact. The steps a machine
+can check are marked; **the rest are checked by reading, and no gate will
+catch you.**
+
+1. **Read the book's own section first** — `curriculum/sgk/unit-NN.md`, found
+   through `index.jsonl`, never by reading the record wholesale — then run
+   `python3 tools/check_coverage.py --unit NN`. We never ship less than the
+   official book, and the two things our shape has historically dropped are the
+   Everyday English function and the Communication content block.
+2. **Convert every exercise a key can settle into a `:::task`**, and leave the
+   genuinely open ones as prose. Expect roughly a dozen per unit, and **say in
+   the commit which went which way.** A reveal-and-self-mark exercise is the
+   arrangement every directive here exists to replace.
+3. **Put the genre in a `variant`, never into `ask=` prose.** A task's own
+   `ask=` is extra detail appended to the variant's, never a replacement — and
+   odd-one-out without its variant renders as a free-text box, where spelling
+   costs the mark on a question about meaning.
+4. **Read every new key back against the text above it.** A marked task must
+   not print its own answer. *Deliberately not gated* — a rule matching keys
+   against nearby prose fires almost entirely on legitimate exercises, and a
+   gate that cries wolf gets ignored. This is the one you have to do by eye.
+5. **Check what the lesson actually enrols** in the review queue: candidates
+   rank produced before picked, so confirm the queue took the productive item
+   and not a classification drill that happened to be printed above it.
+6. **Keep the reasoning off the page.** No criterion names, no markers, no CEFR
+   levels, no citations, no accounts of evidence — and any IELTS claim lives in
+   a `:::bridge` with its `marker` and `src`, or it does not exist, because the
+   gate cannot see a claim made in ordinary prose.
+7. **Run `bash tools/gates.sh`** and read the reports under it, not just the
+   verdict — a coverage drop is printed there and will never fail a build.
+8. **Commit the regenerated `docs/` in the same commit as the source.** The
+   pre-push hook enforces this; committing them apart leaves `main` in a state
+   where the live site does not match the unit that produced it.
 
 ## The unit-1 pilot, and the rules it established
 

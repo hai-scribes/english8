@@ -111,11 +111,15 @@ reads.
 | `curriculum/syllabus.md` | The syllabus map the units are written against. |
 | `curriculum/sgk/` | **The official book, recorded.** Every unit's targets, exercises and glossary, section by section — reference only, never built or published. |
 | `tools/check_coverage.py` | Report: what the official book teaches that our units do not. |
+| `tools/gates.sh` | Runner: the build and every gate, in order, with the reports underneath. `--deploy` also demands that the committed `docs/` match a fresh build. |
+| `tools/hooks/pre-push` | Refuses a push that moves `main` if a gate is red. Not installed by cloning — `ln -sf ../../tools/hooks/pre-push .git/hooks/pre-push`. |
 | `app/` | The earlier single-page artifacts this site replaces. |
 
 ## Building
 
 ```sh
+bash tools/gates.sh               # the build, then every gate, in order
+bash tools/gates.sh --deploy      # the same, and docs/ must already match a fresh build
 python3 tools/build.py            # regenerate docs/
 python3 tools/build.py --check    # parse and report counts, write nothing
 python3 tools/check_dict.py       # gate: every vocabulary slot resolves
@@ -132,10 +136,23 @@ python3 tools/make_overlay.py --plates # shrink the background plates to what th
 
 Requires `markdown` (`pip install markdown`). Edit the markdown in `units/`,
 re-run the build, commit `docs/`. There is no CI step — a push publishes, so
-run all five gates before you push. `check_write.js` and `test_reading.js` read
-the built pages, so run them after `build.py` rather than before.
+every gate has to be green before you push. That is what `tools/gates.sh` is
+for: nine gates in one command, in the order that makes them mean anything.
+`check_write.js` and `test_reading.js` read the built pages, so they run after
+`build.py` rather than before, and the runner will not let them run at all if
+the build failed — docs/ is emptied on every build, so their complaint would
+only bury the real one.
+
 `test_reading.js` additionally wants `npm install jsdom`; without it, it skips
-loudly rather than failing, so a clean checkout still runs the other four.
+loudly rather than failing, so a clean checkout still runs the other eight.
+
+`tools/hooks/pre-push` runs `gates.sh --deploy` on any push that moves `main`
+and refuses the push if a gate is red. `.git/hooks` is not committed, so a
+fresh clone installs it with
+`ln -sf ../../tools/hooks/pre-push .git/hooks/pre-push`. `--deploy` adds the
+one check the others cannot make: the committed `docs/` has to equal what
+today's sources build, which is how *never hand-edit `docs/`* and *rebuild
+before you push* stop being promises.
 
 ## Marked tasks, one play, and strands
 

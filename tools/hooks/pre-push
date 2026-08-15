@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+#
+# pre-push — the last thing between a broken gate and the live site.
+#
+# GitHub Pages serves docs/ from main directly. There is no CI, so a push *is*
+# a deploy and nothing downstream will catch a failed gate. This hook runs
+# tools/gates.sh --deploy and refuses the push if anything is red.
+#
+# It lives here, in tools/hooks/, because .git/hooks is not committed — a fresh
+# clone has to install it again, exactly like the credential helper in
+# CLAUDE.md. Install with:
+#
+#   ln -sf ../../tools/hooks/pre-push .git/hooks/pre-push
+#
+# A symlink rather than a copy, so editing the tracked file is the whole update.
+#
+# Only a push that moves main is gated: a branch or a tag publishes nothing, so
+# stopping it would be a toll booth on a road to nowhere. `git push --no-verify`
+# skips this, as does GATES_SKIP=1, and both say so on the way past.
+#
+set -u
+
+REMOTE_BRANCH='refs/heads/main'
+ZERO='0000000000000000000000000000000000000000'
+
+if [ "${GATES_SKIP:-0}" = "1" ]; then
+  echo "pre-push: GATES_SKIP=1 — publishing without running the gates." >&2
+  exit 0
+fi
+
+# stdin: <local ref> <local sha> <remote ref> <remote sha>, one line per ref.
+# A ref being deleted arrives with an all-zero local sha and deploys nothing.
+publishes=0
+while read -r _local_ref local_sha remote_ref _remote_sha; do
+  [ "$remote_ref" = "$REMOTE_BRANCH" ] || continue
+  [ "$local_sha" = "$ZERO" ] && continue
+  publishes=1
+done
+
+if [ "$publishes" -eq 0 ]; then
+  exit 0
+fi
+
+ROOT=$(git rev-parse --show-toplevel) || exit 1
+
+echo
+echo "pre-push: this push moves main, which is the deploy. Running the gates."
+
+# The gates print to stdout; a hook's stdout reaches the terminal, so the
+# operator sees the same report they would from running it by hand.
+if bash "$ROOT/tools/gates.sh" --deploy; then
+  exit 0
+fi
+
+echo "pre-push: refusing the push. Fix the above, or GATES_SKIP=1 git push to" >&2
+echo "          publish anyway — which puts it live unchecked." >&2
+exit 1
