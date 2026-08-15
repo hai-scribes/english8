@@ -34,7 +34,7 @@
 **Thảo|sad:** [[When|gram:when]] we were small we caught fish there. Now the water looks [[toxic]].
 **Tí|sad:** Not any more. As soon as the fish went, the birds stopped coming too.
 **Thảo|neutral:** Cô Yến is organising a clean-up on Saturday. Our lane could not agree about anything else for a whole week, so she gave us the harbour instead. She says [[awareness]] is where every clean-up starts.
-**Tí|neutral:** Then she'll want evidence. Once we have photographs and dates, she can take them to the district office.
+**Tí|neutral:** Then she'll want [[evidence]]. Once we have photographs and dates, she can take them to the district office.
 **Thảo|happy:** I'll photograph the water every morning while I walk to school.
 **Tí|neutral:** And I'll carry the sacks. Bà Sáu says we shouldn't wait until the harbour is completely dead.
 **Thảo|annoyed:** Nobody in this town does anything until it's too late. And Bống? People still stop me about her.

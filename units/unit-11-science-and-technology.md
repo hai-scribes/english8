@@ -39,7 +39,7 @@
 **Khoa|neutral:** Show me your [[experiment]] sheet. What did you write down on Monday?
 **Tí|sad:** I wrote that the box opened four times out of ten. Hùng [[said|gram:said]] that four out of ten was worse than a key.
 **Khoa|happy:** Hùng is not wrong, for once.
-**Tí|neutral:** Thảo says we should carry it to Chú Bảy. He mends boat engines all day; a small lock cannot be harder than that.
+**Tí|neutral:** Thảo says we should carry it to Chú Bảy. He [[mends|mend]] boat engines all day; a small lock cannot be harder than that.
 **Khoa|neutral:** Ask him tonight, then. And what did Bống say about it?
 **Tí|worried:** She said the sea would not help us. The sea gives back what it took — you never choose what, and there are two marks left on that wall.
 **Khoa|happy:** So we mend it ourselves.

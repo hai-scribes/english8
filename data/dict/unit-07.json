@@ -400,5 +400,26 @@
       { "w": "participation", "pos": "noun", "en": "the act of taking part", "vi": "sự tham gia", "ex": "**Participation** is free but you must sign up." }
     ],
     "note": "Never without **in**: ❌ *participate the contest* → ✅ *participate **in** the contest*. In speech *take part in* is commoner; *participate* is the more formal of the two."
+  },
+  "evidence": {
+    "senses": [
+      {
+        "pos": "noun",
+        "grammar": "uncountable — never *an evidence*, never *evidences*",
+        "en": "facts or objects that show that something is true",
+        "vi": "bằng chứng, chứng cứ",
+        "examples": [
+          "We took photographs, because the office will want **evidence**.",
+          "There is no **evidence** that the workshop caused it.",
+          "The dates on the pictures are the strongest **evidence** we have."
+        ],
+        "colloc": [
+          "collect evidence",
+          "there is no evidence",
+          "evidence that\u2026"
+        ]
+      }
+    ],
+    "note": "**Uncountable**, which is the trap for Vietnamese learners: \u274c *an evidence*, \u274c *many evidences* \u2192 \u2705 *some evidence*, *a piece of evidence*, *a lot of evidence*."
   }
 }

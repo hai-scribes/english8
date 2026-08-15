@@ -832,5 +832,26 @@
       }
     ],
     "note": "Plural **contact lenses**, with *-es*. You **wear** them and you **put** them **in**; you do not ~~use~~ them. Two words in British English, and the everyday short form is just *contacts*."
+  },
+  "mend": {
+    "senses": [
+      {
+        "pos": "verb",
+        "grammar": "+ noun",
+        "en": "to repair something that is broken or torn, so that it works or can be used again",
+        "vi": "s\u1eeda, v\u00e1, s\u1eeda ch\u1eefa",
+        "examples": [
+          "He **mends** boat engines all day.",
+          "She **mended** the net before the tide turned.",
+          "Can you **mend** it, or do we need a new one?"
+        ],
+        "colloc": [
+          "mend an engine",
+          "mend a net",
+          "mend it yourself"
+        ]
+      }
+    ],
+    "note": "**Mend** and **repair** are the same act; *mend* is the everyday word and is what you use for small things \u2014 a net, a shirt, a lock. **Fix** works for all of them and is the commonest of the three in speech."
   }
 }
