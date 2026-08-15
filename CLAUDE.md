@@ -156,9 +156,19 @@ widget for `odd-one-out`, `error-correction` and `sentence-build`. A task's own
 `ask=` is *extra* detail appended to the variant's, never a replacement. Add a
 genre by adding a variant, never by writing the instruction into a unit.
 
-> **Still to do:** ten units carry odd-one-out exercises in the old prose form
-> (`a · b · c = key` under `type="choice"`). They are still text boxes. Adding
-> `variant="odd-one-out"` is the whole fix.
+**All eighteen odd-one-out exercises in `units/` now carry the variant, and so
+do the five in the four Reviews** — which is where the last of them were, and
+why "ten units" was the wrong place to look. The Reviews had the genre written
+into `ask=` and their candidates laid out as `(a) … (b) … (c) …`, so they were
+not the text boxes the units had been; they marked a *letter*. That is why no
+gate found them and why reading for the defect by its symptom missed them: the
+rule is that the genre lives in a `variant`, not that a widget is wrong.
+
+The conversion is worth knowing because it will come up again. `a · b · c =
+key` replaces the lettered options, the key becomes the candidate itself rather
+than its letter, and the build then checks **the key is one of the candidates**
+— which is a real check on every line, and the reason a conversion that builds
+is a conversion that is right.
 
 ### A marked task must not print its own answer
 

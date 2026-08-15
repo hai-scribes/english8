@@ -13,12 +13,12 @@ Three sounds have come up so far, one in each unit: short **/ʊ/** against long
 **/uː/**, the weak **/ə/** against short **/ɪ/**, and **/ʊə/** against **/ɔɪ/**.
 They are all in this exercise, and the lines are not grouped by unit.
 
-::: task skill="course" type="choice" ask="In each line, three words share the sound in **bold** and one does not. Pick the odd one."
-- Line 1 — (a) g**oo**d (b) c**oo**l (c) f**oo**t (d) c**oo**k = b ~ *cool* has the long /uː/; the other three are short /ʊ/
-- Line 2 — (a) J**u**ne (b) r**u**de (c) tr**u**th (d) p**u**t = d ~ *put* is short /ʊ/; the other three are long /uː/
-- Line 3 — (a) vill**a**ge (b) cott**a**ge (c) short**a**ge (d) farm**er** = d ~ *farmer* ends in the weak /ə/; the other three end in /ɪdʒ/
-- Line 4 — (a) t**ou**rist (b) d**u**ring (c) ch**oi**ce (d) c**u**rious = c ~ *choice* is /ɔɪ/; the other three are /ʊə/
-- Line 5 — (a) av**oi**d (b) j**oi**n (c) enj**oy** (d) p**u**re = d ~ *pure* is /ʊə/; the other three are /ɔɪ/
+::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **sound in bold**, not the meaning."
+- g**oo**d · c**oo**l · f**oo**t · c**oo**k = c**oo**l ~ *cool* has the long /uː/; the other three are short /ʊ/
+- J**u**ne · r**u**de · tr**u**th · p**u**t = p**u**t ~ *put* is short /ʊ/; the other three are long /uː/
+- vill**a**ge · cott**a**ge · short**a**ge · farm**er** = farm**er** ~ *farmer* ends in the weak /ə/; the other three end in /ɪdʒ/
+- t**ou**rist · d**u**ring · ch**oi**ce · c**u**rious = ch**oi**ce ~ *choice* is /ɔɪ/; the other three are /ʊə/
+- av**oi**d · j**oi**n · enj**oy** · p**u**re = p**u**re ~ *pure* is /ʊə/; the other three are /ɔɪ/
 :::
 
 > **Mẹo:** Đọc to cả bốn từ trước khi chọn. Mắt rất dễ bị đánh lừa bởi chữ

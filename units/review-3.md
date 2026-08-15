@@ -12,11 +12,11 @@
 Two pairs of clusters have come up: **/bl/** against **/kl/**, and **/sp/**
 against **/st/**.
 
-::: task skill="course" type="choice" ask="In each line, three words begin with the same two sounds and one does not. Pick the odd one."
-- Line 1 — (a) **bl**ue (b) **bl**ame (c) **cl**ean (d) **bl**anket = c ~ *clean* begins /kl/; the other three begin /bl/
-- Line 2 — (a) **st**ore (b) **sp**eaker (c) **st**orm (d) **st**all = b ~ *speaker* begins /sp/; the other three begin /st/
-- Line 3 — (a) **cl**ear (b) **cl**ose (c) **bl**ow (d) **cl**imb = c ~ *blow* begins /bl/; the other three begin /kl/
-- Line 4 — (a) **sp**ecial (b) **sp**end (c) **st**ock (d) **sp**eciality = c ~ *stock* begins /st/; the other three begin /sp/
+::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **cluster** the word begins with, not the meaning."
+- **bl**ue · **bl**ame · **cl**ean · **bl**anket = **cl**ean ~ *clean* begins /kl/; the other three begin /bl/
+- **st**ore · **sp**eaker · **st**orm · **st**all = **sp**eaker ~ *speaker* begins /sp/; the other three begin /st/
+- **cl**ear · **cl**ose · **bl**ow · **cl**imb = **bl**ow ~ *blow* begins /bl/; the other three begin /kl/
+- **sp**ecial · **sp**end · **st**ock · **sp**eciality = **st**ock ~ *stock* begins /st/; the other three begin /sp/
 :::
 
 > **Mẹo:** Đừng chèn thêm nguyên âm vào giữa hai phụ âm đầu. *Store* có một âm
@@ -24,11 +24,11 @@ against **/st/**.
 
 ### 1.2 Odd stress out
 
-::: task skill="course" type="choice" ask="In each line, three words are stressed on the same syllable and one is not. Pick the odd one. Find the word each one is built from — that is where the stress usually stays."
-- Line 1 — (a) humorous (b) numerous (c) tremendous (d) generous = c ~ tre**men**dous takes the stress of *tre**mend***; the other three are stressed on the first syllable
-- Line 2 — (a) national (b) natural (c) arrival (d) typical = c ~ a**rri**val keeps the stress of *a**rrive***; the other three keep a first-syllable stem
-- Line 3 — (a) festival (b) poisonous (c) ambitious (d) cultural = c ~ am**bi**tious keeps the stress of *am**bi**tion*
-- Line 4 — (a) practical (b) additional (c) tropical (d) musical = b ~ a**dd**itional keeps the stress of *a**ddi**tion*
+::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **stress pattern**, not the meaning. Find the word each one is built from — that is where the stress usually stays."
+- humorous · numerous · tremendous · generous = tremendous ~ tre**men**dous takes the stress of *tre**mend***; the other three are stressed on the first syllable
+- national · natural · arrival · typical = arrival ~ a**rri**val keeps the stress of *a**rrive***; the other three keep a first-syllable stem
+- festival · poisonous · ambitious · cultural = ambitious ~ am**bi**tious keeps the stress of *am**bi**tion*
+- practical · additional · tropical · musical = additional ~ a**ddi**tional keeps the stress of *a**ddi**tion*
 :::
 
 ### 1.3 One word missing

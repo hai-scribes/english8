@@ -465,7 +465,12 @@ def task_answer_html(p: dict) -> str:
     rows = []
     for it in p["items"]:
         why = f' <i>({it["why"]})</i>' if it.get("why") else ""
-        rows.append(f'<li><b>{e(it["key"])}</b>{why}</li>')
+        # inline(), not e(): a pronunciation key is written "c**oo**l" and the
+        # marked-up letters are the answer's whole content. Escaping alone
+        # printed the asterisks, so the key on the page disagreed with the
+        # option the learner had just clicked, which showed the same word
+        # rendered. Every other key is plain text, where inline() is e().
+        rows.append(f'<li><b>{inline(it["key"])}</b>{why}</li>')
     return f'<ol class="t-key">{"".join(rows)}</ol>'
 
 

@@ -9,11 +9,11 @@
 
 ### 1.1 Odd stress out
 
-::: task skill="course" type="choice" ask="In each line, three words are stressed on the same syllable and one is not. Say each word aloud before you choose."
-- Line 1 — (a) referee (b) amazing (c) historic (d) invention = a ~ refe**ree** is stressed on the last syllable; the other three on the middle one
-- Line 2 — (a) digital (b) conference (c) Japanese (d) difficult = c ~ Japa**nese** is stressed on the last syllable; the other three on the first
-- Line 3 — (a) Vietnamese (b) employee (c) engineer (d) telescope = d ~ **te**lescope is stressed on the first syllable; the other three on the last
-- Line 4 — (a) astronaut (b) atmosphere (c) discovery (d) gravity = c ~ dis**co**very is stressed on the second syllable; the other three on the first
+::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **stress pattern**, not the meaning. Say each word aloud before you choose."
+- referee · amazing · historic · invention = referee ~ refe**ree** is stressed on the last syllable; the other three on the middle one
+- digital · conference · Japanese · difficult = Japanese ~ Japa**nese** is stressed on the last syllable; the other three on the first
+- Vietnamese · employee · engineer · telescope = telescope ~ **te**lescope is stressed on the first syllable; the other three on the last
+- astronaut · atmosphere · discovery · gravity = discovery ~ dis**co**very is stressed on the second syllable; the other three on the first
 :::
 
 ### 1.2 First or last?

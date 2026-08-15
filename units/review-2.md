@@ -12,12 +12,12 @@
 Three pairs have come up: **/k/** against **/ɡ/**, **/n/** against **/ŋ/**,
 and **/br/** against **/pr/**. The lines below are not grouped by pair.
 
-::: task skill="course" type="choice" ask="In each line, three words share the sound in **bold** and one does not. Pick the odd one."
-- Line 1 — (a) **c**ostume (b) **c**ustom (c) **c**eremony (d) **c**ommunal = c ~ *ceremony* begins with /s/; the other three begin with /k/
-- Line 2 — (a) **g**ong (b) **g**arden (c) **g**eneration (d) **g**ather = c ~ *generation* begins with /dʒ/; the other three begin with /ɡ/
-- Line 3 — (a) ide**n**tify (b) da**n**ce (c) tha**n**k (d) pla**n** = c ~ in *thank* the **n** is pulled to /ŋ/ by the /k/ after it
-- Line 4 — (a) bri**ng** (b) si**ng** (c) spri**ng** (d) lo**ng**evity = d ~ *longevity* is /n/ + /dʒ/; the other three end in /ŋ/
-- Line 5 — (a) **br**ight (b) **br**ead (c) **pr**ice (d) **br**ush = c ~ *price* begins with /pr/; the other three begin with /br/
+::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **sound in bold**, not the meaning."
+- **c**ostume · **c**ustom · **c**eremony · **c**ommunal = **c**eremony ~ *ceremony* begins with /s/; the other three begin with /k/
+- **g**ong · **g**arden · **g**eneration · **g**ather = **g**eneration ~ *generation* begins with /dʒ/; the other three begin with /ɡ/
+- ide**n**tify · da**n**ce · tha**n**k · pla**n** = tha**n**k ~ in *thank* the **n** is pulled to /ŋ/ by the /k/ after it
+- bri**ng** · si**ng** · spri**ng** · lo**ng**evity = lo**ng**evity ~ *longevity* is /n/ + /dʒ/; the other three end in /ŋ/
+- **br**ight · **br**ead · **pr**ice · **br**ush = **pr**ice ~ *price* begins with /pr/; the other three begin with /br/
 :::
 
 > **Mẹo:** Với /n/ và /ŋ/, hãy chú ý đầu lưỡi. Với /n/ đầu lưỡi chạm lợi trên;
