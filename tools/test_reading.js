@@ -37,6 +37,13 @@ const APP = fs.readFileSync(path.join(ROOT, "docs/assets/app.js"), "utf8");
    Two of those promises are load-bearing enough to be worth it — the panel is
    no longer positioned against the scroll, and there is no scroll track. */
 const CSS = fs.readFileSync(path.join(ROOT, "docs/assets/app.css"), "utf8");
+/* The same stylesheet with its comments taken out. Every structural check below
+   scans source text, and this file explains its own rules by quoting them — so
+   a check for a forbidden pattern will find that pattern in the paragraph
+   warning against it and fail on its own documentation. That has now happened
+   twice, once for a translate in a transform and once for an animation-delay
+   outranking the beat. Match against the code; read the comments yourself. */
+const CSSCODE = CSS.replace(/\/\*[\s\S]*?\*\//g, "");
 
 let fails = 0, passes = 0;
 function ok(name, cond, extra) {
@@ -970,6 +977,18 @@ async function main() {
         "@keyframes\\s+" + name + "\\s*\\{(?:[^{}]|\\{[^{}]*\\})*\\}")) || [""])[0];
       return !/\.d-fig/.test(sel) || /translate/.test(frames);
     });
+    /* The squash is a one-shot on `.d-fig[data-beat]`, at (0,2,0). ANY rule
+       reaching a figure with more specificity that also sets an animation
+       longhand will outrank it and silently retime or cancel the squash — which
+       is what per-character breath phases did as `animation-delay`, killing the
+       reaction on every slot but the first. Phases belong in a custom property.
+       This is not a style preference; it is the bug, written down. */
+    const clobber = (CSSCODE.match(/\.d-fig[^{}]*\[[^{}]*\][^{}]*\{[^}]*animation-(delay|duration|name|timing-function)[^}]*\}/g) || [])
+                      .filter(r => !/^\s*\.d-fig\[data-beat\]/.test(r));
+    ok("comic: nothing outranks the expression beat's own animation",
+       clobber.length === 0,
+       clobber.map(r => r.split("{")[0].trim()).join(" · ") || "beat is not clobbered");
+
     ok("comic: a loop may only breathe a figure, never move it or the plate",
        badLoop.length === 0,
        badLoop.map(r => r.split("{")[0].trim()).join(" · ") || loops.length + " safe loop(s)");
