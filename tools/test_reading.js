@@ -915,10 +915,19 @@ async function main() {
        their width. The centring therefore lives on `translate` in the
        stylesheet, and NOTHING in the app may write a translate into a transform
        on an element that also carries animated individual transforms. */
-    ok("comic: the speaker lift and the breath are declared",
-       /\[data-live="1"\][^{]*\{[^}]*translate:/.test(CSS)
-       && /:not\(\[data-live="1"\]\)\s*\{[^}]*animation:[^}]*d-breathe/.test(CSS),
-       "lift and breath rules present");
+    ok("comic: the speaker lift is declared",
+       /\[data-live="1"\][^{]*\{[^}]*translate:/.test(CSS), "lift rule present");
+    /* Nothing in the panel idles. The breath and the sway were removed after
+       being looked at — a uniform scale on a flat still reads as the body
+       inflating, not as breathing — and the rule that replaced them is that
+       motion happens on a beat and then stops. An `infinite` animation here
+       would be a loop running under text somebody is reading, which is both
+       the configuration the reading research indicts and the one WCAG 2.2.2
+       puts in scope at level A. */
+    const idle = (CSS.match(/animation:[^;}]*infinite[^;}]*/g) || [])
+                   .filter(a => /d-[a-z]/.test(a));
+    ok("comic: nothing in the panel loops forever",
+       idle.length === 0, idle.join(" · ") || "no idle loops");
     /* Matched against an ASSIGNMENT rather than the bare string, because the
        note explaining all this names the offending declaration in prose and a
        looser pattern fails on its own documentation. */

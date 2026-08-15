@@ -705,8 +705,8 @@ footer.foot p{margin:0;max-width:74ch}
    on how many people are on stage and which of them is talking. */
 .d-fig,.d-fig-ph{translate:-50% 0}
 .d-fig{position:absolute;bottom:0;background-repeat:no-repeat;
-  transform-origin:bottom center;rotate:0deg;scale:1;
-  transition:opacity .18s ease,translate .16s ease,rotate .3s ease,scale .3s ease}
+  transform-origin:bottom center;scale:1;
+  transition:opacity .18s ease,translate .16s ease}
 
 /* ---- the figures are alive, and the live one is the speaker ---------------
    THE CENTRING IS ON `translate`, NOT ON `transform`, AND THAT IS LOAD-BEARING.
@@ -729,17 +729,12 @@ footer.foot p{margin:0;max-width:74ch}
    The properties are then a BUDGET, divided so that nothing fights:
 
      translate  the centring, plus the speaker's lift   (a transition)
-     rotate     the sway                                (a loop, quiet figures)
-     scale      the breath, and the beat                (a loop, then a one-shot)
+     scale      the beat                                (a one-shot)
+     rotate     nothing, since the sway was removed
 
-   WHY THE QUIET ONES BREATHE AND THE SPEAKER DOES NOT. Left as decoration on
-   everybody it would be a loop running under text somebody is reading, which
-   is the one configuration the reading-disruption research indicts. Confined
-   to the listeners it inverts into a signal: the still, lifted, undimmed
-   figure is the one talking. That matters here more than it would elsewhere,
-   because the balloon deliberately carries no name — the tail and the dimming
-   were the only two things saying who spoke, and on a phone at four-to-a-panel
-   that was thin.
+   Keep it divided if anything is added back. Two rules writing the same
+   property is how the sway and the beat would have fought, and the symptom of
+   that fight is a value snapping rather than an error anybody can see.
 
    THE LIFT IS A SIGNAL AND HAS TO BE SEEN. It shipped once at 1.1% of a
    figure's height, tuned as though it were decoration — and decoration is the
@@ -761,15 +756,23 @@ footer.foot p{margin:0;max-width:74ch}
    tested: the transcript toggle takes the whole comic off the screen, and it
    is the same control reduced-motion readers get switched to by default. If
    that control ever goes, this loop goes with it. */
-@keyframes d-breathe{from{scale:1 1}to{scale:1 1.02}}
-@keyframes d-sway{from{rotate:-.8deg}to{rotate:.8deg}}
-/* Only the real artwork breathes. A dashed placeholder is scaffolding and
-   should read as scaffolding — but it still LIFTS, below, because the lift
-   carries information and the breath does not, and with 3 of 32 drawings in
-   hand most characters on most pages are still a dashed box. */
-.d-fig:not([data-live="1"]){
-  animation:d-breathe 3.2345s ease-in-out infinite alternate,
-            d-sway 5.5345s ease-in-out infinite alternate}
+/* THE IDLE LOOP IS GONE, and it is worth recording why rather than leaving a
+   gap here. A breath (a 2% vertical swell) and a sway (0.8deg about the feet)
+   ran on every figure that was not speaking, on two periods sharing no common
+   factor so the loop never visibly repeated. Both were removed after looking at
+   them on the real page: neither read as life.
+
+   The reason is in the drawings, not in the numbers. Breath reads as breath
+   because hair, cloth and shoulders follow it a beat late; scaling a single
+   flat still uniformly makes the whole body inflate instead, and the eye files
+   that under "something is wrong with the image" rather than "this person is
+   alive". Turning it up does not fix that — it makes a wrong motion louder.
+   Real secondary motion needs the parts to move separately, which means the
+   parts must exist as layers, which is the character-parts work and not this.
+
+   Nothing idles now. Everything left moves ON A BEAT and then stops, which is
+   also the reading the research supports: motion where reading is not
+   happening, and only where it carries information. */
 /* The lift is a static offset that happens to be transitioned, NOT an
    animation — so under reduced motion, where the blanket rule at the top of
    this file kills every animation and transition, the speaker is still raised.
