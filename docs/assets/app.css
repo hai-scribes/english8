@@ -751,13 +751,19 @@ footer.foot p{margin:0;max-width:74ch}
    never visibly repeats, and those tails are the whole trick: two periods that
    never line up read as a body, and two that do read as a metronome.
 
-   THE RATE IS A FULL CYCLE, NOT A HALF ONE. `alternate` runs the keyframes out
-   and back, so the period here is half the breath: 1.7345s each way is a 3.5s
-   cycle, or about seventeen a minute, which is where a resting adult sits. At
-   3.2345s it was a 6.5s cycle — nine a minute — and a body breathing that
-   slowly does not read as calm, it reads as something wrong. The amplitude came
-   down with it, from 2% to 0.8%: at rest the chest moves a little, and the
-   number that looked timid on a slow swell was too much on a real one.
+   THE NUMBERS ARE A PERSON'S, NOT A DESIGNER'S. A resting adult breathes twelve
+   to twenty times a minute, and an adolescent — which is what Tí and Thảo are —
+   sits in the same band. 4s is fifteen a minute, the middle of it. It was
+   9/min once, which does not read as calm but as something wrong.
+
+   AND A BREATH IS NOT SYMMETRICAL. At rest the inhale is roughly half the
+   exhale — the ratio usually quoted is 1:2 — so this is not an `alternate` of a
+   two-stop keyframe, which would spend equal time each way and read like a pump.
+   The swell is reached at 34% and the fall takes the remaining two thirds, with
+   its own easing so the release is softer than the draw.
+
+   The amplitude is 0.7%. A chest at rest moves a little; every version of this
+   that was visible as motion rather than felt as life was too big.
 
    ON WCAG 2.2.2 (Pause, Stop, Hide, level A). A loop that auto-starts, runs
    past five seconds and sits beside text is in scope, and needs a mechanism to
@@ -784,13 +790,19 @@ footer.foot p{margin:0;max-width:74ch}
    not snap. A cancelled animation drops to its base value in one frame, and a
    figure that jerks as it begins a line would undo the point of it.
 
-   THE RATE IS A FULL CYCLE, NOT A HALF ONE. `alternate` runs the keyframes out
-   and back, so the period here is half the breath: 1.7345s each way is a 3.5s
-   cycle, or about seventeen a minute, which is where a resting adult sits. At
-   3.2345s it was a 6.5s cycle — nine a minute — and a body breathing that
-   slowly does not read as calm, it reads as something wrong. The amplitude came
-   down with it, from 2% to 0.8%: at rest the chest moves a little, and the
-   number that looked timid on a slow swell was too much on a real one.
+   THE NUMBERS ARE A PERSON'S, NOT A DESIGNER'S. A resting adult breathes twelve
+   to twenty times a minute, and an adolescent — which is what Tí and Thảo are —
+   sits in the same band. 4s is fifteen a minute, the middle of it. It was
+   9/min once, which does not read as calm but as something wrong.
+
+   AND A BREATH IS NOT SYMMETRICAL. At rest the inhale is roughly half the
+   exhale — the ratio usually quoted is 1:2 — so this is not an `alternate` of a
+   two-stop keyframe, which would spend equal time each way and read like a pump.
+   The swell is reached at 34% and the fall takes the remaining two thirds, with
+   its own easing so the release is softer than the draw.
+
+   The amplitude is 0.7%. A chest at rest moves a little; every version of this
+   that was visible as motion rather than felt as life was too big.
 
    ON WCAG 2.2.2 (Pause, Stop, Hide, level A). This is a loop that auto-starts,
    runs past five seconds and sits beside text, so it is in scope and needs a
@@ -798,8 +810,20 @@ footer.foot p{margin:0;max-width:74ch}
    the transcript toggle takes the whole comic off the screen, and it is the
    same control a reduced-motion reader is given by default. If that control
    ever goes, this loop goes with it. */
-@keyframes d-breathe{from{scale:1 1}to{scale:1 1.008}}
-.d-fig[data-in="1"]{animation:d-breathe 1.7345s ease-in-out infinite alternate}
+@keyframes d-breathe{
+  0%  {scale:1 1;     animation-timing-function:cubic-bezier(.4,0,.55,1)}
+  34% {scale:1 1.007; animation-timing-function:cubic-bezier(.3,0,.45,1)}
+  100%{scale:1 1}
+}
+.d-fig[data-in="1"]{animation:d-breathe 4s infinite}
+/* Nobody breathes in time with anybody else. Two figures rising and falling
+   together is a pair of lungs, not two people, and it is the single thing most
+   likely to read as a mechanism. Negative delays start each of them part-way
+   through, so the offset is there from the first frame rather than drifting in.
+   The numbers are chosen not to share a factor with the period. */
+.d-fig[data-in="1"][data-slot="1"]{animation-delay:-1.3s}
+.d-fig[data-in="1"][data-slot="2"]{animation-delay:-2.7s}
+.d-fig[data-in="1"][data-slot="3"]{animation-delay:-0.9s}
 /* THE SPEAKER IS NOT LIFTED, AND NOTHING MAY LIFT THEM. A 4% rise read as the
    figure floating: a half-body figure is cropped at the waist and stands ON the
    bottom edge of the frame, so raising it opens a strip of background under

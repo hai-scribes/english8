@@ -2119,10 +2119,17 @@ function initScene(root, p){
       if (mv && mv.go === "in" && walk){
         box.style.setProperty("--walk", "0ms");
         box.style.left = OFF[mv.side];
-        requestAnimationFrame(() => {
-          box.style.setProperty("--walk", walk + "ms");
-          box.style.left = (x * 100) + "%";
-        });
+        /* A FORCED STYLE FLUSH, not requestAnimationFrame. rAF runs BEFORE the
+           next paint, so setting the start here and the end in the callback
+           lets the browser resolve style once and see only the end value —
+           there is no earlier value to travel from and no transition runs. A
+           figure walking on is a fresh element with no previous `left` at all,
+           which is the case this bites hardest. Reading a layout property
+           forces the start to resolve first, and then the second assignment is
+           a real change. Same trick as the expression beat, same reason. */
+        void box.offsetWidth;
+        box.style.setProperty("--walk", walk + "ms");
+        box.style.left = (x * 100) + "%";
       } else {
         box.style.setProperty("--walk", walk + "ms");
         box.style.left = (mv && mv.go === "out" && walk)
