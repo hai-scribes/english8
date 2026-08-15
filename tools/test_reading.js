@@ -926,17 +926,28 @@ async function main() {
                      });
     ok("comic: nothing lifts a figure off the floor",
        lifted.length === 0, lifted.join(" · ") || "all figures seated");
-    /* Nothing in the panel idles. The breath and the sway were removed after
-       being looked at — a uniform scale on a flat still reads as the body
-       inflating, not as breathing — and the rule that replaced them is that
-       motion happens on a beat and then stops. An `infinite` animation here
-       would be a loop running under text somebody is reading, which is both
-       the configuration the reading research indicts and the one WCAG 2.2.2
-       puts in scope at level A. */
-    const idle = (CSS.match(/animation:[^;}]*infinite[^;}]*/g) || [])
-                   .filter(a => /d-[a-z]/.test(a));
-    ok("comic: nothing in the panel loops forever",
-       idle.length === 0, idle.join(" · ") || "no idle loops");
+    /* A loop is allowed — the breath is one — but only on a figure, and only
+       on properties that cannot move it. Anything looping on the plate or the
+       whole panel is large-area peripheral movement beside text somebody is
+       reading, which is the configuration both the reading-disruption research
+       and the vestibular guidance single out. And a loop touching `translate`
+       could walk a figure off the floor a fraction at a time, which is the
+       defect the seating rule above exists to prevent. */
+    const loops = (CSS.match(/[^{}]*\{[^}]*animation:[^;}]*infinite[^;}]*/g) || []);
+    const badLoop = loops.filter(r => {
+      const sel = r.split("{")[0];
+      const name = (r.match(/animation:\s*([\w-]+)/) || [])[1] || "";
+      /* The whole block, braces balanced one level deep — a keyframe list is
+         selectors wrapping declarations. A lazy match here stopped at the
+         opening brace and read every animation as harmless, which is how this
+         check first passed while a translate-drift loop was sitting in it. */
+      const frames = (CSS.match(new RegExp(
+        "@keyframes\\s+" + name + "\\s*\\{(?:[^{}]|\\{[^{}]*\\})*\\}")) || [""])[0];
+      return !/\.d-fig/.test(sel) || /translate/.test(frames);
+    });
+    ok("comic: a loop may only breathe a figure, never move it or the plate",
+       badLoop.length === 0,
+       badLoop.map(r => r.split("{")[0].trim()).join(" · ") || loops.length + " safe loop(s)");
     /* Matched against an ASSIGNMENT rather than the bare string, because the
        note explaining all this names the offending declaration in prose and a
        looser pattern fails on its own documentation. */

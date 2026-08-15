@@ -706,7 +706,7 @@ footer.foot p{margin:0;max-width:74ch}
 .d-fig,.d-fig-ph{translate:-50% 0}
 .d-fig{position:absolute;bottom:0;background-repeat:no-repeat;
   transform-origin:bottom center;scale:1;
-  transition:opacity .18s ease,translate .16s ease}
+  transition:opacity .18s ease,translate .16s ease,scale .3s ease}
 
 /* ---- the figures are alive, and the live one is the speaker ---------------
    THE CENTRING IS ON `translate`, NOT ON `transform`, AND THAT IS LOAD-BEARING.
@@ -728,9 +728,9 @@ footer.foot p{margin:0;max-width:74ch}
 
    The properties are then a BUDGET, divided so that nothing fights:
 
-     translate  the centring, plus the speaker's lift   (a transition)
-     scale      the beat                                (a one-shot)
-     rotate     nothing, since the sway was removed
+     translate  the centring, and nothing else        (see below — no Y, ever)
+     scale      the breath, then the beat over it      (a loop, then a one-shot)
+     rotate     nothing, since the sway stays removed
 
    Keep it divided if anything is added back. Two rules writing the same
    property is how the sway and the beat would have fought, and the symptom of
@@ -756,23 +756,29 @@ footer.foot p{margin:0;max-width:74ch}
    tested: the transcript toggle takes the whole comic off the screen, and it
    is the same control reduced-motion readers get switched to by default. If
    that control ever goes, this loop goes with it. */
-/* THE IDLE LOOP IS GONE, and it is worth recording why rather than leaving a
-   gap here. A breath (a 2% vertical swell) and a sway (0.8deg about the feet)
-   ran on every figure that was not speaking, on two periods sharing no common
-   factor so the loop never visibly repeated. Both were removed after looking at
-   them on the real page: neither read as life.
+/* THE BREATH IS BACK; THE SWAY IS NOT. A 2% vertical swell, bottom-anchored, on
+   everyone whose turn it is not — so the person speaking holds still and the
+   room around them is alive. That pairing is the anime convention and it does a
+   job here that nothing else does any more: the dimming answers who is in the
+   conversation, not who is talking this second, so stillness is what marks the
+   speaker inside a two-hander where both are lit.
 
-   The reason is in the drawings, not in the numbers. Breath reads as breath
-   because hair, cloth and shoulders follow it a beat late; scaling a single
-   flat still uniformly makes the whole body inflate instead, and the eye files
-   that under "something is wrong with the image" rather than "this person is
-   alive". Turning it up does not fix that — it makes a wrong motion louder.
-   Real secondary motion needs the parts to move separately, which means the
-   parts must exist as layers, which is the character-parts work and not this.
+   The sway that used to run beside it — 0.8deg about the feet — stays out. Two
+   loops on one flat still is a rocking body rather than a breathing one, and it
+   was the harder of the two to defend.
 
-   Nothing idles now. Everything left moves ON A BEAT and then stops, which is
-   also the reading the research supports: motion where reading is not
-   happening, and only where it carries information. */
+   `scale` is in the transition above so that starting and stopping this does
+   not snap. A cancelled animation drops to its base value in one frame, and a
+   figure that jerks as it begins a line would undo the point of it.
+
+   ON WCAG 2.2.2 (Pause, Stop, Hide, level A). This is a loop that auto-starts,
+   runs past five seconds and sits beside text, so it is in scope and needs a
+   mechanism to pause, stop OR HIDE it. The last of those exists and is tested:
+   the transcript toggle takes the whole comic off the screen, and it is the
+   same control a reduced-motion reader is given by default. If that control
+   ever goes, this loop goes with it. */
+@keyframes d-breathe{from{scale:1 1}to{scale:1 1.02}}
+.d-fig:not([data-live="1"]){animation:d-breathe 3.2345s ease-in-out infinite alternate}
 /* THE SPEAKER IS NOT LIFTED, AND NOTHING MAY LIFT THEM. A 4% rise read as the
    figure floating: a half-body figure is cropped at the waist and stands ON the
    bottom edge of the frame, so raising it opens a strip of background under

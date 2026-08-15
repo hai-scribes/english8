@@ -2191,16 +2191,20 @@ function initScene(root, p){
   let curLines = [];             // the panel's lines, for per-turn faces
   let curRoster = [];            // and the state it ends in
 
-  /* THE DIMMING IS THE TURN. It used to answer at panel granularity, which in a
-     four-line exchange lights everybody and has stopped saying anything by the
-     third balloon. Now the figure at full strength is the one speaking right
-     now, and it hands over as each balloon begins. Opacity only — no geometry,
-     so nothing lifts off the floor and nothing moves after the tails have been
-     measured. */
+  /* THE DIMMING IS NOT THE TURN, and the distinction is the point. Dimming
+     answers "is this person in the conversation" and it is set once per panel,
+     in paintFigure, from everyone who speaks anywhere in the beat. If A is
+     talking to B then BOTH are in it and both stay at full strength; a listener
+     faded down every time the other one takes a line reads as somebody who has
+     left the scene, which is exactly wrong for a two-hander. What the dim is
+     for is the person standing there saying nothing all panel.
+
+     `data-live` is the turn — whose balloon is being typed right now. It moves
+     the faces, it fires the beat, and it holds that figure still while everyone
+     else breathes. It deliberately touches no opacity and no geometry: nothing
+     lifts off the floor, and nothing moves after the tails are measured. */
   const setTurn = slots => $$(".d-fig,.d-fig-ph", cast).forEach(el => {
-    const on = slots.has(Number(el.dataset.slot));
-    el.dataset.live = on ? "1" : "0";
-    el.style.opacity = on ? "1" : String(p.dim || 0.72);
+    el.dataset.live = slots.has(Number(el.dataset.slot)) ? "1" : "0";
   });
 
   /* Everyone's face at one line of the beat, beating whoever just changed. The
