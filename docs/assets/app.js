@@ -2050,15 +2050,60 @@ function initScene(root, p){
       if (!box) return;
       box.style.left = (x * 100) + "%";
       box.style.height = (h * 100) + "%";
-      box.style.transform = "translateX(-50%)" + (mirror ? " scaleX(-1)" : "");
+      /* THE CENTRING IS NOT WRITTEN HERE ANY MORE. It is `translate:-50%` in the
+         stylesheet, and the long note beside it says why: the individual
+         transform properties are applied to the result of `transform`, so a
+         `translateX(-50%)` sitting in this string got scaled and rotated by the
+         breath and the beat, and the figure slid sideways as it squashed. What
+         is left in this string is the mirror alone, which contributes no
+         translation for anything downstream to act on. */
+      box.style.transform = mirror ? "scaleX(-1)" : "";
       /* The speaker is at full strength and in front; everyone else is held
          back. With the name gone from the balloon this is half of what says
          who is talking — the tail is the other half, and two weak signals
          beat one strong one on a small screen. */
       box.style.opacity = speaking ? "1" : String(p.dim || 0.72);
       box.style.zIndex = speaking ? "3" : "2";
+      /* Who is LIVE, at panel granularity. The stylesheet lifts this one and
+         lets the rest breathe; stream() narrows it to a single balloon while
+         the words are arriving, and finishTyping() hands it back. Panel
+         granularity is the right resting state because it is exactly what the
+         dimming above says, and the two must never disagree about who spoke.
+
+         Written to the PLACEHOLDER as well as the artwork, and that is not a
+         nicety: when a sheet is missing the real figure is removed and the
+         dashed box is all that is left, so a cast that is mostly undrawn — 3 of
+         32 today — would otherwise lose the speaker signal entirely on exactly
+         the pages that need it most. The placeholder lifts; it does not
+         breathe, because scaffolding should look like scaffolding. */
+      box.dataset.live = speaking ? "1" : "0";
     });
     if (!el) return;
+    /* A face that changed since the last panel gets the beat. Compared against
+       what this ELEMENT was last painted with, not against the roster, so it
+       cannot fire on a figure that has only just been built — a fresh roster
+       is a new scene, and a whole cast flinching as it arrives is not a
+       reaction to anything. */
+    const was = el.dataset.col;
+    if (was !== undefined && was !== String(c.col)){
+      /* Removing and re-adding inside one frame does not restart a CSS
+         animation; the browser never saw the attribute leave. Reading a layout
+         property in between forces it to, which is the standard restart and is
+         safe here: this runs in show(), before any balloon has begun typing,
+         and it measures rather than changes geometry.
+
+         AND IT IS TAKEN OFF AGAIN. The beat's rule outranks the breath's for as
+         long as the attribute is there, and a finished one-shot does not hand
+         the shorthand back — so a figure left wearing `data-beat` never
+         breathes again. A timer rather than `animationend`, because under
+         reduced motion the animation never runs and the event never fires. */
+      el.removeAttribute("data-beat");
+      void el.offsetWidth;
+      el.setAttribute("data-beat", "1");
+      clearTimeout(el.__beat);
+      el.__beat = setTimeout(() => el.removeAttribute("data-beat"), 150);
+    }
+    el.dataset.col = String(c.col);
     const src = (window.__SHEETS__ && window.__SHEETS__[c.slug])
               || (up + ASSET_CAST + c.slug + ".webp");
     /* Setting the same background-image again is cheap but not free, and the
@@ -2089,6 +2134,24 @@ function initScene(root, p){
       probe.src = src;
     }
   }
+
+  /* ---- who is speaking, right now ----------------------------------------
+     The dimming says who speaks IN THIS PANEL, which in a four-line exchange
+     is everybody, and by the third balloon that has stopped answering the
+     question the balloon refuses to answer itself. So while the words are
+     arriving the live set narrows to the one person saying them, and the
+     stylesheet does the rest: the live figure lifts and holds still, the
+     others breathe.
+
+     A slot is the figure's index in the roster and a balloon carries the same
+     number, which is what the tails are already aimed by — so this needs no
+     new bookkeeping, only the number that is already on the element. A
+     narration caption carries no slot, and NaN is in no set, so a beat with
+     nobody speaking correctly lifts nobody. */
+  let liveSlots = new Set();
+  const setLive = slots => $$(".d-fig,.d-fig-ph", cast).forEach(el => {
+    el.dataset.live = slots.has(Number(el.dataset.slot)) ? "1" : "0";
+  });
 
   /* ---- the props ---------------------------------------------------------
      A thing that is in the scene, so a line can point at it. Two layers: a
@@ -2178,7 +2241,10 @@ function initScene(root, p){
            the head. */
         el.style.height = (h * 1.34 * 100) + "%";
         el.style.aspectRatio = "1";
-        el.style.transform = "translateX(-50%)";
+        /* Centred by `translate` in the stylesheet, not by a transform written
+           here — the pop scales this element, and a scale applied over a
+           `transform` translation drags the offset with it. See the note at
+           `.d-fx-one`. */
       }
       const src = up + ASSET_FX + f.slug + ".webp";
       el.style.backgroundImage = 'url("' + src + '")';
@@ -2258,6 +2324,12 @@ function initScene(root, p){
                   $('.d-fig-ph[data-slot="' + k + '"]', cast), c, k,
                   roster.length, speaking.has(c.who));
     });
+    /* The resting state of the live set — everybody who speaks anywhere in the
+       beat, which is what paintFigure has just written. Kept so that the end
+       of the typing run has something to hand it back to, and so that a rewind
+       or a reduced-motion reader, neither of whom types, lands on it directly. */
+    liveSlots = new Set(roster.map((c, k) => speaking.has(c.who) ? k : -1)
+                              .filter(k => k >= 0));
 
     /* How much of the frame the people occupy, so the balloons can sit just
        clear of their heads instead of being pinned to the ceiling. */
@@ -2399,6 +2471,11 @@ function initScene(root, p){
     });
     typing.all.forEach(sp => sp.classList.remove("d-c-off"));
     typing = null;
+    /* The run is over however it ended — finished, tapped through, or torn
+       down by a panel change — so the live set goes back to what the panel
+       says. Every exit from typing passes through here, which is the only
+       reason one line is enough. */
+    setLive(liveSlots);
   }
 
   function stream(forward){
@@ -2415,13 +2492,22 @@ function initScene(root, p){
     bubbles.forEach((b, k) => { if (k) b.setAttribute("data-typing", "wait"); });
 
     typing = { bubbles, all, timer: 0 };
+    /* The focus follows the voice: whoever owns the balloon now being typed is
+       the only live figure, so a four-line exchange hands the light back and
+       forth instead of leaving both speakers lit throughout. */
+    const liveFor = k => setLive(new Set([Number(bubbles[k].dataset.slot)]));
+    liveFor(0);
     let bi = 0, ci = 0;
     const tick = () => {
       if (!typing) return;
       if (ci >= runs[bi].length){
         bi += 1; ci = 0;
-        if (bi >= runs.length){ typing = null; return; }
+        /* The last balloon has finished but the panel has not: fall through to
+           finishTyping()'s restore rather than leaving the final speaker lit
+           alone, because at rest the panel's own answer is the honest one. */
+        if (bi >= runs.length){ finishTyping(); return; }
         bubbles[bi].removeAttribute("data-typing");
+        liveFor(bi);
         typing.timer = setTimeout(tick, BUBBLE_GAP_MS);
         return;
       }

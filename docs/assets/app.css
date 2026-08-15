@@ -703,17 +703,109 @@ footer.foot p{margin:0;max-width:74ch}
 
    Left, height, transform and opacity are all set in JS, because they depend
    on how many people are on stage and which of them is talking. */
+.d-fig,.d-fig-ph{translate:-50% 0}
 .d-fig{position:absolute;bottom:0;background-repeat:no-repeat;
-  transition:opacity .18s ease}
+  transform-origin:bottom center;rotate:0deg;scale:1;
+  transition:opacity .18s ease,translate .16s ease,rotate .3s ease,scale .3s ease}
+
+/* ---- the figures are alive, and the live one is the speaker ---------------
+   THE CENTRING IS ON `translate`, NOT ON `transform`, AND THAT IS LOAD-BEARING.
+   It used to be `transform:translateX(-50%)` written from JS, which looks like
+   it would compose harmlessly with an animated `scale` or `rotate` and does
+   not. The individual properties build the matrix in the order translate,
+   rotate, scale, THEN transform (CSS Transforms 2, "current transformation
+   matrix"), so `transform` is applied to the point first and everything else
+   operates on its result — including its translation. Scaling by 1.022 there
+   scales the -50% offset too, sliding the figure sideways by about 1% of its
+   width; the effects, popping in from 0.85, swung by nearly a tenth of their
+   width. A squash that drifts left is not a squash.
+
+   With the centring moved out, `transform` carries only the optional mirror.
+   A mirror is a scale about x=50%, so it commutes with everything below and
+   contributes no translation for anything to act on. `transform-origin` is
+   `bottom center` because a figure pivots at its feet, and that is safe for the
+   mirror for the same reason: the flip already turns about x=50%.
+
+   The properties are then a BUDGET, divided so that nothing fights:
+
+     translate  the centring, plus the speaker's lift   (a transition)
+     rotate     the sway                                (a loop, quiet figures)
+     scale      the breath, and the beat                (a loop, then a one-shot)
+
+   WHY THE QUIET ONES BREATHE AND THE SPEAKER DOES NOT. Left as decoration on
+   everybody it would be a loop running under text somebody is reading, which
+   is the one configuration the reading-disruption research indicts. Confined
+   to the listeners it inverts into a signal: the still, lifted, undimmed
+   figure is the one talking. That matters here more than it would elsewhere,
+   because the balloon deliberately carries no name — the tail and the dimming
+   were the only two things saying who spoke, and on a phone at four-to-a-panel
+   that was thin.
+
+   The amplitudes are deliberately at the edge of visible — 0.6% of a figure's
+   height, a third of a degree. Live2D's SDK ships breath as sine waves on
+   periods that share no common factor (3.2345s, 5.5345s) so the loop never
+   visibly repeats, and those tails are the whole trick: two periods that never
+   line up read as a body, and two that do read as a metronome.
+
+   ON WCAG 2.2.2 (Pause, Stop, Hide, level A). A loop that auto-starts, runs
+   past five seconds and sits beside text is in scope, and needs a mechanism to
+   pause, stop OR HIDE it. The last of those already exists and is already
+   tested: the transcript toggle takes the whole comic off the screen, and it
+   is the same control reduced-motion readers get switched to by default. If
+   that control ever goes, this loop goes with it. */
+@keyframes d-breathe{from{scale:1 1}to{scale:1 1.006}}
+@keyframes d-sway{from{rotate:-.3deg}to{rotate:.3deg}}
+/* Only the real artwork breathes. A dashed placeholder is scaffolding and
+   should read as scaffolding — but it still LIFTS, below, because the lift
+   carries information and the breath does not, and with 3 of 32 drawings in
+   hand most characters on most pages are still a dashed box. */
+.d-fig:not([data-live="1"]){
+  animation:d-breathe 3.2345s ease-in-out infinite alternate,
+            d-sway 5.5345s ease-in-out infinite alternate}
+/* The lift is a static offset that happens to be transitioned, NOT an
+   animation — so under reduced motion, where the blanket rule at the top of
+   this file kills every animation and transition, the speaker is still raised.
+   It stops moving; it does not stop meaning anything. Which is also why it is
+   an addition to the dim rather than a replacement for it: whatever survives
+   the blanket has to be enough on its own. */
+.d-fig[data-live="1"],.d-fig-ph[data-live="1"]{translate:-50% -1.1%}
+/* The expression already CUTS between panels, which is what limited animation
+   does and is worth protecting — a cross-fade between two drawings whose arms
+   are in different places is a morph, not a change of face. This is the
+   animator's "hit the pose" laid over that cut: one squash, ninety
+   milliseconds, gone.
+
+   THE ATTRIBUTE MUST BE TAKEN OFF AGAIN, and paintFigure is what does it. This
+   rule and the breath above have equal specificity — (0,2,0) each, since `:not`
+   takes the specificity of its argument — so being later in the file this one
+   wins the whole `animation` shorthand for as long as `data-beat` is present.
+   A finished one-shot does not fall back to the declaration it outranked: it
+   sits there with `animation-name:d-beat` and no breath. Left on, a figure that
+   changed expression once would stop breathing for the rest of the scene. */
+@keyframes d-beat{0%{scale:1 1}40%{scale:1.022 .978}100%{scale:1 1}}
+.d-fig[data-beat]{animation:d-beat 90ms ease-out}
 /* A prop is one cut-out, bottom-anchored on the floor or pinned near the top
    if it hangs. Contained, not covered: a bucket must not be cropped. */
 .d-it{position:absolute;transform:translateX(-50%);aspect-ratio:1;
   background-repeat:no-repeat;background-size:contain;background-position:bottom center}
 .d-it[data-missing] .d-it-ph{display:flex}
-/* An effect is a transparent overlay and never has a box of its own. */
+/* An effect is a transparent overlay and never has a box of its own.
+
+   It POPS, because a manga mark is an impact and an impact that fades up is a
+   stain. One overshoot past its own size and back, in under a sixth of a
+   second — short enough that it is finished before the first balloon has typed
+   two words, so it punctuates the beat instead of competing with it.
+
+   The figure-anchored ones are centred on `translate` rather than on the
+   `transform` JS used to write, for the reason set out at the figures and with
+   a bigger bill here: an effect pops in from 0.85, and scaling a -50% offset by
+   0.85 threw it sideways by 7.5% of its own width — on an overlay wider than
+   the figure it hangs over, a visible swing across the panel and back. */
+@keyframes d-fx-pop{0%{opacity:0;scale:.85}60%{opacity:1;scale:1.04}100%{opacity:1;scale:1}}
 .d-fx-one{position:absolute;background-repeat:no-repeat;background-size:contain;
-  background-position:center}
-.d-fx-one[data-over=figure]{bottom:0;background-position:bottom center}
+  background-position:center;animation:d-fx-pop 140ms ease-out}
+.d-fx-one[data-over=figure]{bottom:0;background-position:bottom center;
+  transform-origin:bottom center;translate:-50% 0}
 .d-fx-one[data-over=panel]{inset:0;background-size:cover}
 
 /* ---- placeholders, until the art lands -----------------------------------

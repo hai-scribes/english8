@@ -209,6 +209,38 @@ def build(slug: str, emotions: list, cols: int, rows: int, keep_white: bool,
     # One cell size for all six, so the head cannot jump or resize between
     # lines. The largest wins and the rest are scaled up to meet it.
     side = min(cell_px, max(p.size[0] for _, p, _ in parts))
+
+    # A sheet costs its DECODED size, not its file size, and the two are not
+    # close. WebP compresses this art about fifty to one, so the 205 KB that
+    # ships as ti.webp is 1920 x 1280 x 4 = 9.8 MB once the browser has it in
+    # memory, and five characters on one page is ~49 MB of image data behind a
+    # 1 MB download. Nothing here is wrong at 3 x 2 — the number is only
+    # alarming when somebody grows the grid, and growing the grid is exactly
+    # what any future mouth or blink state would do. A 6 x 4 sheet at this cell
+    # size is 3840 x 2560, or 39 MB each and ~197 MB for a five-character page,
+    # and it would be discovered on a phone, by a learner.
+    #
+    # 4096 px is the conservative ceiling: it is the documented cap on mobile
+    # Safari's canvas dimensions, and while a CSS background is not a canvas,
+    # no engine promises to decode past it either, and an image that quietly
+    # fails to decode leaves every avatar blank with nothing in the console to
+    # say why. At the 640 px cell that allows six panels on an axis and refuses
+    # seven, which is room for a mouth or an eye dimension and not much more.
+    # Raise the cell size or split the sheet; do not raise this.
+    #
+    # Reported like any other reason a character cannot be composed, rather than
+    # raised: under --all the sheets are written one at a time, so exiting from
+    # here would leave the characters before this one regenerated and the ones
+    # after it stale — a mixed-generation set is worse than a refused one, and
+    # main() already turns "nothing was made" into a non-zero exit.
+    LIMIT = 4096
+    if side * cols > LIMIT or side * rows > LIMIT:
+        print(f"  {slug}: a {cols}x{rows} sheet at {side}px is "
+              f"{side * cols}x{side * rows}, over the {LIMIT}px limit "
+              f"({side * cols * side * rows * 4 / 1e6:.0f} MB decoded). "
+              f"Use a smaller --cell, or fewer panels per axis.")
+        return False
+
     sheet = Image.new("RGBA", (side * cols, side * rows), (255, 255, 255, 0))
     for i, (emo, p, keyed) in enumerate(parts):
         if p.size[0] != side:

@@ -778,6 +778,88 @@ async function main() {
       win.dispatchEvent(new win.KeyboardEvent("keydown", { key:"ArrowLeft", bubbles:true }));
     }
 
+    /* ---- the focus follows the voice --------------------------------------
+       The balloon carries no name, so who is speaking is said by the picture:
+       the tail, the dimming, and now the one figure that is lifted and still
+       while the others breathe. The dimming alone answers at PANEL level, which
+       in a four-line exchange lights everybody and has stopped answering
+       anything by the third balloon — so while the words arrive the live set
+       narrows to whoever is saying them, and hands back at the end.
+
+       Asserted synchronously for the same reason the typewriter above is:
+       `stream()` sets the first balloon's speaker live before any timer runs. */
+    {
+      while (!dlg.querySelector(".d-prev").disabled)
+        click(win, dlg.querySelector(".d-prev"));
+      const live = () => [...dlg.querySelectorAll('.d-fig[data-live="1"]')]
+                           .map(f => f.dataset.slot).sort().join(",");
+      /* A beat with two speakers in it is the only one that can show the
+         difference, so walk forward until one turns up. */
+      let two = null;
+      for (let k = 0; k < 14 && !two; k++){
+        click(win, dlg.querySelector(".d-next"));
+        const slots = new Set([...dlg.querySelectorAll(".d-bub[data-slot]")]
+                                .map(b => b.dataset.slot));
+        if (slots.size > 1) two = [...slots];
+        else click(win, dlg.querySelector(".d-next"));   // finish, then move on
+      }
+      /* Asserted, not skipped. A beat with two speakers is the only shape that
+         can show the narrowing at all, so a fixture that stopped having one
+         would quietly delete this test rather than fail it. */
+      ok("comic: the scene has a beat with two speakers to narrow between",
+         !!two, two ? two.join(",") : "none found in 14 beats");
+      if (two){
+        const first = dlg.querySelector(".d-bub[data-slot]").dataset.slot;
+        ok("comic: while a balloon types, only its own speaker is live",
+           live() === first, live() + " of " + two.join(","));
+        click(win, dlg.querySelector(".d-next"));        // finish the panel
+        ok("comic: and at rest the panel's own answer comes back",
+           live() === two.slice().sort().join(","), live());
+      }
+      /* The beat outranks the breath for as long as `data-beat` is on the
+         element, and a finished one-shot does not hand the shorthand back — so
+         an attribute left behind stops that figure breathing for the rest of
+         the scene. It is removed on a timer; wait past it and check. */
+      await new Promise(r => setTimeout(r, 260));
+      ok("comic: the expression beat does not leave its attribute behind",
+         !dlg.querySelector(".d-fig[data-beat]"),
+         dlg.querySelectorAll(".d-fig[data-beat]").length + " still marked");
+      /* THE LIFT IS AN ADDITION TO THE DIM, NEVER A REPLACEMENT. Reduced motion
+         deletes every transition and animation on the page, so anything only
+         the lift says would be said to nobody at all. The opacity has to keep
+         carrying the answer by itself, exactly as it did before the lift.
+
+         What that does NOT mean is that the dim discriminates in every panel:
+         in a two-speaker exchange it lights both, which is the whole reason the
+         lift was added. So the claim under test is that the dim is still WRITTEN
+         and still holds a silent listener back — walk the scene and require it
+         to have happened at least once. */
+      while (!dlg.querySelector(".d-prev").disabled)
+        click(win, dlg.querySelector(".d-prev"));
+      let held = 0, unset = 0;
+      for (let k = 0; k < 40; k++){
+        const figs = [...dlg.querySelectorAll(".d-fig")];
+        unset += figs.filter(f => !f.style.opacity).length;
+        if (figs.length > 1 && figs.some(f => f.style.opacity === "1")
+                            && figs.some(f => f.style.opacity !== "1")) held++;
+        if (dlg.querySelector(".d-next").disabled) break;
+        /* A tap during typing FINISHES the panel and does not advance it, which
+           is the behaviour asserted further up — so a walk that taps once per
+           beat covers half the scene and misses the far end, where the silent
+           listener happens to be. Tap again when the count has not moved. */
+        const was = dlg.querySelector(".d-count").textContent;
+        click(win, dlg.querySelector(".d-next"));
+        if (dlg.querySelector(".d-count").textContent === was)
+          click(win, dlg.querySelector(".d-next"));
+      }
+      ok("comic: the dimming is still written on every figure",
+         unset === 0, unset + " figure(s) with no opacity set");
+      ok("comic: and still holds a silent listener back, lift or no lift",
+         held > 0, held + " panel(s) with somebody held back");
+      while (!dlg.querySelector(".d-prev").disabled)
+        click(win, dlg.querySelector(".d-prev"));
+    }
+
     win.dispatchEvent(new win.KeyboardEvent("keydown", { key:"ArrowLeft", bubbles:true }));
     await new Promise(r => setTimeout(r, 30));
     ok("comic: the left arrow goes back",
@@ -818,6 +900,33 @@ async function main() {
     ok("comic: no sticky scroll track is left in the stylesheet",
        !/\.d-(track|steps|step)\b/.test(CSS) && !/position:sticky/.test(
          (CSS.match(/\.d-stage\{[^}]*\}/) || [""])[0]));
+
+    /* ---- the motion is in the stylesheet, and composes ---------------------
+       The live-set assertions above check the BOOKKEEPING, and would go on
+       passing with every scrap of the motion deleted. These check the motion is
+       declared at all, and — the one that matters — that the trap it fell into
+       once has not been walked back into.
+
+       THE TRAP: the individual `translate`/`rotate`/`scale` properties build the
+       matrix before `transform` and are applied to its result, so a
+       `translateX(-50%)` centring written into a `transform` gets scaled and
+       rotated by anything animating those properties. The figure slid sideways
+       as it squashed, and the effects — popping in from 0.85 — swung by 7.5% of
+       their width. The centring therefore lives on `translate` in the
+       stylesheet, and NOTHING in the app may write a translate into a transform
+       on an element that also carries animated individual transforms. */
+    ok("comic: the speaker lift and the breath are declared",
+       /\[data-live="1"\][^{]*\{[^}]*translate:/.test(CSS)
+       && /:not\(\[data-live="1"\]\)\s*\{[^}]*animation:[^}]*d-breathe/.test(CSS),
+       "lift and breath rules present");
+    /* Matched against an ASSIGNMENT rather than the bare string, because the
+       note explaining all this names the offending declaration in prose and a
+       looser pattern fails on its own documentation. */
+    const writesTranslate = /style\.transform\s*=\s*["'][^"']*translate/.test(appSrc);
+    ok("comic: the centring is carried by translate, not by an animated transform",
+       /\.d-fig[^{]*\{[^}]*translate:\s*-50%/.test(CSS) && !writesTranslate,
+       writesTranslate ? "the app still writes a translate into a transform"
+                       : "centred on translate");
 
     /* ---- turning the page must not zoom the page ------------------------
        Tapping the picture to go on means tapping the same spot twice in a
