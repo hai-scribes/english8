@@ -51,17 +51,41 @@ const haveMap = existsSync(MAP);
 const map = haveMap ? JSON.parse(read(MAP)) : { placements: [] };
 const placements = map.placements || [];
 
+/* "Placed" is not a row in a file. The charter's metric is targets "placed AND
+ * DELIVERED in the new shape", and counting rows would score a perfect 400 for
+ * a JSON file naming 400 targets against sessions that do not exist — the
+ * cheapest way to fake this milestone's SLO. So a placement only counts when
+ * the session it names is a real session in the catalogue. The `session`
+ * interaction check drives one of those sessions in a real browser from this
+ * same data, which is what stops the catalogue itself from being decorative. */
+const CATALOGUE = join(REPO, "content/sessions.json");
+const haveCatalogue = existsSync(CATALOGUE);
+const catalogue = haveCatalogue ? JSON.parse(read(CATALOGUE)) : { sessions: [] };
+const sessionIds = new Set(
+  (catalogue.sessions || []).map(s => (typeof s === "string" ? s : s && s.id)).filter(Boolean));
+
 const placed = new Set();
 const bySession = new Map();
+let danglingRoles = 0;
+const danglingDetail = [];
 for (const p of placements) {
   if (!p || !p.target) continue;
-  placed.add(p.target);
+  let delivered = false;
   for (const role of ["encounter", "production", "check"]) {
     const s = p[role];
     if (s == null) continue;
+    if (!sessionIds.has(s)) {
+      danglingRoles++;
+      if (danglingDetail.length < 8)
+        danglingDetail.push(`${p.target} ${role} → ${JSON.stringify(s)} is not a session`);
+      continue;
+    }
+    /* An encounter is the minimum delivery: met at least once, somewhere real. */
+    if (role === "encounter") delivered = true;
     const k = `${p.target}@@${s}`;
     bySession.set(k, (bySession.get(k) || new Set()).add(role));
   }
+  if (delivered) placed.add(p.target);
 }
 
 /* A target whose three roles land in one session is the failure mode. */
@@ -72,6 +96,7 @@ const covered = targets.filter(t => placed.has(t.id)).length;
 
 console.log(`build: curriculum coverage`);
 console.log(`  placement map: ${haveMap ? MAP.replace(REPO, "") : "ABSENT — nothing placed yet"}`);
+console.log(`  session catalogue: ${haveCatalogue ? `${CATALOGUE.replace(REPO, "")} — ${sessionIds.size} session(s)` : "ABSENT — no placement can resolve"}`);
 console.log(`  target families:`);
 for (const [f, n] of Object.entries(byFamily)) {
   const c = targets.filter(t => t.family === f && placed.has(t.id)).length;
@@ -82,14 +107,21 @@ if (collisions.length) {
   console.log(`  E5 invariant violated by ${collisions.length} target(s):`);
   for (const c of collisions.slice(0, 8)) console.log(`    ${c}`);
 }
+if (danglingRoles) {
+  console.log(`  ${danglingRoles} placement role(s) name a session that does not exist:`);
+  for (const d of danglingDetail) console.log(`    ${d}`);
+}
 
 metric("sgk_targets_covered", covered);
 metric("items_swept", targets.length);
 metric("invariant_violations", collisions.length);
+metric("dangling_placements", danglingRoles);
 
 finish([
-  gate("every prescribed target is placed", covered === targets.length,
+  gate("every prescribed target is placed and delivered", covered === targets.length,
        `${covered}/${targets.length}`),
   gate("no target has encounter+production+check in one session",
        collisions.length === 0, `${collisions.length} violation(s)`),
+  gate("every placement resolves to a real session", danglingRoles === 0,
+       `${danglingRoles} dangling`),
 ]);
