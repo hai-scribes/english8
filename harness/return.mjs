@@ -32,16 +32,45 @@
  * There is no other source for it.
  */
 import { existsSync, readFileSync } from "node:fs";
-import { join } from "node:path";
+import { join, resolve, dirname, sep } from "node:path";
+import { execFileSync } from "node:child_process";
 import { REPO, resolveBuild, walk, metric, gate, finish } from "./lib.mjs";
 
-const OBS = process.env.ATELIER_RETURNS_OBSERVATIONS || join(REPO, "observations/returns.json");
+/* WHERE the observation lives is a security property, not a convenience.
+ *
+ * A tournament variant builds in its own worktree and can write any file it
+ * likes there. If this harness read `observations/returns.json` from beside
+ * itself, a variant could author its own north star — write five weekdays,
+ * mark three unprompted, and report that a child came back. That is not a
+ * hypothetical: it is the single cheapest green in this whole plan, and the
+ * file is not inside the frozen gate artifact.
+ *
+ * So the record is read from the MAIN worktree's .specs, which no variant
+ * worktree is, and a file resolving inside the current tree is refused outright
+ * rather than read. The operator writes it; the build cannot reach it. */
+function mainWorktree() {
+  try {
+    const common = execFileSync("git", ["rev-parse", "--path-format=absolute", "--git-common-dir"],
+                                { cwd: REPO, encoding: "utf8" }).trim();
+    return dirname(common);           // <main>/.git -> <main>
+  } catch { return null; }
+}
+
+const MAIN = mainWorktree();
+const OBS = resolve(process.env.ATELIER_RETURNS_OBSERVATIONS ||
+  (MAIN ? join(MAIN, ".specs/prototype/story-english.observations.json")
+        : join(REPO, "../../.specs/prototype/story-english.observations.json")));
+
+const inThisTree = (OBS + sep).startsWith(resolve(REPO) + sep);
 
 /* --- read the operator's record, or fail saying so ------------------------ */
 
 let records = null;
 let parseError = null;
-if (existsSync(OBS)) {
+if (inThisTree) {
+  parseError = `refused: ${OBS} is inside the build tree — an observation the ` +
+               `build can write is not an observation`;
+} else if (existsSync(OBS)) {
   try {
     const doc = JSON.parse(readFileSync(OBS, "utf8"));
     records = Array.isArray(doc) ? doc : doc.records;
@@ -92,6 +121,8 @@ for (const r of records || []) {
 
 const { dir: buildDir, path: buildPath } = resolveBuild();
 let logOpens = null;
+/* The log, by contrast, IS a build artefact — it is what the app records. It
+ * corroborates and never counts, so a variant writing it gains nothing. */
 const LOG = join(REPO, "observations/activity-log.json");
 if (existsSync(LOG)) {
   try {
@@ -111,7 +142,7 @@ if (existsSync(LOG)) {
 /* --- report ---------------------------------------------------------------- */
 
 console.log("unprompted return");
-console.log(`  observations: ${OBS.replace(REPO, "")}${records ? "" : " — ABSENT"}`);
+console.log(`  observations: ${OBS}${records ? "" : (inThisTree ? " — REFUSED" : " — ABSENT")}`);
 if (parseError) console.log(`    unreadable: ${parseError}`);
 console.log(`  build: ${buildDir ? `${buildDir}/ (${walk(buildPath, [".html"]).length} page(s))` : "none built"}`);
 console.log(`  ${counted.size} weekday(s) recorded as an unprompted open`);
