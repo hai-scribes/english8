@@ -141,7 +141,7 @@
 
   "stage": {
     "max_cast": 4,
-    "dim": 0.5,
+    "dim": 0.82,
     "face_in": true,
 
     "_moves_comment": [

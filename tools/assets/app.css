@@ -950,143 +950,86 @@ footer.foot p{margin:0;max-width:74ch}
    split is load-bearing twice: the tail hangs off the wrapper so a clip-path
    on the balloon cannot cut it off, and an opened gloss lands after the
    balloon instead of inside a shape that was sized for two lines of speech. */
-/* The stack ENDS just above the figures and grows upward, instead of being
-   pinned to the top of the frame. It was pinned there when a balloon's vertical
-   position was the only thing carrying reading order; the balloons type
-   themselves out in speech order now, so that job is done and they are free to
-   sit where a letterer would put them — near the head that is saying them.
-   `--fig-h` is how tall the people are, published by JS because it depends on
-   how many of them there are. */
-.d-bubble{position:absolute;
-  inset:.6rem .6rem calc(var(--fig-h,62%) + .3rem) .6rem;
-  display:flex;flex-direction:column;
-  /* SAFE flex-end, and the keyword is load-bearing. Bottom-aligning a stack
-     that is taller than its box overflows the START edge — upward, into the
-     top of the frame, where `.d-stage`'s overflow:hidden cuts the first
-     balloon's head off. `safe` says "align to the end unless that would
-     overflow, in which case align to the start", so a tall panel gives up the
-     nice position and keeps all of its words. The unprefixed value is left in
-     front of it as the fallback. */
-  justify-content:flex-end;justify-content:safe flex-end;
-  /* Every balloon starts at the left edge and is then pushed across by a
-     margin JS measures, so that it sits over the person who said it. The
-     alignment is not the position — it is the origin the position is measured
-     from, which is why it is a single value here and not three. */
-  gap:.55rem;align-items:flex-start}
-/* The measure is the point of the cap. `78%` keeps a balloon off the far edge
-   of a wide frame; `34ch` is the line length that stops a reader's eye having
-   to travel — and on a picture, where the text is competing with a face, short
-   lines matter more than they do in a paragraph, not less. */
-.d-bub{position:relative;max-width:min(78%,34ch);color:#111;
-  font-size:.98rem;line-height:1.5}
-.d-said{background:#fff;border:2px solid #111;border-radius:1.15rem;
-  padding:.55rem .85rem}
-.d-txt{text-wrap:pretty}
-/* The tail, two stacked triangles so the outline reads as one continuous
-   contour with the balloon. `--tail-x` is written by JS from the speaker's
-   measured position; the fallback is a sane left-ish tail for the instant
-   before the first measurement lands. */
-/* `--tail-lift` is written by JS for a balloon whose contour is drawn, because
-   a drawn contour does not sit on the bottom of its box — a burst's edge is a
-   valley between its spikes. Zero for an ordinary balloon, whose border IS the
-   bottom of the box. */
-.d-bub::before,.d-bub::after{content:"";position:absolute;
-  top:calc(100% - var(--tail-lift,0px));
-  left:var(--tail-x,1.7rem);transform:translateX(-50%);
-  border:.55rem solid transparent;border-top-color:#111}
-.d-bub::after{border-top-color:#fff;margin-top:-3px}
+/* EVERY BALLOON IS PLACED BY JS, ONE AT A TIME. It was a single flex column
+   bottom-aligned just above the figures, and the two things wrong with that
+   only show up with two people talking: the first balloon of a beat was lifted
+   by the height of the second one whoever had said it, and on a phone a media
+   query swapped the anchor for `bottom:auto`, which pinned the whole column to
+   the top of the frame while the heads sat halfway down. There is no anchor
+   here any more — `layoutBalloons` in app.js hangs each balloon over its own
+   speaker and this file only says what a balloon LOOKS like. */
+.d-bubble{position:absolute;inset:0;pointer-events:none}
+/* `max-content`, and nothing capping it here: the width is decided by the line
+   breaker, which is the only thing that knows how much of the frame this
+   speaker is allowed and where the sensible breaks are. A `max-width` in the
+   stylesheet would silently re-wrap the lines it chose. */
+.d-bub{position:absolute;left:0;top:0;width:max-content;
+  color:#111;font-size:calc(.98rem * var(--bub-scale,1));line-height:1.42;
+  pointer-events:auto}
+/* The box the words occupy, and nothing else — no background, no border, no
+   padding. The drawn path is the balloon; this is what it is drawn around. */
+.d-said{position:relative;background:none;border:0;padding:0}
+/* `nowrap` plus explicit breaks. The breaker put the lines where it wanted
+   them; letting the browser add its own would undo the only work that makes
+   the stack lens-shaped. Centred, because a ragged-left stack in an oval leaves
+   the whole left shoulder empty. */
+.d-txt{position:relative;z-index:1;white-space:nowrap;text-align:center}
+/* The space a break replaced. Hidden rather than deleted, so a re-layout at a
+   different width can put it back. */
+.d-sp-off{display:none}
 
-/* ---- balloons that are a SHAPE rather than a rounded box -------------------
-   A burst and a cloud are drawn as an SVG path stretched behind the words, and
-   the stroke is declared `non-scaling-stroke` so it stays one even weight
-   however far the path is stretched. That last part is the whole point of
-   doing it this way.
+/* ---- the drawn contour ----------------------------------------------------
+   Two open paths that meet end to end: the balloon's outline stops either side
+   of the tail's mouth and the tail's outline starts there, so the stroke reads
+   as one continuous contour and the two white fills abut along the chord
+   between them. Painting a closed balloon over a closed tail cannot do this —
+   the balloon's own stroke draws a line straight across the tail's opening,
+   which is the seam that made the old CSS-triangle tail read as a sticker.
 
-   > **What was here before, and why it could not be tuned into working.** The
-   > burst was two CSS `clip-path` polygons — ink on the outer element, white on
-   > an inner element inset by `margin:3px` — on the theory that the gap between
-   > them reads as an outline. It does not. A percentage polygon is resolved
-   > against its OWN box, so shrinking the box by 6px scales the whole shape by
-   > about 6px' worth of percentage rather than insetting it by 3px everywhere.
-   > Near a spike, where the contour runs almost parallel to the direction of
-   > the shrink, the white overshot the black completely and the outline
-   > vanished; between spikes it was several pixels thick. The result was a
-   > contour that came and went around the shape. No polygon fixes that,
-   > because the geometry is wrong rather than the numbers: a uniform inset of
-   > an arbitrary polygon is not a scaled copy of it. Drawing one path and
-   > stroking it is the operation that was actually wanted.
-
-   The path is BUILT to the measured box in JS rather than stretched to it, so
-   the spikes and lobes keep a constant size and only their number changes. The
-   note in app.js has the two versions that got this wrong and why. */
-.d-shape{position:absolute;inset:0;width:100%;height:100%;overflow:visible;
-  pointer-events:none}
-.d-shape path{fill:#fff;stroke:#111;stroke-width:2.5;stroke-linejoin:round;
-  vector-effect:non-scaling-stroke}
-/* A shaped balloon draws no box of its own — the path is the balloon — and the
-   words ride above it. The class is set in JS from the same table that picks
-   the path, rather than listed here per shape: adding a fifth balloon should
-   be one entry in one place, not an entry plus a selector somebody forgets. */
+   `non-scaling-stroke` keeps the weight even whatever the viewBox is, and the
+   svg is positioned and sized by JS because a spike, a lobe and a tail all hang
+   outside the box the words occupy. */
+.d-shape{position:absolute;overflow:visible;pointer-events:none;z-index:0}
+.d-shape path{fill:#fff;stroke:#111;stroke-width:2.4;
+  stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
 .d-said.is-shaped{background:none;border:0;border-radius:0}
-.d-said .d-txt{position:relative}
 
-/* A shaped balloon's contour hangs OUTSIDE its box, so it needs panel to hang
-   into: `--spike` is the amplitude the JS actually used, and the margin keeps
-   the neighbouring balloon and the frame edge clear of it. */
-/* The width itself is computed in JS from how much text there is — see
-   `fitShaped`. These two are the bounds it works inside: never wider than the
-   panel can carry, and never narrower than the longest single word, which is
-   what stops a computed width from splitting a word down the middle. */
-.d-bub[data-bub=shout],.d-bub[data-bub=think]{
-  margin:var(--spike,14px);max-width:min(70%,30ch);min-width:min-content}
+/* Loud. A heavier stroke and heavier type, which is what a letterer does — the
+   spikes alone do not carry it. */
+/* Bigger as well as heavier, because that is how loud is lettered: a shout set
+   at the same size as the line before it is a shout nobody hears. */
+.d-bub[data-bub=shout]{font-weight:650;
+  font-size:calc(1.12rem * var(--bub-scale,1))}
+.d-bub[data-bub=shout] .d-shape path{stroke-width:3.2}
 
-/* Loud. Called across a yard, or lost patience. KEPT NARROW ON PURPOSE, and
-   this is the fix for the shape that was coming out wrong: a burst is a shape
-   with a roughly square block of text in it, and a one-line shout makes a box
-   six times as wide as it is tall. Spikes are a constant size, so a long thin
-   perimeter simply got more of them — forty small teeth, which is a sawtooth
-   strip and not a shout. Capping the measure makes the text wrap into a chunky
-   block, and the burst has something worth bursting around. */
-.d-bub[data-bub=shout]{font-weight:650}
-.d-bub[data-bub=shout] .d-said{padding:.55rem .8rem}
-.d-bub[data-bub=shout] .d-txt{text-align:center}
-/* A narrower, longer spike for a tail, to match the contour above it. */
-.d-bub[data-bub=shout]::before,.d-bub[data-bub=shout]::after{
-  border-width:.85rem .3rem 0}
-.d-bub[data-bub=shout]::after{margin-top:-4px}
+/* Not said. A scalloped cloud, and the tail is a trail of shrinking bubbles —
+   the one balloon convention a reader decodes with no instruction at all. Use
+   it for what a character does not say out loud, and never for a line a
+   listening or speaking exercise is built on: a thought is not speech. */
+.d-bub[data-bub=think]{font-style:italic}
 
-/* Not said. A scalloped cloud, and the tail is two bubbles trailing back to
-   the thinker — which is the one balloon shape a reader decodes with no
-   instruction at all. Use it for what a character does not say out loud, and
-   never for a line a listening or speaking exercise is built on: a thought is
-   not speech. */
-.d-bub[data-bub=think] .d-said{padding:.7rem .95rem}
-.d-bub[data-bub=think]::before,.d-bub[data-bub=think]::after{
-  border:2px solid #111;background:#fff;border-radius:50%}
-.d-bub[data-bub=think]::before{width:.62rem;height:.62rem;margin-top:.18rem}
-.d-bub[data-bub=think]::after{width:.36rem;height:.36rem;margin-top:1.05rem;
-  margin-left:-.5rem}
+/* Quiet, or not meant to carry. A broken contour and smaller type: the size of
+   the lettering is half of how a whisper reads. */
+.d-bub[data-bub=whisper]{font-size:calc(.88rem * var(--bub-scale,1));color:#333}
+.d-bub[data-bub=whisper] .d-shape path{stroke-dasharray:7 5;stroke-width:2}
 
-/* Quiet, or not meant to carry. A broken contour, and a smaller tail. */
-.d-bub[data-bub=whisper] .d-said{border-style:dashed;font-size:.93em;color:#333}
-.d-bub[data-bub=whisper]::before,.d-bub[data-bub=whisper]::after{
-  border-width:.38rem}
-.d-bub[data-bub=whisper]::after{margin-top:-2px}
-
-/* Narration is a caption box, not a balloon: square, full width, no tail. */
-.d-bub[data-bub=narrate]{max-width:100%;align-self:stretch;font-style:italic}
-.d-bub[data-bub=narrate] .d-said{border-radius:3px}
-.d-bub[data-bub=narrate]::before,.d-bub[data-bub=narrate]::after{display:none}
+/* Narration is a caption box, not a balloon: a rectangle, no tail, and its
+   lines set even and block-like — which is the exact stack that would be wrong
+   inside an oval. Nobody is saying it, so it is not placed against anybody. */
+.d-bub[data-bub=narrate]{font-style:italic}
+.d-bub[data-bub=narrate] .d-said{background:#fff;border:2px solid #111;
+  border-radius:3px;padding:.5rem .75rem}
+.d-bub[data-bub=narrate] .d-txt{text-align:left}
 
 /* ---- the words arriving -----------------------------------------------
    A character waiting its turn is HIDDEN, not absent: `visibility` keeps the
    box, so the balloon is its final size from the first frame and nothing
    reflows while it types. `display:none` here would make the balloon grow as
-   it filled, dragging its measured tail across the panel behind it. */
+   it filled, dragging its drawn contour across the panel behind it. */
 .d-c-off{visibility:hidden}
 /* A balloon whose turn has not come is hidden whole. Left visible it would sit
    there as an empty outline, which reads as a balloon somebody forgot to fill
-   rather than as one about to be spoken. It keeps its space, so the panel does
+   rather than as one about to be spoken. It keeps its place, so the panel does
    not jump when it arrives. */
 .d-bub[data-typing="wait"]{visibility:hidden}
 /* Nothing above is motion a reader can be hurt by, but the whole effect is
@@ -1099,10 +1042,14 @@ footer.foot p{margin:0;max-width:74ch}
    marks two of them while the third is still coming — and offers a tap on
    something that does not mean anything yet. */
 .d-bub .gl[data-armed="0"]{border-bottom-color:transparent;pointer-events:none}
-/* The gloss is a sibling of the balloon, so it is styled as its own card
-   rather than inheriting a shape that was cut for speech. */
-.d-bubble .gloss{background:#f4f2ec;color:#111;margin:0;max-width:min(90%,44ch);
-  border-left-color:#b4503c}
+/* The gloss is a sibling of the balloon, so it is styled as its own card rather
+   than inheriting a shape that was cut for speech. Taken out of flow as well as
+   out of the shape: a balloon is exactly as wide as its widest line, and a
+   gloss left in flow would stretch it to 44ch the moment somebody tapped a
+   word — moving the balloon off the speaker it was placed over. */
+.d-bubble .gloss{position:absolute;top:100%;left:50%;transform:translateX(-50%);
+  width:max-content;max-width:min(78vw,34ch);margin:.4rem 0 0;z-index:3;
+  background:#f4f2ec;color:#111;border-left-color:#b4503c;pointer-events:auto}
 
 /* ---- the controls, under the picture -------------------------------------
    Out of the frame and centred. They used to float in the panel's bottom-right
@@ -1164,10 +1111,14 @@ html.d-locked,html.d-locked body{overflow:hidden}
      about two centimetres tall, which is below the size an expression reads
      at, and the expressions are the whole reason the art exists. */
   .d-frame{aspect-ratio:1;max-width:calc(62vh)}
-  .d-bubble{inset:.5rem .5rem auto .5rem}
-  .d-bub{max-width:min(92%,28ch);font-size:.92rem}
-  .d-said{padding:.45rem .7rem}
-  .d-bub[data-bub=shout] .d-txt{padding:.95rem 1.5rem}
+  /* No positioning override here any more, and that absence is the fix: this
+     block used to say `.d-bubble{inset:.5rem .5rem auto .5rem}`, which threw
+     away the vertical anchor and pinned every balloon to the top of a square
+     panel while the heads sat halfway down it. Placement is measured in JS at
+     every width; only the size of the type is a matter of screen. */
+  .d-bub{font-size:calc(.88rem * var(--bub-scale,1))}
+  .d-bub[data-bub=whisper]{font-size:calc(.80rem * var(--bub-scale,1))}
+  .d-bub[data-bub=shout]{font-size:calc(1.00rem * var(--bub-scale,1))}
   .d-nav{padding-inline:0 2.9rem}
   .d-nav .d-prev,.d-nav .d-next{flex:1 1 auto;padding:.6rem .5rem}
   .d-count{min-width:3.6rem}

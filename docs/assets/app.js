@@ -1767,12 +1767,39 @@ function initDialogue(){
    than no picture. Everything is torn down on a second press, and the sequence
    checks it is still the current run before touching the DOM — otherwise a
    stop-then-start leaves two narrators driving one stage. */
+/* THE PANEL LIST, and there is exactly one of it. A beat pairs two short lines
+   so a phone reader is not tapping once a sentence, and on a 3:2 frame that is
+   right. On a phone the frame is square and about 285px across: two balloons
+   have to share it side by side, so a long line gets a twelve-character
+   measure, runs to fourteen lines and ends up either over the other speaker's
+   balloon or over their face. Every other lever — smaller type, shorter
+   figures, pushing the balloons apart — buys twenty pixels against a shortfall
+   of a hundred. The panel does not hold two, so on a phone it holds one.
+
+   Safe to cut anywhere, because a stage direction already breaks a beat: the
+   lines inside one share a background, a roster and a set of props, and each
+   line carries its own copy of all three.
+
+   It lives here, above both callers, because the comic and the narrator that
+   drives it must agree about what a panel IS. They each derived their own beat
+   list once, and on a phone the narrator then asked for panel three of its
+   fourteen while the comic was holding twenty-six — so pressing play jumped the
+   reader into the wrong half of the scene. Read once per page load rather than
+   re-read on resize, because re-splitting mid-story would renumber the panel
+   the reader is looking at. */
+function panelBeats(p){
+  const raw = (p.beats && p.beats.length) ? p.beats : p.lines.map((_, i) => [i]);
+  const narrow = typeof matchMedia === "function"
+              && matchMedia("(max-width: 34rem)").matches;
+  return narrow ? raw.reduce((out, g) => out.concat(g.map(j => [j])), []) : raw;
+}
+
 function initDialogueAudio(root, p){
   const btn = $(".d-hear", root);
   if (!btn) return;
   if (!canListen()){ const box = $(".d-audio", root); if (box) box.hidden = true; return; }
   const said = $(".d-heard", root);
-  const beats = (p.beats && p.beats.length) ? p.beats : p.lines.map((_, i) => [i]);
+  const beats = panelBeats(p);
   let run = 0;
 
   const plain = html => {
@@ -1842,13 +1869,10 @@ const ASSET_FX = "assets/fx/";
    speckles the hair and rings the cheek blush. See tools/make_sheet.py. */
 const ASSET_CAST = "assets/cast/";
 
-/* ---------------- balloons that are a shape, not a rounded box -------------
-   Two of the four balloon contours are not expressible as a border-radius, so
-   they are drawn as an SVG path behind the words. The path is GENERATED FROM
-   THE MEASURED BOX rather than stretched to fit it, and that distinction is
-   the whole design — everything below follows from it.
-
-   Two versions of this have been wrong, and both failures are instructive.
+/* ---------------- every balloon is a drawn contour --------------------------
+   NO BALLOON IS A BOX ANY MORE, and that is the change everything below
+   follows from. Three versions of this have been wrong; the third is the one
+   worth naming, because it looked finished.
 
    1. **Two clip-path polygons**, ink outside and white inset by `margin:3px`,
       on the theory that the gap reads as an outline. It cannot: a percentage
@@ -1857,141 +1881,349 @@ const ASSET_CAST = "assets/cast/";
       contour runs nearly parallel to the shrink — the white overshot the black
       and the outline vanished. It shipped with a contour that came and went.
 
-   2. **One fixed path, stretched** with `preserveAspectRatio="none"`. The
-      outline was even, and it was still wrong for a different reason: a
-      balloon is as wide as its text, so the stretch was severe, and a star
-      squashed to 3:1 is a row of horizontal shards. Worse, a star's INSCRIBED
-      area is far smaller than its bounding box, so the words ran outside the
-      white and the tail hung detached below a shape that stopped short of the
-      box.
+   2. **One fixed path, stretched** with `preserveAspectRatio="none"`. Even
+      outline, wrong for a different reason: a balloon is as wide as its text,
+      so the stretch was severe, and a star squashed to 3:1 is a row of
+      horizontal shards.
 
-   So the path is built to the box. A shape function takes the measured width
-   and height and returns a path in the element's own pixel coordinates, and
-   the spikes and lobes therefore keep a CONSTANT SIZE while their number
-   adapts to the perimeter — which is exactly how a comic letterer draws one.
-   Both shapes are built on a rounded rectangle rather than an ellipse, so the
-   interior really is the text box and the padding only has to clear the
-   spikes.
+   3. **A path built to the box, but only for the two loud shapes.** Ordinary
+      speech — which is nearly every line in the book — stayed a
+      `border-radius:1.15rem` rectangle with a CSS border-triangle stuck under
+      it. That is the version this replaces, and the fault is not a number
+      anywhere: a rounded rectangle is a *label*, and a comic that labels its
+      dialogue has stopped being a comic. The tell is that no amount of tuning
+      helps, because there is no radius at which a rectangle becomes a balloon.
 
-   Adding a fifth balloon is one function in this table. */
+   So the contour is a curve for every kind, generated from the block of text
+   it has to hold. Three things below do the work and they are separable on
+   purpose: `ovoidSamples` says what the outline is, `contourPath` says how it
+   is drawn, and `tailPath` says how it reaches the person speaking.
+
+   The outline is a superellipse rather than an ellipse. An ellipse through the
+   four corners of a w x h block is w*sqrt(2) wide — it overshoots the words by
+   41% and looks inflated. Raising the exponent squares the shoulders slightly:
+   at n = 2.7 the same block needs about 29%, which is the difference between a
+   balloon and a bubble. On top of that runs a slow two- and three-cycle swell
+   seeded from the line itself, so no two balloons in a panel share a silhouette
+   and the same line always draws the same one — a contour that re-randomised
+   on every relayout would boil under a resize. */
 
 const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
-/* Points at roughly even spacing around a rounded rectangle, walked clockwise
-   from the top-left, each with the outward normal at that point. One walk
-   serves every shape: a burst pushes a peak out along the normal between
-   consecutive points, a cloud bulges an arc between them. */
-function walkRoundRect(w, h, inset, r, pitch){
-  const x0 = inset, y0 = inset, x1 = w - inset, y1 = h - inset;
-  r = clamp(r, 0, Math.min((x1 - x0) / 2, (y1 - y0) / 2));
-  const sx = (x1 - x0) - 2 * r, sy = (y1 - y0) - 2 * r, arc = Math.PI * r / 2;
-  const corner = (cx, cy, from) => ({
-    len: arc,
-    at: t => { const a = from + t * Math.PI / 2;
-               return [cx + r * Math.cos(a), cy + r * Math.sin(a),
-                       Math.cos(a), Math.sin(a)]; },
-  });
-  const segs = [
-    { len: sx, at: t => [x0 + r + sx * t, y0, 0, -1] },
-    corner(x1 - r, y0 + r, -Math.PI / 2),
-    { len: sy, at: t => [x1, y0 + r + sy * t, 1, 0] },
-    corner(x1 - r, y1 - r, 0),
-    { len: sx, at: t => [x1 - r - sx * t, y1, 0, 1] },
-    corner(x0 + r, y1 - r, Math.PI / 2),
-    { len: sy, at: t => [x0, y1 - r - sy * t, -1, 0] },
-    corner(x0 + r, y0 + r, Math.PI),
-  ];
-  const total = segs.reduce((s, g) => s + g.len, 0);
-  if (!(total > 0)) return [];
-  const n = Math.max(10, Math.round(total / pitch));
+/* Seeded from the text, so a balloon's wobble is a property of the line rather
+   than of when it was drawn. */
+function hashSeed(str){
+  let h = 2166136261;
+  for (let i = 0; i < str.length; i++){
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+function seededRandom(seed){
+  let s = (seed >>> 0) || 1;
+  return () => {
+    s ^= s << 13; s >>>= 0;
+    s ^= s >>> 17;
+    s ^= s << 5;  s >>>= 0;
+    return s / 4294967296;
+  };
+}
+
+const SUPER_N = 2.7;   /* the shoulder of the outline — see the note above */
+
+/* Points around the contour, walked clockwise in screen coordinates from the
+   right-hand side. `n` is chosen by the caller from the perimeter, so a lobe or
+   a spike keeps a constant SIZE and only its count changes with the balloon —
+   which is how a letterer's hand works and why one big balloon does not come
+   out with the same twelve teeth as a small one. */
+function ovoidSamples(cw, ch, n, rnd){
+  const a = cw / 2, b = ch / 2;
+  const p1 = rnd() * 6.2832, p2 = rnd() * 6.2832, p3 = rnd() * 6.2832;
+  /* Three times what it was. A 3% wobble on a 240px balloon is a two-pixel
+     deviation — below the stroke weight, so the contour came out as a machined
+     ellipse and read, correctly, as a rounded box with the corners taken off.
+     A drawn balloon is visibly lopsided: one shoulder higher than the other,
+     one side fuller. The first harmonic is what does that, and it is the one
+     that was missing. */
+  const a0 = 0.042 + rnd() * 0.026;      /* lopsided */
+  const a1 = 0.034 + rnd() * 0.022;      /* fuller on one side */
+  const a2 = 0.020 + rnd() * 0.014;
+  const a3 = 0.010;
+  /* THE WOBBLE ONLY EVER PUSHES OUTWARD, and that is not a stylistic choice —
+     it is what makes the fit above sound. The contour is solved so that every
+     line of type clears a nominal superellipse; a wobble that swings both ways
+     then puts the drawn curve up to a seventh INSIDE that nominal shape,
+     wherever it happens to pinch, and the words cross their own outline on
+     whichever side the seed decided to pinch. Measured: 27px of air on the left
+     of a balloon and 10px on the right, same balloon, same line.
+
+     So the sum is shifted into [0, 2D] rather than [-D, +D]. The contour still
+     swells unevenly — one shoulder higher, one side fuller, which is the whole
+     point — but it never cuts in past the shape the words were fitted to. */
+  const D = a0 + a1 + a2 + a3;
   const out = [];
   for (let i = 0; i < n; i++){
-    let d = i * total / n, k = 0;
-    while (k < segs.length - 1 && d > segs[k].len){ d -= segs[k].len; k++; }
-    const g = segs[k];
-    const [x, y, nx, ny] = g.at(g.len ? clamp(d / g.len, 0, 1) : 0);
-    out.push({ x, y, nx, ny });
+    const t = i / n * Math.PI * 2;
+    const ct = Math.cos(t), st = Math.sin(t);
+    const k = Math.pow(Math.pow(Math.abs(ct), SUPER_N)
+                     + Math.pow(Math.abs(st), SUPER_N), -1 / SUPER_N);
+    const swing = a0 * Math.sin(t + p1)
+                + a1 * Math.sin(2 * t + p2)
+                + a2 * Math.sin(3 * t + p3)
+                + a3 * Math.sin(5 * t + p1 * 1.7);
+    const wob = 1 + (swing + D) * 0.62;
+    out.push({ x: a + a * k * ct * wob, y: b + b * k * st * wob, t });
   }
   return out;
 }
 
-const fmt = pts => "M" + pts.map(p => p[0].toFixed(1) + " " + p[1].toFixed(1))
-                           .join(" L") + " Z";
+const P = v => v.toFixed(1);
 
-/* How far a spike or a lobe reaches BEYOND the text box.
-
-   This used to be measured inward, with the contour drawn inside the element
-   and the padding holding the words clear of it. That coupling was the reason
-   the burst came out wrong: the amplitude was capped by the padding, so on a
-   one-line balloon — which is wide and short — the spikes were tiny and the
-   perimeter was long, and a burst with forty small teeth on it is a sawtooth
-   strip, not a shout.
-
-   So the contour is drawn on the element's own edge and the spikes hang
-   OUTSIDE it, where nothing has to make room for them. The element is exactly
-   the text box, the padding is ordinary text padding, and the amplitude is free
-   to be whatever reads as a burst. `.d-bub` carries a margin so the spikes have
-   panel to hang into. */
-function spikeAmp(w, h, share, max){
-  return clamp(Math.min(w, h) * share, 8, max);
+/* THE OVOID ITSELF: a Catmull-Rom spline through the samples, emitted as
+   cubics. Open, because
+   the tail's mouth is a GAP in the contour rather than something drawn on top
+   of it: the balloon's outline stops at one side of the mouth and the tail's
+   outline starts there, so the two strokes join end to end into one continuous
+   contour. Painting a closed balloon over a closed tail cannot do that — the
+   balloon's own stroke draws a line straight across the tail's opening. */
+function ovoidPath(pts, from, count){
+  const n = pts.length, at = i => pts[((i % n) + n) % n];
+  let d = "M" + P(at(from).x) + " " + P(at(from).y);
+  for (let i = 0; i < count; i++){
+    const p0 = at(from + i - 1), p1 = at(from + i),
+          p2 = at(from + i + 1), p3 = at(from + i + 2);
+    d += " C" + P(p1.x + (p2.x - p0.x) / 6) + " " + P(p1.y + (p2.y - p0.y) / 6)
+       + " " + P(p2.x - (p3.x - p1.x) / 6) + " " + P(p2.y - (p3.y - p1.y) / 6)
+       + " " + P(p2.x) + " " + P(p2.y);
+  }
+  return d;
 }
 
-/* Each shape is three numbers and a path function.
+/* Scallops: an outward arc between each pair of samples. Sweep 1 bulges away
+   from the centre because the walk is clockwise on a screen, where y counts
+   downward. */
+function scallopThrough(pts, from, count){
+  const n = pts.length, at = i => pts[((i % n) + n) % n];
+  let d = "M" + P(at(from).x) + " " + P(at(from).y);
+  for (let i = 0; i < count; i++){
+    const p1 = at(from + i), p2 = at(from + i + 1);
+    /* Just over the chord's half-length, so each lobe is most of a semicircle.
+       A bigger radius is a FLATTER arc, which is the counter-intuitive part and
+       the reason the cloud read as a bumpy oval: the sagitta falls as the radius
+       rises, so widening it to make the lobes "rounder" flattened them. */
+    const r = Math.hypot(p2.x - p1.x, p2.y - p1.y) / 2 * 1.08;
+    d += " A" + P(r) + " " + P(r) + " 0 0 1 " + P(p2.x) + " " + P(p2.y);
+  }
+  return d;
+}
 
-   `share` and `max` set how big a spike or lobe wants to be; `lift` is how far
-   the tail has to climb to MEET the contour, as a fraction of that size. The
-   third one is easy to forget and looks like a bug when it is: the contour of a
-   shaped balloon does not sit on the bottom of its box — a burst's edge is a
-   valley for most of its length and only touches the box at the spike tips —
-   so a tail pinned to the box hangs in mid-air below it. */
-const BUB_SHAPE = {
-  /* Loud: a spike between every pair of boundary points, of alternating length
-     so the contour reads as drawn rather than machined. */
-  shout: { share: 0.24, max: 17, pitch: 2.9, lift: -0.72, path(w, h, amp){
-    const p = walkRoundRect(w, h, 0, amp * 1.2, amp * 2.9);
-    if (!p.length) return "";
-    const out = [];
-    p.forEach((a, i) => {
-      const b = p[(i + 1) % p.length];
-      out.push([a.x, a.y]);
-      const nx = a.nx + b.nx, ny = a.ny + b.ny;
-      const L = Math.hypot(nx, ny) || 1;
-      /* Uneven spikes read as drawn rather than machined, and the long ones
-         are what make it a burst instead of a sawtooth. */
-      const k = amp * (i % 2 ? 1 : 0.62);
-      out.push([(a.x + b.x) / 2 + nx / L * k, (a.y + b.y) / 2 + ny / L * k]);
-    });
-    return fmt(out);
-  } },
-  /* Not said: an outward arc between every pair, which is a scalloped edge.
-     Sweep 1 bulges outward because the walk is clockwise in screen
-     coordinates, where y counts downward. */
-  think: { share: 0.17, max: 15, pitch: 3.0, lift: -0.6, path(w, h, amp){
-    const p = walkRoundRect(w, h, 0, amp * 2, amp * 3.0);
-    if (!p.length) return "";
-    let d = `M${p[0].x.toFixed(1)} ${p[0].y.toFixed(1)}`;
-    for (let i = 1; i <= p.length; i++){
-      const a = p[i - 1], b = p[i % p.length];
-      const r = (Math.hypot(b.x - a.x, b.y - a.y) / 2) * 1.35;
-      d += ` A${r.toFixed(1)} ${r.toFixed(1)} 0 0 1 `
-         + `${b.x.toFixed(1)} ${b.y.toFixed(1)}`;
-    }
-    return d + " Z";
-  } },
+/* A burst. The spikes alternate length because an even row of teeth is a saw,
+   not a shout, and each flank is a quadratic rather than a straight line so the
+   contour still reads as drawn by a hand. */
+function burstThrough(pts, from, count, amp, cx, cy){
+  const n = pts.length, at = i => pts[((i % n) + n) % n];
+  let d = "M" + P(at(from).x) + " " + P(at(from).y);
+  for (let i = 0; i < count; i++){
+    const p1 = at(from + i), p2 = at(from + i + 1);
+    const mx = (p1.x + p2.x) / 2, my = (p1.y + p2.y) / 2;
+    let nx = mx - cx, ny = my - cy;
+    const L = Math.hypot(nx, ny) || 1;
+    const k = amp * ((from + i) % 2 ? 1 : 0.62);
+    const tx = mx + nx / L * k, ty = my + ny / L * k;
+    /* out to the point, then back — two curves per spike, so the flanks bow */
+    d += " Q" + P(p1.x + (tx - p1.x) * 0.55 - ny / L * k * 0.16) + " "
+              + P(p1.y + (ty - p1.y) * 0.55 + nx / L * k * 0.16) + " "
+              + P(tx) + " " + P(ty)
+       + " Q" + P(p2.x + (tx - p2.x) * 0.55 + ny / L * k * 0.16) + " "
+              + P(p2.y + (ty - p2.y) * 0.55 - nx / L * k * 0.16) + " "
+              + P(p2.x) + " " + P(p2.y);
+  }
+  return d;
+}
+
+/* How the four kinds differ, in one table.
+
+   `gap` is how many samples the tail's mouth takes out of the contour — zero
+   for a thought, whose trail of bubbles is detached and whose cloud is
+   therefore closed all the way round. `pitch` is the target spacing between
+   samples, which is what keeps a lobe the same size on a big balloon and a
+   small one. `amp` is the spike height for a burst and is ignored otherwise. */
+/* THE SWELL IS SMALLER THAN THE MATHS SAYS, and that is the correction that
+   makes these read as lettering rather than as bubbles. An ellipse through the
+   four corners of a w x h block is 1.41 x its size; a superellipse at n = 2.7 is
+   1.30. Both numbers circumscribe the block's CORNERS — and in a lens-shaped
+   stack the corners are empty, because the first and last lines are the short
+   ones. Padding to them puts a hand's width of white round two lines of speech,
+   which is what made every balloon look inflated and pushed its mass up into the
+   sky away from the head it belongs to.
+
+   So the swell is set to clear the INK rather than the box, and the floor under
+   it is the letterer's own rule: one capital of the dialogue font fits in the
+   gap between the stack and the contour, anywhere round it, and no more. */
+const BUB_KIND = {
+  say:     { pitch: 13, gap: 3, draw: "spline", swellW: 1.13, swellH: 1.26 },
+  whisper: { pitch: 13, gap: 3, draw: "spline", swellW: 1.12, swellH: 1.24 },
+  shout:   { pitch: 22, gap: 3, draw: "burst",  swellW: 1.16, swellH: 1.30,
+             share: 0.20, max: 18 },
+  think:   { pitch: 31, gap: 0, draw: "scallop", swellW: 1.15, swellH: 1.28 },
 };
 
+/* The contour and the tail, built together because the tail's mouth is a hole
+   in the contour and neither is decidable without the other.
+
+   `aim` is where the tail is going, in the contour's own coordinates. Returns
+   the two path strings and the drawn extent, which the caller needs to size the
+   svg: a spike or a lobe hangs outside the box the words occupy, and a tail
+   hangs a long way outside it. */
+function balloonPaths(kind, cw, ch, aim, seed, hand){
+  const spec = BUB_KIND[kind] || BUB_KIND.say;
+  const cx = cw / 2, cy = ch / 2;
+  const rnd = seededRandom(seed);
+  const perim = Math.PI * ((cw + ch) / 2) * 1.05;
+  const n = clamp(Math.round(perim / spec.pitch), 12, 44);
+  const pts = ovoidSamples(cw, ch, n, rnd);
+  const amp = kind === "shout"
+    ? clamp(Math.min(cw, ch) * spec.share, 8, spec.max) : 0;
+
+  /* Where the tail leaves. A balloon sits above its speaker, so the mouth wants
+     to be underneath it; the angle is allowed to lean toward the head but never
+     to climb into the top half, where a tail would read as somebody else's. */
+  /* AND IT COMES OUT OF ONE SIDE. A mouth placed dead on the line to the
+     speaker gives a symmetrical tail, and a symmetrical tail has no handedness
+     for the bow to mirror — measured, the sweep either way was two to four
+     pixels on a fifty-pixel tail, swamped by the run along the contour. A
+     letterer brings the tail out of the side of the balloon nearer the speaker
+     and curves it in. That offset is the signal; the bow follows it. */
+  let ang = Math.atan2(aim.y - cy, aim.x - cx);
+  ang = clamp(ang + (hand || 1) * 0.34, 0.55, Math.PI - 0.55);
+  /* The mouth is a WIDTH, not a sample count. Three samples off a small
+     balloon is a narrow tail and off a large one is a funnel, because the
+     sample spacing is fixed and the count is not — so the tail came out thick
+     on exactly the balloons that carry the most text. Set the chord instead
+     and let the count follow it. */
+  const chord = clamp(cw * 0.055, 7, 14);
+  const gap = spec.gap ? clamp(Math.round(chord / (perim / n)), 1, 4) : 0;
+  const centre = Math.round(ang / (Math.PI * 2) * n);
+  const i1 = centre - Math.ceil(gap / 2), i2 = i1 + gap;
+  const at = i => pts[((i % n) + n) % n];
+
+  const from = gap ? i2 : 0;
+  const count = gap ? n - gap : n;
+  let body;
+  if (spec.draw === "burst") body = burstThrough(pts, from, count, amp, cx, cy);
+  else if (spec.draw === "scallop") body = scallopThrough(pts, from, count);
+  else body = ovoidPath(pts, from, count);
+  if (!gap) body += " Z";
+
+  /* The direction the contour is TRAVELLING at each side of the mouth. The
+     tail leaves along it, so the outline runs on without a corner. */
+  const tangent = i => {
+    const a = at(i - 1), b = at(i + 1);
+    const dx = b.x - a.x, dy = b.y - a.y, L = Math.hypot(dx, dy) || 1;
+    return { x: dx / L, y: dy / L };
+  };
+  const tail = tailPath(kind, at(i1), at(i2), aim, cx, cy, cw, ch,
+                        tangent(i1), tangent(i2), hand);
+
+  /* The extent has to cover the spikes and the tail, because the svg is sized
+     to it and anything outside is not drawn. */
+  /* A scallop bulges outside the sample ring by about a third of the spacing
+     between samples — the same allowance a spike needs, arrived at differently. */
+  const out = Math.max(amp, spec.draw === "scallop" ? perim / n * 0.36 : 0);
+  let x0 = 0, y0 = 0, x1 = cw, y1 = ch;
+  for (const p of pts){
+    x0 = Math.min(x0, p.x - out); y0 = Math.min(y0, p.y - out);
+    x1 = Math.max(x1, p.x + out); y1 = Math.max(y1, p.y + out);
+  }
+  x0 = Math.min(x0, aim.x - 8); y0 = Math.min(y0, aim.y - 8);
+  x1 = Math.max(x1, aim.x + 8); y1 = Math.max(y1, aim.y + 8);
+  return { body, tail, ext: { x0, y0, x1, y1 } };
+}
+
+/* The tail. A letterer's tail is a curved sliver that tapers to a point and
+   stops somewhere between half and two thirds of the way to the mouth — it does
+   not have to touch the face, and it should not, because a tail that lands on a
+   chin reads as a pointer. What it must not be is the thing this replaces: a
+   fixed eight-pixel CSS border-triangle, which is the same size whether it has
+   four pixels to cross or ninety, and at ninety it is a stub under a floating
+   box.
+
+   A thought does not get a sliver at all. Its trail of shrinking bubbles is the
+   one balloon convention a reader decodes with no instruction, and it aims at
+   the head rather than the mouth. */
+function tailPath(kind, r1, r2, aim, cx, cy, cw, ch, t1, t2, hand){
+  if (kind === "think"){
+    /* The trail starts OUTSIDE the cloud. Spacing it as a fraction of the whole
+       distance from the cloud's CENTRE put the first bubble inside the balloon,
+       sitting on top of a word — which is what "knows (o) is not true" was. So
+       the run begins at the contour's own edge along the line to the thinker,
+       and only then walks down towards them. */
+    let ux = aim.x - cx, uy = aim.y - cy;
+    const L = Math.hypot(ux, uy) || 1;
+    ux /= L; uy /= L;
+    const rE = 1 / Math.hypot(ux / (cw / 2), uy / (ch / 2));
+    const run = Math.max(10, L - rE);
+    let d = "";
+    for (let i = 0; i < 3; i++){
+      const f = rE + 7 + run * (i / 2.6);
+      const bx = cx + ux * f, by = cy + uy * f;
+      const rr = 7.5 - i * 2.1;
+      d += " M" + P(bx - rr) + " " + P(by)
+         + " A" + P(rr) + " " + P(rr) + " 0 1 0 " + P(bx + rr) + " " + P(by)
+         + " A" + P(rr) + " " + P(rr) + " 0 1 0 " + P(bx - rr) + " " + P(by) + " Z";
+    }
+    return d.trim();
+  }
+  const mx = (r1.x + r2.x) / 2, my = (r1.y + r2.y) / 2;
+  let dx = aim.x - mx, dy = aim.y - my;
+  const L = Math.hypot(dx, dy) || 1;
+  dx /= L; dy /= L;
+  /* THE FLANKS LEAVE ALONG THE CONTOUR AND SWEEP TO ONE SIDE. What this
+     replaces was two cubics whose control points ran straight at the tip, which
+     on a short tail is a triangle with a kink where it meets the balloon — the
+     outline arrives round the curve and then turns a corner. Reading it at four
+     times size, that corner is most of why the tail looked thick and blunt: a
+     wedge stuck on, rather than a stroke coming off.
+
+     Two things fix it and they are separable. The root controls run along the
+     contour's own tangent, so the outline continues rather than turning; and
+     the bow lives entirely in the controls near the POINT, so the sliver leans
+     to one side as it tapers instead of being skewed bodily sideways. Which
+     side is `hand`, taken from where the speaker is standing. */
+  const px = -dy, py = dx;              /* across the tail */
+  const k = L * 0.30;                   /* how far the flanks run along the curve */
+  const back = L * 0.34;                /* control distance back from the point */
+  const bow = -hand * L * 0.62;         /* the sweep, all of it near the point */
+  const c1x = r1.x + t1.x * k, c1y = r1.y + t1.y * k;
+  const c2x = aim.x - dx * back + px * bow,
+        c2y = aim.y - dy * back + py * bow;
+  const c3x = aim.x - dx * back * 0.78 + px * bow * 0.42,
+        c3y = aim.y - dy * back * 0.78 + py * bow * 0.42;
+  const c4x = r2.x - t2.x * k, c4y = r2.y - t2.y * k;
+  return "M" + P(r1.x) + " " + P(r1.y)
+       + " C" + P(c1x) + " " + P(c1y) + " " + P(c2x) + " " + P(c2y)
+              + " " + P(aim.x) + " " + P(aim.y)
+       + " C" + P(c3x) + " " + P(c3y) + " " + P(c4x) + " " + P(c4y)
+              + " " + P(r2.x) + " " + P(r2.y);
+}
+
+/* Narration is the one thing that stays a rectangle, and deliberately: a
+   caption is not a balloon, nobody is saying it, and its lines are set even and
+   block-like — which is the exact stack that is wrong inside an oval. */
 function balloonHTML(kind, inner){
-  if (!BUB_SHAPE[kind])
+  if (kind === "narrate")
     return '<div class="d-said"><div class="d-txt">' + inner + "</div></div>";
-  /* The path is empty until it has been measured. That is deliberate: a
-     placeholder shape would be drawn at the wrong size for one frame, and a
-     balloon that visibly changes shape after it appears is worse than one that
-     arrives a frame late. */
+  /* The paths are empty until the words have been measured. A placeholder would
+     be drawn at the wrong size for one frame, and a balloon that visibly
+     changes shape after it appears is worse than one that arrives a frame
+     late. */
   return '<div class="d-said is-shaped">'
        + '<svg class="d-shape" aria-hidden="true" focusable="false">'
-       + '<path d=""/></svg>'
+       + '<path class="d-body-path" d=""/><path class="d-tail" d=""/></svg>'
        + '<div class="d-txt">' + inner + "</div></div>";
 }
+
 
 function initScene(root, p){
   const scene = $(".d-scene", root), body = $(".d-body", root),
@@ -2014,7 +2246,7 @@ function initScene(root, p){
      avatar and background 404'd while the CSS beside them loaded fine. */
   const css = document.querySelector('link[rel="stylesheet"][href*="assets/app.css"]');
   const up = css ? css.getAttribute("href").replace(/assets\/app\.css.*$/, "") : "";
-  const beats = p.beats && p.beats.length ? p.beats : p.lines.map((_, i) => [i]);
+  const beats = panelBeats(p);
   let at = -1;
 
   /* ---- where things stand ------------------------------------------------
@@ -2029,7 +2261,20 @@ function initScene(root, p){
   /* Height falls as the cast grows, but slowly: the point of the half-body
      crop is the expression, and an avatar under about 45% of the frame stops
      delivering one. Four is the cap for that reason and is enforced at build. */
-  const figH = n => n <= 2 ? 0.62 : n === 3 ? 0.55 : 0.48;
+  /* And falls again on a SQUARE panel, which is what a phone gets. A 3:2 frame
+     with figures at 62% leaves a comfortable band of sky for the balloons; the
+     same 62% of a square leaves barely a third of the panel, and two people
+     talking in it cannot both be given a balloon over their head without one of
+     them ending up across the other's face. The figures come down to about half
+     the frame instead, which is still well above the size an expression reads
+     at, and the sky it buys is what the balloons are placed in. */
+  const figSquash = () => {
+    const st = $(".d-stage", scene);
+    const r = st && st.getBoundingClientRect();
+    if (!r || !r.height) return 1;
+    return clamp((r.width / r.height) / 1.5, 0.8, 1);
+  };
+  const figH = n => (n <= 2 ? 0.62 : n === 3 ? 0.55 : 0.48) * figSquash();
 
   /* ---- the figures -------------------------------------------------------
      One sheet per character, offset to the panel that holds the wanted face.
@@ -2538,7 +2783,7 @@ function initScene(root, p){
       shapeWatch.disconnect();
       $$(".d-said.is-shaped", bubble).forEach(el => shapeWatch.observe(el));
     }
-    requestAnimationFrame(relayout);
+    settleLayout();
     /* A tail is aimed at the figure it points to, ONCE, off a measurement. A
        figure still walking to its place would therefore be pointed at where it
        set off from, so the longest walk in the panel books a second aim for the
@@ -2703,151 +2948,654 @@ function initScene(root, p){
     typing.timer = setTimeout(tick, 120);
   }
 
-  /* ---- drawing the shaped balloons ---------------------------------------
-     A shape is built to the box the words ended up needing, so it can only be
-     built after layout. Cheap and idempotent: it remembers the size it drew at
-     and does nothing when asked again at the same one, which is what makes it
-     safe to hang off a ResizeObserver as well as off the paint. */
-  /* A drawn contour wants a text block of roughly the right SHAPE to wrap
-     around, and a balloon left to its own devices is exactly the wrong shape:
-     it is as wide as its longest sensible line and only as tall as it has to
-     be, so a one-line shout is five times as wide as it is tall. Spikes are a
-     constant size, so a long thin perimeter simply gets more of them — which
-     is a sawtooth strip, not a burst.
+  /* ---- lettering: where the lines break -----------------------------------
+     THE BREAKS ARE INPUT TO THE BALLOON, NOT OUTPUT FROM IT. That is the whole
+     of this section, and it is the opposite of what a `max-width` does.
 
-     Capping the measure in `ch` does not fix it either. It makes short lines
-     chunky and turns long ones into a tall narrow column, which is the same
-     defect standing up.
+     Greedy wrapping fills each line to the measure and drops whatever is left
+     onto the last one, which is why the balloons here kept ending in a stranded
+     word — "…I come down here / to relax." A letterer breaks the line first and
+     draws the balloon around the result, and aims for a stack that is short at
+     the top, longest in the middle and short again at the bottom, because that
+     is the shape that fills an oval. An even stack is a caption, and a caption
+     inside an oval is what wastes the corners and inflates the shape.
 
-     So the width is COMPUTED from how much text there is. Measure the line the
-     text would occupy if it never wrapped, and a block of aspect A has width
-     sqrt(A · lineHeight · thatLength) — the same relation whether the line is
-     three characters or eighty. Measured rather than estimated, because
-     guessing an average character width is what `ch` already did badly. */
-  const SHAPE_ASPECT = { shout: 1.9, think: 2.7 };
+     So: every break candidate is measured, and a small dynamic program picks
+     the set of breaks that comes closest to a lens-shaped stack while paying a
+     penalty for the breaks a reader would trip on — after "the", after "to",
+     mid-phrase — and a large one for stranding a short word at the end. The
+     text then carries explicit `<br>`s and is set `nowrap`, so nothing else can
+     break it: the balloon is exactly as wide as the widest line the breaker
+     chose. */
 
-  function fitShaped(said, kind){
-    const txt = $(".d-txt", said), bub = said.parentNode;
-    if (!txt) return;
-    const cs = getComputedStyle(txt);
-    const lh = parseFloat(cs.lineHeight) || parseFloat(cs.fontSize) * 1.5;
-    const was = txt.style.whiteSpace;
-    txt.style.whiteSpace = "nowrap";
-    const natural = txt.scrollWidth;
-    txt.style.whiteSpace = was;
-    if (!natural || !lh) return;
-    const sc = getComputedStyle(said);
-    const pad = (parseFloat(sc.paddingLeft) || 0) + (parseFloat(sc.paddingRight) || 0);
-    /* max-width in the stylesheet is still the ceiling, and `min-width:
-       min-content` the floor, so a single long word can never be squeezed
-       narrower than it is. */
-    bub.style.width =
-      Math.round(Math.sqrt((SHAPE_ASPECT[kind] || 2) * lh * natural) + pad) + "px";
+  /* Break candidates are real elements rather than characters, so a break can
+     be applied and removed without touching the words around it. Glosses are
+     skipped: a gloss is an inline-block, it cannot be split across lines, and a
+     break inside one would tear its underline in half. It is one wide token,
+     and the breaker parks it where a wide token belongs. */
+  function tokenize(txt){
+    if (txt.dataset.tok === "1") return;
+    txt.dataset.tok = "1";
+    const walk = node => {
+      for (const kid of [...node.childNodes]){
+        if (kid.nodeType === 3){
+          if (!/\s/.test(kid.data)) continue;
+          const frag = document.createDocumentFragment();
+          for (const s of kid.data.split(/(\s+)/)){
+            if (!s) continue;
+            if (/^\s+$/.test(s)){
+              const sp = document.createElement("span");
+              sp.className = "d-sp";
+              sp.textContent = " ";
+              frag.appendChild(sp);
+            } else frag.appendChild(document.createTextNode(s));
+          }
+          kid.replaceWith(frag);
+        } else if (kid.nodeType === 1
+                   && !kid.classList.contains("gl")
+                   && !kid.classList.contains("d-sp")){
+          walk(kid);
+        }
+      }
+    };
+    walk(txt);
   }
 
-  function drawShapes(){
-    if (scene.hidden) return;
-    $$(".d-said.is-shaped", bubble).forEach(said => {
-      const bub = said.parentNode;
-      const spec = BUB_SHAPE[(bub.dataset || {}).bub];
-      const svg = $("svg.d-shape", said), path = svg && $("path", svg);
-      if (!spec || !path) return;
-      fitShaped(said, (bub.dataset || {}).bub);
-      const w = said.clientWidth, h = said.clientHeight;
-      if (!w || !h) return;
-      const key = w + "x" + h;
-      if (said.dataset.drawn === key) return;
-      said.dataset.drawn = key;
-      const amp = spikeAmp(w, h, spec.share, spec.max);
-      svg.setAttribute("viewBox", "0 0 " + w + " " + h);
-      path.setAttribute("d", spec.path(w, h, amp));
-      /* Move the tail to where the contour actually is. Negative now, because
-         the contour hangs BELOW the box rather than sitting inside it. */
-      bub.style.setProperty("--tail-lift", (amp * spec.lift).toFixed(1) + "px");
-      /* And give the spikes somewhere to hang. */
-      bub.style.setProperty("--spike", amp.toFixed(1) + "px");
-    });
+  /* The words between the break candidates, in order — needed because the cost
+     of a break depends on the word in front of it. */
+  function segments(txt){
+    const out = [""];
+    const walk = node => {
+      for (const kid of node.childNodes){
+        if (kid.nodeType === 3){ out[out.length - 1] += kid.data; continue; }
+        if (kid.nodeType !== 1) continue;
+        if (kid.classList.contains("d-sp")){ out.push(""); continue; }
+        if (kid.classList.contains("d-br")) continue;
+        if (kid.classList.contains("gl")){ out[out.length - 1] += kid.textContent; continue; }
+        walk(kid);
+      }
+    };
+    walk(txt);
+    return out.map(s => s.trim());
   }
+
+  /* Words a line should not end on. Breaking after "the" or "to" makes the
+     reader carry an incomplete phrase across the gap, which on a picture — where
+     the eye has somewhere else to go — is a real cost rather than a nicety. */
+  const WEAK_END = new Set(["a","an","the","to","of","in","on","at","for","with",
+    "my","your","his","her","our","their","and","but","or","so","is","was","are",
+    "were","be","been","that","this","if","as"]);
+
+  function endPenalty(word){
+    if (!word) return 900;
+    if (/[.!?]["'’]?$/.test(word)) return 0;
+    if (/[,;:—…]["'’]?$/.test(word)) return 220;
+    if (WEAK_END.has(word.toLowerCase().replace(/[^\w'’]/g, ""))) return 2600;
+    return 900;
+  }
+
+  const LINE_COST = 1300;    /* an extra line has to earn its place */
+  const ORPHAN_W = 0.40;     /* a last line thinner than this is stranded */
+  const MAX_LINES = 16;      /* the ceiling, not the aim — see the fallback */
+
+  /* Is this stack the shape an oval wants? Short, long, longest, long, short.
+     Checked on the widths the breaker actually produced rather than on the
+     targets it aimed at, because a solution can hit its targets badly and still
+     come out top-heavy — which reads as a caption somebody rounded off. */
+  function tapers(ws){
+    if (ws.length < 3) return true;
+    let mid = 0;
+    for (let i = 1; i < ws.length - 1; i++) mid = Math.max(mid, ws[i]);
+    return ws[0] <= mid * 1.01 && ws[ws.length - 1] <= mid * 1.01;
+  }
+
+  /* Returns the indices of the segments each line ENDS on. */
+  function lensBreak(starts, ends, segs, maxW){
+    const m = ends.length;
+    if (m < 2) return [];
+    const wide = (i, j) => ends[j] - starts[i];
+    let best = null, bestAny = null;
+    for (let k = 1; k <= Math.min(MAX_LINES, m); k++){
+      let peak = 0;
+      const prof = [];
+      for (let i = 0; i < k; i++){
+        const s = Math.sin(Math.PI * (i + 0.5) / k);
+        prof.push(s); peak = Math.max(peak, s);
+      }
+      const target = prof.map(s => maxW * Math.pow(s / peak, 0.35));
+      /* f[l][i] — the cost of laying segments i.. into l lines, and the choice
+         that achieved it. l counts DOWN, so the line's target is target[k-l]. */
+      const f = [], pick = [];
+      for (let l = 0; l <= k; l++){
+        f.push(new Array(m + 1).fill(Infinity));
+        pick.push(new Array(m + 1).fill(-1));
+      }
+      f[0][m] = 0;
+      for (let l = 1; l <= k; l++){
+        const idx = k - l, t = target[idx];
+        /* The taper, made structural rather than hoped for: on a stack of three
+           or more the top and bottom lines may not run the full measure. */
+        const cap = k < 3 ? maxW : (idx === 0 ? maxW * 0.86
+                                   : idx === k - 1 ? maxW * 0.92 : maxW);
+        for (let i = m - 1; i >= 0; i--){
+          for (let j = i; j < m; j++){
+            const w = wide(i, j);
+            if (w > cap) break;
+            const rest = f[l - 1][j + 1];
+            if (!isFinite(rest)) continue;
+            let c = (t - w) * (t - w) + LINE_COST;
+            if (l > 1) c += endPenalty(segs[j]);
+            else {
+              /* the last line: the two rules a reader actually notices */
+              if (w < ORPHAN_W * maxW) c += 9000;
+              if (i === j && segs[j].replace(/[^\wÀ-ỹ]/g, "").length < 4) c += 1e7;
+            }
+            const tot = c + rest;
+            if (tot < f[l][i]){ f[l][i] = tot; pick[l][i] = j; }
+          }
+        }
+      }
+      if (!isFinite(f[k][0])) continue;
+      const cuts = [], ws = [];
+      let i = 0;
+      for (let l = k; l >= 1; l--){
+        const j = pick[l][i];
+        cuts.push(j); ws.push(wide(i, j)); i = j + 1;
+      }
+      const cand = { cost: f[k][0], cuts };
+      if (!bestAny || cand.cost < bestAny.cost) bestAny = cand;
+      if (tapers(ws) && (!best || cand.cost < best.cost)) best = cand;
+    }
+    const won = best || bestAny;
+    if (won) return won.cuts.slice(0, -1);
+    /* Nothing fitted the measure at any line count — a very long line in a very
+       narrow panel. Fall back to plain greedy wrapping rather than returning no
+       breaks at all, which is what used to leave a phone balloon three times the
+       width of the frame. */
+    const cuts = [];
+    let from = 0;
+    for (let j = 0; j < m - 1; j++){
+      if (wide(from, j + 1) > maxW){ cuts.push(j); from = j + 1; }
+    }
+    return cuts;
+  }
+
+  /* ---- fitting one balloon ------------------------------------------------
+     Measure with every break removed, choose the breaks, then measure the block
+     they produced. Nothing here reads a stylesheet width: the measure comes in
+     as an argument, because it is decided by how much of the frame this
+     speaker's balloon is allowed to occupy. */
+  function fitText(bub, maxW, minW){
+    const txt = $(".d-txt", bub);
+    if (!txt) return null;
+    $$("br.d-br", txt).forEach(n => n.remove());
+    $$(".d-sp", txt).forEach(s => s.classList.remove("d-sp-off"));
+    tokenize(txt);
+    const sps = $$(".d-sp", txt);
+    const tr = txt.getBoundingClientRect();
+    if (!tr.width) return null;
+    const starts = [0], ends = [];
+    for (const sp of sps){
+      const r = sp.getBoundingClientRect();
+      ends.push(r.left - tr.left);
+      starts.push(r.right - tr.left);
+    }
+    ends.push(tr.width);
+    /* A single token wider than the measure — a long word, or a gloss covering
+       a whole phrase — sets the measure rather than being broken by it. */
+    let widest = 0;
+    for (let i = 0; i < ends.length; i++) widest = Math.max(widest, ends[i] - starts[i]);
+    /* A floor as well as a ceiling. A short line in a narrow slab was being
+       broken into four two-word scraps — and a four-word question cannot taper
+       at six characters a line, so it came out top-heavy however the breaker
+       arranged it. Below its own natural width nothing is gained by breaking at
+       all, so that is where the floor sits. */
+    const measure = Math.max(maxW, widest, Math.min(tr.width, minW || 0));
+    const cuts = lensBreak(starts, ends, segments(txt), measure);
+    for (const j of cuts){
+      const sp = sps[j];
+      if (!sp) continue;
+      sp.classList.add("d-sp-off");
+      const br = document.createElement("br");
+      br.className = "d-br";
+      sp.after(br);
+    }
+    /* The lines themselves, not just the block they add up to. A contour is a
+       curve, so what it has to clear is each LINE at the height that line sits
+       at — the block's corners are empty in a lens-shaped stack and padding to
+       them is what inflated these balloons. */
+    const after = txt.getBoundingClientRect();
+    const rng = document.createRange();
+    rng.selectNodeContents(txt);
+    const rows = [];
+    for (const r of rng.getClientRects()){
+      if (r.width < 0.5 || r.height < 0.5) continue;
+      const hit = rows.find(q => Math.abs(q.top - r.top) <= 5);
+      if (!hit) rows.push({ top: r.top, bottom: r.bottom, left: r.left, right: r.right });
+      else { hit.left = Math.min(hit.left, r.left); hit.right = Math.max(hit.right, r.right);
+             hit.top = Math.min(hit.top, r.top); hit.bottom = Math.max(hit.bottom, r.bottom); }
+    }
+    const mid = after.top + after.height / 2;
+    const lines = rows.map(r => ({ w: r.right - r.left, cy: (r.top + r.bottom) / 2 - mid }));
+    return { w: after.width, h: after.height, lines };
+  }
+
+  /* ---- drawing and placing ------------------------------------------------
+     A balloon goes OVER THE HEAD OF THE PERSON SAYING IT, and everything about
+     the old arrangement worked against that. The balloons were one flex column
+     bottom-aligned against the top of the figures, so a beat's first balloon was
+     lifted by the height of the second one whoever had spoken it, and on a phone
+     a media query replaced the vertical anchor with `bottom:auto` — which pinned
+     the whole stack to the top of the frame while the heads sat halfway down.
+
+     Now each balloon is placed on its own, in three steps that cannot be
+     reordered: the frame is divided into a slab per speaker so two balloons can
+     never want the same pixels; the words are broken to fit that slab; and the
+     balloon is hung over the head with the tail reaching most of the way to the
+     mouth. If the result would leave the frame it comes down into the figure —
+     a balloon may cover the top of a head, which is ordinary in a comic — and
+     only if that is not enough does the type come down a step. */
+  const FRAME_PAD = 5;      /* ink stays this far inside the frame */
+  const HEAD_GAP = 0.028;   /* the gap above the head, as a share of the frame */
+  const GAP_MIN = 9, GAP_MAX = 22;
+  const TAIL_REACH = 0.80;  /* how far down that gap the tail's point goes */
+  const SINK_MAX = 0.10;    /* how far a balloon may come down into a figure */
+  /* Type comes down a step at a time when a balloon will not fit above the
+     head. Six steps rather than four, because a phone panel is 285px square and
+     two people talking in it is the case that needs the last two. */
+  const SCALES = [1, 0.94, 0.88, 0.82, 0.76, 0.71, 0.66];
+
+  let laying = false;
+
+  function layoutBalloons(){
+    if (scene.hidden || laying) return;
+    const bubs = $$(".d-bub", bubble);
+    if (!bubs.length) return;
+    const sr = stage.getBoundingClientRect();
+    const box = bubble.getBoundingClientRect();
+    if (!sr.width || !sr.height || !box.width) return;
+    laying = true;
+    try { layoutInner(bubs, sr, box); } finally { laying = false; }
+  }
+
+  function layoutInner(bubs, sr, box){
+    const speech = [], caption = [];
+    for (const b of bubs) (b.dataset.bub === "narrate" ? caption : speech).push(b);
+
+    /* Captions stack up from the foot of the frame. Nobody is saying them, so
+       they are not placed against anybody. */
+    /* A caption is a BOX, sized to what it says. It ran the full width of the
+       frame and sat on the bottom edge, which is a film subtitle — the reader
+       looks along it rather than at it, and it draws a hard line under the
+       picture. A comic's caption is a small square of card dropped into a
+       corner of the panel, and it is smaller than the art it sits on. */
+    let foot = box.height - FRAME_PAD * 2;
+    for (let i = caption.length - 1; i >= 0; i--){
+      const b = caption[i];
+      b.style.left = (FRAME_PAD * 2) + "px";
+      b.style.width = "";
+      b.style.top = "";
+      fitText(b, box.width * 0.52, 0);
+      const r = b.getBoundingClientRect();
+      b.style.top = (foot - r.height) + "px";
+      foot -= r.height + 7;
+    }
+
+    /* A SLAB PER SPEAKER, SIZED BY HOW MUCH THERE IS TO SAY. Dividing the
+       frame at the midpoints between speakers is the obvious rule and it is
+       wrong on a phone: a twenty-seven-word line and a four-word answer got half
+       the panel each, so the long one had a twelve-character measure, ran to
+       fourteen lines and could not fit above anybody's head — which is where the
+       two balloons ended up on top of each other. A letterer gives the long
+       speech the room. The widths go as the square root of the length, so a
+       short line still gets a balloon rather than a column, and the slabs stay
+       in speaker order so reading order is still left to right. */
+    /* WHERE THE FIGURE IS GOING, NOT WHERE IT IS. A figure that walks on
+       transitions `left` over `--walk`, so for the length of that walk its
+       measured box is somewhere between off-frame and its mark — and a balloon
+       laid out against it gets a tail aimed at a person standing outside the
+       panel. That is the stretched tail: not a tail that grew, a tail pointing
+       correctly at a position that was never going to last.
+
+       The settled position is not something to wait for, though: it is already
+       written, as the inline `left` the paint put there, and the browser is
+       merely animating towards it. So read that instead of the rect, and the
+       balloon is right on the first frame with nothing to correct afterwards. */
+    const castR = cast ? cast.getBoundingClientRect() : sr;
+    const targetCX = fig => {
+      const pct = parseFloat(fig && fig.style.left);
+      if (!isFinite(pct)) return null;
+      return castR.left + castR.width * pct / 100;
+    };
+    const items = [];
+    for (const b of speech){
+      const fig = figFor(b.dataset.slot);
+      const fr = fig ? fig.getBoundingClientRect() : null;
+      const txt = $(".d-txt", b);
+      const cx = (fig && targetCX(fig)) != null ? targetCX(fig)
+               : (fr && fr.width ? fr.left + fr.width / 2 : sr.left + sr.width / 2);
+      items.push({ b, fr,
+        /* And a speaker who ends up off the panel entirely — walking out of the
+           scene — gets a tail that butts the frame rather than one that runs off
+           the side of it, which is what a letterer does for a voice off-panel. */
+        cx: clamp(cx, sr.left + sr.width * 0.06, sr.right - sr.width * 0.06),
+        n: Math.max(6, ((txt || b).textContent || "").trim().length) });
+    }
+    const order = items.slice().sort((p, q) => p.cx - q.cx);
+    const usable = sr.width - FRAME_PAD * 2;
+    /* Every speaker gets a floor before anybody gets a share, because a
+       four-word question in a sliver is worse than a long speech one line
+       taller: it comes out as a column of scraps that cannot taper. */
+    const floorW = order.length > 1
+      ? Math.min(usable * 0.42, usable / order.length) : usable;
+    let weight = 0;
+    for (const it of order) weight += Math.sqrt(it.n);
+    const spare = Math.max(0, usable - floorW * order.length);
+    let edge = sr.left + FRAME_PAD;
+    for (const it of order){
+      const w = floorW + spare * Math.sqrt(it.n) / (weight || 1);
+      it.lo = edge; it.hi = edge + w; edge += w;
+    }
+
+    for (const it of items) placeOne(it, sr, box);
+    separate(speech, sr);
+  }
+
+  /* The slabs keep two balloons apart when both fit inside their share of the
+     frame. When one does not — a forty-word line on a phone — it spills, and a
+     balloon over somebody else's balloon is worse than a balloon slightly off
+     its own speaker. So anything still piled up is pushed apart afterwards,
+     into whatever room the frame has left, sharing the move between the two. */
+  function separate(bubs, sr){
+    const items = [];
+    for (const b of bubs){
+      const svg = $("svg.d-shape", b);
+      const r = (svg || b).getBoundingClientRect();
+      if (r.width > 2 && r.height > 2) items.push({ b, r, dx: 0 });
+    }
+    for (let pass = 0; pass < 3; pass++){
+      let moved = false;
+      for (let i = 0; i < items.length; i++){
+        for (let j = i + 1; j < items.length; j++){
+          const A = items[i], B = items[j];
+          const ox = Math.min(A.r.right + A.dx, B.r.right + B.dx)
+                   - Math.max(A.r.left + A.dx, B.r.left + B.dx);
+          const oy = Math.min(A.r.bottom, B.r.bottom) - Math.max(A.r.top, B.r.top);
+          if (ox <= 0 || oy <= 0) continue;
+          const small = Math.min(A.r.width * A.r.height, B.r.width * B.r.height) || 1;
+          if (ox * oy / small <= 0.045) continue;
+          const need = ox + 3;
+          const left = (A.r.left + A.dx + A.r.right + A.dx)
+                     < (B.r.left + B.dx + B.r.right + B.dx) ? A : B;
+          const right = left === A ? B : A;
+          const roomL = (left.r.left + left.dx) - (sr.left + FRAME_PAD);
+          const roomR = (sr.right - FRAME_PAD) - (right.r.right + right.dx);
+          const total = roomL + roomR;
+          if (total <= 0.5) continue;
+          const takeL = Math.min(Math.max(0, roomL), need * (Math.max(0, roomL) / total));
+          const takeR = Math.min(Math.max(0, roomR), need - takeL);
+          left.dx -= takeL; right.dx += takeR;
+          moved = true;
+        }
+      }
+      if (!moved) break;
+    }
+    for (const o of items){
+      if (Math.abs(o.dx) < 0.4) continue;
+      o.b.style.left = ((parseFloat(o.b.style.left) || 0) + o.dx).toFixed(1) + "px";
+    }
+  }
+
+  function placeOne(it, sr, box){
+    const b = it.b, kind = b.dataset.bub || "say";
+    const spec = BUB_KIND[kind] || BUB_KIND.say;
+    const said = $(".d-said", b), svg = $("svg.d-shape", b);
+    const bodyEl = svg && $("path.d-body-path", svg);
+    const tailEl = svg && $("path.d-tail", svg);
+    const fr = it.fr;
+    const slab = Math.max(70, it.hi - it.lo - 6);
+    const roof = sr.top + FRAME_PAD, floor = sr.bottom - FRAME_PAD;
+
+    for (let s = 0; s < SCALES.length; s++){
+      b.style.setProperty("--bub-scale", SCALES[s]);
+      /* Read AFTER the scale is set, so it is the size the words are actually
+         about to be measured at rather than the size the last panel used. */
+      const fs = parseFloat(getComputedStyle(b).fontSize) || 16;
+      /* The measure: never wider than this speaker's slab allows, and never
+         longer than an eye wants to travel on a picture. */
+      const maxW = Math.min(slab / spec.swellW, fs * 17);
+      /* The floor never exceeds the slab: a balloon wider than its own share
+         of the frame is a balloon on top of somebody else's. */
+      const blk = fitText(b, Math.max(48, maxW),
+                          Math.min(fs * 11, slab / spec.swellW));
+      if (!blk) return;
+
+      /* SOLVE THE CURVE, DO NOT MULTIPLY THE BOX. A superellipse of semi-axes
+         a and b is only `a` wide at its equator; at height y it has narrowed to
+         a * (1 - |y/b|^n)^(1/n). A two-line stack has BOTH its lines off the
+         equator, so a contour scaled from the bounding box is too narrow where
+         the words actually are — which is how the last pass ended up with text
+         crossing its own outline — while a contour padded enough to be safe
+         everywhere is the inflated bubble before it. Neither is a guess worth
+         tuning: pick the height, then take the width each line needs at the
+         height it sits at, and keep the largest.
+
+         `pad` is the letterer's rule and the only free number here: one capital
+         of the dialogue font fits between the stack and the contour, anywhere
+         round it, and no more. */
+      const pad = fs * 0.72;
+      let bb = blk.h / 2 + pad;
+      const rows = (blk.lines && blk.lines.length) ? blk.lines
+                 : [{ w: blk.w, cy: 0 }];
+      let aa = 0;
+      for (const ln of rows){
+        const t = Math.min(0.97, Math.abs(ln.cy) / bb);
+        const narrow = Math.pow(Math.max(1e-3, 1 - Math.pow(t, SUPER_N)), 1 / SUPER_N);
+        aa = Math.max(aa, (ln.w / 2 + pad) / narrow);
+      }
+      let cw = aa * 2, ch = bb * 2;
+      /* A burst's spikes are cut INTO the contour as well as out of it, so it
+         needs a little more room than a smooth one. */
+      if (kind === "shout"){ cw += fs * 0.5; ch += fs * 0.5; }
+      /* And a one-liner stays a lens rather than a slot. */
+      ch = Math.max(ch, cw * 0.15);
+
+      /* THE GAP IS MEASURED TO THE WORDS, not to the outline. A contour
+         circumscribes its text, so it hangs below the last line by a good
+         fraction of the balloon's height — and holding the OUTLINE a fixed
+         distance above the head therefore holds the words a variable and much
+         larger distance above it, which is what "too far from the characters"
+         looked like on a wide one-line balloon. Position the block, and let the
+         curve come down over the top of the head where it wants to. */
+      /* THE GAP IS THE TAIL'S ROOM, and it is measured to the CONTOUR.
+         Measuring it to the last line of type looks like the same thing and is
+         not: the curve hangs below the words by half its own padding, so a
+         seventeen-pixel gap to the text left about six to the drawn edge — and
+         a tail that has to start at that edge and stop clear of the hair then
+         has nothing to be. The result was a row of pins.
+
+         So the number below is what the tail gets to live in, and the two rules
+         it has to satisfy set it: long enough to read as a tail, short enough
+         that the balloon still belongs to the head under it. */
+      /* And it yields when there is not room for both. The tail wants space and
+         the reader wants the balloon near the head, and on a 285px phone panel
+         those two pull against each other — so the gap is whatever is left after
+         the curve's own overhang has been paid for out of the distance the words
+         are allowed to sit from the head. A short tail on a small panel is the
+         right answer there; a balloon adrift is not. */
+      const overhang = (ch - blk.h) / 2;
+      const gap = clamp(Math.min(sr.height * 0.045, sr.height * 0.088 - overhang),
+                        10, 34);
+      const headTop = fr && fr.height ? fr.top : sr.top + sr.height * 0.55;
+      const figH = fr && fr.height ? fr.height : sr.height * 0.5;
+      let ctop = headTop - gap - ch;
+      if (ctop < roof){
+        /* Come down into the figure rather than off the top of the frame. A
+           balloon may cover the top of a head — that is ordinary in a comic —
+           and only when even that is not enough does the type come down a
+           step. */
+        ctop += Math.min(roof - ctop, gap + figH * SINK_MAX);
+      }
+      const tooTall = ctop < roof;
+      if (tooTall && s < SCALES.length - 1) continue;
+      ctop = clamp(ctop, roof, Math.max(roof, floor - ch));
+
+      let cleft = clamp(it.cx - cw / 2,
+                        Math.max(sr.left + FRAME_PAD, it.lo - cw * 0.12),
+                        Math.min(sr.right - FRAME_PAD - cw, it.hi - cw * 0.88));
+      if (!isFinite(cleft)) cleft = sr.left + FRAME_PAD;
+      cleft = clamp(cleft, sr.left + FRAME_PAD, Math.max(sr.left + FRAME_PAD, sr.right - FRAME_PAD - cw));
+
+      /* Draw, look at what was actually drawn, and pull it back inside the
+         frame if a spike or a tail ended up outside it. The correction has to
+         happen after the path exists, because a wobbling contour and a tail
+         aimed at a face are both wider than the box the words occupy — which is
+         all a clamp on `cw` can see. */
+      let paths = null, over = 0;
+      for (let pass = 0; pass < 4; pass++){
+        paths = drawPaths(kind, cw, ch, cleft, ctop, it, fr, headTop, figH,
+                          Math.sign(it.cx - (sr.left + sr.width / 2)) || 1);
+        const e = paths.ext;
+        const dl = (sr.left + FRAME_PAD) - (cleft + e.x0);
+        const dr = (cleft + e.x1) - (sr.right - FRAME_PAD);
+        const dt = roof - (ctop + e.y0);
+        const db = (ctop + e.y1) - floor;
+        over = Math.max(0, dl) + Math.max(0, dr) + Math.max(0, dt) + Math.max(0, db);
+        if (over < 0.6) break;
+        if (dl > 0 && dr > 0) break;          /* wider than the frame: shrink */
+        if (dt > 0 && db > 0) break;
+        if (dl > 0) cleft += dl; else if (dr > 0) cleft -= dr;
+        if (dt > 0) ctop += dt; else if (db > 0) ctop -= db;
+      }
+      if (over >= 0.6 && s < SCALES.length - 1) continue;
+      /* The correction above moves the balloon to keep its ink in the frame,
+         and moving it DOWN can put it over the face the tail is pointing at.
+         A balloon may cover the top of a head; past that it is smaller type or
+         nothing. */
+      const sink = ctop + (ch + blk.h) / 2 - headTop;
+      if (sink > figH * 0.12 && s < SCALES.length - 1) continue;
+
+      const tx = cleft + (cw - blk.w) / 2, ty = ctop + (ch - blk.h) / 2;
+      b.style.left = (tx - box.left).toFixed(1) + "px";
+      b.style.top = (ty - box.top).toFixed(1) + "px";
+
+      if (svg && bodyEl && tailEl){
+        const ox = -(cw - blk.w) / 2, oy = -(ch - blk.h) / 2;
+        const e = paths.ext, ew = e.x1 - e.x0, eh = e.y1 - e.y0;
+        svg.setAttribute("viewBox", e.x0.toFixed(1) + " " + e.y0.toFixed(1)
+                                  + " " + ew.toFixed(1) + " " + eh.toFixed(1));
+        svg.style.left = (ox + e.x0).toFixed(1) + "px";
+        svg.style.top = (oy + e.y0).toFixed(1) + "px";
+        svg.style.width = ew.toFixed(1) + "px";
+        svg.style.height = eh.toFixed(1) + "px";
+        bodyEl.setAttribute("d", paths.body);
+        tailEl.setAttribute("d", paths.tail);
+      }
+      if (said) said.dataset.drawn = Math.round(cw) + "x" + Math.round(ch);
+      return;
+    }
+  }
+
+  /* Where the tail is going, and the contour around it. The aim is the face, a
+     sixth of the way down the figure; the tail stops short of it, because a tail
+     that lands on a chin reads as a pointer rather than as speech. */
+  function drawPaths(kind, cw, ch, cleft, ctop, it, fr, headTop, figH, hand){
+    const ccx = cleft + cw / 2, ccy = ctop + ch / 2;
+    const mx = it.cx, my = headTop + figH * 0.17;
+    let dx = mx - ccx, dy = my - ccy;
+    const dist = Math.hypot(dx, dy) || 1;
+    const ux = dx / dist, uy = dy / dist;
+    const rE = 1 / Math.hypot(ux / (cw / 2), uy / (ch / 2));
+    /* A tail is a shape, not a marker. Taking a fixed fraction of the gap was
+       right while the balloons floated a third of a panel away and wrong the
+       moment they came down to the head: a twelve-pixel gap gives a nine-pixel
+       tail, which reads as a pin stuck in the balloon. So it also has a length
+       of its own, set by the balloon it hangs off, and it is allowed to run a
+       little past the hair — a tail overlapping the top of a head is ordinary
+       in a comic, and a tail too short to read is not. */
+    /* It stops SHORT of the face. The floor used to be a fraction of the
+       balloon and the ceiling let it run past the head into the hair, so on a
+       close balloon the tail arrived at the character rather than pointing at
+       them — a tail that lands on somebody reads as an arrow. Between about
+       seven and eight tenths of the way there is the whole range. */
+    /* IT STOPS CLEAR OF THE PERSON. Aiming at the face and then travelling most
+       of the way there put the point in somebody's hair — a tail that touches a
+       character reads as an arrow pointing at them rather than as speech coming
+       out of them. So the reach is bounded twice: as a fraction of the way to
+       the mouth, and by a hard line a few pixels above the top of the figure,
+       which is the one that actually binds on a close balloon. */
+    const span = dist - rE;
+    let tipD = rE + clamp(span * TAIL_REACH, Math.min(13, span * 0.5), span * 0.84);
+    if (uy > 0.05){
+      const stopY = headTop - Math.max(9, figH * 0.035);
+      const room = (stopY - ccy) / uy;
+      if (isFinite(room)) tipD = Math.min(tipD, Math.max(rE + 3, room));
+    }
+    /* A BALLOON ALWAYS HAS A TAIL. The clearance above can squeeze it to
+       nothing when the balloon has already had to come down over the figure,
+       and a balloon with no tail is a balloon with no speaker — the one thing
+       the name coming off the balloon made the tail responsible for. So it
+       keeps a floor, and pays for it with a few pixels of overlap in the
+       handful of panels where there was never room for both. */
+    tipD = Math.max(tipD, rE + 14);
+    {
+    }
+    const aim = { x: cw / 2 + ux * tipD, y: ch / 2 + uy * tipD };
+    const seed = hashSeed(kind + "|" + (($(".d-txt", it.b) || it.b).textContent));
+    /* WHICH SIDE OF THE PANEL THE SPEAKER STANDS ON, and nothing more local
+       than that. Taking it from where the aim fell relative to the balloon's
+       own centre looked equivalent and was not: the balloon is nudged outward
+       from its speaker, so the aim lands on the inward side for BOTH of them
+       and every tail in the panel came out the same handedness — measured, the
+       sweep was -40 and -29 on a pair that should have mirrored. The frame has
+       a middle and the speakers are either side of it; that is the fact the
+       mirror is about. */
+    return balloonPaths(kind, cw, ch, aim, seed, hand);
+  }
+
   /* A web font landing, or a gloss opening under a balloon, changes the box
      after the paint that drew it. Guarded by `typeof`, not by truthiness:
      where the API is absent the bare name throws. */
   const shapeWatch = typeof ResizeObserver === "function"
-    ? new ResizeObserver(() => relayout()) : null;
+    ? new ResizeObserver(() => { if (!laying) relayout(); }) : null;
 
-  /* ---- aiming the tails --------------------------------------------------
-     The balloon carries no name any more, so the tail is what identifies the
-     speaker and it has to actually point at them. That cannot be done in CSS:
-     it is the distance between two boxes whose positions depend on the cast
-     size, the frame width and how the text happened to wrap. So it is measured
-     after layout and written back as a custom property, and re-measured
-     whenever the frame changes shape. */
   /* The figure a balloon belongs to, or its placeholder when the art has not
      landed — the placeholder is drawn to the same footprint, so a balloon aimed
      at one is aimed correctly. */
   const figFor = k => $('.d-fig[data-slot="' + k + '"]', cast)
                    || $('.d-fig-ph[data-slot="' + k + '"]', cast);
 
-  function aimTails(){
-    if (scene.hidden) return;
-    $$(".d-bub[data-slot]", bubble).forEach(b => {
-      const fig = figFor(b.dataset.slot);
-      if (!fig) return;
-      const fr = fig.getBoundingClientRect(), br = b.getBoundingClientRect();
-      if (!br.width || !fr.width) return;
-      /* Kept clear of the balloon's own corners, or the tail grows out of the
-         curve and reads as a mistake rather than a tail. */
-      const pad = Math.min(30, br.width * 0.24);
-      const x = fr.left + fr.width / 2 - br.left;
-      b.style.setProperty("--tail-x",
-        Math.max(pad, Math.min(br.width - pad, x)) + "px");
-    });
+  /* One pass, because breaking the lines, sizing the contour, placing the
+     balloon and aiming the tail are no longer four things that can disagree
+     about what the balloon is. Four callers ask for it — a new panel, a resize,
+     going full screen, and a balloon that changed size under the observer. */
+  function relayout(){ layoutBalloons(); }
+
+  /* THE FIGURES WALK ON, and a balloon placed before they arrive is placed
+     against where they were standing. `.d-fig` transitions `left` over
+     `--walk`, so the animation frame after a panel change — which is when this
+     used to be the only layout — sees everybody at their old marks. On a
+     two-hander that put the incoming speaker's balloon in the other speaker's
+     half of the frame with a tail stretching five hundred pixels back across it.
+
+     So the layout runs again when the walk ends, and once more on a timer for
+     the cases where no transition fires at all: a figure that did not move, a
+     `--walk` of zero, and reduced motion. Idempotent, so running it three times
+     costs three measurements and changes nothing after the first that settles. */
+  /* Named for what it settles, because two other things in this file are
+     already called `settle` — one in the marking engine and one waiting on a
+     background plate. Neither is in scope at any of the call sites below, and
+     a name that is only safe by where the braces happen to fall is a name
+     waiting for somebody to move a block. */
+  let settleT = 0;
+  function settleLayout(){
+    requestAnimationFrame(relayout);
+    clearTimeout(settleT);
+    settleT = setTimeout(relayout, 480);
   }
-
-  /* ---- putting the balloon over the person who said it ---------------------
-     A balloon used to be aligned to one of three places — the left edge of the
-     frame, the middle, or the right edge — picked from which side of the stage
-     its speaker was standing on. That is near enough to right that what is
-     wrong with it is easy to miss: it puts the balloon against the EDGE of the
-     panel rather than over the SPEAKER, and in a two-hander those are ninety
-     pixels apart. Tí stands a quarter of the way across a 1084px frame, at 272;
-     flush left his balloon was centred at 179, out in the corner past him, with
-     the tail reaching back. A letterer puts the balloon over the head.
-
-     So it is CENTRED on the figure and then clamped to the frame — a balloon
-     hanging off the edge is a worse fault than one not quite over its speaker,
-     and the tail covers the difference. Measured rather than computed from the
-     roster the way the leaning was, because centring needs the balloon's width
-     and a balloon is as wide as its text happened to need.
-
-     It runs before `aimTails` and after `drawShapes`, and that order is the
-     whole of it: a shaped balloon's width is decided by the shape, the balloon
-     is placed with the width it ends up having, and the tail is aimed at a
-     balloon that has already been put somewhere. */
-  function placeBubbles(){
-    if (scene.hidden) return;
-    const bubs = $$(".d-bub[data-slot]", bubble);
-    if (!bubs.length) return;
-    /* Cleared before measuring so a wide balloon is never sized against the
-       margin the last panel's narrow one left behind. */
-    bubs.forEach(b => { b.style.marginLeft = "0px"; });
-    const box = bubble.getBoundingClientRect();
-    if (!box.width) return;
-    bubs.forEach(b => {
-      const fig = figFor(b.dataset.slot);
-      if (!fig) return;
-      const fr = fig.getBoundingClientRect(), br = b.getBoundingClientRect();
-      if (!fr.width || !br.width) return;
-      const x = fr.left + fr.width / 2 - box.left - br.width / 2;
-      b.style.marginLeft =
-        Math.max(0, Math.min(box.width - br.width, x)).toFixed(1) + "px";
-    });
-  }
-
-  /* Everything that has to happen after layout, in the order it has to happen
-     in. Four things ask for it — a new panel, a resize, going full screen, and
-     a balloon that changed size under the observer — and every one of them
-     wants all three. */
-  function relayout(){ drawShapes(); placeBubbles(); aimTails(); }
+  if (cast) cast.addEventListener("transitionend", e => {
+    if (e.propertyName === "left" || e.propertyName === "translate") relayout();
+  });
 
   /* ---- moving through it -------------------------------------------------
      Three ways in, and every one of them moves the SAME thing: the panel. The
@@ -2970,7 +3718,7 @@ function initScene(root, p){
     const on = document.fullscreenElement === scene || scene.classList.contains("is-full");
     full.setAttribute("aria-pressed", String(on));
     full.setAttribute("aria-label", on ? "Leave full screen" : "Fill the screen");
-    requestAnimationFrame(relayout);
+    settleLayout();
   }
   full.addEventListener("click", () => {
     const on = document.fullscreenElement === scene || scene.classList.contains("is-full");
@@ -2996,7 +3744,7 @@ function initScene(root, p){
      it re-measures. Resize, not scroll: this panel does not know or care where
      the page is. */
   addEventListener("resize",
-    () => requestAnimationFrame(relayout),
+    () => settleLayout(),
     { passive: true });
 
   /* Which view the learner gets is theirs, and it is remembered. The default
