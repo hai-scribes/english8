@@ -238,6 +238,10 @@ metric("false_positive_marks", fp);
 metric("false_negative_rate", accepts ? fn / accepts : 0);
 metric("key_variant_coverage", coverage);
 metric("marking_rule_violations", ruleViolations);
+/* The conformance sweep's OWN workload. items_swept counts the fixture set (87);
+ * the Group C sweep runs over the key corpus (1,127), and a coverage assertion
+ * has to certify the workload its metric came from, not a different one. */
+metric("keys_probed", keysProbed);
 metric("items_swept", accepts + rejects);
 
 finish([
