@@ -1,0 +1,23 @@
+{
+  "_comment": "Milestone 1 session catalogue. Read by harness/coverage.mjs (a placement only counts once its session exists here) and driven live by harness/session.mjs, which loads the dist/ build in a real browser. `chapter-NN` is one story chapter per SGK unit, carrying that unit's grammar, pronunciation, Everyday English function, culture block and writing genre. `vocab-spiral-A-B` interleaves the lexis of two adjacent units instead of teaching each unit's word list in place, so the vocabulary track is its own cross-cutting session rather than one more slot in a 12x7 grid. Only chapter-01 has authored prose and a browser-driven page today (content/chapters/chapter-01.md, dist/chapter-1.html); the remaining ids are real catalogue entries scheduled for the sessions that place their targets, and are the next cycle's work.",
+  "sessions": [
+    { "id": "chapter-01", "title": "The list in the yard", "kind": "chapter", "units": [1] },
+    { "id": "chapter-02", "title": "What the tide left on the paddy field", "kind": "chapter", "units": [2] },
+    { "id": "chapter-03", "title": "The forum post", "kind": "chapter", "units": [3] },
+    { "id": "chapter-04", "title": "The stilt house on the highland road", "kind": "chapter", "units": [4] },
+    { "id": "chapter-05", "title": "The lantern that would not stay lit", "kind": "chapter", "units": [5] },
+    { "id": "chapter-06", "title": "A promise about tomorrow", "kind": "chapter", "units": [6] },
+    { "id": "chapter-07", "title": "The dugong at low tide", "kind": "chapter", "units": [7] },
+    { "id": "chapter-08", "title": "The last stall at the market", "kind": "chapter", "units": [8] },
+    { "id": "chapter-09", "title": "The storm that did not arrive", "kind": "chapter", "units": [9] },
+    { "id": "chapter-10", "title": "A voice message from the water", "kind": "chapter", "units": [10] },
+    { "id": "chapter-11", "title": "The scanner on the harbour wall", "kind": "chapter", "units": [11] },
+    { "id": "chapter-12", "title": "Twelve marks on the wall", "kind": "chapter", "units": [12] },
+    { "id": "vocab-spiral-01-02", "title": "Words from the yard and the fields", "kind": "vocab-spiral", "units": [1, 2] },
+    { "id": "vocab-spiral-03-04", "title": "Words from the forum and the highlands", "kind": "vocab-spiral", "units": [3, 4] },
+    { "id": "vocab-spiral-05-06", "title": "Words from the festival and the journey", "kind": "vocab-spiral", "units": [5, 6] },
+    { "id": "vocab-spiral-07-08", "title": "Words from the reef and the market", "kind": "vocab-spiral", "units": [7, 8] },
+    { "id": "vocab-spiral-09-10", "title": "Words from the storm and the signal", "kind": "vocab-spiral", "units": [9, 10] },
+    { "id": "vocab-spiral-11-12", "title": "Words from the lab and the sky", "kind": "vocab-spiral", "units": [11, 12] }
+  ]
+}
