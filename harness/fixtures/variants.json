@@ -1,0 +1,131 @@
+{
+  "_method": "Key-blind by construction. Each case states the QUESTION as the learner sees it, then what a thirteen-year-old plausibly writes. `accept` are productions that are correct English answers to that question and must be marked right; `reject` are near-miss or wrong productions that must stay wrong. The distinction is made from the question, not from the key — the original defect came from writing the key first and imagining answers second, so a fixture set derived from the key inherits the same blind spot. Gate on BOTH numbers: a false-negative gate alone is satisfied by an engine that accepts everything.",
+  "cases": [
+    {
+      "id": "short-answer-yes",
+      "question": "Is the bucket still on the harbour wall? (short answer)",
+      "key": "yes",
+      "accept": ["yes", "Yes", "yes, it is", "Yes, it is.", "yes it is"],
+      "reject": ["no", "no, it isn't", "maybe"]
+    },
+    {
+      "id": "short-answer-no",
+      "question": "Does Tí tell his mother about the fish? (short answer)",
+      "key": "no",
+      "accept": ["no", "No, he doesn't", "no, he does not"],
+      "reject": ["yes", "yes, he does"]
+    },
+    {
+      "id": "contraction-cant-stand",
+      "question": "Complete: Thảo ___ (not stand) the smell of the harbour.",
+      "key": "can't stand",
+      "accept": ["can't stand", "cannot stand", "can not stand", "CAN'T STAND"],
+      "reject": ["can stand", "don't stand", "couldn't stand"]
+    },
+    {
+      "id": "contraction-doesnt-matter",
+      "question": "Complete the reply: ___ (it / not matter).",
+      "key": "it doesn't matter",
+      "accept": ["it doesn't matter", "it does not matter", "It doesn't matter."],
+      "reject": ["it matters", "it don't matter"]
+    },
+    {
+      "id": "number-hours",
+      "question": "How long did they wait on the wall?",
+      "key": "three hours",
+      "accept": ["three hours", "3 hours", "Three hours."],
+      "reject": ["two hours", "3 days", "hours"]
+    },
+    {
+      "id": "number-months",
+      "question": "How many months had the chalk marks been there?",
+      "key": "eight months",
+      "accept": ["eight months", "8 months"],
+      "reject": ["eighteen months", "8 weeks"]
+    },
+    {
+      "id": "article-bracelets",
+      "question": "What did the sea put back on the step?",
+      "key": "bracelets",
+      "accept": ["bracelets", "the bracelets"],
+      "reject": ["a bracelet", "necklaces", "bracelet"]
+    },
+    {
+      "id": "article-incense",
+      "question": "What was burning by the door?",
+      "key": "incense",
+      "accept": ["incense", "the incense"],
+      "reject": ["candles", "a fire"]
+    },
+    {
+      "id": "spelling-analyse",
+      "question": "Complete: Scientists ___ (study closely) the water each month.",
+      "key": "analyse",
+      "accept": ["analyse", "analyze"],
+      "reject": ["analysis", "analysed"]
+    },
+    {
+      "id": "spelling-enrol",
+      "question": "Complete: You must ___ (sign up) before Friday.",
+      "key": "enrol",
+      "accept": ["enrol", "enroll"],
+      "reject": ["enrolled", "enter"]
+    },
+    {
+      "id": "spelling-skilful",
+      "question": "Complete: She is a ___ (very able) swimmer.",
+      "key": "skilful",
+      "accept": ["skilful", "skillful"],
+      "reject": ["skilled", "skill"]
+    },
+    {
+      "id": "spelling-fulfil",
+      "question": "Complete: The town could not ___ (carry out) its promise.",
+      "key": "fulfil",
+      "accept": ["fulfil", "fulfill"],
+      "reject": ["fulfilled", "fill"]
+    },
+    {
+      "id": "spelling-colour",
+      "question": "Complete: The water changed ___ (shade) overnight.",
+      "key": "colour",
+      "accept": ["colour", "color"],
+      "reject": ["colours", "cold"]
+    },
+    {
+      "id": "spelling-organise",
+      "question": "Complete: They will ___ (arrange) a clean-up.",
+      "key": "organise",
+      "accept": ["organise", "organize"],
+      "reject": ["organisation", "organised"]
+    },
+    {
+      "id": "lexical-shop-must-stay-strict",
+      "question": "Complete with the word from this unit's list: Mai works in a ___ near the market.",
+      "key": "shop",
+      "accept": ["shop", "the shop"],
+      "reject": ["store", "market", "shopping"]
+    },
+    {
+      "id": "grammar-variant-must-stay-strict",
+      "question": "Rewrite using HAVE GOT: I have two brothers.",
+      "key": "I have got two brothers",
+      "accept": ["I have got two brothers", "I've got two brothers"],
+      "reject": ["I have two brothers", "I do have two brothers"]
+    },
+    {
+      "id": "trailing-punctuation",
+      "question": "Where did the fish come from?",
+      "key": "the sea",
+      "accept": ["the sea", "The sea.", "the sea!"],
+      "reject": ["the river", "a bucket"]
+    },
+    {
+      "id": "case-insensitive",
+      "question": "Name the town the story is set in.",
+      "key": "Quy Nhơn",
+      "accept": ["Quy Nhơn", "quy nhơn", "QUY NHƠN"],
+      "reject": ["Hanoi", "Quy"]
+    }
+  ]
+}
