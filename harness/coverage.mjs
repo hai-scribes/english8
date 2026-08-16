@@ -92,6 +92,25 @@ for (const p of placements) {
 const collisions = [];
 for (const [k, roles] of bySession) if (roles.size === 3) collisions.push(k.split("@@")[0]);
 
+/* Is this the 12 x 7 grid wearing new names?
+ *
+ * That is a kill criterion and nothing here could see it: a placement map with
+ * eighty-four unit-local sessions scores a perfect 400 and goes green. The
+ * discriminator is not what the sessions are CALLED, it is whether any session
+ * draws on more than one source unit — the grid has exactly zero such sessions
+ * by construction, and a freed sequence has them everywhere.
+ *
+ * Gated at one, and one is a floor that refutes the literal grid. It is NOT
+ * evidence the architecture is good, and the distribution below is printed
+ * because that judgement is a person's to make. */
+const unitsPerSession = new Map();
+for (const [k, _roles] of bySession) {
+  const [target, session] = k.split("@@");
+  const unit = (target.split(":")[1] || "?");
+  unitsPerSession.set(session, (unitsPerSession.get(session) || new Set()).add(unit));
+}
+const crossUnit = [...unitsPerSession.values()].filter(s => s.size >= 2).length;
+
 const covered = targets.filter(t => placed.has(t.id)).length;
 
 console.log(`build: curriculum coverage`);
@@ -112,10 +131,20 @@ if (danglingRoles) {
   for (const d of danglingDetail) console.log(`    ${d}`);
 }
 
+console.log(`  session shape: ${unitsPerSession.size} session(s) carry targets; ` +
+            `${crossUnit} draw on more than one source unit`);
+{
+  const dist = new Map();
+  for (const s of unitsPerSession.values()) dist.set(s.size, (dist.get(s.size) || 0) + 1);
+  for (const [n, c] of [...dist].sort((a, b) => a[0] - b[0]))
+    console.log(`    ${String(c).padStart(4)} session(s) drawing on ${n} unit(s)`);
+}
+
 metric("sgk_targets_covered", covered);
 metric("items_swept", targets.length);
 metric("invariant_violations", collisions.length);
 metric("dangling_placements", danglingRoles);
+metric("cross_unit_sessions", crossUnit);
 
 finish([
   gate("every prescribed target is placed and delivered", covered === targets.length,
@@ -124,4 +153,6 @@ finish([
        collisions.length === 0, `${collisions.length} violation(s)`),
   gate("every placement resolves to a real session", danglingRoles === 0,
        `${danglingRoles} dangling`),
+  gate("the sequence is not the 12 x 7 grid renamed", crossUnit >= 1,
+       `${crossUnit} cross-unit session(s) — a floor, not a proof; read the distribution`),
 ]);
