@@ -1,0 +1,368 @@
+{
+  "problem": "One Vietnamese grade-8 learner, ~13, studies English largely alone. The operator (her uncle) sits with her one morning a week; the rest of the week she is on her own with a phone and nobody to ask. The existing build delivers the prescribed curriculum completely but is the wrong artefact three ways over, and two of the three are now measured rather than asserted. FIRST, it organises learning as the textbook does - twelve units of seven lessons - which is the publisher's convenience rather than an evidence-derived teaching sequence. SECOND, its marking produces false negatives, and the defect is worse than reported: traced against the live engine, key 'yes' with the answer 'yes, it is' returns {ok:false, why:'two'}, so she is not merely marked wrong, she is authoritatively told she wrote two answers in one gap when she wrote one. The same trace rejects 'cannot stand' for \"can't stand\", '3 hours' for 'three hours', 'the bracelets' for 'bracelets', and the entire -yse and single-l British spelling classes (analyse/analyze, enrol/enroll, skilful/skillful, fulfil/fulfill). Across units/*.md there are 2,164 marked items; only 275 of 1,357 free-text keys (20.3%) use the official key grammar that would fix this. And markAnswer() never reads skill=, so IELTS Listening severity is applied to all 1,851 grade-8 coursework items as well as the 313 that actually simulate a test. THIRD, engineering ran ahead of content: 41% of the runtime is comic geometry guarded only by string-matching, one 4,702-line script loads on all 101 pages, and 29 of 32 art assets are placeholders. The rebuild exists to fix three architectures - teaching, marking, and app - while losing none of the content.",
+  "target_users": "One named learner: the operator's niece. Vietnamese, grade 8, ~13, phone-first, and already studying IELTS separately, so the design targets a motivated learner above the pure-beginner case. The usage rhythm is now known and is structural: the operator and the learner sit together ONE MORNING A WEEK (Saturday) and use the app; on weekdays she uses it alone, unsupervised. That splits the product into two surfaces with different jobs - a weekday self-study loop, and a weekly shared surface where what she did during the week is visible to both of them. It also means her weekday activity must be tracked, because the Saturday session is where that record is read. The population this must NOT silently design for is the adult test-taker on whom almost the entire IELTS-preparation evidence base is built. Commercial scale-up is out of scope; n = 1 is a strength because the north star can be observed weekly rather than modelled.",
+  "desired_outcome": "A responsive web app - phone and desktop, fast, offline-capable - that a child opens on a weekday with no help and learns English from, and that gives her uncle something real to look at on Saturday. Underneath it, three architectures designed rather than inherited: (1) a TEACHING architecture whose atomic unit is a short session rather than a lesson, delivering every prescribed target while free to sequence and pace them as the evidence directs; (2) a MARKING architecture that is local, synchronous and offline - question types engineered toward closed answer spaces, official key grammar carrying legitimate variation, two severities so coursework is not marked with test severity, and a near-miss state so a nearly-right answer is neither credited nor accused; (3) an APP architecture with real module boundaries, content as data, versioned local state, and asset slots that make a drawing work the moment it is dropped in. Her underlying English improves, which is the honest route to any IELTS improvement; the app never outputs, predicts or promises a band.",
+  "scope": {
+    "in": [
+      "The teaching architecture, designed clean-room: the atomic unit of work is a SESSION, not a lesson and not a chapter; what a session contains, how sessions chain, and what decides what she does next when she opens the app - a queue, not an index",
+      "A story spine extended to enough chapters to carry real reading volume, since the existing four story slots total 11,479 words across a whole year - roughly one graded reader - which is not extensive reading by any reading of the evidence",
+      "A vocabulary track OUTSIDE the stories: the 325 distinct lexis strings taught as collocations with audio, pre-taught before the text that uses them, on a fixed-interval ladder",
+      "Placement of the non-lexis targets - grammar, pronunciation, everyday-English functions, culture blocks, writing genres - into the new shape, gated rather than hoped for",
+      "The marking architecture: closed-answer-space question types; official key grammar with optional tokens, alternates and either-order pairs; two severities keyed to whether an item simulates a test or is coursework; a near-miss third state; and an appeal control that records her disagreement without re-marking",
+      "British and American SPELLING variants, including the -yse and single-l classes the current engine misses; lexical and grammatical variants only per-key, never globally",
+      "An authoring-time LLM that proposes key variants for human acceptance and pre-generates per-item explanations shipped into the page - never a runtime scorer",
+      "IELTS PRECURSOR SKILLS from the start - synonym recognition under search conditions, confidence calibration with feedback, obligatory-context accuracy on named structures - with format familiarisation as a one-off orientation per question type",
+      "Weekday activity tracking, and a weekly shared surface that makes the week legible on Saturday without becoming a score",
+      "Spaced retrieval on a fixed-interval ladder, evaluated against delayed retention",
+      "Support that appears where the reader stalls and withdraws afterwards, in Vietnamese, once per item",
+      "The app foundation: responsive phone and desktop, fast, offline-capable, module boundaries, content as data, learner state persisted locally and versioned",
+      "An asset-slot interface and a written inventory of every missing art asset, so drawings added later simply work with no code change",
+      "A thin end-to-end slice built for real, spanning at least two consecutive sessions",
+      "An adversarial second-brain review on each architecture step, its verdict recorded as a committed artefact"
+    ],
+    "out": [
+      "ANY runtime LLM call that decides, adjudicates or overrides a mark. D10 requires an automated scorer to report its disagreement rate with human judgement or report nothing scored at all; with one learner and no human rater no such rate can exist, so the LLM may not score. This also removes the latency, cost, offline-fragility and privacy problems entirely",
+      "Sending the learner's written work to any third-party API. She is a minor; every defensible LLM job runs at authoring time over authored text on the author's machine",
+      "Global lexical or grammatical variant matching (shop/store, have you got/do you have). Applied globally these manufacture false POSITIVES in exactly the exercises that are about the distinction; they belong in individual keys",
+      "Reworking story mode's rendering. The existing story structure is reused; the 'animating novel' direction - colourful animated characters moving through the adventure - is documented and planned for a later scope",
+      "Producing the 29 missing art assets. They are inventoried and slotted; drawing them is later work",
+      "Aligning the sequence to her school's examination calendar. The operator has chosen to optimise purely for learning",
+      "A streak mechanic. The north-star metric IS unprompted return; a streak optimises that metric directly and destroys its interpretability, so no streak ships before a clean baseline exists",
+      "Commercial features - accounts, payment, multi-tenancy, third-party authoring. One learner",
+      "Delivering grades other than 8. The shape must not ASSUME grade 8; it need not DELIVER another grade",
+      "Any Speaking rubric or Speaking feedback tool (D7)",
+      "Any IELTS band number, half-band, dial, predictor, or hours-to-band promise (A2, A3, E7); any claim that our own practice-test gains are proficiency gains absent an independent measure (E6)",
+      "Any Vietnamese pronunciation tooling beyond 07 8.3's three permitted targets, and any claim it raises a score or transfers to spontaneous speech (B7)",
+      "Porting tools/, docs/ or the generated site. Reference for intent only",
+      "A native app - nothing observed requires leaving the browser",
+      "Regenerating the kept assets: curriculum/sgk/, research/, data/dict/, data/cast.json and art/ are read-only inputs",
+      "Re-running the pedagogy research. research/ielts/ is source-verified; it is queried via index.jsonl, never read wholesale"
+    ]
+  },
+  "success_metrics": [
+    {
+      "id": "returns_unprompted",
+      "priority": "north_star",
+      "measurable_form": "WEEKDAY days (Mon-Fri) the learner opens the app without being asked. Saturday is excluded by construction: it is a scheduled shared session, so it cannot evidence unprompted return",
+      "benchmark_candidate": "Operator observation, recorded at the Saturday session; the app's local activity log corroborates but cannot establish it, because no log distinguishes a prompted open from an unprompted one",
+      "threshold": 3,
+      "verification_mode": "user_study",
+      "evidence_strength": "direct",
+      "required_by": "final milestone, as a deferred_to_boundary honesty surface — a headless gate cannot see whether a child came back"
+    },
+    {
+      "id": "sessions_unprompted",
+      "priority": "diagnostic",
+      "measurable_form": "Sessions the learner starts on weekdays without being asked. 'Session' because the atomic unit of work is what the teaching-architecture milestone decides",
+      "benchmark_candidate": "Operator observation, logged weekly",
+      "threshold": 4,
+      "verification_mode": "user_study",
+      "evidence_strength": "direct",
+      "required_by": "final milestone"
+    },
+    {
+      "id": "sgk_targets_covered",
+      "priority": "critical",
+      "measurable_form": "Prescribed targets from curriculum/sgk/targets.json placed and delivered in the new shape, counted across all six families — lexis 328, grammar 24, pronunciation 12, everyday-English 12, culture/Communication block 12, writing genre 12. The 328 figure quoted everywhere in this repo is LEXIS ALONE; the other five families are gated separately by check_coverage.py and are the ones this project has historically dropped",
+      "benchmark_candidate": "A coverage harness over the designed curriculum and the built slice, emitting ATELIER_METRIC sgk_targets_covered=<n>",
+      "threshold": 400,
+      "verification_mode": "automated",
+      "evidence_strength": "direct",
+      "required_by": "curriculum-architecture milestone; never regresses thereafter"
+    },
+    {
+      "id": "false_negative_marks",
+      "priority": "critical",
+      "measurable_form": "Legitimately correct learner answers that the engine marks wrong, over a fixture set of valid answer variants per item — including short-answer forms ('yes' / 'yes, it is'), British and American spellings, and other accepted variants. This is the operator's named defect made mechanical",
+      "benchmark_candidate": "An adversarial variant harness driving every built item, emitting ATELIER_METRIC false_negative_marks=<n>",
+      "threshold": 0,
+      "verification_mode": "automated",
+      "evidence_strength": "direct",
+      "required_by": "marking-architecture milestone"
+    },
+    {
+      "id": "marking_rule_violations",
+      "priority": "critical",
+      "measurable_form": "Group C conformance failures across every marked item: key grammar not honoured, a UK or US spelling rejected, two answers in one gap given partial credit, a word limit not enforced per task, spelling silently forgiven, or a retake offered on a clock-spent task",
+      "benchmark_candidate": "A rule harness driving each Group C rule against every built item, emitting ATELIER_METRIC marking_rule_violations=<n>",
+      "threshold": 0,
+      "verification_mode": "automated",
+      "evidence_strength": "direct",
+      "required_by": "marking-architecture milestone"
+    },
+    {
+      "id": "band_tokens_emitted",
+      "priority": "guardrail",
+      "measurable_form": "Occurrences of an IELTS band number, half-band, band promise or hours-to-band claim in built learner-facing output, including anything an LLM returns to the page",
+      "benchmark_candidate": "A scanner over built output and over captured LLM responses, emitting ATELIER_METRIC band_tokens_emitted=<n>",
+      "threshold": 0,
+      "verification_mode": "automated",
+      "evidence_strength": "direct",
+      "required_by": "every milestone from the app foundation onward"
+    },
+    {
+      "id": "gloss_reoffers",
+      "priority": "guardrail",
+      "measurable_form": "Items glossed more than once within a unit of work, or re-glossed after they have been withdrawn — support failing to withdraw, made mechanical",
+      "benchmark_candidate": "A pass over built content data, emitting ATELIER_METRIC gloss_reoffers=<n>",
+      "threshold": 0,
+      "verification_mode": "automated",
+      "evidence_strength": "direct",
+      "required_by": "support-withdrawal milestone"
+    },
+    {
+      "id": "first_paint_ms",
+      "priority": "diagnostic",
+      "measurable_form": "Time from opening the app to first readable content at 360 px width under a mid-range mobile CPU throttle",
+      "benchmark_candidate": "Headless browser at 360 px with CPU throttling, emitting ATELIER_METRIC first_paint_ms=<n>",
+      "threshold": 1500,
+      "verification_mode": "automated",
+      "evidence_strength": "proxy",
+      "required_by": "app-foundation milestone — 'lightning fast' is a claim until measured, and a headless number is not the number a user feels"
+    },
+    {
+      "id": "js_bytes",
+      "priority": "guardrail",
+      "measurable_form": "Total JavaScript delivered to open the first screen, compressed. The honest, reliably measurable proxy for 'fast', and the direct antidote to the previous build's single 4,702-line script loading on all 101 pages",
+      "benchmark_candidate": "A build-output measurement, emitting ATELIER_METRIC js_bytes=<n>",
+      "threshold": 150000,
+      "verification_mode": "automated",
+      "evidence_strength": "proxy",
+      "required_by": "app-foundation milestone"
+    },
+    {
+      "id": "items_swept",
+      "priority": "diagnostic",
+      "measurable_form": "Items or screens the harness actually rendered and exercised during a sweep — coverage, so a gate that renders nothing cannot report zero defects",
+      "benchmark_candidate": "Emitted alongside every sweep as ATELIER_METRIC items_swept=<n>",
+      "threshold": 1,
+      "verification_mode": "automated",
+      "evidence_strength": "direct",
+      "required_by": "used as slo.coverage_metric_id on every sweeping milestone"
+    },
+    {
+      "id": "art_slots_unfilled",
+      "priority": "diagnostic",
+      "measurable_form": "Declared asset slots with no real drawing behind them. Reported, never failed — the point is that the number is visible and that dropping a file into a slot makes it work with no code change",
+      "benchmark_candidate": "A manifest-versus-filesystem pass, emitting ATELIER_METRIC art_slots_unfilled=<n>",
+      "threshold": 29,
+      "verification_mode": "automated",
+      "evidence_strength": "direct",
+      "required_by": "app-foundation milestone — this is the operator's 'list them out' requirement made mechanical"
+    },
+    {
+      "id": "false_positive_marks",
+      "priority": "critical",
+      "measurable_form": "Wrong answers the engine accepts as right, over an adversarial distractor set. Paired with false_negative_marks deliberately: a false-negative gate alone is trivially satisfied by accepting everything, so neither number means anything without the other",
+      "benchmark_candidate": "The same harness that emits false_negative_marks, emitting ATELIER_METRIC false_positive_marks=<n>",
+      "threshold": 0,
+      "verification_mode": "automated",
+      "evidence_strength": "direct",
+      "required_by": "marking-architecture milestone; gated jointly with false_negative_marks"
+    },
+    {
+      "id": "key_variant_coverage",
+      "priority": "diagnostic",
+      "measurable_form": "Share of free-text answer keys carrying official key grammar - optional tokens, alternates, either-order pairs - rather than a bare exact string. Measured today at 275/1357 = 0.203 across units/*.md",
+      "benchmark_candidate": "An authoring-time key audit, emitting ATELIER_METRIC key_variant_coverage=<0.0000>",
+      "threshold": 0.9,
+      "verification_mode": "automated",
+      "evidence_strength": "direct",
+      "required_by": "marking-architecture milestone - the leading indicator behind the false-negative rate"
+    }
+  ],
+  "constraints": [
+    "The content floor is ALL ~400 prescribed targets across six families. The METHOD and SEQUENCE are free — the 12-unit x 7-lesson shape is dead — but no target may be dropped, because the learner still sits Vietnamese school examinations on this book. check_coverage.py reports and exits 0, so this needs a real gate: a large rewrite can go fully green while quietly deleting required curriculum",
+    "No IELTS band number is ever output — not a score, prediction, progress dial, badge or goal. No half-band. Label by CEFR if a level must be named at all, and never on the learner's page (A1, A2, A3)",
+    "No hours-to-band promise of any kind (E7). No presentation of our own practice-test gains as proficiency gains without an independent measure (E6)",
+    "An exercise a key can settle is a committed, marked attempt, never a reveal-and-self-mark — learners cannot self-assess accurately (Phakiti 2016, N = 376, up to 93% miscalibrated on hard items). A retake is a new attempt, never an edit; no averaging across attempts, no trend claim (C1–C5, E3, E9, §4.4)",
+    "A false negative is the worst failure this system can produce. She is alone and has nobody to appeal to, so a correct answer marked wrong teaches her that the right answer is wrong. The gate is zero",
+    "Automated judgement stays inside the defensible set: obligatory-context accuracy on named structures, error-free sentence density, presence or absence of named discourse moves, paraphrase identification. Never a holistic band, never Coherence & Cohesion, Task Response, Lexical Resource precision, 'flexibility', or pronunciation (D9, §4.2, §5.4)",
+    "Any automated scorer reports its disagreement rate with human judgement, or reports nothing scored at all (D10), and is adversarially tested before shipping (D11)",
+    "Any extensive-reading provision limits text choice to the learner's level AND includes an accountability step (B9) — the difference between d = 0.51 and d = 0.01",
+    "The interface explains nothing about itself. No criterion names, no evidential markers, no CEFR labels, no citations, no accounts of evidence",
+    "No Speaking rubric or Speaking feedback tool (D7)",
+    "No Vietnamese pronunciation tooling beyond 07 §8.3's three permitted targets, and no claim that any of it raises a score or transfers to spontaneous speech (B7)",
+    "Nothing recorded upstream as a GAP or [X] may be asserted — and neither may its negation (A10, G6)",
+    "Responsive web app: one codebase serving phone and desktop, designed at 360 px and grown, fast enough to be measured rather than asserted. Browser only, no native app",
+    "Art is added later and must simply work: every drawable thing is a declared slot with a placeholder behind it, the missing set is inventoried in writing, and dropping a file into a slot requires no code change",
+    "Story mode is reused structurally and is not reworked in this scope. The 'animating novel' direction is captured as a planned later scope",
+    "Any visual or geometric claim is measured in a real browser against real layout boxes. A DOM shim that does no layout cannot see a balloon covering a face — 41% of the previous build's runtime was guarded that way",
+    "Every sweep emits a coverage count beside its result; zero rendered and zero defects are otherwise identical output",
+    "The kept assets — curriculum/sgk/, research/, data/dict/, data/cast.json, art/ — are read-only inputs. Regenerating them is years of work and would be an unforced loss",
+    "The repository path contains a space (/Users/liemnguyen/Per/English 8). Every path passed to a shell or harness is quoted",
+    "Each architecture step gets an adversarial second-brain review before it is frozen, and the verdict is committed as an artefact"
+  ],
+  "assumptions": [
+    {
+      "id": "a-cleanroom-better",
+      "text": "A teaching architecture derived from the evidence base will beat the textbook's unit shape. The incumbent is the prescribed book's own organisation, a stronger baseline than 'legacy' implies — the clean-room design may rediscover much of it, and that is a legitimate outcome rather than a failure. What would make it a failure is rebuilding the same grid under new names at the cost of a full rewrite",
+      "provenance": "ai_inferred"
+    },
+    {
+      "id": "a-selfstudy-transfer",
+      "text": "The extensive-reading effect survives unsupervised self-study at all. research/ielts/09 §2.2 carries this as an explicit GAP — the evidence base is almost entirely classroom-mediated, and the accountability moderator suggests self-study is the HARDER case, not the easier one. Supported by no evidence and contradicted by none. This is the central risk of the whole product",
+      "provenance": "ai_inferred"
+    },
+    {
+      "id": "a-story-spine",
+      "text": "A narrative spine carrying the syllabus raises sustained unprompted use. The extensive-reading evidence does NOT warrant this: the story slots total 11,479 words across a year, roughly one graded reader, and volume was never analysed in the meta-analysis. The sourced warrant is instead the topic-lexis discount (07 §2.2a [S]) - a fixed cast, setting and vocabulary is its strongest instantiation, worth about a 1,000-word level of coverage. Marker honestly downgraded from [V 3-0] to [S] by making the claim fit the evidence",
+      "provenance": "ai_inferred"
+    },
+    {
+      "id": "a-ielts-precursor",
+      "text": "Grade-8 work built this way develops genuine IELTS precursors, and IELTS-format practice from the start is right for a learner already studying IELTS. Two limits stand: the official alignment bottoms out at band 4.0 = B1 with no band for A2 or A1, so the claim cannot be checked at her level even in principle; and §3.3 records that preparation can move scores without moving proficiency, which is precisely the outcome we would be unable to detect",
+      "provenance": "ai_inferred"
+    },
+    {
+      "id": "a-marking-authoring",
+      "text": "MEASURED, no longer inferred: of 2,164 marked items in units/*.md, 1,851 are coursework and 313 simulate a test; only 275 of 1,357 free-text keys (20.3%) use official key grammar; and markAnswer() never reads skill=, so test severity is applied to all coursework. Three mechanical classes of legitimate variant are rejected at 41/62 = 0.661. The residue needing genuine semantic judgement is ~7% of items. What remains assumed is that re-authoring that residue toward closed answer spaces is preferable to judging it - not that the 93/7 split is real, which is counted",
+      "provenance": "codebase_observed"
+    },
+    {
+      "id": "a-variant-tractable",
+      "text": "Spelling-variant acceptance is tractable and bounded - the missing -yse and single-l British classes are two rules and one list. What is NOT tractable is global lexical or grammatical variant matching, which manufactures false positives in exactly the exercises that test the distinction; those belong in individual keys. The assumption is that per-key authoring covers the real cases",
+      "provenance": "ai_inferred"
+    },
+    {
+      "id": "a-storymode-reuse",
+      "text": "'Reuse the current story mode structure' means reusing its data model, authoring vocabulary and cast manifest while rebuilding the renderer to that structure — not porting the existing comic-geometry code, which the brief rules out. If the operator meant literally keeping the existing implementation, the app-foundation milestone changes materially",
+      "provenance": "ai_inferred"
+    },
+    {
+      "id": "a-art-later",
+      "text": "The learning experience can be built and judged with placeholder art, provided every drawable thing is a declared slot and the missing set is inventoried, so drawings added later simply work. Operator-decided. The counter-case stands: a reading adventure whose art is dashed boxes may not be the product, in which case the verdict measures something she will never use",
+      "provenance": "operator_stated"
+    },
+    {
+      "id": "a-thin-slice",
+      "text": "A thin end-to-end slice is enough to judge the loop, provided it spans at least two consecutive units of work — a return is where the north-star metric lives, and one session cannot show it",
+      "provenance": "operator_stated"
+    },
+    {
+      "id": "a-marking-after",
+      "text": "Marking placed after the reading, as the accountability step, preserves the thread better than marking inline at the beat. Operator-decided and unvalidated against the alternative; no tournament will run on it",
+      "provenance": "operator_stated"
+    },
+    {
+      "id": "a-n-of-1",
+      "text": "One learner's response generalises far enough to justify the build. Accepted knowingly; commercial scale-up is out of scope, so this charter is not asked to generalise",
+      "provenance": "operator_stated"
+    },
+    {
+      "id": "a-assets-kept",
+      "text": "Deleting tools/, docs/ and the generated site while keeping curriculum/sgk/, research/, data/dict/, data/cast.json and art/ is the right cut of 'remove the current code'. Those kept assets are what the rebuild exists to deliver better",
+      "provenance": "ai_inferred"
+    },
+    {
+      "id": "a-accountability-tolerable",
+      "text": "Some form of accountability exists that this specific thirteen-year-old tolerates and does not experience as homework. This is not a missing feature; it is the difference between d = 0.51 and d = 0.01, and the documented risk runs both ways — detail-testing quizzes after reading are recorded as demotivating and avoidance-inducing",
+      "provenance": "ai_inferred"
+    },
+    {
+      "id": "a-browser-only",
+      "text": "A browser-delivered app with local persistence is sufficient; nothing observed requires a native app or a server. There is one learner and no server-side backup, so her record lives on one device and losing it loses the product",
+      "provenance": "ai_inferred"
+    },
+    {
+      "id": "a-saturday-rhythm",
+      "provenance": "operator_stated",
+      "text": "The weekly shared Saturday session plus weekday solo use is the real usage pattern, and the Saturday session is what makes the weekday record worth keeping. It also supplies the independent measure E6 requires before any gain may be called a proficiency gain. Unvalidated: whether the Saturday session actually happens every week, and whether it stays a conversation rather than becoming an inspection"
+    }
+  ],
+  "kill_criteria": [
+    "The learner stops opening it unprompted for two consecutive weeks, with content available and no external cause",
+    "The ~400 prescribed targets cannot be placed in the new shape without recreating the 12 x 7 grid under new names — in which case the honest conclusion is to keep the textbook's curriculum organisation and rebuild only the delivery, at a fraction of the cost",
+    "The false-negative rate cannot be driven to zero on the built slice, or can only be driven to zero by accepting wrong answers as right",
+    "Accountability cannot be built into a form this learner tolerates. Per the evidence that is not a missing feature; it is the difference between a medium effect and no effect at all",
+    "The teaching architecture cannot carry curriculum without degenerating into a lesson with a story printed above it — the current build's failure mode, and repeating it means the rebuild bought nothing",
+    "Honest marking cannot be preserved on the new surface without the experience degrading into a test",
+    "The app cannot be made fast enough on a mid-range phone to be opened casually — if it is slow to open, it will not be opened unprompted, and the north-star metric is lost before any pedagogy is tested"
+  ],
+  "user_access_plan": "The learner is the operator's niece and is directly reachable, so this charter needs no recruited study. The app is installed on her phone and she uses it unsupervised. The operator observes weekly and records two things: days she opened it without being asked (returns_unprompted) and sessions she started (sessions_unprompted). The app keeps a local open-log that corroborates the observation but never establishes it, because no log can distinguish a prompted open from an unprompted one. Nothing about the observation is surfaced in the interface, and she is never shown a band, score or composite. Three honest limits: n = 1; the observation is single-blind at best because the observer is the person who wants it to succeed; and novelty cannot be separated from effect in the first weeks — which is why the kill criterion is stated in consecutive weeks rather than sessions. She is also studying IELTS elsewhere, so any change in her IELTS performance has a second cause we do not control and cannot subtract.",
+  "readiness": {
+    "designer": "Direction is unusually well specified and has just been sharpened: research/prototype/story-english-brief.md carries scope, eight non-negotiables, metric candidates and kill criteria; .atelier/rules/design-foundations.md has been rewritten from the shipped starter template to this product's actual UI bar. Newly settled: content floor of ~400 targets, method free, IELTS format from the start, art later behind slots, story mode reused not reworked. Still open and now the first milestone's job: what the atomic unit of work is, and what accountability looks like to this learner. Not ready: no visual language exists for the new surface.",
+    "developer": "Stack deliberately unchosen — the previous build's defining failure was one 4,702-line script with no module boundary, so boundaries should be chosen before frameworks. Inputs are stable and machine-readable (targets.json, data/dict/, data/cast.json). Two risks: every geometric or performance claim needs a real browser harness, which is new work rather than ported work; and the LLM marking fallback introduces latency, cost, failure and privacy considerations the previous build never had.",
+    "owner": "Settled: all ~400 targets kept, method free; IELTS format from the start; design-to-avoid marking with LLM only where unavoidable; art inventoried and deferred; story mode reused; second-brain review by subagent since an opus subagent is blocked by a workspace spend cap. Outstanding: no LLM provider chosen and the privacy position on a minor's written work leaving the device is not settled; whether the clean-room design's conclusion is binding if it contradicts the incumbent; and what happens to the rest of the year if the thin slice succeeds. The north-star metric depends on the owner personally making a weekly observation."
+  },
+  "sources": [
+    {
+      "id": "brief",
+      "title": "story-english — direction brief for the prototype lane",
+      "url": "research/prototype/story-english-brief.md",
+      "note": "Operator-authored input. Scope, eight non-negotiables, metric candidates, assumptions seed, kill criteria, risk-first milestone sketch"
+    },
+    {
+      "id": "sangers-2025",
+      "title": "Sangers et al. (2025), Educational Psychology Review — extensive reading meta-analysis",
+      "url": "https://link.springer.com/article/10.1007/s10648-025-10068-6",
+      "note": "[V 3-0] via research/ielts/09 §2.2 and checklist B9. 73 studies / 82 interventions / 86 comparisons; d = 0.41 overall. Two moderators are product features: level-limited text choice d = 0.73 (k=25) vs 0.22 (k=57); accountability d = 0.51 (k=59) vs d = 0.01 n.s. (k=23). Three limits travel with it: duration was NOT a moderator, reading volume was never analysed, retention is barely tested"
+    },
+    {
+      "id": "nakanishi-2015",
+      "title": "Nakanishi (2015), TESOL Quarterly — extensive reading meta-analysis",
+      "url": "research/ielts/09-design-principles.md",
+      "note": "[V 3-0] via 09 §2.2. d = 0.46 for group contrasts"
+    },
+    {
+      "id": "er-selfstudy-gap",
+      "title": "GAP — the extensive-reading effect in unsupervised self-study is not established",
+      "url": "research/ielts/09-design-principles.md",
+      "note": "09 §2.2 GAP blockquote, collected again at §8.1 item 2. An argument for building the log, NOT evidence it works without one. Warrant for assumption a-selfstudy-transfer"
+    },
+    {
+      "id": "checklist-09-1",
+      "title": "The audit checklist — 66 items, Groups A–G",
+      "url": "research/ielts/09-design-principles.md",
+      "note": "§1. Groups A (claims/labels) and G (citation hygiene) apply to everything; B lessons, C auto-marked practice, D rubrics and LLM tools, E progress reporting, F vocabulary tooling. Audit items, not preferences"
+    },
+    {
+      "id": "autoscore-42",
+      "title": "Which sub-skills can be validly auto-scored, and which cannot",
+      "url": "research/ielts/09-design-principles.md",
+      "note": "§4.2. Six can, five cannot. The most important absence is 'flexibility' — the discriminator the descriptors use at every band from 6 up, with no scoring mechanism named anywhere. The spine of the marking architecture"
+    },
+    {
+      "id": "llm-boundary",
+      "title": "Where an LLM feedback tool is and is not defensible",
+      "url": "research/ielts/09-design-principles.md",
+      "note": "§5.3 defensible set; §5.4 the seven things it is not defensible on; §5.2 what automated scoring is known to get wrong; D10 disagreement-rate requirement; D11 adversarial testing before shipping"
+    },
+    {
+      "id": "washback-03",
+      "title": "Washback — what IELTS preparation actually produces",
+      "url": "research/ielts/09-design-principles.md",
+      "note": "§3. §3.2 what prep produces; §3.3 whether prep raises scores without raising proficiency; §3.4 the amendment that format familiarity is not nothing; §3.5 where the evidence is mixed. Directly bears on running IELTS-format work from the start"
+    },
+    {
+      "id": "phakiti-2016",
+      "title": "Phakiti (2016) — learners cannot self-assess accurately",
+      "url": "research/ielts/09-design-principles.md",
+      "note": "[S] via 09 §4.4. N = 376, simulated IELTS Listening; miscalibration across all four sections with a tendency to overconfidence, up to 93% miscalibrated on very difficult items. Warrant for committed marking over reveal-and-self-mark"
+    },
+    {
+      "id": "spaced-retrieval",
+      "title": "Spaced retrieval — and the finding that should change how we build",
+      "url": "research/ielts/09-design-principles.md",
+      "note": "§2.1, with checklist F4 and F5: fixed/uniform intervals are permitted, nothing may claim expanding intervals are superior (two independent meta-analyses find them equivalent), intervals err long rather than short, and the scheduler is evaluated against DELAYED retention"
+    },
+    {
+      "id": "doraemon-craft",
+      "title": "What makes Doraemon work — a craft foundation",
+      "url": "research/story/doraemon-craft.md",
+      "note": "§8 the audience, Vietnamese thirteen-year-olds in 2026. §10 the measured container: 11,479 words across four story slots, ~750 words of continuous narrative per unit in four scenes — the measured basis for sizing a unit of work"
+    },
+    {
+      "id": "sgk-record",
+      "title": "curriculum/sgk/ — the prescribed student's book, recorded",
+      "url": "curriculum/sgk/targets.json",
+      "note": "Twelve units section by section, a 282-word glossary, four cumulative Reviews, machine-readable targets. SIX families: lexis 328, grammar 24, pronunciation 12, everyday-English 12, culture block 12, writing genre 12 — the widely-quoted 328 is lexis alone. Queried via index.jsonl, never read wholesale (~4,400 lines)"
+    },
+    {
+      "id": "prior-art-accountability",
+      "title": "Prior art scan — accountability forms for a teenager on a phone",
+      "url": "https://www.edutopia.org/article/ditching-reading-logs/",
+      "note": "Tier 3 — the OBJECT of a claim, never its warrant (G4). Streaks have strong retention prior art but are brittle: one missed day collapses the mechanic for many users. Detail-testing quizzes after reading are documented as demotivating and avoidance-inducing. App-plus-one-human-partner is repeatedly named as the effective configuration, and this product uniquely has that human"
+    }
+  ]
+}

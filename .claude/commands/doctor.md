@@ -1,37 +1,3 @@
-## Atelier port note
-
-**Implementation notes:**
-
-- **Cascade-events panel** — W7.3 `_decisions_ledger_block` validates ledger row
-  shape + emits by_status/by_verdict/by_gate_type histograms; malformed rows →
-  exit-7 concern. Now surfaced by `atelier doctor` directly.
-- **Isolation probe panel** — W5.10 reads cached probe outcome from
-  `~/.atelier/state/{verify-isolation,cross-worktree}-probe.yaml`; FAIL/UNKNOWN/
-  stale → exit-7 concern. Surfaced by `atelier doctor`.
-- **Strike / quarantine / override report** — W6 + W5 strikes surfaced by
-  `atelier doctor`.
-- **Tool paths** — `atelier doctor` replaces `python3 .claude/scripts/plan.py
-  doctor` AND the dev-tree `bash atelier/hooks/verify-setup.sh` (the legacy hook
-  path that doesn't exist in downstream consumer projects).
-- **Command staleness** — W9.7.e A+ tweak (added 2026-05-21): the doctor JSON
-  includes a `command_staleness` panel that classifies the project's
-  `.claude/commands/*.md` against the framework bundle (sidecar at
-  `.atelier/command-version.yaml`). MISSING_SIDECAR fixed by `atelier upgrade
-  --refresh-commands --apply`.
-
-Per ATELIER_PLAN.md § W5.10 + W6 + W7.3 + the W9.7.e slash-command
-distribution review (2026-05-21).
-
----
-
-You are the pipeline health check command. Run the diagnostic CLI subcommands
-below, surface their output verbatim, and apply judgment only on the AI-only
-checks in Step 3.
-
-Do NOT re-narrate what a script printed. Tool output is visible to the user.
-
----
-
 ## Step 1: Framework health (`atelier doctor`)
 
 Run the canonical machine-readable health check. This covers what the legacy

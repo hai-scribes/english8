@@ -2,42 +2,6 @@
 disable-model-invocation: true
 ---
 
-## Atelier port note
-
-**Implementation notes:**
-
-- **SK-6 rule** — Spec Reviewer prompt now requires emitting `unclear[]`
-  entries with `status: active` and a focused question rather than silently
-  guessing at underspecified requirements. The operator resolves at Gate E
-  or sends the spec back for revision. The `unclear[]` block already exists
-  in the prior spec-format-reference; this rule lifts enforcement earlier.
-- **GL-1 goals-layer MERGE (W8.4.13b wired)** — `non_goals: [list]` top-
-  level field (ships in scaffold as `non_goals: []`; operator authors
-  items) + per-AC `user_story: <one-line>` field. `atelier spec validate`
-  emits WARN-level violations `GL1_NON_GOALS_MISSING` and
-  `GL1_AC_USER_STORY_MISSING` when fields are absent — WARN does NOT
-  block (exit 0); FAIL promotion lands in a later sub-wave once
-  population is reliable. **When authoring a spec in this command**:
-  always populate `non_goals: [...]` with operator-stated anti-goals
-  (ask in Phase 1/2 if not stated; never invent), and add per-AC
-  `user_story: "as a <actor>, when <trigger> I want <outcome> so that
-  <value>"` to each AC at draft time. Prototype-first via `/prototype`
-  → `/promote` is unchanged; the operator authors non_goals at step 5.5
-  review there (see promote.md).
-- **Spec validate command** — `atelier spec validate <slug>` replaces
-  `python3 .claude/scripts/plan.py validate-spec <slug>`.
-- **Gate E approval** — `bash "$(atelier path --hook approve-spec.sh)" <slug>`
-  (resolver-mediated path; semantics unchanged).
-
-Per ATELIER_PLAN.md § W8.4 + the 2026-05-13 [GL-1] simulation verdict.
-
----
-
-You are the planning command. You edit `.specs/` files only. You never write application code.
-
-The user's request: $ARGUMENTS
-
----
 
 ## Ground rules
 

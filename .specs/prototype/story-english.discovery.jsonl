@@ -1,0 +1,54 @@
+{"type": "init", "tier": "prototype", "idea": "A phone-first English self-study app for one Vietnamese grade-8 learner where a story read chapter by chapter is the spine and the syllabus is carried by it, built on a clean-room curriculum design derived from the research base rather than ported from the current system", "at": "2026-08-16T15:18:23.859Z"}
+{"type": "note", "text": "Rules housekeeping done: .atelier/rules/design-foundations.md and patterns.md rewritten from shipped starter templates to product-specific bars (learner-facing surface explains nothing; no band number; story is spine not wrapper; support withdraws once per item; committed marked attempt not reveal-and-self-mark; phone-first at 360px; one gesture moves one thing; real-browser geometry gates; coverage emitted beside every sweep; no porting app.js). They feed the extract/elevate prompts at /promote.", "at": "2026-08-16T15:18:38.072Z"}
+{"type": "note", "text": "Prior art scan for the accountability milestone (the d=0.51 vs d=0.01 fork, Sangers 2025 [V 3-0]). Four candidate forms, each with a named failure mode: (1) STREAK/daily cadence - strong retention prior art but brittle, one missed day collapses the mechanic for many users; (2) IN-STORY GATE - the next chapter is earned by answering what happened, accountability hidden inside the fiction, no separate homework surface; (3) OWNED LOG/artefact - a visible record the learner keeps (the story's own twelve chalk marks are a native fit), Matthews' written-goal-plus-weekly-report 76% vs 43%; (4) HUMAN ON THE OTHER END - the operator sees the log. Repeated finding across sources: app-plus-one-human-partner is the effective configuration, and this product uniquely HAS that human. Counter-evidence to carry: end-of-reading quizzes are documented as demotivating/punitive when they test detail (Edutopia), so the accountability step must be about what happened, not detail recall.", "at": "2026-08-16T15:18:38.227Z"}
+{"type": "revision", "target": "charter", "keys": ["assumptions", "constraints", "desired_outcome", "kill_criteria", "problem", "readiness", "scope", "sources", "success_metrics", "target_users", "user_access_plan"], "at": "2026-08-16T15:20:52.561Z"}
+{"type": "revision", "target": "charter", "keys": ["assumptions", "constraints", "desired_outcome", "kill_criteria", "problem", "readiness", "scope", "sources", "success_metrics", "target_users", "user_access_plan"], "at": "2026-08-16T16:08:41.881Z"}
+{"type": "revision", "target": "charter", "keys": ["assumptions", "constraints", "desired_outcome", "kill_criteria", "problem", "readiness", "scope", "sources", "success_metrics", "target_users", "user_access_plan"], "at": "2026-08-16T17:14:10.415Z"}
+{"type": "decision", "id": "charter-approved", "content_sha256": "b50f6c1f469b83a749a018245e4010e9779166d48149a878dc31e57fa7023d9e", "with_risks": ["a-cleanroom-better", "a-selfstudy-transfer", "a-story-spine", "a-ielts-precursor", "a-variant-tractable", "a-storymode-reuse", "a-assets-kept", "a-accountability-tolerable", "a-browser-only"], "at": "2026-08-16T17:50:18.429Z"}
+{"type": "revision", "target": "milestones", "count": 4, "at": "2026-08-16T17:50:23.077Z"}
+{"type": "revision", "target": "milestones", "count": 6, "at": "2026-08-16T17:56:44.199Z"}
+{"type": "revision", "target": "milestones", "count": 6, "at": "2026-08-16T18:01:32.035Z"}
+{"type": "revision", "target": "milestones", "count": 6, "at": "2026-08-16T18:05:27.267Z"}
+{"type": "revision", "target": "milestones", "count": 6, "at": "2026-08-16T18:07:04.873Z"}
+{"type": "revision", "target": "milestones", "count": 6, "at": "2026-08-16T18:09:23.993Z"}
+{"type": "honesty_review", "milestone_id": 1, "surfaces": 4, "unresolved": 1, "at": "2026-08-16T18:09:34.256Z"}
+{"type": "honesty_review", "milestone_id": 2, "surfaces": 3, "unresolved": 0, "at": "2026-08-16T18:09:34.493Z"}
+{"type": "honesty_review", "milestone_id": 3, "surfaces": 4, "unresolved": 0, "at": "2026-08-16T18:10:15.984Z"}
+{"type": "honesty_review", "milestone_id": 4, "surfaces": 3, "unresolved": 0, "at": "2026-08-16T18:10:16.123Z"}
+{"type": "honesty_review", "milestone_id": 5, "surfaces": 4, "unresolved": 0, "at": "2026-08-16T18:10:16.269Z"}
+{"type": "honesty_review", "milestone_id": 6, "surfaces": 4, "unresolved": 1, "at": "2026-08-16T18:10:16.414Z"}
+{"type": "revision", "target": "milestones", "count": 6, "at": "2026-08-16T18:11:50.913Z"}
+{"type": "honesty_review", "milestone_id": 1, "surfaces": 4, "unresolved": 1, "at": "2026-08-16T18:12:10.477Z"}
+{"type": "honesty_review", "milestone_id": 2, "surfaces": 3, "unresolved": 0, "at": "2026-08-16T18:12:10.621Z"}
+{"type": "honesty_review", "milestone_id": 3, "surfaces": 4, "unresolved": 0, "at": "2026-08-16T18:12:10.762Z"}
+{"type": "honesty_review", "milestone_id": 4, "surfaces": 3, "unresolved": 0, "at": "2026-08-16T18:12:10.905Z"}
+{"type": "honesty_review", "milestone_id": 5, "surfaces": 4, "unresolved": 0, "at": "2026-08-16T18:12:11.046Z"}
+{"type": "honesty_review", "milestone_id": 6, "surfaces": 4, "unresolved": 1, "at": "2026-08-16T18:12:11.185Z"}
+{"type": "revision", "target": "milestones", "count": 6, "at": "2026-08-16T18:24:58.766Z"}
+{"type": "honesty_review", "milestone_id": 1, "surfaces": 4, "unresolved": 1, "at": "2026-08-16T18:24:59.877Z"}
+{"type": "honesty_review", "milestone_id": 2, "surfaces": 3, "unresolved": 0, "at": "2026-08-16T18:25:00.022Z"}
+{"type": "honesty_review", "milestone_id": 3, "surfaces": 4, "unresolved": 0, "at": "2026-08-16T18:25:00.164Z"}
+{"type": "honesty_review", "milestone_id": 4, "surfaces": 3, "unresolved": 0, "at": "2026-08-16T18:25:00.318Z"}
+{"type": "honesty_review", "milestone_id": 5, "surfaces": 4, "unresolved": 0, "at": "2026-08-16T18:25:00.459Z"}
+{"type": "honesty_review", "milestone_id": 6, "surfaces": 4, "unresolved": 1, "at": "2026-08-16T18:25:00.600Z"}
+{"type": "findings", "milestone_id": 1, "source": "auto", "status": "stuck", "recommendation": "pivot", "at": "2026-08-16T19:14:05.109Z"}
+{"type": "decision", "id": "redo-milestone", "milestone_id": 1, "at": "2026-08-16T19:31:12.672Z"}
+{"type": "findings", "milestone_id": 1, "source": "auto", "status": "stop", "recommendation": "iterate", "at": "2026-08-16T20:34:47.526Z"}
+{"type": "revision", "target": "milestones", "count": 6, "at": "2026-08-16T20:36:46.943Z"}
+{"type": "honesty_review", "milestone_id": 1, "surfaces": 4, "unresolved": 1, "at": "2026-08-16T20:36:48.416Z"}
+{"type": "honesty_review", "milestone_id": 2, "surfaces": 3, "unresolved": 0, "at": "2026-08-16T20:36:48.561Z"}
+{"type": "honesty_review", "milestone_id": 3, "surfaces": 4, "unresolved": 0, "at": "2026-08-16T20:36:48.705Z"}
+{"type": "honesty_review", "milestone_id": 4, "surfaces": 3, "unresolved": 0, "at": "2026-08-16T20:36:48.853Z"}
+{"type": "honesty_review", "milestone_id": 5, "surfaces": 4, "unresolved": 0, "at": "2026-08-16T20:36:49.001Z"}
+{"type": "honesty_review", "milestone_id": 6, "surfaces": 4, "unresolved": 1, "at": "2026-08-16T20:36:49.150Z"}
+{"type": "findings", "milestone_id": 1, "source": "auto", "status": "pending_approval", "recommendation": "proceed", "at": "2026-08-16T21:43:18.960Z"}
+{"type": "decision", "id": "boundary-auto-approved", "milestone_id": 1, "provenance": "auto-pilot-boundary", "decision_id": "45f1c22a-ea2b-49c5-8e62-63ab05082489", "at": "2026-08-16T21:43:19.123Z"}
+{"type": "findings", "milestone_id": 2, "source": "auto", "status": "pending_approval", "recommendation": "proceed", "at": "2026-08-16T21:43:35.915Z"}
+{"type": "decision", "id": "boundary-auto-approved", "milestone_id": 2, "provenance": "auto-pilot-boundary", "decision_id": "bcf1314d-6eec-4cb6-b2f6-3e92714eb759", "at": "2026-08-16T21:43:36.055Z"}
+{"type": "findings", "milestone_id": 3, "source": "auto", "status": "pending_approval", "recommendation": "proceed", "at": "2026-08-16T21:43:49.065Z"}
+{"type": "decision", "id": "boundary-auto-approved", "milestone_id": 3, "provenance": "auto-pilot-boundary", "decision_id": "039fc226-c03f-4f13-97da-90377bc61542", "at": "2026-08-16T21:43:49.206Z"}
+{"type": "findings", "milestone_id": 4, "source": "auto", "status": "pending_approval", "recommendation": "proceed", "at": "2026-08-16T21:44:03.999Z"}
+{"type": "decision", "id": "boundary-auto-approved", "milestone_id": 4, "provenance": "auto-pilot-boundary", "decision_id": "d9e1ed86-7015-4d30-a4a0-0e2b1fb27bd7", "at": "2026-08-16T21:44:04.163Z"}
+{"type": "findings", "milestone_id": 5, "source": "auto", "status": "stop", "recommendation": "iterate", "at": "2026-08-16T21:44:15.899Z"}
+{"type": "revision", "target": "milestone-6", "reopened": true, "at": "2026-08-17T10:57:26.262Z"}
+{"type": "honesty_review", "milestone_id": 6, "surfaces": 4, "unresolved": 1, "at": "2026-08-17T10:57:37.561Z"}

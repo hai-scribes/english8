@@ -1,0 +1,115 @@
+{
+  "run_id": "11d1ce04f955",
+  "slug": "story-english",
+  "command": "atelier prototype run --auto",
+  "started": "2026-08-16T20:37:01Z",
+  "finished": "2026-08-16T21:44:16Z",
+  "elapsed_sec": 4034.2,
+  "exit_action": "blocked",
+  "stop_reason": "lane not green (state='stopped'): coverage metric items_swept=10.0 is at or below coverage_min 10.0 \u2014 workload coverage is below the bar that certifies the workload ran (it ran, but not enough; raise coverage or lower coverage_min) \u2014 must-stop",
+  "milestones_advanced": 4,
+  "max_wall_clock_sec": 0,
+  "max_milestones": 0,
+  "milestones": [
+    {
+      "milestone_id": 1,
+      "objective": "Replace the textbook's 12-unit x 7-lesson organisation with a session-based teaching architecture derived from the evidence base, expressed as machine-readable data rather than a design document, and prove it by running one real session in a real browser at 360 px. Every prescribed target gets a placement; the story chapter plan and the vocabulary track are sized here.",
+      "outcome": "advanced",
+      "reason": "green boundary; frozen hashes intact",
+      "slo": {
+        "metric_id": "sgk_targets_covered",
+        "threshold": 400,
+        "direction": "maximize"
+      },
+      "benchmark_value": 400.0,
+      "winner_variant": 2,
+      "selection_mode": null,
+      "gate_sha256": "5bbfb903f2b347d760073b01787894b45df8fe110db4711779f794fa601d0351",
+      "benchmark_sha256": "0924d67217576699afbfdfc54b84757748f29c1f0b45e640c6e27202abb1f0c0",
+      "grafted_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+      "decision_id": "45f1c22a-ea2b-49c5-8e62-63ab05082489",
+      "recommendation": "proceed",
+      "report_path": "/Users/liemnguyen/Per/English 8/reports/prototype-story-english.html"
+    },
+    {
+      "milestone_id": 2,
+      "objective": "Make every marked item conform to the Group C rules before any accuracy number is believed. Split severity so coursework is not marked with test severity, close the missing spelling classes, and re-author bare-string keys into official key grammar. This is staged first because key_variant_coverage is 0.203 today: four keys in five are a bare exact string, so a false negative measured against them is measuring the key, not the engine.",
+      "outcome": "advanced",
+      "reason": "green boundary; frozen hashes intact",
+      "slo": {
+        "metric_id": "marking_rule_violations",
+        "threshold": 0,
+        "direction": "minimize"
+      },
+      "benchmark_value": 0.0,
+      "winner_variant": 1,
+      "selection_mode": null,
+      "gate_sha256": "f3fa97a75b14a2c64113de3af91a0edd3ea4631d6b14f78f2bc30020a8f7fb6b",
+      "benchmark_sha256": "6040fd13fac7a80de27404e211354424f509443c31398eb8a89af901748cf5c8",
+      "grafted_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+      "decision_id": "bcf1314d-6eec-4cb6-b2f6-3e92714eb759",
+      "recommendation": "proceed",
+      "report_path": "/Users/liemnguyen/Per/English 8/reports/prototype-story-english.html"
+    },
+    {
+      "milestone_id": 3,
+      "objective": "Drive to zero the case where a legitimately correct answer is marked wrong. Fix the misdiagnosis bug, add the near-miss third state so a nearly-right answer is neither credited nor accused, build the fixture set key-blind, and give her an appeal that costs nothing and changes nothing.",
+      "outcome": "advanced",
+      "reason": "green boundary; frozen hashes intact",
+      "slo": {
+        "metric_id": "false_negative_marks",
+        "threshold": 0,
+        "direction": "minimize"
+      },
+      "benchmark_value": 0.0,
+      "winner_variant": 1,
+      "selection_mode": null,
+      "gate_sha256": "08b9dfcf8d682c0b930385995f9d022daec9d7ea45a81d27a209c1808a167832",
+      "benchmark_sha256": "e82ff2c8c9893615ea3c7587fd2d1099d8df589a6e1bd4b4f273834e0f002535",
+      "grafted_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+      "decision_id": "039fc226-c03f-4f13-97da-90377bc61542",
+      "recommendation": "proceed",
+      "report_path": "/Users/liemnguyen/Per/English 8/reports/prototype-story-english.html"
+    },
+    {
+      "milestone_id": 4,
+      "objective": "Close the counter-gate. Drive false_positive_marks to zero over an adversarial distractor set while false_negative_marks stays at zero, so neither number was bought with the other. Refuse global lexical and grammatical variant matching, and enforce the D11 separation that keeps the fixture author from being the key author.",
+      "outcome": "advanced",
+      "reason": "green boundary; frozen hashes intact",
+      "slo": {
+        "metric_id": "false_positive_marks",
+        "threshold": 0,
+        "direction": "minimize"
+      },
+      "benchmark_value": 0.0,
+      "winner_variant": 1,
+      "selection_mode": null,
+      "gate_sha256": "ec2013eaaf5a3009c316041cd7cc8041d784712755edfece50220264f19d251a",
+      "benchmark_sha256": "70821d86e1aeeda7b2ed6a0742cad0a50af7b7d56b01c5223dc90212daecdd3e",
+      "grafted_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+      "decision_id": "d9e1ed86-7015-4d30-a4a0-0e2b1fb27bd7",
+      "recommendation": "proceed",
+      "report_path": "/Users/liemnguyen/Per/English 8/reports/prototype-story-english.html"
+    },
+    {
+      "milestone_id": 5,
+      "objective": "Make the loop she does alone on a weekday work end to end - a session opens, is read with support placed where she actually stalls, is answered on, and enrols what it taught into a fixed-interval review queue that brings it back on a later day.",
+      "outcome": "blocked",
+      "reason": "lane not green (state='stopped'): coverage metric items_swept=10.0 is at or below coverage_min 10.0 \u2014 workload coverage is below the bar that certifies the workload ran (it ran, but not enough; raise coverage or lower coverage_min) \u2014 must-stop",
+      "slo": {
+        "metric_id": "gloss_reoffers",
+        "threshold": 0,
+        "direction": "minimize"
+      },
+      "benchmark_value": 0.0,
+      "winner_variant": 1,
+      "selection_mode": null,
+      "gate_sha256": "7f7009008999909dc6bd7bd75fd31a379d488406e734cc1b25e6e82950b09e1c",
+      "benchmark_sha256": "870ce865edab8799d79490e0230d47de1e3e693b9a07e0c1e1375f35d5e0739b",
+      "grafted_sha": null,
+      "decision_id": null,
+      "recommendation": "iterate",
+      "report_path": "/Users/liemnguyen/Per/English 8/reports/prototype-story-english.html"
+    }
+  ]
+}

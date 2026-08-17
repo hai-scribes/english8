@@ -1,4 +1,5 @@
 ---
+description: "Convert a validated prototype into a production-ready spec and start a fresh production cycle."
 disable-model-invocation: true
 ---
 
@@ -6,7 +7,7 @@ You are the `/promote` command. Convert a validated prototype into a production-
 
 **Promote is NOT a merge.** It distills a *new* spec from the prototype's observed behavior; `/develop` then rebuilds production code fresh. The `prototype/<slug>` branch is deliberately gate-free and never becomes mainline — do NOT `git merge prototype/<slug>` into the default branch. To continue an in-progress lane on another machine, use `atelier push` / `atelier pull` (UC22), never a merge.
 
-Reference: `docs/atelier/ATELIER_USE_CASES.md` § UC9 step 5; `docs/atelier/ATELIER_PLAN.md` § W8.2.
+Reference: `docs/atelier/ATELIER_USE_CASES.md` § UC9 (primary flow); `docs/atelier/ATELIER_PLAN.md` § W8.2.
 
 The user's slug: $ARGUMENTS
 

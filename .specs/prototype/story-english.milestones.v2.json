@@ -1,0 +1,384 @@
+[
+ {
+  "id": 1,
+  "title": "The teaching architecture, and one session that actually runs",
+  "active": true,
+  "objective": "Replace the textbook's 12-unit x 7-lesson organisation with a session-based teaching architecture derived from the evidence base, expressed as machine-readable data rather than a design document, and prove it by running one real session in a real browser at 360 px. Every prescribed target gets a placement; the story chapter plan and the vocabulary track are sized here.",
+  "risk": "This is the highest design risk in the product and everything downstream is decoration if it is wrong. Two specific failure modes: recreating the 12x7 grid under new names at the cost of a full rebuild, which is a kill criterion; and producing a design artefact no machine reads, which drifts from the build the day after it is written. The counter to both is that the architecture ships AS DATA and is gated on it. A third risk retired here deliberately: the previous build had no real-browser gate until far too late, so 41% of its runtime was unverifiable - this milestone establishes the browser harness before there is much to verify.",
+  "approach_candidates": [
+   {
+    "id": "queue-first",
+    "name": "Queue-first: the app opens on what is due",
+    "summary": "The home surface is the review queue; the story is a slot inside a session rather than the navigation model. Priority: due reviews, then the next unmet target whose prerequisite lexis is at 'seen', then reading. There is no 'next lesson' screen at all - this is what makes the freed sequence actually free rather than rhetorically free. Strongest fit to the spaced-retrieval evidence (09 §2.1, [V 3-0] across 48 experiments, N = 3,411); weakest pull for unprompted return, because a queue is a chore surface and the north-star metric is whether she opens it unasked."
+   },
+   {
+    "id": "story-first",
+    "name": "Story-first: the app opens on the next chapter",
+    "summary": "The narrative is the navigation model; due reviews and the vocabulary track surface after or around the chapter. Strongest fit to the operator's thesis and to unprompted return, and the honest warrant is the topic-lexis discount (07 §2.2a [S]) - a fixed cast, setting and vocabulary is its strongest instantiation, worth roughly a 1,000-word level of coverage. Risk: scheduling becomes subordinate to narrative order, and a target's delayed check lands when the story reaches it rather than when memory needs it."
+   },
+   {
+    "id": "alternating",
+    "name": "Alternating: story days and drill days",
+    "summary": "Sessions alternate in kind rather than mixing - some are pure reading, others pure retrieval. Simplest to schedule and to reason about; the sharpest test of whether the story is carrying the syllabus or merely alternating with it. Risk: it makes the seam between story and syllabus visible, which is precisely the 'lesson with a story printed above it' failure the rebuild exists to avoid."
+   },
+   {
+    "id": "woven",
+    "name": "Woven: one session, four fixed slots",
+    "summary": "Every session has the same four slots in the same order - due reviews, meet ~6 new collocations with audio, read one text, produce one accounted-for output. Fixed shape means she always knows what she is in for, which matters for a 13-year-old alone. Warranted slot by slot: F7/F3 collocations with audio, B8 lexis pre-taught before the text that uses it, B9 accountability. Risk: a fixed shape can feel like a worksheet, and four slots may overrun a weekday evening."
+   }
+  ],
+  "gate": {
+   "checks": [
+    {
+     "name": "build",
+     "kind": "build"
+    },
+    {
+     "name": "marking",
+     "kind": "smoke"
+    },
+    {
+     "name": "session",
+     "kind": "interaction"
+    }
+   ],
+   "required_tier": "interaction",
+   "artifacts": [
+    "harness/",
+    "package.json",
+    "package-lock.json"
+   ]
+  },
+  "slo": {
+   "metric_id": "sgk_targets_covered",
+   "threshold": 400,
+   "direction": "maximize",
+   "coverage_metric_id": "items_swept",
+   "coverage_min": 399
+  },
+  "benchmark": {
+   "harness": "harness/coverage.mjs",
+   "command": "node harness/coverage.mjs",
+   "fixed_workload": "Every target in curriculum/sgk/targets.json across all six families - lexis 325 distinct of 328 entries, grammar 24, pronunciation 12, everyday-English 12, culture block 12, writing genre 12 slots of 5 distinct values - resolved against the placement map, plus the encounter/production/check separation invariant checked on every placed target"
+  },
+  "tasks": [
+   "Design the session: what an atomic unit of work contains, how long it is, and what decides what she does next. The evidence gives no session duration - state the chosen figure as an engineering assumption, not a finding",
+   "Size the story: how many chapters, how long each, and what each carries. The current four slots total 11,479 words across a year, roughly one graded reader, which is why the spine must be extended to carry real volume",
+   "Design the vocabulary track outside the stories: 325 distinct lexis strings as collocations with audio (F7, F3), pre-taught before the text that uses them (B8), on a fixed-interval ladder",
+   "Build the target placement map: encounter, production and delayed check for each of the non-lexis targets; lexis routes to the trainer rather than into lessons",
+   "Implement the invariant as a build gate: no target may have its encounter, its production and its delayed check in the same session. This is E5 restated as architecture and it is what mechanically prevents 'a lesson with a story printed above it'",
+   "Fix the ladder defect before reuse: research/vocabulary-mode-design.md rung 2 is 'recall, reveal, self-mark' and a revealed answer moves the schedule, which is a self-assessment driving a scheduling decision (E8, and §4.4 Phakiti N=376, up to 93% miscalibrated). Drop the rung or make it non-scheduling",
+   "Fixed-interval ladder only. F4 permits uniform intervals and forbids claiming expanding ones are superior - two independent meta-analyses find them equivalent (g = 0.034, n.s.). F5: err long. E5: evaluate on delayed retention, never same-session",
+   "Stand up the real-browser harness at 360 px and desktop, measuring from real layout boxes. This exists from milestone one deliberately - the previous build's jsdom gates asserted a stylesheet as a string and grepped the app's own source for function names — DONE: harness/{lib,coverage,marking,session,surfaces,support}.mjs with Playwright+Chromium, verified against the real build (first paint 1079ms at 360px/4x throttle, js_bytes 448092, 18/46 false negatives reproduced incl. the why:\"two\" misdiagnosis)",
+   "Establish the app skeleton the architecture needs: content as data, module boundaries, versioned local state, declared art slots with placeholders behind them, and the missing-asset inventory written out",
+   "Run one complete session end to end in the browser harness at 360 px",
+   "Adversarial second-brain review by an opus subagent (briefed to disagree; codex is not used) of the architecture before the boundary; commit the verdict as an artefact"
+  ]
+ },
+ {
+  "id": 2,
+  "active": true,
+  "decision_type": "correctness_call",
+  "title": "Marking conformance: the key says what it means",
+  "objective": "Make every marked item conform to the Group C rules before any accuracy number is believed. Split severity so coursework is not marked with test severity, close the missing spelling classes, and re-author bare-string keys into official key grammar. This is staged first because key_variant_coverage is 0.203 today: four keys in five are a bare exact string, so a false negative measured against them is measuring the key, not the engine.",
+  "risk": "The measurement precondition, and the reason the marking work is three milestones rather than one. With 20.3% of keys carrying official key grammar, driving false_negative_marks to zero against the current key corpus would credit the engine for defects that live in the keys - and would be undone the moment a key was re-authored. The counter-risk is that conformance is trivially satisfiable by loosening every key, which is why false_positive_marks gates in the same `marking` check from this milestone on, and why the adversarial distractor set is built here rather than at the milestone that gates it.",
+  "approach_candidates": [
+   {
+    "id": "keys-first",
+    "name": "Re-author the corpus, then narrow the engine",
+    "summary": "Raise key_variant_coverage by re-authoring the five enumerated exposures (33 contraction-only, 24 number-word-only, 67 internal-punctuation, 50 long-with-no-alternates, 270 bare-noun-phrase) into official key grammar, then remove the engine's compensating leniency. Keys carry the meaning, the engine stays literal. Strongest fit to C1-C5 and the only version where a key reads as its own specification; costs the most authoring."
+   },
+   {
+    "id": "engine-first",
+    "name": "Encode the classes as rules, re-author only what resists",
+    "summary": "Put the -yse class and the single-l British class into the engine as rules, apply severity by skill, and re-author only the keys no rule can reach. Far less authoring and the spelling classes stay in one place rather than 374 keys; the risk is that a rule is invisible at the key, so an author cannot see what their key will accept."
+   }
+  ],
+  "gate": {
+   "checks": [
+    {
+     "name": "build",
+     "kind": "build"
+    },
+    {
+     "name": "marking",
+     "kind": "smoke"
+    },
+    {
+     "name": "session",
+     "kind": "interaction"
+    }
+   ],
+   "required_tier": "interaction",
+   "artifacts": [
+    "harness/",
+    "package.json",
+    "package-lock.json"
+   ]
+  },
+  "slo": {
+   "metric_id": "marking_rule_violations",
+   "threshold": 0,
+   "direction": "minimize",
+   "coverage_metric_id": "keys_probed",
+   "coverage_min": 1000
+  },
+  "benchmark": {
+   "harness": "harness/marking.mjs",
+   "command": "node harness/marking.mjs",
+   "fixed_workload": "Every marked item in the built slice, driven against a key-blind fixture set of legitimate answer variants AND an adversarial distractor set. Emits false_negative_marks, false_positive_marks, key_variant_coverage and items_swept. Baseline on the current engine over three mechanical variant classes: 41/62 = 0.661 false-negative rate; key_variant_coverage 275/1357 = 0.203"
+  },
+  "tasks": [
+   "Two severities keyed to whether an item simulates a test. 313 of 2,164 items are reading/listening and get full C1-C5, where strictness is the point; 1,851 are coursework and the mark lands on the target feature the exercise is about. Group C is titled 'Auto-marked practice (Listening and Reading)' and traces to 01 §8 and 03 §4 - it was never about grade-8 grammar drills. markAnswer() currently does not receive skill= at all",
+   "Close the spelling-variant gaps: the -yse class (analyse, paralyse, catalyse, breathalyse) falls through the -ise rule entirely, and the single-l British class (enrol/enroll, skilful/skillful, fulfil/fulfill, instalment/installment) is absent. Two rules and one list",
+   "Raise key_variant_coverage from 0.203 by re-authoring bare-string keys into official key grammar. Enumerable exposures to review: contraction-only keys 33, number-word-only 24, internal-punctuation 67, long keys with no alternates 50, no-gap bare-noun-phrase keys 270",
+   "No runtime LLM call, ever. D10 requires an automated scorer to report its disagreement rate with human judgement or report nothing scored at all; with one learner and no human rater no such rate can exist. The LLM works at authoring time only - proposing key variants for human acceptance and pre-generating per-item explanations shipped into the page (§5.3 item 6)",
+   "Adversarial second-brain review by an opus subagent (briefed to disagree; codex is not used) before the boundary; commit the verdict as an artefact"
+  ]
+ },
+ {
+  "id": 3,
+  "active": true,
+  "decision_type": "correctness_call",
+  "title": "Marking that cannot lie to her: the false negative",
+  "objective": "Drive to zero the case where a legitimately correct answer is marked wrong. Fix the misdiagnosis bug, add the near-miss third state so a nearly-right answer is neither credited nor accused, build the fixture set key-blind, and give her an appeal that costs nothing and changes nothing.",
+  "risk": "The named defect, and the most damaging thing this system can do. Traced live: markAnswer('yes, it is', ['yes']) returns {ok:false, why:'two'}, so she is authoritatively told she wrote two answers when she wrote one correct one - and there is no adult in the room to overrule it. The asymmetry is roughly 10:1 against false negatives, because a false positive costs one under-learned item that spaced retrieval re-presents, while a false negative teaches her that a right answer is wrong and §4.4 shows she cannot self-assess her way out. The counter-risk is real and is why the gate is a PAIR: a false-negative gate alone is trivially satisfied by accepting everything.",
+  "approach_candidates": [
+   {
+    "id": "three-state",
+    "name": "A third state between right and wrong",
+    "summary": "Near-miss is a first-class outcome - key is a substring of the answer, answer a superset of the key, or edit distance <= 1 on a single-token key. Not credited, not accused: 'not quite - here is the answer'. 'yes, it is' lands here. Risk: three states is a harder thing for a thirteen-year-old to read than two, and a near-miss she believes was right still needs the appeal."
+   },
+   {
+    "id": "widen-accept",
+    "name": "Widen acceptance and let the pair hold the line",
+    "summary": "Keep two states and widen what counts as correct, relying on the adversarial distractor set to stop it running away. Simpler on the page and no new vocabulary to teach her; the risk is exactly the one the paired gate exists for, and it concedes the diagnostic value of telling her she was close."
+   }
+  ],
+  "gate": {
+   "checks": [
+    {
+     "name": "build",
+     "kind": "build"
+    },
+    {
+     "name": "marking",
+     "kind": "smoke"
+    },
+    {
+     "name": "session",
+     "kind": "interaction"
+    }
+   ],
+   "required_tier": "interaction",
+   "artifacts": [
+    "harness/",
+    "package.json",
+    "package-lock.json"
+   ]
+  },
+  "slo": {
+   "metric_id": "false_negative_marks",
+   "threshold": 0,
+   "direction": "minimize",
+   "coverage_metric_id": "items_swept",
+   "coverage_min": 86
+  },
+  "benchmark": {
+   "harness": "harness/marking.mjs",
+   "command": "node harness/marking.mjs",
+   "fixed_workload": "Every marked item in the built slice, driven against a key-blind fixture set of legitimate answer variants AND an adversarial distractor set. Emits false_negative_marks, false_positive_marks, key_variant_coverage and items_swept. Baseline on the current engine over three mechanical variant classes: 41/62 = 0.661 false-negative rate; key_variant_coverage 275/1357 = 0.203"
+  },
+  "tasks": [
+   "Fix the misdiagnosis: order the two-answers check after near-miss detection so an internal comma never produces a false 'you wrote two answers' explanation. 67 keys in the corpus contain internal punctuation and every near-miss on them gets the same wrong story",
+   "Add the near-miss third state - key is a substring of the answer, answer is a superset of the key, or edit distance <= 1 on a single-token key. Not credited, not accused: 'not quite - here is the answer'. This is where 'yes, it is' lands",
+   "Build the fixture set key-blind: whoever writes fixtures sees the rendered question exactly as she sees it and never the key, then a human sorts the productions into accept/reject. This is the structural break - the bug came from writing the key first and imagining answers second, and without this the fixtures inherit the same blind spot",
+   "Harvest rather than invent: every appealed and every rejected answer becomes a fixture candidate. Real productions are the only source not derived from the author's model of the answer, and this is the set that would have caught 'yes, it is' on day one",
+   "Ship the appeal control: 'I think mine is right' records her answer locally, shows the keyed answer with its pre-generated explanation, and does NOT re-mark. A mark that mutates after commit is an edit of a committed attempt, and for a child that is worse than being wrong - it makes the app untrustworthy in both directions",
+   "Adversarial second-brain review by an opus subagent (briefed to disagree; codex is not used) before the boundary; commit the verdict as an artefact"
+  ]
+ },
+ {
+  "id": 4,
+  "active": true,
+  "decision_type": "correctness_call",
+  "title": "Marking that cannot be fooled: the false positive",
+  "objective": "Close the counter-gate. Drive false_positive_marks to zero over an adversarial distractor set while false_negative_marks stays at zero, so neither number was bought with the other. Refuse global lexical and grammatical variant matching, and enforce the D11 separation that keeps the fixture author from being the key author.",
+  "risk": "This milestone exists because the previous one is trivially satisfiable. An engine that accepts everything scores a perfect false-negative rate, so the false-negative gate means nothing until this one holds beside it - which is why the `marking` check runs both numbers on every boundary from milestone 2 on, and why a variant here that regresses false_negative_marks fails the check even with a green SLO. The specific false positives are known and lexical: shop/store, film/movie, have you got/do you have manufacture credit in exactly the exercises that test the distinction.",
+  "approach_candidates": [
+   {
+    "id": "key-local",
+    "name": "Every acceptable variant is written in its key",
+    "summary": "No global synonym table at all. Where a variant is genuinely acceptable it appears in that key ('shop/store'), so the exercise that tests the distinction simply does not list it. The key is the whole specification and an author can read what it accepts; the cost is that a genuinely general variant is written out many times."
+   },
+   {
+    "id": "scoped-classes",
+    "name": "Named variant classes a key opts into",
+    "summary": "Declare classes (spelling-uk-us, contraction, number-word) that a key opts into by name, so an exercise testing a distinction opts out of the class that would erase it. Less repetition than key-local and the classes are testable in isolation; the risk is a key whose behaviour is only legible if you also read the class table."
+   }
+  ],
+  "gate": {
+   "checks": [
+    {
+     "name": "build",
+     "kind": "build"
+    },
+    {
+     "name": "marking",
+     "kind": "smoke"
+    },
+    {
+     "name": "session",
+     "kind": "interaction"
+    }
+   ],
+   "required_tier": "interaction",
+   "artifacts": [
+    "harness/",
+    "package.json",
+    "package-lock.json"
+   ]
+  },
+  "slo": {
+   "metric_id": "false_positive_marks",
+   "threshold": 0,
+   "direction": "minimize",
+   "coverage_metric_id": "items_swept",
+   "coverage_min": 86
+  },
+  "benchmark": {
+   "harness": "harness/marking.mjs",
+   "command": "node harness/marking.mjs",
+   "fixed_workload": "Every marked item in the built slice, driven against a key-blind fixture set of legitimate answer variants AND an adversarial distractor set. Emits false_negative_marks, false_positive_marks, key_variant_coverage and items_swept. Baseline on the current engine over three mechanical variant classes: 41/62 = 0.661 false-negative rate; key_variant_coverage 275/1357 = 0.203"
+  },
+  "tasks": [
+   "Refuse global lexical and grammatical variant matching. shop/store, film/movie, have you got/do you have manufacture false POSITIVES in exactly the exercises that test the distinction. Where a variant is genuinely acceptable it goes in that key: 'shop/store'",
+   "Adversarial separation per D11: the fixture author is not the key author, and the same pass produces distractors that must stay rejected, so a generous engine cannot win",
+   "Hold false_negative_marks at zero while false_positive_marks goes to zero. The `marking` check runs the pair and neither number means anything alone - a variant that buys this milestone's SLO by regressing the previous one fails the check, not the SLO",
+   "Build the adversarial distractor set against the rendered question, not the key: near-synonyms the exercise is testing against, right-word-wrong-form, and answers correct for a neighbouring item. These must stay rejected",
+   "Adversarial second-brain review by an opus subagent (briefed to disagree; codex is not used) before the boundary; commit the verdict as an artefact"
+  ]
+ },
+ {
+  "id": 5,
+  "title": "The weekday loop: support that withdraws, and review that returns",
+  "active": true,
+  "objective": "Make the loop she does alone on a weekday work end to end - a session opens, is read with support placed where she actually stalls, is answered on, and enrols what it taught into a fixed-interval review queue that brings it back on a later day.",
+  "risk": "Support that does not withdraw is the failure this replaces: a word handed back three chapters later is scaffolding that never came down, and it is invisible without a gate. The review side carries the opposite risk - E5 forbids marking anything learned in the session that taught it, so a queue that flatters her by checking recall immediately measures nothing. Both are mechanically detectable and neither is visible by reading.",
+  "gate": {
+   "checks": [
+    {
+     "name": "build",
+     "kind": "build"
+    },
+    {
+     "name": "marking",
+     "kind": "smoke"
+    },
+    {
+     "name": "session",
+     "kind": "interaction"
+    }
+   ],
+   "required_tier": "interaction",
+   "artifacts": [
+    "harness/",
+    "package.json",
+    "package-lock.json"
+   ]
+  },
+  "slo": {
+   "metric_id": "gloss_reoffers",
+   "threshold": 0,
+   "direction": "minimize",
+   "coverage_metric_id": "items_swept",
+   "coverage_min": 10
+  },
+  "benchmark": {
+   "harness": "harness/support.mjs",
+   "command": "node harness/support.mjs",
+   "fixed_workload": "Every glossable item across the built slice, checked for repeat offers within and across sessions; plus every review-queue enrolment checked for same-session checking. Emits gloss_reoffers and items_swept"
+  },
+  "tasks": [
+   "Gloss what a grade-8 Vietnamese reader actually stalls on - phrases, idioms, phrasal verbs, not single words - in Vietnamese, once per item, then withdrawn",
+   "Gate the withdrawal: gloss_reoffers counts an item glossed twice within a session or re-glossed after withdrawal. Zero",
+   "Enrol what the session taught into the review queue, and gate that nothing is checked in the session that taught it (E5)",
+   "Rank review candidates produced-before-picked, so the queue takes the productive item rather than whatever classification drill happened to be printed above it",
+   "Committed marked attempts throughout, with retake as a new attempt: answers clear, history survives, both runs listed. No average across attempts (E3), no trend or 'better' (E9), no retake on a clock-spent task (C6, C7)",
+   "IELTS precursor skills woven in from the start, per the operator's decision and bounded by the evidence: synonym recognition under search conditions (04 §8.3, named auto-scorable and level-appropriate), confidence rating with calibration feedback (C10, 03 §6.6, overconfidence d = 0.62), obligatory-context accuracy on 3SG -s, articles and plurals. Format familiarisation is a ONE-OFF orientation per question type and is never the curriculum (09 §3.4 [INF])",
+   "Keep first_paint_ms and js_bytes green throughout - if it is slow to open it will not be opened unprompted, and the north-star metric dies before any pedagogy is tested",
+   "Adversarial second-brain review by an opus subagent (briefed to disagree; codex is not used) before the boundary; commit the verdict as an artefact"
+  ]
+ },
+ {
+  "id": 6,
+  "title": "Accountability she tolerates, and a Saturday worth having",
+  "active": true,
+  "objective": "Build the accountability step that the evidence says separates a medium effect from no effect, in a form a thirteen-year-old does not experience as homework - and make the week she did alone legible at the Saturday session without turning it into a score or an inspection.",
+  "risk": "The d = 0.51 versus d = 0.01 fork, and the milestone that most wants a tournament. Accountability absent is an effect indistinguishable from zero; accountability shipped as scoring is experienced as school, and the return metric dies quietly while every internal gate stays green. The Saturday surface carries its own risk: it is the independent measure E6 requires before any gain may be called a proficiency gain, and it stops being that the moment it becomes an inspection she performs for.",
+  "approach_candidates": [
+   {
+    "id": "owned-log",
+    "name": "The log she owns and reads back",
+    "summary": "A visible record of what she has read, in her own words, that she reads back rather than is scored on. The only candidate with a named warrant: B9 and 09 §7 rank 2 both name the reading log as the mechanism, and it is the d = 0.51 arm made concrete. Risk: a log nobody reads is a chore with no payoff, which is what the Saturday session is for."
+   },
+   {
+    "id": "in-story-gate",
+    "name": "The next chapter is earned",
+    "summary": "Accountability hidden inside the fiction - the next beat opens once she has answered on the last one. Cheap, needs no separate surface, and aligns directly with unprompted return. Sharp constraint: the gate must be on the MARKED OUTPUT, never on time spent or completion, because gating on completion makes the story the reward and English the tax, which inverts the entire thesis."
+   },
+   {
+    "id": "saturday-review",
+    "name": "The uncle is the accountability, and the measure",
+    "summary": "The weekly shared session is the accountability step: ten unstructured minutes asking her about what she read. Uniquely available here and the closest analogue to the classroom-mediated evidence base, which is exactly what the self-study GAP says is missing. Its second job matters more: E6 forbids calling our own test gains proficiency gains without an independent measure of the same ability, and this is the only independent measure that exists. Risk: it depends on the session actually happening every week, and on it staying a conversation."
+   },
+   {
+    "id": "quiz-after",
+    "name": "The short quiz after reading",
+    "summary": "Named explicitly by B9 as an accountability form - 'a log, quiz, or report'. Included deliberately because the case against it in the prior-art scan is Tier-3 folklore that G4 forbids as a warrant, and designing away from the quiz on folklore would trade the d = 0.51 arm for the d = 0.01 arm. Constraint from that same folklore, treated as a hypothesis rather than a finding: ask about what happened, not about detail."
+   }
+  ],
+  "gate": {
+   "checks": [
+    {
+     "name": "build",
+     "kind": "build"
+    },
+    {
+     "name": "marking",
+     "kind": "smoke"
+    },
+    {
+     "name": "session",
+     "kind": "interaction"
+    }
+   ],
+   "required_tier": "interaction",
+   "artifacts": [
+    "harness/",
+    "package.json",
+    "package-lock.json"
+   ]
+  },
+  "slo": {
+   "metric_id": "returns_unprompted",
+   "threshold": 3,
+   "direction": "maximize",
+   "coverage_metric_id": "items_swept",
+   "coverage_min": 4
+  },
+  "benchmark": {
+   "harness": "harness/return.mjs",
+   "command": "node harness/return.mjs",
+   "fixed_workload": "Every record in the operator's observation file — .specs/prototype/story-english.observations.json in the MAIN worktree, or $ATELIER_RETURNS_OBSERVATIONS — validated and counted as distinct WEEKDAY dates recorded as an unprompted open. The number is not derived from anything the build produces: the charter holds that the app's local activity log corroborates but cannot establish it, because no log distinguishes a prompted open from an unprompted one. A path resolving INSIDE the build tree is refused rather than read, so a tournament variant cannot author its own north star. The harness reads the activity log where present and reports disagreement in both directions without letting it move the metric, refuses Saturday by construction, and fails on an absent observation file so that 'nobody looked' and 'she did not come back' cannot produce the same green. coverage_min 5 forces a full weekday week, prompted days included, so the number cannot be cherry-picked. Emits returns_unprompted and items_swept. band_tokens_emitted keeps its teeth on every boundary through the `session` interaction check, which runs harness/surfaces.mjs; baseline 0 across 103 pages."
+  },
+  "tasks": [
+   "Track weekday activity locally and make it legible on Saturday - what she read, what came back for review, what she is in the middle of. Never a score, a percentage, a total or a composite (D3, E1, A2)",
+   "Ship no streak. The north-star metric IS unprompted return; a streak optimises it directly and destroys its interpretability, so after one ships you can no longer tell whether she came back for the product or the number. If ever, only after a clean baseline",
+   "The interface still explains nothing about itself: no criterion names, no CEFR labels, no evidential markers, no citations, on any surface including the Saturday one",
+   "Record the weekly observation out of band - weekday days opened unasked, and sessions started - and keep it out of the interface entirely",
+   "Adversarial second-brain review by an opus subagent (briefed to disagree; codex is not used) before the boundary; commit the verdict as an artefact",
+   "Record the week in observations/returns.json at the Saturday session - one entry per weekday, `unprompted` being the operator's judgement and the only source for it. The gate stops here for a human by design; a headless run cannot see whether a child came back"
+  ]
+ }
+]

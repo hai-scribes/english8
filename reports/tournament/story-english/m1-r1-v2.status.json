@@ -1,0 +1,13 @@
+{
+  "variant_key": "m1-r1-v2",
+  "pid": 49779,
+  "updated_at": "2026-08-16T21:06:40Z",
+  "agent_id": "prototype-story-english-m1-r1-v2",
+  "variant_id": 2,
+  "milestone_id": 1,
+  "round_id": 1,
+  "phase": "finished",
+  "status": "gate_passed",
+  "gate_passed": true,
+  "benchmark_value": 400.0
+}

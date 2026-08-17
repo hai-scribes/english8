@@ -1,4 +1,5 @@
 ---
+description: "Single entry to the prototype lane — resume an existing prototype, or create a new one."
 disable-model-invocation: true
 ---
 
@@ -45,6 +46,29 @@ atelier prototype start <slug>
 This atomically creates branch `prototype/<slug>` and worktree `.worktrees/prototype-<slug>/` **forked from the project default branch (`main` — the develop main lane's code)**, writes lane state, and captures the `PROTOTYPE_MODE=1` env contract that short-circuits every gate (Scribe / Auditor / RED / GREEN / HMAC) inside the worktree. (Refuses on an unborn HEAD → run `atelier init` first; on the parallel cap, default 5; on residue from an aborted attempt.)
 
 **Free-form hacking is now available with no further ceremony.** Inside this worktree you can just ask the AI to build/edit UI ("add a login screen", "make the header sticky") and it commits straight onto `prototype/<slug>` — no charter, no gates, no command. The goal flow below is the *scaffolding that unlocks autonomy + measurable boundaries*; it is NOT required to iterate. If the operator only wants to hack, stop here and build.
+
+## Step 3.5 — Stand up the harness (W9.11 — do this FIRST)
+
+`prototype start` returns a `harness` block. While `harness.ready` is false this lane cannot run, drive or observe its own build — so every "does it actually work?" question gets handed back to the operator, and `/prototype-auto` has nothing to certify against. **Build the harness before you build features.**
+
+This is your job, not the operator's. It is the same division `/develop` uses for `INTERACTION_TEST_CMD`: the framework owns the contract, you own the tooling choice. **Do not prescribe from habit** — a Next.js app, a Rust CLI, an HTTP API and a Flutter target need four different harnesses, and you hold the product context that decides which.
+
+Author `.specs/prototype/<slug>.checks.yaml`:
+
+- **`kind: build`** — the compile/typecheck signal, so a compile break reads as a compile break rather than a mystery interaction failure.
+- **top-level `serve:`, if the product serves** — `command` + `ready_command` (any shell command polled until it exits 0: an HTTP probe, `nc -z`, a log-line grep, a device probe), optional `ready_timeout_seconds` / `stop_timeout_seconds` / `setup`. **Bind the port from `${ATELIER_VARIANT_PORT:-<default>}`, never a literal** — a tournament runs variant worktrees concurrently and a hard-coded port makes them fight over one socket, failing a variant for a reason unrelated to its work. The framework boots it once, waits for readiness, runs every scenario against it, then reaps the whole process group and keeps `serve.log`. Never hand-roll boot/teardown inside a scenario `command`, and **never** ask the operator to start a dev server in another terminal — that is exactly the manual step this block removes.
+- **≥1 `kind: interaction`** that drives the product and **asserts observable output**. A command that merely exits 0 is a mislabelled smoke check; it defeats the guarantee the tier exists for and lets a run certify a product that does not work.
+- **idempotent `setup:`** recording whatever install the driver needs (`[ -d node_modules ] || npm ci`), so a fresh tournament variant worktree bootstraps itself.
+- **The scenario `name`s you pick here become the milestone's `gate.checks` names.** `approve-milestone` refuses unless the two sets match exactly, so choose names you are willing to reuse verbatim at Step 6 — otherwise the freeze fails for a reason that looks unrelated to anything you did here.
+
+Then run `atelier prototype check <slug> --agent` and iterate until the harness **executes** cleanly. Scenarios may still FAIL their assertions — the feature isn't built. What must not survive: a scenario that cannot execute (exit 126/127), a `serve:` that never reaches readiness, an interaction check that asserts nothing.
+
+`atelier prototype harness status <slug> --agent` answers "is it ready?" at any point and always carries the brief. Every run's logs land in `.atelier/harness/` inside the worktree (`serve.log`, `<scenario>.out.log`, `<scenario>.err.log`) — **read them instead of asking the operator what happened.**
+
+Two boundaries worth keeping straight:
+
+- **The harness must exist before the freeze.** `approve-milestone` hash-binds checks.yaml into the milestone gate, and a variant that edits its own measuring stick is disqualified — so a goal run will *not* bootstrap a harness mid-tournament. Build it here, at Step 3.5, not later.
+- **Never weaken the gate to make it green.** `command: "true"`, an assertion-free interaction check, or a quietly deleted scenario buys a green that certifies nothing.
 
 ## Step 4 — Goal discovery (create-new; the charter)
 
@@ -97,7 +121,7 @@ Propose ordered milestones, **design-risk-first**. Each carries: a non-empty **`
 echo '<milestones-json-list>' | atelier prototype goal propose <slug> --set-json - --agent --compact
 ```
 
-Confirm the **cut line** with the operator (active vs deferred). Before freezing, author the **executable gate** — `.specs/prototype/<slug>.checks.yaml` — whose scenario set matches the milestone's `gate.checks` names (one slug-level checks.yaml gates the goal; `prototype check` runs ALL its scenarios — there is no per-milestone selection in v1). **The shared `checks.yaml` must carry ≥1 `kind: interaction` scenario before ANY milestone can run** — the working-UI guard checks the one shared file, so even a non-final milestone run is refused (exit 2) until the interaction scenario exists. Author it up front; it is what certifies the final milestone's working UI but is *present* from the first run. Then they freeze each active milestone's gate (every benchmark must trace to a charter metric — CLI-enforced):
+Confirm the **cut line** with the operator (active vs deferred). The **executable gate** — `.specs/prototype/<slug>.checks.yaml` — was authored at **Step 3.5**; here you only reconcile it with the plan: the milestone's `gate.checks` names MUST equal the scenario set already in the file (rename on ONE side, not both, and re-run `atelier prototype check <slug>` after any edit) (one slug-level checks.yaml gates the goal; `prototype check` runs ALL its scenarios — there is no per-milestone selection in v1). **The shared `checks.yaml` must carry ≥1 `kind: interaction` scenario before ANY milestone can run** — the working-UI guard checks the one shared file, so even a non-final milestone run is refused (exit 2) until the interaction scenario exists. Author it up front; it is what certifies the final milestone's working UI but is *present* from the first run. Then they freeze each active milestone's gate (every benchmark must trace to a charter metric — CLI-enforced):
 
 ```bash
 atelier prototype goal approve-milestone <slug> <id> --agent --compact
@@ -188,7 +212,7 @@ atelier prototype goal approve-boundary <slug> <id> --proceed [--tryout-note "�
 
 ## Notes for the AI running this command
 
-- **DO NOT pre-write a spec YAML.** The spec is *extracted from the validated prototype later* via `/promote` (UC9 step 5).
+- **DO NOT pre-write a spec YAML.** The spec is *extracted from the validated prototype later* via `/promote` (UC9 primary flow).
 - **You never freeze a gate or charter** — that's the operator's act (`approve-*`). You propose inert `proposed` records.
 - **Never let narrative govern** — milestones derive from approved machine fields, not charter prose. Tag every inferred claim as an `ai_inferred` assumption; surface them at approval.
 - **Free-form hacking needs no goal.** If the operator just wants to explore UI, the worktree (PROTOTYPE_MODE=1) is enough; the charter is only for measurable / autonomous runs.

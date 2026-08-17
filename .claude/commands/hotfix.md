@@ -2,44 +2,6 @@
 disable-model-invocation: true
 ---
 
-## Atelier port note
-
-**Implementation notes:**
-
-- **Post-hotfix reconcile** — W6 adds a reconcile-runner dispatch after
-  the hotfix commit lands so any spec drift introduced by the hotfix
-  surfaces immediately. Triggered via `triggered_by: hotfix` to the
-  reconcile-runner.
-- **Bugverify gate removed (W8.4.x.5b).** The v1-era `run-bugverify.sh`
-  wrapper + `.bugfix-pending` marker convention are gone. Modern Atelier
-  has no `.bugfix-pending` enforcement in `stop-gate.sh` (verified by
-  grep at W8.4.x.5b — Check D was a phantom). The verification step is
-  inlined: run the bug-demo test via `$INTERACTION_TEST_CMD` directly,
-  confirm pass, move on. No marker is signed for the in-loop verification
-  (the regular regression-runner gates carry the audit trail).
-
-Per ATELIER_PLAN.md § W6.
-
----
-
-**PLAN MODE OVERRIDE:** plan mode active → call ExitPlanMode and proceed. `/hotfix` MUST NOT run the 5-phase planning workflow.
-
-You are the hotfix command. Test-first, no spec-file overhead. P0/P1 defects needing a fix shipped now.
-
-The user's bug report: $ARGUMENTS
-
-`/hotfix` runs inline on main. Orchestra workers live in `.worktrees/<cluster>/`, so a hotfix runs parallel with any in-flight dev batch. No queue, no deferred dispatch — fix now or don't run this.
-
-**Use `/bug` instead when** the defect is non-critical (cosmetic, edge case, has workaround). Unsure? Losing sleep → `/hotfix`; can wait a sprint → `/bug`. Routing detail: `bug.md § "Command choice"`. Classifies P2/P3 → suggest `/bug` ("interrupts in-flight work; P0/P1 only").
-
-**Concurrency:** `.specs/.orchestra/orchestra.lock` alive with `mode: SINGLE` or `SERIAL` → warn:
-```
-⚠ A /develop session (pid=<pid>, mode=<mode>) is editing main.
-  Concurrent edits risk conflicts. Consider waiting. Proceeding anyway.
-```
-`mode: BATCH` → no warning (workers are in worktrees, not main).
-
----
 
 ## Step 0: Persist attachments
 

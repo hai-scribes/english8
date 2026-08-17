@@ -21,3 +21,12 @@ node_modules/
 saved-progress/*.md
 
 saved-progress/archive/*.md
+
+# Atelier prototype-lane transients. The lane's PLAN (.specs/prototype/*.json,
+# *.yaml, *.md) and its RUN EVIDENCE (reports/*.json, *.html) are worth keeping;
+# these are not. Locks are per-process and meaningless once it exits; the
+# per-variant event streams are live progress telemetry the dashboard tails.
+.specs/prototype/.cap-lock
+.specs/.orchestra/
+reports/*.lock
+reports/.*.lock

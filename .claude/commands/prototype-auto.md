@@ -1,4 +1,5 @@
 ---
+description: "Unattended prototype lane — same setup as /prototype create-new, auto-advancing each green boundary."
 disable-model-invocation: true
 ---
 
@@ -16,7 +17,35 @@ Do the **entire `/prototype` create-new (or resume) flow first** — Steps 1–6
 
 If the operator already set the goal up via `/prototype` and just wants to finish it autonomously, resume that slug instead of re-running discovery.
 
+**The harness is part of that setup and it is YOURS to build (W9.11).** `/prototype` Step 3.5 — author `checks.yaml` with a `kind: interaction` scenario, plus a top-level `serve:` block if the product serves — must be done before the milestone freeze, because `approve-milestone` hash-binds the gate and a variant that edits its own measuring stick is disqualified. A goal run therefore will **not** bootstrap a harness mid-tournament; it refuses with **exit 2** at the run guard (and shows `interaction_gate` red under preflight) instead. Never carry this back to the operator as "please add a check" — check `atelier prototype harness status <slug> --agent` and build what it asks for.
+
 Confirm the operator understands the run will be **unattended**: it will advance every green milestone boundary by itself and stop only at the goal, a real blocker, or a budget cap. One confirmation, then go.
+
+### What this costs — say it before they confirm
+
+An unattended run spends real money, and the two knobs that decide how much are
+not obvious from their names. Before the confirmation, state the shape:
+
+- **`n_variants` is a cost multiplier, not just a latency knob.** The docs
+  advertise parallel variants as a 2.2–2.5× wall-clock speedup; the same fan-out
+  is an ~N× *token* multiplier, because every variant is a full worker session
+  and all but the winner are discarded. A measured 3-wide run spent **$119.96 /
+  342.3M tokens / 3,710 worker turns to land two milestones.**
+- **`max_cycles_per_milestone` is a milestone TOTAL that gets divided**, not a
+  per-worker allowance: per-variant = `floor(0.8 × total / (n_variants ×
+  max_rounds))`. Get this wrong and each variant gets a single attempt with no
+  iteration — preflight's `budget_shape` check now flags that shape explicitly.
+- **`max_wall_minutes` does not govern cycles.** It sets the round's shared wall
+  deadline only. If variants are ending `budget_exhausted` after one attempt,
+  raising this changes nothing — raise `max_cycles_per_milestone` or lower
+  `n_variants` instead.
+
+Milestones typed `correctness_call` or `provider_probe` resolve to **1 variant**
+automatically (one right answer is observed, not raced); only `perf_bakeoff`
+needs ≥2. Set `run.worker.autocompact` and `run.worker.orientation_file` unless
+there is a reason not to — an uncapped worker context and a worker that
+rediscovers the repo every cycle were together the largest share of that
+measured spend.
 
 ## Step 2 — Run unattended
 
@@ -60,7 +89,8 @@ Always name the stacked report path `reports/prototype-<slug>.html` (and the run
 - **Setup is never automated.** The charter / milestone gates / benchmarks are operator-frozen up front — that freeze is the trust anchor that makes unattended running safe. You propose; the operator `approve-*`s.
 - **Auto mode only auto-decides GREEN boundaries.** A non-green terminal, a hash mismatch, or an unrunnable milestone is a hard must-stop — recorded, never fake-advanced. It never auto-edits/pivots the frozen plan.
 - **DO NOT treat `blocked` / `stuck` / `stopped_by_cap` as "almost done" and silently re-launch.** They are terminal stop reasons with causes in the report.
-- **The final milestone's interaction-tier is non-negotiable** — "verified by build" still requires a passing `kind: interaction` scenario.
+- **The final milestone's interaction-tier is non-negotiable** — "verified by build" still requires a passing `kind: interaction` scenario. W9.11 changed WHO builds it (you, at `/prototype` Step 3.5), never whether it is required.
+- **Never ask the operator to verify a build by hand.** The lane runs, drives and observes the product itself: `serve:` owns boot/readiness/teardown, and every run writes `.atelier/harness/` in the worktree (`serve.log` + per-scenario `.out.log`/`.err.log`), fed back into the next cycle automatically. "Can you open it and click through?" means the harness is incomplete — fix the harness.
 - **Run backgrounded**, not foreground; for a run that must outlive your session, hand the operator the `! atelier prototype run <slug> --auto --max-wall-clock-sec 0` form.
 - **Operator-initiated, not worker-callable** — it spawns worktree-mutating sessions; a supervised worker must never trigger an autonomous run. ("worker-callable" = the supervised *sub-agents* the pipeline spawns — NOT the operator's interactive Claude session. You, the AI driving the operator's session, DO run this on the operator's behalf; the restriction is on pipeline-spawned subagents, not on you.)
 - **One auto run per slug** — the per-slug lock refuses a second concurrent run (exit 8). Distinct slugs run concurrently.
