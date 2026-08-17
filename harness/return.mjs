@@ -19,7 +19,13 @@
  * because "nobody looked" and "she did not come back" must not produce the
  * same green.
  *
- * Observation file — `observations/returns.json`, or $ATELIER_RETURNS_OBSERVATIONS:
+ * Observation file — `.specs/prototype/story-english.observations.json` in the
+ * MAIN worktree (never this one; see the refusal below), or wherever
+ * $ATELIER_RETURNS_OBSERVATIONS points. The path is resolved by the code a few
+ * lines down and is stated here verbatim on purpose: an earlier draft of this
+ * comment named `observations/returns.json`, which the harness has never read,
+ * so an operator following it would have written a file nothing opens and got a
+ * failing gate that said the observation was missing.
  *
  *   {
  *     "records": [
