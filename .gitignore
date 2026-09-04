@@ -21,3 +21,10 @@ node_modules/
 saved-progress/*.md
 
 saved-progress/archive/*.md
+
+# Firebase emulator debug logs — serve.mjs runs the emulators with cwd set to
+# the variant TMPDIR so these land there, but a stray run from the worktree
+# would drop them here.
+firestore-debug.log
+ui-debug.log
+firebase-debug.log
