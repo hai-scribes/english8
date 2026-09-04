@@ -1,0 +1,202 @@
+{
+  "approvals": [],
+  "created_at": "2026-09-04T17:41:47.019Z",
+  "current_milestone": null,
+  "goal": {
+    "charter": {
+      "approved_at": null,
+      "approved_risks": [],
+      "assumptions": [
+        {
+          "id": "a-google-account",
+          "provenance": "ai_inferred",
+          "text": "The learner has, or can be given, a Google account she can sign in with on her own phone. If she does not, the entire sign-in premise fails and the fallback is export/import."
+        },
+        {
+          "id": "a-spark-sufficient",
+          "provenance": "ai_inferred",
+          "text": "One learner's traffic stays far inside the Spark daily quotas of roughly 50,000 reads and 20,000 writes. A progress document is a few KB and a study session writes on the order of tens of times, so the estimate is that usage lands under 0.1% of the write quota. The quotas are published; this application of them to this learner's volume is inferred."
+        },
+        {
+          "id": "a-local-first-required",
+          "provenance": "ai_inferred",
+          "text": "Instant and offline together force a local-first architecture — reads and writes hit local storage synchronously and a sync engine reconciles afterwards — rather than reading through to Firestore with a cache. This is a design inference, and the falsifiable form of it is render_path_cloud_reads: if the cloud is in the render path, this assumption was wrong or was not implemented."
+        },
+        {
+          "id": "a-eleven-keys-portable",
+          "provenance": "codebase_observed",
+          "text": "The eleven existing en8: localStorage keys can be carried to a per-account record and back without changing how the marking engine, review queue or writing panel serialise anything — i.e. the sync layer can sit underneath the existing app rather than inside it. Read from the code, not verified by building it."
+        },
+        {
+          "id": "a-daily-not-streak",
+          "provenance": "ai_inferred",
+          "text": "The operator's 'save progress, daily, weekly works' means persisting and showing the record of work done per day and per week, NOT a streak counter or a score. This reading is what makes the request compatible with app.js's own rule that the log must never become a score, a rate, a streak or a comparison. If a streak is actually wanted, that rule has to be changed deliberately first, and this charter is the wrong instrument for it."
+        },
+        {
+          "id": "a-emulator-fidelity",
+          "provenance": "ai_inferred",
+          "text": "The Firebase Auth and Firestore emulators are faithful enough that a green gate against them predicts correct behaviour against the real project — in particular that the rules engine evaluates identically. Firebase documents the emulators as behaviour-compatible; that this holds for the specific rules this lane writes is not independently verified here."
+        },
+        {
+          "id": "a-100ms-is-instant",
+          "provenance": "ai_inferred",
+          "text": "100ms at the 95th percentile under a 4x CPU throttle is a defensible operational reading of 'instant' for a click-to-paint interaction. The threshold is a judgement call encoding the usual direct-manipulation feedback bound, tightened by the fact that a local-first design has no network in the path and so has no excuse for missing it."
+        },
+        {
+          "id": "a-sw-safe-with-hashed-assets",
+          "provenance": "codebase_observed",
+          "text": "A service worker can cache the 103 pages and their assets without shipping stale code, because build.py already content-hashes app.js and app.css into their query strings and build.py's own comment records that GitHub Pages serves assets with max-age=600. The hazard a service worker adds is caching the HTML that names those hashes; the assumption is that this is solvable with a network-first strategy for documents."
+        },
+        {
+          "id": "a-no-storage-needed",
+          "provenance": "ai_inferred",
+          "text": "Nothing this lane needs requires Cloud Storage for Firebase. Progress is JSON documents in Firestore; art and audio stay in the static build. This is what keeps the project on Spark, and it is stated as an assumption because a design that later wanted to sync, say, a learner's own recordings would break it."
+        }
+      ],
+      "charter_status": "proposed",
+      "constraints": [
+        "The push is the deploy. GitHub Pages serves docs/ from main with no CI between a commit and the live site, so docs/ must equal a fresh build and all nine gates must be green before any push. The pre-push hook enforces it; nothing downstream will.",
+        "docs/ is generated and must never be hand-edited. Every change lands in units/*.md, tools/assets/app.js or tools/build.py and is regenerated. The build is deterministic, which is what makes the docs==fresh-build check meaningful.",
+        "Spark plan only. No payment method is ever attached, which is what makes the free guarantee structural rather than a matter of watching a meter. Cloud Storage for Firebase is therefore unavailable and must not be reached for.",
+        "The Firebase web config is public by design and ships in the static build; security is enforced by Firestore rules, not by hiding the config. The rules are therefore product code and are gated against the real emulator.",
+        "Nothing on a page explains the design. No criterion names, no evidential markers, no CEFR levels, no citations — CLAUDE.md's rule about the audience, which the new sync and rhythm surfaces are as bound by as any lesson page.",
+        "A grade-8 learner is the user. Every state the sync surface can be in has to be readable by a thirteen-year-old, including the failure states.",
+        "The learner's data is a child's schoolwork. Cross-account isolation is a safety property, not a feature, and is gated against the real rules engine rather than a stub.",
+        "The Firestore emulator is a Java program and the Auth emulator is not. OpenJDK 26 is installed; the harness resolves the keg-only path itself rather than depending on a configured shell profile."
+      ],
+      "content_sha256": null,
+      "deferred": {},
+      "desired_outcome": "She signs in once with the Google account she already has, and from then on her work follows her: every device she signs in on shows the same progress, the same daily and weekly record of what she has done, and the same state she left. It stays instant — every interaction answers from local storage, never from a round trip — and it keeps working with no network at all, because a learner on a phone is regularly on no network. Everything the app does on her behalf is visible while it happens: there is no moment where the page is talking to a server and not saying so.",
+      "kill_criteria": [
+        "The learner cannot complete Google sign-in on her own phone without help — an account system a child cannot get through is worse than localStorage, which at least never asks.",
+        "p95 interaction latency cannot be held at or under 100ms with sync enabled, meaning the feature made the app perceptibly slower in exchange for durability. Instant was an explicit requirement, not a nice-to-have.",
+        "Cross-account isolation cannot be demonstrated against the real rules engine. Shipping a version where one account might read another's work is not an option at any level of usefulness.",
+        "Carrying the eleven existing en8: keys turns out to require changing how the marking engine or the review queue stores anything, i.e. the layer cannot go underneath the existing app and has to reach into it.",
+        "Staying inside the Spark quotas requires a sync design so coarse that work is lost between devices — in which case the honest conclusion is export/import rather than a sync that silently drops writes."
+      ],
+      "problem": "One Vietnamese grade-8 learner, ~13, studies English on a phone. Everything she has done lives in eleven localStorage keys on one browser on one device: 319 marked tasks, twelve writing tasks, her highlights, her notes, her attempt history. That storage is invisible, unbacked and untransferable. Clearing site data erases a year of work with no warning and no recovery; a new phone starts her at zero; and a tablet in another room is a different learner as far as the app is concerned. She also cannot see what she has done lately — the app records every attempt but shows her no account of her own week, so 'have I done anything this week?' is a question the software holds the answer to and does not answer. The site is static, served straight from docs/ by GitHub Pages with no server between a commit and the live page, so none of this can be fixed on the page alone.",
+      "readiness": {
+        "designer": [],
+        "developer": [],
+        "owner": []
+      },
+      "scope": {
+        "in": [
+          "Sign-in with Google, from the page, ending in a session that survives a reload and a new device — and a sign-out that actually ends it",
+          "Every existing en8: local key carried to a per-account record and back: progress, task attempts, writing, highlights, notes, review queue, story reading, single-play flags",
+          "A dated record of the work done each day, rolled up by week, that travels with the account and is shown to the learner as an account of her own week",
+          "A visible sync surface: who is signed in, what state the sync is in, when it last succeeded, and what went wrong when it did not — such that no network request the page makes is invisible while it is in flight",
+          "Local-first read and write, so that every interaction is answered from local storage and reconciled afterwards; the cloud is never in the render path",
+          "Offline operation of the lesson pages and their assets via a service worker, including work done offline reconciling when the network returns",
+          "Firestore security rules, gated against the real emulator, such that one signed-in account cannot read another's work",
+          "The harness that measures all of the above, and the performance budget it enforces"
+        ],
+        "out": [
+          "The paid Blaze plan, and therefore Cloud Storage for Firebase, which has required Blaze since 2026-02-03. This is a hard non-goal, not a preference: Spark has no payment method attached, so an exceeded quota fails and resets rather than billing, and that property is the whole basis of the free guarantee. Any design that reaches for Cloud Storage forfeits it",
+          "Moving art, audio or lesson content to a backend. Immutable assets stay in the static build, served by GitHub Pages, which is already a CDN; only mutable per-user state goes to Firestore. At ~1.06MB of shipped assets against a 1GB limit there is no size pressure arguing otherwise",
+          "A streak, a score, a percentage, a progress dial, a band number or any comparison with another person, over the new daily/weekly record or anywhere else. app.js already states this rule over the reading log; CLAUDE.md states the band-number half repo-wide",
+          "Any account system other than Google sign-in — no passwords, no email links, no anonymous accounts to migrate later",
+          "Multi-user features: sharing, a teacher view, a parent dashboard, or anything that shows one person another person's work",
+          "Server-side rendering, a build step on the server, or any change to how GitHub Pages publishes the site — the push stays the deploy",
+          "Changing what the lessons teach, how tasks are marked, or any curriculum content. This lane adds a layer under the existing app; the 328 covered targets and the nine content gates must come through untouched"
+        ]
+      },
+      "sources": [],
+      "success_metrics": [
+        {
+          "benchmark_candidate": "node harness/identity.mjs",
+          "evidence_strength": "direct",
+          "id": "auth_contract_violations",
+          "measurable_form": "Number of violations of the sign-in contract, driven through the page in a real browser against the Firebase Auth emulator: the page declares signed-out before sign-in, the Google flow completes and names who signed in, the session survives a reload, and sign-out returns it to signed-out. Target 0 with auth_flows_swept >= 4.",
+          "priority": "critical",
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "node harness/sync.mjs",
+          "evidence_strength": "direct",
+          "id": "sync_mismatches",
+          "measurable_form": "Number of failures of the cross-device round trip, measured with separate browser contexts as separate devices: work done on device A appears on device B after signing in as the same learner; work done offline reaches a third device after reconnecting. Target 0 with sync_roundtrips_swept >= 4.",
+          "priority": "critical",
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "node harness/rhythm.mjs",
+          "evidence_strength": "direct",
+          "id": "rhythm_defects",
+          "measurable_form": "Number of defects in the daily and weekly record, exercised across two different dates in one ISO week with the browser clock overridden: work is recorded against the day it was done, an earlier day survives a later one rather than being overwritten, and the week is shown to the learner as a rollup. Target 0 with rhythm_days_swept >= 4.",
+          "priority": "critical",
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "node harness/session.mjs",
+          "evidence_strength": "direct",
+          "id": "silent_network_ops",
+          "measurable_form": "Number of network requests to a backend origin that left the page while the visible sync indicator read idle or synced. Sampled inside the request handler at the moment the request is issued, not asserted afterwards, because a state that flickers back before an assertion runs is precisely the hidden process being looked for. Target 0, and only counted once sync_states_surfaced >= 4 proves the UI was actually driven through its states.",
+          "priority": "critical",
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "node harness/speed.mjs",
+          "evidence_strength": "direct",
+          "id": "p95_interaction_ms",
+          "measurable_form": "95th percentile milliseconds from a click to the next painted frame, over at least 12 samples, at 390px width under a 4x CPU throttle. The 95th percentile rather than the mean, because the mean hides the occasional stall a learner is the one who notices. Target <= 100ms with speed_probes_swept >= 3.",
+          "priority": "critical",
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "node harness/sync.mjs",
+          "evidence_strength": "direct",
+          "id": "cross_account_leaks",
+          "measurable_form": "Number of times a signed-in account received another account's work, measured against the real Firestore emulator running the shipped firestore.rules. Target 0. This is the failure that exposes a child's work to a stranger, and it is the one a stub backend cannot detect at all.",
+          "priority": "guardrail",
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "node harness/speed.mjs",
+          "evidence_strength": "direct",
+          "id": "render_path_cloud_reads",
+          "measurable_form": "Number of backend requests the page waits on before it is usable, measured by loading a lesson cold with every non-origin request aborted and counting whether the lesson still rendered. Target 0. This is an architectural claim rather than a tuning one: a local-first page paints from its own storage and reconciles afterwards.",
+          "priority": "guardrail",
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "node harness/rhythm.mjs",
+          "evidence_strength": "direct",
+          "id": "forbidden_surfaces",
+          "measurable_form": "Number of streak, score, percentage-complete or band-number surfaces found in the rendered page text. Target 0. A dated work record is exactly where a streak counter appears, and app.js forbids one in its own words.",
+          "priority": "guardrail",
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "node harness/build.mjs",
+          "evidence_strength": "direct",
+          "id": "repo_gate_failures",
+          "measurable_form": "Number of the repository's own nine content gates that fail after this lane's changes. Target 0. Everything here lands in the same app.js and build.py that render 103 pages of curriculum, so a sync feature that quietly broke the marking engine would otherwise reach a green interaction gate.",
+          "priority": "guardrail",
+          "verification_mode": "automated"
+        }
+      ],
+      "target_users": "One named learner: the operator's niece. Vietnamese, grade 8, ~13, phone-first. The usage rhythm is structural rather than incidental — she works with her uncle one morning a week and alone on weekdays — which is why cross-device matters concretely: the Saturday session and the weekday sessions are not reliably the same device, and a progress record that does not travel silently splits her work in two. She is a child, not a tester: an error she cannot interpret is an error that ends the session, and anything the app does on her behalf that she cannot see is something she cannot trust.",
+      "tier": "prototype",
+      "user_access_plan": "The learner is the operator's niece and is directly reachable, so nothing here needs a recruited study. Every metric in this charter is machine-measured against the real product driven in a real browser, so none of them depends on her availability. What she is needed for is the one thing the harness cannot check: whether the sign-in flow and the sync surface are comprehensible to a thirteen-year-old on her own phone. That is an observation the operator makes at the Saturday session after the lane lands, and it is deliberately not encoded as a metric here, because a number invented for it would be a number nobody measured."
+    },
+    "final_gate": null,
+    "text": "Sign in with Google and carry every learner's progress, daily and weekly work across devices — instantly, offline-capable, with every sync visible on the page"
+  },
+  "milestones": [],
+  "run": {
+    "max_cycles_per_milestone": 60,
+    "max_rounds": 2,
+    "max_wall_minutes": 75,
+    "n_variants": 1,
+    "no_progress_limit": 3,
+    "worker": {
+      "autocompact": "150k",
+      "orientation_file": ".specs/prototype/learn-anywhere.orientation.md"
+    }
+  },
+  "schema_version": 1,
+  "slug": "learn-anywhere",
+  "state": "proposed",
+  "updated_at": "2026-09-04T17:48:49.239Z"
+}
