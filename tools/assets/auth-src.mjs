@@ -41,30 +41,40 @@ function paintSignedIn(user) {
 if (!cfg) {
   setState("error");
 } else {
-  const app = initializeApp(cfg);
-  const auth = getAuth(app);
-  if (cfg.emulators?.auth) {
-    connectAuthEmulator(auth, cfg.emulators.auth, { disableWarnings: true });
-  }
-  setPersistence(auth, indexedDBLocalPersistence).catch(e => {
-    console.warn("en8: persistence could not be set", e);
-  });
-
-  onAuthStateChanged(auth, user => {
-    if (user) paintSignedIn(user); else paintSignedOut();
-  });
-
-  signinBtn?.addEventListener("click", async () => {
-    setState("signing-in");
-    try {
-      await signInWithPopup(auth, new GoogleAuthProvider());
-    } catch (e) {
-      console.warn("en8: sign-in failed", e);
-      paintSignedOut();
+  (async () => {
+    const app = initializeApp(cfg);
+    const auth = getAuth(app);
+    if (cfg.emulators?.auth) {
+      connectAuthEmulator(auth, cfg.emulators.auth, { disableWarnings: true });
     }
-  });
 
-  signoutBtn?.addEventListener("click", () => {
-    signOut(auth).catch(e => console.warn("en8: sign-out failed", e));
-  });
+    /* Awaited, not fire-and-forget: a sign-in that lands before this resolves
+       is stored under whatever persistence the SDK defaults to, not
+       indexedDB — signed in, but gone on the very reload this exists to
+       survive. The sign-in button is wired only once the switch has taken,
+       so a click can never race it. */
+    try {
+      await setPersistence(auth, indexedDBLocalPersistence);
+    } catch (e) {
+      console.warn("en8: persistence could not be set", e);
+    }
+
+    onAuthStateChanged(auth, user => {
+      if (user) paintSignedIn(user); else paintSignedOut();
+    });
+
+    signinBtn?.addEventListener("click", async () => {
+      setState("signing-in");
+      try {
+        await signInWithPopup(auth, new GoogleAuthProvider());
+      } catch (e) {
+        console.warn("en8: sign-in failed", e);
+        paintSignedOut();
+      }
+    });
+
+    signoutBtn?.addEventListener("click", () => {
+      signOut(auth).catch(e => console.warn("en8: sign-out failed", e));
+    });
+  })();
 }
