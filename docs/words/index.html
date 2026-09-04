@@ -6,7 +6,7 @@
 <title>Word list · English 8 — Global Success</title>
 <meta name="description" content="Look up any of the words this course teaches, in English or Vietnamese, with sound.">
 <meta name="color-scheme" content="light dark">
-<link rel="stylesheet" href="assets/app.css?v=ea05b20f">
+<link rel="stylesheet" href="assets/app.css?v=005b201a">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2226%22>📗</text></svg>">
 </head>
@@ -15,6 +15,11 @@
   <a class="mark" href="index.html"><b>English 8</b><span>Global Success</span></a>
   <nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Course</a><i>›</i><b>Words</b></nav>
   <span class="sp"></span>
+  <div class="auth" data-en8-auth-state="signed-out">
+    <button class="iconbtn" type="button" data-en8-signin>Sign in with Google</button>
+    <button class="iconbtn" type="button" data-en8-signout hidden>Sign out</button>
+    <span class="auth-id" data-en8-identity hidden></span>
+  </div>
   <button class="iconbtn" id="themeBtn" type="button">◒ Auto</button>
 </div></header>
 <div class="shell"><main>
@@ -46,6 +51,8 @@
   a good model of which word you are hearing, and not a reliable model of vowel length.</p>
 </footer></div>
 <script id="page-data" type="application/json">{"kind": "words"}</script>
+<script src="assets/firebase-config.js?v=82b76138"></script>
+<script type="module" src="assets/auth.bundle.js?v=ec2d269c"></script>
 <script src="assets/app.js?v=9118e1c9"></script>
 </body>
 </html>

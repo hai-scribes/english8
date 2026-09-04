@@ -80,6 +80,8 @@ img{max-width:100%}
 .iconbtn{font:inherit;font-size:.9rem;line-height:1;background:none;border:1px solid var(--rule);color:var(--muted);
   border-radius:var(--r);padding:.42rem .6rem;cursor:pointer}
 .iconbtn:hover{border-color:var(--teal);color:var(--teal)}
+.auth{display:flex;align-items:center;gap:.5rem;font-size:.83rem;color:var(--muted)}
+.auth .auth-id{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:10rem}
 
 /* ---------------- page furniture ---------------- */
 main{padding:2rem 0 5rem;display:flex;flex-direction:column;gap:1.5rem}

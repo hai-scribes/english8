@@ -30,6 +30,7 @@ import html
 import json
 import re
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -2378,7 +2379,14 @@ def _asset_hash(name: str) -> str:
     return hashlib.sha256(src).hexdigest()[:8]
 
 
-ASSET_V = {"css": _asset_hash("app.css"), "js": _asset_hash("app.js")}
+ASSET_V = {
+    "css": _asset_hash("app.css"),
+    "js": _asset_hash("app.js"),
+    "authcfg": _asset_hash("firebase-config.js"),
+    # auth.bundle.js is not in tools/assets — esbuild writes it straight into
+    # docs/assets from auth-src.mjs — so it is versioned off its own source.
+    "auth": _asset_hash("auth-src.mjs"),
+}
 
 
 def shell(*, title, depth, body, crumb, data=None, desc=""):
@@ -2432,6 +2440,11 @@ def shell(*, title, depth, body, crumb, data=None, desc=""):
   <a class="mark" href="{up}index.html"><b>English 8</b><span>Global Success</span></a>
   <nav class="crumb" aria-label="Breadcrumb">{crumb_html}</nav>
   <span class="sp"></span>
+  <div class="auth" data-en8-auth-state="signed-out">
+    <button class="iconbtn" type="button" data-en8-signin>Sign in with Google</button>
+    <button class="iconbtn" type="button" data-en8-signout hidden>Sign out</button>
+    <span class="auth-id" data-en8-identity hidden></span>
+  </div>
   <button class="iconbtn" id="themeBtn" type="button">◒ Auto</button>
 </div></header>
 <div class="shell"><main>
@@ -2445,6 +2458,8 @@ def shell(*, title, depth, body, crumb, data=None, desc=""):
   a good model of which word you are hearing, and not a reliable model of vowel length.</p>
 </footer></div>
 {data_tag}
+<script src="{up}assets/firebase-config.js?v={ASSET_V['authcfg']}"></script>
+<script type="module" src="{up}assets/auth.bundle.js?v={ASSET_V['auth']}"></script>
 <script src="{up}assets/app.js?v={ASSET_V['js']}"></script>
 </body>
 </html>
@@ -3384,6 +3399,18 @@ def main() -> int:
     for a in ASSETS.iterdir():
         if a.is_file():
             shutil.copy2(a, OUT / "assets" / a.name)
+    # The one file allowed a dependency: app.js stays plain ES with nothing to
+    # bundle, and this is the Firebase JS SDK bundled in instead of fetched
+    # from a CDN, so sign-in still works with no network at all once cached.
+    subprocess.run(
+        [
+            str(ROOT / "node_modules" / "esbuild" / "bin" / "esbuild"),
+            str(ASSETS / "auth-src.mjs"),
+            "--bundle", "--format=esm", "--target=es2020",
+            f"--outfile={OUT / 'assets' / 'auth.bundle.js'}",
+        ],
+        cwd=ROOT, check=True,
+    )
     # The cast sheets, the background plates, and the prop and effect cut-outs,
     # published under the names app.js asks for. Per-emotion drawings are not
     # copied: they are masters, and so are the un-keyed prop originals.
