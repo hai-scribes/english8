@@ -18,7 +18,7 @@
  * not this laptop. Un-throttled numbers here would certify nothing.
  */
 import { metric, gate, finish } from "./lib.mjs";
-import { launch, device, url, aLessonPath, signIn, waitSynced, P } from "./browser.mjs";
+import { launch, device, url, aLessonPath, signIn, waitSynced, P , portsError } from "./browser.mjs";
 
 const problems = [];
 let probes = 0;
@@ -29,6 +29,7 @@ const pct = (xs, p) => xs.length ? xs.slice().sort((a, b) => a - b)[Math.min(xs.
 let p95 = NaN, cloudReads = 0, blocking = 0;
 
 try {
+  if (portsError) throw portsError;
   const { ctx, page, net } = await device(browser);
   const cdp = await ctx.newCDPSession(page);
   await cdp.send("Emulation.setCPUThrottlingRate", { rate: 4 });

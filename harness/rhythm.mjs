@@ -18,7 +18,7 @@
  * gamifying it is the defect.
  */
 import { metric, gate, finish } from "./lib.mjs";
-import { launch, device, url, aLessonPath, signIn, answerFirstTask, localState, waitSynced } from "./browser.mjs";
+import { launch, device, url, aLessonPath, signIn, answerFirstTask, localState, waitSynced , portsError } from "./browser.mjs";
 
 const problems = [];
 let swept = 0, forbidden = 0;
@@ -52,6 +52,7 @@ const FORBIDDEN = [
 ];
 
 try {
+  if (portsError) throw portsError;
   /* --- day one: do work, it lands under that date -------------------- */
   const A = await atDate(DAY_ONE);
   await A.page.goto(url(LESSON), { waitUntil: "domcontentloaded" });

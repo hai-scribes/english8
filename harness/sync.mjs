@@ -10,7 +10,7 @@
  * exposes a child's work to strangers.
  */
 import { metric, gate, finish } from "./lib.mjs";
-import { launch, device, url, aLessonPath, signIn, answerFirstTask, localState, waitSynced } from "./browser.mjs";
+import { launch, device, url, aLessonPath, signIn, answerFirstTask, localState, waitSynced , portsError } from "./browser.mjs";
 
 const problems = [];
 let swept = 0, leaks = 0;
@@ -22,6 +22,7 @@ const progressOf = s => Object.entries(s)
   .map(([k, v]) => `${k}=${v}`).sort().join("\n");
 
 try {
+  if (portsError) throw portsError;
   /* --- device A: sign in, do a lesson, let it sync --------------------- */
   const A = await device(browser);
   await A.page.goto(url(LESSON), { waitUntil: "domcontentloaded" });

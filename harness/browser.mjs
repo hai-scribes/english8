@@ -36,7 +36,20 @@ import { join } from "node:path";
 import { chromium } from "playwright";
 import { REPO, ports } from "./lib.mjs";
 
-export const P = ports();
+/* Resolved at import, but NOT thrown at import. A top-level throw here kills
+ * the module before its harness can print anything, and a harness that dies
+ * without emitting its measurement is indistinguishable from one that measured
+ * zero — which is the whole reason lib.mjs reports numbers on failing runs.
+ * The error is carried instead, and each harness raises it inside its own
+ * try/catch, where it becomes a recorded problem next to a real metric line. */
+let _ports = null;
+export let portsError = null;
+try { _ports = ports(); } catch (e) { portsError = e; }
+
+export const P = _ports || {
+  project: "demo-english8", site: "http://127.0.0.1:1", sitePort: 1,
+  authHost: "127.0.0.1:1", authPort: 1, firestoreHost: "127.0.0.1", firestorePort: 1,
+};
 
 /** The config the app would load in production, rewritten to point at this
  *  run's emulators. Substituted over the wire — the app is unmodified. */

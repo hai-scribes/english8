@@ -5,7 +5,7 @@
  * that a learner can start the flow from the page and end it signed in.
  */
 import { metric, gate, finish } from "./lib.mjs";
-import { launch, device, url, aLessonPath, signIn } from "./browser.mjs";
+import { launch, device, url, aLessonPath, signIn , portsError } from "./browser.mjs";
 
 const violations = [];
 let swept = 0;
@@ -15,6 +15,7 @@ const browser = await launch();
 const state = p => p.$eval("[data-en8-auth-state]", el => el.getAttribute("data-en8-auth-state")).catch(() => null);
 
 try {
+  if (portsError) throw portsError;
   const { page } = await device(browser);
   await page.goto(url(aLessonPath()), { waitUntil: "domcontentloaded" });
 

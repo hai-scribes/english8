@@ -13,7 +13,7 @@
  * promise than the one that was made.
  */
 import { metric, gate, finish } from "./lib.mjs";
-import { launch, device, url, aLessonPath, signIn, answerFirstTask, waitSynced, silentOps, P } from "./browser.mjs";
+import { launch, device, url, aLessonPath, signIn, answerFirstTask, waitSynced, silentOps, P , portsError } from "./browser.mjs";
 
 const problems = [];
 let steps = 0, silent = 0, surfaced = 0;
@@ -21,6 +21,7 @@ const LESSON = aLessonPath();
 const browser = await launch();
 
 try {
+  if (portsError) throw portsError;
   const { ctx, page, net } = await device(browser);
   await page.goto(url(LESSON), { waitUntil: "domcontentloaded" });
 
