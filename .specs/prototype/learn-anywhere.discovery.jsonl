@@ -7,3 +7,16 @@
 {"type": "note", "text": "no Java runtime existed on this machine; the Firestore emulator is a Java program (the Auth emulator is not). OpenJDK 26 was installed with the operator's approval. The harness resolves the keg-only path itself rather than editing a shell profile, so a fresh variant worktree needs no hand configuration", "at": "2026-09-04T17:45:50.816Z"}
 {"type": "revision", "target": "charter", "keys": ["assumptions", "constraints", "desired_outcome", "kill_criteria", "problem", "scope", "success_metrics", "target_users", "user_access_plan"], "hashed_content_changed": true, "at": "2026-09-04T17:48:17.002Z"}
 {"type": "revision", "target": "run", "keys": ["max_cycles_per_milestone", "max_rounds", "max_wall_minutes", "n_variants", "no_progress_limit", "worker"], "at": "2026-09-04T17:48:49.244Z"}
+{"type": "decision", "id": "charter-approved", "content_sha256": "f8efc848dcb975f6d794e4dc53d995bc29b2f68bf52495ff3beec98336b18e9c", "with_risks": ["a-google-account", "a-spark-sufficient", "a-local-first-required", "a-daily-not-streak", "a-emulator-fidelity", "a-100ms-is-instant", "a-no-storage-needed"], "at": "2026-09-04T17:56:49.336Z"}
+{"type": "revision", "target": "run", "keys": ["max_cycles_per_milestone", "n_variants"], "at": "2026-09-04T17:57:53.303Z"}
+{"type": "revision", "target": "milestones", "count": 5, "archived_milestone_ids": [], "at": "2026-09-04T17:59:25.563Z"}
+{"type": "honesty_review", "milestone_id": 1, "surfaces": 2, "unresolved": 1, "at": "2026-09-04T18:00:48.310Z"}
+{"type": "honesty_review", "milestone_id": 2, "surfaces": 3, "unresolved": 1, "at": "2026-09-04T18:00:48.972Z"}
+{"type": "honesty_review", "milestone_id": 3, "surfaces": 3, "unresolved": 1, "at": "2026-09-04T18:00:49.449Z"}
+{"type": "honesty_review", "milestone_id": 4, "surfaces": 3, "unresolved": 2, "at": "2026-09-04T18:00:50.122Z"}
+{"type": "honesty_review", "milestone_id": 5, "surfaces": 4, "unresolved": 1, "at": "2026-09-04T18:00:50.482Z"}
+{"type": "revision", "target": "milestone-1", "reopened": false, "at": "2026-09-04T18:01:21.549Z"}
+{"type": "revision", "target": "milestone-2", "reopened": false, "at": "2026-09-04T18:01:21.776Z"}
+{"type": "revision", "target": "milestone-3", "reopened": false, "at": "2026-09-04T18:01:21.939Z"}
+{"type": "revision", "target": "milestone-4", "reopened": false, "at": "2026-09-04T18:01:22.105Z"}
+{"type": "revision", "target": "milestone-5", "reopened": false, "at": "2026-09-04T18:01:22.238Z"}

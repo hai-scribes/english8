@@ -1,0 +1,62 @@
+schema_version: 1
+
+# Milestone 4's gate. GENERATED from learn-anywhere.checks.yaml by taking the
+# scenarios below verbatim — edit the master and regenerate, never edit here.
+#
+# The set is CUMULATIVE: milestone N carries every earlier milestone's
+# scenarios so a later milestone cannot go green by breaking an earlier one.
+# It is a per-milestone sidecar rather than the slug-level file because the
+# slug-level file demands all six, which milestone 1 cannot satisfy and should
+# not be asked to — a gate that does not discriminate this milestone from the
+# last one is how a milestone advances on work it did not do.
+#
+# Scenarios: build, identity, sync, rhythm, session
+
+serve:
+  setup: |
+    set -e
+    [ -d node_modules ] || npm ci --no-audit --no-fund
+    npx --no-install playwright install chromium
+    node_modules/.bin/firebase setup:emulators:firestore
+  command: "node harness/serve.mjs"
+  # ports.json is written only once BOTH emulators answer, so polling for it is
+  # polling for a usable stack rather than for a process that has been spawned.
+  ready_command: "test -f .atelier/harness/ports.json"
+  ready_timeout_seconds: 240
+  stop_timeout_seconds: 15
+
+checks:
+  - name: build
+    kind: build
+    # No `|| true`: node_modules is gitignored, so every tournament variant
+    # worktree starts cold. Swallowing a failed install turns it into a missing
+    # package a minute later, which reads as a harness defect and sends the
+    # worker to fix code that was never broken. A setup failure must fail as
+    # setup.
+    setup: "[ -d node_modules ] || npm ci --no-audit --no-fund"
+    timeout_seconds: 600
+    command: "node harness/build.mjs"
+
+  - name: identity
+    kind: interaction
+    setup: "[ -d node_modules ] || npm ci --no-audit --no-fund"
+    timeout_seconds: 600
+    command: "node harness/identity.mjs"
+
+  - name: sync
+    kind: interaction
+    setup: "[ -d node_modules ] || npm ci --no-audit --no-fund"
+    timeout_seconds: 900
+    command: "node harness/sync.mjs"
+
+  - name: rhythm
+    kind: interaction
+    setup: "[ -d node_modules ] || npm ci --no-audit --no-fund"
+    timeout_seconds: 900
+    command: "node harness/rhythm.mjs"
+
+  - name: session
+    kind: interaction
+    setup: "[ -d node_modules ] || npm ci --no-audit --no-fund"
+    timeout_seconds: 900
+    command: "node harness/session.mjs"
