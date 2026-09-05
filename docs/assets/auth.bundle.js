@@ -8071,34 +8071,29 @@ function paintSignedIn(user) {
 if (!cfg) {
   setState("error");
 } else {
-  (async () => {
-    const app = initializeApp(cfg);
-    const auth = getAuth(app);
-    if (cfg.emulators?.auth) {
-      connectAuthEmulator(auth, cfg.emulators.auth, { disableWarnings: true });
-    }
+  const app = initializeApp(cfg);
+  const auth = getAuth(app);
+  if (cfg.emulators?.auth) {
+    connectAuthEmulator(auth, cfg.emulators.auth, { disableWarnings: true });
+  }
+  const persistenceReady = setPersistence(auth, indexedDBLocalPersistence).catch((e) => console.warn("en8: persistence could not be set", e));
+  onAuthStateChanged(auth, (user) => {
+    if (user) paintSignedIn(user);
+    else paintSignedOut();
+  });
+  signinBtn?.addEventListener("click", async () => {
+    setState("signing-in");
     try {
-      await setPersistence(auth, indexedDBLocalPersistence);
+      await persistenceReady;
+      await signInWithPopup(auth, new GoogleAuthProvider());
     } catch (e) {
-      console.warn("en8: persistence could not be set", e);
+      console.warn("en8: sign-in failed", e);
+      paintSignedOut();
     }
-    onAuthStateChanged(auth, (user) => {
-      if (user) paintSignedIn(user);
-      else paintSignedOut();
-    });
-    signinBtn?.addEventListener("click", async () => {
-      setState("signing-in");
-      try {
-        await signInWithPopup(auth, new GoogleAuthProvider());
-      } catch (e) {
-        console.warn("en8: sign-in failed", e);
-        paintSignedOut();
-      }
-    });
-    signoutBtn?.addEventListener("click", () => {
-      signOut(auth).catch((e) => console.warn("en8: sign-out failed", e));
-    });
-  })();
+  });
+  signoutBtn?.addEventListener("click", () => {
+    signOut(auth).catch((e) => console.warn("en8: sign-out failed", e));
+  });
 }
 /*! Bundled license information:
 

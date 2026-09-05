@@ -41,40 +41,38 @@ function paintSignedIn(user) {
 if (!cfg) {
   setState("error");
 } else {
-  (async () => {
-    const app = initializeApp(cfg);
-    const auth = getAuth(app);
-    if (cfg.emulators?.auth) {
-      connectAuthEmulator(auth, cfg.emulators.auth, { disableWarnings: true });
-    }
+  const app = initializeApp(cfg);
+  const auth = getAuth(app);
+  if (cfg.emulators?.auth) {
+    connectAuthEmulator(auth, cfg.emulators.auth, { disableWarnings: true });
+  }
 
-    /* Awaited, not fire-and-forget: a sign-in that lands before this resolves
-       is stored under whatever persistence the SDK defaults to, not
-       indexedDB — signed in, but gone on the very reload this exists to
-       survive. The sign-in button is wired only once the switch has taken,
-       so a click can never race it. */
+  /* Started, not awaited, before the listeners below are wired: awaiting here
+     would delay attaching the click handler, and a click landing in that
+     window finds no handler and does nothing — silently losing the sign-in
+     rather than merely storing it under the wrong persistence. The listener
+     is wired synchronously instead, and it is the handler itself that awaits
+     this promise before ever calling signInWithPopup, so the write to
+     indexedDB persistence still lands before any session does. */
+  const persistenceReady = setPersistence(auth, indexedDBLocalPersistence)
+    .catch(e => console.warn("en8: persistence could not be set", e));
+
+  onAuthStateChanged(auth, user => {
+    if (user) paintSignedIn(user); else paintSignedOut();
+  });
+
+  signinBtn?.addEventListener("click", async () => {
+    setState("signing-in");
     try {
-      await setPersistence(auth, indexedDBLocalPersistence);
+      await persistenceReady;
+      await signInWithPopup(auth, new GoogleAuthProvider());
     } catch (e) {
-      console.warn("en8: persistence could not be set", e);
+      console.warn("en8: sign-in failed", e);
+      paintSignedOut();
     }
+  });
 
-    onAuthStateChanged(auth, user => {
-      if (user) paintSignedIn(user); else paintSignedOut();
-    });
-
-    signinBtn?.addEventListener("click", async () => {
-      setState("signing-in");
-      try {
-        await signInWithPopup(auth, new GoogleAuthProvider());
-      } catch (e) {
-        console.warn("en8: sign-in failed", e);
-        paintSignedOut();
-      }
-    });
-
-    signoutBtn?.addEventListener("click", () => {
-      signOut(auth).catch(e => console.warn("en8: sign-out failed", e));
-    });
-  })();
+  signoutBtn?.addEventListener("click", () => {
+    signOut(auth).catch(e => console.warn("en8: sign-out failed", e));
+  });
 }
