@@ -25,3 +25,21 @@
 {"type": "revision", "target": "milestone-3", "reopened": false, "at": "2026-09-04T19:13:29.027Z"}
 {"type": "revision", "target": "milestone-4", "reopened": false, "at": "2026-09-04T19:13:29.175Z"}
 {"type": "revision", "target": "milestone-5", "reopened": false, "at": "2026-09-04T19:13:29.318Z"}
+{"type": "honesty_review", "milestone_id": 1, "surfaces": 2, "unresolved": 1, "at": "2026-09-04T20:12:27.949Z"}
+{"type": "findings", "milestone_id": 1, "source": "auto", "status": "stop", "recommendation": "iterate", "at": "2026-09-04T22:08:19.639Z"}
+{"type": "decision", "id": "boundary-auto-stopped", "milestone_id": 1, "provenance": "auto-pilot-boundary", "verdict": "blocked", "reason": "lane not green (state='stopped') — must-stop", "decision_id": "671b6f72-d2d5-48c4-9125-aeb3d25b7622", "at": "2026-09-04T22:08:19.862Z"}
+{"type": "decision", "id": "redo-milestone", "milestone_id": 1, "at": "2026-09-04T22:11:37.027Z"}
+{"type": "findings", "milestone_id": 1, "source": "auto", "status": "stuck", "recommendation": "pivot", "at": "2026-09-04T22:42:46.015Z"}
+{"type": "decision", "id": "boundary-auto-stopped", "milestone_id": 1, "provenance": "auto-pilot-boundary", "verdict": "stuck", "reason": "lane not green (state='stuck'): stopping after round 1 of 2 this attempt (round id 1): every one of the 1 attempts that ran was reaped by the WALL, and `run.chain_rounds` is off — so the next round would restart from the same base with the same slice and be reaped at the same place. This is wall starvation, not a wrong approach: raise `run.max_wall_minutes` (or lower `run.n_variants` / `run.max_ro", "decision_id": "c838c0bb-7af6-4267-a45d-d27a258b1fca", "at": "2026-09-04T22:42:46.075Z"}
+{"type": "revision", "target": "run", "keys": ["chain_rounds", "max_rounds", "max_wall_minutes"], "at": "2026-09-05T05:03:20.304Z"}
+{"type": "decision", "id": "redo-milestone", "milestone_id": 1, "at": "2026-09-05T08:30:23.594Z"}
+{"type": "findings", "milestone_id": 1, "source": "auto", "status": "stuck", "recommendation": "pivot", "at": "2026-09-05T09:35:57.892Z"}
+{"type": "decision", "id": "boundary-auto-stopped", "milestone_id": 1, "provenance": "auto-pilot-boundary", "verdict": "stuck", "reason": "lane not green (state='stuck'): no winner after 4 round(s) this attempt: no variant passed the gate — must-stop", "decision_id": "5874de3d-d67d-40ff-959f-583ef0b35573", "at": "2026-09-05T09:35:57.982Z"}
+{"type": "decision", "id": "redo-milestone", "milestone_id": 1, "at": "2026-09-05T09:55:22.262Z"}
+{"type": "revision", "target": "run", "keys": ["chain_rounds", "max_rounds", "max_wall_minutes"], "at": "2026-09-18T13:03:57.139Z"}
+{"type": "findings", "milestone_id": 1, "source": "ai", "theory_changes": null, "at": "2026-09-18T13:11:32.792Z"}
+{"type": "revision", "target": "milestone-1", "reopened": false, "at": "2026-09-18T15:53:51.228Z"}
+{"type": "revision", "target": "milestone-2", "reopened": false, "at": "2026-09-18T15:53:51.419Z"}
+{"type": "revision", "target": "milestone-3", "reopened": false, "at": "2026-09-18T15:53:51.627Z"}
+{"type": "revision", "target": "milestone-4", "reopened": false, "at": "2026-09-18T15:53:51.862Z"}
+{"type": "revision", "target": "milestone-5", "reopened": false, "at": "2026-09-18T15:53:52.069Z"}

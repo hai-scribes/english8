@@ -1,0 +1,78 @@
+{
+  "run_id": "3f4775298e37",
+  "slug": "learn-anywhere",
+  "command": "atelier prototype run learn-anywhere --auto --accept-empty-graft",
+  "launch_flags": {
+    "accept_deferred": false,
+    "accept_empty_graft": true,
+    "force": false,
+    "max_parallel": null
+  },
+  "started": "2026-09-05T08:36:01Z",
+  "finished": "2026-09-05T09:35:57Z",
+  "elapsed_sec": 3596.8,
+  "exit_action": "stuck",
+  "stop_reason": "lane not green (state='stuck'): no winner after 4 round(s) this attempt: no variant passed the gate \u2014 must-stop",
+  "milestones_advanced": 0,
+  "max_wall_clock_sec": 28800,
+  "max_milestones": 0,
+  "milestones": [
+    {
+      "milestone_id": 1,
+      "objective": "A learner opens a lesson page, signs in with the Google account she already has, and the page says who she is. The session survives a reload and a new tab; signing out actually ends it. Nothing about progress moves yet \u2014 this milestone establishes identity and nothing else, because every later milestone is meaningless without a stable per-account key to hang data on.",
+      "outcome": "stuck",
+      "reason": "lane not green (state='stuck'): no winner after 4 round(s) this attempt: no variant passed the gate \u2014 must-stop",
+      "slo": {
+        "metric_id": "auth_contract_violations",
+        "threshold": 0,
+        "direction": "minimize"
+      },
+      "benchmark_value": null,
+      "winner_variant": null,
+      "selection_mode": null,
+      "gate_sha256": "d3556cbe9c621812fbd257a433aade287a1ce342ee792437713ad4ee20b78321",
+      "benchmark_sha256": "ae3071b12623a5a5515f7dde12677e254293c5e32c3edfa9d566514c7fec9bca",
+      "grafted_sha": null,
+      "cycles": 3,
+      "variant_cycles": [
+        {
+          "variant_id": 1,
+          "cycles": 3
+        }
+      ],
+      "cycles_all_rounds": 12,
+      "retained_branches": [],
+      "boundary_refusal": "no winner after 4 round(s) this attempt: no variant passed the gate",
+      "best_retained": null,
+      "decision_id": null,
+      "recommendation": "pivot",
+      "report_path": "/Users/liemnguyen/Per/English 8/reports/prototype-learn-anywhere.html",
+      "terminal_causes": [
+        "barren_session"
+      ],
+      "session_diagnostics": [
+        {
+          "variant_id": 1,
+          "applied_work": false,
+          "cycle": 1,
+          "detail": "[stdout] You've hit your session limit \u00b7 resets 4:50pm (Asia/Saigon)",
+          "tag": "exit-1"
+        },
+        {
+          "variant_id": 1,
+          "applied_work": false,
+          "cycle": 2,
+          "detail": "[stdout] You've hit your session limit \u00b7 resets 4:50pm (Asia/Saigon)",
+          "tag": "exit-1"
+        },
+        {
+          "variant_id": 1,
+          "applied_work": false,
+          "cycle": 3,
+          "detail": "[stdout] You've hit your session limit \u00b7 resets 4:50pm (Asia/Saigon)",
+          "tag": "exit-1"
+        }
+      ]
+    }
+  ]
+}

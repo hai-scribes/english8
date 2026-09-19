@@ -1,0 +1,49 @@
+{
+  "run_id": "54ee77f8fa1f",
+  "slug": "learn-anywhere",
+  "command": "atelier prototype run learn-anywhere --auto",
+  "launch_flags": {
+    "accept_deferred": false,
+    "accept_empty_graft": false,
+    "force": false,
+    "max_parallel": null
+  },
+  "started": "2026-09-04T22:08:19Z",
+  "finished": "2026-09-04T22:08:19Z",
+  "elapsed_sec": 0.4,
+  "exit_action": "blocked",
+  "stop_reason": "lane not green (state='stopped') \u2014 must-stop",
+  "milestones_advanced": 0,
+  "max_wall_clock_sec": 28800,
+  "max_milestones": 0,
+  "milestones": [
+    {
+      "milestone_id": 1,
+      "objective": "A learner opens a lesson page, signs in with the Google account she already has, and the page says who she is. The session survives a reload and a new tab; signing out actually ends it. Nothing about progress moves yet \u2014 this milestone establishes identity and nothing else, because every later milestone is meaningless without a stable per-account key to hang data on.",
+      "outcome": "blocked",
+      "reason": "lane not green (state='stopped') \u2014 must-stop",
+      "slo": {
+        "metric_id": "auth_contract_violations",
+        "threshold": 0,
+        "direction": "minimize"
+      },
+      "benchmark_value": null,
+      "winner_variant": null,
+      "selection_mode": null,
+      "gate_sha256": "d3556cbe9c621812fbd257a433aade287a1ce342ee792437713ad4ee20b78321",
+      "benchmark_sha256": "ae3071b12623a5a5515f7dde12677e254293c5e32c3edfa9d566514c7fec9bca",
+      "grafted_sha": null,
+      "cycles": 0,
+      "variant_cycles": [],
+      "cycles_all_rounds": 0,
+      "retained_branches": [],
+      "boundary_refusal": null,
+      "best_retained": null,
+      "decision_id": null,
+      "recommendation": "iterate",
+      "report_path": "/Users/liemnguyen/Per/English 8/reports/prototype-learn-anywhere.html",
+      "terminal_causes": [],
+      "session_diagnostics": []
+    }
+  ]
+}
