@@ -90,6 +90,41 @@
       "milestone_id": 5,
       "operator": "local",
       "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-09-19T14:27:59.659Z",
+      "content_sha256": "d3556cbe9c621812fbd257a433aade287a1ce342ee792437713ad4ee20b78321",
+      "milestone_id": 1,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-09-19T14:27:59.880Z",
+      "content_sha256": "13505dfccf3d2f101aa4056a604495619b9eea94b8520fdbf53c4055467874a7",
+      "milestone_id": 2,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-09-19T14:28:00.101Z",
+      "content_sha256": "40f98a14c8e331513e4d677b8b2842c21f5b5ad5e5913ee7c9457c09838fb682",
+      "milestone_id": 3,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-09-19T14:28:00.283Z",
+      "content_sha256": "1190c34681775a33a7b33b19ec05bf72183eaae9a408f0b49ef292d7094e4b2e",
+      "milestone_id": 4,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-09-19T14:28:00.467Z",
+      "content_sha256": "85d41f56313f5e09dc9c7651b8359cddb2ab0631aa08145bae76635040f79bdb",
+      "milestone_id": 5,
+      "operator": "local",
+      "type": "milestone_gate"
     }
   ],
   "created_at": "2026-09-04T17:41:47.019Z",
@@ -420,9 +455,9 @@
         }
       ],
       "benchmark": {
-        "approved_at": "2026-09-04T22:06:16.948Z",
+        "approved_at": "2026-09-19T14:27:59.659Z",
         "command": "node harness/identity.mjs",
-        "content_sha256": "ae3071b12623a5a5515f7dde12677e254293c5e32c3edfa9d566514c7fec9bca",
+        "content_sha256": "05cb8e95d6c66f0a89a45f4b06cf177de8cb27dcd5c69ecc9cc5307fc8fedef0",
         "fixed_workload": "Four sign-in contract flows driven through the page in a real Chromium against the Firebase Auth emulator: the page declares signed-out before anything happens; the Google popup flow completes and [data-en8-identity] names the learner; the signed-in state survives a reload; sign-out returns the page to signed-out.",
         "harness": "harness/identity.mjs",
         "lifecycle": "needs_serve"
@@ -478,7 +513,7 @@
         "source": "ai"
       },
       "gate": {
-        "approved_at": "2026-09-04T22:06:16.948Z",
+        "approved_at": "2026-09-19T14:27:59.659Z",
         "artifacts": [
           "harness/lib.mjs",
           "harness/browser.mjs",
@@ -947,16 +982,16 @@
         }
       ],
       "benchmark": {
-        "approved_at": "2026-09-04T22:06:16.978Z",
+        "approved_at": "2026-09-19T14:27:59.880Z",
         "command": "node harness/sync.mjs",
-        "content_sha256": "6c4897950de0f20011441e7cfdc0b5422f98626a38b261a4a65de634c3410e1b",
+        "content_sha256": "9ed17355ba722089270386553c1188b248d0a0541e9ff28a453554ae69a33eb6",
         "fixed_workload": "Four round trips across separate browser contexts treated as separate devices, against the real Firestore emulator running the shipped firestore.rules: device A answers a marked task and syncs; device B signs in as the same learner and must receive that task; device C signs in as a different learner and must receive none of it; device A works offline and a fourth device must receive that work after A reconnects.",
         "harness": "harness/sync.mjs",
         "lifecycle": "needs_serve"
       },
       "decision_type": "correctness_call",
       "gate": {
-        "approved_at": "2026-09-04T22:06:16.978Z",
+        "approved_at": "2026-09-19T14:27:59.880Z",
         "artifacts": [
           "harness/lib.mjs",
           "harness/browser.mjs",
@@ -1048,16 +1083,16 @@
         }
       ],
       "benchmark": {
-        "approved_at": "2026-09-04T22:06:16.996Z",
+        "approved_at": "2026-09-19T14:28:00.101Z",
         "command": "node harness/rhythm.mjs",
-        "content_sha256": "148aa093a61c4256261554c6abc38bf28c2c06afa6c8391bab016065d6e7a335",
+        "content_sha256": "fb34646ae83844f568cfd6d121b2b6b431e52a0eb94db7ad968eaff991a47892",
         "fixed_workload": "Two study sessions on two different dates inside one ISO week (Tue 2026-09-08 and Thu 2026-09-10), with the browser's clock overridden in the harness rather than in the product: work is recorded against the day it was done, day one's record survives into day two, the week is shown as a rollup in [data-en8-rhythm], and the rendered page is scanned for a streak, a score, a percentage-complete or a band number.",
         "harness": "harness/rhythm.mjs",
         "lifecycle": "needs_serve"
       },
       "decision_type": "correctness_call",
       "gate": {
-        "approved_at": "2026-09-04T22:06:16.996Z",
+        "approved_at": "2026-09-19T14:28:00.101Z",
         "artifacts": [
           "harness/lib.mjs",
           "harness/browser.mjs",
@@ -1152,16 +1187,16 @@
         }
       ],
       "benchmark": {
-        "approved_at": "2026-09-04T22:06:17.014Z",
+        "approved_at": "2026-09-19T14:28:00.283Z",
         "command": "node harness/session.mjs",
-        "content_sha256": "66a597553f7a20336a02e08ee8302b5d912f102f6c92ea1cb257f39d7be4c49f",
+        "content_sha256": "c29a875ac4c3912c1a154cf76e8bbe43f59361bda55ea47bc3e014ce03ab002c",
         "fixed_workload": "One full session at 390px driven through five steps — indicator present before sign-in, sign-in narrated with readable detail text, an answer saved while the indicator shows syncing, the lesson loaded and usable with the context set offline, and the whole request log audited. Every request is timestamped against the sync-state the UI was showing at the moment it left; requests to the site's own origin are excluded by origin rather than by guesswork.",
         "harness": "harness/session.mjs",
         "lifecycle": "needs_serve"
       },
       "decision_type": "correctness_call",
       "gate": {
-        "approved_at": "2026-09-04T22:06:17.014Z",
+        "approved_at": "2026-09-19T14:28:00.283Z",
         "artifacts": [
           "harness/lib.mjs",
           "harness/browser.mjs",
@@ -1266,16 +1301,16 @@
         }
       ],
       "benchmark": {
-        "approved_at": "2026-09-04T22:06:17.032Z",
+        "approved_at": "2026-09-19T14:28:00.467Z",
         "command": "node harness/speed.mjs",
-        "content_sha256": "04e6ebb3da33302664f659bad06302625eec4065cba234c294ebdba84c7696c5",
+        "content_sha256": "e47604e88c8b956dffdb9635e457da422984093cf3241614111872e4f7d75fd6",
         "fixed_workload": "Three probes at 390px under a 4x CPU throttle, signed in with sync live: a cold load with every non-origin request aborted (the lesson must still render, proving the cloud is not in the render path); at least twelve click-to-next-painted-frame samples reported at the 95th percentile; and total long-task time from a PerformanceObserver.",
         "harness": "harness/speed.mjs",
         "lifecycle": "needs_serve"
       },
       "decision_type": "perf_bakeoff",
       "gate": {
-        "approved_at": "2026-09-04T22:06:17.032Z",
+        "approved_at": "2026-09-19T14:28:00.467Z",
         "artifacts": [
           "harness/lib.mjs",
           "harness/browser.mjs",
@@ -1398,5 +1433,5 @@
   "schema_version": 1,
   "slug": "learn-anywhere",
   "state": "approved",
-  "updated_at": "2026-09-18T15:53:52.067Z"
+  "updated_at": "2026-09-19T14:28:00.482Z"
 }
