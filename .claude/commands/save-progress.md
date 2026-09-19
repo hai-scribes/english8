@@ -2,6 +2,18 @@
 disable-model-invocation: true
 ---
 
+> **This command has no bash-native form, and that is deliberate.**
+>
+> An `atelier progress preflight` verb briefly did Step 1 — root, stamp, both
+> `.gitignore` guards, the git dump — and was removed on 2026-09-01. To fill
+> `Commits made this session` a script must GUESS when your session began, and
+> that guess gets written into a durable artifact the next session reads as
+> fact. You know the real answer; a guess you have to verify costs more than no
+> guess at all. Step 1 below is one Bash call — just make it.
+>
+> See `docs/atelier/ATELIER_SLASH_COMMANDS.md` § "Bash-native commands" for the
+> commands that DO have one.
+
 You are `/save-progress`: capture this session's progress into a standalone file that lets a brand-new Claude session (no memory, no CLAUDE.md, no history) resume exactly where this one left off.
 
 **Routing rule (applies even without the slash command).** Any request to "save progress" / "save for a new session" means: write the local `saved-progress/` snapshot below — never route session progress into AI memory (memory has no size gate; it holds only durable user/feedback/reference facts).
@@ -22,6 +34,8 @@ The user's arguments: $ARGUMENTS
 3. Empty arguments, or clearly just a label → skip the directive handling; do not invent directives.
 
 **An instruction must never survive only as a filename.** If you cannot place a directive, that is what `## Notes from the operator` is for.
+
+**Each directive lands in exactly ONE place.** `## Notes from the operator` is the overflow for what fitted nowhere — not a receipt for what did. Copying a directive into both its section and Notes duplicates it in every resume of that snapshot forever, and a reader who meets the same sentence twice cannot tell whether it is one instruction or two. Placed it → it is not in Notes. Nothing left over → omit the section entirely.
 
 A directive to commit, push, or share the snapshot → don't; say why (snapshots are local-only transient session state, Step 1) and continue with the save.
 
@@ -75,6 +89,11 @@ The file MUST contain every section below, populated with real content from this
 
 - **Cap.** *What we accomplished*, *Commits made this session*, *Files modified*: paths, shas and one-line outcomes only. Never paste diffs, log excerpts or file contents — git has them, and the next session can run `git show`.
 - **Never cap.** *Key findings*, *Approaches tried and rejected*, *Standing constraints from the user*. None of it leaves a trace in git or tests; unwritten is gone, and losing it is the failure this command exists to prevent.
+
+**How to write the anchors** under *Context the next session MUST load first*. `atelier progress resume` inlines those ranges when the snapshot is loaded, and enforces both rules mechanically:
+
+- **Repeat the path on every range.** A bare `:310-344` binds to the last path that carried a range of its own, and only on the *same line*; with no such path it resolves to nothing and is reported as an orphan. `PLAN.md:165-253` … `PLAN.md:310-344` always means what it says.
+- **Keep a range under 60 lines AND ~3.3 KB of text**, or expect it not to be inlined. The cap is 4,000 characters *including* an 11-character line-number gutter, so 60 lines leave ~3.3 KB — about 55 characters per line. Over either cap the resume prints the range's measured size and defers it to the go-ahead rather than inlining a fragment. That is the right outcome for a big range, but if you want it in the brief, anchor the 30 lines that matter instead of the 90 around them.
 
 ```markdown
 # Session Progress — <slug>
@@ -133,7 +152,7 @@ The file MUST contain every section below, populated with real content from this
 
 ## Context the next session MUST load first
 
-<Repo-relative paths to read before acting, each with a **line range** wherever the file is large — `docs/atelier/ATELIER_PLAN.md:11-30`, never "the Current state section". An anchored range costs the next session only that range; an unanchored pointer to a big file costs it the whole file — on a mature plan doc that is the difference between a few thousand tokens and tens of thousands. ALWAYS include `CLAUDE.md` if one exists (continuity contract + commit discipline, unrestated here), the plan / current-state doc's relevant entries, and the in-flight files; name the sections that matter.>
+<Repo-relative paths to read before acting, each with a **line range** wherever the file is large — `docs/atelier/ATELIER_PLAN.md:11-30`, never "the Current state section". An anchored range costs the next session only that range; an unanchored pointer to a big file costs it the whole file — on a mature plan doc that is the difference between a few thousand tokens and tens of thousands. ALWAYS include `CLAUDE.md` if one exists (continuity contract + commit discipline, unrestated here), the plan / current-state doc's relevant entries, and the in-flight files; name the sections that matter. Anchor per "How to write the anchors" above.>
 
 ## Commands to run on resume
 

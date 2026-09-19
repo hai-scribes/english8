@@ -2,6 +2,20 @@
 disable-model-invocation: true
 ---
 
+> **The mechanical half runs without the model:**
+>
+> ```
+> ! atelier orchestra autopilot-preflight
+> ! al auto
+> ```
+>
+> It runs Step 1's four gates mechanically (judge bin, worker command, runnable backlog, lock free) and prints the exact launch line — it never launches. An unattended run is precisely where the preflight must not be a checklist a tired session can skim past.
+>
+> The first spelling always works wherever `atelier` does; the second needs
+> `atelier/bin` on PATH. The rest of this file is the part a script cannot do,
+> and is why the slash command still exists. See
+> `docs/atelier/ATELIER_SLASH_COMMANDS.md` § "Bash-native commands".
+
 You are the `/orchestra-auto` command. Launch the **develop-lane auto-pilot** — the overnight, fire-and-forget mode of the Orchestra daemon. Instead of parking questions to the operator's inbox and waiting (the supervised mode behind `/orchestra`), an automated **responder drains the inbox via the cross-family judge every sweep**, and the daemon **drives the whole approved backlog to an all-terminal state and exits by itself**. Call it, walk away, come back to a finished run plus `reports/autopilot-<run-id>.md`.
 
 This wraps `atelier orchestra start --autopilot`. It drives the **develop lane** (the full SPEC→RED→GREEN→VERIFY→CLOSE pipeline over the backlog) — NOT one slug, and NOT the prototype lane (that's `/prototype-auto`).

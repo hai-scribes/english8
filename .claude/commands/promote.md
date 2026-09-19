@@ -45,12 +45,12 @@ atelier prototype promote <slug> --dry-run
 
 This validates state file + prompts + dispatcher availability + branch/worktree collisions WITHOUT actually invoking LLMs. Surface the output to the user.
 
-If the operator hasn't wired `$ATELIER_SPEC_EXTRACT_BIN` and `$ATELIER_SPEC_ELEVATE_BIN`, the dry-run shows them as `<unwired>` and exits 3 (INFRA). **Do NOT push the slash command `/setup-models` onto the operator as a manual step.** You (the AI driving this command) can run the underlying `atelier setup-models` CLI inline — this is the same workflow `/setup-models` encodes, just invoked from this `/promote` context. Per R6.4.b discipline, internalize it.
+If no dispatcher is wired for a role (no `/setup-models` provider and no exported `$ATELIER_SPEC_*_BIN` override), the dry-run shows it as `<unwired>` and exits 3 (INFRA). **Do NOT push the slash command `/setup-models` onto the operator as a manual step.** You (the AI driving this command) can run the underlying `atelier setup-models` CLI inline — this is the same workflow `/setup-models` encodes, just invoked from this `/promote` context. Per R6.4.b discipline, internalize it.
 
 `AskUserQuestion` the operator:
 
 > Dispatchers aren't wired — `/promote` will fail until they are. Options:
-> - **Wire now (Recommended)** — I'll auto-detect installed LLM CLIs (codex / gemini / etc.), confirm the pair with you, render the shim scripts under `.atelier/bin/`, write env exports to `.envrc.atelier`, and source them in this session. ~30 seconds.
+> - **Wire now (Recommended)** — I'll auto-detect installed LLM CLIs (codex / gemini / etc.), confirm the pair with you, and record the providers + models machine-wide (`~/.atelier/models/`, used by every repo on this machine). ~30 seconds.
 > - **Skip / wire later** — exit `/promote` now; you'll need to wire manually before the next attempt.
 > - **Cancel `/promote`** — stop here without changes.
 
@@ -58,9 +58,9 @@ If the operator picks **Wire now**, execute this inline workflow:
 
 1. `atelier setup-models --detect` (parse JSON for `installed`, `suggested_pair`, `ready_to_apply`).
 2. If `ready_to_apply: false`: surface `hint` to the operator, suggest they install the missing CLI, then re-prompt; do NOT proceed to `--apply`.
-3. If `ready_to_apply: true`: `AskUserQuestion` to confirm the `suggested_pair` (or swap roles per `/setup-models` Step 2's option set). Default to the suggested pair if the operator just confirms. Then `AskUserQuestion` for the MODEL of each chosen provider, using `installed[provider].models[]` from the detect JSON (first entry = Recommended; for `codex` that is currently `gpt-5.5`, the default on codex 0.135 that works on ChatGPT-account auth).
-4. `atelier setup-models --apply --extract=<EXTRACT_KEY> --extract-model=<EXTRACT_MODEL> --elevate=<ELEVATE_KEY> --elevate-model=<ELEVATE_MODEL>` — parse JSON, confirm `ok: true`. Surface the `orphaned_shims[]` list and the `actions` map.
-5. **Source the env vars in your own Bash session** so subsequent calls in this `/promote` flow see them: prefix subsequent Bash calls with `source .envrc.atelier && <cmd>`, OR `export` the four env vars directly (the two `ATELIER_SPEC_*_BIN` shim paths AND the two `CALL_PROVIDER_<FAMILY>_MODEL` model exports). The model env vars are required — `call-provider.sh` refuses to dispatch without them. (Direnv setup advice from `/setup-models` Step 5 applies if the operator wants persistence across sessions — handle that as a side-task; don't gate `/promote` on it.)
+3. If `ready_to_apply: true`: `AskUserQuestion` to confirm the `suggested_pair` (or swap roles per `/setup-models` Step 2's option set). Default to the suggested pair if the operator just confirms. Then `AskUserQuestion` for the MODEL of each chosen provider, using `installed[provider].models[]` from the detect JSON (first entry = Recommended; for `codex` that is currently `gpt-5.6-terra`, confirmed on ChatGPT-account auth 2026-09-07 / codex-cli 0.153.4).
+4. `atelier setup-models --apply --extract=<EXTRACT_KEY> --extract-model=<EXTRACT_MODEL> --elevate=<ELEVATE_KEY> --elevate-model=<ELEVATE_MODEL>` — parse JSON, confirm `ok: true`. Surface the `actions` map and any `warnings`.
+5. **Nothing to source.** `promote-runner.sh` and `call-provider.sh` load the machine-wide file at dispatch. If `--apply` reported `stale_env: true`, this session exports an older value that would win — `unset` the named var(s) in the Bash calls that follow.
 6. Re-run `atelier prototype promote <slug> --dry-run` — confirm `READY: YES`. If still NO, surface the error and stop.
 7. Continue to Step 4 (full promotion) with the dispatchers now wired.
 
@@ -75,9 +75,9 @@ atelier prototype promote <slug>
 The runner narrates `[1/4]…[4/4]` progress to stderr:
 
 ```
-[1/4] Extracting candidate spec via $ATELIER_SPEC_EXTRACT_BIN ...
+[1/4] Extracting candidate spec via provider=codex (built-in dispatcher) ...
       → family=openai; candidate at .specs/verify/<slug>.spec-candidate.yaml
-[2/4] Elevating candidate via $ATELIER_SPEC_ELEVATE_BIN ...
+[2/4] Elevating candidate via provider=gemini (built-in dispatcher) ...
       → family=google; elevated spec at <tmp>
 [3/4] Final spec written to .specs/features/<slug>.yaml
 [4/4] Fresh production worktree created at .worktrees/<slug> (branch=<slug>, base=main)
@@ -87,22 +87,25 @@ Exit ladder:
 - `0` — promotion complete. Surface the runner's terminal output verbatim.
 - `1` — operational failure (state-not-open / branch collision / worktree collision / already-approved).
 - `2` — invalid args (bad slug shape).
-- `3` — INFRA (extract or elevate dispatcher timeout / unavailable / malformed output).
-- `4` — cross-family violation (extract + elevate same family — Invariant 5 violation).
+- `3` — INFRA (extract or elevate dispatcher timeout / unavailable / malformed output, or a built-in provider whose required model env is unset — caught at pre-flight, before any LLM call).
+- `4` — same family for extract + elevate on a project that has not declared single-model. With both roles on `/setup-models` providers this fires at pre-flight (dry-run included), before any LLM call.
+  A project that HAS declared it (`ATELIER_MODEL_FAMILY_STAMP=single-family`) is accepted and
+  the spec is stamped, so exit 4 means the pairing was unintended.
 
-On exit 3, retry once if the dispatcher might be transient (rate limit, API hiccup). If persistent, **do NOT push `/setup-models --force` onto the operator** — `AskUserQuestion`:
+On exit 3, retry once if the dispatcher might be transient (rate limit, API hiccup). If persistent, **do NOT push a manual fix onto the operator** — `AskUserQuestion`:
 
-> The dispatcher keeps failing. Likely a shim corruption or path-resolution drift. Options:
-> - **Re-render shims (Recommended)** — I'll run `atelier setup-models --apply --force` to overwrite both shims with canonical content + re-run doctor to verify, then retry `/promote`. ~10s.
+> The dispatcher keeps failing — usually auth expired, a model the account can't use, or a stale `ATELIER_SPEC_*_BIN` export overriding the recorded provider. Options:
+> - **Diagnose + re-pick (Recommended)** — I'll run `atelier doctor`, fix what it names (e.g. `unset` a stale BIN export), re-run `atelier setup-models --apply` with a working model if needed, then retry `/promote`. ~10s.
 > - **Inspect first** — I'll run `atelier doctor` and surface the dispatcher panel for triage; you decide next.
 > - **Stop** — exit `/promote` here.
 
-If "Re-render shims": run `atelier setup-models --apply --extract=<X> --extract-model=<MX> --elevate=<Y> --elevate-model=<MY> --force` inline (use the current pair from `.envrc.atelier` or doctor's `promote_dispatchers` block), source `.envrc.atelier` in your Bash session, re-run `atelier prototype promote <slug>`.
+If "Diagnose + re-pick": run `atelier doctor --agent`, read `promote_dispatchers` (`source: bin` means an exported override is in effect) and `model_envs`, apply the named fix — re-running `atelier setup-models --apply --extract=<X> --extract-model=<MX> --elevate=<Y> --elevate-model=<MY>` inline when the model is the problem (current pair from `~/.atelier/models/models.env` or doctor) — then re-run `atelier prototype promote <slug>`.
 
-On exit 4 (same-family Invariant 5 violation), `AskUserQuestion`:
+On exit 4 (same family, single-model NOT declared), `AskUserQuestion`:
 
-> Extract + elevate dispatchers resolved to the same model family — Invariant 5 violation. Options:
-> - **Re-pick cross-family pair (Recommended)** — I'll run setup-models inline with a different pair (canonical T1: extract=Codex/openai, elevate=Gemini/google). The CLI enforces Invariant 5 at apply-time so a same-family pair won't render.
+> Extract + elevate resolved to the same model family, and this project has not declared single-model. Options:
+> - **Re-pick cross-family pair (Recommended)** — I'll run setup-models inline with a different pair (canonical T1: extract=Codex/openai, elevate=Gemini/google). This gives a genuine cross-vendor pass.
+> - **Declare single-model** — I'll apply the same-family pair deliberately (e.g. `--extract claude --elevate claude`). `/promote` then accepts it and stamps the spec `single-family`. Use this when no second vendor is usable. The spec gets fresh eyes, NOT a cross-vendor pass, and is recorded as such.
 > - **Stop** — exit `/promote`; you reconfigure manually.
 
 If "Re-pick": run the inline setup-models workflow from Step 3 with the swapped pair (or whichever the operator picks via the detect/apply confirm), then retry `/promote`.
@@ -219,4 +222,4 @@ Next:
 - **DO NOT cherry-pick code from the archived prototype into the production worktree.** The fresh `.worktrees/<slug>/` is the architectural firewall — production code rebuilds from the elevated spec via standard RED→GREEN→VERIFY. Inheriting prototype code would defeat the whole lane.
 - **The prototype branch lives on** at `prototype/<slug>` post-promote — reference material only. W8.3's `block-prototype-read.sh` PreToolUse hook prevents Builder/Scribe from reading it (defense in depth).
 - **`.atelier/retro/notes-for-operator.md` will get a system reminder** prompting the operator to /retro after promote (W7.5 hook). Surface that nudge if it fires.
-- **If extract + elevate are wired but exit 4 fires repeatedly**, the operator may have both bins resolving to the same family (e.g. both Codex). Inspect dispatcher envelopes at `.specs/verify/<slug>.spec-{candidate,elevated}.family` for forensic value.
+- **If extract + elevate are wired but exit 4 fires repeatedly**, the operator may have both bins resolving to the same family (e.g. both Codex). Inspect dispatcher envelopes at `.specs/verify/<slug>.spec-{candidate,elevated}.family` for forensic value (present only for a custom `ATELIER_SPEC_*_BIN` path; built-in providers are refused at pre-flight, before any envelope is written).

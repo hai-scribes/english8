@@ -73,7 +73,7 @@ The user's request: $ARGUMENTS
    --porcelain` once. Two buckets, both emit WARN lines:
    - **Pipeline paths** (`.claude/`, `.specs/spec-format-reference.yaml`,
      `.specs/architecture.yaml`): uncommitted pipeline files may differ
-     from checked-in docs; commit or stash via `/commit` before relying
+     from checked-in docs; commit or stash via `/atelier-ship` before relying
      on automation.
    - **Any other dirty file** outside `.specs/.orchestra/` and
      `.specs/verify/`: working tree has uncommitted files outside this
@@ -578,4 +578,4 @@ invariants and hook mechanics, read source directly:
 - `atelier/prompts/scribe-{red,contract}.md` — Scribe role contracts
 - `docs/atelier/ATELIER_PLAN.md` — wave-level history + parked decisions + close-time gates
 - `docs/atelier/ATELIER_REQUIREMENTS.md` — R-IDs + non-goals
-- `docs/atelier/ATELIER_USE_CASES.md` — UC1–UC20 operator flows
+- `docs/atelier/ATELIER_USE_CASES.md` — UC1–UC27 operator flows

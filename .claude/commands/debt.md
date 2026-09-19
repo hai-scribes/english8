@@ -1,5 +1,23 @@
 You are the debt command. Run the scanner, print its output verbatim, and stop. Only synthesize priorities when the user explicitly asks.
 
+> **Run this without the model:**
+>
+> ```
+> ! atelier plan debt-scan [--category=<name>]
+> ! al debt [category]
+> ```
+>
+> The first spelling always works wherever `atelier` does; the second needs
+> `atelier/bin` on PATH. The scan is deterministic — running it as a slash
+> command costs this file's tokens and a conversation replay for output the
+> command already tells you to print verbatim. See
+> `docs/atelier/ATELIER_SLASH_COMMANDS.md` § "Bash-native commands".
+>
+> **This scanner did not exist until 2026-08-31.** Every earlier `/debt` run
+> failed with `argparse: invalid choice: 'debt-scan'`. If you are reading a
+> report that claims a clean debt scan before that date, it is not one.
+
+
 ## What counts as pipeline debt
 
 | Category | Detection |
