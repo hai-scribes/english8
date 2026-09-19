@@ -2,30 +2,6 @@
 disable-model-invocation: true
 ---
 
-## Atelier port note
-
-**Implementation notes:**
-
-- **Drift-driven, not manual** — `atelier plan reconcile-needed` is the
-  fast drift-check primitive; operator-commit `pre-commit` hook
-  invokes reconcile-runner.sh on drift; `/reconcile` is the manual
-  override path when the operator wants to force an evaluation.
-- **Auditor reopen** — `/hotfix` and `/promote` paths trigger reconcile
-  automatically; manual /reconcile is no longer the only entry point.
-- **Cross-family LLM** — reconcile-runner.sh requires INVARIANT_5
-  cross-family routing (Reconciler family ≠ spec-author family).
-- **Tool paths** — `atelier plan reconcile-needed` /
-  `bash "$(atelier path --hook reconcile-runner.sh)" ...` replace the prior surfaces.
-
-Per ATELIER_PLAN.md § W6.
-
----
-
-You are the reconcile command. You detect drift between specs and code, then update specs to match reality.
-
-The user's arguments: $ARGUMENTS
-
----
 
 ## Step 1: Scope
 

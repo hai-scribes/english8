@@ -1,0 +1,45 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-prototype-read.sh"
+          },
+          {
+            "type": "command",
+            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-operator-verbs.sh"
+          },
+          {
+            "type": "command",
+            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-goal-direct-writes.sh"
+          },
+          {
+            "type": "command",
+            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ arch-boundary-guard.sh"
+          },
+          {
+            "type": "command",
+            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-unresolved-shared-edit.sh"
+          }
+        ],
+        "matcher": "Read|Edit|Write|NotebookEdit|Bash|MultiEdit"
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ stop-gate.sh"
+          },
+          {
+            "type": "command",
+            "command": "sh -c 'G=\"${ATELIER_HOME:-$HOME/.atelier}/bin/rigor-goal-stop-gate\"; [ ! -x \"$G\" ] || exec \"$G\"'"
+          }
+        ]
+      }
+    ]
+  }
+}

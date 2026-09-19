@@ -1,0 +1,2051 @@
+{
+  "approvals": [
+    {
+      "approved_at": "2026-08-16T17:50:18.427Z",
+      "approved_risks": [
+        "a-accountability-tolerable",
+        "a-assets-kept",
+        "a-browser-only",
+        "a-cleanroom-better",
+        "a-ielts-precursor",
+        "a-selfstudy-transfer",
+        "a-story-spine",
+        "a-storymode-reuse",
+        "a-variant-tractable"
+      ],
+      "content_sha256": "b50f6c1f469b83a749a018245e4010e9779166d48149a878dc31e57fa7023d9e",
+      "type": "charter"
+    },
+    {
+      "approved_at": "2026-08-16T18:01:36.867Z",
+      "content_sha256": "253a37c248e6501545668e9c07bcb60d1b8dd44ea0074f0c655ad9e0beed76a5",
+      "milestone_id": 1,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:01:37.354Z",
+      "content_sha256": "59e2fd0a2c71e41e4bdcde3400e6063f04bced0da9f2838ff3493316d212421f",
+      "milestone_id": 2,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:01:37.770Z",
+      "content_sha256": "d99ebfa0d08ac2cd3ff7cb65aabf6495e477c0ce63da4b44f611e582ae0a529b",
+      "milestone_id": 3,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:01:38.154Z",
+      "content_sha256": "9a41de243ff595e59c01734f5442693d84fd5d98c90b39081320f4d72fd0b6de",
+      "milestone_id": 4,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:01:38.556Z",
+      "content_sha256": "9db3984710c22595c1b8dd0a01b701a5b4f16e58c4215058b6bb736e94e490c0",
+      "milestone_id": 5,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:01:39.002Z",
+      "content_sha256": "77d9056fd956d78ac81a89d71895da86ce8f50e59787843e9f737a22aad2c685",
+      "milestone_id": 6,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:05:27.427Z",
+      "content_sha256": "7d3b299322989815ac6f75981ce01ae6801d94c761ba8accf3c71db778637b88",
+      "milestone_id": 1,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:05:27.592Z",
+      "content_sha256": "06158c99bb13b603321cb14efa9c704ddf867d7f1db1501c90cf3d7070897019",
+      "milestone_id": 2,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:05:27.751Z",
+      "content_sha256": "8fe6ab435217d792b9af6654990b3b51b53cbc9cbe35f59c3778217b8bd0e6d0",
+      "milestone_id": 3,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:05:27.910Z",
+      "content_sha256": "214a122785cde433000ac783f49afc6fa8fca26462e444d2f853485a347db617",
+      "milestone_id": 4,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:05:28.071Z",
+      "content_sha256": "90901c6d6b1e2103fb0451f5622cf1cb4f0145922fdc97b01443b9f7ec611e9d",
+      "milestone_id": 5,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:05:28.231Z",
+      "content_sha256": "59bfcaad4fdfdbb881844a9e83fa2a88bd1a324c4ecdb44c30f9101d657d60af",
+      "milestone_id": 6,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:07:05.025Z",
+      "content_sha256": "412d901d435efea6a8229893f7f9701ae7edc79f09d4c1b24b815f2608543d49",
+      "milestone_id": 1,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:07:05.184Z",
+      "content_sha256": "9e5af65736a2fdbf7f876bd8d78bfe936c076acfa3770dae447891a856f1e605",
+      "milestone_id": 2,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:07:05.344Z",
+      "content_sha256": "3733aa81172507da76326fd04c1585a93b95ee08c8182ac9a4f2786821b3665a",
+      "milestone_id": 3,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:07:05.503Z",
+      "content_sha256": "f7f19026ba17f57b3b9c5d04a1e1e7db5062af074ba2e0fd23be43c1451c6c43",
+      "milestone_id": 4,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:07:05.661Z",
+      "content_sha256": "537308d30a7908bc41c338cff1541aaaa788eec8b17eaa757620fd5e9671e442",
+      "milestone_id": 5,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:07:05.818Z",
+      "content_sha256": "72997b5b184f14744d7c1cd3122fd28b527eefeae5754fc8cc2342638c34c3fb",
+      "milestone_id": 6,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:09:24.143Z",
+      "content_sha256": "0ed5f4b7e73a6e500535c85f71788079c7ecc74b8241482c2eb3aff3ecf2a886",
+      "milestone_id": 1,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:09:24.303Z",
+      "content_sha256": "8d3879b588d1774cc6dc3afe91aceb1d4b66b2e8d8bfac27bcb90e6b96c86507",
+      "milestone_id": 2,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:09:24.460Z",
+      "content_sha256": "21d53bec1e282868094f7947d73fb25631504e7255b4a6f9c1ebe4bb1cee3988",
+      "milestone_id": 3,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:09:24.623Z",
+      "content_sha256": "6eb1a31146bac98928ac7fe33baa354d26c287e206df28adcfae861a49336653",
+      "milestone_id": 4,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:09:24.783Z",
+      "content_sha256": "0239b66d58e6dd221dd64d572213db2cb7e1fbf03781116628b643b1b7971767",
+      "milestone_id": 5,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:09:24.939Z",
+      "content_sha256": "f84dd764dad216b581a33592a644c620c22397007234786199bd634be72c1220",
+      "milestone_id": 6,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:11:51.148Z",
+      "content_sha256": "927bf8fdfc0d75ec13d971ee6417ce2e3d98b912a19825990897b815e8659d73",
+      "milestone_id": 1,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:11:51.303Z",
+      "content_sha256": "63dad472f82e5f226163ef95a80c4d60f73f359caabb1e5455c274432866730e",
+      "milestone_id": 2,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:11:51.475Z",
+      "content_sha256": "b465eb177a350113ba40f2b92b152a59db2e40927f1a196e61c44feff8f587c7",
+      "milestone_id": 3,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:11:51.632Z",
+      "content_sha256": "2e6ef5a520c29e83619a561d6f6178a64cad3eb2fb053a184a8b5b2ad24d326c",
+      "milestone_id": 4,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:11:51.790Z",
+      "content_sha256": "ac9142a2c691d922ea7ef485fa76deaf06f374413f5fd062b1ca75f240d261e6",
+      "milestone_id": 5,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:11:51.951Z",
+      "content_sha256": "ff4008d8267c53d6e4e4f03ce69dc07361a0797b101294063b678b7f84c8935d",
+      "milestone_id": 6,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:24:58.930Z",
+      "content_sha256": "927bf8fdfc0d75ec13d971ee6417ce2e3d98b912a19825990897b815e8659d73",
+      "milestone_id": 1,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:24:59.090Z",
+      "content_sha256": "63dad472f82e5f226163ef95a80c4d60f73f359caabb1e5455c274432866730e",
+      "milestone_id": 2,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:24:59.250Z",
+      "content_sha256": "b465eb177a350113ba40f2b92b152a59db2e40927f1a196e61c44feff8f587c7",
+      "milestone_id": 3,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:24:59.410Z",
+      "content_sha256": "2e6ef5a520c29e83619a561d6f6178a64cad3eb2fb053a184a8b5b2ad24d326c",
+      "milestone_id": 4,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:24:59.571Z",
+      "content_sha256": "ac9142a2c691d922ea7ef485fa76deaf06f374413f5fd062b1ca75f240d261e6",
+      "milestone_id": 5,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T18:24:59.731Z",
+      "content_sha256": "ff4008d8267c53d6e4e4f03ce69dc07361a0797b101294063b678b7f84c8935d",
+      "milestone_id": 6,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T20:36:47.178Z",
+      "content_sha256": "5bbfb903f2b347d760073b01787894b45df8fe110db4711779f794fa601d0351",
+      "milestone_id": 1,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T20:36:47.344Z",
+      "content_sha256": "f3fa97a75b14a2c64113de3af91a0edd3ea4631d6b14f78f2bc30020a8f7fb6b",
+      "milestone_id": 2,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T20:36:47.504Z",
+      "content_sha256": "08b9dfcf8d682c0b930385995f9d022daec9d7ea45a81d27a209c1808a167832",
+      "milestone_id": 3,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T20:36:47.663Z",
+      "content_sha256": "ec2013eaaf5a3009c316041cd7cc8041d784712755edfece50220264f19d251a",
+      "milestone_id": 4,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T20:36:47.832Z",
+      "content_sha256": "7f7009008999909dc6bd7bd75fd31a379d488406e734cc1b25e6e82950b09e1c",
+      "milestone_id": 5,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-08-16T20:36:48.007Z",
+      "content_sha256": "03b445d7720437b6323b74d41f766b71e9daa99241ca91e585123b81244e9fb5",
+      "milestone_id": 6,
+      "operator": "local",
+      "type": "milestone_gate"
+    }
+  ],
+  "created_at": "2026-08-16T15:18:23.858Z",
+  "current_milestone": 5,
+  "goal": {
+    "charter": {
+      "approved_at": "2026-08-16T17:50:18.427Z",
+      "approved_risks": [
+        "a-accountability-tolerable",
+        "a-assets-kept",
+        "a-browser-only",
+        "a-cleanroom-better",
+        "a-ielts-precursor",
+        "a-selfstudy-transfer",
+        "a-story-spine",
+        "a-storymode-reuse",
+        "a-variant-tractable"
+      ],
+      "assumptions": [
+        {
+          "id": "a-cleanroom-better",
+          "provenance": "ai_inferred",
+          "text": "A teaching architecture derived from the evidence base will beat the textbook's unit shape. The incumbent is the prescribed book's own organisation, a stronger baseline than 'legacy' implies — the clean-room design may rediscover much of it, and that is a legitimate outcome rather than a failure. What would make it a failure is rebuilding the same grid under new names at the cost of a full rewrite"
+        },
+        {
+          "id": "a-selfstudy-transfer",
+          "provenance": "ai_inferred",
+          "text": "The extensive-reading effect survives unsupervised self-study at all. research/ielts/09 §2.2 carries this as an explicit GAP — the evidence base is almost entirely classroom-mediated, and the accountability moderator suggests self-study is the HARDER case, not the easier one. Supported by no evidence and contradicted by none. This is the central risk of the whole product"
+        },
+        {
+          "id": "a-story-spine",
+          "provenance": "ai_inferred",
+          "text": "A narrative spine carrying the syllabus raises sustained unprompted use. The extensive-reading evidence does NOT warrant this: the story slots total 11,479 words across a year, roughly one graded reader, and volume was never analysed in the meta-analysis. The sourced warrant is instead the topic-lexis discount (07 §2.2a [S]) - a fixed cast, setting and vocabulary is its strongest instantiation, worth about a 1,000-word level of coverage. Marker honestly downgraded from [V 3-0] to [S] by making the claim fit the evidence"
+        },
+        {
+          "id": "a-ielts-precursor",
+          "provenance": "ai_inferred",
+          "text": "Grade-8 work built this way develops genuine IELTS precursors, and IELTS-format practice from the start is right for a learner already studying IELTS. Two limits stand: the official alignment bottoms out at band 4.0 = B1 with no band for A2 or A1, so the claim cannot be checked at her level even in principle; and §3.3 records that preparation can move scores without moving proficiency, which is precisely the outcome we would be unable to detect"
+        },
+        {
+          "id": "a-marking-authoring",
+          "provenance": "codebase_observed",
+          "text": "MEASURED, no longer inferred: of 2,164 marked items in units/*.md, 1,851 are coursework and 313 simulate a test; only 275 of 1,357 free-text keys (20.3%) use official key grammar; and markAnswer() never reads skill=, so test severity is applied to all coursework. Three mechanical classes of legitimate variant are rejected at 41/62 = 0.661. The residue needing genuine semantic judgement is ~7% of items. What remains assumed is that re-authoring that residue toward closed answer spaces is preferable to judging it - not that the 93/7 split is real, which is counted"
+        },
+        {
+          "id": "a-variant-tractable",
+          "provenance": "ai_inferred",
+          "text": "Spelling-variant acceptance is tractable and bounded - the missing -yse and single-l British classes are two rules and one list. What is NOT tractable is global lexical or grammatical variant matching, which manufactures false positives in exactly the exercises that test the distinction; those belong in individual keys. The assumption is that per-key authoring covers the real cases"
+        },
+        {
+          "id": "a-storymode-reuse",
+          "provenance": "ai_inferred",
+          "text": "'Reuse the current story mode structure' means reusing its data model, authoring vocabulary and cast manifest while rebuilding the renderer to that structure — not porting the existing comic-geometry code, which the brief rules out. If the operator meant literally keeping the existing implementation, the app-foundation milestone changes materially"
+        },
+        {
+          "id": "a-art-later",
+          "provenance": "operator_stated",
+          "text": "The learning experience can be built and judged with placeholder art, provided every drawable thing is a declared slot and the missing set is inventoried, so drawings added later simply work. Operator-decided. The counter-case stands: a reading adventure whose art is dashed boxes may not be the product, in which case the verdict measures something she will never use"
+        },
+        {
+          "id": "a-thin-slice",
+          "provenance": "operator_stated",
+          "text": "A thin end-to-end slice is enough to judge the loop, provided it spans at least two consecutive units of work — a return is where the north-star metric lives, and one session cannot show it"
+        },
+        {
+          "id": "a-marking-after",
+          "provenance": "operator_stated",
+          "text": "Marking placed after the reading, as the accountability step, preserves the thread better than marking inline at the beat. Operator-decided and unvalidated against the alternative; no tournament will run on it"
+        },
+        {
+          "id": "a-n-of-1",
+          "provenance": "operator_stated",
+          "text": "One learner's response generalises far enough to justify the build. Accepted knowingly; commercial scale-up is out of scope, so this charter is not asked to generalise"
+        },
+        {
+          "id": "a-assets-kept",
+          "provenance": "ai_inferred",
+          "text": "Deleting tools/, docs/ and the generated site while keeping curriculum/sgk/, research/, data/dict/, data/cast.json and art/ is the right cut of 'remove the current code'. Those kept assets are what the rebuild exists to deliver better"
+        },
+        {
+          "id": "a-accountability-tolerable",
+          "provenance": "ai_inferred",
+          "text": "Some form of accountability exists that this specific thirteen-year-old tolerates and does not experience as homework. This is not a missing feature; it is the difference between d = 0.51 and d = 0.01, and the documented risk runs both ways — detail-testing quizzes after reading are recorded as demotivating and avoidance-inducing"
+        },
+        {
+          "id": "a-browser-only",
+          "provenance": "ai_inferred",
+          "text": "A browser-delivered app with local persistence is sufficient; nothing observed requires a native app or a server. There is one learner and no server-side backup, so her record lives on one device and losing it loses the product"
+        },
+        {
+          "id": "a-saturday-rhythm",
+          "provenance": "operator_stated",
+          "text": "The weekly shared Saturday session plus weekday solo use is the real usage pattern, and the Saturday session is what makes the weekday record worth keeping. It also supplies the independent measure E6 requires before any gain may be called a proficiency gain. Unvalidated: whether the Saturday session actually happens every week, and whether it stays a conversation rather than becoming an inspection"
+        }
+      ],
+      "charter_status": "approved",
+      "constraints": [
+        "The content floor is ALL ~400 prescribed targets across six families. The METHOD and SEQUENCE are free — the 12-unit x 7-lesson shape is dead — but no target may be dropped, because the learner still sits Vietnamese school examinations on this book. check_coverage.py reports and exits 0, so this needs a real gate: a large rewrite can go fully green while quietly deleting required curriculum",
+        "No IELTS band number is ever output — not a score, prediction, progress dial, badge or goal. No half-band. Label by CEFR if a level must be named at all, and never on the learner's page (A1, A2, A3)",
+        "No hours-to-band promise of any kind (E7). No presentation of our own practice-test gains as proficiency gains without an independent measure (E6)",
+        "An exercise a key can settle is a committed, marked attempt, never a reveal-and-self-mark — learners cannot self-assess accurately (Phakiti 2016, N = 376, up to 93% miscalibrated on hard items). A retake is a new attempt, never an edit; no averaging across attempts, no trend claim (C1–C5, E3, E9, §4.4)",
+        "A false negative is the worst failure this system can produce. She is alone and has nobody to appeal to, so a correct answer marked wrong teaches her that the right answer is wrong. The gate is zero",
+        "Automated judgement stays inside the defensible set: obligatory-context accuracy on named structures, error-free sentence density, presence or absence of named discourse moves, paraphrase identification. Never a holistic band, never Coherence & Cohesion, Task Response, Lexical Resource precision, 'flexibility', or pronunciation (D9, §4.2, §5.4)",
+        "Any automated scorer reports its disagreement rate with human judgement, or reports nothing scored at all (D10), and is adversarially tested before shipping (D11)",
+        "Any extensive-reading provision limits text choice to the learner's level AND includes an accountability step (B9) — the difference between d = 0.51 and d = 0.01",
+        "The interface explains nothing about itself. No criterion names, no evidential markers, no CEFR labels, no citations, no accounts of evidence",
+        "No Speaking rubric or Speaking feedback tool (D7)",
+        "No Vietnamese pronunciation tooling beyond 07 §8.3's three permitted targets, and no claim that any of it raises a score or transfers to spontaneous speech (B7)",
+        "Nothing recorded upstream as a GAP or [X] may be asserted — and neither may its negation (A10, G6)",
+        "Responsive web app: one codebase serving phone and desktop, designed at 360 px and grown, fast enough to be measured rather than asserted. Browser only, no native app",
+        "Art is added later and must simply work: every drawable thing is a declared slot with a placeholder behind it, the missing set is inventoried in writing, and dropping a file into a slot requires no code change",
+        "Story mode is reused structurally and is not reworked in this scope. The 'animating novel' direction is captured as a planned later scope",
+        "Any visual or geometric claim is measured in a real browser against real layout boxes. A DOM shim that does no layout cannot see a balloon covering a face — 41% of the previous build's runtime was guarded that way",
+        "Every sweep emits a coverage count beside its result; zero rendered and zero defects are otherwise identical output",
+        "The kept assets — curriculum/sgk/, research/, data/dict/, data/cast.json, art/ — are read-only inputs. Regenerating them is years of work and would be an unforced loss",
+        "The repository path contains a space (/Users/liemnguyen/Per/English 8). Every path passed to a shell or harness is quoted",
+        "Each architecture step gets an adversarial second-brain review before it is frozen, and the verdict is committed as an artefact"
+      ],
+      "content_sha256": "b50f6c1f469b83a749a018245e4010e9779166d48149a878dc31e57fa7023d9e",
+      "deferred": {},
+      "desired_outcome": "A responsive web app - phone and desktop, fast, offline-capable - that a child opens on a weekday with no help and learns English from, and that gives her uncle something real to look at on Saturday. Underneath it, three architectures designed rather than inherited: (1) a TEACHING architecture whose atomic unit is a short session rather than a lesson, delivering every prescribed target while free to sequence and pace them as the evidence directs; (2) a MARKING architecture that is local, synchronous and offline - question types engineered toward closed answer spaces, official key grammar carrying legitimate variation, two severities so coursework is not marked with test severity, and a near-miss state so a nearly-right answer is neither credited nor accused; (3) an APP architecture with real module boundaries, content as data, versioned local state, and asset slots that make a drawing work the moment it is dropped in. Her underlying English improves, which is the honest route to any IELTS improvement; the app never outputs, predicts or promises a band.",
+      "kill_criteria": [
+        "The learner stops opening it unprompted for two consecutive weeks, with content available and no external cause",
+        "The ~400 prescribed targets cannot be placed in the new shape without recreating the 12 x 7 grid under new names — in which case the honest conclusion is to keep the textbook's curriculum organisation and rebuild only the delivery, at a fraction of the cost",
+        "The false-negative rate cannot be driven to zero on the built slice, or can only be driven to zero by accepting wrong answers as right",
+        "Accountability cannot be built into a form this learner tolerates. Per the evidence that is not a missing feature; it is the difference between a medium effect and no effect at all",
+        "The teaching architecture cannot carry curriculum without degenerating into a lesson with a story printed above it — the current build's failure mode, and repeating it means the rebuild bought nothing",
+        "Honest marking cannot be preserved on the new surface without the experience degrading into a test",
+        "The app cannot be made fast enough on a mid-range phone to be opened casually — if it is slow to open, it will not be opened unprompted, and the north-star metric is lost before any pedagogy is tested"
+      ],
+      "problem": "One Vietnamese grade-8 learner, ~13, studies English largely alone. The operator (her uncle) sits with her one morning a week; the rest of the week she is on her own with a phone and nobody to ask. The existing build delivers the prescribed curriculum completely but is the wrong artefact three ways over, and two of the three are now measured rather than asserted. FIRST, it organises learning as the textbook does - twelve units of seven lessons - which is the publisher's convenience rather than an evidence-derived teaching sequence. SECOND, its marking produces false negatives, and the defect is worse than reported: traced against the live engine, key 'yes' with the answer 'yes, it is' returns {ok:false, why:'two'}, so she is not merely marked wrong, she is authoritatively told she wrote two answers in one gap when she wrote one. The same trace rejects 'cannot stand' for \"can't stand\", '3 hours' for 'three hours', 'the bracelets' for 'bracelets', and the entire -yse and single-l British spelling classes (analyse/analyze, enrol/enroll, skilful/skillful, fulfil/fulfill). Across units/*.md there are 2,164 marked items; only 275 of 1,357 free-text keys (20.3%) use the official key grammar that would fix this. And markAnswer() never reads skill=, so IELTS Listening severity is applied to all 1,851 grade-8 coursework items as well as the 313 that actually simulate a test. THIRD, engineering ran ahead of content: 41% of the runtime is comic geometry guarded only by string-matching, one 4,702-line script loads on all 101 pages, and 29 of 32 art assets are placeholders. The rebuild exists to fix three architectures - teaching, marking, and app - while losing none of the content.",
+      "readiness": {
+        "designer": "Direction is unusually well specified and has just been sharpened: research/prototype/story-english-brief.md carries scope, eight non-negotiables, metric candidates and kill criteria; .atelier/rules/design-foundations.md has been rewritten from the shipped starter template to this product's actual UI bar. Newly settled: content floor of ~400 targets, method free, IELTS format from the start, art later behind slots, story mode reused not reworked. Still open and now the first milestone's job: what the atomic unit of work is, and what accountability looks like to this learner. Not ready: no visual language exists for the new surface.",
+        "developer": "Stack deliberately unchosen — the previous build's defining failure was one 4,702-line script with no module boundary, so boundaries should be chosen before frameworks. Inputs are stable and machine-readable (targets.json, data/dict/, data/cast.json). Two risks: every geometric or performance claim needs a real browser harness, which is new work rather than ported work; and the LLM marking fallback introduces latency, cost, failure and privacy considerations the previous build never had.",
+        "owner": "Settled: all ~400 targets kept, method free; IELTS format from the start; design-to-avoid marking with LLM only where unavoidable; art inventoried and deferred; story mode reused; second-brain review by subagent since codex is blocked by a workspace spend cap. Outstanding: no LLM provider chosen and the privacy position on a minor's written work leaving the device is not settled; whether the clean-room design's conclusion is binding if it contradicts the incumbent; and what happens to the rest of the year if the thin slice succeeds. The north-star metric depends on the owner personally making a weekly observation."
+      },
+      "scope": {
+        "in": [
+          "The teaching architecture, designed clean-room: the atomic unit of work is a SESSION, not a lesson and not a chapter; what a session contains, how sessions chain, and what decides what she does next when she opens the app - a queue, not an index",
+          "A story spine extended to enough chapters to carry real reading volume, since the existing four story slots total 11,479 words across a whole year - roughly one graded reader - which is not extensive reading by any reading of the evidence",
+          "A vocabulary track OUTSIDE the stories: the 325 distinct lexis strings taught as collocations with audio, pre-taught before the text that uses them, on a fixed-interval ladder",
+          "Placement of the non-lexis targets - grammar, pronunciation, everyday-English functions, culture blocks, writing genres - into the new shape, gated rather than hoped for",
+          "The marking architecture: closed-answer-space question types; official key grammar with optional tokens, alternates and either-order pairs; two severities keyed to whether an item simulates a test or is coursework; a near-miss third state; and an appeal control that records her disagreement without re-marking",
+          "British and American SPELLING variants, including the -yse and single-l classes the current engine misses; lexical and grammatical variants only per-key, never globally",
+          "An authoring-time LLM that proposes key variants for human acceptance and pre-generates per-item explanations shipped into the page - never a runtime scorer",
+          "IELTS PRECURSOR SKILLS from the start - synonym recognition under search conditions, confidence calibration with feedback, obligatory-context accuracy on named structures - with format familiarisation as a one-off orientation per question type",
+          "Weekday activity tracking, and a weekly shared surface that makes the week legible on Saturday without becoming a score",
+          "Spaced retrieval on a fixed-interval ladder, evaluated against delayed retention",
+          "Support that appears where the reader stalls and withdraws afterwards, in Vietnamese, once per item",
+          "The app foundation: responsive phone and desktop, fast, offline-capable, module boundaries, content as data, learner state persisted locally and versioned",
+          "An asset-slot interface and a written inventory of every missing art asset, so drawings added later simply work with no code change",
+          "A thin end-to-end slice built for real, spanning at least two consecutive sessions",
+          "An adversarial second-brain review on each architecture step, its verdict recorded as a committed artefact"
+        ],
+        "out": [
+          "ANY runtime LLM call that decides, adjudicates or overrides a mark. D10 requires an automated scorer to report its disagreement rate with human judgement or report nothing scored at all; with one learner and no human rater no such rate can exist, so the LLM may not score. This also removes the latency, cost, offline-fragility and privacy problems entirely",
+          "Sending the learner's written work to any third-party API. She is a minor; every defensible LLM job runs at authoring time over authored text on the author's machine",
+          "Global lexical or grammatical variant matching (shop/store, have you got/do you have). Applied globally these manufacture false POSITIVES in exactly the exercises that are about the distinction; they belong in individual keys",
+          "Reworking story mode's rendering. The existing story structure is reused; the 'animating novel' direction - colourful animated characters moving through the adventure - is documented and planned for a later scope",
+          "Producing the 29 missing art assets. They are inventoried and slotted; drawing them is later work",
+          "Aligning the sequence to her school's examination calendar. The operator has chosen to optimise purely for learning",
+          "A streak mechanic. The north-star metric IS unprompted return; a streak optimises that metric directly and destroys its interpretability, so no streak ships before a clean baseline exists",
+          "Commercial features - accounts, payment, multi-tenancy, third-party authoring. One learner",
+          "Delivering grades other than 8. The shape must not ASSUME grade 8; it need not DELIVER another grade",
+          "Any Speaking rubric or Speaking feedback tool (D7)",
+          "Any IELTS band number, half-band, dial, predictor, or hours-to-band promise (A2, A3, E7); any claim that our own practice-test gains are proficiency gains absent an independent measure (E6)",
+          "Any Vietnamese pronunciation tooling beyond 07 8.3's three permitted targets, and any claim it raises a score or transfers to spontaneous speech (B7)",
+          "Porting tools/, docs/ or the generated site. Reference for intent only",
+          "A native app - nothing observed requires leaving the browser",
+          "Regenerating the kept assets: curriculum/sgk/, research/, data/dict/, data/cast.json and art/ are read-only inputs",
+          "Re-running the pedagogy research. research/ielts/ is source-verified; it is queried via index.jsonl, never read wholesale"
+        ]
+      },
+      "sources": [
+        {
+          "id": "brief",
+          "note": "Operator-authored input. Scope, eight non-negotiables, metric candidates, assumptions seed, kill criteria, risk-first milestone sketch",
+          "title": "story-english — direction brief for the prototype lane",
+          "url": "research/prototype/story-english-brief.md"
+        },
+        {
+          "id": "sangers-2025",
+          "note": "[V 3-0] via research/ielts/09 §2.2 and checklist B9. 73 studies / 82 interventions / 86 comparisons; d = 0.41 overall. Two moderators are product features: level-limited text choice d = 0.73 (k=25) vs 0.22 (k=57); accountability d = 0.51 (k=59) vs d = 0.01 n.s. (k=23). Three limits travel with it: duration was NOT a moderator, reading volume was never analysed, retention is barely tested",
+          "title": "Sangers et al. (2025), Educational Psychology Review — extensive reading meta-analysis",
+          "url": "https://link.springer.com/article/10.1007/s10648-025-10068-6"
+        },
+        {
+          "id": "nakanishi-2015",
+          "note": "[V 3-0] via 09 §2.2. d = 0.46 for group contrasts",
+          "title": "Nakanishi (2015), TESOL Quarterly — extensive reading meta-analysis",
+          "url": "research/ielts/09-design-principles.md"
+        },
+        {
+          "id": "er-selfstudy-gap",
+          "note": "09 §2.2 GAP blockquote, collected again at §8.1 item 2. An argument for building the log, NOT evidence it works without one. Warrant for assumption a-selfstudy-transfer",
+          "title": "GAP — the extensive-reading effect in unsupervised self-study is not established",
+          "url": "research/ielts/09-design-principles.md"
+        },
+        {
+          "id": "checklist-09-1",
+          "note": "§1. Groups A (claims/labels) and G (citation hygiene) apply to everything; B lessons, C auto-marked practice, D rubrics and LLM tools, E progress reporting, F vocabulary tooling. Audit items, not preferences",
+          "title": "The audit checklist — 66 items, Groups A–G",
+          "url": "research/ielts/09-design-principles.md"
+        },
+        {
+          "id": "autoscore-42",
+          "note": "§4.2. Six can, five cannot. The most important absence is 'flexibility' — the discriminator the descriptors use at every band from 6 up, with no scoring mechanism named anywhere. The spine of the marking architecture",
+          "title": "Which sub-skills can be validly auto-scored, and which cannot",
+          "url": "research/ielts/09-design-principles.md"
+        },
+        {
+          "id": "llm-boundary",
+          "note": "§5.3 defensible set; §5.4 the seven things it is not defensible on; §5.2 what automated scoring is known to get wrong; D10 disagreement-rate requirement; D11 adversarial testing before shipping",
+          "title": "Where an LLM feedback tool is and is not defensible",
+          "url": "research/ielts/09-design-principles.md"
+        },
+        {
+          "id": "washback-03",
+          "note": "§3. §3.2 what prep produces; §3.3 whether prep raises scores without raising proficiency; §3.4 the amendment that format familiarity is not nothing; §3.5 where the evidence is mixed. Directly bears on running IELTS-format work from the start",
+          "title": "Washback — what IELTS preparation actually produces",
+          "url": "research/ielts/09-design-principles.md"
+        },
+        {
+          "id": "phakiti-2016",
+          "note": "[S] via 09 §4.4. N = 376, simulated IELTS Listening; miscalibration across all four sections with a tendency to overconfidence, up to 93% miscalibrated on very difficult items. Warrant for committed marking over reveal-and-self-mark",
+          "title": "Phakiti (2016) — learners cannot self-assess accurately",
+          "url": "research/ielts/09-design-principles.md"
+        },
+        {
+          "id": "spaced-retrieval",
+          "note": "§2.1, with checklist F4 and F5: fixed/uniform intervals are permitted, nothing may claim expanding intervals are superior (two independent meta-analyses find them equivalent), intervals err long rather than short, and the scheduler is evaluated against DELAYED retention",
+          "title": "Spaced retrieval — and the finding that should change how we build",
+          "url": "research/ielts/09-design-principles.md"
+        },
+        {
+          "id": "doraemon-craft",
+          "note": "§8 the audience, Vietnamese thirteen-year-olds in 2026. §10 the measured container: 11,479 words across four story slots, ~750 words of continuous narrative per unit in four scenes — the measured basis for sizing a unit of work",
+          "title": "What makes Doraemon work — a craft foundation",
+          "url": "research/story/doraemon-craft.md"
+        },
+        {
+          "id": "sgk-record",
+          "note": "Twelve units section by section, a 282-word glossary, four cumulative Reviews, machine-readable targets. SIX families: lexis 328, grammar 24, pronunciation 12, everyday-English 12, culture block 12, writing genre 12 — the widely-quoted 328 is lexis alone. Queried via index.jsonl, never read wholesale (~4,400 lines)",
+          "title": "curriculum/sgk/ — the prescribed student's book, recorded",
+          "url": "curriculum/sgk/targets.json"
+        },
+        {
+          "id": "prior-art-accountability",
+          "note": "Tier 3 — the OBJECT of a claim, never its warrant (G4). Streaks have strong retention prior art but are brittle: one missed day collapses the mechanic for many users. Detail-testing quizzes after reading are documented as demotivating and avoidance-inducing. App-plus-one-human-partner is repeatedly named as the effective configuration, and this product uniquely has that human",
+          "title": "Prior art scan — accountability forms for a teenager on a phone",
+          "url": "https://www.edutopia.org/article/ditching-reading-logs/"
+        }
+      ],
+      "success_metrics": [
+        {
+          "benchmark_candidate": "Operator observation, recorded at the Saturday session; the app's local activity log corroborates but cannot establish it, because no log distinguishes a prompted open from an unprompted one",
+          "evidence_strength": "direct",
+          "id": "returns_unprompted",
+          "measurable_form": "WEEKDAY days (Mon-Fri) the learner opens the app without being asked. Saturday is excluded by construction: it is a scheduled shared session, so it cannot evidence unprompted return",
+          "priority": "north_star",
+          "required_by": "final milestone, as a deferred_to_boundary honesty surface — a headless gate cannot see whether a child came back",
+          "threshold": 3,
+          "verification_mode": "user_study"
+        },
+        {
+          "benchmark_candidate": "Operator observation, logged weekly",
+          "evidence_strength": "direct",
+          "id": "sessions_unprompted",
+          "measurable_form": "Sessions the learner starts on weekdays without being asked. 'Session' because the atomic unit of work is what the teaching-architecture milestone decides",
+          "priority": "diagnostic",
+          "required_by": "final milestone",
+          "threshold": 4,
+          "verification_mode": "user_study"
+        },
+        {
+          "benchmark_candidate": "A coverage harness over the designed curriculum and the built slice, emitting ATELIER_METRIC sgk_targets_covered=<n>",
+          "evidence_strength": "direct",
+          "id": "sgk_targets_covered",
+          "measurable_form": "Prescribed targets from curriculum/sgk/targets.json placed and delivered in the new shape, counted across all six families — lexis 328, grammar 24, pronunciation 12, everyday-English 12, culture/Communication block 12, writing genre 12. The 328 figure quoted everywhere in this repo is LEXIS ALONE; the other five families are gated separately by check_coverage.py and are the ones this project has historically dropped",
+          "priority": "critical",
+          "required_by": "curriculum-architecture milestone; never regresses thereafter",
+          "threshold": 400,
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "An adversarial variant harness driving every built item, emitting ATELIER_METRIC false_negative_marks=<n>",
+          "evidence_strength": "direct",
+          "id": "false_negative_marks",
+          "measurable_form": "Legitimately correct learner answers that the engine marks wrong, over a fixture set of valid answer variants per item — including short-answer forms ('yes' / 'yes, it is'), British and American spellings, and other accepted variants. This is the operator's named defect made mechanical",
+          "priority": "critical",
+          "required_by": "marking-architecture milestone",
+          "threshold": 0,
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "A rule harness driving each Group C rule against every built item, emitting ATELIER_METRIC marking_rule_violations=<n>",
+          "evidence_strength": "direct",
+          "id": "marking_rule_violations",
+          "measurable_form": "Group C conformance failures across every marked item: key grammar not honoured, a UK or US spelling rejected, two answers in one gap given partial credit, a word limit not enforced per task, spelling silently forgiven, or a retake offered on a clock-spent task",
+          "priority": "critical",
+          "required_by": "marking-architecture milestone",
+          "threshold": 0,
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "A scanner over built output and over captured LLM responses, emitting ATELIER_METRIC band_tokens_emitted=<n>",
+          "evidence_strength": "direct",
+          "id": "band_tokens_emitted",
+          "measurable_form": "Occurrences of an IELTS band number, half-band, band promise or hours-to-band claim in built learner-facing output, including anything an LLM returns to the page",
+          "priority": "guardrail",
+          "required_by": "every milestone from the app foundation onward",
+          "threshold": 0,
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "A pass over built content data, emitting ATELIER_METRIC gloss_reoffers=<n>",
+          "evidence_strength": "direct",
+          "id": "gloss_reoffers",
+          "measurable_form": "Items glossed more than once within a unit of work, or re-glossed after they have been withdrawn — support failing to withdraw, made mechanical",
+          "priority": "guardrail",
+          "required_by": "support-withdrawal milestone",
+          "threshold": 0,
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "Headless browser at 360 px with CPU throttling, emitting ATELIER_METRIC first_paint_ms=<n>",
+          "evidence_strength": "proxy",
+          "id": "first_paint_ms",
+          "measurable_form": "Time from opening the app to first readable content at 360 px width under a mid-range mobile CPU throttle",
+          "priority": "diagnostic",
+          "required_by": "app-foundation milestone — 'lightning fast' is a claim until measured, and a headless number is not the number a user feels",
+          "threshold": 1500,
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "A build-output measurement, emitting ATELIER_METRIC js_bytes=<n>",
+          "evidence_strength": "proxy",
+          "id": "js_bytes",
+          "measurable_form": "Total JavaScript delivered to open the first screen, compressed. The honest, reliably measurable proxy for 'fast', and the direct antidote to the previous build's single 4,702-line script loading on all 101 pages",
+          "priority": "guardrail",
+          "required_by": "app-foundation milestone",
+          "threshold": 150000,
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "Emitted alongside every sweep as ATELIER_METRIC items_swept=<n>",
+          "evidence_strength": "direct",
+          "id": "items_swept",
+          "measurable_form": "Items or screens the harness actually rendered and exercised during a sweep — coverage, so a gate that renders nothing cannot report zero defects",
+          "priority": "diagnostic",
+          "required_by": "used as slo.coverage_metric_id on every sweeping milestone",
+          "threshold": 1,
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "A manifest-versus-filesystem pass, emitting ATELIER_METRIC art_slots_unfilled=<n>",
+          "evidence_strength": "direct",
+          "id": "art_slots_unfilled",
+          "measurable_form": "Declared asset slots with no real drawing behind them. Reported, never failed — the point is that the number is visible and that dropping a file into a slot makes it work with no code change",
+          "priority": "diagnostic",
+          "required_by": "app-foundation milestone — this is the operator's 'list them out' requirement made mechanical",
+          "threshold": 29,
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "The same harness that emits false_negative_marks, emitting ATELIER_METRIC false_positive_marks=<n>",
+          "evidence_strength": "direct",
+          "id": "false_positive_marks",
+          "measurable_form": "Wrong answers the engine accepts as right, over an adversarial distractor set. Paired with false_negative_marks deliberately: a false-negative gate alone is trivially satisfied by accepting everything, so neither number means anything without the other",
+          "priority": "critical",
+          "required_by": "marking-architecture milestone; gated jointly with false_negative_marks",
+          "threshold": 0,
+          "verification_mode": "automated"
+        },
+        {
+          "benchmark_candidate": "An authoring-time key audit, emitting ATELIER_METRIC key_variant_coverage=<0.0000>",
+          "evidence_strength": "direct",
+          "id": "key_variant_coverage",
+          "measurable_form": "Share of free-text answer keys carrying official key grammar - optional tokens, alternates, either-order pairs - rather than a bare exact string. Measured today at 275/1357 = 0.203 across units/*.md",
+          "priority": "diagnostic",
+          "required_by": "marking-architecture milestone - the leading indicator behind the false-negative rate",
+          "threshold": 0.9,
+          "verification_mode": "automated"
+        }
+      ],
+      "target_users": "One named learner: the operator's niece. Vietnamese, grade 8, ~13, phone-first, and already studying IELTS separately, so the design targets a motivated learner above the pure-beginner case. The usage rhythm is now known and is structural: the operator and the learner sit together ONE MORNING A WEEK (Saturday) and use the app; on weekdays she uses it alone, unsupervised. That splits the product into two surfaces with different jobs - a weekday self-study loop, and a weekly shared surface where what she did during the week is visible to both of them. It also means her weekday activity must be tracked, because the Saturday session is where that record is read. The population this must NOT silently design for is the adult test-taker on whom almost the entire IELTS-preparation evidence base is built. Commercial scale-up is out of scope; n = 1 is a strength because the north star can be observed weekly rather than modelled.",
+      "tier": "prototype",
+      "user_access_plan": "The learner is the operator's niece and is directly reachable, so this charter needs no recruited study. The app is installed on her phone and she uses it unsupervised. The operator observes weekly and records two things: days she opened it without being asked (returns_unprompted) and sessions she started (sessions_unprompted). The app keeps a local open-log that corroborates the observation but never establishes it, because no log can distinguish a prompted open from an unprompted one. Nothing about the observation is surfaced in the interface, and she is never shown a band, score or composite. Three honest limits: n = 1; the observation is single-blind at best because the observer is the person who wants it to succeed; and novelty cannot be separated from effect in the first weeks — which is why the kill criterion is stated in consecutive weeks rather than sessions. She is also studying IELTS elsewhere, so any change in her IELTS performance has a second cause we do not control and cannot subtract."
+    },
+    "final_gate": null,
+    "text": "A phone-first English self-study app for one Vietnamese grade-8 learner where a story read chapter by chapter is the spine and the syllabus is carried by it, built on a clean-room curriculum design derived from the research base rather than ported from the current system"
+  },
+  "milestones": [
+    {
+      "active": true,
+      "approach_candidates": [
+        {
+          "id": "queue-first",
+          "name": "Queue-first: the app opens on what is due",
+          "summary": "The home surface is the review queue; the story is a slot inside a session rather than the navigation model. Priority: due reviews, then the next unmet target whose prerequisite lexis is at 'seen', then reading. There is no 'next lesson' screen at all - this is what makes the freed sequence actually free rather than rhetorically free. Strongest fit to the spaced-retrieval evidence (09 §2.1, [V 3-0] across 48 experiments, N = 3,411); weakest pull for unprompted return, because a queue is a chore surface and the north-star metric is whether she opens it unasked."
+        },
+        {
+          "id": "story-first",
+          "name": "Story-first: the app opens on the next chapter",
+          "summary": "The narrative is the navigation model; due reviews and the vocabulary track surface after or around the chapter. Strongest fit to the operator's thesis and to unprompted return, and the honest warrant is the topic-lexis discount (07 §2.2a [S]) - a fixed cast, setting and vocabulary is its strongest instantiation, worth roughly a 1,000-word level of coverage. Risk: scheduling becomes subordinate to narrative order, and a target's delayed check lands when the story reaches it rather than when memory needs it."
+        },
+        {
+          "id": "alternating",
+          "name": "Alternating: story days and drill days",
+          "summary": "Sessions alternate in kind rather than mixing - some are pure reading, others pure retrieval. Simplest to schedule and to reason about; the sharpest test of whether the story is carrying the syllabus or merely alternating with it. Risk: it makes the seam between story and syllabus visible, which is precisely the 'lesson with a story printed above it' failure the rebuild exists to avoid."
+        },
+        {
+          "id": "woven",
+          "name": "Woven: one session, four fixed slots",
+          "summary": "Every session has the same four slots in the same order - due reviews, meet ~6 new collocations with audio, read one text, produce one accounted-for output. Fixed shape means she always knows what she is in for, which matters for a 13-year-old alone. Warranted slot by slot: F7/F3 collocations with audio, B8 lexis pre-taught before the text that uses it, B9 accountability. Risk: a fixed shape can feel like a worksheet, and four slots may overrun a weekday evening."
+        }
+      ],
+      "benchmark": {
+        "approved_at": "2026-08-16T20:36:47.178Z",
+        "command": "node harness/coverage.mjs",
+        "content_sha256": "0924d67217576699afbfdfc54b84757748f29c1f0b45e640c6e27202abb1f0c0",
+        "fixed_workload": "Every target in curriculum/sgk/targets.json across all six families - lexis 325 distinct of 328 entries, grammar 24, pronunciation 12, everyday-English 12, culture block 12, writing genre 12 slots of 5 distinct values - resolved against the placement map, plus the encounter/production/check separation invariant checked on every placed target",
+        "harness": "harness/coverage.mjs"
+      },
+      "findings": {
+        "margin_pct": 0.0,
+        "observations": [
+          {
+            "kind": "confirms",
+            "text": "approach v2 ('The narrative is the navigation model; due reviews and the vocabulary track surface after or around the chapter. Strongest fit to the operator's thesis and to unprompted return, and the honest warrant is the topic-lexis discount (07 §2.2a [S]) - a fixed cast, setting and vocabulary is its strongest instantiation, worth roughly a 1,000-word level of coverage. Risk: scheduling becomes subordinate to narrative order, and a target's delayed check lands when the story reaches it rather than when memory needs it.', proposer story-first) won the round"
+          },
+          {
+            "kind": "new",
+            "text": "approach v1 did not reach the gate (no progress for 3 cycles; still failing: build, marking — 1 of 4 cycle(s) reaped by the wall-timeout watchdog (worker silent/unresponsive))"
+          },
+          {
+            "kind": "new",
+            "text": "approach v3 did not reach the gate (budget exhausted (max-cycles / wall-clock))"
+          },
+          {
+            "kind": "new",
+            "text": "winner 400.0 vs SLO 400 (maximize) — margin 0% (tight)"
+          }
+        ],
+        "proposed_next": [
+          {
+            "action": "iterate",
+            "text": "SLO met but margin is tight (0%); an iteration could buy headroom"
+          }
+        ],
+        "recommendation": {
+          "action": "proceed",
+          "confidence": "objective",
+          "rationale": "green vs SLO, winner grafted + re-gated; ready to advance"
+        },
+        "recorded_at": "2026-08-16T21:43:18.958Z",
+        "source": "auto",
+        "status": "pending_approval",
+        "theory_changes": []
+      },
+      "gate": {
+        "approved_at": "2026-08-16T20:36:47.178Z",
+        "artifacts": [
+          "harness/",
+          "package.json",
+          "package-lock.json"
+        ],
+        "artifacts_sha256": "0428359727a13941fbd98b3aa3e466c517a4d2cd315c5725dec2ee045d9b2ee9",
+        "checks": [
+          {
+            "kind": "build",
+            "name": "build"
+          },
+          {
+            "kind": "smoke",
+            "name": "marking"
+          },
+          {
+            "kind": "interaction",
+            "name": "session"
+          }
+        ],
+        "checks_yaml_body": "schema_version: 1\n\n# The executable gate for story-english. One shared file gates the goal; every\n# milestone declares this same scenario set, and `prototype check` runs all of\n# them. Each scenario emits its ATELIER_METRIC lines on stdout as bare numbers,\n# with the unit carried in the metric id.\n#\n# Every sweep emits a coverage count beside its result. A harness that renders\n# nothing and a harness that finds no defects produce identical output\n# otherwise, and one is a pass while the other is broken.\n#\n# These are real gates. Until the milestones build the harnesses they fail,\n# which is correct: making them green is the work, not a precondition to it.\n\nchecks:\n  # ---------------------------------------------------------------------------\n  # Curriculum and content integrity. Every prescribed target is placed, and no\n  # target has its encounter, its production and its delayed check in the same\n  # session — E5 restated as architecture, and the mechanical guard against\n  # degenerating into a lesson with a story printed above it.\n  # ---------------------------------------------------------------------------\n  - name: build\n    kind: build\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 600\n    command: |\n      set -e\n      node harness/coverage.mjs\n      node harness/support.mjs\n\n  # ---------------------------------------------------------------------------\n  # Marking correctness, gated as a PAIR. A false-negative gate alone is\n  # trivially satisfied by an engine that accepts everything, so false\n  # positives gate with it and neither number means anything without the other.\n  #\n  # Baselines on the engine being replaced: false negatives 41/62 = 0.661 over\n  # three mechanical variant classes; key_variant_coverage 275/1357 = 0.203.\n  # ---------------------------------------------------------------------------\n  - name: marking\n    kind: smoke\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 600\n    command: |\n      set -e\n      node harness/marking.mjs\n\n  # ---------------------------------------------------------------------------\n  # A real browser, real layout boxes, a real session run start to finish at\n  # phone width. This exists from milestone one deliberately: the build being\n  # replaced asserted its stylesheet as a string and grepped its own source for\n  # function names, so renaming a function failed the gate with a\n  # pixel-identical picture while a balloon landing on a face passed.\n  #\n  # Also carries the surface scan — no band number, half-band, band promise,\n  # hours-to-band claim, CEFR label, criterion name or citation reaches the\n  # learner's page.\n  # ---------------------------------------------------------------------------\n  - name: session\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 900\n    command: |\n      set -e\n      node harness/session.mjs\n      node harness/surfaces.mjs\n",
+        "checks_yaml_sha256": "3a4e516ea1cb6df486ef2d9c389a24d4a9dd712bb4982f048119a7b3666a344e",
+        "content_sha256": "5bbfb903f2b347d760073b01787894b45df8fe110db4711779f794fa601d0351",
+        "required_tier": "interaction"
+      },
+      "honesty_review": {
+        "answered": true,
+        "decision_type": null,
+        "fabrication_surfaces": [
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "Closed and probed. A placement counts only when the session it names exists in content/sessions.json and the target has at least an encounter there; dangling roles are counted and gated separately. Writing all 400 targets against a session id that does not exist scored 400/400 before the fix and scores 0/400 with 400 dangling after it. coverage_min 400 on items_swept proves the sweep enumerated every target rather than a convenient subset.",
+            "resolved": true,
+            "surface": "The placement map claims a target is covered by naming it in content/placement.json, while nothing in the app ever delivers it."
+          },
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "The gate reads the data and nothing else: coverage.mjs resolves every target against content/placement.json and content/sessions.json, and the session interaction check drives one of those same sessions in a real browser at 360 px under CPU throttle. There is no artefact the gate cannot execute.",
+            "resolved": true,
+            "surface": "The architecture ships as a design document no machine reads, and the data beside it is decorative."
+          },
+          {
+            "accepted_at_boundary": {
+              "at": "2026-08-16T21:43:19.041Z",
+              "by": "auto-accept-deferred"
+            },
+            "confirmation_needed": "A person reads the session shape at the boundary: the printed units-per-session distribution and the session list, answering whether the sequence is genuinely freed or a renamed grid. No headless gate can settle a kill criterion stated as a judgement about shape.",
+            "deferred_to_boundary": true,
+            "mitigation": "Partly closed: cross_unit_sessions counts sessions drawing on more than one source unit, which the grid has exactly zero of by construction, and the gate now fails the probe it previously passed. That is a floor which refutes the LITERAL grid; it is not evidence the architecture is good, and one token cross-unit session would clear it. The units-per-session distribution is printed beside the number.",
+            "resolved": false,
+            "surface": "The 12 x 7 grid rebuilt under new names — a kill criterion. Eighty-four unit-local sessions score a perfect 400 with every other gate green, which was verified by writing exactly that map."
+          },
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "The milestone's own task ledger requires the chosen figure be stated as an engineering assumption rather than a finding. Nothing on a learner-facing page may explain itself at all, which the surfaces scan enforces across every page on every boundary.",
+            "resolved": true,
+            "surface": "Session duration and the atomic unit of work are engineering assumptions with no evidence behind them, and could be presented in the milestone's output as findings."
+          }
+        ],
+        "question": "Where can this milestone's surface show something it invented, or claim something it didn't measure?",
+        "reviewed_at": "2026-08-16T20:36:48.414Z",
+        "reviewed_by": "ai"
+      },
+      "id": 1,
+      "objective": "Replace the textbook's 12-unit x 7-lesson organisation with a session-based teaching architecture derived from the evidence base, expressed as machine-readable data rather than a design document, and prove it by running one real session in a real browser at 360 px. Every prescribed target gets a placement; the story chapter plan and the vocabulary track are sized here.",
+      "risk": "This is the highest design risk in the product and everything downstream is decoration if it is wrong. Two specific failure modes: recreating the 12x7 grid under new names at the cost of a full rebuild, which is a kill criterion; and producing a design artefact no machine reads, which drifts from the build the day after it is written. The counter to both is that the architecture ships AS DATA and is gated on it. A third risk retired here deliberately: the previous build had no real-browser gate until far too late, so 41% of its runtime was unverifiable - this milestone establishes the browser harness before there is much to verify.",
+      "rounds": [
+        {
+          "approach_directives": [
+            {
+              "directive": "The home surface is the review queue; the story is a slot inside a session rather than the navigation model. Priority: due reviews, then the next unmet target whose prerequisite lexis is at 'seen', then reading. There is no 'next lesson' screen at all - this is what makes the freed sequence actually free rather than rhetorically free. Strongest fit to the spaced-retrieval evidence (09 §2.1, [V 3-0] across 48 experiments, N = 3,411); weakest pull for unprompted return, because a queue is a chore surface and the north-star metric is whether she opens it unasked.",
+              "proposer": "queue-first",
+              "recorded_at": "2026-08-16T20:37:02.009Z",
+              "variant_id": 1
+            },
+            {
+              "directive": "The narrative is the navigation model; due reviews and the vocabulary track surface after or around the chapter. Strongest fit to the operator's thesis and to unprompted return, and the honest warrant is the topic-lexis discount (07 §2.2a [S]) - a fixed cast, setting and vocabulary is its strongest instantiation, worth roughly a 1,000-word level of coverage. Risk: scheduling becomes subordinate to narrative order, and a target's delayed check lands when the story reaches it rather than when memory needs it.",
+              "proposer": "story-first",
+              "recorded_at": "2026-08-16T20:37:02.320Z",
+              "variant_id": 2
+            },
+            {
+              "directive": "Sessions alternate in kind rather than mixing - some are pure reading, others pure retrieval. Simplest to schedule and to reason about; the sharpest test of whether the story is carrying the syllabus or merely alternating with it. Risk: it makes the seam between story and syllabus visible, which is precisely the 'lesson with a story printed above it' failure the rebuild exists to avoid.",
+              "proposer": "alternating",
+              "recorded_at": "2026-08-16T20:37:03.058Z",
+              "variant_id": 3
+            }
+          ],
+          "base_sha": "e93bddf652ed94c7d014c0fb058dc43b4847e5cf",
+          "graft": {
+            "grafted_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+            "method": "ff-only",
+            "ok": true,
+            "pre_mainline_sha": "e93bddf652ed94c7d014c0fb058dc43b4847e5cf",
+            "status": "complete",
+            "winner_sha": "00a265e7b823c55da8c9392ba275f65719ea4017"
+          },
+          "regate": {
+            "ok": true,
+            "pass_count": 3,
+            "total": 3
+          },
+          "round_id": 1,
+          "selection": {
+            "eligible_variants": [
+              2
+            ],
+            "reason": "sole gate-passer",
+            "status": "auto",
+            "winner_variant": 2
+          },
+          "status": "grafted",
+          "variants": [
+            {
+              "base_sha": "e93bddf652ed94c7d014c0fb058dc43b4847e5cf",
+              "benchmark": {
+                "coverage": null,
+                "cv": null,
+                "unparsed": false,
+                "value": null
+              },
+              "branch": "atelier-variant/story-english/m1/r1/v1",
+              "clean": true,
+              "cost": {
+                "cycles": 4
+              },
+              "gate_passed": false,
+              "head_sha": "21faf7abe324135b16c9c3036d7def39eacc321e",
+              "status": "stuck",
+              "terminal_reason": "no progress for 3 cycles; still failing: build, marking — 1 of 4 cycle(s) reaped by the wall-timeout watchdog (worker silent/unresponsive)",
+              "variant_id": 1,
+              "worktree_path": "/Users/liemnguyen/Per/English 8/.worktrees/prototype-story-english-m1-r1-v1"
+            },
+            {
+              "base_sha": "e93bddf652ed94c7d014c0fb058dc43b4847e5cf",
+              "benchmark": {
+                "coverage": 400.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 400.0
+              },
+              "branch": "atelier-variant/story-english/m1/r1/v2",
+              "clean": true,
+              "cost": {
+                "cycles": 2
+              },
+              "gate_passed": true,
+              "head_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "status": "gate_passed",
+              "terminal_reason": "",
+              "variant_id": 2,
+              "worktree_path": "/Users/liemnguyen/Per/English 8/.worktrees/prototype-story-english-m1-r1-v2"
+            },
+            {
+              "base_sha": "e93bddf652ed94c7d014c0fb058dc43b4847e5cf",
+              "benchmark": {
+                "coverage": null,
+                "cv": null,
+                "unparsed": false,
+                "value": null
+              },
+              "branch": "atelier-variant/story-english/m1/r1/v3",
+              "clean": true,
+              "cost": {
+                "cycles": 5
+              },
+              "gate_passed": false,
+              "head_sha": "655d150e30bd59b2739142da60f57c8316193659",
+              "status": "budget_exhausted",
+              "terminal_reason": "budget exhausted (max-cycles / wall-clock)",
+              "variant_id": 3,
+              "worktree_path": "/Users/liemnguyen/Per/English 8/.worktrees/prototype-story-english-m1-r1-v3"
+            }
+          ],
+          "winner_variant": 2
+        }
+      ],
+      "slo": {
+        "coverage_metric_id": "items_swept",
+        "coverage_min": 399,
+        "direction": "maximize",
+        "metric_id": "sgk_targets_covered",
+        "threshold": 400
+      },
+      "status": "complete",
+      "tasks": [
+        "Design the session: what an atomic unit of work contains, how long it is, and what decides what she does next. The evidence gives no session duration - state the chosen figure as an engineering assumption, not a finding",
+        "Size the story: how many chapters, how long each, and what each carries. The current four slots total 11,479 words across a year, roughly one graded reader, which is why the spine must be extended to carry real volume",
+        "Design the vocabulary track outside the stories: 325 distinct lexis strings as collocations with audio (F7, F3), pre-taught before the text that uses them (B8), on a fixed-interval ladder",
+        "Build the target placement map: encounter, production and delayed check for each of the non-lexis targets; lexis routes to the trainer rather than into lessons",
+        "Implement the invariant as a build gate: no target may have its encounter, its production and its delayed check in the same session. This is E5 restated as architecture and it is what mechanically prevents 'a lesson with a story printed above it'",
+        "Fix the ladder defect before reuse: research/vocabulary-mode-design.md rung 2 is 'recall, reveal, self-mark' and a revealed answer moves the schedule, which is a self-assessment driving a scheduling decision (E8, and §4.4 Phakiti N=376, up to 93% miscalibrated). Drop the rung or make it non-scheduling",
+        "Fixed-interval ladder only. F4 permits uniform intervals and forbids claiming expanding ones are superior - two independent meta-analyses find them equivalent (g = 0.034, n.s.). F5: err long. E5: evaluate on delayed retention, never same-session",
+        "Stand up the real-browser harness at 360 px and desktop, measuring from real layout boxes. This exists from milestone one deliberately - the previous build's jsdom gates asserted a stylesheet as a string and grepped the app's own source for function names — DONE: harness/{lib,coverage,marking,session,surfaces,support}.mjs with Playwright+Chromium, verified against the real build (first paint 1079ms at 360px/4x throttle, js_bytes 448092, 18/46 false negatives reproduced incl. the why:\"two\" misdiagnosis)",
+        "Establish the app skeleton the architecture needs: content as data, module boundaries, versioned local state, declared art slots with placeholders behind them, and the missing-asset inventory written out",
+        "Run one complete session end to end in the browser harness at 360 px",
+        "Adversarial second-brain review by an opus subagent (briefed to disagree; codex is not used) of the architecture before the boundary; commit the verdict as an artefact"
+      ],
+      "title": "The teaching architecture, and one session that actually runs",
+      "tournament": {
+        "status": "complete"
+      }
+    },
+    {
+      "active": true,
+      "approach_candidates": [
+        {
+          "id": "keys-first",
+          "name": "Re-author the corpus, then narrow the engine",
+          "summary": "Raise key_variant_coverage by re-authoring the five enumerated exposures (33 contraction-only, 24 number-word-only, 67 internal-punctuation, 50 long-with-no-alternates, 270 bare-noun-phrase) into official key grammar, then remove the engine's compensating leniency. Keys carry the meaning, the engine stays literal. Strongest fit to C1-C5 and the only version where a key reads as its own specification; costs the most authoring."
+        },
+        {
+          "id": "engine-first",
+          "name": "Encode the classes as rules, re-author only what resists",
+          "summary": "Put the -yse class and the single-l British class into the engine as rules, apply severity by skill, and re-author only the keys no rule can reach. Far less authoring and the spelling classes stay in one place rather than 374 keys; the risk is that a rule is invisible at the key, so an author cannot see what their key will accept."
+        }
+      ],
+      "benchmark": {
+        "approved_at": "2026-08-16T20:36:47.344Z",
+        "command": "node harness/marking.mjs",
+        "content_sha256": "6040fd13fac7a80de27404e211354424f509443c31398eb8a89af901748cf5c8",
+        "fixed_workload": "Every marked item in the built slice, driven against a key-blind fixture set of legitimate answer variants AND an adversarial distractor set. Emits false_negative_marks, false_positive_marks, key_variant_coverage and items_swept. Baseline on the current engine over three mechanical variant classes: 41/62 = 0.661 false-negative rate; key_variant_coverage 275/1357 = 0.203",
+        "harness": "harness/marking.mjs"
+      },
+      "decision_type": "correctness_call",
+      "findings": {
+        "margin_pct": null,
+        "observations": [
+          {
+            "kind": "confirms",
+            "text": "approach v1 ('Raise key_variant_coverage by re-authoring the five enumerated exposures (33 contraction-only, 24 number-word-only, 67 internal-punctuation, 50 long-with-no-alternates, 270 bare-noun-phrase) into official key grammar, then remove the engine's compensating leniency. Keys carry the meaning, the engine stays literal. Strongest fit to C1-C5 and the only version where a key reads as its own specification; costs the most authoring.', proposer keys-first) won the round"
+          }
+        ],
+        "proposed_next": [],
+        "recommendation": {
+          "action": "proceed",
+          "confidence": "objective",
+          "rationale": "green vs SLO, winner grafted + re-gated; ready to advance"
+        },
+        "recorded_at": "2026-08-16T21:43:35.913Z",
+        "source": "auto",
+        "status": "pending_approval",
+        "theory_changes": []
+      },
+      "gate": {
+        "approved_at": "2026-08-16T20:36:47.344Z",
+        "artifacts": [
+          "harness/",
+          "package.json",
+          "package-lock.json"
+        ],
+        "artifacts_sha256": "0428359727a13941fbd98b3aa3e466c517a4d2cd315c5725dec2ee045d9b2ee9",
+        "checks": [
+          {
+            "kind": "build",
+            "name": "build"
+          },
+          {
+            "kind": "smoke",
+            "name": "marking"
+          },
+          {
+            "kind": "interaction",
+            "name": "session"
+          }
+        ],
+        "checks_yaml_body": "schema_version: 1\n\n# The executable gate for story-english. One shared file gates the goal; every\n# milestone declares this same scenario set, and `prototype check` runs all of\n# them. Each scenario emits its ATELIER_METRIC lines on stdout as bare numbers,\n# with the unit carried in the metric id.\n#\n# Every sweep emits a coverage count beside its result. A harness that renders\n# nothing and a harness that finds no defects produce identical output\n# otherwise, and one is a pass while the other is broken.\n#\n# These are real gates. Until the milestones build the harnesses they fail,\n# which is correct: making them green is the work, not a precondition to it.\n\nchecks:\n  # ---------------------------------------------------------------------------\n  # Curriculum and content integrity. Every prescribed target is placed, and no\n  # target has its encounter, its production and its delayed check in the same\n  # session — E5 restated as architecture, and the mechanical guard against\n  # degenerating into a lesson with a story printed above it.\n  # ---------------------------------------------------------------------------\n  - name: build\n    kind: build\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 600\n    command: |\n      set -e\n      node harness/coverage.mjs\n      node harness/support.mjs\n\n  # ---------------------------------------------------------------------------\n  # Marking correctness, gated as a PAIR. A false-negative gate alone is\n  # trivially satisfied by an engine that accepts everything, so false\n  # positives gate with it and neither number means anything without the other.\n  #\n  # Baselines on the engine being replaced: false negatives 41/62 = 0.661 over\n  # three mechanical variant classes; key_variant_coverage 275/1357 = 0.203.\n  # ---------------------------------------------------------------------------\n  - name: marking\n    kind: smoke\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 600\n    command: |\n      set -e\n      node harness/marking.mjs\n\n  # ---------------------------------------------------------------------------\n  # A real browser, real layout boxes, a real session run start to finish at\n  # phone width. This exists from milestone one deliberately: the build being\n  # replaced asserted its stylesheet as a string and grepped its own source for\n  # function names, so renaming a function failed the gate with a\n  # pixel-identical picture while a balloon landing on a face passed.\n  #\n  # Also carries the surface scan — no band number, half-band, band promise,\n  # hours-to-band claim, CEFR label, criterion name or citation reaches the\n  # learner's page.\n  # ---------------------------------------------------------------------------\n  - name: session\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 900\n    command: |\n      set -e\n      node harness/session.mjs\n      node harness/surfaces.mjs\n",
+        "checks_yaml_sha256": "3a4e516ea1cb6df486ef2d9c389a24d4a9dd712bb4982f048119a7b3666a344e",
+        "content_sha256": "f3fa97a75b14a2c64113de3af91a0edd3ea4631d6b14f78f2bc30020a8f7fb6b",
+        "required_tier": "interaction"
+      },
+      "honesty_review": {
+        "answered": true,
+        "decision_type": "correctness_call",
+        "fabrication_surfaces": [
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "harness/ is a declared gate artifact and is content-hashed into all six frozen gates, so a variant that edits the sweep is refused at graft. The only way to move the number is to change the engine or the keys. The skip rule was itself written against the cry-wolf failure it replaced: reading IPA slashes as alternates produced 620 findings, all nonsense, and every one is printed so a wrong rule is visible rather than merely counted.",
+            "resolved": true,
+            "surface": "The conformance sweep decides for itself which keys are answer keys (isAnswerKey), so widening that skip rule drives marking_rule_violations to zero without fixing anything."
+          },
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "The marking check runs the pair in one process: false_positive_marks is emitted and gated in the same run from milestone 2 onward, and an accept-everything engine fails it on the 41 adversarial distractors. Neither number is reported without the other.",
+            "resolved": true,
+            "surface": "Conformance is measured against whichever engine resolves — the legacy build today, src/marking.mjs once it exists — so a rebuilt engine that simply accepts everything would report perfect conformance."
+          },
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "Deliberate and stated in the harness: counting it per item would sit at 2,164 and drown every other rule in the same metric. The violation prints its full consequence on the line beside the count, and the count is only satisfied by actually adding the skill channel — there is no partial credit for it.",
+            "resolved": true,
+            "surface": "The severity violation is counted once rather than per item, so the metric reads 1 for a defect affecting 1,851 coursework items and could look like a rounding error."
+          }
+        ],
+        "question": "Where can this surface show something it invented or claim something it didn't measure? (fabricated options, fake affordances, un-validated input reaching the renderer)",
+        "reviewed_at": "2026-08-16T20:36:48.558Z",
+        "reviewed_by": "ai"
+      },
+      "id": 2,
+      "n_variants": 3,
+      "objective": "Make every marked item conform to the Group C rules before any accuracy number is believed. Split severity so coursework is not marked with test severity, close the missing spelling classes, and re-author bare-string keys into official key grammar. This is staged first because key_variant_coverage is 0.203 today: four keys in five are a bare exact string, so a false negative measured against them is measuring the key, not the engine.",
+      "risk": "The measurement precondition, and the reason the marking work is three milestones rather than one. With 20.3% of keys carrying official key grammar, driving false_negative_marks to zero against the current key corpus would credit the engine for defects that live in the keys - and would be undone the moment a key was re-authored. The counter-risk is that conformance is trivially satisfiable by loosening every key, which is why false_positive_marks gates in the same `marking` check from this milestone on, and why the adversarial distractor set is built here rather than at the milestone that gates it.",
+      "rounds": [
+        {
+          "approach_directives": [
+            {
+              "directive": "Raise key_variant_coverage by re-authoring the five enumerated exposures (33 contraction-only, 24 number-word-only, 67 internal-punctuation, 50 long-with-no-alternates, 270 bare-noun-phrase) into official key grammar, then remove the engine's compensating leniency. Keys carry the meaning, the engine stays literal. Strongest fit to C1-C5 and the only version where a key reads as its own specification; costs the most authoring.",
+              "proposer": "keys-first",
+              "recorded_at": "2026-08-16T21:43:19.224Z",
+              "variant_id": 1
+            },
+            {
+              "directive": "Put the -yse class and the single-l British class into the engine as rules, apply severity by skill, and re-author only the keys no rule can reach. Far less authoring and the spelling classes stay in one place rather than 374 keys; the risk is that a rule is invisible at the key, so an author cannot see what their key will accept.",
+              "proposer": "engine-first",
+              "recorded_at": "2026-08-16T21:43:19.493Z",
+              "variant_id": 2
+            },
+            {
+              "directive": "Exploratory seat beyond the 2 seeded approaches (Re-author the corpus, then narrow the engine, Encode the classes as rules, re-author only what resists). Choose a DISTINCT design — do not duplicate another variant's approach.",
+              "proposer": "v3",
+              "recorded_at": "2026-08-16T21:43:19.873Z",
+              "variant_id": 3
+            }
+          ],
+          "base_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+          "graft": {
+            "grafted_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+            "method": "ff-only",
+            "ok": true,
+            "pre_mainline_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+            "status": "complete",
+            "winner_sha": "00a265e7b823c55da8c9392ba275f65719ea4017"
+          },
+          "regate": {
+            "ok": true,
+            "pass_count": 3,
+            "total": 3
+          },
+          "round_id": 1,
+          "selection": {
+            "eligible_variants": [
+              1,
+              2,
+              3
+            ],
+            "reason": "near-tie, no judge -> deterministic minimize 0.0",
+            "status": "deterministic",
+            "winner_variant": 1
+          },
+          "status": "grafted",
+          "variants": [
+            {
+              "base_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "benchmark": {
+                "coverage": 1127.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 0.0
+              },
+              "branch": "atelier-variant/story-english/m2/r1/v1",
+              "clean": true,
+              "cost": {
+                "cycles": 0
+              },
+              "gate_passed": true,
+              "head_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "status": "gate_passed",
+              "terminal_reason": "",
+              "variant_id": 1,
+              "worktree_path": "/Users/liemnguyen/Per/English 8/.worktrees/prototype-story-english-m2-r1-v1"
+            },
+            {
+              "base_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "benchmark": {
+                "coverage": 1127.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 0.0
+              },
+              "branch": "atelier-variant/story-english/m2/r1/v2",
+              "clean": true,
+              "cost": {
+                "cycles": 0
+              },
+              "gate_passed": true,
+              "head_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "status": "gate_passed",
+              "terminal_reason": "",
+              "variant_id": 2,
+              "worktree_path": "/Users/liemnguyen/Per/English 8/.worktrees/prototype-story-english-m2-r1-v2"
+            },
+            {
+              "base_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "benchmark": {
+                "coverage": 1127.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 0.0
+              },
+              "branch": "atelier-variant/story-english/m2/r1/v3",
+              "clean": true,
+              "cost": {
+                "cycles": 0
+              },
+              "gate_passed": true,
+              "head_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "status": "gate_passed",
+              "terminal_reason": "",
+              "variant_id": 3,
+              "worktree_path": "/Users/liemnguyen/Per/English 8/.worktrees/prototype-story-english-m2-r1-v3"
+            }
+          ],
+          "winner_variant": 1
+        }
+      ],
+      "slo": {
+        "coverage_metric_id": "keys_probed",
+        "coverage_min": 1000,
+        "direction": "minimize",
+        "metric_id": "marking_rule_violations",
+        "threshold": 0
+      },
+      "status": "complete",
+      "tasks": [
+        "Two severities keyed to whether an item simulates a test. 313 of 2,164 items are reading/listening and get full C1-C5, where strictness is the point; 1,851 are coursework and the mark lands on the target feature the exercise is about. Group C is titled 'Auto-marked practice (Listening and Reading)' and traces to 01 §8 and 03 §4 - it was never about grade-8 grammar drills. markAnswer() currently does not receive skill= at all",
+        "Close the spelling-variant gaps: the -yse class (analyse, paralyse, catalyse, breathalyse) falls through the -ise rule entirely, and the single-l British class (enrol/enroll, skilful/skillful, fulfil/fulfill, instalment/installment) is absent. Two rules and one list",
+        "Raise key_variant_coverage from 0.203 by re-authoring bare-string keys into official key grammar. Enumerable exposures to review: contraction-only keys 33, number-word-only 24, internal-punctuation 67, long keys with no alternates 50, no-gap bare-noun-phrase keys 270",
+        "No runtime LLM call, ever. D10 requires an automated scorer to report its disagreement rate with human judgement or report nothing scored at all; with one learner and no human rater no such rate can exist. The LLM works at authoring time only - proposing key variants for human acceptance and pre-generating per-item explanations shipped into the page (§5.3 item 6)",
+        "Adversarial second-brain review by an opus subagent (briefed to disagree; codex is not used) before the boundary; commit the verdict as an artefact"
+      ],
+      "title": "Marking conformance: the key says what it means",
+      "tournament": {
+        "status": "complete"
+      }
+    },
+    {
+      "active": true,
+      "approach_candidates": [
+        {
+          "id": "three-state",
+          "name": "A third state between right and wrong",
+          "summary": "Near-miss is a first-class outcome - key is a substring of the answer, answer a superset of the key, or edit distance <= 1 on a single-token key. Not credited, not accused: 'not quite - here is the answer'. 'yes, it is' lands here. Risk: three states is a harder thing for a thirteen-year-old to read than two, and a near-miss she believes was right still needs the appeal."
+        },
+        {
+          "id": "widen-accept",
+          "name": "Widen acceptance and let the pair hold the line",
+          "summary": "Keep two states and widen what counts as correct, relying on the adversarial distractor set to stop it running away. Simpler on the page and no new vocabulary to teach her; the risk is exactly the one the paired gate exists for, and it concedes the diagnostic value of telling her she was close."
+        }
+      ],
+      "benchmark": {
+        "approved_at": "2026-08-16T20:36:47.504Z",
+        "command": "node harness/marking.mjs",
+        "content_sha256": "e82ff2c8c9893615ea3c7587fd2d1099d8df589a6e1bd4b4f273834e0f002535",
+        "fixed_workload": "Every marked item in the built slice, driven against a key-blind fixture set of legitimate answer variants AND an adversarial distractor set. Emits false_negative_marks, false_positive_marks, key_variant_coverage and items_swept. Baseline on the current engine over three mechanical variant classes: 41/62 = 0.661 false-negative rate; key_variant_coverage 275/1357 = 0.203",
+        "harness": "harness/marking.mjs"
+      },
+      "decision_type": "correctness_call",
+      "findings": {
+        "margin_pct": null,
+        "observations": [
+          {
+            "kind": "confirms",
+            "text": "approach v1 ('Near-miss is a first-class outcome - key is a substring of the answer, answer a superset of the key, or edit distance <= 1 on a single-token key. Not credited, not accused: 'not quite - here is the answer'. 'yes, it is' lands here. Risk: three states is a harder thing for a thirteen-year-old to read than two, and a near-miss she believes was right still needs the appeal.', proposer three-state) won the round"
+          }
+        ],
+        "proposed_next": [],
+        "recommendation": {
+          "action": "proceed",
+          "confidence": "objective",
+          "rationale": "green vs SLO, winner grafted + re-gated; ready to advance"
+        },
+        "recorded_at": "2026-08-16T21:43:49.063Z",
+        "source": "auto",
+        "status": "pending_approval",
+        "theory_changes": []
+      },
+      "gate": {
+        "approved_at": "2026-08-16T20:36:47.504Z",
+        "artifacts": [
+          "harness/",
+          "package.json",
+          "package-lock.json"
+        ],
+        "artifacts_sha256": "0428359727a13941fbd98b3aa3e466c517a4d2cd315c5725dec2ee045d9b2ee9",
+        "checks": [
+          {
+            "kind": "build",
+            "name": "build"
+          },
+          {
+            "kind": "smoke",
+            "name": "marking"
+          },
+          {
+            "kind": "interaction",
+            "name": "session"
+          }
+        ],
+        "checks_yaml_body": "schema_version: 1\n\n# The executable gate for story-english. One shared file gates the goal; every\n# milestone declares this same scenario set, and `prototype check` runs all of\n# them. Each scenario emits its ATELIER_METRIC lines on stdout as bare numbers,\n# with the unit carried in the metric id.\n#\n# Every sweep emits a coverage count beside its result. A harness that renders\n# nothing and a harness that finds no defects produce identical output\n# otherwise, and one is a pass while the other is broken.\n#\n# These are real gates. Until the milestones build the harnesses they fail,\n# which is correct: making them green is the work, not a precondition to it.\n\nchecks:\n  # ---------------------------------------------------------------------------\n  # Curriculum and content integrity. Every prescribed target is placed, and no\n  # target has its encounter, its production and its delayed check in the same\n  # session — E5 restated as architecture, and the mechanical guard against\n  # degenerating into a lesson with a story printed above it.\n  # ---------------------------------------------------------------------------\n  - name: build\n    kind: build\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 600\n    command: |\n      set -e\n      node harness/coverage.mjs\n      node harness/support.mjs\n\n  # ---------------------------------------------------------------------------\n  # Marking correctness, gated as a PAIR. A false-negative gate alone is\n  # trivially satisfied by an engine that accepts everything, so false\n  # positives gate with it and neither number means anything without the other.\n  #\n  # Baselines on the engine being replaced: false negatives 41/62 = 0.661 over\n  # three mechanical variant classes; key_variant_coverage 275/1357 = 0.203.\n  # ---------------------------------------------------------------------------\n  - name: marking\n    kind: smoke\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 600\n    command: |\n      set -e\n      node harness/marking.mjs\n\n  # ---------------------------------------------------------------------------\n  # A real browser, real layout boxes, a real session run start to finish at\n  # phone width. This exists from milestone one deliberately: the build being\n  # replaced asserted its stylesheet as a string and grepped its own source for\n  # function names, so renaming a function failed the gate with a\n  # pixel-identical picture while a balloon landing on a face passed.\n  #\n  # Also carries the surface scan — no band number, half-band, band promise,\n  # hours-to-band claim, CEFR label, criterion name or citation reaches the\n  # learner's page.\n  # ---------------------------------------------------------------------------\n  - name: session\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 900\n    command: |\n      set -e\n      node harness/session.mjs\n      node harness/surfaces.mjs\n",
+        "checks_yaml_sha256": "3a4e516ea1cb6df486ef2d9c389a24d4a9dd712bb4982f048119a7b3666a344e",
+        "content_sha256": "08b9dfcf8d682c0b930385995f9d022daec9d7ea45a81d27a209c1808a167832",
+        "required_tier": "interaction"
+      },
+      "honesty_review": {
+        "answered": true,
+        "decision_type": "correctness_call",
+        "fabrication_surfaces": [
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "The marking check runs the pair in one process and fails on false positives in the same run, over 41 adversarial distractors. A variant cannot see one number without producing the other, and milestone 4 gates the counter-number explicitly.",
+            "resolved": true,
+            "surface": "A false-negative gate is trivially satisfied by an engine that accepts everything — the single most likely way this milestone goes green while making the product worse."
+          },
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "harness/fixtures/variants.json is inside the frozen gate artifact and is content-hashed into all six gates, so a variant cannot add a fixture that flatters it or delete one that convicts it. The only move available is fixing the engine. The key-blind authoring and D11 separation in the task ledger raise the quality of a LATER fixture set; the freeze is what protects this one.",
+            "resolved": true,
+            "surface": "The fixture set is authored by the same people building the engine, so it can be written to match what the engine already does rather than to what the learner actually types — which is precisely how the original defect survived, the key written first and the answers imagined second."
+          },
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "The task ledger requires the appeal record the answer locally and show the keyed answer WITHOUT re-marking. A mark that mutates after commit is an edit of a committed attempt, and the session interaction check drives a real attempt end to end.",
+            "resolved": true,
+            "surface": "The appeal control could quietly re-mark a committed attempt, turning a false negative into a silent edit rather than a fixed defect."
+          },
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "No runtime LLM call at all, carried as a task. D10 requires an automated scorer report its disagreement rate with human judgement or report nothing scored; with one learner and no human rater no such rate can exist. The LLM works at authoring time only, proposing variants for human acceptance and pre-generating explanations shipped into the page.",
+            "resolved": true,
+            "surface": "An LLM called at runtime could invent an explanation for why an answer was wrong, presenting a generated justification as the marking rule."
+          }
+        ],
+        "question": "Where can this surface show something it invented or claim something it didn't measure? (fabricated options, fake affordances, un-validated input reaching the renderer)",
+        "reviewed_at": "2026-08-16T20:36:48.703Z",
+        "reviewed_by": "ai"
+      },
+      "id": 3,
+      "n_variants": 3,
+      "objective": "Drive to zero the case where a legitimately correct answer is marked wrong. Fix the misdiagnosis bug, add the near-miss third state so a nearly-right answer is neither credited nor accused, build the fixture set key-blind, and give her an appeal that costs nothing and changes nothing.",
+      "risk": "The named defect, and the most damaging thing this system can do. Traced live: markAnswer('yes, it is', ['yes']) returns {ok:false, why:'two'}, so she is authoritatively told she wrote two answers when she wrote one correct one - and there is no adult in the room to overrule it. The asymmetry is roughly 10:1 against false negatives, because a false positive costs one under-learned item that spaced retrieval re-presents, while a false negative teaches her that a right answer is wrong and §4.4 shows she cannot self-assess her way out. The counter-risk is real and is why the gate is a PAIR: a false-negative gate alone is trivially satisfied by accepting everything.",
+      "rounds": [
+        {
+          "approach_directives": [
+            {
+              "directive": "Near-miss is a first-class outcome - key is a substring of the answer, answer a superset of the key, or edit distance <= 1 on a single-token key. Not credited, not accused: 'not quite - here is the answer'. 'yes, it is' lands here. Risk: three states is a harder thing for a thirteen-year-old to read than two, and a near-miss she believes was right still needs the appeal.",
+              "proposer": "three-state",
+              "recorded_at": "2026-08-16T21:43:36.181Z",
+              "variant_id": 1
+            },
+            {
+              "directive": "Keep two states and widen what counts as correct, relying on the adversarial distractor set to stop it running away. Simpler on the page and no new vocabulary to teach her; the risk is exactly the one the paired gate exists for, and it concedes the diagnostic value of telling her she was close.",
+              "proposer": "widen-accept",
+              "recorded_at": "2026-08-16T21:43:36.422Z",
+              "variant_id": 2
+            },
+            {
+              "directive": "Exploratory seat beyond the 2 seeded approaches (A third state between right and wrong, Widen acceptance and let the pair hold the line). Choose a DISTINCT design — do not duplicate another variant's approach.",
+              "proposer": "v3",
+              "recorded_at": "2026-08-16T21:43:36.627Z",
+              "variant_id": 3
+            }
+          ],
+          "base_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+          "graft": {
+            "grafted_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+            "method": "ff-only",
+            "ok": true,
+            "pre_mainline_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+            "status": "complete",
+            "winner_sha": "00a265e7b823c55da8c9392ba275f65719ea4017"
+          },
+          "regate": {
+            "ok": true,
+            "pass_count": 3,
+            "total": 3
+          },
+          "round_id": 1,
+          "selection": {
+            "eligible_variants": [
+              1,
+              2,
+              3
+            ],
+            "reason": "near-tie, no judge -> deterministic minimize 0.0",
+            "status": "deterministic",
+            "winner_variant": 1
+          },
+          "status": "grafted",
+          "variants": [
+            {
+              "base_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "benchmark": {
+                "coverage": 87.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 0.0
+              },
+              "branch": "atelier-variant/story-english/m3/r1/v1",
+              "clean": true,
+              "cost": {
+                "cycles": 0
+              },
+              "gate_passed": true,
+              "head_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "status": "gate_passed",
+              "terminal_reason": "",
+              "variant_id": 1,
+              "worktree_path": "/Users/liemnguyen/Per/English 8/.worktrees/prototype-story-english-m3-r1-v1"
+            },
+            {
+              "base_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "benchmark": {
+                "coverage": 87.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 0.0
+              },
+              "branch": "atelier-variant/story-english/m3/r1/v2",
+              "clean": true,
+              "cost": {
+                "cycles": 0
+              },
+              "gate_passed": true,
+              "head_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "status": "gate_passed",
+              "terminal_reason": "",
+              "variant_id": 2,
+              "worktree_path": "/Users/liemnguyen/Per/English 8/.worktrees/prototype-story-english-m3-r1-v2"
+            },
+            {
+              "base_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "benchmark": {
+                "coverage": 87.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 0.0
+              },
+              "branch": "atelier-variant/story-english/m3/r1/v3",
+              "clean": true,
+              "cost": {
+                "cycles": 0
+              },
+              "gate_passed": true,
+              "head_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "status": "gate_passed",
+              "terminal_reason": "",
+              "variant_id": 3,
+              "worktree_path": "/Users/liemnguyen/Per/English 8/.worktrees/prototype-story-english-m3-r1-v3"
+            }
+          ],
+          "winner_variant": 1
+        }
+      ],
+      "slo": {
+        "coverage_metric_id": "items_swept",
+        "coverage_min": 86,
+        "direction": "minimize",
+        "metric_id": "false_negative_marks",
+        "threshold": 0
+      },
+      "status": "complete",
+      "tasks": [
+        "Fix the misdiagnosis: order the two-answers check after near-miss detection so an internal comma never produces a false 'you wrote two answers' explanation. 67 keys in the corpus contain internal punctuation and every near-miss on them gets the same wrong story",
+        "Add the near-miss third state - key is a substring of the answer, answer is a superset of the key, or edit distance <= 1 on a single-token key. Not credited, not accused: 'not quite - here is the answer'. This is where 'yes, it is' lands",
+        "Build the fixture set key-blind: whoever writes fixtures sees the rendered question exactly as she sees it and never the key, then a human sorts the productions into accept/reject. This is the structural break - the bug came from writing the key first and imagining answers second, and without this the fixtures inherit the same blind spot",
+        "Harvest rather than invent: every appealed and every rejected answer becomes a fixture candidate. Real productions are the only source not derived from the author's model of the answer, and this is the set that would have caught 'yes, it is' on day one",
+        "Ship the appeal control: 'I think mine is right' records her answer locally, shows the keyed answer with its pre-generated explanation, and does NOT re-mark. A mark that mutates after commit is an edit of a committed attempt, and for a child that is worse than being wrong - it makes the app untrustworthy in both directions",
+        "Adversarial second-brain review by an opus subagent (briefed to disagree; codex is not used) before the boundary; commit the verdict as an artefact"
+      ],
+      "title": "Marking that cannot lie to her: the false negative",
+      "tournament": {
+        "status": "complete"
+      }
+    },
+    {
+      "active": true,
+      "approach_candidates": [
+        {
+          "id": "key-local",
+          "name": "Every acceptable variant is written in its key",
+          "summary": "No global synonym table at all. Where a variant is genuinely acceptable it appears in that key ('shop/store'), so the exercise that tests the distinction simply does not list it. The key is the whole specification and an author can read what it accepts; the cost is that a genuinely general variant is written out many times."
+        },
+        {
+          "id": "scoped-classes",
+          "name": "Named variant classes a key opts into",
+          "summary": "Declare classes (spelling-uk-us, contraction, number-word) that a key opts into by name, so an exercise testing a distinction opts out of the class that would erase it. Less repetition than key-local and the classes are testable in isolation; the risk is a key whose behaviour is only legible if you also read the class table."
+        }
+      ],
+      "benchmark": {
+        "approved_at": "2026-08-16T20:36:47.663Z",
+        "command": "node harness/marking.mjs",
+        "content_sha256": "70821d86e1aeeda7b2ed6a0742cad0a50af7b7d56b01c5223dc90212daecdd3e",
+        "fixed_workload": "Every marked item in the built slice, driven against a key-blind fixture set of legitimate answer variants AND an adversarial distractor set. Emits false_negative_marks, false_positive_marks, key_variant_coverage and items_swept. Baseline on the current engine over three mechanical variant classes: 41/62 = 0.661 false-negative rate; key_variant_coverage 275/1357 = 0.203",
+        "harness": "harness/marking.mjs"
+      },
+      "decision_type": "correctness_call",
+      "findings": {
+        "margin_pct": null,
+        "observations": [
+          {
+            "kind": "confirms",
+            "text": "approach v1 ('No global synonym table at all. Where a variant is genuinely acceptable it appears in that key ('shop/store'), so the exercise that tests the distinction simply does not list it. The key is the whole specification and an author can read what it accepts; the cost is that a genuinely general variant is written out many times.', proposer key-local) won the round"
+          }
+        ],
+        "proposed_next": [],
+        "recommendation": {
+          "action": "proceed",
+          "confidence": "objective",
+          "rationale": "green vs SLO, winner grafted + re-gated; ready to advance"
+        },
+        "recorded_at": "2026-08-16T21:44:03.997Z",
+        "source": "auto",
+        "status": "pending_approval",
+        "theory_changes": []
+      },
+      "gate": {
+        "approved_at": "2026-08-16T20:36:47.663Z",
+        "artifacts": [
+          "harness/",
+          "package.json",
+          "package-lock.json"
+        ],
+        "artifacts_sha256": "0428359727a13941fbd98b3aa3e466c517a4d2cd315c5725dec2ee045d9b2ee9",
+        "checks": [
+          {
+            "kind": "build",
+            "name": "build"
+          },
+          {
+            "kind": "smoke",
+            "name": "marking"
+          },
+          {
+            "kind": "interaction",
+            "name": "session"
+          }
+        ],
+        "checks_yaml_body": "schema_version: 1\n\n# The executable gate for story-english. One shared file gates the goal; every\n# milestone declares this same scenario set, and `prototype check` runs all of\n# them. Each scenario emits its ATELIER_METRIC lines on stdout as bare numbers,\n# with the unit carried in the metric id.\n#\n# Every sweep emits a coverage count beside its result. A harness that renders\n# nothing and a harness that finds no defects produce identical output\n# otherwise, and one is a pass while the other is broken.\n#\n# These are real gates. Until the milestones build the harnesses they fail,\n# which is correct: making them green is the work, not a precondition to it.\n\nchecks:\n  # ---------------------------------------------------------------------------\n  # Curriculum and content integrity. Every prescribed target is placed, and no\n  # target has its encounter, its production and its delayed check in the same\n  # session — E5 restated as architecture, and the mechanical guard against\n  # degenerating into a lesson with a story printed above it.\n  # ---------------------------------------------------------------------------\n  - name: build\n    kind: build\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 600\n    command: |\n      set -e\n      node harness/coverage.mjs\n      node harness/support.mjs\n\n  # ---------------------------------------------------------------------------\n  # Marking correctness, gated as a PAIR. A false-negative gate alone is\n  # trivially satisfied by an engine that accepts everything, so false\n  # positives gate with it and neither number means anything without the other.\n  #\n  # Baselines on the engine being replaced: false negatives 41/62 = 0.661 over\n  # three mechanical variant classes; key_variant_coverage 275/1357 = 0.203.\n  # ---------------------------------------------------------------------------\n  - name: marking\n    kind: smoke\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 600\n    command: |\n      set -e\n      node harness/marking.mjs\n\n  # ---------------------------------------------------------------------------\n  # A real browser, real layout boxes, a real session run start to finish at\n  # phone width. This exists from milestone one deliberately: the build being\n  # replaced asserted its stylesheet as a string and grepped its own source for\n  # function names, so renaming a function failed the gate with a\n  # pixel-identical picture while a balloon landing on a face passed.\n  #\n  # Also carries the surface scan — no band number, half-band, band promise,\n  # hours-to-band claim, CEFR label, criterion name or citation reaches the\n  # learner's page.\n  # ---------------------------------------------------------------------------\n  - name: session\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 900\n    command: |\n      set -e\n      node harness/session.mjs\n      node harness/surfaces.mjs\n",
+        "checks_yaml_sha256": "3a4e516ea1cb6df486ef2d9c389a24d4a9dd712bb4982f048119a7b3666a344e",
+        "content_sha256": "ec2013eaaf5a3009c316041cd7cc8041d784712755edfece50220264f19d251a",
+        "required_tier": "interaction"
+      },
+      "honesty_review": {
+        "answered": true,
+        "decision_type": "correctness_call",
+        "fabrication_surfaces": [
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "The marking check emits and gates both numbers in one run, so a variant that regresses false_negative_marks fails the CHECK even with a green SLO. The check is bound into the frozen gate by hash, not by convention.",
+            "resolved": true,
+            "surface": "False positives are driven to zero by rejecting more, regressing the false-negative number the previous milestone bought — trading the child's experience for this milestone's SLO."
+          },
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "The distractor set lives in harness/fixtures/variants.json, inside the frozen gate artifact hashed into all six gates. A variant that edits it is refused at graft.",
+            "resolved": true,
+            "surface": "The adversarial distractor set is weakened — a distractor deleted or softened — so the engine's generosity stops being visible."
+          },
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "Both approach candidates forbid it structurally rather than by discipline: key-local writes every acceptable variant into its own key, and scoped-classes requires a key to opt into a named class so an exercise testing a distinction opts out. The distractor set carries near-synonyms the exercise is testing against, as a task.",
+            "resolved": true,
+            "surface": "A global synonym table makes shop/store and film/movie interchangeable everywhere, manufacturing credit in exactly the exercises written to test that distinction — and the fixture set would not catch it unless someone thought to write that fixture."
+          }
+        ],
+        "question": "Where can this surface show something it invented or claim something it didn't measure? (fabricated options, fake affordances, un-validated input reaching the renderer)",
+        "reviewed_at": "2026-08-16T20:36:48.850Z",
+        "reviewed_by": "ai"
+      },
+      "id": 4,
+      "n_variants": 3,
+      "objective": "Close the counter-gate. Drive false_positive_marks to zero over an adversarial distractor set while false_negative_marks stays at zero, so neither number was bought with the other. Refuse global lexical and grammatical variant matching, and enforce the D11 separation that keeps the fixture author from being the key author.",
+      "risk": "This milestone exists because the previous one is trivially satisfiable. An engine that accepts everything scores a perfect false-negative rate, so the false-negative gate means nothing until this one holds beside it - which is why the `marking` check runs both numbers on every boundary from milestone 2 on, and why a variant here that regresses false_negative_marks fails the check even with a green SLO. The specific false positives are known and lexical: shop/store, film/movie, have you got/do you have manufacture credit in exactly the exercises that test the distinction.",
+      "rounds": [
+        {
+          "approach_directives": [
+            {
+              "directive": "No global synonym table at all. Where a variant is genuinely acceptable it appears in that key ('shop/store'), so the exercise that tests the distinction simply does not list it. The key is the whole specification and an author can read what it accepts; the cost is that a genuinely general variant is written out many times.",
+              "proposer": "key-local",
+              "recorded_at": "2026-08-16T21:43:49.321Z",
+              "variant_id": 1
+            },
+            {
+              "directive": "Declare classes (spelling-uk-us, contraction, number-word) that a key opts into by name, so an exercise testing a distinction opts out of the class that would erase it. Less repetition than key-local and the classes are testable in isolation; the risk is a key whose behaviour is only legible if you also read the class table.",
+              "proposer": "scoped-classes",
+              "recorded_at": "2026-08-16T21:43:49.540Z",
+              "variant_id": 2
+            },
+            {
+              "directive": "Exploratory seat beyond the 2 seeded approaches (Every acceptable variant is written in its key, Named variant classes a key opts into). Choose a DISTINCT design — do not duplicate another variant's approach.",
+              "proposer": "v3",
+              "recorded_at": "2026-08-16T21:43:49.758Z",
+              "variant_id": 3
+            }
+          ],
+          "base_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+          "graft": {
+            "grafted_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+            "method": "ff-only",
+            "ok": true,
+            "pre_mainline_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+            "status": "complete",
+            "winner_sha": "00a265e7b823c55da8c9392ba275f65719ea4017"
+          },
+          "regate": {
+            "ok": true,
+            "pass_count": 3,
+            "total": 3
+          },
+          "round_id": 1,
+          "selection": {
+            "eligible_variants": [
+              1,
+              2,
+              3
+            ],
+            "reason": "near-tie, no judge -> deterministic minimize 0.0",
+            "status": "deterministic",
+            "winner_variant": 1
+          },
+          "status": "grafted",
+          "variants": [
+            {
+              "base_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "benchmark": {
+                "coverage": 87.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 0.0
+              },
+              "branch": "atelier-variant/story-english/m4/r1/v1",
+              "clean": true,
+              "cost": {
+                "cycles": 0
+              },
+              "gate_passed": true,
+              "head_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "status": "gate_passed",
+              "terminal_reason": "",
+              "variant_id": 1,
+              "worktree_path": "/Users/liemnguyen/Per/English 8/.worktrees/prototype-story-english-m4-r1-v1"
+            },
+            {
+              "base_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "benchmark": {
+                "coverage": 87.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 0.0
+              },
+              "branch": "atelier-variant/story-english/m4/r1/v2",
+              "clean": true,
+              "cost": {
+                "cycles": 0
+              },
+              "gate_passed": true,
+              "head_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "status": "gate_passed",
+              "terminal_reason": "",
+              "variant_id": 2,
+              "worktree_path": "/Users/liemnguyen/Per/English 8/.worktrees/prototype-story-english-m4-r1-v2"
+            },
+            {
+              "base_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "benchmark": {
+                "coverage": 87.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 0.0
+              },
+              "branch": "atelier-variant/story-english/m4/r1/v3",
+              "clean": true,
+              "cost": {
+                "cycles": 0
+              },
+              "gate_passed": true,
+              "head_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "status": "gate_passed",
+              "terminal_reason": "",
+              "variant_id": 3,
+              "worktree_path": "/Users/liemnguyen/Per/English 8/.worktrees/prototype-story-english-m4-r1-v3"
+            }
+          ],
+          "winner_variant": 1
+        }
+      ],
+      "slo": {
+        "coverage_metric_id": "items_swept",
+        "coverage_min": 86,
+        "direction": "minimize",
+        "metric_id": "false_positive_marks",
+        "threshold": 0
+      },
+      "status": "complete",
+      "tasks": [
+        "Refuse global lexical and grammatical variant matching. shop/store, film/movie, have you got/do you have manufacture false POSITIVES in exactly the exercises that test the distinction. Where a variant is genuinely acceptable it goes in that key: 'shop/store'",
+        "Adversarial separation per D11: the fixture author is not the key author, and the same pass produces distractors that must stay rejected, so a generous engine cannot win",
+        "Hold false_negative_marks at zero while false_positive_marks goes to zero. The `marking` check runs the pair and neither number means anything alone - a variant that buys this milestone's SLO by regressing the previous one fails the check, not the SLO",
+        "Build the adversarial distractor set against the rendered question, not the key: near-synonyms the exercise is testing against, right-word-wrong-form, and answers correct for a neighbouring item. These must stay rejected",
+        "Adversarial second-brain review by an opus subagent (briefed to disagree; codex is not used) before the boundary; commit the verdict as an artefact"
+      ],
+      "title": "Marking that cannot be fooled: the false positive",
+      "tournament": {
+        "status": "complete"
+      }
+    },
+    {
+      "active": true,
+      "benchmark": {
+        "approved_at": "2026-08-16T20:36:47.832Z",
+        "command": "node harness/support.mjs",
+        "content_sha256": "870ce865edab8799d79490e0230d47de1e3e693b9a07e0c1e1375f35d5e0739b",
+        "fixed_workload": "Every glossable item across the built slice, checked for repeat offers within and across sessions; plus every review-queue enrolment checked for same-session checking. Emits gloss_reoffers and items_swept",
+        "harness": "harness/support.mjs"
+      },
+      "findings": {
+        "margin_pct": null,
+        "observations": [
+          {
+            "kind": "confirms",
+            "text": "approach v1 ('', proposer v1) won the round"
+          }
+        ],
+        "proposed_next": [
+          {
+            "action": "iterate",
+            "text": "iterate this milestone — coverage metric items_swept=10.0 is at or below coverage_min 10.0 — workload coverage is below the bar that certifies the workload ran (it ran, but not enough; raise coverage or lower coverage_min) — refused before grafting; the prototype lane is unchanged (no winner merged). Winner branch atelier-variant/story-english/m5/r1/v1 preserved for inspection.; or relax the SLO via charter edit if the target was unrealistic"
+          }
+        ],
+        "recommendation": {
+          "action": "iterate",
+          "confidence": "objective",
+          "rationale": "stopped short of the boundary (coverage metric items_swept=10.0 is at or below coverage_min 10.0 — workload coverage is below the bar that certifies the workload ran (it ran, but not enough; raise coverage or lower coverage_min) — refused before grafting; the prototype lane is unchanged (no winner merged). Winner branch atelier-variant/story-english/m5/r1/v1 preserved for inspection.)"
+        },
+        "recorded_at": "2026-08-16T21:44:15.897Z",
+        "source": "auto",
+        "status": "stop",
+        "theory_changes": []
+      },
+      "gate": {
+        "approved_at": "2026-08-16T20:36:47.832Z",
+        "artifacts": [
+          "harness/",
+          "package.json",
+          "package-lock.json"
+        ],
+        "artifacts_sha256": "0428359727a13941fbd98b3aa3e466c517a4d2cd315c5725dec2ee045d9b2ee9",
+        "checks": [
+          {
+            "kind": "build",
+            "name": "build"
+          },
+          {
+            "kind": "smoke",
+            "name": "marking"
+          },
+          {
+            "kind": "interaction",
+            "name": "session"
+          }
+        ],
+        "checks_yaml_body": "schema_version: 1\n\n# The executable gate for story-english. One shared file gates the goal; every\n# milestone declares this same scenario set, and `prototype check` runs all of\n# them. Each scenario emits its ATELIER_METRIC lines on stdout as bare numbers,\n# with the unit carried in the metric id.\n#\n# Every sweep emits a coverage count beside its result. A harness that renders\n# nothing and a harness that finds no defects produce identical output\n# otherwise, and one is a pass while the other is broken.\n#\n# These are real gates. Until the milestones build the harnesses they fail,\n# which is correct: making them green is the work, not a precondition to it.\n\nchecks:\n  # ---------------------------------------------------------------------------\n  # Curriculum and content integrity. Every prescribed target is placed, and no\n  # target has its encounter, its production and its delayed check in the same\n  # session — E5 restated as architecture, and the mechanical guard against\n  # degenerating into a lesson with a story printed above it.\n  # ---------------------------------------------------------------------------\n  - name: build\n    kind: build\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 600\n    command: |\n      set -e\n      node harness/coverage.mjs\n      node harness/support.mjs\n\n  # ---------------------------------------------------------------------------\n  # Marking correctness, gated as a PAIR. A false-negative gate alone is\n  # trivially satisfied by an engine that accepts everything, so false\n  # positives gate with it and neither number means anything without the other.\n  #\n  # Baselines on the engine being replaced: false negatives 41/62 = 0.661 over\n  # three mechanical variant classes; key_variant_coverage 275/1357 = 0.203.\n  # ---------------------------------------------------------------------------\n  - name: marking\n    kind: smoke\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 600\n    command: |\n      set -e\n      node harness/marking.mjs\n\n  # ---------------------------------------------------------------------------\n  # A real browser, real layout boxes, a real session run start to finish at\n  # phone width. This exists from milestone one deliberately: the build being\n  # replaced asserted its stylesheet as a string and grepped its own source for\n  # function names, so renaming a function failed the gate with a\n  # pixel-identical picture while a balloon landing on a face passed.\n  #\n  # Also carries the surface scan — no band number, half-band, band promise,\n  # hours-to-band claim, CEFR label, criterion name or citation reaches the\n  # learner's page.\n  # ---------------------------------------------------------------------------\n  - name: session\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 900\n    command: |\n      set -e\n      node harness/session.mjs\n      node harness/surfaces.mjs\n",
+        "checks_yaml_sha256": "3a4e516ea1cb6df486ef2d9c389a24d4a9dd712bb4982f048119a7b3666a344e",
+        "content_sha256": "7f7009008999909dc6bd7bd75fd31a379d488406e734cc1b25e6e82950b09e1c",
+        "required_tier": "interaction"
+      },
+      "honesty_review": {
+        "answered": true,
+        "decision_type": null,
+        "fabrication_surfaces": [
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "support.mjs gates that the sweep actually saw glosses, and coverage_min 10 on items_swept is bound into the frozen SLO, so a run that glosses nothing fails on coverage rather than passing on zero defects.",
+            "resolved": true,
+            "surface": "gloss_reoffers reaches zero by shipping no glosses at all — perfect withdrawal of support that was never offered."
+          },
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "The same-session check is mechanical and is gated: nothing enrolled may be checked in the session that taught it. Short intervals match long ones on immediate tests and lose on delayed ones, so this is the difference between a queue and a scoreboard.",
+            "resolved": true,
+            "surface": "The review queue flatters the learner by checking recall in the session that taught it, so the queue looks effective and measures nothing (E5)."
+          },
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "The sweep checks re-offer both within a scope and globally across scopes, and the session interaction check drives a real session against the same content. The residual is real and named: this measures the content's withdrawal, not a longitudinal record, which does not exist until she has used it for weeks.",
+            "resolved": true,
+            "surface": "Withdrawal is measured across the built corpus, not across one learner's real history over weeks — a gloss withdrawn in the content could still be re-offered by a runtime that re-reads it."
+          },
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "Ranking is produced-before-picked with the cap applied afterwards, carried as a task, and what a session actually enrols is inspectable in the data the gate reads rather than inferred from the lesson.",
+            "resolved": true,
+            "surface": "Review candidates are ranked by whatever is printed first, so the queue enrols a classification drill that happened to sit above the productive item — which is the exact defect the previous build shipped."
+          }
+        ],
+        "question": "Where can this milestone's surface show something it invented, or claim something it didn't measure?",
+        "reviewed_at": "2026-08-16T20:36:48.999Z",
+        "reviewed_by": "ai"
+      },
+      "id": 5,
+      "objective": "Make the loop she does alone on a weekday work end to end - a session opens, is read with support placed where she actually stalls, is answered on, and enrols what it taught into a fixed-interval review queue that brings it back on a later day.",
+      "risk": "Support that does not withdraw is the failure this replaces: a word handed back three chapters later is scaffolding that never came down, and it is invisible without a gate. The review side carries the opposite risk - E5 forbids marking anything learned in the session that taught it, so a queue that flatters her by checking recall immediately measures nothing. Both are mechanically detectable and neither is visible by reading.",
+      "rounds": [
+        {
+          "approach_directives": [
+            {
+              "directive": "",
+              "proposer": "v1",
+              "recorded_at": "2026-08-16T21:44:04.271Z",
+              "variant_id": 1
+            },
+            {
+              "directive": "",
+              "proposer": "v2",
+              "recorded_at": "2026-08-16T21:44:04.564Z",
+              "variant_id": 2
+            },
+            {
+              "directive": "",
+              "proposer": "v3",
+              "recorded_at": "2026-08-16T21:44:04.930Z",
+              "variant_id": 3
+            }
+          ],
+          "base_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+          "boundary_refusal": "coverage metric items_swept=10.0 is at or below coverage_min 10.0 — workload coverage is below the bar that certifies the workload ran (it ran, but not enough; raise coverage or lower coverage_min)",
+          "graft": {},
+          "round_id": 1,
+          "selection": {
+            "eligible_variants": [
+              1,
+              2,
+              3
+            ],
+            "reason": "near-tie, no judge -> deterministic minimize 0.0",
+            "status": "deterministic",
+            "winner_variant": 1
+          },
+          "status": "failed",
+          "variants": [
+            {
+              "base_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "benchmark": {
+                "coverage": 10.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 0.0
+              },
+              "branch": "atelier-variant/story-english/m5/r1/v1",
+              "clean": true,
+              "cost": {
+                "cycles": 0
+              },
+              "gate_passed": true,
+              "head_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "status": "gate_passed",
+              "terminal_reason": "",
+              "variant_id": 1,
+              "worktree_path": "/Users/liemnguyen/Per/English 8/.worktrees/prototype-story-english-m5-r1-v1"
+            },
+            {
+              "base_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "benchmark": {
+                "coverage": 10.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 0.0
+              },
+              "branch": "atelier-variant/story-english/m5/r1/v2",
+              "clean": true,
+              "cost": {
+                "cycles": 0
+              },
+              "gate_passed": true,
+              "head_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "status": "gate_passed",
+              "terminal_reason": "",
+              "variant_id": 2,
+              "worktree_path": "/Users/liemnguyen/Per/English 8/.worktrees/prototype-story-english-m5-r1-v2"
+            },
+            {
+              "base_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "benchmark": {
+                "coverage": 10.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 0.0
+              },
+              "branch": "atelier-variant/story-english/m5/r1/v3",
+              "clean": true,
+              "cost": {
+                "cycles": 0
+              },
+              "gate_passed": true,
+              "head_sha": "00a265e7b823c55da8c9392ba275f65719ea4017",
+              "status": "gate_passed",
+              "terminal_reason": "",
+              "variant_id": 3,
+              "worktree_path": "/Users/liemnguyen/Per/English 8/.worktrees/prototype-story-english-m5-r1-v3"
+            }
+          ],
+          "winner_variant": 1
+        }
+      ],
+      "slo": {
+        "coverage_metric_id": "items_swept",
+        "coverage_min": 10,
+        "direction": "minimize",
+        "metric_id": "gloss_reoffers",
+        "threshold": 0
+      },
+      "status": "pending_approval",
+      "tasks": [
+        "Gloss what a grade-8 Vietnamese reader actually stalls on - phrases, idioms, phrasal verbs, not single words - in Vietnamese, once per item, then withdrawn",
+        "Gate the withdrawal: gloss_reoffers counts an item glossed twice within a session or re-glossed after withdrawal. Zero",
+        "Enrol what the session taught into the review queue, and gate that nothing is checked in the session that taught it (E5)",
+        "Rank review candidates produced-before-picked, so the queue takes the productive item rather than whatever classification drill happened to be printed above it",
+        "Committed marked attempts throughout, with retake as a new attempt: answers clear, history survives, both runs listed. No average across attempts (E3), no trend or 'better' (E9), no retake on a clock-spent task (C6, C7)",
+        "IELTS precursor skills woven in from the start, per the operator's decision and bounded by the evidence: synonym recognition under search conditions (04 §8.3, named auto-scorable and level-appropriate), confidence rating with calibration feedback (C10, 03 §6.6, overconfidence d = 0.62), obligatory-context accuracy on 3SG -s, articles and plurals. Format familiarisation is a ONE-OFF orientation per question type and is never the curriculum (09 §3.4 [INF])",
+        "Keep first_paint_ms and js_bytes green throughout - if it is slow to open it will not be opened unprompted, and the north-star metric dies before any pedagogy is tested",
+        "Adversarial second-brain review by an opus subagent (briefed to disagree; codex is not used) before the boundary; commit the verdict as an artefact"
+      ],
+      "title": "The weekday loop: support that withdraws, and review that returns",
+      "tournament": {
+        "status": "complete"
+      }
+    },
+    {
+      "active": true,
+      "approach_candidates": [
+        {
+          "id": "owned-log",
+          "name": "The log she owns and reads back",
+          "summary": "A visible record of what she has read, in her own words, that she reads back rather than is scored on. The only candidate with a named warrant: B9 and 09 §7 rank 2 both name the reading log as the mechanism, and it is the d = 0.51 arm made concrete. Risk: a log nobody reads is a chore with no payoff, which is what the Saturday session is for."
+        },
+        {
+          "id": "in-story-gate",
+          "name": "The next chapter is earned",
+          "summary": "Accountability hidden inside the fiction - the next beat opens once she has answered on the last one. Cheap, needs no separate surface, and aligns directly with unprompted return. Sharp constraint: the gate must be on the MARKED OUTPUT, never on time spent or completion, because gating on completion makes the story the reward and English the tax, which inverts the entire thesis."
+        },
+        {
+          "id": "saturday-review",
+          "name": "The uncle is the accountability, and the measure",
+          "summary": "The weekly shared session is the accountability step: ten unstructured minutes asking her about what she read. Uniquely available here and the closest analogue to the classroom-mediated evidence base, which is exactly what the self-study GAP says is missing. Its second job matters more: E6 forbids calling our own test gains proficiency gains without an independent measure of the same ability, and this is the only independent measure that exists. Risk: it depends on the session actually happening every week, and on it staying a conversation."
+        },
+        {
+          "id": "quiz-after",
+          "name": "The short quiz after reading",
+          "summary": "Named explicitly by B9 as an accountability form - 'a log, quiz, or report'. Included deliberately because the case against it in the prior-art scan is Tier-3 folklore that G4 forbids as a warrant, and designing away from the quiz on folklore would trade the d = 0.51 arm for the d = 0.01 arm. Constraint from that same folklore, treated as a hypothesis rather than a finding: ask about what happened, not about detail."
+        }
+      ],
+      "benchmark": {
+        "approved_at": null,
+        "command": "node harness/return.mjs",
+        "content_sha256": null,
+        "fixed_workload": "Every record in the operator's observation file — .specs/prototype/story-english.observations.json in the MAIN worktree, or $ATELIER_RETURNS_OBSERVATIONS — validated and counted as distinct WEEKDAY dates recorded as an unprompted open. The number is not derived from anything the build produces: the charter holds that the app's local activity log corroborates but cannot establish it, because no log distinguishes a prompted open from an unprompted one. A path resolving INSIDE the build tree is refused rather than read, so a tournament variant cannot author its own north star. The harness reads the activity log where present and reports disagreement in both directions without letting it move the metric, refuses Saturday by construction, and fails on an absent observation file so that 'nobody looked' and 'she did not come back' cannot produce the same green. coverage_min 4 forces a full weekday week, prompted days included, so the number cannot be cherry-picked. The floor is EXCLUSIVE — the reading must be strictly greater than it — so 4 is what demands at least 5 weekday records. Do not 'correct' it to 5: that would demand 6, which a five-weekday week cannot produce, and the milestone could never pass. Emits returns_unprompted and items_swept. band_tokens_emitted keeps its teeth on every boundary through the `session` interaction check, which runs harness/surfaces.mjs; baseline 0 across 103 pages.",
+        "harness": "harness/return.mjs"
+      },
+      "gate": {
+        "approved_at": "2026-08-16T20:36:48.007Z",
+        "artifacts": [
+          "harness/",
+          "package.json",
+          "package-lock.json"
+        ],
+        "artifacts_sha256": "0428359727a13941fbd98b3aa3e466c517a4d2cd315c5725dec2ee045d9b2ee9",
+        "checks": [
+          {
+            "kind": "build",
+            "name": "build"
+          },
+          {
+            "kind": "smoke",
+            "name": "marking"
+          },
+          {
+            "kind": "interaction",
+            "name": "session"
+          }
+        ],
+        "checks_yaml_body": "schema_version: 1\n\n# The executable gate for story-english. One shared file gates the goal; every\n# milestone declares this same scenario set, and `prototype check` runs all of\n# them. Each scenario emits its ATELIER_METRIC lines on stdout as bare numbers,\n# with the unit carried in the metric id.\n#\n# Every sweep emits a coverage count beside its result. A harness that renders\n# nothing and a harness that finds no defects produce identical output\n# otherwise, and one is a pass while the other is broken.\n#\n# These are real gates. Until the milestones build the harnesses they fail,\n# which is correct: making them green is the work, not a precondition to it.\n\nchecks:\n  # ---------------------------------------------------------------------------\n  # Curriculum and content integrity. Every prescribed target is placed, and no\n  # target has its encounter, its production and its delayed check in the same\n  # session — E5 restated as architecture, and the mechanical guard against\n  # degenerating into a lesson with a story printed above it.\n  # ---------------------------------------------------------------------------\n  - name: build\n    kind: build\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 600\n    command: |\n      set -e\n      node harness/coverage.mjs\n      node harness/support.mjs\n\n  # ---------------------------------------------------------------------------\n  # Marking correctness, gated as a PAIR. A false-negative gate alone is\n  # trivially satisfied by an engine that accepts everything, so false\n  # positives gate with it and neither number means anything without the other.\n  #\n  # Baselines on the engine being replaced: false negatives 41/62 = 0.661 over\n  # three mechanical variant classes; key_variant_coverage 275/1357 = 0.203.\n  # ---------------------------------------------------------------------------\n  - name: marking\n    kind: smoke\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 600\n    command: |\n      set -e\n      node harness/marking.mjs\n\n  # ---------------------------------------------------------------------------\n  # A real browser, real layout boxes, a real session run start to finish at\n  # phone width. This exists from milestone one deliberately: the build being\n  # replaced asserted its stylesheet as a string and grepped its own source for\n  # function names, so renaming a function failed the gate with a\n  # pixel-identical picture while a balloon landing on a face passed.\n  #\n  # Also carries the surface scan — no band number, half-band, band promise,\n  # hours-to-band claim, CEFR label, criterion name or citation reaches the\n  # learner's page.\n  # ---------------------------------------------------------------------------\n  - name: session\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 900\n    command: |\n      set -e\n      node harness/session.mjs\n      node harness/surfaces.mjs\n",
+        "checks_yaml_sha256": "3a4e516ea1cb6df486ef2d9c389a24d4a9dd712bb4982f048119a7b3666a344e",
+        "content_sha256": "03b445d7720437b6323b74d41f766b71e9daa99241ca91e585123b81244e9fb5",
+        "required_tier": "interaction"
+      },
+      "honesty_review": {
+        "answered": true,
+        "decision_type": null,
+        "fabrication_surfaces": [
+          {
+            "confirmation_needed": "The operator records the week at the Saturday session — one entry per weekday, `unprompted` being their own judgement — and that record is the evidence. A headless gate cannot see whether a child came back, and this boundary is designed to stop for a person.",
+            "deferred_to_boundary": true,
+            "mitigation": "harness/return.mjs does not derive it. It reads the operator's observation file from the MAIN worktree's .specs — a path resolving inside the build tree is refused rather than read, so a tournament variant cannot author its own north star, which was the cheapest green in this plan until it was closed and probed. It fails when the file is absent so that 'nobody looked' and 'she did not come back' cannot produce the same green.",
+            "resolved": false,
+            "surface": "returns_unprompted is not computable from anything this build produces. No log distinguishes an open the learner chose from one her uncle asked for, so any harness that derived the number would be inventing the only thing the metric is about."
+          },
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "The harness reads the log where present and reports disagreement in BOTH directions — observed days the log missed, logged days with no operator attribution — while refusing to let either move the metric. Saturday is excluded by construction rather than by judgement.",
+            "resolved": true,
+            "surface": "The app's local activity log is substituted for the observation, so device opens are silently reported as unprompted returns."
+          },
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "coverage_min 4 on items_swept is bound into the frozen SLO — an EXCLUSIVE floor, so 4 is what requires at least 5 weekday records: a full weekday week must be recorded, prompted days included, before the number counts at all. Records are deduplicated by date and malformed entries fail their own gate.",
+            "resolved": true,
+            "surface": "Only the good days are recorded, so the metric is cherry-picked from a week that was mostly empty."
+          },
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "No streak, carried as an explicit task with the reason. band_tokens_emitted is gated at zero on EVERY boundary through the session interaction check, which scans every learner-facing surface for band numbers, half-bands, CEFR labels, criterion names and citations; baseline 0 across 103 pages.",
+            "resolved": true,
+            "surface": "Accountability ships as a score, a streak or a progress dial — the return metric then dies quietly while every internal gate stays green, because a streak optimises the north star directly and destroys its interpretability."
+          }
+        ],
+        "question": "Where can this milestone's surface show something it invented, or claim something it didn't measure?",
+        "reviewed_at": "2026-08-17T10:57:37.559Z",
+        "reviewed_by": "ai",
+        "stale_reason": "milestone gate/benchmark/SLO changed via amend-milestone after this review was answered — re-answer it before running"
+      },
+      "id": 6,
+      "objective": "Build the accountability step that the evidence says separates a medium effect from no effect, in a form a thirteen-year-old does not experience as homework - and make the week she did alone legible at the Saturday session without turning it into a score or an inspection.",
+      "risk": "The d = 0.51 versus d = 0.01 fork, and the milestone that most wants a tournament. Accountability absent is an effect indistinguishable from zero; accountability shipped as scoring is experienced as school, and the return metric dies quietly while every internal gate stays green. The Saturday surface carries its own risk: it is the independent measure E6 requires before any gain may be called a proficiency gain, and it stops being that the moment it becomes an inspection she performs for.",
+      "slo": {
+        "coverage_metric_id": "items_swept",
+        "coverage_min": 4,
+        "direction": "maximize",
+        "metric_id": "returns_unprompted",
+        "threshold": 3
+      },
+      "status": "proposed",
+      "tasks": [
+        "Track weekday activity locally and make it legible on Saturday - what she read, what came back for review, what she is in the middle of. Never a score, a percentage, a total or a composite (D3, E1, A2)",
+        "Ship no streak. The north-star metric IS unprompted return; a streak optimises it directly and destroys its interpretability, so after one ships you can no longer tell whether she came back for the product or the number. If ever, only after a clean baseline",
+        "The interface still explains nothing about itself: no criterion names, no CEFR labels, no evidential markers, no citations, on any surface including the Saturday one",
+        "Record the weekly observation out of band - weekday days opened unasked, and sessions started - and keep it out of the interface entirely",
+        "Adversarial second-brain review by an opus subagent (briefed to disagree; codex is not used) before the boundary; commit the verdict as an artefact",
+        "Record the week in observations/returns.json at the Saturday session - one entry per weekday, `unprompted` being the operator's judgement and the only source for it. The gate stops here for a human by design; a headless run cannot see whether a child came back"
+      ],
+      "title": "Accountability she tolerates, and a Saturday worth having"
+    }
+  ],
+  "run": {
+    "max_cycles_per_milestone": 60,
+    "max_rounds": 2,
+    "max_wall_minutes": 150,
+    "n_variants": 1,
+    "no_progress_limit": 3,
+    "worker": {
+      "autocompact": "150k",
+      "orientation_file": ".specs/prototype/story-english.orientation.md"
+    }
+  },
+  "schema_version": 1,
+  "slug": "story-english",
+  "state": "stopped",
+  "updated_at": "2026-08-17T10:57:37.559Z"
+}

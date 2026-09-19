@@ -1,0 +1,35 @@
+{
+  "run_id": "a9c8558528bb",
+  "slug": "story-english",
+  "command": "atelier prototype run --auto",
+  "started": "2026-08-16T19:31:17Z",
+  "finished": "2026-08-16T20:34:47Z",
+  "elapsed_sec": 3809.6,
+  "exit_action": "blocked",
+  "stop_reason": "lane not green (state='stopped'): coverage metric items_swept=400.0 is at or below coverage_min 400.0 \u2014 workload coverage is below the bar that certifies the workload ran (it ran, but not enough; raise coverage or lower coverage_min) \u2014 must-stop",
+  "milestones_advanced": 0,
+  "max_wall_clock_sec": 0,
+  "max_milestones": 0,
+  "milestones": [
+    {
+      "milestone_id": 1,
+      "objective": "Replace the textbook's 12-unit x 7-lesson organisation with a session-based teaching architecture derived from the evidence base, expressed as machine-readable data rather than a design document, and prove it by running one real session in a real browser at 360 px. Every prescribed target gets a placement; the story chapter plan and the vocabulary track are sized here.",
+      "outcome": "blocked",
+      "reason": "lane not green (state='stopped'): coverage metric items_swept=400.0 is at or below coverage_min 400.0 \u2014 workload coverage is below the bar that certifies the workload ran (it ran, but not enough; raise coverage or lower coverage_min) \u2014 must-stop",
+      "slo": {
+        "metric_id": "sgk_targets_covered",
+        "threshold": 400,
+        "direction": "maximize"
+      },
+      "benchmark_value": 400.0,
+      "winner_variant": 2,
+      "selection_mode": null,
+      "gate_sha256": "927bf8fdfc0d75ec13d971ee6417ce2e3d98b912a19825990897b815e8659d73",
+      "benchmark_sha256": "d078dde2ec872ed17cf5cbe2b0487f378b4f46e51ef06cfb54f8fcaa7bdb9f0e",
+      "grafted_sha": null,
+      "decision_id": null,
+      "recommendation": "iterate",
+      "report_path": "/Users/liemnguyen/Per/English 8/reports/prototype-story-english.html"
+    }
+  ]
+}

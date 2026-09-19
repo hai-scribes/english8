@@ -2,6 +2,28 @@
 disable-model-invocation: true
 ---
 
+> **Run this without the model:**
+>
+> ```
+> ! atelier doctor --probe-skill-invocation
+> ! al probe
+> ```
+>
+> The first spelling always works wherever `atelier` does. The second is the
+> `al` shorthand, which needs `atelier/bin` on PATH — linking only the
+> `atelier` binary does not carry it, so downstream projects may have the
+> long form and not the short one.
+>
+> Every step below is deterministic — no synthesis, no judgment call. Running
+> it as a slash command costs this file's tokens plus a full conversation
+> replay per tool call, and buys nothing the shell cannot do. In Claude Code,
+> `!` runs a local command and puts its output in the transcript with **zero
+> model turns**; the AI reads the result on your next message.
+>
+> This file stays the reference for what the command is contracted to do, and
+> the fallback when neither spelling is reachable. See
+> `docs/atelier/ATELIER_SLASH_COMMANDS.md` § "Bash-native commands".
+
 # `/_atelier-probe` — `disable-model-invocation` sentinel (fallback)
 
 This is an Atelier framework **fallback sentinel probe**, not an operator workflow. The W9.7.d-ii ship (2026-05-19) flipped `disable-model-invocation: true` onto the 17 side-effectful slash commands AFTER an empirical-probe verdict confirmed the field behaves correctly on the maintainer's empirically-probed Claude Code version (2.1.144 as of 2026-05-19; the framework's `known_good` range extends as new operators report results — see § 3.1 in `docs/atelier/ATELIER_SLASH_COMMANDS.md`). This file remains shipped as the manual fallback for two scenarios:

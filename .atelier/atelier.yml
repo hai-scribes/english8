@@ -52,3 +52,13 @@ supervision:
 # in as optional fields; the bare `keys` list remains the stable anchor.
 secrets:
   keys: []
+
+# --- bootstrap: how a fresh clone gets its Atelier surface back ---
+# Added by a later `atelier init`; the generated surface
+# (`.claude/commands/`) is per-machine and not tracked, so a clone
+# arrives with lane state and no way to drive it. These lines are the
+# recovery route, readable with nothing installed.
+framework:
+  repo: "https://github.com/hai-scribes/atelier-framework.git"
+  version_at_topup: "0.1.0-dev"
+  restore: "atelier upgrade --refresh-commands --apply"

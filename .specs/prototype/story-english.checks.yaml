@@ -1,0 +1,83 @@
+schema_version: 1
+
+# The executable gate for story-english. One shared file gates the goal; every
+# milestone declares this same scenario set, and `prototype check` runs all of
+# them. Each scenario emits its ATELIER_METRIC lines on stdout as bare numbers,
+# with the unit carried in the metric id.
+#
+# Every sweep emits a coverage count beside its result. A harness that renders
+# nothing and a harness that finds no defects produce identical output
+# otherwise, and one is a pass while the other is broken.
+#
+# These are real gates. Until the milestones build the harnesses they fail,
+# which is correct: making them green is the work, not a precondition to it.
+
+checks:
+  # ---------------------------------------------------------------------------
+  # Curriculum and content integrity. Every prescribed target is placed, and no
+  # target has its encounter, its production and its delayed check in the same
+  # session — E5 restated as architecture, and the mechanical guard against
+  # degenerating into a lesson with a story printed above it.
+  # ---------------------------------------------------------------------------
+  - name: build
+    kind: build
+    # No `2>/dev/null || true`: node_modules is gitignored, so every tournament
+    # variant worktree starts cold and installs playwright here. Swallowing the
+    # error turned a failed install into `Cannot find package 'playwright'` a
+    # minute later inside the harness, which reads as a harness defect and sends
+    # the worker to fix code that was never broken. A setup failure must fail as
+    # setup.
+    setup: "[ -d node_modules ] || npm ci --no-audit --no-fund"
+    timeout_seconds: 600
+    command: |
+      set -e
+      node harness/coverage.mjs
+      node harness/support.mjs
+
+  # ---------------------------------------------------------------------------
+  # Marking correctness, gated as a PAIR. A false-negative gate alone is
+  # trivially satisfied by an engine that accepts everything, so false
+  # positives gate with it and neither number means anything without the other.
+  #
+  # Baselines on the engine being replaced: false negatives 41/62 = 0.661 over
+  # three mechanical variant classes; key_variant_coverage 275/1357 = 0.203.
+  # ---------------------------------------------------------------------------
+  - name: marking
+    kind: smoke
+    # No `2>/dev/null || true`: node_modules is gitignored, so every tournament
+    # variant worktree starts cold and installs playwright here. Swallowing the
+    # error turned a failed install into `Cannot find package 'playwright'` a
+    # minute later inside the harness, which reads as a harness defect and sends
+    # the worker to fix code that was never broken. A setup failure must fail as
+    # setup.
+    setup: "[ -d node_modules ] || npm ci --no-audit --no-fund"
+    timeout_seconds: 600
+    command: |
+      set -e
+      node harness/marking.mjs
+
+  # ---------------------------------------------------------------------------
+  # A real browser, real layout boxes, a real session run start to finish at
+  # phone width. This exists from milestone one deliberately: the build being
+  # replaced asserted its stylesheet as a string and grepped its own source for
+  # function names, so renaming a function failed the gate with a
+  # pixel-identical picture while a balloon landing on a face passed.
+  #
+  # Also carries the surface scan — no band number, half-band, band promise,
+  # hours-to-band claim, CEFR label, criterion name or citation reaches the
+  # learner's page.
+  # ---------------------------------------------------------------------------
+  - name: session
+    kind: interaction
+    # No `2>/dev/null || true`: node_modules is gitignored, so every tournament
+    # variant worktree starts cold and installs playwright here. Swallowing the
+    # error turned a failed install into `Cannot find package 'playwright'` a
+    # minute later inside the harness, which reads as a harness defect and sends
+    # the worker to fix code that was never broken. A setup failure must fail as
+    # setup.
+    setup: "[ -d node_modules ] || npm ci --no-audit --no-fund"
+    timeout_seconds: 900
+    command: |
+      set -e
+      node harness/session.mjs
+      node harness/surfaces.mjs

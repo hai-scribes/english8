@@ -2,6 +2,28 @@
 disable-model-invocation: true
 ---
 
+> **Run this without the model:**
+>
+> ```
+> ! atelier route show
+> ! al route
+> ```
+>
+> The first spelling always works wherever `atelier` does. The second is the
+> `al` shorthand, which needs `atelier/bin` on PATH — linking only the
+> `atelier` binary does not carry it, so downstream projects may have the
+> long form and not the short one.
+>
+> Every step below is deterministic — no synthesis, no judgment call. Running
+> it as a slash command costs this file's tokens plus a full conversation
+> replay per tool call, and buys nothing the shell cannot do. In Claude Code,
+> `!` runs a local command and puts its output in the transcript with **zero
+> model turns**; the AI reads the result on your next message.
+>
+> This file stays the reference for what the command is contracted to do, and
+> the fallback when neither spelling is reachable. See
+> `docs/atelier/ATELIER_SLASH_COMMANDS.md` § "Bash-native commands".
+
 You are the `/route` command. Configure or inspect the per-gate LLM routing
 for this project. Three operator modes; all backed by `atelier route` CLI
 under the hood (R3.2 in-session surface).

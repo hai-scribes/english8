@@ -1,0 +1,12 @@
+# atelier prototype-lane state — W8.1, framework-managed
+slug: learn-anywhere
+branch: prototype/learn-anywhere
+worktree_path: .worktrees/prototype-learn-anywhere
+created_at: "2026-09-04T17:24:54.097Z"
+prototype_mode: true
+parallel_seen: 1
+state: open
+intent_captured: false
+payload_schema_version: 1.1.0
+base_ref: main
+base_commit: d25d76c099b17709d2fb0ff8fc23136f0d514008

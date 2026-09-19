@@ -1,0 +1,12 @@
+# atelier prototype-lane state — W8.1, framework-managed
+slug: story-english
+branch: prototype/story-english
+worktree_path: .worktrees/prototype-story-english
+created_at: "2026-08-16T15:10:12.437Z"
+prototype_mode: true
+parallel_seen: 0
+state: open
+intent_captured: false
+payload_schema_version: 1.1.0
+base_ref: main
+base_commit: d25d76c099b17709d2fb0ff8fc23136f0d514008

@@ -1,0 +1,13 @@
+{
+  "variant_key": "m3-r1-v1",
+  "pid": 49779,
+  "updated_at": "2026-08-16T21:43:45Z",
+  "agent_id": "prototype-story-english-m3-r1-v1",
+  "variant_id": 1,
+  "milestone_id": 3,
+  "round_id": 1,
+  "phase": "finished",
+  "status": "gate_passed",
+  "gate_passed": true,
+  "benchmark_value": 0.0
+}

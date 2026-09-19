@@ -2,45 +2,6 @@
 disable-model-invocation: true
 ---
 
-## Atelier port note
-
-**Implementation notes:**
-
-- **Terminal-only digest** — W7.5 made `/retro` strictly terminal-output;
-  no on-disk dated `*.md` digests, no "Resolved since last retro" diffing.
-  The on-disk draft is ephemeral and deleted in step 6.
-- **Destination redirect** — AI-saved project-type dev observations route
-  to `<project>/.atelier/retro/{lessons,notes-for-operator}.md` instead
-  of new `project_*.md` memory files. CLAUDE.md auto-memory section
-  documents the rule.
-- **Close-event hooks** — five hooks at
-  `atelier/hooks/retro-after-{spec-close,cluster-merge,hotfix,promote,
-  drop-prototype}.sh` emit timely "consider /retro" prompts to stderr;
-  they are NOT gates and do not enforce — they surface close events.
-
-Per ATELIER_PLAN.md § W7.5 + `feedback_retro_terminal_first.md`.
-
----
-
-You are the retro command. Generate evidence via script, hand it to a Sonnet subagent that classifies findings, then have the main session bias-check + reconcile inline into a unified digest, then print to the terminal. The digest exists on disk only as an ephemeral draft (cleaned up in Step 6); terminal output is the only durable artifact.
-
-The user's arguments: $ARGUMENTS
-
-Run after every pipeline command (`/develop` cluster, `/hotfix`, `/regression`, soak, `/product`) to surface bugs in the project AND friction in the pipeline framework itself.
-
-| Role | Tool | On failure |
-|---|---|---|
-| Window + paths | `retro_resolve.py` (via `atelier path --script`) | Report stderr, stop. |
-| Evidence collection | `retro_evidence.py` (via `atelier path --script`) | Report stderr, stop. |
-| Classification + draft | Sonnet subagent (`Agent` tool, `model: sonnet`) — brief at `atelier/prompts/retro-scan.md` | Dispatch error → report, stop. |
-| Bias check + reconcile | Main session (this AI) — reads draft, applies bias lens, amends in place | n/a (no dispatch). |
-
-> **Reference pointers:**
-> - `atelier/prompts/retro-scan.md` — Sonnet brief (draft mode).
-> - `retro_resolve.py`, `retro_evidence.py` (resolved via `atelier path --script`) — deterministic, no AI.
-> - `atelier plan register-bug --help` + the bug-intake rules in `/bug` — govern out-of-scope-finding proposals.
-
----
 
 ## Step 1: Resolve the window
 

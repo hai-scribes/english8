@@ -1,0 +1,58 @@
+{
+  "run_id": "521d9e544bf6",
+  "slug": "learn-anywhere",
+  "command": "atelier prototype run learn-anywhere --auto",
+  "launch_flags": {
+    "accept_deferred": false,
+    "accept_empty_graft": false,
+    "force": false,
+    "max_parallel": null
+  },
+  "started": "2026-09-04T22:12:49Z",
+  "finished": "2026-09-04T22:42:46Z",
+  "elapsed_sec": 1796.6,
+  "exit_action": "stuck",
+  "stop_reason": "lane not green (state='stuck'): stopping after round 1 of 2 this attempt (round id 1): every one of the 1 attempts that ran was reaped by the WALL, and `run.chain_rounds` is off \u2014 so the next round would restart from the same base with the same slice and be reaped at the same place. This is wall starvation, not a wrong approach: raise `run.max_wall_minutes` (or lower `run.n_variants` / `run.max_rounds`, which divide it), or set `run.chain_rounds` true so the next round CONTINUES this work instead of rebuilding it. Change one of those with `atelier prototype goal run-config`. (no variant passed the gate) \u2014 must-stop",
+  "milestones_advanced": 0,
+  "max_wall_clock_sec": 28800,
+  "max_milestones": 0,
+  "milestones": [
+    {
+      "milestone_id": 1,
+      "objective": "A learner opens a lesson page, signs in with the Google account she already has, and the page says who she is. The session survives a reload and a new tab; signing out actually ends it. Nothing about progress moves yet \u2014 this milestone establishes identity and nothing else, because every later milestone is meaningless without a stable per-account key to hang data on.",
+      "outcome": "stuck",
+      "reason": "lane not green (state='stuck'): stopping after round 1 of 2 this attempt (round id 1): every one of the 1 attempts that ran was reaped by the WALL, and `run.chain_rounds` is off \u2014 so the next round would restart from the same base with the same slice and be reaped at the same place. This is wall starvation, not a wrong approach: raise `run.max_wall_minutes` (or lower `run.n_variants` / `run.max_rounds`, which divide it), or set `run.chain_rounds` true so the next round CONTINUES this work instead of rebuilding it. Change one of those with `atelier prototype goal run-config`. (no variant passed the gate) \u2014 must-stop",
+      "slo": {
+        "metric_id": "auth_contract_violations",
+        "threshold": 0,
+        "direction": "minimize"
+      },
+      "benchmark_value": null,
+      "winner_variant": null,
+      "selection_mode": null,
+      "gate_sha256": "d3556cbe9c621812fbd257a433aade287a1ce342ee792437713ad4ee20b78321",
+      "benchmark_sha256": "ae3071b12623a5a5515f7dde12677e254293c5e32c3edfa9d566514c7fec9bca",
+      "grafted_sha": null,
+      "cycles": 2,
+      "variant_cycles": [
+        {
+          "variant_id": 1,
+          "cycles": 2
+        }
+      ],
+      "cycles_all_rounds": 2,
+      "retained_branches": [
+        "atelier-variant/learn-anywhere/m1/r1/v1"
+      ],
+      "boundary_refusal": "stopping after round 1 of 2 this attempt (round id 1): every one of the 1 attempts that ran was reaped by the WALL, and `run.chain_rounds` is off \u2014 so the next round would restart from the same base with the same slice and be reaped at the same place. This is wall starvation, not a wrong approach: raise `run.max_wall_minutes` (or lower `run.n_variants` / `run.max_rounds`, which divide it), or set `run.chain_rounds` true so the next round CONTINUES this work instead of rebuilding it. Change one of those with `atelier prototype goal run-config`. (no variant passed the gate)",
+      "best_retained": null,
+      "decision_id": null,
+      "recommendation": "pivot",
+      "report_path": "/Users/liemnguyen/Per/English 8/reports/prototype-learn-anywhere.html",
+      "terminal_causes": [
+        "budget_wall"
+      ],
+      "session_diagnostics": []
+    }
+  ]
+}

@@ -587,3 +587,77 @@ would unblock it.
 - Tier 3 (prep blogs, teacher lore) is never a warrant — only ever the *object*
   of a claim.
 - If you add or move a claim, update `index.jsonl` in the same change.
+
+## The pedagogy knowledge base — read this before shaping the work
+
+`research/pedagogy/` is a second source-verified base, sibling to
+`research/ielts/` and deliberately **not** merged with it. Where the IELTS base
+says what may be *claimed*, this one says how the work should be *shaped*: how
+much to assign, how often, what to mix, what to reward, and what a weekly tutor
+session is worth. Six documents, 99 indexed claims, same marker convention, same
+grep protocol — `ROUTER.md` first, never the documents wholesale.
+
+**It is separate on purpose.** None of it is IELTS evidence, and merging would
+let extrapolations from school mathematics inherit the credibility of a base
+built on Tier-1 test documentation. **Nothing in it may appear in a `:::bridge`**;
+`check_ielts.py` resolves citations against `research/ielts/` only.
+
+**The three findings that change what we build**, each with its build rule in
+`06-build-rules.md`:
+
+- **Elapsed time is never shown or recorded as progress** (**P1**). At the
+  individual level more minutes predicts *lower* achievement — four samples,
+  three countries, including 1,832 Swiss grade-8 students learning French. A
+  slow learner spending longer is the signature of difficulty. What predicts
+  gains is **effort**, and effort is near-uncorrelated with time.
+- **In-session accuracy is not a proxy for retention** (**P6**), and **the
+  learner's felt sense of a practice arrangement is not a design input**
+  (**P7**). The schedule with the worst in-session accuracy won a week later,
+  and learners rated three schedules of different effectiveness as equally
+  effective.
+- **No points, badges or tangible rewards for completing study** (**P9**), and
+  no feature warranted as engagement-improving (**P10**) — attrition tracks
+  dispositional persistence, not motivation or proficiency.
+
+**Every build rule in it is `[INF]` even where its finding is `[V 3-0]`**, because
+the population is wrong in at least one dimension every time: none Vietnamese,
+none a self-study site, and the 13–14 band is where this literature is thinnest,
+not thickest. **State the population when you cite it.** A rule quoted without
+"18–22-year-old adults on a receptive test" attached has been laundered.
+
+**A third of the base is `> **GAP**` blockquotes, and that is its most useful
+half.** Extensive *listening*, explicit-vs-implicit grammar, streaks, habit
+formation, what a fluent-but-untrained tutor should do with an hour, and whether
+to interleave or block for an adolescent are all *unestablished* — `04` is nearly
+empty and its brevity is a finding, not a summary of consensus held elsewhere.
+`06` §2 is the blocked list and names what would unblock each item.
+
+**Ten claims are marked `[X]` — tested and not sustained** — and several are
+figures that look eminently quotable: the "15% of an SD" for daily assignment,
+the `0.37 SD` tutoring benchmark, the Cepeda `8–43%` spacing rule. **Grep
+`'"refuted"'` before quoting any effect size you half-remember from this area.**
+
+<!-- atelier:memory-routing -->
+## Auto-memory routing (Atelier)
+
+Durable learning goes to files, not to AI memory — memory has no size gate.
+When the AI would otherwise save a **dev observation** (a non-obvious
+framework / domain / process lesson learned while doing the work), redirect it:
+
+- Project-domain lessons -> `.atelier/retro/lessons.md` (append).
+- Framework / upstream observations -> `.atelier/retro/notes-for-operator.md`
+  (append; intentionally not memory-indexed — the operator reads it during `/retro`).
+
+`MEMORY.md` carries **one** pointer line for the whole `lessons.md` surface, never
+one entry per lesson. Memory still takes the user / feedback / reference types,
+plus load-bearing project pointers (design-anchor commit hashes and the like).
+
+**Session progress never goes to memory.** "Save progress" / "save for a new
+session" — slash command or not — means the local `saved-progress/<ts>-<slug>.md`
+snapshot that `/save-progress` writes, never an auto-memory entry.
+
+*Don't want these rules?* Replace this whole block — markers included — with the
+single line `<!-- atelier:memory-routing:off -->` and Atelier will stop adding it
+back. Deleting it without that marker is temporary: the next `atelier init` or
+`atelier upgrade --refresh-commands` restores it.
+<!-- /atelier:memory-routing -->

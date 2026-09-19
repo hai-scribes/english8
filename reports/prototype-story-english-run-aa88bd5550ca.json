@@ -1,0 +1,35 @@
+{
+  "run_id": "aa88bd5550ca",
+  "slug": "story-english",
+  "command": "atelier prototype run --auto",
+  "started": "2026-08-16T18:25:05Z",
+  "finished": "2026-08-16T19:14:05Z",
+  "elapsed_sec": 2939.2,
+  "exit_action": "stuck",
+  "stop_reason": "lane not green (state='stuck') \u2014 must-stop",
+  "milestones_advanced": 0,
+  "max_wall_clock_sec": 28800,
+  "max_milestones": 0,
+  "milestones": [
+    {
+      "milestone_id": 1,
+      "objective": "Replace the textbook's 12-unit x 7-lesson organisation with a session-based teaching architecture derived from the evidence base, expressed as machine-readable data rather than a design document, and prove it by running one real session in a real browser at 360 px. Every prescribed target gets a placement; the story chapter plan and the vocabulary track are sized here.",
+      "outcome": "stuck",
+      "reason": "lane not green (state='stuck') \u2014 must-stop",
+      "slo": {
+        "metric_id": "sgk_targets_covered",
+        "threshold": 400,
+        "direction": "maximize"
+      },
+      "benchmark_value": null,
+      "winner_variant": null,
+      "selection_mode": null,
+      "gate_sha256": "927bf8fdfc0d75ec13d971ee6417ce2e3d98b912a19825990897b815e8659d73",
+      "benchmark_sha256": "d078dde2ec872ed17cf5cbe2b0487f378b4f46e51ef06cfb54f8fcaa7bdb9f0e",
+      "grafted_sha": null,
+      "decision_id": null,
+      "recommendation": "pivot",
+      "report_path": "/Users/liemnguyen/Per/English 8/reports/prototype-story-english.html"
+    }
+  ]
+}
