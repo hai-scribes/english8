@@ -12,26 +12,22 @@
 ::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **stress pattern**, not the meaning. Say each word aloud before you choose."
 - referee · amazing · historic · invention = referee ~ refe**ree** is stressed on the last syllable; the other three on the middle one
 - digital · conference · Japanese · difficult = Japanese ~ Japa**nese** is stressed on the last syllable; the other three on the first
-- Vietnamese · employee · engineer · telescope = telescope ~ **te**lescope is stressed on the first syllable; the other three on the last
+- Vietnamese · refugee · engineer · telescope = telescope ~ **te**lescope is stressed on the first syllable; the other three on the last
 - astronaut · atmosphere · discovery · gravity = discovery ~ dis**co**very is stressed on the second syllable; the other three on the first
 :::
 
 ### 1.2 First or last?
 
-::: task skill="course" type="sort" opts="first syllable|last syllable" ask="Where does the main stress fall? The endings **-ese** and **-ee** pull the stress onto themselves; most other endings leave it where it was."
+::: task skill="course" type="sort" opts="first syllable|last syllable" ask="Where does the main stress fall? Say each word aloud before you choose."
 - interviewee = last syllable
-- telescope = first syllable
-- engineer = last syllable
+- satellite = first syllable
+- Taiwanese = last syllable
 - galaxy = first syllable
-- Vietnamese = last syllable
-- gravity = first syllable
+- trainee = last syllable
+- planet = first syllable
 - guarantee = last syllable
-- emoji = first syllable
+- coffee = first syllable ~ **cof**fee ends in -ee but is stressed on the first syllable, so say it aloud rather than trusting the ending
 :::
-
-> ⚠️ **Bẫy thường gặp:** *emoji* không theo quy tắc **-ee**. Nó được đọc là
-> e-**mo**-ji, trọng âm rơi vào âm tiết giữa — đây là lý do phải đọc to từng từ
-> chứ không chỉ nhìn đuôi.
 
 ### 1.3 Read these aloud
 
@@ -56,47 +52,43 @@ how a listener knows the list has finished.
 ### 1.4 One word, three choices
 
 ::: task skill="course" type="choice" ask="Choose the word or phrase that completes each sentence."
-- A small picture you put in a message to show how you feel is an ___ . (a) emoji (b) icon (c) avatar = a
-- Our club had a ___ with three schools in Da Nang last Friday. (a) language barrier (b) video conference (c) carrier pigeon = b
-- The results of the ___ surprised even the teacher who set it up. (a) invention (b) experiment (c) attendance = b
-- The school checks who is in the room with ___ instead of a register. (a) biometrics (b) truancy (c) feedback = a
-- Nobody knows how many stars there are in our ___ . (a) orbit (b) galaxy (c) atmosphere = b
+- A small picture you put in a message to show how you feel is called ___ . {an emoji | a webcam | a voice message} = an emoji
+- Our club had a ___ with three schools in Da Nang last Friday. {video conference | language barrier | carrier pigeon} = video conference
+- The results of the ___ surprised even the teacher who set it up. {experiment | invention | attendance} = experiment
+- The school checks who is in the room with ___ instead of a register. {biometrics | truancy | feedback} = biometrics
+- Nobody knows how many stars there are in our ___ . {galaxy | orbit | atmosphere} = galaxy
 :::
 
 ### 1.5 One word, another form
 
-::: task skill="course" type="gap-fill" ask="Write the correct form of the word in brackets. Every gap here needs a noun."
-- **(communicate)** Telepathy may one day be a normal form of ___ . = communication
-- **(connect)** The video call froze because the ___ was too weak. = connection
-- **(translate)** A ___ machine would take the language barrier away. = translation
-- **(recognise)** Iris ___ opens the laboratory door in under a second. = recognition
-- **(possible)** Life on another planet is a real ___ , not a story. = possibility
-- **(invent)** Biometrics is one of the most useful ___ of the century. = inventions
+::: task skill="course" type="gap-fill" ask="Choose the correct form of the word in brackets."
+- **(communicate)** Telepathy may one day be a normal form of ___ . {communication | communicative | communicator} = communication
+- **(connect)** The video call froze because the ___ was too weak. {connection | connecting | connected} = connection
+- **(translate)** A ___ machine would take the language barrier away. {translation | translated | translates} = translation
+- **(recognise)** Iris ___ opens the laboratory door in under a second. {recognition | recognised | recognisable} = recognition
+- **(possible)** Life on another planet is a real ___ , not a story. {possibility | possible | possibly} = possibility
+- **(invent)** Biometrics is one of the most useful ___ of the century. {inventions | invention | inventors} = inventions
 :::
 
 ### 1.6 Small words, big difference
 
-::: task skill="course" type="choice" ask="Choose the word that completes each sentence. Three are prepositions and two are possessives."
-- We ran the experiment ___ three hours without stopping. (a) on (b) for (c) at = b ~ *for* + a length of time
-- The talk about future communication starts ___ 2 p.m. (a) in (b) on (c) at = c ~ *at* + a clock time
-- That telescope is not ___ — ours is the small one by the window. (a) our (b) ours (c) our's = b ~ a possessive pronoun stands alone and never takes an apostrophe
-- A friend ___ mine wants to work on the Mars programme. (a) in (b) of (c) from = b ~ *a friend of mine*, never *a friend of me*
-- Robots may be teaching some lessons ___ 2050. (a) by (b) since (c) during = a ~ *by* + a point in the future means "at some time before then"
+::: task skill="course" type="choice" ask="Choose the word that completes each sentence."
+- We ran the experiment ___ three hours without stopping. {for | on | at} = for ~ *for* + a length of time
+- The talk about future communication starts ___ 2 p.m. {at | in | on} = at ~ *at* + a clock time
+- That telescope is not ___ — we brought the small one by the window. {ours | our | our's} = ours ~ a possessive pronoun stands alone and never takes an apostrophe
+- A friend ___ mine wants to work on the Mars programme. {of | in | from} = of ~ *a friend of mine*, never *a friend of me*
+- Please hand in your poster ___ Friday at the latest — the contest closes that evening. {by | until | since} = by ~ *by* + a deadline means "on or before then"; *until* is for something that goes on up to that time
 :::
 
 ### 1.7 What they said
 
-::: task skill="course" type="gap-fill" ask="Write the missing word or words so the reported sentence says the same thing. The tense usually steps one back."
-- "I am reading a book about future communication," she told me. → She told me that she ___ a book about future communication. = was reading
-- "What planet do you want to visit?" my friend asked me. → My friend asked me what planet I ___ to visit. = wanted
-- "We are having a video conference next week," our club president said. → Our president said that they ___ a video conference the following week. = were having
-- "How will teachers check attendance?" Lan asked Nam. → Lan asked Nam how teachers ___ check attendance. = would
-- "When will there be a full moon?" I asked my mum. → I asked my mum when there ___ be a full moon. = would
+::: task skill="course" type="gap-fill" ask="Choose the words that complete the reported sentence so it says the same thing."
+- "I am reading a book about future communication," she told me. → She told me that she ___ a book about future communication. {was reading | had read | would read} = was reading
+- "What planet do you want to visit?" my friend asked me. → My friend asked me what planet ___ to visit. {I wanted | did I want | do I want} = I wanted ~ in a reported question the word order goes back to a statement's: *I wanted*, not *did I want*
+- "We are having a video conference next week," our club president said. → Our president said that we ___ a video conference the following week. {were having | had had | have had} = were having
+- "How will teachers check attendance?" Lan asked Nam. → Lan asked Nam how ___ check attendance. {teachers would | would teachers | will teachers} = teachers would ~ statement order again: *teachers would*, and no question mark at the end
+- "When will there be a full moon?" I asked my mum. → I asked my mum when ___ a full moon. {there would be | would there be | will there be} = there would be ~ statement order: *there would be*
 :::
-
-> **Ghi chú:** Trong câu hỏi tường thuật, trật tự từ trở về như câu kể —
-> *what planet I wanted to visit*, chứ **không** phải *what planet did I want*.
-> Và câu tường thuật không còn dấu chấm hỏi ở cuối.
 
 ## Part 2 — Skills
 
@@ -152,22 +144,22 @@ how a listener knows the list has finished.
 
 ### 2.2 Answer from the text
 
-::: task skill="reading" type="short-answer" words="3+number" ask="Use the words that are already in the text. Do not rephrase them."
-- How many events were open to Year 8? = four
-- What was the speaker's job? = (an) engineer/engineer
-- Which day was the debate? = (on) Wednesday/Wednesday
-- Which planet's moons did the students see? = Jupiter
-- Which planet won the poster contest? = Venus
+::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
+- How many events were open to Year 8? {four | two | twenty} = four
+- What was the speaker's job? {engineer | physics teacher | judge} = engineer
+- Which day was the debate? {Wednesday | Monday | Thursday} = Wednesday
+- Which planet's moons did the students see? {Jupiter | Venus | Earth} = Jupiter
+- Which planet was the winning poster about? {Venus | Jupiter | Earth} = Venus
 :::
 
 ### 2.3 Find the word
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above covers this exercise too."
-- a room or building where scientific work is done = laboratory
-- a machine that would turn one language into another = translation machine
-- to go on living somewhere difficult = survive
-- the path one object takes around another — the verb the last paragraph uses = goes round
-- made of light rather than solid — the word used about future calls = holographic
+- a room or building where scientific work is done {laboratory | library | classroom} = laboratory
+- a machine that would turn one language into another {translation machine | telescope | robot teacher} = translation machine
+- to go on living somewhere difficult {survive | communicate | convince} = survive
+- to move in a circle around another object {goes round | signed up | took up} = goes round
+- made of light rather than solid — the word used about future calls {holographic | reliable | welcoming} = holographic
 :::
 
 ### Speaking — The device you actually use
@@ -200,10 +192,10 @@ you had just said: *I said that I used it every evening…*
 
 ### Listening — Round the solar system
 
-You get **one** play. Read the five gaps first, then fill them in while you
-listen rather than afterwards from memory.
+You get **one** play. Read the five gaps first, then choose while you listen
+rather than afterwards from memory.
 
-**Nghe một lần duy nhất.** Đọc năm câu hỏi trước, rồi vừa nghe vừa điền.
+**Nghe một lần duy nhất.** Đọc năm câu hỏi trước, rồi vừa nghe vừa chọn.
 
 ::: audio orientation="You will hear a guide called Mark taking a group of visitors round the solar system before they go into the planetarium." mode="computer" preview="30" review="120"
 Hello, everyone. My name is Mark and I look after the planetarium here. Before
@@ -231,12 +223,12 @@ which is why, just now, the moons interest us rather more than the planets do.
 
 ### 2.4 Fill in the gaps
 
-::: task skill="listening" type="completion" words="2" ask="Write **NO MORE THAN TWO WORDS** in each gap. Spelling counts here, as it does everywhere else in this course."
-- Eight planets go round the Sun, and many of them have ___ = moons
-- The four inner planets are quite small and have rocky ___ = surfaces
-- The asteroid belt holds millions of rocky ___ = objects
-- The outer planets are mostly made up of ___ rather than rock = gas
-- The outer planets all have thick layers of ___ around them = cloud/clouds
+::: task skill="listening" type="completion" ask="Choose the word you hear for each gap."
+- Eight planets go round the Sun, and many of them have ___ {moons | minutes | houses} = moons
+- The four inner planets are quite small and have rocky ___ {surfaces | objects | layers} = surfaces
+- The asteroid belt holds millions of rocky ___ {objects | planets | surfaces} = objects
+- The outer planets are mostly made up of ___ rather than rock {gas | water | life} = gas
+- The outer planets all have thick layers of ___ around them {cloud | water | rock} = cloud
 :::
 
 ### Writing — Your favourite means of communication

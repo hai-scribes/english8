@@ -1273,7 +1273,12 @@ async function main() {
       seen.push(lede.textContent.split("·")[0].trim());
       const opt = host.querySelector(".choices button");
       const inp = host.querySelector("#ans");
+      /* Built and tapped items answer through their own controls, then Check. */
+      const tile = host.querySelector(".i-tiles .i-tile");
+      const tok = host.querySelector(".i-tok");
       if (opt) click(win, opt);
+      else if (tile) { click(win, tile); click(win, host.querySelector("#go")); }
+      else if (tok) { click(win, tok); click(win, host.querySelector("#go")); }
       else if (inp) { inp.value = "x"; click(win, host.querySelector("#go")); }
       else break;
       await new Promise(r => setTimeout(r, 20));
@@ -1295,6 +1300,221 @@ async function main() {
       || !labels.slice(0, i).includes(l));
     ok("review: kinds are interleaved, not grouped into blocks", !grouped,
        JSON.stringify(labels));
+  }
+
+  /* ---- Today: one next step, a capped review, and an end to the day -------
+     The home page used to be the whole course at once, and the complaint was
+     "too many places, no direction, it feels like forever". What must hold:
+     it always names exactly one next step on the path; the review never asks
+     more than the day's allowance; and the day can be over. */
+  {
+    const day = Math.floor((Date.now() - new Date().getTimezoneOffset() * 60000) / 86400000);
+    const seeded = store => (rel) => settled(load(rel, null, w => {
+      for (const k of Object.keys(store)) w.localStorage.setItem(k, JSON.stringify(store[k]));
+    }));
+    const lessons = k => { const o = {}; for (let i = 1; i <= k; i++) o[i] = 1; return o; };
+    const txt = (doc, s) => { const e = doc.querySelector(s); return e ? e.textContent.trim() : ""; };
+    const href = (doc, s) => (doc.querySelector(s) || { getAttribute: () => "" }).getAttribute("href");
+
+    let doc = (await seeded({})("docs/index.html")).document;
+    ok("today: a new learner is sent to Unit 01, Lesson 1",
+       href(doc, "#startLink") === "unit-01/lesson-1/index.html", href(doc, "#startLink"));
+    ok("today: nothing on the page counts lessons out of the whole course",
+       !/\bof 84\b|lessons done|units started/i.test(doc.querySelector("main").textContent));
+    ok("today: the rest of the course is one closed Browse section",
+       doc.querySelector("details#browse") && !doc.querySelector("details#browse").open);
+
+    doc = (await seeded({ "en8:progress:v1": { "01": { lessons: lessons(7), test: null } } })
+      ("docs/index.html")).document;
+    ok("today: after seven lessons the next step is the unit test",
+       href(doc, "#startLink") === "unit-01/index.html#gate", href(doc, "#startLink"));
+
+    const three = {};
+    for (const u of ["01", "02", "03"]) three[u] = { lessons: lessons(7), test: { best: 50, at: 1 } };
+    doc = (await seeded({ "en8:progress:v1": three })("docs/index.html")).document;
+    ok("today: after Unit 03 the next step is Checkpoint 1",
+       href(doc, "#startLink") === "review-1/index.html", href(doc, "#startLink"));
+    doc = (await seeded({ "en8:progress:v1": Object.assign({ checkpoints: { 1: 1 } }, three) })
+      ("docs/index.html")).document;
+    ok("today: a finished checkpoint moves the path on to Unit 04",
+       href(doc, "#startLink") === "unit-04/lesson-1/index.html", href(doc, "#startLink"));
+
+    /* The cap: sixty items due, five already reviewed today -> fifteen asked. */
+    const payload = JSON.parse(doc.getElementById("page-data").textContent);
+    const rec = {};
+    payload.review.slice(0, 60).forEach(r => {
+      rec[r.unit + ":" + (r.type === "word" ? "" : r.type + ":") + String(r.id).toLowerCase()] =
+        { due: day - 2, seen: 1, kept: 0, delayed: 0 };
+    });
+    const prog = { "01": { lessons: lessons(3), test: null } };
+    doc = (await seeded({ "en8:review:v1": rec, "en8:progress:v1": prog,
+                          "en8:days:v1": { [day]: { reviewed: 5, steps: [] } } })("docs/index.html")).document;
+    ok("today: the review asks at most the day's allowance",
+       /Review 15 items/.test(txt(doc, "#reviewTitle")), txt(doc, "#reviewTitle"));
+
+    /* A retired item stays out of the queue however overdue it is. */
+    const retired = {};
+    for (const k of Object.keys(rec)) retired[k] = Object.assign({}, rec[k], { retired: true, kept: 3 });
+    doc = (await seeded({ "en8:review:v1": retired, "en8:progress:v1": prog })("docs/index.html")).document;
+    ok("today: learned items do not come back", /done/.test(txt(doc, "#reviewTitle")),
+       txt(doc, "#reviewTitle"));
+
+    /* The day ends: one step finished today and the allowance spent. */
+    doc = (await seeded({ "en8:review:v1": rec, "en8:progress:v1": prog,
+                          "en8:days:v1": { [day]: { reviewed: 20, steps: ["01:L3"] } } })("docs/index.html")).document;
+    ok("today: a step finished and the review cleared ends the day",
+       !doc.querySelector("#todayDone").hidden);
+    ok("today: the day's end still offers the next step",
+       href(doc, "#keepGoing") === "unit-01/lesson-4/index.html", href(doc, "#keepGoing"));
+
+    /* Finishing a lesson records it, and records it against today. */
+    const lw = await seeded({})("docs/unit-01/lesson-2/index.html");
+    const fin = lw.document.querySelector("#markDone");
+    ok("finish: the lesson's primary action is Finish, and it leads to Today",
+       fin && /Finish lesson/.test(fin.textContent) && fin.getAttribute("href") === "../../index.html",
+       fin ? fin.textContent + " -> " + fin.getAttribute("href") : "missing");
+    fin.dispatchEvent(new lw.MouseEvent("click", { bubbles: true, cancelable: true }));
+    const p = JSON.parse(lw.localStorage.getItem("en8:progress:v1") || "{}");
+    const d = JSON.parse(lw.localStorage.getItem("en8:days:v1") || "{}");
+    ok("finish: the lesson is recorded", !!(p["01"] && p["01"].lessons["2"]));
+    ok("finish: the day's record names it", !!(d[day] && d[day].steps.includes("01:L2")),
+       JSON.stringify(d));
+  }
+
+  /* ---- answers are picked, tapped or built — never typed -----------------
+     A typed key is never a complete list of right answers, so a converted
+     unit carries no text box at all, and each closed widget must mark the
+     right answer right, the wrong one wrong, and come back after a reload. */
+  {
+    /* Every page with marked tasks: twelve units of seven lessons, four Reviews. */
+    const pages = [];
+    for (let u = 1; u <= 12; u++)
+      for (let l = 1; l <= 7; l++) pages.push("docs/unit-" + String(u).padStart(2, "0") + "/lesson-" + l + "/index.html");
+    for (let r = 1; r <= 4; r++) pages.push("docs/review-" + r + "/index.html");
+    const withBoxes = [];
+    for (const pg of pages) {
+      const w = await settled(load(pg));
+      const boxes = w.document.querySelectorAll('[data-role="task"] .i-in').length;
+      if (boxes) withBoxes.push(pg + " (" + boxes + ")");
+      w.close();
+    }
+    ok("picked: no marked task on any of the " + pages.length + " pages has a text box",
+       withBoxes.length === 0, withBoxes.join(", "));
+
+    const win = await settled(load("docs/unit-01/lesson-3/index.html"));
+    const doc = win.document;
+    const P = JSON.parse(doc.getElementById("page-data").textContent);
+    const taskOf = pred => P.tasks.find(t => t.items.some(pred));
+    const tt = taskOf(it => it.tiles), tp = taskOf(it => it.tap), tg = taskOf(it => it.opts && !it.tap);
+    const rootOf = t => doc.querySelector('[data-task="' + t.id + '"]');
+
+    /* Tiles: build item 1 right from its own tiles, leave the rest. */
+    const tr = rootOf(tt), it0 = tt.items[0];
+    const li0 = tr.querySelector('.i[data-i="0"]');
+    const want = it0.key.split("/")[0].replace(/,/g, " ,").replace(/;/g, " ;").split(/\s+/).filter(Boolean);
+    const usedJ = new Set();
+    for (const word of want) {
+      const j = it0.tiles.findIndex((t, k) => t === word && !usedJ.has(k));
+      usedJ.add(j);
+      click(win, li0.querySelector('.i-tiles .i-tile[data-j="' + j + '"]'));
+    }
+    const lineOf = li => [...li.querySelectorAll(".i-line .i-tile")].map(x => x.textContent).join(" ");
+    ok("tiles: the built line reads as the sentence", lineOf(li0) === want.join(" "), lineOf(li0));
+    /* Send the last tile back and re-add it: the line is editable before Check. */
+    const placed = li0.querySelectorAll(".i-line .i-tile");
+    click(win, placed[placed.length - 1]);
+    ok("tiles: tapping a placed tile sends it back",
+       li0.querySelectorAll(".i-line .i-tile").length === want.length - 1);
+    const lastJ = it0.tiles.findIndex(t => t === want[want.length - 1]);
+    click(win, li0.querySelector('.i-tiles .i-tile[data-j="' + lastJ + '"]'));
+    click(win, tr.querySelector(".t-check"));
+    ok("tiles: a correctly built sentence is marked right", li0.dataset.ok === "1");
+    ok("tiles: an unbuilt sentence is marked wrong",
+       tr.querySelector('.i[data-i="1"]').dataset.ok === "0");
+
+    /* Tap-and-fix: right word + right fix; right word + wrong fix; wrong word. */
+    const pr = rootOf(tp);
+    const tapIt = (i, j, fix) => {
+      const li = pr.querySelector('.i[data-i="' + i + '"]');
+      click(win, li.querySelector('.i-tok[data-j="' + j + '"]'));
+      const r = [...li.querySelectorAll("input")].find(x => x.value === fix);
+      r.checked = true;
+      r.dispatchEvent(new win.Event("change", { bubbles: true }));
+      return li;
+    };
+    const a = tp.items[0], b2 = tp.items[1], c = tp.items[2];
+    const liA = tapIt(0, a.span[0], a.fix);
+    const liB = tapIt(1, b2.span[0], b2.opts.find(o => o.k !== b2.fix).k);
+    const liC = tapIt(2, c.span[0] === 0 ? c.span[1] + 1 : 0, c.fix);
+    ok("tap: the fix panel opens once a word is tapped", !liA.querySelector(".i-fix").hidden);
+    click(win, pr.querySelector(".t-check"));
+    ok("tap: right word and right fix is right", liA.dataset.ok === "1");
+    ok("tap: right word, wrong fix is wrong", liB.dataset.ok === "0");
+    ok("tap: wrong word, right fix is wrong", liC.dataset.ok === "0");
+    ok("tap: after checking, the real mistake is marked",
+       !!liC.querySelector(".i-tok.was"));
+
+    /* A picked word lands in the sentence's gap. */
+    const gr = rootOf(tg), gi = tg.items.findIndex(it => /i-gap|___/.test(it.q) || true);
+    const gli = gr.querySelector('.i[data-i="' + gi + '"]');
+    const gap = gli.querySelector(".i-gap");
+    if (gap) {
+      const r = gli.querySelector('input[value="' + tg.items[gi].key.replace(/"/g, '\\"') + '"]');
+      r.checked = true;
+      r.dispatchEvent(new win.Event("change", { bubbles: true }));
+      ok("gap: the chosen word shows in the sentence", gap.textContent.trim() === tg.items[gi].key,
+         gap.textContent);
+    } else ok("gap: a gap-fill renders its gap", false, "no .i-gap");
+
+    /* A committed attempt comes back after a reload, marks and all. */
+    const store = {};
+    for (let i = 0; i < win.localStorage.length; i++) {
+      const k = win.localStorage.key(i);
+      store[k] = win.localStorage.getItem(k);
+    }
+    const again = (await settled(load("docs/unit-01/lesson-3/index.html", null, w => {
+      for (const k of Object.keys(store)) w.localStorage.setItem(k, store[k]);
+    }))).document;
+    const back0 = again.querySelector('[data-task="' + tt.id + '"] .i[data-i="0"]');
+    ok("restore: the built sentence is back after a reload",
+       lineOf(back0) === want.join(" ") && back0.dataset.ok === "1", lineOf(back0));
+    const backA = again.querySelector('[data-task="' + tp.id + '"] .i[data-i="0"]');
+    ok("restore: the tapped word and its fix are back",
+       !!backA.querySelector(".i-tok.on") && backA.dataset.ok === "1");
+
+    /* Try again clears the widgets as well as the inputs. */
+    const againBtn = again.querySelector('[data-task="' + tt.id + '"] .t-again');
+    click(again.defaultView, againBtn);
+    ok("retake: the tile line is empty again",
+       !back0.querySelector(".i-line .i-tile") && !back0.querySelector(".i-tiles .i-tile:disabled"));
+  }
+
+  /* The word practice engine never asks for a typed word either. */
+  {
+    const win = await settled(load("docs/unit-01/index.html", null, w => {
+      w.localStorage.setItem("en8:progress:v1", JSON.stringify({ "01": { lessons: { 1:1, 2:1, 3:1, 4:1, 5:1, 6:1, 7:1 }, test: null } }));
+      fastPage(w);
+    }));
+    const doc = win.document;
+    click(win, doc.querySelector("#startTest"));
+    await new Promise(r => setTimeout(r, 30));
+    const host = doc.querySelector("#engine");
+    let typedSeen = 0, steps = 0;
+    for (; steps < 40; steps++) {
+      if (!host.querySelector(".choices, .i-tiles, .i-tok")) break;
+      if (host.querySelector("#ans")) typedSeen++;
+      const opt = host.querySelector(".choices button");
+      if (!opt) break;
+      click(win, opt);
+      await new Promise(r => setTimeout(r, 5));
+      const conf = host.querySelector('[data-conf="1"]');
+      if (conf) click(win, conf);
+      await new Promise(r => setTimeout(r, 5));
+      const next = host.querySelector("#next");
+      if (next) click(win, next);
+    }
+    ok("engine: the unit test is answered by picking, every item",
+       typedSeen === 0 && steps >= 10, typedSeen + " typed of " + steps);
   }
 
   console.log(fails

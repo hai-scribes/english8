@@ -1,9 +1,8 @@
 # Unit 10 — Communication in the Future
 
 > **Bài 10 — Giao tiếp trong tương lai**
-> Self-study pack. Work through Lessons 1–7 in order. Answers to every
-> exercise are in the [Answer Key](#answer-key) at the end — do the exercise
-> first, then check.
+> Self-study pack. Work through Lessons 1–7 in order. Marked exercises
+> check themselves; the [Answer Key](#answer-key) covers the open ones.
 
 ## What this unit teaches
 
@@ -50,21 +49,21 @@
 
 ### 1.1 Comprehension
 
-::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
-- Thảo tells Tí to open the box. He answers with a question instead of a reason. Who does he not want watching? = Bà Sáu/Ba Sau/his grandmother/grandmother
-- Thảo suggests something Tí has already tried, more than once. How many times has he tried it? = four/4/four times
-- Tí is counting something that runs out before the water reaches the street. How many are left? = three/3/three marks
-- Tí refuses Thảo's second suggestion too. Who was she telling him to go to? = Bống/Bong
-- There is one person whose word Tí will not take about anything. Who? = Đạt/Dat
+::: task skill="course" type="short-answer" ask="Read the scene, then choose."
+- Thảo tells Tí to open the box. He answers with a question instead of a reason. Who does he not want watching? {Bà Sáu | Đạt | his mother} = Bà Sáu
+- Thảo suggests something Tí has already tried, more than once. How many times has he tried it? {four | three | six} = four
+- Tí is counting something that runs out before the water reaches the street. How many are left? {three | four | six} = three
+- When Tí will not open the box, Thảo names somebody he could ask instead. Who? {Bống | Đạt | Bà Sáu} = Bống
+- There is one person whose word Tí will not take about anything. Who? {Đạt | Thảo | Bống} = Đạt
 :::
 
 ### 1.2 Find the phrase
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
-- directly across the road from = opposite
-- in the space separating two things = between
-- immediately beside, with nothing in the middle = next to
-- belonging to those people = theirs
+- directly across the road from {opposite | next to | between} = opposite
+- in the space separating two things {between | opposite | in front of} = between
+- immediately beside, with nothing in the middle {next to | opposite | under} = next to
+- belonging to those people {theirs | ours | hers} = theirs
 :::
 
 ### 1.3 Notice the grammar
@@ -132,8 +131,7 @@ Look at the **bold** words.
 > lesson, the unit page opens a **practice** session over all thirty-three —
 > the meaning, the word, what you hear, and, more often than any of those,
 > **the word inside a phrase it actually lives in**. Wrong answers come
-> straight back, and everything returns a week later, because what you can
-> still recall after a gap is the only recall worth counting. The **unit
+> straight back, and everything returns a week later. The **unit
 > test** opens once all seven lessons are done.
 >
 > **Luyện 33 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
@@ -141,8 +139,7 @@ Look at the **bold** words.
 > luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
 > ngay, và mọi từ quay lại sau một tuần.
 >
-> Do the written exercises below as well — writing by hand and typing on a
-> screen build different halves of the same knowledge.
+> Do the exercises below as well — they put the words back inside sentences.
 
 ### Meet the words
 
@@ -154,13 +151,13 @@ them: a few at a time, then answer on the few you have just met.
 
 ### 2.1 Complete the sentences
 
-::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
-- Deaf people often use hand ___ to make their meaning clear. = gestures
-- My grandmother prefers a ___ visit to a phone call. = face-to-face
-- This app can ___ a whole page from English into Vietnamese in a second. = translate
-- Our ___ is very slow tonight, so the picture keeps freezing. = connection
-- In the film, the twins could read each other's minds — they were ___ . = telepathic
-- She sent me an ___ instead of ringing me. = instant message
+::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
+- Deaf people often use hand ___ to make their meaning clear. {gestures | devices | connections} = gestures
+- My grandmother prefers a ___ visit to a phone call — she likes to hug us. {face-to-face | virtual | holographic} = face-to-face
+- This app can ___ a whole page from English into Vietnamese in a second. {translate | transmit | communicate} = translate
+- Our internet ___ is very slow tonight, so the picture keeps freezing. {connection | gesture | webcam} = connection
+- In the film, the twins could read each other's minds — they were ___ . {telepathic | holographic | virtual} = telepathic
+- She sent me ___ instead of ringing me — just typed words, no sound and no pictures. {an instant message | a voice message | an emoji} = an instant message
 :::
 
 ### 2.2 Match the word to the meaning
@@ -174,7 +171,7 @@ them: a few at a time, then answer on the few you have just met.
 | **e** | the person who answers the questions in an interview |
 | **f** | a sound, a light or an electrical pulse that carries information |
 
-::: task skill="course" type="choice" opts="a|b|c|d|e|f" ask="Write the letter of the meaning next to each word."
+::: task skill="course" type="choice" opts="a|b|c|d|e|f" ask="Choose the letter of the meaning for each word."
 - device = c
 - network = a
 - virtual = b
@@ -185,27 +182,27 @@ them: a few at a time, then answer on the few you have just met.
 
 ### 2.3 Communication technology
 
-::: task skill="course" type="gap-fill" ask="Use one word or phrase from rows 19–33 of the table. Change the form if you need to."
-- Many people add an ___ to a message to show how they feel. = emoji
-- Our club had a ___ with a school in Japan last Thursday. = video conference
-- I send a ___ when I don't feel like typing. = voice message
-- Move the ___ down a little — I can only see your forehead. = webcam
-- By using ___ , a speaker can appear in the room as a three-dimensional image. = holography
-- Five of us talked at the same time in one ___ . = group call
-- Don't put your phone number in a comment — send me a ___ instead. = private message
-- Learning English helped my aunt get past the ___ in Australia. = language barrier
+::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
+- Many people add ___ to a message to show how they feel. {an emoji | a webcam | a chatbot} = an emoji
+- Our club had a ___ with a school in Japan last Thursday. {video conference | voice message | carrier pigeon} = video conference
+- I send a ___ when I don't feel like typing. {voice message | private message | group call} = voice message
+- Move the ___ down a little — I can only see your forehead. {webcam | chatbot | emoji} = webcam
+- By using ___ , a speaker can appear in the room as a three-dimensional image. {holography | telepathy | emojis} = holography
+- Five of us talked at the same time in one ___ . {group call | private message | voice message} = group call
+- Don't put your phone number in a comment — send me a ___ instead. {private message | group call | video conference} = private message
+- Learning English helped my aunt get past the ___ in Australia. {language barrier | translation machine | carrier pigeon} = language barrier
 :::
 
 ### 2.4 Which one fits?
 
 ::: task skill="course" type="choice" ask="Pick the option that completes each sentence."
-- In the fifth century, an important message often travelled by ___ . (a) chatbot (b) carrier pigeon (c) webcam = b ~ a bird carried it; the other two are electronic
-- The shop answers customers at midnight because its ___ never sleeps. (a) chatbot (b) group call (c) translation machine = a
-- A tourist who speaks no German can carry a small ___ . (a) carrier pigeon (b) translation machine (c) private message = b
-- A single cable can ___ live pictures to every screen in the hall. (a) transmit (b) zoom in (c) charge = a
-- The reply arrived ___ — I had not even put my phone down. (a) advanced (b) instantly (c) opposite = b
-- In fifty years we will use far more ___ ways of talking to each other. (a) advanced (b) instant (c) private = a
-- ___ on the map so that we can read the street names. (a) Charge (b) Zoom in (c) Transmit = b
+- In the fifth century, an important message often travelled by ___ . {carrier pigeon | chatbot | webcam} = carrier pigeon ~ a bird carried it; the other two are electronic
+- The shop answers customers at midnight because its ___ never sleeps. {chatbot | group call | translation machine} = chatbot
+- A tourist who speaks no German can carry a small ___ . {translation machine | carrier pigeon | private message} = translation machine
+- A single cable can ___ live pictures to every screen in the hall. {transmit | translate | signal} = transmit
+- The reply arrived ___ — I had not even put my phone down. {instantly | slowly | late} = instantly
+- Technology keeps getting better, so in fifty years we will use far more ___ ways of talking to each other. {advanced | old-fashioned | face-to-face} = advanced
+- ___ on the map so that we can read the street names. {Zoom in | Interact | Signal} = Zoom in
 :::
 
 > **Mẹo:** Nhiều từ trong nhóm này là **cụm hai từ**, và phải học cả cụm:
@@ -353,35 +350,35 @@ A possessive **adjective** comes **before a noun**. A possessive **pronoun**
 
 ### 3.1 Place — choose the correct preposition
 
-::: task skill="course" type="gap-fill" ask="Write the right word from the pair in brackets."
-- My phone is ___ (on / in) the table, next to the lamp. = on
-- The cat is sleeping ___ (under / above) the desk. = under
-- There is a big clock ___ (above / between) the whiteboard. = above
-- Thảo sits ___ (in front of / behind) me, so I can see the back of her head. = in front of
-- The post office is ___ (opposite / under) the museum, on the other side of the road. = opposite
-- The café is ___ (next to / above) the bookshop — the two doors are side by side. = next to
-- The letter is ___ (in / on) the envelope. = in
-- Minh is standing ___ (between / behind) Thảo and Khoa. = between
+::: task skill="course" type="gap-fill" ask="Choose the preposition that fits the picture the sentence gives you."
+- Grandma's glasses are ___ the kitchen table, right beside the fruit bowl. {on | under | in} = on
+- The dog is sleeping ___ my bed, on the floor where it is dark. {under | above | on} = under
+- A small lamp hangs high up ___ the front door, so we can see the steps at night. {above | under | behind} = above
+- Thảo sits ___ me, so I can see the back of her head. {in front of | behind | next to} = in front of
+- The bakery is ___ our school, on the other side of the road. {opposite | next to | behind} = opposite
+- The pharmacy is ___ the bank — the two doors are side by side. {next to | opposite | above} = next to
+- The photos are still ___ the box — I haven't opened it yet. {in | on | under} = in
+- Minh is standing ___ Thảo and Khoa — Thảo on his left, Khoa on his right. {between | behind | opposite} = between
 :::
 
 ### 3.2 Time — *in*, *on*, or *at*?
 
 ::: task skill="course" type="choice" opts="in|on|at" ask="Choose **in**, **on**, or **at**."
 - ___ Monday morning = on
-- ___ 2025 = in
+- ___ 2019 = in
 - ___ half past seven = at
 - ___ night = at
 - ___ the afternoon = in
 - ___ 12 October = on
 - ___ March = in
-- ___ the weekend = at
+- ___ summer = in
 - ___ midnight = at
 - ___ Tuesday = on
 :::
 
 ### 3.3 Rewrite with a possessive pronoun
 
-::: task skill="course" type="gap-fill" ask="Keep the meaning. Use *mine, yours, his, hers, ours, theirs*."
+::: task skill="course" type="gap-fill" opts="mine|yours|his|hers|ours|theirs" ask="Keep the meaning."
 - This is my tablet. → This tablet is ___ . = mine
 - That is her phone. → That phone is ___ . = hers
 - These are our tickets. → These tickets are ___ . = ours
@@ -392,15 +389,15 @@ A possessive **adjective** comes **before a noun**. A possessive **pronoun**
 
 ### 3.4 Correct the mistake
 
-::: task skill="course" type="short-answer" variant="error-correction" ask="The first four mistakes are prepositions of time; the last four are possessives."
-- My birthday is in 3 September. = on ~ a date takes *on*
-- The exhibition opens in nine o'clock. = at ~ a clock time takes *at*
-- She studies English on the evening. = in ~ a part of the day takes *in*
-- I never use my phone in night. = at ~ *night* is the exception: *at night*
-- This is mine tablet. = my ~ a possessive **pronoun** stands alone; before a noun you need the adjective
-- Their's is the red one. = Theirs ~ possessive pronouns never take an apostrophe
-- The blue headset is your's. = yours ~ possessive pronouns never take an apostrophe
-- Its a very good network. = It's ~ *it's* = *it is*; *its* is the possessive
+::: task skill="course" type="short-answer" variant="error-correction"
+- My birthday is in 3 September. {on | at | by} = in -> on ~ a date takes *on*
+- The film starts in a quarter to eight. {at | on | for} = in -> at ~ a clock time takes *at*
+- She studies English on the evening. {in | at | by} = on -> in ~ a part of the day takes *in*
+- I never use my phone in night. {at | on | for} = in -> at ~ *night* is the exception: *at night*
+- This is mine tablet. {my | me | I} = mine -> my ~ a possessive **pronoun** stands alone; before a noun you need the adjective
+- Their's is the red one. {Theirs | There's | Their} = Their's -> Theirs ~ possessive pronouns never take an apostrophe
+- The blue headset is your's. {yours | your | you're} = your's -> yours ~ possessive pronouns never take an apostrophe
+- Its a very good network. {It's | Its' | It} = Its -> It's ~ *it's* = *it is*; *its* is the possessive
 :::
 
 ### 3.5 About you
@@ -486,12 +483,12 @@ Both openings are polite, and the two forms after *sorry* are different:
 
 ### 4.1 Complete the mini-dialogues
 
-::: task skill="course" type="gap-fill" ask="Use a phrase from the tables above. One gap per line — where a line had two gaps, the second one is already filled in for you."
-- **A:** Hello? Hello? I can see you but I can't hear anything. **B:** Oh — sorry, I think ___ . = you're on mute/you are on mute/I'm on mute/I am on mute
-- **A:** …and then we went to the museum ___ Saturday and… sorry, what? = on
-- **B:** ___ . Your voice keeps stopping. = you're breaking up/you are breaking up/you keep breaking up
-- **A:** It's nearly ten o'clock here. **B:** ___ . Say hello to your parents for me. = I'd better go now/I had better go now/I'd better go/let's talk again on Friday/bye for now
-- **B:** I'd better go now. ___ to your parents for me. = say hello
+::: task skill="course" type="gap-fill" ask="Choose what fits each gap."
+- **A:** Hello? Hello? I can see you but I can't hear anything. **B:** Oh — sorry, I think ___ . {I'm on mute | you're on mute | I lost you for a second} = I'm on mute
+- **A:** …and then we went to the museum ___ Saturday and… sorry, what? {on | in | at} = on
+- **B:** ___ . Your voice keeps stopping. {You're breaking up | You're on mute | Bye for now} = You're breaking up
+- **A:** It's nearly ten o'clock here. **B:** ___ . Let's talk again on Friday. {I'd better go now | Can you hear me | Let me turn my camera on} = I'd better go now
+- **A:** Give my love to everyone at home. **B:** I will. And ___ to your parents for me. {Say hello | Hold on | Go on} = Say hello
 :::
 
 ### 4.2 Write your own
@@ -510,10 +507,10 @@ _______________________________________________
 ### 4.3 Break in politely
 
 ::: task skill="course" type="choice" opts="Sorry for interrupting, but|Hold on|Can I just say|Sorry about that|Go on" ask="Which phrase fits the situation? Use each one once."
-- In an online meeting a classmate is reading out the rules, and you want to suggest a different starting time. You begin… = Sorry for interrupting, but ~ it works with anybody, and it puts the apology before the idea
-- Your best friend is telling you how to move the webcam and you missed one step. You say… = Hold on ~ short and informal, which is fine with a friend
+- In an online lesson your teacher is in the middle of reading out the rules. You must stop her to suggest a different starting time, so you apologise first and give your idea in the same sentence. You begin… = Sorry for interrupting, but ~ it works with anybody, and it puts the apology before the idea
+- Your best friend is explaining how to move the webcam and you missed one step. You just want them to stop for a moment — two short, friendly words. You say… = Hold on ~ short and informal, which is fine with a friend
 - Everybody in the group has spoken and you have one short point to add. You ask… = Can I just say
-- You broke into your sister's story and now she has stopped talking. You say… = Sorry about that
+- You broke into your sister's story and now she has stopped talking. First you apologise, then you ask what she was saying: "… You were saying?" = Sorry about that
 - You have made your point and you want your friend to carry on. You say, "Sorry — please …" = Go on
 :::
 
@@ -557,15 +554,15 @@ questions Mark answered: **when**, **who**, **how** and **why**.
 
 ### 4.5 Read the predictions
 
-::: task skill="course" type="short-answer" ask="Answer from Mark's prediction and from the two fact-files. Short answers, not full sentences."
-- What means of communication is Mark talking about? = emojis/emoji
-- When does Mark think everybody will be using them? = in twenty years/twenty years/in 20 years/20 years
-- Apart from teenagers, who does Mark name? = grandparents, teachers and bank managers/grandparents/teachers/bank managers
-- Why does an emoji work in every country? = it carries a feeling/a feeling does not need a language/it needs no language
-- Who will use the automatic translation function? = social network users/people who use social networks
-- Why will the automatic translation function spread? = it removes the language barrier/the language barrier
-- How will a chatbot help the people who use it? = it replies to customers instantly/it replies instantly/replies instantly
-- Why will sellers want one? = it helps them sell to customers in other countries/to sell to customers in other countries/to sell more
+::: task skill="course" type="short-answer" ask="Answer from Mark's prediction and from the two fact-files."
+- What means of communication is Mark talking about? {emojis | emails | chatbots} = emojis
+- When does Mark think everybody will be using them? {in twenty years | in ten years | in fifty years} = in twenty years
+- Apart from teenagers, who does Mark name? {grandparents, teachers and bank managers | people who use social networks | people who sell things in online shops} = grandparents, teachers and bank managers
+- Why does an emoji work in every country? {a feeling does not need a language | it translates every comment | it replies to customers instantly} = a feeling does not need a language
+- Who will use the automatic translation function? {people who use social networks | people who sell things in online shops | teachers and bank managers} = people who use social networks
+- Why will the automatic translation function spread? {it removes the language barrier | it helps them sell to customers in other countries | it carries a feeling} = it removes the language barrier
+- How will a chatbot help the people who use it? {it replies to customers instantly in every language | it translates comments and private messages | it carries a feeling with no words} = it replies to customers instantly in every language
+- Why will sellers want one? {it helps them sell to customers in other countries | it translates private messages | it carries a feeling} = it helps them sell to customers in other countries
 :::
 
 ### 4.6 Your own prediction
@@ -627,7 +624,7 @@ _______________________________________________
 
 ### 5.1 True, False, or Not Given
 
-::: task skill="reading" type="true-false-not-given" ask="**False** means the passage says the opposite. **Not Given** means it does not say either way — and answering from what you would expect to be in an old sealed box is exactly the trap here."
+::: task skill="reading" type="true-false-not-given" ask="**False** means the passage says the opposite. **Not Given** means it does not say either way."
 - There was a letter inside the tin box. = F ~ there was no letter — only one small brass thing the size of a thumb
 - The voice spoke in Vietnamese before it spoke in English. = T
 - The voice says the sea is a station on a network. = T
@@ -637,27 +634,26 @@ _______________________________________________
 
 ### 5.2 Answer the questions
 
-::: task skill="reading" type="short-answer" words="3" ask="Take the words from the passage. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- How high did the water stand when the brass thing was put down? = (the) tenth mark
-- Which language did the voice speak first? = Vietnamese
-- What does the voice say the sea is a station on? = (a) network
-- Whose does the voice say the line is? = mine
-- Where did Bống sit down? = the wet stone
+::: task skill="reading" type="multiple-choice" ask="Choose the answer the passage gives."
+- How high did the water stand when the brass thing was put down? {the tenth mark | the fourth mark | the top of the harbour wall} = the tenth mark
+- Where did the voice come out of? {the air above the box | the brass thing | a mast in the province} = the air above the box
+- What does the voice say a keeper's work is? {holding the line open at the far end | wishing | making lost things out of nothing} = holding the line open at the far end
+- In "The line is mine", who does *mine* mean? {the man speaking | Bống | Thảo} = the man speaking
+- Where did Bống sit down? {the wet stone | the tin box | the mud} = the wet stone
 :::
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the passage that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- changes words from one language into another = translating/translate/translates
-- a system of connected computers, devices or people = network
-- a movement of the hand, head or face that carries meaning = gesture
-- in person, with the other person in the same room = face-to-face
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the passage that means each of these. The clock above covers this exercise too."
+- changes words from one language into another {translating | signal | telepathy} = translating
+- a system of connected computers, devices or people {network | signal | station} = network
+- a movement of the hand, head or face that carries meaning {gesture | telepathy | voice} = gesture
+- in person, with the other person in the same room {face-to-face | telepathy | phone call} = face-to-face
 :::
 
 ### Speaking — The pros and cons of online calls
 
-> **Working alone:** You have no partner, so do this in three steps. It still
-> works — speaking practice is mostly about producing language out loud.
+> **Working alone:** You have no partner, so do this in three steps.
 
 **Step 1 — Prepare.** Write short notes (not full sentences) in both columns.
 
@@ -669,10 +665,8 @@ _______________________________________________
 | **Technical problems** | | |
 | **Family and friends far away** | | |
 
-**Step 2 — Speak.** Talk for **one minute**. There is no sentence frame here on
-purpose — a frame would give you someone else's words to recite instead of your
-own to find. What you get instead is the **order of the questions**. Answer
-these five, out loud, in your own words, using your notes from Step 1:
+**Step 2 — Speak.** Talk for **one minute**. Answer these five questions, in
+this order, out loud and in your own words, using your notes from Step 1:
 
 1. What are the two biggest **advantages** of an online call?
 2. Of those two, which matters more to you — and **why**?
@@ -680,9 +674,8 @@ these five, out loud, in your own words, using your notes from Step 1:
 4. When is an online call **better** than meeting face to face?
 5. When is it **worse**?
 
-Your answer to 2 is the one to spend time on. Naming an advantage is a list;
-saying which one matters more and why is the part that carries a reason, and
-that is what a spoken answer is judged on.
+Your answer to 2 is the one to spend time on: say which one matters more, and
+why.
 
 **Step 3 — Record and check.** Record yourself on your phone. Listen back and
 check three things:
@@ -744,25 +737,25 @@ the last page tells you what the sea must never—
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- The speaker says he posted the message at (a) a railway station (b) a post office (c) a market = b
-- He says he is now (a) upriver at the mill (b) on the far side of the water (c) in his workroom = b
-- The workroom is (a) above the mill (b) under the mill (c) opposite the mill = b ~ three prepositions are used about that building; only one of them says where the room is
-- The notebook that matters is (a) the green one (b) the last one (c) the one on the bench = a
-- The message (a) ends with a goodbye (b) stops in the middle of a sentence (c) repeats the address = b
+- The speaker says he posted the message at {the post office | a railway station | a market} = the post office
+- He says he is now {on the far side of the water | upriver at the mill | in his workroom} = on the far side of the water
+- The workroom is {under the mill | above the mill | opposite the mill} = under the mill ~ *above* belongs to the shelf, not to the room
+- The notebook that matters is {the green one | the blue one | the first one} = the green one
+- The message {stops in the middle of a sentence | ends with a goodbye | repeats the address} = stops in the middle of a sentence
 :::
 
 ### 6.2 Note completion
 
 The notes below are the shape this type always takes: headings and fragments,
-never full sentences. Fill each gap **as you listen** — there is no transfer
+never full sentences. Choose for each gap **as you listen** — there is no transfer
 time at the end.
 
-::: task skill="listening" type="completion" words="1+number"
-- Message posted ___ years ago = sixty/60
-- Where to go — upriver, past the stilt house, to the old ___ = mill
-- The workroom — under the mill, behind the ___ = wheel
-- The notebooks — on the shelf above the ___ = bench
-- Read this page first — the ___ page = last
+::: task skill="listening" type="completion"
+- Message posted ___ years ago {sixty | sixteen | nine} = sixty
+- Where to go — upriver, past the ___ , to the old mill {stilt house | workroom | shelf} = stilt house
+- The workroom — behind the ___ {wheel | bench | shelf} = wheel
+- The notebooks — on the shelf above the ___ {bench | wheel | door} = bench
+- Read this page first — the ___ page {last | first | second} = last
 :::
 
 ::: bridge name="Open → stand → close, out loud, with an audible pause at each turn" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
@@ -847,12 +840,12 @@ how you notice them.
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
-- My phone can ___ Japanese into English in a second. *(t…)* = translate
-- A smile is the friendliest ___ in the world. *(g…)* = gesture
-- We use ___ to keep in touch with friends far away. *(s m…)* = social media
-- The ___ answered every question honestly. *(i…)* = interviewee
-- In the future, teachers may appear as ___ images. *(h…)* = holographic
+::: task skill="course" type="gap-fill" ask="Choose the word or phrase that fits."
+- My phone can ___ Japanese into English in a second. {translate | transmit | interact} = translate
+- A smile is the friendliest ___ in the world. {gesture | device | network} = gesture
+- We use ___ to keep in touch with friends far away. {social media | telepathy | holography} = social media
+- The reporter asked the questions, and the ___ answered every one honestly. {interviewee | interviewer | webcam} = interviewee
+- In the future, teachers may appear as ___ images. {holographic | telepathic | face-to-face} = holographic
 :::
 
 ### 7.2 Pronunciation check
@@ -868,35 +861,35 @@ how you notice them.
 
 ### 7.3 Grammar check
 
-::: task skill="course" type="gap-fill" ask="Write **in**, **on**, **at**, or the correct possessive pronoun."
-- The museum opens ___ half past eight. = at
-- My grandparents got married ___ 1979. = in
-- We have an English test ___ Friday. = on
-- I never study ___ night. = at
-- This tablet isn't mine — I think it's ___ (she). = hers
-- Their house is bigger than ___ (we). = ours
-- Is this charger ___ (you)? = yours
-- The blue helmet is ___ (they). = theirs
+::: task skill="course" type="gap-fill" ask="Choose **in**, **on**, **at**, or the correct possessive pronoun."
+- The museum opens ___ half past eight. {at | on | in} = at
+- My grandparents got married ___ 1979. {in | on | at} = in
+- We have an English test ___ Friday. {on | in | at} = on
+- I never study ___ night. {at | in | on} = at
+- This tablet isn't mine — I think it's ___ (she). {hers | her | she} = hers
+- Their house is bigger than ___ (we). {ours | our | we} = ours
+- Is this charger ___ (you)? {yours | your | you} = yours
+- The blue helmet is ___ (they). {theirs | their | them} = theirs
 :::
 
 ### 7.4 Error hunt
 
-Find and correct **six** errors in this paragraph. Three are prepositions of
-place or time; three are possessive forms.
+This paragraph has **six** mistakes. Below, it comes one line at a time: tap
+each mistake, then choose the fix.
 
 > Two marks are left on the wall. The tin box came home in my pocket in Tuesday
-> evening, and the small brass thing from inside it sits in the shelf above my
-> bed. Thảo says hers grandmother still remembers the old post office. "Is this
+> evening, and the small brass thing from inside it sits in the table next to
+> my bed. Thảo says hers grandmother still remembers the old post office. "Is this
 > box your's?" Bà Sáu asked at breakfast. Its not mine, and it is not hers
 > either. We are walking upriver in Saturday morning.
 
-::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
-- Error 1 = on Tuesday evening/on ~ a named day takes *on*
-- Error 2 = on the shelf/on ~ a surface takes *on*
-- Error 3 = her grandmother/her ~ *hers* takes no noun after it
-- Error 4 = yours ~ a possessive pronoun takes no apostrophe
-- Error 5 = It's not mine/it's/it is ~ *it's* = *it is*; *its* is the possessive
-- Error 6 = on Saturday morning/on ~ a named day takes *on*
+::: task skill="course" type="short-answer" variant="error-correction" ask="Each line is part of the paragraph, with the earlier mistakes already put right."
+- The tin box came home in Tuesday evening. {on | at | to} = in -> on ~ a named day takes *on*
+- The small brass thing from inside it sits in the table next to my bed. {on | at | of} = in -> on ~ a surface takes *on*
+- Thảo says hers grandmother still remembers the old post office. {her | she | she's} = hers -> her ~ *hers* takes no noun after it
+- "Is this box your's?" Bà Sáu asked at breakfast. {yours | your | you're} = your's -> yours ~ a possessive pronoun takes no apostrophe
+- Its not mine, and it is not hers either. {It's | Its' | It} = Its -> It's ~ *it's* = *it is*; *its* is the possessive
+- We are walking upriver in Saturday morning. {on | at | to} = in -> on ~ a named day takes *on*
 :::
 
 ### Project — A message across a hundred years
@@ -935,7 +928,7 @@ times you said *in*, *on* and *at* correctly.
 
 Eight things this unit set out to teach. Beside each one is the place your own
 answer to it is already sitting — open that exercise again and look at what you
-actually put, which tells you far more than a feeling does. Where nothing on the
+actually put. Where nothing on the
 page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |

@@ -248,18 +248,102 @@ VARIANTS = {
     "error-correction": {
         "types": {"short-answer"},
         "label": "Correct the mistake",
-        "ask": "Each sentence has exactly one mistake. Write only the words that "
-               "should replace the wrong ones — not the whole sentence.",
-        "widget": "type",
+        "ask": "Each sentence has exactly one mistake. Tap the wrong word, then "
+               "choose what should replace it.",
+        "widget": "tap",
     },
     "sentence-build": {
         "types": {"short-answer"},
         "label": "Build the sentence",
-        "ask": "Build a full sentence from the words you are given. Change the "
-               "form of a word where you need to, and write the whole sentence.",
-        "widget": "type",
+        "ask": "Build the sentence from the tiles, in order. Some tiles are not "
+               "needed — the form of a word matters.",
+        "widget": "tiles",
     },
 }
+
+# ------------------------------------------------------- answers are picked --
+# Every answer on this site is picked, tapped or built from what is on screen,
+# never typed. A typed answer can only be marked against a list of accepted
+# strings, and that list is never complete: "cannot stand" against "can't
+# stand", a comma the key has and the learner did not, "Thao" for "Thảo" --
+# each a right answer marked wrong. A closed set can be marked exactly.
+#
+# That reverses C4/C5 as written (spelling costs the mark; a completion answer
+# is written) -- a decision the operator took on 2026-09-25 after the learner
+# kept being failed for right answers. What it gives up is the spelling half
+# of those rules; the retrieval half survives in the widgets: tiles make the
+# learner assemble the sentence, including the word whose form is the point;
+# tap-the-mistake makes them find the error before fixing it.
+#
+# Three item shapes, on top of the fixed sets and shared `opts=` above:
+#
+#   {a | b | c}         at the end of a prompt: this item's own choices. The
+#                       key is the option TEXT and must be one of them. Order
+#                       is shuffled here, stably, so the key is not always
+#                       first where the author happened to write it.
+#   variant=sentence-build   tiles made from the key, plus the cue words the
+#                       key changed ("watch" beside "watching") as decoys.
+#   variant=error-correction key "wrong -> fix", the fix one of the item's
+#                       {…} choices, "wrong" found in the sentence.
+RE_BRACE_OPTS = re.compile(r"\s*\{(?P<body>[^{}]*\|[^{}]*)\}\s*$")
+RE_FIX = re.compile(r"^(?P<wrong>.+?)\s*->\s*(?P<fix>.+)$")
+RE_TILE_PUNCT = re.compile(r"^(?P<w>.*?)(?P<p>[,;:]?)$")
+
+
+def is_typed(item: dict) -> bool:
+    """Still a text box: none of the picked, tapped or built shapes."""
+    return not (item.get("opts") or item.get("tiles"))
+
+
+def stable_shuffle(items: list, seed: str) -> list:
+    """The same order on every build, and a different one per item."""
+    return sorted(items, key=lambda x: hashlib.sha1((seed + "\x00" + x).encode()).hexdigest())
+
+
+def sentence_tiles(key: str) -> list:
+    """"sleep, but most" -> ["sleep", ",", "but", "most"]. The final full stop
+    or question mark is not a tile; a comma or semicolon is, because where it
+    goes is taught (Unit 3's "; therefore,")."""
+    first = key.split("/")[0].strip()
+    first = re.sub(r"\(([^)]*)\)", r"\1", first)            # optional tokens: take them
+    first = re.sub(r"[.?!]+$", "", first).strip()
+    out = []
+    for w in first.split():
+        m = RE_TILE_PUNCT.match(w)
+        if m.group("w"):
+            out.append(m.group("w"))
+        if m.group("p"):
+            out.append(m.group("p"))
+    return out
+
+
+def cue_decoys(prompt: str, tiles: list) -> list:
+    """The cue words the key did not use as written -- "watch" when the key
+    says "watching". They are the decoys that make the form the question."""
+    cue = re.sub(r"<[^>]+>", " ", prompt).split("—")[0]
+    have = {t.lower() for t in tiles}
+    seen, out = set(), []
+    for w in re.split(r"[\s/]+", cue):
+        w = w.strip(".,;:!?()[]\"'*✚+")
+        if not w or w.lower() in have or w.lower() in seen or not re.search(r"[A-Za-zÀ-ỹ]", w):
+            continue
+        seen.add(w.lower())
+        out.append(w)
+    return out[:4]
+
+
+def tap_tokens(sentence: str) -> list:
+    return sentence.split()
+
+
+def find_span(tokens: list, wrong: str):
+    bare = lambda w: re.sub(r"[^\w'’-]", "", w).lower()
+    want = [bare(w) for w in wrong.split()]
+    toks = [bare(t) for t in tokens]
+    for i in range(len(toks) - len(want) + 1):
+        if toks[i:i + len(want)] == want:
+            return [i, i + len(want) - 1]
+    return None
 # The separator an odd-one-out line uses between its candidates.
 ODD_SEP = "·"
 
@@ -314,13 +398,53 @@ def parse_task_body(a: dict, body: str) -> dict:
     # once on the task rather than repeated on twelve lines.
     shared = [x.strip() for x in a["opts"].split("|")] if a.get("opts") else None
     pick_line = bool(variant) and VARIANTS[variant]["widget"] == "pick-from-line"
+    widget = VARIANTS[variant]["widget"] if variant else ""
     items = []
     for im in RE_ITEM.finditer(body):
         prompt, key = im.group("prompt").strip(), im.group("key").strip()
         item = {"q": prompt, "key": key}
         if im.group("why"):
             item["why"] = im.group("why").strip()
-        if pick_line:
+        brace = RE_BRACE_OPTS.search(prompt)
+        own = ([c.strip() for c in brace.group("body").split("|") if c.strip()]
+               if brace else None)
+        if brace:
+            prompt = prompt[:brace.start()].rstrip()
+            item["q"] = prompt
+        if widget == "tiles":
+            tiles = sentence_tiles(key)
+            decoys = cue_decoys(prompt, tiles) + (own or [])
+            item["tiles"] = stable_shuffle(tiles + decoys, prompt)
+            item["q"] = inline(prompt)
+            items.append(item)
+            continue
+        fx = RE_FIX.match(key) if widget == "tap" else None
+        if fx:
+            wrong, fix = fx.group("wrong").strip(), fx.group("fix").strip()
+            toks = tap_tokens(prompt)
+            span = find_span(toks, wrong)
+            if span is None:
+                raise SystemExit(f"variant=error-correction: {wrong!r} is not in "
+                                 f"{prompt!r} — the learner could never tap it")
+            if not own or fix not in own:
+                raise SystemExit(f"variant=error-correction: {prompt!r} needs its "
+                                 f"replacements as {{a | b | c}}, including {fix!r}")
+            item.update({"tap": [inline(t) for t in toks], "span": span, "fix": fix,
+                         "key": f"{wrong} → {fix}",
+                         "opts": [{"k": c, "t": inline(c)} for c in stable_shuffle(own, prompt)]})
+            item["q"] = ""
+            items.append(item)
+            continue
+        if own:
+            if key not in own:
+                raise SystemExit(f"{prompt!r}: key {key!r} is not one of its "
+                                 f"choices {{{' | '.join(own)}}}")
+            if len(own) < 2:
+                raise SystemExit(f"{prompt!r}: one choice is not a choice")
+            item["opts"] = [{"k": c, "t": c} for c in stable_shuffle(own, prompt)]
+        if item.get("opts"):
+            pass
+        elif pick_line:
             # The line IS the question: its candidates are the options, so the
             # prompt empties out and nothing is left to type. The key must be
             # one of them, which is the check that catches a candidate edited
@@ -421,7 +545,7 @@ def task_html(p: dict, a: dict) -> str:
     # Rules about *writing* an answer are noise on a task where the answer is
     # picked from buttons. Printing them anyway is how a rules box stops being
     # read.
-    typed = any(not it.get("opts") for it in p["items"])
+    typed = any(is_typed(it) for it in p["items"])
     if p["skill"] == "course":
         head = (f'<span class="t-k">Marked</span>'
                 f'<span class="t-t">{e(label)}</span>')
@@ -1927,6 +2051,11 @@ def _review_row(nn, kind, lesson, blk, item, n, t=None):
     said = ([spec["ask"]] if spec else []) + ([t["ask"]] if (t or {}).get("ask") else [])
     if said:
         row["ask"] = " ".join(said)
+    # A built or tapped item comes back in the same shape, or the queue would
+    # ask for a sentence with nowhere to build it.
+    for k in ("tiles", "tap", "span", "fix"):
+        if item.get(k) is not None:
+            row[k] = item[k]
     if item.get("why"):
         row["why"] = item["why"]
     if blk.get("title"):
@@ -1999,7 +2128,9 @@ def review_items(u) -> list:
             if not item.get("key"):
                 continue
             row = _review_row(u["nn"], kind, lesson, blk, item, n, t)
-            cand[kind].append((0 if not row.get("opts") else 1, len(cand[kind]),
+            # Built and tapped items are produced; a plain pick is picked.
+            produced = bool(row.get("tiles") or row.get("tap")) or not row.get("opts")
+            cand[kind].append((0 if produced else 1, len(cand[kind]),
                                row, blk.get("id") or blk.get("title")))
 
     for kind, rows in cand.items():
@@ -2485,6 +2616,24 @@ def review_cards(reviews, units, up="") -> str:
 
 
 def page_home(units, reviews=()) -> str:
+    """The home page is TODAY: what to do now, in the order to do it.
+
+    It used to open on the whole course -- a masthead about twelve units and 84
+    lessons, four counters, a story card, a review card and the unit grid, all
+    at the same weight. Every one of them was a place to go and none said which,
+    and the only progress figure was a count out of 84, which reads as a
+    distance still to walk. The learner's complaint was exactly that: too many
+    places with no clear purpose, and a course that feels like it never ends.
+
+    So the page answers one question -- what now? -- with at most two steps: the
+    day's review, capped, then the next step on the path. Once both are done it
+    says so and stops asking. Progress is shown inside the current unit only,
+    where the end is always in sight. Everything else is one "Browse" section
+    below, closed.
+
+    The card's markup ships in its first-visit state and app.js repaints it
+    from the learner's record, as the start card always did.
+    """
     cards = []
     for u in units:
         cards.append(f"""    <a class="unitcard" href="unit-{u['nn']}/index.html" data-unit-progress="{u['nn']}">
@@ -2496,62 +2645,97 @@ def page_home(units, reviews=()) -> str:
       </div>
       <div class="foot"><span data-progress-text>7 lessons</span><span class="bar"><i></i></span></div>
     </a>""")
-    body = f"""  <header class="masthead">
-    <p class="eyebrow">Self-study course · 12 units · 84 lessons</p>
-    <h1>Tiếng Anh 8 — Global Success</h1>
-    <p class="standfirst">Twelve units, seven lessons each, in order. Every lesson teaches
-    something and then asks you to use it; when all seven are done, the unit's practice and
-    test open. Your work is saved on this device as you go.</p>
+    def scene(u):
+        """The Lesson 1 dialogue's own title -- "The list in the yard" -- which
+        is what the learner will actually meet. The story chapters reuse the
+        unit titles, and "chapter 1: Leisure Time" promises nothing."""
+        for b in u["lessons"][0]["blocks"]:
+            for d in b.get("dialogues", []):
+                a = d[0] if isinstance(d, tuple) else d
+                if a.get("title"):
+                    return a["title"]
+        return ""
+    # The path, in the order it is walked. app.js derives the next step from
+    # this and the learner's record, so the order lives in one place.
+    path = [{"nn": u["nn"], "num": u["num"], "title": u["title"],
+             "chapter": scene(u),
+             "lessons": [x["title"] for x in u["lessons"]],
+             "check": next((r["num"] for r in reviews if r["covers"][-1] == u["num"]), None)}
+            for u in units]
+    body = f"""  <header class="masthead today-head">
+    <p class="eyebrow">Tiếng Anh 8 · Global Success</p>
+    <h1>Today</h1>
   </header>
 
-  <div class="card start" id="startCard">
-    <h3 id="startTitle">Start here</h3>
-    <p class="lede" id="startLede">Begin with <b>Unit 01, Lesson 1</b> and work down the
-    list. About 20–30 minutes a lesson is plenty.</p>
-    <div class="row">
-      <a class="btn" id="startLink" href="unit-01/index.html">Open Unit 01</a>
+  <section class="card today" id="todayCard" aria-labelledby="todayTitle">
+    <h2 id="todayTitle" class="sr-only">What to do today</h2>
+    <ol class="today-steps">
+      <li class="tstep" id="reviewCard" hidden>
+        <span class="tick" aria-hidden="true"></span>
+        <div class="tbody">
+          <p class="tk">First · review</p>
+          <h3 id="reviewTitle">Review</h3>
+          <p class="lede" id="reviewLede"></p>
+          <div class="row">
+            <button class="btn" id="startReview" type="button">Start review</button>
+          </div>
+          <details class="cycle"><summary>What is in your review cycle</summary>
+            <div id="reviewKinds"></div>
+            <p class="lede small" id="reviewBreak"></p>
+          </details>
+          <div id="reviewEngine" hidden></div>
+        </div>
+      </li>
+      <li class="tstep" id="nextStep">
+        <span class="tick" aria-hidden="true"></span>
+        <div class="tbody">
+          <p class="tk" id="nextKicker">Unit 01 · Lesson 1</p>
+          <h3 id="nextTitle">Getting Started</h3>
+          <p class="lede" id="nextLede">Start here. Each lesson teaches something, then asks
+          you to use it. Press <b>Finish lesson</b> at the bottom when you are done.</p>
+          <div class="row">
+            <a class="btn" id="startLink" href="unit-01/lesson-1/index.html">Open the lesson</a>
+          </div>
+        </div>
+      </li>
+    </ol>
+    <div class="today-done" id="todayDone" hidden>
+      <p class="big">That is today's work done.</p>
+      <p class="lede">Come back tomorrow — spacing it out is what makes it stick.
+      If you want more now, the next step is below.</p>
+      <div class="row"><a class="btn quiet" id="keepGoing" href="#">Keep going</a></div>
     </div>
-  </div>
+  </section>
 
-  <div class="overview">
-    <div class="stat"><span class="n" data-units-started>0</span><span class="k">units started</span></div>
-    <div class="stat good"><span class="n" data-units-done>0</span><span class="k">units finished</span></div>
-    <div class="stat hot"><span class="n" data-total-lessons>0</span><span class="k">lessons done</span></div>
-    <div class="stat"><span class="n" data-review-due>0</span><span class="k">words due today</span></div>
-  </div>
-
-  <div class="card story" id="storyCard">
-    <h3>The Sea Gives Back</h3>
-    <p class="lede">The twelve units tell one story. Here it is with the
-    exercises taken away, to be read straight through — a chapter opens once
-    you have done that unit's first lesson.</p>
-    <div class="row">
-      <a class="btn quiet" href="story/index.html">Open the story</a>
-      <a class="btn quiet" href="words/index.html">Look up a word</a>
-      <span class="label"><b data-story-read>0</b> of 12 chapters read</span>
+  <section class="card unitpath" id="unitPath" aria-labelledby="pathTitle">
+    <div class="ph">
+      <p class="tk" id="pathUnit">Unit 01 of 12</p>
+      <h2 id="pathTitle">{e(units[0]['title']) if units else ''}</h2>
     </div>
-  </div>
+    <ol class="dots" id="pathDots"></ol>
+    <p class="lede" id="pathStory"></p>
+  </section>
 
-  <div class="card review" id="reviewCard" hidden>
-    <h3>Due for review</h3>
-    <p class="lede" id="reviewLede"></p>
-    <div id="reviewKinds"></div>
-    <div class="row">
-      <button class="btn" id="startReview" type="button">Start review</button>
-      <span class="label" id="reviewBreak"></span>
-    </div>
-    <div id="reviewEngine" hidden></div>
-  </div>
-
-  <div class="sectionhead"><h2>The twelve units</h2><span class="label">sounds in clay · grammar in teal</span></div>
-  <div class="unitgrid">
+  <details class="browse" id="browse">
+    <summary>Browse the course</summary>
+    <div class="browse-body">
+      <div class="row">
+        <a class="btn quiet" href="story/index.html">The story</a>
+        <a class="btn quiet" href="words/index.html">Look up a word</a>
+        <span class="label"><b data-story-read>0</b> of 12 chapters read</span>
+      </div>
+      <div class="sectionhead"><h2>All twelve units</h2><span class="label">sounds in clay · grammar in teal</span></div>
+      <div class="unitgrid">
 {chr(10).join(cards)}
-  </div>
-{review_cards(reviews, units)}"""
+      </div>
+{review_cards(reviews, units)}
+    </div>
+  </details>"""
     # The review queue spans units, so the home page carries every unit's items.
-    # ~216 of them; the alternative is a fetch, and this site has no server.
-    return shell(title=SITE, depth=0, body=body, crumb=[("Course", "")],
+    # ~570 of them; the alternative is a fetch, and this site has no server.
+    return shell(title=SITE, depth=0, body=body, crumb=[("Today", "")],
                  data={"kind": "home",
+                       "path": path,
                        "vocab": {u["nn"]: practice_data(u) for u in units},
                        # Flat and typed: the review queue spans units and kinds,
                        # and the scheduler keys on (unit, type, id).
@@ -2579,10 +2763,10 @@ def start_card(u) -> str:
     <ol class="steps">
       <li><b>Read the teaching part</b> at the top of the lesson: the example, the table,
       the rule. Nothing to fill in yet.</li>
-      <li><b>Do the exercises.</b> Type or choose your answer, then press
+      <li><b>Do the exercises.</b> Choose, tap or build your answer, then press
       <b>Check answers</b>. You will see what was right and, where it helps, why.</li>
-      <li><b>Press “Mark lesson complete”</b> at the bottom before you move on. That is
-      what fills the progress bar and opens the practice and the test.</li>
+      <li><b>Press “Finish lesson”</b> at the bottom. That records the lesson, opens
+      the practice and the test, and takes you back to Today.</li>
     </ol>
     <div class="row">
       <a class="btn" id="startLink" href="lesson-1/index.html">Start Lesson 1</a>
@@ -2677,7 +2861,7 @@ def page_unit(u, reviews=()) -> str:
   </div>"""
 
     return shell(title=f"Unit {u['num']:02d} — {u['title']} · {SITE}", depth=1, body=body,
-                 crumb=[("Course", "../index.html"), (f"Unit {u['num']:02d}", "")],
+                 crumb=[("Today", "../index.html"), (f"Unit {u['num']:02d}", "")],
                  data={"kind": "unit", "unit": u["nn"], "vocab": practice_data(u)},
                  desc=f"Unit {u['num']}: {u['title']}. Seven lessons, practice and a unit test.")
 
@@ -2823,7 +3007,7 @@ def page_story(units) -> str:
   <div class="sc-reader">{"".join(secs)}</div>
 """
     return shell(title=f"The Sea Gives Back · {SITE}", depth=0, body=body,
-                 crumb=[("Course", "index.html"), ("The story", "")],
+                 crumb=[("Today", "index.html"), ("The story", "")],
                  data={"kind": "story",
                        "chapters": [{"nn": c["nn"], "num": c["num"],
                                      "title": c["title"], "words": c["words"]}
@@ -2904,7 +3088,7 @@ def page_words(units) -> str:
   word, or the Vietnamese.</p>
 """
     return shell(title=f"Word list · {SITE}", depth=0, body=body,
-                 crumb=[("Course", "index.html"), ("Words", "")],
+                 crumb=[("Today", "index.html"), ("Words", "")],
                  data={"kind": "words"},
                  desc="Look up any of the words this course teaches, in English "
                       "or Vietnamese, with sound.")
@@ -3143,8 +3327,12 @@ def page_lesson(u, L) -> str:
 
     prev_l = (f'<a class="btn quiet" href="../lesson-{L["n"] - 1}/index.html">← Lesson {L["n"] - 1}</a>'
               if L["n"] > 1 else '<a class="btn quiet" href="../index.html">← Unit</a>')
-    next_l = (f'<a class="btn" href="../lesson-{L["n"] + 1}/index.html">Lesson {L["n"] + 1} →</a>'
-              if L["n"] < LESSONS else '<a class="btn" href="../index.html">Practice &amp; test →</a>')
+    # One primary action, and it is the one that moves the learner on. It used
+    # to be a quiet "Mark lesson complete" toggle beside a louder "next" link,
+    # so the easy path skipped the step that records the lesson -- and a lesson
+    # never recorded is a course that never ends. Finishing goes back to Today,
+    # which is where the next step is decided.
+    after = (f'Lesson {L["n"] + 1}' if L["n"] < LESSONS else "the unit test")
 
     body = f"""  <div class="rail" aria-label="Lessons in this unit">{rail}</div>
   <header class="masthead">
@@ -3154,16 +3342,16 @@ def page_lesson(u, L) -> str:
 
 {chr(10).join(parts)}
 
-  <div class="pager">
+  <div class="pager finish" id="finish" data-after="{e(after)}">
     {prev_l}
-    <button class="btn quiet" id="markDone" type="button">Mark lesson complete</button>
     <span class="sp"></span>
-    {next_l}
+    <button class="btn quiet small" id="undoDone" type="button" hidden>Not finished yet</button>
+    <a class="btn" id="markDone" href="../../index.html">Finish lesson ✓</a>
   </div>"""
 
     return shell(title=f"Lesson {L['n']} — {L['title']} · Unit {u['num']:02d} · {SITE}",
                  depth=2, body=body,
-                 crumb=[("Course", "../../index.html"),
+                 crumb=[("Today", "../../index.html"),
                         (f"Unit {u['num']:02d}", "../index.html"),
                         (f"Lesson {L['n']}", "")],
                  data={"kind": "lesson", "unit": u["nn"], "lesson": L["n"],
@@ -3183,10 +3371,11 @@ def review_span_text(r) -> str:
 def page_review(r, units) -> str:
     """One Review: everything on one page, in the two halves the book prints.
 
-    There is no progress gate and no "mark complete" button. A Review is not a
-    lesson the learner is working through — it is the point at which three
-    finished units are asked about together, which is the one thing this site
-    had no shape for at all.
+    There is no progress gate: nothing here is locked, and nothing after it
+    waits on it. It does carry a Finish button, because it is a step on the
+    path Today walks, and a step the learner cannot finish is one Today would
+    point at forever. A Review is the point at which three finished units are
+    asked about together, which is the one thing this site had no shape for.
     """
     parts = []
     payload: dict = {"tasks": [], "audio": [], "write": [], "clock": [], "passage": []}
@@ -3207,9 +3396,6 @@ def page_review(r, units) -> str:
 
     last = r["covers"][-1]
     prev_l = f'<a class="btn quiet" href="../unit-{last:02d}/index.html">← Unit {last:02d}</a>'
-    nxt = last + 1
-    next_l = (f'<a class="btn" href="../unit-{nxt:02d}/index.html">Unit {nxt:02d} →</a>'
-              if nxt <= 12 else '<a class="btn" href="../index.html">Back to the course →</a>')
 
     body = f"""  <header class="masthead">
     <p class="eyebrow">Review {r['num']} of {REVIEWS} · after Unit {last:02d}</p>
@@ -3227,15 +3413,16 @@ def page_review(r, units) -> str:
 
 {chr(10).join(parts)}
 
-  <div class="pager">
+  <div class="pager finish" id="finish">
     {prev_l}
     <span class="sp"></span>
-    {next_l}
+    <button class="btn quiet small" id="undoDone" type="button" hidden>Not finished yet</button>
+    <a class="btn" id="markDone" href="../index.html">Finish checkpoint ✓</a>
   </div>"""
 
     return shell(title=f"Review {r['num']} — {review_span_text(r)} · {SITE}",
                  depth=1, body=body,
-                 crumb=[("Course", "../index.html"), (f"Review {r['num']}", "")],
+                 crumb=[("Today", "../index.html"), (f"Review {r['num']}", "")],
                  data={"kind": "review", "unit": r["nn"], "review": r["num"],
                        "tasks": payload["tasks"], "audio": payload["audio"],
                        "write": payload["write"], "clock": payload["clock"],

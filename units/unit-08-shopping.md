@@ -1,9 +1,9 @@
 # Unit 8 — Shopping
 
 > **Bài 8 — Mua sắm**
-> Self-study pack. Work through Lessons 1–7 in order. Answers to every
-> exercise are in the [Answer Key](#answer-key) at the end — do the exercise
-> first, then check.
+> Self-study pack. Work through Lessons 1–7 in order. The marked exercises
+> check themselves; the [Answer Key](#answer-key) at the end covers the open
+> ones — do the exercise first, then check.
 
 ## What this unit teaches
 
@@ -54,26 +54,26 @@
 
 ### 1.1 Comprehension
 
-::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
-- Thảo defends Đạt with a single word. What does she say he is **not**? = unkind
-- A woman came to the house at the weekend and left without what she had asked for. Who was she? = Cô Yến/Co Yen/Yến/Yen
-- Two boys have already been in to see Bống. One of them is Đạt. Who is the other? = Hùng/Hung
-- Tí tells Thảo to pay for herself tomorrow. Whose money is he in charge of? = Bà Sáu's/Bà Sáu/Ba Sau/his grandmother's/his grandmother
-- Something had to be bought before the boats could run again. What was it? = the blades/blades
+::: task skill="course" type="short-answer" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- Thảo defends Đạt with a single word. What does she say he is **not**? {unkind | rich | proud} = unkind
+- A woman came to the house at the weekend and left without what she had asked for. Who was she? {Cô Yến | Bà Sáu | the woman at the stall} = Cô Yến
+- Two boys have already been in to see Bống. One of them is Đạt. Who is the other? {Hùng | Tí | Khoa} = Hùng
+- Tí tells Thảo to pay for herself tomorrow. Whose money is he in charge of? {Bà Sáu's | Đạt's | Cô Yến's} = Bà Sáu's
+- Something had to be bought before the boats could run again. What was it? {the blades | the trainers | the basket} = the blades
 :::
 
 ### 1.2 Find the phrase
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
-- almost never = hardly ever
-- money in notes and coins, not a card = cash
-- the piece of paper that proves you paid = receipt
-- your money given back to you = refund
+- almost never {hardly ever | never | every morning} = hardly ever
+- money in notes and coins, not a card {cash | refund | receipt} = cash
+- the piece of paper that proves you paid {receipt | refund | cash} = receipt
+- your money given back to you {refund | receipt | cash} = refund
 :::
 
 ### 1.3 Notice the grammar
 
-::: task skill="course" type="choice" opts="A|F" ask="Look at the **bold** word. Write **A** if it is an adverb of frequency, or **F** if it is a present simple verb used for a **future** event."
+::: task skill="course" type="choice" opts="A|F" ask="Look at the **bold** word. Choose **A** if it is an adverb of frequency, or **F** if it is a present simple verb used for a **future** event."
 - He **always** has money on a Tuesday. = A
 - The money from my parents **arrives** on the fifteenth. = F
 - She **usually** goes to the stall at the end of our lane. = A
@@ -143,8 +143,7 @@
 > luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
 > ngay, và mọi từ quay lại sau một tuần.
 >
-> Do the written exercises below as well — writing by hand and typing on a
-> screen build different halves of the same knowledge.
+> Do the exercises below as well — they put the words back inside sentences.
 
 ### Meet the words
 
@@ -156,13 +155,13 @@ them: a few at a time, then answer on the few you have just met.
 
 ### 2.1 Complete the sentences
 
-::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
-- I asked for a ___ because the shirt had a hole in it. = refund
-- Keep your ___ — you cannot return anything without it. = receipt
-- That jacket is far too ___ for me. I'll look somewhere else. = expensive
-- Sorry, that size isn't ___ at the moment. Try again next week. = in stock
-- She buys mangoes from a ___ on the corner every morning. = street vendor
-- Always ___ a pair of shoes before you pay for them. = try on
+::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
+- I asked for a ___ because the shirt had a hole in it. {refund | receipt | price tag} = refund
+- Keep your ___ — you cannot return anything without it. {receipt | refund | discount} = receipt
+- That jacket is far too ___ for me. I'll look somewhere else. {expensive | convenient | home-made} = expensive
+- Sorry, that size isn't ___ at the moment. Try again next week. {in stock | home-made | convenient} = in stock
+- She buys mangoes from a ___ on the corner every morning. {street vendor | customer | shopaholic} = street vendor
+- Always ___ a pair of shoes before you pay for them. {try on | browse | purchase} = try on
 :::
 
 ### 2.2 Odd one out
@@ -193,21 +192,21 @@ from the others.
 
 ### 2.4 The new words
 
-::: task skill="course" type="gap-fill" ask="Use one word or phrase from rows 19–33 of the table. Change the form if you need to."
-- Everything in this shop is one dollar, so we call it a ___ . = dollar store
-- My aunt bakes the cakes in her own kitchen, so they are ___ . = home-made
-- The tomatoes are ___ — my grandfather grows them behind the house. = home-grown
-- Look at the ___ before you take it to the till. = price tag
-- These jeans are ___ this week: 400,000 dong instead of 600,000. = on sale
-- She buys three pairs of shoes a month. She is a real ___ . = shopaholic
-- I need milk at eleven at night, so I go to the ___ on the corner. = convenience store
-- Write a ___ before you go, or you will forget the rice again. = shopping list
-- I saw an ___ for that phone on my brother's tablet. = advertisement
-- Without Internet ___ , you cannot shop online at all. = access
-- I'd like to make a ___ about the shoes I ordered last week. = complaint
-- The farmers sell their own vegetables at the ___ every Saturday. = farmers' market
-- A big supermarket offers a wide ___ , from rice to raincoats. = range of products
-- He is ___ to shopping — he cannot walk past a sale. = addicted
+::: task skill="course" type="gap-fill" ask="Choose the word or phrase that fits."
+- Everything in this shop is one dollar, so we call it a ___ . {dollar store | convenience store | speciality shop} = dollar store
+- My aunt bakes the cakes in her own kitchen, so they are ___ . {home-made | home-grown | on sale} = home-made
+- The tomatoes are ___ — my grandfather grows them behind the house. {home-grown | home-made | on sale} = home-grown
+- Look at the ___ before you take it to the till. {price tag | complaint | access} = price tag
+- These jeans are ___ this week: 400,000 dong instead of 600,000. {on sale | home-made | home-grown} = on sale
+- She buys three pairs of shoes a month. She is a real ___ . {shopaholic | street vendor | complaint} = shopaholic
+- I need milk at eleven at night, so I go to the ___ on the corner. {convenience store | farmers' market | advertisement} = convenience store
+- Write a ___ before you go, or you will forget the rice again. {shopping list | complaint | price tag} = shopping list
+- I saw ___ for that phone on my brother's tablet. {an advertisement | a complaint | a farmers' market} = an advertisement
+- Without Internet ___ , you cannot shop online at all. {access | delivery | advertisement} = access
+- I'd like to make ___ about the shoes I ordered last week. {a complaint | an advertisement | a shopping list} = a complaint
+- My uncle sells the vegetables he grows at the ___ every Saturday. {farmers' market | department store | dollar store} = farmers' market
+- A big supermarket offers a wide ___ , from rice to raincoats. {range of products | price tag | shopping list} = range of products
+- He is ___ to shopping — he cannot walk past a sale. {addicted | convenient | on sale} = addicted
 :::
 
 > ⚠️ **Bẫy thường gặp:** **home-grown** là *tự trồng* (rau, quả), **home-made**
@@ -370,7 +369,7 @@ But **always** and **never** cannot.
 
 ### Part B — Present simple for future events
 
-We use the **present simple**, not *will*, for things on a **timetable or
+We usually use the **present simple** for things on a **timetable or
 schedule** — something fixed by a shop, a bus company, a cinema, a calendar.
 
 > The sale **starts** on Monday.
@@ -406,37 +405,47 @@ Put these adverbs in order from **most often (1)** to **least often (7)**:
 
 ### 3.2 Put the adverb in the right place
 
-::: task skill="course" type="short-answer" variant="sentence-build" ask="Slot the adverb in brackets into the sentence. Change nothing else."
-- My sister is at the shopping centre at the weekend. (always) = My sister is always at the shopping centre at the weekend. ~ after *be*, not before it
-- I browse the stalls before I buy anything. (usually) = I usually browse the stalls before I buy anything.
-- He has asked for a refund. (never) = He has never asked for a refund. ~ between the auxiliary and the main verb
-- We queue for more than ten minutes. (rarely) = We rarely queue for more than ten minutes.
-- Street vendors take cards. (hardly ever) = Street vendors hardly ever take cards.
-- You can find a bargain there. (often) = You can often find a bargain there. ~ between the modal and the main verb
-- She doesn't shop online. (usually) = She doesn't usually shop online./She does not usually shop online./She usually doesn't shop online./She usually does not shop online.
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Put the adverb in brackets into the sentence."
+- My sister is at the shopping centre at the weekend. (always) {are | be} = My sister is always at the shopping centre at the weekend./At the weekend my sister is always at the shopping centre. ~ after *be*, not before it
+- I browse the stalls before I buy anything. (usually) {browses | buys} = I usually browse the stalls before I buy anything./Usually I browse the stalls before I buy anything./Before I buy anything I usually browse the stalls.
+- Thảo has bought trainers online. (never) {have | buys} = Thảo has never bought trainers online./Never has Thảo bought trainers online. ~ between the auxiliary and the main verb
+- We queue for more than ten minutes. (rarely) {queues | queuing} = We rarely queue for more than ten minutes.
+- Street vendors take cards. (hardly ever) {takes | taking} = Street vendors hardly ever take cards.
+- You can find a bargain there. (often) {finds | found} = You can often find a bargain there./Often you can find a bargain there./You can find a bargain there often./There you can often find a bargain. ~ *often* usually goes between the modal and the main verb, but the end of the sentence is fine too
+- My uncle doesn't bargain at the fish row. (usually) {bargains | don't} = My uncle doesn't usually bargain at the fish row./My uncle usually doesn't bargain at the fish row./Usually my uncle doesn't bargain at the fish row./At the fish row my uncle doesn't usually bargain./At the fish row my uncle usually doesn't bargain.
 :::
 
 ### 3.3 Present simple or *will*?
 
+Every sentence here is about the future. Why does each one use the form in **bold**?
+
+::: task skill="course" type="choice" opts="a timetable|a prediction|a promise" ask="Choose the reason for the form in bold."
+- The department store **opens** at 9:30 tomorrow. = a timetable
+- I think prices **will go** up again next month. = a prediction
+- The sale **starts** next Monday — it says so on the poster. = a timetable
+- I **will send** you the photos tonight — I won't forget. = a promise
+- Our delivery **arrives** next Tuesday morning — the app says so. = a timetable
+- I'm sure your mother **will like** this scarf. = a prediction
+:::
+
+Now choose the form. In these three, only one is right.
+
 ::: task skill="course" type="choice" ask="Choose the correct form."
-- The sale ___ on 15 September — it says so on the poster. (a) starts (b) will start = a
-- I think this jacket ___ too expensive for me. (a) is (b) will be = b
-- The department store ___ at 9:30 tomorrow. (a) opens (b) will open = a
-- Don't worry, I ___ you back on Friday. (a) pay (b) will pay = b
-- Our delivery ___ on Tuesday morning — the app says so. (a) arrives (b) will arrive = a
-- The market ___ at noon on Sundays. (a) closes (b) will close = a
+- I think these trainers ___ too small for you next year. {will be | are | were} = will be
+- I promise I ___ you the money next Friday. {will give | give | gave} = will give
+- Put those bags down — I ___ them to the car for you. {will carry | carry | carried} = will carry
 :::
 
 ### 3.4 Correct the mistake
 
-::: task skill="course" type="short-answer" variant="error-correction" ask="Every mistake here is about the **adverb of frequency** — its form, its position, or one negative too many."
-- I don't never buy clothes online. = ever ~ two negatives in one clause; keep one
-- Always I go to the market with my mother. = I always go ~ *always* cannot start the sentence
-- She is often go to that department store. = often goes ~ there is no *be* here; the adverb goes before the main verb
-- He doesn't hardly ever pay in cash. = hardly ever pays ~ *hardly ever* is already negative
-- The shop will open at eight tomorrow — it says so on the door. = opens ~ a fixed opening time takes the present simple
-- He goes to that stall every Tuesdays. = every Tuesday ~ *every* is followed by a singular noun
-- I never have asked for a discount at that stall. = have never asked ~ the adverb goes between the auxiliary and the main verb
+::: task skill="course" type="short-answer" variant="error-correction"
+- We can't hardly ever find a bargain at the centre — maybe once a year. {can | cannot | could not} = can't -> can ~ *hardly ever* is already negative, so no *not*
+- Always my uncle buys his rice at the same stall. {My uncle always buys | My uncle buys always | Always my uncle buy} = Always my uncle buys -> My uncle always buys ~ *always* cannot start the sentence
+- Hùng has bought never anything online. {never bought | ever bought | bought ever} = bought never -> never bought ~ the adverb goes between the auxiliary and the main verb
+- You can get often a good price at the fish row. {often get | often gets | gets often} = get often -> often get ~ between the modal and the main verb
+- Bà Sáu hardly ever pay by card. {pays | paying | to pay} = pay -> pays ~ the adverb does not change the verb: *she pays*, so *she hardly ever pays*
+- The sale starts at nine tomorrow and finish at noon. {finishes | finishing | finished} = finish -> finishes ~ a timetable, so the present simple — and *the sale* takes *-es*
+- Don't worry, I pay you back on Friday. {will pay | paying | pays} = pay -> will pay ~ a promise, not a timetable, so *will*
 :::
 
 ### 3.5 About you
@@ -530,16 +539,15 @@ you say it.
 
 ### 4.1 Complete the mini-dialogues
 
-::: task skill="course" type="gap-fill" ask="**A** is the customer, **B** is the shop. Some gaps take more than one word — every one of them is a phrase from the tables above."
-- **A:** Excuse me, do you have these trainers in size 39? **B:** I'm afraid we're ___ in that size. = out of stock
-- **A:** Can I ___ this jacket on, please? = try
-- **A:** Can I try this jacket ___ , please? = on
-- **B:** Of course. The ___ are over there. = fitting rooms
-- **A:** How much is it ___ ? = altogether
-- **B:** That ___ 180,000 dong. Would you like a bag? = comes to
-- **A:** This shirt has a mark on it. I'd like a ___ , please. = refund
-- **B:** No problem. Do you have the ___ ? = receipt
-- **A:** Can I help you at all? **B:** No, thanks. I'm just ___ . = browsing
+::: task skill="course" type="gap-fill" ask="**A** is the customer, **B** is the shop. Choose what fits each gap."
+- **A:** Excuse me, do you have these trainers in size 39? **B:** I'm afraid we're ___ in that size. {out of stock | in stock | on special offer} = out of stock
+- **A:** It looks nice, but is it my size? Can I ___ this jacket, please? {try on | take back | give back} = try on
+- **A:** I'd like to see if these jeans fit. **B:** Of course. The ___ are over there. {fitting rooms | shopping bags | price tags} = fitting rooms
+- **A:** I'll take the shirt and the socks. How much is it ___ ? {altogether | in stock | out of stock} = altogether
+- **B:** That ___ 180,000 dong. Would you like a bag? {comes to | takes | spends} = comes to
+- **A:** This shirt has a mark on it. I'd like a ___ , please. {refund | receipt | bargain} = refund
+- **B:** No problem. Do you have the ___ ? {receipt | refund | discount} = receipt
+- **A:** Can I help you at all? **B:** No, thanks. I'm just ___ . {browsing | queuing | complaining} = browsing
 :::
 
 ### 4.2 Write your own dialogue
@@ -557,14 +565,14 @@ the tables above, and one adverb of frequency.
 
 ### 4.3 Make the complaint
 
-::: task skill="course" type="gap-fill" ask="Complete each line with **one** word. The phrases are all in the *Making complaints* table above."
-- I'm calling to make a ___ about the shoes I ordered on Monday. = complaint
-- I'd like to make a complaint ___ the delivery, please. = about
-- I'm not ___ with the colour — it looked dark brown online. = happy
-- There's a ___ with this box of biscuits: it went out of date last week. = problem
-- **A:** It doesn't match the picture. **B:** I'm ___ about that. I'll send you another one. = sorry
-- **A:** The tin was already open. **B:** I'm sorry to ___ that. Do you have the receipt? = hear
-- Could you ___ it or give me a refund? = replace
+::: task skill="course" type="gap-fill" ask="Choose the word that completes each line."
+- I'm calling to make a ___ about the shoes I ordered on Monday. {complaint | refund | problem} = complaint
+- I'd like to make a complaint ___ the delivery, please. {about | for | with} = about
+- I'm not ___ with the colour — it looked dark brown online. {happy | sorry | afraid} = happy
+- There's a ___ with this box of biscuits: it went out of date last week. {problem | complaint | refund} = problem
+- **A:** It doesn't match the picture. **B:** I'm ___ about that. I'll send you another one. {sorry | happy | afraid} = sorry
+- **A:** The tin was already open. **B:** I'm sorry to ___ that. Do you have the receipt? {hear | buy | sell} = hear
+- Could you ___ it or give me a refund? {replace | complain | browse} = replace
 :::
 
 ### 4.4 Your turn to complain
@@ -586,8 +594,7 @@ person you are speaking to.
 
 ### My favourite shopping place
 
-Three people, three very different places — and each of them has one clear
-reason.
+Three people, three very different places — and why each of them likes it.
 
 > **Trang, 14.** "My favourite place is the open-air market at the end of our
 > lane. My mother and I go every Sunday morning. The vegetables are home-grown
@@ -614,7 +621,7 @@ reason.
 - This person's reason is that the food is fresh. = Trang
 - This person admits the range of products is small. = Khanh
 - This person shops there once a week. = Trang ~ *"every Sunday morning"*
-- This person names something bad about the place and buys there anyway. = Bảo ~ *"my sister says the bags fall apart"*
+- This person repeats what someone else says is bad about the place. = Bảo ~ *"my sister says the bags fall apart"*
 :::
 
 ### 4.6 And your favourite?
@@ -680,7 +687,7 @@ Answer in full sentences.
 
 ### 5.1 True, False, or Not Given
 
-::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and answering from what you already know about markets and shopping centres is exactly the pull this type is built to catch."
+::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way."
 - The writer took Bống to the market with him. = T
 - The writer had looked up the time of the tide the night before. = T ~ "which is not a thing anybody does by accident"
 - The market that came back stood where the car park is now. = T
@@ -691,28 +698,27 @@ Answer in full sentences.
 
 ### 5.2 Answer the questions
 
-::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- Besides two hundred thousand dong, what did the writer take to the market? = (a) list
-- How many stalls stood under palm leaves? = forty (stalls)
-- What turned at twenty past five? = (the) tide
-- What did the woman drop the coins into? = (a) wooden box
-- What kind of money was the note the shopkeeper pushed back? = old money
+::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
+- Besides two hundred thousand dong, what did Bà Sáu send the writer to the market with? {a list | a watch | a wooden box} = a list
+- How many stalls stood under palm leaves? {forty | four | eight} = forty
+- What turned at twenty past five? {the tide | the car park | the corner shop} = the tide
+- What did the woman drop the coins into? {a wooden box | a palm leaf | the fish row} = a wooden box
+- What kind of money was the note the shopkeeper pushed back? {old money | new money | change} = old money
 :::
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- an open space where cars are left = car park
-- a line of stalls selling the same kind of goods = row
-- the money you get back when you have paid too much = change
-- notes and coins that no shop uses any more = old money
-- the long flat surface you are served across in a shop = counter
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too."
+- an open space where cars are left {car park | fish row | lane} = car park
+- a line of stalls selling the same kind of goods {row | lane | counter} = row
+- the money you get back when you have paid too much {change | old money | price} = change
+- notes and coins that no shop uses any more {old money | change | price} = old money
+- the long flat surface you are served across in a shop {counter | corner | gate} = counter
 :::
 
 ### Speaking — Your local market or shopping centre
 
-> **Working alone:** You have no partner, so do this in three steps. It still
-> works — speaking practice is mostly about producing language out loud.
+> **Working alone:** You have no partner, so do this in three steps.
 
 **Step 1 — Prepare.** Write short notes (not full sentences) for each question.
 
@@ -817,22 +823,22 @@ midnight. Go and count your marks. There are four left.
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- The stranger says the boy has been doing it wrong for (a) eight tides (b) two tides (c) twelve tides = a
-- He says that what he keeps is (a) markets (b) tide tables (c) apprentices = b
-- He says the girl has been ashore for (a) four days (b) eleven days (c) thirty days = b
-- He says the marks still left number (a) four (b) eleven (c) thirty = a
-- He says that what the girl was told is (a) old (b) half a sentence (c) a lie = b
-- He says the sea gives back one thing to (a) one person (b) one family (c) one town = a
+- The stranger says the boy has been doing it wrong for {eight tides | eleven days | thirty years} = eight tides
+- He says that what he keeps is {tide tables | marks | a market} = tide tables
+- He says the girl has been ashore for {eleven days | eight tides | thirty years} = eleven days
+- He says the marks still left number {four | eight | twelve} = four
+- He says that what the girl was told is {half a sentence | the same rule | the useful part} = half a sentence
+- He says the sea gives back one thing to {one person | a town | a whole market} = one person
 :::
 
 ### 6.2 Listen and complete
 
-::: task skill="listening" type="sentence-completion" words="3"
-- He says he has kept them for ___ . = a long time
-- The money stopped existing before the town's ___ were born. = grandparents
-- The stranger calls what she was told ___ . = half a sentence
-- The town has spent ___ learning to move on. = thirty years
-- The stranger tells the boy to go and count his ___ . = marks
+::: task skill="listening" type="sentence-completion"
+- He says he has kept them for ___ . {a long time | eleven days | eight tides} = a long time
+- The money stopped existing before the town's ___ were born. {grandparents | boys | sellers} = grandparents
+- The stranger tells the boy to go and read his own ___ . {wall | knee | slipway} = wall
+- The town has spent ___ learning to move on. {thirty years | eight tides | eleven days} = thirty years
+- The stranger tells the boy to go and count his ___ . {marks | tides | sellers} = marks
 :::
 
 ### Writing — A paragraph about one kind of shopping
@@ -860,10 +866,6 @@ centre, or online shopping. Choose one side only — do not write both.
 
 Cover the finished paragraph above. Answer in note form, in your own words.
 
-The phrase bank that used to sit here has been removed on purpose — see the
-note under Unit 11's writing task for why a list of connectives to reuse
-works against you.
-
 | The question | Your answer — notes, in your own words |
 | --- | --- |
 | Which kind of shopping, and what is your position on it? | |
@@ -876,7 +878,7 @@ works against you.
 ::: bridge name="Re-score the frequency drill: say it aloud first, and count the -s" trains="Grammatical Range & Accuracy" cefr="B1" marker="[S]" src="07 §4.5"
 Exercise **3.2** does not change. How you run it does:
 
-1. **Say every sentence aloud first, and record it.** Then write them.
+1. **Say every sentence aloud first, and record it.** Then build them.
 2. Mark each sentence **supplied** or **omitted** — did the third-person `-s`
    actually appear? Report the fraction, not a score.
 
@@ -912,14 +914,14 @@ count *supplied* against *required* rather than marking sentences right or wrong
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
-- Keep the ___ so you can ask for a refund later. *(r…)* = receipt
-- My aunt sells fruit from a ___ at the market. *(s…)* = stall
-- The shop is closed, but their ___ arrives on Tuesday. *(d…)* = delivery
-- I never pay by card at the market — I always use ___ . *(c…)* = cash
-- That phone is far too ___ for a student. *(e…)* = expensive
-- Sorry, that colour isn't in ___ this week. *(s…)* = stock
-- I like to ___ for half an hour before I buy anything. *(b…)* = browse
+::: task skill="course" type="gap-fill" ask="Choose the word from this unit that completes each sentence."
+- Keep the ___ so you can ask for a refund later. {receipt | discount | delivery} = receipt
+- My aunt sells fruit from a ___ at the market. {stall | queue | customer} = stall
+- The shop is closed, but their ___ arrives on Tuesday. {delivery | stall | queue} = delivery
+- I never pay by card at the market — I always use ___ . {cash | stock | delivery} = cash
+- That phone is far too ___ for a student. {expensive | convenient | home-made} = expensive
+- Sorry, that colour isn't in ___ this week. {stock | sale | cash} = stock
+- I like to ___ for half an hour before I buy anything. {browse | queue | purchase} = browse
 :::
 
 ### 7.2 Pronunciation check
@@ -939,41 +941,47 @@ count *supplied* against *required* rather than marking sentences right or wrong
 
 **A.** Put the adverb where it belongs.
 
-::: task skill="course" type="short-answer" variant="sentence-build" ask="Slot the word or phrase in brackets into the sentence. Change nothing else."
-- She is late for school. (never) = She is never late for school.
-- We go to the shopping centre. (twice a month) = We go to the shopping centre twice a month.
-- I have bought anything online. (rarely) = I have rarely bought anything online.
-- He doesn't buy clothes at the market. (usually) = He doesn't usually buy clothes at the market./He does not usually buy clothes at the market./He usually doesn't buy clothes at the market./He usually does not buy clothes at the market.
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Put the word or phrase in brackets into the sentence."
+- She is late for school. (never) {are | be} = She is never late for school./Never is she late for school.
+- Bà Sáu buys fish from that seller. (three times a week) {buy | buying} = Bà Sáu buys fish from that seller three times a week./Three times a week Bà Sáu buys fish from that seller.
+- I have bought clothes online. (rarely) {has | buy} = I have rarely bought clothes online./Rarely have I bought clothes online.
+- He doesn't buy clothes at the market. (usually) {buys | don't} = He doesn't usually buy clothes at the market./He usually doesn't buy clothes at the market./Usually he doesn't buy clothes at the market./At the market he doesn't usually buy clothes./At the market he usually doesn't buy clothes.
 :::
 
 **B.** Present simple or *will*?
 
+::: task skill="course" type="choice" opts="a timetable|a prediction|a promise" ask="Choose the reason for the form in bold."
+- Our bus **leaves** at 6:15 tomorrow morning. = a timetable
+- I think the queue **will be** very long on Saturday. = a prediction
+- Don't worry — I **will bring** your umbrella back tomorrow. = a promise
+- The sale **starts** next Friday — look at the sign. = a timetable
+:::
+
 ::: task skill="course" type="choice" ask="Choose the correct form."
-- The sale ___ on Friday — look at the sign. (a) starts (b) will start = a
-- I think it ___ tomorrow. (a) rains (b) will rain = b
-- Our bus ___ at 6:15 every morning. (a) leaves (b) will leave = a
+- I think it ___ tomorrow. {will rain | rains | rained} = will rain
 :::
 
 ### 7.4 Error hunt
 
-Find and correct **seven** errors in this paragraph. Five are about adverbs of
-frequency (position or double negative); two are about present simple for
-scheduled future events.
+This paragraph has **seven** mistakes. Read it, then put them right one line
+at a time below.
 
 > Four marks are left on the wall, and the stranger will not say his name.
-> Bà Sáu always is at the market by six o'clock. She goes twice a week there,
-> and she doesn't never pay by card. Tomorrow is different: the new stalls will
-> open at nine, and the big sale will start at ten. Always I go with her when
-> there is a discount, but I hardly ever don't find anything I can afford.
+> The market is still open, though. Bà Sáu goes twice a week there, and she
+> usually get there before the rice truck. She can't hardly ever pay by card,
+> because only two stalls take cards. Always she takes me with her when there
+> is a discount. I have seen never so many discounts as this week. The new rice
+> stall opens at five tomorrow and close at noon. The big sale begin at eight
+> tomorrow.
 
-::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
-- Error 1 = is always ~ an adverb of frequency goes after *be*
-- Error 2 = goes there twice a week/there twice a week ~ a frequency expression goes at the end
-- Error 3 = never pays ~ double negative — *never* is already negative
-- Error 4 = I always go ~ *always* cannot start the sentence
-- Error 5 = opens ~ a fixed opening time takes the present simple
-- Error 6 = starts ~ a scheduled event takes the present simple
-- Error 7 = hardly ever find ~ double negative — *hardly ever* is already negative
+::: task skill="course" type="short-answer" variant="error-correction" ask="Each line is part of the paragraph, with the earlier mistakes already put right."
+- Bà Sáu goes twice a week there. {there twice a week | twice there a week | there a week twice} = twice a week there -> there twice a week ~ the place comes before a frequency expression, and the frequency expression goes at the end
+- She usually get there before the rice truck. {gets | getting | to get} = get -> gets ~ the adverb does not change the verb: *she gets*
+- She can't hardly ever pay by card, because only two stalls take cards. {can | cannot | could not} = can't -> can ~ *hardly ever* is already negative
+- Always she takes me with her when there is a discount. {She always takes | She takes always | Always she take} = Always she takes -> She always takes ~ *always* cannot start the sentence
+- I have seen never so many discounts as this week. {never seen | ever seen | seen ever} = seen never -> never seen ~ between the auxiliary and the main verb
+- The new rice stall opens at five tomorrow and close at noon. {closes | closing | closed} = close -> closes ~ a timetable, so the present simple — with *-s*
+- The big sale begin at eight tomorrow. {begins | beginning | to begin} = begin -> begins ~ a timetable, so the present simple — with *-s*
 :::
 
 ### Project — A shopping survey

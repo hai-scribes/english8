@@ -1,9 +1,8 @@
 # Unit 12 — Life on Other Planets
 
 > **Bài 12 — Sự sống trên các hành tinh khác**
-> Self-study pack. Work through Lessons 1–7 in order. Answers to every
-> exercise are in the [Answer Key](#answer-key) at the end — do the exercise
-> first, then check.
+> Self-study pack. Work through Lessons 1–7 in order. Marked exercises check
+> themselves; the [Answer Key](#answer-key) covers the open ones.
 
 ## What this unit teaches
 
@@ -51,34 +50,34 @@
 
 ### 1.1 Comprehension
 
-::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
-- Thảo tells Cô Yến something about Tí that is not true, and Tí knows it. How does he answer her? = thank you/thanks
-- Thảo replied to one of Cô Yến's three questions with a single word. Which word? = planets
-- Nobody can telephone Khoa. What do Tí and Thảo blame for that? = the rule/rule
-- One boy raises the same question year after year. Who? = Đạt/Dat
-- Minh is afraid that one person will not have heard of him. Who? = the old man/old man
-- Khoa can get partway back, but not all the way. How far can he get? = the beach/our beach/beach
+::: task skill="course" type="short-answer" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- Thảo tells Tí what she said to Cô Yến about him, and it was not true. What does Tí say back to Thảo? {Thank you. | Nobody knows about him. | Because of the rule.} = Thank you.
+- Thảo replied to one of Cô Yến's three questions with a single word. Which word? {planets | gravity | nobody} = planets
+- Tí talks about somebody nine days' walk away. Nobody can call that person. What do Tí and Thảo blame for that? {the rule | the green notebook | Cô Yến} = the rule
+- One boy raises the same question year after year. Who? {Đạt | Khoa | Minh} = Đạt
+- Minh is afraid that one person will not have heard of him. Who? {the old man | Cô Yến | Bống} = the old man
+- The person nine days away can come partway back, but not all the way. How far can he get? {our beach | the river | the crossing} = our beach
 :::
 
 ### 1.2 Find the phrase
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
-- I do not know at all = no idea
-- so that everybody nearby can hear = out loud
-- in the short rest between lessons = at break
-- walking, not in any vehicle = on foot
-- stops talking suddenly = goes quiet
+- I do not know at all {no idea | anything else | the wrong person} = no idea
+- so that everybody nearby can hear {out loud | at the gate | behind me} = out loud
+- in the short rest between lessons {at break | at the gate | last night} = at break
+- walking, not in any vehicle {on foot | on the road | for an hour} = on foot
+- stops talking suddenly {goes quiet | cannot come home | spend it} = goes quiet
 :::
 
 ### 1.3 Notice the grammar
 
 Each sentence below reports a **question**. What did the person actually ask?
 
-::: task skill="course" type="short-answer" ask="Write the direct question — the words the speaker really used. Put the subject and verb back in question order."
-- Cô Yến asked me **whether you were coming in** today. = are you coming in today
-- She asked **why you had missed** Monday. = why did you miss monday
-- Khoa asked me **how far the crossing is**. = how far is the crossing
-- He asked me **what my name means**. = what does your name mean
+::: task skill="course" type="short-answer" ask="Choose the direct question — the words the speaker really used."
+- Cô Yến asked me **whether I was coming in** today. {Are you coming in today? | Am I coming in today? | Whether are you coming in today?} = Are you coming in today?
+- She asked **why I had missed** Monday. {Why did you miss Monday? | Why had I missed Monday? | Why you missed Monday?} = Why did you miss Monday?
+- Khoa asked me **how far the crossing is**. {How far is the crossing? | How far the crossing is? | How far was the crossing?} = How far is the crossing?
+- She asked me **what my name means**. {What does your name mean? | What does my name mean? | What your name means?} = What does your name mean?
 :::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **câu hỏi tường
@@ -135,8 +134,7 @@ Each sentence below reports a **question**. What did the person actually ask?
 > luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
 > ngay, và mọi từ quay lại sau một tuần.
 >
-> Do the written exercises below as well — writing by hand and typing on a
-> screen build different halves of the same knowledge.
+> Do the exercises below as well — they put the words back inside sentences.
 
 ### Meet the words
 
@@ -148,17 +146,17 @@ them: a few at a time, then answer on the few you have just met.
 
 ### 2.1 Complete the sentences
 
-::: task skill="course" type="gap-fill" ask="Use one word from the table. Change the form if you need to."
-- Without a thick ___ , a planet cannot hold in heat or block dangerous sunlight. = atmosphere
-- The Moon ___ the Earth once every twenty-seven days or so. = orbits
-- Humans need ___ to breathe; on Mars there is almost none. = oxygen
-- A planet at the right distance from its star may be ___ — living things could possibly stay alive there. = habitable
-- She looked at Saturn through a small ___ in her garden. = telescope
-- No plant could ___ for long in temperatures of minus one hundred degrees. = survive
-- The ___ took six hours to put on her suit and leave the station. = astronaut
-- Our Sun and its eight planets make up the ___ . = solar system
-- Scientists will ___ a new spacecraft towards Mars next year. = launch
-- Our Sun is only one star among billions in this ___ . = galaxy
+::: task skill="course" type="gap-fill" ask="Choose the word from the table that fits."
+- Without a thick ___ , a planet cannot hold in heat or block dangerous sunlight. {atmosphere | surface | orbit} = atmosphere
+- The Moon ___ the Earth once every twenty-seven days or so. {orbits | launches | explores} = orbits
+- Humans need ___ to breathe; on Mars there is almost none. {oxygen | gravity | surface} = oxygen
+- A planet at the right distance from its star may be ___ — living things could possibly stay alive there. {habitable | extraterrestrial | alien} = habitable
+- She looked at Saturn through a small ___ in her garden. {telescope | spacecraft | galaxy} = telescope
+- No plant could ___ for long in temperatures of minus one hundred degrees. {survive | explore | orbit} = survive
+- The ___ took six hours to put on her suit and leave the station. {astronaut | spacecraft | planet} = astronaut
+- Our Sun and its eight planets make up the ___ . {solar system | galaxy | atmosphere} = solar system
+- Scientists will ___ a new spacecraft towards Mars next year. {launch | explore | orbit} = launch
+- Our Sun is only one star among billions in this ___ . {galaxy | solar system | planet} = galaxy
 :::
 
 ### 2.2 Odd one out
@@ -167,19 +165,19 @@ them: a few at a time, then answer on the few you have just met.
 - planet · galaxy · telescope · star = telescope ~ the others are objects in space; a telescope is an instrument we use to look at them
 - alien · creature · extraterrestrial · gravity = gravity ~ the others are living things; gravity is a force
 - explore · survive · launch · surface = surface ~ the others are verbs; *surface* is a noun
-- oxygen · atmosphere · astronaut · air = astronaut ~ the others are gases or the layer of gas; an astronaut is a person
+- oxygen · atmosphere · astronaut · air = astronaut ~ the others are all about the air around a planet; an astronaut is a person
 :::
 
 ### 2.3 Words from the far end of the table
 
-::: task skill="course" type="gap-fill" ask="Use one word from rows 19–25 of the table. Change the form if you need to."
-- Something bright crossed the sky, and nobody could say what it was — the newspaper called it a ___ . = UFO
-- The seventh planet from the Sun is ___ , and it spins on its side. = Uranus
-- ___ is the eighth planet from the Sun and the coldest of them all. = Neptune
-- The crew refused to obey their ___ and turned the ship round. = commander
-- Hundreds of people ___ the plan to build a road through the forest. = oppose
-- Of all the planets we know, Mars is the most ___ place to look for life. = promising
-- There is no water on the surface today, but there are ___ of it in the rock. = traces
+::: task skill="course" type="gap-fill" ask="Choose the word from rows 19–25 of the table that fits."
+- Something bright crossed the sky, and nobody could say what it was — the newspaper called it a ___ . {UFO | trace | commander} = UFO
+- The seventh planet from the Sun is ___ , and it spins on its side. {Uranus | Neptune | Saturn} = Uranus
+- ___ is the eighth planet from the Sun and the farthest from it. {Neptune | Uranus | Mercury} = Neptune
+- The crew refused to obey their ___ and turned the ship round. {commander | trace | galaxy} = commander
+- Hundreds of people ___ the plan to build a road through the forest. {oppose | orbit | survive} = oppose
+- Of all the planets we know, Mars is the most ___ place to look for life. {promising | extraterrestrial | alien} = promising
+- There is no water on the surface today, but there are ___ of it in the rock. {traces | commanders | UFOs} = traces
 :::
 
 ### 2.4 The eight planets in order
@@ -190,7 +188,7 @@ starts with the same letter as a planet:
 
 > **M**y **V**ery **E**xcellent **M**other **J**ust **S**erved **U**s **N**oodles.
 
-::: task skill="course" type="short-answer" ask="Write the English name of each planet, counting outwards from the Sun. The Vietnamese name is given, and the silly sentence above gives you every first letter."
+::: task skill="course" type="short-answer" opts="Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune" ask="Choose the English name of each planet, counting outwards from the Sun. The Vietnamese name is given, and the silly sentence above gives you every first letter."
 - 1st from the Sun — *sao Thuỷ* = Mercury
 - 2nd — *sao Kim* = Venus
 - 3rd — *Trái Đất* = Earth
@@ -233,13 +231,24 @@ Compare these two:
 
 ### 2.5 Mark the intonation
 
-Write ↗ or ↘ above each underlined item.
-
-1. A planet needs __water__, __warmth__ and __an atmosphere__.
-2. We packed __food__, __water__, __warm clothes__ and __a camera__.
-3. The crew were __Vietnamese__, __Japanese__ and __Brazilian__.
-4. I'd like to visit __Mars__, __Jupiter__ and __Saturn__.
-5. She studies __stars__, __planets__ and __galaxies__.
+::: task skill="course" type="choice" opts="↗|↘" ask="Which way does your voice go on the **bold** item?"
+- A planet needs **water**, warmth and an atmosphere. = ↗
+- A planet needs water, **warmth** and an atmosphere. = ↗
+- A planet needs water, warmth and **an atmosphere**. = ↘
+- We packed **food**, water, warm clothes and a camera. = ↗
+- We packed food, **water**, warm clothes and a camera. = ↗
+- We packed food, water, **warm clothes** and a camera. = ↗
+- We packed food, water, warm clothes and **a camera**. = ↘
+- The crew were **Vietnamese**, Japanese and Brazilian. = ↗
+- The crew were Vietnamese, **Japanese** and Brazilian. = ↗
+- The crew were Vietnamese, Japanese and **Brazilian**. = ↘
+- I'd like to visit **Mars**, Jupiter and Saturn. = ↗
+- I'd like to visit Mars, **Jupiter** and Saturn. = ↗
+- I'd like to visit Mars, Jupiter and **Saturn**. = ↘
+- She studies **stars**, planets and galaxies. = ↗
+- She studies stars, **planets** and galaxies. = ↗
+- She studies stars, planets and **galaxies**. = ↘
+:::
 
 ### 2.6 Open or closed?
 
@@ -388,51 +397,51 @@ Keep the question word. Everything after it becomes a plain statement.
 
 ### 3.2 Choose the correct form
 
-::: task skill="course" type="gap-fill" ask="Write the correct option from the brackets."
-- He asked me ___ I had seen the launch. *(if / what)* = if
-- She asked where ___ the telescope. *(did I buy / I had bought)* = I had bought
-- They asked ___ the planet was habitable. *(whether / what)* = whether
-- My father asked me why ___ awake at midnight. *(was I / I was)* = I was
-- The teacher asked how many moons ___ . *(does Mars have / Mars had)* = Mars had
-- Thảo asked Khoa ___ he believed in aliens. *(if / that)* = if
-- He asked when the spacecraft ___ return. *(will / would)* = would
-- Nobody asked ___ the creatures ate. *(what / if)* = what
+::: task skill="course" type="gap-fill" ask="Choose the correct option."
+- He asked me ___ I had seen the launch. {if | what | that} = if
+- She asked where ___ the telescope. {I had bought | did I buy | had I bought} = I had bought
+- They asked ___ the planet was habitable. {whether | what | that} = whether
+- My father asked me why ___ awake at midnight. {I was | was I | he was} = I was
+- The teacher asked how many moons ___ . {Mars had | does Mars have | did Mars have} = Mars had
+- Thảo asked Khoa ___ he believed in aliens. {if | that | what} = if
+- The spacecraft came home safely last spring. Before that, he had asked when it ___ return. {would | will | does} = would
+- "What do the creatures need?" Nobody asked that question. Nobody asked ___ the creatures needed. {what | whether | where} = what
 :::
 
 ### 3.3 Report these Yes/No questions
 
-::: task skill="course" type="short-answer" ask="Write the whole reported sentence, beginning with the words in brackets. It ends in a full stop, not a question mark. Either *if* or *whether* is accepted."
-- "Do you like science fiction?" (She asked me…) = She asked me if I liked science fiction./She asked me whether I liked science fiction.
-- "Is there water on Mars?" (He asked…) = He asked if there was water on Mars./He asked whether there was water on Mars.
-- "Did the astronauts take photographs?" (I asked…) = I asked if the astronauts had taken photographs./I asked whether the astronauts had taken photographs.
-- "Can you see the galaxy without a telescope?" (She asked whether…) = She asked whether I could see the galaxy without a telescope.
-- "Are you coming to the club tomorrow?" (Khoa asked me…) = Khoa asked me if I was coming to the club the next day./Khoa asked me whether I was coming to the club the next day./Khoa asked me if I was coming to the club the following day./Khoa asked me whether I was coming to the club the following day. ~ *tomorrow* shifts as well as the verb
-- "Have you ever used a telescope?" (My teacher asked…) = My teacher asked if I had ever used a telescope./My teacher asked whether I had ever used a telescope.
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Every question here was asked on the science club's night trip to the observatory last month. Report it, starting with the words after the dash."
+- "Do you need a torch?" — Thảo asked me = Thảo asked me if I needed a torch.
+- "Is the telescope working?" — Khoa asked {were | did} = Khoa asked if the telescope was working.
+- "Did the astronauts take photographs?" — I asked the guide = I asked the guide if the astronauts had taken photographs.
+- "Can you see the galaxy tonight?" — The guide asked us = The guide asked us whether we could see the galaxy that night./The guide asked us that night whether we could see the galaxy. ~ *tonight* shifts as well as the verb
+- "Are you coming to the club tomorrow?" — Minh asked me = Minh asked me if I was coming to the club the next day./Minh asked me if I was coming the next day to the club. ~ *tomorrow* shifts as well as the verb
+- "Has anybody seen my gloves?" — A girl asked = A girl asked if anybody had seen her gloves.
 :::
 
 ### 3.4 Report these Wh- questions
 
-::: task skill="course" type="short-answer" ask="Write the whole reported sentence, beginning with the words in brackets. The question word stays; the *do/does/did* goes, and the subject comes back in front of the verb."
-- "Where do you live?" (He asked me…) = He asked me where I lived.
-- "What does a planet need to support life?" (She asked us…) = She asked us what a planet needed to support life./She asked us what a planet needs to support life. ~ this one is a general truth, so the present tense is accepted too
-- "When will humans land on Mars?" (They asked…) = They asked when humans would land on Mars.
-- "Why are you studying astronomy?" (My aunt asked me…) = My aunt asked me why I was studying astronomy.
-- "How did the creatures survive the winter?" (The reporter asked…) = The reporter asked how the creatures had survived the winter.
-- "Who launched the first spacecraft?" (Hùng asked…) = Hùng asked who had launched the first spacecraft./Hung asked who had launched the first spacecraft.
-- "How much does a telescope cost?" (I asked the shop assistant…) = I asked the shop assistant how much a telescope cost.
+::: task skill="course" type="short-answer" variant="sentence-build" ask="These were asked on the same trip last month. Report each one, starting with the words after the dash."
+- "Where are you going?" — The guard asked me = The guard asked me where I was going.
+- "What do you want to see first?" — The guide asked us = The guide asked us what we wanted to see first.
+- "When will the bus come?" — Thảo asked {comes | coming} = Thảo asked when the bus would come.
+- "Why are you shivering?" — The guide asked me = The guide asked me why I was shivering.
+- "How did you get here?" — The guard asked us = The guard asked us how we (had) got there. ~ *here* becomes *there*
+- "Who launched the first spacecraft?" — Hùng asked {did | launches} = Hùng asked who (had) launched the first spacecraft.
+- "How much does the telescope cost?" — I asked the shop assistant {did | costing} = I asked the shop assistant how much the telescope cost.
 :::
 
 ### 3.5 Correct the mistake
 
-::: task skill="course" type="short-answer" variant="error-correction" ask="Every mistake here is in the reported question itself — the word order, the tense, or the word that joins the two halves."
-- She asked me where did I put the map. = I had put/I put ~ a reported question has no *did*, and the verb backshifts
-- He asked if what the planet was called. = what ~ a question word does the joining on its own; *if* has no business there
-- They asked me whether do I want to be an astronaut. = I wanted ~ no *do*, statement order, and the tense steps back
-- My teacher asked when will the club meet again. = the club would meet ~ subject before verb, and *will* backshifts
-- Thảo asked me why was I so interested in Mars. = I was ~ statement order, so the subject comes first
-- He asked me that I had seen the photographs. = if/whether ~ a Yes/No question is joined by *if* or *whether*, never *that*
-- The scientist asked us what do we know about gravity. = we knew ~ no *do*, and the present steps back to the past
-- She asked me if I am tired. = was ~ the present steps back to the past
+::: task skill="course" type="short-answer" variant="error-correction"
+- She asked me where did I put the map. {I had put | had I put | I did put} = did I put -> I had put ~ a reported question has no *did*, and the verb backshifts
+- He asked if what the planet was called. {what | whether | that} = if what -> what ~ a question word does the joining on its own; *if* has no business there
+- They asked me whether do I want to be an astronaut. {I wanted | did I want | wanted I} = do I want -> I wanted ~ no *do*, statement order, and the tense steps back
+- My teacher asked when will the club meet again. {the club would meet | would the club meet | the club did meet} = will the club meet -> the club would meet ~ subject before verb, and *will* backshifts
+- Thảo asked me why was I so interested in Mars. {I was | he was | she was} = was I -> I was ~ statement order, so the subject comes first
+- He wanted a yes or a no, so he asked me that I had seen the photographs. {if | when | where} = that -> if ~ a Yes/No question is joined by *if* or *whether*, never *that*
+- The scientist asked us what do we know about gravity. {we knew | did we know | knew we} = do we know -> we knew ~ no *do*, and the present steps back to the past
+- Last night, when I got home, she asked me if I am tired. {was | were | be} = am -> was ~ the present steps back to the past
 :::
 
 ### 3.6 About you
@@ -518,18 +527,18 @@ the frames you need most:
 
 ### 4.1 Complete the mini-dialogues
 
-::: task skill="course" type="gap-fill" ask="One word or phrase in each gap."
-- **A:** Do you think there are aliens in our galaxy? — **B:** It's ___ that there are — the galaxy is enormous. = possible
-- **A:** My cousin says he saw a spacecraft over the rice fields. — **B:** I ___ it. It was probably a plane. = doubt
-- **A:** Will humans live on Mars one day? — **B:** It ___ on how fast the technology improves. = depends
-- **A:** Chi asked me something about you yesterday. — **B:** Really? What did she want to ___ ? = know
-- **A:** She asked ___ you were joining the science club. = if/whether
+::: task skill="course" type="gap-fill" ask="Choose the word that fits each gap."
+- **A:** Do you think there are aliens in our galaxy? — **B:** It's ___ that there are — the galaxy is enormous. {possible | impossible | unlikely} = possible
+- **A:** My cousin says he saw a spacecraft over the rice fields. — **B:** I ___ it. It was probably a plane. {doubt | believe | know} = doubt
+- **A:** Will humans live on Mars one day? — **B:** It depends ___ how fast the technology improves. {on | of | in} = on
+- **A:** Chi asked me something about you yesterday. — **B:** Really? What did she want to ___ ? {know | tell | doubt} = know
+- **A:** Cô Yến asked ___ you were joining the science club. — **B:** Tell her yes — I signed up on Monday. {if | when | why} = if
 :::
 
 ### 4.2 Phrase first, then the reason
 
 ::: task skill="course" type="choice" opts="I'm not sure about it.|I doubt it." ask="Which phrase fits in front of the reason that follows it? **I'm not sure about it.** = you simply do not know. **I doubt it.** = you think the answer is probably no."
-- ___ Nobody has ever brought a rock back from that planet. = I'm not sure about it. ~ the speaker has no information either way
+- ___ The results of the tests only come out next week. = I'm not sure about it. ~ the speaker has no information either way yet
 - ___ There is no oxygen at all in the air there. = I doubt it. ~ the reason points firmly towards *no*
 - ___ Scientists are still arguing about the photographs. = I'm not sure about it. ~ even the experts have not settled it
 - ___ The ticket costs more than a house. = I doubt it. ~ the reason makes it very unlikely
@@ -598,15 +607,15 @@ them and see how much you can still say.
 
 ### 4.5 Read the fact-files
 
-::: task skill="course" type="short-answer" ask="Answer from the three fact-files above. Write the planet's name, or a short phrase."
-- Which two planets have no moon? = Mercury and Venus/Venus and Mercury
-- Which planet is similar in size to the Earth? = Venus
-- Which planet is the smallest and the closest to the Sun? = Mercury
-- Which planet do people call the morning star? = Venus
-- Which planet is the largest and the stormiest? = Jupiter
-- About how many moons does Jupiter have? = (about) sixty-three/63
-- Why is there no wind or weather on Mercury? = (because) it has no atmosphere/no atmosphere ~ no air means nothing for the wind to be made of
-- When is the best time to look for Venus? = (just) before sunrise/in the early morning
+::: task skill="course" type="short-answer" ask="Answer from the three fact-files above."
+- Which two planets have no moon? {Mercury and Venus | Mercury and Jupiter | Venus and Jupiter} = Mercury and Venus
+- Which planet is similar in size to the Earth? {Venus | Mercury | Jupiter} = Venus
+- Which planet is the smallest and the closest to the Sun? {Mercury | Venus | Jupiter} = Mercury
+- Which planet do people call the morning star? {Venus | Jupiter | Mercury} = Venus
+- Which planet is the largest and the stormiest? {Jupiter | Venus | Mercury} = Jupiter
+- About how many moons does Jupiter have? {about sixty-three | about eight | about three} = about sixty-three
+- Why is there no wind or weather on Mercury? {It has no atmosphere. | It has no moon. | It is the smallest planet.} = It has no atmosphere. ~ no air means nothing for the wind to be made of
+- When does the fact-file tell you to look east for Venus? {just before sunrise | just after sunset | at midnight} = just before sunrise
 :::
 
 ### 4.6 Tell someone about one of them
@@ -696,34 +705,34 @@ tone — that is the Lesson 2 target, used for real.
 
 ### 5.1 True, False, or Not Given
 
-::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and this is a topic you already know things about, which is exactly the pull this type is built to catch."
+::: task skill="reading" type="true-false-not-given" ask="**True** means the text says it. **False** means the text says the opposite. **Not Given** means the text does not say either way."
 - The writer has told this story before. = T ~ he says he has told it eleven times
 - Khoa wanted a cloudy night. = F ~ he wanted it clear so that he could name things
 - The writer could see Venus when Khoa pointed at it. = F ~ "I could not"
-- Bống wanted to be sure before they rowed out. = T ~ she asked them three times whether they were sure
+- Bống asked the others more than once whether they were sure. = T ~ she asked them three times whether they were sure
 - Something landed in the boat when the tide turned. = F ~ nothing landed in the boat and the water gave them nothing
-- Thảo had rowed a boat on that river before. = NG ~ she rows them out, but the text never says whether she had done it before
+- Thảo had rowed a boat before that night. = NG ~ she rows them out, but the text never says whether she had done it before
 - The writer thinks he can decide what the sea brings back. = F ~ "You never choose what comes back"
 :::
 
 ### 5.2 Answer the questions
 
-::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- Which planet did Khoa point at, low over the roofs? = Venus
-- Who sat in the bow of the boat? = Minh
-- How long did the water take to go over? = (about) four seconds
-- What did Bống say when she lifted her head? = Sao
-- Which way did the water go after that? = out
+::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
+- Which planet did Khoa point at, low over the roofs? {Venus | the moon | the habitable zone} = Venus
+- Who hardly said anything in the boat? {Minh | Bống | the writer} = Minh
+- How long did the tide take to turn? {about four seconds | about four minutes | about four hours} = about four seconds
+- What did Bống say when she lifted her head? {"Sao." | "Are you sure?" | "That is a keeper's name."} = "Sao."
+- Which way did the water go after the tide turned? {out | in | up} = out
 :::
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the reading that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- rose past the top of something = went over
-- with no clouds in it = clear
-- without any help from anybody = by itself
-- passing something over to the person it belongs to = handing it over
-- the front end of a boat = the bow
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the reading that means each of these. The clock above is still running, and it covers this exercise too."
+- changed direction, as the tide does {went over | came in | kept going} = went over
+- with no clouds in it {clear | low | very large} = clear
+- without any help from anybody {by itself | on purpose | anyway} = by itself
+- giving something to the person who should have it {handing it over | come home | lifted} = handing it over
+- the front end of a boat {the bow | the wall | the roofs} = the bow
 :::
 
 ::: bridge name="Only what the text says — and a story you have followed is the hardest place to obey that" trains="Reading" cefr="B1" marker="[Q]" src="04 §4.2"
@@ -837,23 +846,23 @@ I am sorry it took so long to reach her.
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- The speaker says his visitors walked (a) two days (b) nine days (c) a month = b
-- He says the line only opens (a) from both ends (b) from this end (c) from neither end = b
-- He says he is (a) angry about the twelve marks (b) not angry about them (c) unable to remember them = b
-- About the way the marks were spent, he says he would spend them (a) better (b) worse (c) exactly the same = b
-- He says the marks (a) can be made again (b) cannot be made again (c) are already gone = b
-- He knew about the girl because she (a) shouted at him (b) ran away (c) asked him nothing = c
+- The speaker says his visitors walked {nine days | eleven days | twelve days} = nine days
+- He says the line only opens {from this end | from both ends | halfway} = from this end
+- He says he is {not angry about the twelve marks | angry about the twelve marks | unable to remember the twelve marks} = not angry about the twelve marks
+- About the way the marks were spent, he says he would spend them {worse | better | exactly the same} = worse
+- He says the marks {cannot be made again | can be made again | will close behind him tonight} = cannot be made again
+- He knew Sao had her name back because she {asked him nothing | asked him how long Minh could stay | asked him whether he was angry} = asked him nothing
 :::
 
 ### 6.2 Listen and complete
 
-::: task skill="listening" type="sentence-completion" words="2+number"
-- He says the least he can do is answer them in ___ . = order
-- Every lost thing still travelling will ___ where it is. = stop
-- The boy's list began with a game, a path and a ___ . = friend
-- By morning, he says, the harbour ___ will be dry. = wall
-- The line closes behind him ___ . = tonight
-- He is sorry it took so long to ___ her. = reach
+::: task skill="listening" type="sentence-completion"
+- He says the least he can do is answer them in ___ . {order | the end | a good while} = order
+- Every lost thing still travelling will ___ where it is. {stop | close | go out} = stop
+- The boy's list began with a game, a path and a ___ . {friend | house | reef} = friend
+- By morning, he says, the harbour ___ will be dry. {wall | line | workroom} = wall
+- The line closes behind him ___ . {tonight | first | halfway} = tonight
+- He is sorry it took so long to ___ her. {reach | mend | hold} = reach
 :::
 
 ### Writing — A descriptive paragraph about aliens
@@ -934,15 +943,15 @@ reader who reads nothing else should still be given.
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
-- Mars is the fourth ___ from the Sun. *(p…)* = planet
-- The Earth takes one year to ___ the Sun. *(o…)* = orbit
-- On the Moon, ___ is much weaker than on Earth. *(g…)* = gravity
-- We cannot breathe on Mars because there is almost no ___ . *(o…)* = oxygen
-- A planet where living things could stay alive is called ___ . *(h…)* = habitable
-- She watched Jupiter through her father's ___ . *(t…)* = telescope
-- The strange ___ had six legs and no eyes. *(c…)* = creature
-- Our Sun is one of billions of stars in this ___ . *(g…)* = galaxy
+::: task skill="course" type="gap-fill" ask="Choose the word from this unit that fits."
+- Mars is the fourth ___ from the Sun. {planet | star | galaxy} = planet
+- The Earth takes one year to ___ the Sun. {orbit | explore | launch} = orbit
+- On the Moon, ___ is much weaker than on Earth. {gravity | oxygen | surface} = gravity
+- We cannot breathe on Mars because there is almost no ___ . {oxygen | gravity | orbit} = oxygen
+- Mars is too cold and too dry to be ___ for humans without special buildings. {habitable | promising | extraterrestrial} = habitable
+- She watched Jupiter through her father's ___ . {telescope | spacecraft | UFO} = telescope
+- The strange ___ had six legs and no eyes. {creature | astronaut | planet} = creature
+- The Milky Way is the ___ that our solar system belongs to. {galaxy | atmosphere | planet} = galaxy
 :::
 
 ### 7.2 Pronunciation check
@@ -960,55 +969,55 @@ reader who reads nothing else should still be given.
 
 ### 7.3 Grammar check
 
-::: task skill="course" type="short-answer" ask="Report each question. Write the whole sentence, beginning with the words in brackets. It ends in a full stop, not a question mark. Either *if* or *whether* is accepted."
-- "Do you have a telescope?" (He asked me…) = He asked me if I had a telescope./He asked me whether I had a telescope.
-- "Where is the science club?" (She asked…) = She asked where the science club was.
-- "Did you watch the launch?" (My brother asked me…) = My brother asked me if I had watched the launch./My brother asked me whether I had watched the launch.
-- "Why are the creatures blue?" (The teacher asked us…) = The teacher asked us why the creatures were blue.
-- "Will you come with us tomorrow?" (Thảo asked me…) = Thảo asked me if I would go with them the next day./Thảo asked me whether I would go with them the next day./Thảo asked me if I would come with them the next day./Thảo asked me whether I would come with them the next day./Thảo asked me if I would go with them the following day./Thảo asked me whether I would go with them the following day./Thảo asked me if I would come with them the following day./Thảo asked me whether I would come with them the following day./Thao asked me if I would go with them the next day./Thao asked me whether I would go with them the next day./Thao asked me if I would come with them the next day./Thao asked me whether I would come with them the next day./Thao asked me if I would go with them the following day./Thao asked me whether I would go with them the following day./Thao asked me if I would come with them the following day./Thao asked me whether I would come with them the following day. ~ *tomorrow* shifts as well as the verb, and *us* becomes *them*
-- "How far is Mars from the Earth?" (I asked my father…) = I asked my father how far Mars was from the Earth./I asked my father how far Mars is from the Earth. ~ a distance is a general truth, so the present tense is accepted too
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Every question here was asked a few weeks ago. Report it, starting with the words after the dash."
+- "Do you have a coat with you?" — He asked me = He asked me if I had a coat with me.
+- "Where are you sitting?" — She asked me = She asked me where I was sitting.
+- "Did you watch the launch?" — My brother asked me = My brother asked me if I (had) watched the launch.
+- "Why are you so quiet?" — The teacher asked us = The teacher asked us why we were so quiet.
+- "Will you come with us tomorrow?" — Thảo asked me = Thảo asked me if I would come with them the next day./Thảo asked me if I would come the next day with them. ~ *tomorrow* shifts as well as the verb, and *us* becomes *them*
+- "How long will the film last?" — I asked my father {lasts | lasting} = I asked my father how long the film would last.
 :::
 
 ### 7.4 Error hunt
 
-Find and correct **six** errors in this paragraph. Five are about reported
-questions; one is a subject–verb agreement slip.
+This paragraph has **six** mistakes. Below, it comes one line at a time: tap
+each mistake, then choose the fix.
 
 > The wall is dry, and last week the water went out for good. Bà Sáu asked me
 > did I know where Sao had got to. Then she asked where have I been all
-> afternoon. Sao asked her if she could stay for dinner? I asked her when will
+> afternoon. Sao asked her if could she stay for dinner. I asked her when will
 > she go back for her training. She said not yet. Minh comes over on Sundays now,
 > and we play the wooden game in the yard. My uncle asked me why did I
 > keep the old path clear. Everyone use it now.
 
-::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
-- Error 1 = asked me if I knew/asked me whether I knew ~ a reported Yes/No question takes *if* or *whether*
-- Error 2 = asked where I had been ~ no inversion in a reported question, and the tense shifts back
-- Error 3 = asked her if she could stay for dinner ~ and it ends in a full stop, not a question mark
-- Error 4 = asked her when she would go back ~ statement order, and *will* backshifts
-- Error 5 = asked me why I kept ~ no *did*, and statement order
-- Error 6 = uses ~ *Everyone* takes a singular verb
+::: task skill="course" type="short-answer" variant="error-correction" ask="Each line is part of the paragraph, with the earlier mistakes already put right."
+- Bà Sáu asked me did I know where Sao had got to. {if I knew | I did know | did I knew} = did I know -> if I knew ~ a reported Yes/No question takes *if* or *whether*
+- Then she asked where have I been all afternoon. {I had been | had I been | I been} = have I been -> I had been ~ no inversion in a reported question, and the tense shifts back
+- Sao asked her if could she stay for dinner. {she could | she can | she will} = could she -> she could ~ statement order: the subject comes first
+- I asked her when will she go back for her training. {she would go | would she go | she had gone} = will she go -> she would go ~ statement order, and *will* backshifts
+- My uncle asked me why did I keep the old path clear. {I kept | kept I | did I kept} = did I keep -> I kept ~ no *did*, and statement order
+- Everyone use it now. {uses | using | used} = use -> uses ~ *Everyone* takes a singular verb
 :::
 
 ### 7.5 Word formation
 
-::: task skill="course" type="gap-fill" ask="Complete each sentence with the right form of the word in brackets. One of them does not change at all."
-- Space ___ costs a great deal of money and takes a great deal of time. *(explore)* = exploration
-- Water is the first thing a crew would need for ___ on Mars. *(survive)* = survival
-- Nobody has ruled out the ___ of life on other planets. *(possible)* = possibility
-- Two members of the crew voiced their ___ to the plan. *(oppose)* = opposition
-- Scientists look for signs that a planet might be ___ . *(inhabit)* = habitable
-- The ___ of the new telescope is planned for next March. *(launch)* = launch
+::: task skill="course" type="gap-fill" ask="Choose the right form of the word in brackets."
+- Space ___ costs a great deal of money and takes a great deal of time. *(explore)* {exploration | explorer | explore} = exploration
+- Water is the first thing a crew would need for ___ on Mars. *(survive)* {survival | survivor | survive} = survival
+- Nobody has ruled out the ___ of life on other planets. *(possible)* {possibility | possible | possibly} = possibility
+- Two members of the crew voiced their ___ to the plan. *(oppose)* {opposition | opponent | opposite} = opposition
+- Scientists look for signs that a planet might be ___ — that something already lives there. *(inhabit)* {inhabited | inhabitant | inhabit} = inhabited
+- The ___ of the new telescope is planned for next March. *(launch)* {launch | launcher | launched} = launch
 :::
 
 ### 7.6 Report the question
 
-::: task skill="course" type="gap-fill" ask="Rewrite each question as a reported question. Write only the missing words."
-- "What planet do you want to visit?" my friend asked me. → My friend asked me what planet I ___ to visit. = wanted
-- "Is there water on Mars?" Khoa asked. → Khoa asked ___ there was water on Mars. = if/whether
-- "When will the spacecraft land?" the students wondered. → The students wondered when the spacecraft ___ land. = would
-- "Do aliens really exist?" I asked my brother. → I asked my brother ___ aliens really existed. = if/whether
-- "Who is the commander of the mission?" Hùng wondered. → Hùng wondered who the commander of the mission ___ . = was
+::: task skill="course" type="gap-fill" ask="Choose the words that complete each reported question."
+- "What planet do you want to visit?" my friend asked me. → My friend asked me what planet ___ to visit. {I wanted | did I want | do I want} = I wanted
+- "Is there water on Mars?" Khoa asked. → Khoa asked ___ there was water on Mars. {if | what | that} = if
+- "When will the spacecraft land?" the students wondered. → The students wondered when ___ land. {the spacecraft would | would the spacecraft | will the spacecraft} = the spacecraft would
+- "Do aliens really exist?" I asked my brother. → I asked my brother ___ aliens really existed. {whether | that | what} = whether
+- "Where is the commander of the mission?" Hùng wondered. → Hùng wondered where ___ . {the commander of the mission was | was the commander of the mission | is the commander of the mission} = the commander of the mission was
 :::
 
 ### Project — Design a habitable planet
@@ -1075,13 +1084,6 @@ page can settle it, the row says so, and that one is yours to judge.
 > **Đáp án.** Chỉ xem sau khi đã tự làm bài.
 
 ### Lesson 2
-
-**2.5** In every list, all items except the last rise ↗; the final item falls ↘.
-1. water ↗, warmth ↗, an atmosphere ↘
-2. food ↗, water ↗, warm clothes ↗, a camera ↘
-3. Vietnamese ↗, Japanese ↗, Brazilian ↘
-4. Mars ↗, Jupiter ↗, Saturn ↘
-5. stars ↗, planets ↗, galaxies ↘
 
 **2.7** Answers will vary. Check: in items 1–3 your voice steps **up** on
 every item except the last, and clearly **down** on the last one; in item 4 the "open" version
