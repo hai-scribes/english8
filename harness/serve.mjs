@@ -33,19 +33,27 @@ const build = resolveBuild();
 if (!build.path) { console.error("no build directory found (dist/, build/, docs/)"); process.exit(1); }
 console.log(`serving ${build.dir}/`);
 
-/* Ask the kernel for a free port, then let it go. There is a race between
+/* Ask the kernel for free ports, then let them go. There is a race between
  * releasing and re-binding, but it is the same race every dev server runs and
  * it is bounded to this machine; the alternative — a fixed offset from the
- * variant port — collides deterministically instead of rarely. */
-function freePort() {
-  return new Promise((resolve, reject) => {
-    const s = createNetServer();
-    s.once("error", reject);
-    s.listen(0, "127.0.0.1", () => {
-      const { port } = s.address();
-      s.close(() => resolve(port));
-    });
-  });
+ * variant port — collides deterministically instead of rarely. All of them are
+ * held open until the last is bound, so the kernel cannot hand the same port
+ * back twice; and a lost race is retried with fresh ports (launch() below)
+ * rather than failing the run for a reason that has nothing to do with it. */
+async function freePorts(n) {
+  const held = [];
+  try {
+    for (let i = 0; i < n; i++) {
+      held.push(await new Promise((resolve, reject) => {
+        const s = createNetServer();
+        s.once("error", reject);
+        s.listen(0, "127.0.0.1", () => resolve(s));
+      }));
+    }
+    return held.map(s => s.address().port);
+  } finally {
+    await Promise.all(held.map(s => new Promise(r => s.close(r))));
+  }
 }
 
 const TYPES = {
@@ -125,18 +133,14 @@ await new Promise((resolve, reject) => {
 console.log(`static site on http://127.0.0.1:${staticPort}${BASE}`);
 
 /* --- the emulators ------------------------------------------------------- */
-const authPort = await freePort();
-const firestorePort = await freePort();
-const uiPort = await freePort();
 /* The hub, the logging channel and Firestore's own websocket default to the
  * FIXED ports 4400, 4500 and 9150. They are not mentioned in the emulator's
  * own summary as configurable, and they are the reason two concurrent variants
  * collide even when the auth and firestore ports differ — the second variant
  * then fails for a reason that looks like a defect in its code. Every port
  * this process opens is ephemeral. */
-const hubPort = await freePort();
-const loggingPort = await freePort();
-const wsPort = await freePort();
+let authPort, firestorePort;
+let emul = null, ready = false, attempt = 0, stopping = false;
 
 /* The generated config lives in the variant's own TMPDIR, never in the
  * worktree: the worktree copy would be a gate artifact whose bytes change per
@@ -165,18 +169,6 @@ if (existsSync(shippedRules)) {
   console.log("no firestore.rules in the worktree yet — running deny-all");
 }
 
-writeFileSync(join(scratch, "firebase.json"), JSON.stringify({
-  firestore: { rules: rulesPath },
-  emulators: {
-    auth: { port: authPort, host: "127.0.0.1" },
-    firestore: { port: firestorePort, host: "127.0.0.1", websocketPort: wsPort },
-    hub: { port: hubPort, host: "127.0.0.1" },
-    logging: { port: loggingPort, host: "127.0.0.1" },
-    ui: { enabled: false, port: uiPort },
-    singleProjectMode: true,
-  },
-}, null, 2));
-
 /* The Firestore emulator is a Java program and Homebrew keeps openjdk off
  * PATH. Fail here, naming the cause, rather than letting the emulator die
  * with a message that reads like a Firebase fault. */
@@ -200,21 +192,50 @@ if (!existsSync(firebaseBin)) {
   cleanup(1);
 }
 
-const emul = spawn(firebaseBin, [
-  "emulators:start",
-  "--project", PROJECT,
-  "--only", "auth,firestore",
-  "--config", join(scratch, "firebase.json"),
-], { cwd: scratch, stdio: ["ignore", "inherit", "inherit"], env: jenv });
+/* A port picked above can be taken by the time the emulator binds it (most
+ * often by an emulator from the previous run still shutting down): the
+ * emulator then exits with "port taken" before it is ever ready. That is
+ * retried on fresh ports. An exit AFTER readiness is a real failure. */
+const ATTEMPTS = 3;
 
-emul.on("exit", (code, signal) => {
-  console.error(`firebase emulators exited (code=${code} signal=${signal})`);
-  cleanup(code ?? 1);
-});
-emul.on("error", err => {
-  console.error(`could not spawn the firebase emulators: ${err.message}`);
-  cleanup(1);
-});
+async function launch() {
+  attempt++;
+  let uiPort, hubPort, loggingPort, wsPort;
+  [authPort, firestorePort, uiPort, hubPort, loggingPort, wsPort] = await freePorts(6);
+  writeFileSync(join(scratch, "firebase.json"), JSON.stringify({
+    firestore: { rules: rulesPath },
+    emulators: {
+      auth: { port: authPort, host: "127.0.0.1" },
+      firestore: { port: firestorePort, host: "127.0.0.1", websocketPort: wsPort },
+      hub: { port: hubPort, host: "127.0.0.1" },
+      logging: { port: loggingPort, host: "127.0.0.1" },
+      ui: { enabled: false, port: uiPort },
+      singleProjectMode: true,
+    },
+  }, null, 2));
+  const proc = emul = spawn(firebaseBin, [
+    "emulators:start",
+    "--project", PROJECT,
+    "--only", "auth,firestore",
+    "--config", join(scratch, "firebase.json"),
+  ], { cwd: scratch, stdio: ["ignore", "inherit", "inherit"], env: jenv });
+
+  proc.on("exit", (code, signal) => {
+    if (proc !== emul) return;
+    console.error(`firebase emulators exited (code=${code} signal=${signal})`);
+    if (!ready && attempt < ATTEMPTS && !stopping) {
+      console.error(`retrying on fresh ports (attempt ${attempt + 1} of ${ATTEMPTS})`);
+      launch();
+      return;
+    }
+    cleanup(code ?? 1);
+  });
+  proc.on("error", err => {
+    console.error(`could not spawn the firebase emulators: ${err.message}`);
+    cleanup(1);
+  });
+}
+await launch();
 
 /* Readiness is published, not guessed. ports.json appears only once BOTH
  * emulators answer, so `ready_command` polling for this file is polling for a
@@ -230,6 +251,7 @@ async function up(port, path = "/") {
 }
 
 (async () => {
+  /* One deadline across every attempt: a retry is not extra time. */
   const deadline = Date.now() + 150_000;
   while (Date.now() < deadline) {
     if (await up(authPort) && await up(firestorePort)) {
@@ -243,6 +265,7 @@ async function up(port, path = "/") {
         firestoreHost: "127.0.0.1",
         firestorePort,
       }, null, 2));
+      ready = true;
       console.log(`emulators ready — auth :${authPort}, firestore :${firestorePort}`);
       return;
     }
@@ -253,9 +276,10 @@ async function up(port, path = "/") {
 })();
 
 function cleanup(code) {
+  stopping = true;
   rmSync(PORTS_FILE, { force: true });
   rmSync(scratch, { recursive: true, force: true });
-  try { emul.kill("SIGTERM"); } catch {}
+  try { emul?.kill("SIGTERM"); } catch {}
   try { site.close(); } catch {}
   process.exit(code);
 }

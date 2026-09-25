@@ -53,7 +53,12 @@ assertion on `en8:` storage keys obsolete.
 - `lib.mjs` — `resolveBuild()` serves `docs/` only.
 - `serve.mjs` — site under `/english8/` (as on GitHub Pages), no
   `Service-Worker-Allowed` header, and `POST /__harness/deploy` simulating a
-  new build.
+  new build. The six emulator ports are taken together, held until the last
+  is bound, so none can be handed out twice; and an emulator that dies before
+  readiness ("port taken" — seen once in the proof, on a port the previous
+  run's emulator had not yet let go) is relaunched on fresh ports, up to three
+  attempts inside the one 150 s deadline. Forced in a scratch copy: attempt 1
+  port taken → attempt 2 ready.
 - `browser.mjs` — the contract: sync-state semantics spelled out; **"it
   synced" means the other device SHOWS it** (never storage); the page may
   repaint in place or reload itself. The state timeline is reported out of the
@@ -102,7 +107,9 @@ Setting up the scratch copy: a directory holding a copy of `docs/`, a
 `node_modules` (symlink is fine) and the files of `harness-proof/`; `run-ref.sh`
 copies `$LANE/harness/` in on every run.
 
-**Result, 2026-09-25** — `matrix.sh`: 17 of 17 as expected. Flake: the correct
+**Result, 2026-09-25** — `matrix.sh`: 17 of 17 as expected, twice (the
+second run, on the final harness, after one earlier run lost a case to the
+emulator port race that `serve.mjs` now retries). Flake: the correct
 reference, all four scenarios × 20 on one shared stack — 280 of 280 gate lines
 PASS, 0 FAIL.
 
