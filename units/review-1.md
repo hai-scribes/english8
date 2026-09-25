@@ -1,9 +1,7 @@
 # Review 1 — Units 1–3
 
 > **Ôn tập 1 — Bài 1, 2 và 3**
-> Everything here has already been taught. Nothing is new, and nothing is
-> harder than the units it comes from — the only difference is that the three
-> units are mixed together instead of being asked one at a time.
+> Everything here comes from Units 1, 2 and 3, mixed together.
 
 ## Part 1 — Language
 
@@ -16,31 +14,29 @@ They are all in this exercise, and the lines are not grouped by unit.
 ::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **sound in bold**, not the meaning."
 - g**oo**d · c**oo**l · f**oo**t · c**oo**k = c**oo**l ~ *cool* has the long /uː/; the other three are short /ʊ/
 - J**u**ne · r**u**de · tr**u**th · p**u**t = p**u**t ~ *put* is short /ʊ/; the other three are long /uː/
-- vill**a**ge · cott**a**ge · short**a**ge · farm**er** = farm**er** ~ *farmer* ends in the weak /ə/; the other three end in /ɪdʒ/
-- t**ou**rist · d**u**ring · ch**oi**ce · c**u**rious = ch**oi**ce ~ *choice* is /ɔɪ/; the other three are /ʊə/
+- vill**a**ge · cott**a**ge · short**a**ge · breakf**a**st = breakf**a**st ~ *breakfast* has the weak /ə/; the other three have /ɪ/
+- t**ou**rist · d**u**ring · s**ou**p · c**u**rious = s**ou**p ~ *soup* is the long /uː/; the other three are /ʊə/
 - av**oi**d · j**oi**n · enj**oy** · p**u**re = p**u**re ~ *pure* is /ʊə/; the other three are /ɔɪ/
 :::
 
 > **Mẹo:** Đọc to cả bốn từ trước khi chọn. Mắt rất dễ bị đánh lừa bởi chữ
-> viết — *good* và *cool* viết giống nhau nhưng dài ngắn khác nhau.
+> viết — *book* và *boot* viết giống nhau nhưng dài ngắn khác nhau.
 
 ### 1.2 Which word fits?
 
 ::: task skill="course" type="choice" ask="Choose the word that completes each sentence."
-- Mai is really into ___ photos of the paddy fields near her house. (a) take (b) taking (c) to take = b ~ after *be into* the verb takes **-ing**
-- My uncle is keen ___ fishing in the stream behind the barn. (a) in (b) at (c) on = c ~ *be keen **on***
-- I can't stand ___ my notifications every ten minutes. (a) check (b) checking (c) to check = b ~ after *can't stand* the verb takes **-ing**
-- Nam is not fond ___ jigsaw puzzles, so don't buy him one. (a) of (b) on (c) with = a ~ *be fond **of***
-- While I was ___ the club's forum, I found a photo of my village. (a) uploading (b) browsing (c) logging = b ~ you *browse* a site; you *upload* something *to* it and you *log on to* it
+- Mai is really into ___ photos of the paddy fields near her house. {taking | take | to take} = taking ~ after *be into* the verb takes **-ing**
+- My uncle is keen ___ fishing in the stream behind the barn. {on | in | at} = on ~ *be keen **on***
+- I can't stand ___ my notifications every ten minutes. {checking | check | checked} = checking ~ after *can't stand* the verb takes **-ing**
+- Nam is not fond ___ jigsaw puzzles, so don't buy him one. {of | on | with} = of ~ *be fond **of***
+- I spent an hour ___ the club's forum, just reading old posts and looking at photos. {browsing | uploading to | logging on to} = browsing ~ reading and looking around a site is *browsing* it; *uploading to* it adds something, and *logging on to* it only gets you in
 :::
 
 ### 1.3 One word missing
 
-The six words below are from Units 1, 2 and 3. Each one goes in exactly one gap.
+Eight words and phrases from Units 1, 2 and 3. Six of them fit — one in each gap.
 
-> **harvest · hospitable · peer pressure · picturesque · get involved · take up**
-
-::: task skill="course" type="gap-fill" ask="Write the missing word or phrase. Spelling counts, and the form has to fit the sentence."
+::: task skill="course" type="gap-fill" opts="harvest|hospitable|peer pressure|picturesque|get involved|take up|relax|vast" ask="Choose the word or phrase that fits each gap."
 - The people in my grandmother's village are very ___ : a stranger is fed before anyone asks who they are. = hospitable
 - Don't skip the club just because your friends have — that is ___ , and nothing else. = peer pressure
 - My sister decided to ___ judo last month, and now she goes twice a week. = take up
@@ -51,31 +47,29 @@ The six words below are from Units 1, 2 and 3. Each one goes in exactly one gap.
 
 ### 1.4 Choose the right form
 
-::: task skill="course" type="choice" ask="One form is right in each sentence. Two of them are about liking and disliking; three are about comparing."
-- My grandmother gets up ___ than anyone else in the house. (a) more early (b) earlier (c) more earlier = b ~ *early* is short, so it takes **-er** — never both at once
-- Duy enjoys ___ board games with his cousins on Sunday. (a) play (b) to play (c) playing = c ~ after *enjoy* the verb takes **-ing**
-- We decided ___ the kite on the hill behind the barn. (a) to fly (b) flying (c) fly = a ~ after *decide* the verb takes **to**
-- Buses run ___ in town than in the village. (a) frequentlier (b) more frequent (c) more frequently = c ~ *frequently* is a long adverb, so it takes **more**, and it stays an adverb
-- My cousin detests ___ up before six o'clock. (a) get (b) getting (c) to get = b ~ after *detest* the verb takes **-ing**
+::: task skill="course" type="choice" ask="One form is right in each sentence."
+- My grandmother gets up ___ than anyone else in the house. {earlier | more early | more earlier} = earlier ~ *early* is short, so it takes **-er** — never both at once
+- Duy enjoys ___ board games with his cousins on Sunday. {playing | play | to play} = playing ~ after *enjoy* the verb takes **-ing**
+- We decided ___ the kite on the hill behind the barn. {to fly | flying | fly} = to fly ~ after *decide* the verb takes **to**
+- Buses run ___ in town than in the village. {more frequently | more frequent | most frequently} = more frequently ~ *frequently* is a long adverb, so it takes **more**, and it stays an adverb
+- My cousin detests ___ up before six o'clock. {getting | get | got} = getting ~ after *detest* the verb takes **-ing**
 :::
 
-> ⚠️ **Bẫy thường gặp:** *more earlier* và *frequentlier* đều sai. Từ ngắn thì
-> thêm **-er**, từ dài thì dùng **more** — không bao giờ dùng cả hai, và cũng
-> không tự thêm **-er** vào những từ kết thúc bằng **-ly**.
+> **Mẹo:** Đọc cả câu trước khi chọn — có *than* thì phải là dạng so sánh.
 
 ### 1.5 Join the two halves
 
-::: task skill="course" type="choice" ask="Pick the joining word that makes sense. Read both halves before you choose — two of them look right until you do."
-- I wanted to join the cooking club, ___ it was already full. (a) so (b) but (c) or = b ~ the second half is a problem, not a result
-- Leave before six, ___ you will miss the last ferry. (a) otherwise (b) therefore (c) however = a ~ *otherwise* = if you do not do this, here is what happens
-- The village has no cinema; ___ , nobody seems to mind. (a) otherwise (b) however (c) so = b ~ the second half is a surprise after the first
-- My cousin lives on a farm, ___ he still has faster internet than I do. (a) and (b) yet (c) or = b ~ *yet* marks the contrast; *and* would only add
-- It rained all morning, ___ we stayed in and played a board game. (a) or (b) yet (c) so = c ~ the second half is the result of the first
+::: task skill="course" type="choice" ask="Pick the joining word that makes sense. Read both halves before you choose."
+- I wanted to join the cooking club, ___ it was already full. {but | so | or} = but ~ the second half is a problem, not a result
+- Leave before six; ___ , you will miss the last ferry. {otherwise | therefore | however} = otherwise ~ *otherwise* = if you do not do this, here is what happens
+- The village has no cinema; ___ , nobody seems to mind. {however | therefore | otherwise} = however ~ the second half is a surprise after the first
+- My cousin lives on a farm, ___ he still has faster internet than I do. {yet | so | or} = yet ~ *yet* marks the contrast; *so* would make it a result
+- It rained all morning, ___ we stayed in and played a board game. {so | or | yet} = so ~ the second half is the result of the first
 :::
 
 > **Ghi chú:** *however*, *therefore* và *otherwise* không phải là liên từ. Trước
 > chúng dùng dấu chấm phẩy hoặc dấu chấm, sau chúng dùng dấu phẩy —
-> *The village has no cinema; **however**, nobody seems to mind.*
+> *My village is small; **however**, its market is huge.*
 
 ## Part 2 — Skills
 
@@ -128,28 +122,27 @@ The six words below are from Units 1, 2 and 3. Each one goes in exactly one gap.
 
 ### 2.2 Answer from the text
 
-::: task skill="reading" type="short-answer" words="3" ask="Use the words that are already in the text. Rephrasing costs you the mark here, which is not true anywhere else in this course."
-- Where do Mai and her cousins take the kite? = (the) dyke
-- Which club did Duy join? = (the) chess club/chess club
-- What does Linh make out of old cloth? = bracelets
-- How long does one bracelet take? = (about) two hours
-- Who edits the school magazine? = Ms Hoa
+::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
+- Where do Mai and her cousins take the kite? {the dyke | the barn | the orchard} = the dyke
+- Which club did Duy join? {the chess club | the school magazine | a kite club} = the chess club
+- What does Linh make out of old cloth? {bracelets | kites | necklaces} = bracelets
+- How long does Linh need to make one of the things she sells at the market? {about two hours | a whole Saturday | a month} = about two hours
+- Who edits the school magazine? {Ms Hoa | Linh's grandmother | Mai} = Ms Hoa
 :::
 
 ### 2.3 Find the word
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock is still running and it covers this exercise too."
-- birds kept for their eggs and their meat = poultry
-- a piece of land planted with fruit trees = orchard
-- sure of yourself = self-confident
-- start doing something new = take up
-- stay level with something and not fall behind = keep up with
+- birds kept for their eggs and their meat {poultry | barn | kite} = poultry
+- a piece of land planted with fruit trees {orchard | dyke | barn} = orchard
+- sure of yourself {self-confident | surprised | sorry} = self-confident
+- start doing something new {take up | notice | sell} = take up
+- stay level with something and not fall behind {keep up with | stay | carry} = keep up with
 :::
 
 ### Speaking — Saturday, and where you spend it
 
-> **Working alone:** there is no partner here, so do this in three steps. It
-> still works — most of the value is in producing the language out loud.
+> **Working alone:** there is no partner here, so do this in three steps.
 
 **Step 1 — Prepare.** Think of one person you know well: a cousin, a
 neighbour, an older brother or sister. Make short notes, not sentences.
@@ -164,9 +157,9 @@ neighbour, an older brother or sister. Make short notes, not sentences.
 | Do they do it more often now than a year ago? | |
 
 **Step 2 — Speak.** Answer each question **aloud**, in full sentences. Use at
-least one verb of liking or disliking in every answer — *be into*, *be keen
-on*, *be fond of*, *can't stand*, *detest* — and remember which of them are
-followed by **-ing**.
+least one verb of liking or disliking in every answer — *enjoy*, *be crazy
+about*, *be interested in*, *hate*, *don't mind* — and check the form of the
+verb that follows each.
 
 **Step 3 — Record and check.** Record yourself on your phone and listen back
 once. Three things to listen for:
@@ -181,10 +174,10 @@ stopping.
 
 ### Listening — Two Saturdays, two places
 
-You get **one** play. Read the five gaps first, then fill them in while you
-listen rather than afterwards from memory.
+You get **one** play. Read the five gaps first, then choose while you listen
+rather than afterwards from memory.
 
-**Nghe một lần duy nhất.** Đọc năm câu hỏi trước, rồi vừa nghe vừa điền.
+**Nghe một lần duy nhất.** Đọc năm câu hỏi trước, rồi vừa nghe vừa chọn.
 
 ::: audio orientation="You will hear two students, Tom and Mai, comparing what a Saturday is like in the town where Tom lives and in the village where Mai lives." mode="computer" preview="30" review="120"
 Tom: You have never lived in a city, have you, Mai?
@@ -218,12 +211,12 @@ Tom: I would miss space. Our flat has no garden, not even a balcony.
 
 ### 2.4 Fill in the gaps
 
-::: task skill="listening" type="completion" words="1" ask="Write **ONE word** in each gap. Spelling counts here, as it does everywhere else in this course."
-- Before the day is her own, Mai feeds the ___ and carries water to the barn = poultry
-- Mai and her cousins take a kite up to the ___ = dyke
-- Tom lives in the middle of town, above his father's ___ = shop
-- In the afternoon Tom meets his friends at the shopping ___ = centre
-- The one thing Mai says she misses is a ___ = library
+::: task skill="listening" type="completion" ask="Choose what you hear for each gap."
+- On a Saturday Tom is asleep until ___ {nine | ten | half past five} = nine
+- In the village, Mai says, the noise is birds instead of ___ {traffic | people | space} = traffic
+- Tom's flat has no garden and not even a ___ {balcony | library | barn} = balcony
+- In the afternoon Tom meets his friends at the ___ {shopping centre | shop | dyke} = shopping centre
+- The one thing Mai says she misses is a ___ {library | garden | shop} = library
 :::
 
 ### Writing — A family member's free time

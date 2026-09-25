@@ -190,8 +190,7 @@ against *can't stand*, a comma the key has and the learner did not, *Thao* for
 Write distractors that are **wrong in that sentence**, not just different: a
 near-synonym that also fits (*relax* for *hang out with my cousins*, *I'd
 better not* for *I'd rather not*) marks a right answer wrong, which is the
-defect this replaced. `check_ielts.py` fails any typed item in a file listed in
-its `PICK_ONLY`; the list grows file by file as the book is converted.
+defect this replaced. `check_ielts.py` fails any typed item anywhere in `units/`.
 
 | Attribute | What it must be |
 | --- | --- |
@@ -213,7 +212,7 @@ failure. Each of these was a route around a rule, not a hypothetical:
 
 - A bracketed *part* of a word — `give(s) up`. The published legend makes whole
   **words** optional; write the alternates out, `give up/gives up`.
-- A typed item in a converted file (`PICK_ONLY` in `check_ielts.py`).
+- A typed item, anywhere.
 - A key that is not one of its item's choices, a tile sentence whose "wrong"
   words are not in the sentence, or a fix that is not among the replacements.
 - `words` on a task with nothing written in it.

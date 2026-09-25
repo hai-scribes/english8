@@ -1386,12 +1386,20 @@ async function main() {
      unit carries no text box at all, and each closed widget must mark the
      right answer right, the wrong one wrong, and come back after a reload. */
   {
-    for (let l = 1; l <= 7; l++) {
-      const w = await settled(load("docs/unit-01/lesson-" + l + "/index.html"));
+    /* Every page with marked tasks: twelve units of seven lessons, four Reviews. */
+    const pages = [];
+    for (let u = 1; u <= 12; u++)
+      for (let l = 1; l <= 7; l++) pages.push("docs/unit-" + String(u).padStart(2, "0") + "/lesson-" + l + "/index.html");
+    for (let r = 1; r <= 4; r++) pages.push("docs/review-" + r + "/index.html");
+    const withBoxes = [];
+    for (const pg of pages) {
+      const w = await settled(load(pg));
       const boxes = w.document.querySelectorAll('[data-role="task"] .i-in').length;
-      ok("picked: Unit 01 lesson " + l + " has no text box in any marked task", boxes === 0,
-         boxes + " found");
+      if (boxes) withBoxes.push(pg + " (" + boxes + ")");
+      w.close();
     }
+    ok("picked: no marked task on any of the " + pages.length + " pages has a text box",
+       withBoxes.length === 0, withBoxes.join(", "));
 
     const win = await settled(load("docs/unit-01/lesson-3/index.html"));
     const doc = win.document;

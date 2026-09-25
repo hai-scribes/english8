@@ -288,10 +288,6 @@ def check_bridge(where: str, a: dict, body: str, problems: list):
                         f"(or [SPEC] if untested), and the footer prints the marker (G2)")
 
 
-# The files whose every answer is picked. Grows file by file; never shrinks.
-PICK_ONLY = {"unit 01"}
-
-
 def check_task(where: str, a: dict, problems: list):
     """Group C, for one :::task.
 
@@ -336,11 +332,9 @@ def check_task(where: str, a: dict, problems: list):
     # Answers are picked, never typed (build.py, "answers are picked"). The
     # operator reversed C4/C5's written-completion rule on 2026-09-25: a typed
     # key is never a complete list of right answers, and the learner was being
-    # failed for right ones. PICK_ONLY is the progress marker for converting
-    # the book, the way check_level's --strict-through is: it names the files
-    # that are done, it only ever grows, and once it covers everything the
-    # word-limit branch below is dead and can go.
-    if typed and any(where.startswith(t + " ") for t in PICK_ONLY):
+    # failed for right ones. Every unit and Review was converted file by file
+    # under a growing allow-list; with all sixteen done, the rule is global.
+    if typed:
         problems.append(f"{where}: item(s) {typed} are typed — every answer here is "
                         f"picked, tapped or built. Give the item {{a | b | c}} choices, "
                         f"or the task a shared opts=")

@@ -25,23 +25,21 @@ and **/br/** against **/pr/**. The lines below are not grouped by pair.
 
 ### 1.2 Verb and noun
 
-::: task skill="course" type="choice" opts="baskets|bad spirits|a family recipe|the old customs|a visitor" ask="Each verb goes with exactly one of these five. Choose it."
+::: task skill="course" type="choice" opts="baskets|bad spirits|a family recipe|the rice cakes|a visitor" ask="Each verb goes with exactly one of these five. Choose it."
 - weave = baskets ~ you weave bamboo, cloth or a basket
 - chase away = bad spirits ~ what the drums and the lion dance are for
 - pass down = a family recipe ~ something handed from one generation to the next
-- preserve = the old customs ~ to keep something so it does not disappear
+- wrap = the rice cakes ~ cover something tightly in leaves before it goes in the pot
 - greet = a visitor ~ what you do when somebody arrives
 :::
 
 ### 1.3 One word missing
 
-The six words below come from Units 4, 5 and 6. Each goes in exactly one gap.
+The words come from Units 4, 5 and 6. Each goes in exactly one gap. One word is not needed.
 
-> **ethnic minority · lunar · sedentary · stilt house · superstition · well-being**
-
-::: task skill="course" type="gap-fill" ask="Write the missing word or phrase. Spelling counts."
+::: task skill="course" type="gap-fill" opts="ethnic minority|lunar|sedentary|stilt house|superstition|well-being|ornamental tree" ask="Choose the word or phrase that fits each gap."
 - Sitting in front of a screen all afternoon is a ___ way to live. = sedentary
-- The Ede are an ___ living mostly in Dak Lak province. = ethnic minority
+- The Ede, one ___ of the Central Highlands, live mostly in Dak Lak province. = ethnic minority
 - Not sweeping the floor on the first morning of Tet is a ___ , not a rule. = superstition
 - A ___ stands on wooden legs, so the floor stays dry when the river rises. = stilt house
 - Half an hour of walking every morning is good for your ___ . = well-being
@@ -50,12 +48,12 @@ The six words below come from Units 4, 5 and 6. Each goes in exactly one gap.
 
 ### 1.4 One word, three choices
 
-::: task skill="course" type="choice" ask="Choose the word that completes each sentence. Two of them are about articles, and one of the three choices there is **no article at all**."
-- ___ many ethnic groups live in the northern mountains? (a) How (b) What (c) Which = a ~ *How many* asks for a number
-- We saw ___ ornamental trees in front of almost every house. (a) a (b) the (c) no article = c ~ a plural noun used in general takes no article
-- ___ do people wear at a wedding ceremony in your village? (a) How (b) What (c) Where = b ~ the question asks for a thing, not a way or a place
-- I need ___ information about the festival before I go. (a) some (b) a few (c) many = a ~ *information* is uncountable, so *a few* and *many* cannot go with it
-- She plays ___ flute at the new-rice ceremony every year. (a) a (b) the (c) no article = b ~ a musical instrument played as an activity takes **the**
+::: task skill="course" type="choice" ask="Choose the word that completes each sentence. **—** means no word at all."
+- ___ ethnic groups live in the northern mountains? {How many | How much | How long} = How many ~ *How many* asks for a number
+- There is ___ ornamental tree beside almost every front door. {an | a | —} = an ~ *ornamental* begins with a vowel sound, so **an**
+- ___ do people wear at a wedding ceremony in your village? {What | How | Where} = What ~ the question asks for a thing, not a way or a place
+- We need ___ rice for the offering before Tet. {some | a few | many} = some ~ *rice* is uncountable, so *a few* and *many* cannot go with it
+- ___ oldest stilt house in the village is two hundred years old. {The | An | —} = The ~ a superlative takes **the**
 :::
 
 > ⚠️ **Bẫy thường gặp:** *informations* và *many information* đều sai.
@@ -64,12 +62,12 @@ The six words below come from Units 4, 5 and 6. Each goes in exactly one gap.
 
 ### 1.5 What will happen
 
-::: task skill="course" type="gap-fill" ask="Write the correct form of the verb in brackets. Every sentence is about the future — watch which half of it carries the *will*."
-- If it ___ (rain) tomorrow, the lion dance will move inside the communal house. = rains ~ after *if*, the present simple — never *will*
-- Unless you ___ (leave) now, you will miss the offering. = leave ~ *unless* already means *if… not*, so the verb stays positive
-- I think people ___ (live) in smaller families in fifty years' time. = will live/'ll live
-- If nobody writes the songs down, the next generation ___ (not know) them. = won't know/will not know
-- Unless the village ___ (teach) the craft to somebody, it will disappear. = teaches ~ *unless* takes the present simple too
+::: task skill="course" type="gap-fill" ask="Choose the correct form of the verb in brackets. Every sentence is about the future."
+- If it ___ (rain) tomorrow, the lion dance will move inside the communal house. {rains | will rain | rained} = rains ~ after *if*, the present simple — never *will*
+- Unless you ___ (leave) now, you will miss the offering. {leave | don't leave | will leave} = leave ~ *unless* already means *if… not*, so the verb stays positive
+- I think people ___ (live) in smaller families in fifty years' time. {will live | lived | live} = will live
+- If nobody writes the songs down, the next generation ___ (not know) them. {won't know | won't knows | didn't know} = won't know
+- Unless the village ___ (teach) the craft to somebody, it will disappear. {teaches | will teach | teach} = teaches ~ *unless* takes the present simple too
 :::
 
 ## Part 2 — Skills
@@ -126,28 +124,27 @@ The six words below come from Units 4, 5 and 6. Each goes in exactly one gap.
 
 ### 2.2 Answer from the text
 
-::: task skill="reading" type="short-answer" words="3" ask="Use the words that are already in the text. Do not rephrase them."
-- How far is Ban Lac from Ha Noi, in time? = three hours
-- Which ethnic group lives in the village? = (the) White Thai
-- How long does one scarf take to weave? = (about) three days
-- What does an elder burn before the new rice is eaten? = incense
-- Where are the people who buy what Mrs Ha's nieces make? = upstairs
+::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
+- How far is Ban Lac from Ha Noi, in time? {three hours | three days | thirty years} = three hours
+- How many ethnic groups are there in Viet Nam? {fifty-four | sixty-one | thirty} = fifty-four
+- How long does one scarf take to weave? {about three days | about three hours | about twenty years} = about three days
+- What does an elder burn before the new rice is eaten? {incense | the drums | a scarf} = incense
+- Where are the people who buy what Mrs Ha's nieces make? {upstairs | in Ha Noi | under the house} = upstairs
 :::
 
 ### 2.3 Find the word
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above covers this exercise too."
-- animals kept on a farm = livestock
-- something offered at a ceremony = offering
-- goes on existing instead of dying out = survives
-- machines used for weaving cloth = looms
-- the amount of time somebody spends looking at a phone or a computer = screen time
+- animals kept on a farm {livestock | tools | guests} = livestock
+- things a family gives to the ancestors or the gods at a ceremony {offering | custom | calendar} = offering
+- goes on existing instead of dying out {survives | belongs | holds} = survives
+- machines used for weaving cloth {looms | tools | drums} = looms
+- the amount of time somebody spends looking at a phone or a computer {screen time | signal | calendar} = screen time
 :::
 
 ### Speaking — One custom, two generations
 
-> **Working alone:** three steps, out loud. Producing the language is most of
-> the value; a listener is a bonus.
+> **Working alone:** three steps, out loud. A listener is welcome but not needed.
 
 **Step 1 — Prepare.** Choose one custom your family keeps: a festival day, a
 meal, a visit, a thing nobody is allowed to do. Make notes, not sentences.
@@ -199,12 +196,12 @@ than she minds the motorbike.
 
 ### 2.4 Complete the sentences
 
-::: task skill="listening" type="sentence-completion" words="1" ask="Write **ONE word** in each gap. Spelling counts here, as it does everywhere else in this course."
-- Phong's family belongs to the ___ ethnic group. = Tay
-- His grandmother still ___ , and she is teaching his sister. = weaves
-- His mother now orders rice and oil on her ___ . = phone
-- His father rides a ___ out to the fields. = motorbike
-- His brother now eats in front of a ___ . = screen
+::: task skill="listening" type="sentence-completion" ask="Choose the word you hear for each gap."
+- Phong's mother used to walk to the ___ every single morning. {market | fields | village} = market
+- His grandmother still ___ , and she is teaching his sister. {weaves | works | eats} = weaves
+- His mother now orders rice and oil on her ___ . {phone | van | motorbike} = phone
+- His father ___ a motorbike out to the fields. {rides | walks | comes} = rides
+- His ___ now eats in front of a screen. {brother | sister | father} = brother
 :::
 
 ### Writing — A custom, and a life that has changed around it

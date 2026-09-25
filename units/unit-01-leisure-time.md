@@ -149,8 +149,7 @@ Below them the water climbs one step of the wall, and slides back down.
 > luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
 > ngay, và mọi từ quay lại sau một tuần.
 >
-> Do the written exercises below as well — writing by hand and typing on a
-> screen build different halves of the same knowledge.
+> Do the exercises below as well — they put the words back inside sentences.
 
 ### Meet the words
 

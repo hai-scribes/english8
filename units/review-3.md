@@ -1,9 +1,7 @@
 # Review 3 — Units 7–9
 
 > **Ôn tập 3 — Bài 7, 8 và 9**
-> Three units, one page. The words come from the environment, from shopping
-> and from natural disasters, and they are deliberately not kept apart — a
-> flood happens in a market town like everything else.
+> Three units, one page: the environment, shopping and natural disasters, mixed together.
 
 ## Part 1 — Language
 
@@ -13,10 +11,10 @@ Two pairs of clusters have come up: **/bl/** against **/kl/**, and **/sp/**
 against **/st/**.
 
 ::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **cluster** the word begins with, not the meaning."
-- **bl**ue · **bl**ame · **cl**ean · **bl**anket = **cl**ean ~ *clean* begins /kl/; the other three begin /bl/
-- **st**ore · **sp**eaker · **st**orm · **st**all = **sp**eaker ~ *speaker* begins /sp/; the other three begin /st/
-- **cl**ear · **cl**ose · **bl**ow · **cl**imb = **bl**ow ~ *blow* begins /bl/; the other three begin /kl/
-- **sp**ecial · **sp**end · **st**ock · **sp**eciality = **st**ock ~ *stock* begins /st/; the other three begin /sp/
+- blue · blame · clean · blanket = clean ~ *clean* begins /kl/; the other three begin /bl/
+- store · speaker · storm · stall = speaker ~ *speaker* begins /sp/; the other three begin /st/
+- clear · close · blow · climb = blow ~ *blow* begins /bl/; the other three begin /kl/
+- special · spend · stock · speciality = stock ~ *stock* begins /st/; the other three begin /sp/
 :::
 
 > **Mẹo:** Đừng chèn thêm nguyên âm vào giữa hai phụ âm đầu. *Store* có một âm
@@ -24,8 +22,8 @@ against **/st/**.
 
 ### 1.2 Odd stress out
 
-::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **stress pattern**, not the meaning. Find the word each one is built from — that is where the stress usually stays."
-- humorous · numerous · tremendous · generous = tremendous ~ tre**men**dous takes the stress of *tre**mend***; the other three are stressed on the first syllable
+::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **stress pattern**, not the meaning."
+- humorous · numerous · tremendous · generous = tremendous ~ tre**men**dous is stressed on the second syllable; the other three are stressed on the first syllable
 - national · natural · arrival · typical = arrival ~ a**rri**val keeps the stress of *a**rrive***; the other three keep a first-syllable stem
 - festival · poisonous · ambitious · cultural = ambitious ~ am**bi**tious keeps the stress of *am**bi**tion*
 - practical · additional · tropical · musical = additional ~ a**ddi**tional keeps the stress of *a**ddi**tion*
@@ -33,11 +31,9 @@ against **/st/**.
 
 ### 1.3 One word missing
 
-The six words below come from Units 7, 8 and 9. Each goes in exactly one gap.
+The words below come from Units 7, 8 and 9. Two of them fit no gap.
 
-> **bargain · drought · evacuate · habitat · receipt · single-use**
-
-::: task skill="course" type="gap-fill" ask="Write the missing word or phrase. Spelling counts."
+::: task skill="course" type="gap-fill" opts="bargain|drought|evacuate|habitat|receipt|single-use|toxic|tornado" ask="Choose the word that fits each gap."
 - Take a cloth bag to the market and you will not need a ___ plastic one. = single-use
 - Cutting down the forest destroys the ___ of hundreds of species. = habitat
 - Keep the ___ — the shop will not give you a refund without it. = receipt
@@ -48,36 +44,36 @@ The six words below come from Units 7, 8 and 9. Each goes in exactly one gap.
 
 ### 1.4 One word, another form
 
-::: task skill="course" type="gap-fill" ask="Write the correct form of the word in brackets. The part of speech the gap needs is not always the one in the brackets."
-- **(destroy)** The storm was the most ___ one in ten years. = destructive
-- **(extinct)** Hunting pushed the rhino close to ___ . = extinction
-- **(addict)** A sale that never quite ends can be ___ . = addictive
-- **(instruct)** Follow the ___ printed on the back of the packet. = instructions
-- **(pollute)** Traffic is the main cause of air ___ in the city. = pollution
-- **(advantage)** The one ___ of buying online is that you cannot try anything on. = disadvantage
+::: task skill="course" type="gap-fill" ask="Choose the correct form of the word in brackets. The part of speech the gap needs is not always the one in the brackets, or the word may need a prefix."
+- **(destroy)** The storm was the most ___ one in ten years. {destructive | destruction | destroyed} = destructive
+- **(extinct)** Hunting has put the rhino in danger of ___ . {extinction | extinct | extinctions} = extinction
+- **(addict)** A sale that never quite ends can be ___ . {addictive | addicted | addiction} = addictive
+- **(instruct)** Follow the ___ printed on the back of the packet. {instructions | instructive | instructor} = instructions
+- **(pollute)** Traffic is the main cause of air ___ in the city. {pollution | polluted | polluting} = pollution
+- **(advantage)** The one ___ of buying online is that you cannot try anything on. {disadvantage | advantage | advantageous} = disadvantage
 :::
 
-> ⚠️ **Bẫy thường gặp:** *destroy* → *destruction* (danh từ) nhưng *destructive*
+> ⚠️ **Bẫy thường gặp:** *protect* → *protection* (danh từ) nhưng *protective*
 > (tính từ). Hãy đọc kỹ chỗ trống cần **từ loại** nào trước khi đổi đuôi.
 
 ### 1.5 Which tense?
 
-::: task skill="course" type="gap-fill" ask="Write the correct form of the verb in brackets. One of them is a timetable, so it is not in the past at all."
-- While we ___ (carry) the boxes upstairs, the water reached the gate. = were carrying
-- The market ___ (open) at five tomorrow morning, as it does every day. = opens ~ a fixed timetable takes the present simple, even about tomorrow
-- As soon as the warning ___ (arrive), the traders moved their stock upstairs. = arrived
-- I ___ (queue) at the till when the lights went out. = was queueing/was queuing ~ both spellings are accepted
-- The delivery ___ (come) on Friday, so somebody has to be at home. = comes
+::: task skill="course" type="gap-fill" ask="Choose the correct form of the verb in brackets."
+- While we ___ (carry) the boxes upstairs, the water reached the gate. {were carrying | was carrying | are carrying} = were carrying
+- The market ___ (open) at five tomorrow morning, as it does every day. {opens | open | opened} = opens ~ a fixed timetable takes the present simple, even about tomorrow
+- As soon as the flood warning ___ (arrive), my uncle moved the rice upstairs. {arrived | arrives | was arriving} = arrived
+- I ___ (queue) at the till when the lights went out. {was queuing | were queuing | am queuing} = was queuing
+- The delivery ___ (come) on Friday, so somebody has to be at home. {comes | come | came} = comes
 :::
 
 ### 1.6 When exactly?
 
-::: task skill="course" type="choice" ask="Choose the time word that makes the sentence true. Read the whole sentence first — the order of the two events is what decides it."
-- ___ the storm ended, the traders swept the mud out of their stalls. (a) Until (b) After (c) While = b ~ the sweeping comes second
-- Wait under the roof ___ the rain stops. (a) until (b) as soon as (c) before = a ~ *until* marks the end of the waiting
-- Check the price tag ___ you pay. (a) before (b) after (c) until = a ~ checking it afterwards is too late
-- The alarm rang ___ we were still asleep. (a) as soon as (b) while (c) until = b ~ two things at the same time
-- ___ I get the refund, I will buy a new one. (a) While (b) Until (c) As soon as = c ~ the buying happens the moment the refund arrives
+::: task skill="course" type="choice" ask="Choose the time word that fits each sentence."
+- ___ the storm ended, the traders swept the mud out of their stalls. {After | Until | While} = After ~ the sweeping comes second
+- Wait under the roof ___ the rain stops. {until | as soon as | before} = until ~ *until* marks the end of the waiting
+- Check the price tag ___ you pay. {before | after | until} = before ~ checking it afterwards is too late
+- The alarm rang ___ we were still asleep. {while | as soon as | until} = while ~ two things at the same time
+- ___ I get the refund, I will buy a new one. {As soon as | While | Until} = As soon as ~ the buying happens the moment the refund arrives
 :::
 
 ## Part 2 — Skills
@@ -133,22 +129,22 @@ The six words below come from Units 7, 8 and 9. Each goes in exactly one gap.
 
 ### 2.2 Answer from the text
 
-::: task skill="reading" type="short-answer" words="3+number" ask="Use the words that are already in the text. Do not rephrase them."
-- How many stalls were ruined? = sixty-two/62
-- How long did the rebuilding take? = eight months
-- How far up the slope did the market move? = forty metres/40 metres
-- How many cloth bags did each stall receive? = two hundred/200
-- What is the one thing you cannot bargain for? = rice
+::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
+- How many stalls were ruined? {sixty-two | eleven | ninety} = sixty-two
+- How long did the rebuilding take? {eight months | eleven hours | a week} = eight months
+- How far did the market move along the slope? {forty metres | a metre | ninety metres} = forty metres
+- How many cloth bags did each stall receive? {two hundred | sixty-two | forty} = two hundred
+- What is the one thing you cannot bargain for? {rice | cloth | dried fish} = rice
 :::
 
 ### 2.3 Find the word
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above covers this exercise too."
-- a message that something dangerous is coming = warning
-- the goods a shop or a stall has to sell = stock
-- fell down suddenly = collapsed
-- made to be thrown away after being used once = single-use
-- argue about a price until it comes down = bargain
+- a message that something dangerous is coming {warning | storm | damage} = warning
+- the goods a shop or a stall has to sell {stock | drains | platform} = stock
+- fell down suddenly {collapsed | ruined | moved} = collapsed
+- made to be thrown away after being used once {single-use | plastic | cloth} = single-use
+- argue about a price until it comes down {bargain | complain | vote} = bargain
 :::
 
 ### Speaking — Where you buy things, and what it costs
@@ -180,10 +176,10 @@ arrives*, *as soon as the market opens*.
 
 ### Listening — What is actually in the air
 
-You get **one** play. Read the five gaps first, then fill them in while you
-listen rather than afterwards from memory.
+You get **one** play. Read the five gaps first, then choose while you listen
+rather than afterwards from memory.
 
-**Nghe một lần duy nhất.** Đọc năm câu hỏi trước, rồi vừa nghe vừa điền.
+**Nghe một lần duy nhất.** Đọc năm câu hỏi trước, rồi vừa nghe vừa chọn.
 
 ::: audio orientation="You will hear a speaker at a school assembly explaining what makes the air in the city dirty, who it harms most, and one thing about it that surprises people." mode="computer" preview="30" review="120"
 Good morning. I want to talk about the air in this city, and about one thing
@@ -211,12 +207,12 @@ in the yard on a Sunday.
 
 ### 2.4 Fill in the gaps
 
-::: task skill="listening" type="completion" words="2" ask="Write **NO MORE THAN TWO WORDS** in each gap. Spelling counts here, as it does everywhere else in this course."
-- The largest single source is ___ from cars and motorbikes = exhaust fumes
-- A great deal of the dust comes off the cement and sand at ___ = building sites
-- Burning rubbish in a yard is ___ , and also extremely common = illegal
-- The gases are especially harmful for ___ , whose lungs are still growing = children
-- Less of today's pollution comes from ___ than in the past = factories
+::: task skill="listening" type="completion" ask="Choose what the speaker says for each gap."
+- The largest single source is ___ from cars and motorbikes {exhaust fumes | dust | rubbish} = exhaust fumes
+- A great deal of what we breathe comes from ___ {building sites | factories | the main road} = building sites
+- Burning rubbish in a yard is ___ , and also extremely common {illegal | surprising | not wrong} = illegal
+- The gases are especially harmful for ___ {children | adults | doctors} = children
+- Less of today's pollution comes from ___ than in the past {factories | traffic | building sites} = factories
 :::
 
 ### Writing — Where your family shops, and why

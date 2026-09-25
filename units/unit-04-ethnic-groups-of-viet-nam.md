@@ -1,9 +1,9 @@
 # Unit 4 — Ethnic Groups of Viet Nam
 
 > **Bài 4 — Các dân tộc Việt Nam**
-> Self-study pack. Work through Lessons 1–7 in order. Answers to every
-> exercise are in the [Answer Key](#answer-key) at the end — do the exercise
-> first, then check.
+> Self-study pack. Work through Lessons 1–7 in order. The marked exercises
+> check themselves; for the open ones, the [Answer Key](#answer-key) at the end
+> says what to look for — do the exercise first, then check.
 
 ## What this unit teaches
 
@@ -53,37 +53,37 @@
 
 ### 1.1 Comprehension
 
-::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
-- Tí's first attempt is turned down before it is finished. What one word had he said? = hello
-- On which day was the class given the ten-question task? = Friday/on Friday
-- Thảo's invented character admits she cannot do her own craft yet, and names what she is short of. What is it? = patience
-- Thảo picks that river for a private reason, not a school one. Which classmate is it about? = Minh/Minh's/Minh's family
-- Tí is afraid of coming home with nothing. How many answers does Thảo point out he has at this moment? = none/no answers/zero
+::: task skill="course" type="short-answer" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- Tí's first attempt is turned down before it is finished. What one word had he said? {Hello | Begin | Careful} = Hello
+- On which day was the class given the ten-question task? {Friday | Saturday | Sunday} = Friday
+- Thảo's invented character admits she cannot do her own craft yet, and names what she is short of. What is it? {patience | rice | bamboo} = patience
+- Thảo picks that river for a private reason, not a school one. Which classmate is it about? {Minh | Tí | Cô Yến} = Minh
+- Tí is afraid of coming home with nothing. How many answers does Thảo point out he has at this moment? {none | ten | one} = none
 :::
 
 ### 1.2 Find the phrase
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
-- a house built above the ground on tall wooden legs = stilt house
-- flat steps of land cut into a hillside for growing rice = terraced fields
-- traditional songs passed down among a people = folk songs
-- make baskets or cloth by crossing strips or threads = weave
+- a house built above the ground on tall wooden legs {stilt house | staircase | terraced fields} = stilt house
+- flat steps of land cut into a hillside for growing rice {terraced fields | hillside | staircase} = terraced fields
+- traditional songs passed down among a people {folk songs | baskets | questions} = folk songs
+- make baskets or cloth by crossing strips or threads {weave | grow | cook} = weave
 :::
 
 ### 1.3 Notice the grammar
 
 **A.** What kind of question is each one from the dialogue?
 
-::: task skill="course" type="choice" opts="Yes/No|Wh-|Subject" ask="Yes/No, Wh-, or Subject?"
-- **Do** they live there all year? = Yes/No
-- **Where** does your family live? = Wh-
-- **Who** looks after the house now? = Subject ~ *who* is the subject, so there is no *does*
-- **Can** you weave? = Yes/No
+::: task skill="course" type="choice" opts="Yes/No|Wh- (with do/does)|Wh- (no do/does)" ask="Yes/No, or which kind of Wh-?"
+- Do they live there all year? = Yes/No
+- Where does your family live? = Wh- (with do/does)
+- Who looks after the house now? = Wh- (no do/does) ~ *who* is the subject, so there is no *does*
+- Can you weave? = Yes/No
 :::
 
 **B.** And the nouns in **bold**:
 
-::: task skill="course" type="choice" opts="countable|uncountable" ask="Countable or uncountable? The question word in front of it is the clue."
+::: task skill="course" type="choice" opts="countable|uncountable" ask="Countable or uncountable?"
 - How many **rooms** does it have? = countable ~ *how many* goes with countable nouns
 - How much **rice** does your family grow? = uncountable ~ *how much* goes with uncountable nouns
 :::
@@ -148,8 +148,7 @@
 > luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
 > ngay, và mọi từ quay lại sau một tuần.
 >
-> Do the written exercises below as well — writing by hand and typing on a
-> screen build different halves of the same knowledge.
+> Do the exercises below as well — they put the words back inside sentences.
 
 ### Meet the words
 
@@ -161,14 +160,14 @@ them: a few at a time, then answer on the few you have just met.
 
 ### 2.1 Complete the sentences
 
-::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
-- Viet Nam has 54 ethnic groups, so its culture is very ___ . = diverse
-- My grandmother ___ baskets from strips of bamboo. = weaves
-- My grandmother weaves baskets from strips of ___ . = bamboo
-- The Kinh are the ___ ; the other 53 groups are ethnic minorities. = majority
-- At the festival, everyone wears a ___ costume. = traditional
-- Rice grows on ___ cut into the hillside. = terraced fields
-- Old songs, old houses and old crafts are all part of our ___ . = heritage
+::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
+- Viet Nam has 54 ethnic groups, so its culture is very ___ . {diverse | traditional | simple} = diverse
+- My grandmother ___ baskets and sells them at the market. {weaves | raises | grows} = weaves
+- The walls are made of ___ , cut from the tall green plants behind the village. {bamboo | soil | livestock} = bamboo
+- The Kinh are the ___ ; the other 53 groups are ethnic minorities. {majority | ethnic minority | custom} = majority
+- At the festival, everyone wears a ___ costume. {traditional | diverse | musical} = traditional
+- Rice grows on ___ cut into the hillside. {terraced fields | stilt houses | caves} = terraced fields
+- Old songs, old houses and old crafts are all part of our ___ . {heritage | majority | livestock} = heritage
 :::
 
 ### 2.2 Odd one out
@@ -181,20 +180,20 @@ them: a few at a time, then answer on the few you have just met.
 
 ### 2.3 A day in the village
 
-::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
-- The whole village meets in the ___ when there is a decision to make. = communal house
-- My uncle keeps buffaloes, goats and pigs, so looking after the ___ takes all day. = livestock
-- Most families here ___ chickens and pigs behind the house. = raise
-- The ___ on the hillside is thin, so every crop needs care. = soil
-- My grandmother spends the whole morning ___ — watering, weeding and cutting back. = gardening
-- Their house ___ the terraced fields, so you see the valley from the door. = overlooks
-- In the middle of the kitchen there is an ___ and the family sits around it. = open fire
-- The Jrai carve a wooden ___ for each grave. = statue
-- He cut a ___ from a piece of bamboo and played us a tune on it. = flute
-- The gong and the đàn tính are both a kind of ___ . = musical instrument
-- At the festival the whole village joins in a ___ . = folk dance
-- We ate ___ that had been dyed five colours with leaves and roots. = sticky rice
-- The tall roof is the first ___ you notice about a Rong house. = feature
+::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
+- The whole village meets in the ___ when there is a decision to make. {communal house | open fire | cave} = communal house
+- My uncle keeps buffaloes, goats and pigs, so looking after the ___ takes all day. {livestock | gardening | heritage} = livestock
+- Most families here ___ chickens and pigs behind the house. {raise | weave | overlook} = raise
+- The ___ on the hillside is thin, so every crop needs care. {soil | bamboo | gardening} = soil
+- My grandmother spends the whole morning ___ — watering, weeding and cutting back. {gardening | weaving | overlooking} = gardening
+- Their house ___ the terraced fields, so you see the valley from the door. {overlooks | raises | weaves} = overlooks
+- In the middle of the kitchen there is ___ and the family sits around it. {an open fire | a flute | a terraced field} = an open fire
+- The Jrai carve a wooden ___ for each grave. {statue | costume | basket} = statue
+- He cut a ___ from a piece of bamboo and played us a tune on it. {flute | gong | basket} = flute
+- The gong and the đàn tính are both a kind of ___ . {musical instrument | folk dance | folk song} = musical instrument
+- At the festival the whole village joins in a ___ . {folk dance | statue | stilt house} = folk dance
+- We ate ___ dyed five colours with leaves and roots. {sticky rice | bamboo | soil} = sticky rice
+- The tall roof is the first ___ you notice about a Rong house. {feature | statue | custom} = feature
 :::
 
 ### 2.4 Which word?
@@ -410,37 +409,37 @@ To count an uncountable noun, put a **unit** in front of it:
 
 ### 3.2 Make the question
 
-::: task skill="course" type="short-answer" variant="sentence-build" ask="Here the words you are given are a statement. Turn it into the question that the **bold** part answers, and write the whole question. Two of them are subject questions, so watch what happens to *do/does/did*."
-- **The Tay** live in the northern mountains. = Who lives in the northern mountains? ~ *who* is the subject here, so no *do* — and the verb takes **-s**
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Here the words you are given are a statement. Build the question that the **bold** part answers."
+- **The Tay** live in the northern mountains. {do | living} = Who lives in the northern mountains? ~ *who* is the subject here, so no *do* — and the verb takes **-s**
 - She weaves baskets **in the evening**. = When does she weave baskets? / What time does she weave baskets?
-- There are **five** people in his family. = How many people are there in his family?
-- They build houses on stilts **because the floor stays dry**. = Why do they build houses on stilts?
-- **My mother** makes our festival costumes. = Who makes your festival costumes? / Who makes our festival costumes? ~ another subject question: no *does*, and *makes* keeps its **-s**
+- There are **five** people in his family. {much | is} = How many people are there in his family?/How many people are in his family?
+- They build houses on stilts **because the floor stays dry**. {does | built} = Why do they build houses on stilts?
+- **My mother** makes our festival costumes. {do | make} = Who makes your festival costumes? / Who makes our festival costumes? ~ another subject question: no *does*, and *makes* keeps its **-s**
 - We stayed in the village **for a week**. = How long did you stay in the village? / How long did we stay in the village? ~ after *did*, the main verb goes back to *stay*
 :::
 
 ### 3.3 Countable or uncountable?
 
-::: task skill="course" type="choice" ask="Choose the correct word. Write it out in full."
-- How **(many / much)** rice does your family eat in a week? = much
-- My grandmother gave me a good **(advice / piece of advice)**. = piece of advice
-- There aren't **(many / much)** stilt houses left in this village. = many
-- I found **(a / some)** information about the Dao on the museum website. = some
-- She wears **(a / some)** beautiful silver jewellery at Tet. = some
-- We didn't take **(much / any)** photos inside the cave. = any
-- How **(many / much)** folk songs do you know? = many
-- They brought **(a bowl of / a bowl)** rice and some vegetables. = a bowl of
+::: task skill="course" type="choice" ask="Choose the correct word or words."
+- How ___ rice does your family eat in a week? {much | many} = much
+- My grandmother gave me a good ___ . {piece of advice | advice | advices} = piece of advice
+- There aren't ___ stilt houses left in this village. {many | much} = many
+- I found ___ information about the Dao on the museum website. {some | a | many} = some
+- She wears ___ beautiful silver jewellery at Tet. {some | a | many} = some
+- We didn't take ___ photos inside the cave. {any | much} = any
+- How ___ folk songs do you know? {many | much} = many
+- They brought ___ rice and some vegetables. {a bowl of | a bowl | a} = a bowl of
 :::
 
 ### 3.4 Correct the mistake
 
-::: task skill="course" type="short-answer" variant="error-correction" ask="The mistake is always in the **question form** or in the **countable/uncountable** word."
-- Where your grandparents live? = do your grandparents live/do ~ a Wh- question needs an operator before the subject
-- Does she weaves baskets every day? = weave ~ after *does*, the main verb goes back to its base form
-- Who does live in the stilt house now? = who lives/lives ~ *who* is the subject here, so there is no *does*
-- How much rooms are there in the house? = how many/many ~ *rooms* can be counted
-- He gave me many useful informations about the festival. = much useful information/a lot of useful information/some useful information/much information ~ *information* is uncountable and has no plural
-- Did you visited the terraced fields last summer? = visit ~ after *did*, the main verb goes back to its base form
+::: task skill="course" type="short-answer" variant="error-correction"
+- Where your grandparents live? {Where do your | Where does your | Where are your} = Where your -> Where do your ~ a Wh- question needs an operator before the subject
+- Does she weaves baskets every day? {weave | weaving | wove} = weaves -> weave ~ after *does*, the main verb goes back to its base form
+- Who did built the stilt house? {built | build | building} = did built -> built ~ *who* is the subject here, so there is no *did*
+- How much rooms are there in the house? {many | a lot of | some} = much -> many ~ *rooms* can be counted
+- She wears a lot of silver jewelleries at Tet. {jewellery | jewel | a jewellery} = jewelleries -> jewellery ~ *jewellery* is uncountable and has no plural
+- Did you visited the terraced fields last summer? {visit | visiting | visits} = visited -> visit ~ after *did*, the main verb goes back to its base form
 :::
 
 ### 3.5 About you
@@ -527,12 +526,12 @@ opinion with a flat *no*. They agree with a part of it first, then turn:
 
 ### 4.1 Complete the mini-dialogues
 
-::: task skill="course" type="gap-fill" ask="**A** is interviewing **B** about her village. Every answer is a word from the tables above."
-- **A:** Could you tell me where your village ___ (be)? = is
-- **B:** Sure, ___ ahead — it's in Ha Giang, near the border. = go
-- **A:** Do you ___ if I ask how many people live in your house? = mind
-- **A:** I was ___ how your grandmother makes the dye for the cloth. = wondering
-- **A:** Really? That's ___ . = fascinating/interesting/unique
+::: task skill="course" type="gap-fill" ask="**A** is interviewing **B** about her village. Choose what fits."
+- **A:** Where ___ ? {is your village | your village is | does your village be} = is your village
+- **B:** Sure, ___ ahead — it's in Ha Giang, near the border. {go | get | look} = go
+- **A:** Do you ___ if I ask how many people live in your house? {mind | think | wonder} = mind
+- **A:** I was ___ how your grandmother makes the dye for the cloth. {wondering | minding | telling} = wondering
+- **B:** She boils the leaves of one tree for two whole days. **A:** Really? That's ___ . {fascinating | a pity | too bad} = fascinating
 :::
 
 ### 4.2 Write your own
@@ -548,14 +547,14 @@ question, and one beginning *Could you tell me…*.
 
 ### 4.3 Say what you think
 
-::: task skill="course" type="gap-fill" ask="Fill each gap so that the line means what the Vietnamese in brackets says. One word is enough everywhere."
-- What do you ___ about living close to nature? *(Bạn nghĩ sao về…?)* = think
-- ___ about you? What do you think? *(Còn bạn thì sao?)* = What
-- ___ my opinion, a stilt house is cooler than a brick one. *(Theo ý mình…)* = In
-- To my ___ of thinking, every school should teach a folk dance. *(Theo cách nghĩ của mình…)* = way
-- I ___ think the gong is hard to play. *(Mình không nghĩ là…)* = don't/do not
-- I see ___ you mean, but the path is dangerous in the rain. *(Mình hiểu ý bạn, nhưng…)* = what
-- I'm not ___ about that — the roof leaked all last summer. *(Mình không chắc lắm.)* = sure
+::: task skill="course" type="gap-fill" ask="Choose the word that makes each line mean what the Vietnamese in brackets says."
+- What do you ___ about living close to nature? *(Bạn nghĩ sao về…?)* {think | agree | mind} = think
+- ___ about you? What do you think? *(Còn bạn thì sao?)* {What | Who | Where} = What
+- ___ my opinion, a stilt house is cooler than a brick one. *(Theo ý mình…)* {In | On | For} = In
+- To my ___ of thinking, every school should teach a folk dance. *(Theo cách nghĩ của mình…)* {way | mind | kind} = way
+- I ___ think the gong is hard to play. *(Mình không nghĩ là…)* {don't | not | doesn't} = don't
+- I see ___ you mean, but the path is dangerous in the rain. *(Mình hiểu ý bạn, nhưng…)* {what | that | which} = what
+- I'm not ___ about that — the roof leaked all last summer. *(Mình không chắc lắm.)* {sure | agree | true} = sure
 :::
 
 ### 4.4 Three opinions of your own
@@ -604,15 +603,15 @@ decoration — they were, and in places still are, working animals.
 ### 4.5 How much do you know?
 
 ::: task skill="course" type="choice" ask="Pick the right answer. Everything you need is in the two texts above."
-- There are ___ ethnic groups in Viet Nam. (a) 63 (b) 45 (c) 54 = c
-- Ethnic minority groups make up about ___ of the population. (a) 7% (b) 13% (c) 25% = b
-- They live mainly ___ . (a) in the lowlands (b) in the mountains (c) in the Mekong Delta = b
-- In 2019 the Jrai numbered about ___ . (a) 51,000 (b) 513,930 (c) 5,130,000 = b
-- Most Jrai people live in ___ . (a) Gia Lai (b) Cao Bang (c) Ninh Thuan = a
-- A Jrai family lives in a ___ . (a) brick flat (b) stilt house (c) cave = b
-- Coffee, cacao and rubber are ___ the Jrai plant. (a) industrial trees (b) food crops (c) flowers = a
-- The two large animals the Jrai raise are buffaloes and ___ . (a) horses (b) sheep (c) elephants = c
-- In a Jrai family the dominant role belongs to the ___ . (a) women (b) eldest son (c) village head = a
+- There are ___ ethnic groups in Viet Nam. {54 | 63 | 45} = 54
+- Ethnic minority groups make up about ___ of the population. {13% | 7% | 25%} = 13%
+- They live mainly ___ . {in the mountains | in the lowlands | in the Mekong Delta} = in the mountains
+- In 2019 the Jrai numbered about ___ . {513,930 | 51,000 | 5,130,000} = 513,930
+- Most Jrai people live in ___ . {Gia Lai | Cao Bang | Ninh Thuan} = Gia Lai
+- A Jrai family lives in a ___ . {stilt house | brick flat | cave} = stilt house
+- Coffee, cacao and rubber are ___ the Jrai plant. {industrial trees | food crops | flowers} = industrial trees
+- The two large animals the Jrai raise are buffaloes and ___ . {elephants | horses | sheep} = elephants
+- In a Jrai family the dominant role belongs to the ___ . {women | eldest son | village head} = women
 :::
 
 ### 4.6 What interests you?
@@ -678,29 +677,29 @@ tables above.
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you already know about ethnic groups is exactly the pull this type is built to catch."
 - There are 54 ethnic groups in Viet Nam. = T
 - The Kinh are one of the ethnic minorities. = F ~ the Kinh are the majority
-- The house on the path was built of brick and concrete. = F ~ it was built of wood and bamboo; brick and concrete are the new houses down in Bãi Sẻ
-- A stilt house is cooler because air moves under the floor. = T
+- The house on the path was built of brick and concrete. = F ~ the text names other materials for this house; brick and concrete belong to somewhere else
+- Cool air moved under the house while the writer stood in the sun. = T
 - The family who lived in the house grew rice. = NG ~ the writer asks how much rice they grew, and the text never answers
 - The writer's own family lives in a stilt house. = NG ~ the text never says what kind of home the writer lives in
 :::
 
 ### 5.2 Answer the questions
 
-::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- What are the 53 groups other than the Kinh called? = (ethnic) minorities
-- In which season does the floor of a stilt house stay dry? = (the) rainy season
-- Which two materials was the house built of? = wood and bamboo
-- What do you climb to reach the door? = (a) wooden staircase
-- Which two materials do the new houses in Bãi Sẻ go up in? = brick and concrete
+::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
+- What are the 53 groups other than the Kinh called? {ethnic minorities | the majority | heritage} = ethnic minorities
+- Besides animals, what had people kept underneath the house? {tools and firewood | baskets and a gong | rice and water} = tools and firewood
+- Which two materials was the house built of? {wood and bamboo | brick and concrete | wood and brick} = wood and bamboo
+- What do you climb to reach the door? {a wooden staircase | a bamboo ladder | the tall wooden legs} = a wooden staircase
+- Which two materials do the new houses in Bãi Sẻ go up in? {brick and concrete | wood and bamboo | wood and concrete} = brick and concrete
 :::
 
 ### 5.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- the larger part of a population = majority
-- a set of steps between floors = staircase
-- repair something old and bring it back to its former state = restore
-- traditions and objects passed down from earlier generations = heritage
+- the larger part of a population {majority | minorities | ethnic groups} = majority
+- a set of steps between floors {staircase | legs | bank} = staircase
+- repair something old and bring it back to its former state {restore | choose | turn} = restore
+- traditions and objects passed down from earlier generations {heritage | firewood | tools} = heritage
 :::
 
 ::: bridge name="Synonym search against the clock" trains="Reading" cefr="B1" marker="[T2]" src="04 §8.3"
@@ -815,20 +814,20 @@ it since before I was born, and nobody left can tell you what it was for.
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- She learned the names of the families from (a) a school book (b) her mother (c) the people at the ford = b
-- Above the ford there stood (a) nine houses (b) three houses (c) eleven houses = a
-- She says the number of baskets is wrong for a household of (a) two (b) ten or eleven (c) thirty = b
-- Families along that stretch of the river grew rice (a) to sell at the market (b) for the year and no more (c) only in a bad year = b
-- She believes the house the boy describes (a) burned down (b) belonged to her mother (c) was never one of the nine = c
+- She learned the names of the families from {her mother | the people at the ford | the festival} = her mother
+- Above the ford there stood {nine houses | three houses | eleven houses} = nine houses
+- She says the number of baskets is wrong for a household of {ten or eleven | three | nine} = ten or eleven
+- Families along that stretch of the river grew rice {for the year and no more | to sell at the market | only in a bad year} = for the year and no more
+- She believes the house the boy describes {was never one of the nine | burned down | belonged to her mother} = was never one of the nine
 :::
 
 ### 6.2 Listen and complete
 
-::: task skill="listening" type="sentence-completion" words="2+number"
-- She heard the names until she could say them in her ___ . = sleep
-- A family with rice to ___ is not one her mother knew. = spare
-- Nobody has held the festival since before she was ___ . = born
-- The festival was held in the ___ month of the year. = ninth/9th
+::: task skill="listening" type="sentence-completion"
+- She heard the names until she could say them in her ___ . {sleep | time | year} = sleep
+- A family with rice to ___ is not one her mother knew. {spare | eat | grow} = spare
+- Nobody has held the festival since before she was ___ . {born | deaf} = born
+- The festival was held in the ___ month of the year. {ninth | third | eleventh} = ninth
 :::
 
 ### Writing — A paragraph about what you do for your family
@@ -890,15 +889,15 @@ settles a dozen small choices at once.
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
-- The Kinh are the ___ ; the other 53 groups are ethnic minorities. *(m…)* = majority
-- The Kinh are the majority; the other 53 groups are ethnic ___ . *(m…)* = minorities
-- My grandmother ___ baskets from bamboo. *(w…)* = weaves
-- My grandmother weaves baskets from ___ . *(b…)* = bamboo
-- Rice grows on ___ cut into the hillside. *(t f…)* = terraced fields
-- At the festival the dancers wear traditional ___ . *(c…)* = costumes
-- The old songs and old houses are part of our ___ . *(h…)* = heritage
-- They live in a wooden ___ above the ground. *(s h…)* = stilt house
+::: task skill="course" type="gap-fill" ask="Complete with a word from this unit."
+- Most people in Viet Nam are Kinh, so the Kinh are the ___ . {majority | minority | heritage} = majority
+- Fifty-three of Viet Nam's groups are ethnic ___ . {minorities | majorities | costumes} = minorities
+- My grandmother ___ baskets in the evening. {weaves | raises | overlooks} = weaves
+- The stilt house in the Lesson 1 dialogue is made of wood and ___ . {bamboo | heritage | soil} = bamboo
+- Rice grows on ___ cut into the hillside. {terraced fields | stilt houses | communal houses} = terraced fields
+- At the festival the dancers wear traditional ___ . {costumes | customs | rituals} = costumes
+- The old songs and old houses are part of our ___ . {heritage | majority | livestock} = heritage
+- They live in a wooden ___ above the ground. {stilt house | cave | terraced field} = stilt house
 :::
 
 ### 7.2 Pronunciation check
@@ -914,28 +913,28 @@ settles a dozen small choices at once.
 
 ### 7.3 Grammar check
 
-**A.** Write the question.
+**A.** Build the question.
 
-::: task skill="course" type="short-answer" ask="You are given the answer. Write the question that would get it, and write the whole question. The note in brackets tells you what to ask about."
-- The answer is *Yes, they live in a stilt house.* — ask a **Yes/No** question. = Do they live in a stilt house
-- The answer is *My uncle repairs the roof.* — ask about **the person who does it**. = Who repairs the roof
-- The answer is *There are seven people in my family.* — ask about **the number**. = How many people are there in your family/How many people are in your family
-- The answer is *Because the floor stays dry in the rainy season.* — ask **why**, and begin *Why do they build…* = Why do they build houses on stilts/Why do they build their houses on stilts/Why do they build stilt houses
+::: task skill="course" type="short-answer" variant="sentence-build" ask="You are given the answer. Build the question that would get it. The note after the answer tells you what to ask about."
+- *Yes, they live in a stilt house.* — ask a **Yes/No** question {Does | Are} = Do they live in a stilt house?
+- *My uncle repairs the roof.* — ask about **the person who does it** {do | repair} = Who repairs the roof?
+- *There are seven people in my family.* — ask about **the number** {much | is} = How many people are there in your family?/How many people are in your family?
+- *Because the floor stays dry in the rainy season.* — ask about **the reason** they build houses on stilts {does | building} = Why do they build houses on stilts?
 :::
 
 **B.** Choose the correct word.
 
-::: task skill="course" type="choice" ask="Countable or uncountable — that is what decides every one of these."
-- We don't have ___ information about that group. (a) many (b) much = b
-- How ___ ethnic groups are there in Viet Nam? (a) many (b) much = a
-- She gave me ___ about weaving. (a) an advice (b) some advice = b
-- Would you like ___ rice? (a) a bowl of (b) a bowl = a
+::: task skill="course" type="choice" ask="Choose the correct word or words."
+- We don't have ___ information about that group. {much | many} = much
+- How ___ ethnic groups are there in Viet Nam? {many | much} = many
+- She gave me ___ about weaving. {some advice | an advice | some advices} = some advice
+- Would you like ___ rice? {a bowl of | a bowl | a} = a bowl of
 :::
 
 ### 7.4 Error hunt
 
-Find and correct **five** errors in this paragraph. Two are about question
-forms; three are about countable and uncountable nouns.
+This paragraph has **five** mistakes. Below, it comes one line at a time: tap
+each mistake, then choose the fix.
 
 > The house came back on Saturday, two hours up the river. How many rooms it
 > has? One! Somebody had cooked many rice on the open fire in the middle of it,
@@ -943,12 +942,12 @@ forms; three are about countable and uncountable nouns.
 > remember them?" He gave me a lot of informations about the old villages, and
 > an advice: ask the oldest person first.
 
-::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
-- Error 1 = how many rooms does it have ~ a question needs *does* + the bare verb
-- Error 2 = a lot of rice/much rice ~ *rice* is uncountable — not *many*
-- Error 3 = can you remember them ~ *can* is already the auxiliary — no *do*
-- Error 4 = a lot of information ~ *information* is uncountable — no plural *-s*
-- Error 5 = some advice/a piece of advice ~ *advice* is uncountable — no *an*
+::: task skill="course" type="short-answer" variant="error-correction" ask="Each line is part of the paragraph, with the earlier mistakes already put right."
+- How many rooms it has? One! {does it have | it does have | does it has} = it has -> does it have ~ a question needs *does* + the bare verb
+- Somebody had cooked many rice on the open fire in the middle of it. {a lot of | a | several} = many -> a lot of ~ *rice* is uncountable — not *many*
+- I asked Chú Bảy, "Do you can remember them?" {Can you | Do can you | Can do you} = Do you can -> Can you ~ *can* is already the auxiliary — no *do*
+- He gave me a lot of informations about the old villages. {information | informative | an information} = informations -> information ~ *information* is uncountable — no plural *-s*
+- And he gave me an advice: ask the oldest person first. {some advice | an advices | many advice} = an advice -> some advice ~ *advice* is uncountable — no *an*
 :::
 
 ### Project — A village fact file

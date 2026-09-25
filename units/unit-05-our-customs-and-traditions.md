@@ -1,9 +1,8 @@
 # Unit 5 — Our Customs and Traditions
 
 > **Bài 5 — Phong tục và truyền thống của chúng ta**
-> Self-study pack. Work through Lessons 1–7 in order. Answers to every
-> exercise are in the [Answer Key](#answer-key) at the end — do the exercise
-> first, then check.
+> Self-study pack. Work through Lessons 1–7 in order. Marked exercises check
+> themselves; the [Answer Key](#answer-key) at the end covers the open ones.
 
 ## What this unit teaches
 
@@ -50,30 +49,30 @@
 
 ### 1.1 Comprehension
 
-::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
-- Tí walks in and asks about something spread over the whole table. What is it? = banana leaves
-- Tí says a house upriver has stopped keeping a festival. Bà Sáu answers that it was never theirs to stop. Which month is that festival in? = the ninth/ninth/the ninth month/ninth month
-- Bà Sáu is not satisfied with Tí's cakes, and names one relative who did the job better. Which relative? = great-grandmother/his great-grandmother/your great-grandmother/my great-grandmother
-- Tí is afraid he will bow the wrong way. What does Bà Sáu tell him to do? = copy me/copy her/copy
-- Which animal gives tomorrow's festival its name? = whale/the whale
+::: task skill="course" type="short-answer" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- Tí walks in and asks about something spread over the whole table. What is it? {banana leaves | incense | a drum} = banana leaves
+- Tí says a house upriver has stopped keeping a festival. Bà Sáu answers that it was never theirs to stop. Which month is that festival in? {the ninth month | the second month | the first month} = the ninth month
+- Bà Sáu is not satisfied with Tí's cakes, and names one relative who did the job better. Which relative? {his great-grandmother | his grandmother | his mother} = his great-grandmother
+- Tí is afraid he will bow the wrong way. What does Bà Sáu tell him to do? {copy her | light the first stick | wear a hat} = copy her
+- Which animal gives tomorrow's festival its name? {whale | carp | lion} = whale
 :::
 
 ### 1.2 Find the phrase
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
-- things you place on an altar for spirits or ancestors = offerings
-- cover something completely in paper, leaves or cloth = wrap
-- object to something; find it unacceptable = mind
-- look at something with your own eyes = see for yourself
+- things you place on an altar for spirits or ancestors {offerings | customs | games} = offerings
+- cover something completely in paper, leaves or cloth {wrap | copy | bow} = wrap
+- object to something; find it unacceptable {mind | keep | copy} = mind
+- look at something with your own eyes {see for yourself | copy me | keep doing it} = see for yourself
 :::
 
 ### 1.3 Notice the grammar
 
-::: task skill="course" type="choice" opts="a|an|the|—" ask="Each sentence comes from the dialogue, but the little word before the noun is missing. Pick **a**, **an**, **the**, or **—** if no word is needed."
-- We opened it with ___ drum you could hear from the water. = a
+::: task skill="course" type="choice" opts="a|an|the|—" ask="Each sentence comes from the dialogue, but the little word before the noun is missing. Go back to the dialogue, find the sentence, and pick the word it uses: **a**, **an**, **the**, or **—** if there is no word."
+- Your great-grandmother could wrap forty before ___ breakfast. = — ~ meals take no article
 - There used to be ___ hour of games. = an
 - ___ oldest person lights the first stick. = the
-- ___ Customs don't die by themselves. = — ~ plural, general meaning — no article
+- ___ customs don't die by themselves. = — ~ plural, general meaning — no article
 - We opened it in ___ second lunar month. = the
 :::
 
@@ -149,8 +148,7 @@
 > luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
 > ngay, và mọi từ quay lại sau một tuần.
 >
-> Do the written exercises below as well — writing by hand and typing on a
-> screen build different halves of the same knowledge.
+> Do the exercises below as well — they put the words back inside sentences.
 
 ### Meet the words
 
@@ -162,13 +160,13 @@ them: a few at a time, then answer on the few you have just met.
 
 ### 2.1 Complete the sentences
 
-::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
-- On the morning of the first day, the ___ brings luck into the house. = first-footer
-- My grandmother burns ___ in front of the altar every morning. = incense
-- These songs have been ___ from parents to children for three hundred years. = passed down
-- In my village it is a ___ to sweep the floor on the first day of the lunar year. = taboo
-- The whole family ___ on the last evening of the year. = gets together
-- We ___ the house with yellow flowers a week before the festival. = decorate
+::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
+- On the morning of the first day, the ___ brings luck into the house. {first-footer | festival goer | contestant} = first-footer
+- My grandmother burns ___ in front of the altar every morning. {incense | young rice | carp} = incense
+- These songs have been ___ from parents to children for three hundred years. {passed down | chased away | got together} = passed down
+- In my village it is a ___ to sweep the floor on the first day of the lunar year — people believe it sweeps the luck away. {taboo | ritual | tradition} = taboo
+- Every year, the whole family ___ on the last evening of the year. {gets together | getting together | passes down} = gets together
+- We ___ the house with yellow flowers a week before the festival. {decorate | celebrate | release} = decorate
 :::
 
 ### 2.2 Odd one out
@@ -185,30 +183,24 @@ These six phrases come up again and again when people talk about customs. In
 each one the **verb is fixed** — English will not let you swap in a word that
 means roughly the same thing. Learn the whole phrase.
 
-::: task skill="course" type="gap-fill" ask="One verb is missing from each phrase. Choose from *practise · keep · break · worship · chase · pray* and change the form if the sentence needs it."
-- Wrapping the cakes the night before is one of the customs we still ___ . = practise/practice
-- Teaching the songs to the children is one way to ___ the tradition alive. = keep
-- My cousin ___ with tradition last year and spent Tet in Da Nang. = broke
-- On the first morning of the lunar year we ___ our ancestors at the altar. = worship
-- The drums and the bright head are there to ___ away bad spirits. = chase
-- Families go to the pagoda to ___ for good luck and longevity. = pray
+::: task skill="course" type="gap-fill" ask="One verb is missing from each phrase. Choose the one that fits."
+- Wrapping the cakes the night before is one of the customs we still ___ . {practise | make | worship} = practise ~ English says *practise a custom*, never *do a custom* — don't translate word for word from Vietnamese
+- Teaching the songs to the children is one way to ___ the tradition alive. {keep | hold | make} = keep ~ *keep a tradition alive* — *hold a tradition* is not English
+- My cousin ___ with tradition last year and spent Tet in Da Nang. {broke | broken | kept} = broke ~ *break with tradition* — with *with*, and no article before *tradition*
+- On the first morning of the lunar year we ___ our ancestors at the altar. {worship | pray | practise} = worship
+- The drums and the bright head are there to ___ away bad spirits. {chase | break | worship} = chase
+- Families go to the pagoda to ___ for good luck and longevity. {pray | keep | chase} = pray
 :::
-
-> ⚠️ **Bẫy thường gặp:** Đừng dịch từng chữ từ tiếng Việt.
-> ❌ *do a custom* → ✅ **practise a custom**.
-> ❌ *hold a tradition* → ✅ **keep a tradition alive**.
-> ❌ *break a tradition* → ✅ **break with tradition** — có *with*, và không có
-> mạo từ trước *tradition*.
 
 ### 2.4 The right word
 
-::: task skill="course" type="gap-fill" ask="Use one word or phrase from rows 19–44 of the table. Change the form if you need to."
-- Before Tet, whole families drive out to the flower villages to ___ the blossom. = admire
-- My father buys an ___ every year and keeps it beside the front door. = ornamental tree
-- Our village is ___ , so the fishermen hold a whale worship ceremony each spring. = coastal
-- At the end of the race the referee ___ a duck into the middle of the river. = releases
-- Every ___ in the boat race had been training for a month. = contestant
-- The old ___ lit the incense and said nothing for a long time. = monk
+::: task skill="course" type="gap-fill" ask="Choose the word or phrase from rows 19–44 of the table that fits."
+- Before Tet, whole families drive out to the flower villages to ___ the blossom. {admire | release | chase} = admire
+- My father buys an ___ every year — this year it is a small peach tree — and keeps it beside the front door. {ornamental tree | ancestor | offering} = ornamental tree
+- Our village is ___ , so the fishermen hold a whale worship ceremony each spring. {coastal | lunar | decorative} = coastal
+- At the end of the race the referee ___ a duck into the middle of the river. {releases | release | decorates} = releases
+- Every ___ in the boat race had been training for a month. {contestant | festival goer | monk} = contestant
+- The old ___ lit the incense and said nothing for a long time. {monk | carp | bamboo pole} = monk
 :::
 
 ### Pronunciation — /n/ and /ŋ/
@@ -364,53 +356,53 @@ happens in a place*, use no article. When you mean *the building itself*, use
 ### 3.1 *a* or *an*?
 
 ::: task skill="course" type="choice" opts="a|an" ask="Pick **a** or **an** for each phrase. Say it aloud before you decide — the choice follows the **sound**, not the spelling."
-- ___ hour = an
-- ___ university = a
-- ___ MP3 file = an
+- ___ honour = an
+- ___ uniform = a
+- ___ X-ray = an
 - ___ ancestor = an
-- ___ European friend = a
-- ___ honest answer = an
-- ___ lunar month = a
+- ___ one-way street = a
+- ___ heir = an
+- ___ useful custom = a
 - ___ umbrella = an
-- ___ one-day holiday = a
-- ___ offering = an
+- ___ FM radio = an
+- ___ unusual gift = an
 :::
 
 ### 3.2 Fill the gaps
 
 ::: task skill="course" type="choice" opts="a|an|the|—" ask="One connected story, one gap at a time. Pick **a**, **an**, **the**, or **—** (no article)."
 - Last week my aunt gave me ___ old photograph. = an
-- ___ photograph shows my great-grandmother… = the ~ second mention; write it with a capital *T* at the start of the sentence
-- …at ___ village festival in 1968. = a
+- ___ photograph shows my great-grandmother… = the ~ second mention
+- …as ___ young woman, in 1968. = a
 - She is holding ___ tray of offerings… = a
 - …and behind her ___ moon is very bright. = the ~ there is only one
 - My aunt says that ___ customs like this one are disappearing. = — ~ plural, general meaning
 - In our family ___ oldest person always lights… = the ~ superlative
 - …always lights ___ first stick of incense… = the ~ ordinal number
-- …and nobody eats ___ dinner before that. = — ~ meals take no article
+- …and nobody has ___ breakfast until that is done. = — ~ meals take no article
 - I hope my own children will see ___ same photograph one day. = the
 :::
 
 ### 3.3 First mention, then second mention
 
-::: task skill="course" type="gap-fill" ask="Three pairs, and each pair names the same thing twice. Every line says which mention it is. Write **a**, **an** or **the** in the gap."
-- **First mention** — ___ old man sang two songs at the festival. = An ~ your reader does not know him yet, and *old* starts with a vowel sound
-- **Second mention** — ___ old man was my neighbour's grandfather. = The ~ now your reader knows which old man you mean
-- **First mention** — my sister made ___ lantern out of red paper. = a ~ *lantern* starts with a consonant sound
-- **Second mention** — ___ lantern floated slowly down the river. = The
-- **First mention** — I sent ___ email to my friend in Australia. = an ~ *email* starts with a vowel sound
-- **Second mention** — ___ email took me nearly an hour to write. = The
+::: task skill="course" type="gap-fill" opts="a|an|the" ask="Three pairs, and each pair names the same thing twice. Pick **a**, **an** or **the** for the gap."
+- At the festival, ___ old man I had never met sang two songs. = an ~ first mention: your reader does not know him yet, and *old* starts with a vowel sound
+- When he finished, ___ old man bowed and sat down again. = the ~ second mention: now your reader knows which old man you mean
+- My sister made ___ lantern out of red paper. = a ~ first mention, and *lantern* starts with a consonant sound
+- That night she put it on the water, and ___ lantern floated slowly down the river. = the ~ second mention — the one she made
+- Yesterday I sent ___ email to a friend in Australia. = an ~ first mention, and *email* starts with a vowel sound
+- ___ email took me nearly an hour to write, because I wrote it all in English. = the ~ second mention — the one you sent
 :::
 
 ### 3.4 Correct the mistake
 
-::: task skill="course" type="short-answer" variant="error-correction" ask="Every mistake here is an **article** — one too many, one missing, or the wrong one of *a* and *an*."
-- My grandmother goes to the bed early on the night before the festival. = to bed/goes to bed/bed ~ *go to bed* is the activity, so no article
-- I like the rice more than noodles. = like rice/rice ~ general meaning, so no article
-- She is an university student in Hue. = a/a university ~ *university* starts with /j/, a consonant sound
-- It took us a hour to wrap all the cakes. = an/an hour ~ the *h* is silent, so it starts with a vowel sound
-- My father is oldest son in his family. = the oldest ~ superlatives take *the*
-- We ate the breakfast at my aunt's house. = ate breakfast/breakfast ~ meals take no article
+::: task skill="course" type="short-answer" variant="error-correction"
+- My grandmother goes to the bed early on the night before the festival. {bed | a bed | beds} = the bed -> bed ~ *go to bed* is the activity, so no article
+- In general, I like the rice more than noodles. {rice | a rice | rices} = the rice -> rice ~ general meaning, so no article
+- She is an university student in Hue. {a | the | —} = an -> a ~ *university* starts with /j/, a consonant sound
+- It took us a hour to wrap all the cakes. {an | the | —} = a -> an ~ the *h* is silent, so it starts with a vowel sound
+- My father is oldest son in his family. {the oldest | an oldest | the most old} = oldest -> the oldest ~ superlatives take *the*
+- On the first day of Tet we always eat the breakfast at my aunt's house. {breakfast | a breakfast | breakfasts} = the breakfast -> breakfast ~ meals take no article
 :::
 
 ### 3.5 About you
@@ -485,13 +477,13 @@ what to do about it. Three ways to say it, from the gentlest to the most direct:
 
 ### 4.1 Complete the mini-dialogues
 
-::: task skill="course" type="gap-fill" ask="**A** is a visitor asking about a custom, **B** explains it. One word in every gap."
-- **A:** I'm coming to your house for Tet. Is there anything I ___ do? = shouldn't/should not
-- **B:** Don't give money in a white envelope — it's ___ bad luck. = considered
-- **A:** Am I ___ to take my shoes off at the door? = supposed
-- **B:** Yes, please. It's ___ tradition in every house here. = a
-- **A:** What ___ this ritual mean? = does
-- **B:** We're thanking our ___ for the harvest. = ancestors
+::: task skill="course" type="gap-fill" ask="**A** is a visitor asking about a custom, **B** explains it. Choose the word that fits each gap."
+- **A:** I'm coming to your house for Tet, and I don't want to make a mistake. Is there anything I ___ do? {shouldn't | didn't | won't} = shouldn't
+- **B:** Don't give money in a white envelope — it's ___ bad luck. {considered | supposed | traditional} = considered
+- **A:** Am I ___ to take my shoes off at the door? {supposed | considered | minded} = supposed
+- **B:** Yes, please. It's a ___ in every house here. {tradition | taboo | festival} = tradition
+- **A:** What ___ this ritual mean? {does | is | do} = does
+- **B:** We're thanking our ___ for the harvest. {ancestors | offerings | customs} = ancestors
 :::
 
 ### 4.2 Write your own
@@ -511,13 +503,13 @@ in one or two sentences, using a phrase from the tables above.
 Tom is having dinner at a Vietnamese friend's house for the first time, and he
 has asked about the table manners.
 
-::: task skill="course" type="gap-fill" ask="Complete each piece of advice with the verb in brackets. Watch the form — one of these three openings takes *to* and the other two do not."
-- Perhaps you should ___ (wait) for the host to start eating. = wait
-- It's a good idea ___ (hand) an older person a bowl with both hands. = to hand
-- Don't ___ (stick) your chopsticks upright in the bowl of rice. = stick
-- Perhaps you should ___ (say) something kind about the food. = say
-- It's a good idea ___ (arrive) a few minutes early. = to arrive
-- Don't ___ (leave) the table before the elders have finished. = leave
+::: task skill="course" type="gap-fill" ask="Choose the right form of the verb in brackets for each piece of advice."
+- Perhaps you should ___ (watch) how the others hold their bowls. {watch | to watch | watching} = watch
+- It's a good idea ___ (pour) tea for the person next to you. {to pour | pour | poured} = to pour
+- Don't ___ (stick) your chopsticks upright in the bowl of rice. {stick | to stick | sticking} = stick
+- Perhaps you should ___ (say) something kind about the food. {say | to say | said} = say
+- It's a good idea ___ (arrive) a few minutes early. {to arrive | arrive | arrived} = to arrive
+- Don't ___ (leave) the table before the elders have finished. {leave | to leave | left} = leave
 :::
 
 ### 4.4 Your turn to advise
@@ -560,10 +552,10 @@ the other side of the street. Read both, then find what separates them.
 - Children see it first at the Mid-Autumn Festival. = Vietnamese
 - It is danced at weddings and at the opening of a business. = Both
 - The dancers need martial arts as well as acrobatics. = Vietnamese
-- Somebody dances in front of the head and fans it. = Vietnamese
+- Somebody walks in front of the head and fans it. = Vietnamese
 - Flutes play as well as drums. = Japanese
 - One performer on his own is enough. = Both
-- It is meant to chase bad spirits away. = Japanese
+- The text says its purpose is to chase bad spirits away. = Japanese
 - Luck is part of the reason for it. = Both
 :::
 
@@ -632,29 +624,29 @@ that it is the thing your reader is left holding.
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you already know about village festivals is exactly the pull this type is built to catch."
 - The writer took Bống down to the harbour wall. = T
-- The people in the procession knew who the writer was. = F ~ "Nobody looked at me once", and a woman asks whose grandson he is
+- The woman who gave the writer a cake knew whose grandson he was. = F ~ she "asked whose grandson I was"
 - The sticky rice had been soaked for two days. = T
 - The cakes shaped like fish tasted better than the sticky rice. = NG ~ the text names both foods but never compares them
-- His grandmother joined the procession in the end. = T
+- Bà Sáu joined the procession in the end. = T
 :::
 
 ### 5.2 Answer the questions
 
-::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- Where did the writer take Bống? = (the) harbour wall
-- What came back that night? = (a) night
-- What were the men in the procession carrying? = (a) red palanquin
-- What kept everybody in step? = (a) gong
-- What was his grandmother wearing on the step? = (her) nightclothes
+::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
+- Where did the writer take Bống? {the harbour wall | the shallows | the gate post} = the harbour wall
+- The writer says one thing came back. What was it? {a night | a gong | a tray} = a night
+- What were the men in the procession carrying? {a red palanquin | trays of offerings | cakes shaped like fish} = a red palanquin
+- What kept everybody in step? {a gong | the lanterns | the palanquin} = a gong
+- What was Bà Sáu wearing on the step? {her nightclothes | new clothes | a hat} = her nightclothes
 :::
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- a covered seat carried on poles by several people = palanquin
-- a line of people moving forward together in a ceremony = procession
-- not tight; likely to come off = loose
-- left in water for a long time = soaked
+::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. The clock above is still running, and it covers this exercise too."
+- a covered seat carried on poles by several people {palanquin | procession | tray} = palanquin
+- a line of people moving forward together in a ceremony {procession | shallows | moorings} = procession
+- not tight; likely to come off {loose | wet | cold} = loose
+- left in water for a long time {soaked | wrapped | carried} = soaked
 :::
 
 ### Speaking — Building a dialogue about a family event
@@ -741,20 +733,20 @@ week, and so did everybody at the market.
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- In recent years the festival has been (a) large and noisy (b) small and quiet (c) cancelled = b
-- Of the people in the lane that night, the speaker knew (a) all of them (b) a few of them (c) none of them = c
-- Beside the boy near the water there was (a) a tray (b) a drum (c) a small girl nobody knew = c
-- Her grandmother heard about a child like that while working (a) upriver (b) at the market (c) abroad = a
-- The speaker now wants to know (a) who the boy is (b) what else the sea can bring back (c) how the lanterns were made = b
+- In recent years the festival has been {large and noisy | small and quiet | cancelled} = small and quiet
+- About the three hundred people in the lane, the speaker says she {did not know one single face | knew every face | knew a few faces} = did not know one single face
+- Beside the boy near the water there was {a small girl nobody knew | a girl from her own street | an old woman she knew} = a small girl nobody knew
+- When she was young, the speaker's grandmother worked in a house {upriver | near the market | near the water} = upriver
+- The speaker now wants to know {who the boy is | what else the sea can bring back | how the lanterns were made} = what else the sea can bring back
 :::
 
 ### 6.2 Listen and complete
 
-::: task skill="listening" type="sentence-completion" words="2"
-- On the night of the festival the speaker walked down to the ___ house. = communal
-- The speaker has lived in the lane for ___ years. = fifty-one/51
-- The boy she saw was from her own ___ . = street
-- The speaker was ___ when she laughed at her grandmother. = eleven/11
+::: task skill="listening" type="sentence-completion"
+- On the night of the festival the speaker walked down to the ___ house. {communal | market | upriver} = communal
+- The speaker has lived in the lane for ___ years. {fifty-one | eleven | six} = fifty-one
+- The boy she saw was from her own ___ . {street | market | house} = street
+- The speaker was ___ when she laughed at her grandmother. {eleven | fifty-one | six} = eleven
 :::
 
 ### Writing — An email of advice
@@ -847,12 +839,12 @@ to the next.
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
-- My grandmother burns ___ in front of the altar each morning. *(i…)* = incense
-- Tet falls on the first day of the ___ year. *(l…)* = lunar
-- Stories like this are ___ from one generation to the next. *(p d…)* = passed down
-- Breaking a mirror is bad luck — that is an old ___ . *(s…)* = superstition
-- The whole family ___ on the last evening of the year. *(g t…)* = gets together
+::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit."
+- My grandmother burns ___ in front of the altar each morning. {incense | carp | bamboo poles} = incense
+- Tet falls on the first day of the ___ year. {lunar | coastal | decorative} = lunar
+- Stories like this are ___ from one generation to the next. {passed down | chased away | released} = passed down
+- Breaking a mirror is bad luck — that is an old ___ . {superstition | ritual | ancestor} = superstition
+- Every year, the whole family ___ on the last evening of the year. {gets together | getting together | chases away} = gets together
 :::
 
 ### 7.2 Pronunciation check
@@ -871,18 +863,17 @@ to the next.
 ::: task skill="course" type="choice" opts="a|an|the|—" ask="Complete with **a**, **an**, **the**, or **—** (no article)."
 - My sister goes to ___ bed very late on New Year's Eve. = — ~ *go to bed* is the activity, not the furniture
 - It took us ___ hour to decorate the altar. = an ~ silent *h*, so the sound is a vowel
-- ___ moon was very bright that night. = the ~ there is only one; capitalise it at the start of the sentence
-- ___ Traditions change slowly, but they do change. = — ~ plural, general meaning
+- ___ moon was very bright that night. = the ~ there is only one
+- ___ traditions change slowly, but they do change. = — ~ plural, general meaning
 - My cousin is ___ university student in Can Tho. = a ~ "yoo-niversity" starts with the consonant sound /j/
 - My grandmother gave me ___ old silver bracelet. = an
 - She said ___ bracelet had belonged to her mother. = the ~ second mention
-- We never eat ___ breakfast before the offerings. = — ~ meals take no article
+- We never have ___ breakfast before the offerings. = — ~ meals take no article
 :::
 
 ### 7.4 Error hunt
 
-Find and correct **six** errors in this paragraph. Five are about articles; one
-is a subject–verb agreement slip.
+This paragraph has **six** mistakes. Below, it comes one line at a time: tap each mistake, then choose the fix.
 
 > Five marks are on our wall now, and the whole market is asking questions.
 > Last night my grandmother went to the bed at midnight, still folding leaves.
@@ -893,29 +884,29 @@ is a subject–verb agreement slip.
 > carried them down and set them on the water — "Go well." — and the whole
 > night went out with them, one lantern at a time.
 
-::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
-- Error 1 = bed/to bed ~ *go to bed* is the activity, not the furniture
-- Error 2 = customs/customs like ours ~ plural, general meaning — no article
-- Error 3 = the oldest person/the ~ a superlative takes *the*
-- Error 4 = the first stick/the ~ an ordinal number takes *the*
-- Error 5 = sweeps ~ *Nobody sweep* → *sweeps* — subject–verb agreement
-- Error 6 = breakfast/ate breakfast ~ meals take no article
+::: task skill="course" type="short-answer" variant="error-correction" ask="Each line is part of the paragraph, with the earlier mistakes already put right."
+- Last night my grandmother went to the bed at midnight, still folding leaves. {bed | a bed | beds} = the bed -> bed ~ *go to bed* is the activity, not the furniture
+- She says the customs like ours never really die. {customs | a custom | custom} = the customs -> customs ~ plural, general meaning — no article
+- She is oldest person on our lane. {the oldest | an oldest | the most old} = oldest -> the oldest ~ a superlative takes *the*
+- So she lit an first stick of incense at dawn. {the | one | —} = an -> the ~ an ordinal number takes *the*
+- Nobody sweep the yard afterwards. {swept | sweeping | to sweep} = sweep -> swept ~ the story is told in the past — *went*, *lit*, *ate*
+- We ate the breakfast very late. {breakfast | a breakfast | breakfasts} = the breakfast -> breakfast ~ meals take no article
 :::
 
 ### 7.5 Word formation
 
-A festival word rarely stays in one shape: *tradition* becomes *traditional*,
-*offer* becomes *offerings*. Read the whole sentence before you choose.
+A festival word rarely stays in one shape: *pray* becomes *prayer*, *coast*
+becomes *coastal*. Read the whole sentence before you choose.
 
-::: task skill="course" type="gap-fill" ask="Complete each sentence with the right form of the word in brackets."
-- The whole family comes home for the New Year ___ . *(union)* = reunion
-- People carry fruit, flowers and cakes to the temple as ___ . *(offer)* = offerings
-- Festival ___ start arriving before the sun is up. *(go)* = goers
-- My grandmother still wears ___ clothes on the first morning of Tet. *(tradition)* = traditional
-- The village spends the whole morning ___ its ancestors. *(worship)* = worshipping/worshiping
-- We buy ___ items for the house a week before the festival. *(decorate)* = decorative
-- The ___ of the full moon lasts three days in our town. *(celebrate)* = celebration
-- Some people are very ___ about who comes through the door first. *(superstition)* = superstitious
+::: task skill="course" type="gap-fill" ask="Choose the right form of the word in brackets for each sentence."
+- The whole family comes home for the New Year ___ . *(union)* {reunion | union | reunite} = reunion
+- People carry fruit, flowers and cakes to the temple as ___ . *(offer)* {offerings | offers | offered} = offerings
+- Festival ___ start arriving before the sun is up. *(go)* {goers | goer | going} = goers
+- My grandmother still wears ___ clothes on the first morning of Tet. *(tradition)* {traditional | traditionally | traditions} = traditional
+- The village spends the whole morning ___ its ancestors. *(worship)* {worshipping | worship | worshipped} = worshipping
+- We buy ___ items for the house a week before the festival. *(decorate)* {decorative | decorate | decoratively} = decorative
+- The ___ of the full moon lasts three days in our town. *(celebrate)* {celebration | celebrate | celebrated} = celebration
+- Some people are very ___ about who comes through the door first. *(superstition)* {superstitious | superstition | superstitiously} = superstitious
 :::
 
 ### Project — A custom in your family

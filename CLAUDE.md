@@ -154,9 +154,7 @@ completion. Do not put a text box back.
 
 Distractors are where this can go wrong the other way: an option that is also
 right in that sentence marks a right answer wrong. **Read every option against
-its sentence.** `PICK_ONLY` in `check_ielts.py` lists the files already
-converted and only ever grows — the same progress-marker pattern as
-`--strict-through`.
+its sentence** — no gate can see it. `check_ielts.py` fails any typed item.
 
 ### A marked task must not print its own answer
 
