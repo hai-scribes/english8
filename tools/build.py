@@ -546,16 +546,18 @@ def task_html(p: dict, a: dict) -> str:
     # picked from buttons. Printing them anyway is how a rules box stops being
     # read.
     typed = any(is_typed(it) for it in p["items"])
+    # Every answer is picked now, so the rules box has nothing left to say: a
+    # picked answer cannot be misspelled, and a radio cannot hold two. It
+    # stays only for a typed task, should one ever come back.
     if p["skill"] == "course":
-        head = (f'<span class="t-k">Marked</span>'
-                f'<span class="t-t">{e(label)}</span>')
+        head = f'<span class="t-t">{e(label)}</span>'
         rules = ("<li>Spelling counts.</li>"
                  "<li>British and American spellings are both accepted.</li>"
-                 ) if typed else "<li>One mark each. Nothing is part-marked.</li>"
+                 ) if typed else ""
     else:
         head = (f'<span class="t-k">{"Listening" if p["skill"] == "listening" else "Reading"}'
                 f'</span><span class="t-t">{e(label)}</span>')
-        rules = MARKING_RULES if typed else PICK_RULES
+        rules = MARKING_RULES if typed else ""
     limit = (f'<p class="t-lim">{word_limit_text(p["words"])}</p>' if p.get("words") else "")
     # The variant's instruction first, then whatever this task adds — never
     # instead of. An author who wants different wording for the genre changes
@@ -568,8 +570,8 @@ def task_html(p: dict, a: dict) -> str:
     return (f'<div class="task" data-role="task" data-task="{e(p["id"])}">'
             f'<div class="t-h">{head}</div>'
             f'{ask}{limit}'
-            f'<ul class="t-rules">{rules}</ul>'
-            f'{conf}'
+            + (f'<ul class="t-rules">{rules}</ul>' if rules else '')
+            + f'{conf}'
             f'<div class="t-items"></div>'
             f'<div class="t-foot"><button class="btn t-check" type="button">Check answers</button>'
             f'<button class="btn quiet t-again" type="button" hidden>Try it again</button>'
@@ -1173,15 +1175,12 @@ def dialogue_html(p: dict) -> str:
     # Two sentences, and the second one only when there is a comic to move
     # through. Telling an unstaged dialogue's reader about arrow keys would be
     # describing a control that is not on their page.
-    say = ('Tap any <u>underlined</u> word to see what it means — later lessons '
-           'ask for the same words without it.')
+    say = 'Tap an <u>underlined</u> word to see what it means.'
     if p["staged"]:
-        say += (' Tap the left or right side of the picture to go back or on, '
-                'or use <b>Back</b> and <b>Next</b> under it, the left and '
-                'right arrow keys, or a swipe.')
+        say += ' Tap the sides of the picture, or swipe, to move through the scene.'
+    # No title bar of its own: the lesson's section heading above already
+    # names the scene, and printing it twice made a card inside a card.
     return (f'<div class="dlg" data-role="dialogue" data-dialogue="{e(p["id"])}">'
-            + (f'<div class="d-h"><span class="d-k">Dialogue</span>'
-               f'<span class="d-t">{e(p["title"])}</span></div>' if p["title"] else "")
             + f'<p class="d-say">{say}</p>'
             # Audio on the Getting Started text. Every Getting Started in the
             # prescribed book is a track (track 1, 7, 13, 20 ...) and ours was
@@ -1886,9 +1885,18 @@ def entry_html(w, entry) -> str:
         # part of speech and gloss rather than dropping the word.
         entry = {"senses": [{"pos": w.get("pos", ""), "en": "", "vi": w["vi"], "examples": []}]}
     senses = entry.get("senses", [])
-    head = (f'<div class="e-h"><h3>{e(w["word"])}</h3>'
+    first = senses[0] if senses else {}
+    # The one-line summary a closed entry shows: part of speech and the
+    # Vietnamese gloss. Thirty-seven full entries in a row was four screens of
+    # dictionary before the learner met a single word; closed, the list is a
+    # glossary that opens where you tap.
+    summary = (f'<p class="e-sum"><span class="s-pos">{e(first.get("pos", ""))}</span>'
+               f'<span class="e-vi">{inline(first.get("vi", ""))}</span></p>')
+    head = (f'<div class="e-h" role="button" tabindex="0" aria-expanded="false">'
+            f'<h3>{e(w["word"])}</h3>'
             f'<span class="e-ipa">{e(w["ipa"])}</span>{audio}'
-            f'<span class="e-n">{w["n"]}</span></div>')
+            f'<span class="e-n">{w["n"]}</span><span class="e-caret" aria-hidden="true"></span></div>'
+            + summary)
     flat = sense_html(senses[0], 1 if len(senses) > 1 else None) if senses else ""
 
     rest = "".join(sense_html(sn, i + 2) for i, sn in enumerate(senses[1:]))
@@ -1905,7 +1913,8 @@ def entry_html(w, entry) -> str:
 
     body = rest + forms + note
     if not body:
-        return f'<article class="entry" id="w-{e(slug(w["word"]))}" data-role="vocab-row">{head}{flat}</article>'
+        return (f'<article class="entry" id="w-{e(slug(w["word"]))}" data-role="vocab-row">{head}'
+                f'<div class="e-body" hidden="until-found">{flat}</div></article>')
     extra = len(senses) - 1
     bits = []
     if extra > 0:
@@ -1914,15 +1923,18 @@ def entry_html(w, entry) -> str:
         bits.append("word family")
     if entry.get("note"):
         bits.append("usage")
-    return (f'<article class="entry" id="w-{e(slug(w["word"]))}" data-role="vocab-row">{head}{flat}'
+    return (f'<article class="entry" id="w-{e(slug(w["word"]))}" data-role="vocab-row">{head}'
+            f'<div class="e-body" hidden="until-found">{flat}'
             f'<div class="e-more">'
             f'<button type="button" class="e-toggle" aria-expanded="false">'
             f'<span class="bk">📖</span> Full entry <span class="e-hint">{e(" · ".join(bits))}</span></button>'
-            f'<div class="e-full" hidden="until-found" id="full-{e(slug(w["word"]))}">{body}</div></div></article>')
+            f'<div class="e-full" hidden="until-found" id="full-{e(slug(w["word"]))}">{body}</div></div></div></article>')
 
 
 def vocab_entries(u) -> str:
-    return ('<div class="entries">'
+    return ('<div class="e-bar"><span class="label">' + str(len(u["vocab"])) + ' words · tap one to open it</span>'
+            '<button type="button" class="btn quiet small" id="entriesAll">Open all</button></div>'
+            '<div class="entries">'
             + "".join(entry_html(w, DICT.get(w["word"].lower())) for w in u["vocab"])
             + "</div>")
 
@@ -2563,17 +2575,20 @@ def shell(*, title, depth, body, crumb, data=None, desc=""):
   <a class="mark" href="{up}index.html"><b>English 8</b><span>Global Success</span></a>
   <nav class="crumb" aria-label="Breadcrumb">{crumb_html}</nav>
   <span class="sp"></span>
-  <button class="iconbtn" id="themeBtn" type="button">◒ Auto</button>
+  <button class="iconbtn round" id="themeBtn" type="button" aria-label="Colour theme">◐</button>
 </div></header>
 <div class="shell"><main>
 {body}
 </main>
 <footer class="foot">
+  <p>Your progress is saved on this device.</p>
+  <details><summary>About this course</summary>
   <p><b>English 8 — Global Success.</b> Original self-study material written against the
   Tiếng Anh 8 syllabus (NXB Giáo dục Việt Nam × Pearson, GDPT 2018). This site records
   structure and targets and carries our own exercises; it is not the textbook's text.</p>
   <p>Progress is stored in this browser only. Audio uses your device's speech voices —
   a good model of which word you are hearing, and not a reliable model of vowel length.</p>
+  </details>
 </footer></div>
 {data_tag}
 <script src="{up}assets/app.js?v={ASSET_V['js']}"></script>
@@ -2645,30 +2660,42 @@ def page_home(units, reviews=()) -> str:
       </div>
       <div class="foot"><span data-progress-text>7 lessons</span><span class="bar"><i></i></span></div>
     </a>""")
-    def scene(u):
+    def scene(u, key="title"):
         """The Lesson 1 dialogue's own title -- "The list in the yard" -- which
         is what the learner will actually meet. The story chapters reuse the
         unit titles, and "chapter 1: Leisure Time" promises nothing."""
         for b in u["lessons"][0]["blocks"]:
             for d in b.get("dialogues", []):
                 a = d[0] if isinstance(d, tuple) else d
-                if a.get("title"):
-                    return a["title"]
+                if a.get(key):
+                    return a[key]
         return ""
+
+    def plate(u):
+        """The unit's own background plate if it has been drawn, else the
+        harbour wall -- where the story is set, so never wrong for a unit."""
+        bg = scene(u, "bg")
+        return bg if bg and (ROOT / "art" / "bg" / f"{bg}.jpg").exists() else "harbour-wall"
     # The path, in the order it is walked. app.js derives the next step from
     # this and the learner's record, so the order lives in one place.
     path = [{"nn": u["nn"], "num": u["num"], "title": u["title"],
              "chapter": scene(u),
+             "bg": plate(u),
              "lessons": [x["title"] for x in u["lessons"]],
              "check": next((r["num"] for r in reviews if r["covers"][-1] == u["num"]), None)}
             for u in units]
-    body = f"""  <header class="masthead today-head">
-    <p class="eyebrow">Tiếng Anh 8 · Global Success</p>
-    <h1>Today</h1>
-  </header>
+    body = f"""  <section class="hero" id="unitPath" aria-labelledby="pathTitle">
+    <img class="hero-bg" id="heroBg" src="assets/bg/{path[0]['bg'] if path else 'harbour-wall'}.jpg" alt="">
+    <div class="hero-in">
+      <p class="hk" id="pathUnit">Unit 01 of 12 · {e(units[0]['title']) if units else ''}</p>
+      <h1 id="pathTitle">{e(path[0]['chapter']) if path else ''}</h1>
+      <p class="hs" id="pathStory">The Sea Gives Back · chapter 1</p>
+      <ol class="track" id="pathDots" aria-label="This unit"></ol>
+    </div>
+  </section>
 
   <section class="card today" id="todayCard" aria-labelledby="todayTitle">
-    <h2 id="todayTitle" class="sr-only">What to do today</h2>
+    <h2 id="todayTitle" class="today-t">Today</h2>
     <ol class="today-steps">
       <li class="tstep" id="reviewCard" hidden>
         <span class="tick" aria-hidden="true"></span>
@@ -2689,12 +2716,12 @@ def page_home(units, reviews=()) -> str:
       <li class="tstep" id="nextStep">
         <span class="tick" aria-hidden="true"></span>
         <div class="tbody">
-          <p class="tk" id="nextKicker">Unit 01 · Lesson 1</p>
+          <p class="tk" id="nextKicker">Unit 01 · Lesson 1 of 7</p>
           <h3 id="nextTitle">Getting Started</h3>
           <p class="lede" id="nextLede">Start here. Each lesson teaches something, then asks
-          you to use it. Press <b>Finish lesson</b> at the bottom when you are done.</p>
+          you to use it.</p>
           <div class="row">
-            <a class="btn" id="startLink" href="unit-01/lesson-1/index.html">Open the lesson</a>
+            <a class="btn big" id="startLink" href="unit-01/lesson-1/index.html">Start the lesson →</a>
           </div>
         </div>
       </li>
@@ -2705,15 +2732,6 @@ def page_home(units, reviews=()) -> str:
       If you want more now, the next step is below.</p>
       <div class="row"><a class="btn quiet" id="keepGoing" href="#">Keep going</a></div>
     </div>
-  </section>
-
-  <section class="card unitpath" id="unitPath" aria-labelledby="pathTitle">
-    <div class="ph">
-      <p class="tk" id="pathUnit">Unit 01 of 12</p>
-      <h2 id="pathTitle">{e(units[0]['title']) if units else ''}</h2>
-    </div>
-    <ol class="dots" id="pathDots"></ol>
-    <p class="lede" id="pathStory"></p>
   </section>
 
   <details class="browse" id="browse">
@@ -2743,56 +2761,38 @@ def page_home(units, reviews=()) -> str:
                  desc="Self-study English 8 course: 12 units, 84 lessons, with practice and unit tests.")
 
 
-def start_card(u) -> str:
-    """The first thing on a unit page: what to do, in the order to do it.
+def lesson_summary(L) -> str:
+    """What a lesson is ABOUT, in the words its own sections use.
 
-    Opening on "What this unit teaches" answered a question nobody had asked
-    yet. A learner arriving here needs one instruction — open Lesson 1 — and a
-    short account of what a lesson asks of them; the syllabus strands are
-    reference, and now sit underneath.
-
-    The button is a plain link to Lesson 1 in the HTML and is repointed by
-    app.js to the first lesson not yet marked complete, so a page opened with
-    no progress and a page opened with six lessons done both say the right
-    thing.
+    The row under each lesson title used to read "3 teaching blocks · 7
+    exercises" -- a count of the page's furniture, which tells a learner
+    nothing about whether this is the grammar lesson or the reading. The
+    section titles already say it: "Grammar — Verbs of liking and disliking"
+    becomes "Grammar: Verbs of liking and disliking"; a lesson with two
+    strands lists both names.
     """
-    return f"""  <div class="card start" id="startCard">
-    <h2 id="startTitle">Where to begin</h2>
-    <p class="lede" id="startLede">Start with <b>Lesson 1</b> and work down the list —
-    each lesson builds on the one before it.</p>
-    <ol class="steps">
-      <li><b>Read the teaching part</b> at the top of the lesson: the example, the table,
-      the rule. Nothing to fill in yet.</li>
-      <li><b>Do the exercises.</b> Choose, tap or build your answer, then press
-      <b>Check answers</b>. You will see what was right and, where it helps, why.</li>
-      <li><b>Press “Finish lesson”</b> at the bottom. That records the lesson, opens
-      the practice and the test, and takes you back to Today.</li>
-    </ol>
-    <div class="row">
-      <a class="btn" id="startLink" href="lesson-1/index.html">Start Lesson 1</a>
-      <span class="label">About 20–30 minutes a lesson.</span>
-    </div>
-  </div>
-
-"""
+    parts, full = [], []
+    for b in L["blocks"]:
+        if b["kind"] != "teach" or not b["title"]:
+            continue
+        t = plain(b["title"])
+        if t.startswith("Dialogue:"):
+            parts.append("Story"); full.append("Story · " + t.split(":", 1)[1].strip())
+        elif " — " in t:
+            left, right = t.split(" — ", 1)
+            parts.append(left); full.append(f"{left}: {right}")
+    if not parts:
+        return ""
+    return full[0] if len(parts) == 1 else " · ".join(dict.fromkeys(parts))
 
 
 def page_unit(u, reviews=()) -> str:
     rows = []
     for L in u["lessons"]:
-        n_ex = sum(1 for b in L["blocks"] if b["kind"] == "exercise")
-        n_teach = sum(1 for b in L["blocks"] if b["kind"] == "teach")
-        if L["n"] == LESSONS:
-            n_teach += 1                       # the recap the generator adds
-        bits = []
-        if n_teach:
-            bits.append(f"{n_teach} teaching block" + ("s" if n_teach != 1 else ""))
-        if n_ex:
-            bits.append(f"{n_ex} exercise" + ("s" if n_ex != 1 else ""))
         rows.append(f"""    <a class="lesson" data-role="lesson-link" data-lesson="{L['n']}"
        href="lesson-{L['n']}/index.html">
       <span class="n">{L['n']}</span>
-      <span class="body"><span class="t">{e(L['title'])}</span><span class="d">{e(' · '.join(bits))}</span></span>
+      <span class="body"><span class="t">{e(L['title'])}</span><span class="d">{e(lesson_summary(L))}</span></span>
       <span class="go" aria-hidden="true">→</span>
     </a>""")
 
@@ -2800,24 +2800,39 @@ def page_unit(u, reviews=()) -> str:
         f'<div><span class="k">{e(k)}</span><span class="v">{inline(v)}</span></div>'
         for k, v in u["strands"])
 
-    body = f"""  <header class="masthead">
+    # The unit page answers one question first -- where am I, and what next?
+    # -- so the title, the progress and one button come before anything else,
+    # and the lessons follow at once. The how-to and the syllabus are there for
+    # whoever wants them, closed.
+    body = f"""  <header class="unithead" id="startCard">
     <p class="eyebrow">Unit {u['num']:02d} of 12</p>
     <h1>{e(u['title'])}</h1>
     <p class="vi">{e(u['vi'])}</p>
+    <div class="uprog" data-unit-progress="{u['nn']}">
+      <span class="bar"><i></i></span><span class="label" data-progress-text>7 lessons</span>
+    </div>
+    <p class="lede" id="startLede"><span id="startTitle" hidden></span>Seven lessons, then a
+    short test on the words.</p>
+    <div class="row"><a class="btn big" id="startLink" href="lesson-1/index.html">Start Lesson 1 →</a></div>
   </header>
 
-{start_card(u)}  <div class="card"><h2>What this unit teaches</h2>
-    <div class="strands">{strands}</div>
+  <div class="lessons" data-role="lesson-index">
+{chr(10).join(rows)}
   </div>
 
-  <div class="sectionhead"><h2>Lessons</h2><span class="label">work through these in order</span></div>
-  <div class="lessons" data-role="lesson-index" data-unit-progress="{u['nn']}">
-{chr(10).join(rows)}
-    <div class="row" style="margin-top:.2rem">
-      <span class="bar" style="max-width:14rem"><i></i></span>
-      <span class="label" data-progress-text>7 lessons</span>
-    </div>
-  </div>
+  <details class="more">
+    <summary>How a lesson works</summary>
+    <ol class="steps">
+      <li><b>Read the teaching part</b> at the top: the example, the table, the rule.</li>
+      <li><b>Do the exercises.</b> Choose, tap or build your answer, then press
+      <b>Check answers</b>. You see what was right and why.</li>
+      <li><b>Press “Finish lesson”</b> at the bottom. That records it and takes you back to Today.</li>
+    </ol>
+  </details>
+  <details class="more">
+    <summary>What this unit teaches</summary>
+    <div class="strands">{strands}</div>
+  </details>
 
   <div class="sectionhead"><h2>Practice &amp; test</h2><span class="label">after the lessons</span></div>
   <div class="gate" id="gate">
@@ -3284,20 +3299,11 @@ def block_section(u, lesson, b, payload, *, where="") -> str:
 
     ans_html = ""
     if b["tasks"]:
-        # A task carries its own key, so the generator writes the answer
-        # entry. A hand-written entry for the same exercise would be a second
-        # copy of the same fact, and the gate rejects having both.
-        #
-        # data-locked: the reveal opens only once the task has been checked. A
-        # key readable beside an unanswered task makes the attempt optional,
-        # and an optional attempt is the reveal button this construct replaced.
-        body = "".join(task_answer_html(task_payload(u, lesson, b["id"], t, i))
-                       for i, t in enumerate(b["tasks"]))
-        ans_html = f"""
-    <div class="answer" data-role="answer" data-locked="1">
-      <button type="button">Show answer</button>
-      <div class="body prose" hidden>{body}</div>
-    </div>"""
+        # No reveal button on a marked task. Checking already prints every key
+        # and its reason in place, so a "Show answer" underneath was the same
+        # fact a second time, one tap further away. (The gate still rejects a
+        # hand-written entry for an exercise that has a task.)
+        pass
     elif u["answers"].get(b["id"]):
         ans_html = f"""
     <div class="answer" data-role="answer">

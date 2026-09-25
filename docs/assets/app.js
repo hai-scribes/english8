@@ -21,8 +21,10 @@ function initTheme(){
   const label = () => {
     let cur = null;
     try { cur = localStorage.getItem(THEME_KEY); } catch(e){}
-    btn.textContent = cur === "dark" ? "◐ Dark" : cur === "light" ? "◑ Light" : "◒ Auto";
-    btn.setAttribute("aria-label", "Colour theme: " + (cur || "auto") + ". Click to change.");
+    btn.textContent = cur === "dark" ? "☾" : cur === "light" ? "☀" : "◐";
+    const name = cur === "dark" ? "dark" : cur === "light" ? "light" : "same as your device";
+    btn.setAttribute("aria-label", "Colours: " + name + ". Tap to change.");
+    btn.title = "Colours: " + name;
   };
   label();
   btn.addEventListener("click", () => {
@@ -385,6 +387,35 @@ function initAnswers(){
    One toggle per entry. Kept independent (not an accordion) because a learner
    comparing two words wants both open at once. */
 function initEntries(){
+  /* A closed entry is one line; tapping the line opens it. The body is
+     hidden="until-found", so Ctrl+F still finds a word inside a closed entry
+     and the browser opens it -- beforematch keeps the state honest. */
+  const setOpen = (art, open) => {
+    const body = $(".e-body", art), h = $(".e-h", art);
+    if (!body) return;
+    if (open) body.removeAttribute("hidden"); else body.setAttribute("hidden", "until-found");
+    art.classList.toggle("is-open", open);
+    if (h) h.setAttribute("aria-expanded", String(open));
+  };
+  $$(".entry").forEach(art => {
+    const h = $(".e-h", art), body = $(".e-body", art);
+    if (!h || !body) return;
+    const flip = ev => {
+      if (ev.target.closest("button")) return;          // the speak buttons speak
+      setOpen(art, !art.classList.contains("is-open"));
+    };
+    h.addEventListener("click", flip);
+    h.addEventListener("keydown", ev => {
+      if (ev.key === "Enter" || ev.key === " "){ ev.preventDefault(); flip(ev); }
+    });
+    body.addEventListener("beforematch", () => setOpen(art, true));
+  });
+  const all = $("#entriesAll");
+  if (all) all.addEventListener("click", () => {
+    const open = all.textContent === "Open all";
+    $$(".entry").forEach(a => setOpen(a, open));
+    all.textContent = open ? "Close all" : "Open all";
+  });
   $$(".e-toggle").forEach(btn => {
     const full = btn.parentElement.querySelector(".e-full");
     if (!full) return;
@@ -502,19 +533,28 @@ function initStart(){
     const u = DATA.unit;
     let next = 0;
     for (let l = 1; l <= 7; l++) if (!lessonDone(u, l)){ next = l; break; }
+    /* The lesson list shows where the learner is: finished ones ticked, the
+       next one marked. It used to show seven identical rows whatever the
+       record said, so the list itself could not answer "where was I?". */
+    $$('[data-role="lesson-link"]').forEach(a => {
+      const l = Number(a.dataset.lesson), done = lessonDone(u, l);
+      a.classList.toggle("is-done", done);
+      a.classList.toggle("is-next", l === next);
+      const n = $(".n", a);
+      if (n) n.textContent = done ? "✓" : String(l);
+      a.setAttribute("aria-label", "Lesson " + l + (done ? ", done" : l === next ? ", next" : ""));
+    });
     const done = lessonsDone(u);
     if (!next){
       const tested = !!unitRec(u).test;
       say(tested ? "This unit is finished" : "One step left: the unit test",
-        tested ? "All seven lessons and the unit test are done. Today has your next step."
-               : "All seven lessons are finished. The unit test is at the bottom of this "
-                 + "page — every word once, then this unit is done.",
-        tested ? "../index.html" : "#gate", tested ? "Back to Today" : "Go to the unit test");
+        tested ? "Every lesson and the unit test are done."
+               : "All seven lessons are done. One step left: the unit test — every word once.",
+        tested ? "../index.html" : "#gate", tested ? "Back to Today →" : "Take the unit test →");
     } else if (done){
       say("Pick up where you left off",
-        "You have finished <b>" + done + " of 7</b> lessons in this unit. The steps below "
-        + "are the same every time.",
-        "lesson-" + next + "/index.html", "Continue with Lesson " + next);
+        "<b>" + done + " of 7</b> lessons done.",
+        "lesson-" + next + "/index.html", "Continue with Lesson " + next + " →");
     }
     return;
   }
@@ -556,7 +596,7 @@ function initGate(){
         + "</div>";
     } else if (canPractise){
       lock.innerHTML = "<span>◐</span><div>Practice is open. The <b>unit test</b> unlocks when all seven "
-        + "lessons are marked complete — <b>" + (7 - done) + "</b> to go.</div>";
+        + "lessons are finished — <b>" + (7 - done) + "</b> to go.</div>";
     } else {
       lock.innerHTML = "<span>🔒</span><div>Work through the lessons first. Practice opens once you finish "
         + "<b>Lesson " + PRACTICE_AFTER + "</b> (where this unit's vocabulary is taught); the "
@@ -1242,13 +1282,16 @@ function stepLede(s){
   if (s.kind === "check")
     return "Three units asked about together. Nothing new — everything in it has "
       + "already been taught. Press <b>Finish checkpoint</b> at the bottom when you are done.";
+  if (s.n === 1 && s.u.nn === "01")
+    return "The story starts here. Read the scene, then answer on it.";
   if (s.n === 1 && s.u.chapter)
-    return "A new unit, and the story goes on: <i>" + esc(s.u.chapter) + "</i>.";
-  return "Press <b>Finish lesson</b> at the bottom when you are done.";
+    return "A new unit, and the next part of the story: <i>" + esc(s.u.chapter) + "</i>.";
+  return "When you reach the end, press <b>Finish lesson</b>.";
 }
 function stepAction(s){
-  return s.kind === "lesson" ? "Open the lesson"
-       : s.kind === "test" ? "Go to the unit test" : "Open the checkpoint";
+  const started = s.kind === "lesson" && Object.keys(unitRec(s.u.nn).lessons).length > 0;
+  return s.kind === "lesson" ? (s.n === 1 && !started ? "Start the lesson →" : "Continue →")
+       : s.kind === "test" ? "Take the unit test →" : "Open the checkpoint →";
 }
 
 function paintPath(step){
@@ -1257,8 +1300,11 @@ function paintPath(step){
   const path = DATA.path || [];
   const u = step ? step.u : path[path.length - 1];
   if (!u){ box.hidden = true; return; }
-  $("#pathUnit").textContent = "Unit " + u.nn + " of 12";
-  $("#pathTitle").textContent = u.title;
+  const img = $("#heroBg");
+  if (img && u.bg && !img.getAttribute("src").endsWith("/" + u.bg + ".jpg"))
+    img.setAttribute("src", "assets/bg/" + u.bg + ".jpg");
+  $("#pathUnit").textContent = "Unit " + u.nn + " of 12 · " + u.title;
+  $("#pathTitle").textContent = u.chapter || u.title;
   const steps = pathSteps().filter(x => x.u.nn === u.nn);
   $("#pathDots").innerHTML = steps.map(x => {
     const cur = step && x.id === step.id, done = x.done();
@@ -1269,12 +1315,13 @@ function paintPath(step){
       + '" title="' + esc(name) + '">' + (done ? "✓" : label) + '</a></li>';
   }).join("");
   const story = $("#pathStory");
-  if (story) story.innerHTML = u.chapter
-    ? (lessonDone(u.nn, 1)
-        ? 'Story, chapter ' + Number(u.nn) + ': <i>' + esc(u.chapter) + '</i> — '
-          + (STORY[u.nn] ? "read." : '<a href="story/index.html">read it straight through</a>.')
-        : 'Story, chapter ' + Number(u.nn) + ': <i>' + esc(u.chapter) + '</i> — starts in Lesson 1.')
-    : "";
+  if (story){
+    const n = Number(u.nn);
+    story.innerHTML = "The Sea Gives Back · chapter " + n
+      + (lessonDone(u.nn, 1)
+          ? (STORY[u.nn] ? " · read" : ' · <a href="story/index.html">read it straight through</a>')
+          : "");
+  }
 }
 
 function paintToday(){
@@ -1289,7 +1336,11 @@ function paintToday(){
   if (n) n.textContent = batch.length;
   const reviewDone = !batch.length;
   if (card){
-    card.hidden = !everSeen;
+    /* A review step appears only on a day that has one: items due, or items
+       already answered today. "Review — done, nothing was due" was a tick
+       for doing nothing, and one more line between the learner and the
+       lesson. */
+    card.hidden = !everSeen || (reviewDone && !today.reviewed);
     card.classList.toggle("is-done", reviewDone);
     const title = $("#reviewTitle"), lede = $("#reviewLede"), btn = $("#startReview");
     if (title) title.textContent = reviewDone ? "Review — done" : "Review " + batch.length
@@ -1854,18 +1905,33 @@ function initTasks(){
         li.dataset.ok = m.ok ? "1" : "0";
         const why = WHY_TEXT[m.why] || "";
         const it = t.items[i];
+        /* The reason shows on a right answer too: knowing why it was right
+           is half of what the item teaches, and a lucky pick learns it here. */
         $(".i-out", li).innerHTML = m.ok
-          ? '<span class="ok">&#10003; right</span>'
-          : '<span class="no">&#10007;</span> <b>' + esc(it.key) + '</b>'
+          ? '<span class="ok">&#10003; Right</span>'
+            + (it.why ? ' <span class="why">' + it.why + '</span>' : "")
+          : '<span class="no">&#10007;</span> <span class="ans">' + esc(it.key) + '</span>'
             + (why ? ' <i>— ' + esc(why) + '</i>' : "")
-            + (it.why ? ' <i>(' + it.why + ')</i>' : "");
+            + (it.why ? ' <span class="why">' + it.why + '</span>' : "");
         $$("input, .i-tile, .i-tok", li).forEach(x => { x.disabled = true; });
+        /* On a picked item the chips themselves carry the verdict: the right
+           one outlined green, a wrong pick struck red. Reading a small red
+           answer under the chips was the slow way to see the same thing. */
+        const keyOpt = it.tap ? it.fix : it.key;
+        $$(".i-opt", li).forEach(lab => {
+          const inp = $("input", lab);
+          if (!inp) return;
+          lab.classList.toggle("is-key", !!it.opts && inp.value === keyOpt);
+          lab.classList.toggle("is-wrong", inp.checked && inp.value !== keyOpt);
+        });
         if (it.tap) $$(".i-tok", li).forEach(x => x.classList.toggle("was",
           Number(x.dataset.j) >= it.span[0] && Number(x.dataset.j) <= it.span[1]));
       });
       const score = marks.filter(m => m.ok).length;
-      out.innerHTML = '<b>' + score + ' of ' + marks.length + '</b> — one mark each, '
-        + 'nothing part-marked.';
+      out.dataset.all = score === marks.length ? "1" : "0";
+      out.innerHTML = score === marks.length
+        ? '<b>' + score + ' / ' + marks.length + '</b> All right'
+        : '<b>' + score + ' / ' + marks.length + '</b> right — the red ones show the answer';
       let cal = $(".t-cal", root);
       if (cal) cal.remove();
       if (t.conf){
@@ -1970,6 +2036,7 @@ function initTasks(){
           else x.value = "";
         });
         $$(".i-tile, .i-tok", li).forEach(x => { x.disabled = false; x.classList.remove("was"); });
+        $$(".i-opt", li).forEach(x => x.classList.remove("is-key", "is-wrong"));
         delete li.dataset.tap;
         li.dataset.seq = "";
         if (it.tiles) paintTiles(li, it);
@@ -5030,6 +5097,7 @@ function initReadingNav(){
       const fl = document.createElement("button");
       fl.type = "button";
       fl.className = "i-flag";
+      li.classList.add("has-flag");      // room on the right so the flag covers no text
       fl.textContent = "⚑";
       fl.title = "Flag for review";
       fl.setAttribute("aria-label", "Flag question " + (i + 1) + " for review");
