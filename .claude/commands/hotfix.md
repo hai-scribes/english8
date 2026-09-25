@@ -114,6 +114,26 @@ Approve?
 ```
 On approval → stage, commit, push.
 
+## Step 7: Close event — ONLY if Step 5.75 closed no spec
+
+**Skip this step entirely if Step 5.75 ran `atelier spec set-status <slug> done`.**
+That call already fired the *spec-close* hook; running this one too would record
+the same close twice under two different event names.
+
+Run it only when this hotfix closed no spec:
+
+```bash
+python3 "$(atelier path --hook _retro_close.py)" hotfix <bug-slug>
+```
+
+Best-effort and time-bounded — the helper caps the hook at 20s and kills its
+process group on expiry, so it cannot hang the hotfix. It prints the `/retro`
+reminder and appends any NEW deterministic analyzer finding to
+`.atelier/retro/notes-for-operator.md` (Stage 1b,
+`ATELIER_SELF_IMPROVEMENT.md`). `/hotfix` is the one close event with no CLI
+verb to hang this on, which is why it lives in the prompt. It always exits 0;
+if it prints nothing, there was nothing new to say.
+
 ## Report
 
 ```

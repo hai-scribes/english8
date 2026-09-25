@@ -4,12 +4,11 @@ disable-model-invocation: true
 
 > **This command has no bash-native form, and that is deliberate.**
 >
-> An `atelier progress preflight` verb briefly did Step 1 — root, stamp, both
-> `.gitignore` guards, the git dump — and was removed on 2026-09-01. To fill
-> `Commits made this session` a script must GUESS when your session began, and
-> that guess gets written into a durable artifact the next session reads as
-> fact. You know the real answer; a guess you have to verify costs more than no
-> guess at all. Step 1 below is one Bash call — just make it.
+> Filling `Commits made this session` needs to know when your session began.
+> A script could only guess, and the guess would land in a durable artifact the
+> next session reads as fact. You know the real answer; a guess you have to
+> verify costs more than no guess at all. Step 1 below is one Bash call — just
+> make it.
 >
 > See `docs/atelier/ATELIER_SLASH_COMMANDS.md` § "Bash-native commands" for the
 > commands that DO have one.

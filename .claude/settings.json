@@ -2,29 +2,38 @@
   "hooks": {
     "PreToolUse": [
       {
+        "matcher": "Read|Edit|MultiEdit|Write|NotebookEdit|Bash|Grep|Glob",
         "hooks": [
           {
             "type": "command",
-            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-prototype-read.sh"
-          },
-          {
-            "type": "command",
-            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-operator-verbs.sh"
-          },
-          {
-            "type": "command",
-            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-goal-direct-writes.sh"
-          },
-          {
-            "type": "command",
-            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ arch-boundary-guard.sh"
-          },
-          {
-            "type": "command",
-            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-unresolved-shared-edit.sh"
+            "command": "sh -c 'A=; H=0; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && H=1; done; if [ \"$H\" = 0 ]; then b=$(command -v atelier 2>/dev/null); n=0; while [ -n \"$b\" ] && [ -L \"$b\" ] && [ $n -lt 10 ]; do t=$(readlink \"$b\"); case $t in /*) b=$t;; *) b=$(dirname \"$b\")/$t;; esac; n=$((n+1)); done; if [ -n \"$b\" ]; then A=$(dirname \"$(dirname \"$(dirname \"$b\")\")\")/atelier/hooks; [ -f \"$A/$1\" ] || A=$(dirname \"$(dirname \"$b\")\")/hooks; fi; fi; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\" \"$A\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-prototype-read.sh"
           }
-        ],
-        "matcher": "Read|Edit|Write|NotebookEdit|Bash|MultiEdit"
+        ]
+      },
+      {
+        "matcher": "Edit|MultiEdit|Write|NotebookEdit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh -c 'A=; H=0; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && H=1; done; if [ \"$H\" = 0 ]; then b=$(command -v atelier 2>/dev/null); n=0; while [ -n \"$b\" ] && [ -L \"$b\" ] && [ $n -lt 10 ]; do t=$(readlink \"$b\"); case $t in /*) b=$t;; *) b=$(dirname \"$b\")/$t;; esac; n=$((n+1)); done; if [ -n \"$b\" ]; then A=$(dirname \"$(dirname \"$(dirname \"$b\")\")\")/atelier/hooks; [ -f \"$A/$1\" ] || A=$(dirname \"$(dirname \"$b\")\")/hooks; fi; fi; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\" \"$A\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-prototype-merge.sh"
+          },
+          {
+            "type": "command",
+            "command": "sh -c 'A=; H=0; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && H=1; done; if [ \"$H\" = 0 ]; then b=$(command -v atelier 2>/dev/null); n=0; while [ -n \"$b\" ] && [ -L \"$b\" ] && [ $n -lt 10 ]; do t=$(readlink \"$b\"); case $t in /*) b=$t;; *) b=$(dirname \"$b\")/$t;; esac; n=$((n+1)); done; if [ -n \"$b\" ]; then A=$(dirname \"$(dirname \"$(dirname \"$b\")\")\")/atelier/hooks; [ -f \"$A/$1\" ] || A=$(dirname \"$(dirname \"$b\")\")/hooks; fi; fi; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\" \"$A\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-operator-verbs.sh"
+          },
+          {
+            "type": "command",
+            "command": "sh -c 'A=; H=0; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && H=1; done; if [ \"$H\" = 0 ]; then b=$(command -v atelier 2>/dev/null); n=0; while [ -n \"$b\" ] && [ -L \"$b\" ] && [ $n -lt 10 ]; do t=$(readlink \"$b\"); case $t in /*) b=$t;; *) b=$(dirname \"$b\")/$t;; esac; n=$((n+1)); done; if [ -n \"$b\" ]; then A=$(dirname \"$(dirname \"$(dirname \"$b\")\")\")/atelier/hooks; [ -f \"$A/$1\" ] || A=$(dirname \"$(dirname \"$b\")\")/hooks; fi; fi; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\" \"$A\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-goal-direct-writes.sh"
+          },
+          {
+            "type": "command",
+            "command": "sh -c 'A=; H=0; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && H=1; done; if [ \"$H\" = 0 ]; then b=$(command -v atelier 2>/dev/null); n=0; while [ -n \"$b\" ] && [ -L \"$b\" ] && [ $n -lt 10 ]; do t=$(readlink \"$b\"); case $t in /*) b=$t;; *) b=$(dirname \"$b\")/$t;; esac; n=$((n+1)); done; if [ -n \"$b\" ]; then A=$(dirname \"$(dirname \"$(dirname \"$b\")\")\")/atelier/hooks; [ -f \"$A/$1\" ] || A=$(dirname \"$(dirname \"$b\")\")/hooks; fi; fi; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\" \"$A\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ arch-boundary-guard.sh"
+          },
+          {
+            "type": "command",
+            "command": "sh -c 'A=; H=0; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && H=1; done; if [ \"$H\" = 0 ]; then b=$(command -v atelier 2>/dev/null); n=0; while [ -n \"$b\" ] && [ -L \"$b\" ] && [ $n -lt 10 ]; do t=$(readlink \"$b\"); case $t in /*) b=$t;; *) b=$(dirname \"$b\")/$t;; esac; n=$((n+1)); done; if [ -n \"$b\" ]; then A=$(dirname \"$(dirname \"$(dirname \"$b\")\")\")/atelier/hooks; [ -f \"$A/$1\" ] || A=$(dirname \"$(dirname \"$b\")\")/hooks; fi; fi; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\" \"$A\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ block-unresolved-shared-edit.sh"
+          }
+        ]
       }
     ],
     "Stop": [
@@ -32,11 +41,26 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh -c 'for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ stop-gate.sh"
-          },
+            "command": "sh -c 'A=; H=0; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && H=1; done; if [ \"$H\" = 0 ]; then b=$(command -v atelier 2>/dev/null); n=0; while [ -n \"$b\" ] && [ -L \"$b\" ] && [ $n -lt 10 ]; do t=$(readlink \"$b\"); case $t in /*) b=$t;; *) b=$(dirname \"$b\")/$t;; esac; n=$((n+1)); done; if [ -n \"$b\" ]; then A=$(dirname \"$(dirname \"$(dirname \"$b\")\")\")/atelier/hooks; [ -f \"$A/$1\" ] || A=$(dirname \"$(dirname \"$b\")\")/hooks; fi; fi; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\" \"$A\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ stop-gate.sh"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
           {
             "type": "command",
-            "command": "sh -c 'G=\"${ATELIER_HOME:-$HOME/.atelier}/bin/rigor-goal-stop-gate\"; [ ! -x \"$G\" ] || exec \"$G\"'"
+            "command": "sh -c 'A=; H=0; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && H=1; done; if [ \"$H\" = 0 ]; then b=$(command -v atelier 2>/dev/null); n=0; while [ -n \"$b\" ] && [ -L \"$b\" ] && [ $n -lt 10 ]; do t=$(readlink \"$b\"); case $t in /*) b=$t;; *) b=$(dirname \"$b\")/$t;; esac; n=$((n+1)); done; if [ -n \"$b\" ]; then A=$(dirname \"$(dirname \"$(dirname \"$b\")\")\")/atelier/hooks; [ -f \"$A/$1\" ] || A=$(dirname \"$(dirname \"$b\")\")/hooks; fi; fi; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\" \"$A\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ session-path.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "resume|fork",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh -c 'A=; H=0; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && H=1; done; if [ \"$H\" = 0 ]; then b=$(command -v atelier 2>/dev/null); n=0; while [ -n \"$b\" ] && [ -L \"$b\" ] && [ $n -lt 10 ]; do t=$(readlink \"$b\"); case $t in /*) b=$t;; *) b=$(dirname \"$b\")/$t;; esac; n=$((n+1)); done; if [ -n \"$b\" ]; then A=$(dirname \"$(dirname \"$(dirname \"$b\")\")\")/atelier/hooks; [ -f \"$A/$1\" ] || A=$(dirname \"$(dirname \"$b\")\")/hooks; fi; fi; for d in \"${ATELIER_HOOKS_DIR:-}\" \"$CLAUDE_PROJECT_DIR/atelier/hooks\" \"${ATELIER_HOME:-$HOME/.atelier}/current/hooks\" \"$A\"; do [ -n \"$d\" ] && [ -f \"$d/$1\" ] && exec bash \"$d/$1\"; done; echo \"atelier: $1 not found (set ATELIER_HOOKS_DIR); guard inert\" >&2' _ session-resume-gates.sh"
           }
         ]
       }

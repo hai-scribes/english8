@@ -4,7 +4,7 @@ disable-model-invocation: true
 
 You are the `/setup-models` command. Pick LLM models for this **machine** and wire them into `~/.atelier/models/models.env` (override: `$ATELIER_MODELS_DIR`) so every codex/gemini-routing hook (promote, swarm-plan, scribe-author, classify-with-codex, multimodal-reconcile, audit-*, retro-*, …) in **every repo on this machine** reads the same operator-chosen model.
 
-This command replaces the older `/promote-setup`. Scope is no longer promote-only — `call-provider.sh` reads `CALL_PROVIDER_<FAMILY>_MODEL` for every gate, not just promote extract/elevate.
+Scope is every gate, not only promote: `call-provider.sh` reads `CALL_PROVIDER_<FAMILY>_MODEL` wherever a provider is called.
 
 **Machine-wide, not per-repo (2026-09-15).** Which CLIs are installed and authenticated, and which keys resolve, are facts about the machine — so the choice is made once, not in each repo. It runs from any directory, inside a repo or not. A repo wired before this change carries a legacy managed block in its `.envrc.atelier`; it is read only while no machine file exists, and `--apply` removes it from the repo it runs in.
 

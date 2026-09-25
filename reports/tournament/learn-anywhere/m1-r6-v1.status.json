@@ -1,14 +1,17 @@
 {
   "variant_key": "m1-r6-v1",
-  "pid": 18106,
+  "pid": 16546,
   "host": "BES-Hais-MBP.local",
-  "updated_at": "2026-09-18T13:05:33Z",
+  "updated_at": "2026-09-19T15:22:58Z",
   "agent_id": "prototype-learn-anywhere-m1-r6-v1",
   "variant_id": 1,
   "milestone_id": 1,
   "round_id": 6,
   "branch": "atelier-variant/learn-anywhere/m1/r6/v1",
   "approach": "Firebase Auth signInWithPopup, config injected from a generated asset",
-  "phase": "running",
-  "status": "running"
+  "phase": "finished",
+  "status": "gate_passed",
+  "terminal_cause": "",
+  "gate_passed": true,
+  "benchmark_value": 0.0
 }

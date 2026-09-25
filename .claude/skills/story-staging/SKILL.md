@@ -25,6 +25,29 @@ line of markup, not a rewrite.
 | `research/story/illustration-prompts.md` | every generation prompt, and the filenames they must be saved under |
 | `CLAUDE.md` § *The dialogue is a comic* | the rules a change here must not break |
 
+## The story the twelve units carry
+
+All twelve chapters tell one continuous adventure, **The Sea Gives Back**, set
+in **Quy Nhơn** on the central coast. A boy called Tí keeps a fish in a bucket
+and it will not stay a fish; the sea has come looking for her, and everywhere it
+reaches it puts back what it took. Twelve chalk marks climb the harbour wall,
+one per chapter, and at twelve the water is over the street.
+
+Three documents own it, and they bind in this order:
+
+| | |
+| --- | --- |
+| `research/story/story-bible.md` | world, cast, the one changed rule, the arc, the ending — and §9, what the story deliberately does **not** take from either of the works it learns from |
+| `research/story/chapter-briefs.md` | **the frozen interface.** Twelve briefs, and every hard rule a drafter may not trade away. Where it and the bible differ, the briefs win |
+| `research/story/chain-and-payoff.md` | the audit a finished chapter has to survive: the *because* test, the payoff ledger, what happens to each return |
+
+The house art style is Studio Ghibli's *Ponyo*, and the story shares its shape —
+a sea-child ashore, water that rises without malice, a town that floods and is
+beautiful rather than tragic. **The style is borrowed; the plot is not**, and
+`story-bible.md` §9 lists the specific elements that may never appear. Tí's and
+Thảo's designs carry no setting on them and did not change when the story moved
+from a delta to a coast.
+
 ## The markup, in full
 
 ```
