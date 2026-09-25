@@ -31,10 +31,10 @@
  */
 import { metric, gate, finish } from "./lib.mjs";
 import {
-  launch, device, url, aLessonPath, signIn, answerTask, waitSynced, mark, portsError,
+  launch, device, url, aLessonPath, signIn, answerTask, waitSynced, mark, learner, portsError,
 } from "./browser.mjs";
 
-const LEARNER = "rhythm-learner@example.com";
+const LEARNER = learner("rhythm");
 const problems = [];
 let swept = 0, forbidden = 0;
 const LESSON = aLessonPath();

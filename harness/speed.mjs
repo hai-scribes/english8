@@ -33,10 +33,10 @@
  */
 import { metric, gate, finish } from "./lib.mjs";
 import {
-  launch, device, url, aLessonPath, signIn, answerTask, waitSynced, mark, P, portsError,
+  launch, device, url, aLessonPath, signIn, answerTask, waitSynced, mark, P, learner, portsError,
 } from "./browser.mjs";
 
-const LEARNER = "speed-learner@example.com";
+const LEARNER = learner("speed");
 const SAMPLES = 40;
 const problems = [];
 let probes = 0;

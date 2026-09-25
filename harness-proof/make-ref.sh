@@ -1,15 +1,15 @@
 #!/bin/bash
-# usage: make-ref.sh <defect-or-empty> ; rebuilds the throwaway reference into docs/ of this scratch copy
+# usage: make-ref.sh <defect[+defect…]-or-empty> ; rebuilds the throwaway reference into docs/ of this scratch copy
 set -e
 cd "$(dirname "$0")"
 D="${1:-}"
 node_modules/.bin/esbuild ref-src.mjs --bundle --format=esm --minify --define:__DEFECT__="\"$D\"" --outfile=docs/assets/ref.bundle.js --log-level=warning
-MODE=network-first; [ "$D" = "stale-sw" ] && MODE=cache-first
+MODE=network-first; [[ "+$D+" == *+stale-sw+* ]] && MODE=cache-first
 sed "s/__MODE__/$MODE/" sw-template.js > docs/sw.js
-if [ "$D" = "no-sw" ]; then rm -f docs/sw.js; fi
+if [[ "+$D+" == *+no-sw+* ]]; then rm -f docs/sw.js; fi
 rm -f firestore.rules
-if [ "$D" != "no-rules" ]; then
-  if [ "$D" = "open-rules" ]; then R='allow read, write: if request.auth != null;'; M='/{d=**}'; else R='allow read, write: if request.auth != null \&\& request.auth.uid == uid;'; M='/users/{uid}/{d=**}'; fi
+if [[ "+$D+" != *+no-rules+* ]]; then
+  if [[ "+$D+" == *+open-rules+* ]]; then R='allow read, write: if request.auth != null;'; M='/{d=**}'; else R='allow read, write: if request.auth != null \&\& request.auth.uid == uid;'; M='/users/{uid}/{d=**}'; fi
   printf "rules_version = '2';\nservice cloud.firestore {\n  match /databases/{db}/documents {\n    match %s { %s }\n  }\n}\n" "$M" "$R" | sed 's/\\&/\&/g' > firestore.rules
 fi
 python3 - <<'PY'

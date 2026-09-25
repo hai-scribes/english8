@@ -11,10 +11,12 @@
  *
  * Four round trips, each a thing a learner would notice if it broke:
  *
- *   1. A answers a task and it reaches the backend.
- *   2. B, a clean device signed in as the same learner, receives ALL of A's
- *      local state — every en8: key but the theme, byte for byte — not just
- *      the one task.
+ *   1. A answers a task, takes it again, and both attempts reach the backend.
+ *   2. B, a clean device signed in as the same learner, SHOWS that task as
+ *      A shows it — done, the same answers, the same marks, the same score
+ *      line and the same attempt history — without the learner doing
+ *      anything but sign in. A sync that carries "done" but loses the answers,
+ *      or the latest attempt but not the history, draws a different page.
  *   3. ISOLATION, asked of the rules engine directly. After C (a different
  *      learner) has used the app, the harness lists every document in the
  *      emulator with admin rights, then tries to read and to write each one
@@ -31,29 +33,46 @@
  *      loading a page with no network is the service worker's job, gated in
  *      milestone 4's session scenario, not here.)
  *
- * Every scenario signs in as its own learner, so what one scenario leaves in
- * the shared emulator cannot answer another's question.
+ * Every run signs in as learners of its own (`learner()` in browser.mjs), so
+ * what an earlier run or another scenario left in the shared emulator cannot
+ * answer this one's question.
+ *
+ * Asserted on the PAGE, never on how the build stores anything. There is no
+ * legacy data to carry (a fresh app, by the operator's decision of
+ * 2026-09-25), so the storage format is the variant's business; what a
+ * learner sees on the other device is not. Pulled work has to be SHOWN:
+ * a build that fills storage and leaves the page it already drew stale fails
+ * here, whether it repaints in place or reloads itself to do it.
  */
 import { metric, gate, finish } from "./lib.mjs";
 import {
-  launch, device, url, aLessonPath, signIn, answerTask, localState,
-  waitSynced, mark, P, portsError,
+  launch, device, url, aLessonPath, signIn, answerTask, taskView, showsDone,
+  waitSynced, mark, learner, P, portsError,
 } from "./browser.mjs";
 
-const LEARNER = "sync-learner@example.com";
-const OTHER = "sync-other@example.com";
+const LEARNER = learner("sync");
+const OTHER = learner("sync-other");
 
 const problems = [];
 let swept = 0, leaks = 0;
 const LESSON = aLessonPath();
 const browser = await launch();
 
-/* Progress is every en8: key except the theme, which is a device preference. */
-const progress = s => Object.fromEntries(Object.entries(s)
-  .filter(([k]) => k.startsWith("en8:") && k !== "en8:theme").sort());
-const taskIdsIn = s => {
-  try { return Object.keys(JSON.parse(s["en8:tasks:v1"] || "{}")); } catch { return []; }
-};
+/* Where two views of one task disagree, named field by field. */
+function differences(a, b) {
+  const out = [];
+  if (a.done !== b.done) out.push(`done ${a.done} vs ${b.done}`);
+  if (a.score !== b.score) out.push(`score line ${JSON.stringify(a.score)} vs ${JSON.stringify(b.score)}`);
+  if (a.history !== b.history) out.push(`attempt history ${JSON.stringify(a.history)} vs ${JSON.stringify(b.history)}`);
+  if (a.items.length !== b.items.length) out.push(`${a.items.length} items vs ${b.items.length}`);
+  a.items.forEach((x, i) => {
+    const y = b.items[i];
+    if (!y) return;
+    if (x.ok !== y.ok) out.push(`item ${i + 1} marked ${x.ok} vs ${y.ok}`);
+    if (JSON.stringify(x.given) !== JSON.stringify(y.given)) out.push(`item ${i + 1} answer ${JSON.stringify(x.given)} vs ${JSON.stringify(y.given)}`);
+  });
+  return out;
+}
 
 /* --- the rules engine, asked directly ------------------------------------ */
 const FS = `http://${P.firestoreHost}:${P.firestorePort}/v1/projects/${P.project}/databases/(default)/documents`;
@@ -119,7 +138,7 @@ let step = "starting";
 try {
   if (portsError) throw portsError;
 
-  /* --- 1. device A: sign in, answer, and it reaches the backend ---------- */
+  /* --- 1. device A: sign in, answer twice, and it reaches the backend --- */
   const A = await device(browser);
   await A.page.goto(url(LESSON), { waitUntil: "domcontentloaded" });
   step = "signing A in";
@@ -127,15 +146,17 @@ try {
   let m = await mark(A.page);
   step = "A answering its first task";
   const task0 = await answerTask(A.page, 0);
-  step = "waiting for A's answer to sync";
+  step = "A taking it again";
+  await answerTask(A.page, 0);                 // a retake: two attempts in the history
+  step = "waiting for A's answers to sync";
   await waitSynced(A.page, { since: m });
   swept++;
-  const aState = progress(await localState(A.page));
-  if (!taskIdsIn(aState).includes(task0)) {
-    problems.push(`device A answered ${task0} but its local record does not hold it — nothing to sync`);
+  const aView = await taskView(A.page, task0);
+  if (!aView.done || !aView.history) {
+    problems.push(`device A answered ${task0} twice but does not show it as done with its two attempts — nothing to compare`);
   }
 
-  /* --- 2. device B: same learner, clean device, inherits EVERYTHING ------ */
+  /* --- 2. device B: same learner, clean device, shows the same task ------ */
   const B = await device(browser);
   await B.page.goto(url(LESSON), { waitUntil: "domcontentloaded" });
   m = await mark(B.page);
@@ -144,10 +165,11 @@ try {
   step = "waiting for B to pull";
   await waitSynced(B.page, { since: m });
   swept++;
-  const bState = progress(await localState(B.page));
-  for (const [k, v] of Object.entries(aState)) {
-    if (!(k in bState)) problems.push(`device B never received ${k}`);
-    else if (bState[k] !== v) problems.push(`device B received ${k} but not A's value of it`);
+  if (!await showsDone(B.page, task0)) {
+    problems.push(`device B, signed in as the same learner and synced, does not show ${task0} as done — A's work never reached B's page`);
+  } else {
+    const diff = differences(aView, await taskView(B.page, task0));
+    if (diff.length) problems.push(`device B shows ${task0} differently from A: ${diff.join("; ")}`);
   }
 
   /* --- 3. device C: a DIFFERENT learner, and the rules engine asked ------ */
@@ -157,15 +179,22 @@ try {
   step = "signing C in";
   await signIn(C.page, OTHER);
   await waitSynced(C.page, { since: m });
+  /* C has answered nothing, so ANY task shown done on C's page is another
+   * learner's work handed to the wrong account. A few seconds' grace, so a
+   * build that repaints just after it says `synced` is still looked at. */
+  step = "looking at C's page before C has done anything";
+  const done = C.page.locator('.task[data-task][data-done="1"]');
+  await done.first().waitFor({ state: "attached", timeout: 3_000 }).catch(() => {});
+  const foreign = await done.evaluateAll(els => els.map(e => e.getAttribute("data-task")));
+  if (foreign.length) {
+    leaks++;
+    problems.push(`LEAK: ${OTHER} has answered nothing, yet its page shows work as done: ${foreign.join(", ")}`);
+  }
   m = await mark(C.page);
   step = "C answering";
   await answerTask(C.page, 0);                 // so C has documents of its own
   await waitSynced(C.page, { since: m });
   swept++;
-  if (taskIdsIn(progress(await localState(C.page))).length > 1) {
-    leaks++;
-    problems.push(`LEAK: ${OTHER} was handed another learner's tasks in its own local state`);
-  }
   step = "probing the rules engine";
   const cUid = await uidOf(OTHER);
   if (!cUid) problems.push(`the Auth emulator has no account for ${OTHER} — isolation NOT MEASURED`);
@@ -216,11 +245,10 @@ try {
     m = await mark(D.page);
     await signIn(D.page, LEARNER);
     await waitSynced(D.page, { since: m });
-    const got = taskIdsIn(progress(await localState(D.page)));
     for (const [what, id] of [["work done offline on A", offlineTask],
                               ["work done meanwhile on B", concurrentTask],
                               ["A's first answer", task0]]) {
-      if (!got.includes(id)) problems.push(`${what} (${id}) is missing on a fresh device after A reconnected — one device's work overwrote the other's`);
+      if (!await showsDone(D.page, id)) problems.push(`${what} (${id}) is not shown on a fresh device after A reconnected — one device's work overwrote the other's`);
     }
   } catch (e) { problems.push(`offline round trip: ${e.message}`); }
 } catch (e) {

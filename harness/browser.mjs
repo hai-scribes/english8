@@ -40,6 +40,13 @@
  *   offline  there is no network; local changes are kept and will be sent
  *   error    the last exchange failed, in words the learner can act on
  *
+ * WHAT "IT SYNCED" MEANS: the other device SHOWS it. Every assertion about
+ * progress is made on the page — a task shown done, with its answers, marks
+ * and attempt history; a day shown in the record — never on how the build
+ * stores anything. Work that arrives from the backend after the page has
+ * painted has to be painted too, in place or by the page reloading itself;
+ * the harness follows the page across a reload it makes of its own accord.
+ *
  * The harness records every value the attribute takes (a MutationObserver
  * installed before the page's own scripts run), and "finished syncing" means
  * the page went through `syncing` and came back to `synced` AFTER the thing
@@ -99,15 +106,14 @@ export async function launch() {
   return chromium.launch({ args: ["--disable-dev-shm-usage"] });
 }
 
-/* Installed before any of the page's own scripts: records every value
+/* Installed before any of the page's own scripts: reports every value
  * [data-en8-sync-state] and [data-en8-auth-state] take, in order, with the
- * browser's own timestamp — in the page (for waitSynced) and reported out to
- * the harness through a binding (for the request audit), so the record
+ * browser's own timestamp, out to the harness through a binding — which is
+ * where waitSynced and the request audit both read it, so the record
  * survives the page navigating. `performance`, not `Date`: rhythm.mjs moves
  * Date to another day, and this clock must not move with it. */
 const STATE_LOG_INIT = `(() => {
-  const log = []; const last = {};
-  Object.defineProperty(window, "__en8SyncLog", { value: log });
+  const last = {};
   const now = () => performance.timeOrigin + performance.now();
   const rec = () => {
     for (const kind of ["sync", "auth"]) {
@@ -115,7 +121,6 @@ const STATE_LOG_INIT = `(() => {
       const v = el ? el.getAttribute("data-en8-" + kind + "-state") : null;
       if (v === last[kind] && kind in last) continue;
       last[kind] = v;
-      if (kind === "sync") log.push(v);
       try { window.__en8Report && window.__en8Report(kind, v, now()); } catch (e) {}
     }
   };
@@ -129,6 +134,8 @@ const STATE_LOG_INIT = `(() => {
   if (document.documentElement) start();
   else document.addEventListener("readystatechange", start, { once: true });
 })();`;
+
+const TIMELINES = new WeakMap();
 
 /** One "device": its own context, its own storage, its own network log.
  *  `timezoneId` defaults to the learner's own — Quy Nhơn is UTC+7, and a
@@ -146,6 +153,7 @@ export async function device(browser, { offline = false, viewport, timezoneId = 
   /* The state timeline: every value the two attributes took on THIS page,
    * across navigations, stamped by the browser. */
   const timeline = [];
+  TIMELINES.set(page, timeline);
   await ctx.exposeBinding("__en8Report", (src, kind, value, t) => {
     /* The main frame only: the init script also runs inside iframes — the
      * sign-in SDK inserts one — where neither attribute exists, and a `null`
@@ -175,10 +183,18 @@ export async function device(browser, { offline = false, viewport, timezoneId = 
     const url = req.url();
     if (url.startsWith("data:") || url.startsWith("blob:")) return;
     let from = "page";
-    try {
-      const fp = req.frame().page();
-      if (fp !== page) return;           // the sign-in popup: a visible window of its own
-    } catch { from = "service-worker"; } // no frame: issued by the service worker
+    if (req.serviceWorker()) from = "service-worker";
+    else {
+      try {
+        if (req.frame().page() !== page) return;   // the sign-in popup: a visible window of its own
+      } catch {
+        /* No frame yet: Playwright's documented case of a navigation issued
+         * before its frame exists, which is how a popup's first request
+         * arrives. A window the learner can see is not a hidden process. */
+        if (req.isNavigationRequest()) return;
+        from = "unattributed";
+      }
+    }
     net.push({ url, method: req.method(), resourceType: req.resourceType(), from, req, seenAt: Date.now() });
   });
 
@@ -218,6 +234,13 @@ export function silentOps(net) {
     return r;
   }).filter(r => !r.surfaced);
 }
+
+/** A learner email unique to THIS run. The emulators outlive a scenario —
+ *  the gate and a benchmark can share one stack, and a scenario may be run
+ *  again on it — so a fixed address would sign in to the work an earlier run
+ *  left behind, and "a second learner who has done nothing" would not be one. */
+const RUN = `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
+export const learner = role => `${role}-${RUN}@example.com`;
 
 /** A page URL on the served build, under the path the site is published at.
  *  `p` is relative to the site root ("unit-01/lesson-1/"). */
@@ -313,15 +336,13 @@ export async function answerTask(page, index = 0) {
 /** Kept for the scenarios that only ever need one task. */
 export const answerFirstTask = page => answerTask(page, 0);
 
-/** Everything the app has persisted locally, by its own key prefix. */
-export const localState = page => page.evaluate(() => {
-  const out = {};
-  for (let i = 0; i < localStorage.length; i++) {
-    const k = localStorage.key(i);
-    if (k.startsWith("en8:")) out[k] = localStorage.getItem(k);
-  }
-  return out;
-});
+/* The sync-state record the harness reads is the one the page REPORTED OUT
+ * (the timeline device() keeps, fed through the binding), not the array the
+ * init script keeps inside the page. The in-page array dies with its
+ * document, so a build that reloads itself after pulling — a legitimate way to
+ * show work that arrived from another device — would reset it mid-wait, and a
+ * `since` index taken in the old document would point into the wrong array. */
+const syncEntries = page => (TIMELINES.get(page) || []).filter(e => e.kind === "sync");
 
 /** Where the sync-state record stands now — the index of the CURRENT state,
  *  so a page that is already `syncing` when the mark is taken (an initial
@@ -329,11 +350,10 @@ export const localState = page => page.evaluate(() => {
  *  on is credited with it. Marking after the current entry instead would wait
  *  forever on a page that coalesced the change into the exchange already in
  *  flight, which is correct behaviour. Pass it to waitSynced as `since`. */
-export const mark = page => page.evaluate(() => Math.max(0, (window.__en8SyncLog || []).length - 1));
+export const mark = async page => Math.max(0, syncEntries(page).length - 1);
 
-/** The sync-state values the page has shown, in order. */
-export const syncLog = (page, since = 0) =>
-  page.evaluate(n => (window.__en8SyncLog || []).slice(n), since);
+/** The sync-state values the page has shown, in order, across navigations. */
+export const syncLog = async (page, since = 0) => syncEntries(page).slice(since).map(e => e.value);
 
 /** Wait for the page to declare it has finished syncing.
  *
@@ -342,17 +362,45 @@ export const syncLog = (page, since = 0) =>
  *  to `synced` — the action's exchange with the backend completed. Without
  *  it, it waits for the state to read `synced`. `idle` never counts: it means
  *  nothing has happened, which is not the same as something having finished. */
-export const waitSynced = (page, { since, ms = 25_000 } = {}) => page.waitForFunction(n => {
-  const log = window.__en8SyncLog || [];
-  const now = document.querySelector("[data-en8-sync-state]")?.getAttribute("data-en8-sync-state");
-  if (now !== "synced") return false;
-  return n == null || log.slice(n).includes("syncing");
-}, since ?? null, { timeout: ms }).catch(async e => {
+export async function waitSynced(page, { since, ms = 25_000 } = {}) {
+  const deadline = Date.now() + ms;
+  for (;;) {
+    const log = syncEntries(page);
+    const now = log.length ? log[log.length - 1].value : null;
+    if (now === "synced" && (since == null || log.slice(since).some(e => e.value === "syncing"))) return;
+    if (Date.now() > deadline) break;
+    await new Promise(r => setTimeout(r, 40));
+  }
   /* Say what the page was showing, so a timeout reads as "stuck in error"
    * or "never left synced" rather than as an anonymous wait. */
-  const seen = await syncLog(page, since ?? 0).catch(() => []);
+  const seen = await syncLog(page, since ?? 0);
   const detail = await page.$eval("[data-en8-sync-detail]", el => el.textContent.trim()).catch(() => null);
   throw new Error(`the page never finished syncing within ${ms}ms — states shown: ` +
     `${seen.map(s => s ?? "absent").join(" → ") || "none"}` +
-    (detail ? `; detail text: ${JSON.stringify(detail)}` : "") + ` (${e.message.split("\n")[0]})`);
-});
+    (detail ? `; detail text: ${JSON.stringify(detail)}` : ""));
+}
+
+/** What the learner sees of one marked task: whether it is done, the answer
+ *  given and the mark on each item, the score line and the attempt history.
+ *  Two devices showing the same learner the same task must agree on all of it
+ *  — a sync that carries "task done" but loses the answers, or carries the
+ *  latest attempt but not the history, shows a different page. */
+export async function taskView(page, id) {
+  return page.locator(`.task[data-task="${id}"]`).first().evaluate(t => ({
+    done: t.dataset.done === "1",
+    items: [...t.querySelectorAll(".t-items .i")].map(li => ({
+      ok: li.dataset.ok ?? null,
+      given: [...li.querySelectorAll("input, select")].map(el =>
+        el.type === "radio" || el.type === "checkbox" ? (el.checked ? el.value : null) : el.value)
+        .filter(v => v !== null),
+    })),
+    score: (t.querySelector(".t-score")?.textContent || "").trim(),
+    history: (t.querySelector(".t-log")?.innerText || "").trim(),
+  }), null, { timeout: 10_000 });
+}
+
+/** Wait until the page SHOWS the task as done — the learner-visible fact —
+ *  surviving any reload the page does of its own accord. False on timeout. */
+export const showsDone = (page, id, ms = 10_000) =>
+  page.locator(`.task[data-task="${id}"][data-done="1"] .t-items .i`).first()
+    .waitFor({ state: "attached", timeout: ms }).then(() => true, () => false);

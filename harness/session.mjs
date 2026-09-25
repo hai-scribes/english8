@@ -20,10 +20,10 @@
 import { metric, gate, finish } from "./lib.mjs";
 import {
   launch, device, url, aLessonPath, signIn, answerTask, waitSynced, mark, syncLog,
-  silentOps, P, portsError,
+  silentOps, P, learner, portsError,
 } from "./browser.mjs";
 
-const LEARNER = "session-learner@example.com";
+const LEARNER = learner("session");
 const problems = [];
 let steps = 0, silent = 0, surfaced = 0;
 const LESSON = aLessonPath();
