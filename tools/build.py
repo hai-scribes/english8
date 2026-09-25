@@ -2485,6 +2485,24 @@ def review_cards(reviews, units, up="") -> str:
 
 
 def page_home(units, reviews=()) -> str:
+    """The home page is TODAY: what to do now, in the order to do it.
+
+    It used to open on the whole course -- a masthead about twelve units and 84
+    lessons, four counters, a story card, a review card and the unit grid, all
+    at the same weight. Every one of them was a place to go and none said which,
+    and the only progress figure was a count out of 84, which reads as a
+    distance still to walk. The learner's complaint was exactly that: too many
+    places with no clear purpose, and a course that feels like it never ends.
+
+    So the page answers one question -- what now? -- with at most two steps: the
+    day's review, capped, then the next step on the path. Once both are done it
+    says so and stops asking. Progress is shown inside the current unit only,
+    where the end is always in sight. Everything else is one "Browse" section
+    below, closed.
+
+    The card's markup ships in its first-visit state and app.js repaints it
+    from the learner's record, as the start card always did.
+    """
     cards = []
     for u in units:
         cards.append(f"""    <a class="unitcard" href="unit-{u['nn']}/index.html" data-unit-progress="{u['nn']}">
@@ -2496,62 +2514,97 @@ def page_home(units, reviews=()) -> str:
       </div>
       <div class="foot"><span data-progress-text>7 lessons</span><span class="bar"><i></i></span></div>
     </a>""")
-    body = f"""  <header class="masthead">
-    <p class="eyebrow">Self-study course · 12 units · 84 lessons</p>
-    <h1>Tiếng Anh 8 — Global Success</h1>
-    <p class="standfirst">Twelve units, seven lessons each, in order. Every lesson teaches
-    something and then asks you to use it; when all seven are done, the unit's practice and
-    test open. Your work is saved on this device as you go.</p>
+    def scene(u):
+        """The Lesson 1 dialogue's own title -- "The list in the yard" -- which
+        is what the learner will actually meet. The story chapters reuse the
+        unit titles, and "chapter 1: Leisure Time" promises nothing."""
+        for b in u["lessons"][0]["blocks"]:
+            for d in b.get("dialogues", []):
+                a = d[0] if isinstance(d, tuple) else d
+                if a.get("title"):
+                    return a["title"]
+        return ""
+    # The path, in the order it is walked. app.js derives the next step from
+    # this and the learner's record, so the order lives in one place.
+    path = [{"nn": u["nn"], "num": u["num"], "title": u["title"],
+             "chapter": scene(u),
+             "lessons": [x["title"] for x in u["lessons"]],
+             "check": next((r["num"] for r in reviews if r["covers"][-1] == u["num"]), None)}
+            for u in units]
+    body = f"""  <header class="masthead today-head">
+    <p class="eyebrow">Tiếng Anh 8 · Global Success</p>
+    <h1>Today</h1>
   </header>
 
-  <div class="card start" id="startCard">
-    <h3 id="startTitle">Start here</h3>
-    <p class="lede" id="startLede">Begin with <b>Unit 01, Lesson 1</b> and work down the
-    list. About 20–30 minutes a lesson is plenty.</p>
-    <div class="row">
-      <a class="btn" id="startLink" href="unit-01/index.html">Open Unit 01</a>
+  <section class="card today" id="todayCard" aria-labelledby="todayTitle">
+    <h2 id="todayTitle" class="sr-only">What to do today</h2>
+    <ol class="today-steps">
+      <li class="tstep" id="reviewCard" hidden>
+        <span class="tick" aria-hidden="true"></span>
+        <div class="tbody">
+          <p class="tk">First · review</p>
+          <h3 id="reviewTitle">Review</h3>
+          <p class="lede" id="reviewLede"></p>
+          <div class="row">
+            <button class="btn" id="startReview" type="button">Start review</button>
+          </div>
+          <details class="cycle"><summary>What is in your review cycle</summary>
+            <div id="reviewKinds"></div>
+            <p class="lede small" id="reviewBreak"></p>
+          </details>
+          <div id="reviewEngine" hidden></div>
+        </div>
+      </li>
+      <li class="tstep" id="nextStep">
+        <span class="tick" aria-hidden="true"></span>
+        <div class="tbody">
+          <p class="tk" id="nextKicker">Unit 01 · Lesson 1</p>
+          <h3 id="nextTitle">Getting Started</h3>
+          <p class="lede" id="nextLede">Start here. Each lesson teaches something, then asks
+          you to use it. Press <b>Finish lesson</b> at the bottom when you are done.</p>
+          <div class="row">
+            <a class="btn" id="startLink" href="unit-01/lesson-1/index.html">Open the lesson</a>
+          </div>
+        </div>
+      </li>
+    </ol>
+    <div class="today-done" id="todayDone" hidden>
+      <p class="big">That is today's work done.</p>
+      <p class="lede">Come back tomorrow — spacing it out is what makes it stick.
+      If you want more now, the next step is below.</p>
+      <div class="row"><a class="btn quiet" id="keepGoing" href="#">Keep going</a></div>
     </div>
-  </div>
+  </section>
 
-  <div class="overview">
-    <div class="stat"><span class="n" data-units-started>0</span><span class="k">units started</span></div>
-    <div class="stat good"><span class="n" data-units-done>0</span><span class="k">units finished</span></div>
-    <div class="stat hot"><span class="n" data-total-lessons>0</span><span class="k">lessons done</span></div>
-    <div class="stat"><span class="n" data-review-due>0</span><span class="k">words due today</span></div>
-  </div>
-
-  <div class="card story" id="storyCard">
-    <h3>The Sea Gives Back</h3>
-    <p class="lede">The twelve units tell one story. Here it is with the
-    exercises taken away, to be read straight through — a chapter opens once
-    you have done that unit's first lesson.</p>
-    <div class="row">
-      <a class="btn quiet" href="story/index.html">Open the story</a>
-      <a class="btn quiet" href="words/index.html">Look up a word</a>
-      <span class="label"><b data-story-read>0</b> of 12 chapters read</span>
+  <section class="card unitpath" id="unitPath" aria-labelledby="pathTitle">
+    <div class="ph">
+      <p class="tk" id="pathUnit">Unit 01 of 12</p>
+      <h2 id="pathTitle">{e(units[0]['title']) if units else ''}</h2>
     </div>
-  </div>
+    <ol class="dots" id="pathDots"></ol>
+    <p class="lede" id="pathStory"></p>
+  </section>
 
-  <div class="card review" id="reviewCard" hidden>
-    <h3>Due for review</h3>
-    <p class="lede" id="reviewLede"></p>
-    <div id="reviewKinds"></div>
-    <div class="row">
-      <button class="btn" id="startReview" type="button">Start review</button>
-      <span class="label" id="reviewBreak"></span>
-    </div>
-    <div id="reviewEngine" hidden></div>
-  </div>
-
-  <div class="sectionhead"><h2>The twelve units</h2><span class="label">sounds in clay · grammar in teal</span></div>
-  <div class="unitgrid">
+  <details class="browse" id="browse">
+    <summary>Browse the course</summary>
+    <div class="browse-body">
+      <div class="row">
+        <a class="btn quiet" href="story/index.html">The story</a>
+        <a class="btn quiet" href="words/index.html">Look up a word</a>
+        <span class="label"><b data-story-read>0</b> of 12 chapters read</span>
+      </div>
+      <div class="sectionhead"><h2>All twelve units</h2><span class="label">sounds in clay · grammar in teal</span></div>
+      <div class="unitgrid">
 {chr(10).join(cards)}
-  </div>
-{review_cards(reviews, units)}"""
+      </div>
+{review_cards(reviews, units)}
+    </div>
+  </details>"""
     # The review queue spans units, so the home page carries every unit's items.
-    # ~216 of them; the alternative is a fetch, and this site has no server.
-    return shell(title=SITE, depth=0, body=body, crumb=[("Course", "")],
+    # ~570 of them; the alternative is a fetch, and this site has no server.
+    return shell(title=SITE, depth=0, body=body, crumb=[("Today", "")],
                  data={"kind": "home",
+                       "path": path,
                        "vocab": {u["nn"]: practice_data(u) for u in units},
                        # Flat and typed: the review queue spans units and kinds,
                        # and the scheduler keys on (unit, type, id).
@@ -2581,8 +2634,8 @@ def start_card(u) -> str:
       the rule. Nothing to fill in yet.</li>
       <li><b>Do the exercises.</b> Type or choose your answer, then press
       <b>Check answers</b>. You will see what was right and, where it helps, why.</li>
-      <li><b>Press “Mark lesson complete”</b> at the bottom before you move on. That is
-      what fills the progress bar and opens the practice and the test.</li>
+      <li><b>Press “Finish lesson”</b> at the bottom. That records the lesson, opens
+      the practice and the test, and takes you back to Today.</li>
     </ol>
     <div class="row">
       <a class="btn" id="startLink" href="lesson-1/index.html">Start Lesson 1</a>
@@ -2677,7 +2730,7 @@ def page_unit(u, reviews=()) -> str:
   </div>"""
 
     return shell(title=f"Unit {u['num']:02d} — {u['title']} · {SITE}", depth=1, body=body,
-                 crumb=[("Course", "../index.html"), (f"Unit {u['num']:02d}", "")],
+                 crumb=[("Today", "../index.html"), (f"Unit {u['num']:02d}", "")],
                  data={"kind": "unit", "unit": u["nn"], "vocab": practice_data(u)},
                  desc=f"Unit {u['num']}: {u['title']}. Seven lessons, practice and a unit test.")
 
@@ -2823,7 +2876,7 @@ def page_story(units) -> str:
   <div class="sc-reader">{"".join(secs)}</div>
 """
     return shell(title=f"The Sea Gives Back · {SITE}", depth=0, body=body,
-                 crumb=[("Course", "index.html"), ("The story", "")],
+                 crumb=[("Today", "index.html"), ("The story", "")],
                  data={"kind": "story",
                        "chapters": [{"nn": c["nn"], "num": c["num"],
                                      "title": c["title"], "words": c["words"]}
@@ -2904,7 +2957,7 @@ def page_words(units) -> str:
   word, or the Vietnamese.</p>
 """
     return shell(title=f"Word list · {SITE}", depth=0, body=body,
-                 crumb=[("Course", "index.html"), ("Words", "")],
+                 crumb=[("Today", "index.html"), ("Words", "")],
                  data={"kind": "words"},
                  desc="Look up any of the words this course teaches, in English "
                       "or Vietnamese, with sound.")
@@ -3143,8 +3196,12 @@ def page_lesson(u, L) -> str:
 
     prev_l = (f'<a class="btn quiet" href="../lesson-{L["n"] - 1}/index.html">← Lesson {L["n"] - 1}</a>'
               if L["n"] > 1 else '<a class="btn quiet" href="../index.html">← Unit</a>')
-    next_l = (f'<a class="btn" href="../lesson-{L["n"] + 1}/index.html">Lesson {L["n"] + 1} →</a>'
-              if L["n"] < LESSONS else '<a class="btn" href="../index.html">Practice &amp; test →</a>')
+    # One primary action, and it is the one that moves the learner on. It used
+    # to be a quiet "Mark lesson complete" toggle beside a louder "next" link,
+    # so the easy path skipped the step that records the lesson -- and a lesson
+    # never recorded is a course that never ends. Finishing goes back to Today,
+    # which is where the next step is decided.
+    after = (f'Lesson {L["n"] + 1}' if L["n"] < LESSONS else "the unit test")
 
     body = f"""  <div class="rail" aria-label="Lessons in this unit">{rail}</div>
   <header class="masthead">
@@ -3154,16 +3211,16 @@ def page_lesson(u, L) -> str:
 
 {chr(10).join(parts)}
 
-  <div class="pager">
+  <div class="pager finish" id="finish" data-after="{e(after)}">
     {prev_l}
-    <button class="btn quiet" id="markDone" type="button">Mark lesson complete</button>
     <span class="sp"></span>
-    {next_l}
+    <button class="btn quiet small" id="undoDone" type="button" hidden>Not finished yet</button>
+    <a class="btn" id="markDone" href="../../index.html">Finish lesson ✓</a>
   </div>"""
 
     return shell(title=f"Lesson {L['n']} — {L['title']} · Unit {u['num']:02d} · {SITE}",
                  depth=2, body=body,
-                 crumb=[("Course", "../../index.html"),
+                 crumb=[("Today", "../../index.html"),
                         (f"Unit {u['num']:02d}", "../index.html"),
                         (f"Lesson {L['n']}", "")],
                  data={"kind": "lesson", "unit": u["nn"], "lesson": L["n"],
@@ -3183,10 +3240,11 @@ def review_span_text(r) -> str:
 def page_review(r, units) -> str:
     """One Review: everything on one page, in the two halves the book prints.
 
-    There is no progress gate and no "mark complete" button. A Review is not a
-    lesson the learner is working through — it is the point at which three
-    finished units are asked about together, which is the one thing this site
-    had no shape for at all.
+    There is no progress gate: nothing here is locked, and nothing after it
+    waits on it. It does carry a Finish button, because it is a step on the
+    path Today walks, and a step the learner cannot finish is one Today would
+    point at forever. A Review is the point at which three finished units are
+    asked about together, which is the one thing this site had no shape for.
     """
     parts = []
     payload: dict = {"tasks": [], "audio": [], "write": [], "clock": [], "passage": []}
@@ -3207,9 +3265,6 @@ def page_review(r, units) -> str:
 
     last = r["covers"][-1]
     prev_l = f'<a class="btn quiet" href="../unit-{last:02d}/index.html">← Unit {last:02d}</a>'
-    nxt = last + 1
-    next_l = (f'<a class="btn" href="../unit-{nxt:02d}/index.html">Unit {nxt:02d} →</a>'
-              if nxt <= 12 else '<a class="btn" href="../index.html">Back to the course →</a>')
 
     body = f"""  <header class="masthead">
     <p class="eyebrow">Review {r['num']} of {REVIEWS} · after Unit {last:02d}</p>
@@ -3227,15 +3282,16 @@ def page_review(r, units) -> str:
 
 {chr(10).join(parts)}
 
-  <div class="pager">
+  <div class="pager finish" id="finish">
     {prev_l}
     <span class="sp"></span>
-    {next_l}
+    <button class="btn quiet small" id="undoDone" type="button" hidden>Not finished yet</button>
+    <a class="btn" id="markDone" href="../index.html">Finish checkpoint ✓</a>
   </div>"""
 
     return shell(title=f"Review {r['num']} — {review_span_text(r)} · {SITE}",
                  depth=1, body=body,
-                 crumb=[("Course", "../index.html"), (f"Review {r['num']}", "")],
+                 crumb=[("Today", "../index.html"), (f"Review {r['num']}", "")],
                  data={"kind": "review", "unit": r["nn"], "review": r["num"],
                        "tasks": payload["tasks"], "audio": payload["audio"],
                        "write": payload["write"], "clock": payload["clock"],

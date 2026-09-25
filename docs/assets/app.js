@@ -62,7 +62,74 @@ function markLesson(u, l, on){
   if (on) r.lessons[String(l)] = Date.now();
   else delete r.lessons[String(l)];
   saveProg();
+  logStep(u + ":L" + l, on);
 }
+/* A checkpoint (one of the four Reviews) is a step on the path too. */
+const checkDone = n => !!(PROG.checkpoints && PROG.checkpoints[String(n)]);
+function markCheck(n, on){
+  PROG.checkpoints = PROG.checkpoints || {};
+  if (on) PROG.checkpoints[String(n)] = Date.now();
+  else delete PROG.checkpoints[String(n)];
+  saveProg();
+  logStep("R" + n, on);
+}
+
+/* ---------------- the day's record ---------------------------------------
+   What was done on each calendar day: review items answered, and path steps
+   finished. Two jobs. It tells Today when today's work is done, so the page
+   can stop asking; and it is the weekday record the Saturday session reads.
+
+   It counts things done and never minutes (pedagogy P1: elapsed time is not
+   progress), and it is never shown as a streak -- that mechanic is on the
+   blocked list (pedagogy 06 §2), and a broken streak on a phone at 9pm is
+   exactly the kind of pressure nobody has evidence about. */
+const D_KEY = "en8:days:v1";
+let DAYS = (() => {
+  try { return JSON.parse(localStorage.getItem(D_KEY)) || {}; } catch(e){ return {}; }
+})();
+function saveDays(){
+  try { localStorage.setItem(D_KEY, JSON.stringify(DAYS)); } catch(e){}
+}
+function dayRec(){
+  const t = String(todayNum());
+  if (!DAYS[t]) DAYS[t] = { reviewed:0, steps:[] };
+  return DAYS[t];
+}
+function logStep(id, on){
+  const d = dayRec();
+  d.steps = d.steps.filter(x => x !== id);
+  if (on) d.steps.push(id);
+  saveDays();
+}
+function logReviewed(){
+  dayRec().reviewed++;
+  saveDays();
+}
+
+/* ---------------- the path -----------------------------------------------
+   Every unit is walked the same way: seven lessons, then the unit test, and
+   after Units 03, 06, 09 and 12 a checkpoint. Practice is not a step -- it is
+   open from Lesson 2 for anyone who wants it, and the review queue already
+   brings every word back. `DATA.path` is written by build.py (home page only)
+   so the order lives in one place. Hrefs are relative to the home page. */
+function pathSteps(){
+  const out = [];
+  for (const u of (DATA.path || [])){
+    u.lessons.forEach((title, i) => out.push({
+      kind:"lesson", u, n:i + 1, title,
+      id:u.nn + ":L" + (i + 1),
+      href:"unit-" + u.nn + "/lesson-" + (i + 1) + "/index.html",
+      done:() => lessonDone(u.nn, i + 1) }));
+    out.push({ kind:"test", u, title:"Unit test", id:u.nn + ":T",
+      href:"unit-" + u.nn + "/index.html#gate",
+      done:() => !!unitRec(u.nn).test });
+    if (u.check) out.push({ kind:"check", u, n:u.check, title:"Checkpoint " + u.check,
+      id:"R" + u.check, href:"review-" + u.check + "/index.html",
+      done:() => checkDone(u.check) });
+  }
+  return out;
+}
+const nextStep = () => pathSteps().find(s => !s.done()) || null;
 
 /* ---------------- speech -------------------------------------------------- */
 /* The voice is the pronunciation model, so it is ranked, not accepted:
@@ -342,16 +409,26 @@ function initEntries(){
 
 /* ---------------- lesson page -------------------------------------------- */
 function initLesson(){
-  if (DATA.kind !== "lesson") return;
+  if (DATA.kind !== "lesson" && DATA.kind !== "review") return;
+  /* A checkpoint page has the same Finish control and none of the rail. */
+  const isCheck = DATA.kind === "review";
   const { unit, lesson } = DATA;
-  const btn = $("#markDone");
+  const isDone = () => isCheck ? checkDone(DATA.review) : lessonDone(unit, lesson);
+  const setDone = on => isCheck ? markCheck(DATA.review, on) : markLesson(unit, lesson, on);
+  const btn = $("#markDone"), undo = $("#undoDone");
+  const after = ($("#finish") || { dataset:{} }).dataset.after;
   const paint = () => {
-    const done = lessonDone(unit, lesson);
+    const done = isDone();
     if (btn){
-      btn.textContent = done ? "✓ Completed" : "Mark lesson complete";
-      btn.classList.toggle("quiet", done);
-      btn.setAttribute("aria-pressed", String(done));
+      /* Finishing is a link to Today, and the click records the step first.
+         A finished lesson keeps the same button, reworded: going back to
+         Today is still the next thing to do. */
+      btn.textContent = done ? "✓ Finished — back to Today"
+                             : (isCheck ? "Finish checkpoint ✓" : "Finish lesson ✓");
+      btn.title = done || !after ? "" : "Records this lesson. Next on the path: " + after;
     }
+    if (undo) undo.hidden = !done;
+    if (isCheck) return;
     /* The rail shows numbers only; name each one so hovering (or a screen
        reader) tells you which lesson it is, and mark the finished ones. */
     $$(".rail a, .rail span").forEach(el => {
@@ -366,7 +443,8 @@ function initLesson(){
       if (lessonDone(unit, Number(n))) el.classList.add("ok");
     });
   };
-  if (btn) btn.addEventListener("click", () => { markLesson(unit, lesson, !lessonDone(unit, lesson)); paint(); });
+  if (btn) btn.addEventListener("click", () => { if (!isDone()) setDone(true); });
+  if (undo) undo.addEventListener("click", () => { setDone(false); paint(); });
   paint();
 }
 
@@ -402,7 +480,7 @@ function paintProgress(){
 }
 
 /* ---------------- where to begin -----------------------------------------
-   The card at the top of the home page and of every unit page. Its markup
+   The card at the top of every unit page. Its markup
    ships pointing at the first thing a new learner should open, and this
    repoints it at the first thing *this* learner has not finished — because
    "start with Lesson 1" is wrong advice for someone who did Lessons 1 to 4
@@ -426,10 +504,12 @@ function initStart(){
     for (let l = 1; l <= 7; l++) if (!lessonDone(u, l)){ next = l; break; }
     const done = lessonsDone(u);
     if (!next){
-      say("This unit is finished",
-        "All seven lessons are marked complete. The word practice and the unit test are "
-        + "open at the bottom of this page.",
-        "#gate", "Go to practice & test");
+      const tested = !!unitRec(u).test;
+      say(tested ? "This unit is finished" : "One step left: the unit test",
+        tested ? "All seven lessons and the unit test are done. Today has your next step."
+               : "All seven lessons are finished. The unit test is at the bottom of this "
+                 + "page — every word once, then this unit is done.",
+        tested ? "../index.html" : "#gate", tested ? "Back to Today" : "Go to the unit test");
     } else if (done){
       say("Pick up where you left off",
         "You have finished <b>" + done + " of 7</b> lessons in this unit. The steps below "
@@ -439,25 +519,7 @@ function initStart(){
     return;
   }
 
-  if (DATA.kind === "home"){
-    let next = 0, started = 0;
-    for (let n = 1; n <= 12; n++){
-      const u = String(n).padStart(2, "0"), d = lessonsDone(u);
-      if (d < 7){ next = n; started = d; break; }
-    }
-    if (!next){
-      say("Every unit is finished",
-        "All twelve units are complete. Words you have practised keep coming back for "
-        + "review — check the queue above.",
-        "unit-01/index.html", "Back to Unit 01");
-    } else if (started || next > 1){
-      const nn = String(next).padStart(2, "0");
-      say("Pick up where you left off",
-        started ? "You are <b>" + started + " of 7</b> lessons into Unit " + nn + "."
-                : "Unit " + nn + " is next.",
-        "unit-" + nn + "/index.html", "Continue Unit " + nn);
-    }
-  }
+  /* The home page is Today now, and paints itself: see initToday. */
 }
 
 /* ---------------- the gate ------------------------------------------------
@@ -673,12 +735,30 @@ function initWords(){
 
    The seven days is an engineering choice and the interface says so. Nothing
    in the evidence names an interval, and a tool implying otherwise would be
-   selling a forgetting curve nobody has published. */
+   selling a forgetting curve nobody has published.
+
+   Two limits keep the queue finishable, and both are engineering choices too
+   (pedagogy P14: no review ladder is evidenced). Uniform intervals with no
+   exit meant every item came back every week for ever: 567 items across the
+   twelve units is ~80 due a day by the end of the year, on a phone, alone —
+   a pile nobody finishes, and an unfinishable pile is a reason to stop
+   opening the site. So:
+
+     RETIRE_AFTER  an item right after a real gap three times leaves the cycle.
+                   A miss brings it back in.
+     DAILY_REVIEW  at most this many items are asked in a day, longest-waiting
+                   first. The rest wait; nothing is lost, and nothing is shown
+                   as a backlog to be ashamed of. */
 const R_KEY = "en8:review:v1";
 const DAY = 86400000;
 const REVIEW_DAYS = 7;      // uniform, not expanding
 const RELEARN_DAYS = 1;     // an item you missed comes back tomorrow
-const todayNum = () => Math.floor(Date.now() / DAY);
+const RETIRE_AFTER = 3;
+const DAILY_REVIEW = 20;
+/* The LOCAL calendar day. Counting whole UTC days rolled "today" over at
+   07:00 in Vietnam, so a review done before school and one done after it
+   landed on different days. */
+const todayNum = () => Math.floor((Date.now() - new Date().getTimezoneOffset() * 60000) / DAY);
 
 let REVIEW = (() => {
   try { return JSON.parse(localStorage.getItem(R_KEY)) || {}; } catch(e){ return {}; }
@@ -704,6 +784,7 @@ function schedule(unit, type, id, ok){
   r.seen++;
   r.last = t;
   r.due = t + (ok ? REVIEW_DAYS : RELEARN_DAYS);
+  r.retired = ok ? (r.kept >= RETIRE_AFTER) : false;
   REVIEW[k] = r;
   saveReview();
 }
@@ -737,9 +818,15 @@ function dueItems(){
   const all = DATA.review || [];
   for (const it of all){
     const r = REVIEW[rKey(it.unit, it.type, it.id)];
-    if (r && r.due <= t) out.push(Object.assign({ _u:it.unit }, it));
+    if (r && !r.retired && r.due <= t) out.push(Object.assign({ _u:it.unit, _due:r.due }, it));
   }
   return out;
+}
+/* Today's share of what is due: the longest-waiting first, up to what is left
+   of the day's allowance. */
+function todaysReview(){
+  const left = Math.max(0, DAILY_REVIEW - dayRec().reviewed);
+  return dueItems().sort((a, b) => a._due - b._due).slice(0, left);
 }
 
 /* What is in the cycle, per kind. Reported separately and never added up:
@@ -751,8 +838,10 @@ function reviewByKind(){
   for (const it of (DATA.review || [])){
     const r = REVIEW[rKey(it.unit, it.type, it.id)];
     if (!r) continue;
-    (out[it.type] = out[it.type] || { seen:0, due:0 }).seen++;
-    if (r.due <= todayNum()) out[it.type].due++;
+    const k = (out[it.type] = out[it.type] || { seen:0, due:0, retired:0 });
+    if (r.retired){ k.retired++; continue; }
+    k.seen++;
+    if (r.due <= todayNum()) k.due++;
   }
   return out;
 }
@@ -931,6 +1020,9 @@ function runEngine(mode, words, unit, hostSel, opts){
     const q = st.items[st.i], w = q.w, ok = res.ok;
     if (ok) st.right++; else st.wrong.push({ q, given, why:res.why });
     schedule(q.w._u || st.unit, w.type || "word", w.id || w.word, ok);
+    /* Once per item, not per showing: a missed item is asked again at the end
+       of the session, and that second showing is not another item reviewed. */
+    if (st.mode === "review" && !q.counted){ q.counted = true; logReviewed(); }
     if (st.mode === "test"){ st.i++; return paintQ(); }
     const why = res.why === "two"
       ? '<div class="n">Two answers in one gap score nothing, even when one of them is right.</div>'
@@ -980,6 +1072,7 @@ function runEngine(mode, words, unit, hostSel, opts){
     if (st.mode === "test" && st.unit){
       const r = unitRec(st.unit);
       const pct = Math.round(st.right / total * 100);
+      if (!r.test) logStep(st.unit + ":T", true);
       if (!r.test || pct > r.test.best) r.test = { best:pct, at:Date.now() };
       saveProg();
     }
@@ -1006,13 +1099,22 @@ function runEngine(mode, words, unit, hostSel, opts){
       + missed
       + '<p class="note small">This is a score on this unit\'s word list, not a measure of your '
       + 'English overall.</p>'
-      + '<div class="row"><button class="btn" id="again">Go again</button>'
-      + '<button class="btn quiet" id="back">Done</button></div></div>';
-    $("#again", host).addEventListener("click", () => runEngine(st.mode, words, st.unit, hostSel));
-    $("#back", host).addEventListener("click", () => {
+      /* No "go again" on a review: the same items straight back is massed
+         practice, and today's allowance is spent. A unit test ends the unit,
+         so its way out is Today, where the next step is. */
+      + '<div class="row">'
+      + (st.mode === "review" ? "" : '<button class="btn' + (st.mode === "test" ? " quiet" : "")
+          + '" id="again">Go again</button>')
+      + (st.mode === "test"
+          ? '<a class="btn" href="../index.html">Back to Today</a>'
+          : '<button class="btn' + (st.mode === "review" ? "" : " quiet") + '" id="back">Done</button>')
+      + '</div></div>';
+    const again = $("#again", host), back = $("#back", host);
+    if (again) again.addEventListener("click", () => runEngine(st.mode, words, st.unit, hostSel));
+    if (back) back.addEventListener("click", () => {
       host.hidden = true;
       const g = $("#gate"); if (g){ g.hidden = false; initGate(); }
-      if (DATA.kind === "home") paintReview();
+      if (DATA.kind === "home") paintToday();
       window.scrollTo({ top:0, behavior:"smooth" });
     });
   }
@@ -1059,51 +1161,171 @@ function runEngine(mode, words, unit, hostSel, opts){
   });
 }
 
-/* ---------------- the review card on the home page ----------------------- */
-function paintReview(){
+/* ---------------- Today ---------------------------------------------------
+   The home page. Two steps at most -- the day's review, then the next step on
+   the path -- and then it says the day is done and stops asking.
+
+   "Done" is one path step finished today with the review allowance cleared.
+   One lesson a day is a design choice, not an evidenced dose (pedagogy P2),
+   and it is not a limit: Keep going is always there. What it buys is an end
+   to each day, which is what a course that "feels like forever" lacked. */
+const STEP_WORD = { lesson:"Lesson", test:"Unit test", check:"Checkpoint" };
+
+function stepKicker(s){
+  if (s.kind === "lesson") return "Unit " + s.u.nn + " · Lesson " + s.n + " of 7";
+  if (s.kind === "test") return "Unit " + s.u.nn + " · last step";
+  return "After Unit " + s.u.nn;
+}
+function stepLede(s){
+  if (s.kind === "test")
+    return "Every word from this unit once, with the answers at the end. "
+      + "Then Unit " + s.u.nn + " is done.";
+  if (s.kind === "check")
+    return "Three units asked about together. Nothing new — everything in it has "
+      + "already been taught. Press <b>Finish checkpoint</b> at the bottom when you are done.";
+  if (s.n === 1 && s.u.chapter)
+    return "A new unit, and the story goes on: <i>" + esc(s.u.chapter) + "</i>.";
+  return "Press <b>Finish lesson</b> at the bottom when you are done.";
+}
+function stepAction(s){
+  return s.kind === "lesson" ? "Open the lesson"
+       : s.kind === "test" ? "Go to the unit test" : "Open the checkpoint";
+}
+
+function paintPath(step){
+  const box = $("#unitPath");
+  if (!box) return;
+  const path = DATA.path || [];
+  const u = step ? step.u : path[path.length - 1];
+  if (!u){ box.hidden = true; return; }
+  $("#pathUnit").textContent = "Unit " + u.nn + " of 12";
+  $("#pathTitle").textContent = u.title;
+  const steps = pathSteps().filter(x => x.u.nn === u.nn);
+  $("#pathDots").innerHTML = steps.map(x => {
+    const cur = step && x.id === step.id, done = x.done();
+    const label = x.kind === "lesson" ? String(x.n) : x.kind === "test" ? "Test" : "Check";
+    const name = x.kind === "lesson" ? "Lesson " + x.n + ": " + x.title : x.title;
+    return '<li class="' + (done ? "ok" : "") + (cur ? " cur" : "") + (x.kind !== "lesson" ? " wide" : "")
+      + '"><a href="' + x.href + '" aria-label="' + esc(name + (done ? " (done)" : cur ? " (next)" : ""))
+      + '" title="' + esc(name) + '">' + (done ? "✓" : label) + '</a></li>';
+  }).join("");
+  const story = $("#pathStory");
+  if (story) story.innerHTML = u.chapter
+    ? (lessonDone(u.nn, 1)
+        ? 'Story, chapter ' + Number(u.nn) + ': <i>' + esc(u.chapter) + '</i> — '
+          + (STORY[u.nn] ? "read." : '<a href="story/index.html">read it straight through</a>.')
+        : 'Story, chapter ' + Number(u.nn) + ': <i>' + esc(u.chapter) + '</i> — starts in Lesson 1.')
+    : "";
+}
+
+function paintToday(){
   if (DATA.kind !== "home") return;
   enrolReview();
+  const today = dayRec();
+  const batch = todaysReview();
+  const everSeen = Object.keys(REVIEW).length > 0;
+
+  /* Step 1: review. Shown once anything is in the cycle. */
   const card = $("#reviewCard"), n = $("[data-review-due]");
-  const due = dueItems();
-  if (n) n.textContent = due.length;
-  if (!card) return;
-  const seen = Object.keys(REVIEW).length;
-  if (!seen){ card.hidden = true; return; }
-  card.hidden = false;
-  const ret = retention();
-  const lede = $("#reviewLede"), brk = $("#reviewBreak"), btn = $("#startReview");
-  if (lede) lede.textContent = due.length
-    ? due.length + " item" + (due.length === 1 ? " is" : "s are") + " due. They come back on a "
-      + "fixed " + REVIEW_DAYS + "-day cycle, and anything you miss returns tomorrow."
-    : "Nothing is due today. " + seen + " item" + (seen === 1 ? "" : "s") + " are in the cycle; "
-      + "spacing them out is what makes them stick, so coming back tomorrow beats going again now.";
-  if (brk) brk.textContent = ret.checked
-    ? ret.kept + "/" + ret.checked + " kept after a real gap" : "";
-  /* What is in the cycle, one line per kind, nothing summed. Five different
-     kinds of target do not share a scale, so a single figure over them would
-     be a number with no meaning as well as a prohibited one. */
-  const kinds = $("#reviewKinds");
-  if (kinds){
-    const LABEL = { word:"Words", colloc:"Collocations", grammar:"Grammar",
-                    function:"Everyday English", pron:"Pronunciation" };
-    const by = reviewByKind();
-    const rows = Object.keys(LABEL).filter(k => by[k])
-      .map(k => '<tr><td>' + LABEL[k] + '</td><td>' + by[k].seen + '</td><td>'
-                + (by[k].due || "—") + '</td></tr>').join("");
-    kinds.innerHTML = rows
-      ? '<div class="scroll"><table><thead><tr><th>In the cycle</th><th>Items</th>'
-        + '<th>Due</th></tr></thead><tbody>' + rows + '</tbody></table></div>'
-      : "";
-  }
-  if (btn){
-    btn.setAttribute("aria-disabled", String(!due.length));
-    btn.textContent = due.length ? "Review " + due.length + " item" + (due.length === 1 ? "" : "s")
-                                 : "Nothing due";
-    if (due.length && !btn.dataset.wired){
-      btn.dataset.wired = "1";
-      btn.addEventListener("click", () => runEngine("review", dueItems(), null, "#reviewEngine"));
+  if (n) n.textContent = batch.length;
+  const reviewDone = !batch.length;
+  if (card){
+    card.hidden = !everSeen;
+    card.classList.toggle("is-done", reviewDone);
+    const title = $("#reviewTitle"), lede = $("#reviewLede"), btn = $("#startReview");
+    if (title) title.textContent = reviewDone ? "Review — done" : "Review " + batch.length
+      + " item" + (batch.length === 1 ? "" : "s");
+    if (lede) lede.textContent = reviewDone
+      ? (today.reviewed ? "You reviewed " + today.reviewed + " item" + (today.reviewed === 1 ? "" : "s")
+          + " today." : "Nothing is due today.")
+      : "Things you learned a while ago, coming back before they fade. Anything you miss "
+        + "returns tomorrow.";
+    if (btn){
+      btn.hidden = reviewDone;
+      if (!btn.dataset.wired){
+        btn.dataset.wired = "1";
+        btn.addEventListener("click", () => {
+          const items = todaysReview();
+          if (items.length) runEngine("review", items, null, "#reviewEngine");
+        });
+      }
+    }
+    const ret = retention(), brk = $("#reviewBreak");
+    if (brk) brk.textContent = ret.checked
+      ? ret.kept + " of " + ret.checked + " were still right when they came back after a real gap." : "";
+    /* What is in the cycle, one line per kind, nothing summed. Five different
+       kinds of target do not share a scale, so a single figure over them would
+       be a number with no meaning as well as a prohibited one. */
+    const kinds = $("#reviewKinds");
+    if (kinds){
+      const LABEL = { word:"Words", colloc:"Collocations", grammar:"Grammar",
+                      function:"Everyday English", pron:"Pronunciation" };
+      const by = reviewByKind();
+      const rows = Object.keys(LABEL).filter(k => by[k])
+        .map(k => '<tr><td>' + LABEL[k] + '</td><td>' + by[k].seen + '</td><td>'
+                  + (by[k].due || "—") + '</td><td>' + (by[k].retired || "—") + '</td></tr>').join("");
+      kinds.innerHTML = rows
+        ? '<div class="scroll"><table><thead><tr><th>In the cycle</th><th>Items</th>'
+          + '<th>Due</th><th>Learned</th></tr></thead><tbody>' + rows + '</tbody></table></div>'
+          + '<p class="lede small">Items come back every ' + REVIEW_DAYS + ' days. One you get '
+          + 'right after a gap ' + RETIRE_AFTER + ' times counts as learned and stops coming back. '
+          + 'At most ' + DAILY_REVIEW + ' a day.</p>'
+        : "";
     }
   }
+
+  /* Step 2: the next step on the path. */
+  const step = nextStep();
+  const stepToday = today.steps.length > 0;
+  const nx = $("#nextStep");
+  if (nx){
+    const k = $("#nextKicker"), t = $("#nextTitle"), l = $("#nextLede"), a = $("#startLink");
+    if (!step){
+      k.textContent = "The whole course";
+      t.textContent = "Every unit is finished";
+      l.innerHTML = "All twelve units and the four checkpoints are done. The review keeps "
+        + "bringing things back — that is the part worth keeping up.";
+      a.hidden = true;
+    } else {
+      k.textContent = stepKicker(step);
+      t.textContent = step.kind === "lesson" ? step.title : STEP_WORD[step.kind]
+        + (step.kind === "check" ? " " + step.n : "");
+      l.innerHTML = stepLede(step);
+      a.hidden = false;
+      a.setAttribute("href", step.href);
+      a.textContent = stepAction(step);
+    }
+    nx.classList.toggle("is-done", stepToday);
+    if (stepToday){
+      const last = today.steps[today.steps.length - 1];
+      const s = pathSteps().find(x => x.id === last);
+      k.textContent = "Done today";
+      t.textContent = s ? (s.kind === "lesson" ? "Unit " + s.u.nn + " · " + s.title : s.title
+                           + (s.kind === "test" ? " · Unit " + s.u.nn : "")) : "One step finished";
+      l.textContent = today.steps.length > 1
+        ? today.steps.length + " steps finished today." : "";
+      a.hidden = true;
+    }
+  }
+
+  /* The day is done when the step is done and the review is clear. */
+  const done = stepToday && (reviewDone || !everSeen);
+  const box = $("#todayDone");
+  if (box){
+    box.hidden = !done;
+    const kg = $("#keepGoing");
+    if (kg){
+      kg.hidden = !step;
+      if (step){
+        kg.setAttribute("href", step.href);
+        kg.textContent = "Keep going: " + (step.kind === "lesson"
+          ? "Unit " + step.u.nn + " · Lesson " + step.n : STEP_WORD[step.kind]);
+      }
+    }
+  }
+  const card2 = $("#todayCard");
+  if (card2) card2.classList.toggle("is-done", done);
+  paintPath(step);
 }
 
 /* ---------------- global speak buttons (vocabulary tables) ---------------- */
@@ -4681,7 +4903,7 @@ function boot(){
   paintProgress();
   initStart();
   initGate();
-  paintReview();
+  paintToday();
   initStory();
   paintStoryHome();
   initWords();

@@ -1297,6 +1297,85 @@ async function main() {
        JSON.stringify(labels));
   }
 
+  /* ---- Today: one next step, a capped review, and an end to the day -------
+     The home page used to be the whole course at once, and the complaint was
+     "too many places, no direction, it feels like forever". What must hold:
+     it always names exactly one next step on the path; the review never asks
+     more than the day's allowance; and the day can be over. */
+  {
+    const day = Math.floor((Date.now() - new Date().getTimezoneOffset() * 60000) / 86400000);
+    const seeded = store => (rel) => settled(load(rel, null, w => {
+      for (const k of Object.keys(store)) w.localStorage.setItem(k, JSON.stringify(store[k]));
+    }));
+    const lessons = k => { const o = {}; for (let i = 1; i <= k; i++) o[i] = 1; return o; };
+    const txt = (doc, s) => { const e = doc.querySelector(s); return e ? e.textContent.trim() : ""; };
+    const href = (doc, s) => (doc.querySelector(s) || { getAttribute: () => "" }).getAttribute("href");
+
+    let doc = (await seeded({})("docs/index.html")).document;
+    ok("today: a new learner is sent to Unit 01, Lesson 1",
+       href(doc, "#startLink") === "unit-01/lesson-1/index.html", href(doc, "#startLink"));
+    ok("today: nothing on the page counts lessons out of the whole course",
+       !/\bof 84\b|lessons done|units started/i.test(doc.querySelector("main").textContent));
+    ok("today: the rest of the course is one closed Browse section",
+       doc.querySelector("details#browse") && !doc.querySelector("details#browse").open);
+
+    doc = (await seeded({ "en8:progress:v1": { "01": { lessons: lessons(7), test: null } } })
+      ("docs/index.html")).document;
+    ok("today: after seven lessons the next step is the unit test",
+       href(doc, "#startLink") === "unit-01/index.html#gate", href(doc, "#startLink"));
+
+    const three = {};
+    for (const u of ["01", "02", "03"]) three[u] = { lessons: lessons(7), test: { best: 50, at: 1 } };
+    doc = (await seeded({ "en8:progress:v1": three })("docs/index.html")).document;
+    ok("today: after Unit 03 the next step is Checkpoint 1",
+       href(doc, "#startLink") === "review-1/index.html", href(doc, "#startLink"));
+    doc = (await seeded({ "en8:progress:v1": Object.assign({ checkpoints: { 1: 1 } }, three) })
+      ("docs/index.html")).document;
+    ok("today: a finished checkpoint moves the path on to Unit 04",
+       href(doc, "#startLink") === "unit-04/lesson-1/index.html", href(doc, "#startLink"));
+
+    /* The cap: sixty items due, five already reviewed today -> fifteen asked. */
+    const payload = JSON.parse(doc.getElementById("page-data").textContent);
+    const rec = {};
+    payload.review.slice(0, 60).forEach(r => {
+      rec[r.unit + ":" + (r.type === "word" ? "" : r.type + ":") + String(r.id).toLowerCase()] =
+        { due: day - 2, seen: 1, kept: 0, delayed: 0 };
+    });
+    const prog = { "01": { lessons: lessons(3), test: null } };
+    doc = (await seeded({ "en8:review:v1": rec, "en8:progress:v1": prog,
+                          "en8:days:v1": { [day]: { reviewed: 5, steps: [] } } })("docs/index.html")).document;
+    ok("today: the review asks at most the day's allowance",
+       /Review 15 items/.test(txt(doc, "#reviewTitle")), txt(doc, "#reviewTitle"));
+
+    /* A retired item stays out of the queue however overdue it is. */
+    const retired = {};
+    for (const k of Object.keys(rec)) retired[k] = Object.assign({}, rec[k], { retired: true, kept: 3 });
+    doc = (await seeded({ "en8:review:v1": retired, "en8:progress:v1": prog })("docs/index.html")).document;
+    ok("today: learned items do not come back", /done/.test(txt(doc, "#reviewTitle")),
+       txt(doc, "#reviewTitle"));
+
+    /* The day ends: one step finished today and the allowance spent. */
+    doc = (await seeded({ "en8:review:v1": rec, "en8:progress:v1": prog,
+                          "en8:days:v1": { [day]: { reviewed: 20, steps: ["01:L3"] } } })("docs/index.html")).document;
+    ok("today: a step finished and the review cleared ends the day",
+       !doc.querySelector("#todayDone").hidden);
+    ok("today: the day's end still offers the next step",
+       href(doc, "#keepGoing") === "unit-01/lesson-4/index.html", href(doc, "#keepGoing"));
+
+    /* Finishing a lesson records it, and records it against today. */
+    const lw = await seeded({})("docs/unit-01/lesson-2/index.html");
+    const fin = lw.document.querySelector("#markDone");
+    ok("finish: the lesson's primary action is Finish, and it leads to Today",
+       fin && /Finish lesson/.test(fin.textContent) && fin.getAttribute("href") === "../../index.html",
+       fin ? fin.textContent + " -> " + fin.getAttribute("href") : "missing");
+    fin.dispatchEvent(new lw.MouseEvent("click", { bubbles: true, cancelable: true }));
+    const p = JSON.parse(lw.localStorage.getItem("en8:progress:v1") || "{}");
+    const d = JSON.parse(lw.localStorage.getItem("en8:days:v1") || "{}");
+    ok("finish: the lesson is recorded", !!(p["01"] && p["01"].lessons["2"]));
+    ok("finish: the day's record names it", !!(d[day] && d[day].steps.includes("01:L2")),
+       JSON.stringify(d));
+  }
+
   console.log(fails
     ? "\n" + passes + " passed, " + fails + " FAILED"
     : "PASS: " + passes + " reading-screen checks — paragraph labels, highlighting, "
