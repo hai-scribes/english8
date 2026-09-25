@@ -41,12 +41,14 @@ export function ports() {
   return JSON.parse(readFileSync(PORTS_FILE, "utf8"));
 }
 
-/** Prefer the rebuild's output; fall back to the committed build. */
+/** The build GitHub Pages publishes, and only that. `build.py` writes docs/
+ *  and the pre-push hook compares it against a fresh build, so there is no
+ *  other output to prefer — and a `build/` or `dist/` scratch directory a
+ *  variant happened to create must not be served in the published site's
+ *  place. */
 export function resolveBuild() {
-  for (const dir of ["dist", "build", "docs"]) {
-    const p = join(REPO, dir);
-    if (existsSync(p) && statSync(p).isDirectory()) return { dir, path: p };
-  }
+  const p = join(REPO, "docs");
+  if (existsSync(p) && statSync(p).isDirectory()) return { dir: "docs", path: p };
   return { dir: null, path: null };
 }
 

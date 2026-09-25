@@ -58,22 +58,59 @@ const TYPES = {
 
 const staticPort = Number(process.env.ATELIER_VARIANT_PORT || 8788);
 
+/* The site is served under the path it is published at —
+ * https://hai-scribes.github.io/english8/ — not at the root. A service worker
+ * scoped to `/`, or an asset referenced as `/assets/…`, works at the root of
+ * a local server and breaks on the live site; serving at the root would pass
+ * exactly the builds that fail in production. */
+const BASE = "/english8/";
+
+/* A simulated deploy. POST /__harness/deploy makes the server behave as if a
+ * new build had been published: every page names a new `?v=` for app.js and
+ * app.css, and app.js itself sets `window.__EN8_DEPLOY__` to the deploy
+ * count. That is the shape of a real deploy here — build.py content-hashes
+ * those two assets into the query string — and it is what lets the gate ask
+ * whether a service worker lets a new build reach a device that already has
+ * the old one, which is the service worker's own named risk. The control path
+ * lives outside BASE so no page of the site can collide with it. */
+let deploys = 0;
+
 const site = createServer(async (req, res) => {
   try {
     const url = decodeURIComponent(req.url.split("?")[0]);
-    let p = join(build.path, url);
+    if (url === "/__harness/deploy" && req.method === "POST") {
+      deploys++;
+      res.writeHead(200, { "content-type": "application/json" }).end(JSON.stringify({ deploys }));
+      return;
+    }
+    if (url === "/" || url === BASE.slice(0, -1)) {
+      res.writeHead(302, { location: BASE }).end();
+      return;
+    }
+    if (!url.startsWith(BASE)) {
+      res.writeHead(404, { "content-type": "text/plain" }).end("not found (the site lives under " + BASE + ")");
+      return;
+    }
+    let p = join(build.path, url.slice(BASE.length));
     if (existsSync(p) && statSync(p).isDirectory()) p = join(p, "index.html");
-    const body = await readFile(p);
+    let body = await readFile(p);
+    if (deploys && extname(p) === ".html") {
+      body = Buffer.from(body.toString("utf8")
+        .replace(/(app\.(?:js|css)\?v=)([0-9A-Za-z]+)/g, `$1$2d${deploys}`));
+    } else if (deploys && p.endsWith(`${join("assets", "app.js")}`)) {
+      body = Buffer.concat([body, Buffer.from(`\n;window.__EN8_DEPLOY__ = ${deploys};\n`)]);
+    }
     /* No caching from the harness. GitHub Pages serves these with
      * `max-age=600` and the build already content-hashes app.js/app.css in the
      * query string; a harness cache would only hide a stale-asset defect that
-     * the real deploy would show. */
+     * the real deploy would show.
+     *
+     * And no Service-Worker-Allowed header: GitHub Pages cannot send custom
+     * headers, so a service worker has to live at (or above) the scope it
+     * claims, exactly as it will on the live site. */
     res.writeHead(200, {
       "content-type": TYPES[extname(p)] || "application/octet-stream",
       "cache-control": "no-store",
-      /* The service worker must be allowed root scope even though it is
-       * emitted beside the pages, matching how it is served in production. */
-      ...(p.endsWith("sw.js") ? { "service-worker-allowed": "/" } : {}),
     });
     res.end(body);
   } catch {
@@ -85,7 +122,7 @@ await new Promise((resolve, reject) => {
   site.once("error", reject);
   site.listen(staticPort, "127.0.0.1", resolve);
 });
-console.log(`static site on http://127.0.0.1:${staticPort}`);
+console.log(`static site on http://127.0.0.1:${staticPort}${BASE}`);
 
 /* --- the emulators ------------------------------------------------------- */
 const authPort = await freePort();
@@ -199,6 +236,7 @@ async function up(port, path = "/") {
       writeFileSync(PORTS_FILE, JSON.stringify({
         project: PROJECT,
         site: `http://127.0.0.1:${staticPort}`,
+        base: BASE,
         sitePort: staticPort,
         authHost: `127.0.0.1:${authPort}`,
         authPort,

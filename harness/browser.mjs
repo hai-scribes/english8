@@ -24,12 +24,40 @@
  *   [data-en8-identity]      visible text naming who is signed in
  *   [data-en8-sync-state]    value: idle | syncing | synced | offline | error
  *   [data-en8-sync-detail]   visible human text (e.g. "saved a moment ago")
+ *   [data-en8-rhythm]        the daily/weekly record, and inside it one
+ *     [data-en8-day="YYYY-MM-DD"]  element per day with work on it, keyed by
+ *                          the learner's LOCAL date, carrying visible text
+ *
+ * WHAT THE SYNC STATES MEAN — the gates hold the product to these, so they
+ * are part of the contract rather than a reading of it:
+ *   idle     signed out, or nothing to do yet
+ *   syncing  a local change has not yet reached the backend, OR a request to
+ *            the backend is in flight. A change shows `syncing` from the
+ *            moment it is made — including while a debounce waits to flush
+ *            it — not only while the request itself is open.
+ *   synced   the last exchange with the backend completed and nothing local
+ *            is pending. Never shown over an unsent change.
+ *   offline  there is no network; local changes are kept and will be sent
+ *   error    the last exchange failed, in words the learner can act on
+ *
+ * The harness records every value the attribute takes (a MutationObserver
+ * installed before the page's own scripts run), and "finished syncing" means
+ * the page went through `syncing` and came back to `synced` AFTER the thing
+ * being waited on — so a state that simply still reads `synced` from before a
+ * write is not mistaken for the write having landed.
  *
  * The sync-state attribute is the load-bearing one. "No hidden behind-the-
  * scenes process" is measured, not asserted: every network request the page
- * makes is timestamped against this attribute's value, and a request that
- * happens while it reads `idle` or `synced` is a SILENT operation and fails
- * the gate. That is the only way the requirement can be checked mechanically.
+ * makes — including any its service worker makes on its behalf — is
+ * timestamped against this attribute's value, and a request to a backend that
+ * happens while it reads `idle` or `synced` (or is absent) is a SILENT
+ * operation and fails the gate. The one other state that surfaces a request is
+ * `data-en8-auth-state="signing-in"`, because the learner has just asked for
+ * it and the page is saying so. Requests from the sign-in popup window are not
+ * counted: that window IS the visible surface.
+ *
+ * WHERE THE SITE LIVES: under /english8/, as it does on GitHub Pages, with no
+ * custom response headers (Pages cannot send any).
  */
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
@@ -47,7 +75,7 @@ export let portsError = null;
 try { _ports = ports(); } catch (e) { portsError = e; }
 
 export const P = _ports || {
-  project: "demo-english8", site: "http://127.0.0.1:1", sitePort: 1,
+  project: "demo-english8", site: "http://127.0.0.1:1", base: "/english8/", sitePort: 1,
   authHost: "127.0.0.1:1", authPort: 1, firestoreHost: "127.0.0.1", firestorePort: 1,
 };
 
@@ -71,68 +99,136 @@ export async function launch() {
   return chromium.launch({ args: ["--disable-dev-shm-usage"] });
 }
 
-/** One "device": its own context, its own storage, its own network log. */
-export async function device(browser, { offline = false, viewport } = {}) {
+/* Installed before any of the page's own scripts: records every value
+ * [data-en8-sync-state] and [data-en8-auth-state] take, in order, with the
+ * browser's own timestamp — in the page (for waitSynced) and reported out to
+ * the harness through a binding (for the request audit), so the record
+ * survives the page navigating. `performance`, not `Date`: rhythm.mjs moves
+ * Date to another day, and this clock must not move with it. */
+const STATE_LOG_INIT = `(() => {
+  const log = []; const last = {};
+  Object.defineProperty(window, "__en8SyncLog", { value: log });
+  const now = () => performance.timeOrigin + performance.now();
+  const rec = () => {
+    for (const kind of ["sync", "auth"]) {
+      const el = document.querySelector("[data-en8-" + kind + "-state]");
+      const v = el ? el.getAttribute("data-en8-" + kind + "-state") : null;
+      if (v === last[kind] && kind in last) continue;
+      last[kind] = v;
+      if (kind === "sync") log.push(v);
+      try { window.__en8Report && window.__en8Report(kind, v, now()); } catch (e) {}
+    }
+  };
+  const start = () => {
+    rec();
+    new MutationObserver(rec).observe(document.documentElement, {
+      subtree: true, childList: true, attributes: true,
+      attributeFilter: ["data-en8-sync-state", "data-en8-auth-state"],
+    });
+  };
+  if (document.documentElement) start();
+  else document.addEventListener("readystatechange", start, { once: true });
+})();`;
+
+/** One "device": its own context, its own storage, its own network log.
+ *  `timezoneId` defaults to the learner's own — Quy Nhơn is UTC+7, and a
+ *  harness in UTC cannot tell a build that files an evening's work under the
+ *  wrong day from one that does not. */
+export async function device(browser, { offline = false, viewport, timezoneId = "Asia/Ho_Chi_Minh" } = {}) {
   const ctx = await browser.newContext({
     viewport: viewport || { width: 390, height: 844 },
     deviceScaleFactor: 2,
     serviceWorkers: "allow",
+    timezoneId,
   });
   const page = await ctx.newPage();
 
+  /* The state timeline: every value the two attributes took on THIS page,
+   * across navigations, stamped by the browser. */
+  const timeline = [];
+  await ctx.exposeBinding("__en8Report", (src, kind, value, t) => {
+    /* The main frame only: the init script also runs inside iframes — the
+     * sign-in SDK inserts one — where neither attribute exists, and a `null`
+     * from there would read as the page having lost its indicator. */
+    if (src.page === page && src.frame === page.mainFrame()) timeline.push({ kind, value, t });
+  });
+  await ctx.addInitScript(STATE_LOG_INIT);
+
   /* Substitute the config file. Matches any path ending in the config name so
-   * it works whether the site is served at root or under /english8/. */
+   * it works whether the site is served at root or under /english8/. A
+   * service worker must let this request through to the network rather than
+   * answer it from a cache (see the orientation file): a cached copy would be
+   * the production config, and the page would stop talking to the emulators. */
   await ctx.route("**/assets/firebase-config.js*", route =>
     route.fulfill({ status: 200, contentType: "text/javascript", body: emulatorConfigJS() }));
 
-  /* Every request the page makes, with the sync-state the UI was showing at
-   * the moment it left. Sampled in the handler rather than afterwards,
-   * because a state that flickers back to `synced` before the assertion runs
-   * is exactly the hidden process this is looking for. */
+  /* Every request the device makes — the CONTEXT's, not the page's, so a
+   * request a service worker issues on the page's behalf is counted too.
+   * Each is judged against the state the page was showing AT THE MOMENT IT
+   * LEFT, by the browser's own clock (see silentOps), not by asking the page
+   * afterwards: an asynchronous look lands late, after a state that flickered
+   * back to `synced` — or in the next document, mid-navigation, where it reads
+   * nothing at all. */
   const net = [];
-  page.on("request", async req => {
+  net.timeline = timeline;
+  ctx.on("request", req => {
     const url = req.url();
     if (url.startsWith("data:") || url.startsWith("blob:")) return;
-    let state = null, visible = false;
+    let from = "page";
     try {
-      const r = await page.evaluate(() => {
-        const el = document.querySelector("[data-en8-sync-state]");
-        if (!el) return { state: null, visible: false };
-        const cs = getComputedStyle(el);
-        return {
-          state: el.getAttribute("data-en8-sync-state"),
-          visible: cs.display !== "none" && cs.visibility !== "hidden" && cs.opacity !== "0",
-        };
-      });
-      state = r.state; visible = r.visible;
-    } catch { /* page navigating or closed — recorded as unknown */ }
-    net.push({ url, method: req.method(), resourceType: req.resourceType(), state, visible });
+      const fp = req.frame().page();
+      if (fp !== page) return;           // the sign-in popup: a visible window of its own
+    } catch { from = "service-worker"; } // no frame: issued by the service worker
+    net.push({ url, method: req.method(), resourceType: req.resourceType(), from, req, seenAt: Date.now() });
   });
 
   if (offline) await ctx.setOffline(true);
   return { ctx, page, net };
 }
 
-/** Requests that crossed the network to a backend while the UI claimed to be
- *  doing nothing. Same-origin static asset loads are not sync operations and
- *  are excluded by origin, not by guesswork. */
-export function silentOps(net) {
-  const site = P.site;
-  return net.filter(r =>
-    !r.url.startsWith(site) &&
-    !/^https?:\/\/(127\.0\.0\.1|localhost):\d+\/(assets|units|review)/.test(r.url) &&
-    r.state !== "syncing" && r.state !== "error" && r.state !== "offline");
+/* A request and the state change that announces it are stamped by two clocks
+ * inside one browser (the network stack's and the page's); this is the slack
+ * allowed between them. It is far below anything a learner could see, so it
+ * cannot hide a real silent operation. */
+const CLOCK_SLACK_MS = 25;
+
+function stateAt(timeline, kind, t) {
+  let v = undefined;
+  for (const e of timeline) { if (e.kind !== kind) continue; if (e.t <= t) v = e.value; else break; }
+  return v;
 }
 
-/** A page URL on the served build. */
-export const url = (p = "/") => `${P.site}${p}`;
+/** Requests that crossed the network to a backend while the UI claimed to be
+ *  doing nothing. Same-origin static asset loads are not sync operations and
+ *  are excluded by origin, not by guesswork. Each gets `state` and `auth` —
+ *  what the page showed when it left — for reporting. */
+export function silentOps(net) {
+  const site = P.site;
+  const tl = (net.timeline || []).slice().sort((a, b) => a.t - b.t);
+  const SURFACED = new Set(["syncing", "error", "offline"]);
+  return net.filter(r => !r.url.startsWith(site)).map(r => {
+    const started = r.req?.timing?.().startTime;
+    const t = started > 0 ? started : r.seenAt;
+    r.state = stateAt(tl, "sync", t) ?? null;
+    r.auth = stateAt(tl, "auth", t) ?? null;
+    const later = stateAt(tl, "sync", t + CLOCK_SLACK_MS);
+    const laterAuth = stateAt(tl, "auth", t + CLOCK_SLACK_MS);
+    r.surfaced = SURFACED.has(r.state) || SURFACED.has(later) ||
+                 r.auth === "signing-in" || laterAuth === "signing-in";
+    return r;
+  }).filter(r => !r.surfaced);
+}
+
+/** A page URL on the served build, under the path the site is published at.
+ *  `p` is relative to the site root ("unit-01/lesson-1/"). */
+export const url = (p = "") => `${P.site}${P.base || "/english8/"}${String(p).replace(/^\/+/, "")}`;
 
 /** The first lesson page the build produced — resolved, never hard-coded, so
  *  a renamed route fails as a missing page rather than as a mystery. */
 export function aLessonPath() {
   const docs = join(REPO, "docs");
   for (const p of ["unit-01/lesson-1/index.html", "unit-01/index.html", "index.html"]) {
-    if (existsSync(join(docs, p))) return "/" + p.replace(/index\.html$/, "");
+    if (existsSync(join(docs, p))) return p.replace(/index\.html$/, "");
   }
   throw new Error("no lesson page in docs/ — did tools/build.py run?");
 }
@@ -172,17 +268,26 @@ export async function signIn(page, email) {
     null, { timeout: 20_000 });
 }
 
-/** Answer the first marked task on the page for real — fill whatever widgets
- *  the build rendered, then commit. Being RIGHT is not the point; an attempt
- *  is the progress this lane has to carry between devices. */
-export async function answerFirstTask(page) {
-  await page.waitForSelector(".task[data-task] .t-items input, .task[data-task] .t-items select",
-    { timeout: 20_000 });
-  return page.evaluate(() => {
-    const task = document.querySelector(".task[data-task]");
-    if (!task) throw new Error("no .task[data-task] on the page");
+/** Answer the `index`-th marked task on the page for real, as a learner
+ *  would: if it already carries an attempt, take "Try it again" first (a
+ *  retake is a new attempt, and Check stays disabled until then); mark any
+ *  confidence toggles; fill whatever widgets the build rendered; press Check;
+ *  and wait until the page itself says the attempt is committed. Being RIGHT
+ *  is not the point — an attempt is the progress this lane has to carry
+ *  between devices. Returns the task id. */
+export async function answerTask(page, index = 0) {
+  await page.waitForFunction(i => {
+    const t = document.querySelectorAll(".task[data-task]")[i];
+    return !!t && !!t.querySelector(".t-items input, .t-items select");
+  }, index, { timeout: 20_000 });
+  const id = await page.evaluate(i => {
+    const task = document.querySelectorAll(".task[data-task]")[i];
+    const again = task.querySelector(".t-again");
+    if (task.dataset.done === "1" && again && !again.hidden) again.click();
+    for (const b of task.querySelectorAll(".i-conf button")) if (!b.disabled) b.click();
     const seen = new Set();
     for (const el of task.querySelectorAll(".t-items input, .t-items select")) {
+      if (el.disabled) continue;
       if (el.type === "radio") {
         if (seen.has(el.name)) continue;
         seen.add(el.name); el.checked = true;
@@ -194,10 +299,19 @@ export async function answerFirstTask(page) {
       el.dispatchEvent(new Event("input", { bubbles: true }));
       el.dispatchEvent(new Event("change", { bubbles: true }));
     }
-    task.querySelector(".t-check")?.click();
+    const check = task.querySelector(".t-check");
+    if (!check || check.disabled) throw new Error(`task ${task.dataset.task}: Check is not clickable`);
+    check.click();
     return task.getAttribute("data-task");
-  });
+  }, index);
+  await page.waitForFunction(i =>
+    document.querySelectorAll(".task[data-task]")[i]?.dataset.done === "1", index, { timeout: 10_000 })
+    .catch(() => { throw new Error(`task ${id}: the attempt was never committed (data-done never set)`); });
+  return id;
 }
+
+/** Kept for the scenarios that only ever need one task. */
+export const answerFirstTask = page => answerTask(page, 0);
 
 /** Everything the app has persisted locally, by its own key prefix. */
 export const localState = page => page.evaluate(() => {
@@ -209,8 +323,36 @@ export const localState = page => page.evaluate(() => {
   return out;
 });
 
-/** Wait for the page to declare it has finished syncing. */
-export const waitSynced = (page, ms = 25_000) => page.waitForFunction(
-  () => ["synced", "idle"].includes(
-    document.querySelector("[data-en8-sync-state]")?.getAttribute("data-en8-sync-state")),
-  null, { timeout: ms });
+/** Where the sync-state record stands now — the index of the CURRENT state,
+ *  so a page that is already `syncing` when the mark is taken (an initial
+ *  pull still running) and stays `syncing` through the change being waited
+ *  on is credited with it. Marking after the current entry instead would wait
+ *  forever on a page that coalesced the change into the exchange already in
+ *  flight, which is correct behaviour. Pass it to waitSynced as `since`. */
+export const mark = page => page.evaluate(() => Math.max(0, (window.__en8SyncLog || []).length - 1));
+
+/** The sync-state values the page has shown, in order. */
+export const syncLog = (page, since = 0) =>
+  page.evaluate(n => (window.__en8SyncLog || []).slice(n), since);
+
+/** Wait for the page to declare it has finished syncing.
+ *
+ *  With `since` (a `mark()` taken BEFORE the action being waited on), it
+ *  waits for the page to pass through `syncing` after that mark and come back
+ *  to `synced` — the action's exchange with the backend completed. Without
+ *  it, it waits for the state to read `synced`. `idle` never counts: it means
+ *  nothing has happened, which is not the same as something having finished. */
+export const waitSynced = (page, { since, ms = 25_000 } = {}) => page.waitForFunction(n => {
+  const log = window.__en8SyncLog || [];
+  const now = document.querySelector("[data-en8-sync-state]")?.getAttribute("data-en8-sync-state");
+  if (now !== "synced") return false;
+  return n == null || log.slice(n).includes("syncing");
+}, since ?? null, { timeout: ms }).catch(async e => {
+  /* Say what the page was showing, so a timeout reads as "stuck in error"
+   * or "never left synced" rather than as an anonymous wait. */
+  const seen = await syncLog(page, since ?? 0).catch(() => []);
+  const detail = await page.$eval("[data-en8-sync-detail]", el => el.textContent.trim()).catch(() => null);
+  throw new Error(`the page never finished syncing within ${ms}ms — states shown: ` +
+    `${seen.map(s => s ?? "absent").join(" → ") || "none"}` +
+    (detail ? `; detail text: ${JSON.stringify(detail)}` : "") + ` (${e.message.split("\n")[0]})`);
+});
