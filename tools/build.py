@@ -1600,9 +1600,8 @@ def clock_html(p: dict) -> str:
             f'<div class="c-h"><span class="c-k">Reading</span>'
             f'<span class="c-t">One clock — {e(shown)} minutes</span></div>'
             f'<p class="c-say">{inline(p["for"]) + " " if p["for"] else ""}'
-            f'The clock covers <b>everything</b>: reading the text, finding the answers '
-            f'and typing them in. It does not stop while you type, and there is no extra '
-            f'time at the end.</p>'
+            f'The clock covers <b>everything</b>: reading the text and answering. It does '
+            f'not stop, and there is no extra time at the end.</p>'
             f'<div class="c-ctl"><button class="btn c-start" type="button">Start reading</button>'
             f'<span class="c-state" role="status"></span></div>'
             f'</div>')
@@ -2660,16 +2659,7 @@ def page_home(units, reviews=()) -> str:
       </div>
       <div class="foot"><span data-progress-text>7 lessons</span><span class="bar"><i></i></span></div>
     </a>""")
-    def scene(u, key="title"):
-        """The Lesson 1 dialogue's own title -- "The list in the yard" -- which
-        is what the learner will actually meet. The story chapters reuse the
-        unit titles, and "chapter 1: Leisure Time" promises nothing."""
-        for b in u["lessons"][0]["blocks"]:
-            for d in b.get("dialogues", []):
-                a = d[0] if isinstance(d, tuple) else d
-                if a.get(key):
-                    return a[key]
-        return ""
+    scene = unit_scene
 
     def plate(u):
         """The unit's own background plate if it has been drawn, else the
@@ -2956,6 +2946,18 @@ def _story_prose(kind: str, body: str) -> str:
     return "".join(out)
 
 
+def unit_scene(u, key="title") -> str:
+    """An attribute of the unit's Lesson 1 dialogue: its scene title ("The list
+    in the yard") or its background plate. The chapter is what the learner
+    meets, and the unit title ("Leisure Time") names the syllabus, not it."""
+    for b in u["lessons"][0]["blocks"]:
+        for d in b.get("dialogues", []):
+            a = d[0] if isinstance(d, tuple) else d
+            if a.get(key):
+                return a[key]
+    return ""
+
+
 def story_chapters(units) -> list:
     out = []
     for u in units:
@@ -2975,7 +2977,9 @@ def story_chapters(units) -> list:
 
 def page_story(units) -> str:
     chapters = story_chapters(units)
+    by_nn = {u["nn"]: u for u in units}
     total = sum(c["words"] for c in chapters)
+    name = lambda c: unit_scene(by_nn[c["nn"]]) or c["title"]
     secs = []
     for c in chapters:
         parts = "".join(
@@ -2983,8 +2987,8 @@ def page_story(units) -> str:
             for p in c["parts"])
         secs.append(
             f'<article class="sc-ch" data-chapter="{c["nn"]}" hidden>'
-            f'<header class="sc-h"><p class="sc-n">Chapter {c["num"]}</p>'
-            f'<h2>{e(c["title"])}</h2>'
+            f'<header class="sc-h"><p class="sc-n">Chapter {c["num"]} · {e(c["title"])}</p>'
+            f'<h2>{e(name(c))}</h2>'
             f'<p class="sc-w">{c["words"]} words</p></header>'
             f'{parts}'
             f'<div class="sc-foot">'
@@ -2996,21 +3000,21 @@ def page_story(units) -> str:
         f'<button class="sc-card" type="button" data-open="{c["nn"]}" '
         f'data-chapter="{c["nn"]}" aria-disabled="true">'
         f'<span class="n">{c["num"]:02d}</span>'
-        f'<span class="t">{e(c["title"])}</span>'
-        f'<span class="w">{c["words"]} words</span>'
+        f'<span class="t">{e(name(c))}</span>'
+        f'<span class="w">{e(c["title"])} · {c["words"]} words</span>'
         f'<span class="st"></span></button>'
         for c in chapters)
-    body = f"""  <header class="masthead">
-    <p class="eyebrow">The Sea Gives Back · twelve chapters · {total:,} words</p>
-    <h1>Read the whole story</h1>
-    <p class="standfirst">You meet this story in pieces — a conversation here, a
-    page of someone's writing there. This is the same story with the exercises
-    taken away, to be read straight through. A chapter opens once you have done
-    that unit's first lesson, so nothing here spoils a lesson you have not
-    reached.</p>
-  </header>
+    body = f"""  <section class="hero story-hero">
+    <img class="hero-bg" src="../assets/bg/harbour-wall.jpg" alt="">
+    <div class="hero-in">
+      <p class="hk">Twelve chapters · {total:,} words</p>
+      <h1>The Sea Gives Back</h1>
+      <p class="hs">The story the twelve units tell, without the exercises — to read
+      straight through. A chapter opens when you start its unit.</p>
+    </div>
+  </section>
 
-  <div class="overview">
+  <div class="overview story-stats">
     <div class="stat"><span class="n" data-story-read>0</span><span class="k">chapters read</span></div>
     <div class="stat"><span class="n" data-story-open>0</span><span class="k">open to you</span></div>
     <div class="stat hot"><span class="n" data-story-words>0</span><span class="k">words read</span></div>
@@ -3021,8 +3025,10 @@ def page_story(units) -> str:
   units. Finish Unit 01, Lesson 1 to open the first one.</p>
   <div class="sc-reader">{"".join(secs)}</div>
 """
-    return shell(title=f"The Sea Gives Back · {SITE}", depth=0, body=body,
-                 crumb=[("Today", "index.html"), ("The story", "")],
+    # depth=1: the page is story/index.html, so its stylesheet, script and
+    # the way home are one level up. It shipped at depth=0 and loaded neither.
+    return shell(title=f"The Sea Gives Back · {SITE}", depth=1, body=body,
+                 crumb=[("Today", "../index.html"), ("The story", "")],
                  data={"kind": "story",
                        "chapters": [{"nn": c["nn"], "num": c["num"],
                                      "title": c["title"], "words": c["words"]}
@@ -3102,8 +3108,8 @@ def page_words(units) -> str:
   <p class="wd-none" id="wdNone" hidden>No word matches that. Try part of the
   word, or the Vietnamese.</p>
 """
-    return shell(title=f"Word list · {SITE}", depth=0, body=body,
-                 crumb=[("Today", "index.html"), ("Words", "")],
+    return shell(title=f"Word list · {SITE}", depth=1, body=body,
+                 crumb=[("Today", "../index.html"), ("Words", "")],
                  data={"kind": "words"},
                  desc="Look up any of the words this course teaches, in English "
                       "or Vietnamese, with sound.")

@@ -1381,6 +1381,29 @@ async function main() {
        JSON.stringify(d));
   }
 
+  /* ---- every page can reach its stylesheet and script ----------------------
+     The story and word pages shipped at the wrong depth and loaded neither,
+     so the live story page could not open a chapter. The harness here injects
+     app.js itself, which is exactly why nothing noticed: check the paths. */
+  {
+    const bad = [];
+    const walk = dir => {
+      for (const f of fs.readdirSync(dir, { withFileTypes: true })) {
+        const pth = path.join(dir, f.name);
+        if (f.isDirectory() && f.name !== "assets") walk(pth);
+        else if (f.name === "index.html") {
+          const html = fs.readFileSync(pth, "utf8");
+          for (const m of html.matchAll(/(?:href|src)="([^"?#]*assets\/app\.(?:css|js))[^"]*"/g)) {
+            if (!fs.existsSync(path.resolve(path.dirname(pth), m[1])))
+              bad.push(path.relative(ROOT, pth) + " → " + m[1]);
+          }
+        }
+      }
+    };
+    walk(path.join(ROOT, "docs"));
+    ok("assets: every page's stylesheet and script path resolves", bad.length === 0, bad.join(", "));
+  }
+
   /* ---- answers are picked, tapped or built — never typed -----------------
      A typed key is never a complete list of right answers, so a converted
      unit carries no text box at all, and each closed widget must mark the

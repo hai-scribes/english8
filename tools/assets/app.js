@@ -1035,8 +1035,9 @@ function runEngine(mode, words, unit, hostSel, opts){
         + '<div class="prompt sent">' + w.q + '</div>'
         + (q.fmt === "recall-mc"
             ? '<div class="choices">'
-              + q.options.map((o, i) => '<button data-i="' + i + '">' + esc(o.t)
-                                        + '</button>').join("")
+              + q.options.map((o, i) => '<button data-i="' + i + '">'
+                  + esc(o.t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
+                  + '</button>').join("")
               + '</div>'
             : field("your answer"));
     } else if (q.fmt === "mc"){
@@ -1097,7 +1098,7 @@ function runEngine(mode, words, unit, hostSel, opts){
     if (st.mode === "test"){ st.i++; return paintQ(); }
     const why = res.why === "two"
       ? '<div class="n">Two answers in one gap score nothing, even when one of them is right.</div>'
-      : (given && !ok ? '<div class="n">You wrote: ' + esc(given) + '</div>' : "");
+      : (given && !ok ? '<div class="n">You chose: ' + esc(given) + '</div>' : "");
     host.innerHTML = chrome(
       '<div class="verdict ' + (ok ? "ok" : "no") + '">'
       + '<b>' + (ok ? "Correct" : "Not quite") + '</b>'
@@ -1663,7 +1664,11 @@ function itemHTML(t, it, i){
     const opts = it.opts.map(o =>
       '<label class="i-opt"><input type="radio" name="' + esc(group) + '" value="'
       + esc(o.k) + '">'
-      + '<span>' + (o.t === o.k ? esc(o.k) : "(" + esc(o.k) + ") " + o.t) + '</span></label>').join("");
+      /* "(a) text" only for a lettered option. An odd-one-out candidate's key
+         is its own source text ("g**oo**d"), rendered in o.t; printing the
+         key beside it showed the markdown to the learner. */
+      + '<span>' + (o.t === o.k ? esc(o.k) : /^[a-z]$/.test(o.k) ? "(" + esc(o.k) + ") " + o.t : o.t)
+      + '</span></label>').join("");
     /* A gap in the sentence shows the chosen word in place, so the learner
        reads the sentence they are committing to, not a sentence and a list. */
     const stem = /_{3,}/.test(it.q)
@@ -1910,7 +1915,7 @@ function initTasks(){
         $(".i-out", li).innerHTML = m.ok
           ? '<span class="ok">&#10003; Right</span>'
             + (it.why ? ' <span class="why">' + it.why + '</span>' : "")
-          : '<span class="no">&#10007;</span> <span class="ans">' + esc(it.key) + '</span>'
+          : '<span class="no">&#10007;</span> <span class="ans">' + esc(it.key).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>") + '</span>'
             + (why ? ' <i>— ' + esc(why) + '</i>' : "")
             + (it.why ? ' <span class="why">' + it.why + '</span>' : "");
         $$("input, .i-tile, .i-tok", li).forEach(x => { x.disabled = true; });
@@ -5067,9 +5072,8 @@ function initReadingNav(){
     nav.className = "c-nav";
     nav.innerHTML = '<p class="c-nl">Questions ' + 1 + "–" + items.length + "</p>"
       + '<div class="c-ns"></div>'
-      + '<p class="c-nh">A number fills in when that question has an answer. '
-      + 'Flag one with ⚑ beside it to come back to it — the flag is a marker, '
-      + 'not an answer, and nothing about it is scored.</p>';
+      + '<p class="c-nh">A number fills in once you answer it. Tap ⚑ beside a '
+      + 'question to come back to it later.</p>';
     root.appendChild(nav);
     const strip = $(".c-ns", nav);
 
