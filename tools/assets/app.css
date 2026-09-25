@@ -1394,3 +1394,23 @@ html.d-locked,html.d-locked body{overflow:hidden}
 .d-audio{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;margin:0 0 .8rem}
 .d-heard{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;
   text-transform:uppercase;color:var(--faint)}
+
+/* ---------------- touch: size and response ----------------
+   The learner is on a phone. Every control she taps gets a target near the
+   44px guideline and answers the press, so a tap never feels unregistered. */
+@media (hover:none),(max-width:640px){
+  .i-conf{gap:.35rem;margin:.35rem 0 0;display:flex}
+  .i-conf button{min-height:2.3rem;padding:0 .8rem;font-size:.82rem;border-radius:999px}
+  .i-tok{padding:.3rem .32rem;margin:-.1rem -.05rem}
+  .i-tile{min-height:2.45rem;padding:.4rem .75rem}
+  .i-opt span{min-height:2.35rem;display:inline-flex;align-items:center}
+}
+.i-opt span,.i-tile,.i-tok,.choices button,.track a,.lesson,.sc-card{
+  -webkit-tap-highlight-color:transparent}
+.i-opt:active span,.i-tile:active,.choices button:active,.i-conf button:active{transform:scale(.96)}
+.i-opt span,.i-tile,.choices button,.i-conf button{transition:transform .08s,background .12s,border-color .12s}
+.lesson:active,.sc-card:active{transform:scale(.99)}
+@media (prefers-reduced-motion:reduce){
+  .i-opt:active span,.i-tile:active,.choices button:active,.i-conf button:active,
+  .lesson:active,.sc-card:active{transform:none}
+}

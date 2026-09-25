@@ -1627,8 +1627,8 @@ function bestAssignment(fits){
 function itemHTML(t, it, i){
   const conf = t.conf
     ? '<span class="i-conf" role="group" aria-label="How sure are you?">'
-      + '<button type="button" data-conf="1" title="I am sure">&#9679;</button>'
-      + '<button type="button" data-conf="0" title="I am not sure">&#9675;</button></span>'
+      + '<button type="button" data-conf="1" title="I am sure">&#9679; Sure</button>'
+      + '<button type="button" data-conf="0" title="I am not sure">&#9675; Not sure</button></span>'
     : "";
   /* it.q, it.opts[].t and it.why arrive already escaped, with **bold** and
      *italic* resolved by the generator. Re-escaping here would print the
