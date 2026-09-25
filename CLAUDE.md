@@ -50,44 +50,16 @@ rebuild that changes a tracked file means the published output was stale or
 touched by hand. `research/evidence-register.md` is written by the build too,
 and is checked with it.
 
-Like the credential helper below, **`.git/hooks` is not committed, so a fresh
-clone has to install it again**:
-
-```sh
-ln -sf ../../tools/hooks/pre-push .git/hooks/pre-push
-```
-
-A symlink, not a copy, so editing the tracked file is the whole update. The
-escape hatches are `git push --no-verify` and `GATES_SKIP=1`, and both announce
-themselves — if you take one, you are publishing unchecked.
+**`.git/hooks` and `.git/config` are not committed**, so a fresh clone must
+install the pre-push hook and pin pushes to `hai-scribes` again — the
+`clone-setup` skill has the commands. The escape hatches are
+`git push --no-verify` and `GATES_SKIP=1`, and both announce themselves — if you
+take one, you are publishing unchecked.
 
 This repo belongs to **`hai-scribes`**, and pushes must authenticate as that
-account. The trap: `gh` can hold several logged-in accounts, and its git
-credential helper hands git the token of whichever one is **active** —
-it ignores the username git asks for, so `credential.username` will not fix it.
-If the active account is somebody else, the push dies with a 403 that names the
-wrong user.
-
-`.git/config` is not committed, so **a fresh clone has to be pinned again**:
-
-```sh
-git config --local --replace-all 'credential.https://github.com.helper' ''
-git config --local --add 'credential.https://github.com.helper' \
-  '!f() { test "$1" = get && printf "username=hai-scribes\npassword=%s\n" \
-   "$(gh auth token -u hai-scribes)"; }; f'
-git config --local user.name  "hai-scribes"
-git config --local user.email "230175965+hai-scribes@users.noreply.github.com"
-```
-
-The empty first value is load-bearing: it resets the helper list inherited from
-global config so only this one runs. Check it took with
-
-```sh
-printf 'protocol=https\nhost=github.com\n\n' | git credential fill | grep username
-```
-
-This changes nothing globally — other repos keep using whichever account is
-active, and `gh auth switch` is not needed.
+account. `gh`'s credential helper hands git the **active** account's token, so a
+push from the wrong active account dies with a 403 naming the wrong user — the
+`clone-setup` skill's pin fixes it without `gh auth switch`.
 
 ## Editing a unit: the order of work
 
@@ -215,118 +187,20 @@ and C7. That last one is gated in `test_reading.js`.
 
 ### The dialogue is a comic, and the transcript is still the page
 
-**`.claude/skills/story-staging/` is the working guide** — the whole markup
-vocabulary, the rules that bind it and the art pipeline, in one place. Read it
-before writing or revising a dialogue. What follows is the summary.
+**`.claude/skills/story-staging/` owns this** — the markup, the caps, the art
+pipeline and the reasons. Load it before writing or revising a `:::dialogue`, or
+touching `data/cast.json` or `art/`. What must hold even without it:
 
-`:::dialogue` renders as a background plate, the people in the scene, the things
-in it, manga overlay marks and speech balloons — **one panel at a time, advanced
-by the reader**. `data/cast.json` declares the five characters, the six
-emotions, the eleven backgrounds, the ten props, the twelve effects and the
-four balloon shapes; the build **fails** on a dialogue naming anything outside
-it, and `tools/check_cast.py` reports which images have actually been drawn.
-
-**All twelve units are staged.** The rollout is finished; what is outstanding is
-art, not authoring.
-
-Art is **one drawing per expression** — thirty square pictures — composed into a
-3 x 2 sheet per character by `tools/make_sheet.py`, which squares each drawing,
-keys the white to transparency by flooding in from the border (skipping a
-drawing that already arrives cut out), lays out the grid, and encodes it at
-640 px panels as WebP. The drawings live in **`art/cast/<slug>/<emotion>.png`**
-and the sheet beside them as `art/cast/<slug>.webp`; `art/` is a source tree
-and `build.py` copies the sheets and the plates into `docs/assets/`. **Do not
-put art in `docs/`** — the build deletes `docs/assets/` on every run. Asking a generator for the six-panel sheet directly returned eight panels
-four times running: multi-panel layout is the weakest thing these models do, and
-"not eight" made it worse, because diffusion models have no representation of
-negation and naming a number only raises its salience. Layout is arithmetic; ask
-a generator only for what it is good at. The `col` index in `data/cast.json` is
-the panel's position and is load-bearing twice over — the composer writes to it
-and the page reads from it — so reordering it without regenerating the art gives
-every character the wrong face. `research/story/illustration-prompts.md` is the
-brief — every prompt the art needs, and nothing else — and its filenames and the
-manifest's slugs must agree.
-
-Props and effects are **one cut-out each**, keyed by `tools/make_overlay.py`
-from masters in `art/props/src/` and `art/fx/src/`. It is `make_sheet.py`'s
-smaller sibling and differs in two deliberate ways: it **trims a prop** to its
-content, because the manifest's `size` is its height as a fraction of the panel
-and that is only true if the file's edges are the object's; and it **does not
-trim an effect**, because half of them belong above a figure's head and their
-position inside the square is the information.
-
-```
-::: dialogue title="…" bg="harbour-wall"
-@cast Tí|sad, Thảo|neutral
-@item bucket at=left
-@fx sparkle on=ti
-**Thảo|neutral:** You've been down here all morning.
-**Thảo|annoyed|shout:** Tí.
-@bg school-yard
-**Tí|sad:** Nothing's wrong.
-:::
-```
-
-`|emotion` defaults to `neutral` and `|balloon` to `say`. `@bg` moves the scene
-and clears the props; `@cast` sets who is on stage, silent people included;
-`@item` puts a thing in it, which persists; `@fx` puts a manga mark over one
-person or the whole frame, for **one panel only**. **Any `@` line breaks the
-panel** — that is the panel-break tool, and it is the only honest reading, since
-a panel has one background, one roster and one set of props. A line with no
-speaker is narration — a caption box over the plate, no balloon, and **the stage
-stays as it stands**: narration means nobody is speaking, not that nobody is
-there, so the roster survives it with none of its figures lit. `@cast none`
-empties it, which is what an opening establishing shot and a scene everybody has
-left both want.
-
-**The balloons type themselves out**, one at a time, in speech order, and an
-`…` in a line is a real pause — a hesitation costs nothing to author because the
-punctuation is already in the writing. Going back is instant, and so is tapping
-*Next* mid-stream, which finishes the panel rather than skipping it. Reduced
-motion gets the panel complete; a screen reader gets the whole beat at once from
-a live region off the balloons, because one over a typewriter announces a line a
-letter at a time.
-
-`[[…]]` marks **words, phrases, idioms, phrasal verbs and the unit's grammar** —
-gloss what a reader will actually stall on, which is usually not a single word.
-**One gloss per item per dialogue**; a second is a build failure, because a word
-handed back three lines later is the support failing to withdraw. A dialogue with no `bg=`
-is unstaged and ships as plain text; that is now an error state rather than the
-rollout, because all twelve are staged.
-
-Two caps, enforced at build because both are legibility: **four people** on
-stage (a fifth half-body figure is a silhouette, and a silhouette carries no
-expression), and **one effect** per person plus one over the frame (a frame with
-a shock burst and circling birds and motion lines is unreadable, not expressive).
-
-Four things that must survive any change here, because each is load-bearing and
-two of them are exercises:
-
-- **The transcript stays in the document as real markup.** Exercise 1.2 asks
-  the learner to find a phrase "in the dialogue" and 1.3 sends them back to
-  look at a verb; neither is answerable one panel at a time. It is also what
-  `Ctrl+F`, a screen reader and a printout use.
-- **Glosses work inside the balloons**, wired per scope so the same marked word
-  can exist in both views without sharing a DOM id. A gloss opens *after* the
-  balloon rather than inside it — inside a shout balloon the spikes would clip
-  it away.
-- **The balloon carries no name.** Who is speaking is shown by the picture: the
-  balloon is placed over the speaker and its tail is measured in JS to point at
-  them, and the speaker is the figure at full strength while the rest are held
-  back. Placement is centred on the figure and clamped to the frame — it was
-  three fixed positions picked from which side of the stage they stood on, which
-  put the balloon against the frame's edge rather than over the person. The name is still in the
-  panel's accessible name, because a screen-reader user has no tail to follow.
-  Do not put it back on the balloon.
-- **The panel is not driven by scroll, and nothing intercepts a wheel or touch
-  event.** The stage used to be sticky inside a tall track and stepped as the
-  page scrolled past it. That worked and was still wrong: it put two things the
-  reader moves through — the page and the story — on one gesture, so scrolling
-  to the exercise ran the story on and scrolling back landed it somewhere else.
-  The comic now has its own controls, the arrow keys and a swipe, and the scroll
-  position means nothing to it. There is a test asserting the app registers no
-  `scroll`, `wheel` or `touchmove` listener, and one asserting no sticky track
-  is left in the stylesheet.
+- **The transcript stays in the document as real markup** — exercises send the
+  learner back to it, and `Ctrl+F`, screen readers and printouts use it.
+- **The balloon carries no name.** The picture and the tail show the speaker. Do
+  not put it back.
+- **Nothing intercepts `scroll`, `wheel` or `touchmove`**; the comic has its own
+  controls, and a test asserts it.
+- **Do not put art in `docs/`** — the build deletes `docs/assets/`. Art lives in `art/`.
+- Reordering `col` in `data/cast.json` without regenerating the art gives every
+  character the wrong face.
+- All twelve units are staged; a dialogue with no `bg=` is an error state.
 
 ### Lexis is met, not tabled
 
@@ -344,26 +218,10 @@ job.
 
 ### The story the twelve units carry
 
-All twelve chapters tell one continuous adventure, **The Sea Gives Back**, set
-in **Quy Nhơn** on the central coast. A boy called Tí keeps a fish in a bucket
-and it will not stay a fish; the sea has come looking for her, and everywhere it
-reaches it puts back what it took. Twelve chalk marks climb the harbour wall,
-one per chapter, and at twelve the water is over the street.
-
-Three documents own it, and they bind in this order:
-
-| | |
-| --- | --- |
-| `research/story/story-bible.md` | world, cast, the one changed rule, the arc, the ending — and §9, what the story deliberately does **not** take from either of the works it learns from |
-| `research/story/chapter-briefs.md` | **the frozen interface.** Twelve briefs, and every hard rule a drafter may not trade away. Where it and the bible differ, the briefs win |
-| `research/story/chain-and-payoff.md` | the audit a finished chapter has to survive: the *because* test, the payoff ledger, what happens to each return |
-
-The house art style is Studio Ghibli's *Ponyo*, and the story shares its shape —
-a sea-child ashore, water that rises without malice, a town that floods and is
-beautiful rather than tragic. **The style is borrowed; the plot is not**, and
-`story-bible.md` §9 lists the specific elements that may never appear. Tí's and
-Thảo's designs carry no setting on them and did not change when the story moved
-from a delta to a coast.
+One continuous adventure, **The Sea Gives Back**, set in Quy Nhơn. The story
+documents, their binding order and the house style live in the story-staging
+skill. **The style is borrowed from *Ponyo*; the plot is not** —
+`research/story/story-bible.md` §9 lists elements that may never appear.
 
 ### The story prose stays inside grade 8
 
