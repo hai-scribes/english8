@@ -6,7 +6,8 @@ One drive = one task + 2–24 deterministic done-conditions (shell commands, exi
 (`drive.py gate`) re-runs the conditions every time the model tries to end its
 turn and BLOCKS the stop while any condition is unmet — so "done" is observed,
 never declared. Four exits only: met (the gate, or `close`), abort (with mechanism
-+ evidence), cap, operator release.
++ evidence), cap, operator release. An operator `pause` is not an exit: it keeps the drive and
+lets every stop through until `resume`.
 
 Sub-commands
   install-hook [--project] [--timeout S]            opt-in: ALSO wire the gate into .claude/settings*.json
@@ -16,17 +17,19 @@ Sub-commands
           [--protect-tests GLOBS] [--map KEY=IDS|unmapped ...] [--known-incomplete ID=TEXT ...]
           [--max-blocks N] [--max-minutes M] [--allow-green ID,..] [--timeout S]
           [--hook-timeout S] [--unhooked R] [--session ID] [--transcript P]
+          [--auto-pause-empty N] [--allow-crash-red ID,..]
           [--force --why-force R]                   seal a drive for this session
   amend   --reason R [--add-cond ID=CMD ...] [--checker ID=PATH ...] [--red-proof ID=DIR ...]
           [--known-incomplete ID=TEXT ...] [--map KEY=IDS|unmapped ...] [--raise-blocks N]
-          [--raise-minutes M] [--allow-green ID,..]  ADDITIVE-only change to the live contract
+          [--raise-minutes M] [--allow-green ID,..] [--timeout S (lower only)]
+                                                    ADDITIVE-only change to the live contract
   check                                             run conditions in-turn, print unmet (exit 1 if any)
   close                                             all green → terminal `met` (the unhooked close-out)
   gate                                              Stop hook (payload on stdin)
   brief   --agent NAME --files GLOBS [--cond ids] [--context TEXT]
                                                     write+reserve an agent brief
   collect NAME                                      validate and print an agent's RETURN.md, then check
-  cancel  NAME                                      release an undispatched/abandoned agent slot
+  cancel  NAME                                      free the slot of an agent you stopped or never dispatched
   codex-verify [--agent verify-codex] [--minutes M] run a cross-vendor verifier via `codex exec`
   verified [--cdir DIR]                             exit 0 iff the newest verify-* verdict is CONVERGED
   report-check --cdir DIR                           the `report` condition: 9 substantive requirements
@@ -34,7 +37,8 @@ Sub-commands
   abort   --blocked X --mechanism Y --evidence Z --attempts "a;b"   audited abort → terminal
   note    TEXT                                      append to the progress log
   status                                            print state
-  resume  [--session ID]                            rebind the drive to THIS session
+  pause   [--reason R]                              operator's order only: allow every stop until resume
+  resume  [--session ID]                            rebind the drive to THIS session; re-arms a pause
   release                                           operator-only: end the drive
 
 Close-out and first-green freeze (S1):
@@ -113,13 +117,14 @@ Returns: a worker/relay RETURN.md's first line is RETURN_FIRST_LINE_FORM (`unmet
 
 Contracts this file keeps:
   * FAIL-OPEN: any crash in `gate` exits 0 → the stop is allowed. A Stop hook that
-    exits non-zero would make the session unstoppable. `gate` prints NOTHING on a
-    plain allow and exactly ONE stderr line when it fails open, naming what was
+    exits non-zero would make the session unstoppable. A block is recorded in state.json
+    BEFORE its reason is rendered. `gate` prints NOTHING on a
+    plain allow (a paused drive's allow carries one systemMessage line) and exactly ONE stderr line when it fails open, naming what was
     missing or corrupt.
   * Blocks are signalled ONLY by {"decision":"block"} on stdout with exit 0.
   * A sibling session in the same repo is never blocked (session binding).
-  * Caps always win: blocks >= max_blocks or wall >= max_minutes → terminal
-    `capped`, stop allowed. No path here can trap the operator — not a tampered
+  * Caps always win on a LIVE drive: blocks >= max_blocks or wall >= max_minutes → terminal
+    `capped`, stop allowed (a paused drive allows the stop before any cap is read). No path here can trap the operator — not a tampered
     contract, not an exhausted gate budget.
   * Conditions are evaluated BEFORE the caps are applied, so a drive that goes
     all-green on the cap boundary records `met`, not `capped`.
@@ -148,6 +153,30 @@ Contracts this file keeps:
     settings copy (`install-hook`) is an explicit opt-in, and Claude Code watches settings files
     — measured 2026-09-15 (claude 2.1.272): a Stop hook written between two turns fired on the
     next turn, so it gates the running session too.
+  * PAUSE (P1–P4): `pause` is honoured only when the operator's latest entry in the BOUND session's
+    transcript (derived from the session id — never a flag or a Stop payload; a typed prompt or a
+    prompt queued mid-turn; after the seal and the last resume) is a short, un-negated pause/hold/stop
+    order (a clause that leads with the verb — HOLD_CLAUSE_RE — or `! drive.py pause`). It is audited; a state.json `paused_at` with no matching audit
+    event is ignored (enforced, said out loud). While paused the gate allows every stop with no sweep,
+    no block, no cap, printing one `systemMessage` line; wall time excludes paused spans. `resume`
+    re-arms: the stall ladder restarts. Honest limit: a process that writes the harness transcript,
+    or points HOME / the session id at a file it wrote, still forges the order — no cheaper than the
+    existing `resume --session <other>` escape.
+    A block whose latest operator entry reads as a hold adds "if they asked to pause, run pause" —
+    a THIRD legal move; the stall ladder stays on, because a regex misread must not switch it off.
+  * EMPTY BLOCKS (P4): a stop is `empty` when, since the last block, the bound session's own
+    transcript gained the harness's record of that block, no tool call, no assistant text, and
+    ≤ EMPTY_GROWTH_BYTES otherwise. `--auto-pause-empty N` (OPT-IN; default 0 = never) consecutive
+    empty ones pause the drive (audited `paused by gate-empty`), never while an agent is out. Off by
+    default because a model can end turns silently on purpose to trigger it. A text-only
+    turn is never empty: "all done" repeated is a model declaring done, which the gate refuses.
+  * A CRASH IS NOT A RED (P10): at seal and amend, a red condition that exits 126/127, dies in the
+    interpreter (an import/syntax error line after a traceback frame, `python: No module named`) or
+    in its own bash syntax is REFUSED unless `--allow-crash-red` names it.
+  * REPEATS ARE SHORT (P5): a block whose unmet ids, last output lines, stall tier, agents and
+    warnings match the previous block's prints a short form that still carries every warning.
+  * TRANSCRIPT MEASURES (P7): growth excludes the harness's own records of the gate's blocks; the
+    first block after any resume, or on another transcript file, is a baseline.
   * ONE STOP, ONE COUNT: hooks are not deduplicated by Claude Code, so a settings copy next to
     the frontmatter hook fires the gate twice per stop. `gate` identifies the stop event
     (session, prompt id, transcript path and byte count at firing start) and a second firing of
@@ -250,6 +279,50 @@ RETURN_FIRST_LINE_RE = re.compile(r"^(unmet=\[[^\]]*\](\s.*)?|INCOMPLETE:\s*\S.*
 VERDICTS = ("VERDICT: CONVERGED", "VERDICT: NOT-CONVERGED")
 VERDICT_FORM = "`VERDICT: CONVERGED` or `VERDICT: NOT-CONVERGED`"
 TRACEBACK = "Traceback (most recent call last)"
+# A red at seal that is a CRASH, not a detection (P10): bash's "not executable" / "command not found", or a
+# Python interpreter dying on its imports or its syntax (the LAST output line — unittest/pytest failure output
+# that merely quotes a traceback ends on its own summary line, not on these).
+CRASH_RCS = (126, 127)
+CRASH_LAST_LINE_RE = re.compile(r"^(ModuleNotFoundError|ImportError|SyntaxError|IndentationError)(:|$)")
+CRASH_FRAME_RE = re.compile(r'^\s*File ".*", line \d+')
+CRASH_LAUNCH_RE = re.compile(r"python[\d.]*: (No module named |can't open file )")  # `python -m x` / `python x.py`
+CRASH_BASH_SYNTAX_RE = re.compile(r"^(/bin/)?bash: (-c: )?line \d+: syntax error")
+# Pause (P1–P4). The gate lets every stop through while a drive is paused; only `resume` ends a pause.
+# `pause` is honoured only when the operator's LATEST typed prompt (after the seal) asks for it: the model can
+# never author that entry, so it cannot pause its way past a red gate. Tamper-evidence, not proof — a process
+# that rewrites the transcript file itself still beats it.
+# A hold is a CLAUSE that leads with the verb and says nothing else but where/when/what to hold: "No, stop.",
+# "ok, pause the drive", "stop here for now please", "hold on — I'll resume tomorrow". "stop using mocks",
+# "hold the lock longer", "don't stop", "the Stop hook fires twice" are instructions, not holds.
+HOLD_CLAUSE_SPLIT_RE = re.compile(r"[.,;:!?—–]+|\s-\s|\n")
+HOLD_CLAUSE_RE = re.compile(
+    r"^\s*((ok|okay|please|pls|wait|alright|right|hey|yes|so|now|then|let's|lets|let us|we'll|we will|"
+    r"can you|could you|time to)\s+){0,2}"
+    r"(?P<verb>pause|hold|stop|halt|park)"
+    r"(\s+(on|off|it|this|that|here|there|now|please|everything|all|for|the|a|drive|work|working|session|task|"
+    r"today|tonight|tomorrow|later|day|moment|minute|bit|while|until|till|i'm|i|am|back|and|save|progress|"
+    r"commit|what|you|have|wait|me))*\s*$", re.I)
+# Any clause that says the opposite voids the whole prompt: "Stop. Do not pause the drive; keep working."
+HOLD_CONTRARY_RE = re.compile(
+    r"\b(don't|dont|do not|never|no need to|not)\s+(\w+\s+){0,2}(pause|hold|stop|halt|park)\b"
+    r"|\bkeep (going|working)\b|\bcarry on\b", re.I)
+HOLD_MAX_WORDS = 40  # a long prompt that happens to contain a hold-shaped clause is not an order
+# The operator's `! drive.py pause` as a COMMAND (optionally through python3), not a grep/log that mentions it.
+# A QUOTED path may contain spaces. The first form matched the path with `\S*`, so on a checkout such as
+# ".../Atelier Framework/..." the operator's own `!python3 "<path>/drive.py" pause` was not recognised and the
+# pause was refused — the one order the gate exists to obey, lost to a directory name.
+BASH_PAUSE_RE = re.compile(
+    r"^<bash-input>\s*((\"[^\"\n]*python3?(\.\d+)?\"|'[^'\n]*python3?(\.\d+)?'|(\S*/)?python3?(\.\d+)?)\s+)?"
+    r"(\"[^\"\n]*drive\.py\"|'[^'\n]*drive\.py'|\S*drive\.py)\s+pause(\s+--reason\s+.*)?\s*</bash-input>\s*$",
+    re.S)
+# Consecutive empty blocks → the gate pauses the drive. OFF by default (start --auto-pause-empty N opts in): a model
+# can end turns silently on purpose, and nothing a Stop hook sees tells that apart from an abandoned session.
+AUTO_PAUSE_EMPTY = 0
+AUTO_PAUSE_FLOOR = 3
+EMPTY_GROWTH_BYTES = 64_000  # an "empty" turn: no tool call and at most this much non-hook transcript growth
+HUMAN_SKIP_PREFIXES = ("<task-notification", "<local-command", "<system-reminder", "<bash-stdout", "<bash-stderr",
+                       "Stop hook feedback", "<agent-message", "Another Claude session sent a message")
+OPERATOR_ACTION_PREFIXES = ("<command-", "[Request interrupted")  # the operator's, but never a hold
 HOOKED_CLOSE_REFUSAL = ("REFUSED — hooked drive — end your turn; the Stop hook closes it. "
                         "`close` is the unhooked path.")
 
@@ -1131,7 +1204,8 @@ def report_requirements(cdir):
         unmet.append("4. cancelled agent(s) not named: " + ", ".join(miss))
     # 5. planned vs dispatched, under ## Agents
     P = (contract.get("policy") or {}).get("agents_planned", 0)
-    D = len({n for n in collected if not n.startswith(("verify", "relay"))})
+    D = len({n for n in _agent_dirs(cdir, cancelled=True) if agent_ever_collected(cdir, n)
+             and not n.startswith(("verify", "relay"))})
     agents_txt = _sections(shown, "## Agents")
     pat = re.compile(r"planned\s+%d\s*,\s*dispatched\s+%d(?!\d)" % (P, D), re.I)
     if not any(pat.search(ln) for ln in agents_txt.splitlines()):
@@ -1600,6 +1674,263 @@ def derive_transcript(ws, session, home=None):
     return p if os.path.isfile(p) else None
 
 
+def _ts_epoch(ts):
+    """ISO timestamp (a transcript's `...Z` included, on Python 3.9) → epoch, or None."""
+    if not isinstance(ts, str) or not ts:
+        return None
+    try:
+        return datetime.fromisoformat(ts.replace("Z", "+00:00")).timestamp()
+    except ValueError:
+        return None
+
+
+def _content_text(content):
+    """A message content (str, or a list of text/image/document blocks) → its text; None for anything else
+    (a tool_result list is never operator text)."""
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        if any(not isinstance(x, dict) or x.get("type") not in ("text", "image", "document") for x in content):
+            return None
+        return "\n".join(x.get("text") or "" for x in content if x.get("type") == "text")
+    return None
+
+
+def _operator_entry(rec):
+    """→ (text, ts) for a transcript entry the OPERATOR produced, else None. `text` is "" for an operator entry
+    that is not a prompt (a slash command, an interrupt): it is still the LATEST thing they did, so an older
+    prompt behind it never counts as their current order.
+
+    Two shapes carry a typed prompt (measured on this machine's transcripts, 2026-09-16):
+      * `type: user`, string/text content, `origin.kind == "human"` on a current harness (no origin on an
+        older one);
+      * `type: attachment` / `queued_command` with `commandMode: prompt` and `origin.kind == "human"` — a
+        prompt typed WHILE a turn runs, which under /drive is nearly every prompt. The same attachment with
+        `origin.kind == "peer"` (a sub-agent hand-back) or `commandMode: task-notification` is not the operator.
+    Never the operator: tool results, isMeta, sidechains, compaction summaries, hook feedback, notifications."""
+    if not isinstance(rec, dict) or rec.get("isSidechain"):
+        return None
+    ts = _ts_epoch(rec.get("timestamp"))
+    if rec.get("type") == "attachment":
+        att = rec.get("attachment")
+        if not isinstance(att, dict) or att.get("type") != "queued_command" or att.get("commandMode") != "prompt":
+            return None
+        origin = att.get("origin")
+        if att.get("isMeta") or not isinstance(origin, dict) or origin.get("kind") != "human":
+            return None
+        text = _content_text(att.get("prompt"))
+        return (text.strip(), _ts_epoch(att.get("timestamp")) or ts) if text is not None else None
+    if rec.get("type") != "user" or rec.get("isMeta") or "toolUseResult" in rec:
+        return None
+    if rec.get("isCompactSummary") or rec.get("isVisibleInTranscriptOnly"):
+        return None
+    msg = rec.get("message")
+    text = _content_text(msg.get("content") if isinstance(msg, dict) else None)
+    if text is None:
+        return None
+    text = text.strip()
+    origin = rec.get("origin")
+    kind = origin.get("kind") if isinstance(origin, dict) else None
+    if kind is not None and kind != "human" and not text.startswith("<bash-input>"):
+        return None
+    if text.startswith(OPERATOR_ACTION_PREFIXES):
+        return "", ts
+    if not text or text.startswith(HUMAN_SKIP_PREFIXES):
+        return None
+    return text, ts
+
+
+def last_human_prompt(path, chunk=1 << 20, session=None):
+    """→ (text, ts_epoch) of the newest operator entry in the transcript, or (None, None). With `session`, an
+    entry stamped with another `sessionId` is not this drive's operator.
+
+    Read backwards in chunks: the newest one is usually near the end, and every other line is skipped by a
+    substring test before any JSON parse."""
+    try:
+        f = open(path, "rb")
+    except (OSError, TypeError):
+        return None, None
+    with f:
+        pos = f.seek(0, os.SEEK_END)
+        tail = b""
+        while pos > 0:
+            step = min(chunk, pos)
+            pos -= step
+            f.seek(pos)
+            lines = (f.read(step) + tail).split(b"\n")
+            tail = lines.pop(0) if pos > 0 else b""
+            for ln in reversed(lines):
+                if b'"human"' not in ln and not (b'"user"' in ln and b'"toolUseResult"' not in ln):
+                    continue
+                try:
+                    rec = json.loads(ln)
+                except ValueError:
+                    continue
+                hit = _operator_entry(rec)
+                if hit is not None and session and rec.get("sessionId") not in (None, session):
+                    continue
+                if hit is not None:
+                    return hit
+    return None, None
+
+
+def hold_word(text):
+    """The hold verb of an operator prompt that ORDERS a pause/hold/stop, or None.
+
+    A regex cannot read intent, so the bar is deliberately narrow (HOLD_CLAUSE_RE): some clause of the prompt
+    must lead with the verb and carry nothing but where/when/what to hold. A negation ("don't stop", "no need
+    to stop") or an object ("stop adding debug prints") breaks the clause shape. A `!` command counts only when
+    it runs this script's `pause`. What it misses — a long-winded or non-English hold — leaves the drive
+    enforced, and the operator can still type `! drive.py pause` or `release`."""
+    t = (text or "").replace("\u2019", "'").strip()
+    if not t:
+        return None
+    if t.startswith("<bash-input>"):
+        # The operator's own `! drive.py pause` is the plainest order there is; any other shell command is not.
+        return "pause" if BASH_PAUSE_RE.match(t) else None
+    if len(t.split()) > HOLD_MAX_WORDS or HOLD_CONTRARY_RE.search(t):
+        return None
+    for clause in HOLD_CLAUSE_SPLIT_RE.split(t):
+        m = HOLD_CLAUSE_RE.match(clause)
+        if m:
+            return m.group("verb").lower()
+    return None
+
+
+def operator_hold(path, since_epoch, session=None):
+    """→ (word, excerpt) when the operator's latest entry, made after `since_epoch`, is a hold; else None.
+    An entry with no timestamp cannot be placed after the seal, so it never counts."""
+    text, ts = last_human_prompt(path, session=session)
+    if not text or ts is None or ts <= since_epoch:
+        return None
+    w = hold_word(text)
+    return (w, " ".join(text.split())[:120]) if w else None
+
+
+def _hook_record_len(ln):
+    """Bytes of `ln` when it is the harness's record of a Stop-hook BLOCK (the `Stop hook feedback` meta entry or
+    the `hook_blocking_error` attachment), else 0. Parsed, not substring-matched: a tool result that merely
+    quotes those words (reading drive.py does) is work, not a block record."""
+    try:
+        rec = json.loads(ln)
+    except ValueError:
+        return 0
+    if not isinstance(rec, dict):
+        return 0
+    if rec.get("type") == "attachment":
+        att = rec.get("attachment")
+        return len(ln) if isinstance(att, dict) and att.get("type") == "hook_blocking_error" else 0
+    msg = rec.get("message")
+    content = msg.get("content") if isinstance(msg, dict) else None
+    if (rec.get("type") == "user" and rec.get("isMeta") and isinstance(content, str)
+            and content.startswith("Stop hook feedback")):
+        return len(ln)
+    return 0
+
+
+def _assistant_said_something(ln):
+    try:
+        rec = json.loads(ln)
+    except ValueError:
+        return False
+    msg = rec.get("message") if isinstance(rec, dict) and rec.get("type") == "assistant" else None
+    content = msg.get("content") if isinstance(msg, dict) else None
+    if isinstance(content, str):
+        return bool(content.strip())
+    return isinstance(content, list) and any(
+        isinstance(x, dict) and x.get("type") == "text" and (x.get("text") or "").strip() for x in content)
+
+
+def transcript_segment(path, start):
+    """What the transcript gained since byte `start`: tool calls, assistant text messages, the bytes the harness
+    spent recording the gate's own blocks (measured 2026-09-11: one block is stored twice, as a `Stop hook
+    feedback` entry and a `hook_blocking_error` attachment), and the total. None when unreadable."""
+    try:
+        f = open(path, "rb")
+    except (OSError, TypeError):
+        return None
+    out = {"tool_uses": 0, "texts": 0, "hook_bytes": 0, "total": 0}
+    with f:
+        size = f.seek(0, os.SEEK_END)
+        f.seek(start if isinstance(start, int) and 0 <= start <= size else size)
+        for ln in f:
+            out["total"] += len(ln)
+            if b'"assistant"' in ln:
+                out["tool_uses"] += ln.count(b'"type":"tool_use"') + ln.count(b'"type": "tool_use"')
+                out["texts"] += 1 if b'"text"' in ln and _assistant_said_something(ln) else 0
+            elif b"Stop hook feedback" in ln or b"hook_blocking_error" in ln:
+                out["hook_bytes"] += _hook_record_len(ln)
+    return out
+
+
+def wall_minutes(state):
+    """Minutes the drive has been LIVE: wall time since the seal minus every finished and running pause."""
+    paused = float(state.get("paused_seconds") or 0)
+    if state.get("paused_at"):
+        paused += max(0.0, time.time() - epoch(state["paused_at"]))
+    return max(0.0, time.time() - epoch(state["started_at"]) - paused) / 60
+
+
+def pause_attested(cdir, state):
+    """A state `paused_at` counts only when audit.jsonl's newest pause event is `paused` (the pause
+    writes its audit line BEFORE state.json, like set_terminal)."""
+    if not state.get("paused_at"):
+        return False
+    last = None
+    try:
+        with open(os.path.join(cdir, "audit.jsonl")) as f:
+            for ln in f:
+                try:
+                    rec = json.loads(ln)
+                except ValueError:
+                    continue
+                if isinstance(rec, dict) and rec.get("event") in ("paused", "unpaused"):
+                    last = rec
+    except OSError:
+        return False
+    return bool(last and last["event"] == "paused" and last.get("paused_at") == state["paused_at"])
+
+
+def set_paused(cdir, state, by, **kw):
+    state["paused_at"] = now_iso()
+    state["paused_by"] = by
+    audit(cdir, "paused", by=by, paused_at=state["paused_at"], blocks=state.get("blocks"), **kw)
+    write_json(os.path.join(cdir, "state.json"), state)
+
+
+def crash_red(tail):
+    """A seal-time red that is a CRASH (exit 126/127, or a last line naming an import/syntax error), as a
+    one-line reason; None for a real red. `tail` is run_condition's `exit N: <last lines>`."""
+    m = re.match(r"exit (-?\d+): ", tail or "")
+    if not m:
+        return None
+    rc = int(m.group(1))
+    lines = [ln.strip() for ln in tail[m.end():].splitlines() if ln.strip()]
+    last = lines[-1] if lines else ""
+    if rc in CRASH_RCS:
+        return f"exit {rc} ({'not executable' if rc == 126 else 'command not found'}): {last[:160]}"
+    # The error line alone is not enough: a detector may print `SyntaxError: <what it found>` and exit 1 on
+    # purpose. The interpreter's own crash also prints a frame (`File "...", line N`) or the traceback header.
+    if CRASH_LAST_LINE_RE.match(last) and any(TRACEBACK in ln or CRASH_FRAME_RE.match(ln) for ln in lines[:-1]):
+        return f"exit {rc}, the interpreter crashed: {last[:160]}"
+    if CRASH_LAUNCH_RE.search(last):
+        return f"exit {rc}, the interpreter could not start the module or file: {last[:160]}"
+    if rc == 2 and any(CRASH_BASH_SYNTAX_RE.match(ln) for ln in lines):
+        return f"exit 2, the condition's own shell syntax is broken: {last[:160]}"
+    return None
+
+
+def refuse_crash_reds(res, allowed, where):
+    crashed = [(i, why) for i, m, t in res
+               if not m and i not in RESERVED_IDS and i not in allowed for why in [crash_red(t)] if why]
+    if crashed:
+        sys.exit(f"REFUSED — red at {where} by CRASHING, not by detecting: "
+                 + "; ".join(f"{i}: {why}" for i, why in crashed)
+                 + ". A crash stays red whatever the work does. Fix the command or the sealed env "
+                   "(a missing module: `--allow-user-site \"<reason>\"` or a sealed interpreter that has it); "
+                   "if the missing piece IS the work, name the id in --allow-crash-red.")
+
+
 # ----------------------------------------------------------------- commands
 
 
@@ -1908,6 +2239,11 @@ def cmd_start(a):
         allow_green.add(TESTS_COND)  # green at seal by construction
     conds.append(report_condition(cdir, verify=(a.verify == "required"), python=python))
     ids = [c["id"] for c in conds]
+    if a.auto_pause_empty and not a.auto_pause_empty >= AUTO_PAUSE_FLOOR:
+        sys.exit(f"REFUSED — --auto-pause-empty {a.auto_pause_empty}: 0 (off) or ≥ {AUTO_PAUSE_FLOOR}")
+    crash_ok = set(filter(None, (a.allow_crash_red or "").split(",")))
+    if crash_ok - set(ids):
+        sys.exit("REFUSED — --allow-crash-red names unknown condition id(s): " + ", ".join(sorted(crash_ok - set(ids))))
     for cid, text in parse_known_incomplete(a.known_incomplete, ids):
         next(c for c in conds if c["id"] == cid).setdefault("known_incomplete", []).append(text)
     cmap = parse_map(a.map, ids)
@@ -1923,6 +2259,7 @@ def cmd_start(a):
         "enforcement": enforcement,
         "enforcement_detail": enf_detail,
         "allow_green": sorted(allow_green),
+        "allow_crash_red": sorted(crash_ok),
         "workspace": ws,
         "relay_mb": a.relay_mb,
         # sealed condition environment (X1): conditions run with exactly this, never the caller's env
@@ -1944,6 +2281,7 @@ def cmd_start(a):
         "policy": {
             "verify": a.verify, "why_no_verify": a.why_no_verify,
             "agents_planned": a.agents, "why_solo": a.why_solo, "max_agents": a.max_agents,
+            "auto_pause_empty": a.auto_pause_empty,
             "seams": [s.strip() for s in a.seams.split(";") if s.strip()],
         },
     }
@@ -1990,6 +2328,7 @@ def cmd_start(a):
             )
         if not [i for i in red if i not in RESERVED_IDS]:
             sys.exit("REFUSED — every condition is green already; nothing to drive.")
+        refuse_crash_reds(res, crash_ok, "seal")
         if baseline and TESTS_COND in red:
             sys.exit(f"REFUSED — {TESTS_COND} is red at seal, against its own fresh baseline: "
                      + next((t for i, m, t in res if i == TESTS_COND), ""))
@@ -2031,6 +2370,7 @@ def cmd_start(a):
     state = {
         "session": session,
         "started_at": now_iso(),
+        "sealed_at_ms": datetime.now(timezone.utc).isoformat(timespec="milliseconds"),
         "blocks": 0,
         "history": [],
         "outcome": None,
@@ -2079,6 +2419,8 @@ def cmd_start(a):
           f" · enforcement={enforcement} ({enf_detail})"
           + (f" · {map_summary(cmap)}" if cmap else "")
           + (f" · unproven checkers: {', '.join(unproven)}" if unproven else "")
+          + (f" · auto-pause after {pol['auto_pause_empty']} empty stops" if pol.get("auto_pause_empty") else "")
+          + (f" · crash-red allowed: {', '.join(contract['allow_crash_red'])}" if contract["allow_crash_red"] else "")
           + (f" · user-site allowed ({user_site})" if user_site else "")
           + (f" · workspace python allowed ({ws_python})" if ws_python else "")
           + (f" · WARNING: WORKSPACE ON PATH: {', '.join(ws_on_path)}" if ws_on_path else "")
@@ -2109,10 +2451,10 @@ def cmd_amend(a):
             audit_breaks(cdir, state, files, ck_ids)
             sys.exit("REFUSED — the seal is broken (" + ", ".join(files + [f"checker {i}" for i in ck_ids])
                      + "); an amend never blesses a hand edit. Restore it first.")
-        if not (a.add_cond or a.checker or a.known_incomplete or a.map
+        if not (a.add_cond or a.checker or a.known_incomplete or a.map or a.timeout is not None
                 or a.raise_blocks is not None or a.raise_minutes is not None):
             sys.exit("REFUSED — nothing to amend: give --add-cond/--checker/--known-incomplete/--map/"
-                     "--raise-blocks/--raise-minutes")
+                     "--raise-blocks/--raise-minutes/--timeout")
         existing = [c["id"] for c in contract["conditions"]]
         taken = list(existing)
         added = []
@@ -2176,11 +2518,47 @@ def cmd_amend(a):
             cmap[key] = new
             map_changes[key] = new
         budget = gate_budget(contract)
-        timeout = contract.get("timeout", DEFAULT_TIMEOUT)
+        timeout = old_timeout = contract.get("timeout", DEFAULT_TIMEOUT)
+        if a.timeout is not None:
+            # LOWER only: a condition that outruns its timeout is unmet, so a lower one can only make the
+            # contract harder to pass. A raise would loosen what was sealed.
+            if not 1 <= a.timeout < old_timeout:
+                sys.exit(f"REFUSED — --timeout {a.timeout}: the per-condition timeout can only be LOWERED "
+                         f"(sealed {old_timeout}s; 1 ≤ N < {old_timeout})")
+            # Only as far as the budget needs: a red condition's run time says nothing about its green run (it
+            # often fails in milliseconds until the evidence exists), so no measurement proves a deeper cut safe.
+            need = budget // len(merged)
+            if need >= old_timeout:
+                sys.exit(f"REFUSED — --timeout {a.timeout}: {len(merged)} conditions × the sealed {old_timeout}s "
+                         f"already fit the {budget}s gate budget; nothing needs a lower timeout.")
+            if a.timeout < need:
+                sys.exit(f"REFUSED — --timeout {a.timeout}: lower it only as far as the gate budget needs — "
+                         f"`--timeout {need}` fits {len(merged)} conditions in {budget}s. A timeout below a "
+                         "condition's green run makes it unmet for good, and it can never be raised back.")
+            # A lower timeout must not turn an existing condition into a permanent TIMEOUT (it could never be
+            # raised back): time each one now under the sealed timeout, and refuse if any needs ≥ 80% of the new.
+            slow = []
+            for c in user + new_conds + auto:
+                t0 = time.time()
+                _, tail = run_condition(c, ws, old_timeout, env=env)
+                took = time.time() - t0
+                if took >= 0.8 * a.timeout:
+                    slow.append(f"{c['id']} took {took:.1f}s" + (" (TIMEOUT)" if tail.startswith("TIMEOUT") else ""))
+            if slow:
+                sys.exit(f"REFUSED — --timeout {a.timeout}: " + "; ".join(slow) + f" under the sealed {old_timeout}s. "
+                         "A timeout below a condition's own run time makes it unmet for good.")
+            timeout = a.timeout
         if timeout * len(merged) > budget:
+            fit = budget // len(merged)
             sys.exit(f"REFUSED — worst-case gate sweep {timeout * len(merged)}s ({len(merged)} conditions × "
                      f"timeout {timeout}s) exceeds the {budget}s gate budget; the amended contract could not "
-                     "print in time")
+                     "print in time. "
+                     + (f"It fits at exactly `--timeout {fit}` (lower it in this amend)" if fit >= 1
+                        else "Split the task into drives"))
+        crash_ok = set(filter(None, (a.allow_crash_red or "").split(",")))
+        if crash_ok - set(new_ids):
+            sys.exit("REFUSED — --allow-crash-red in an amend may only name conditions added by it; unknown: "
+                     + ", ".join(sorted(crash_ok - set(new_ids))))
         written = []
         try:
             for cond, prep in zip(ck_conds, preps):
@@ -2192,6 +2570,7 @@ def cmd_amend(a):
                 res = evaluate(cdir, {"conditions": new_conds, "timeout": timeout, "env": env,
                                       "allow_user_site": contract.get("allow_user_site"),
                                       "startup": contract.get("startup")}, ws, budget=budget)
+                refuse_crash_reds(res, crash_ok, "amend")
                 green = [i for i, m, _ in res if m and i not in allow]
                 if green:
                     sys.exit("REFUSED — added condition(s) already green at amend: " + ", ".join(green)
@@ -2210,6 +2589,10 @@ def cmd_amend(a):
         contract["caps"] = caps
         contract["map"] = cmap
         contract["allow_green"] = sorted(set(contract.get("allow_green") or []) | allow)
+        if timeout != old_timeout:
+            contract["timeout"] = timeout
+            raises["timeout_lowered"] = [old_timeout, timeout]
+        contract["allow_crash_red"] = sorted(set(contract.get("allow_crash_red") or []) | crash_ok)
         entry = {"ts": now_iso(), "reason": a.reason.strip(), "added": new_ids, "raises": raises,
                  "old_sha": old_sha, "known_incomplete": [[i, t] for i, t in ki], "map": map_changes,
                  "allow_green": sorted(allow),
@@ -2226,7 +2609,7 @@ def cmd_amend(a):
               new_sha=state["contract_sha256"], known_incomplete=entry["known_incomplete"], map=map_changes)
     unproven = [c["id"] for c in ck_conds if not c["checker"].get("red_proven")]
     print(f"amended {contract['id']} (#{len(contract['amendments'])}): added {new_ids or 'none'}"
-          f"{'; raised ' + ', '.join(f'{k} {v[0]}→{v[1]}' for k, v in raises.items()) if raises else ''}"
+          f"{'; changed ' + ', '.join(f'{k} {v[0]}→{v[1]}' for k, v in raises.items()) if raises else ''}"
           f"{'; known-incomplete +' + str(len(ki)) if ki else ''}"
           f"{'; ' + map_summary(cmap) if map_changes else ''}"
           f"{'; unproven checkers: ' + ', '.join(unproven) if unproven else ''}"
@@ -2244,6 +2627,9 @@ def cmd_check(a):
         print(first_green_line(state["first_green_at"]))
     if bad:
         print(state_tamper_line(bad))
+    if pause_attested(cdir, state):
+        print(f"PAUSED since {state['paused_at']} (by {state.get('paused_by')}): the gate lets every stop "
+              f"through; `python3 {me()} resume` re-arms it")
     for ln in tamper_lines(files, ids):
         print(ln)
     for ln in not_attested_lines(cdir):
@@ -2316,37 +2702,99 @@ def cmd_close(a):
     sys.exit(0)
 
 
-def build_block_reason(cdir, contract, state, res, stall, tbytes=0, delta_mb=0.0, baseline=False):
+def exits_line():
+    return ("Legal exits: every condition green (including the REPORT.md `report` condition), an audited abort, "
+            f"or the cap. The OPERATOR's exits: `python3 {me()} pause` keeps the drive for a later session "
+            "(honoured only when the operator's latest prompt asks to pause/hold/stop), "
+            f"`python3 {me()} release` ends it (operator-only).")
+
+
+def build_block_reason(cdir, contract, state, res, stall, tbytes=0, delta_mb=0.0, baseline=False, flags=None):
+    """→ (reason, signature). `flags` colour the reason, never the record: tampered_files, tampered_checkers,
+    state_tampered, abort_file_unaudited, budget_starved, pause_unattested, hold (word, excerpt), empty.
+
+    The signature is what makes a block NEW: each unmet condition's last output line (numbers masked), the
+    stall tier, the agents waited on, every warning. A block whose signature equals the previous block's
+    prints a short form (P5) — each block reason is stored twice in the transcript. The short form still
+    repeats every warning, the collect instruction and the hard-stall demand; it drops only the condition
+    descriptions and the standing rules."""
+    f = flags or {}
     caps = contract["caps"]
     n = state["blocks"]
-    growth = "baseline" if baseline else f"+{delta_mb:.1f} MB this block"
-    lines = [
-        f"/drive {contract['id']} — NOT DONE. Block {n}/{caps['max_blocks']}; "
-        f"wall {int((time.time() - epoch(state['started_at'])) / 60)}/{caps['max_minutes']} min; "
-        f"transcript {tbytes / 1e6:.1f} MB ({growth}).",
-        "Unmet conditions (observed by running them just now):",
-    ]
-    if state.get("state_tampered"):
-        lines.append(state_tamper_line(state["state_tampered"]) + " — the drive is live; it is enforced as one.")
-    lines += tamper_lines(state.get("tampered_files") or [], state.get("tampered_checkers") or [])
-    if state.get("abort_file_unaudited"):
-        lines.append(
+    me_ = me()
+    growth = "baseline" if baseline else f"+{delta_mb:.1f} MB since the last block"
+    head = (f"/drive {contract['id']} — NOT DONE. Block {n}/{caps['max_blocks']}; "
+            f"wall {int(wall_minutes(state))}/{caps['max_minutes']} min; "
+            f"transcript {tbytes / 1e6:.1f} MB ({growth}).")
+    unmet = [i for i, m, _ in res if not m]
+    hold = f.get("hold")
+    relay_mb = contract.get("relay_mb", DEFAULT_RELAY_MB)
+    pressure = delta_mb >= relay_mb
+    tier = "hard" if stall >= STALL_HARD else "k" if stall >= STALL_K else ""
+    pending = outstanding_agents(cdir)
+    uncollected = uncollected_agents(cdir)
+    tails = [[i, re.sub(r"\d+(\.\d+)?", "#", (t.strip().splitlines() or [""])[-1])] for i, m, t in res if not m]
+    sig = hashlib.sha256(json.dumps([
+        tails, tier, pending, uncollected, bool(f.get("state_tampered")), f.get("tampered_files") or [],
+        f.get("tampered_checkers") or [], bool(f.get("abort_file_unaudited")), f.get("budget_starved") or [],
+        pressure, bool(f.get("pause_unattested")), bool(f.get("empty")), bool(hold),
+    ], sort_keys=True, default=str).encode()).hexdigest()[:16]
+
+    # Lines every form carries.
+    warn = []
+    if f.get("state_tampered"):
+        warn.append(state_tamper_line(f["state_tampered"]) + " — the drive is live; it is enforced as one.")
+    if f.get("pause_unattested"):
+        warn.append("PAUSE NOT ATTESTED: state.json says paused but audit.jsonl records no such pause — the drive "
+                    f"is live and enforced. A real pause is `python3 {me_} pause`, on the operator's order.")
+    warn += tamper_lines(f.get("tampered_files") or [], f.get("tampered_checkers") or [])
+    if f.get("abort_file_unaudited"):
+        warn.append(
             f"ABORT.md is present but no audited abort was run — a hand-written ABORT.md ends nothing. Run "
-            f"`python3 {me()} abort --blocked ... --mechanism ... --evidence ... --attempts '<try 1>;<try 2>'`."
+            f"`python3 {me_} abort --blocked ... --mechanism ... --evidence ... --attempts '<try 1>;<try 2>'`."
         )
-    if state.get("budget_starved"):
-        lines.append(
-            f"GATE BUDGET EXHAUSTED: {', '.join(state['budget_starved'])} could not be run inside the "
+    if f.get("budget_starved"):
+        warn.append(
+            f"GATE BUDGET EXHAUSTED: {', '.join(f['budget_starved'])} could not be run inside the "
             f"{gate_budget(contract)}s sweep budget, so they count UNMET. Make the earlier conditions "
             "faster (or lower --timeout at the next seal); a gate that cannot finish cannot enforce."
         )
-    relay_mb = contract.get("relay_mb", DEFAULT_RELAY_MB)
-    if delta_mb >= relay_mb:
-        lines.append(
-            f"CONTEXT PRESSURE: +{delta_mb:.1f} MB of transcript in one block (relay threshold {relay_mb} MB). "
+    if pressure:
+        warn.append(
+            f"CONTEXT PRESSURE: +{delta_mb:.1f} MB of transcript since the last block (relay threshold {relay_mb} MB). "
             "You did the work in main context. From here on: `drive.py brief --agent relay-<n>` and dispatch a "
             "RELAY orchestrator agent to continue the drive; main context only dispatches, waits, verifies."
         )
+    collect = ([f"Returned, not collected: {', '.join(uncollected)} — run collect for each "
+                f"(reading a RETURN.md by hand bypasses validation): `python3 {me_} collect <name>`. "
+                "A verifier's verdict does not count until it is collected."] if uncollected else [])
+    # P3: an operator hold is a THIRD legal move, never a replacement for the stall ladder — the hold is read
+    # by a regex, and a misread must not switch the ladder off.
+    hold_line = ([f"OPERATOR HOLD?: the operator's latest prompt (\"{hold[1]}\") reads as a request to {hold[0]}. "
+                  f"If it asks to pause this drive, run `python3 {me_} pause` and end your turn — a hold is not a "
+                  "stall, so do not dispatch or abort over it. Otherwise keep working."] if hold else [])
+    hard = ([f"STALLED ×{stall}: the same unmet set for {stall} consecutive blocks. Legal moves only: "
+             "(1) dispatch one fresh-context agent per stalled condition NOW, or (2) "
+             "`drive.py abort --blocked … --mechanism … --evidence … --attempts '<a>;<b>'` naming what you "
+             "ruled out" + (", or (3) the operator's hold above: `pause`" if hold else "")
+             + ". Restating the problem is not a move."] if stall >= STALL_HARD else [])
+    spine = ([("Spine: numbers pass — regenerate every count from the artifact · verify by contact, not recognition · "
+               "prove yourself wrong once before reporting · a worker's 'done' is a claim until a condition or a "
+               "separate verifier says so · never game the gate (a weakened condition is a red one).")]
+             if n == 1 or n % SPINE_EVERY == 0 else [])
+
+    prev = state.get("last_reason") if isinstance(state.get("last_reason"), dict) else {}
+    if prev.get("sig") == sig and isinstance(prev.get("full_block"), int):
+        lines = [head,
+                 f"Unmet set, last output lines and warnings unchanged since block {prev['full_block']}: unmet {unmet}"
+                 + (f"; STALLED ×{stall}" if STALL_K <= stall < STALL_HARD else "")
+                 + (f"; agents without a RETURN.md: {', '.join(pending)}" if pending else "")
+                 + f". That block's instructions stand; `python3 {me_} check` prints the full output."]
+        lines += warn + collect + hold_line + hard + spine
+        lines.append("Keep working in THIS turn. " + exits_line())
+        return "\n".join(lines), sig
+
+    lines = [head, "Unmet conditions (observed by running them just now):"] + warn
     for i, m, tail in res:
         if not m:
             c0 = next((c for c in contract["conditions"] if c["id"] == i), {})
@@ -2360,46 +2808,30 @@ def build_block_reason(cdir, contract, state, res, stall, tbytes=0, delta_mb=0.0
                 tail = tl[0].split(": ", 1)[0] + ": " + tl[-1]
             lines.append(f"      {tail.replace(chr(10), ' | ')[:300]}")
     lines.append("")
-    pending = outstanding_agents(cdir)
     if pending:
         lines.append(
             f"Agents without a RETURN.md yet: {', '.join(pending)}. Poll their return files IN THIS TURN "
             "(bounded sleep loop); do not end the turn to wait. Each block spent waiting costs budget. "
-            f"An agent you never dispatched: `python3 {me()} cancel <name>`."
+            f"An agent you stopped or never dispatched: `python3 {me_} cancel <name>` — the gate stops waiting "
+            "for it (cancel does not stop a running agent)."
         )
-    uncollected = uncollected_agents(cdir)
-    if uncollected:
-        lines.append(
-            f"Returned, not collected: {', '.join(uncollected)} — run collect for each "
-            f"(reading a RETURN.md by hand bypasses validation): `python3 {me()} collect <name>`. "
-            "A verifier's verdict does not count until it is collected."
-        )
-    if stall >= STALL_HARD:
-        lines.append(
-            f"STALLED ×{stall}: the same unmet set for {stall} consecutive blocks. Two legal moves only: "
-            "(1) dispatch one fresh-context agent per stalled condition NOW, or (2) "
-            "`drive.py abort --blocked … --mechanism … --evidence … --attempts '<a>;<b>'` naming what you "
-            "ruled out. Restating the problem is not a move."
-        )
-    elif stall >= STALL_K:
+    lines += collect + hold_line + hard
+    if STALL_K <= stall < STALL_HARD:
         lines.append(
             f"STALLED ×{stall}: unmet set unchanged for {stall} blocks. Dispatch a fresh-context agent "
             "for each stalled condition (brief = the condition id + its cmd + allowed files + a return "
             "path under .drive/<id>/agents/<name>/), then verify with a separate read-only agent."
         )
-    if n == 1 or n % SPINE_EVERY == 0:
-        lines += [
-            "Spine: numbers pass — regenerate every count from the artifact · verify by contact, not recognition · "
-            "prove yourself wrong once before reporting · a worker's 'done' is a claim until a condition or a "
-            "separate verifier says so · never game the gate (a weakened condition is a red one).",
-        ]
+    if f.get("empty"):
+        lines.append("EMPTY TURN: no tool call and no message since the last block. Ending a turn without work "
+                     "spends a block and changes nothing.")
+    lines += spine
     lines += [
         "Rules: keep working in THIS turn. Do not summarize, do not ask, do not end the turn to wait "
         "for agents — poll their return files in-turn (`sleep` loops ≤600s per Bash call). "
-        f"Run `python3 {me()} check` before your next attempt to stop. "
-        "Legal exits: every condition green (including the REPORT.md `report` condition), an audited abort, or the cap.",
+        f"Run `python3 {me_} check` before your next attempt to stop. " + exits_line(),
     ]
-    return "\n".join(lines)
+    return "\n".join(lines), sig
 
 
 def cmd_gate(_a):
@@ -2490,10 +2922,28 @@ def _duplicate_firing(cdir, state, event):
     return last["reason"]
 
 
+def _hold_since(state):
+    """A hold counts only from a prompt typed after the seal and after the last resume: an old `pause`
+    prompt that a resume already answered never re-pauses the drive."""
+    # `sealed_at_ms` is exact; a drive sealed before it existed has only second-precision `started_at`, where
+    # +1 s keeps a prompt from earlier in the seal's own second out.
+    sealed = _ts_epoch(state.get("sealed_at_ms"))
+    return max(sealed if sealed is not None else epoch(state["started_at"]) + 1,
+               _ts_epoch(state.get("unpaused_at")) or 0)
+
+
 def _gate_locked(cdir, contract, state, ws, payload, event=None):
     sid = payload.get("session_id")
     if state.get("session") and sid and state["session"] != sid:
         return  # sibling session in the same repo → never blocked
+    # P1: a paused drive lets EVERY stop through — no sweep, no block, no cap, and wall time frozen —
+    # until `resume`. Only an audit-attested pause counts; a hand-set `paused_at` is dropped (enforced).
+    # One line to the operator on every allowed stop, so a paused drive never passes for a met one.
+    if pause_attested(cdir, state):
+        print(json.dumps({"systemMessage": (
+            f"/drive {contract['id']} is PAUSED (by {state.get('paused_by')}, since {state['paused_at']}); "
+            f"not met. `python3 {me()} resume` re-arms it, `python3 {me()} release` ends it.")}))
+        return
     if not state.get("session") and sid:
         state["session"] = sid  # adopt on first firing
         audit(cdir, "adopted", session=sid)
@@ -2502,6 +2952,10 @@ def _gate_locked(cdir, contract, state, ws, payload, event=None):
         # Same stop, second hook copy: the same decision, no second block, no second audit line.
         print(json.dumps({"decision": "block", "reason": dup}))
         return
+    pause_unattested = bool(state.get("paused_at"))
+    if pause_unattested:
+        audit(cdir, "state_tampered", paused_at=state.pop("paused_at"))
+        state.pop("paused_by", None)
     bad = attest_outcome(cdir, state)  # a hand-set outcome is not a settled drive
     # Only an audited `abort` ends a drive. A hand-written ABORT.md is a stop wearing a
     # heading: say so and block (block-counted, so the cap still releases).
@@ -2525,7 +2979,7 @@ def _gate_locked(cdir, contract, state, ws, payload, event=None):
         ensure_first_green(cdir, state, "gate")
         set_terminal(cdir, state, "met", blocks=state["blocks"])
         return
-    wall_min = (time.time() - epoch(state["started_at"])) / 60
+    wall_min = wall_minutes(state)
     if wall_min >= caps["max_minutes"]:
         set_terminal(cdir, state, "capped", cap="wall", minutes=int(wall_min), unmet=unmet,
                      tampered=tampered)
@@ -2534,10 +2988,17 @@ def _gate_locked(cdir, contract, state, ws, payload, event=None):
         set_terminal(cdir, state, "capped", cap="blocks", blocks=state["blocks"], unmet=unmet,
                      tampered=tampered)
         return
-    state["blocks"] += 1
-    tbytes = transcript_bytes(payload.get("transcript_path"))
+    tpath = payload.get("transcript_path") if isinstance(payload.get("transcript_path"), str) else None
+    tbytes = transcript_bytes(tpath)
     baseline = False
-    if state["history"]:
+    last_path = state.get("last_transcript_path")
+    if tpath and tbytes:
+        state["last_transcript_path"] = tpath
+    if state.pop("transcript_rebase", False) or (tpath and tbytes and last_path and last_path != tpath):
+        # First block after a resume, or on another transcript file (P7): the growth since the last block is
+        # pre-pause work, or another file's bytes — never this block's. This firing is the new baseline.
+        prev, baseline = tbytes, True
+    elif state["history"]:
         prev = state["history"][-1]["transcript_bytes"]
     else:
         prev = state.get("transcript_at_seal") or 0
@@ -2547,23 +3008,63 @@ def _gate_locked(cdir, contract, state, ws, payload, event=None):
             state["transcript_baseline"] = "gate"
             prev = tbytes
             baseline = True
+    # What the transcript gained since the last block, minus the harness's copies of the gate's own
+    # reasons (P7), and whether any tool was called in it (P4).
+    # A transcript that SHRANK is another file (a resumed or forked session), not this one's growth:
+    # nothing is known about the turn, so it is neither empty nor measured.
+    seg = (transcript_segment(tpath, prev)
+           if (tpath and tbytes and prev and tbytes >= prev and not baseline) else None)
+    grown = max(0, tbytes - prev - (seg["hook_bytes"] if seg else 0)) if (tbytes and prev) else 0
+    delta_mb = 0.0 if baseline else grown / 1e6
+    # `hook_bytes > 0` is the harness's own record of the previous block: `gate` run by hand (any payload, any
+    # number of times) writes no `Stop hook feedback` entry, so it can never manufacture an empty streak.
+    # And only the HARNESS transcript of the bound session counts (a JSONL the model wrote could hold anything).
+    canonical = derive_transcript(ws, sid)
+    own = bool(canonical and tpath and os.path.realpath(canonical) == os.path.realpath(tpath))
+    # And a turn that SAID something is not empty: "all done, the work is complete" three times is a model
+    # declaring done — the one thing this gate exists to refuse — not a session that wants to end.
+    empty = bool(own and seg is not None and seg["tool_uses"] == 0 and seg["texts"] == 0
+                 and seg["hook_bytes"] > 0 and grown <= EMPTY_GROWTH_BYTES)
+    floor = min(int(state.get("stall_floor") or 0), len(state["history"]))
+    run_empty = 1 if empty else 0
+    if empty:
+        for h in reversed(state["history"][floor:]):
+            if not h.get("empty"):
+                break
+            run_empty += 1
+    auto = (contract.get("policy") or {}).get("auto_pause_empty", AUTO_PAUSE_EMPTY)
+    # Never while an agent is out: its notification wakes the model into work that must be gated.
+    if empty and auto and run_empty >= auto and not outstanding_agents(cdir):
+        # P4: N stops in a row with nothing done in between are not a drive, they are a session that
+        # wants to end. Hand the drive back to the operator instead of burning the block cap on it.
+        set_paused(cdir, state, "gate-empty", empty_blocks=run_empty, unmet=unmet)
+        print(json.dumps({"systemMessage": (
+            f"/drive {contract['id']} PAUSED by the gate after {run_empty} empty turns in a row (no tool call). "
+            f"Unmet: {unmet}. The drive is kept: `python3 {me()} resume` re-arms it, "
+            f"`python3 {me()} release` ends it.")}))
+        return
+    hold = operator_hold(tpath, _hold_since(state), session=sid) if tpath and tbytes else None
+    state["blocks"] += 1
     state["history"].append({"ts": now_iso(), "block": state["blocks"], "unmet": unmet,
-                             "transcript_bytes": tbytes})
+                             "transcript_bytes": tbytes, "empty": empty})
     hist = state["history"]
     stall = 1
-    while stall < len(hist) and hist[-1 - stall]["unmet"] == unmet:
+    while stall < len(hist) - floor and hist[-1 - stall]["unmet"] == unmet:
         stall += 1
-    delta_mb = 0.0 if baseline else ((tbytes - prev) / 1e6 if tbytes and prev else 0.0)
     audit(cdir, "blocked", n=state["blocks"], unmet=unmet, stall=stall,
-          transcript_bytes=tbytes, delta_mb=round(delta_mb, 2), tampered=tampered)
+          transcript_bytes=tbytes, delta_mb=round(delta_mb, 2), tampered=tampered, empty=empty,
+          hold=hold[0] if hold else None)
+    # The block is recorded BEFORE the reason is rendered: a render that fails (fail-open) still counts.
     write_json(os.path.join(cdir, "state.json"), state)
-    # Transient flags: set AFTER the state.json write — they colour the reason, not the record.
-    state["tampered_files"] = t_files
-    state["tampered_checkers"] = t_ids
-    state["state_tampered"] = bad
-    state["abort_file_unaudited"] = abort_unaudited
-    state["budget_starved"] = starved
-    reason = build_block_reason(cdir, contract, state, res, stall, tbytes, delta_mb, baseline)
+    flags = {"tampered_files": t_files, "tampered_checkers": t_ids, "state_tampered": bad,
+             "abort_file_unaudited": abort_unaudited, "budget_starved": starved,
+             "pause_unattested": pause_unattested, "hold": hold, "empty": empty}
+    reason, sig = build_block_reason(cdir, contract, state, res, stall, tbytes, delta_mb, baseline, flags)
+    prev_reason = state.get("last_reason") if isinstance(state.get("last_reason"), dict) else {}
+    short = prev_reason.get("sig") == sig and isinstance(prev_reason.get("full_block"), int)
+    state["last_reason"] = {"sig": sig, "full_block": prev_reason["full_block"] if short else state["blocks"]}
+    with contextlib.suppress(OSError):
+        write_json(os.path.join(cdir, "state.json"), state)
     if event:
         # Best effort: a lost record only means a duplicate firing counts (the old behaviour).
         with contextlib.suppress(OSError):
@@ -2675,14 +3176,14 @@ def agent_attestations(cdir):
                     continue
                 if not isinstance(rec, dict) or not isinstance(rec.get("agent"), str):
                     continue
-                s = out.setdefault(rec["agent"], {"cancelled": False, "collected": False})
+                s = out.setdefault(rec["agent"], {"cancelled": False, "collected": False, "ever_collected": False})
                 ev = rec.get("event")
                 if ev == "cancelled":
                     s["cancelled"] = True
                 elif ev == "uncancelled":
                     s["cancelled"] = False
                 elif ev == "collected" and not rec.get("problems"):
-                    s["collected"] = True
+                    s["collected"] = s["ever_collected"] = True
                 elif ev == "brief" and rec.get("redispatch"):
                     s["collected"] = False
     except OSError:
@@ -2726,6 +3227,13 @@ def collected_stamp(cdir, name):
     """`collect` writes this after a clean validation. It is what makes collection
     MECHANICAL: `cat`ting a RETURN.md leaves no stamp, so its verdict cannot count."""
     return os.path.join(cdir, "agents", name, COLLECTED_STAMP)
+
+
+def agent_ever_collected(cdir, name):
+    """Collected cleanly at least once (P8). A redispatch clears `collected` — the new return owes its own
+    collect — but never this: the agent WAS dispatched and its work was collected, so the report's `dispatched
+    D` does not shrink when a collected agent is pushed again."""
+    return agent_attestations(cdir).get(name, {}).get("ever_collected", False)
 
 
 def agent_collected(cdir, name):
@@ -2820,6 +3328,9 @@ def cmd_status(_a):
                                           or live_sha == state.get("contract_sha256")),
                       "seal_breaks": dict(zip(("files", "checkers"), seal_breaks(cdir, contract, state))),
                       "first_green_at": state.get("first_green_at") or audited_first_green(cdir),
+                      "paused": ({"since": state["paused_at"], "by": state.get("paused_by")}
+                                 if pause_attested(cdir, state) else None),
+                      "wall_minutes": int(wall_minutes(state)),
                       "outcome_attested": outcome_attested(cdir, state),
                       "amendments": len(contract.get("amendments") or []),
                       "outstanding_agents": outstanding_agents(cdir),
@@ -2846,19 +3357,92 @@ def cmd_resume(a):
     if bad:
         print(state_tamper_line(bad))
     sid = a.session or os.environ.get("CLAUDE_CODE_SESSION_ID")
-    old = state.get("session")
-    state["session"] = sid
-    write_json(os.path.join(cdir, "state.json"), state)
-    audit(cdir, "resumed", old_session=old, session=sid)
+    unpaused = ""
+    with drive_lock(cdir):
+        fresh = read_json(os.path.join(cdir, "state.json"))
+        if isinstance(fresh, dict) and fresh.get("started_at"):
+            state = fresh
+            attest_outcome(cdir, state, quiet=True)
+        old = state.get("session")
+        if pause_attested(cdir, state):
+            # P1/P3/P7: re-arm. The paused span leaves the wall clock, the stall ladder restarts, and the
+            # next block measures context growth from itself, not from before the pause.
+            secs = max(0.0, time.time() - epoch(state["paused_at"]))
+            audit(cdir, "unpaused", paused_at=state["paused_at"], by=state.get("paused_by"),
+                  seconds=int(secs), session=sid)
+            unpaused = (f"unpaused: paused {int(secs // 60)} min (by {state.get('paused_by')}); the gate "
+                        "blocks again from the next stop\n")
+            state["paused_seconds"] = float(state.get("paused_seconds") or 0) + secs
+            state["unpaused_at"] = datetime.now(timezone.utc).isoformat(timespec="milliseconds")
+            state["stall_floor"] = len(state.get("history") or [])
+            state.pop("last_reason", None)
+        elif state.get("paused_at"):
+            unpaused = "PAUSE NOT ATTESTED: state.json said paused with no audit record; dropped\n"
+            audit(cdir, "state_tampered", paused_at=state["paused_at"])
+        state.pop("paused_at", None)
+        state.pop("paused_by", None)
+        # A new session writes another transcript file, and an un-pause spans unmeasured time: the next block
+        # is a baseline (P7). A same-session resume is not — it must not silence CONTEXT PRESSURE on demand.
+        if unpaused.startswith("unpaused") or sid != old:
+            state["transcript_rebase"] = True
+        state["session"] = sid
+        write_json(os.path.join(cdir, "state.json"), state)
+        audit(cdir, "resumed", old_session=old, session=sid)
     res = evaluate(cdir, contract, ws, budget=gate_budget(contract))
     unmet = [i for i, m, _ in res if not m]
-    print(f"resumed drive {contract['id']} → session {sid}\n"
+    print(f"{unpaused}resumed drive {contract['id']} → session {sid}\n"
           f"task: {contract['task']}\nunmet: {unmet}  blocks: {state['blocks']}/{contract['caps']['max_blocks']}\n"
           f"--- PROGRESS.md (tail) ---")
     try:
         print("".join(open(os.path.join(cdir, "PROGRESS.md")).readlines()[-25:]))
     except OSError:
         pass
+
+
+def cmd_pause(a):
+    """Keep the drive for a later session and let every stop through until `resume` (P1). Honoured only on
+    the operator's order: their latest typed prompt, sent after the seal (and after the last resume), must
+    ask to pause/hold/stop. The model cannot write that entry, so it cannot pause past a red gate."""
+    ws = ws_root()
+    cdir, contract, state = load_active(ws)
+    if not cdir:
+        sys.exit("no active drive")
+    with drive_lock(cdir):
+        fresh = read_json(os.path.join(cdir, "state.json"))
+        if isinstance(fresh, dict) and fresh.get("started_at"):
+            state = fresh
+        if state.get("outcome") is not None and outcome_attested(cdir, state):
+            sys.exit(f"REFUSED — drive is settled: outcome={state['outcome']}; nothing to pause")
+        attest_outcome(cdir, state)
+        if pause_attested(cdir, state):
+            print(f"already paused since {state['paused_at']} (by {state.get('paused_by')}); "
+                  f"`python3 {me()} resume` re-arms it")
+            return
+        # The transcript is DERIVED from the BOUND session, never taken from a flag, a Stop payload (`gate` can be
+        # run by hand with any payload) or another session's id: only the drive's own operator can pause it. An
+        # operator in a new session resumes there first (audited), then pauses.
+        bound = state.get("session")
+        env_sid = os.environ.get("CLAUDE_CODE_SESSION_ID")
+        if not bound:
+            sys.exit(f"REFUSED — the drive is bound to no session; `python3 {me()} resume` in the operator's session first")
+        if env_sid and env_sid != bound:
+            sys.exit(f"REFUSED — this session ({env_sid}) is not the drive's ({bound}). The operator's own session "
+                     f"pauses it: `python3 {me()} resume` here first, then pause.")
+        tpath = derive_transcript(ws, bound)
+        if not tpath:
+            sys.exit("REFUSED — pause cannot find this session's transcript, so it cannot see the operator's "
+                     f"order. The drive stays live; the operator can end it with `python3 {me()} release`.")
+        hold = operator_hold(tpath, _hold_since(state), session=bound)
+        if not hold:
+            text, _ = last_human_prompt(tpath, session=bound)
+            seen = f'"{" ".join(text.split())[:120]}"' if text else "none found"
+            sys.exit("REFUSED — pause is the operator's call: their latest prompt after the seal must be a short "
+                     f"order to pause/hold/stop, e.g. \"pause here\" (latest seen: {seen}). Keep working, or ask the operator.")
+        set_paused(cdir, state, "operator", word=hold[0], prompt=hold[1], transcript=tpath,
+                   note=(a.reason or "").strip())
+    print(f"paused drive {contract['id']} (operator said \"{hold[1]}\"). Every stop is allowed until "
+          f"`python3 {me()} resume`; blocks, the stall count and wall time are frozen. "
+          f"`python3 {me()} release` ends the drive instead.")
 
 
 def build_brief(ws, cdir, contract, agent, files, cond, minutes, context,
@@ -3052,7 +3636,8 @@ def cancel_agent(cdir, agent, reason=""):
 
 
 def cmd_cancel(a):
-    """Release an agent slot reserved by `brief` but never dispatched (or abandoned)."""
+    """Free the slot of an agent that was stopped, abandoned or never dispatched. It does not stop a running
+    agent — that is the Agent tool's (or the operator's) job; this only makes the drive stop waiting for it."""
     ws = ws_root()
     cdir, _, _ = load_active(ws)
     if not cdir:
@@ -3070,7 +3655,8 @@ def cmd_cancel(a):
         if not a.force:
             sys.exit(f"{a.agent} has a RETURN.md — `collect` it, or --force to cancel anyway.")
     dest = cancel_agent(cdir, a.agent, a.reason)
-    print(f"cancelled {a.agent} → {dest}; it no longer counts against max_agents")
+    print(f"cancelled {a.agent} → {dest}; it no longer counts against max_agents and the gate stops waiting "
+          "for it (a still-running agent is NOT stopped by this)")
 
 
 def cmd_codex_verify(a):
@@ -3269,6 +3855,10 @@ def _add_contract_flags(p):
     p.add_argument("--map", action="append", default=[], metavar="KEY=IDS|unmapped",
                    help="sealed ask→condition row: KEY (≤40 chars) = comma list of condition ids, or "
                         "`unmapped`; every KEY must appear under ## Outcome (unmapped ones under ## Unverified too)")
+    p.add_argument("--allow-crash-red", default="", metavar="ID,..",
+                   help="ids (added by this call) whose red may be a crash — exit 126/127 or a last line naming "
+                        "ModuleNotFoundError/ImportError/SyntaxError — because the missing piece IS the work. "
+                        "Otherwise such a red is REFUSED: a crash is not a detection")
 
 
 def main():
@@ -3312,6 +3902,11 @@ def main():
                    help="transcript path, to baseline context growth (default: derived from the "
                         "session id under ~/.claude/projects/, used only if that file exists)")
     s.add_argument("--relay-mb", type=float, default=DEFAULT_RELAY_MB)
+    s.add_argument("--auto-pause-empty", type=int, default=AUTO_PAUSE_EMPTY, metavar="N",
+                   help="opt-in: after N consecutive EMPTY blocks (no tool call, no message, only the harness's "
+                        "record of the last block) the gate pauses the drive and lets the stop through; `resume` "
+                        "re-arms it. A silent model can trigger it on purpose, so it is off unless asked for "
+                        f"(default {AUTO_PAUSE_EMPTY} = never)")
     s.add_argument("--verify", choices=("required", "none"), default="required",
                    help="required: the report cannot pass without a verify-* CONVERGED verdict")
     s.add_argument("--why-no-verify", default="", help="mandatory reason when --verify none")
@@ -3349,6 +3944,9 @@ def main():
     am.add_argument("--raise-minutes", type=int, default=None, metavar="M",
                     help="new max_minutes; must be strictly higher than the current cap")
     am.add_argument("--allow-green", default="", help="comma list of ADDED ids allowed to pass at amend")
+    am.add_argument("--timeout", type=int, default=None, metavar="S",
+                    help="LOWER the per-condition timeout (never raise it), e.g. to make room in the gate "
+                         "budget for an added condition")
     am.set_defaults(fn=cmd_amend)
     sp.add_parser("check", help="run the conditions now; exit 1 while any is unmet").set_defaults(fn=cmd_check)
     sp.add_parser("close", help="all conditions green → terminal met (the unhooked close-out); "
@@ -3367,7 +3965,7 @@ def main():
     b.set_defaults(fn=cmd_brief)
     c = sp.add_parser("collect", help="validate + print an agent's RETURN.md, then check")
     c.add_argument("agent"); c.set_defaults(fn=cmd_collect)
-    cn = sp.add_parser("cancel", help="release an undispatched/abandoned agent slot")
+    cn = sp.add_parser("cancel", help="free the slot of an agent you stopped or never dispatched (does not stop it)")
     cn.add_argument("agent"); cn.add_argument("--reason", default="")
     cn.add_argument("--force", action="store_true", help="cancel even though a RETURN.md exists")
     cn.set_defaults(fn=cmd_cancel)
@@ -3395,7 +3993,11 @@ def main():
     n = sp.add_parser("note", help="append to the progress log"); n.add_argument("text")
     n.set_defaults(fn=cmd_note)
     sp.add_parser("status", help="print state").set_defaults(fn=cmd_status)
-    rs = sp.add_parser("resume", help="rebind the active drive to THIS session")
+    pz = sp.add_parser("pause", help="keep the drive for later: every stop is allowed until resume "
+                       "(only on the operator's order — their latest prompt must ask for it)")
+    pz.add_argument("--reason", default="")
+    pz.set_defaults(fn=cmd_pause)
+    rs = sp.add_parser("resume", help="rebind the active drive to THIS session; re-arms a paused drive")
     rs.add_argument("--session", default=None); rs.set_defaults(fn=cmd_resume)
     r = sp.add_parser("release", help="operator-only: end the drive")
     r.add_argument("--reason", default="operator"); r.set_defaults(fn=cmd_release)

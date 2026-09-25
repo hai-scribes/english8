@@ -79,10 +79,10 @@ not obvious from their names. Before the confirmation, state the shape:
 
 Milestones typed `correctness_call` or `provider_probe` resolve to **1 variant**
 automatically (one right answer is observed, not raced); only `perf_bakeoff`
-needs ≥2. Set `run.worker.autocompact` and `run.worker.orientation_file` unless
-there is a reason not to — an uncapped worker context and a worker that
-rediscovers the repo every cycle were together the largest share of that
-measured spend.
+needs ≥2. Set `run.worker.autocompact` to a token threshold (`150k` unless
+there is a reason not to) and `run.worker.orientation_file` — an uncapped worker
+context and a worker that rediscovers the repo every cycle were together the
+largest share of that measured spend.
 
 ### What a run may waive — say it before they confirm
 
@@ -142,7 +142,7 @@ echo '<prose-markdown>' | atelier prototype goal report <slug> --narrate run --s
 
 The narrative is **non-authoritative**: explain the persisted facts, never restate/override the verdict/SLO/decisions, and never invent a recommendation (that goes through `goal findings` first — NG25). It is escaped safe-markdown (no raw HTML) and auto-hidden if the spine later changes.
 
-**Order matters, and is now enforced.** Findings are part of the hashed spine, so if you submit `goal findings` you must narrate against the hash that submit hands back (its reply carries a `narration` block with the current `section_hash` and that milestone's section) — NOT the one you read earlier from `--emit-model`. A stale `--section-hash` is REFUSED at write, naming the live hash; it used to be accepted silently and the prose was then hidden from the report forever.
+**Order matters.** Findings are part of the hashed spine, so if you submit `goal findings`, narrate against the hash that submit hands back (its reply carries a `narration` block with the current `section_hash` and that milestone's section), not the one you read earlier from `--emit-model`. A stale `--section-hash` is refused at write, naming the live hash.
 
 Then surface the stacked report (also live in the dashboard's *Goal runs* panel) and report the terminal `action`:
 

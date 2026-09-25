@@ -123,7 +123,7 @@ Read `<digest_path>` and `<evidence_path>`. Cross-reference against your in-sess
 | Amendments needed | Edit `<digest_path>` in place to apply the changes inline (severity flip, classification move, add/drop register-bug, add a missed finding). Append `_bias_check: amended` footer. Go to Step 6. |
 | Fundamental flaw (Sonnet hallucinated a finding not in evidence; window is wrong; classifier inverted project/framework axis) | **STOP** (stop-branch cleanup applies). Tell user: `Retro draft has fundamental issues: <summary>. Read draft at <digest_path>. Re-run /retro after addressing.` Skip Step 6. |
 
-The amendment is an in-place edit of the draft markdown — same shape as how Step 5.4 used to work, just done by the main session in this turn rather than by a second subagent dispatch.
+The amendment is an in-place edit of the draft markdown, made by the main session in this turn rather than by a second subagent dispatch.
 
 ### Stop-branch cleanup
 

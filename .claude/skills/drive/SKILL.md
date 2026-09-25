@@ -40,7 +40,8 @@ tail it prints; none → answer "no task found" and end.
    The ids `report` and `tests-not-weakened` belong to the script.
    - **Cheap: aim ≤ 5 s each**, ceiling `--timeout` (default 60 s). They re-run at seal, `check`,
      `collect`, `close` **and every stop attempt**, serially within 0.8 × the hook's `timeout`. `start` REFUSES one that cannot fit (naming a `--timeout`); an unreached one is `NOT RUN`, UNMET. A slow suite runs in the work; its condition checks the result file is **newer** than the sources.
-   - **Fail closed.** A condition exits non-zero when its evidence is missing; conditions run under
+   - **Fail closed.** A condition exits non-zero when its evidence is missing; a *crashing* red (exit
+     126/127, import/syntax error) is REFUSED unless `--allow-crash-red ID`. Conditions run under
      `/bin/bash -o pipefail`, so every stage of a pipeline counts, in a **scrubbed env**: PATH, HOME,
      USER, LANG, LC_ALL, TMPDIR, TERM as at `start`, sealed, plus `start --pass-env NAME[,NAME]`
      (value sealed then). No other variable reaches one; `--pass-env` refuses every `PYTHON*` name
@@ -104,15 +105,14 @@ while its hooks fire.
 
 **`D amend --reason "<why>"` — additive only**: `--add-cond`,
 `--checker`, `--red-proof`, `--known-incomplete`, `--map`, `--raise-blocks N`, `--raise-minutes M`,
-`--allow-green` (added ids). Nothing is dropped, redefined or lowered, the sealed env included.
+`--allow-green` (added ids), `--timeout S` (lower only). Nothing is dropped, redefined or loosened.
 REFUSED: no live drive, first green recorded, an existing or reserved id, a raise not above its cap,
 past 24 or the gate budget, an added condition green outside `--allow-green`, an unknown id. Blocks, start time, history and session carry forward; a hand edit still fails the tamper check. `start --force --why-force
 "<reason>"` re-cuts the drive (old one `superseded`), REFUSED after first green.
 
-Ambiguity where the readings mean materially different work: ask **once, now, recommendation
-first** — only if the operator is reachable, i.e. whoever answers your NEXT message. Leaving,
-headless, or handing the work to an agent is unreachable: do not ask — seal your reading as a
-condition, listed under `## Unverified` as inferred. A question after the seal is a stop.
+Readings meaning materially different work: ask **once, now, recommendation first**, only if
+the operator answers your NEXT message. Leaving, headless or delegated: do not ask — seal your
+reading as a condition, under `## Unverified` as inferred. A question after the seal is a stop.
 
 ## 2. Work — auto-spawn triggers, not options
 
@@ -127,8 +127,8 @@ seam they own (solo, main is that worker).
 | **T1 seam map** — ≥ 2 independent seams (disjoint files, no shared symbol *this task changes*) | One agent per seam, dispatched **in one message**, each with `--files`. |
 | **T2 heavy seam** — > ~15 min of tool calls or > ~20 files read | Delegate it. |
 | **T3 verify** — sealed `--verify required` | `D codex-verify` **first** (§ 3b); exit 3 → an Agent-tool `verify-*` agent. Shipping? Both. **Read-only**: re-derives the conditions, attacks the diff; no `VERDICT: CONVERGED`, no report. Sealed `none`: the conditions are the review. |
-| **T4 stall** — the gate says `STALLED ×k` | k=2: one fresh-context agent per stalled condition. k=4: dispatch or `D abort`; a third identical block is a violation. |
-| **T5 context pressure** — `CONTEXT PRESSURE` (transcript +≥ 1.5 MB in a block) | Switch to **relay** (§ 3). |
+| **T4 stall** — the gate says `STALLED ×k` | k=2: a fresh-context agent per stalled condition. k=4: dispatch or `D abort`. `OPERATOR HOLD?`: pause only if ordered. |
+| **T5 context pressure** — `CONTEXT PRESSURE` (+≥ 1.5 MB since the last block) | Switch to **relay** (§ 3). |
 
 **Every brief comes from the script**, never hand-written (`--cond`/`--files` take **commas**):
 ```
@@ -140,8 +140,8 @@ It writes `agents/<name>/BRIEF.md` and prints a
 `brief` refuses a writer without `--files` (only `verify*`/`relay*` may omit it), an outstanding
 name without `--redispatch`, a dispatch past `--max-agents`, and a writer overlapping an outstanding
 writer's `--files`, patterns included (`--allow-overlap --why "<x>"` is audited). A slot frees when a
-**non-empty** RETURN.md appears, not on `collect`: dead agent → `--redispatch`; never
-dispatched → `D cancel <name>` (a marker; REFUSED for a collected agent or a returned verifier: collect it). A hand-written `.cancelled`/`.collected` with no audit event counts for nothing (`check`/`status`: `NOT ATTESTED`). `--files` refuses overlapping *allowed sets*, not duplicated
+**non-empty** RETURN.md appears, not on `collect`: dead agent → `--redispatch`; stopped or never
+dispatched → `D cancel <name>` (frees the slot, stops nothing; a marker; REFUSED for a collected agent or a returned verifier: collect it). A hand-written `.cancelled`/`.collected` with no audit event counts for nothing (`check`/`status`: `NOT ATTESTED`). `--files` refuses overlapping *allowed sets*, not duplicated
 *deliverables*: freeze layout, output format and test home in `--context`.
 
 Every agent returns **a path**, `agents/<name>/RETURN.md`, ≤ 60 lines, first line exactly
@@ -191,12 +191,11 @@ Relays skip the overlap check: one at a time. A relay may be a **separate sessio
 - **After `/clear`, a crash, `--resume` or a new terminal: `D resume` first.** The gate binds one session id
   and **never blocks another**: until you resume, the drive is silently ungated; the operator must
   re-type `/drive` (a skill cannot self-invoke).
-- **The gate walks UP** from its payload cwd to the nearest `.drive/active` (`DRIVE_WORKSPACE`
-  overrides); a drive sealed with no session id is adopted by the first session that fires.
-- **State or contract missing or corrupt** → the gate fails open (exit 0), one stderr line naming what.
+- **The gate walks UP** from its payload cwd to the nearest `.drive/active`; a drive sealed with no session id is adopted by the first session that fires.
+- **State or contract missing or corrupt** → the gate fails open, one stderr line naming what.
 - **No Agent tool**: `--agents 0` and `--verify none`, or the Codex verifier.
-- **Operator interrupt**: the drive stays active (`D resume`); the operator ends it with
-  `D release`, you with `D abort`.
+- **Operator's pause order**: `D pause`, end the turn; stops pass until `D resume`.
+  REFUSED unless their latest prompt orders it. `D release` ends the drive.
 
 **Codex verifier, cross-vendor first** (T3), never hand-written: `D codex-verify --agent verify-codex
 --minutes 15 --cond <ids>` writes RETURN.md **only** on a verdict line; else it cancels the agent, exits **3**: use an Agent-tool verifier, noted in the report.
@@ -235,8 +234,8 @@ as a completion summary while `D check` shows unmet ids.
 2. ≥ 400 characters and ≥ 40 distinct words (≥ 3 letters) of non-heading text outside fences and comments.
 3. Every condition id you sealed, and `tests-not-weakened` when present, as a whole word.
 4. Every collected and every cancelled agent's name.
-5. Under `## Agents`, `planned <P>, dispatched <D>` with P = `--agents`, D = distinct collected agents
-   not named `verify*`/`relay*` (it prints the exact phrase when missing). A shortfall: say why.
+5. Under `## Agents`, `planned <P>, dispatched <D>` with P = `--agents`, D = distinct agents collected at
+   least once, not named `verify*`/`relay*`. A shortfall: say why.
 6. Every `--known-incomplete` TEXT, verbatim, under `## Unverified`.
 7. Every `--map` KEY under `## Outcome`; a KEY mapped `unmapped` under `## Unverified` too.
 8. Verify required: the newest non-cancelled `verify-*` return is `VERDICT: CONVERGED` and collected

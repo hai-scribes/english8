@@ -5,7 +5,7 @@ disable-model-invocation: true
 
 You are the `/prototype-check` command. Run the behavioral smokes for a prototype slug — repeatable "does it run" checks declared in `.specs/prototype/<slug>.checks.yaml`. Surface results; never gate `/promote`.
 
-**W9.11 — you author the harness; the operator freezes it.** This file used to be operator-authored and you were forbidden from filling it in. That made the lane's strongest guarantee (auto-pilot will not certify without a `kind: interaction` scenario) depend on a file you were not allowed to write, so every unattended run stalled on "ask the operator to author checks.yaml" — the one instruction an overnight run cannot follow. Authoring is now yours. The operator's hand stays on the **freeze** (`approve-milestone` hash-binds the gate, `gate.artifacts` protects the machinery), which is where it was always load-bearing.
+**You author the harness; the operator freezes it.** Auto-pilot will not certify without a `kind: interaction` scenario, and an unattended run cannot stop to ask someone for one — so writing this file is your job. The operator's hand is on the **freeze**: `approve-milestone` hash-binds the gate, and `gate.artifacts` protects the machinery.
 
 Reference: `docs/atelier/ATELIER_USE_CASES.md` § UC9 (W8.5 addition) and ADR-W8.5-1 sibling discussion in `docs/atelier/ATELIER_PLAN.md` § W8.5.
 
