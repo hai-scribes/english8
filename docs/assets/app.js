@@ -873,6 +873,22 @@ function retention(){
    labelled by the exercise it came back from rather than by its own prompt. */
 const itemName = w => w.word || (w.from ? w.from : String(w.q || "").slice(0, 40));
 
+/* Three other words from the same unit, the same part of speech first: a
+   noun among verbs is answered by grammar, not by knowing the word. */
+function wordDecoys(words, w, n){
+  const others = shuffle(words.filter(x => x.word !== w.word && sayWord(x) !== sayWord(w)));
+  const same = others.filter(x => x.pos && x.pos === w.pos);
+  const rest = others.filter(x => !same.includes(x));
+  const out = [], seen = new Set([sayWord(w).toLowerCase()]);
+  for (const x of same.concat(rest)){
+    const k = sayWord(x).toLowerCase();
+    if (seen.has(k)) continue;
+    seen.add(k); out.push(x);
+    if (out.length >= n) break;
+  }
+  return out;
+}
+
 function buildItems(words, mode){
   const list = shuffle(words);
   return list.map((w, i) => {
@@ -884,6 +900,8 @@ function buildItems(words, mode){
       /* An imported choice item is unanswerable without the option set its own
          exercise printed — "enjoy" wanting "1" would mark every honest answer
          wrong. When the item had options, it comes back AS a choice. */
+      if (w.tiles) return { fmt:"recall-tiles", w };
+      if (w.tap) return { fmt:"recall-tap", w };
       if (w.opts && w.opts.length){
         return { fmt:"recall-mc", w,
                  options:shuffle(w.opts.map(o => ({ t:o, ok:o === w.a }))) };
@@ -905,12 +923,15 @@ function buildItems(words, mode){
     if (fmt === "mc"){
       const others = shuffle(words.filter(x => x.word !== w.word)).slice(0, 3);
       q.options = shuffle(others.map(x => ({ t:x.vi, ok:false })).concat([{ t:w.vi, ok:true }]));
+    } else {
+      /* Every other format is answered by picking the English word, never by
+         typing it. The right option is the exact form the prompt needs -- the
+         inflected cloze key, the headword a collocation was blanked on. */
+      if (fmt === "colloc") q.phrase = pick(w.colloc);
+      const right = fmt === "cloze" ? (w.clozeKey || sayWord(w)) : sayWord(w);
+      q.options = shuffle(wordDecoys(words, w, 3).map(x => ({ t:sayWord(x), ok:false }))
+        .concat([{ t:right, ok:true }]));
     }
-    if (fmt === "colloc"){
-      q.phrase = pick(w.colloc);
-      q.keys = [w.word, sayWord(w)];
-    }
-    if (fmt === "cloze") q.keys = [w.clozeKey, w.word, sayWord(w)];
     return q;
   });
 }
@@ -952,10 +973,19 @@ function runEngine(mode, words, unit, hostSel, opts){
       '<input type="text" id="ans" autocomplete="off" autocapitalize="off" '
       + 'autocorrect="off" spellcheck="false" placeholder="' + esc(ph) + '">'
       + '<div class="row"><button class="btn" id="go">Check</button></div>';
+    const choices = () => '<div class="choices">'
+      + q.options.map((o, i) => '<button data-i="' + i + '">' + esc(o.t) + '</button>').join("")
+      + '</div>';
     let body = "", note = "";
-    if (q.fmt === "recall" || q.fmt === "recall-mc"){
-      const KIND = { grammar:"Grammar", function:"Everyday English",
-                     pron:"Pronunciation", colloc:"Collocation" };
+    const KIND = { grammar:"Grammar", function:"Everyday English",
+                   pron:"Pronunciation", colloc:"Collocation" };
+    if (q.fmt === "recall-tiles" || q.fmt === "recall-tap"){
+      body = '<p class="lede">' + esc(KIND[w.type] || "From this unit")
+        + (w.from ? ' · ' + esc(w.from) : "") + '</p>'
+        + (w.ask ? '<p class="note small">' + w.ask + '</p>' : "")
+        + '<ol class="items rv">' + itemHTML({ id:"rv" }, w, 0) + '</ol>'
+        + '<div class="row"><button class="btn" id="go">Check</button></div>';
+    } else if (q.fmt === "recall" || q.fmt === "recall-mc"){
       /* The prompt has already been through the generator's inline renderer, so
          it is HTML. Escaping it again printed literal <strong> tags and turned
          &#x27; into visible text. */
@@ -978,24 +1008,25 @@ function runEngine(mode, words, unit, hostSel, opts){
     } else if (q.fmt === "colloc"){
       body = '<p class="lede">Complete the phrase. Learn the word with the words it lives with.</p>'
         + '<div class="prompt gap">' + blankOut(q.phrase, sayWord(w)) + '</div>'
-        + '<p class="lede">' + esc(w.vi) + '</p>' + field("the missing word");
+        + '<p class="lede">' + esc(w.vi) + '</p>' + choices();
     } else if (q.fmt === "cloze"){
-      body = '<p class="lede">One word is missing. Write the form this sentence needs.</p>'
+      body = '<p class="lede">One word is missing. Pick the form this sentence needs.</p>'
         + '<div class="prompt sent">' + esc(w.cloze).split(GAP).join('<b class="hole"></b>') + '</div>'
-        + field("the missing word");
+        + choices();
     } else if (q.fmt === "type"){
       body = '<div class="prompt">' + esc(w.vi) + '<span class="ipa">' + esc(w.pos || "") + '</span></div>'
-        + field("the English word");
+        + '<p class="lede">Which English word means this?</p>' + choices();
     } else {
-      body = '<p class="lede">Play the word and write what you hear.</p>'
-        + '<div class="row">' + audio + '</div>' + field("what you heard")
+      body = '<p class="lede">Play the word, then pick the one you heard.</p>'
+        + '<div class="row">' + audio + '</div>' + choices()
         + '<div class="row"><button class="btn quiet" id="noaudio">No sound — show the meaning</button></div>';
     }
-    if (q.fmt === "colloc" || q.fmt === "cloze" || q.fmt === "type"
-        || q.fmt === "listen" || q.fmt === "recall")
+    if (q.fmt === "recall")
       note = '<p class="note small">Spelling counts. UK and US spellings are both accepted; '
            + 'two answers in one gap score nothing.</p>';
     host.innerHTML = chrome(body, note);
+    const li = $(".i", host);
+    if (li && q.fmt === "recall-tiles"){ li.dataset.seq = ""; paintTiles(li, w); }
     if (q.fmt === "listen") setTimeout(() => speak(sayWord(w)), 200);
     const inp = $("#ans", host);
     if (inp){ try { inp.focus({ preventScroll:true }); } catch(e){ inp.focus(); } }
@@ -1144,6 +1175,34 @@ function runEngine(mode, words, unit, hostSel, opts){
       setTimeout(() => askConfidence({ ok }, q.options[i].t), 300);
       return;
     }
+    if (q.fmt === "recall-tiles" || q.fmt === "recall-tap"){
+      const li = $(".i", host);
+      if (b.classList.contains("i-tile")){
+        const seq = tileSeq(li);
+        if (b.classList.contains("in")) seq.splice(Number(b.dataset.pos), 1);
+        else if (!seq.includes(Number(b.dataset.j))) seq.push(Number(b.dataset.j));
+        li.dataset.seq = seq.join(",");
+        paintTiles(li, q.w);
+        return;
+      }
+      if (b.classList.contains("i-tok")){ li.dataset.tap = b.dataset.j; paintTap(li, q.w); return; }
+      if (b.id === "go"){
+        let given, res;
+        if (q.fmt === "recall-tiles"){
+          given = tilesText(li, q.w);
+          res = { ok: acceptedForms(q.w.a).includes(fold(given)) };
+        } else {
+          const on = $("input:checked", li);
+          given = (li.dataset.tap !== undefined ? q.w.tap[Number(li.dataset.tap)].replace(/<[^>]+>/g, "") : "")
+            + (on ? " → " + on.value : "");
+          const n = Number(li.dataset.tap);
+          res = { ok: li.dataset.tap !== undefined && n >= q.w.span[0] && n <= q.w.span[1]
+                      && !!on && on.value === q.w.fix };
+        }
+        askConfidence(res, given);
+      }
+      return;
+    }
     if (b.id === "go"){
       const v = ($("#ans", host) || {}).value || "";
       const keys = q.keys || [q.w.word, sayWord(q.w)];
@@ -1151,7 +1210,7 @@ function runEngine(mode, words, unit, hostSel, opts){
       return;
     }
     if (b.id === "noaudio"){
-      st.items[st.i] = { fmt:"type", w:q.w };
+      st.items[st.i] = Object.assign({}, q, { fmt:"type" });
       paintQ();
       return;
     }
@@ -1420,6 +1479,21 @@ const WHY_TEXT = {
 };
 
 function markOne(t, it, given){
+  /* Tiles: the built sentence against the key's accepted sentences. Built
+     only from the key's own tiles, so the key grammar's alternates and
+     optional tokens still apply and nothing else can be produced. */
+  if (it.tiles){
+    if (!given) return { ok:false, why:"blank" };
+    return { ok: acceptedForms(it.key).includes(fold(given)) };
+  }
+  /* Tap-and-fix: "<index>|<fix>". Any word inside the wrong span counts as
+     finding it; the replacement must be the one the key names. */
+  if (it.tap){
+    const [j, fix] = String(given || "").split("|");
+    if (j === "" || j == null) return { ok:false, why:"blank" };
+    const n = Number(j);
+    return { ok: n >= it.span[0] && n <= it.span[1] && fix === it.fix };
+  }
   /* An answer picked from buttons is matched against the option it IS.
      Running it through the key grammar would read the slashes in an IPA
      option like "/ʊə/" as a list of alternates and reject every answer. */
@@ -1508,7 +1582,29 @@ function itemHTML(t, it, i){
      *italic* resolved by the generator. Re-escaping here would print the
      tags; the generator is the only thing that ever builds this HTML. */
   let q;
-  if (it.opts){
+  if (it.tiles){
+    /* Build the sentence: tap a tile to add it to the line, tap a word in the
+       line to send it back. Punctuation is a tile of its own, because where
+       the comma goes is sometimes the point. */
+    q = '<div class="i-q">' + it.q + '</div>'
+      + '<div class="i-line" aria-label="Your sentence" aria-live="polite"></div>'
+      + '<div class="i-tiles">' + it.tiles.map((w, j) =>
+          '<button type="button" class="i-tile" data-j="' + j + '">' + esc(w) + '</button>').join("")
+      + '</div>';
+  } else if (it.tap){
+    /* Find the mistake, then fix it: tap the wrong word, then pick what
+       replaces it. Both halves are the answer. */
+    const group = "q-" + t.id + "-" + i;
+    q = '<div class="i-q i-sent">' + it.tap.map((w, j) =>
+          '<button type="button" class="i-tok" data-j="' + j + '">' + w + '</button>').join(" ")
+      + '</div><div class="i-fix" hidden><span class="i-fixk">Replace it with:</span>'
+      + '<div class="i-opts">' + it.opts.map(o => {
+          /* The review queue carries options as plain strings. */
+          const k = typeof o === "string" ? o : o.k, tx = typeof o === "string" ? esc(o) : o.t;
+          return '<label class="i-opt"><input type="radio" name="' + esc(group) + '" value="'
+            + esc(k) + '"><span>' + tx + '</span></label>';
+        }).join("") + '</div></div>';
+  } else if (it.opts){
     /* The radio group is namespaced to the task. Without that, two tasks on
        one lesson page share the groups "q0", "q1"... and answering the second
        silently clears the first. */
@@ -1517,7 +1613,11 @@ function itemHTML(t, it, i){
       '<label class="i-opt"><input type="radio" name="' + esc(group) + '" value="'
       + esc(o.k) + '">'
       + '<span>' + (o.t === o.k ? esc(o.k) : "(" + esc(o.k) + ") " + o.t) + '</span></label>').join("");
-    q = '<div class="i-q">' + it.q + '</div><div class="i-opts">' + opts + '</div>';
+    /* A gap in the sentence shows the chosen word in place, so the learner
+       reads the sentence they are committing to, not a sentence and a list. */
+    const stem = /_{3,}/.test(it.q)
+      ? it.q.replace(/_{3,}/, '<span class="i-gap">&nbsp;</span>') : it.q;
+    q = '<div class="i-q">' + stem + '</div><div class="i-opts">' + opts + '</div>';
   } else {
     const box = '<input class="i-in" type="text" autocomplete="off" autocapitalize="off"'
       + ' spellcheck="false" aria-label="Answer ' + (i + 1) + '">';
@@ -1619,6 +1719,47 @@ function calibrationLine(marks, conf, unit, record){
    learn pass may hand one exercise back because nothing there was spent. */
 const TASK_RESET = {};
 
+/* ---------------- the built and tapped item shapes ------------------------
+   State lives on the item's <li>: `seq` is the tile indices in the order
+   placed, `tap` the index of the word tapped as the mistake. Both are read
+   back into the same string answers the marker and the task store already
+   use, so a committed attempt restores exactly as a typed one did. */
+const TILE_GLUE = s => s.replace(/ ([,;:])/g, "$1");
+function tileSeq(li){ return (li.dataset.seq || "").split(",").filter(x => x !== "").map(Number); }
+function tilesText(li, it){ return TILE_GLUE(tileSeq(li).map(j => it.tiles[j]).join(" ")); }
+function paintTiles(li, it){
+  const seq = tileSeq(li);
+  $(".i-line", li).innerHTML = seq.length
+    ? seq.map((j, pos) => '<button type="button" class="i-tile in" data-pos="' + pos + '">'
+        + esc(it.tiles[j]) + '</button>').join("")
+    : '<span class="i-ph">Tap the tiles below to build the sentence.</span>';
+  $$(".i-tiles .i-tile", li).forEach(b => b.classList.toggle("used", seq.includes(Number(b.dataset.j))));
+}
+/* A saved sentence back into tile indices: each word takes the first unused
+   tile that says it. */
+function seqFromText(it, text){
+  const used = new Set(), seq = [];
+  const words = String(text || "").replace(/([,;:])/g, " $1").split(/\s+/).filter(Boolean);
+  for (const w of words){
+    const j = it.tiles.findIndex((t, k) => !used.has(k) && t === w);
+    if (j < 0) continue;
+    used.add(j); seq.push(j);
+  }
+  return seq;
+}
+function paintTap(li, it){
+  const j = li.dataset.tap;
+  $$(".i-tok", li).forEach(b => b.classList.toggle("on", b.dataset.j === j));
+  const fix = $(".i-fix", li);
+  if (fix) fix.hidden = j === undefined || j === "";
+}
+function paintGap(li){
+  const gap = $(".i-gap", li), on = $("input:checked", li);
+  if (!gap) return;
+  gap.textContent = on ? on.parentNode.textContent.replace(/^\([a-z]\)\s*/, "") : "\u00a0";
+  gap.classList.toggle("on", !!on);
+}
+
 function initTasks(){
   const list = DATA.tasks || [];
   if (!list.length) return;
@@ -1628,6 +1769,30 @@ function initTasks(){
     const box = $(".t-items", root);
     box.innerHTML = '<ol class="items">'
       + t.items.map((it, i) => itemHTML(t, it, i)).join("") + '</ol>';
+    t.items.forEach((it, i) => {
+      const li = $('.i[data-i="' + i + '"]', box);
+      if (it.tiles) paintTiles(li, it);
+    });
+    box.addEventListener("click", ev => {
+      const b = ev.target.closest("button");
+      if (!b || b.disabled || root.dataset.done === "1") return;
+      const li = b.closest(".i"), it = li && t.items[Number(li.dataset.i)];
+      if (!it) return;
+      if (b.classList.contains("i-tile")){
+        const seq = tileSeq(li);
+        if (b.classList.contains("in")) seq.splice(Number(b.dataset.pos), 1);
+        else if (!seq.includes(Number(b.dataset.j))) seq.push(Number(b.dataset.j));
+        li.dataset.seq = seq.join(",");
+        paintTiles(li, it);
+      } else if (b.classList.contains("i-tok")){
+        li.dataset.tap = b.dataset.j;
+        paintTap(li, it);
+      }
+    });
+    box.addEventListener("change", ev => {
+      const li = ev.target.closest(".i");
+      if (li) paintGap(li);
+    });
 
     const conf = t.items.map(() => null);
     if (t.conf) $$(".i-conf button", root).forEach(b => {
@@ -1664,6 +1829,12 @@ function initTasks(){
 
     const read = () => t.items.map((it, i) => {
       const li = $('.i[data-i="' + i + '"]', root);
+      if (it.tiles) return tilesText(li, it);
+      if (it.tap){
+        const on = $("input:checked", li);
+        return li.dataset.tap === undefined || li.dataset.tap === ""
+          ? "" : li.dataset.tap + "|" + (on ? on.value : "");
+      }
       if (it.opts){
         const on = $("input:checked", li);
         return on ? on.value : "";
@@ -1688,7 +1859,9 @@ function initTasks(){
           : '<span class="no">&#10007;</span> <b>' + esc(it.key) + '</b>'
             + (why ? ' <i>— ' + esc(why) + '</i>' : "")
             + (it.why ? ' <i>(' + it.why + ')</i>' : "");
-        $$("input", li).forEach(x => { x.disabled = true; });
+        $$("input, .i-tile, .i-tok", li).forEach(x => { x.disabled = true; });
+        if (it.tap) $$(".i-tok", li).forEach(x => x.classList.toggle("was",
+          Number(x.dataset.j) >= it.span[0] && Number(x.dataset.j) <= it.span[1]));
       });
       const score = marks.filter(m => m.ok).length;
       out.innerHTML = '<b>' + score + ' of ' + marks.length + '</b> — one mark each, '
@@ -1796,6 +1969,12 @@ function initTasks(){
           if (x.type === "radio" || x.type === "checkbox") x.checked = false;
           else x.value = "";
         });
+        $$(".i-tile, .i-tok", li).forEach(x => { x.disabled = false; x.classList.remove("was"); });
+        delete li.dataset.tap;
+        li.dataset.seq = "";
+        if (it.tiles) paintTiles(li, it);
+        if (it.tap) paintTap(li, it);
+        paintGap(li);
         $$(".i-conf button", li).forEach(x => { x.disabled = false; x.classList.remove("on"); });
         conf[i] = null;
       });
@@ -1816,9 +1995,18 @@ function initTasks(){
       t.items.forEach((it, i) => {
         const li = $('.i[data-i="' + i + '"]', root);
         const given = was.given[i] || "";
-        if (it.opts){
+        if (it.tiles){
+          li.dataset.seq = seqFromText(it, given).join(",");
+          paintTiles(li, it);
+        } else if (it.tap){
+          const [j, fix] = String(given).split("|");
+          if (j !== undefined && j !== ""){ li.dataset.tap = j; paintTap(li, it); }
+          const on = fix ? $('input[value="' + fix.replace(/"/g, '\\"') + '"]', li) : null;
+          if (on) on.checked = true;
+        } else if (it.opts){
           const on = $('input[value="' + String(given).replace(/"/g, '\\"') + '"]', li);
           if (on) on.checked = true;
+          paintGap(li);
         } else {
           const box = $(".i-in", li);
           if (box) box.value = given;

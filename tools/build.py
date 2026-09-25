@@ -248,18 +248,102 @@ VARIANTS = {
     "error-correction": {
         "types": {"short-answer"},
         "label": "Correct the mistake",
-        "ask": "Each sentence has exactly one mistake. Write only the words that "
-               "should replace the wrong ones — not the whole sentence.",
-        "widget": "type",
+        "ask": "Each sentence has exactly one mistake. Tap the wrong word, then "
+               "choose what should replace it.",
+        "widget": "tap",
     },
     "sentence-build": {
         "types": {"short-answer"},
         "label": "Build the sentence",
-        "ask": "Build a full sentence from the words you are given. Change the "
-               "form of a word where you need to, and write the whole sentence.",
-        "widget": "type",
+        "ask": "Build the sentence from the tiles, in order. Some tiles are not "
+               "needed — the form of a word matters.",
+        "widget": "tiles",
     },
 }
+
+# ------------------------------------------------------- answers are picked --
+# Every answer on this site is picked, tapped or built from what is on screen,
+# never typed. A typed answer can only be marked against a list of accepted
+# strings, and that list is never complete: "cannot stand" against "can't
+# stand", a comma the key has and the learner did not, "Thao" for "Thảo" --
+# each a right answer marked wrong. A closed set can be marked exactly.
+#
+# That reverses C4/C5 as written (spelling costs the mark; a completion answer
+# is written) -- a decision the operator took on 2026-09-25 after the learner
+# kept being failed for right answers. What it gives up is the spelling half
+# of those rules; the retrieval half survives in the widgets: tiles make the
+# learner assemble the sentence, including the word whose form is the point;
+# tap-the-mistake makes them find the error before fixing it.
+#
+# Three item shapes, on top of the fixed sets and shared `opts=` above:
+#
+#   {a | b | c}         at the end of a prompt: this item's own choices. The
+#                       key is the option TEXT and must be one of them. Order
+#                       is shuffled here, stably, so the key is not always
+#                       first where the author happened to write it.
+#   variant=sentence-build   tiles made from the key, plus the cue words the
+#                       key changed ("watch" beside "watching") as decoys.
+#   variant=error-correction key "wrong -> fix", the fix one of the item's
+#                       {…} choices, "wrong" found in the sentence.
+RE_BRACE_OPTS = re.compile(r"\s*\{(?P<body>[^{}]*\|[^{}]*)\}\s*$")
+RE_FIX = re.compile(r"^(?P<wrong>.+?)\s*->\s*(?P<fix>.+)$")
+RE_TILE_PUNCT = re.compile(r"^(?P<w>.*?)(?P<p>[,;:]?)$")
+
+
+def is_typed(item: dict) -> bool:
+    """Still a text box: none of the picked, tapped or built shapes."""
+    return not (item.get("opts") or item.get("tiles"))
+
+
+def stable_shuffle(items: list, seed: str) -> list:
+    """The same order on every build, and a different one per item."""
+    return sorted(items, key=lambda x: hashlib.sha1((seed + "\x00" + x).encode()).hexdigest())
+
+
+def sentence_tiles(key: str) -> list:
+    """"sleep, but most" -> ["sleep", ",", "but", "most"]. The final full stop
+    or question mark is not a tile; a comma or semicolon is, because where it
+    goes is taught (Unit 3's "; therefore,")."""
+    first = key.split("/")[0].strip()
+    first = re.sub(r"\(([^)]*)\)", r"\1", first)            # optional tokens: take them
+    first = re.sub(r"[.?!]+$", "", first).strip()
+    out = []
+    for w in first.split():
+        m = RE_TILE_PUNCT.match(w)
+        if m.group("w"):
+            out.append(m.group("w"))
+        if m.group("p"):
+            out.append(m.group("p"))
+    return out
+
+
+def cue_decoys(prompt: str, tiles: list) -> list:
+    """The cue words the key did not use as written -- "watch" when the key
+    says "watching". They are the decoys that make the form the question."""
+    cue = re.sub(r"<[^>]+>", " ", prompt).split("—")[0]
+    have = {t.lower() for t in tiles}
+    seen, out = set(), []
+    for w in re.split(r"[\s/]+", cue):
+        w = w.strip(".,;:!?()[]\"'*✚+")
+        if not w or w.lower() in have or w.lower() in seen or not re.search(r"[A-Za-zÀ-ỹ]", w):
+            continue
+        seen.add(w.lower())
+        out.append(w)
+    return out[:4]
+
+
+def tap_tokens(sentence: str) -> list:
+    return sentence.split()
+
+
+def find_span(tokens: list, wrong: str):
+    bare = lambda w: re.sub(r"[^\w'’-]", "", w).lower()
+    want = [bare(w) for w in wrong.split()]
+    toks = [bare(t) for t in tokens]
+    for i in range(len(toks) - len(want) + 1):
+        if toks[i:i + len(want)] == want:
+            return [i, i + len(want) - 1]
+    return None
 # The separator an odd-one-out line uses between its candidates.
 ODD_SEP = "·"
 
@@ -314,13 +398,53 @@ def parse_task_body(a: dict, body: str) -> dict:
     # once on the task rather than repeated on twelve lines.
     shared = [x.strip() for x in a["opts"].split("|")] if a.get("opts") else None
     pick_line = bool(variant) and VARIANTS[variant]["widget"] == "pick-from-line"
+    widget = VARIANTS[variant]["widget"] if variant else ""
     items = []
     for im in RE_ITEM.finditer(body):
         prompt, key = im.group("prompt").strip(), im.group("key").strip()
         item = {"q": prompt, "key": key}
         if im.group("why"):
             item["why"] = im.group("why").strip()
-        if pick_line:
+        brace = RE_BRACE_OPTS.search(prompt)
+        own = ([c.strip() for c in brace.group("body").split("|") if c.strip()]
+               if brace else None)
+        if brace:
+            prompt = prompt[:brace.start()].rstrip()
+            item["q"] = prompt
+        if widget == "tiles":
+            tiles = sentence_tiles(key)
+            decoys = cue_decoys(prompt, tiles) + (own or [])
+            item["tiles"] = stable_shuffle(tiles + decoys, prompt)
+            item["q"] = inline(prompt)
+            items.append(item)
+            continue
+        fx = RE_FIX.match(key) if widget == "tap" else None
+        if fx:
+            wrong, fix = fx.group("wrong").strip(), fx.group("fix").strip()
+            toks = tap_tokens(prompt)
+            span = find_span(toks, wrong)
+            if span is None:
+                raise SystemExit(f"variant=error-correction: {wrong!r} is not in "
+                                 f"{prompt!r} — the learner could never tap it")
+            if not own or fix not in own:
+                raise SystemExit(f"variant=error-correction: {prompt!r} needs its "
+                                 f"replacements as {{a | b | c}}, including {fix!r}")
+            item.update({"tap": [inline(t) for t in toks], "span": span, "fix": fix,
+                         "key": f"{wrong} → {fix}",
+                         "opts": [{"k": c, "t": inline(c)} for c in stable_shuffle(own, prompt)]})
+            item["q"] = ""
+            items.append(item)
+            continue
+        if own:
+            if key not in own:
+                raise SystemExit(f"{prompt!r}: key {key!r} is not one of its "
+                                 f"choices {{{' | '.join(own)}}}")
+            if len(own) < 2:
+                raise SystemExit(f"{prompt!r}: one choice is not a choice")
+            item["opts"] = [{"k": c, "t": c} for c in stable_shuffle(own, prompt)]
+        if item.get("opts"):
+            pass
+        elif pick_line:
             # The line IS the question: its candidates are the options, so the
             # prompt empties out and nothing is left to type. The key must be
             # one of them, which is the check that catches a candidate edited
@@ -421,7 +545,7 @@ def task_html(p: dict, a: dict) -> str:
     # Rules about *writing* an answer are noise on a task where the answer is
     # picked from buttons. Printing them anyway is how a rules box stops being
     # read.
-    typed = any(not it.get("opts") for it in p["items"])
+    typed = any(is_typed(it) for it in p["items"])
     if p["skill"] == "course":
         head = (f'<span class="t-k">Marked</span>'
                 f'<span class="t-t">{e(label)}</span>')
@@ -1927,6 +2051,11 @@ def _review_row(nn, kind, lesson, blk, item, n, t=None):
     said = ([spec["ask"]] if spec else []) + ([t["ask"]] if (t or {}).get("ask") else [])
     if said:
         row["ask"] = " ".join(said)
+    # A built or tapped item comes back in the same shape, or the queue would
+    # ask for a sentence with nowhere to build it.
+    for k in ("tiles", "tap", "span", "fix"):
+        if item.get(k) is not None:
+            row[k] = item[k]
     if item.get("why"):
         row["why"] = item["why"]
     if blk.get("title"):
@@ -1999,7 +2128,9 @@ def review_items(u) -> list:
             if not item.get("key"):
                 continue
             row = _review_row(u["nn"], kind, lesson, blk, item, n, t)
-            cand[kind].append((0 if not row.get("opts") else 1, len(cand[kind]),
+            # Built and tapped items are produced; a plain pick is picked.
+            produced = bool(row.get("tiles") or row.get("tap")) or not row.get("opts")
+            cand[kind].append((0 if produced else 1, len(cand[kind]),
                                row, blk.get("id") or blk.get("title")))
 
     for kind, rows in cand.items():
@@ -2632,7 +2763,7 @@ def start_card(u) -> str:
     <ol class="steps">
       <li><b>Read the teaching part</b> at the top of the lesson: the example, the table,
       the rule. Nothing to fill in yet.</li>
-      <li><b>Do the exercises.</b> Type or choose your answer, then press
+      <li><b>Do the exercises.</b> Choose, tap or build your answer, then press
       <b>Check answers</b>. You will see what was right and, where it helps, why.</li>
       <li><b>Press “Finish lesson”</b> at the bottom. That records the lesson, opens
       the practice and the test, and takes you back to Today.</li>

@@ -142,6 +142,22 @@ than its letter, and the build then checks **the key is one of the candidates**
 — which is a real check on every line, and the reason a conversion that builds
 is a conversion that is right.
 
+### Answers are picked, tapped or built — never typed
+
+Decided by the operator on 2026-09-25, after the learner kept being marked
+wrong for right answers: a typed key is a list of accepted strings and is never
+complete (*cannot* for *can't*, a missing comma, *Thao* for *Thảo*). Every item
+is now `{a | b | c}` choices, shared `opts=`, word tiles (`sentence-build`) or
+tap-the-mistake-then-fix (`error-correction`) — README §`:::task` has the
+syntax. **This reverses C4/C5 as written**: no spelling mark, no written
+completion. Do not put a text box back.
+
+Distractors are where this can go wrong the other way: an option that is also
+right in that sentence marks a right answer wrong. **Read every option against
+its sentence.** `PICK_ONLY` in `check_ielts.py` lists the files already
+converted and only ever grows — the same progress-marker pattern as
+`--strict-through`.
+
 ### A marked task must not print its own answer
 
 Unit 1's 1.3 bolded `can't stand **hearing**` and asked which form follows —
@@ -292,7 +308,7 @@ IELTS, which is a different job — see `README.md` for the full syntax.
 
 | | What it does | The rule it stops you breaking |
 | --- | --- | --- |
-| `:::task` | An exercise becomes a committed, marked attempt — retakeable, as a new attempt | C1–C5: official key grammar, per-task word limit, spelling costs the mark |
+| `:::task` | An exercise becomes a committed, marked attempt — retakeable, as a new attempt — answered by picking, tapping or building, never typing | C1–C3; C4/C5's spelling and word-limit half was reversed on 2026-09-25 (see above) |
 | `:::audio` | A script becomes a recording that plays once, after a replayable learning pass | C6, C8: declared delivery mode, unwritten orientation, no replay |
 | `:::write` | A writing task is attempted on the page, and counted | C9 live word count; E8 + §4.4, a self-report needs an objective anchor |
 | `:::clock` | The reading runs one clock, and it does not stop while you type | C7, from `04` §1.1 |

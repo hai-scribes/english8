@@ -288,6 +288,10 @@ def check_bridge(where: str, a: dict, body: str, problems: list):
                         f"(or [SPEC] if untested), and the footer prints the marker (G2)")
 
 
+# The files whose every answer is picked. Grows file by file; never shrinks.
+PICK_ONLY = {"unit 01"}
+
+
 def check_task(where: str, a: dict, problems: list):
     """Group C, for one :::task.
 
@@ -328,16 +332,25 @@ def check_task(where: str, a: dict, problems: list):
     # task with `opts` renders buttons, so no answer is ever written and the
     # spelling rule is never exercised; a multiple-choice task with an
     # untyped item renders a text box with no limit on it.
-    typed = [i for i, it in enumerate(a.get("items", []), 1) if not it.get("opts")]
-    if skill != "course" and typ in b.NEEDS_LIMIT:
-        if a.get("opts"):
-            problems.append(f"{where}: a {typ} task cannot declare opts — a completion "
-                            f"answer is written, not chosen, and choosing it away drops "
-                            f"the word limit and the spelling rule (C4, C5)")
-        if not a.get("words"):
-            problems.append(f"{where}: a {typ} task must declare its word limit "
-                            f"(words=\"2\" or words=\"3+number\") — the limit is per task, "
-                            f"printed, and a hard fail (C4)")
+    typed = [i for i, it in enumerate(a.get("items", []), 1) if b.is_typed(it)]
+    # Answers are picked, never typed (build.py, "answers are picked"). The
+    # operator reversed C4/C5's written-completion rule on 2026-09-25: a typed
+    # key is never a complete list of right answers, and the learner was being
+    # failed for right ones. PICK_ONLY is the progress marker for converting
+    # the book, the way check_level's --strict-through is: it names the files
+    # that are done, it only ever grows, and once it covers everything the
+    # word-limit branch below is dead and can go.
+    if typed and any(where.startswith(t + " ") for t in PICK_ONLY):
+        problems.append(f"{where}: item(s) {typed} are typed — every answer here is "
+                        f"picked, tapped or built. Give the item {{a | b | c}} choices, "
+                        f"or the task a shared opts=")
+    if skill != "course" and typ in b.NEEDS_LIMIT and typed and not a.get("words"):
+        problems.append(f"{where}: a {typ} task must declare its word limit "
+                        f"(words=\"2\" or words=\"3+number\") — the limit is per task, "
+                        f"printed, and a hard fail (C4)")
+    if a.get("words") and not typed:
+        problems.append(f"{where}: words={a['words']!r} limits a written answer, and "
+                        f"nothing in this task is written — drop it")
     if skill != "course" and typed and not a.get("words"):
         problems.append(f"{where}: item(s) {typed} are typed rather than chosen, so this "
                         f"task needs a word limit whatever its type says (C4)")
@@ -372,6 +385,13 @@ def check_task(where: str, a: dict, problems: list):
     # right answer wrong.
     for i, it in enumerate(a.get("items", []), 1):
         k = it.get("key", "")
+        if it.get("tiles"):
+            continue                     # built from the key's own tiles
+        if it.get("tap"):
+            if it.get("fix") not in {o["k"] for o in it["opts"]}:
+                problems.append(f"{where} item {i}: the fix {it.get('fix')!r} is not "
+                                f"one of the replacements offered")
+            continue
         if it.get("opts"):
             # A picked answer is matched against the option it *is*. The key
             # grammar does not apply, which is what lets an option be spelled

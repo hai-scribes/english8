@@ -528,8 +528,46 @@ footer.foot p{margin:0;max-width:74ch}
   border:1px solid var(--rule);border-bottom:2px solid var(--clay);border-radius:3px;
   background:var(--surface);color:var(--ink)}
 .i-in:focus{outline:2px solid var(--teal);outline-offset:1px}
-.i-opts{display:flex;flex-wrap:wrap;gap:.3rem .9rem;margin:.3rem 0 0}
-.i-opt{display:inline-flex;align-items:center;gap:.3rem;font-size:.92rem;cursor:pointer}
+/* Every answer is picked, tapped or built, so the choices are the widget and
+   get a thumb-sized target: a chip, the radio kept for keyboard and screen
+   readers but drawn as the chip's own state. */
+.i-opts{display:flex;flex-wrap:wrap;gap:.4rem;margin:.45rem 0 0}
+.i-opt{position:relative;display:inline-flex;align-items:center;font-size:.92rem;cursor:pointer}
+.i-opt input{position:absolute;opacity:0;width:1px;height:1px}
+.i-opt span{display:inline-block;padding:.38rem .75rem;border:1px solid var(--rule);border-radius:999px;
+  background:var(--surface);line-height:1.3;transition:border-color .12s,background .12s}
+.i-opt:hover span{border-color:var(--teal)}
+.i-opt input:focus-visible+span{outline:2px solid var(--teal);outline-offset:2px}
+.i-opt input:checked+span{background:var(--teal);border-color:var(--teal);color:var(--teal-ink)}
+.i-opt input:disabled+span{cursor:default}
+.i-opt input:disabled:not(:checked)+span{opacity:.6}
+/* The gap a picked word lands in. */
+.i-gap{display:inline-block;min-width:4.5rem;border-bottom:2px solid var(--clay);padding:0 .3rem;
+  text-align:center;color:var(--teal);font-weight:600}
+.i-gap.on{border-bottom-color:var(--teal)}
+/* Tiles: the line being built above, the bank below. */
+.i-line{display:flex;flex-wrap:wrap;gap:.35rem;min-height:2.6rem;margin:.45rem 0 .35rem;padding:.35rem .45rem;
+  border:1px dashed var(--rule);border-radius:var(--r);background:var(--raised);align-items:center}
+.i-ph{color:var(--faint);font-size:.84rem}
+.i-tiles{display:flex;flex-wrap:wrap;gap:.35rem}
+.i-tile{font:inherit;font-size:.92rem;padding:.34rem .65rem;border:1px solid var(--rule);border-radius:5px;
+  background:var(--surface);color:var(--ink);cursor:pointer;box-shadow:0 1px 0 var(--rule)}
+.i-tile:hover{border-color:var(--teal)}
+.i-tile.in{background:var(--teal-wash);border-color:var(--teal);color:var(--teal)}
+.i-tile.used{color:transparent;background:var(--sunk);border-style:dashed;box-shadow:none;pointer-events:none}
+.i-tile:disabled{cursor:default}
+/* Tap the mistake: every word is a target, the tapped one is marked, and
+   after checking the real mistake is underlined whatever was tapped. */
+.i-sent{line-height:2.1}
+.i-tok{font:inherit;font-size:.95rem;padding:.08rem .22rem;border:0;border-radius:4px;background:none;
+  color:var(--ink);cursor:pointer}
+.i-tok:hover{background:var(--sunk)}
+.i-tok.on{background:var(--clay-wash);color:var(--clay);text-decoration:line-through;font-weight:600}
+.i-tok.was{box-shadow:inset 0 -2px 0 var(--red)}
+.i-tok:disabled{cursor:default}
+.i-fix{margin-top:.2rem}
+.i-fixk{font-size:.8rem;color:var(--muted)}
+.engine ol.items.rv{list-style:none;padding:0;margin:.2rem 0}
 .i-conf{display:inline-flex;gap:.2rem;margin-left:.5rem;vertical-align:middle}
 .i-conf button:disabled{opacity:.55;cursor:default}
 .i-conf button{font:inherit;font-size:.8rem;line-height:1;padding:.18rem .34rem;cursor:pointer;

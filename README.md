@@ -163,25 +163,42 @@ with a mechanic the page enforces.
 ### `:::task` — a committed answer, marked by the published rules
 
 ```markdown
-::: task skill="listening" type="sentence-completion" words="2+number"
-- The school asked ___ students. = two hundred/200 ~ both forms are accepted
-- Too little sleep was named by ___ per cent. = forty-five
+::: task skill="listening" type="sentence-completion"
+- The school asked ___ students. {two hundred | twenty | two thousand} = two hundred
+- Too little sleep was named by ___ per cent. {forty-five | fifty-four | fifteen} = forty-five
 :::
 ```
 
 One line per item: the prompt, ` = `, the key, and optionally ` ~ ` and the
-reason. The key is written in IELTS's own key grammar — `(the) (public)
-library/libraries` — and the same engine the vocabulary trainer uses expands
-it. The generator writes the answer-key entry from the task, so the printed
+reason. The generator writes the answer-key entry from the task, so the printed
 answers and the marked ones cannot drift; the gate rejects an exercise that
 has both a task and a hand-written entry.
+
+**Every answer is picked, tapped or built — never typed.** A typed key is a
+list of accepted strings, and that list is never complete: *cannot stand*
+against *can't stand*, a comma the key has and the learner did not, *Thao* for
+*Thảo* — each a right answer marked wrong. So an item takes one of these shapes:
+
+| Shape | Written as | The learner |
+| --- | --- | --- |
+| Own choices | `- prompt ___ {a \| b \| c} = b` | picks one; a `___` in the prompt shows the pick in place. The key is the option text and must be one of them. The build shuffles the order, stably. |
+| Shared choices | `opts="on\|of\|about"` on the task | picks from the same set on every line. |
+| Build the sentence | `variant="sentence-build"`, key = the sentence | taps tiles into order. Tiles come from the key; the cue words the key changed (`watch` beside `watching`) are the decoys; `{x \| y}` adds more. Commas and semicolons are tiles. |
+| Correct the mistake | `variant="error-correction"`, `- sentence {fix \| b \| c} = wrong -> fix` | taps the wrong word, then picks its replacement. Both must be right. |
+| Fixed sets | T/F/NG, odd-one-out, inline `(a) … (b) …` | picks, as before. |
+
+Write distractors that are **wrong in that sentence**, not just different: a
+near-synonym that also fits (*relax* for *hang out with my cousins*, *I'd
+better not* for *I'd rather not*) marks a right answer wrong, which is the
+defect this replaced. `check_ielts.py` fails any typed item in a file listed in
+its `PICK_ONLY`; the list grows file by file as the book is converted.
 
 | Attribute | What it must be |
 | --- | --- |
 | `skill` | `listening`, `reading` or `course`. The first two must name an official question type; `course` is a grade-8 drill and is never dressed as an IELTS item. |
 | `type` | One of the official six Listening or eleven Reading types, or a course type. |
-| `words` | `1`–`3`, optionally `+number`. Required for completion and short-answer, printed on the task in IELTS's own wording, and enforced as a hard fail. |
-| `opts` | `S\|C` — a fixed option set shared by every item. Inline `(a) … (b) …` works too. |
+| `words` | Only on a task that still has typed items (a file not yet converted). Refused on a task whose answers are all picked. |
+| `opts` | `S\|C` — a fixed option set shared by every item. Inline `(a) … (b) …` and per-item `{a \| b}` work too. |
 | `either` | `1-2` — those items are marked as an unordered pair. |
 | `ask` | The instruction line, in markdown. |
 
@@ -196,9 +213,10 @@ failure. Each of these was a route around a rule, not a hypothetical:
 
 - A bracketed *part* of a word — `give(s) up`. The published legend makes whole
   **words** optional; write the alternates out, `give up/gives up`.
-- `opts` on a completion or short-answer task. Choosing an answer from buttons
-  means never writing one, which drops both the word limit and the spelling
-  rule off a task whose type requires them.
+- A typed item in a converted file (`PICK_ONLY` in `check_ielts.py`).
+- A key that is not one of its item's choices, a tile sentence whose "wrong"
+  words are not in the sentence, or a fix that is not among the replacements.
+- `words` on a task with nothing written in it.
 - A typed item on any IELTS-skill task with no `words` — whatever the type says.
 - A `skill="course"` task in a lesson that has a recording. A listening set
   relabelled a course drill loses its word limit and its confidence rating.

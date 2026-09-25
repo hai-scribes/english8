@@ -24,7 +24,7 @@
 
 *Read the conversation aloud. Then answer the questions below.*
 
-::: dialogue title="The list in the yard" bg="harbour-wall" gramen="love / can't stand + V-ing" gramvi="Sau các động từ chỉ sự thích hoặc không thích (love, like, enjoy, can't stand, hate), động từ theo sau thêm **-ing**." gramco="I love cooking · I can't stand waiting"
+::: dialogue title="The list in the yard" bg="harbour-wall" gramen="enjoy / can't stand + V-ing" gramvi="Sau các động từ enjoy, can't stand, don't mind, động từ theo sau thêm **-ing**." gramco="I enjoy cooking · I can't stand waiting"
 @cast none
 @fx birds on=panel
 The [[tide]] is out. The wet steps of the [[harbour wall|harbour]] go all the way down into the water.
@@ -43,10 +43,10 @@ The [[tide]] is out. The wet steps of the [[harbour wall|harbour]] go all the wa
 **Tí|sad:** That was ages ago.
 **Thảo|neutral:** So you would like to go.
 @fx flush on=Tí
-**Tí|annoyed|shout:** I'd [[love|gram:v-ing]] to go. There. Are you happy now?
+**Tí|annoyed|shout:** I'd love to go. There. Are you happy now?
 **Thảo|happy:** No. Come to my house on Saturday instead. We can [[hang out|hang out (with)]] all afternoon, and I don't mind teaching you a card game.
 **Tí|worried:** You're only asking me because of the list.
-**Thảo|happy:** I enjoy sitting here with you and I would enjoy sitting there with you. Both things are true.
+**Thảo|happy:** I [[enjoy|gram:v-ing]] sitting here with you and I would enjoy sitting there with you. Both things are true.
 **Tí|neutral:** …
 Below them the water climbs one step of the wall, and slides back down.
 **Thảo|neutral:** Are you coming up? My mother is cooking fish, and I am not waiting here on wet steps.
@@ -59,21 +59,21 @@ Below them the water climbs one step of the wall, and slides back down.
 
 ### 1.1 Comprehension
 
-::: task skill="course" type="short-answer" words="3" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
-- Hùng stopped reading the list at one name. Which name? = Khoa
-- What does Tí say he does not like? = board games/playing board games
-- Tí thinks one person already knows he is not telling the truth. Who? = Thảo
-- Tí believes Thảo is inviting him for one reason only. What reason? = the list
-- Tí will not name the thing he is hiding. Which word does he use instead? = something
+::: task skill="course" type="short-answer" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+- Hùng stopped reading the list at one name. Which name? {Khoa | Tí | Thảo} = Khoa
+- What does Tí say he does not like? {playing board games | card games | reading lists out loud} = playing board games
+- Tí thinks one person already knows he is not telling the truth. Who? {Thảo | Hùng | Khoa} = Thảo
+- Tí believes Thảo is inviting him for one reason only. What reason? {the list | the fish | the card game} = the list
+- Tí will not name the thing he is hiding. Which word does he use instead? {something | nothing | anybody} = something
 :::
 
 ### 1.2 Find the phrase
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
-- I really dislike it = can't stand
-- it is not important = it doesn't matter
-- a very long time ago = ages ago
-- spend time together with no particular plan = hang out
+- I really dislike it {can't stand | don't mind | can't work out} = can't stand
+- it is not important {it doesn't matter | nothing's wrong | that was ages ago} = it doesn't matter
+- a very long time ago {ages ago | all morning | in a minute} = ages ago
+- spend time together with no particular plan {hang out | relax | fold up} = hang out
 :::
 
 ### 1.3 Notice the grammar
@@ -162,13 +162,13 @@ them: a few at a time, then answer on the few you have just met.
 
 ### 2.1 Complete the sentences
 
-::: task skill="course" type="gap-fill" ask="Use one word or phrase from the table. Change the form if you need to."
-- My grandmother makes beautiful paper flowers. Her ___ are lovely. = crafts
-- I want to ___ photography next year — I've just bought a camera. = take up
-- On Sundays I like to ___ with my cousins at the park. = hang out
-- He ___ loud music when he is trying to study. = can't stand
-- In her ___ time, my sister does jigsaw puzzles. = leisure
-- We couldn't ___ between the film and the football match. = choose
+::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
+- My grandmother makes beautiful paper flowers. Her ___ are lovely. {crafts | puzzles | concerts} = crafts
+- I want to ___ photography next year — I've just bought a camera. {take up | give up | hang out} = take up
+- On Sundays I like to ___ with my cousins at the park. {hang out | take up | choose} = hang out
+- He ___ loud music when he is trying to study. {can't stand | takes up | hangs out} = can't stand
+- In her ___ time, my sister does jigsaw puzzles. {leisure | pastime | craft} = leisure
+- We couldn't ___ between the film and the football match. {choose | relax | take up} = choose
 :::
 
 ### 2.2 Odd one out
@@ -199,7 +199,7 @@ preposition. The preposition is fixed — learn the whole phrase, not the parts.
 
 ### 2.4 Say it about yourself
 
-::: task skill="course" type="gap-fill" ask="Complete with an expression from 2.3. Use a different one each time, and keep the *-ing* form."
+::: task skill="course" type="gap-fill" opts="keen|fond|crazy|interested|into" ask="Complete with an expression from 2.3. Look at the word after the gap — only one fits each time."
 - I'm ___ on cooking — I make lunch every Sunday. = keen
 - My sister is ___ of doing jigsaw puzzles. = fond
 - They're ___ about playing football after school. = crazy
@@ -315,31 +315,31 @@ are **three groups**. Learn which group each verb belongs to.
 ### 3.1 One form only
 
 ::: task skill="course" type="gap-fill" ask="Put the verb in brackets into the correct form. Only **one** answer is possible."
-- I can't stand ___ (queue) for tickets. = queuing
-- She'd like ___ (join) the chess club. = to join
-- My brother avoids ___ (cook) whenever he can. = cooking
-- We don't mind ___ (walk) if it isn't far. = walking
-- Would you prefer ___ (stay) in tonight? = to stay
-- He practises ___ (play) the piano every evening. = playing
+- I can't stand ___ (queue) for tickets. {queuing | queued | queue} = queuing
+- She'd like ___ (join) the chess club. {to join | joining | join} = to join
+- My brother avoids ___ (cook) whenever he can. {cooking | to cook | cook} = cooking
+- We don't mind ___ (walk) if it isn't far. {walking | to walk | walk} = walking
+- Would you prefer ___ (stay) in tonight? {to stay | stayed | stay} = to stay
+- He practises ___ (play) the piano every evening. {playing | to play | play} = playing
 :::
 
 ### 3.2 Two forms possible
 
-::: task skill="course" type="short-answer" variant="sentence-build" ask="These two verbs take **both** forms. Write each sentence twice."
+::: task skill="course" type="short-answer" variant="sentence-build" ask="These two verbs take **both** forms. Build each sentence twice."
 - I / love / watch / films with my dad — use **V-ing** = I love watching films with my dad
-- I / love / watch / films with my dad — use **to-V** = I love to watch films with my dad
+- I / love / watch / films with my dad — use **to-V** {watching | watches} = I love to watch films with my dad
 - She / hate / get up / before seven — use **V-ing** = She hates getting up before seven
-- She / hate / get up / before seven — use **to-V** = She hates to get up before seven
+- She / hate / get up / before seven — use **to-V** {getting | gets} = She hates to get up before seven
 :::
 
 ### 3.3 Correct the mistake
 
-::: task skill="course" type="short-answer" variant="error-correction" ask="Every mistake here is the **form of the second verb**."
-- I would like going to the new bookshop. = to go
-- My sister enjoys to make paper crafts. = making
-- They can't stand to be late. = being
-- He doesn't mind to help with the cooking. = helping
-- Would you love watching a movie tonight? = to watch
+::: task skill="course" type="short-answer" variant="error-correction"
+- I would like going to the new bookshop. {to go | go | went} = going -> to go
+- My sister enjoys to make paper crafts. {making | make | made} = to make -> making
+- They avoid to arrive late. {arriving | arrive | arrived} = to arrive -> arriving
+- He doesn't mind to help with the cooking. {helping | help | helped} = to help -> helping
+- I would love watching a movie tonight. {to watch | watch | watched} = watching -> to watch
 :::
 
 ### 3.4 About you
@@ -405,13 +405,13 @@ A **suggestion** proposes something for *both* of you, so it usually says *we*:
 
 ### 4.1 Complete the mini-dialogues
 
-::: task skill="course" type="gap-fill" ask="**A** suggests, **B** answers. The replies come from the two lists above — any one that fits is accepted."
-- **A:** How about ___ (go) swimming? = going
-- **B:** ___ — I love the pool in summer. = That sounds great/Good idea/Sure, why not/I'd love to
-- **A:** Why don't we ___ (watch) a movie? = watch
-- **B:** Sorry, I ___ make it. I'm busy tonight. = can't
-- **A:** Do you fancy ___ (play) football? = playing
-- **B:** I'd ___ not — I hurt my ankle yesterday. = rather
+::: task skill="course" type="gap-fill" ask="**A** suggests, **B** answers. Choose what fits."
+- **A:** How about ___ (go) swimming? {going | to go | go} = going
+- **B:** ___ — I love the pool in summer. {That sounds great | Sorry, I can't | I'd rather not} = That sounds great
+- **A:** Why don't we ___ (watch) a movie? {watch | watching | to watch} = watch
+- **B:** Sorry, I ___ make it. I'm busy tonight. {can't | mustn't | needn't} = can't
+- **A:** Do you fancy ___ (play) football? {playing | to play | play} = playing
+- **B:** I'd ___ not — I hurt my ankle yesterday. {rather | like | love} = rather
 :::
 
 ### 4.2 Write your own
@@ -428,12 +428,12 @@ one politely, and give a reason.
 
 ### 4.3 Invite, then accept
 
-::: task skill="course" type="gap-fill" ask="Complete each invitation or reply. Watch the form of the verb — **would you like** takes *to*, **fancy** takes *-ing*."
-- Would you like ___ (come) to the board game club with me? = to come
-- Do you fancy ___ (make) paper flowers this afternoon? = making
-- **A:** Would you like to try my home-made pizza? **B:** I'd ___ to. Thanks. = love
-- **A:** Do you fancy going for a swim? **B:** That's ___ . Thanks. = great
-- Would you like ___ (play) badminton with us on Sunday? = to play
+::: task skill="course" type="gap-fill" ask="Complete each invitation or reply."
+- Would you like ___ (come) to the board game club with me? {to come | coming | come} = to come
+- Do you fancy ___ (make) paper flowers this afternoon? {making | to make | make} = making
+- **A:** Would you like to try my home-made pizza? **B:** I'd ___ to. Thanks. {love | enjoy | mind} = love
+- **A:** Do you fancy going for a swim? **B:** That's ___ . Thanks. {great | a pity | too bad} = great
+- Would you like ___ (play) badminton with us on Sunday? {to play | playing | play} = to play
 :::
 
 ### 4.4 Write the invitation
@@ -470,26 +470,26 @@ and each of them can say **why**.
 
 ### 4.5 Complete the table
 
-::: task skill="course" type="gap-fill" ask="Read the three profiles again and complete each row. Write the words the teenager uses."
-- Sakura's activity = origami
-- Sakura does it with = on her own/nobody/alone
-- The benefit Sakura names = it makes her calm/calm
-- Eric's activity = snowboarding
-- Eric does it with = his parents/parents
-- The benefit Eric names = balance/his balance
-- Lan's activity = badminton
-- Lan does it with = her best friend/best friend/friend
-- The benefit Lan names = it takes the stress out/less stress/stress
+::: task skill="course" type="gap-fill" ask="Read the three profiles again and complete each row."
+- Sakura's activity {origami | paper flowers | drawing} = origami
+- Sakura does it with {on her own | her best friend | her parents} = on her own
+- The benefit Sakura names {it makes her calm | her balance improves | she makes new friends} = it makes her calm
+- Eric's activity {snowboarding | skiing | hiking} = snowboarding
+- Eric does it with {his parents | his best friend | on his own} = his parents
+- The benefit Eric names {better balance | stronger legs | less stress} = better balance
+- Lan's activity {badminton | tennis | football} = badminton
+- Lan does it with {her best friend | her parents | on her own} = her best friend
+- The benefit Lan names {it takes the stress out | it makes her calm | better balance} = it takes the stress out
 :::
 
 ### 4.6 Which teenager?
 
 ::: task skill="course" type="choice" opts="Sakura|Eric|Lan" ask="Which of the three does each sentence describe?"
-- This person's activity costs almost nothing to start. = Sakura ~ *"It costs almost nothing"* — Lan needs two rackets, and Eric needs a ski resort
+- This person's activity costs almost nothing. = Sakura ~ *"It costs almost nothing"* — Lan needs two rackets, and Eric needs a ski resort
 - This person does the activity alone. = Sakura ~ *"I do it on my own"*
-- This person's activity depends on where they live. = Eric ~ his town is near the mountains
+- This person needs the mountains near their town to do the activity. = Eric ~ his town is near the mountains
 - This person does the activity nearly every day. = Lan ~ *"almost every afternoon"*
-- This person says the activity has made a part of the body stronger. = Eric ~ his balance has improved
+- This person says a skill has got better since they started. = Eric ~ his balance has got much better
 :::
 
 ### 4.7 And you?
@@ -566,30 +566,30 @@ fond of, be crazy about, be into*).
 ### 5.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and answering from what feels likely is exactly the pull this type is built to catch."
-- The fish was still in the bucket when Tí came home. = F ~ the bucket was empty and a girl was sitting on the step
+- The fish was still in the bucket on Saturday morning. = F ~ on Saturday morning the bucket was empty
 - Bống explains what the sea does. = T ~ "The sea gives back what it took"
 - The board game that came back was new. = F ~ it is wooden and hand-cut, with a lid that does not fit
 - Tí had played this game before. = NG ~ he never says whether he had; only that it came back
-- Thảo wanted to know about Bống. = F ~ she did not ask one question about her
+- Thảo asked questions about Bống. = F ~ she did not ask one question about her
 :::
 
 ### 5.2 Answer the questions
 
-::: task skill="reading" type="short-answer" words="3" ask="Take the words from the text. Do not rephrase them — this is the one place in the course where using your own words costs you the mark."
-- How long was the fish in the bucket? = three days/3 days
-- What was the girl on the step eating? = (a) sweet potato
-- What are the four counters cut from? = bottle tops
-- How many games did Bà Sáu stay for? = four/4
-- What came back? = (a) board game
+::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
+- How long was the fish in the bucket? {three days | two days | a week} = three days
+- What was the girl on the step eating? {a sweet potato | fried egg | rice} = a sweet potato
+- What are the four counters cut from? {bottle tops | shells | wood} = bottle tops
+- How many games did Bà Sáu stay for? {four | three | one} = four
+- What came back? {a board game | the fish | a piece of chalk} = a board game
 :::
 
 ### 5.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- cut by hand, not by machine = hand-cut
-- the hard grey material the harbour wall is made of = concrete
-- the time when the sea is at its lowest = low water
-- the metal caps from drinks = bottle tops
+- cut by hand, not by machine {hand-cut | wooden | short} = hand-cut
+- the hard grey material the harbour wall is made of {concrete | chalk | shell} = concrete
+- the time when the sea is at its lowest {low water | the tide | Saturday morning} = low water
+- the metal caps from drinks {bottle tops | counters | lid} = bottle tops
 :::
 
 ### Speaking — Talking about your leisure time
@@ -712,20 +712,20 @@ for you.
 ### 6.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
-- When it rained, the boys (a) went home (b) played games they had made (c) went fishing = b
-- Making the game took him (a) one week (b) a whole wet season (c) twenty years = b
-- He kept the game in (a) a cupboard (b) a tin box (c) his school bag = b
-- He lost the game when (a) a wave came over the boat (b) he sold it (c) he gave it away = a
-- When he saw the game again he (a) took it back (b) said nothing and played (c) told the boy's grandmother = b
+- When it rained, the boys {played games they had made | went home | went fishing} = played games they had made
+- Making the game took him {a whole wet season | one week | twenty years} = a whole wet season
+- He kept the game in {a tin box | a cupboard | his school bag} = a tin box
+- He lost the game when {a wave came over the boat | he sold it | he gave it away} = a wave came over the boat
+- When he saw the game again he {said nothing and played | took it back | told the boy's grandmother} = said nothing and played
 :::
 
 ### 6.2 Listen and complete
 
-::: task skill="listening" type="sentence-completion" words="2+number"
-- He cut the board out of ___ . = (a) plank
-- He kept the box on the boat until he was about ___ . = twenty-five/25
-- There is a mark on the back where the ___ slipped. = knife
-- He looked for it on that beach for ___ . = (a) month
+::: task skill="listening" type="sentence-completion"
+- He cut the board out of ___ . {a plank | bottle tops | a tin box} = a plank
+- He kept the box on the boat until he was about ___ . {twenty-five | thirteen | twenty} = twenty-five
+- There is a mark on the back where the ___ slipped. {knife | wave | lid} = knife
+- He looked for it on that beach for ___ . {a month | a week | a wet season} = a month
 :::
 
 ### Writing — An email about your leisure time
@@ -800,12 +800,12 @@ question in the left-hand column.
 
 ### 7.1 Vocabulary check
 
-::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit. Write the whole word. The letters in brackets are the first letter of each word you need, not part of the gap."
-- In my free time I like doing ___ . *(j p…)* = jigsaw puzzles
-- My sister wants to ___ the guitar. *(t u…)* = take up
-- He's very sociable — he loves to ___ with new people. *(s…)* = socialise
-- I ___ loud noise when I'm reading. *(c s…)* = can't stand
-- We bought the book at the new ___ in town. *(b…)* = bookshop
+::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit."
+- In my free time I like doing ___ . {jigsaw puzzles | football | badminton} = jigsaw puzzles
+- My sister wants to ___ the guitar. {take up | make up | put up} = take up
+- He loves to ___ at parties and meet new people. {socialise | take up | choose} = socialise
+- I ___ loud noise when I'm reading. {can't stand | take up | hang out} = can't stand
+- We bought these comics at the new ___ in town. {bookshop | swimming pool | sports centre} = bookshop
 :::
 
 ### 7.2 Pronunciation check
@@ -821,13 +821,13 @@ question in the left-hand column.
 
 ### 7.3 Grammar check
 
-::: task skill="course" type="gap-fill" ask="Complete with the correct form of the verb. One of these has two possible answers."
-- I enjoy ___ (spend) time with my grandparents. = spending
-- She'd love ___ (visit) Da Nang next summer. = to visit
-- They don't mind ___ (wait) for ten minutes. = waiting
-- He can't stand ___ (lose) at board games. = losing
-- Would you like ___ (come) with us? = to come
-- My father hates ___ (drive) in the rain. = driving/to drive
+::: task skill="course" type="gap-fill" ask="Choose the correct form of the verb. The last one asks which forms fit."
+- I enjoy ___ (spend) time with my grandparents. {spending | to spend | spend} = spending
+- She'd love ___ (visit) Da Nang next summer. {to visit | visiting | visit} = to visit
+- They don't mind ___ (wait) for ten minutes. {waiting | to wait | wait} = waiting
+- He can't stand ___ (lose) at board games. {losing | lost | lose} = losing
+- Would you like ___ (come) with us? {to come | coming | come} = to come
+- My father hates (drive) in the rain. Which forms fit after *hates*? {only driving | only to drive | both} = both ~ *hate* takes both forms
 :::
 
 ### 7.4 Which group?
@@ -846,21 +846,22 @@ tells you something if you answer it from memory.
 
 ### 7.5 Error hunt
 
-Find and correct **six** errors in this paragraph. Five are about verb forms
-after liking/disliking verbs; one is a subject–verb agreement slip.
+This paragraph has **six** mistakes. Five are about verb forms after
+liking/disliking verbs; one is a subject–verb agreement slip. Below, it comes
+one line at a time: tap each mistake, then choose the fix.
 
 > One mark is on the wall now, at my shoulder, and the game stays. Bống enjoy to
-> play it and she is terrible at it. She can't stand to lose, so she practises to
+> play it and she is terrible at it. She avoids to lose, so she practises to
 > move the counters while nobody is looking. I don't mind watch her do it, but I
 > would like doing something about that lid.
 
-::: task skill="course" type="short-answer" ask="Read the paragraph again and find the errors yourself — their places are not given. Write **the correction only**: the word or words that should replace the wrong ones, in the order the errors appear. Spelling counts."
-- Error 1 = enjoys ~ *enjoy* → *enjoys* — subject–verb agreement
-- Error 2 = playing ~ *to play* → *playing* after *enjoy*
-- Error 3 = losing ~ *to lose* → *losing* after *can't stand*
-- Error 4 = moving ~ *to move* → *moving* after *practise*
-- Error 5 = watching ~ *watch* → *watching* after *don't mind*
-- Error 6 = would like to do/to do ~ *would like doing* → *would like to do*
+::: task skill="course" type="short-answer" variant="error-correction" ask="Each line is part of the paragraph, with the earlier mistakes already put right."
+- Bống enjoy it, and she is terrible at it. {enjoys | enjoying | to enjoy} = enjoy -> enjoys ~ subject–verb agreement
+- She enjoys to play it. {playing | play | played} = to play -> playing ~ *enjoy* takes V-ing
+- She avoids to lose. {losing | lose | lost} = to lose -> losing ~ *avoid* takes V-ing
+- She practises to move the counters while nobody is looking. {moving | move | moved} = to move -> moving ~ *practise* takes V-ing
+- I don't mind watch her do it. {watching | to watching | watched} = watch -> watching ~ *don't mind* takes V-ing
+- I would like doing something about that lid. {to do | do | did} = doing -> to do ~ *would like* takes to-V
 :::
 
 ### Project — Your leisure profile
