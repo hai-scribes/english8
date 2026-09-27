@@ -174,10 +174,10 @@ stopping.
 
 ### Listening — Two Saturdays, two places
 
-You get **one** play. Read the five gaps first, then choose while you listen
+You hear it **once**, read aloud by someone else. Read the five gaps first, then choose while you listen
 rather than afterwards from memory.
 
-**Nghe một lần duy nhất.** Đọc năm câu hỏi trước, rồi vừa nghe vừa chọn.
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc năm câu hỏi trước, rồi vừa nghe vừa chọn.
 
 ::: audio orientation="You will hear two students, Tom and Mai, comparing what a Saturday is like in the town where Tom lives and in the village where Mai lives." mode="computer" preview="30" review="120"
 Tom: You have never lived in a city, have you, Mai?

@@ -1210,7 +1210,7 @@ def main() -> int:
     print(f"      {weak} of {len(bridges)} rest on evidence weaker than verified, and each "
           f"says so in research/evidence-register.md.")
     print(f"      {len(tasks)} marked tasks ({items} items), {ielts} of them official IELTS "
-          f"question types · {audio} single-play recording(s) · {len(strands)} strand(s), "
+          f"question types · {audio} listening script(s) · {len(strands)} strand(s), "
           f"each recurring where it says it does.")
     if reviews:
         rt = [t for r in reviews for _, _, t in r["tasks"]]

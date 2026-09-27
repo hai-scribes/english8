@@ -136,15 +136,14 @@ Below them the water climbs one step of the wall, and slides back down.
 
 > ### ▶︎ [**Practise these 37 words**](../app/unit-01-vocab.html)
 >
-> Press 🔊 on any row above to hear the word. When you have finished this
-> lesson, the unit page opens a **practice** session over all thirty-seven — the
-> meaning, the word, what you hear, and, more often than any of those, **the
-> word inside a phrase it actually lives in**. Wrong answers come straight
-> back, and everything returns a week later, because what you can still recall
-> after a gap is the only recall worth counting. The **unit test** opens once
-> all seven lessons are done.
+> When you have finished this lesson, the unit page opens a **practice**
+> session over all thirty-seven — the meaning, the word, and, more often than
+> either of those, **the word inside a phrase it actually lives in**. Wrong
+> answers come straight back, and everything returns a week later, because
+> what you can still recall after a gap is the only recall worth counting. The
+> **unit test** opens once all seven lessons are done.
 >
-> **Luyện 37 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **Luyện 37 từ này.** Học xong bài này, phần
 > **practice** ở trang bài sẽ mở ra để luyện cả 37 từ — trong đó phần lớn là
 > luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
 > ngay, và mọi từ quay lại sau một tuần.
@@ -655,10 +654,10 @@ Repeat Step 2 until you can answer all five clearly.
 
 ### Listening — What Chú Bảy used to do
 
-You get **one** play, so use the preview window: read both sets of questions
-first, then answer while you listen rather than afterwards from memory.
+You hear it **once**, read aloud by someone else, so read both sets of
+questions first, then answer while you listen rather than afterwards from memory.
 
-**Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
 
 ::: audio orientation="You will hear a man talking about how he spent his free time when he was a boy, and about something he made and then lost at sea." mode="computer" preview="30" review="120"
 When I was thirteen there was nothing to do in this town and we did all of

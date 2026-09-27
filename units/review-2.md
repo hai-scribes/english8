@@ -170,10 +170,10 @@ one sentence with **unless**.
 
 ### Listening — What changed, and what did not
 
-You get **one** play. Read the five sentences first, then complete them while
+You hear it **once**, read aloud by someone else. Read the five sentences first, then complete them while
 you listen rather than afterwards from memory.
 
-**Nghe một lần duy nhất.** Đọc năm câu trước, rồi vừa nghe vừa hoàn thành.
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc năm câu trước, rồi vừa nghe vừa hoàn thành.
 
 ::: audio orientation="You will hear a student called Phong talking about his family's customs and about the things that have changed in his village in the last few years." mode="computer" preview="30" review="120"
 Hello. My name is Phong, and I have lived in the same village in the north all

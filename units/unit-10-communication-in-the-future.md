@@ -127,14 +127,13 @@ Look at the **bold** words.
 
 > ### ▶︎ [**Practise these 33 words**](../app/unit-10-vocab.html)
 >
-> Press 🔊 on any row above to hear the word. When you have finished this
-> lesson, the unit page opens a **practice** session over all thirty-three —
-> the meaning, the word, what you hear, and, more often than any of those,
-> **the word inside a phrase it actually lives in**. Wrong answers come
-> straight back, and everything returns a week later. The **unit
+> When you have finished this lesson, the unit page opens a **practice**
+> session over all thirty-three — the meaning, the word, and, more often than
+> either of those, **the word inside a phrase it actually lives in**. Wrong
+> answers come straight back, and everything returns a week later. The **unit
 > test** opens once all seven lessons are done.
 >
-> **Luyện 33 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **Luyện 33 từ này.** Học xong bài này, phần
 > **practice** ở trang bài sẽ mở ra để luyện cả 33 từ — trong đó phần lớn là
 > luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
 > ngay, và mọi từ quay lại sau một tuần.
@@ -702,11 +701,11 @@ between stages rather than inside a sentence.
 
 ### Listening — The rest of the message
 
-You get **one** play. This recording is dense with dates, numbers and places,
-so read both sets of questions in the preview window first and answer as you
+You hear it **once**, read aloud by someone else. This recording is dense with dates, numbers and places,
+so read both sets of questions first and answer as you
 listen.
 
-**Nghe một lần duy nhất.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
 
 ::: audio orientation="You will hear one speaker recording a message for somebody he has never met. He says where he sent it from, where he is now, and what he wants the listener to go and find." mode="computer" preview="30" review="120"
 **The keeper:** …to whoever is holding this now. My name does not matter. The

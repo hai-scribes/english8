@@ -120,15 +120,14 @@ of the sentence.
 
 > ### ▶︎ [**Practise these 28 words**](../app/unit-07-vocab.html)
 >
-> Press 🔊 on any row above to hear the word. When you have finished this
-> lesson, the unit page opens a **practice** session over all twenty-eight —
-> the meaning, the word, what you hear, and, more often than any of those,
-> **the word inside a phrase it actually lives in**. Wrong answers come
-> straight back, and everything returns a week later, because what you can
-> still recall after a gap is the only recall worth counting. The **unit
-> test** opens once all seven lessons are done.
+> When you have finished this lesson, the unit page opens a **practice**
+> session over all twenty-eight — the meaning, the word, and, more often than
+> either of those, **the word inside a phrase it actually lives in**. Wrong
+> answers come straight back, and everything returns a week later, because
+> what you can still recall after a gap is the only recall worth counting. The
+> **unit test** opens once all seven lessons are done.
 >
-> **Luyện 28 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **Luyện 28 từ này.** Học xong bài này, phần
 > **practice** ở trang bài sẽ mở ra để luyện cả 28 từ — trong đó phần lớn là
 > luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
 > ngay, và mọi từ quay lại sau một tuần.
@@ -682,11 +681,11 @@ You have already read *The morning the reef came back* and answered questions on
 
 ### Listening — What the coral did
 
-You get **one** play. The talk gives the damage first and then what the school
-must do, in that order, and the two question sets follow it. Read both sets in
-the preview window, then answer as you listen — not afterwards, from memory.
+You hear it **once**, read aloud by someone else. The talk gives the damage first and then what the school
+must do, in that order, and the two question sets follow it. Read both sets
+first, then answer as you listen — not afterwards, from memory.
 
-**Nghe một lần duy nhất.** Đọc trước cả hai phần câu hỏi trong lúc chờ, rồi vừa
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả hai phần câu hỏi, rồi vừa
 nghe vừa trả lời.
 
 ::: audio orientation="You will hear a teacher speaking to students about the damage the new coral has done, and about somebody she wants to meet." mode="computer" preview="30" review="120"

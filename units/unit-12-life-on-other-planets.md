@@ -121,15 +121,14 @@ Each sentence below reports a **question**. What did the person actually ask?
 
 > ### ▶︎ [**Practise these 25 words**](../app/unit-12-vocab.html)
 >
-> Press 🔊 on any row above to hear the word. When you have finished this
-> lesson, the unit page opens a **practice** session over all twenty-five — the
-> meaning, the word, what you hear, and, more often than any of those, **the
-> word inside a phrase it actually lives in**. Wrong answers come straight
-> back, and everything returns a week later, because what you can still recall
-> after a gap is the only recall worth counting. The **unit test** opens once
-> all seven lessons are done.
+> When you have finished this lesson, the unit page opens a **practice**
+> session over all twenty-five — the meaning, the word, and, more often than
+> either of those, **the word inside a phrase it actually lives in**. Wrong
+> answers come straight back, and everything returns a week later, because
+> what you can still recall after a gap is the only recall worth counting. The
+> **unit test** opens once all seven lessons are done.
 >
-> **Luyện 25 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **Luyện 25 từ này.** Học xong bài này, phần
 > **practice** ở trang bài sẽ mở ra để luyện cả 25 từ — trong đó phần lớn là
 > luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
 > ngay, và mọi từ quay lại sau một tuần.
@@ -808,11 +807,10 @@ You have already read *The twelfth mark* and answered questions on it, so nothin
 
 ### Listening — The man at the far end
 
-You get **one** play. The speaker answers his visitors' questions in the order
-they put them to him, and so do the exercises, so read both sets in the preview
-window first and let them tell you which details to hold on to.
+You hear it **once**, read aloud by someone else. The speaker answers his visitors' questions in the order
+they put them to him, and so do the exercises, so read both sets first and let them tell you which details to hold on to.
 
-**Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
 
 ::: audio orientation="You will hear one speaker at the end of a long walk, replying to the visitors who have come to find him and saying what he intends to do with what they have carried to him." mode="computer" preview="30" review="120"
 Sit down, all of you. You walked nine days to give me back a thing I put down

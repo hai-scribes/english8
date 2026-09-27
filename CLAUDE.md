@@ -196,8 +196,8 @@ memory, so locking a task after one go cost learning for nothing.
 Three things it must never become, each from a rule a friendlier version would
 break — no average across attempts (**E3**), no trend or "better" (**E9**: a
 single retest is regression to the mean as much as learning), and **no retake
-at all on a task a timer has already spent**, or the button quietly repeals C6
-and C7. That last one is gated in `test_reading.js`.
+at all on a task the reading clock has already spent**, or the button quietly
+repeals C7. That last one is gated in `test_reading.js`.
 
 ### The dialogue is a comic, and the transcript is still the page
 
@@ -307,7 +307,7 @@ IELTS, which is a different job — see `README.md` for the full syntax.
 | | What it does | The rule it stops you breaking |
 | --- | --- | --- |
 | `:::task` | An exercise becomes a committed, marked attempt — retakeable, as a new attempt — answered by picking, tapping or building, never typing | C1–C3; C4/C5's spelling and word-limit half was reversed on 2026-09-25 (see above) |
-| `:::audio` | A script becomes a recording that plays once, after a replayable learning pass | C6, C8: declared delivery mode, unwritten orientation, no replay |
+| `:::audio` | A listening script is hidden behind *Show the script*, to be read aloud once by someone else — the site has no speech of its own (removed 2026-09-27) | never printing a listening script above its questions |
 | `:::write` | A writing task is attempted on the page, and counted | C9 live word count; E8 + §4.4, a self-report needs an objective anchor |
 | `:::clock` | The reading runs one clock, and it does not stop while you type | C7, from `04` §1.1 |
 | `:::passage` | The reading text can be highlighted and annotated, and its paragraphs carry the labels its questions name | C9's reading half, from `01` §9.1, §12.7 |

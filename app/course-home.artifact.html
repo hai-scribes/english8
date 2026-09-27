@@ -75,7 +75,7 @@
   nav.sub { border-top:1px solid var(--rule-soft); padding-top:.15rem; }
   nav.sub button { font-size:.8rem; padding:.35rem .6rem; }
   nav button:focus-visible, .btn:focus-visible, input:focus-visible, textarea:focus-visible,
-  .speak:focus-visible, .steps button:focus-visible, .choices button:focus-visible {
+  .steps button:focus-visible, .choices button:focus-visible {
     outline:2px solid var(--clay); outline-offset:2px;
   }
 
@@ -206,9 +206,6 @@
   td.vi { color:var(--muted); }
   tr:last-child td { border-bottom:0; }
 
-  .speak { font:inherit; font-size:.8rem; background:none; border:1px solid var(--rule); color:var(--teal); border-radius:3px; padding:.12rem .4rem; cursor:pointer; line-height:1.4; }
-  .speak:hover { border-color:var(--teal); }
-
   .grp { border-left:3px solid var(--teal); padding-left:.9rem; display:flex; flex-direction:column; gap:.35rem; }
   .grp .verbs { font-weight:600; color:var(--teal); font-size:.93rem; }
   .grp .eg { font-size:.88rem; color:var(--muted); }
@@ -284,7 +281,6 @@
       <button data-view="practice">Practice</button>
       <button data-view="learn">Word &amp; Rule</button>
       <button data-view="read">Read</button>
-      <button data-view="listen">Listen</button>
       <button data-view="write">Write</button>
       <button data-view="progress">Progress</button>
     </nav>
@@ -377,7 +373,7 @@
 
         <div class="panel flag">
           <h3>Listening has no text solution</h3>
-          <p>Every unit's listening topic is known, but the audio ships with the book. Either use the official recordings, or script and record your own. The app works around this with browser speech.</p>
+          <p>Every unit's listening topic is known, but the audio ships with the book. Either use the official recordings, or script and record your own.</p>
         </div>
 
         <div class="panel flag">
@@ -407,7 +403,7 @@
           <ol style="margin:0;padding-left:1.15rem;display:flex;flex-direction:column;gap:.5rem;font-size:.91rem;color:var(--muted)">
             <li><b style="color:var(--ink)">Answer before you reveal.</b> Typing a wrong answer teaches you more than reading the right one.</li>
             <li><b style="color:var(--ink)">Come back tomorrow.</b> Fifteen minutes on five days beats two hours on one. The schedule assumes you return.</li>
-            <li><b style="color:var(--ink)">Speak out loud.</b> Silent reading will not fix /ʊ/ and /uː/. Use the ▶ buttons and copy them.</li>
+            <li><b style="color:var(--ink)">Speak out loud.</b> Silent reading will not fix /ʊ/ and /uː/. Say each word aloud, using the IPA as your guide.</li>
             <li><b style="color:var(--ink)">Overrule the app when it is wrong.</b> If your answer was also correct, say so — it will be remembered.</li>
           </ol>
         </div>
@@ -429,7 +425,7 @@
       <div class="sub-view" id="v-learn" hidden>
         <div class="card">
           <h2>Vocabulary</h2>
-          <p class="lede">Eighteen words. Press ▶ to hear each one — the voice changes between plays on purpose.</p>
+          <p class="lede">Eighteen words, with IPA and meaning. Say each one aloud.</p>
           <div class="scroll"><table id="vocabTable"></table></div>
         </div>
         <div class="card">
@@ -446,7 +442,7 @@
             <span class="vi">Tiếng Việt không phân biệt độ dài nguyên âm kiểu này, nên phải luyện bằng tai chứ không đoán theo chữ viết.</span>
           </div>
           <h3>Minimal pairs</h3>
-          <p class="lede">These differ by one sound only. Play each pair and listen for the length.</p>
+          <p class="lede">These differ by one sound only. Say each pair aloud and make the long vowel twice as long.</p>
           <div class="scroll"><table id="pairTable"></table></div>
         </div>
         <div class="card">
@@ -506,34 +502,6 @@
         </div>
       </div>
 
-      <div class="sub-view" id="v-listen" hidden>
-        <div class="card">
-          <h2>Nam's free time</h2>
-          <p class="lede">Listen twice before you read anything. The script stays hidden until you have answered.</p>
-          <div class="row">
-            <button class="btn" id="playListen">▶ Play</button>
-            <button class="btn quiet" id="stopListen">Stop</button>
-            <span class="counter" id="playCount">played 0×</span>
-          </div>
-          <label class="hintline" style="display:flex;gap:.5rem;align-items:center">
-            <span>Speed</span>
-            <input type="range" id="rate" min="0.6" max="1.1" step="0.05" value="0.9" style="flex:1;max-width:200px;accent-color:var(--teal)">
-            <span class="counter" id="rateVal">0.90×</span>
-          </label>
-          <div class="note-box" id="ttsWarn" hidden></div>
-        </div>
-        <div class="card">
-          <h3>Questions</h3>
-          <div class="qa" id="listenQ"></div>
-          <button class="btn" id="checkListen">Check my answers</button>
-        </div>
-        <div class="card">
-          <h3>Script</h3>
-          <p class="lede">Only open this after you have answered.</p>
-          <button class="btn quiet" id="toggleScript">Reveal script</button>
-          <div class="passage masked" id="script"></div>
-        </div>
-      </div>
 
       <div class="sub-view" id="v-write" hidden>
         <div class="card">
@@ -592,10 +560,9 @@
         <h3>What each unit will carry</h3>
         <ul style="margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.4rem;font-size:.9rem;color:var(--muted)">
           <li><b style="color:var(--ink)">~18 vocabulary items</b> with IPA and Vietnamese glosses, seeded with that unit's target sounds</li>
-          <li><b style="color:var(--ink)">Pronunciation training</b> on the unit's contrast, with voice-varied listening</li>
+          <li><b style="color:var(--ink)">Pronunciation training</b> on the unit's contrast</li>
           <li><b style="color:var(--ink)">Grammar</b> taught as patterns, with graded production exercises</li>
           <li><b style="color:var(--ink)">An original reading passage</b> on the unit's topic, with recall-after-hiding</li>
-          <li><b style="color:var(--ink)">A listening script</b> read by browser speech</li>
           <li><b style="color:var(--ink)">The writing task</b> in its correct genre, with a fading scaffold</li>
         </ul>
       </div>
@@ -605,7 +572,7 @@
           <li>Is the level right? Unit 1 sits around A2–B1.</li>
           <li>Is 90 practice items per unit too many, too few?</li>
           <li>Is the amount of Vietnamese support correct?</li>
-          <li>Units 9–12 need stress and intonation, which browser speech renders imperfectly. That may need a different exercise design.</li>
+          <li>Units 9–12 need stress and intonation, which print cannot carry. That may need a different exercise design.</li>
         </ul>
       </div>
     </section>
@@ -613,7 +580,7 @@
   </main>
 
   <footer>
-    <p><b>Method.</b> Built on practice testing and distributed practice — the two techniques Dunlosky et al. (2013) rated high-utility — plus interleaving, the generation effect, and confidence calibration. Pronunciation training rotates between voices because variability is what makes perceptual training generalise.</p>
+    <p><b>Method.</b> Built on practice testing and distributed practice — the two techniques Dunlosky et al. (2013) rated high-utility — plus interleaving, the generation effect, and confidence calibration.</p>
     <p><b>Scope.</b> This records structure and teaching targets compiled from public sources; it contains none of the textbook's own text, passages or word lists. All study material here is original.</p>
     <p>Official free reader: <a href="https://hanhtrangso.nxbgd.vn/">hanhtrangso.nxbgd.vn</a> · companion audio: <a href="https://www.sachmem.vn/">sachmem.vn</a> · publisher: <a href="https://heid.vn/product/sach-giao-khoa-tieng-anh-lop-8-global-success/">HEID</a>. Progress is stored only in this browser; nothing is uploaded.</p>
   </footer>
@@ -706,8 +673,8 @@
   ];
 
   /* English has few /ʊ/–/uː/ minimal pairs, and the rare ones (wooed, shooed)
-     are obscure at this level and unreliable in text-to-speech. These four are
-     the usable set; the sorting task carries the rest of the perceptual load. */
+     are obscure at this level. These four are the usable set, shown as a
+     reference table; the sorting task carries the practice. */
   const PAIRS = [
     {short:"full", long:"fool"}, {short:"pull", long:"pool"},
     {short:"look", long:"Luke"}, {short:"soot", long:"suit"}
@@ -760,21 +727,6 @@
     {q:"In one word — how does Trang feel about the crooked bookshelf? (fond / annoyed / embarrassed)", a:["fond"], why:"“I would not change it for anything” — she values it as it is."}
   ];
 
-  const SCRIPT = [
-    "Hi, I'm Nam. People think I have a lot of free time because I don't play sport, but my week is quite full.",
-    "On weekday evenings I usually stay in. I like listening to music while I do my homework — my mother says this is impossible, but my marks are fine. After that I sometimes watch a short film, though I can't stand anything longer than an hour on a school night.",
-    "Saturdays are for my friends. We meet at the shopping centre near the swimming pool and just walk around. We don't spend much money. Mostly we talk. Last month we started playing football in the park instead, and now half of us are too tired to do anything on Sunday.",
-    "Sunday belongs to my grandparents. I go to their house for lunch and my grandfather teaches me to cook one new dish each week. So far I have learned six. Two of them were good."
-  ];
-
-  const LISTEN_Q = [
-    {q:"What does Nam listen to while doing homework?", a:["music"], why:"“I like listening to music while I do my homework.”"},
-    {q:"What is the longest film he will watch on a school night? (hour / minute / day)", a:["hour","an hour","one hour"], why:"He can't stand anything longer than an hour."},
-    {q:"Where do he and his friends meet on Saturdays? (three words)", a:["the shopping centre","shopping centre","the shopping center","shopping center"], why:"At the shopping centre near the swimming pool."},
-    {q:"What sport did they start playing last month?", a:["football"], why:"“Last month we started playing football in the park.”"},
-    {q:"How many dishes has he learned to cook? (write the number in words)", a:["six","6"], why:"“So far I have learned six.”"}
-  ];
-
   const W_STEPS = [
     {name:"1 · Model", html:'<p class="lede">Read this once. Notice how each paragraph does a different job.</p><div class="passage" style="font-size:.94rem"><p>Hi Linh,</p><p>Thanks for your message! You asked what I do at the weekend, so here it is.</p><p>I don\'t have much free time during the week, but Saturdays are mine. I usually hang out with two friends from my class. We enjoy walking around the bookshops in the old quarter, and we always end up in the same café.</p><p>I\'ve also taken up cooking this year. I can\'t stand following recipes, so my food is unpredictable! Next I\'d love to learn how to make bánh xèo.</p><p>What about you? Write soon.<br>Mai</p></div><p class="counter">96 words</p>'},
     {name:"2 · Frames", html:'<p class="lede">Same shape, with the content removed. Fill each frame in your draft below.</p><div class="passage" style="font-size:.94rem;color:var(--muted)"><p>Hi ____,</p><p>Thanks for ____. You asked ____, so here it is.</p><p>I don\'t have much free time during ____, but ____ are mine. I usually ____ with ____. We enjoy ____, and we always ____.</p><p>I\'ve also taken up ____ this year. I can\'t stand ____, so ____! Next I\'d love to ____.</p><p>What about you? Write soon.<br>____</p></div>'},
@@ -801,13 +753,12 @@
   /* `accepted` holds answers the learner overruled the app on. No word list can
      anticipate every correct synonym, so the learner gets the final say and the
      app remembers it — the same answer is never rejected twice. */
-  let S = { items:{}, draft:"", wstep:0, checks:[], errors:[], plays:0, accepted:{} };
+  let S = { items:{}, draft:"", wstep:0, checks:[], errors:[], accepted:{} };
   function load() { try { const r = localStorage.getItem(KEY); if (r) S = Object.assign(S, JSON.parse(r)); } catch (e) {} }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
 
   const BANK = [];
   VOCAB.forEach((v,i) => { BANK.push({id:"vr"+i,kind:"vocab-recall",data:v}); BANK.push({id:"vc"+i,kind:"vocab-cloze",data:v}); });
-  PAIRS.forEach((p,i) => BANK.push({id:"mp"+i,kind:"minimal-pair",data:p}));
   SORT_WORDS.forEach((w,i) => BANK.push({id:"ps"+i,kind:"pron-sort",data:w}));
   GROUPS.forEach((g,i) => BANK.push({id:"gg"+i,kind:"grammar-group",data:g}));
   FORMS.forEach((f,i) => BANK.push({id:"gf"+i,kind:"grammar-form",data:f}));
@@ -852,96 +803,6 @@
     grade(id, true);
   }
   const learnerOK = (id, typed) => matches(typed, S.accepted[id] || []);
-
-  /* ================= SPEECH ================= */
-
-  /* The voice IS the pronunciation model, so it is chosen, not accepted.
-     getVoices() returns every installed en-* voice unranked, and on macOS that
-     list is mostly Apple's stylised set — of the 37 English voices on a stock
-     machine, Daniel and Samantha are the only neutral speakers. Because the
-     rotation below steps to the next voice on every press, an unfiltered pool
-     meant a learner who pressed "Hear it" a few times marched straight through
-     Bahh, Bells, Boing and Bubbles. A cartoon voice is not a pronunciation
-     model. Same ranking as app/unit-01-vocab.html, which fixed this first. */
-  const CHARACTER_VOICE = /\b(albert|bad news|bahh|bells|boing|bubbles|cellos|eddy|flo|fred|good news|grandma|grandpa|jester|junior|kathy|organ|ralph|reed|rocko|sandy|shelley|superstar|trinoids|whisper|wobble|zarvox)\b/i;
-  const NEURAL_VOICE    = /(natural|neural|enhanced|premium|siri|google|online)/i;
-  const NEUTRAL_VOICE   = /\b(daniel|kate|serena|libby|sonia|ryan|arthur|oliver|hazel|george|martha|samantha|alex|karen|moira|tessa)\b/i;
-
-  let voices = [], voiceTurn = 0, ttsOK = ("speechSynthesis" in window);
-  function scoreVoice(v) {
-    const lang = String(v.lang || "").replace("_", "-");
-    const name = String(v.name || "");
-    let s = /^en-GB/i.test(lang) ? 100 : /^en-(IE|AU|NZ|ZA)/i.test(lang) ? 40 : 20;
-    if (NEURAL_VOICE.test(name))  s += 50;
-    if (NEUTRAL_VOICE.test(name)) s += 25;
-    if (/compact/i.test(name))    s -= 15;
-    return s;
-  }
-  function refreshVoices() {
-    if (!ttsOK) return;
-    const all = speechSynthesis.getVoices() || [];
-    const en  = all.filter(v => /^en/i.test(String(v.lang || "").replace("_", "-")));
-    /* Novelty voices are dropped, not merely ranked last — a rotation always
-       reaches the end of its pool eventually. They return only on a machine
-       with nothing else, where a silly voice still beats silence. */
-    const usable = en.filter(v => !CHARACTER_VOICE.test(String(v.name || "")));
-    voices = (usable.length ? usable : en).slice().sort((a, b) => scoreVoice(b) - scoreVoice(a));
-    if (!voices.length && all.length) voices = all.slice(0, 3);
-    voiceTurn = 0;
-  }
-  if (ttsOK) { refreshVoices(); speechSynthesis.onvoiceschanged = () => { refreshVoices(); renderTTSWarn(); }; }
-
-  /* HVPT: rotate voices so the contrast is heard from several speakers — that
-     variability is what makes perceptual training generalise to new words. The
-     rotation runs over the ranked pool above and is capped, so every repeat
-     stays inside the handful of voices actually worth imitating. */
-  const ROTATE_POOL = 4;
-  let sayTimer = null, sayTurn = 0;
-  function stopSpeaking() {
-    sayTurn++;                                   // invalidate anything waiting to start
-    if (sayTimer) { clearTimeout(sayTimer); sayTimer = null; }
-    if (ttsOK) speechSynthesis.cancel();
-  }
-  function say(text, opts) {
-    opts = opts || {};
-    if (!ttsOK || !text) return;
-    try {
-      stopSpeaking();
-      const mine = sayTurn;
-      /* A cancel() landing mid-word can leave Chrome's engine paused, and a
-         paused engine accepts utterances without ever playing them. */
-      if (speechSynthesis.paused) speechSynthesis.resume();
-      /* Chrome drops an utterance queued in the same tick as cancel(), and
-         WebKit keeps a queued-but-unstarted one alive so the replacement plays
-         over the top of it. Either way repeated presses garble. Wait for the
-         engine to actually fall idle, with a cap so a stuck engine still
-         gets its one attempt. */
-      let waited = 0;
-      const fire = () => {
-        sayTimer = null;
-        if (mine !== sayTurn) return;            // a later press already won
-        if ((speechSynthesis.speaking || speechSynthesis.pending) && waited < 600) {
-          waited += 40; sayTimer = setTimeout(fire, 40); return;
-        }
-        const u = new SpeechSynthesisUtterance(text);
-        if (voices.length) {
-          const pool = Math.min(voices.length, ROTATE_POOL);
-          u.voice = opts.vary === false ? voices[0] : voices[voiceTurn % pool];
-          if (opts.vary !== false) voiceTurn++;
-          u.lang = u.voice.lang;
-        }
-        u.rate = opts.rate || 0.85; u.pitch = 1;
-        speechSynthesis.speak(u);
-      };
-      sayTimer = setTimeout(fire, 60);
-    } catch (e) {}
-  }
-  function renderTTSWarn() {
-    const el2 = document.getElementById("ttsWarn"); if (!el2) return;
-    const bad = !ttsOK || !voices.length;
-    el2.hidden = !bad;
-    if (bad) el2.innerHTML = "<b>No speech voices found in this browser.</b> The listening and sound exercises need them. Try Chrome, Edge or Safari, or ask someone to read the script aloud while you cover it.";
-  }
 
   /* ================= HELPERS ================= */
 
@@ -1035,7 +896,7 @@
   /* ================= NAVIGATION ================= */
 
   const SECTIONS = ["map","unit1","roadmap"];
-  const TABS = ["today","practice","learn","vocabmode","read","listen","write","progress"];
+  const TABS = ["today","practice","learn","vocabmode","read","write","progress"];
   let curSec = "map", curTab = "today";
 
   function showSection(sec) {
@@ -1190,7 +1051,7 @@
 
   const KIND_LABEL = {
     "vocab-recall":"vocabulary", "vocab-cloze":"vocabulary in context",
-    "minimal-pair":"listening · sounds", "pron-sort":"sounds",
+    "pron-sort":"sounds",
     "grammar-group":"grammar pattern", "grammar-form":"grammar form"
   };
 
@@ -1324,29 +1185,9 @@
       return { focus:()=>input.focus(), lock:()=>{input.disabled=true;},
         check:()=>judgeWord(v, input.value, v.en, item.id) };
     },
-    "minimal-pair": function (item, body) {
-      const p = item.data;
-      const target = Math.random() < 0.5 ? p.short : p.long;
-      body.appendChild(el("div","prompt","Which word did you hear?"));
-      const row = el("div","row");
-      const play = el("button","btn ghost","▶ Play"); play.addEventListener("click",()=>say(target,{rate:0.8}));
-      const slow = el("button","btn quiet","▶ Slower"); slow.addEventListener("click",()=>say(target,{rate:0.6}));
-      row.appendChild(play); row.appendChild(slow); body.appendChild(row);
-      body.appendChild(el("p","hintline","The voice changes each time you play — that variation is what trains your ear."));
-      let pick = null;
-      const ch = el("div","choices two");
-      pickList(ch, [{label:p.short,value:p.short},{label:p.long,value:p.long}], v => { pick = v; });
-      body.appendChild(ch);
-      say(target,{rate:0.8});
-      return { lock:()=>ch.querySelectorAll("button").forEach(b=>b.disabled=true),
-        check:()=>({ok: pick===target, answer:target, why: p.short+" has the short /ʊ/; "+p.long+" has the long /uː/."}) };
-    },
     "pron-sort": function (item, body) {
       const w = item.data;
       body.appendChild(el("div","prompt", w.w));
-      const row = el("div","row");
-      const play = el("button","btn ghost","▶ Hear it"); play.addEventListener("click",()=>say(w.w,{rate:0.75}));
-      row.appendChild(play); body.appendChild(row);
       body.appendChild(el("p","hintline","Which vowel sound is in this word?"));
       let pick = null;
       const ch = el("div","choices two");
@@ -1393,24 +1234,16 @@
 
   /* ================= LEARN ================= */
 
-  function speakBtn(text, label) {
-    const b = el("button","speak", label || "▶"); b.type = "button";
-    b.setAttribute("aria-label","Hear " + text);
-    b.addEventListener("click", () => say(text));
-    return b;
-  }
-
   function renderLearn() {
     const t = $("#vocabTable"); t.innerHTML = "";
     const hr = document.createElement("tr");
-    ["","Word","IPA","","Nghĩa"].forEach(h => { const th=document.createElement("th"); th.textContent=h; hr.appendChild(th); });
+    ["","Word","IPA","Nghĩa"].forEach(h => { const th=document.createElement("th"); th.textContent=h; hr.appendChild(th); });
     t.appendChild(hr);
     VOCAB.forEach((v,i) => {
       const tr = document.createElement("tr");
       tr.appendChild(el("td","mono",String(i+1)));
       const w = el("td"); w.appendChild(el("b",null,v.en)); tr.appendChild(w);
       tr.appendChild(el("td","ipa",v.ipa));
-      const sp = el("td"); sp.appendChild(speakBtn(v.en)); tr.appendChild(sp);
       tr.appendChild(el("td","vi",v.vi));
       t.appendChild(tr);
     });
@@ -1431,7 +1264,7 @@
           + (VOCAB.length - done) + " still new</span>";
       b.addEventListener("click", () => showTab("vocabmode"));
       wrap.appendChild(b);
-      const h = el("p","hintline","Six words at a time. Each one gets a card with sound, meaning and "
+      const h = el("p","hintline","Six words at a time. Each one gets a card with pronunciation, meaning and "
         + "examples, then comes straight back as a question — recognise it, recall it, write it, "
         + "then use it in a sentence.");
       wrap.appendChild(h);
@@ -1440,18 +1273,12 @@
 
     const pt = $("#pairTable"); pt.innerHTML = "";
     const ph = document.createElement("tr");
-    ["/ʊ/ short","","/uː/ long","","Both"].forEach(h => { const th=document.createElement("th"); th.textContent=h; ph.appendChild(th); });
+    ["/ʊ/ short","/uː/ long"].forEach(h => { const th=document.createElement("th"); th.textContent=h; ph.appendChild(th); });
     pt.appendChild(ph);
     PAIRS.forEach(p => {
       const tr = document.createElement("tr");
       tr.appendChild(el("td",null,p.short));
-      const b1 = el("td"); b1.appendChild(speakBtn(p.short)); tr.appendChild(b1);
       tr.appendChild(el("td",null,p.long));
-      const b2 = el("td"); b2.appendChild(speakBtn(p.long)); tr.appendChild(b2);
-      const b3 = el("td");
-      const x3 = el("button","speak","▶ pair"); x3.type = "button";
-      x3.addEventListener("click", () => say(p.short + " … " + p.long, {rate:0.7}));
-      b3.appendChild(x3); tr.appendChild(b3);
       pt.appendChild(tr);
     });
   }
@@ -1672,9 +1499,6 @@
     body.appendChild(el("span","label","New word"));
     const h = el("div","qhead");
     const w = el("h2",null,v.en); w.style.fontSize = "1.9rem"; h.appendChild(w);
-    h.appendChild(speakBtn(v.en, "▶ hear it"));
-    const sl = el("button","speak","▶ slowly"); sl.type = "button";
-    sl.addEventListener("click", () => say(v.en, {rate:0.6})); h.appendChild(sl);
     body.appendChild(h);
     const ip = el("div","ipa-tag", v.ipa + "  ·  " + v.pos); body.appendChild(ip);
     const g = el("p"); g.style.fontSize = "1.15rem"; g.style.fontWeight = "600"; g.style.margin = ".5rem 0 0";
@@ -1708,7 +1532,6 @@
     if (p.kind === "mc"){
       const q = el("div","prompt"); q.textContent = v.en; body.appendChild(q);
       body.appendChild(el("div","ipa-tag", v.ipa));
-      const sr = el("div","row"); sr.appendChild(speakBtn(v.en, "▶ hear it")); body.appendChild(sr);
       const box = el("div","choices");
       p.opts.concat([{ text:"I don't know", idk:true }]).forEach(o => {
         const b = el("button", null, o.text); b.type = "button";
@@ -1787,7 +1610,6 @@
       const again = el("span","note","This word comes back in a few questions — that is the point.");
       box.appendChild(again);
     }
-    const sr = el("div","row"); sr.appendChild(speakBtn(v.en, "▶ hear it")); box.appendChild(sr);
     body.appendChild(box);
     /* Let the learner overrule a wrong verdict on a typed answer, exactly as
        the Practice tab does — no word list anticipates every good answer. */
@@ -1911,12 +1733,6 @@
     PASSAGE.forEach(t => p.appendChild(el("p",null,t)));
     fillQA("#readQ", READ_Q);
   }
-  function renderListen() {
-    const s = $("#script"); s.innerHTML = "";
-    SCRIPT.forEach(t => s.appendChild(el("p",null,t)));
-    fillQA("#listenQ", LISTEN_Q);
-    renderTTSWarn();
-  }
 
   $("#hideRead").addEventListener("click", () => {
     $("#passage").classList.add("masked");
@@ -1930,19 +1746,7 @@
     $("#showRead").hidden = true; $("#hideRead").hidden = false;
   });
   $("#checkRead").addEventListener("click", () => gradeQA("#readQ", READ_Q));
-  $("#checkListen").addEventListener("click", () => gradeQA("#listenQ", LISTEN_Q));
 
-  $("#playListen").addEventListener("click", () => {
-    S.plays = (S.plays||0)+1; save();
-    $("#playCount").textContent = "played " + S.plays + "×";
-    say(SCRIPT.join(" "), {rate:parseFloat($("#rate").value), vary:false});
-  });
-  $("#stopListen").addEventListener("click", stopSpeaking);
-  $("#rate").addEventListener("input", e => { $("#rateVal").textContent = parseFloat(e.target.value).toFixed(2) + "×"; });
-  $("#toggleScript").addEventListener("click", () => {
-    const hidden = $("#script").classList.toggle("masked");
-    $("#toggleScript").textContent = hidden ? "Reveal script" : "Hide script";
-  });
 
   /* ================= WRITE ================= */
 
@@ -2055,7 +1859,6 @@
     const d = it.data;
     switch (it.kind) {
       case "vocab-recall": case "vocab-cloze": return d.en + " — " + d.vi;
-      case "minimal-pair": return d.short + " / " + d.long;
       case "pron-sort": return d.w + " → /" + d.s + "/";
       case "grammar-group": return d.v + " → Group " + d.g;
       case "grammar-form": return d.s.replace("___","____");
@@ -2066,7 +1869,7 @@
   $("#resetAll").addEventListener("click", () => {
     if (!confirm("Delete all progress, drafts and schedules on this device?")) return;
     try { localStorage.removeItem(KEY); } catch (e) {}
-    S = { items:{}, draft:"", wstep:0, checks:[], errors:[], plays:0, accepted:{} };
+    S = { items:{}, draft:"", wstep:0, checks:[], errors:[], accepted:{} };
     renderProgress(); renderToday(); renderWrite();
   });
 
@@ -2076,10 +1879,8 @@
   renderMap();
   renderLearn();
   renderRead();
-  renderListen();
   renderWrite();
   renderToday();
-  $("#playCount").textContent = "played " + (S.plays||0) + "×";
   showSection("map");
 
 })();

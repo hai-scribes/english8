@@ -129,15 +129,14 @@ single difference is most of what Lesson 3 is about.
 
 > ### ▶︎ [**Practise these 33 words**](../app/unit-11-vocab.html)
 >
-> Press 🔊 on any row above to hear the word. When you have finished this
-> lesson, the unit page opens a **practice** session over all thirty-three — the
-> meaning, the word, what you hear, and, more often than any of those, **the
-> word inside a phrase it actually lives in**. Wrong answers come straight
-> back, and everything returns a week later, because what you can still recall
-> after a gap is the only recall worth counting. The **unit test** opens once
-> all seven lessons are done.
+> When you have finished this lesson, the unit page opens a **practice**
+> session over all thirty-three — the meaning, the word, and, more often than
+> either of those, **the word inside a phrase it actually lives in**. Wrong
+> answers come straight back, and everything returns a week later, because
+> what you can still recall after a gap is the only recall worth counting. The
+> **unit test** opens once all seven lessons are done.
 >
-> **Luyện 33 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **Luyện 33 từ này.** Học xong bài này, phần
 > **practice** ở trang bài sẽ mở ra để luyện cả 33 từ — trong đó phần lớn là
 > luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
 > ngay, và mọi từ quay lại sau một tuần.
@@ -850,11 +849,11 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### Listening — The apprentice says what he was taught
 
-This plays **once**. The talk runs in order and so do the questions, so read
-both 6.1 and 6.2 in the preview window, then answer while the voice is still
-moving rather than afterwards from memory.
+You hear it **once**, read aloud by someone else. The talk runs in order and so
+do the questions, so read both 6.1 and 6.2 first, then answer while the reader
+is still going rather than afterwards from memory.
 
-**Bài nghe chỉ phát một lần.** Đọc trước cả 6.1 và 6.2 trong lúc chờ, rồi vừa
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả 6.1 và 6.2, rồi vừa
 nghe vừa trả lời.
 
 ::: audio orientation="You will hear one speaker, sitting in the workroom, telling the others what her teacher taught her, what she was never taught, and what she thinks they should do with what is left." mode="computer" preview="30" review="120"

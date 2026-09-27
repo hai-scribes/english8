@@ -135,15 +135,15 @@
 
 > ### ▶︎ [**Practise these 31 words**](../app/unit-04-vocab.html)
 >
-> Press 🔊 on any row above to hear the word. When you have finished this
-> lesson, the unit page opens a **practice** session over all thirty-one — the
-> meaning, the word, what you hear, and, more often than any of those, **the
+> When you have finished this lesson, the unit page opens a **practice**
+> session over all thirty-one — the meaning, the word, and, more often than
+> either of those, **the
 > word inside a phrase it actually lives in**. Wrong answers come straight
 > back, and everything returns a week later, because what you can still recall
 > after a gap is the only recall worth counting. The **unit test** opens once
 > all seven lessons are done.
 >
-> **Luyện 31 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **Luyện 31 từ này.** Học xong bài này, phần
 > **practice** ở trang bài sẽ mở ra để luyện cả 31 từ — trong đó phần lớn là
 > luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
 > ngay, và mọi từ quay lại sau một tuần.
@@ -779,11 +779,11 @@ habit, not a trick — build it in until you stop noticing you are doing it.
 
 ### Listening — Bà Sáu answers the four questions
 
-You get **one** play, so use the preview window: read both sets of questions
-first, then answer while you listen rather than afterwards from memory. The speaker takes the questions one at a time, in
+You hear it **once**, read aloud by someone else, so read both sets of
+questions first, then answer while you listen rather than afterwards from memory. The speaker takes the questions one at a time, in
 order, so the questions below come in that order too.
 
-**Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
 
 ::: audio orientation="You will hear a grandmother taking a boy's four project questions one at a time, and telling him what she knows about the families who lived along one stretch of the river." mode="computer" preview="30" review="120"
 Read them out again. Slowly. Do you think I am deaf? I am old, not deaf.

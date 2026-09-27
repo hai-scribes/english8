@@ -125,14 +125,13 @@
 
 > ### ▶︎ [**Practise these 31 words**](../app/unit-09-vocab.html)
 >
-> Press 🔊 on any row above to hear the word. When you have finished this
-> lesson, the unit page opens a **practice** session over all thirty-one — the
-> meaning, the word, what you hear, and, more often than any of those, **the
-> word inside a phrase it actually lives in**. Wrong answers come straight
-> back, and everything returns a week later. The **unit test** opens once
-> all seven lessons are done.
+> When you have finished this lesson, the unit page opens a **practice**
+> session over all thirty-one — the meaning, the word, and, more often than
+> either of those, **the word inside a phrase it actually lives in**. Wrong
+> answers come straight back, and everything returns a week later. The **unit
+> test** opens once all seven lessons are done.
 >
-> **Luyện 31 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **Luyện 31 từ này.** Học xong bài này, phần
 > **practice** ở trang bài sẽ mở ra để luyện cả 31 từ — trong đó phần lớn là
 > luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
 > ngay, và mọi từ quay lại sau một tuần.
@@ -856,11 +855,12 @@ Repeat Step 2 until the report runs clearly from start to finish.
 
 ### Listening — On the wall in the dark
 
-You get **one** play — nobody in a flood says it twice. Two people are speaking
-here, so read both sets of questions in the preview window first and decide
+You hear it **once**, read aloud by someone else — nobody in a flood says it
+twice. Two people are speaking
+here, so read both sets of questions first and decide
 which of them each answer will come from.
 
-**Nghe một lần duy nhất.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
 
 ::: audio orientation="You will hear two speakers outdoors at night, standing above deep water. Somebody they know is not where he was, and they are trying to find him." mode="computer" preview="30" review="120"
 **The keeper:** Face the water first, then say the words. Which way you face is

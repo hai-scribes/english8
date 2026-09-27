@@ -87,32 +87,15 @@ function load(rel, store, beforeParse) {
   return dom;
 }
 
-/* Both timers count in real seconds, and a Review's clock is eighteen minutes
-   long, so the only way to watch one expire is to make the page's seconds
-   short. Delays are divided rather than mocked out, so the ORDER of everything
-   -- orientation, preview window, play, review window -- is still the order
-   the page schedules, and a bug that reversed two of them would still show.
-
-   jsdom has no speech synthesis, and without it the player takes its
-   no-voice branch and never opens a review window at all. So it gets a voice
-   that says every line instantly. */
+/* The reading clock counts in real seconds, and a Review's clock is eighteen
+   minutes long, so the only way to watch one expire is to make the page's
+   seconds short. Delays are divided rather than mocked out, so the ORDER of
+   everything is still the order the page schedules. */
 function fastPage(w) {
   const si = w.setInterval, st = w.setTimeout;
   const squash = ms => (typeof ms === "number" && ms > 8 ? Math.max(1, ms / 1000) : ms);
   w.setInterval = (fn, ms, ...a) => si(fn, squash(ms), ...a);
   w.setTimeout = (fn, ms, ...a) => st(fn, squash(ms), ...a);
-
-  const voice = { name: "Daniel", lang: "en-GB", localService: true };
-  class Utterance {
-    constructor(text) { this.text = text; this.onend = null; this.onerror = null; }
-  }
-  w.SpeechSynthesisUtterance = Utterance;
-  w.speechSynthesis = {
-    getVoices: () => [voice],
-    addEventListener: () => {},
-    cancel: () => {},
-    speak: u => st(() => { if (u.onend) u.onend(); }, 1),
-  };
 }
 
 /* Run the page's timers forward until `done()` or the budget runs out. */
@@ -359,15 +342,11 @@ async function main() {
        JSON.parse(win.localStorage.getItem("en8:marks:r1-2-p1") || "[]").length === 1);
   }
 
-  /* ---- what each timer is allowed to switch off ------------------------
-     A Review is the only page carrying two timers, and each one silences the
-     exercises below it when its window shuts. The rule is that a timer owns
-     the tasks under it and above the next timer. Both halves matter, and both
-     are watched here by running the timers to expiry rather than by reading
-     the selector: the player must not reach back over the five Language
-     exercises -- the defect that kept the Reviews from having a Listening
-     section at all -- and the clock must not reach forward into the listening
-     exercise, which is the same defect facing the other way. */
+  /* ---- what the clock is allowed to switch off -------------------------
+     The clock silences the exercises below it when its window shuts, and
+     stops at the listening player. The player itself is not a timer: the page
+     has no voice, so it only shows the script, and must switch nothing off.
+     Both are watched by driving them rather than by reading the selector. */
   {
     /* Where each task sits, so the two runs below can name them. */
     const split = doc => {
@@ -395,17 +374,15 @@ async function main() {
       ok("review 1: everything starts live",
          allLive(s.language) && allLive(s.reading) && allLive(s.listening));
 
-      const state = s.player.querySelector(".p-state");
+      const script = s.player.querySelector(".p-script");
+      ok("player: the script starts hidden", script.hidden);
       click(win, s.player.querySelector(".p-start"));
-      const shut = await until(win, () => /Time\./.test(state.textContent));
-      ok("player: the recording runs and the review window closes", shut,
-         JSON.stringify(state.textContent));
-      ok("player: the listening exercise under it stops taking input",
-         allDead(s.listening));
-      ok("player: the Language exercises above it stay live", allLive(s.language),
-         inputs(s.language).filter(i => i.disabled).length + " went dead");
-      ok("player: the reading exercises above it stay live", allLive(s.reading),
-         inputs(s.reading).filter(i => i.disabled).length + " went dead");
+      ok("player: pressing Show the script shows it", !script.hidden);
+      await new Promise(r => setTimeout(r, 40));
+      ok("player: showing the script switches nothing off",
+         allLive(s.language) && allLive(s.reading) && allLive(s.listening));
+      ok("player: the page carries no speech controls",
+         !win.document.querySelector("[data-say], .d-hear, .p-learn"));
     }
 
     {
@@ -422,108 +399,6 @@ async function main() {
          allLive(s.listening),
          inputs(s.listening).filter(i => i.disabled).length + " went dead");
     }
-  }
-
-  /* ---- the learning pass hands questions back; the test pass never does ---
-     Phase 3's whole point is that a first exposure is practice, not an exam:
-     attempt, see what went wrong, go again. The risk is the opposite one —
-     that "go again" reaches a COMMITTED attempt, at which point the word
-     limit, the spelling rule and the single play all stop meaning anything.
-     So this drives both passes for real and checks the boundary from both
-     sides. */
-  {
-    const win = await settled(load("docs/unit-01/lesson-6/index.html", null, fastPage));
-    const doc = win.document;
-    const player = doc.querySelector('[data-role="audio"]');
-    const task = doc.querySelector('[data-task="01-6-6.2-1"]');
-    ok("learn: the page has a player and a listening task", !!player && !!task);
-
-    const inputs = () => Array.from(task.querySelectorAll(".i-in, .i-opt input"));
-    const retry = () => player.querySelector(".p-retry");
-    const check = task.querySelector(".t-check") || task.querySelector("button.btn");
-
-    ok("learn: no Try-again before anything has been played",
-       !retry() || retry().hidden);
-
-    click(win, player.querySelector(".p-learn"));
-    const played = await until(win, () =>
-      /Practised/.test(player.querySelector(".p-lstate").textContent));
-    ok("learn: practising plays and reports itself", played,
-       JSON.stringify(player.querySelector(".p-lstate").textContent));
-    ok("learn: practising does NOT spend the single play",
-       win.localStorage.getItem("en8:played:01-6-1") === null,
-       String(win.localStorage.getItem("en8:played:01-6-1")));
-
-    /* Answer wrong on purpose, then commit it. */
-    const first = inputs()[0];
-    if (first){
-      if (first.type === "radio"){ first.checked = true;
-        first.dispatchEvent(new win.Event("change", { bubbles:true })); }
-      else { first.value = "definitely-wrong";
-        first.dispatchEvent(new win.Event("input", { bubbles:true })); }
-    }
-    click(win, check);
-    ok("learn: checking locks the answers, as it always has",
-       task.dataset.done === "1" && inputs().every(i => i.disabled));
-    ok("learn: and the attempt is stored",
-       /01-6-6\.2-1/.test(win.localStorage.getItem("en8:tasks:v1") || ""));
-
-    const r = retry();
-    ok("learn: Try-again appears once there is something to hand back",
-       !!r && !r.hidden);
-    click(win, r);
-    ok("learn: it re-opens the inputs", inputs().every(i => !i.disabled));
-    ok("learn: it clears the marks", task.dataset.done !== "1");
-    ok("learn: it forgets the stored attempt, so a refresh cannot restore it",
-       !/01-6-6\.2-1/.test(win.localStorage.getItem("en8:tasks:v1") || ""));
-
-    /* Now the committed pass. From here nothing may be handed back. */
-    click(win, player.querySelector(".p-start"));
-    ok("test: starting the one play removes Try-again for good", !retry());
-    const spent = await until(win, () =>
-      win.localStorage.getItem("en8:played:01-6-1") !== null);
-    ok("test: the single play is recorded as spent", spent);
-    const shut = await until(win, () =>
-      /Time\./.test(player.querySelector(".p-state").textContent), 6000);
-    ok("test: the review window closes", shut,
-       JSON.stringify(player.querySelector(".p-state").textContent));
-    ok("test: no Try-again ever comes back", !retry());
-  }
-
-  /* ---- Try-again respects the player's territory --------------------------
-     A Review is the one page where the player has exercises ABOVE it that are
-     none of its business. Marking one of those must not offer to hand back the
-     listening questions, must not unlock the script, and above all must not
-     have its own committed mark cleared by a control belonging to a different
-     block. */
-  {
-    const win = await settled(load("docs/review-1/index.html", null, fastPage));
-    const doc = win.document;
-    const player = doc.querySelector('[data-role="audio"]');
-    const tasks = Array.from(doc.querySelectorAll('[data-role="task"]'));
-    const language = tasks[0];
-    ok("review page: a player with Language exercises above it",
-       !!player && tasks.length > 1);
-
-    click(win, player.querySelector(".p-learn"));
-    await until(win, () => /Practised/.test(player.querySelector(".p-lstate").textContent));
-
-    const inp = language.querySelector(".i-in") || language.querySelector(".i-opt input");
-    if (inp){
-      if (inp.type === "radio"){ inp.checked = true;
-        inp.dispatchEvent(new win.Event("change", { bubbles:true })); }
-      else { inp.value = "zz"; inp.dispatchEvent(new win.Event("input", { bubbles:true })); }
-    }
-    click(win, language.querySelector(".t-check") || language.querySelector("button.btn"));
-    await new Promise(r => setTimeout(r, 40));
-
-    const r = player.querySelector(".p-retry");
-    ok("territory: marking a Language task offers no Try-again on the player",
-       !r || r.hidden);
-    ok("territory: and does not unlock the listening script",
-       doc.querySelector(".p-script").hidden);
-    ok("territory: the Language task keeps its committed mark",
-       language.dataset.done === "1");
   }
 
   /* ---- the dialogue as a comic ------------------------------------------
@@ -1114,8 +989,8 @@ async function main() {
      Repeated retrieval is what builds memory, so an untimed task offers
      "Try it again". The two things that must hold: the attempt history
      survives the reset (or the second go is the only one that ever existed),
-     and the button is absent on anything a timer has already spent -- a
-     retake on a single-play listening set repeals C6 without saying so. */
+     and the button is absent on anything the reading clock has already
+     spent -- a retake there repeals C7 without saying so. */
   {
     const win = await settled(load("docs/unit-01/lesson-2/index.html", null, fastPage));
     const doc = win.document;
@@ -1151,31 +1026,39 @@ async function main() {
     ok("retake: attempts are not totalled, averaged or called an improvement",
        !/total|average|overall|better|worse|improv|%/i.test(hist), hist.slice(0, 120));
 
-    /* And the half that protects the constitution. */
-    const w2 = await settled(load("docs/unit-01/lesson-6/index.html", null, fastPage));
+    /* And the half that protects the constitution: a task the reading clock
+       has spent is never handed back. The listening player is not a timer any
+       more -- the page has no voice -- so a task under it retakes like any
+       other, which is also checked, or the clock case could pass by accident. */
+    const w2 = await settled(load("docs/review-1/index.html", null, fastPage));
     const d2 = w2.document;
+    const clock = d2.querySelector('[data-role="clock"]');
     const player = d2.querySelector('[data-role="audio"]');
-    const listening = owned2(d2, player)[0];
-    ok("retake: the listening page has a player with tasks below it", !!player && !!listening);
-    click(w2, player.querySelector(".p-start"));
-    await new Promise(r => setTimeout(r, 60));
-    const li = listening.querySelector(".i-opt input") || listening.querySelector(".i-in");
-    if (li){
-      if (li.type === "radio"){ li.checked = true;
-        li.dispatchEvent(new w2.Event("change", { bubbles:true })); }
-      else { li.value = "zz"; li.dispatchEvent(new w2.Event("input", { bubbles:true })); }
-    }
-    listening.querySelectorAll(".i-conf button[data-conf='1']")
-      .forEach(b => click(w2, b));
-    click(w2, listening.querySelector(".t-check"));
+    const reading = owned2(d2, clock)[0], listening = owned2(d2, player)[0];
+    ok("retake: the Review has a clocked task and a listening task", !!reading && !!listening);
+    const commit = t => {
+      const li = t.querySelector(".i-opt input") || t.querySelector(".i-in");
+      if (li){
+        if (li.type === "radio"){ li.checked = true;
+          li.dispatchEvent(new w2.Event("change", { bubbles:true })); }
+        else { li.value = "zz"; li.dispatchEvent(new w2.Event("input", { bubbles:true })); }
+      }
+      t.querySelectorAll(".i-conf button[data-conf='1']").forEach(b => click(w2, b));
+      click(w2, t.querySelector(".t-check"));
+    };
+    click(w2, clock.querySelector(".c-start"));
+    commit(reading);
+    commit(listening);
     await new Promise(r => setTimeout(r, 40));
-    const a2 = listening.querySelector(".t-again");
-    /* Both halves are load-bearing and were probed: the task really does reach
-       done=1, and `.t-again` really is present in the shell. Without either,
-       this assertion would pass by accident and guard nothing. */
-    ok("retake: the spent-play task is committed", listening.dataset.done === "1");
-    ok("retake: no Try it again on a task whose single play is spent",
-       !a2 || a2.hidden, a2 ? "shown" : "absent");
+    const ra = reading.querySelector(".t-again"), la = listening.querySelector(".t-again");
+    /* Both halves are load-bearing: the task really does reach done=1, and
+       `.t-again` really is present in the shell. Without either, this
+       assertion would pass by accident and guard nothing. */
+    ok("retake: the clocked task is committed", reading.dataset.done === "1");
+    ok("retake: no Try it again on a task whose clock is spent",
+       !ra || ra.hidden, ra ? "shown" : "absent");
+    ok("retake: the listening task offers Try it again", listening.dataset.done === "1"
+       && !!la && !la.hidden);
   }
 
   /* ---- the review queue is interleaved, not grouped ----------------------

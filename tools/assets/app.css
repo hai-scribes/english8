@@ -356,9 +356,6 @@ input[type=text]{font:inherit;background:var(--raised);color:var(--ink);border:1
 .verdict.ok{background:var(--green-wash);border-left:3px solid var(--green)}
 .verdict.no{background:var(--red-wash);border-left:3px solid var(--red)}
 .verdict .n{font-size:.85rem;color:var(--muted)}
-.speak{font:inherit;font-size:.8rem;background:none;border:1px solid var(--rule);color:var(--teal);
-  border-radius:var(--r);padding:.2rem .5rem;cursor:pointer;line-height:1.5}
-.speak:hover{border-color:var(--teal)}
 .score{font-family:var(--f-mono);font-size:2.6rem;line-height:1.1;font-variant-numeric:tabular-nums}
 .note{background:var(--amber-wash);border-left:3px solid var(--amber);border-radius:0 var(--r) var(--r) 0;
   padding:.7rem .85rem;font-size:.86rem}
@@ -413,7 +410,6 @@ footer.foot p{margin:0;max-width:74ch}
 .e-ipa{font-family:var(--f-mono);font-size:.83rem;color:var(--muted)}
 .e-n{margin-left:auto;font-family:var(--f-mono);font-size:.68rem;color:var(--faint);
   font-variant-numeric:tabular-nums;flex:none}
-.e-h .speak{padding:.1rem .38rem;font-size:.76rem}
 
 .sense{display:flex;gap:.55rem;padding:.15rem 0}
 .sense+.sense{margin-top:.7rem;padding-top:.7rem;border-top:1px dotted var(--rule-soft)}
@@ -515,7 +511,7 @@ footer.foot p{margin:0;max-width:74ch}
   vertical-align:baseline;height:1.05em;margin:0 .15rem}
 
 /* =========================================================================
-   Marked tasks, single-play listening, strand checks
+   Marked tasks, listening scripts, strand checks
    The three constructs that make an exercise an attempt rather than a page.
    ========================================================================= */
 .task,.player,.thread,.write,.clock{margin:1.3rem 0 .2rem;padding:.95rem 1.1rem .85rem;
@@ -664,17 +660,11 @@ footer.foot p{margin:0;max-width:74ch}
 .t-key li{margin:.2rem 0}
 .t-key i{color:var(--muted)}
 
-.player[data-playing="1"]{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-wash)}
 .p-ctl{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin:.6rem 0 .1rem}
-.p-state{font-family:var(--f-mono);font-size:.78rem;color:var(--teal);font-variant-numeric:tabular-nums}
-.p-note{margin:.7rem 0 0;padding-top:.55rem;border-top:1px dotted var(--rule);
-  font-size:.78rem;color:var(--muted);line-height:1.55}
 .p-script{margin-top:.9rem;padding:.8rem .95rem;background:var(--sunk);border-radius:var(--r)}
 .p-script h4{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;
   color:var(--faint);font-weight:400;margin:0 0 .5rem}
 .p-script p{margin:.5rem 0;font-size:.92rem}
-.p-fallback{color:var(--muted);font-size:.85rem!important;border-left:2px solid var(--clay);
-  padding-left:.7rem}
 
 .thread{border-left:3px solid var(--teal)}
 .th-m{margin:.3rem 0 .5rem;font-size:.95rem}
@@ -1389,11 +1379,6 @@ html.d-locked,html.d-locked body{overflow:hidden}
   text-transform:uppercase;color:var(--faint);margin:.45rem 0 0}
 .wd-row[hidden]{display:none}
 .wd-none{color:var(--muted)}
-
-/* ---------------- hearing the dialogue ---------------- */
-.d-audio{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;margin:0 0 .8rem}
-.d-heard{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--faint)}
 
 /* ---------------- touch: size and response ----------------
    The learner is on a phone. Every control she taps gets a target near the

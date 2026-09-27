@@ -130,15 +130,14 @@
 
 > ### ▶︎ [**Practise these 33 words**](../app/unit-08-vocab.html)
 >
-> Press 🔊 on any row above to hear the word. When you have finished this
-> lesson, the unit page opens a **practice** session over all thirty-three —
-> the meaning, the word, what you hear, and, more often than any of those,
-> **the word inside a phrase it actually lives in**. Wrong answers come
-> straight back, and everything returns a week later, because what you can
-> still recall after a gap is the only recall worth counting. The **unit
-> test** opens once all seven lessons are done.
+> When you have finished this lesson, the unit page opens a **practice**
+> session over all thirty-three — the meaning, the word, and, more often than
+> either of those, **the word inside a phrase it actually lives in**. Wrong
+> answers come straight back, and everything returns a week later, because
+> what you can still recall after a gap is the only recall worth counting. The
+> **unit test** opens once all seven lessons are done.
 >
-> **Luyện 33 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **Luyện 33 từ này.** Học xong bài này, phần
 > **practice** ở trang bài sẽ mở ra để luyện cả 33 từ — trong đó phần lớn là
 > luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
 > ngay, và mọi từ quay lại sau một tuần.
@@ -777,11 +776,11 @@ pause where one idea ends is help for your listener, not a mistake.
 
 ### Listening — The stranger by the car park
 
-You get **one** play. Two people are speaking here, so read both sets of
-questions in the preview window first and decide which of them each answer will
+You hear it **once**, read aloud by someone else. Two people are speaking here, so read both sets of
+questions first and decide which of them each answer will
 come from.
 
-**Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
 
 ::: audio orientation="You will hear a stranger speaking to a boy beside a market, and short replies from the boy. He has come a long way and he is not pleased with him." mode="computer" preview="30" review="120"
 **The keeper:** Take her home. You are doing this wrong, and you have done it

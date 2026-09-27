@@ -133,80 +133,6 @@ function pathSteps(){
 }
 const nextStep = () => pathSteps().find(s => !s.done()) || null;
 
-/* ---------------- speech -------------------------------------------------- */
-/* The voice is the pronunciation model, so it is ranked, not accepted:
-   getVoices() is unordered, and on macOS eight of the nine en-GB voices are
-   Apple's stylised set. A character voice is not a pronunciation model.
-   Measured caveat carried from the audio review: TTS does NOT reliably
-   render the /ʊ/-/uː/ length contrast, so audio here is a model of word
-   identity, never of vowel length. */
-const CHARACTER_VOICE = /\b(albert|bad news|bahh|bells|boing|bubbles|cellos|eddy|flo|fred|good news|grandma|grandpa|jester|junior|kathy|organ|ralph|reed|rocko|sandy|shelley|superstar|trinoids|whisper|wobble|zarvox)\b/i;
-const NEURAL_VOICE = /(natural|neural|enhanced|premium|siri|google|online)/i;
-const NEUTRAL_VOICE = /\b(daniel|kate|serena|libby|sonia|ryan|arthur|oliver|hazel|george|martha)\b/i;
-const RATE_NORMAL = 1.0, RATE_SLOW = 0.6;
-
-const TTS = { ready:false, voice:null, british:false, failed:false,
-              supported:(typeof speechSynthesis !== "undefined") };
-let onVoices = null;
-
-function scoreVoice(v){
-  const lang = String(v.lang || "").replace("_", "-");
-  if (!/^en\b/i.test(lang)) return -Infinity;
-  const n = String(v.name || "");
-  let s = /^en-GB/i.test(lang) ? 100 : /^en-(IE|AU|NZ|ZA)/i.test(lang) ? 40 : 20;
-  if (CHARACTER_VOICE.test(n)) s -= 200;   // beaten by any plain voice, any accent
-  if (NEURAL_VOICE.test(n))    s += 50;
-  if (NEUTRAL_VOICE.test(n))   s += 25;
-  if (/compact/i.test(n))      s -= 15;
-  if (v.localService === false) s += 5;
-  return s;
-}
-function refreshVoice(){
-  const was = TTS.ready;
-  let best = null, bs = -Infinity;
-  const vs = (TTS.supported && speechSynthesis.getVoices()) || [];
-  for (const v of vs){ const s = scoreVoice(v); if (s > bs){ bs = s; best = v; } }
-  TTS.voice = bs === -Infinity ? null : best;
-  TTS.ready = !!TTS.voice;
-  TTS.british = !!(TTS.voice && /^en[-_]GB/i.test(TTS.voice.lang));
-  return TTS.ready !== was;
-}
-if (TTS.supported){
-  refreshVoice();
-  /* Chrome returns an empty list on the first call and fills it async. */
-  speechSynthesis.addEventListener("voiceschanged", () => { if (refreshVoice() && onVoices) onVoices(); });
-}
-const canListen = () => TTS.supported && TTS.ready && !TTS.failed;
-
-let primed = false;
-function primeSpeech(){           // iOS grants synthesis only from a gesture
-  if (primed || !TTS.supported) return;
-  primed = true;
-  try { const u = new SpeechSynthesisUtterance(" "); u.volume = 0; speechSynthesis.speak(u); } catch(e){}
-}
-let sTimer = null;
-function speak(text, opts){
-  if (!canListen() || !text) return false;
-  opts = opts || {};
-  try {
-    speechSynthesis.cancel();
-    if (sTimer) clearTimeout(sTimer);
-    /* Chrome drops an utterance queued in the same tick as cancel(). */
-    sTimer = setTimeout(() => {
-      const u = new SpeechSynthesisUtterance(text);
-      u.voice = TTS.voice; u.lang = TTS.voice.lang;
-      u.rate = opts.slow ? RATE_SLOW : RATE_NORMAL;
-      u.onerror = ev => {
-        const e = ev && ev.error;
-        if (e === "interrupted" || e === "canceled") return;   // our own cancel()
-        TTS.failed = true;
-      };
-      speechSynthesis.speak(u);
-    }, 60);
-    return true;
-  } catch(e){ return false; }
-}
-
 /* ---------------- small helpers ------------------------------------------ */
 const $  = (s, r) => (r || document).querySelector(s);
 const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
@@ -342,8 +268,8 @@ function markAnswer(given, keys){
     return { ok:false, why:"two" };
   return { ok:false, why:"wrong" };
 }
-/* Speak the headword, not its bracketed grammar note: "hang out (with)". */
-const sayWord = w => String(w.word || "").replace(/\s*\(.*?\)\s*/g," ").trim();
+/* The headword without its bracketed grammar note: "hang out (with)". */
+const bareWord = w => String(w.word || "").replace(/\s*\(.*?\)\s*/g," ").trim();
 
 /* ---------------- page data ---------------------------------------------- */
 function pageData(){
@@ -400,13 +326,12 @@ function initEntries(){
   $$(".entry").forEach(art => {
     const h = $(".e-h", art), body = $(".e-body", art);
     if (!h || !body) return;
-    const flip = ev => {
-      if (ev.target.closest("button")) return;          // the speak buttons speak
+    const flip = () => {
       setOpen(art, !art.classList.contains("is-open"));
     };
     h.addEventListener("click", flip);
     h.addEventListener("keydown", ev => {
-      if (ev.key === "Enter" || ev.key === " "){ ev.preventDefault(); flip(ev); }
+      if (ev.key === "Enter" || ev.key === " "){ ev.preventDefault(); flip(); }
     });
     body.addEventListener("beforematch", () => setOpen(art, true));
   });
@@ -916,12 +841,12 @@ const itemName = w => w.word || (w.from ? w.from : String(w.q || "").slice(0, 40
 /* Three other words from the same unit, the same part of speech first: a
    noun among verbs is answered by grammar, not by knowing the word. */
 function wordDecoys(words, w, n){
-  const others = shuffle(words.filter(x => x.word !== w.word && sayWord(x) !== sayWord(w)));
+  const others = shuffle(words.filter(x => x.word !== w.word && bareWord(x) !== bareWord(w)));
   const same = others.filter(x => x.pos && x.pos === w.pos);
   const rest = others.filter(x => !same.includes(x));
-  const out = [], seen = new Set([sayWord(w).toLowerCase()]);
+  const out = [], seen = new Set([bareWord(w).toLowerCase()]);
   for (const x of same.concat(rest)){
-    const k = sayWord(x).toLowerCase();
+    const k = bareWord(x).toLowerCase();
     if (seen.has(k)) continue;
     seen.add(k); out.push(x);
     if (out.length >= n) break;
@@ -954,10 +879,9 @@ function buildItems(words, mode){
     let fmt;
     if (mode === "test"){
       fmt = i % 3 === 0 ? "mc"
-          : (canListen() && i % 5 === 3) ? "listen"
           : rich.length ? rich[i % rich.length] : "type";
     } else {
-      fmt = pick((canListen() ? ["mc","type","listen"] : ["mc","type"]).concat(rich, rich));
+      fmt = pick(["mc","type"].concat(rich, rich));
     }
     const q = { fmt, w };
     if (fmt === "mc"){
@@ -968,8 +892,8 @@ function buildItems(words, mode){
          typing it. The right option is the exact form the prompt needs -- the
          inflected cloze key, the headword a collocation was blanked on. */
       if (fmt === "colloc") q.phrase = pick(w.colloc);
-      const right = fmt === "cloze" ? (w.clozeKey || sayWord(w)) : sayWord(w);
-      q.options = shuffle(wordDecoys(words, w, 3).map(x => ({ t:sayWord(x), ok:false }))
+      const right = fmt === "cloze" ? (w.clozeKey || bareWord(w)) : bareWord(w);
+      q.options = shuffle(wordDecoys(words, w, 3).map(x => ({ t:bareWord(x), ok:false }))
         .concat([{ t:right, ok:true }]));
     }
     return q;
@@ -1005,10 +929,6 @@ function runEngine(mode, words, unit, hostSel, opts){
   function paintQ(){
     if (st.i >= st.items.length) return paintDone();
     const q = st.items[st.i], w = q.w;
-    const audio = canListen()
-      ? '<button class="speak" data-say="' + esc(sayWord(w)) + '">🔊 Hear it</button>'
-        + '<button class="speak" data-say="' + esc(sayWord(w)) + '" data-slow="1">🐢 Slowly</button>'
-      : "";
     const field = ph =>
       '<input type="text" id="ans" autocomplete="off" autocapitalize="off" '
       + 'autocorrect="off" spellcheck="false" placeholder="' + esc(ph) + '">'
@@ -1042,25 +962,20 @@ function runEngine(mode, words, unit, hostSel, opts){
             : field("your answer"));
     } else if (q.fmt === "mc"){
       body = '<div class="prompt">' + esc(w.word) + '<span class="ipa">' + esc(w.ipa) + '</span></div>'
-        + (audio ? '<div class="row">' + audio + '</div>' : "")
         + '<div class="choices">'
         + q.options.map((o, i) => '<button data-i="' + i + '">' + esc(o.t) + '</button>').join("")
         + '</div>';
     } else if (q.fmt === "colloc"){
       body = '<p class="lede">Complete the phrase. Learn the word with the words it lives with.</p>'
-        + '<div class="prompt gap">' + blankOut(q.phrase, sayWord(w)) + '</div>'
+        + '<div class="prompt gap">' + blankOut(q.phrase, bareWord(w)) + '</div>'
         + '<p class="lede">' + esc(w.vi) + '</p>' + choices();
     } else if (q.fmt === "cloze"){
       body = '<p class="lede">One word is missing. Pick the form this sentence needs.</p>'
         + '<div class="prompt sent">' + esc(w.cloze).split(GAP).join('<b class="hole"></b>') + '</div>'
         + choices();
-    } else if (q.fmt === "type"){
+    } else {
       body = '<div class="prompt">' + esc(w.vi) + '<span class="ipa">' + esc(w.pos || "") + '</span></div>'
         + '<p class="lede">Which English word means this?</p>' + choices();
-    } else {
-      body = '<p class="lede">Play the word, then pick the one you heard.</p>'
-        + '<div class="row">' + audio + '</div>' + choices()
-        + '<div class="row"><button class="btn quiet" id="noaudio">No sound — show the meaning</button></div>';
     }
     if (q.fmt === "recall")
       note = '<p class="note small">Spelling counts. UK and US spellings are both accepted; '
@@ -1068,7 +983,6 @@ function runEngine(mode, words, unit, hostSel, opts){
     host.innerHTML = chrome(body, note);
     const li = $(".i", host);
     if (li && q.fmt === "recall-tiles"){ li.dataset.seq = ""; paintTiles(li, w); }
-    if (q.fmt === "listen") setTimeout(() => speak(sayWord(w)), 200);
     const inp = $("#ans", host);
     if (inp){ try { inp.focus({ preventScroll:true }); } catch(e){ inp.focus(); } }
   }
@@ -1109,8 +1023,6 @@ function runEngine(mode, words, unit, hostSel, opts){
             : esc(w.a) + (w.why ? ' <span class="ipa">' + esc(w.why) + '</span>' : ""))
         + '</div>' + why + '</div>'
       + (w.colloc ? '<p class="note small"><b>Goes with:</b> ' + w.colloc.map(esc).join(" · ") + '</p>' : "")
-      + (w.word && canListen() ? '<div class="row"><button class="speak" data-say="' + esc(sayWord(w)) + '">🔊 Hear it</button>'
-          + '<button class="speak" data-say="' + esc(sayWord(w)) + '" data-slow="1">🐢 Slowly</button></div>' : "")
       + '<div class="row"><button class="btn" id="next">Continue</button></div>');
     if (!ok) st.items.push(q);                 // wrong items come back
     $("#next", host).addEventListener("click", () => { st.i++; paintQ(); });
@@ -1194,8 +1106,6 @@ function runEngine(mode, words, unit, hostSel, opts){
   host.addEventListener("click", ev => {
     const b = ev.target.closest("button");
     if (!b || !host.contains(b)) return;
-    primeSpeech();
-    if (b.dataset.say){ speak(b.dataset.say, { slow:!!b.dataset.slow }); return; }
     const q = st.items[st.i];
     if (!q) return;
     if (b.dataset.conf !== undefined){
@@ -1246,13 +1156,8 @@ function runEngine(mode, words, unit, hostSel, opts){
     }
     if (b.id === "go"){
       const v = ($("#ans", host) || {}).value || "";
-      const keys = q.keys || [q.w.word, sayWord(q.w)];
+      const keys = q.keys || [q.w.word, bareWord(q.w)];
       askConfidence(markAnswer(v, keys), v.trim());
-      return;
-    }
-    if (b.id === "noaudio"){
-      st.items[st.i] = Object.assign({}, q, { fmt:"type" });
-      paintQ();
       return;
     }
   });
@@ -1437,23 +1342,6 @@ function paintToday(){
   const card2 = $("#todayCard");
   if (card2) card2.classList.toggle("is-done", done);
   paintPath(step);
-}
-
-/* ---------------- global speak buttons (vocabulary tables) ---------------- */
-function initSpeakButtons(){
-  document.addEventListener("click", ev => {
-    const b = ev.target.closest("[data-say]");
-    if (!b) return;
-    primeSpeech();
-    speak(b.dataset.say, { slow:!!b.dataset.slow });
-  });
-  if (!canListen()) $$("[data-say]").forEach(b => { b.hidden = true; });
-  const warn = $("#ttsNote");
-  if (warn && canListen() && !TTS.british){
-    warn.hidden = false;
-    warn.innerHTML = "Reading with <b>" + esc(TTS.voice.name) + "</b> (" + esc(TTS.voice.lang)
-      + "). This course teaches British pronunciation, so a few words will not match the IPA shown.";
-  }
 }
 
 /* ================== marked tasks =========================================
@@ -1766,13 +1654,10 @@ function calibrationLine(marks, conf, unit, record){
     + '</table><p>' + verdict + '</p></div>';
 }
 
-/* A task's own "give it back to me" hook, keyed by task id.
-   It exists for exactly one caller — the listening LEARN pass — and it is a
-   registry rather than a button on the task because a task must never offer
-   this to itself. A marked attempt is committed: that is what makes the word
-   limit, the spelling rule and the single play mean anything, and a Try-again
-   the learner can reach on any exercise would quietly undo all three. The
-   learn pass may hand one exercise back because nothing there was spent. */
+/* A task's own "give it back to me" hook, keyed by task id. Its one caller
+   is the task's own "Try it again", which checks first that no timer has
+   spent the task: a retake on a clocked reading set would quietly undo the
+   one clock. */
 const TASK_RESET = {};
 
 /* ---------------- the built and tapped item shapes ------------------------
@@ -1979,7 +1864,7 @@ function initTasks(){
        trend or say "better" (E9: a single retest is regression to the mean as
        much as learning, and nothing here can tell them apart). And it does not
        appear at all on a task a timer has already spent -- otherwise "Try it
-       again" quietly repeals the single play and the one clock. */
+       again" quietly repeals the one clock. */
     const again = $(".t-again", root), logBox = $(".t-log", root);
 
     /* The nearest timer ABOVE this task is the one that owns it -- the inverse
@@ -1992,8 +1877,7 @@ function initTasks(){
     function timerSpent(){
       const tm = ownerTimer();
       if (!tm) return false;
-      const key = tm.dataset.audio ? "en8:played:" + tm.dataset.audio
-                : tm.dataset.clock ? "en8:clock:" + tm.dataset.clock : null;
+      const key = tm.dataset.clock ? "en8:clock:" + tm.dataset.clock : null;
       if (!key) return false;
       try { return !!JSON.parse(localStorage.getItem(key) || "null"); } catch(e){ return false; }
     }
@@ -2097,43 +1981,11 @@ function initTasks(){
   });
 }
 
-/* ================== single-play listening ================================
-   03 §1.1 and §4.2, all Tier 1: the orientation is spoken and deliberately
-   NOT written down, there is a fixed window to read the questions, and the
-   recording plays once. Printing the script above the questions -- which is
-   what this course used to do -- deletes the task and leaves a reading
-   comprehension exercise wearing its name. */
-
-/* `alive` is optional and only matters to a caller that can be interrupted.
-   cancel() empties the queue but cannot reach a speak() that has not happened
-   yet, and this runs the next line off a timer — so a caller that stops mid
-   sequence would still get one more line out loud about 60ms later. The
-   predicate is checked at the two points where that timer lands. */
-function speakSeq(lines, onEnd, alive){
-  const live = () => (typeof alive !== "function" || alive());
-  if (!canListen()){ onEnd(false); return; }
-  try { speechSynthesis.cancel(); } catch(e){}
-  let i = 0;
-  const next = () => {
-    if (!live()) return;
-    if (i >= lines.length){ onEnd(true); return; }
-    const u = new SpeechSynthesisUtterance(lines[i++]);
-    u.voice = TTS.voice; u.lang = TTS.voice.lang; u.rate = RATE_NORMAL;
-    u.onend = next;
-    u.onerror = ev => {
-      const err = ev && ev.error;
-      if (err === "interrupted" || err === "canceled") return;
-      TTS.failed = true; if (live()) onEnd(false);
-    };
-    speechSynthesis.speak(u);
-  };
-  setTimeout(next, 60);
-}
-
 /* ---------------- what a timer covers -------------------------------------
-   Both timing devices on this course -- the reading clock and the single-play
-   player -- stop input when their window closes, and both need the same answer
-   to the same question: which exercises are mine?
+   The reading clock stops input when its window closes, and needs to know
+   which exercises are its own. The listening player is not a timer any more
+   -- the page has no voice to play it -- but it still marks where the
+   listening exercises begin, so the clock stops there.
 
    A timer covers the tasks printed BELOW it and ABOVE the next timer.
 
@@ -2228,27 +2080,9 @@ function initDialogue(){
     if (!root) return;
     wireGlosses($(".d-body", root) || root, p.glosses || [], p.id);
     if (p.staged) initScene(root, p);
-    initDialogueAudio(root, p);
   });
 }
 
-/* ---------------- hearing the conversation --------------------------------
-   The prescribed book's Getting Started is a recording in every one of the
-   twelve units; ours was text and a comic, so a learner working alone reached
-   the Lesson 6 listening never having heard these people speak.
-
-   Replayable, unlike the :::audio player. C6 and C8 bind the listening TEST —
-   one play, declared timing, an orientation that is not written down. This is
-   a reading text whose transcript is deliberately on the page: 1.2 tells the
-   learner to find a phrase "in the dialogue" and 1.3 sends them back for a
-   verb. Playing it once would not turn it into a listening test; it would just
-   make it a worse reading page.
-
-   The panel follows the voice when the comic is on screen, through the scene's
-   own show(), because a picture that sits still while the words move is worse
-   than no picture. Everything is torn down on a second press, and the sequence
-   checks it is still the current run before touching the DOM — otherwise a
-   stop-then-start leaves two narrators driving one stage. */
 /* THE PANEL LIST, and there is exactly one of it. A beat pairs two short lines
    so a phone reader is not tapping once a sentence, and on a 3:2 frame that is
    right. On a phone the frame is square and about 285px across: two balloons
@@ -2274,52 +2108,6 @@ function panelBeats(p){
   const narrow = typeof matchMedia === "function"
               && matchMedia("(max-width: 34rem)").matches;
   return narrow ? raw.reduce((out, g) => out.concat(g.map(j => [j])), []) : raw;
-}
-
-function initDialogueAudio(root, p){
-  const btn = $(".d-hear", root);
-  if (!btn) return;
-  if (!canListen()){ const box = $(".d-audio", root); if (box) box.hidden = true; return; }
-  const said = $(".d-heard", root);
-  const beats = panelBeats(p);
-  let run = 0;
-
-  const plain = html => {
-    const d = document.createElement("div");
-    d.innerHTML = html;
-    return (d.textContent || "").replace(/\s+/g, " ").trim();
-  };
-
-  const stop = () => {
-    run++;
-    try { speechSynthesis.cancel(); } catch(e){}
-    btn.innerHTML = "&#9654; Hear the conversation";
-    if (said) said.textContent = "";
-  };
-
-  btn.addEventListener("click", () => {
-    if (btn.dataset.on === "1"){ btn.dataset.on = "0"; stop(); return; }
-    btn.dataset.on = "1";
-    const mine = ++run;
-    primeSpeech();
-    btn.innerHTML = "&#9632; Stop";
-    let b = 0;
-    const nextBeat = () => {
-      if (mine !== run) return;                 // a newer run owns the stage
-      if (b >= beats.length){ btn.dataset.on = "0"; stop(); return; }
-      const idx = b++;
-      if (root._scene) root._scene.show(idx);
-      if (said) said.textContent = "Panel " + (idx + 1) + " of " + beats.length;
-      const lines = beats[idx].map(j => plain(p.lines[j].html)).filter(Boolean);
-      if (!lines.length){ nextBeat(); return; }
-      speakSeq(lines, ok => {
-        if (mine !== run) return;
-        if (!ok){ btn.dataset.on = "0"; stop(); return; }
-        nextBeat();
-      }, () => mine === run);
-    };
-    nextBeat();
-  });
 }
 
 /* ---------------- the dialogue as a comic ---------------------------------
@@ -4263,7 +4051,7 @@ function initScene(root, p){
 
    The middle stage is the existing engine, called with an `onDone` so this can
    own the step after it. Reusing it is deliberate: the engine already asks
-   items as collocations and in context (`09` F7), already speaks them (F3),
+   items as collocations and in context (`09` F7),
    and already schedules what it touches. A second, simpler quiz written here
    would have none of that and would look identical.
 
@@ -4313,7 +4101,7 @@ function initVocab(){
         + '<div class="bar"><i style="width:' + (wi / set.length * 100) + '%"></i></div>'
         + '<p class="v-w">' + esc(w.word)
         + (w.ipa ? ' <span class="v-ipa">' + esc(w.ipa) + '</span>' : "")
-        + ' <button class="speak" type="button" data-say="' + esc(sayWord(w)) + '">🔊</button></p>'
+        + '</p>'
         + (w.pos ? '<p class="v-pos">' + esc(w.pos) + '</p>' : "")
         + '<p class="v-vi">' + esc(w.vi) + '</p>'
         + (w.colloc && w.colloc.length
@@ -4454,199 +4242,17 @@ function initFluency(){
   });
 }
 
+/* ---------------- listening, read aloud by someone -----------------------
+   The page has no voice of its own. The script stays hidden until it is asked
+   for, so the questions can be read first and the script handed to whoever
+   reads it aloud, once. */
 function initAudio(){
-  const list = DATA.audio || [];
-  list.forEach(a => {
-    const root = document.querySelector('[data-audio="' + a.id + '"]');
-    if (!root) return;
-    const btn = $(".p-start", root), state = $(".p-state", root),
-          script = $(".p-script", root);
-    /* Voices load asynchronously, so nothing is decided at boot. The device
-       is only judged when the learner presses Start. */
-    const noVoice = () => {
-      btn.disabled = true;
-      state.textContent = "No speech voice on this device.";
-      script.hidden = false;
-      script.insertAdjacentHTML("afterbegin",
-        '<p class="p-fallback">Your device has no speech voice, so this cannot run as '
-        + 'a single-play task. Cover the script, have someone read it aloud <b>once</b>, '
-        + 'and answer as you listen.</p>');
-    };
-    /* "Plays once" has to survive a reload, or it is a suggestion. The flag is
-       stored, not held in a variable a refresh throws away -- and `played`
-       (set when the recording ENDS) is what unlocks the script, because Start
-       only means the audio began. */
-    const PLAY_KEY = "en8:played:" + a.id;
-    let used = false, played = false;
-    try {
-      const was = JSON.parse(localStorage.getItem(PLAY_KEY) || "null");
-      if (was){ used = true; played = !!was.done; }
-    } catch(e){}
-    const remember = done => {
-      try { localStorage.setItem(PLAY_KEY, JSON.stringify({ done: !!done })); } catch(e){}
-    };
-    if (used){
-      btn.disabled = true;
-      state.innerHTML = played
-        ? "<b>Already played.</b> It plays once."
-        : "<b>Already started.</b> It plays once, and that play is spent.";
-      if (played) revealScript();
-    }
-    /* ---- the learning pass ------------------------------------------------
-       Replayable, and the script opens once a real attempt has been made.
-       It deliberately does NOT touch PLAY_KEY: practising must not spend the
-       single play, or the two passes collapse into one and C6 is decoration.
-       It also never disables a task — nothing here is timed. */
-    const lbtn = $(".p-learn", root), lstate = $(".p-lstate", root);
-    if (lbtn){
-      let plays = 0, running = false;
-      const paintL = () => {
-        lbtn.textContent = plays ? "Play it again" : "Practise it first";
-        lstate.textContent = plays
-          ? "Practised " + plays + (plays === 1 ? " time" : " times")
-            + ". This does not use your one play."
-          : "";
-      };
-      paintL();
-      lbtn.addEventListener("click", () => {
-        /* speakSeq() cancels synthesis globally and a cancelled utterance never
-           fires its completion callback, so starting one pass mid-way through
-           the other stalled the first and could leave the single play spent
-           without ever playing. Neither pass may start while the other runs. */
-        if (running || root.dataset.pass === "test") return;
-        primeSpeech();
-        if (!canListen()){
-          lstate.textContent = "No speech voice on this device — use “Take it "
-                             + "once” below, which shows you the script instead.";
-          lbtn.disabled = true;
-          return;
-        }
-        running = true;
-        root.dataset.pass = "learn";      // which pass is running, for state and styling
-        lbtn.disabled = true;
-        lstate.textContent = "Playing — you can replay this as often as you like";
-        speakSeq(a.script, () => {
-          running = false;
-          root.dataset.pass = "";
-          lbtn.disabled = false;
-          plays++;
-          paintL();
-          /* The script is the answer sheet, so it opens only after an attempt
-             has been marked — otherwise the learning pass hands the listening
-             lesson over as a reading lesson, which is the exact defect the
-             directive exists to prevent. */
-          if (owned(root).some(x => x.dataset.done === "1")) revealScript();
-          paintRetry();
-        });
-      });
-      /* `owned(root)`, not any task on the page: on a Review the Language
-         exercises sit ABOVE the player, and marking one of those revealed a
-         listening script the learner had never attempted. */
-      document.addEventListener("en8:task-done", () => {
-        if (plays > 0 && owned(root).some(x => x.dataset.done === "1")) revealScript();
-        paintRetry();
-      });
-
-      /* The second half of a learning pass. Attempting once and reading the key
-         is not practice — the loop is attempt, see what went wrong, go again.
-         Three conditions, and each one is load-bearing:
-           - only after the recording has been practised, so the questions are
-             never handed back before they have been heard;
-           - only while the single play is UNSPENT (`!used`), so this can never
-             reach a committed attempt;
-           - only over `owned(root)`, so it cannot touch an exercise belonging
-             to another player or to the reading clock. */
-      const retry = document.createElement("button");
-      retry.className = "btn quiet p-retry";
-      retry.type = "button";
-      retry.textContent = "Try those questions again";
-      retry.hidden = true;
-      $(".p-ctl[data-pass='learn']", root).appendChild(retry);
-
-      function paintRetry(){
-        const mine = owned(root);
-        retry.hidden = !(plays > 0 && !used && mine.some(x => x.dataset.done === "1"));
-      }
-      retry.addEventListener("click", () => {
-        if (used) return;                       // the test pass owns them now
-        owned(root).forEach(x => {
-          const id = x.dataset.task;
-          if (id && TASK_RESET[id]) TASK_RESET[id]();
-        });
-        lstate.textContent = "Cleared. Play it again, then answer them again.";
-        paintRetry();
-      });
-      paintRetry();
-    }
-
-    const tick = (secs, label, then) => {
-      let left = secs;
-      state.textContent = label + " — " + left + "s";
-      const iv = setInterval(() => {
-        left--;
-        if (left <= 0){ clearInterval(iv); then(); return; }
-        state.textContent = label + " — " + left + "s";
-      }, 1000);
-    };
+  $$('[data-role="audio"]').forEach(root => {
+    const btn = $(".p-start", root), script = $(".p-script", root);
+    if (!btn || !script) return;
     btn.addEventListener("click", () => {
-      if (used || root.dataset.pass === "learn") return;   // see the note on lbtn
-      primeSpeech();
-      if (!canListen()){ noVoice(); return; }
-      used = true; remember(false);
-      const rt = $(".p-retry", root);
-      if (rt) rt.remove();               // a committed attempt is never handed back
-      btn.disabled = true;
-      root.dataset.pass = "test";       // the one-play pass; never written by learn
-      root.dataset.playing = "1";
-      state.textContent = "Introduction — listen, it is not written down";
-      speakSeq([a.orientation], () => {
-        tick(a.preview, "Read the questions", () => {
-          state.textContent = "Playing — once only";
-          speakSeq(a.script, () => {
-            played = true; remember(true);
-            root.dataset.playing = "";
-            const label = a.mode === "computer"
-              ? "Review your answers" : "Transfer your answers";
-            tick(a.mode === "computer" ? a.review : 600, label, () => {
-              /* C6: the review window is a window. When it closes, writing
-                 stops -- otherwise "two minutes to review" is decoration and
-                 the task has no timing at all. Check stays live, so whatever
-                 is already written can still be submitted. `owned`, not every
-                 task on the page: see the note above it. */
-              owned(root).forEach(x => {
-                if (x.dataset.done === "1") return;
-                $$(".i-in, .i-opt input", x).forEach(y => { y.disabled = true; });
-                x.dataset.timeup = "1";
-              });
-              state.innerHTML = '<b>Time.</b> Check your answers below.';
-              revealScript();
-            });
-          });
-        });
-      });
-    });
-    function revealScript(){
-      if (!script.hidden) return;
-      script.hidden = false;
-      script.insertAdjacentHTML("afterbegin",
-        '<p class="p-fallback">The recording has played. Read the script now and find '
-        + 'the places your answers came apart — that is the part of this worth doing '
-        + 'twice.</p>');
-    }
-    /* The script also unlocks once every task this player covers has been
-       marked, so a learner who finishes early is not held hostage to a
-       countdown -- but only after the recording has been played. Checking
-       blank answers before pressing Start would otherwise hand over the script
-       and turn the whole lesson into a reading exercise. The exercises above
-       the player are not part of the bargain: on a Review they belong to the
-       Language half, and nobody should have to finish those to read a
-       listening script they have already earned. */
-    document.addEventListener("en8:task-done", () => {
-      /* `played`, not `used`: submitting blank answers during the orientation
-         must not hand over the script before the recording has run. */
-      if (!played) return;
-      const mine = owned(root);
-      if (mine.length && mine.every(x => x.dataset.done === "1")) revealScript();
+      script.hidden = !script.hidden;
+      btn.textContent = script.hidden ? "Show the script" : "Hide the script";
     });
   });
 }
@@ -5177,8 +4783,6 @@ function boot(){
   initReadingNav();     // after initTasks: it numbers the items those render
   initWrite();
   initThreads();
-  initSpeakButtons();
-  onVoices = () => { initSpeakButtons(); };
 }
 if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
 else boot();

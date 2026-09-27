@@ -132,15 +132,14 @@
 
 > ### ▶︎ [**Practise these 36 words**](../app/unit-02-vocab.html)
 >
-> Press 🔊 on any row above to hear the word. When you have finished this
-> lesson, the unit page opens a **practice** session over all thirty-six — the
-> meaning, the word, what you hear, and, more often than any of those, **the
-> word inside a phrase it actually lives in**. Wrong answers come straight
-> back, and everything returns a week later, because what you can still recall
-> after a gap is the only recall worth counting. The **unit test** opens once
-> all seven lessons are done.
+> When you have finished this lesson, the unit page opens a **practice**
+> session over all thirty-six — the meaning, the word, and, more often than
+> either of those, **the word inside a phrase it actually lives in**. Wrong
+> answers come straight back, and everything returns a week later, because
+> what you can still recall after a gap is the only recall worth counting. The
+> **unit test** opens once all seven lessons are done.
 >
-> **Luyện 36 từ này.** Bấm 🔊 để nghe từng từ. Học xong bài này, phần
+> **Luyện 36 từ này.** Học xong bài này, phần
 > **practice** ở trang bài sẽ mở ra để luyện cả 36 từ — trong đó phần lớn là
 > luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
 > ngay, và mọi từ quay lại sau một tuần.
@@ -736,10 +735,10 @@ You have already read *The old way to Bến Vàng* and answered questions on it,
 
 ### Listening — Thảo walks the path
 
-You get **one** play, so use the preview window: read both sets of questions
-first, then answer while you listen rather than afterwards from memory.
+You hear it **once**, read aloud by someone else, so read both sets of
+questions first, then answer while you listen rather than afterwards from memory.
 
-**Nghe một lần duy nhất.** Đọc câu hỏi trong lúc chờ, rồi vừa nghe vừa trả lời.
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
 
 ::: audio orientation="You will hear a girl describing a walk she took with a friend along a path outside the village, and what happened when they followed it the other way." mode="computer" preview="30" review="120"
 I want to say first that I believed him before I saw anything. He does not

@@ -192,10 +192,10 @@ you had just said: *I said that I used it every evening…*
 
 ### Listening — Round the solar system
 
-You get **one** play. Read the five gaps first, then choose while you listen
+You hear it **once**, read aloud by someone else. Read the five gaps first, then choose while you listen
 rather than afterwards from memory.
 
-**Nghe một lần duy nhất.** Đọc năm câu hỏi trước, rồi vừa nghe vừa chọn.
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc năm câu hỏi trước, rồi vừa nghe vừa chọn.
 
 ::: audio orientation="You will hear a guide called Mark taking a group of visitors round the solar system before they go into the planetarium." mode="computer" preview="30" review="120"
 Hello, everyone. My name is Mark and I look after the planetarium here. Before

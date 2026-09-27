@@ -606,6 +606,11 @@ def task_answer_html(p: dict) -> str:
 # the recording is played once, and computer-delivered means two minutes of
 # review rather than ten minutes of transfer. Printing the script above the
 # questions — which is what all twelve units did — removes the task.
+#
+# The page has had no speech of its own since 2026-09-27, so none of that
+# timing is enforced any more: the script is read aloud by someone else. The
+# attributes are still declared and checked by `check_ielts.py`, and only the
+# orientation reaches the page, at the top of the hidden script.
 AUDIO_ATTRS = {"orientation", "mode", "preview", "review"}
 AUDIO_REQUIRED = {"orientation", "mode"}
 AUDIO_MODES = {"computer", "paper"}
@@ -1182,22 +1187,6 @@ def dialogue_html(p: dict) -> str:
     # names the scene, and printing it twice made a card inside a card.
     return (f'<div class="dlg" data-role="dialogue" data-dialogue="{e(p["id"])}">'
             + f'<p class="d-say">{say}</p>'
-            # Audio on the Getting Started text. Every Getting Started in the
-            # prescribed book is a track (track 1, 7, 13, 20 ...) and ours was
-            # silent, so a self-studying learner reached the Lesson 6 listening
-            # never having heard these characters speak.
-            #
-            # It is REPLAYABLE, and that is not an oversight. C6 and C8 govern
-            # the listening TEST: one play, a declared delivery mode, an
-            # unwritten orientation. None of that applies here, because the
-            # transcript is on the page by design — 1.2 sends the learner back
-            # into it and 1.3 asks them to find a verb in it. A text you can
-            # reread is not a listening test, and pretending otherwise would
-            # make this a worse reading page without making it a real
-            # listening one.
-            + '<div class="d-audio"><button class="btn quiet d-hear" type="button">'
-              '&#9654; Hear the conversation</button>'
-              '<span class="d-heard" role="status"></span></div>'
             + scene
             + '<div class="d-body">' + "".join(rows) + '</div>'
             + toggle
@@ -1347,36 +1336,20 @@ def fluency_html(p: dict) -> str:
 
 
 def audio_html(p: dict) -> str:
-    timing = ("Answer <b>as you listen</b>. You then have <b>two minutes</b> to check "
-              "what you wrote."
-              if p["mode"] == "computer" else
-              "Answer as you listen, then you get <b>ten minutes</b> to copy your "
-              "answers out neatly.")
+    # The page has no voice of its own, so the recording is somebody reading
+    # the script aloud. It stays hidden until asked for, so the learner can read
+    # the questions first and hand the script over without seeing it.
     return (f'<div class="player" data-role="audio" data-audio="{e(p["id"])}">'
             f'<div class="p-h"><span class="p-k">Listening</span>'
-            f'<span class="p-t">Plays once</span></div>'
-            f'<p class="p-mode">{timing}</p>'
-            f'<p class="p-say">First you hear a short spoken introduction — it is '
-            f'<b>not written down</b>, so listen to it. Then you get '
-            f'<b>{p["preview"]} seconds</b> to read the questions, and then the '
-            f'recording plays <b>once</b>.</p>'
-            # Two passes over one recording. The LEARN pass is supported —
-            # replay, and the script once an attempt has been made — because a
-            # single play is excellent assessment and poor first exposure. The
-            # TEST pass is the one that was always here, unchanged: one
-            # orientation, one preview, one play, one review window.
-            f'<div class="p-ctl" data-pass="learn">'
-            f'<button class="btn quiet p-learn" type="button">Practise it first</button>'
-            f'<span class="p-lstate" role="status"></span></div>'
-            f'<p class="p-say small">Practising does not use up your one play. '
-            f'When you want the real thing, take it once below.</p>'
-            f'<div class="p-ctl" data-pass="test">'
-            f'<button class="btn p-start" type="button">Take it once</button>'
-            f'<span class="p-state" role="status"></span></div>'
-            f'<div class="p-note"><b>The voice is your device\'s speech synthesiser.</b> '
-            f'It says the words clearly, but it is not a real speaker: no accent range, '
-            f'and none of the run-together sounds of natural speech.</div>'
+            f'<span class="p-t">Read aloud once</span></div>'
+            f'<p class="p-say">Read the questions first. Then ask someone to read '
+            f'the script aloud to you <b>once</b>, without showing it to you, and '
+            f'answer as you listen. Read the script yourself afterwards and find '
+            f'the places your answers came apart.</p>'
+            f'<div class="p-ctl">'
+            f'<button class="btn p-start" type="button">Show the script</button></div>'
             f'<div class="p-script" hidden><h4>Script</h4>'
+            + (f'<p><i>{inline(p["orientation"])}</i></p>' if p.get("orientation") else "")
             + "".join(f"<p>{inline(ln)}</p>" for ln in p["script"]) +
             f'</div></div>')
 
@@ -1874,11 +1847,6 @@ def entry_html(w, entry) -> str:
     """An Oxford-style entry: headword line, the first sense flat, the rest
     behind one toggle. A word with a single sense, no forms and no note gets
     no toggle at all — an empty expander is worse than none."""
-    say = re.sub(r"\s*\(.*?\)\s*", " ", w["word"]).strip()
-    audio = (f'<button class="speak" type="button" data-say="{e(say)}" '
-             f'aria-label="Hear {e(say)}">🔊</button>'
-             f'<button class="speak" type="button" data-say="{e(say)}" data-slow="1" '
-             f'aria-label="Hear {e(say)} slowly">🐢</button>')
     if not entry:
         # No dictionary entry authored yet: fall back to the unit table's own
         # part of speech and gloss rather than dropping the word.
@@ -1893,7 +1861,7 @@ def entry_html(w, entry) -> str:
                f'<span class="e-vi">{inline(first.get("vi", ""))}</span></p>')
     head = (f'<div class="e-h" role="button" tabindex="0" aria-expanded="false">'
             f'<h3>{e(w["word"])}</h3>'
-            f'<span class="e-ipa">{e(w["ipa"])}</span>{audio}'
+            f'<span class="e-ipa">{e(w["ipa"])}</span>'
             f'<span class="e-n">{w["n"]}</span><span class="e-caret" aria-hidden="true"></span></div>'
             + summary)
     flat = sense_html(senses[0], 1 if len(senses) > 1 else None) if senses else ""
@@ -1942,19 +1910,16 @@ def vocab_table(u) -> str:
     """The vocabulary table, rebuilt from parsed data rather than passed through.
 
     Two reasons not to just render the markdown table: every row needs a
-    data-role marker so the parity checker can count what actually shipped,
-    and every headword needs its own audio button. Rebuilding also pins the
-    row count to the parse, so a table that loses a row loses it loudly.
+    data-role marker so the parity checker can count what actually shipped.
+    Rebuilding also pins the row count to the parse, so a table that loses a
+    row loses it loudly.
     """
     rows = []
     for w in u["vocab"]:
-        say = re.sub(r"\s*\(.*?\)\s*", " ", w["word"]).strip()
         rows.append(
             f'<tr data-role="vocab-row">'
             f'<td class="num">{w["n"]}</td>'
-            f'<td><b>{e(w["word"])}</b> '
-            f'<button class="speak" type="button" data-say="{e(say)}" '
-            f'aria-label="Hear {e(say)}">🔊</button></td>'
+            f'<td><b>{e(w["word"])}</b></td>'
             f'<td class="ipa">{e(w["ipa"])}</td>'
             f'<td>{e(w["pos"])}</td>'
             f'<td class="vi">{e(w["vi"])}</td></tr>')
@@ -2585,8 +2550,6 @@ def shell(*, title, depth, body, crumb, data=None, desc=""):
   <p><b>English 8 — Global Success.</b> Original self-study material written against the
   Tiếng Anh 8 syllabus (NXB Giáo dục Việt Nam × Pearson, GDPT 2018). This site records
   structure and targets and carries our own exercises; it is not the textbook's text.</p>
-  <p>Progress is stored in this browser only. Audio uses your device's speech voices —
-  a good model of which word you are hearing, and not a reliable model of vowel length.</p>
   </details>
 </footer></div>
 {data_tag}
@@ -2844,8 +2807,7 @@ def page_unit(u, reviews=()) -> str:
       </div>
     </div>
   </div>
-  <div id="engine" hidden></div>
-  <p class="note" id="ttsNote" hidden></p>"""
+  <div id="engine" hidden></div>"""
 
     # The Review that closes on this unit is signposted from it. A cumulative
     # section nobody can find from the unit it follows is a page, not a
@@ -3093,8 +3055,7 @@ def page_words(units) -> str:
     <p class="eyebrow">Look up a word · {len(rows)} entries</p>
     <h1>Every word the course teaches</h1>
     <p class="standfirst">Type any part of a word — in English or in Vietnamese —
-    and the list narrows as you type. Each entry says which unit teaches it.
-    Press 🔊 to hear it, 🐢 to hear it slowly.</p>
+    and the list narrows as you type. Each entry says which unit teaches it.</p>
   </header>
 
   <div class="wd-search">
@@ -3543,8 +3504,8 @@ def main() -> int:
                   f"threads={len(u['threads'])}")
         print(f"\n{len(units)} units · {tot_ex} exercises · {tot_teach} teaching blocks · "
               f"{tot_ans} answers · {tot_vocab} vocabulary rows · {tot_bridge} IELTS bridges")
-        print(f"{tot_task} marked tasks · {tot_item} marked items · {tot_audio} single-play "
-              f"recordings · {len(THREADS)} strands")
+        print(f"{tot_task} marked tasks · {tot_item} marked items · {tot_audio} listening "
+              f"scripts · {len(THREADS)} strands")
         print(f"{tot_write} committed writing tasks · {tot_checked} of {len(write_items)} "
               f"checklist lines decided from the learner's own text · {tot_clock} reading clocks")
         print(f"{tot_pass} reading passages, highlightable and annotatable · "
@@ -3625,8 +3586,8 @@ def main() -> int:
     print(f"built {pages} pages into {OUT.relative_to(ROOT)}/ — "
           f"{len(units)} units, {tot_ex} exercises, {tot_ans} answers, "
           f"{tot_vocab} vocabulary rows, {tot_bridge} IELTS bridges")
-    print(f"        {tot_task} marked tasks ({tot_item} items), {tot_audio} single-play "
-          f"recordings, {len(THREADS)} strands")
+    print(f"        {tot_task} marked tasks ({tot_item} items), {tot_audio} listening "
+          f"scripts, {len(THREADS)} strands")
     if art:
         print(f"        {art} drawn asset(s) copied from {ART.relative_to(ROOT)}/")
     if reviews:

@@ -176,10 +176,10 @@ arrives*, *as soon as the market opens*.
 
 ### Listening — What is actually in the air
 
-You get **one** play. Read the five gaps first, then choose while you listen
+You hear it **once**, read aloud by someone else. Read the five gaps first, then choose while you listen
 rather than afterwards from memory.
 
-**Nghe một lần duy nhất.** Đọc năm câu hỏi trước, rồi vừa nghe vừa chọn.
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc năm câu hỏi trước, rồi vừa nghe vừa chọn.
 
 ::: audio orientation="You will hear a speaker at a school assembly explaining what makes the air in the city dirty, who it harms most, and one thing about it that surprises people." mode="computer" preview="30" review="120"
 Good morning. I want to talk about the air in this city, and about one thing

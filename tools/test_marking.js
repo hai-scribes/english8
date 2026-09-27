@@ -28,7 +28,6 @@ global.document = { documentElement: el, getElementById: () => null, querySelect
                     createElement: () => el, body: el };
 global.localStorage = { getItem: () => null, setItem: noop };
 global.matchMedia = () => ({ matches:false, addEventListener:noop });
-global.speechSynthesis = undefined;
 global.CustomEvent = class {};
 eval(src.replace(/if \(document.readyState[\s\S]*$/, "") + "\n;module.exports={markTask,overLimit,markAnswer,fold,acceptedForms,parseEither,calibrationLine,itemHTML};");
 const M = module.exports;

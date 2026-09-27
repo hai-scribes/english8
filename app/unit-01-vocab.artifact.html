@@ -113,7 +113,6 @@ ol.vocab{list-style:none;margin:0;padding:0;display:grid;gap:1px;
 .s-learning{background:var(--accent-soft);color:var(--accent)}
 .s-due{background:var(--warn-soft);color:var(--warn)}
 .s-known{background:var(--good-soft);color:var(--good)}
-.speak.mini{margin-left:0;padding:5px 9px;font-size:.8rem;line-height:1}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
 .stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px;text-align:center}
 .stat b{display:block;font-size:1.5rem;line-height:1.2;font-weight:650}
@@ -139,7 +138,6 @@ ul.ex li{margin-bottom:5px}
 ul.ex li:last-child{margin-bottom:0}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chip{font-size:.8rem;padding:3px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--muted)}
-.speak{border-radius:999px;padding:6px 13px;font-size:.86rem;margin-left:8px;vertical-align:3px}
 
 /* choices */
 .choices{display:grid;gap:9px;margin-top:14px}
@@ -167,7 +165,6 @@ table.res td.mark{width:1.6em}
 footer.foot{margin-top:26px;color:var(--muted);font-size:.78rem;text-align:center}
 footer.foot button{padding:5px 11px;font-size:.78rem;border-radius:8px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.notice{font-size:.8rem;color:var(--warn);margin-top:10px}
 @media (prefers-reduced-motion: reduce){*{transition:none !important}}
 @media (max-width:420px){ .word{font-size:1.7rem} .stat b{font-size:1.3rem} }
 </style>
@@ -213,7 +210,6 @@ const WORDS = [
   examples:["On Sundays I <b>hang out with</b> my cousins at the park.","They <b>hang out</b> at the shopping centre near the swimming pool."],
   colloc:["hang out with friends","hang out at the park"],
   accept:["hang out","hang out (with)","hang out with","hangs out","hanging out"],
-  speak:"hang out",
   cloze:[
     {t:"At the weekend I like to ___ with my cousins at the park."},
     {t:"They usually ___ at the shopping centre after school."}
@@ -227,14 +223,13 @@ const WORDS = [
   examples:["My dad spends every Sunday doing <b>DIY</b>.","She made the bookshelf herself — it was a <b>DIY</b> project."],
   colloc:["do DIY","a DIY project","a DIY shop"],
   accept:["diy","d.i.y.","d i y","do it yourself","do-it-yourself"],
-  speak:"D I Y",
   cloze:[
     {t:"My father spends every Sunday doing ___ around the house."},
     {t:"We built the shelf ourselves — it was a ___ project."}
   ]
 },
 {
-  lengthPair:true, id:"football", round:1, word:"football", ipa:"/ˈfʊtbɔːl/", pos:"noun", syn:"game",
+  id:"football", round:1, word:"football", ipa:"/ˈfʊtbɔːl/", pos:"noun", syn:"game",
   vi:"bóng đá",
   en:"a game played by two teams of eleven who kick a ball into a goal",
   note:"<i>Play football</i> — no <i>the</i>. First vowel is the short /ʊ/ of <i>put</i>, not the long /uː/ of <i>food</i>.",
@@ -247,7 +242,7 @@ const WORDS = [
   ]
 },
 {
-  lengthPair:true, id:"movie", round:1, word:"movie", ipa:"/ˈmuːvi/", pos:"noun", syn:"media",
+  id:"movie", round:1, word:"movie", ipa:"/ˈmuːvi/", pos:"noun", syn:"media",
   vi:"bộ phim",
   en:"a story told in moving pictures that you watch at a cinema or at home",
   note:"Long /uː/ — the vowel of <i>food</i>, not <i>book</i>. British speakers often say <i>film</i> instead.",
@@ -260,7 +255,7 @@ const WORDS = [
   ]
 },
 {
-  lengthPair:true, id:"choose", round:1, word:"choose", ipa:"/tʃuːz/", pos:"verb", syn:"verb",
+  id:"choose", round:1, word:"choose", ipa:"/tʃuːz/", pos:"verb", syn:"verb",
   vi:"chọn, lựa chọn",
   en:"to decide which thing or person you want from a number of them",
   note:"Irregular: choose → chose /tʃəʊz/ → chosen. Two <i>o</i>s in the present, one in the past. Long /uː/, ending in a /z/ sound.",
@@ -339,7 +334,7 @@ const WORDS = [
   ]
 },
 {
-  lengthPair:true, id:"bookshop", round:2, word:"bookshop", ipa:"/ˈbʊkʃɒp/", pos:"noun", syn:"place",
+  id:"bookshop", round:2, word:"bookshop", ipa:"/ˈbʊkʃɒp/", pos:"noun", syn:"place",
   vi:"hiệu sách",
   en:"a shop that sells books",
   note:"British English; Americans say <i>bookstore</i>. Short /ʊ/ in <i>book</i>.",
@@ -366,7 +361,7 @@ const WORDS = [
   ]
 },
 {
-  lengthPair:true, id:"cook", round:3, word:"cook", ipa:"/kʊk/", pos:"verb / noun", syn:"make",
+  id:"cook", round:3, word:"cook", ipa:"/kʊk/", pos:"verb / noun", syn:"make",
   vi:"nấu ăn; đầu bếp",
   en:"to prepare food by heating it; also, a person who cooks",
   note:"Short /ʊ/ — the vowel of <i>book</i>, <b>not</b> the long /uː/ of <i>food</i>. A <i>cook</i> works at home or in a small kitchen; a <i>chef</i> is trained and professional.",
@@ -405,7 +400,7 @@ const WORDS = [
   ]
 },
 {
-  lengthPair:true, id:"swimming-pool", round:3, word:"swimming pool", ipa:"/ˈswɪmɪŋ puːl/", pos:"noun", syn:"place",
+  id:"swimming-pool", round:3, word:"swimming pool", ipa:"/ˈswɪmɪŋ puːl/", pos:"noun", syn:"place",
   vi:"bể bơi",
   en:"a large tank or hole filled with water for people to swim in",
   note:"<i>Pool</i> has the long /uː/ of <i>food</i>. Stress the first word: <b>SWIM</b>ming pool.",
@@ -462,7 +457,7 @@ function addDays(day, n){
 function blankRecord(){
   return { introduced:null, due:null, step:0, lastReviewed:null,
            attempts:0, correct:0, lapses:0,
-           receptive:0, productive:0, listening:0,
+           receptive:0, productive:0,
            delayedSuccesses:0, durable:false };
 }
 let STATE = loadState();
@@ -528,158 +523,6 @@ function grade(id, ok, dimension){
   saveState();
 }
 
-/* ============================================================
-   Speech
-
-   The voice IS the pronunciation model, so it is chosen, not accepted.
-   getVoices() returns an unranked list and the old code took the first
-   en-GB match — on macOS that is a coin flip across nine en-GB voices of
-   which exactly one (Daniel) is a neutral speaker; the other eight are
-   Apple's stylised set (Grandpa, Rocko, Shelley, Flo...). A cartoon voice
-   is not a pronunciation model.
-
-   Ranking, in order of weight:
-     1. Never a character voice, in any accent.
-     2. Prefer en-GB. This unit teaches British IPA, and a US voice
-        contradicts the table printed beside it: US "leisure" is /ˈliːʒər/,
-        which rhymes with the exact word the note says it does not rhyme
-        with, and "craft" is /kræft/ against the table's /krɑːft/.
-     3. Prefer a neural/enhanced voice over a compact one.
-
-   Read the honest limit in NOT_A_LENGTH_MODEL below before trusting this
-   audio for the /ʊ/ vs /uː/ contrast.
-   ============================================================ */
-const RATE_NORMAL = 1.0;   // the natural-speed reference
-const RATE_SLOW   = 0.6;   // deliberate replay, on request only
-
-/* Apple's stylised/novelty voices — present in en-GB and en-US alike. */
-const CHARACTER_VOICE = /\b(albert|bad news|bahh|bells|boing|bubbles|cellos|eddy|flo|fred|good news|grandma|grandpa|jester|junior|kathy|organ|ralph|reed|rocko|sandy|shelley|superstar|trinoids|whisper|wobble|zarvox)\b/i;
-/* Name fragments that mark the high-fidelity path on each platform. */
-const NEURAL_VOICE    = /(natural|neural|enhanced|premium|siri|google|online)/i;
-/* Neutral news-reader voices shipped by Apple, Microsoft and Google. */
-const NEUTRAL_VOICE   = /\b(daniel|kate|serena|libby|sonia|ryan|arthur|oliver|hazel|george|martha)\b/i;
-
-const TTS = { ready:false, voice:null, british:false, failed:false,
-              supported:("speechSynthesis" in window) };
-let onVoicesReady = null;   // installed by the UI once it exists
-
-function scoreVoice(v){
-  const lang = String(v.lang || "").replace("_", "-");
-  if (!/^en\b/i.test(lang)) return -Infinity;
-  const name = String(v.name || "");
-  let s = 0;
-  if (/^en-GB/i.test(lang)) s += 100;
-  else if (/^en-(IE|AU|NZ|ZA)/i.test(lang)) s += 40;
-  else s += 20;
-  /* Outweighs the accent bonus, so a plain US voice beats a character GB
-     one — but stays finite, so a character voice is still better than
-     silence on a machine that has nothing else. */
-  if (CHARACTER_VOICE.test(name)) s -= 200;
-  if (NEURAL_VOICE.test(name))    s += 50;
-  if (NEUTRAL_VOICE.test(name))   s += 25;
-  if (/compact/i.test(name))      s -= 15;
-  if (v.localService === false)   s += 5;
-  return s;
-}
-function pickVoice(){
-  if (!TTS.supported) return null;
-  const vs = speechSynthesis.getVoices() || [];
-  let best = null, bestScore = -Infinity;
-  for (const v of vs){
-    const s = scoreVoice(v);
-    if (s > bestScore){ best = v; bestScore = s; }
-  }
-  return bestScore === -Infinity ? null : best;
-}
-function refreshVoice(){
-  const was = TTS.ready;
-  TTS.voice = pickVoice();
-  TTS.ready = !!TTS.voice;
-  TTS.british = !!(TTS.voice && /^en[-_]GB/i.test(TTS.voice.lang));
-  return TTS.ready !== was;
-}
-if (TTS.supported){
-  refreshVoice();
-  /* Chrome returns an empty list on the first call and fills it
-     asynchronously. Without a repaint the home screen keeps claiming there
-     is no voice, and every review session keeps skipping listening prompts,
-     for the whole session. */
-  speechSynthesis.addEventListener("voiceschanged", () => {
-    if (refreshVoice() && onVoicesReady) onVoicesReady();
-  });
-}
-function canListen(){ return TTS.supported && TTS.ready && !TTS.failed; }
-
-/* iOS Safari will only start synthesis that descends from a user gesture.
-   A silent utterance on the first click buys every later programmatic
-   speak() the same permission. */
-let speechPrimed = false;
-function primeSpeech(){
-  if (speechPrimed || !TTS.supported) return;
-  speechPrimed = true;
-  try {
-    const u = new SpeechSynthesisUtterance(" ");
-    u.volume = 0;
-    speechSynthesis.speak(u);
-  } catch(e){ /* priming is best-effort */ }
-}
-
-let speakTimer = null, speakTurn = 0;
-function speak(text, opts){
-  if (!TTS.supported || !text) return false;
-  opts = opts || {};
-  try {
-    const mine = ++speakTurn;
-    if (speakTimer){ clearTimeout(speakTimer); speakTimer = null; }
-    speechSynthesis.cancel();
-    /* A cancel() landing mid-word can leave Chrome's engine paused, and a
-       paused engine accepts utterances without ever playing them. */
-    if (speechSynthesis.paused) speechSynthesis.resume();
-    /* Chrome drops an utterance queued in the same tick as cancel(); one
-       frame of separation is enough to make it reliable. A fixed frame is
-       not enough on WebKit, which keeps a queued-but-unstarted utterance
-       alive across cancel() — so a learner tapping 🔊 twice gets the second
-       reading laid over the first. Wait for the engine to actually fall
-       idle, capped so a stuck engine still gets its one attempt. */
-    let waited = 0;
-    const fire = () => {
-      speakTimer = null;
-      if (mine !== speakTurn) return;          // a later tap already won
-      if ((speechSynthesis.speaking || speechSynthesis.pending) && waited < 600){
-        waited += 40; speakTimer = setTimeout(fire, 40); return;
-      }
-      const u = new SpeechSynthesisUtterance(text);
-      if (TTS.voice){ u.voice = TTS.voice; u.lang = TTS.voice.lang; } else { u.lang = "en-GB"; }
-      u.rate = opts.slow ? RATE_SLOW : RATE_NORMAL;
-      u.pitch = 1;
-      u.volume = 1;
-      u.onerror = ev => {
-        /* "interrupted" and "canceled" are our own cancel() calls landing,
-           not a broken voice. Anything else means the audio path is dead
-           and listening prompts must stop being offered. */
-        const err = ev && ev.error;
-        if (err === "interrupted" || err === "canceled") return;
-        TTS.failed = true;
-      };
-      speechSynthesis.speak(u);
-    };
-    speakTimer = setTimeout(fire, 60);
-    return true;
-  } catch(e){ return false; }
-}
-const sayText = w => w.speak || w.word.replace(/\s*\(.*?\)\s*/g, " ").trim();
-
-/* Measured, not assumed: on this machine the en-GB voices render the
-   /ʊ/-/uː/ pair with a 1-3% duration difference, and Daniel — the voice
-   the ranking above picks — renders "full" LONGER than "fool", i.e.
-   backwards. The unit teaches that /uː/ is held about twice as long.
-   So the audio is a reliable model of word identity and stress, and is
-   NOT a model of vowel length. Words that turn on that contrast say so. */
-const NOT_A_LENGTH_MODEL =
-  "Computer voices do not reliably hold /uː/ longer than /ʊ/ — some make it "
-+ "shorter. Use 🔊 to check <i>which</i> word this is; use the IPA "
-+ "and the note above for <i>how long</i> the vowel is.";
-
 /* ---------- answer checking ---------- */
 function norm(s){
   return String(s == null ? "" : s)
@@ -722,14 +565,13 @@ function distractors(word, n){
 
 /* ---------- prompt construction ---------- */
 /* formats:
-   mc-meaning     English word (+audio) -> choose the Vietnamese meaning   [receptive]
+   mc-meaning     English word -> choose the Vietnamese meaning   [receptive]
    recall-meaning English word -> think, reveal, self-mark                 [receptive]
    type-word      Vietnamese + part of speech -> type the English word     [productive]
-   cloze          sentence with a gap -> type the English word             [productive]
-   listen-type    audio only -> type the English word                      [listening] */
+   cloze          sentence with a gap -> type the English word             [productive] */
 const DIMENSION = {
   "mc-meaning":"receptive", "recall-meaning":"receptive",
-  "type-word":"productive", "cloze":"productive", "listen-type":"listening"
+  "type-word":"productive", "cloze":"productive"
 };
 function buildPrompt(word, format){
   const p = { format, wordId:word.id, dimension:DIMENSION[format] };
@@ -751,8 +593,7 @@ function buildPrompt(word, format){
 function LearnRound(words){
   /* Four rungs, easiest first, each a step up in retrieval effort. A word
      leaves the round only after clearing all four — recognise the meaning,
-     recall the meaning, produce the form, then produce it inside a sentence.
-     Listening prompts belong to review, once the form is stable. */
+     recall the meaning, produce the form, then produce it inside a sentence. */
   const ladder = ["mc-meaning","recall-meaning","type-word","cloze"];
   const MAX_PROMPTS = 14;
   const st = {};
@@ -842,8 +683,7 @@ function ReviewRound(words){
       const w = BY_ID[id], r = rec(id);
       let fmt;
       if (r.productive === 0) fmt = "type-word";
-      else if (r.listening === 0 && canListen()) fmt = "listen-type";
-      else if (r.durable) fmt = pick(canListen() ? ["cloze","listen-type","type-word"] : ["cloze","type-word"]);
+      else if (r.durable) fmt = pick(["cloze","type-word"]);
       else fmt = pick(["recall-meaning","type-word","cloze"]);
       return { kind:"prompt", prompt:buildPrompt(w, fmt) };
     },
@@ -865,7 +705,6 @@ function buildTest(words){
   return shuffle(words).map((w, i) => {
     let fmt;
     if (i % 2 === 0) fmt = "mc-meaning";
-    else if (canListen() && i % 5 === 3) fmt = "listen-type";
     else fmt = pick(["type-word","cloze"]);
     return buildPrompt(w, fmt);
   });
@@ -928,27 +767,6 @@ function viewUnit(){
       intro.length ? "A scored test over every word you have met. Freshly generated each time — you will not get the same paper twice."
                    : "Learn some words first and this unlocks.",
       intro.length === 0));
-  /* The learner is told which voice is modelling the words for them, because
-     the answer changes what they should trust. A US voice is not a small
-     accent difference here: it says /ˈliːʒər/ for a word whose card insists
-     it does not rhyme with "seize", and /kræft/ against the /krɑːft/ printed
-     in the unit's own vocabulary table. */
-  let notice = "";
-  if (!TTS.supported){
-    notice = '<p class="notice">This browser has no speech support, so listening questions are switched off. '
-           + 'Everything else works. On a phone, try Chrome or Safari.</p>';
-  } else if (TTS.failed){
-    notice = '<p class="notice">The speech voice stopped responding, so listening questions are switched off '
-           + 'for now. Reload the page to try again.</p>';
-  } else if (!TTS.ready){
-    notice = '<p class="notice">No English speech voice is available in this browser, so listening questions are '
-           + 'switched off. Everything else works. On a phone, try Chrome or Safari.</p>';
-  } else if (!TTS.british){
-    notice = '<p class="notice">Reading the words with <b>' + esc(TTS.voice.name) + '</b> ('
-           + esc(TTS.voice.lang) + '). This unit teaches British pronunciation, so a few words will not '
-           + 'match the IPA on the card — <i>leisure</i>, <i>craft</i>, <i>pastime</i> and <i>can\'t</i> '
-           + 'are the ones to watch. Installing a British English voice fixes it.</p>';
-  }
   return '<div class="stats">'
     + stat(due.length, "due today")
     + stat(acquiredTodayCount(), "learned today")
@@ -956,8 +774,7 @@ function viewUnit(){
     + '</div>'
     + '</div>'
     + vocabPanel(bar, nr)
-    + '<div class="menu" style="margin-top:14px">' + cards.join("") + '</div>'
-    + notice;
+    + '<div class="menu" style="margin-top:14px">' + cards.join("") + '</div>';
 }
 
 /* ---- the new-vocabulary list, and the way into the learning mode ----
@@ -1004,16 +821,12 @@ function vocabPanel(bar, nr){
 }
 function vocabRow(w, n){
   const s = wordStatus(w);
-  const audio = TTS.supported
-    ? '<button class="speak mini" type="button" data-act="say" data-id="' + w.id
-      + '" aria-label="Hear ' + esc(w.word) + '">🔊</button>' : "";
   return '<li class="vrow">'
     + '<span class="vnum">' + n + '</span>'
     + '<span class="vmain"><span class="vword">' + esc(w.word) + '</span> '
       + '<span class="ipa vipa">' + esc(w.ipa) + '</span>'
       + '<span class="vvi">' + esc(w.vi) + '</span></span>'
-    + '<span class="vstat s-' + s.k + '">' + esc(s.label) + '</span>'
-    + audio + '</li>';
+    + '<span class="vstat s-' + s.k + '">' + esc(s.label) + '</span></li>';
 }
 function stat(n, label){ return '<div class="stat"><b>' + n + '</b><span>' + esc(label) + '</span></div>'; }
 function cardBtn(act, title, pill, desc, disabled){
@@ -1028,26 +841,9 @@ function progressBar(label, right, frac){
 }
 
 /* ---- word card (exposure) ---- */
-/* Two buttons, not one. A single slowed-down button (the old behaviour: every
-   utterance at rate 0.88) leaves the learner no natural-speed reference,
-   which is the only speed they will ever meet the word at. Natural is the
-   default; the slow replay is there on request. */
-function audioButtons(id, inline){
-  /* canListen(), not TTS.supported: a browser can support the API and still
-     have no English voice installed, and a speaker button that plays nothing
-     reads to the learner as a broken app rather than a missing voice. The
-     home screen explains the absence; here it simply does not appear. */
-  if (!canListen()) return "";
-  const style = inline ? "" : ' style="margin-left:0"';
-  return '<button class="speak" type="button" data-act="say" data-id="' + id + '"' + style + '>🔊 Hear it</button>'
-       + '<button class="speak" type="button" data-act="say-slow" data-id="' + id + '">🐢 Slowly</button>';
-}
 function wordCardHTML(w, opts){
   opts = opts || {};
-  const lengthWarn = w.lengthPair && canListen()
-    ? '<p class="tiny notice">' + NOT_A_LENGTH_MODEL + '</p>' : "";
-  return '<p class="word">' + esc(w.word) + ' <span class="pos">' + esc(w.pos) + '</span>'
-      + audioButtons(w.id, true) + '</p>'
+  return '<p class="word">' + esc(w.word) + ' <span class="pos">' + esc(w.pos) + '</span></p>'
     + '<div class="ipa">' + esc(w.ipa) + '</div>'
     + '<p class="gloss">' + esc(w.vi) + '</p>'
     + '<p class="small muted">' + esc(w.en) + '</p>'
@@ -1055,7 +851,7 @@ function wordCardHTML(w, opts){
         '<div class="dl"><h3>Examples</h3><ul class="ex"><li>' + w.examples.join("</li><li>") + '</li></ul></div>'
       + '<div class="dl"><h3>Goes with</h3><div class="chips"><span class="chip">'
         + w.colloc.map(esc).join('</span><span class="chip">') + '</span></div></div>'
-      + '<div class="dl"><h3>Watch out</h3><p class="small">' + w.note + '</p>' + lengthWarn + '</div>');
+      + '<div class="dl"><h3>Watch out</h3><p class="small">' + w.note + '</p></div>');
 }
 function viewExpose(){
   const w = UI.word, e = UI.engine;
@@ -1076,11 +872,10 @@ function sessionProgress(e){
 /* ---- prompt ---- */
 function viewPrompt(){
   const p = UI.prompt, w = BY_ID[p.wordId], e = UI.engine;
-  let body = "", kicker = "", helper = "";
+  let body = "", kicker = "";
   if (p.format === "mc-meaning"){
     kicker = "What does it mean?";
     body = '<p class="prompt-q">' + esc(w.word) + '</p><div class="ipa">' + esc(w.ipa) + '</div>'
-      + (canListen() ? '<div style="margin-top:8px">' + audioButtons(w.id) + '</div>' : "")
       + '<div class="choices">'
       + p.options.map((o,i) => '<button class="choice" type="button" data-act="choose" data-i="' + i + '"'
           + (i === 0 ? " data-autofocus" : "") + '>' + esc(o.text) + '</button>').join("")
@@ -1100,24 +895,9 @@ function viewPrompt(){
     body = '<p class="prompt-q">' + clozeHTML(p.sentence) + '</p>'
       + '<p class="small muted">' + esc(w.vi) + ' · ' + esc(w.pos) + '</p>'
       + typedInput("The missing word");
-  } else if (p.format === "listen-type"){
-    kicker = "Listen and write";
-    body = '<p class="small muted">Play the word and write what you hear. Play it as often as you like.</p>'
-      + '<div style="margin:12px 0">'
-      + '<button class="speak" type="button" data-act="say" data-id="' + w.id + '" style="margin-left:0">🔊 Play again</button>'
-      + '<button class="speak" type="button" data-act="say-slow" data-id="' + w.id + '">🐢 Slowly</button></div>'
-      + typedInput("What you heard");
-    /* An audio-only question with no audio is unanswerable, and silent
-       failure is common: a blocked autoplay policy, a voice that dies
-       mid-session, headphones on the wrong device. Offer the same word
-       from its meaning instead of letting the learner burn a lapse. */
-    helper = '<p class="tiny muted" style="margin-top:12px">Nothing playing? '
-      + '<button type="button" data-act="noaudio" style="padding:2px 8px;font-size:.78rem;border-radius:8px">'
-      + 'Answer from the meaning instead</button></p>';
-    setTimeout(() => speak(sayText(w)), 220);
   }
   return sessionProgress(e)
-    + '<div class="panel"><div class="kicker">' + esc(kicker) + '</div>' + body + helper + '</div>'
+    + '<div class="panel"><div class="kicker">' + esc(kicker) + '</div>' + body + '</div>'
     + (p.format === "recall-meaning" || p.format === "mc-meaning" ? ""
       : '<div class="btn-row end"><button class="btn-primary" type="button" data-act="submit">Check</button></div>');
 }
@@ -1144,11 +924,10 @@ function viewFeedback(){
     '<div class="dl" style="border-top:0;padding-top:10px;margin-top:10px">'
     + '<p class="small">' + esc(w.en) + '</p>'
     + '<ul class="ex small"><li>' + w.examples[0] + '</li></ul></div>';
-  const audio = audioButtons(w.id);
   return sessionProgress(e)
     + '<div class="panel"><div class="fb ' + (ok ? "ok" : "no") + '" style="margin-top:0">'
     + '<div class="h">' + head + '</div><div>' + detail + '</div>'
-    + '<div style="margin-top:10px">' + audio + '</div>' + extra + '</div>'
+    + extra + '</div>'
     + (ok ? "" : '<p class="tiny muted" style="margin-top:12px">This word will come back in a few questions. '
         + 'Getting it wrong now and fixing it is one of the best things you can do for your memory.</p>')
     + '</div>'
@@ -1192,19 +971,6 @@ function viewTest(){
   } else if (p.format === "cloze"){
     body = '<p class="prompt-q">' + clozeHTML(p.sentence) + '</p><p class="small muted">' + esc(w.vi) + '</p>'
       + typedInput("The missing word");
-  } else if (p.format === "listen-type"){
-    body = '<p class="small muted">Write the word you hear.</p>'
-      + '<div style="margin:12px 0">'
-      + '<button class="speak" type="button" data-act="say" data-id="' + w.id + '" style="margin-left:0">🔊 Play again</button>'
-      + '<button class="speak" type="button" data-act="say-slow" data-id="' + w.id + '">🐢 Slowly</button></div>'
-      + typedInput("What you heard")
-      /* Same escape as in practice: a dead audio path must not cost marks on
-         a scored test. Swapping to the meaning keeps the item productive, so
-         the score still means what the results table says it means. */
-      + '<p class="tiny muted" style="margin-top:12px">Nothing playing? '
-      + '<button type="button" data-act="tnoaudio" style="padding:2px 8px;font-size:.78rem;border-radius:8px">'
-      + 'Answer from the meaning instead</button></p>';
-    setTimeout(() => speak(sayText(w)), 220);
   }
   return progressBar("Question " + (t.i + 1) + " of " + t.items.length, "", (t.i) / t.items.length)
     + '<div class="panel"><div class="kicker">Practice test — no feedback until the end</div>' + body + '</div>'
@@ -1271,7 +1037,7 @@ function startTest(words){
 function advance(){
   const t = UI.engine.next();
   if (!t){ UI.screen = "roundDone"; render(); return; }
-  if (t.kind === "expose"){ UI.screen = "expose"; UI.word = t.word; render(); setTimeout(() => speak(sayText(t.word)), 260); return; }
+  if (t.kind === "expose"){ UI.screen = "expose"; UI.word = t.word; render(); return; }
   UI.prompt = t.prompt; UI.screen = "prompt"; render();
 }
 function answerPrompt(ok, given){
@@ -1295,21 +1061,7 @@ function submitTyped(){
 document.addEventListener("click", ev => {
   const b = ev.target.closest("button");
   if (!b) return;
-  primeSpeech();   // iOS grants synthesis from inside a gesture; take it early
   const act = b.dataset.act;
-  if (act === "say"){ speak(sayText(BY_ID[b.dataset.id])); return; }
-  if (act === "say-slow"){ speak(sayText(BY_ID[b.dataset.id]), { slow:true }); return; }
-  if (act === "noaudio"){
-    UI.prompt = buildPrompt(BY_ID[UI.prompt.wordId], "type-word");
-    render();
-    return;
-  }
-  if (act === "tnoaudio"){
-    const t = UI.test;
-    t.items[t.i] = buildPrompt(BY_ID[t.items[t.i].wordId], "type-word");
-    render();
-    return;
-  }
   if (act === "home"){ UI = { screen:"home" }; render(); return; }
   if (act === "unit"){ UI = { screen:"unit" }; render(); return; }
   if (act === "learn"){ startLearn(); return; }
@@ -1415,11 +1167,6 @@ function doReset(){
   saveState();
   UI = { screen:"home" }; render();
 }
-
-/* Repaint when a late-arriving voice list changes what the app can offer —
-   but only on the home screen, where nothing is half-typed. Mid-session the
-   new voice is picked up by the next speak() anyway. */
-onVoicesReady = () => { if (UI.screen === "home") render(); };
 
 render();
 </script>

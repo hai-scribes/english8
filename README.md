@@ -58,9 +58,9 @@ seven lessons and no progress gate, because it teaches nothing — its words and
 its structures have already been taught three units running. What it has is the
 book's two halves on one page: **Language** (sounds, then vocabulary, then
 grammar) and **Skills** — a text read against one clock, a speaking step, a
-recording that plays once, and a paragraph of 80–100 words that recombines all
+listening read aloud once, and a paragraph of 80–100 words that recombines all
 three units. Everything is the same machinery as a lesson: the same `:::task`,
-the same clock, the same single-play player, the same highlightable passage,
+the same clock, the same listening block, the same highlightable passage,
 the same counted checklist.
 
 A Review is the only page in the course that carries **two timers at once**, and
@@ -243,7 +243,7 @@ The same prohibitions are scanned over `tools/build.py`, because the generator
 authors learner-facing copy too — the home page, the unit cards, the widget
 that wraps every task.
 
-### `:::audio` — the recording plays once
+### `:::audio` — the script is read aloud once, by someone else
 
 ```markdown
 ::: audio orientation="You will hear a school counsellor talking about stress."
@@ -252,15 +252,14 @@ Hello. I'm Ms Trang, and I'm the school counsellor here…
 :::
 ```
 
-The script never reaches the printed page. The orientation is spoken and not
-written down, because in the real test it never is; then a preview window over
-the questions; then one play; then the declared review window, after which the
-script unlocks. It also unlocks once every task on the page is marked — but only
-after the recording has actually finished, and the spent play is remembered
-across a reload, or "plays once" would only be a suggestion.
-
-The voice is the device's speech synthesiser and the page says so plainly —
-what this trains is the shape of the task, not the ear.
+The site has no speech of its own — every voice function was removed on
+2026-09-27. The script, with the orientation above it, is hidden behind a
+**Show the script** button: the learner reads the questions, hands the script
+to someone who reads it aloud once, and answers as they listen. The player is
+not a timer and spends nothing, so the tasks under it retake like any other.
+It still carries `data-role="audio"`, which is where the reading clock's
+territory ends. `mode`, `preview` and `review` are still parsed and currently
+unused.
 
 ### `:::write` — the writing task is attempted on the page, and counted
 
@@ -519,15 +518,6 @@ examples are original, written in the style of a learner's dictionary — they a
 not taken from any published dictionary. Run `python3 tools/check_dict.py` to
 confirm every headword resolves and every sense has a part of speech, both
 glosses and at least two examples with the target word bolded.
-
-## A note on the audio
-
-Word audio uses your device's speech voices. The site ranks them (a British,
-non-novelty, neural voice wins where one exists) but browser speech is a
-reliable model of **which word** you are hearing and **not** of vowel length:
-measured across the installed voices, the /ʊ/–/uː/ contrast Unit 1 teaches comes
-out at 1–3% — and backwards on some voices — against the ~2× the lesson
-describes. Use the audio for word identity and the IPA for length.
 
 ## Staying level with the prescribed book
 
