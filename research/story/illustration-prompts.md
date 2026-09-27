@@ -3,6 +3,11 @@
 Every prompt the site's art needs, and nothing else. Written for **Gemini**
 (Nano Banana / Imagen). Each block is complete: paste it, generate, save.
 
+`python3 tools/art.py gen <slug>` does that for you: it sends a block verbatim,
+cuts the result out, checks it and critiques it — see
+`.claude/skills/art-generation/`. **This file stays the only place a prompt is
+written**; the tool reads it and never rewrites it.
+
 The Getting Started dialogue on every Lesson 1 page is a **comic** — a
 background plate, the people in the scene, the things in it, the overlay marks
 and the balloons, one panel at a time. So there are four kinds of image, and the

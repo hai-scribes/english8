@@ -23,20 +23,21 @@ square, identically placed.
 
 Three jobs, in order:
 
+  key       the background is flooded out from the border and becomes
+            transparent, at the master's full resolution. It is a CONTIGUOUS
+            fill from outside the figure, not a global "remove all white", so
+            Thảo's and Khoa's white shirts survive — the figure's closed contour
+            is what separates inside from outside, so it is the drawing, not the
+            code, that has to keep it unbroken: a gap lets the fill in and
+            hollows the figure out, and the keyer (artgen/cutout.py, shared
+            with make_overlay.py) now says so when it happens. The prompts in
+            research/story/illustration-prompts.md ask for a closed line for
+            this reason
   square    each drawing is padded (never cropped, never stretched) to a square,
             centred horizontally and sat on the bottom edge, so the character
             stands on the floor of the panel
-  key       white is flooded out from the border and becomes transparent. It is
-            a CONTIGUOUS fill from outside the figure, not a global "remove all
-            white", so Thảo's and Khoa's white shirts survive — the figure's
-            closed contour is what separates inside from outside. That contour
-            is a soft coloured pencil line in this style rather than a cel
-            outline, so it is the drawing, not the code, that has to keep it
-            unbroken: a gap lets the fill in and hollows the figure out. The
-            prompts in research/story/illustration-prompts.md ask for a closed
-            line and for the watercolour to stay inside it, for this reason
   compose   the six squares are pasted into a 3 x 2 grid, in the order
-            data/cast.json declares, and written as one PNG
+            data/cast.json declares, and written as one WebP
 
 `data/cast.json` is the authority for the grid and the emotion order. Nothing
 here hard-codes either.
@@ -47,10 +48,14 @@ import sys
 from pathlib import Path
 
 try:
-    from PIL import Image, ImageChops, ImageDraw
+    from PIL import Image, ImageChops
 except ImportError:
     print("FAIL: this needs Pillow — `pip3 install Pillow`")
     sys.exit(2)
+
+# The keyer is shared with make_overlay.py and with the generator, so a figure
+# and a prop drawn in the same session are cut out by the same rule.
+from artgen import cutout
 
 ROOT = Path(__file__).resolve().parents[1]
 CAST_DIR = ROOT / "art" / "cast"
@@ -78,20 +83,8 @@ MASTER_EXT = (".png", ".jpg", ".jpeg", ".webp")
 # 1.0% of the frame is under half a head's difference — below it, leave alone.
 ALIGN_TOL = 0.010
 
-# How far from pure white still counts as background. Generators rarely return
-# exactly #FFFFFF — JPEG-ish ringing and faint paper tone drift a few levels —
-# and a threshold this tight still cannot reach a drawn line.
-WHITE_TOL = 18
-SENTINEL = (255, 0, 255)
-
-
 def is_keyed(im: Image.Image) -> bool:
-    """Does this drawing already carry transparency? Generators increasingly
-    return a cut-out PNG, and keying one again is at best a no-op and at worst
-    destroys it: converting RGBA to RGB drops the alpha and leaves whatever is
-    underneath, which for a transparent pixel is black."""
-    a = im.getchannel("A")
-    return a.getextrema()[0] < 250
+    return cutout.is_keyed(im)
 
 
 def content_box(im: Image.Image, keyed: bool):
@@ -140,34 +133,6 @@ def square(im: Image.Image, fill) -> Image.Image:
     return out
 
 
-def key_white(im: Image.Image) -> Image.Image:
-    """White that touches the border becomes transparent; enclosed white stays."""
-    rgb = im.convert("RGB")
-    w, h = rgb.size
-    px = rgb.load()
-    near = lambda p: all(c >= 255 - WHITE_TOL for c in p)
-
-    # Seed from every border pixel that is background-coloured. Later seeds are
-    # cheap: the fill short-circuits on anything already sentinel-coloured.
-    border = ([(x, 0) for x in range(w)] + [(x, h - 1) for x in range(w)]
-              + [(0, y) for y in range(h)] + [(w - 1, y) for y in range(h)])
-    for xy in border:
-        if near(px[xy]):
-            ImageDraw.floodfill(rgb, xy, SENTINEL, thresh=WHITE_TOL)
-
-    out = im.convert("RGBA")
-    op = out.load()
-    cleared = 0
-    for y in range(h):
-        for x in range(w):
-            if px[x, y] == SENTINEL:
-                op[x, y] = (255, 255, 255, 0)
-                cleared += 1
-    if not cleared:
-        print("      note: nothing was keyed — is the background actually white?")
-    return out
-
-
 def build(slug: str, emotions: list, cols: int, rows: int, keep_white: bool,
           cell_px: int = CELL, do_align: bool = True) -> bool:
     src = CAST_DIR / slug
@@ -185,6 +150,16 @@ def build(slug: str, emotions: list, cols: int, rows: int, keep_white: bool,
             return False
         im = Image.open(f).convert("RGBA")
         keyed = is_keyed(im)
+        # Key at full resolution, before any resampling: the edge is softened
+        # from the drawn line itself rather than from a 640 px copy of it.
+        if not keyed and not keep_white:
+            im, rep = cutout.key(im)
+            keyed = True
+            if not rep["keyed_frac"]:
+                print(f"      note: {emo}: nothing was keyed — is the background white?")
+            if rep["leak_frac"] >= 0.03:
+                print(f"      WARNING: {emo}: {rep['leak_frac']:.1%} of the figure was "
+                      f"flooded through a gap in the outline — it will look hollow")
         raw.append([emo, im if keyed else im.convert("RGB"), keyed,
                     content_box(im if keyed else im.convert("RGB"), keyed)])
 
@@ -245,10 +220,7 @@ def build(slug: str, emotions: list, cols: int, rows: int, keep_white: bool,
     for i, (emo, p, keyed) in enumerate(parts):
         if p.size[0] != side:
             p = p.resize((side, side), Image.LANCZOS)
-        if keyed or keep_white:
-            cell = p.convert("RGBA")
-        else:
-            cell = key_white(p)
+        cell = p.convert("RGBA")
         sheet.paste(cell, (i % cols * side, i // cols * side))
 
     out = CAST_DIR / f"{slug}.webp"
