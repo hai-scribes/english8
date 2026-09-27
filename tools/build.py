@@ -28,6 +28,7 @@ import argparse
 import hashlib
 import html
 import json
+import os
 import re
 import shutil
 import sys
@@ -1381,6 +1382,9 @@ def md_inline_keep(s: str) -> str:
 # The set is CHUNKED rather than run whole. Meeting thirty-seven words before
 # the first question is not an intake either, and `size` is the only knob.
 VOCAB_DEFAULT_SIZE = 8
+VOCAB_MIN_VARIANTS = 12
+VOCAB_VARIANTS_GATE = True
+VARIANT_REPORT: dict = {}
 
 
 def bank_word_tags(rows: list, words: list) -> None:
@@ -1393,14 +1397,46 @@ def bank_word_tags(rows: list, words: list) -> None:
     """
     # "be keen on" is written "I'm keen on", so the phrase is matched without
     # its "be" as well.
+    # A one-word remainder ("be into" -> "into") is kept only with a form of
+    # *be* in front of it, or every "folding paper into a bird" counts as the
+    # phrase.
+    BE = ("am", "is", "are", "was", "were", "'m", "'re", "'s", "be", "being", "not")
+    def unbe(f):
+        rest = f[3:]
+        return [rest] if " " in rest else [b + (" " if not b.startswith("'") else "") + rest
+                                           for b in BE]
     forms = [(w["n"], [f for f in word_forms(w["word"])
-                       + [f[3:] for f in word_forms(w["word"]) if f.startswith("be ")]
+                       + [x for f in word_forms(w["word"]) if f.startswith("be ") for x in unbe(f)]
                        if len(f) > 2]) for w in words]
 
+    head = {w["n"]: re.sub(r"\s*\([^)]*\)", "", w["word"]).strip().lower() for w in words}
+
     def hits(text: str) -> set:
+        """The rows the text mentions. Where two words claim the same stretch
+        of text, the one that fits it better wins: "instant message" is the
+        phrase, not also *instantly* (whose forms include "instant"), and
+        "holographic" is its own row, not also *holography*'s."""
         t = " " + RE_WS.sub(" ", html.unescape(RE_TAG.sub(" ", str(text))).lower()) + " "
-        return {n for n, fs in forms
-                if any(re.search(r"(?<![\w'])" + re.escape(f) + r"(?![\w'])", t) for f in fs)}
+        found = []
+        for n, fs in forms:
+            for f in fs:
+                for m in re.finditer(r"(?<![\w'])" + re.escape(f) + r"(?![\w'])", t):
+                    found.append((n, m.start(), m.end(), f))
+        keep = set()
+        for n, a0, a1, f in found:
+            beaten = False
+            for n2, b0, b1, f2 in found:
+                if n2 == n:
+                    continue
+                if b0 <= a0 and a1 <= b1 and (b1 - b0) > (a1 - a0):
+                    beaten = True        # inside a longer phrase of another row
+                elif (b0, b1) == (a0, a1) and head[n2] == f2 and head[n] != f:
+                    beaten = True        # same words; the other row's own headword
+                if beaten:
+                    break
+            if not beaten:
+                keep.add(n)
+        return keep
 
     for r in rows:
         ans = r.get("fix") or r["a"]
@@ -1441,6 +1477,33 @@ def vocab_payload(u, lesson, a: dict, idx: int, groups: list = (), blk=None) -> 
                              f"unit's table")
     pool = bank_rows(list(groups), lambda g: bank_block_id(blk or {"title": "vocab"}, g))
     bank_word_tags(pool, practice_data(u))
+    # Tiles test word order and word forms, and the word itself is printed in
+    # the cue -- so in Meet the words they checked nothing about the word.
+    # Decided by the operator on 2026-09-27: not in a vocabulary pool.
+    tiled = [r for r in pool if r.get("tiles")]
+    if tiled and VOCAB_VARIANTS_GATE:
+        raise SystemExit(f"{where}: a build-the-sentence item is not a vocabulary "
+                         f"question ({RE_TAG.sub('', str(tiled[0]['q']))[:60]!r}) — "
+                         f"it belongs in Lesson 3's practice bank")
+    # Every word is asked a DIFFERENT question each time it comes back -- after a
+    # miss, and on every later run -- so each needs enough of them. A question
+    # counts for a word when the word is its answer and every word it mentions
+    # has been met by the time that word's set is asked.
+    met, askable = set(), {}
+    for i in range(0, len(words), size):
+        chunk = words[i:i + size]
+        met |= {w["n"] for w in chunk}
+        for w in chunk:
+            askable[w["word"]] = sum(1 for r in pool
+                                     if w["n"] in r.get("k", []) and set(r.get("all", [])) <= met)
+    short = {k: v for k, v in askable.items() if v < VOCAB_MIN_VARIANTS}
+    if short and VOCAB_VARIANTS_GATE:
+        raise SystemExit(f"{where}: {len(short)} word(s) have fewer than "
+                         f"{VOCAB_MIN_VARIANTS} different questions: "
+                         + ", ".join(f"{k} ({v})" for k, v in sorted(short.items(), key=lambda x: x[1])[:12]))
+    if tiled:
+        short = dict(short, **{"(tiles still in the pool)": len(tiled)})
+    VARIANT_REPORT[u["nn"]] = short
     return {"id": f"{u['nn']}-{lesson}-v{idx + 1}", "size": size, "words": words,
             "pool": pool}
 
@@ -3868,6 +3931,10 @@ def main() -> int:
         if reviews:
             print(f"{len(reviews)} cumulative reviews · {rv_ex} exercises · {rv_task} marked "
                   f"tasks · {rv_item} marked items, every one of them across three units")
+        if os.environ.get("EN8_VARIANTS"):
+            for nn, short in sorted(VARIANT_REPORT.items()):
+                print(f"  variants unit {nn}: " + ("every word has " + str(VOCAB_MIN_VARIANTS) + "+" if not short
+                      else f"{len(short)} short — " + ", ".join(f"{k} ({v})" for k, v in sorted(short.items(), key=lambda x: x[1]))))
         return 0
 
     # Rebuild the generated tree only — remove what we own by name rather than

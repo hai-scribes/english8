@@ -1168,9 +1168,7 @@ function runEngine(mode, words, unit, hostSel, opts){
         + '</div>' + why + '</div>'
       + (w.colloc ? '<p class="note small"><b>Goes with:</b> ' + w.colloc.map(esc).join(" · ") + '</p>' : "")
       + '<div class="row"><button class="btn" id="next">Continue</button></div>');
-    /* A wrong item comes back later in the run -- twice at most, so one
-       stubborn item cannot make a session endless. */
-    if (!ok && (q.back = (q.back || 0) + 1) <= 2) st.items.push(q);
+    if (!ok) requeue(q);
     $("#next", host).addEventListener("click", () => { st.i++; paintQ(); });
   }
 
@@ -1179,6 +1177,26 @@ function runEngine(mode, words, unit, hostSel, opts){
      its own, because a right answer needs nothing from the learner. Wrong: the
      question stays, the right answer shows beside it, and only then is there a
      button -- the one moment worth stopping for. */
+  /* A wrong item comes back later in the run -- twice at most, so one
+     stubborn item cannot make a session endless. Where the caller can supply
+     another question on the same thing (`opts.retry`), THAT comes back instead:
+     passing the second time should mean knowing the word, not remembering the
+     sentence it was asked in. With nothing different left, nothing comes back. */
+  function requeue(q){
+    const back = (q.back || 0) + 1;
+    if (back > 2) return;
+    if (opts.retry){
+      const alt = opts.retry(q.w);
+      if (!alt) return;
+      const nq = buildItems([alt], st.mode, opts.decoys)[0];
+      nq.back = back;
+      st.items.push(nq);
+      return;
+    }
+    q.back = back;
+    st.items.push(q);
+  }
+
   function answerHTML(w){
     return w.word
       ? '<b>' + esc(w.word) + '</b> — ' + esc(w.vi)
@@ -1197,7 +1215,7 @@ function runEngine(mode, words, unit, hostSel, opts){
       return;
     }
     card.classList.add("is-wrong");
-    if (!ok && (q.back = (q.back || 0) + 1) <= 2) st.items.push(q);
+    requeue(q);
     const two = res.why === "two" ? '<div class="n">Two answers in one gap score nothing.</div>' : "";
     card.insertAdjacentHTML("beforeend", '<div class="e-fix" role="status">'
       + '<div class="e-ans"><span class="no">&#10007;</span> ' + answerHTML(w) + '</div>' + two
@@ -4340,33 +4358,57 @@ function initVocab(){
       if (bk) bk.addEventListener("click", () => meet(si, wi - 1));
     }
 
-    /* ---- 2. questions on the set just met: its words, plus pool items about
-       them that mention nothing not yet met ---- */
-    function recall(si){
-      const set = sets[si], met = metUpTo(si), mine = new Set(set.map(w => w.n));
-      const fromPool = drawFresh(p.id, pool.filter(x =>
-        (x.k || []).some(n => mine.has(n)) && fits(x, met)), Math.max(4, Math.ceil(set.length * .75)));
-      ask(set.concat(fromPool), "Set " + (si + 1), r => {
-        log.push({ set: si, right: r.right, total: r.total, at: Date.now() });
-        save(); listing(si);
-      }, p.words.filter(w => met.has(w.n)));
+    /* ---- one question per word, never the same one twice ----------------
+       Each word has many questions in the pool (the build holds it to twelve
+       or more). A run asks each word the one the learner has gone longest
+       without seeing, and a miss brings the word back as a DIFFERENT question
+       from those still unseen in this run -- so a right answer the second time
+       is about the word, not about remembering the sentence. The word's own
+       generated question is the last resort, used once. */
+    function variant(w, met, used){
+      const cands = pool.filter(x => (x.k || []).includes(w.n) && fits(x, met) && !used.has(x.id));
+      if (cands.length){
+        const x = drawFresh(p.id, cands, 1)[0];
+        used.add(x.id);
+        return x;
+      }
+      const gid = "w:" + w.word;
+      if (used.has(gid)) return null;
+      used.add(gid);
+      return w;
+    }
+    const byK = x => x.n !== undefined ? byN[x.n] : byN[(x.k || [])[0]];
+    function run(words, extra, met, label, logSet, si){
+      const used = new Set();
+      const items = shuffle(words).map(w => variant(w, met, used)).filter(Boolean);
+      for (const w of shuffle(words).slice(0, extra)){
+        const x = variant(w, met, used);
+        if (x) items.push(x);
+      }
+      stage.innerHTML = '<div id="v-eng-' + p.id + '"></div>';
+      runEngine("practice", shuffle(items), null, "#v-eng-" + p.id, {
+        conf: false, schedule: false, label, decoys: p.words.filter(w => met.has(w.n)),
+        retry: it => { const w = byK(it); return w ? variant(w, met, used) : null; },
+        onDone: r => {
+          log.push({ set: logSet, right: r.right, total: r.total, at: Date.now() });
+          save(); listing(si);
+        },
+      });
     }
 
-    /* ---- mixed: everything met so far, a fresh draw every time ---- */
+    /* ---- 2. questions on the set just met: one on every word, then a few
+       more on some of them, each a different question ---- */
+    function recall(si){
+      const set = sets[si];
+      run(set, Math.ceil(set.length / 2), metUpTo(si), "Set " + (si + 1), si, si);
+    }
+
+    /* ---- mixed: everything met so far; the words least recently asked ---- */
     function mixed(si){
       const met = metUpTo(Math.max(-1, ...setsDone())), words = p.words.filter(w => met.has(w.n));
-      const fromPool = drawFresh(p.id, pool.filter(x => fits(x, met)), 8);
-      const fromWords = drawFresh(p.id + ":w", words.map(w => Object.assign({ id: w.word }, w)), 12 - fromPool.length);
-      ask(fromWords.concat(fromPool), "Mixed", r => {
-        log.push({ set: -1, right: r.right, total: r.total, at: Date.now() });
-        save(); listing(si);
-      }, words);
-    }
-
-    function ask(items, label, done, decoys){
-      stage.innerHTML = '<div id="v-eng-' + p.id + '"></div>';
-      runEngine("practice", items, null, "#v-eng-" + p.id,
-                { conf: false, schedule: false, label, decoys, onDone: done });
+      const pickW = drawFresh(p.id + ":w", words.map(w => Object.assign({ id: w.word }, w)), 12)
+        .map(x => byN[x.n]);
+      run(pickW, 0, met, "Mixed", -1, si);
     }
 
     /* ---- 3. the set at a glance, and where to go next ---- */
@@ -4421,8 +4463,19 @@ function initBanks(){
       const items = drawFresh(p.id, p.items, p.draw)
         .map(x => Object.assign({ type: p.type }, x));
       stage.innerHTML = '<div id="b-eng-' + p.id + '"></div>';
+      const used = new Set(items.map(x => x.id));
       runEngine("practice", items, DATA.unit || null, "#b-eng-" + p.id, {
         conf: false, schedule: false, label: "Practice",
+        /* A miss comes back as another question of the same kind, not the
+           same question: the second go should test the rule, not the memory
+           of one sentence. */
+        retry: it => {
+          const c = p.items.filter(x => x.genre === it.genre && !used.has(x.id));
+          if (!c.length) return null;
+          const x = drawFresh(p.id, c, 1)[0];
+          used.add(x.id);
+          return Object.assign({ type: p.type }, x);
+        },
         onDone: r => { log.push({ right: r.right, total: r.total, at: Date.now() }); save(); cover(); },
       });
     }
