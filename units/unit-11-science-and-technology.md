@@ -9,7 +9,7 @@
 | Strand | Target |
 | --- | --- |
 | **Pronunciation** | **Stress** in statements and in questions |
-| **Grammar** | **Reported speech** — statements |
+| **Grammar** | **Reported speech** — *"I am tired."* → She said she **was** tired |
 | **Reading** | An inventor's workroom, and the rule he wrote on the last page |
 | **Speaking** | Talking about the technology you use and why |
 | **Listening** | An apprentice on what he was taught, and what he was never taught |
@@ -20,8 +20,6 @@
 ## Lesson 1 — Getting Started
 
 ### Dialogue: The box that will not open
-
-*Read the conversation aloud. Then answer the questions below.*
 
 ::: dialogue title="The box that will not open" bg="science-room" gramen="said (that) — reported speech" gramvi="Khi thuật lại lời nói, lùi thì một bậc và đổi đại từ: *“I am tired”* → *He said he **was** tired*." gramco="She said she was busy"
 @cast Tí|annoyed, Khoa|neutral
@@ -50,7 +48,7 @@
 
 ### 1.1 Comprehension
 
-::: task skill="course" type="short-answer" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+::: task skill="course" type="short-answer" ask="Choose the answer from the scene."
 - Khoa says Tí has been pressing with the wrong part of his thumb. Which part? {the tip | the flat part | the side} = the tip
 - Đạt compared the box to one ordinary object. Which object? {a shoe box | a key | a boat engine} = a shoe box
 - Khoa admits that one person's opinion of the test result is right. Whose? {Hùng | Đạt | Cô Yến} = Hùng
@@ -69,25 +67,155 @@
 
 ### 1.3 Notice the grammar
 
-::: task skill="course" type="choice" opts="say|tell" ask="Each of these is reported somewhere in the dialogue above. Go back and find the line. Which reporting verb does it use **there**?"
-- Bống, on whether the sea will help them = say
-- Cô Yến, on how long the club has left = tell
-- Cô Yến, on the whole school coming to look = tell
-- Hùng, on four out of ten = say
+::: task skill="course" type="gap-fill" ask="Find the line in the dialogue. Which words does the speaker use?"
+- Khoa: "Cô Yến ___ us that the club had until Friday." {told | said} = told
+- Tí: "Hùng ___ that four out of ten was worse than a key." {said | told} = said
+- Tí: "She told me that the whole school ___ come and look at it." {would | will} = would
+- Tí: "I wrote that the box ___ four times out of ten." {opened | opens} = opened
 :::
 
-Now look at what follows each verb in the dialogue. Two of the four lines have
-an extra word straight after it — *us*, *me*. The other two have nothing there,
-and cannot: **only *tell* takes a person after it.** *Say* never does. That
-single difference is most of what Lesson 3 is about.
+Look at the word after each verb: told **us**, told **me** — but said **that**.
+*Told* has a person after it. *Said* never does.
 
-> **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **câu tường thuật**
-> (reported speech) với câu trần thuật. Chú ý hai điều: *say* và *tell* dùng
-> khác nhau, và động từ thường lùi một thì. Chi tiết đầy đủ ở Lesson 3.
+> **Ghi chú:** Đây là **câu tường thuật** — kể lại lời người khác nói. Chú ý
+> hai điều: *said* và *told* dùng khác nhau, và động từ lùi về quá khứ
+> (*will* → *would*, *opens* → *opened*). Lesson 3 giải thích kĩ.
 
 ---
 
 ## Lesson 2 — A Closer Look 1
+
+### Meet the words
+
+::: vocab size="7"
+@ gap-fill ask="Choose the word that fits."
+- The printing press was one of the most important ___ in history. {inventions | laboratories | experiments} = inventions
+- Khoa's newest ___ is a box that opens with a fingerprint. {invention | experiment | laboratory} = invention
+- My brother wants to ___ a machine that does the washing-up by itself. {invent | discover | complain} = invent
+- Who ___ the first computer? {invented | discovered | complained} = invented
+- The bank uses ___ : you pay by showing your face to a camera. {biometrics | nanolearning | truancy} = biometrics
+- Our phones can now check who we are by ___ — a finger, a face or an eye. {biometrics | feedback | attendance} = biometrics
+- No two people have the same ___ , so it is very hard to copy. {fingerprint | application | platform} = fingerprint
+- Press your thumb on the glass so the lock can read your ___ . {fingerprint | iris | feedback} = fingerprint
+- The camera at the airport scanned my ___ — the coloured part of my eye. {iris | fingerprint | contact lens} = iris
+- Every person's ___ has its own pattern of colours and lines. {iris | contact lens | platform} = iris
+- Face ___ lets my phone unlock as soon as I look at it. {recognition | feedback | attendance} = recognition
+- Voice ___ lets me write a message just by speaking. {recognition | attendance | feedback} = recognition
+- My laptop and my phone are the two ___ I use every single day. {devices | experiments | drawbacks} = devices
+- A smart watch is a small ___ that counts your steps. {device | platform | breakthrough} = device
+- A program that learns from data is using ___ . {artificial intelligence | biometrics | nanolearning} = artificial intelligence
+- This app uses ___ to answer my questions like a real person. {artificial intelligence | eye-tracking | attendance} = artificial intelligence
+- The factory ___ its packing line last year, so machines now do the work of fifty people. {automated | complained | discovered} = automated
+- Many banks have ___ simple jobs, so machines do them now. {automated | complained | invented} = automated
+- Ten minutes of ___ a day — one short video and three questions — fits into a busy week. {nanolearning | biometrics | eye-tracking} = nanolearning
+- With ___ , each lesson lasts about three minutes. {nanolearning | eye-tracking | biometrics} = nanolearning
+- The new engine is extremely ___ — it uses half the fuel. {efficient | digital | convenient} = efficient
+- Walking to school is not very ___ ; the bus takes half the time. {efficient | innovative | digital} = efficient
+- Khoa's water filter is very ___ : nobody has used shells to clean water before. {innovative | digital | convenient} = innovative
+- Our teacher has an ___ idea: we learn science by cooking. {innovative | convenient | digital} = innovative
+- After ten years of work, the doctors made a ___ : a medicine that finally worked. {breakthrough | drawback | device} = breakthrough
+- The first vaccine was a huge ___ in medicine. {breakthrough | drawback | truancy} = breakthrough
+- Scientists work for months in the ___ before they announce anything. {laboratory | breakout room | platform} = laboratory
+- Put on your safety glasses before you go into the ___ . {laboratory | breakout room | platform} = laboratory
+- We did an ___ to see if salt water freezes more slowly than fresh water. {experiment | invention | application} = experiment
+- The ___ failed, so the scientists tried again with less salt. {experiment | benefit | platform} = experiment
+- Will computers ever ___ doctors? {replace | complain | automate} = replace
+- My old phone broke, so I need to ___ it. {replace | develop | complain} = replace
+- One ___ of living near school is that I can sleep longer. {benefit | drawback | breakthrough} = benefit
+- The main ___ of the new app is that it is free. {benefit | drawback | epidemic} = benefit
+- The biggest ___ of studying online is that you cannot ask a question immediately. {drawback | benefit | feedback} = drawback
+- The phone is cheap and fast. Its only ___ is a small screen. {drawback | benefit | breakthrough} = drawback
+- Thảo uses an ___ on her phone to check the weather before school. {application | invention | experiment} = application
+- This ___ turns a photo of a page into a list of new words. {application | laboratory | epidemic} = application
+- All our homework is on one online ___ , so I never lose a worksheet. {platform | feedback | attendance} = platform
+- Which online ___ does your school use — Zoom or Google Meet? {platform | device | laboratory} = platform
+- The team is still ___ the robot; it will be ready next year. {developing | replacing | automating} = developing
+- Reading every day helps you ___ your English. {develop | invent | automate} = develop
+- My grandfather's old photos are now ___ — he keeps them on a laptop instead of in a box. {digital | efficient | innovative} = digital
+- We use a ___ camera, so we can see each photo at once. {digital | innovative | efficient} = digital
+- ___ shows exactly where a person is looking on a screen. {Eye-tracking | Face recognition | Nanolearning} = Eye-tracking
+- The game uses ___ , so you can move the car just by looking left or right. {eye-tracking | fingerprints | attendance} = eye-tracking
+- Our teacher checks ___ at the start of every lesson — who is here and who isn't. {attendance | feedback | recognition} = attendance
+- Her ___ is perfect: she has not missed one day this year. {attendance | truancy | feedback} = attendance
+- The new scanner at the school gate should stop ___ — nobody can skip class without the school knowing. {truancy | attendance | feedback} = truancy
+- Hùng's father was angry when the school phoned about his ___ — he had missed five days. {truancy | feedback | platform} = truancy
+- ___ in tests is unfair to the students who study hard. {Cheating | Attendance | Feedback} = Cheating
+- The online test watches your eyes to stop ___ . {cheating | attendance | feedback} = cheating
+- My English teacher always gives useful ___ on my essays. {feedback | attendance | breakthrough} = feedback
+- The coach watched the video of our match and gave us ___ the next day. {feedback | truancy | recognition} = feedback
+- In the online English class, the teacher sends us into ___ to talk in groups of four. {breakout rooms | laboratories | platforms} = breakout rooms
+- After ten minutes in the ___ , our group came back to the main online class. {breakout room | contact lens | epidemic} = breakout room
+- After a year of video calls, it was lovely to see my cousins ___ again. {face to face | online | on the platform} = face to face
+- We have talked online for a year, but we have never met ___ . {face to face | by message | online} = face to face
+- The bus stop is right outside our house, which is very ___ . {convenient | digital | artificial} = convenient
+- Is Friday afternoon ___ for you, or shall we meet on Saturday? {convenient | efficient | digital} = convenient
+- My neighbours often ___ about the noise from the building site. {complain | replace | automate} = complain
+- Bà Sáu never ___ ; she just fixes what is broken. {complains | replaces | invents} = complains
+- During the ___ , the schools in Quy Nhơn closed for two months. {epidemic | breakthrough | truancy} = epidemic
+- The ___ spread quickly, and soon half the town was ill. {epidemic | breakthrough | device} = epidemic
+- Chú Bảy's daughter doesn't like glasses, so she wears ___ . {contact lenses | fingerprints | platforms} = contact lenses
+- One of my ___ fell out during the football match, and I couldn't see the ball. {contact lenses | fingerprints | irises} = contact lenses
+@ choice ask="Which word or phrase means this?"
+- the coloured ring around the pupil of the eye {iris | fingerprint | contact lens} = iris
+- an important new discovery that changes things {breakthrough | drawback | epidemic} = breakthrough
+- to make a machine do a job a person used to do {automate | invent | complain} = automate
+- checking who a person is from a part of the body {biometrics | nanolearning | eye-tracking} = biometrics
+- a scientific test done to find something out {experiment | invention | application} = experiment
+- studying in very short bursts of a few minutes {nanolearning | truancy | feedback} = nanolearning
+- to take the place of someone or something {replace | develop | automate} = replace
+- new and full of fresh ideas {innovative | efficient | convenient} = innovative
+- a bad point about something {drawback | benefit | feedback} = drawback
+- a good point about something {benefit | drawback | epidemic} = benefit
+- staying away from school without permission {truancy | cheating | attendance} = truancy
+- what someone tells you about your work so you can do better {feedback | benefit | application} = feedback
+- easy to use or to get to; no trouble for you {convenient | innovative | digital} = convenient
+- a disease that spreads to many people at the same time {epidemic | breakthrough | truancy} = epidemic
+- in the same room, not on a screen {face to face | online | digital} = face to face
+- a room where scientists do tests {laboratory | platform | breakout room} = laboratory
+@ choice ask="What does the word mean?"
+- platform {an online system where people learn or meet | a room for science tests | a thin lens you wear on your eye} = an online system where people learn or meet
+- application {a program on a phone or computer | a new discovery | a test in a laboratory} = a program on a phone or computer
+- digital {stored on a computer, not on paper | very fast and cheap | new and full of ideas} = stored on a computer, not on paper
+- efficient {doing a job without wasting time or energy | easy to get to | never seen before} = doing a job without wasting time or energy
+- invent {make something completely new for the first time | find something that was already there | say you are not happy} = make something completely new for the first time
+- device {a piece of equipment made for one job | a room for scientists | a bad point} = a piece of equipment made for one job
+- complain {say you are not happy about something | take the place of something | make something better} = say you are not happy about something
+- develop {work on something until it is better | find something by chance | stay away from school} = work on something until it is better
+@ choice opts="invent|discover|create|develop" ask="Which verb goes with the phrase?"
+- ___ the wheel = invent ~ nothing like it existed before somebody built the first one
+- ___ the telephone = invent ~ nothing like it existed before Bell
+- ___ your English skills = develop ~ the skills are already there; you make them better
+- ___ the school website until it works on phones = develop ~ the website already exists; you improve it
+- ___ a new kind of frog in the forest = discover ~ the frog was already there; somebody found it
+- ___ a new planet = discover ~ the planet was in the sky long before the telescope
+- ___ a birthday card for your mum = create ~ you make it yourself, and it is new
+- ___ a poster for the science fair = create ~ something new that you make yourself
+@ odd-one-out
+- fingerprint · iris · face · laptop = laptop ~ the others are parts of the body a machine can read
+- benefit · good point · advantage · drawback = drawback ~ the others are good things about something
+- laboratory · breakout room · classroom · contact lens = contact lens ~ the others are places where people learn or work
+- Zoom · Google Meet · Microsoft Teams · biometrics = biometrics ~ the others are online platforms
+- cheating · truancy · bullying · attendance = attendance ~ the others are problems a school wants to stop
+- epidemic · breakthrough · invention · discovery = epidemic ~ the others are good news for science
+- phone · laptop · tablet · feedback = feedback ~ the others are devices
+- convenient · efficient · innovative · epidemic = epidemic ~ the others describe something good
+@ error-correction
+- Bell discovered the telephone in 1876. {invented | complained | replaced} = discovered -> invented ~ the telephone did not exist before; Bell **invented** it
+- She complained on the slow Internet. {about | at | for} = on -> about ~ you **complain about** something
+- I met my online friend face by face last summer. {to | with | in} = by -> to ~ **face to face**
+- The main benefit for this app is that it is free. {of | in | at} = for -> of ~ the **benefit of** something
+- The biggest benefit of this phone is its tiny battery — it dies by lunch. {drawback | feedback | invention} = benefit -> drawback ~ a battery that dies by lunch is a bad point
+- Scientists do their tests in the platform. {laboratory | application | device} = platform -> laboratory ~ scientists work in a **laboratory**
+- The teacher gave me a useful feedback on my essay. {some | many | an} = a -> some ~ you give **some feedback**, never *a feedback*
+- Our class makes an experiment every Friday. {does | takes | gives} = makes -> does ~ you **do** an experiment
+- Robots will never change teachers completely. {replace | develop | invent} = change -> replace ~ one thing takes the place of another: **replace**
+@ sentence-build
+- Khoa / invent / a new lock {inventing | to} = Khoa invented a new lock
+- the teacher / give / us / useful feedback {giving | a} = The teacher gave us useful feedback
+- robots / can / replace / some workers {replaces} = Robots can replace some workers / Some robots can replace workers
+- she / complain / about / the slow Internet {on} = She complained about the slow Internet
+- my sister / not like / contact lenses {don't} = My sister doesn't like contact lenses
+:::
 
 ### Vocabulary — Science and technology
 
@@ -127,321 +255,201 @@ single difference is most of what Lesson 3 is about.
 | 32 | epidemic | /ˌepɪˈdemɪk/ | n | dịch bệnh |
 | 33 | contact lens | /ˈkɒntækt lenz/ | n | kính áp tròng |
 
-> ### ▶︎ [**Practise these 33 words**](../app/unit-11-vocab.html)
->
-> When you have finished this lesson, the unit page opens a **practice**
-> session over all thirty-three — the meaning, the word, and, more often than
-> either of those, **the word inside a phrase it actually lives in**. Wrong
-> answers come straight back, and everything returns a week later, because
-> what you can still recall after a gap is the only recall worth counting. The
-> **unit test** opens once all seven lessons are done.
->
-> **Luyện 33 từ này.** Học xong bài này, phần
-> **practice** ở trang bài sẽ mở ra để luyện cả 33 từ — trong đó phần lớn là
-> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
-> ngay, và mọi từ quay lại sau một tuần.
->
-> Do the exercises below as well — they put the words back inside sentences.
+### invent, discover, create, develop
 
-### Meet the words
-
-The table above is there to look things up in. This is where you actually meet
-them: a few at a time, then answer on the few you have just met.
-
-::: vocab size="7"
-:::
-
-### 2.1 Complete the sentences
-
-::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
-- The printing press was one of the most important ___ in history. {inventions | laboratories | experiments} = inventions
-- My laptop and my phone are the two ___ I use every single day. {devices | experiments | drawbacks} = devices
-- Scientists work for months in the ___ before they announce anything. {laboratory | breakout room | platform} = laboratory
-- A program that learns from data is using ___ . {artificial intelligence | biometrics | nanolearning} = artificial intelligence
-- No two people have the same ___ , so it is very hard to copy. {fingerprint | application | platform} = fingerprint
-- The new engine is extremely ___ — it uses half the fuel. {efficient | digital | convenient} = efficient
-- The biggest ___ of studying online is that you cannot ask a question immediately. {drawback | benefit | feedback} = drawback
-- Face ___ lets my phone unlock as soon as I look at it. {recognition | feedback | attendance} = recognition
-:::
-
-### 2.2 Match the word to its meaning
-
-::: task skill="course" type="choice" opts="biometrics|nanolearning|breakthrough|automate|iris|innovative|experiment|replace" ask="Which word from the table does each meaning belong to?"
-- the coloured ring around the pupil of the eye = iris
-- an important new discovery that changes things = breakthrough
-- to make a machine do a job a person used to do = automate
-- identifying a person from a part of the body = biometrics
-- a scientific test done to find something out = experiment
-- studying in very short, focused bursts = nanolearning
-- to take the place of someone or something = replace
-- new and full of fresh ideas = innovative
-:::
-
-### 2.3 Which verb?
-
-Four verbs sit very close together in English and are kept strictly apart. You
-**invent** something that never existed. You **discover** something that was
-always there and nobody had found. You **create** something new that you made
-yourself. You **develop** something that already exists until it works properly.
+You **invent** something that never existed. You **discover** something that was
+always there. You **create** something new that you make yourself. You
+**develop** something that already exists, until it works better.
 
 > **Mẹo:** Nhớ theo vật đi kèm, đừng nhớ theo nghĩa tiếng Việt.
 > **invent** + *a machine, the wheel, the telephone* — thứ trước đó chưa hề có.
 > **discover** + *a chemical element, a planet, radium* — thứ vốn đã tồn tại.
 > **create** + *a card, a poster, a painting* — thứ chính mình làm ra.
-> **develop** + *a skill, a website that already exists* — thứ đã có, nay
-> làm cho tốt hơn, hoàn thiện hơn.
+> **develop** + *a skill, a website* — thứ đã có, nay làm cho tốt hơn.
 
-::: task skill="course" type="choice" opts="invent|discover|create|develop" ask="Which verb goes with each phrase? Only **one** of the four fits."
-- ___ the wheel = invent ~ nothing like it existed before somebody built the first one
-- ___ a chemical element = discover ~ the element was already there; somebody found it
-- ___ a birthday card for your mum = create ~ you make it yourself, and it is new
-- ___ your English skills = develop ~ the skills are already there; you make them better
-- ___ a new planet = discover ~ the planet was in the sky long before the telescope
-- ___ the school website until it works on phones = develop ~ the website already exists; it is improved until it works
-- ___ the telephone = invent ~ nothing like it existed before Bell
-- ___ a poster for the science fair = create ~ something new that you make yourself
-:::
-
-> ⚠️ **Bẫy thường gặp:** Tiếng Việt dùng chung "phát minh / phát hiện / tạo ra"
-> khá linh hoạt, nên học sinh hay viết ❌ *Marie Curie invented radium.*
-> Radium đã có sẵn trong tự nhiên → ✅ *Marie Curie **discovered** radium.*
-> Ngược lại ❌ *Bell discovered the telephone.* → ✅ *Bell **invented** the
-> telephone.*
-
-### 2.4 Learning, checking, complaining
-
-::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
-- Our teacher puts us into ___ so that four of us can discuss one question. {breakout rooms | laboratories | platforms} = breakout rooms
-- The school uses a fingerprint scanner to check ___ every morning. {attendance | feedback | recognition} = attendance
-- Biometrics is meant to put an end to ___ and to copying in tests. {truancy | attendance | feedback} = truancy
-- My aunt wears ___ instead of glasses when she plays badminton. {contact lenses | fingerprints | platforms} = contact lenses
-- Classes moved online during the ___ and never fully moved back. {epidemic | breakthrough | truancy} = epidemic
-- I would rather meet my classmates ___ than in twenty small squares. {face to face | online | on the platform} = face to face
-- Studying at home is ___ : I save an hour of travelling every day. {convenient | digital | artificial} = convenient
-- Half the class ___ about the Internet connection every single week. {complain | replace | automate} = complain
-- The teacher marks my work and sends ___ the next morning. {feedback | attendance | breakthrough} = feedback
-- Our school has put every subject on the same ___ . {platform | feedback | attendance} = platform
-- ___ can show which line of the page a reader stopped at. {Eye-tracking | Face recognition | Nanolearning} = Eye-tracking
-- The library is now completely ___ — there is not one paper card left. {digital | efficient | innovative} = digital
-- Engineers spent nine years ___ this battery before it was safe to sell. {developing | replacing | automating} = developing
-- I downloaded an ___ that tests me on ten new words a day. {application | invention | experiment} = application
-:::
+> ⚠️ **Bẫy thường gặp:** ❌ *Marie Curie invented radium.* → ✅ *Marie Curie
+> **discovered** radium.* (radium vốn có sẵn trong tự nhiên)
+> ❌ *Bell discovered the telephone.* → ✅ *Bell **invented** the telephone.*
 
 ### Pronunciation — Stress in statements and questions
 
-English does **not** give every word the same weight. Some words are said
-louder, longer and higher; the rest are squeezed. This is **sentence stress**.
+In a sentence, some words are said **louder, longer and higher**. The rest are
+said quickly and quietly. The book calls the loud ones **content words** and the
+quiet ones **function words**.
 
-| | **Content words — STRESSED** | **Function words — weak** |
-| --- | --- | --- |
-| **Which words** | nouns, main verbs, adjectives, adverbs, question words, *not* | articles, prepositions, auxiliary verbs, pronouns, conjunctions |
-| **Examples** | robot, invent, efficient, quickly, **what**, **why**, **not** | a, an, the, in, of, to, is, do, can, I, he, it, and, but |
-| **Why** | they carry the meaning | you can guess them from grammar |
+#### 1 · Words that carry the meaning are stressed
 
-Say this sentence. Only the **CAPITAL** words get a beat:
+**robot · invent · efficient · quickly · what · why · not**
 
 > The **SCIENTISTS** are **FINISHING** their **EXPERIMENT** in the **LABORATORY**.
 
-Now the contrast the unit is about — **statements vs questions**.
+#### 2 · Small grammar words are weak
 
-| Type | Example (stress in CAPITALS) | Voice at the end |
-| --- | --- | --- |
-| **Statement** | The **ROBOT** can **READ** my **FINGERPRINT**. | falls ↘ |
-| **Wh- question** | **WHAT** did the **TEACHER** **SAY**? | falls ↘ |
-| **Yes/No question** | Can a **MACHINE** **REPLACE** a **TEACHER**? | rises ↗ |
-| **Short answer** | Yes, it **CAN**. / No, it **CAN'T**. | falls ↘ |
+**a · the · in · of · to · is · do · can · I · he · and**
 
-Three things to notice:
+> **Mẹo:** Gõ nhịp bằng tay: mỗi từ mang nghĩa (danh từ, động từ chính, tính
+> từ, trạng từ, từ để hỏi) là **một nhịp**; các từ nhỏ còn lại đọc lướt qua.
 
-1. The **Wh- word is stressed** — *WHAT, WHY, WHERE, HOW* — and the voice still
-   **falls** at the end, exactly like a statement.
-2. A Yes/No question starts with a **weak auxiliary** (*Can* → /kən/, *Do* →
-   /də/) and **rises** at the end.
-3. That same auxiliary becomes **strong and stressed** in a short answer:
-   *Yes, it **CAN**.* Never weaken the last word of a short answer.
+#### 3 · Statements and *Wh-* questions fall at the end ↘
 
-> **Mẹo:** Đừng đọc đều đều từng từ. Hãy gõ nhịp bằng tay: mỗi **từ nội dung**
-> (danh từ, động từ chính, tính từ, trạng từ, từ để hỏi) là **một nhịp**; các
-> từ chức năng đọc lướt qua. Câu trần thuật và câu hỏi Wh- **hạ giọng** ở cuối;
-> câu hỏi Yes/No **lên giọng**.
+> The **ROBOT** can **READ** my **FINGERPRINT**. ↘
+> **WHAT** did the **TEACHER** **SAY**? ↘
 
-### 2.5 Content or function?
+The question word (*what, why, where, how*) is stressed.
 
-::: task skill="course" type="choice" opts="C|F" ask="**C** for a content word (stressed), **F** for a function word (weak)."
-- laboratory = C
-- the = F
-- invent = C
-- can = F
-- quickly = C
-- of = F
-- why = C
-- they = F
-- efficient = C
-- and = F
+#### 4 · Yes/No questions rise at the end ↗
+
+> Can a **MACHINE** **REPLACE** a **TEACHER**? ↗
+> Did **KHOA** **FINISH** his **PROJECT**? ↗
+
+*Can* and *Did* at the start are weak.
+
+#### 5 · In a short answer, the last word is strong
+
+> Yes, it **CAN**. ↘
+> No, it **CAN'T**. ↘
+
+❌ *Yes, it /kən/.*
+
+### 2.1 Stressed or weak?
+
+::: task skill="course" type="choice" opts="stressed|weak" ask="In a sentence, is this word stressed or weak?"
+- laboratory = stressed
+- the = weak
+- invent = stressed
+- of = weak
+- quickly = stressed
+- to = weak
+- why = stressed
+- they = weak
+- efficient = stressed
+- and = weak
 :::
 
-### 2.6 Which words are stressed?
+### 2.2 Which words carry the beat?
 
-Write out the stressed (content) words of each sentence, in order.
+::: task skill="course" type="gap-fill" ask="Which words are stressed?"
+- The scientist finished the experiment. {scientist, finished, experiment | The, the | The, scientist, the} = scientist, finished, experiment
+- A robot cannot understand a joke. {robot, cannot, understand, joke | A, a | robot, a, joke} = robot, cannot, understand, joke
+- What did the teacher say? {What, teacher, say | did, the | What, did, the} = What, teacher, say
+- Can a machine read your iris? {machine, read, iris | Can, a, your | Can, read, your} = machine, read, iris
+- My new phone is very efficient. {new, phone, very, efficient | My, is | My, phone, is} = new, phone, very, efficient
+- Where do they test the devices? {Where, test, devices | do, they, the | Where, do, the} = Where, test, devices
+:::
 
-1. The scientist finished the experiment.
-2. A robot cannot understand a joke.
-3. What did the teacher say?
-4. Can a machine read your iris?
-5. My new phone is very efficient.
-6. Where do they test the devices?
+### 2.3 Say these aloud
 
-### 2.7 Say these aloud
+Read each line three times, beating the stressed words with your hand. Choose
+where your voice goes at the end, then record yourself and listen back.
 
-Read each line three times, faster each time, beating the stressed words with
-your hand. Decide where your voice goes at the end **before** you speak, commit
-to it below, then record yourself and listen back for whether it really did.
-
-::: task skill="course" type="choice" opts="↘|↗" ask="Does the voice **fall** (↘) or **rise** (↗) at the end of each line?"
+::: task skill="course" type="choice" opts="↘|↗" ask="Does the voice fall (↘) or rise (↗) at the end?"
 - **BIOMETRICS** can **IDENTIFY** a **PERSON**. = ↘
-- **WHY** did they **AUTOMATE** the **FACTORY**? = ↘ ~ a Wh- question falls, exactly like a statement
-- Did **KHOA** **FINISH** his **PROJECT**? = ↗ ~ a Yes/No question rises
+- **WHY** did they **AUTOMATE** the **FACTORY**? = ↘ ~ a *Why* question falls, like a statement
+- Did **KHOA** **FINISH** his **PROJECT**? = ↗ ~ a *Did …?* question rises
 - Yes, he **DID**. = ↘ ~ a short answer falls, and *DID* is strong
 - **HOW** does **NANOLEARNING** **WORK**? = ↘
 - The **NEW** **DEVICE** is **NOT** **CHEAP**. = ↘
 :::
 
----
+::: bridge name="Stress one new word per sentence" trains="Pronunciation" cefr="B1" marker="[T2]" src="06 §6.2"
+Go back to the sentences in **2.2**. In each one, pick **one** word — the one
+that tells the listener something new. Say that word strongly and the rest
+lightly. Record it and listen back.
 
-::: bridge name="One new-information word per sentence — and unstress the rest" trains="Pronunciation" cefr="B1" marker="[T2]" src="06 §6.2"
-Go back through exercise **2.6**. In each sentence, circle **exactly one** word:
-the one carrying information the listener does not already have. Say the sentence
-with that word prominent and everything else flattened. Record it on your phone
-and listen for whether the rest really did get out of the way.
+If every word is strong, nothing stands out.
 
-Stressing more words does not sound more emphatic. It sounds flatter, because
-nothing stands out when everything does — and your listener loses the one word
-they actually needed.
-
-**And do not try to fix this by speaking faster.** Speed is not what makes a
-sentence clear; choosing what to make loud is.
-
-> **Tiếng Việt:** Mỗi câu chỉ nhấn **một** từ — từ mang thông tin mới. Nhấn càng
-> nhiều từ, câu càng **phẳng**. Đừng nói nhanh hơn để bù lại.
+> **Tiếng Việt:** Mỗi câu chỉ nhấn **một** từ — từ mang thông tin mới; các từ còn
+> lại đọc nhẹ.
 :::
+
+---
 
 ## Lesson 3 — A Closer Look 2
 
 ### Grammar — Reported speech: statements
 
-When you tell someone what another person said, you do not repeat their exact
-words. You **report** them.
+When you tell someone what another person said, you don't usually repeat their
+exact words. You **report** them, and a few words change.
 
-> **Direct:** Thảo said, "I am tired."
-> **Reported:** Thảo said **that she was** tired.
+> Thảo: "I **am** tired."
+> Thảo said that **she was** tired.
 
-Four things can change. Learn them in this order.
+#### 1 · *said* has no person after it; *told* always has one
 
-#### (a) The reporting verb — *say* or *tell*
+**said that · told me that · told us that · told Khoa that**
 
-This is the first decision, and the one most learners get wrong.
+> He **said that** the test was easy.
+> He **told me that** the test was easy.
 
-| Verb | Pattern | Example |
-| --- | --- | --- |
-| **say** | say (that) + clause — **no person** | He **said that** the test was easy. |
-| **tell** | tell **+ person** + (that) + clause — **person required** | He **told me that** the test was easy. |
-
-✅ She **said** that the robot was expensive.
-✅ She **told us** that the robot was expensive.
 ❌ *She said us that the robot was expensive.*
+
 ❌ *She told that the robot was expensive.*
 
-*that* itself is optional in both: *He said (that) he was busy.*
+> **Ghi chú:** *that* có thể bỏ: *He said (that) he was busy.* · *He told me
+> (that) he was busy.*
 
-#### (b) Backshift — the verb moves one tense back
+#### 2 · The verb moves one step back into the past
 
-| Direct speech | → | Reported speech |
-| --- | --- | --- |
-| present simple — *works* | → | past simple — *worked* |
-| present continuous — *is working* | → | past continuous — *was working* |
-| present perfect — *has worked* | → | past perfect — *had worked* |
-| past simple — *worked* | → | past perfect — *had worked* |
-| **will** | → | **would** |
-| **can** | → | **could** |
-| **may** | → | **might** |
-| **must** | → | **had to** |
+**am / is → was · are → were · will → would · can → could · may → might · must → had to**
 
-> "I **write** code." → He said he **wrote** code.
-> "I **am testing** it." → He said he **was testing** it.
-> "I **have finished**." → He said he **had finished**.
-> "I **finished** it." → He said he **had finished** it.
-> "I **will** call." → He said he **would** call.
-> "I **can** help." → He said he **could** help.
-> "It **may** rain." → He said it **might** rain.
-> "You **must** wait." → He told us we **had to** wait.
+| They said … | You report … |
+| --- | --- |
+| "I **work** here." | He said he **worked** there. |
+| "I **am working**." | He said he **was working**. |
+| "I **have finished**." | He said he **had finished**. |
+| "I **finished** it." | He said he **had finished** it. |
+| "I **will** call." | He said he **would** call. |
+| "I **can** help." | He said he **could** help. |
+| "It **may** rain." | He said it **might** rain. |
+| "You **must** wait." | He told us we **had to** wait. |
 
-Note that *had worked* covers **two** direct tenses — present perfect and past
-simple both land there. Also note that *would*, *could*, *might* and *should*
-do not change: they are already past forms.
+> **Ghi chú:** Sách gọi đây là **lùi thì**: hiện tại đơn → quá khứ đơn; hiện
+> tại tiếp diễn → quá khứ tiếp diễn; hiện tại hoàn thành và quá khứ đơn → quá
+> khứ hoàn thành. *would, could, might, should* giữ nguyên — chúng đã là dạng
+> quá khứ.
 
-#### (c) Pronouns shift
+#### 3 · *I*, *my*, *we*, *our* change to fit the new speaker
 
-The speaker changes, so the pronouns must change with them.
+**I → he / she · my → his / her · we → they · our → their · you → me / us**
 
-| Direct | → | Reported |
-| --- | --- | --- |
-| I | → | he / she |
-| we | → | they |
-| my | → | his / her |
-| our | → | their |
-| you (= the listener) | → | me / us |
+> Thảo said, "I have lost my notes."
+> Thảo said that **she** had lost **her** notes.
+> The teacher said, "We will help you."
+> The teacher told us that **they** would help **us**.
 
-> Thảo said, "**I** have lost **my** notes."
-> → Thảo said that **she** had lost **her** notes.
-> The teacher said, "**We** will help **you**."
-> → The teacher told us that **they** would help **us**.
+❌ *Thảo said that I was doing my homework.*
 
-#### (d) Time and place words shift
+#### 4 · Time and place words change
 
 You are reporting later, and somewhere else.
 
-| Direct | → | Reported |
-| --- | --- | --- |
-| now | → | then |
-| today | → | that day |
-| tonight | → | that night |
-| tomorrow | → | the next day / the following day |
-| yesterday | → | the day before / the previous day |
-| next week | → | the following week |
-| last week | → | the week before |
-| here | → | there |
-| this | → | that |
-| these | → | those |
+**now → then · today → that day · tonight → that night · tomorrow → the next day · yesterday → the day before · next week → the following week · last week → the week before · here → there · this → that · these → those**
 
-> Tí said, "I bought **this** device **yesterday**."
-> → Tí said that he had bought **that** device **the day before**.
+> Tí said, "I bought this device yesterday."
+> Tí said that he had bought **that** device **the day before**.
 
-#### (e) When NOT to backshift
+> **Ghi chú:** *tomorrow* cũng có thể thành *the following day*; *yesterday*
+> cũng có thể thành *the previous day*.
 
-If the statement is a **general truth** that is **still true now**, you may keep
-the present tense. Vietnamese textbooks accept both, but the present sounds more
-natural.
+#### 5 · If it is still true, you can keep the present
 
-> Cô Yến said that water **boils** at 100 degrees Celsius. ✅
-> She told us that no two fingerprints **are** the same. ✅
+> Cô Yến said that water **boils** at 100 degrees Celsius.
+> She told us that no two fingerprints **are** the same.
 
-The same applies when the situation has not changed yet: *He said he **lives**
-in Hue* — and he still does.
+> **Ghi chú:** Với sự thật hiển nhiên, lùi thì hay không đều được, nhưng giữ
+> thì hiện tại nghe tự nhiên hơn.
 
-> ⚠️ **Bẫy thường gặp:** Hai lỗi này chiếm phần lớn bài sai của học sinh lớp 8.
->
-> **1. Nhầm *say* và *tell*.** *tell* **bắt buộc** có tân ngữ chỉ người ngay
-> sau nó; *say* thì **không** có.
-> ❌ *He told that he was busy.* → ✅ He **said** that he was busy.
-> ❌ *He said me that he was busy.* → ✅ He **told me** that he was busy.
->
-> **2. Quên đổi đại từ.** Lùi thì xong rồi vẫn để nguyên *I, my, we*.
-> ❌ *Thảo said that I was doing my homework.* (nghĩa đã sai hoàn toàn!)
-> → ✅ Thảo said that **she** was doing **her** homework.
+> ⚠️ **Bẫy thường gặp:** Hai lỗi hay gặp nhất.
+> **1. Nhầm *said* và *told*.** *told* **luôn** có người ngay sau nó; *said*
+> thì **không**. ❌ *He told that he was busy.* → ✅ He **said** that he was
+> busy. ❌ *He said me that he was busy.* → ✅ He **told me** that he was busy.
+> **2. Quên đổi đại từ.** ❌ *Thảo said that I was doing my homework.* →
+> ✅ Thảo said that **she** was doing **her** homework.
 
-### 3.1 Say or tell?
+### 3.1 Practice
 
-::: task skill="course" type="choice" opts="said|told" ask="Which reporting verb fits?"
+::: bank draw="10"
+@ choice opts="said|told" ask="Which word fits?"
 - Khoa ___ that the experiment had failed. = said
 - Khoa ___ me that the experiment had failed. = told
 - The scientist ___ the students that the laboratory was closed. = told
@@ -452,53 +460,111 @@ in Hue* — and he still does.
 - Cô Yến ___ that robots could not feel anything. = said
 - Who ___ you that? = told
 - Nobody ___ anything about the test. = said
-:::
-
-### 3.2 Backshift the verb
-
-::: task skill="course" type="gap-fill" ask="Choose the reported form of the verb in **bold**."
+- Bà Sáu ___ Tí that dinner was ready. = told
+- Thảo ___ she was too tired to go out. = said
+- Hùng ___ everyone that he had won the game. = told
+- The man on the radio ___ it would rain all weekend. = said
+- Chú Bảy ___ the boys that the sea was too rough. = told
+- My friends ___ me they would wait at the gate. = told
+- Minh ___ that he had never used a laptop. = said
+- The doctor ___ my mum that I needed more sleep. = told
+@ gap-fill ask="Choose the reported form."
 - "I **am** tired." → He said he ___ tired. {was | had been | would be} = was
-- "We **are testing** a new app." → They said they ___ a new app. {were testing | had tested | tested} = were testing
+- "We **are testing** a new app." → They said they ___ a new app. {were testing | had tested | would test} = were testing
 - "I **have seen** the robot." → She said she ___ the robot. {had seen | was seeing | would see} = had seen
 - "I **saw** the robot." → She said she ___ the robot. {had seen | has seen | would see} = had seen
-- "I **will help** you." → He said he ___ me. {would help | had helped | helped} = would help
+- "I **will help** you." → He said he ___ me. {would help | had helped | was helping} = would help
 - "I **can drive**." → She said she ___ . {could drive | had driven | would drive} = could drive
 - "It **may rain**." → He said it ___ . {might rain | had rained | would rain} = might rain
 - "You **must hurry**." → She told us we ___ . {had to hurry | had hurried | would hurry} = had to hurry
 - "I **don't like** robots." → He said he ___ robots. {didn't like | hadn't liked | wouldn't like} = didn't like
-- "The sun **rises** in the east." → She said the sun ___ in the east. {rises | had risen | would rise} = rises ~ a general truth needs no backshift — it is still true now
-:::
-
-### 3.3 Report these statements
-
-::: task skill="course" type="short-answer" variant="sentence-build" ask="You are reporting each one a week later, somewhere else. Begin with the reporting verb in brackets, and change everything else that has to change — the verb, the pronouns, the time and place words. *that* is optional."
-- "I am doing an experiment now." (Thảo / say) = Thảo said (that) she was doing an experiment then./Thao said (that) she was doing an experiment then. ~ *now* shifts to *then*, and *I* to *she*
-- "We will show you our robot tomorrow." (The students / tell me) {tomorrow | tell} = The students told me (that) they would show me their robot the next day./The students told me (that) they would show me their robot the following day. ~ *you* is the person reporting, so it becomes *me*
-- "I bought this device yesterday." (Tí / tell Khoa) = Tí told Khoa (that) he had bought that device the day before./Tí told Khoa (that) he had bought that device the previous day./Tí told Khoa (that) he bought that device the day before./Tí told Khoa (that) he bought that device the previous day. ~ the past simple steps back to the past perfect, and *this* to *that* — *he bought* is accepted too, because *the day before* already makes the order clear
-- "My sister can fix the lock this afternoon." (Khoa / say) = Khoa said (that) his sister could fix the lock that afternoon. ~ *can* becomes *could*, and *this afternoon* becomes *that afternoon*
+- "My phone **is** broken." → Tí said his phone ___ broken. {was | were | had} = was
+- "We **are playing** chess." → The boys said they ___ chess. {were playing | had played | would play} = were playing
+- "I **have lost** my keys." → Mum said she ___ her keys. {had lost | was losing | would lose} = had lost
+- "I **will be** late." → Khoa said he ___ late. {would be | had been | was being} = would be
+- "We **can** see the islands from here." → They said they ___ see the islands from there. {could | had | were} = could
+- "I **may** come to the club." → Hùng said he ___ come to the club. {might | must | had} = might
+- "You **must** wear a helmet." → Dad told me I ___ wear a helmet. {had to | would | could} = had to
+- "I **finished** my project on Monday." → Thảo said she ___ her project on Monday. {had finished | has finished | would finish} = had finished
+- "I **don't** understand the question." → Hùng said he ___ understand the question. {didn't | wouldn't | hadn't} = didn't
+- "I **am making** a robot." → Khoa said he ___ a robot. {was making | had made | would make} = was making
+- "We **will win** the match." → The team said they ___ the match. {would win | had won | were winning} = would win
+- "I **can't** swim." → Bống said she ___ swim. {couldn't | wouldn't | hadn't} = couldn't
+- "I **have never used** a laptop." → Minh said he ___ a laptop. {had never used | never uses | would never use} = had never used
+@ gap-fill ask="Which can go in the gap?"
+- "The sun **rises** in the east." → She said the sun ___ in the east. {rises | had risen | would rise} = rises ~ still true today, so it can stay in the present
+- "The Earth **goes** round the Sun." → The teacher said the Earth ___ round the Sun. {goes | had gone | would go} = goes ~ still true today
+- "Water **freezes** at 0 degrees." → Our teacher told us that water ___ at 0 degrees. {freezes | had frozen | would freeze} = freezes ~ still true today
+@ gap-fill ask="Choose the word that fits."
+- "**I** am hungry," Bống said. → Bống said that ___ was hungry. {she | I | they} = she
+- "**My** laptop is new," Khoa said. → Khoa said that ___ laptop was new. {his | my | your} = his
+- "**We** are ready," said Khoa and Hùng. → Khoa and Hùng said that ___ were ready. {they | we | you} = they
+- "**Our** robot works," said Thảo and Lan. → Thảo and Lan said that ___ robot worked. {their | our | your} = their
+- "I will call **you**," Khoa told me. → Khoa told me that he would call ___ . {me | you | him} = me
+- "**You** must wait," the teacher told us. → The teacher told us that ___ had to wait. {we | you | they} = we
+- "I love **my** grandmother," Tí said. → Tí said he loved ___ grandmother. {his | my | her} = his
+- "I have lost **my** notebook," Thảo said. → Thảo said she had lost ___ notebook. {her | my | his} = her
+@ gap-fill ask="You are reporting later. Choose the words that fit."
+- "I bought it **yesterday**." → A week later, Tí said he had bought it ___ . {the day before | yesterday | the next day} = the day before
+- "I will come **tomorrow**." → Last month, Hùng said he would come ___ . {the next day | tomorrow | the day before} = the next day
+- "It is raining **now**." → Last night, Mum said it was raining ___ . {then | now | tomorrow} = then
+- "I live **here**," Minh said in Huế. → Back in Quy Nhơn, Tí said Minh lived ___ . {there | here | then} = there
+- "I love **this** phone." → A week later, Thảo said she loved ___ phone. {that | this | these} = that
+- "**These** apps are free." → A month later, Khoa said ___ apps were free. {those | these | this} = those
+- "I have a test **today**." → Last Monday, Hùng said he had a test ___ . {that day | today | tomorrow} = that day
+- "We will finish **next week**." → Last month, the builders said they would finish ___ . {the following week | next week | last week} = the following week
+- "I saw him **last week**." → In June, Thảo said she had seen him ___ . {the week before | last week | next week} = the week before
+- "I am busy **tonight**." → Yesterday, Khoa said he was busy ___ . {that night | tonight | tomorrow} = that night
+@ choice ask="Which sentence is right?"
+- Khoa: "I am tired." {Khoa said that he was tired. | Khoa said me that he was tired. | Khoa told that he was tired.} = Khoa said that he was tired.
+- The teacher: "The test is easy." {She told us that the test was easy. | She said us that the test was easy. | She told that the test was easy.} = She told us that the test was easy.
+- Mum: "I can't find my phone." {Mum said she couldn't find her phone. | Mum said I couldn't find her phone. | Mum said she couldn't find my phone.} = Mum said she couldn't find her phone.
+- Thảo's family: "We will visit Huế." {They said they would visit Huế. | They told they would visit Huế. | They said we would visit Huế.} = They said they would visit Huế.
+- Cô Yến: "Light travels faster than sound." {Cô Yến said that light travels faster than sound. | Cô Yến said me that light travels faster than sound. | Cô Yến told that light travels faster than sound.} = Cô Yến said that light travels faster than sound.
+- Khoa: "I have fixed the lock." {Khoa said he had fixed the lock. | Khoa said I had fixed the lock. | Khoa told he had fixed the lock.} = Khoa said he had fixed the lock.
+@ error-correction
+- Our coach told that the match would start at five. {said | tells | telling} = told -> said ~ *told* needs a person after it, and there is none here
+- My cousin said me that she had lost her keys. {told | say | saying} = said -> told ~ *said* never has a person after it
+- Talking about herself, Thảo said that I was tired, so she went to bed early. {she | her | we} = I -> she ~ Thảo was talking about herself: *she*
+- The librarian said us that the library would close early. {told | say | saying} = said -> told ~ a person after the verb means it must be *told*
+- Last week Khoa told me that he will come to the club the next day. {would | shall | wills} = will -> would ~ *will* becomes *would*
+- Thảo said that she has seen the film the week before. {had | have | is} = has -> had ~ *has seen* becomes *had seen*
+- Last month my brother said that he had bought the laptop yesterday. {the day before | the next day | tomorrow} = yesterday -> the day before ~ a month later, *yesterday* has become *the day before*
+- Last month they told us that we can use the laboratory the next day. {could | will | shall} = can -> could ~ *can* becomes *could*
+- Minh said me that he lived in Huế. {told | tells | say} = said -> told ~ *said* never has a person after it
+- The doctor told that I needed more sleep. {said | say | tells} = told -> said ~ no person after the verb, so *said*
+- Last Monday Thảo said that she can't come to the club that day. {couldn't | won't | hasn't} = can't -> couldn't ~ *can't* becomes *couldn't*
+- A week ago Hùng said that he is ill, but he came to school the next day. {was | be | were} = is -> was ~ *is* becomes *was*
+- Yesterday Bà Sáu told me that she will cook fish that evening. {would | shall | is} = will -> would ~ *will* becomes *would*
+- Talking about his phone, Tí said that my phone was broken. {his | her | our} = my -> his ~ Tí is talking about his own phone: *his*
+- Last Sunday Thảo said she was going to the beach tomorrow. {the next day | yesterday | today} = tomorrow -> the next day ~ reported later, *tomorrow* becomes *the next day*
+- Last night my sister told me that she has finished her homework. {had | have | was} = has -> had ~ *has finished* becomes *had finished*
+@ sentence-build ask="Report it a week later. Start with the words in brackets."
+- "I am doing an experiment now." (Thảo / say) = Thảo said (that) she was doing an experiment then. ~ *now* becomes *then*, and *I* becomes *she*
+- "We will show you our robot tomorrow." (The students / tell me) {tomorrow | tell} = The students told me (that) they would show me their robot the next day./The students told me (that) they would show me their robot the following day./The students told me (that) the next day they would show me their robot./The students told me (that) the following day they would show me their robot. ~ *you* is the person reporting, so it becomes *me*
+- "I bought this device yesterday." (Tí / tell Khoa) = Tí told Khoa (that) he had bought that device the day before./Tí told Khoa (that) he had bought that device the previous day./Tí told Khoa (that) he bought that device the day before./Tí told Khoa (that) he bought that device the previous day. ~ *bought* becomes *had bought*, and *this* becomes *that*
+- "My sister can fix the lock this afternoon." (Khoa / say) = Khoa said (that) his sister could fix the lock that afternoon./Khoa said (that) that afternoon his sister could fix the lock. ~ *can* becomes *could*, and *this afternoon* becomes *that afternoon*
 - "I have finished my project." (Thảo / tell us) = Thảo told us (that) she had finished her project./Thảo told us (that) she finished her project.
-- "You must wear safety glasses here today." (The teacher / tell us) = The teacher told us (that) we had to wear safety glasses there that day./The teacher told us (that) we must wear safety glasses there that day. ~ *must* becomes *had to*, *here* becomes *there*, and *today* becomes *that day*
-- "Water boils at 100 degrees Celsius." (Cô Yến / say) = Cô Yến said (that) water boils at 100 degrees Celsius. ~ a general truth keeps the present tense — it is still true now
-- "I may visit the laboratory this week." (Đạt / say) = Đạt said (that) he might visit the laboratory that week./Đạt said (that) he may visit the laboratory that week.
+- "You must wear safety glasses here today." (The teacher / tell us) = The teacher told us (that) we had to wear safety glasses there that day./The teacher told us (that) we must wear safety glasses there that day./The teacher told us (that) that day we had to wear safety glasses there./The teacher told us (that) that day we must wear safety glasses there. ~ *must* becomes *had to*, *here* becomes *there*, and *today* becomes *that day*
+- "Water boils at 100 degrees Celsius." (Cô Yến / say) = Cô Yến said (that) water boils at 100 degrees Celsius. ~ still true today, so it stays in the present
+- "I may visit the laboratory this week." (Đạt / say) = Đạt said (that) he might visit the laboratory that week./Đạt said (that) he may visit the laboratory that week./Đạt said (that) that week he might visit the laboratory./Đạt said (that) that week he may visit the laboratory.
+- "I am cooking dinner." (Bà Sáu / say) = Bà Sáu said (that) she was cooking dinner. ~ *am cooking* becomes *was cooking*
+- "We can't find the key." (The boys / tell me) = The boys told me (that) they couldn't find the key. ~ *can't* becomes *couldn't*, and *we* becomes *they*
+- "I will phone you tonight." (Minh / tell Tí) = Minh told Tí (that) he would phone him that night./Minh told Tí (that) that night he would phone him. ~ *you* is Tí, so it becomes *him*
+@ odd-one-out ask="Which one is wrong?"
+- said that · told me that · told us that · said us that = said us that ~ *said* never has a person after it
+- told him that · said that · told that · told them that = told that ~ *told* needs a person: *told me that*
+- will → would · can → could · must → had to · may → will = may → will ~ *may* becomes *might*
+- today → that day · tomorrow → the next day · yesterday → the day before · here → here = here → here ~ *here* becomes *there*
+- I → he · my → his · we → they · our → my = our → my ~ *our* becomes *their*
+- now → then · this → that · these → those · tonight → today = tonight → today ~ *tonight* becomes *that night*
+- am → was · is → was · are → was · have finished → had finished = are → was ~ *are* becomes *were*
 :::
 
-### 3.4 Correct the mistake
+### 3.2 About you
 
-::: task skill="course" type="short-answer" variant="error-correction"
-- Our coach told that the match would start at five. {said | tells | telling} = told -> said ~ *tell* needs a person after it, and there is none here
-- My cousin said me that she had lost her keys. {told | say | saying} = said -> told ~ *say* never takes a person
-- Talking about herself, Thảo said that I was tired, so she went to bed early. {she | her | we} = I -> she ~ Thảo was talking about herself, so the pronoun shifts out of the first person
-- The librarian said us that the library would close early. {told | say | saying} = said -> told ~ a person after the verb means it must be *tell*
-- Last week Khoa told me that he will come to the club the next day. {would | shall | wills} = will -> would ~ *will* backshifts to *would*
-- Thảo said that she has seen the film the week before. {had | have | is} = has -> had ~ the present perfect backshifts to the past perfect — and *has seen* can never sit with *the week before*
-- Last month my brother said that he had bought the laptop yesterday. {the day before | the next day | tomorrow} = yesterday -> the day before ~ reported a month later, *yesterday* has become *the day before*
-- Last month they told us that we can use the laboratory the next day. {could | will | shall} = can -> could ~ *can* backshifts to *could*
-:::
-
-### 3.5 About you
-
-Write true reported sentences. Use a **different** reporting verb pattern each
-time, and remember the pronoun shift.
+Write true reported sentences. Use *said* in some and *told* + a person in
+others, and change the pronouns.
 
 1. Something a teacher said to your class this month.
    → My teacher told us that _______________________________
@@ -506,7 +572,7 @@ time, and remember the pronoun shift.
    → _______________________________
 3. Something you said about your own plans for next week.
    → I said that _______________________________
-4. A general truth a science teacher has told you (do **not** backshift).
+4. Something that is always true, which a science teacher has told you (keep the present).
    → _______________________________
 5. Something a friend said about a device or app they like.
    → _______________________________
@@ -592,7 +658,7 @@ first, and the news itself in the sentence after it.
 
 ### 4.1 Complete the mini-dialogues
 
-::: task skill="course" type="gap-fill" ask="Choose the word for each gap. The four short exchanges run in order — read each one whole before you choose."
+::: task skill="course" type="gap-fill" ask="Choose the word for each gap."
 - **A:** What do you use that app ___ ? {for | with | on} = for
 - **B:** Homework, mostly. The main ___ is that it checks my spelling. {benefit | drawback | feedback} = benefit
 - **A:** Are there any ___ ? (**B:** Yes — it drains my battery in about an hour.) {drawbacks | benefits | applications} = drawbacks
@@ -615,12 +681,12 @@ were repeating it (*He/She said that…*).
    → _______________________________
 3. "What's the biggest drawback of spending a lot of time online?"
    → _______________________________
-4. Now report answer 1 in the third person.
+4. Now report answer 1, starting *He said that…* or *She said that…*
    → _______________________________
 
 ### 4.3 Which reply?
 
-::: task skill="course" type="choice" opts="Congratulations!|Lucky you!" ask="Your friend tells you each of these. Which reply fits? Ask yourself one question: did your friend **do** it, or did it simply **happen** to them?"
+::: task skill="course" type="choice" opts="Congratulations!|Lucky you!" ask="Your friend tells you this. Which reply fits? Did your friend **do** it, or did it just **happen**?"
 - I passed the entrance exam! = Congratulations! ~ she sat the exam and passed it herself
 - Great news — my school is closed tomorrow because of the storm. = Lucky you! ~ the storm did it, not your friend
 - I won first prize in the science competition. = Congratulations! ~ a prize she won
@@ -678,7 +744,7 @@ thing that does not.
 
 ### 4.5 Benefit or problem?
 
-::: task skill="course" type="sort" opts="Benefit|Problem" ask="Read the four posts again. Is each idea something good about online learning, or something wrong with it?"
+::: task skill="course" type="sort" opts="Benefit|Problem" ask="Read the four posts again. Is each idea good or bad about online learning?"
 - It saves you nearly an hour of travelling. = Benefit
 - The connection drops in the middle of a sentence. = Problem
 - You can discuss a question with four classmates in a breakout room. = Benefit
@@ -770,12 +836,7 @@ they name. Shift the tense and the pronouns.
 
 ### 5.1 Yes, No, or Not Given
 
-This is the same three-way decision you have been making since Unit 1, aimed at
-a different target. **True/False/Not Given** asks about **facts** in a text;
-**Yes/No/Not Given** asks whether the **writer** would agree with a claim. The
-reasoning is the same; what you are matching against is not.
-
-::: task skill="reading" type="yes-no-not-given" ask="Does the writer agree? **YES** if the passage supports the claim, **NO** if it takes the opposite view, **NG** if the passage never takes a position either way."
+::: task skill="reading" type="yes-no-not-given" ask="**YES**: the writer agrees. **NO**: the writer says the opposite. **NG**: the writer does not say."
 - The workroom had already been emptied before they got to it. = YES ~ *Somebody had carried every tool out of that workroom years ago*
 - The keeper's rule allows a keeper to be called home. = NO ~ *she must never call a keeper home*
 - The keeper built his face frame after machines like it were being sold. = NO ~ he built it sixty years before anybody sold such a thing in a shop
@@ -795,7 +856,7 @@ reasoning is the same; what you are matching against is not.
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the passage that means each of these. The clock above is still running, and it covers this exercise too."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the passage that means this. The clock is still running."
 - a machine that reads or scans something {scanner | shelf | bench} = scanner
 - the coloured ring around the pupil of the eye {iris | glass eye | lid} = iris
 - a room fitted out for making and mending things {workroom | shop | school} = workroom
@@ -805,8 +866,7 @@ reasoning is the same; what you are matching against is not.
 
 ### Speaking — The technology you use, and why
 
-> **Working alone:** You have no partner, so do this in three steps. It still
-> works — speaking practice is mostly about producing language out loud.
+> **Working alone:** You have no partner, so do this in three steps.
 
 **Step 1 — Prepare.** Write short notes (not full sentences) for each question.
 
@@ -828,8 +888,8 @@ check three things:
 
 - Did you use *say* and *tell* correctly — no person after *said*, a person
   after *told*?
-- Did you **stress the content words** and squeeze the function words, instead
-  of reading every word with the same weight?
+- Did you make the **words that carry the meaning** loud, and say the small
+  words quickly?
 - Did your pauses fall **between** points rather than inside a sentence?
 
 Repeat Step 2 until each answer runs clearly from its first word to its last.
@@ -849,9 +909,8 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### Listening — The apprentice says what he was taught
 
-You hear it **once**, read aloud by someone else. The talk runs in order and so
-do the questions, so read both 6.1 and 6.2 first, then answer while the reader
-is still going rather than afterwards from memory.
+You hear it **once**, read aloud by someone else. Read 6.1 and 6.2 first, then
+answer while you listen.
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả 6.1 và 6.2, rồi vừa
 nghe vừa trả lời.
@@ -922,10 +981,6 @@ point on the other side, then argue your own.
 
 Cover the finished paragraph above. Answer in note form, in your own words.
 
-The third column of this table used to supply an opening phrase for each row.
-It has been deleted, and the bridge below the task explains why that column was
-the most damaging thing on the page.
-
 | The question | Your answer — notes, in your own words |
 | --- | --- |
 | What is your position, in one sentence? | |
@@ -935,25 +990,14 @@ the most damaging thing on the page.
 | A second reason, different in kind from the first | |
 | Where does the reader see your position for the second time? | |
 
-::: bridge name="Say the prompt in your own words before you answer it" trains="Lexical Resource" cefr="B1" marker="[D]" src="02 §7"
-Before you write a single sentence of the opinion paragraph, do this out loud:
-**say the task back in your own words.** Not the wording above — yours.
+::: bridge name="Say the question in your own words" trains="Lexical Resource" cefr="B1" marker="[D]" src="02 §7"
+Before you write the opinion paragraph, say the task out loud **in your own
+words** — not the wording above. Then write, without a learned-by-heart opening.
 
-Then write. **No prepared opening.** If a sentence arrives fully formed before
-you have thought about the question, it is a memorised sentence and it is working
-against you.
+It takes ten seconds and shows you whether you have understood the question.
 
-This is worth being blunt about, because it is the opposite of how exam writing
-is often taught. A memorised opening does not earn you anything — it only proves
-you can repeat someone else's sentence, and it usually does not quite fit the
-question you were given.
-
-Saying the question back in your own words takes ten seconds, and it is the
-cheapest way to find out whether you have understood it at all.
-
-> **Tiếng Việt:** Trước khi viết, hãy **nói lại đề bằng lời của mình**. Không
-> dùng câu mở bài học thuộc — câu học thuộc thường không khớp với đề bạn đang
-> làm, và không chứng minh được điều gì.
+> **Tiếng Việt:** Trước khi viết, **nói lại đề bằng lời của mình**, và đừng dùng câu
+> mở bài học thuộc.
 :::
 
 ::: thread id="articles" stage="check"
@@ -992,23 +1036,23 @@ cheapest way to find out whether you have understood it at all.
 
 **Part A.** Which words carry a beat?
 
-::: task skill="course" type="choice" opts="C|F" ask="**C** if the **bold** word is a content word (stressed), **F** if it is a function word (weak)."
-- The **students** automated the whole experiment. = C
-- The students automated **the** whole experiment. = F
-- The students **automated** the whole experiment. = C
-- The students automated the **whole** experiment. = C
-- **Why** did she replace the old device? = C
-- Why **did** she replace the old device? = F
-- Why did **she** replace the old device? = F
-- Why did she **replace** the old device? = C
+::: task skill="course" type="choice" opts="stressed|weak" ask="Is the **bold** word stressed or weak?"
+- The **students** automated the whole experiment. = stressed
+- The students automated **the** whole experiment. = weak
+- The students **automated** the whole experiment. = stressed
+- The students automated the **whole** experiment. = stressed
+- **Why** did she replace the old device? = stressed
+- Why **did** she replace the old device? = weak
+- Why did **she** replace the old device? = weak
+- Why did she **replace** the old device? = stressed
 :::
 
 **Part B.** Where does the voice go at the end?
 
-::: task skill="course" type="choice" opts="↘|↗" ask="Does the voice **fall** (↘) or **rise** (↗) at the end of each sentence?"
+::: task skill="course" type="choice" opts="↘|↗" ask="Does the voice fall (↘) or rise (↗) at the end?"
 - A robot cannot feel tired. = ↘
-- Did you see the experiment? = ↗ ~ a Yes/No question rises
-- What did she say? = ↘ ~ a Wh- question falls, exactly like a statement
+- Did you see the experiment? = ↗ ~ a *Did …?* question rises
+- What did she say? = ↘ ~ a *What* question falls, like a statement
 - Is this device efficient? = ↗
 - Scientists work in laboratories. = ↘
 - Can machines replace teachers? = ↗
@@ -1016,15 +1060,15 @@ cheapest way to find out whether you have understood it at all.
 
 ### 7.3 Grammar check
 
-::: task skill="course" type="short-answer" variant="sentence-build" ask="You are reporting each one a week later, somewhere else. Begin with the reporting verb in brackets, and change everything else that has to change — the verb, the pronouns, and the time and place words. *that* is optional."
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Report it a week later. Start with the words in brackets."
 - "I am reading about biometrics." (Tí / say) = Tí said (that) he was reading about biometrics.
-- "We have built a robot this week." (The club / tell us) = The club told us (that) they had built a robot that week./The club told us (that) they built a robot that week. ~ *have built* steps back to *had built*, and *this week* becomes *that week*
-- "I will send you the file tomorrow." (Khoa / tell me) = Khoa told me (that) he would send me the file the next day./Khoa told me (that) he would send me the file the following day. ~ *you* is the person reporting, so it becomes *me*; a week later, *tomorrow* is long gone
-- "You must finish this today." (My teacher / tell me) = My teacher told me (that) I had to finish it that day./My teacher told me (that) I had to finish that that day./My teacher told me (that) I must finish it that day./My teacher told me (that) I must finish that that day. ~ *must* becomes *had to*
-- "I can't come to the laboratory today." (Đạt / say) = Đạt said (that) he couldn't come to the laboratory that day. ~ *can't* becomes *couldn't*, and *today* becomes *that day*
-- "The Earth goes round the Sun." (Cô Yến / say) = Cô Yến said (that) the Earth goes round the Sun. ~ a general truth needs no backshift — it is still true now
+- "We have built a robot this week." (The club / tell us) = The club told us (that) they had built a robot that week./The club told us (that) they built a robot that week./The club told us (that) that week they had built a robot./The club told us (that) that week they built a robot. ~ *have built* steps back to *had built*, and *this week* becomes *that week*
+- "I will send you the file tomorrow." (Khoa / tell me) = Khoa told me (that) he would send me the file the next day./Khoa told me (that) he would send me the file the following day./Khoa told me (that) the next day he would send me the file./Khoa told me (that) the following day he would send me the file. ~ *you* is the person reporting, so it becomes *me*; a week later, *tomorrow* is long gone
+- "You must finish this today." (My teacher / tell me) = My teacher told me (that) I had to finish it that day./My teacher told me (that) I had to finish that that day./My teacher told me (that) I must finish it that day./My teacher told me (that) I must finish that that day./My teacher told me (that) that day I had to finish it./My teacher told me (that) that day I must finish it. ~ *must* becomes *had to*
+- "I can't come to the laboratory today." (Đạt / say) = Đạt said (that) he couldn't come to the laboratory that day./Đạt said (that) that day he couldn't come to the laboratory. ~ *can't* becomes *couldn't*, and *today* becomes *that day*
+- "The Earth goes round the Sun." (Cô Yến / say) = Cô Yến said (that) the Earth goes round the Sun. ~ still true today, so it stays in the present
 - "I saw this device here yesterday." (Thảo / say) {yesterday | say} = Thảo said (that) she had seen that device there the day before./Thảo said (that) she had seen that device there the previous day./Thảo said (that) she saw that device there the day before./Thảo said (that) she saw that device there the previous day. ~ *this* becomes *that* and *here* becomes *there*; *she saw* is accepted too, because *the day before* already makes the order clear
-- "My parents may buy me a laptop next week." (Thảo / tell her friend) = Thảo told her friend (that) her parents might buy her a laptop the following week./Thảo told her friend (that) her parents might buy her a laptop the next week./Thảo told her friend (that) her parents may buy her a laptop the following week./Thảo told her friend (that) her parents may buy her a laptop the next week.
+- "My parents may buy me a laptop next week." (Thảo / tell her friend) = Thảo told her friend (that) her parents might buy her a laptop the following week./Thảo told her friend (that) her parents might buy her a laptop the next week./Thảo told her friend (that) her parents may buy her a laptop the following week./Thảo told her friend (that) her parents may buy her a laptop the next week./Thảo told her friend (that) the following week her parents might buy her a laptop./Thảo told her friend (that) the following week her parents may buy her a laptop.
 :::
 
 ### 7.4 Error hunt
@@ -1034,18 +1078,15 @@ One mark is left on the wall, and everybody has something to say about it.
 ::: task skill="course" type="short-answer" variant="error-correction"
 - Bống told that the keeper had underlined the rule. {said | tell | telling} = told -> said ~ *tell* needs a person after it, and there is none here
 - He said us that we should shut the notebook and go home. {told | say | saying} = said -> told ~ a person after the verb means it must be *tell*
-- Talking about herself, Thảo said that I felt cold, so she put on her jacket. {she | her | herself} = I -> she ~ Thảo was talking about herself, so the pronoun shifts out of the first person
-- Last week Khoa told me that he will read the last page again that night. {would | willing | wills} = will -> would ~ *will* backshifts to *would*
+- Talking about herself, Thảo said that I felt cold, so she put on her jacket. {she | her | herself} = I -> she ~ Thảo was talking about herself: *she*
+- Last week Khoa told me that he will read the last page again that night. {would | willing | wills} = will -> would ~ *will* becomes *would*
 - Last week Khoa said that the mill had flooded yesterday. {the day before | the next day | today} = yesterday -> the day before ~ reported a week later, *yesterday* has become *the day before*
 - His brother say that nobody upriver remembered the mill. {said | saying | to say} = say -> said ~ *say* has no *-s* after *His brother*, and this is a report of something already said
 :::
 
 ### 7.5 Word formation
 
-The words this unit uses most are the ones that change shape — *replace* becomes
-*replacement*, *automate* becomes *automatic*.
-
-::: task skill="course" type="gap-fill" ask="Choose the right form of the word in brackets. Some gaps want a noun, some want an adjective."
+::: task skill="course" type="gap-fill" ask="Choose the right form of the word in brackets."
 - Iris ___ opens the laboratory door faster than any key does. *(recognise)* {recognition | recognise | recognising} = recognition
 - The school is testing a new ___ for checking attendance. *(apply)* {application | applicant | apply} = application
 - Edison's best-known ___ is the light bulb. *(invent)* {invention | inventor | invent} = invention
@@ -1058,7 +1099,7 @@ The words this unit uses most are the ones that change shape — *replace* becom
 
 ### 7.6 Finish the report
 
-::: task skill="course" type="gap-fill" ask="Report what each person said, keeping the meaning. Choose the word the gap needs."
+::: task skill="course" type="gap-fill" ask="Report what each person said. Choose the word that fits."
 - "I will show you the robot tomorrow," Khoa said. → Khoa said that he ___ show me the robot the next day. {would | will | could} = would
 - "We are doing the experiment here," the teacher said. → The teacher said that they were doing the experiment ___ . {there | then | that} = there
 - "I don't understand this application," Thảo said. → Thảo said that she ___ understand that application. {didn't | wouldn't | hadn't} = didn't
@@ -1100,7 +1141,7 @@ Use at least **five** reported statements.
 
 **Step 5 — Present it.** Present your file aloud for ninety seconds without
 reading word for word. Record it, then listen back once and check your sentence
-stress: are the content words louder than the function words?
+stress: are the words that carry the meaning louder than the small words?
 
 > **Stretch:** Now argue the other side. Write 60 words explaining why someone
 > might refuse to use your chosen technology at all. A good opinion paragraph
@@ -1115,9 +1156,9 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for science and technology | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercises 7.1 and 7.5 |
-| say a statement and a question with the stress in the right places | Lesson 2, exercises 2.5 and 2.6 · Lesson 7, exercise 7.2. Saying them aloud is yours — record Lesson 2, exercise 2.7 and listen back. |
-| report what somebody said | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3, 7.4 and 7.6 |
+| use the words for science and technology | Lesson 2, Meet the words · Lesson 7, exercises 7.1 and 7.5 |
+| say a statement and a question with the stress in the right places | Lesson 2, exercises 2.1, 2.2 and 2.3 · Lesson 7, exercise 7.2. Saying them aloud is yours — record Lesson 2, exercise 2.3 and listen back. |
+| report what somebody said | Lesson 3, practice 3.1 · Lesson 7, exercises 7.3, 7.4 and 7.6 |
 | give good news, and answer it | Lesson 4, exercises 4.1 and 4.3 |
 | read a text closely and answer questions on it | Lesson 5, exercises 5.1 and 5.2 |
 | talk about a piece of technology or an invention | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
@@ -1136,19 +1177,9 @@ page can settle it, the row says so, and that one is yours to judge.
 
 > **Đáp án.** Chỉ xem sau khi đã tự làm bài.
 
-### Lesson 2
-
-**2.6**
-1. scientist, finished, experiment
-2. robot, cannot (the *not* part), understand, joke
-3. What, teacher, say
-4. machine, read, iris
-5. new, phone, very, efficient
-6. Where, test, devices
-
 ### Lesson 3
 
-**3.5** Answers will vary. Check: (1) *told us that* — a person after *told*;
+**3.2** Answers will vary. Check: (1) *told us that* — a person after *told*;
 (2) a person after *told* / no person after *said*; (3) *I said that* with the
 pronoun and time word shifted; (4) present tense kept, because it is a general
 truth; (5) the pronoun changed from *I/my* to *he/she/his/her*.

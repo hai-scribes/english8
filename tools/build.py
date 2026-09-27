@@ -158,7 +158,7 @@ RE_THREAD = re.compile(r"^:::[ \t]*thread\b(?P<attrs>[^\n]*)\n(?P<body>.*?)"
 # a misspelled directive name (":::taskk") fails to match instead of matching
 # ":::task" with the rest silently dropped.
 RE_DIRECTIVE = re.compile(
-    r"^:::[ \t]*(?P<kind>task|audio|write|clock|thread|passage|dialogue|fluency|vocab)\b(?P<attrs>[^\n]*)\n"
+    r"^:::[ \t]*(?P<kind>task|audio|write|clock|thread|passage|dialogue|fluency|vocab|bank)\b(?P<attrs>[^\n]*)\n"
     r"(?P<body>.*?)\n?:::[ \t]*$", re.M | re.S)
 WIDGET = "\x00W%d\x00"
 
@@ -242,21 +242,19 @@ VARIANTS = {
     "odd-one-out": {
         "types": {"choice"},
         "label": "Odd one out",
-        "ask": "One item in each line does not belong with the others. Pick it.",
+        "ask": "Pick the one that does not belong.",
         "widget": "pick-from-line",
     },
     "error-correction": {
         "types": {"short-answer"},
         "label": "Correct the mistake",
-        "ask": "Each sentence has exactly one mistake. Tap the wrong word, then "
-               "choose what should replace it.",
+        "ask": "Tap the mistake, then choose the fix.",
         "widget": "tap",
     },
     "sentence-build": {
         "types": {"short-answer"},
         "label": "Build the sentence",
-        "ask": "Build the sentence from the tiles, in order. Some tiles are not "
-               "needed — the form of a word matters.",
+        "ask": "Tap the tiles to build the sentence. Some tiles are not needed.",
         "widget": "tiles",
     },
 }
@@ -406,6 +404,9 @@ def parse_task_body(a: dict, body: str) -> dict:
         if im.group("why"):
             item["why"] = im.group("why").strip()
         brace = RE_BRACE_OPTS.search(prompt)
+        if not brace and widget == "tiles":
+            # A single decoy tile, "{to}", has no "|" to be found by.
+            brace = re.search(r"\s*\{(?P<body>[^{}]+)\}\s*$", prompt)
         own = ([c.strip() for c in brace.group("body").split("|") if c.strip()]
                if brace else None)
         if brace:
@@ -484,12 +485,144 @@ def parse_task_body(a: dict, body: str) -> dict:
         if item.get("why"):
             item["why"] = inline(item["why"])
         items.append(item)
+    for it in items:
+        if re.search(r"[{}]", RE_TAG.sub("", it.get("q") or "")):
+            raise SystemExit(f"{it['q']!r}: a brace is left in the prompt — options are "
+                             f"{{a | b}}, and a single decoy tile is {{a}} at the end")
     a["items"] = items
     # A bullet that does not parse is a question the learner never sees, and
     # silence is the worst possible way to report it. Counted rather than
     # matched so a mistyped separator ("second___= two") is caught too.
     a["bullets"] = len(RE_BULLET.findall(body))
     return a
+
+
+# ----------------------------------------------------------------- the bank --
+# A printed drill is the same six questions every time, so the second go is a
+# memory test of the first rather than a test of the grammar. A bank is a pool
+# written once and drawn from on every run: many items in several genres, a few
+# at a time, in a fresh random order, the ones seen most recently held back.
+#
+#   ::: bank draw="10"
+#   @ gap-fill ask="Choose the word that fits."
+#   - I can't stand ___ in queues. {waiting | to wait | wait} = waiting
+#   @ odd-one-out
+#   - cook · bake · relax · fry = relax ~ the others are ways of cooking
+#   :::
+#
+# `@ genre` starts a group; every item under it is parsed exactly as a
+# `:::task` item of that genre is, so the key checks, the tiles and the tap
+# spans are the same code. The same body inside `:::vocab` is the pool the
+# vocabulary intake draws from.
+#
+# Every bank item is picked, tapped or built. A typed item fails the build.
+BANK_GENRES = {
+    #  genre             type            variant             default instruction
+    "gap-fill":       ("gap-fill",     None,               "Choose the word that fits."),
+    "choice":         ("choice",       None,               "Choose the answer."),
+    "odd-one-out":    ("choice",       "odd-one-out",      None),
+    "sentence-build": ("short-answer", "sentence-build",   None),
+    "error-correction": ("short-answer", "error-correction", None),
+}
+RE_BANK_GROUP = re.compile(r"^@[ \t]*(?P<g>[a-z-]+)(?P<attrs>[^\n]*)$", re.M)
+BANK_DEFAULT_DRAW = 10
+
+
+def parse_bank(body: str, where: str) -> list:
+    """A bank body -> its groups, each one a task dict with `genre` set."""
+    heads = list(RE_BANK_GROUP.finditer(body))
+    if body.strip() and (not heads or body[:heads[0].start()].strip()):
+        raise SystemExit(f"{where}: a bank starts with an '@ genre' line — one of "
+                         f"{', '.join(BANK_GENRES)}")
+    groups = []
+    for j, h in enumerate(heads):
+        genre = h.group("g")
+        if genre not in BANK_GENRES:
+            raise SystemExit(f"{where}: '@ {genre}' is not a bank genre — one of "
+                             f"{', '.join(BANK_GENRES)}")
+        typ, variant, default_ask = BANK_GENRES[genre]
+        a = dict(RE_ATTR.findall(h.group("attrs")))
+        extra = set(a) - {"ask", "opts"}
+        if extra:
+            raise SystemExit(f"{where}: '@ {genre}' takes ask= and opts= only, "
+                             f"not {', '.join(sorted(extra))}")
+        a.update({"type": typ, "skill": "course"})
+        if variant:
+            a["variant"] = variant
+        elif not a.get("ask"):
+            a["ask"] = default_ask
+        end = heads[j + 1].start() if j + 1 < len(heads) else len(body)
+        g = parse_task_body(a, body[h.end():end])
+        g["genre"], g["n"] = genre, j + 1
+        if g["bullets"] != len(g["items"]):
+            raise SystemExit(f"{where}: '@ {genre}' has {g['bullets']} bullets but "
+                             f"{len(g['items'])} parse as items — a line is missing "
+                             f"its ' = key'")
+        typed = [it["q"] for it in g["items"] if is_typed(it)]
+        if typed:
+            raise SystemExit(f"{where}: '@ {genre}' item {typed[0]!r} has nothing to "
+                             f"pick — give it {{a | b | c}} or the group opts=")
+        groups.append(g)
+    return groups
+
+
+def bank_block_id(blk: dict, g: dict) -> str:
+    """The id a bank group is filed under: its block, its place, its genre.
+
+    Shared by the review queue and the page payload, so an item practised in
+    the lesson and the same item due in the review queue are one record.
+    """
+    return f"{blk.get('id') or slug(blk.get('title') or 'bank')}-{g['n']}-{g['genre']}"
+
+
+def bank_rows(groups: list, bid_of) -> list:
+    """Every group's items, flattened to the shape the practice engine asks.
+
+    That shape is the review queue's, deliberately: the engine already knows how
+    to ask a picked, tapped or built item that arrives this way.
+    """
+    rows = []
+    for g in groups:
+        spec = VARIANTS.get(g.get("variant") or "")
+        said = ([spec["ask"]] if spec else []) + ([g["ask"]] if g.get("ask") else [])
+        for n, it in enumerate(g["items"], 1):
+            row = {"id": f"{bid_of(g)}-{n}", "q": it["q"], "a": it["key"],
+                   "ask": inline(" ".join(said)), "genre": g["genre"]}
+            if inline(it["key"]) != e(it["key"]):
+                row["aH"] = inline(it["key"])
+            if it.get("opts"):
+                row["opts"] = [o["k"] for o in it["opts"]]
+                # The text shown on the button, already rendered: an option
+                # written "g**oo**d" is marked on its key and shown bolded.
+                if any(o["t"] != e(o["k"]) for o in it["opts"]):
+                    row["optsH"] = [o["t"] for o in it["opts"]]
+            for k in ("tiles", "tap", "span", "fix"):
+                if it.get(k) is not None:
+                    row[k] = it[k]
+            if it.get("why"):
+                row["why"] = it["why"]
+            rows.append(row)
+    return rows
+
+
+def bank_payload(u, lesson, blk, a: dict, groups: list, idx: int) -> dict:
+    where = f"{u['src']} lesson {lesson} (bank)"
+    try:
+        draw = int(a.get("draw", BANK_DEFAULT_DRAW))
+    except ValueError:
+        raise SystemExit(f"{where}: draw= must be a whole number")
+    rows = bank_rows(groups, lambda g: bank_block_id(blk, g))
+    if len(rows) < draw * 2:
+        raise SystemExit(f"{where}: {len(rows)} items for draw={draw} — a bank needs at "
+                         f"least twice what one run draws, or the second run repeats "
+                         f"the first")
+    return {"id": f"{u['nn']}-{lesson}-b{idx + 1}", "draw": draw, "items": rows,
+            "type": "grammar" if lesson == 3 else "practice"}
+
+
+def bank_html(p: dict) -> str:
+    return (f'<div class="bank" data-role="bank" data-bank="{e(p["id"])}">'
+            f'<div class="bk-stage"></div></div>')
 
 
 def task_payload(u, lesson, ex_id, a: dict, idx: int = 0) -> dict:
@@ -564,9 +697,8 @@ def task_html(p: dict, a: dict) -> str:
     # VARIANTS, which changes it everywhere it is used.
     said = ([spec["ask"]] if spec else []) + ([a["ask"]] if a.get("ask") else [])
     ask = f'<p class="t-ask">{" ".join(inline(s) for s in said)}</p>' if said else ""
-    conf = ('<p class="t-conf">Mark <b>sure</b> or <b>not sure</b> next to each answer '
-            '<i>before</i> you check, so you can see whether your <b>sure</b> answers '
-            'really are right more often.</p>') if p["conf"] else ""
+    conf = ('<p class="t-conf">Mark each answer <b>● sure</b> or <b>○ not sure</b> '
+            'before you check.</p>') if p["conf"] else ""
     return (f'<div class="task" data-role="task" data-task="{e(p["id"])}">'
             f'<div class="t-h">{head}</div>'
             f'{ask}{limit}'
@@ -1172,9 +1304,9 @@ def dialogue_html(p: dict) -> str:
     # Two sentences, and the second one only when there is a comic to move
     # through. Telling an unstaged dialogue's reader about arrow keys would be
     # describing a control that is not on their page.
-    say = 'Tap an <u>underlined</u> word to see what it means.'
+    say = 'Tap an <u>underlined</u> word to see its meaning.'
     if p["staged"]:
-        say += ' Tap the sides of the picture, or swipe, to move through the scene.'
+        say += ' Tap the sides of the picture, or <b>Back</b> and <b>Next</b>, to move.'
     # No title bar of its own: the lesson's section heading above already
     # names the scene, and printing it twice made a card inside a card.
     return (f'<div class="dlg" data-role="dialogue" data-dialogue="{e(p["id"])}">'
@@ -1218,7 +1350,40 @@ def md_inline_keep(s: str) -> str:
 VOCAB_DEFAULT_SIZE = 8
 
 
-def vocab_payload(u, lesson, a: dict, idx: int) -> dict:
+def bank_word_tags(rows: list, words: list) -> None:
+    """Tag each pool item with the table rows it is about.
+
+    `k` is the rows its ANSWER is (the word the item tests); `all` is every row
+    it mentions anywhere, options included. The intake asks an item only once
+    every word in `all` has been met, so a set never asks about a word the
+    learner has not seen yet.
+    """
+    # "be keen on" is written "I'm keen on", so the phrase is matched without
+    # its "be" as well.
+    forms = [(w["n"], [f for f in word_forms(w["word"])
+                       + [f[3:] for f in word_forms(w["word"]) if f.startswith("be ")]
+                       if len(f) > 2]) for w in words]
+
+    def hits(text: str) -> set:
+        t = " " + RE_WS.sub(" ", html.unescape(RE_TAG.sub(" ", str(text))).lower()) + " "
+        return {n for n, fs in forms
+                if any(re.search(r"(?<![\w'])" + re.escape(f) + r"(?![\w'])", t) for f in fs)}
+
+    for r in rows:
+        ans = r.get("fix") or r["a"]
+        r["k"] = sorted(hits(ans))
+        r["all"] = sorted(hits(" ".join([r["q"], ans] + (r.get("opts") or [])
+                                         + (r.get("tap") or []) + (r.get("tiles") or []))))
+        # "What does *outdoors* mean?" has no table word in its answer; the word
+        # it tests is the one in the question. Without this it could only ever
+        # be asked in mixed practice, never with the set that taught it.
+        if not r["k"]:
+            filled = re.sub(r"_{3,}", ans, r["q"], count=1)
+            r["k"] = sorted(hits(filled))
+        r["all"] = sorted(set(r["all"]) | set(r["k"]))
+
+
+def vocab_payload(u, lesson, a: dict, idx: int, groups: list = (), blk=None) -> dict:
     where = f"{u['src']} lesson {lesson} (vocab)"
     try:
         size = int(a.get("size", VOCAB_DEFAULT_SIZE))
@@ -1241,20 +1406,19 @@ def vocab_payload(u, lesson, a: dict, idx: int) -> dict:
         if not words:
             raise SystemExit(f"{where}: rows={rows!r} selects no word in this "
                              f"unit's table")
-    return {"id": f"{u['nn']}-{lesson}-v{idx + 1}", "size": size, "words": words}
+    pool = bank_rows(list(groups), lambda g: bank_block_id(blk or {"title": "vocab"}, g))
+    bank_word_tags(pool, practice_data(u))
+    return {"id": f"{u['nn']}-{lesson}-v{idx + 1}", "size": size, "words": words,
+            "pool": pool}
 
 
 def vocab_html(p: dict) -> str:
     n = len(p["words"])
     sets = (n + p["size"] - 1) // p["size"]
     return (f'<div class="vocab" data-role="vocab" data-vocab="{e(p["id"])}">'
-            f'<div class="v-h"><span class="v-k">New words</span>'
-            f'<span class="v-t">{n} words · {sets} set{"s" if sets != 1 else ""}</span></div>'
-            f'<p class="v-say">Meet them one at a time, then answer on the set you '
-            f'have just met. Nothing is marked learned today — what you still have '
-            f'in a week is the part that counts, and the review queue asks you then.</p>'
-            f'<div class="v-stage"></div>'
-            f'<div class="v-log"></div></div>')
+            f'<p class="v-say">{n} words in {sets} set{"s" if sets != 1 else ""}. Meet each '
+            f'word, then answer questions on it. Every run asks something new.</p>'
+            f'<div class="v-stage"></div></div>')
 
 
 # --------------------------------------------------------- the fluency strand --
@@ -2000,6 +2164,8 @@ def _review_row(nn, kind, lesson, blk, item, n, t=None):
     row = {"unit": nn, "type": kind, "lesson": lesson,
            "id": f"{blk.get('id') or blk.get('title')}-{n}",
            "q": item["q"], "a": item["key"]}
+    if inline(item["key"]) != e(item["key"]):
+        row["aH"] = inline(item["key"])
     # `item["opts"]` — the parser has never written `item["options"]`, so for
     # four years this read the shared `opts=` attribute or nothing, and every
     # item carrying its OWN option set (an inline "(a)(b)(c)" multiple choice,
@@ -2012,13 +2178,16 @@ def _review_row(nn, kind, lesson, blk, item, n, t=None):
         row["opts"] = [o["k"] if isinstance(o, dict)
                        else o[1] if isinstance(o, (list, tuple))
                        else str(o) for o in opts]
+        if (item.get("opts") and not item.get("tap")
+                and any(o["t"] != e(o["k"]) for o in item["opts"])):
+            row["optsH"] = [o["t"] for o in item["opts"]]
     # The instruction the learner needs is the variant's, plus whatever this
     # task added. A queued odd-one-out whose prompt is its own candidate list
     # is four buttons and no question without it.
     spec = VARIANTS.get((t or {}).get("variant") or "")
     said = ([spec["ask"]] if spec else []) + ([t["ask"]] if (t or {}).get("ask") else [])
     if said:
-        row["ask"] = " ".join(said)
+        row["ask"] = inline(" ".join(said))
     # A built or tapped item comes back in the same shape, or the queue would
     # ask for a sentence with nowhere to build it.
     for k in ("tiles", "tap", "span", "fix"):
@@ -2070,7 +2239,7 @@ def review_items(u) -> list:
     # ones and the cap is applied to the ranked list.
     cand = {"pron": [], "grammar": [], "function": []}
     fn_block = None
-    l2 = [blk.get("id") for lesson, blk, _ in u["tasks"] if lesson == 2]
+    l2 = [blk.get("id") for lesson, blk, t in u["tasks"] if lesson == 2 and not t.get("genre")]
     last_l2 = l2[-1] if l2 else None
     for lesson, blk, t in u["tasks"]:
         kind = None
@@ -2098,7 +2267,12 @@ def review_items(u) -> list:
             row = _review_row(u["nn"], kind, lesson, blk, item, n, t)
             # Built and tapped items are produced; a plain pick is picked.
             produced = bool(row.get("tiles") or row.get("tap")) or not row.get("opts")
-            cand[kind].append((0 if produced else 1, len(cand[kind]),
+            # A bank group is a pool, not a sequence: its first item is no more
+            # representative than its tenth, so the order within one is a stable
+            # shuffle rather than the order it happened to be written in.
+            order = (int(hashlib.sha1(row["id"].encode()).hexdigest(), 16) % 10**6
+                     if t.get("genre") else len(cand[kind]))
+            cand[kind].append((0 if produced else 1, order,
                                row, blk.get("id") or blk.get("title")))
 
     for kind, rows in cand.items():
@@ -2215,6 +2389,8 @@ def parse_block_run(body: str):
             a = dict(RE_ATTR.findall(m.group("attrs")))
             if kind == "task":
                 _w.append((kind, parse_task_body(a, m.group("body"))))
+            elif kind in ("bank", "vocab"):
+                _w.append((kind, (a, parse_bank(m.group("body"), f"{head or 'intro'} ({kind})"))))
             elif kind in ("audio", "write", "passage", "dialogue", "fluency"):
                 _w.append((kind, (a, m.group("body"))))
             else:
@@ -2236,6 +2412,7 @@ def parse_block_run(body: str):
             "passages": [d for k, d in widgets if k == "passage"],
             "dialogues": [d for k, d in widgets if k == "dialogue"],
             "fluency": [d for k, d in widgets if k == "fluency"],
+            "bank": [g for k, d in widgets if k in ("bank", "vocab") for g in d[1]],
         }
         if h is None:
             blk["kind"] = "intro"
@@ -2307,8 +2484,8 @@ def parse_unit(path: Path) -> dict:
             "strands": strands, "lessons": lessons, "answers": answers,
             "vocab": vocab, "src": path.name,
             "bridges": [b for L in lessons for b in L["bridges"]],
-            "tasks": [(L["n"], blk, t) for L in lessons for blk in lesson_blocks(L)
-                      for t in blk["tasks"]],
+            "tasks": [(L["n"], b, t) for L in lessons for blk in lesson_blocks(L)
+                      for b, t in block_tasks(blk)],
             "audio": [(L["n"], a, s) for L in lessons for blk in lesson_blocks(L)
                       for a, s in blk["audio"]],
             "writes": [(L["n"], a, s) for L in lessons for blk in lesson_blocks(L)
@@ -2397,8 +2574,8 @@ def parse_review(path: Path) -> dict:
          "vi": vi, "covers": covers, "parts": parts, "answers": {},
          "vocab": [], "src": path.name, "text": text,
          "bridges": [b for P in parts for b in P["bridges"]]}
-    r["tasks"] = [(P["n"], blk, t) for P in parts for blk in part_blocks(P)
-                  for t in blk["tasks"]]
+    r["tasks"] = [(P["n"], b, t) for P in parts for blk in part_blocks(P)
+                  for b, t in block_tasks(blk)]
     for key in ("clocks", "threads"):
         r[key] = [(P["n"], d) for P in parts for blk in part_blocks(P) for d in blk[key]]
     for key in ("audio", "writes", "passages"):
@@ -2429,6 +2606,19 @@ def review_vocab(r, units) -> list:
                 continue
             seen.add(k)
             out.append(dict(w, n=len(out) + 1))
+    return out
+
+
+def block_tasks(blk):
+    """Every marked item set in a block: its tasks, then each bank group.
+
+    A bank group is filed under a block of its own — same title, its genre on
+    the id — so the gates see every bank item as the task it is, and the review
+    queue spreads its cap across the genres as it does across exercises.
+    """
+    out = [(blk, t) for t in blk["tasks"]]
+    for g in blk.get("bank") or []:
+        out.append((dict(blk, id=bank_block_id(blk, g), kind="exercise"), g))
     return out
 
 
@@ -2578,9 +2768,7 @@ def review_cards(reviews, units, up="") -> str:
             f'    </a>')
     return ('\n  <div class="sectionhead"><h2>Four checkpoints</h2>'
             '<span class="label">after Units 03, 06, 09 and 12</span></div>\n'
-            '  <p class="standfirst">Each one asks about three finished units at the same '
-            'time — sounds, words, grammar, a text and a paragraph of your own. Everything '
-            'in them has already been taught.</p>\n'
+            '  <p class="standfirst">Each one tests three finished units together.</p>\n'
             '  <div class="unitgrid">\n' + "\n".join(cards) + "\n  </div>")
 
 
@@ -2663,8 +2851,7 @@ def page_home(units, reviews=()) -> str:
         <div class="tbody">
           <p class="tk" id="nextKicker">Unit 01 · Lesson 1 of 7</p>
           <h3 id="nextTitle">Getting Started</h3>
-          <p class="lede" id="nextLede">Start here. Each lesson teaches something, then asks
-          you to use it.</p>
+          <p class="lede" id="nextLede">Press <b>Finish lesson</b> at the bottom when you are done.</p>
           <div class="row">
             <a class="btn big" id="startLink" href="unit-01/lesson-1/index.html">Start the lesson →</a>
           </div>
@@ -2673,8 +2860,7 @@ def page_home(units, reviews=()) -> str:
     </ol>
     <div class="today-done" id="todayDone" hidden>
       <p class="big">That is today's work done.</p>
-      <p class="lede">Come back tomorrow — spacing it out is what makes it stick.
-      If you want more now, the next step is below.</p>
+      <p class="lede">Come back tomorrow.</p>
       <div class="row"><a class="btn quiet" id="keepGoing" href="#">Keep going</a></div>
     </div>
   </section>
@@ -2768,10 +2954,9 @@ def page_unit(u, reviews=()) -> str:
   <details class="more">
     <summary>How a lesson works</summary>
     <ol class="steps">
-      <li><b>Read the teaching part</b> at the top: the example, the table, the rule.</li>
-      <li><b>Do the exercises.</b> Choose, tap or build your answer, then press
-      <b>Check answers</b>. You see what was right and why.</li>
-      <li><b>Press “Finish lesson”</b> at the bottom. That records it and takes you back to Today.</li>
+      <li>Read the lesson from the top.</li>
+      <li>Answer, then press <b>Check answers</b>.</li>
+      <li>Press <b>Finish lesson</b> at the bottom.</li>
     </ol>
   </details>
   <details class="more">
@@ -2785,16 +2970,12 @@ def page_unit(u, reviews=()) -> str:
     <div class="gategrid">
       <div class="gatecard" data-role="practice">
         <h3>Practice this unit's words</h3>
-        <p>All {len(u['vocab'])} words from Lesson 2, asked in five ways: from the meaning,
-        from the word, from what you hear, and — most often — inside a phrase the word
-        really goes in. Anything you get wrong comes straight back, then again in a week.</p>
+        <p>All {len(u['vocab'])} words, asked in different ways. Wrong answers come back.</p>
         <button class="btn" id="startPractice" type="button" aria-disabled="true">Start practice</button>
       </div>
       <div class="gatecard" data-role="test">
         <h3>Unit test</h3>
-        <p>Every word once, with no feedback until the end. Before each answer is checked
-        you say how sure you were, and the result shows whether feeling sure actually
-        meant being right.</p>
+        <p>Every word once. Results at the end.</p>
         <button class="btn" id="startTest" type="button" aria-disabled="true">Take the test</button>
       </div>
     </div>
@@ -2811,9 +2992,7 @@ def page_unit(u, reviews=()) -> str:
   <div class="sectionhead"><h2>Review {here['num']}</h2><span class="label">three units at once</span></div>
   <div class="card">
     <h3>{e(review_span_text(here))}, mixed together</h3>
-    <p class="lede">This unit is the last of three. Review {here['num']} asks about all
-    three at the same time — the sounds, the words, the grammar, a text to read against
-    the clock and a paragraph of your own. Nothing in it is new.</p>
+    <p class="lede">Review {here['num']} tests all three units together. Nothing in it is new.</p>
     <div class="row">
       <a class="btn" href="../review-{here['num']}/index.html">Open Review {here['num']}</a>
     </div>
@@ -3046,20 +3225,18 @@ def page_words(units) -> str:
     body = f"""  <header class="masthead">
     <p class="eyebrow">Look up a word · {len(rows)} entries</p>
     <h1>Every word the course teaches</h1>
-    <p class="standfirst">Type any part of a word — in English or in Vietnamese —
-    and the list narrows as you type. Each entry says which unit teaches it.</p>
+    <p class="standfirst">Search in English or Vietnamese.</p>
   </header>
 
   <div class="wd-search">
-    <label class="wd-lab" for="wdQ">Search</label>
+    <label class="sr-only" for="wdQ">Search</label>
     <input id="wdQ" type="search" autocomplete="off" spellcheck="false"
-           placeholder="leisure · thời gian rảnh · phr v">
+           placeholder="Find a word">
     <p class="wd-count" role="status" aria-live="polite"></p>
   </div>
 
   <div class="wd-list">{"".join(rows)}</div>
-  <p class="wd-none" id="wdNone" hidden>No word matches that. Try part of the
-  word, or the Vietnamese.</p>
+  <p class="wd-none" id="wdNone" hidden>No word matches.</p>
 """
     return shell(title=f"Word list · {SITE}", depth=1, body=body,
                  crumb=[("Today", "../index.html"), ("Words", "")],
@@ -3168,8 +3345,7 @@ def recap_block(u) -> str:
         for k, v in u["strands"])
     return f"""  <section class="block" data-role="teach">
     <h2>Before you start — what this checks</h2>
-    <p class="lede">Everything below is drawn from Lessons 1–6 of this unit. Skim these
-    targets first; if one of them feels blank, go back to that lesson before answering.</p>
+    <p class="lede">Everything here comes from Lessons 1–6.</p>
     <div class="strands">{items}</div>
   </section>"""
 
@@ -3186,7 +3362,7 @@ def block_prose(u, lesson, b, payload) -> str:
     """
     out = render(b["md"])
     n_task = n_audio = n_write = n_clock = n_pass = 0
-    n_dlg, n_flu, n_voc = [0], [0], [0]
+    n_dlg, n_flu, n_voc, n_bank = [0], [0], [0], [0]
     for i, (kind, d) in enumerate(b["widgets"]):
         if kind == "passage":
             p, html_ = passage_block(u, lesson, d[0], d[1], n_pass)
@@ -3219,8 +3395,13 @@ def block_prose(u, lesson, b, payload) -> str:
             p = fluency_payload(u, lesson, d[0], d[1], fid)
             payload.setdefault("fluency", []).append(p)
             html_ = fluency_html(p)
+        elif kind == "bank":
+            p = bank_payload(u, lesson, b, d[0], d[1], n_bank[0])
+            n_bank[0] += 1
+            payload.setdefault("bank", []).append(p)
+            html_ = bank_html(p)
         elif kind == "vocab":
-            p = vocab_payload(u, lesson, d, n_voc[0])
+            p = vocab_payload(u, lesson, d[0], n_voc[0], d[1], b)
             n_voc[0] += 1
             payload.setdefault("vocabIntake", []).append(p)
             html_ = vocab_html(p)
@@ -3236,6 +3417,73 @@ def block_prose(u, lesson, b, payload) -> str:
     return out
 
 
+RE_BQ = re.compile(r"<blockquote>\s*(.*?)\s*</blockquote>", re.S)
+RE_BQ_P = re.compile(r"<p>(.*?)</p>", re.S)
+RE_H4_SPLIT = re.compile(r"(?=<h4>)")
+RE_VI_NOTE = re.compile(r"^(?:<strong>)?(?:Ghi chú|Mẹo|Lưu ý|Tiếng Việt|Nghĩa|Chú ý)", re.I)
+RE_EG_BREAK = re.compile(r"(?<=[.?!…)\]”\"])\n(?=\S)|\n(?=[A-Z“\"(])")
+
+
+def polish_teach(html: str, split_lines: bool) -> str:
+    """Give a teaching block's parts their own structure.
+
+    A rule under an `####` heading becomes a card of its own; a blockquote is
+    either example sentences, a warning (⚠️) or a note in Vietnamese, and each
+    is marked so it can look like what it is. In a grammar or pronunciation
+    block the examples are one sentence per line in the source, and they keep
+    their lines here rather than running together into a paragraph.
+    """
+    def bq(m):
+        out = []
+        for pm in RE_BQ_P.finditer(m.group(1)):
+            body = pm.group(1).strip()
+            if body.startswith("⚠️"):
+                kind = "callout warn"
+                body = body[len("⚠️"):].lstrip()
+            elif RE_VI_NOTE.match(body):
+                kind = "callout vi"
+            else:
+                kind = "eg"
+            if split_lines:
+                lines = [x.strip() for x in RE_EG_BREAK.split(body) if x.strip()]
+                body = ("".join(f'<span class="eg-l">{x}</span>' for x in lines)
+                        if kind == "eg" else "<br>".join(lines))
+            if out and out[-1][0] == kind and kind == "eg":
+                out[-1][1].append(body)
+            else:
+                out.append((kind, [body]))
+        if not out:
+            return m.group(0)
+        return "".join(f'<div class="{k}">' + "".join(f"<p>{b}</p>" for b in bs) + "</div>"
+                       for k, bs in out)
+
+    html = RE_BQ.sub(bq, html)
+    # A line that is nothing but a bold list of words is a set to learn, and
+    # reads as one: each word its own chip.
+    html = re.sub(r"<p><strong>([^<]*·[^<]*)</strong></p>",
+                  lambda m: '<p class="set">' + "".join(
+                      f"<span>{w.strip()}</span>" for w in m.group(1).split("·") if w.strip())
+                  + "</p>", html)
+    html = re.sub(r"<p>(❌|✗)\s*", r'<p class="bad"><span class="mk" aria-label="Wrong">✗</span> ', html)
+    html = re.sub(r"<p>(✅|✓)\s*", r'<p class="good"><span class="mk" aria-label="Right">✓</span> ', html)
+    # Each cell carries its column's heading, so a table can fold into one
+    # block per row on a phone and still say what each cell is.
+    def label_cells(m):
+        heads = [RE_TAG.sub("", h).strip() for h in re.findall(r"<th>(.*?)</th>", m.group(0), re.S)]
+        def row(rm):
+            cells = iter(heads)
+            return re.sub(r"<td>", lambda _: f'<td data-h="{e(next(cells, ""))}">', rm.group(0))
+        return re.sub(r"<tr>.*?</tr>", row, m.group(0), flags=re.S)
+    html = re.sub(r"<table>.*?</table>", label_cells, html, flags=re.S)
+    if "<h4>" in html:
+        head, *rules = RE_H4_SPLIT.split(html)
+        html = head + "".join(f'<section class="rule">{r}</section>' for r in rules)
+    return html
+
+
+RE_RULE_BLOCK = re.compile(r"^(grammar|part [a-z]|pronunciation|everyday english)", re.I)
+
+
 def block_section(u, lesson, b, payload, *, where="") -> str:
     """One teaching block or one exercise, as a <section>.
 
@@ -3245,12 +3493,15 @@ def block_section(u, lesson, b, payload, *, where="") -> str:
     """
     if b["kind"] != "exercise":
         inner = block_prose(u, lesson, b, payload)
-        # The vocabulary block's table is swapped for the rebuilt one, so
-        # every row carries its marker and its own audio button.
+        # The vocabulary table is not read in the flow of the lesson any more:
+        # it is reference, and it lives in the Words sheet every lesson page
+        # carries (words_sheet). Meet the words is where the words are learned.
         if b["title"].lower().startswith("vocabulary") and u["vocab"]:
-            inner, n = RE_FIRST_TABLE.subn(lambda _: vocab_entries(u), inner, count=1)
-            if n != 1:
+            if not RE_FIRST_TABLE.search(inner):
                 raise SystemExit(f"{where}: vocabulary block has no table to replace")
+            return ""
+        if RE_RULE_BLOCK.match(b["title"] or ""):
+            inner = polish_teach(inner, True)
         head = f"    <h2>{inline(b['title'])}</h2>\n" if b["title"] else ""
         return (f'  <section class="block" data-role="teach">\n{head}'
                 f'    <div class="prose">{inner}</div>\n  </section>')
@@ -3272,6 +3523,42 @@ def block_section(u, lesson, b, payload, *, where="") -> str:
     <div class="exhead"><span class="exno">{e(b['id'])}</span><h2>{inline(b['title'])}</h2></div>
     <div class="prose">{block_prose(u, lesson, b, payload)}</div>{ans_html}
   </section>"""
+
+
+def words_sheet(u) -> str:
+    """The unit's whole vocabulary, one tap away on every lesson page.
+
+    A floating button and a sheet over the page, so the reference is there
+    when a word is needed and out of the way when it is not.
+    """
+    if not u["vocab"]:
+        return ""
+    name = next((b["title"] for L in u["lessons"] for b in L["blocks"]
+                 if b["title"].lower().startswith("vocabulary")), "Vocabulary")
+    name = re.sub(r"^Vocabulary\s*[—–-]\s*", "", name) or "Vocabulary"
+    # What the vocabulary block says besides its table — a note on two words
+    # that are easy to mix up — goes into the sheet with the words.
+    notes = ""
+    for L in u["lessons"]:
+        for b in L["blocks"]:
+            if b["title"].lower().startswith("vocabulary"):
+                rest = RE_FIRST_TABLE.sub("", render(b["md"]), count=1).strip()
+                if RE_TAG.sub("", rest).strip():
+                    notes += polish_teach(rest, False)
+    notes = f'<div class="prose sheet-notes">{notes}</div>' if notes else ""
+    return f"""  <button class="words-fab" type="button" data-words-open aria-haspopup="dialog" aria-controls="words">
+    <span class="wf-i" aria-hidden="true">Aa</span><span class="wf-t">Words</span>
+  </button>
+  <dialog class="sheet" id="words" aria-labelledby="words-h">
+    <div class="sheet-h">
+      <div class="sheet-ht"><p class="eyebrow">Unit {u['num']:02d} · {len(u['vocab'])} words</p>
+      <h2 id="words-h">{inline(name)}</h2></div>
+      <button class="sheet-x" type="button" data-words-close aria-label="Close">
+        <span aria-hidden="true">✕</span></button>
+    </div>
+    <div class="sheet-find"><input type="search" placeholder="Find a word" aria-label="Find a word" autocomplete="off" spellcheck="false"></div>
+    <div class="sheet-b">{notes}{vocab_entries(u)}<p class="sheet-none" hidden>No word matches.</p></div>
+  </dialog>"""
 
 
 def page_lesson(u, L) -> str:
@@ -3311,7 +3598,8 @@ def page_lesson(u, L) -> str:
     <span class="sp"></span>
     <button class="btn quiet small" id="undoDone" type="button" hidden>Not finished yet</button>
     <a class="btn" id="markDone" href="../../index.html">Finish lesson ✓</a>
-  </div>"""
+  </div>
+{words_sheet(u)}"""
 
     return shell(title=f"Lesson {L['n']} — {L['title']} · Unit {u['num']:02d} · {SITE}",
                  depth=2, body=body,
@@ -3324,6 +3612,7 @@ def page_lesson(u, L) -> str:
                        "write": payload["write"], "clock": payload["clock"],
                        "passage": payload["passage"],
                        "vocabIntake": payload.get("vocabIntake", []),
+                       "bank": payload.get("bank", []),
                        "dialogue": payload.get("dialogue", [])},
                  desc=f"Unit {u['num']} Lesson {L['n']}: {L['title']}.")
 
