@@ -209,7 +209,7 @@
 - Mercury / have / no moons {having | to have} = Mercury has no moons
 - the Earth / orbit / the Sun {orbiting | to orbit} = The Earth orbits the Sun
 - Khoa / want / explore / the solar system {exploring} = Khoa wants to explore the solar system
-- many people / oppose / the plan {opposes | opposing} = Many people oppose the plan
+- my uncle / oppose / the plan {opposing} = My uncle opposes the plan
 :::
 
 ### Vocabulary — Space and life beyond Earth

@@ -224,7 +224,7 @@
 @ sentence-build
 - my grandmother / wrap / the cakes / in banana leaves {wrapping | to} = My grandmother wraps the cakes in banana leaves
 - it / be / a taboo / to point / at the offerings {an | are} = It is a taboo to point at the offerings / It is taboo to point at the offerings
-- old people / pray / for / longevity {to | prays} = Old people pray for longevity
+- my grandmother / pray / longevity {to | praying} = My grandmother prays for longevity
 - my sister / admire / the blooming / peach trees {admiring | to} = My sister admires the blooming peach trees
 :::
 

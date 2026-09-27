@@ -225,7 +225,7 @@
 - The shop gave me all my money back — a full discount. {refund | receipt | bargain} = discount -> refund ~ money given back is a **refund**
 @ sentence-build
 - she / be / addicted / to / shopping {are | addict} = She is addicted to shopping/Is she addicted to shopping
-- can / I / try / it / on {tries | trying} = Can I try it on/I can try it on
+- try / it / can / I / on {tries | trying} = Can I try it on/I can try it on
 - the shop / not have / that size / in stock {don't | haven't} = The shop doesn't have that size in stock/Doesn't the shop have that size in stock
 - we / want / make / a complaint / about the delivery {making | for} = We want to make a complaint about the delivery
 - she / be / a real / shopaholic {are} = She is a real shopaholic/Is she a real shopaholic
@@ -560,7 +560,7 @@ calendar — we use the same form as for every day: the shop **opens**, the film
 @ sentence-build
 - Bà Sáu / never / pay / by card {paid} = Bà Sáu never pays by card
 - my brother / always / check / the price tag {checking} = My brother always checks the price tag
-- they / hardly ever / queue / for long {queues} = They hardly ever queue for long
+- she / hardly ever / queue / for long {queuing} = She hardly ever queues for long
 - Tí / never / buy / snacks {buying} = Tí never buys snacks
 - what time / do / the market / open {opens} = What time does the market open
 @ odd-one-out ask="Which one goes in a different place in the sentence?"

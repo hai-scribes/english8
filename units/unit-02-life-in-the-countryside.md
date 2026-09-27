@@ -233,8 +233,8 @@
 - The village is surrounded of rice fields. {by | from | at} = of -> by ~ surrounded **by**
 @ sentence-build
 - the village / be / surrounded by / paddy fields {are | surround} = The village is surrounded by paddy fields
-- the farmers / load / the rice / onto the truck {loading | loads} = The farmers load the rice onto the truck
-- tourists / love / the picturesque scenery / of the village {loves | hospitable} = Tourists love the picturesque scenery of the village / Tourists love the scenery of the picturesque village
+- the farmer / load / the rice / onto the truck {loading} = The farmer loads the rice onto the truck
+- the tourist / love / the picturesque scenery / of the village {hospitable} = The tourist loves the picturesque scenery of the village / The tourist loves the scenery of the picturesque village
 - my uncle / cultivate / the land / behind the house {unload | cultivating} = My uncle cultivates the land behind the house
 :::
 

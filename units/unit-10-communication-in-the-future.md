@@ -194,7 +194,7 @@
 - she / send / me / a voice message {to} = She sent me a voice message/She sent a voice message to me
 - the app / translate / my words / into English {in} = The app translates my words into English
 - my phone / have / no / signal {any} = My phone has no signal
-- zoom in / on / the map {at} = Zoom in on the map
+- zoom in / the map {at} = Zoom in on the map
 - Thảo / interact / with / her classmates {to} = Thảo interacts with her classmates
 :::
 

@@ -1748,3 +1748,21 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.28);backdrop-filter:blur(2px);-web
   .prose .rule td:first-child::before{content:none}
 }
 .t-h .t-t:first-child::before{content:none}
+
+/* In-lesson practice marks in place: a right answer glows and moves on by
+   itself; a wrong one shows the answer under the question, then Next. */
+@keyframes glow-ok{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--green) 55%,transparent)}
+  100%{box-shadow:0 0 0 10px color-mix(in srgb,var(--green) 0%,transparent)}}
+.card.engine.is-right .choices button.ok,
+.card.engine.is-right .i-line,
+.task .i.is-instant[data-ok="1"] .i-opt input:checked+span{animation:glow-ok .8s ease-out}
+.card.engine.is-right .i-line{outline:2px solid var(--green);background:var(--green-wash)}
+.card.engine.is-wrong .i-line{outline:2px solid var(--red)}
+.e-fix{margin-top:.9rem;padding:.8rem .95rem;border-radius:14px;background:var(--red-wash);
+  display:flex;flex-direction:column;gap:.45rem}
+.e-fix .e-ans{font-size:1rem}
+.e-fix .no{color:var(--red);font-weight:700}
+.e-fix .row{margin:0}
+@media (prefers-reduced-motion:reduce){
+  .card.engine.is-right .choices button.ok,.card.engine.is-right .i-line,
+  .task .i.is-instant[data-ok="1"] .i-opt input:checked+span{animation:none}}

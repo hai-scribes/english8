@@ -211,8 +211,8 @@
 @ sentence-build
 - my grandmother / weave / baskets / from bamboo {weaving | to} = My grandmother weaves baskets from bamboo
 - their house / overlook / the river {overlooking | to} = Their house overlooks the river
-- the dancers / wear / traditional costumes {customs | wearing} = The dancers wear traditional costumes
-- Khoa / can / play / a musical instrument {plays | playing} = Khoa can play a musical instrument
+- the dancer / wear / a traditional costume {custom | wearing} = The dancer wears a traditional costume
+- Khoa / play / a musical instrument / every evening {playing} = Khoa plays a musical instrument every evening
 - the village / meet / in the communal house {meeting | to} = The village meets in the communal house
 :::
 
@@ -565,7 +565,7 @@ Put a word for the container or the piece in front.
 - who / look after / the buffaloes {looking | to} = Who looks after the buffaloes?
 - you / visit / the village — in the past {do | visited} = Did you visit the village?
 @ sentence-build
-- I / need / a piece of / advice {an | advices} = I need a piece of advice
+- I / need / advice {an | advices} = I need a piece of advice
 - there / be / not / much / rice / left {many | are} = There is not much rice left
 - Bà Sáu / buy / two loaves of / bread — yesterday {breads | loaf} = Bà Sáu bought two loaves of bread
 @ odd-one-out ask="Which word is different?"
