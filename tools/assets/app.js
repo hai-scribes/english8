@@ -36,6 +36,100 @@ function initTheme(){
   });
 }
 
+/* ---------------- the six-lesson shape -------------------------------------
+   A unit used to have seven lessons: the book's Communication section was
+   Lesson 4 and Skills 1, Skills 2 and Looking Back were 5, 6 and 7. Since
+   2026-09-27 Communication is read inside Lesson 4 and has no marked work, so
+   5, 6 and 7 became 4, 5 and 6. Everything stored under a lesson number or an
+   exercise number moves with it, once, before anything below reads it.
+   Communication's own records are dropped, because the tasks they belong to
+   are gone. Without this, a learner who had finished Skills 1 would find it
+   marked done as Lesson 5 (now Listening & Writing), and the reading clock
+   she had already spent would be offered to her again. */
+const LESSONS = 6;
+(function reshapeOnce(){
+  const FLAG = "en8:shape:6";
+  try { if (localStorage.getItem(FLAG)) return; } catch(e){ return; }
+  const DOWN = { "5":"4", "6":"5", "7":"6" };
+  // "01-5-5.1-1" -> "01-4-4.1-1"; "01-6-w1" -> "01-5-w1"; old Lesson 4 -> null
+  const moveId = id => {
+    const m = /^(\d\d)-([4-7])-(.*)$/.exec(id);
+    if (!m) return id;
+    if (m[2] === "4") return null;
+    const rest = m[3].replace(/^([5-7])\.(\d+)/, (_, l, n) => DOWN[l] + "." + n);
+    return m[1] + "-" + DOWN[m[2]] + "-" + rest;
+  };
+  const read = k => { try { return JSON.parse(localStorage.getItem(k) || "null"); } catch(e){ return null; } };
+  const write = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} };
+  const rekey = obj => {
+    const out = {};
+    for (const k of Object.keys(obj || {})){ const n = moveId(k); if (n) out[n] = obj[k]; }
+    return out;
+  };
+
+  const prog = read("en8:progress:v1");
+  if (prog){
+    for (const u of Object.keys(prog)){
+      const ls = prog[u] && prog[u].lessons;
+      if (!ls) continue;
+      const out = {};
+      for (const l of Object.keys(ls)){
+        if (l === "4") continue;
+        out[DOWN[l] || l] = ls[l];
+      }
+      prog[u].lessons = out;
+    }
+    write("en8:progress:v1", prog);
+  }
+  const days = read("en8:days:v1");
+  if (days){
+    for (const d of Object.keys(days)){
+      const st = (days[d] && days[d].steps) || [];
+      days[d].steps = st.filter(x => !/^\d\d:L4$/.test(x))
+        .map(x => x.replace(/^(\d\d):L([5-7])$/, (_, u, l) => u + ":L" + DOWN[l]));
+    }
+    write("en8:days:v1", days);
+  }
+  for (const k of ["en8:tasks:v1", "en8:write:v1"]){
+    const v = read(k);
+    if (v) write(k, rekey(v));
+  }
+  const rev = read("en8:review:v1");
+  if (rev){
+    for (const k of Object.keys(rev)) if (/^\d\d:function:/.test(k)) delete rev[k];
+    write("en8:review:v1", rev);
+  }
+  // Per-item keys: the reading clock and its flags, fluency runs, highlights, notes.
+  try {
+    const PRE = ["en8:clock:", "en8:flags:", "en8:fluency:", "en8:marks:", "en8:notes:"];
+    const keys = [];
+    for (let i = 0; i < localStorage.length; i++) keys.push(localStorage.key(i));
+    // Old Lesson 4 goes first, then 5, 6, 7: each move lands on a name the
+    // pass before it has already emptied, so nothing is overwritten.
+    const lessonOf = k => { const m = /:\d\d-([4-7])-/.exec(k || ""); return m ? +m[1] : 0; };
+    keys.sort((a, b) => lessonOf(a) - lessonOf(b));
+    for (const k of keys){
+      const pre = PRE.find(p => k && k.indexOf(p) === 0);
+      if (!pre) continue;
+      const n = moveId(k.slice(pre.length));
+      if (n === k.slice(pre.length)) continue;
+      const v = localStorage.getItem(k);
+      localStorage.removeItem(k);
+      if (n) localStorage.setItem(pre + n, v);
+    }
+    // A thread tally is keyed "<thread>:<unit>:<lesson>".
+    const th = keys.map(k => /^en8:thread:(.+):(\d\d):([4-7])$/.exec(k || "")).filter(Boolean)
+      .sort((a, b) => a[3] - b[3]);
+    for (const m of th){
+      const k = m[0];
+      const v = localStorage.getItem(k);
+      localStorage.removeItem(k);
+      if (m[3] !== "4") localStorage.setItem("en8:thread:" + m[1] + ":" + m[2] + ":" + DOWN[m[3]], v);
+    }
+  } catch(e){}
+  try { localStorage.setItem(FLAG, "1"); } catch(e){}
+})();
+
 /* ---------------- progress ------------------------------------------------ */
 /* { "01": { lessons: {"1": epochMs, ...}, test: {best: 0-100, at: epochMs} } } */
 const P_KEY = "en8:progress:v1";
@@ -109,7 +203,7 @@ function logReviewed(){
 }
 
 /* ---------------- the path -----------------------------------------------
-   Every unit is walked the same way: seven lessons, then the unit test, and
+   Every unit is walked the same way: six lessons, then the unit test, and
    after Units 03, 06, 09 and 12 a checkpoint. Practice is not a step -- it is
    open from Lesson 2 for anyone who wants it, and the review queue already
    brings every word back. `DATA.path` is written by build.py (home page only)
@@ -408,12 +502,12 @@ function initLesson(){
 function paintProgress(){
   $$("[data-unit-progress]").forEach(el => {
     const u = el.dataset.unitProgress;
-    const n = lessonsDone(u), pct = Math.round(n / 7 * 100);
+    const n = lessonsDone(u), pct = Math.round(n / LESSONS * 100);
     const fill = $(".bar i", el) || $("i", el);
     if (fill) fill.style.width = pct + "%";
     const t = $("[data-progress-text]", el);
-    if (t) t.textContent = n === 0 ? "7 lessons" : n + " of 7 done";
-    if (n === 7) el.classList.add("is-complete");
+    if (t) t.textContent = n === 0 ? LESSONS + " lessons" : n + " of " + LESSONS + " done";
+    if (n === LESSONS) el.classList.add("is-complete");
   });
   const totalEl = $("[data-total-lessons]");
   if (totalEl){
@@ -430,7 +524,7 @@ function paintProgress(){
   const unitsDone = $("[data-units-done]");
   if (unitsDone){
     let n = 0;
-    for (let u = 1; u <= 12; u++) if (lessonsDone(String(u).padStart(2, "0")) === 7) n++;
+    for (let u = 1; u <= 12; u++) if (lessonsDone(String(u).padStart(2, "0")) === LESSONS) n++;
     unitsDone.textContent = n;
   }
 }
@@ -457,9 +551,9 @@ function initStart(){
   if (DATA.kind === "unit"){
     const u = DATA.unit;
     let next = 0;
-    for (let l = 1; l <= 7; l++) if (!lessonDone(u, l)){ next = l; break; }
+    for (let l = 1; l <= LESSONS; l++) if (!lessonDone(u, l)){ next = l; break; }
     /* The lesson list shows where the learner is: finished ones ticked, the
-       next one marked. It used to show seven identical rows whatever the
+       next one marked. It used to show six identical rows whatever the
        record said, so the list itself could not answer "where was I?". */
     $$('[data-role="lesson-link"]').forEach(a => {
       const l = Number(a.dataset.lesson), done = lessonDone(u, l);
@@ -474,11 +568,11 @@ function initStart(){
       const tested = !!unitRec(u).test;
       say(tested ? "This unit is finished" : "One step left: the unit test",
         tested ? "Every lesson and the unit test are done."
-               : "All seven lessons are done. One step left: the unit test — every word once.",
+               : "All six lessons are done. One step left: the unit test — every word once.",
         tested ? "../index.html" : "#gate", tested ? "Back to Today →" : "Take the unit test →");
     } else if (done){
       say("Pick up where you left off",
-        "<b>" + done + " of 7</b> lessons done.",
+        "<b>" + done + " of " + LESSONS + "</b> lessons done.",
         "lesson-" + next + "/index.html", "Continue with Lesson " + next + " →");
     }
     return;
@@ -490,7 +584,7 @@ function initStart(){
 /* ---------------- the gate ------------------------------------------------
    The operator's constraint: a test is never presented before the lessons it
    tests. That is enforced twice — structurally, because the generator only
-   ever emits this block after all seven lesson links, and behaviourally here,
+   ever emits this block after all six lesson links, and behaviourally here,
    because the buttons stay inert until the lessons are actually done. */
 const PRACTICE_AFTER = 2;   // vocabulary is introduced in Lesson 2
 function initGate(){
@@ -500,7 +594,7 @@ function initGate(){
   if (!gate) return;
   const done = lessonsDone(u);
   const canPractise = lessonDone(u, PRACTICE_AFTER);
-  const canTest = done === 7;
+  const canTest = done === LESSONS;
 
   const pBtn = $("#startPractice"), tBtn = $("#startTest"), lock = $("#gateLock");
   gate.dataset.open = (canPractise || canTest) ? "1" : "0";
@@ -516,16 +610,16 @@ function initGate(){
   if (lock){
     if (canTest){
       const best = unitRec(u).test;
-      lock.innerHTML = "<span>✓</span><div>All seven lessons are done. "
+      lock.innerHTML = "<span>✓</span><div>All six lessons are done. "
         + (best ? "Your best test score so far is <b>" + best.best + "%</b>." : "The unit test is open.")
         + "</div>";
     } else if (canPractise){
-      lock.innerHTML = "<span>◐</span><div>Practice is open. The <b>unit test</b> unlocks when all seven "
-        + "lessons are finished — <b>" + (7 - done) + "</b> to go.</div>";
+      lock.innerHTML = "<span>◐</span><div>Practice is open. The <b>unit test</b> unlocks when all six "
+        + "lessons are finished — <b>" + (LESSONS - done) + "</b> to go.</div>";
     } else {
       lock.innerHTML = "<span>🔒</span><div>Work through the lessons first. Practice opens once you finish "
         + "<b>Lesson " + PRACTICE_AFTER + "</b> (where this unit's vocabulary is taught); the "
-        + "<b>unit test</b> opens when all seven are done.</div>";
+        + "<b>unit test</b> opens when all six are done.</div>";
     }
   }
 }
@@ -1177,7 +1271,7 @@ function runEngine(mode, words, unit, hostSel, opts){
 const STEP_WORD = { lesson:"Lesson", test:"Unit test", check:"Checkpoint" };
 
 function stepKicker(s){
-  if (s.kind === "lesson") return "Unit " + s.u.nn + " · Lesson " + s.n + " of 7";
+  if (s.kind === "lesson") return "Unit " + s.u.nn + " · Lesson " + s.n + " of " + LESSONS;
   if (s.kind === "test") return "Unit " + s.u.nn + " · last step";
   return "After Unit " + s.u.nn;
 }
@@ -1991,7 +2085,7 @@ function initTasks(){
 
    Both halves of that are about the Review pages, because a Review is the only
    page in the course that carries two timers at once. A unit splits across
-   lesson pages -- the reading clock on Skills 1, the player on Skills 2 -- so
+   lesson pages -- the reading clock on Lesson 4, the player on Lesson 5 -- so
    each of them was alone on its page and "every task on the page" happened to
    be right. A Review is one page: five Language exercises, then the timed
    reading block, then the Listening.

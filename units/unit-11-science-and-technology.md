@@ -1,7 +1,7 @@
 # Unit 11 — Science and Technology
 
 > **Bài 11 — Khoa học và công nghệ**
-> Self-study pack. Work through Lessons 1–7 in order. Marked exercises check
+> Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
 > themselves; the [Answer Key](#answer-key) covers the open ones.
 
 ## What this unit teaches
@@ -87,7 +87,7 @@ single difference is most of what Lesson 3 is about.
 
 ---
 
-## Lesson 2 — A Closer Look 1
+## Lesson 2 — Words & Sounds
 
 ### Vocabulary — Science and technology
 
@@ -134,7 +134,7 @@ single difference is most of what Lesson 3 is about.
 > either of those, **the word inside a phrase it actually lives in**. Wrong
 > answers come straight back, and everything returns a week later, because
 > what you can still recall after a gap is the only recall worth counting. The
-> **unit test** opens once all seven lessons are done.
+> **unit test** opens once all six lessons are done.
 >
 > **Luyện 33 từ này.** Học xong bài này, phần
 > **practice** ở trang bài sẽ mở ra để luyện cả 33 từ — trong đó phần lớn là
@@ -325,7 +325,7 @@ sentence clear; choosing what to make loud is.
 > nhiều từ, câu càng **phẳng**. Đừng nói nhanh hơn để bù lại.
 :::
 
-## Lesson 3 — A Closer Look 2
+## Lesson 3 — Grammar
 
 ### Grammar — Reported speech: statements
 
@@ -513,139 +513,7 @@ time, and remember the pronoun shift.
 
 ---
 
-## Lesson 4 — Communication
-
-### Everyday English — Talking about technology, and giving and responding to good news
-
-#### Asking about someone's technology
-
-| English | Nghĩa |
-| --- | --- |
-| What do you use it **for**? | Bạn dùng nó để làm gì? |
-| Why do you **prefer** that app? | Vì sao bạn thích ứng dụng đó hơn? |
-| What's the main **benefit** of it? | Lợi ích chính của nó là gì? |
-| Are there any **drawbacks**? | Có nhược điểm nào không? |
-| Could you **live without** it? | Bạn có thể sống thiếu nó không? |
-
-#### Giving an opinion and a reason
-
-| English | Nghĩa |
-| --- | --- |
-| I use it **because** it saves me a lot of time. | Tôi dùng nó vì nó tiết kiệm nhiều thời gian. |
-| The main benefit is **that** it's very efficient. | Lợi ích chính là nó rất hiệu quả. |
-| It makes my homework **much easier**. | Nó khiến bài tập của tôi dễ hơn nhiều. |
-| The biggest drawback is **the price**. | Nhược điểm lớn nhất là giá cả. |
-| To be honest, I couldn't live without it. | Thật lòng mà nói, tôi không thể sống thiếu nó. |
-| I'd rather use a book, actually. | Thật ra tôi thích dùng sách hơn. |
-
-#### Passing on what someone said
-
-| English | Nghĩa |
-| --- | --- |
-| Guess what — Cô Yến **said that** we'd have a test. | Đoán xem — cô Yến nói rằng chúng ta sẽ có bài kiểm tra. |
-| My brother **told me that** the app was free. | Anh trai tôi bảo tôi rằng ứng dụng đó miễn phí. |
-| Did you hear? They **said that** the club was cancelled. | Cậu nghe chưa? Người ta nói câu lạc bộ bị huỷ. |
-| She didn't **say** anything about it. | Cô ấy không nói gì về việc đó. |
-| Who **told** you that? | Ai bảo cậu thế? |
-
-> ⚠️ Note the pattern once more: **said that…** (no person) but **told me
-> that…** (person required). This is the single most tested point in the unit.
-
-#### Giving good news
-
-Good news is usually announced before it is explained. You put a short opening
-first, and the news itself in the sentence after it.
-
-| English | Nghĩa |
-| --- | --- |
-| **Great news for us.** We'll have school clouds, so we won't have to carry all these books. | Tin vui cho chúng mình đây. |
-| **Guess what!** I won first prize in the essay contest. | Đoán xem nào! |
-| **You'll never guess what happened.** Our class is getting new laptops. | Cậu không đoán được đâu. |
-| **I've got some good news.** The science club is moving to Friday. | Mình có tin vui này. |
-| **Have you heard?** They've fixed the Internet in the library. | Cậu nghe tin gì chưa? |
-
-#### Responding to good news
-
-| English | Nghĩa | Khi nào dùng |
-| --- | --- | --- |
-| **Congratulations!** | Chúc mừng cậu! | Người nghe **đã tự làm được** điều đó |
-| **Well done!** | Giỏi quá! | Người nghe đã cố gắng và thành công |
-| **Great!** | Tuyệt quá! | Tin vui nói chung |
-| **That's great!** | Hay quá! | Tin vui nói chung |
-| **That's wonderful news.** | Tin tuyệt vời đấy. | Tin vui lớn, trang trọng hơn |
-| **I'm so happy for you.** | Mình mừng cho cậu lắm. | Tin vui của riêng người nghe |
-| **Lucky you!** | Cậu may thật đấy! | Tin vui **tự nhiên đến**, không do cố gắng |
-
-> **Ghi chú:** Hai câu trả lời hay bị dùng lẫn nhau.
-> **Congratulations!** dùng cho điều người kia **tự đạt được** — thi đỗ, đoạt
-> giải, thắng một cuộc thi.
-> **That's great!** / **Lucky you!** dùng cho vận may **tự đến** với người kia —
-> trời mưa nên được nghỉ, bố mẹ mua cho cái máy tính mới.
-> *I won first prize in the essay contest.* → **Congratulations!**
-> *My dad gave me a new laptop for my birthday.* → **That's great!**
-
-> ⚠️ **Bẫy thường gặp:** Từ này **luôn** có **-s**: **Congratulations!**
-> ❌ *Congratulation!* — không bao giờ dùng số ít.
-> Muốn nói rõ chúc mừng về việc gì, dùng **on + V-ing / danh từ**:
-> *Congratulations **on winning** the prize!* · *Congratulations **on your new
-> phone**!*
-
-### 4.1 Complete the mini-dialogues
-
-::: task skill="course" type="gap-fill" ask="Choose the word for each gap. The four short exchanges run in order — read each one whole before you choose."
-- **A:** What do you use that app ___ ? {for | with | on} = for
-- **B:** Homework, mostly. The main ___ is that it checks my spelling. {benefit | drawback | feedback} = benefit
-- **A:** Are there any ___ ? (**B:** Yes — it drains my battery in about an hour.) {drawbacks | benefits | applications} = drawbacks
-- **A:** Guess what! Cô Yến ___ us that the science club was moving to Friday. {told | said | spoke} = told
-- **B:** Really? Who ___ you that? {told | said | spoke} = told
-- **A:** She ___ it herself, at the end of the lesson. {said | told | spoke} = said
-- **A:** Could you ___ without your phone for a week? {live | wait | sit} = live
-- **B:** To be ___ , no. I'd last two days. {honest | sure | certain} = honest
-:::
-
-### 4.2 Write your own
-
-Someone asks you about three pieces of technology. Write a full answer to each —
-give an opinion **and** a reason. Then report one of your answers as if a friend
-were repeating it (*He/She said that…*).
-
-1. "What device do you use most, and what do you use it for?"
-   → _______________________________
-2. "What's the main benefit of learning English with an app?"
-   → _______________________________
-3. "What's the biggest drawback of spending a lot of time online?"
-   → _______________________________
-4. Now report answer 1 in the third person.
-   → _______________________________
-
-### 4.3 Which reply?
-
-::: task skill="course" type="choice" opts="Congratulations!|Lucky you!" ask="Your friend tells you each of these. Which reply fits? Ask yourself one question: did your friend **do** it, or did it simply **happen** to them?"
-- I passed the entrance exam! = Congratulations! ~ she sat the exam and passed it herself
-- Great news — my school is closed tomorrow because of the storm. = Lucky you! ~ the storm did it, not your friend
-- I won first prize in the science competition. = Congratulations! ~ a prize she won
-- My uncle has given me his old laptop. = Lucky you! ~ good luck that arrived from someone else
-- Our team came top of the whole province. = Congratulations! ~ the team earned it
-- My aunt has given me her old phone. = Lucky you! ~ nothing your friend did — it simply came to her
-- I've finally finished my invention project. = Congratulations! ~ months of her own work
-- My test was cancelled because the teacher was ill — and I hadn't studied at all! = Lucky you! ~ she did nothing to earn it
-:::
-
-### 4.4 Break the good news
-
-Write the **two** lines of each short exchange: the good news, then the reply.
-Choose the reply that fits — *Congratulations!* if the person achieved it,
-*That's great!* or *Lucky you!* if it simply happened to them.
-
-1. You tell your classmate that a vending machine has been installed at school.
-   → You: _______________________________
-   → Your classmate: _______________________________
-2. You tell your classmate that your dad gave you a new laptop for your birthday.
-   → You: _______________________________
-   → Your classmate: _______________________________
-3. Your classmate tells you she has been chosen for the national maths team.
-   → Your classmate: _______________________________
-   → You: _______________________________
+## Lesson 4 — Reading & Speaking
 
 ### Online learning
 
@@ -676,43 +544,10 @@ thing that does not.
 > is free, and they complain — fairly — that they miss half of every club. I
 > would still rather meet face to face."
 
-### 4.5 Benefit or problem?
+**Talk about it.** Which of the four would you most like to swap places with,
+and why? Say one thing online learning does well for you and one thing it does
+badly.
 
-::: task skill="course" type="sort" opts="Benefit|Problem" ask="Read the four posts again. Is each idea something good about online learning, or something wrong with it?"
-- It saves you nearly an hour of travelling. = Benefit
-- The connection drops in the middle of a sentence. = Problem
-- You can discuss a question with four classmates in a breakout room. = Benefit
-- Your eyes get tired after two hours in front of a screen. = Problem
-- You become more independent and plan your own week. = Benefit
-- The teacher's feedback appears under your work the next morning. = Benefit
-- It is hard to concentrate with a family at home around you. = Problem
-- Nobody has to sit in a traffic jam. = Benefit
-- Some students have no computer or smartphone of their own. = Problem
-- You can feel more stressed than in a real classroom. = Problem
-:::
-
-### 4.6 Report what they said
-
-Choose **two** of the four students. For each one, write **three** reported
-sentences: the platform their class uses, the benefit they name, and the problem
-they name. Shift the tense and the pronouns.
-
-> Lan said that her class used Zoom. She said that it saved her nearly an hour
-> of travelling. She also said that the connection at her house dropped in the
-> middle of a sentence.
-
-1. Student: __________
-   → _______________________________
-   → _______________________________
-   → _______________________________
-2. Student: __________
-   → _______________________________
-   → _______________________________
-   → _______________________________
-
----
-
-## Lesson 5 — Skills 1: Reading & Speaking
 
 ### Reading — *The workroom under the wheel*
 
@@ -768,7 +603,7 @@ they name. Shift the tense and the pronouns.
 > told her any of this.
 :::
 
-### 5.1 Yes, No, or Not Given
+### 4.1 Yes, No, or Not Given
 
 This is the same three-way decision you have been making since Unit 1, aimed at
 a different target. **True/False/Not Given** asks about **facts** in a text;
@@ -783,7 +618,7 @@ reasoning is the same; what you are matching against is not.
 - The keeper can still be reached by somebody willing to travel. = YES ~ the page gives a river, a crossing and how long the walk takes
 :::
 
-### 5.2 Answer the questions
+### 4.2 Answer the questions
 
 ::: task skill="reading" type="multiple-choice" ask="Choose the answer the passage gives."
 - How many times did they walk past the door? {twice | once | three times} = twice
@@ -793,7 +628,7 @@ reasoning is the same; what you are matching against is not.
 - What does the writer say a lost thing is called home along? {a line | a river | the race} = a line
 :::
 
-### 5.3 Vocabulary in context
+### 4.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the passage that means each of these. The clock above is still running, and it covers this exercise too."
 - a machine that reads or scans something {scanner | shelf | bench} = scanner
@@ -834,7 +669,7 @@ check three things:
 
 Repeat Step 2 until each answer runs clearly from its first word to its last.
 
-### 5.4 Say it again, faster
+### 4.4 Say it again, faster
 
 ::: fluency mode="talk" secs="240|180|120" ask="Talk about one invention you would not want to lose."
 - What it is
@@ -843,17 +678,92 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 - What might replace it
 :::
 
+### Everyday English — Giving and responding to good news
+
+*A separate thing from the speaking above: a few fixed phrases for telling
+someone good news, and for answering it. Learn them as they are.*
+
+#### Giving good news
+
+Good news is usually announced before it is explained. You put a short opening
+first, and the news itself in the sentence after it.
+
+| English | Nghĩa |
+| --- | --- |
+| **Great news for us.** We'll have school clouds, so we won't have to carry all these books. | Tin vui cho chúng mình đây. |
+| **Guess what!** I won first prize in the essay contest. | Đoán xem nào! |
+| **You'll never guess what happened.** Our class is getting new laptops. | Cậu không đoán được đâu. |
+| **I've got some good news.** The science club is moving to Friday. | Mình có tin vui này. |
+| **Have you heard?** They've fixed the Internet in the library. | Cậu nghe tin gì chưa? |
+
+#### Responding to good news
+
+| English | Nghĩa | Khi nào dùng |
+| --- | --- | --- |
+| **Congratulations!** | Chúc mừng cậu! | Người nghe **đã tự làm được** điều đó |
+| **Well done!** | Giỏi quá! | Người nghe đã cố gắng và thành công |
+| **Great!** | Tuyệt quá! | Tin vui nói chung |
+| **That's great!** | Hay quá! | Tin vui nói chung |
+| **That's wonderful news.** | Tin tuyệt vời đấy. | Tin vui lớn, trang trọng hơn |
+| **I'm so happy for you.** | Mình mừng cho cậu lắm. | Tin vui của riêng người nghe |
+| **Lucky you!** | Cậu may thật đấy! | Tin vui **tự nhiên đến**, không do cố gắng |
+
+> **Ghi chú:** Hai câu trả lời hay bị dùng lẫn nhau.
+> **Congratulations!** dùng cho điều người kia **tự đạt được** — thi đỗ, đoạt
+> giải, thắng một cuộc thi.
+> **That's great!** / **Lucky you!** dùng cho vận may **tự đến** với người kia —
+> trời mưa nên được nghỉ, bố mẹ mua cho cái máy tính mới.
+> *I won first prize in the essay contest.* → **Congratulations!**
+> *My dad gave me a new laptop for my birthday.* → **That's great!**
+
+> ⚠️ **Bẫy thường gặp:** Từ này **luôn** có **-s**: **Congratulations!**
+> ❌ *Congratulation!* — không bao giờ dùng số ít.
+> Muốn nói rõ chúc mừng về việc gì, dùng **on + V-ing / danh từ**:
+> *Congratulations **on winning** the prize!* · *Congratulations **on your new
+> phone**!*
+
+**Say it with someone.** Tell them two pieces of good news — a new vending
+machine has been put in at your school, and your dad gave you a new laptop for
+your birthday. They answer each one with the reply that fits. Then swap: they
+tell you they have been chosen for the national maths team, and you answer. Open
+with **Great news for us.** or **Guess what!** at least once, and keep
+**Congratulations!** for something the person did themselves.
+
+#### Asking about someone's technology
+
+*This table and the next go with the speaking above, not with good news — use
+them next time you talk about a device or an app.*
+
+| English | Nghĩa |
+| --- | --- |
+| What do you use it **for**? | Bạn dùng nó để làm gì? |
+| Why do you **prefer** that app? | Vì sao bạn thích ứng dụng đó hơn? |
+| What's the main **benefit** of it? | Lợi ích chính của nó là gì? |
+| Are there any **drawbacks**? | Có nhược điểm nào không? |
+| Could you **live without** it? | Bạn có thể sống thiếu nó không? |
+
+#### Giving an opinion and a reason
+
+| English | Nghĩa |
+| --- | --- |
+| I use it **because** it saves me a lot of time. | Tôi dùng nó vì nó tiết kiệm nhiều thời gian. |
+| The main benefit is **that** it's very efficient. | Lợi ích chính là nó rất hiệu quả. |
+| It makes my homework **much easier**. | Nó khiến bài tập của tôi dễ hơn nhiều. |
+| The biggest drawback is **the price**. | Nhược điểm lớn nhất là giá cả. |
+| To be honest, I couldn't live without it. | Thật lòng mà nói, tôi không thể sống thiếu nó. |
+| I'd rather use a book, actually. | Thật ra tôi thích dùng sách hơn. |
+
 ---
 
-## Lesson 6 — Skills 2: Listening & Writing
+## Lesson 5 — Listening & Writing
 
 ### Listening — The apprentice says what he was taught
 
 You hear it **once**, read aloud by someone else. The talk runs in order and so
-do the questions, so read both 6.1 and 6.2 first, then answer while the reader
+do the questions, so read both 5.1 and 5.2 first, then answer while the reader
 is still going rather than afterwards from memory.
 
-**Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả 6.1 và 6.2, rồi vừa
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả 5.1 và 5.2, rồi vừa
 nghe vừa trả lời.
 
 ::: audio orientation="You will hear one speaker, sitting in the workroom, telling the others what her teacher taught her, what she was never taught, and what she thinks they should do with what is left."
@@ -877,7 +787,7 @@ times than I can count.
 Spend it on anything in the world. Do not spend it on him.
 :::
 
-### 6.1 Listen and choose
+### 5.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
 - The speaker says her teacher was {not kind to work for | kind to work for | hardly ever there} = not kind to work for
@@ -888,7 +798,7 @@ Spend it on anything in the world. Do not spend it on him.
 - Her advice about the last mark is to spend it on {anything else | her teacher | nothing at all} = anything else
 :::
 
-### 6.2 Listen and complete
+### 5.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion"
 - She heard the same things every ___ . {morning | evening | week} = morning
@@ -973,9 +883,9 @@ cheapest way to find out whether you have understood it at all.
 
 ---
 
-## Lesson 7 — Looking Back & Project
+## Lesson 6 — Looking Back & Project
 
-### 7.1 Vocabulary check
+### 6.1 Vocabulary check
 
 ::: task skill="course" type="gap-fill" ask="Choose the word from this unit that fits."
 - The telephone was a famous ___ of the nineteenth century. {invention | experiment | laboratory} = invention
@@ -988,7 +898,7 @@ cheapest way to find out whether you have understood it at all.
 - This method is much more ___ — it takes half the time. {efficient | digital | artificial} = efficient
 :::
 
-### 7.2 Pronunciation check
+### 6.2 Pronunciation check
 
 **Part A.** Which words carry a beat?
 
@@ -1014,7 +924,7 @@ cheapest way to find out whether you have understood it at all.
 - Can machines replace teachers? = ↗
 :::
 
-### 7.3 Grammar check
+### 6.3 Grammar check
 
 ::: task skill="course" type="short-answer" variant="sentence-build" ask="You are reporting each one a week later, somewhere else. Begin with the reporting verb in brackets, and change everything else that has to change — the verb, the pronouns, and the time and place words. *that* is optional."
 - "I am reading about biometrics." (Tí / say) = Tí said (that) he was reading about biometrics.
@@ -1027,7 +937,7 @@ cheapest way to find out whether you have understood it at all.
 - "My parents may buy me a laptop next week." (Thảo / tell her friend) = Thảo told her friend (that) her parents might buy her a laptop the following week./Thảo told her friend (that) her parents might buy her a laptop the next week./Thảo told her friend (that) her parents may buy her a laptop the following week./Thảo told her friend (that) her parents may buy her a laptop the next week.
 :::
 
-### 7.4 Error hunt
+### 6.4 Error hunt
 
 One mark is left on the wall, and everybody has something to say about it.
 
@@ -1040,7 +950,7 @@ One mark is left on the wall, and everybody has something to say about it.
 - His brother say that nobody upriver remembered the mill. {said | saying | to say} = say -> said ~ *say* has no *-s* after *His brother*, and this is a report of something already said
 :::
 
-### 7.5 Word formation
+### 6.5 Word formation
 
 The words this unit uses most are the ones that change shape — *replace* becomes
 *replacement*, *automate* becomes *automatic*.
@@ -1056,7 +966,7 @@ The words this unit uses most are the ones that change shape — *replace* becom
 - The science club is full of ___ ideas this year. *(innovate)* {innovative | innovation | innovate} = innovative
 :::
 
-### 7.6 Finish the report
+### 6.6 Finish the report
 
 ::: task skill="course" type="gap-fill" ask="Report what each person said, keeping the meaning. Choose the word the gap needs."
 - "I will show you the robot tomorrow," Khoa said. → Khoa said that he ___ show me the robot the next day. {would | will | could} = would
@@ -1115,14 +1025,14 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for science and technology | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercises 7.1 and 7.5 |
-| say a statement and a question with the stress in the right places | Lesson 2, exercises 2.5 and 2.6 · Lesson 7, exercise 7.2. Saying them aloud is yours — record Lesson 2, exercise 2.7 and listen back. |
-| report what somebody said | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3, 7.4 and 7.6 |
-| give good news, and answer it | Lesson 4, exercises 4.1 and 4.3 |
-| read a text closely and answer questions on it | Lesson 5, exercises 5.1 and 5.2 |
-| talk about a piece of technology or an invention | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen once to a spoken account and catch what was reported in it | Lesson 6, exercises 6.1 and 6.2 |
-| write a paragraph saying whether robots will replace teachers | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| use the words for science and technology | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 6, exercises 6.1 and 6.5 |
+| say a statement and a question with the stress in the right places | Lesson 2, exercises 2.5 and 2.6 · Lesson 6, exercise 6.2. Saying them aloud is yours — record Lesson 2, exercise 2.7 and listen back. |
+| report what somebody said | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 6, exercises 6.3, 6.4 and 6.6 |
+| give good news, and answer it | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| read a text closely and answer questions on it | Lesson 4, exercises 4.1 and 4.2 |
+| talk about a piece of technology or an invention | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| listen once to a spoken account and catch what was reported in it | Lesson 5, exercises 5.1 and 5.2 |
+| write a paragraph saying whether robots will replace teachers | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1155,33 +1065,11 @@ truth; (5) the pronoun changed from *I/my* to *he/she/his/her*.
 
 ### Lesson 4
 
-**4.2** Answers will vary. Check: each of 1–3 gives an opinion **and** a reason
-(*because…* / *so…*); answer 4 uses *He/She said that…* with the pronouns
-shifted out of the first person, and no person after *said*.
-
-**4.4** Answers will vary. Check: each piece of news opens with a phrase from
-the table (*Great news for us…* / *Guess what!* / *I've got some good news…*),
-and the reply matches the kind of news. Items 1 and 2 are luck rather than
-achievement, so *That's great!* or *Lucky you!* — **not** *Congratulations!*
-Item 3 is an achievement, so *Congratulations!* or *Well done!* And it is always
-**Congratulations** with an **-s**.
-
-**4.6** Answers will vary with the two students chosen. Check three things in
-every sentence: a reporting verb with the right pattern (*said that…* with no
-person, *told me that…* with one), the verb moved one tense back (*uses* →
-*used*, *saves* → *saved*, *is* → *was*), and the pronouns shifted out of the
-first person (*I* → *he/she*, *my* → *his/her*). Bảo: Google Meet · breakout
-rooms · tired eyes. Khánh: Microsoft Teams · independence and quick feedback ·
-cannot concentrate at home. Nga: Skype · no traffic jam · members without a
-computer or smartphone.
-
-### Lesson 5
-
 **Speaking** Answers will vary. Check: no person after *said*, a person after
 *told*; every answer contains a reason; question 5 answered with a reported
 statement.
 
-### Lesson 6
+### Lesson 5
 
 **Writing** Answers will vary. Check against the checklist: 80–100 words, a
 position in the first sentence, one *It is true that…* concession, one

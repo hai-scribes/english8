@@ -1,7 +1,7 @@
 # Unit 5 — Our Customs and Traditions
 
 > **Bài 5 — Phong tục và truyền thống của chúng ta**
-> Self-study pack. Work through Lessons 1–7 in order. Marked exercises check
+> Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
 > themselves; the [Answer Key](#answer-key) at the end covers the open ones.
 
 ## What this unit teaches
@@ -82,7 +82,7 @@
 
 ---
 
-## Lesson 2 — A Closer Look 1
+## Lesson 2 — Words & Sounds
 
 ### Vocabulary — Customs and traditions
 
@@ -140,7 +140,7 @@
 > either of those, **the word inside a phrase it actually lives in**. Wrong
 > answers come straight back, and everything returns a week later, because
 > what you can still recall after a gap is the only recall worth counting. The
-> **unit test** opens once all seven lessons are done.
+> **unit test** opens once all six lessons are done.
 >
 > **Luyện 44 từ này.** Học xong bài này, phần
 > **practice** ở trang bài sẽ mở ra để luyện cả 44 từ — trong đó phần lớn là
@@ -267,7 +267,7 @@ Read aloud three times, faster each time. Record yourself if you can.
 
 ---
 
-## Lesson 3 — A Closer Look 2
+## Lesson 3 — Grammar
 
 ### Grammar — Articles: *a*, *an*, *the*, and no article at all
 
@@ -421,111 +421,12 @@ Write true sentences about your own family.
 
 ---
 
-## Lesson 4 — Communication
-
-### Everyday English — Asking about a custom, explaining it, and giving advice
-
-#### Asking about a custom
-
-| Asking about a custom | Nghĩa |
-| --- | --- |
-| What's the custom at Tet? | Phong tục ngày Tết là gì? |
-| Is there anything I shouldn't do? | Có điều gì tôi không nên làm không? |
-| Am I supposed to bring a gift? | Tôi có phải mang quà không? |
-| What does this ritual mean? | Nghi lễ này có ý nghĩa gì? |
-| Is it OK if I take a photo? | Tôi chụp ảnh có được không? |
-
-#### Explaining a custom
-
-| Explaining a custom | Nghĩa |
-| --- | --- |
-| You're supposed to bow three times. | Bạn phải cúi chào ba lần. |
-| It's a tradition to wear new clothes. | Mặc quần áo mới là một truyền thống. |
-| We usually get together on the last evening. | Chúng tôi thường sum họp vào tối cuối năm. |
-| It's considered bad luck to sweep on the first day. | Quét nhà ngày mùng một bị coi là xui xẻo. |
-| It's a taboo here — please don't do it. | Ở đây đó là điều cấm kỵ — xin đừng làm vậy. |
-| Don't worry, nobody will mind. | Đừng lo, không ai để ý đâu. |
-
-> ⚠️ Note the forms: **be supposed to** and **it's a tradition to** take the
-> **to-infinitive**. **It's considered bad luck to** does too. But after
-> **don't** you use the **bare infinitive**: *don't point*, *don't sweep*.
-
-#### Giving advice
-
-Explaining a custom tells your visitor what people do. **Advice** tells them
-what to do about it. Three ways to say it, from the gentlest to the most direct:
-
-| Giving advice | Nghĩa |
-| --- | --- |
-| Well, **perhaps you should** wait for the host to start eating. | Có lẽ bạn nên đợi chủ nhà bắt đầu ăn trước. |
-| **Perhaps you should** ask my grandmother before you sit down. | Có lẽ bạn nên hỏi bà tôi trước khi ngồi xuống. |
-| **It's a good idea to** hand bowls with both hands. | Đưa bát bằng cả hai tay là một ý hay. |
-| **It's a good idea to** try a little of every dish. | Nên nếm thử mỗi món một chút. |
-| **You should** take your shoes off at the door. | Bạn nên bỏ giày ở cửa. |
-| And **don't** hit the bowl with your chopsticks. | Và đừng gõ đũa vào bát. |
-| **Don't** take the last piece without offering it round. | Đừng lấy miếng cuối cùng mà không mời người khác. |
-
-> ⚠️ Note the forms: **should** and **don't** take the **bare infinitive** —
-> *you should **wait***, never *you should to wait*. But **it's a good idea to**
-> takes the **to-infinitive**: *it's a good idea **to wait***.
-
-> **Ghi chú:** *Perhaps you should…* nhẹ nhàng hơn *You must…* rất nhiều. Với
-> người mới quen, hoặc với khách nước ngoài, câu nhẹ thường dễ nghe hơn — và
-> vẫn được hiểu là lời khuyên. *Don't…* thì thẳng, nhưng không hề bất lịch sự
-> khi bạn đang giúp ai đó tránh một lỗi.
-
-### 4.1 Complete the mini-dialogues
-
-::: task skill="course" type="gap-fill" ask="**A** is a visitor asking about a custom, **B** explains it. Choose the word that fits each gap."
-- **A:** I'm coming to your house for Tet, and I don't want to make a mistake. Is there anything I ___ do? {shouldn't | didn't | won't} = shouldn't
-- **B:** Don't give money in a white envelope — it's ___ bad luck. {considered | supposed | traditional} = considered
-- **A:** Am I ___ to take my shoes off at the door? {supposed | considered | minded} = supposed
-- **B:** Yes, please. It's a ___ in every house here. {tradition | taboo | festival} = tradition
-- **A:** What ___ this ritual mean? {does | is | do} = does
-- **B:** We're thanking our ___ for the harvest. {ancestors | offerings | customs} = ancestors
-:::
-
-### 4.2 Write your own
-
-A visitor from another country asks you these three questions. Answer each one
-in one or two sentences, using a phrase from the tables above.
-
-1. "Is it OK if I take a photo of your family altar?"
-   → _______________________________
-2. "Am I supposed to bring anything to your grandmother's house?"
-   → _______________________________
-3. "Is there anything I really shouldn't do on the first day of the year?"
-   → _______________________________
-
-### 4.3 Advice at the dinner table
-
-Tom is having dinner at a Vietnamese friend's house for the first time, and he
-has asked about the table manners.
-
-::: task skill="course" type="gap-fill" ask="Choose the right form of the verb in brackets for each piece of advice."
-- Perhaps you should ___ (watch) how the others hold their bowls. {watch | to watch | watching} = watch
-- It's a good idea ___ (pour) tea for the person next to you. {to pour | pour | poured} = to pour
-- Don't ___ (stick) your chopsticks upright in the bowl of rice. {stick | to stick | sticking} = stick
-- Perhaps you should ___ (say) something kind about the food. {say | to say | said} = say
-- It's a good idea ___ (arrive) a few minutes early. {to arrive | arrive | arrived} = to arrive
-- Don't ___ (leave) the table before the elders have finished. {leave | to leave | left} = leave
-:::
-
-### 4.4 Your turn to advise
-
-A friend from another country is eating at your grandmother's house tomorrow
-and has never used chopsticks. Write **three** pieces of advice — one beginning
-*Perhaps you should…*, one beginning *It's a good idea to…*, and one beginning
-*Don't…*. Add a short reason to each.
-
-1. → _______________________________
-2. → _______________________________
-3. → _______________________________
+## Lesson 4 — Reading & Speaking
 
 ### The Japanese lion dance and the Vietnamese unicorn dance
 
 Two New Year dances, two countries, and a costume that looks much the same from
-the other side of the street. Read both, then find what separates them.
+the other side of the street. Read both, and see what separates them.
 
 > **The Japanese lion dance.** In Japan the dance is called *shishi-mai*. It
 > belongs above all to New Year celebrations, but it is brought out for other
@@ -544,31 +445,9 @@ the other side of the street. Read both, then find what separates them.
 > front of the head and fans it. A drum keeps the beat, and there is nothing
 > else. The whole dance is a wish for luck and success in the year ahead.
 
-### 4.5 Which dance?
-
-::: task skill="course" type="choice" opts="Japanese|Vietnamese|Both" ask="Which dance does each sentence describe? Choose **Both** if it is true of the two of them."
-- It is called *shishi-mai*. = Japanese
-- Children see it first at the Mid-Autumn Festival. = Vietnamese
-- It is danced at weddings and at the opening of a business. = Both
-- The dancers need martial arts as well as acrobatics. = Vietnamese
-- Somebody walks in front of the head and fans it. = Vietnamese
-- Flutes play as well as drums. = Japanese
-- One performer on his own is enough. = Both
-- The text says its purpose is to chase bad spirits away. = Japanese
-- Luck is part of the reason for it. = Both
-:::
-
-### 4.6 Same and different
-
-Write **two or three sentences** about the two dances. Say **one** thing that is
-the same and **one** thing that is different, and put the difference last, so
-that it is the thing your reader is left holding.
-
-→ _______________________________
-
----
-
-## Lesson 5 — Skills 1: Reading & Speaking
+**Talk about it.** Say **one** thing that is the same about the two dances and
+**one** thing that is different. Put the difference last, so that it is the
+thing your listener is left holding.
 
 ### Reading — *The night the lane filled up*
 
@@ -619,7 +498,7 @@ that it is the thing your reader is left holding.
 > nightclothes, at two in the morning.
 :::
 
-### 5.1 True, False, or Not Given
+### 4.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you already know about village festivals is exactly the pull this type is built to catch."
 - The writer took Bống down to the harbour wall. = T
@@ -629,7 +508,7 @@ that it is the thing your reader is left holding.
 - Bà Sáu joined the procession in the end. = T
 :::
 
-### 5.2 Answer the questions
+### 4.2 Answer the questions
 
 ::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
 - Where did the writer take Bống? {the harbour wall | the shallows | the gate post} = the harbour wall
@@ -639,7 +518,7 @@ that it is the thing your reader is left holding.
 - What was Bà Sáu wearing on the step? {her nightclothes | new clothes | a hat} = her nightclothes
 :::
 
-### 5.3 Vocabulary in context
+### 4.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. The clock above is still running, and it covers this exercise too."
 - a covered seat carried on poles by several people {palanquin | procession | tray} = palanquin
@@ -669,8 +548,8 @@ sentences.
 
 **Step 2 — Speak.** Build the whole conversation aloud. Say the visitor's
 question, then your answer, then the next question. Aim for **six exchanges**.
-Use at least one phrase from Lesson 4 in every answer, and at least three words
-from the Lesson 2 table across the whole dialogue.
+Use at least one phrase from the Everyday English tables at the end of this
+lesson in every answer, and at least three words from the Lesson 2 table across the whole dialogue.
 
 **Step 3 — Record and check.** Record yourself on your phone. Listen back and
 check three things:
@@ -682,7 +561,7 @@ check three things:
 
 Repeat Step 2 until all six exchanges run clearly.
 
-### 5.4 Say it again, faster
+### 4.4 Say it again, faster
 
 ::: fluency mode="talk" secs="240|180|120" ask="Talk about one custom your family keeps."
 - What happens, and when
@@ -691,9 +570,69 @@ Repeat Step 2 until all six exchanges run clearly.
 - Whether you will keep it yourself
 :::
 
+### Everyday English — Giving advice
+
+*A few fixed phrases for telling a guest what to do. They fit the speaking
+above: when the visitor asks what a guest should not do, answer with advice.*
+
+#### Giving advice
+
+**Advice** tells a visitor what to do. Three ways to say it, from the gentlest
+to the most direct:
+
+| Giving advice | Nghĩa |
+| --- | --- |
+| Well, **perhaps you should** wait for the host to start eating. | Có lẽ bạn nên đợi chủ nhà bắt đầu ăn trước. |
+| **Perhaps you should** ask my grandmother before you sit down. | Có lẽ bạn nên hỏi bà tôi trước khi ngồi xuống. |
+| **It's a good idea to** hand bowls with both hands. | Đưa bát bằng cả hai tay là một ý hay. |
+| **It's a good idea to** try a little of every dish. | Nên nếm thử mỗi món một chút. |
+| **You should** take your shoes off at the door. | Bạn nên bỏ giày ở cửa. |
+| And **don't** hit the bowl with your chopsticks. | Và đừng gõ đũa vào bát. |
+| **Don't** take the last piece without offering it round. | Đừng lấy miếng cuối cùng mà không mời người khác. |
+
+> ⚠️ Note the forms: **should** and **don't** take the **bare infinitive** —
+> *you should **wait***, never *you should to wait*. But **it's a good idea to**
+> takes the **to-infinitive**: *it's a good idea **to wait***.
+
+> **Ghi chú:** *Perhaps you should…* nhẹ nhàng hơn *You must…* rất nhiều. Với
+> người mới quen, hoặc với khách nước ngoài, câu nhẹ thường dễ nghe hơn — và
+> vẫn được hiểu là lời khuyên. *Don't…* thì thẳng, nhưng không hề bất lịch sự
+> khi bạn đang giúp ai đó tránh một lỗi.
+
+#### Asking about a custom
+
+| Asking about a custom | Nghĩa |
+| --- | --- |
+| What's the custom at Tet? | Phong tục ngày Tết là gì? |
+| Is there anything I shouldn't do? | Có điều gì tôi không nên làm không? |
+| Am I supposed to bring a gift? | Tôi có phải mang quà không? |
+| What does this ritual mean? | Nghi lễ này có ý nghĩa gì? |
+| Is it OK if I take a photo? | Tôi chụp ảnh có được không? |
+
+#### Explaining a custom
+
+| Explaining a custom | Nghĩa |
+| --- | --- |
+| You're supposed to bow three times. | Bạn phải cúi chào ba lần. |
+| It's a tradition to wear new clothes. | Mặc quần áo mới là một truyền thống. |
+| We usually get together on the last evening. | Chúng tôi thường sum họp vào tối cuối năm. |
+| It's considered bad luck to sweep on the first day. | Quét nhà ngày mùng một bị coi là xui xẻo. |
+| It's a taboo here — please don't do it. | Ở đây đó là điều cấm kỵ — xin đừng làm vậy. |
+| Don't worry, nobody will mind. | Đừng lo, không ai để ý đâu. |
+
+> ⚠️ Note the forms: **be supposed to** and **it's a tradition to** take the
+> **to-infinitive**. **It's considered bad luck to** does too. But after
+> **don't** you use the **bare infinitive**: *don't point*, *don't sweep*.
+
+**Say it with someone.** One of you is going to Sa Pa in winter and doesn't know
+what to wear; the other gives advice. Then swap: one of you is going to a
+birthday party and doesn't know what gift to bring. Use **Perhaps you should**,
+**It's a good idea to** and **Don't** at least once each, and give a short
+reason with each piece of advice.
+
 ---
 
-## Lesson 6 — Skills 2: Listening & Writing
+## Lesson 5 — Listening & Writing
 
 ### Listening — A market seller tells a neighbour what she saw
 
@@ -729,7 +668,7 @@ yourself what else the sea can bring back, because I asked myself that all
 week, and so did everybody at the market.
 :::
 
-### 6.1 Listen and choose
+### 5.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
 - In recent years the festival has been {large and noisy | small and quiet | cancelled} = small and quiet
@@ -739,7 +678,7 @@ week, and so did everybody at the market.
 - The speaker now wants to know {who the boy is | what else the sea can bring back | how the lanterns were made} = what else the sea can bring back
 :::
 
-### 6.2 Listen and complete
+### 5.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion"
 - On the night of the festival the speaker walked down to the ___ house. {communal | market | upriver} = communal
@@ -834,9 +773,9 @@ to the next.
 
 ---
 
-## Lesson 7 — Looking Back & Project
+## Lesson 6 — Looking Back & Project
 
-### 7.1 Vocabulary check
+### 6.1 Vocabulary check
 
 ::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit."
 - My grandmother burns ___ in front of the altar each morning. {incense | carp | bamboo poles} = incense
@@ -846,7 +785,7 @@ to the next.
 - Every year, the whole family ___ on the last evening of the year. {gets together | getting together | chases away} = gets together
 :::
 
-### 7.2 Pronunciation check
+### 6.2 Pronunciation check
 
 ::: task skill="course" type="choice" opts="/n/|/ŋ/" ask="Which nasal sound is in the bold part?"
 - thi**n** = /n/
@@ -857,7 +796,7 @@ to the next.
 - offeri**ng** = /ŋ/
 :::
 
-### 7.3 Grammar check
+### 6.3 Grammar check
 
 ::: task skill="course" type="choice" opts="a|an|the|—" ask="Complete with **a**, **an**, **the**, or **—** (no article)."
 - My sister goes to ___ bed very late on New Year's Eve. = — ~ *go to bed* is the activity, not the furniture
@@ -870,7 +809,7 @@ to the next.
 - We never have ___ breakfast before the offerings. = — ~ meals take no article
 :::
 
-### 7.4 Error hunt
+### 6.4 Error hunt
 
 This paragraph has **six** mistakes. Below, it comes one line at a time: tap each mistake, then choose the fix.
 
@@ -892,7 +831,7 @@ This paragraph has **six** mistakes. Below, it comes one line at a time: tap eac
 - We ate the breakfast very late. {breakfast | a breakfast | breakfasts} = the breakfast -> breakfast ~ meals take no article
 :::
 
-### 7.5 Word formation
+### 6.5 Word formation
 
 A festival word rarely stays in one shape: *pray* becomes *prayer*, *coast*
 becomes *coastal*. Read the whole sentence before you choose.
@@ -950,14 +889,14 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for customs and traditions | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercises 7.1 and 7.5 |
-| hear /n/ and /ŋ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
-| use *a*, *an*, *the*, and no article at all | Lesson 3, exercises 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
-| give advice | Lesson 4, exercise 4.3 — marked, and it settles whether you got the form right after *should*, *don't* and *it's a good idea to*. Exercise 4.4 is your own writing; read the Answer Key beside it. |
-| read about a village festival night | Lesson 5, exercises 5.1 and 5.2 |
-| talk about a family event I take part in | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to someone describing what they saw at a festival | Lesson 6, exercises 6.1 and 6.2 |
-| write an email of advice about joining a festival | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| use the words for customs and traditions | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 6, exercises 6.1 and 6.5 |
+| hear /n/ and /ŋ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
+| use *a*, *an*, *the*, and no article at all | Lesson 3, exercises 3.2 and 3.3 · Lesson 6, exercises 6.3 and 6.4 |
+| give advice | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| read about a village festival night | Lesson 4, exercises 4.1 and 4.2 |
+| talk about a family event I take part in | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| listen to someone describing what they saw at a festival | Lesson 5, exercises 5.1 and 5.2 |
+| write an email of advice about joining a festival | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -985,24 +924,3 @@ thing; (2) *the* + superlative, e.g. *the youngest*, *the busiest*; (3) **no**
 article — *I like phở*, not *the phở*; (4) *go to bed*, never *go to the bed*;
 (5) *the sky*, *the moon*, *the sun* — all take *the*.
 
-### Lesson 4
-
-**4.2** Answers will vary. Check that each reply uses a phrase from the tables
-(*Is it OK if…*, *You're supposed to…*, *It's considered bad luck to…*,
-*It's a taboo…*, *Don't worry, nobody will mind*), and that answers 2 and 3 give
-a reason as well as an instruction.
-
-**4.4** Answers will vary. Check the three openings and the form after each:
-*Perhaps you should* + plain verb (*Perhaps you should watch me for the first
-minute*), *It's a good idea to* + **to** + verb (*It's a good idea to hold the
-bowl in your left hand*), *Don't* + plain verb (*Don't worry if you drop
-something*). No *to* after *should* or after *don't*. Each of the three should
-carry a reason — *…, because the rice is very sticky* — not just the
-instruction.
-
-**4.6** Answers will vary. Check: one sentence names something the two dances
-share (both are danced at New Year, at weddings, at business openings; both need
-acrobatics; both are about luck), one names a real difference (the partner *ông
-Địa*, the flutes, the Mid-Autumn Festival, the martial arts, chasing bad spirits
-away), and the difference comes **last**. Two clear sentences beat three the
-reader has to sort out.

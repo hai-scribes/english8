@@ -1,7 +1,7 @@
 # Unit 3 — Teenagers
 
 > **Bài 3 — Thanh thiếu niên**
-> Self-study pack. Work through Lessons 1–7 in order. Marked
+> Self-study pack. Work through Lessons 1–6 in order. Marked
 > exercises check themselves; the [Answer Key](#answer-key) at the end covers
 > the open ones.
 
@@ -95,7 +95,7 @@ that word doing?
 
 ---
 
-## Lesson 2 — A Closer Look 1
+## Lesson 2 — Words & Sounds
 
 ### Vocabulary — Teen life, school clubs, and life online
 
@@ -156,7 +156,7 @@ and **what school does to you** (rows 37–42).
 > *upload a picture* and *log on to an account* are learned as whole phrases
 > or not at all. Wrong answers come straight back, and everything returns a
 > week later, because what you can still recall after a gap is the only recall
-> worth counting. The **unit test** opens once all seven lessons are done.
+> worth counting. The **unit test** opens once all six lessons are done.
 >
 > **Luyện 42 từ này.** Học xong bài này, phần
 > **practice** ở trang bài sẽ mở ra để luyện cả 42 từ — trong đó phần lớn là
@@ -301,7 +301,7 @@ Read aloud three times, faster each time. Record yourself if you can.
 
 ---
 
-## Lesson 3 — A Closer Look 2
+## Lesson 3 — Grammar
 
 ### Grammar — Simple and compound sentences
 
@@ -507,9 +507,171 @@ semicolon, the conjunctive adverb given, and a comma after it.
 
 ---
 
-## Lesson 4 — Communication
+## Lesson 4 — Reading & Speaking
 
-### Everyday English — Making requests, worrying and reassuring
+### Social media popular among teens
+
+One question went up on a class forum: *Which social media do you use, and what
+do you actually do on it?* Four members of 8A answered.
+
+> **Vinh, 14.** "I log on to a video site almost every evening. I watch other
+> people's clips for half an hour, and about once a month I upload one of my
+> own — usually the chess club playing far too fast to follow. It is enjoyable;
+> however, it eats my evening. So I set an alarm now, and when it rings I
+> stop."
+>
+> **Quyen, 13.** "A photo app, and only that. Every Sunday I post a picture of
+> whatever I have drawn that week, and then I check my notifications far more
+> often than I should. When somebody I have never met likes a drawing, my whole
+> afternoon improves. I don't browse for hours — I just want the comments."
+>
+> **Bao, 14.** "I don't have a social media account at all. My parents said not
+> until I am fifteen, and honestly I don't mind much. I use our class forum on
+> the school website for homework questions, and that is enough for me. It is
+> not user-friendly, and it looks about twenty years old, but it works."
+>
+> **Diep, 14.** "A messaging app, all day. I connect with my cousins in Hue and
+> with two friends who moved to another school last year. We never post
+> anything in public. Before the midterm tests we made a group and asked each
+> other questions in it every night; therefore, nobody in that group panicked."
+
+**Talk about it.** Whose answer is closest to yours, and what is different
+about yours? Bao has no account at all — would a year without one be easy or
+hard for you? Say why.
+
+
+### Reading — *The evening at the landing*
+
+*Tí, 13, writes down what happened while he still remembers all of it.*
+
+::: clock mins="18" for="You have 18 minutes for the text and every exercise below it."
+:::
+
+::: passage label="A"
+> I went down to the far end of the harbour wall on my own, where the sand
+> starts. The water was flat and grey and ordinary, and nothing at all was going
+> to happen. I did not plan it. I stood on the slipway where their boat used to
+> be pulled up, because I could not think of anywhere else to stand.
+>
+> Bống came after me without being asked, and she waited until the water
+> stopped, and then she said the two words. Then somebody was standing at the
+> top of the slipway, with a school bag over one shoulder, looking down at us.
+> It was Minh.
+>
+> He was exactly the same. That is the part I keep coming back to. He was the
+> height he was last September, his shirt was the old blue one, and his hair was
+> cut the way Cô Yến used to complain about. I have grown four centimetres since
+> then. He looked at the school on the hill, and he worked something out.
+> "You've all got older," he said.
+>
+> "The sea gives back what it took," Bống said. "You don't choose which, and it
+> comes back the way it went. That boat went off this beach in November, and I
+> would think about that before I said anything else."
+>
+> Minh sat down on the step. He knew. Nobody had to tell him, and nobody did.
+> He asked me one question, and it was a year out of date, and he heard that
+> himself before I could answer. So he stopped asking. He is not frightening. He
+> is out of step, and he is the only one of us who can feel it.
+>
+> We walked up the lane at seven, past the market and the water tank, the way we
+> used to. Bà Sáu put a third bowl on the table and asked nothing. Down at the
+> wall, in the dark, the boat was still there.
+:::
+
+### 4.1 Matching headings
+
+The account has **six** paragraphs, **A** to **F**, lettered in the text above.
+Below are **eight** headings — two of them match no paragraph at all. That is
+how this question type is always built, and it is the whole difficulty: a
+heading that fits nothing still looks plausible.
+
+| | Heading |
+| --- | --- |
+| **i** | Questions that are a year out of date |
+| **ii** | The night the tide never turned |
+| **iii** | An ordinary evening by the water |
+| **iv** | A year that did not touch him |
+| **v** | A promise nobody kept |
+| **vi** | Somebody at the top of the bank |
+| **vii** | What the sea will and will not do |
+| **viii** | The walk up the lane |
+
+::: task skill="reading" type="matching-headings" opts="i|ii|iii|iv|v|vi|vii|viii" ask="Choose the correct heading for each paragraph. Read the whole paragraph before you choose: a heading that matches one sentence of it is the commonest way to get this wrong."
+- Paragraph A = iii ~ the water is flat and grey and ordinary, and nothing at all was going to happen
+- Paragraph B = vi ~ a figure appears above them with a school bag over one shoulder
+- Paragraph C = iv ~ he is the height, shirt and haircut of last September
+- Paragraph D = vii ~ Bống states the rule and its catch
+- Paragraph E = i ~ the one question he asks belongs to last year
+- Paragraph F = viii ~ they go up past the market and the water tank to the kitchen
+:::
+
+### 4.2 Answer the questions
+
+::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
+- What was flat and grey and ordinary? {the water | the sand | the slipway} = the water
+- Who was standing at the top of the slipway? {Minh | Bống | Bà Sáu} = Minh
+- What colour was his shirt? {blue | grey | white} = blue
+- How much has Tí grown since September? {four centimetres | three centimetres | seven centimetres} = four centimetres
+- What did Bà Sáu put on the table? {a third bowl | a school bag | a blue shirt} = a third bowl
+:::
+
+### 4.3 Vocabulary in context
+
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
+- a sloping ramp for pulling boats out of the water {slipway | harbour wall | lane} = slipway
+- smooth and level, with no waves on it {flat | grey | ordinary} = flat
+- with nothing unusual about it {ordinary | flat | frightening} = ordinary
+- not moving at the same time as everybody else {out of step | frightening | exactly the same} = out of step
+- a narrow road between houses {lane | slipway | harbour wall} = lane
+:::
+
+### Speaking — Asking and answering about a club
+
+> **Working alone:** You have no partner, so do this in three steps. It still
+> works — speaking practice is mostly about producing language out loud.
+
+**Step 1 — Prepare.** Choose one club: a real club at your school, or an
+imaginary one you would like to start. Write short notes (not full sentences).
+
+| Question | Your notes |
+| --- | --- |
+| What is the club called, and what does it do? | |
+| When and where does it meet? | |
+| Why did you join it, or why do you want to? | |
+| What do you need in order to join? | |
+| What is the best thing about it? | |
+| Is there anything you don't like about it? | |
+
+**Step 2 — Speak.** Answer each question **aloud** from your notes, in full
+sentences. Use at least one **compound sentence** in every answer — join two
+ideas with *and, but, so, or,* or *yet*. In at least one answer, join them the
+other way instead: a pause where the semicolon would be, then *however*,
+*therefore* or *otherwise*.
+
+**Step 3 — Record and check.** Record yourself on your phone. Listen back and
+check three things:
+
+- Did you actually produce compound sentences, or only short simple ones?
+- Did you pronounce /ʊə/ and /ɔɪ/ differently in *curious* and *join*?
+- Did your pauses fall **between** points rather than inside a sentence?
+
+Repeat Step 2 until each answer runs clearly from its first word to its last.
+
+### 4.4 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about the pressures on someone your age, and what helps."
+- What makes a school week stressful
+- What you do about it
+- One thing adults get wrong about it
+- One thing that genuinely helps
+:::
+
+### Everyday English — Making requests
+
+*A few fixed phrases for asking someone to do something for you. They fit the
+speaking above: **Can you tell me more about …, please?** is how you would ask
+about a club you want to join. The phrases for worrying and reassuring under
+them are a separate set — learn those as they are.*
 
 #### Making a request
 
@@ -560,11 +722,6 @@ is the most casual of the three.
 | Take it one step at a time. | Cứ từ từ từng bước một. |
 | Let me give you a hand. | Để mình giúp một tay. |
 
-> ⚠️ Notice how naturally these turn into compound sentences:
-> *Don't worry, **and** don't stay up all night.*
-> *It happens to everyone, **so** please stop apologising.*
-> *You could revise tonight, **or** you could get some sleep and start early.*
-
 #### Showing interest
 
 | Showing interest | Nghĩa |
@@ -574,247 +731,15 @@ is the most casual of the three.
 | How did that go? | Chuyện đó thế nào rồi? |
 | I know exactly what you mean. | Mình hiểu chính xác ý bạn. |
 
-### 4.1 Ask for it politely
-
-::: task skill="course" type="gap-fill" ask="Complete each request or answer. Every answer comes from the request table above."
-- **A:** Could you ___ me the way to the art room, please? **B:** Certainly. {show | say | explain} = show
-- **A:** Can you ___ me more about the sports club, please? **B:** Certainly. {tell | say | explain} = tell
-- **A:** Could you show me how to upload a photo, ___ ? **B:** Certainly. {please | certainly | of course} = please
-- **A:** Can you tell me when the language club ___ (meet), please? **B:** On Fridays. {meets | meet | meeting} = meets ~ statement order after *tell me* — *when the club **meets***, never *when does the club meet*
-- **A:** Could you tell me where the forum ___ (be), please? **B:** On the school website. {is | are | be} = is
-- **A:** Can you show me how I ___ (log) on to my account, please? {log | logs | logging} = log
-- **A:** Could you tell me more about community service, please? **B:** ___ . It's every second Saturday. {Certainly | Please | Never mind} = Certainly
-:::
-
-### 4.2 Ask for what you need
-
-Write **one** request for each situation, then write the answer you would hope
-to get back. Use *Could you…, please?* when the person is a teacher or a
-stranger, and *Can you…, please?* with a classmate.
-
-1. A classmate has an account on the class forum and you do not know how to get
-   one.
-   → Request: _______________________________
-   → Answer: _______________________________
-2. You have never met the school secretary, and you need to know which room the
-   arts and crafts club uses.
-   → Request: _______________________________
-   → Answer: _______________________________
-3. Your art teacher knows how to upload a picture to the school website, and
-   you do not.
-   → Request: _______________________________
-   → Answer: _______________________________
-
-### 4.3 Complete the mini-dialogues
-
-::: task skill="course" type="gap-fill" ask="**A** has a worry, **B** reassures them. Every answer comes from the tables above."
-- **A:** I'm a bit ___ about the maths test tomorrow. {worried | worry | worrying} = worried
-- **B:** Don't ___ — you've revised for a week. {worry | worried | worrying} = worry
-- **A:** What ___ I forget my lines on stage? {if | when | for} = if
-- **B:** It ___ to everyone. Just breathe and start again. {happens | happen | happening} = happens
-- **A:** I've got so much ___ at the moment. {on | in | at} = on
-- **A:** I can't keep ___ everything. {up with | up to | up for} = up with
-- **B:** Take it one ___ at a time. {step | hand | way} = step
-- **B:** Let me give you a ___ . {hand | step | help} = hand
-:::
-
-### 4.4 Write your own
-
-A friend says each of these to you. Reply with **one compound sentence** that
-reassures them and offers something practical.
-
-1. "I'm worried nobody will talk to me at the new club."
-   → _______________________________
-2. "I've got three tests and a project this week."
-   → _______________________________
-3. "Everyone in my class has a better phone than me."
-   → _______________________________
-
-### Social media popular among teens
-
-One question went up on a class forum: *Which social media do you use, and what
-do you actually do on it?* Four members of 8A answered.
-
-> **Vinh, 14.** "I log on to a video site almost every evening. I watch other
-> people's clips for half an hour, and about once a month I upload one of my
-> own — usually the chess club playing far too fast to follow. It is enjoyable;
-> however, it eats my evening. So I set an alarm now, and when it rings I
-> stop."
->
-> **Quyen, 13.** "A photo app, and only that. Every Sunday I post a picture of
-> whatever I have drawn that week, and then I check my notifications far more
-> often than I should. When somebody I have never met likes a drawing, my whole
-> afternoon improves. I don't browse for hours — I just want the comments."
->
-> **Bao, 14.** "I don't have a social media account at all. My parents said not
-> until I am fifteen, and honestly I don't mind much. I use our class forum on
-> the school website for homework questions, and that is enough for me. It is
-> not user-friendly, and it looks about twenty years old, but it works."
->
-> **Diep, 14.** "A messaging app, all day. I connect with my cousins in Hue and
-> with two friends who moved to another school last year. We never post
-> anything in public. Before the midterm tests we made a group and asked each
-> other questions in it every night; therefore, nobody in that group panicked."
-
-### 4.5 Who does what?
-
-::: task skill="course" type="choice" opts="Vinh|Quyen|Bao|Diep" ask="Which of the four does each sentence describe? Each of them is described twice."
-- This person uploads a video they made themselves. = Vinh ~ *about once a month I upload one of my own*
-- This person checks their notifications more often than they should. = Quyen
-- This person has no social media account. = Bao
-- This person uses social media to keep in touch with people who live somewhere else. = Diep
-- This person says the site they use is not user-friendly. = Bao
-- This person has changed how long they spend online. = Vinh ~ he sets an alarm and stops when it rings
-- This person used social media to prepare for the midterm tests. = Diep
-- This person posts once a week, on the same day. = Quyen ~ *every Sunday I post a picture*
-:::
-
-### 4.6 And you?
-
-Answer in full sentences. Use at least **three** words from rows 27–36 of the
-Lesson 2 table.
-
-1. Which social media do you use most, and what do you actually do on it?
-   → _______________________________
-2. Whose answer above is closest to yours, and what is different about yours?
-   → _______________________________
-3. Bao has no account at all. Would a year without one be easy or hard for you?
-   Say why.
-   → _______________________________
+**Say it with someone.** Ask them to lend you a book, and then to give you
+some advice on your science project — **Could you …, please?** once and **Can
+you …, please?** once. They answer with **Certainly.** and one detail. Then
+swap. After that, tell them one thing you are worried about, and let them
+reassure you with a phrase from the table.
 
 ---
 
-## Lesson 5 — Skills 1: Reading & Speaking
-
-### Reading — *The evening at the landing*
-
-*Tí, 13, writes down what happened while he still remembers all of it.*
-
-::: clock mins="18" for="You have 18 minutes for the text and every exercise below it."
-:::
-
-::: passage label="A"
-> I went down to the far end of the harbour wall on my own, where the sand
-> starts. The water was flat and grey and ordinary, and nothing at all was going
-> to happen. I did not plan it. I stood on the slipway where their boat used to
-> be pulled up, because I could not think of anywhere else to stand.
->
-> Bống came after me without being asked, and she waited until the water
-> stopped, and then she said the two words. Then somebody was standing at the
-> top of the slipway, with a school bag over one shoulder, looking down at us.
-> It was Minh.
->
-> He was exactly the same. That is the part I keep coming back to. He was the
-> height he was last September, his shirt was the old blue one, and his hair was
-> cut the way Cô Yến used to complain about. I have grown four centimetres since
-> then. He looked at the school on the hill, and he worked something out.
-> "You've all got older," he said.
->
-> "The sea gives back what it took," Bống said. "You don't choose which, and it
-> comes back the way it went. That boat went off this beach in November, and I
-> would think about that before I said anything else."
->
-> Minh sat down on the step. He knew. Nobody had to tell him, and nobody did.
-> He asked me one question, and it was a year out of date, and he heard that
-> himself before I could answer. So he stopped asking. He is not frightening. He
-> is out of step, and he is the only one of us who can feel it.
->
-> We walked up the lane at seven, past the market and the water tank, the way we
-> used to. Bà Sáu put a third bowl on the table and asked nothing. Down at the
-> wall, in the dark, the boat was still there.
-:::
-
-### 5.1 Matching headings
-
-The account has **six** paragraphs, **A** to **F**, lettered in the text above.
-Below are **eight** headings — two of them match no paragraph at all. That is
-how this question type is always built, and it is the whole difficulty: a
-heading that fits nothing still looks plausible.
-
-| | Heading |
-| --- | --- |
-| **i** | Questions that are a year out of date |
-| **ii** | The night the tide never turned |
-| **iii** | An ordinary evening by the water |
-| **iv** | A year that did not touch him |
-| **v** | A promise nobody kept |
-| **vi** | Somebody at the top of the bank |
-| **vii** | What the sea will and will not do |
-| **viii** | The walk up the lane |
-
-::: task skill="reading" type="matching-headings" opts="i|ii|iii|iv|v|vi|vii|viii" ask="Choose the correct heading for each paragraph. Read the whole paragraph before you choose: a heading that matches one sentence of it is the commonest way to get this wrong."
-- Paragraph A = iii ~ the water is flat and grey and ordinary, and nothing at all was going to happen
-- Paragraph B = vi ~ a figure appears above them with a school bag over one shoulder
-- Paragraph C = iv ~ he is the height, shirt and haircut of last September
-- Paragraph D = vii ~ Bống states the rule and its catch
-- Paragraph E = i ~ the one question he asks belongs to last year
-- Paragraph F = viii ~ they go up past the market and the water tank to the kitchen
-:::
-
-### 5.2 Answer the questions
-
-::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
-- What was flat and grey and ordinary? {the water | the sand | the slipway} = the water
-- Who was standing at the top of the slipway? {Minh | Bống | Bà Sáu} = Minh
-- What colour was his shirt? {blue | grey | white} = blue
-- How much has Tí grown since September? {four centimetres | three centimetres | seven centimetres} = four centimetres
-- What did Bà Sáu put on the table? {a third bowl | a school bag | a blue shirt} = a third bowl
-:::
-
-### 5.3 Vocabulary in context
-
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
-- a sloping ramp for pulling boats out of the water {slipway | harbour wall | lane} = slipway
-- smooth and level, with no waves on it {flat | grey | ordinary} = flat
-- with nothing unusual about it {ordinary | flat | frightening} = ordinary
-- not moving at the same time as everybody else {out of step | frightening | exactly the same} = out of step
-- a narrow road between houses {lane | slipway | harbour wall} = lane
-:::
-
-### Speaking — Asking and answering about a club
-
-> **Working alone:** You have no partner, so do this in three steps. It still
-> works — speaking practice is mostly about producing language out loud.
-
-**Step 1 — Prepare.** Choose one club: a real club at your school, or an
-imaginary one you would like to start. Write short notes (not full sentences).
-
-| Question | Your notes |
-| --- | --- |
-| What is the club called, and what does it do? | |
-| When and where does it meet? | |
-| Why did you join it, or why do you want to? | |
-| What do you need in order to join? | |
-| What is the best thing about it? | |
-| Is there anything you don't like about it? | |
-
-**Step 2 — Speak.** Answer each question **aloud** from your notes, in full
-sentences. Use at least one **compound sentence** in every answer — join two
-ideas with *and, but, so, or,* or *yet*. In at least one answer, join them the
-other way instead: a pause where the semicolon would be, then *however*,
-*therefore* or *otherwise*.
-
-**Step 3 — Record and check.** Record yourself on your phone. Listen back and
-check three things:
-
-- Did you actually produce compound sentences, or only short simple ones?
-- Did you pronounce /ʊə/ and /ɔɪ/ differently in *curious* and *join*?
-- Did your pauses fall **between** points rather than inside a sentence?
-
-Repeat Step 2 until each answer runs clearly from its first word to its last.
-
-### 5.4 Say it again, faster
-
-::: fluency mode="talk" secs="240|180|120" ask="Talk about the pressures on someone your age, and what helps."
-- What makes a school week stressful
-- What you do about it
-- One thing adults get wrong about it
-- One thing that genuinely helps
-:::
-
----
-
-## Lesson 6 — Skills 2: Listening & Writing
+## Lesson 5 — Listening & Writing
 
 ### Listening — Thảo, later the same evening
 
@@ -849,7 +774,7 @@ water took and then gave back for one night. He says this has happened before,
 more than once, and long before any of us were born.
 :::
 
-### 6.1 Listen and choose
+### 5.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
 - The speaker says the blame should fall on {herself | Tí | Bống} = herself
@@ -859,7 +784,7 @@ more than once, and long before any of us were born.
 - Tí took Minh down to the water and then {turned round and walked back up | said the two words | pushed the boat out} = turned round and walked back up
 :::
 
-### 6.2 Listen and complete
+### 5.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion"
 - Chalk marks to come on the harbour wall: ___ {twelve | two | eight} = twelve
@@ -933,9 +858,9 @@ the two, and the cheapest way to land there is a hard count.
 
 ---
 
-## Lesson 7 — Looking Back & Project
+## Lesson 6 — Looking Back & Project
 
-### 7.1 Vocabulary check
+### 6.1 Vocabulary check
 
 ::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit."
 - My cousin is fifteen, so he is in the middle of ___ . {adolescence | housework | peer pressure} = adolescence
@@ -946,7 +871,7 @@ the two, and the cheapest way to land there is a hard count.
 - If you ___ in a club, you'll make new friends. {get involved | keep up | log on} = get involved
 :::
 
-### 7.2 Pronunciation check
+### 6.2 Pronunciation check
 
 ::: task skill="course" type="choice" opts="/ʊə/|/ɔɪ/" ask="Which vowel is in the underlined part?"
 - t**ou**rist = /ʊə/
@@ -957,7 +882,7 @@ the two, and the cheapest way to land there is a hard count.
 - empl**oy** = /ɔɪ/
 :::
 
-### 7.3 Grammar check
+### 6.3 Grammar check
 
 **Part A.** Simple or compound?
 
@@ -986,7 +911,7 @@ the two, and the cheapest way to land there is a hard count.
 - I had four tests in one week. I did not sleep much. — use **so** {; | ,} = I had four tests in one week, so I did not sleep much / I had four tests in one week, so I didn't sleep much / I had four tests in one week so I did not sleep much / I had four tests in one week so I didn't sleep much ~ *so* is a conjunction, so a comma before it is all it needs
 :::
 
-### 7.4 Error hunt
+### 6.4 Error hunt
 
 This paragraph has **six** mistakes. Below, it comes one line at a time: tap
 each mistake, then choose the fix.
@@ -1006,7 +931,7 @@ each mistake, then choose the fix.
 - Now Minh sit with us at lunch every day. {sits | sitting | to sit} = sit -> sits ~ subject–verb agreement
 :::
 
-### 7.5 Word formation
+### 6.5 Word formation
 
 Most of this unit's words come in a family — *decide* and *decision*, *enjoy*
 and *enjoyable*. The sentence around the gap tells you which member it wants.
@@ -1066,14 +991,14 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for school clubs, life online and teen stress | Lesson 2, exercises 2.1, 2.4 and 2.5 · Lesson 7, exercises 7.1 and 7.5 |
-| hear /ʊə/ and /ɔɪ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.6 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.8 and listen back. |
-| write simple sentences and compound sentences | Lesson 3, exercises 3.1 and 3.5 · Lesson 7, exercises 7.3 and 7.4 |
-| make a request politely | Lesson 4, exercise 4.1 |
-| read a teenager's account of the evening a friend came back | Lesson 5, exercises 5.1 and 5.2 |
-| ask and answer questions about a club | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to someone describing an evening and a hard choice | Lesson 6, exercises 6.1 and 6.2 |
-| write a paragraph about what makes me stressed and what helps | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| use the words for school clubs, life online and teen stress | Lesson 2, exercises 2.1, 2.4 and 2.5 · Lesson 6, exercises 6.1 and 6.5 |
+| hear /ʊə/ and /ɔɪ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.6 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.8 and listen back. |
+| write simple sentences and compound sentences | Lesson 3, exercises 3.1 and 3.5 · Lesson 6, exercises 6.3 and 6.4 |
+| make a request politely | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| read a teenager's account of the evening a friend came back | Lesson 4, exercises 4.1 and 4.2 |
+| ask and answer questions about a club | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| listen to someone describing an evening and a hard choice | Lesson 5, exercises 5.1 and 5.2 |
+| write a paragraph about what makes me stressed and what helps | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1100,23 +1025,3 @@ clauses (cover the joining word — does the second half have its own subject an
 verb?). For 1–5, a **comma before** the conjunction asked for. For 6–8, a
 **semicolon before** the adverb and a **comma after** it.
 
-### Lesson 4
-
-**4.2** Answers will vary. Check three things in every request: it is a
-**question** (*Can you…? / Could you…?*), it ends with **please**, and the part
-after *tell me* or *show me* keeps **statement word order**. Check one more in
-1–3: *could* in 2 and 3 (a stranger and a teacher), *can* or *could* in 1 (a
-classmate). A good answer starts *Certainly.* Model for 2: *Could you tell me
-which room the arts and crafts club uses, please?* — *Certainly. Room 14, on
-Wednesdays.*
-
-**4.4** Answers will vary. Check that each reply is **one compound sentence**
-with a comma before *and, but, so, or,* or *yet*, and that it both reassures
-and suggests something practical. Model for 1: *Don't worry, and I'll sit next
-to you for the first meeting.*
-
-**4.6** Answers will vary. Check: full sentences, at least three words from
-rows 27–36 (*social media, forum, account, log on, upload, browse,
-notification, connect, website, user-friendly*), and that question 2 names a
-real difference rather than only a similarity. Question 3 needs a reason, not
-just *easy* or *hard*.

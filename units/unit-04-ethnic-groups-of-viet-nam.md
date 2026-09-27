@@ -1,7 +1,7 @@
 # Unit 4 — Ethnic Groups of Viet Nam
 
 > **Bài 4 — Các dân tộc Việt Nam**
-> Self-study pack. Work through Lessons 1–7 in order. The marked exercises
+> Self-study pack. Work through Lessons 1–6 in order. The marked exercises
 > check themselves; for the open ones, the [Answer Key](#answer-key) at the end
 > says what to look for — do the exercise first, then check.
 
@@ -95,7 +95,7 @@
 
 ---
 
-## Lesson 2 — A Closer Look 1
+## Lesson 2 — Words & Sounds
 
 ### Vocabulary — Ethnic groups, their homes and their way of life
 
@@ -141,7 +141,7 @@
 > word inside a phrase it actually lives in**. Wrong answers come straight
 > back, and everything returns a week later, because what you can still recall
 > after a gap is the only recall worth counting. The **unit test** opens once
-> all seven lessons are done.
+> all six lessons are done.
 >
 > **Luyện 31 từ này.** Học xong bài này, phần
 > **practice** ở trang bài sẽ mở ra để luyện cả 31 từ — trong đó phần lớn là
@@ -289,7 +289,7 @@ Read aloud three times, faster each time. Record yourself if you can.
 
 ---
 
-## Lesson 3 — A Closer Look 2
+## Lesson 3 — Grammar
 
 ### Grammar A — Yes/No questions
 
@@ -457,117 +457,7 @@ would like to ask a classmate from a different ethnic group.
 
 ---
 
-## Lesson 4 — Communication
-
-### Everyday English — Asking politely, showing interest, and giving opinions
-
-#### Asking politely and showing interest
-
-When you interview someone about their family or their community, a direct
-question can sound blunt. Soften it.
-
-| Asking politely | Nghĩa |
-| --- | --- |
-| **Could you tell me** where you grew up? | Bạn cho mình hỏi bạn lớn lên ở đâu? |
-| **Do you mind if I ask** how many people live with you? | Mình hỏi nhà bạn có mấy người thì có phiền không? |
-| **I was wondering** how you make the baskets. | Mình đang thắc mắc không biết bạn đan giỏ thế nào. |
-| **Can I ask you** something about your costume? | Mình hỏi bạn một chút được không? |
-
-> ⚠️ Note the word order after *Could you tell me* and *I was wondering*: the
-> clause becomes a **statement**, not a question.
-> ✅ Could you tell me **where you grew up**?
-> ❌ *Could you tell me where did you grow up?*
-
-| Showing interest | Answering politely |
-| --- | --- |
-| Really? That's fascinating. | Sure, go ahead. |
-| I didn't know that. | Of course — what would you like to know? |
-| That sounds unique. | Well, it's hard to explain, but… |
-| Tell me more about that. | I'd rather not say, if that's OK. |
-
-#### Giving your opinion
-
-Once someone has answered your questions, they will usually turn the question
-round: *and what do you think?* Here is how to ask, and how to answer.
-
-| Asking for an opinion | Nghĩa |
-| --- | --- |
-| **What do you think about** life in the mountains? | Bạn nghĩ sao về cuộc sống ở miền núi? |
-| **What do you think of** the new communal house? | Bạn thấy nhà rông mới thế nào? |
-| **What about you? What do you think?** | Còn bạn thì sao? Bạn nghĩ thế nào? |
-| **Do you agree?** | Bạn có đồng ý không? |
-
-| Giving your opinion | Nghĩa |
-| --- | --- |
-| **I think** the gong is the finest instrument of them all. | Mình nghĩ... |
-| **In my opinion**, every village should keep one stilt house. | Theo ý mình... |
-| **To my way of thinking**, a house should face the fields. | Theo cách nghĩ của mình... |
-| **I don't think** the old houses will disappear. | Mình không nghĩ là... |
-
-> **Ghi chú:** *I think* dùng được ở mọi lúc. *To my way of thinking* trang
-> trọng hơn — hợp với bài thuyết trình, bài viết, hoặc khi bạn muốn nhấn mạnh
-> rằng đây là **cách nhìn riêng** của mình, chứ không nói chuyện suồng sã với
-> bạn bè.
-
-> ⚠️ **Bẫy thường gặp:** Khi muốn nói điều ngược lại, tiếng Anh đưa *not* lên
-> động từ **think**, chứ không để ở mệnh đề sau.
-> ❌ *I think the roof is not strong enough.*
-> ✅ **I don't think** the roof **is** strong enough.
-
-**Disagreeing without a fight.** English speakers almost never answer an
-opinion with a flat *no*. They agree with a part of it first, then turn:
-
-| Softening a disagreement | Nghĩa |
-| --- | --- |
-| **I see what you mean, but** the walls would not last. | Mình hiểu ý bạn, nhưng... |
-| **I'm not sure about that.** | Mình không chắc lắm. |
-| **That's true, though** the village is a long way from the school. | Đúng là vậy, tuy nhiên... |
-| **I'd say** it depends on the weather. | Mình thì cho rằng... |
-
-### 4.1 Complete the mini-dialogues
-
-::: task skill="course" type="gap-fill" ask="**A** is interviewing **B** about her village. Choose what fits."
-- **A:** Where ___ ? {is your village | your village is | does your village be} = is your village
-- **B:** Sure, ___ ahead — it's in Ha Giang, near the border. {go | get | look} = go
-- **A:** Do you ___ if I ask how many people live in your house? {mind | think | wonder} = mind
-- **A:** I was ___ how your grandmother makes the dye for the cloth. {wondering | minding | telling} = wondering
-- **B:** She boils the leaves of one tree for two whole days. **A:** Really? That's ___ . {fascinating | a pity | too bad} = fascinating
-:::
-
-### 4.2 Write your own
-
-A classmate has just moved to your school from a mountain village. Write **four**
-polite questions to ask her — one Yes/No question, one Wh- question, one subject
-question, and one beginning *Could you tell me…*.
-
-1. (Yes/No) _______________________________
-2. (Wh-) _______________________________
-3. (Subject) _______________________________
-4. (Could you tell me…) _______________________________
-
-### 4.3 Say what you think
-
-::: task skill="course" type="gap-fill" ask="Choose the word that makes each line mean what the Vietnamese in brackets says."
-- What do you ___ about living close to nature? *(Bạn nghĩ sao về…?)* {think | agree | mind} = think
-- ___ about you? What do you think? *(Còn bạn thì sao?)* {What | Who | Where} = What
-- ___ my opinion, a stilt house is cooler than a brick one. *(Theo ý mình…)* {In | On | For} = In
-- To my ___ of thinking, every school should teach a folk dance. *(Theo cách nghĩ của mình…)* {way | mind | kind} = way
-- I ___ think the gong is hard to play. *(Mình không nghĩ là…)* {don't | not | doesn't} = don't
-- I see ___ you mean, but the path is dangerous in the rain. *(Mình hiểu ý bạn, nhưng…)* {what | that | which} = what
-- I'm not ___ about that — the roof leaked all last summer. *(Mình không chắc lắm.)* {sure | agree | true} = sure
-:::
-
-### 4.4 Three opinions of your own
-
-Write **one** full sentence for each. Use a different opening each time — *I
-think…*, *In my opinion…*, *To my way of thinking…* — and give a reason after it.
-
-1. What do you think about living in a house with only one big room?
-   → _______________________________
-2. What do you think of learning a musical instrument at school?
-   → _______________________________
-3. A friend says, "Village life is boring." Disagree politely.
-   → _______________________________
+## Lesson 4 — Reading & Speaking
 
 ### Lifestyle of the ethnic minority groups
 
@@ -600,36 +490,11 @@ job but four, and each one answers a different risk: a bad harvest does not
 empty the house if there is cloth to sell. Second, the elephants are not
 decoration — they were, and in places still are, working animals.
 
-### 4.5 How much do you know?
+**Talk about it.** Which fact about the Jrai surprised you most, and why? The
+Jrai earn a living in four ways — which one would you like to learn? Begin
+with *I think …* or *In my opinion …*; there are more ways to say it at the
+end of this lesson.
 
-::: task skill="course" type="choice" ask="Pick the right answer. Everything you need is in the two texts above."
-- There are ___ ethnic groups in Viet Nam. {54 | 63 | 45} = 54
-- Ethnic minority groups make up about ___ of the population. {13% | 7% | 25%} = 13%
-- They live mainly ___ . {in the mountains | in the lowlands | in the Mekong Delta} = in the mountains
-- In 2019 the Jrai numbered about ___ . {513,930 | 51,000 | 5,130,000} = 513,930
-- Most Jrai people live in ___ . {Gia Lai | Cao Bang | Ninh Thuan} = Gia Lai
-- A Jrai family lives in a ___ . {stilt house | brick flat | cave} = stilt house
-- Coffee, cacao and rubber are ___ the Jrai plant. {industrial trees | food crops | flowers} = industrial trees
-- The two large animals the Jrai raise are buffaloes and ___ . {elephants | horses | sheep} = elephants
-- In a Jrai family the dominant role belongs to the ___ . {women | eldest son | village head} = women
-:::
-
-### 4.6 What interests you?
-
-Answer in full sentences, and begin each one with an opinion expression from the
-tables above.
-
-1. Which fact about the Jrai surprised you most, and why?
-   → _______________________________
-2. The Jrai earn a living in four different ways. Which one would you like to
-   learn, and why?
-   → _______________________________
-3. What is one question about the Jrai that neither text answers?
-   → _______________________________
-
----
-
-## Lesson 5 — Skills 1: Reading & Speaking
 
 ### Reading — *The house that stands on legs*
 
@@ -672,7 +537,7 @@ tables above.
 > Somebody had put the work down meaning to come back to it.
 :::
 
-### 5.1 True, False, or Not Given
+### 4.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you already know about ethnic groups is exactly the pull this type is built to catch."
 - There are 54 ethnic groups in Viet Nam. = T
@@ -683,7 +548,7 @@ tables above.
 - The writer's own family lives in a stilt house. = NG ~ the text never says what kind of home the writer lives in
 :::
 
-### 5.2 Answer the questions
+### 4.2 Answer the questions
 
 ::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
 - What are the 53 groups other than the Kinh called? {ethnic minorities | the majority | heritage} = ethnic minorities
@@ -693,7 +558,7 @@ tables above.
 - Which two materials do the new houses in Bãi Sẻ go up in? {brick and concrete | wood and bamboo | wood and concrete} = brick and concrete
 :::
 
-### 5.3 Vocabulary in context
+### 4.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
 - the larger part of a population {majority | minorities | ethnic groups} = majority
@@ -764,7 +629,7 @@ habit, not a trick — build it in until you stop noticing you are doing it.
 :::
 
 
-### 5.4 Say it again, faster
+### 4.4 Say it again, faster
 
 ::: fluency mode="talk" secs="240|180|120" ask="Talk about a group of people in Viet Nam and how they live."
 - Where they live
@@ -773,9 +638,86 @@ habit, not a trick — build it in until you stop noticing you are doing it.
 - Why it is worth knowing about
 :::
 
+### Everyday English — Giving opinions
+
+*A few fixed phrases for saying what you think, and for asking someone else.
+They fit the speaking above: the last question — would you like to live in a
+stilt house? — asks for an opinion, so answer it with **In my opinion** or
+**To my way of thinking**. The polite questions further down fit the interview
+in Step 2.*
+
+#### Giving your opinion
+
+Sooner or later someone turns the question round: *and what do you think?*
+Here is how to ask, and how to answer.
+
+| Asking for an opinion | Nghĩa |
+| --- | --- |
+| **What do you think about** life in the mountains? | Bạn nghĩ sao về cuộc sống ở miền núi? |
+| **What do you think of** the new communal house? | Bạn thấy nhà rông mới thế nào? |
+| **What about you? What do you think?** | Còn bạn thì sao? Bạn nghĩ thế nào? |
+| **Do you agree?** | Bạn có đồng ý không? |
+
+| Giving your opinion | Nghĩa |
+| --- | --- |
+| **I think** the gong is the finest instrument of them all. | Mình nghĩ... |
+| **In my opinion**, every village should keep one stilt house. | Theo ý mình... |
+| **To my way of thinking**, a house should face the fields. | Theo cách nghĩ của mình... |
+| **I don't think** the old houses will disappear. | Mình không nghĩ là... |
+
+> **Ghi chú:** *I think* dùng được ở mọi lúc. *To my way of thinking* trang
+> trọng hơn — hợp với bài thuyết trình, bài viết, hoặc khi bạn muốn nhấn mạnh
+> rằng đây là **cách nhìn riêng** của mình, chứ không nói chuyện suồng sã với
+> bạn bè.
+
+> ⚠️ **Bẫy thường gặp:** Khi muốn nói điều ngược lại, tiếng Anh đưa *not* lên
+> động từ **think**, chứ không để ở mệnh đề sau.
+> ❌ *I think the roof is not strong enough.*
+> ✅ **I don't think** the roof **is** strong enough.
+
+**Disagreeing without a fight.** English speakers almost never answer an
+opinion with a flat *no*. They agree with a part of it first, then turn:
+
+| Softening a disagreement | Nghĩa |
+| --- | --- |
+| **I see what you mean, but** the walls would not last. | Mình hiểu ý bạn, nhưng... |
+| **I'm not sure about that.** | Mình không chắc lắm. |
+| **That's true, though** the village is a long way from the school. | Đúng là vậy, tuy nhiên... |
+| **I'd say** it depends on the weather. | Mình thì cho rằng... |
+
+#### Asking politely and showing interest
+
+When you interview someone about their family or their community, a direct
+question can sound blunt. Soften it.
+
+| Asking politely | Nghĩa |
+| --- | --- |
+| **Could you tell me** where you grew up? | Bạn cho mình hỏi bạn lớn lên ở đâu? |
+| **Do you mind if I ask** how many people live with you? | Mình hỏi nhà bạn có mấy người thì có phiền không? |
+| **I was wondering** how you make the baskets. | Mình đang thắc mắc không biết bạn đan giỏ thế nào. |
+| **Can I ask you** something about your costume? | Mình hỏi bạn một chút được không? |
+
+> ⚠️ Note the word order after *Could you tell me* and *I was wondering*: the
+> clause becomes a **statement**, not a question.
+> ✅ Could you tell me **where you grew up**?
+> ❌ *Could you tell me where did you grow up?*
+
+| Showing interest | Answering politely |
+| --- | --- |
+| Really? That's fascinating. | Sure, go ahead. |
+| I didn't know that. | Of course — what would you like to know? |
+| That sounds unique. | Well, it's hard to explain, but… |
+| Tell me more about that. | I'd rather not say, if that's OK. |
+
+**Say it with someone.** Ask them *What do you think about playing traditional
+games?*, then the same about living close to nature. They answer each with a
+different opening — **I think**, **In my opinion**, **To my way of thinking** —
+and a reason, then turn it round: **What about you? What do you think?** Answer
+back, and disagree politely at least once. Then swap.
+
 ---
 
-## Lesson 6 — Skills 2: Listening & Writing
+## Lesson 5 — Listening & Writing
 
 ### Listening — Bà Sáu answers the four questions
 
@@ -811,7 +753,7 @@ a festival in the ninth month. Three days of it, with gongs. Nobody has held
 it since before I was born, and nobody left can tell you what it was for.
 :::
 
-### 6.1 Listen and choose
+### 5.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
 - She learned the names of the families from {her mother | the people at the ford | the festival} = her mother
@@ -821,7 +763,7 @@ it since before I was born, and nobody left can tell you what it was for.
 - She believes the house the boy describes {was never one of the nine | burned down | belonged to her mother} = was never one of the nine
 :::
 
-### 6.2 Listen and complete
+### 5.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion"
 - She heard the names until she could say them in her ___ . {sleep | time | year} = sleep
@@ -885,9 +827,9 @@ settles a dozen small choices at once.
 
 ---
 
-## Lesson 7 — Looking Back & Project
+## Lesson 6 — Looking Back & Project
 
-### 7.1 Vocabulary check
+### 6.1 Vocabulary check
 
 ::: task skill="course" type="gap-fill" ask="Complete with a word from this unit."
 - Most people in Viet Nam are Kinh, so the Kinh are the ___ . {majority | minority | heritage} = majority
@@ -900,7 +842,7 @@ settles a dozen small choices at once.
 - They live in a wooden ___ above the ground. {stilt house | cave | terraced field} = stilt house
 :::
 
-### 7.2 Pronunciation check
+### 6.2 Pronunciation check
 
 ::: task skill="course" type="choice" opts="/k/|/ɡ/|/s/" ask="Which sound does the bold letter make?"
 - **c**ostume = /k/
@@ -911,7 +853,7 @@ settles a dozen small choices at once.
 - lan**g**uage = /ɡ/
 :::
 
-### 7.3 Grammar check
+### 6.3 Grammar check
 
 **A.** Build the question.
 
@@ -931,7 +873,7 @@ settles a dozen small choices at once.
 - Would you like ___ rice? {a bowl of | a bowl | a} = a bowl of
 :::
 
-### 7.4 Error hunt
+### 6.4 Error hunt
 
 This paragraph has **five** mistakes. Below, it comes one line at a time: tap
 each mistake, then choose the fix.
@@ -991,14 +933,14 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for the way ethnic groups live | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercise 7.1 |
-| hear /k/ and /ɡ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
-| ask *Yes/No* and *Wh-* questions, and use countable and uncountable nouns | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
-| give my opinion | Lesson 4, exercise 4.3 |
-| read about a stilt house and how one is built | Lesson 5, exercises 5.1 and 5.2 |
-| talk about the kind of home I live in | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to someone answering questions about how a family lived | Lesson 6, exercises 6.1 and 6.2 |
-| write a paragraph about the things I do for my family | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| use the words for the way ethnic groups live | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 6, exercise 6.1 |
+| hear /k/ and /ɡ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
+| ask *Yes/No* and *Wh-* questions, and use countable and uncountable nouns | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 6, exercises 6.3 and 6.4 |
+| give my opinion | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| read about a stilt house and how one is built | Lesson 4, exercises 4.1 and 4.2 |
+| talk about the kind of home I live in | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| listen to someone answering questions about how a family lived | Lesson 5, exercises 5.1 and 5.2 |
+| write a paragraph about the things I do for my family | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1027,33 +969,11 @@ questions, which take no *do/does*.
 
 ### Lesson 4
 
-**4.2** Answers will vary. Check: the Yes/No question starts with *be*, a modal,
-or *do/does/did*; the Wh- question has an operator before the subject; the
-subject question has **no** *do/does/did*; and after *Could you tell me…* the
-clause is in **statement** order.
-
-**4.4** Answers will vary. Check: three different openings — one *I think…*,
-one *In my opinion,…*, one *To my way of thinking,…* — each followed by a
-complete sentence, not a phrase. In 3, the disagreement agrees with something
-first (*I see what you mean, but…*, *That's true, though…*) rather than starting
-with *No*. And if you wanted to say the opposite of *I think*, check you moved
-*not* onto *think*: **I don't think** village life is boring, not *I think
-village life is not boring*.
-
-**4.6** Answers will vary. Check: every answer is a full sentence that opens
-with an opinion expression; each one gives a **reason** as well as a choice; and
-your question in 3 really is unanswered by the two texts — population, province,
-type of house, the four kinds of work, the culture and the role of women are all
-stated there, so a good question asks about something else (the language, the
-festivals, the school, the crops eaten at home).
-
-### Lesson 5
-
 **Speaking** Answers will vary. Check: your Wh- questions keep the order *Wh- +
 operator + subject + verb*, your subject questions have no *do/does*, and you
 say *How many rooms* but *How much rice*.
 
-### Lesson 6
+### Lesson 5
 
 **Writing** Answers will vary. Check: 80–100 words, one paragraph, present
 simple with correct third-person **-s**, at least four Lesson 2 words, and one

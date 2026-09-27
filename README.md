@@ -4,8 +4,25 @@ Self-study material for Tiếng Anh 8 (Global Success), published as a static si
 
 **→ [hai-scribes.github.io/english8](https://hai-scribes.github.io/english8/)**
 
-Twelve units, seven lessons each. Every lesson teaches, then practises what it
-just taught; the unit test opens only once all seven lessons are done.
+Twelve units, six lessons each. Every lesson teaches, then practises what it
+just taught; the unit test opens only once all six lessons are done.
+
+| Lesson | Ours | In the book |
+| --- | --- | --- |
+| 1 | Getting Started | Getting Started |
+| 2 | Words & Sounds | A Closer Look 1 |
+| 3 | Grammar | A Closer Look 2 |
+| 4 | Reading & Speaking | Communication · Skills 1 |
+| 5 | Listening & Writing | Skills 2 |
+| 6 | Looking Back & Project | Looking Back & Project |
+
+Every lesson page prints the book's name for it under ours, so the site and the
+book can be matched in class. The book's Communication section has no lesson of
+its own (operator's decision, 2026-09-27): its content block is read at the top
+of Lesson 4, and its Everyday English phrases close Lesson 4, beside the
+speaking they serve. Neither carries a marked task, and neither is enrolled in
+the review queue. The skills keep the book's pairing, reading with speaking and
+listening with writing: each lesson takes something in, then uses it.
 
 The second job is mostly not something the pages *say* — it is how they
 behave. 1,143 questions are marked the way a real answer key marks; twelve
@@ -34,7 +51,7 @@ justifies a design decision belongs in this repository.
 
 ```
 /                          the twelve units, then the four reviews
-/unit-NN/                  that unit's seven lessons, then practice + test
+/unit-NN/                  that unit's six lessons, then practice + test
 /unit-NN/lesson-M/         one lesson: teaching blocks, then its exercises
 /review-N/                 units 3N-2 to 3N, asked together
 ```
@@ -54,7 +71,7 @@ every unit test stopped at the edge of its own unit. `units/review-N.md` closes
 that, and `/review-N/` is where it lands.
 
 A Review is deliberately not a thirteenth unit. It has no vocabulary table, no
-seven lessons and no progress gate, because it teaches nothing — its words and
+six lessons and no progress gate, because it teaches nothing — its words and
 its structures have already been taught three units running. What it has is the
 book's two halves on one page: **Language** (sounds, then vocabulary, then
 grammar) and **Skills** — a text read against one clock, a speaking step, a
@@ -65,8 +82,8 @@ the same counted checklist.
 
 A Review is the only page in the course that carries **two timers at once**, and
 that is what kept it from having a Listening half for as long as it did. A unit
-splits across lesson pages — the reading clock on Skills 1, the player on Skills
-2 — so each was alone on its page and could close over every task it found. On
+splits across lesson pages — the reading clock on Lesson 4, the player on Lesson
+5 — so each was alone on its page and could close over every task it found. On
 one page that is wrong in both directions: the player would silence the five
 Language exercises printed above it, and the clock would silence the listening
 exercise printed below. So a timer now owns the tasks under it and above the
