@@ -823,7 +823,7 @@ questions first, then answer while you listen rather than afterwards from memory
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a girl telling a friend about an evening she spent with two boys and a younger girl, and about a decision one of them had to make." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a girl telling a friend about an evening she spent with two boys and a younger girl, and about a decision one of them had to make."
 I want to say first that I was the one who told him to send Minh home, so if
 anybody is angry, be angry with me.
 

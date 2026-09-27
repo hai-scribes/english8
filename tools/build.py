@@ -601,28 +601,20 @@ def task_answer_html(p: dict) -> str:
 
 
 # ------------------------------------------------------------------ audio ---
-# `03` §1.1 and §4.2, both **[Q]**/**[C]**: the orientation is spoken and *not*
-# written on the paper, there is a fixed preview window before the questions,
-# the recording is played once, and computer-delivered means two minutes of
-# review rather than ten minutes of transfer. Printing the script above the
-# questions — which is what all twelve units did — removes the task.
-#
-# The page has had no speech of its own since 2026-09-27, so none of that
-# timing is enforced any more: the script is read aloud by someone else. The
-# attributes are still declared and checked by `check_ielts.py`, and only the
-# orientation reaches the page, at the top of the hidden script.
-AUDIO_ATTRS = {"orientation", "mode", "preview", "review"}
-AUDIO_REQUIRED = {"orientation", "mode"}
-AUDIO_MODES = {"computer", "paper"}
+# A listening script, kept off the printed page: printing it above the
+# questions — which is what all twelve units once did — turns the listening
+# into a reading. The page has had no speech of its own since 2026-09-27, so
+# the script is read aloud by someone else, once. The delivery mode, preview
+# window and review window it used to time went with the voice; the
+# orientation stays, at the top of the hidden script.
+AUDIO_ATTRS = {"orientation"}
+AUDIO_REQUIRED = {"orientation"}
 
 
 def audio_payload(u, lesson, a: dict, body: str, idx: int = 0) -> dict:
     return {
         "id": f"{u['nn']}-{lesson}-{idx + 1}",
-        "mode": a["mode"],
         "orientation": a["orientation"],
-        "preview": int(a.get("preview", "30")),
-        "review": int(a.get("review", "120")),
         "script": [ln.strip() for ln in body.strip().split("\n\n") if ln.strip()],
     }
 
@@ -3203,7 +3195,6 @@ def block_prose(u, lesson, b, payload) -> str:
         elif kind == "audio":
             p = audio_payload(u, lesson, d[0], d[1], n_audio)
             n_audio += 1
-            payload["audio"].append(p)
             html_ = audio_html(p)
         elif kind == "write":
             p = write_payload(u, lesson, d[0], d[1], n_write)
@@ -3285,7 +3276,7 @@ def block_section(u, lesson, b, payload, *, where="") -> str:
 
 def page_lesson(u, L) -> str:
     parts = []
-    payload: dict = {"tasks": [], "audio": [], "write": [], "clock": [], "passage": []}
+    payload: dict = {"tasks": [], "write": [], "clock": [], "passage": []}
     if L["n"] == LESSONS:
         parts.append(recap_block(u))
 
@@ -3329,7 +3320,7 @@ def page_lesson(u, L) -> str:
                         (f"Lesson {L['n']}", "")],
                  data={"kind": "lesson", "unit": u["nn"], "lesson": L["n"],
                        "titles": {str(x["n"]): x["title"] for x in u["lessons"]},
-                       "tasks": payload["tasks"], "audio": payload["audio"],
+                       "tasks": payload["tasks"],
                        "write": payload["write"], "clock": payload["clock"],
                        "passage": payload["passage"],
                        "vocabIntake": payload.get("vocabIntake", []),
@@ -3351,7 +3342,7 @@ def page_review(r, units) -> str:
     asked about together, which is the one thing this site had no shape for.
     """
     parts = []
-    payload: dict = {"tasks": [], "audio": [], "write": [], "clock": [], "passage": []}
+    payload: dict = {"tasks": [], "write": [], "clock": [], "passage": []}
     for P in r["parts"]:
         parts.append(f'  <div class="sectionhead"><h2>{inline(P["title"])}</h2>'
                      f'<span class="label">Part {P["n"]} of {len(r["parts"])}</span></div>')
@@ -3397,7 +3388,7 @@ def page_review(r, units) -> str:
                  depth=1, body=body,
                  crumb=[("Today", "../index.html"), (f"Review {r['num']}", "")],
                  data={"kind": "review", "unit": r["nn"], "review": r["num"],
-                       "tasks": payload["tasks"], "audio": payload["audio"],
+                       "tasks": payload["tasks"],
                        "write": payload["write"], "clock": payload["clock"],
                        "passage": payload["passage"]},
                  desc=f"Review {r['num']}: {review_span_text(r)} tested together.")

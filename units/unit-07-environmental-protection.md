@@ -688,7 +688,7 @@ first, then answer as you listen — not afterwards, from memory.
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả hai phần câu hỏi, rồi vừa
 nghe vừa trả lời.
 
-::: audio orientation="You will hear a teacher speaking to students about the damage the new coral has done, and about somebody she wants to meet." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a teacher speaking to students about the damage the new coral has done, and about somebody she wants to meet."
 Good morning, everyone. Sit down, please. Nobody is going home until I have
 finished, so listen.
 

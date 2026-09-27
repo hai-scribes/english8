@@ -708,7 +708,7 @@ questions first, then answer while you listen rather than afterwards from memory
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a man from the lane telling a visitor what the week was like, and what his neighbours now cannot agree about." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a man from the lane telling a visitor what the week was like, and what his neighbours now cannot agree about."
 Good evening. You want to know about our lane, so I will tell you honestly,
 and then you can decide for yourself.
 

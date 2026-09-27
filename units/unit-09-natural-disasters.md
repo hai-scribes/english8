@@ -862,7 +862,7 @@ which of them each answer will come from.
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear two speakers outdoors at night, standing above deep water. Somebody they know is not where he was, and they are trying to find him." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear two speakers outdoors at night, standing above deep water. Somebody they know is not where he was, and they are trying to find him."
 **The keeper:** Face the water first, then say the words. Which way you face is
 not a detail. Nobody ever told her that, which is why nothing went back an
 hour ago.

@@ -782,7 +782,7 @@ come from.
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a stranger speaking to a boy beside a market, and short replies from the boy. He has come a long way and he is not pleased with him." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a stranger speaking to a boy beside a market, and short replies from the boy. He has come a long way and he is not pleased with him."
 **The keeper:** Take her home. You are doing this wrong, and you have done it
 wrong for eight tides.
 

@@ -707,7 +707,7 @@ listen.
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear one speaker recording a message for somebody he has never met. He says where he sent it from, where he is now, and what he wants the listener to go and find." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear one speaker recording a message for somebody he has never met. He says where he sent it from, where he is now, and what he wants the listener to go and find."
 **The keeper:** …to whoever is holding this now. My name does not matter. The
 work does.
 

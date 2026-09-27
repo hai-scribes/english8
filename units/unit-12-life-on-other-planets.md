@@ -812,7 +812,7 @@ they put them to him, and so do the exercises, so read both sets first and let t
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear one speaker at the end of a long walk, replying to the visitors who have come to find him and saying what he intends to do with what they have carried to him." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear one speaker at the end of a long walk, replying to the visitors who have come to find him and saying what he intends to do with what they have carried to him."
 Sit down, all of you. You walked nine days to give me back a thing I put down
 myself, so the least I can do is answer you in order.
 

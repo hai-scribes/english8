@@ -659,7 +659,7 @@ questions first, then answer while you listen rather than afterwards from memory
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a man talking about how he spent his free time when he was a boy, and about something he made and then lost at sea." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a man talking about how he spent his free time when he was a boy, and about something he made and then lost at sea."
 When I was thirteen there was nothing to do in this town and we did all of
 it. I loved swimming, I didn't mind fishing, and when it rained we sat under
 the house and played games we had made ourselves.

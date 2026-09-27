@@ -39,6 +39,11 @@ save/load pairs in `app.js`:
 | `en8:notes:<id>` | 4337 | passage notes |
 | `en8:flags:<id>` | 4570 | question review flags |
 
+> **Since 2026-09-27** `en8:played:<id>` is no longer written: the site's
+> speech was removed and the listening player no longer plays or spends
+> anything. Old browsers may still hold the key; nothing reads it. Ten keys are
+> live, and carrying the eleventh is harmless.
+
 `app.js` makes **no network calls of any kind** today — no `fetch`, no
 `XMLHttpRequest`. There is no service worker and no web app manifest.
 

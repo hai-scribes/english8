@@ -247,7 +247,6 @@ that wraps every task.
 
 ```markdown
 ::: audio orientation="You will hear a school counsellor talking about stress."
-          mode="computer" preview="30" review="120"
 Hello. I'm Ms Trang, and I'm the school counsellor here…
 :::
 ```
@@ -258,8 +257,8 @@ The site has no speech of its own — every voice function was removed on
 to someone who reads it aloud once, and answers as they listen. The player is
 not a timer and spends nothing, so the tasks under it retake like any other.
 It still carries `data-role="audio"`, which is where the reading clock's
-territory ends. `mode`, `preview` and `review` are still parsed and currently
-unused.
+territory ends. `orientation` is its only attribute; the old `mode`, `preview`
+and `review` timed the spoken player and were removed with it.
 
 ### `:::write` — the writing task is attempted on the page, and counted
 

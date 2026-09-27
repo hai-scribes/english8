@@ -197,7 +197,7 @@ rather than afterwards from memory.
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc năm câu hỏi trước, rồi vừa nghe vừa chọn.
 
-::: audio orientation="You will hear a guide called Mark taking a group of visitors round the solar system before they go into the planetarium." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a guide called Mark taking a group of visitors round the solar system before they go into the planetarium."
 Hello, everyone. My name is Mark and I look after the planetarium here. Before
 we go inside, let me take you round the solar system in about two minutes.
 

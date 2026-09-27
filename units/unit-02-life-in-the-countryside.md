@@ -740,7 +740,7 @@ questions first, then answer while you listen rather than afterwards from memory
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a girl describing a walk she took with a friend along a path outside the village, and what happened when they followed it the other way." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a girl describing a walk she took with a friend along a path outside the village, and what happened when they followed it the other way."
 I want to say first that I believed him before I saw anything. He does not
 invent things. He is not clever enough to keep it up for a whole week.
 

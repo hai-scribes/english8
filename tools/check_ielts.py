@@ -426,7 +426,8 @@ def check_task(where: str, a: dict, problems: list):
 
 
 def check_audio(where: str, a: dict, script: str, problems: list):
-    """Group C, for one :::audio. C6 and C8 are timing and orientation."""
+    """Group C, for one :::audio: the orientation is carried (C8), and there is
+    a script. The timing half (C6) went with the page's voice on 2026-09-27."""
     unknown = set(a) - b.AUDIO_ATTRS
     if unknown:
         problems.append(f"{where}: unknown audio attribute(s) {sorted(unknown)}")
@@ -435,14 +436,6 @@ def check_audio(where: str, a: dict, script: str, problems: list):
             problems.append(f"{where}: recording is missing required attribute {req!r} — "
                             f"the spoken orientation is never written on the paper, so it "
                             f"has to be carried here (C8)")
-    if a.get("mode") not in b.AUDIO_MODES:
-        problems.append(f"{where}: mode={a.get('mode')!r} — a listening tool must declare "
-                        f"which delivery it simulates, 'computer' or 'paper' (C6)")
-    # C6: the two modes differ in exactly this, and practising the wrong one
-    # trains a habit that costs marks.
-    if a.get("mode") == "computer" and a.get("review") and a["review"] != "120":
-        problems.append(f"{where}: computer-delivered gives two minutes to review, not "
-                        f"{a['review']}s — there is no transfer window (C6)")
     if not script.strip():
         problems.append(f"{where}: recording has no script")
 

@@ -856,7 +856,7 @@ is still going rather than afterwards from memory.
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả 6.1 và 6.2, rồi vừa
 nghe vừa trả lời.
 
-::: audio orientation="You will hear one speaker, sitting in the workroom, telling the others what her teacher taught her, what she was never taught, and what she thinks they should do with what is left." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear one speaker, sitting in the workroom, telling the others what her teacher taught her, what she was never taught, and what she thinks they should do with what is left."
 **Bống:** He was not a kind man to work for. He said the same things every
 morning until I could say them back to him in my sleep.
 

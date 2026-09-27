@@ -704,7 +704,7 @@ question.
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc trước câu hỏi, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a woman who sells at the market telling a neighbour what she saw on the night of the whale festival, and what her grandmother once told her." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a woman who sells at the market telling a neighbour what she saw on the night of the whale festival, and what her grandmother once told her."
 Listen to me. I am not a woman who invents things, and I am telling you what
 I saw with my own eyes.
 

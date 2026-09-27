@@ -17,3 +17,11 @@ review pass; this file is the durable lightweight tracker.
   open) until a UI walk-through with real Chrome caught it. The asset-path
   check in test_reading.js now guards it; when adding a page, pass the depth
   that matches its folder.
+
+**A `node_modules` symlink in a worktree is not ignored (2026-09-27).** To run
+`test_reading.js` (needs jsdom) in a throwaway `git worktree`, the easy move is
+to symlink the main checkout's `node_modules` in. `.gitignore` says
+`node_modules/`, and the trailing slash matches directories only, so the symlink
+is untracked-but-not-ignored and `git add -A` commits it. Remove it before
+staging (or `git rm --cached node_modules` and amend), and check `git show
+--stat` before any push to `main`.

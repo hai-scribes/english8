@@ -175,7 +175,7 @@ you listen rather than afterwards from memory.
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc năm câu trước, rồi vừa nghe vừa hoàn thành.
 
-::: audio orientation="You will hear a student called Phong talking about his family's customs and about the things that have changed in his village in the last few years." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a student called Phong talking about his family's customs and about the things that have changed in his village in the last few years."
 Hello. My name is Phong, and I have lived in the same village in the north all
 my life, so I am the wrong person to ask about cities.
 

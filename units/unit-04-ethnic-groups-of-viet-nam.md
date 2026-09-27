@@ -785,7 +785,7 @@ order, so the questions below come in that order too.
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
 
-::: audio orientation="You will hear a grandmother taking a boy's four project questions one at a time, and telling him what she knows about the families who lived along one stretch of the river." mode="computer" preview="30" review="120"
+::: audio orientation="You will hear a grandmother taking a boy's four project questions one at a time, and telling him what she knows about the families who lived along one stretch of the river."
 Read them out again. Slowly. Do you think I am deaf? I am old, not deaf.
 
 Who lived there? That one I can answer. I can name every family on that stretch
