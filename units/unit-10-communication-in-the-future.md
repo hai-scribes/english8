@@ -1,8 +1,8 @@
 # Unit 10 — Communication in the Future
 
 > **Bài 10 — Giao tiếp trong tương lai**
-> Self-study pack. Work through Lessons 1–6 in order. Marked exercises
-> check themselves; the [Answer Key](#answer-key) covers the open ones.
+> Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
+> themselves; open ones say what to listen or look for.
 
 ## What this unit teaches
 
@@ -297,6 +297,11 @@ syllable. Record yourself if you can.
 1. The **Japanese** trainee and the **Vietnamese** interviewee met at three.
 2. I **guarantee** the **committee** will drink all the **coffee**.
 3. The **Portuguese** refugee did not **agree** with the **Chinese** engineer.
+
+**Listen back for:** the stress lands on *-nese*, *-nee*, *-tee*, *-gee*, *-ee*
+in *Japanese, trainee, Vietnamese, interviewee, guarantee, Portuguese, refugee,
+agree, Chinese* — and on the FIRST syllable of *coffee*, and the SECOND of
+*committee*.
 
 ---
 
@@ -978,16 +983,3 @@ page can settle it, the row says so, and that one is yours to judge.
 > xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
 > trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
 > đánh giá.
-
----
-
-## Answer Key
-
-> **Đáp án.** Chỉ xem sau khi đã tự làm bài.
-
-### Lesson 2
-
-**2.3** Answers will vary (this is a speaking task). Check: the stress lands on
-*-nese*, *-nee*, *-tee*, *-gee*, *-ee* in *Japanese, trainee, Vietnamese,
-interviewee, guarantee, Portuguese, refugee, agree, Chinese* — and on the FIRST
-syllable of *coffee*, and the SECOND of *committee*.

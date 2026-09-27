@@ -1,9 +1,8 @@
 # Unit 1 — Leisure Time
 
 > **Bài 1 — Thời gian rảnh rỗi**
-> Self-study pack. Work through Lessons 1–6 in order. Answers to every
-> exercise are in the [Answer Key](#answer-key) at the end — do the exercise
-> first, then check.
+> Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
+> themselves; open ones say what to listen or look for.
 
 ## What this unit teaches
 
@@ -124,6 +123,10 @@ Below them the water climbs one step of the wall, and slides back down.
 - Tí beat everyone at the ___ Hùng got for his birthday. {board game | bracelet | bookshop} = board game
 - On hot days the ___ is full of children. {swimming pool | bookshop | dollhouse} = swimming pool
 - My mother likes to ___ fish with ginger for dinner. {cook | knit | choose} = cook
+- Riding a bike is easy once you have good ___ . {balance | leisure | resort} = balance
+- Bống walked along the top of the wall with her arms out for ___ . {balance | shape | pastime} = balance
+- We spent the holiday at a beach ___ with three swimming pools. {resort | bookshop | pastime} = resort
+- Near the mountains there is a ski ___ , full of families every winter. {resort | craft | dollhouse} = resort
 - On rainy afternoons we stay in and do a ___ with 500 pieces. {jigsaw puzzle | board game | bracelet} = jigsaw puzzle
 - Khoa ___ loud people on the bus. He really hates them. {can't stand | is keen on | is fond of} = can't stand
 - My grandfather reads the newspaper to ___ after lunch. {relax | socialise | detest} = relax
@@ -179,6 +182,8 @@ Below them the water climbs one step of the wall, and slides back down.
 - to stay friends with someone by calling or messaging {keep in touch | hang out | socialise} = keep in touch
 - to pick one thing from several {choose | relax | knit} = choose
 - a piece of jewellery you wear round your wrist {bracelet | dollhouse | craft} = bracelet
+- the ability to stay steady and not fall over {balance | leisure | shape} = balance
+- a place where people go on holiday, with hotels and things to do {resort | bookshop | swimming pool} = resort
 @ choice ask="What does it mean?"
 - hang out {spend free time with friends | start a new hobby | stay healthy} = spend free time with friends
 - detest {hate very much | like a little | not mind} = hate very much
@@ -196,6 +201,7 @@ Below them the water climbs one step of the wall, and slides back down.
 - comic book · jigsaw puzzle · board game · stay in shape = stay in shape ~ the others are things you play with or read
 - movie · music · comic book · judo = judo ~ the others are things you watch, hear or read
 - bookshop · swimming pool · cinema · bracelet = bracelet ~ the others are places
+- resort · bookshop · swimming pool · balance = balance ~ the others are places
 - bracelet · dollhouse · board game · outdoors = outdoors ~ the others are things
 - socialise · hang out · keep in touch · detest = detest ~ the others are things you do with other people
 - keep in touch · message · surf the net · stay in shape = stay in shape ~ you can do the others on a phone
@@ -262,6 +268,8 @@ Below them the water climbs one step of the wall, and slides back down.
 | 35 | bracelet | /ˈbreɪslət/ | n | vòng đeo tay |
 | 36 | judo | /ˈdʒuːdəʊ/ | n | võ judo |
 | 37 | dollhouse | /ˈdɒlhaʊs/ | n | nhà búp bê |
+| 38 | balance | /ˈbæləns/ | n | sự thăng bằng |
+| 39 | resort | /rɪˈzɔːt/ | n | khu nghỉ dưỡng |
 
 ### Pronunciation — /ʊ/ and /uː/
 
@@ -497,8 +505,8 @@ Write true sentences about yourself. Use a different verb each time.
 > behind her, and Bà Sáu shuts them, and she opens them again. She hates keeping
 > her hands still; there is always a shell or a spoon turning over in them.
 >
-> She walked me down to the wall at low water and made me wait there, which I
-> can't stand doing. Then the tide turned, and she said, "Come back," to nobody
+> She walked me down to the wall at low water, along the very top of it with
+> her arms out for balance, and made me wait there, which I can't stand doing. Then the tide turned, and she said, "Come back," to nobody
 > at all.
 >
 > "The sea gives back what it took," she said. "You don't get to choose which."

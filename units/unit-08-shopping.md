@@ -1,9 +1,8 @@
 # Unit 8 — Shopping
 
 > **Bài 8 — Mua sắm**
-> Self-study pack. Work through Lessons 1–6 in order. The marked exercises
-> check themselves; the [Answer Key](#answer-key) at the end covers the open
-> ones — do the exercise first, then check.
+> Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
+> themselves; open ones say what to listen or look for.
 
 ## What this unit teaches
 
@@ -336,6 +335,9 @@ or the /t/. Record yourself if you can.
 2. The **special** **stall** is next to the **sports** shop.
 3. It was a **mistake** — the **style** on **display** is too **expensive**.
 4. That **customer** paid in cash **instead**.
+
+**Listen back for:** no vowel sound between /s/ and /p/ or between /s/ and /t/
+(*not* "sờ-pend"), and no aspiration puff on the /p/ or /t/.
 
 ---
 
@@ -1069,15 +1071,3 @@ page can settle it, the row says so, and that one is yours to judge.
 > xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
 > trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
 > đánh giá.
-
----
-
-## Answer Key
-
-> **Đáp án.** Chỉ xem sau khi đã tự làm bài.
-
-### Lesson 2
-
-**2.3** Answers will vary — this is a speaking task. Check: no vowel sound
-between /s/ and /p/ or between /s/ and /t/ (*not* "sờ-pend"), and no aspiration
-puff on the /p/ or /t/.

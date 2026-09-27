@@ -1,9 +1,8 @@
 # Unit 4 — Ethnic Groups of Viet Nam
 
 > **Bài 4 — Các dân tộc Việt Nam**
-> Self-study pack. Work through Lessons 1–6 in order. The marked exercises
-> check themselves; for the open ones, the [Answer Key](#answer-key) at the end
-> says what to look for — do the exercise first, then check.
+> Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
+> themselves; open ones say what to listen or look for.
 
 ## What this unit teaches
 
@@ -321,6 +320,10 @@ Read aloud three times, faster each time. Record yourself if you can.
 1. The **goat** in the **coat** walked past the **cave**.
 2. Each ethnic **group** keeps its own **customs** and **costumes**.
 3. My **grandmother** carried the **basket** of **bamboo** to the **market**.
+
+**Listen back for:** the bold letters in *goat, group, grandmother* buzz (put a
+hand on your throat), while *coat, cave, customs, costumes, basket* are silent
+at the throat and start with a small puff of air.
 
 ---
 
@@ -1039,15 +1042,3 @@ page can settle it, the row says so, and that one is yours to judge.
 > xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
 > trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
 > đánh giá.
-
----
-
-## Answer Key
-
-> **Đáp án.** Chỉ xem sau khi đã tự làm bài.
-
-### Lesson 2
-
-**2.3** Answers will vary. Check: the bold letters in *goat, group, grandmother*
-buzz (put a hand on your throat), while *coat, cave, customs, costumes, basket*
-are silent at the throat and start with a small puff of air.

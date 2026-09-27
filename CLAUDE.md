@@ -134,6 +134,13 @@ that had crept into it belongs in Lesson 3. `app.js` moves a learner's stored
 record from the seven-lesson numbering once (`reshapeOnce`), then to the
 paired-by-kind shape once (`pairByKindOnce`), and `test_reading.js` holds both.
 
+### No Answer Key, and no "Answers will vary"
+
+Decided by the operator on 2026-09-27. A unit has no `## Answer Key`: marked
+work checks itself, "About you" is a `:::jot`, and a spoken drill carries its
+own `**Listen back for:**` line under the sentences. A reveal button over
+"Answers will vary" answers nothing, so do not add one back.
+
 ### An exercise a machine can mark is a `:::task`, not printed prose
 
 Unit 1 had nine printed exercises with no directive. Four were genuinely open

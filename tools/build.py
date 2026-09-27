@@ -3598,14 +3598,18 @@ def words_sheet(u) -> str:
     if not u["vocab"]:
         return ""
     name = next((b["title"] for L in u["lessons"] for b in L["blocks"]
-                 if b["title"].lower().startswith("vocabulary")), "Vocabulary")
+                 if b["kind"] != "exercise" and b["title"].lower().startswith("vocabulary")),
+                "Vocabulary")
     name = re.sub(r"^Vocabulary\s*[—–-]\s*", "", name) or "Vocabulary"
     # What the vocabulary block says besides its table — a note on two words
     # that are easy to mix up — goes into the sheet with the words.
     notes = ""
     for L in u["lessons"]:
         for b in L["blocks"]:
-            if b["title"].lower().startswith("vocabulary"):
+            # Teaching blocks only: "4.3 Vocabulary in context" and "6.1
+            # Vocabulary check" are exercises, and their widget placeholders
+            # used to leak into the sheet as empty paragraphs.
+            if b["kind"] != "exercise" and b["title"].lower().startswith("vocabulary"):
                 rest = RE_FIRST_TABLE.sub("", render(b["md"]), count=1).strip()
                 if RE_TAG.sub("", rest).strip():
                     notes += polish_teach(rest, False)
@@ -3927,6 +3931,14 @@ def main() -> int:
         d.mkdir(parents=True, exist_ok=True)
         (d / "index.html").write_text(page_review(r, units), encoding="utf-8")
         pages += 1
+
+    # A widget placeholder that survives to the output is a directive that
+    # rendered nowhere: the Words sheet shipped two per unit for a while,
+    # invisible on screen and caught only because git called the pages binary.
+    leaked = [str(f.relative_to(ROOT)) for f in OUT.rglob("*.html")
+              if "\x00" in f.read_text(encoding="utf-8")]
+    if leaked:
+        raise SystemExit("unrendered widget placeholder in: " + ", ".join(leaked[:5]))
 
     print(f"built {pages} pages into {OUT.relative_to(ROOT)}/ — "
           f"{len(units)} units, {tot_ex} exercises, {tot_ans} answers, "

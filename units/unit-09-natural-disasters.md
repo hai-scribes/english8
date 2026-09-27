@@ -2,7 +2,7 @@
 
 > **Bài 9 — Thiên tai**
 > Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
-> themselves; the [Answer Key](#answer-key) covers the open ones.
+> themselves; open ones say what to listen or look for.
 
 ## What this unit teaches
 
@@ -437,6 +437,12 @@ each time. Record yourself if you can.
 5. A **MOUN**-tain-ous province with **NU**-mer-ous storms is a **DAN**-ger-ous
    place to build.
 6. The **NA**-tion-al **PRAC**-ti-cal advice is short: keep away from **POI**-son-ous water.
+
+**Listen back for:** the capitalised syllable is longer, louder and clearer, and
+every other syllable is short and light. If *disaster* comes out as
+*DIS-as-ter*, slow down and try again. In sentences 5 and 6, check that the
+*-al* and *-ous* words keep the stress of their stem — *ˈmountainous*,
+*ˈnumerous*, *ˈdangerous*, *ˈnational*, *ˈpractical*, *ˈpoisonous*.
 
 ---
 
@@ -1118,17 +1124,3 @@ page can settle it, the row says so, and that one is yours to judge.
 > xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
 > trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
 > đánh giá.
-
----
-
-## Answer Key
-
-> **Đáp án.** Chỉ xem sau khi đã tự làm bài.
-
-### Lesson 2
-
-**2.5** Spoken. Check: the capitalised syllable is longer, louder and clearer,
-and every other syllable is short and light. If *disaster* comes out as
-*DIS-as-ter*, slow down and try again. In sentences 5 and 6, check that the
-*-al* and *-ous* words keep the stress of their stem — *ˈmountainous*,
-*ˈnumerous*, *ˈdangerous*, *ˈnational*, *ˈpractical*, *ˈpoisonous*.

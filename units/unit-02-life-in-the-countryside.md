@@ -1,9 +1,8 @@
 # Unit 2 — Life in the Countryside
 
 > **Bài 2 — Cuộc sống ở vùng quê**
-> Self-study pack. Work through Lessons 1–6 in order. The marked exercises
-> check themselves; the [Answer Key](#answer-key) at the end covers the open
-> ones — do the exercise first, then check.
+> Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
+> themselves; open ones say what to listen or look for.
 
 ## What this unit teaches
 
@@ -340,6 +339,10 @@ Read aloud three times, faster each time. Record yourself if you can.
 1. The **farmer**'s **brother** carries **water** to the **village**.
 2. My **neighbour** goes to the **orchard** to **pick** oranges.
 3. The **chickens** by the **bridge** are **bigger** than the **biggest** duck.
+
+**Listen back for:** every *-er* ending (*farmer, brother, water, neighbour,
+bigger*) is the relaxed /ə/, never a full "e" sound; *village, pick, chicken,
+bridge, biggest* all keep the short, bright /ɪ/.
 
 ---
 
@@ -985,16 +988,3 @@ page can settle it, the row says so, and that one is yours to judge.
 > xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
 > trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
 > đánh giá.
-
----
-
-## Answer Key
-
-> **Đáp án.** Chỉ xem sau khi đã tự làm bài.
-
-### Lesson 2
-
-**2.3** Answers will vary — this is a speaking drill. Check: every *-er* ending
-(*farmer, brother, water, neighbour, bigger*) is the relaxed /ə/, never a full
-"e" sound; *village, pick, chicken, bridge, biggest* all keep the short, bright
-/ɪ/.

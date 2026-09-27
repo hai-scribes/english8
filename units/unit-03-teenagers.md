@@ -1,9 +1,8 @@
 # Unit 3 — Teenagers
 
 > **Bài 3 — Thanh thiếu niên**
-> Self-study pack. Work through Lessons 1–6 in order. Marked
-> exercises check themselves; the [Answer Key](#answer-key) at the end covers
-> the open ones.
+> Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
+> themselves; open ones say what to listen or look for.
 
 ## What this unit teaches
 
@@ -344,6 +343,10 @@ Read aloud three times, faster each time. Record yourself if you can.
 4. She is **mature**, and her **enjoyable** stories are the best part of the
    club. *(Both sounds in one sentence: ma-**TURE** is /ʊə/, en-**JOY**-able is
    /ɔɪ/.)*
+
+**Listen back for:** your lips **spread into a smile** at the end of *choice,
+enjoy, noise, boys, enjoyable*, and **relax back to the centre** at the end of
+*tourist, curious, during, furious, mature*.
 
 ---
 
@@ -1019,15 +1022,3 @@ page can settle it, the row says so, and that one is yours to judge.
 > xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
 > trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
 > đánh giá.
-
----
-
-## Answer Key
-
-> **Đáp án.** Chỉ xem sau khi đã tự làm bài.
-
-### Lesson 2
-
-**2.3** Answers will vary. Check: your lips **spread into a smile** at the end
-of *choice, enjoy, noise, boys, enjoyable*, and **relax back to the centre** at
-the end of *tourist, curious, during, furious, mature*.

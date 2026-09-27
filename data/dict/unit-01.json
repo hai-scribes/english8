@@ -1132,6 +1132,45 @@
         ]
       }
     ],
-    "note": "The plain verb **fold** is the one inside **origami** — *the art of paper folding* — which comes up again in Lesson 4."
+    "note": "The plain verb **fold** is the one inside **origami** — *the art of paper folding*."
+  },
+  "balance": {
+    "senses": [
+      {
+        "pos": "noun",
+        "en": "the ability to stay steady on your feet or on something narrow without falling",
+        "vi": "sự thăng bằng",
+        "examples": [
+          "Bống walked along the wall with her arms out for **balance**.",
+          "Riding a bike is easy once you have good **balance**.",
+          "Judo helped my brother improve his **balance**."
+        ],
+        "colloc": [
+          "keep your balance",
+          "lose your balance",
+          "good balance"
+        ]
+      }
+    ],
+    "note": "**keep your balance** = not fall; **lose your balance** = start to fall."
+  },
+  "resort": {
+    "senses": [
+      {
+        "pos": "noun",
+        "en": "a place where people go on holiday, with hotels and things to do",
+        "vi": "khu nghỉ dưỡng",
+        "examples": [
+          "There are three beach **resorts** along the coast near Quy Nhơn.",
+          "Every winter my cousins go to a ski **resort** in the mountains.",
+          "The **resort** has a swimming pool and a small cinema."
+        ],
+        "colloc": [
+          "a beach resort",
+          "a ski resort",
+          "a holiday resort"
+        ]
+      }
+    ]
   }
 }

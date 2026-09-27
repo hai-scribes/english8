@@ -2,7 +2,7 @@
 
 > **Bài 5 — Phong tục và truyền thống của chúng ta**
 > Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
-> themselves; the [Answer Key](#answer-key) at the end covers the open ones.
+> themselves; open ones say what to listen or look for.
 
 ## What this unit teaches
 
@@ -339,6 +339,11 @@ Read aloud three times, faster each time. Record yourself if you can.
 2. Nine **thin** **banners** hung **along** the **lane**.
 3. My grandmother lights the **incense** at **dinner**, and we **thank** our
    ancestors.
+
+**Listen back for:** every *-ng* word ends at the **back** of your mouth with
+the tongue tip **down**, and *thin*, *banners*, *lane*, *incense*, *dinner*,
+*nine* all have the tongue tip **up** behind the teeth. *Thank* has /ŋ/, not
+/n/.
 
 ---
 
@@ -984,16 +989,3 @@ page can settle it, the row says so, and that one is yours to judge.
 > xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
 > trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
 > đánh giá.
-
----
-
-## Answer Key
-
-> **Đáp án.** Chỉ xem sau khi đã tự làm bài.
-
-### Lesson 2
-
-**2.3** Answers will vary in speed. Check: every *-ng* word ends at the **back**
-of your mouth with the tongue tip **down**, and *thin*, *banners*, *lane*,
-*incense*, *dinner*, *nine* all have the tongue tip **up** behind the teeth.
-*Thank* has /ŋ/, not /n/.

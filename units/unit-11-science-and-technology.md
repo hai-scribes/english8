@@ -2,7 +2,7 @@
 
 > **Bài 11 — Khoa học và công nghệ**
 > Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
-> themselves; the [Answer Key](#answer-key) covers the open ones.
+> themselves; open ones say what to listen or look for.
 
 ## What this unit teaches
 

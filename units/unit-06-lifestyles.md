@@ -2,8 +2,7 @@
 
 > **Bài 6 — Lối sống**
 > Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
-> themselves; the [Answer Key](#answer-key) at the end covers the open ones —
-> do the exercise first, then check.
+> themselves; open ones say what to listen or look for.
 
 ## What this unit teaches
 
@@ -307,6 +306,11 @@ Read aloud three times, faster each time. Record yourself if you can.
 1. My **brother** will **practise** every day to **improve**.
 2. The **bright** red **umbrella** was a very good **price**.
 3. **Bring** the **brush** — we will **print** the poster and **celebrate**.
+
+**Listen back for:** your throat buzzes on the **br** of *brother, bright,
+bring, brush, celebrate, umbrella* — at the very start in the first four, and in
+the middle of *celebrate* and *umbrella* — and does not buzz on the **pr** of
+*practise, improve, price, print*.
 
 ::: bridge name="Feel the buzz and the puff" trains="Pronunciation" cefr="A2" marker="[S]" src="07 §5.5.3"
 In *brother* and *price*, work on the **first** sound. Put a hand on your throat:
@@ -932,16 +936,3 @@ page can settle it, the row says so, and that one is yours to judge.
 > xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
 > trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
 > đánh giá.
-
----
-
-## Answer Key
-
-> **Đáp án.** Chỉ xem sau khi đã tự làm bài.
-
-### Lesson 2
-
-**2.3** Answers will vary (spoken). Check: your throat buzzes on the **br** of
-*brother, bright, bring, brush, celebrate, umbrella* — at the very start in the
-first four, and in the middle of *celebrate* and *umbrella* — and does not buzz
-on the **pr** of *practise, improve, price, print*.

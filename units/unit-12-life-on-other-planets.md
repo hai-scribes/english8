@@ -2,7 +2,7 @@
 
 > **Bài 12 — Sự sống trên các hành tinh khác**
 > Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
-> themselves; the [Answer Key](#answer-key) covers the open ones.
+> themselves; open ones say what to listen or look for.
 
 ## What this unit teaches
 
@@ -321,6 +321,10 @@ normal speed. Record yourself and check that the last item really falls.
 3. She asked me my ↗name, my ↗age and where I ↘lived.
 4. Now try the same list twice — once **closed**, once **open**:
    *I've read about Mars, Venus and Mercury.*
+
+**Listen back for:** in items 1–3 your voice steps **up** on every item except
+the last, and clearly **down** on the last one; in item 4 the "open" version
+ends with a rise, which should sound as though you were about to continue.
 
 ---
 
@@ -1018,15 +1022,3 @@ page can settle it, the row says so, and that one is yours to judge.
 > xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
 > trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
 > đánh giá.
-
----
-
-## Answer Key
-
-> **Đáp án.** Chỉ xem sau khi đã tự làm bài.
-
-### Lesson 2
-
-**2.3** Answers will vary. Check: in items 1–3 your voice steps **up** on
-every item except the last, and clearly **down** on the last one; in item 4 the "open" version
-ends with a rise, which should sound as though you were about to continue.

@@ -2,7 +2,7 @@
 
 > **Bài 7 — Bảo vệ môi trường**
 > Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
-> themselves; the [Answer Key](#answer-key) covers the open ones.
+> themselves; open ones say what to listen or look for.
 
 ## What this unit teaches
 
@@ -310,6 +310,10 @@ Read aloud three times, faster each time. Record yourself if you can.
 2. It is **possible** to **recycle** almost every **black** bottle.
 3. The **climate** is changing, and that is a **terrible** **problem**.
 4. Careful: *rubbish* has no /bl/, and *chemical* begins with plain /k/.
+
+**Listen back for:** your /b/ buzzes and your /k/ does not, and there is no
+vowel between the consonant and the /l/. Item 4 is a knowledge check: *rubbish*
+is /ˈrʌbɪʃ/ (no /bl/) and *chemical* is /ˈkemɪkl/ (the *ch* is a plain /k/).
 
 ---
 
@@ -984,16 +988,3 @@ page can settle it, the row says so, and that one is yours to judge.
 > xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
 > trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
 > đánh giá.
-
----
-
-## Answer Key
-
-> **Đáp án.** Chỉ xem sau khi đã tự làm bài.
-
-### Lesson 2
-
-**2.3** Answers will vary — this is a speaking drill. Check: your /b/ buzzes and
-your /k/ does not, and there is no vowel between the consonant and the /l/.
-Item 4 is a knowledge check: *rubbish* is /ˈrʌbɪʃ/ (no /bl/) and *chemical* is
-/ˈkemɪkl/ (the *ch* is a plain /k/).
