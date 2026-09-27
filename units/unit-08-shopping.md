@@ -1,7 +1,7 @@
 # Unit 8 — Shopping
 
 > **Bài 8 — Mua sắm**
-> Self-study pack. Work through Lessons 1–7 in order. The marked exercises
+> Self-study pack. Work through Lessons 1–6 in order. The marked exercises
 > check themselves; the [Answer Key](#answer-key) at the end covers the open
 > ones — do the exercise first, then check.
 
@@ -86,7 +86,7 @@
 
 ---
 
-## Lesson 2 — A Closer Look 1
+## Lesson 2 — Words & Sounds
 
 ### Meet the words
 
@@ -339,7 +339,7 @@ or the /t/. Record yourself if you can.
 
 ---
 
-## Lesson 3 — A Closer Look 2
+## Lesson 3 — Grammar
 
 ### Grammar — Adverbs of frequency
 
@@ -587,136 +587,7 @@ Write true sentences about yourself. Use the word given, in the right place.
 
 ---
 
-## Lesson 4 — Communication
-
-### Everyday English — In a shop, bargaining, and making complaints
-
-#### In a shop
-
-| Customer says | Nghĩa |
-| --- | --- |
-| Excuse me, do you have this **in stock**? | Xin lỗi, ở đây còn hàng này không ạ? |
-| Do you have this **in a larger size**? | Cái này có cỡ lớn hơn không ạ? |
-| Can I **try** it **on**? | Tôi thử được không ạ? |
-| How much **is** it **altogether**? | Tất cả hết bao nhiêu ạ? |
-| Is there a **discount** on this? | Cái này có giảm giá không ạ? |
-| Can I pay **by card**? | Tôi trả bằng thẻ được không ạ? |
-| I'd like a **refund**, please. Here's the **receipt**. | Tôi muốn hoàn tiền. Đây là hoá đơn ạ. |
-| I'm just **browsing**, thanks. | Tôi chỉ xem thôi, cảm ơn. |
-
-| Shop assistant says | Nghĩa |
-| --- | --- |
-| Can I help you at all? | Tôi giúp gì được cho bạn không? |
-| The fitting rooms are over there. | Phòng thử đồ ở đằng kia. |
-| I'm afraid we're **out of stock**. | Rất tiếc, chúng tôi hết hàng rồi. |
-| It's on **special offer** this week. | Tuần này món này đang có ưu đãi. |
-| That **comes to** 250,000 dong. | Tổng cộng là 250.000 đồng. |
-| Would you like a bag? | Bạn có cần túi không? |
-| **Delivery takes** two to three days. | Giao hàng mất hai đến ba ngày. |
-
-#### Bargaining at a market
-
-At a market — but **not** in a shopping centre — you can bargain.
-
-| Phrase | Nghĩa |
-| --- | --- |
-| How much is this? | Cái này bao nhiêu ạ? |
-| That's a bit **too much** for me. | Với tôi thì hơi đắt quá. |
-| Could you make it a bit cheaper? | Bác bớt cho cháu một chút được không? |
-| I'll take two if you give me a **discount**. | Cháu lấy hai cái nếu bác giảm giá. |
-| That seems **fair**. I'll take it. | Vậy thì hợp lý ạ. Cháu lấy cái này. |
-| It's a **bargain**! | Thật là món hời! |
-
-> **Ghi chú:** **fair** có hai nghĩa hay gặp khi mua bán: tính từ *hợp lý, phải
-> chăng* (a **fair** price · That seems **fair**.) và danh từ *hội chợ*
-> (a school **fair** · the spring **fair**).
-
-#### Making complaints
-
-Something you bought is wrong — the wrong size, the wrong colour, out of date,
-broken. In English you say what the problem **is**, and you stay polite while
-you say it.
-
-| Making a complaint | Nghĩa |
-| --- | --- |
-| I'm calling to **make a complaint about** the backpack I ordered last week. | Tôi gọi để khiếu nại về chiếc ba lô tôi đặt tuần trước. |
-| I'd like to **make a complaint about** the delivery, please. | Tôi muốn phàn nàn về việc giao hàng ạ. |
-| **I'm not happy with** the colour. It's much darker in your advertisement. | Tôi không hài lòng về màu. Trong quảng cáo màu đậm hơn nhiều. |
-| **There's a problem with** this jar of jam — it's two weeks past its date. | Lọ mứt này có vấn đề — nó quá hạn hai tuần rồi ạ. |
-| **It doesn't** match the picture on your website. | Nó không giống ảnh trên trang web của bạn. |
-| **Could you** replace it **or** give me a refund? | Bạn đổi cái khác hoặc hoàn tiền giúp tôi được không? |
-
-| Answering a complaint | Nghĩa |
-| --- | --- |
-| Well … let me check it. | Vâng… để tôi kiểm tra ạ. |
-| **I'm sorry about that.** I'll send you another one. | Tôi rất xin lỗi. Tôi sẽ gửi bạn cái khác. |
-| **I'm sorry to hear that.** Do you have the receipt? | Rất tiếc khi nghe điều đó. Bạn có hoá đơn không ạ? |
-| We'll give you a full refund today. | Hôm nay chúng tôi sẽ hoàn lại toàn bộ tiền cho bạn. |
-
-> **Ghi chú:** Danh từ **complaint** đi với động từ **make** và giới từ
-> **about**: make a complaint **about** something. ❌ *make a complaint for
-> the shoes.* ✅ make a complaint **about** the shoes. Động từ tương ứng là
-> **complain about**: *She complained about the price.*
-
-> **Mẹo:** Lời phàn nàn trong tiếng Anh **mô tả vấn đề**, không đổ lỗi cho
-> người đang nghe. Nói *"There's a problem with this order"* thay vì
-> *"You sent me the wrong thing"*. Người bán hàng thường không phải người gây
-> ra lỗi, và câu nói lịch sự thì được giúp nhanh hơn.
-
-### 4.1 Complete the mini-dialogues
-
-::: task skill="course" type="gap-fill" ask="**A** is the customer, **B** is the shop. Choose what fits each gap."
-- **A:** Excuse me, do you have these trainers in size 39? **B:** I'm afraid we're ___ in that size. {out of stock | in stock | on special offer} = out of stock
-- **A:** It looks nice, but is it my size? Can I ___ this jacket, please? {try on | take back | give back} = try on
-- **A:** I'd like to see if these jeans fit. **B:** Of course. The ___ are over there. {fitting rooms | shopping bags | price tags} = fitting rooms
-- **A:** I'll take the shirt and the socks. How much is it ___ ? {altogether | in stock | out of stock} = altogether
-- **B:** That ___ 180,000 dong. Would you like a bag? {comes to | takes | spends} = comes to
-- **A:** This shirt has a mark on it. I'd like a ___ , please. {refund | receipt | bargain} = refund
-- **B:** No problem. Do you have the ___ ? {receipt | refund | discount} = receipt
-- **A:** Can I help you at all? **B:** No, thanks. I'm just ___ . {browsing | queuing | complaining} = browsing
-:::
-
-### 4.2 Write your own dialogue
-
-You are at a market stall. You want a hat that costs 150,000 dong, but you
-only have 100,000. Write a six-line dialogue. Use at least three phrases from
-the tables above, and one adverb of frequency.
-
-**You:** _______________________________
-**Vendor:** _______________________________
-**You:** _______________________________
-**Vendor:** _______________________________
-**You:** _______________________________
-**Vendor:** _______________________________
-
-### 4.3 Make the complaint
-
-::: task skill="course" type="gap-fill" ask="Choose the word that completes each line."
-- I'm calling to make a ___ about the shoes I ordered on Monday. {complaint | refund | problem} = complaint
-- I'd like to make a complaint ___ the delivery, please. {about | for | with} = about
-- I'm not ___ with the colour — it looked dark brown online. {happy | sorry | afraid} = happy
-- There's a ___ with this box of biscuits: it went out of date last week. {problem | complaint | refund} = problem
-- **A:** It doesn't match the picture. **B:** I'm ___ about that. I'll send you another one. {sorry | happy | afraid} = sorry
-- **A:** The tin was already open. **B:** I'm sorry to ___ that. Do you have the receipt? {hear | buy | sell} = hear
-- Could you ___ it or give me a refund? {replace | complain | browse} = replace
-:::
-
-### 4.4 Your turn to complain
-
-Write **two** lines for each situation: what you say, and what the shop says
-back. Say what the problem is, and stay polite — describe the goods, not the
-person you are speaking to.
-
-1. You ordered a T-shirt online. It arrived two sizes smaller than the one in
-   the advertisement.
-   → **You:** _______________________________
-   → **Shop:** _______________________________
-2. The milk you bought this morning is five days past its date.
-   → **You:** _______________________________
-   → **Shop:** _______________________________
-3. An assistant in the shop was not helpful when you asked for a larger size.
-   → **You:** _______________________________
-   → **Shop:** _______________________________
+## Lesson 4 — Reading & Speaking
 
 ### My favourite shopping place
 
@@ -738,33 +609,9 @@ Three people, three very different places — and why each of them likes it.
 > rice boils over. It's not cheap and the range of products is small, but when
 > my mother has forgotten the fish sauce again, it saves me half an hour."
 
-### 4.5 Who said it?
-
-::: task skill="course" type="choice" opts="Trang|Bảo|Khanh" ask="Which of the three people does each sentence describe?"
-- This person shops where the goods have no price tag. = Trang ~ that is why bargaining is possible
-- This person's reason is that the place saves time. = Khanh ~ ninety seconds from the door
-- This person's reason is the price of everything in the shop. = Bảo
-- This person's reason is that the food is fresh. = Trang
-- This person admits the range of products is small. = Khanh
-- This person shops there once a week. = Trang ~ *"every Sunday morning"*
-- This person repeats what someone else says is bad about the place. = Bảo ~ *"my sister says the bags fall apart"*
-:::
-
-### 4.6 And your favourite?
-
-Answer in full sentences.
-
-1. What is your own favourite shopping place? Name it, and say what kind of
-   place it is.
-   → _______________________________
-2. Give **one** clear reason why you like it — not three.
-   → _______________________________
-3. Name one thing you do **not** like about it.
-   → _______________________________
-
----
-
-## Lesson 5 — Skills 1: Reading & Speaking
+**Talk about it.** What is your own favourite shopping place, and what kind of
+place is it? Give **one** clear reason why you like it — not three — and name
+one thing you do **not** like about it.
 
 ### Reading — *The morning the market came back*
 
@@ -811,7 +658,7 @@ Answer in full sentences.
 > all.
 :::
 
-### 5.1 True, False, or Not Given
+### 4.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way."
 - The writer took Bống to the market with him. = T
@@ -822,7 +669,7 @@ Answer in full sentences.
 - The man at the corner shop accepted the writer's note. = F ~ he pushed it back across the counter
 :::
 
-### 5.2 Answer the questions
+### 4.2 Answer the questions
 
 ::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
 - Besides two hundred thousand dong, what did Bà Sáu send the writer to the market with? {a list | a watch | a wooden box} = a list
@@ -832,7 +679,7 @@ Answer in full sentences.
 - What kind of money was the note the shopkeeper pushed back? {old money | new money | change} = old money
 :::
 
-### 5.3 Vocabulary in context
+### 4.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these."
 - an open space where cars are left {car park | fish row | lane} = car park
@@ -883,7 +730,7 @@ Pause between your ideas, not in the middle of a sentence.
 :::
 
 
-### 5.4 Say it again, faster
+### 4.4 Say it again, faster
 
 ::: fluency mode="talk" secs="240|180|120" ask="Talk about how and where you shop."
 - Where your family shops
@@ -892,9 +739,95 @@ Pause between your ideas, not in the middle of a sentence.
 - One thing that has gone wrong
 :::
 
+### Everyday English — Making complaints
+
+*A few fixed phrases for when something you bought is wrong. They fit the
+speaking above: its last prompt asked for one thing that has gone wrong — this
+is how you say it to the shop. After them come the phrases for asking in a shop
+and bargaining at a market.*
+
+Something you bought is wrong — the wrong size, the wrong colour, out of date,
+broken. In English you say what the problem **is**, and you stay polite while
+you say it.
+
+| Making a complaint | Nghĩa |
+| --- | --- |
+| I'm calling to **make a complaint about** the backpack I ordered last week. | Tôi gọi để khiếu nại về chiếc ba lô tôi đặt tuần trước. |
+| I'd like to **make a complaint about** the delivery, please. | Tôi muốn phàn nàn về việc giao hàng ạ. |
+| **I'm not happy with** the colour. It's much darker in your advertisement. | Tôi không hài lòng về màu. Trong quảng cáo màu đậm hơn nhiều. |
+| **There's a problem with** this jar of jam — it's two weeks past its date. | Lọ mứt này có vấn đề — nó quá hạn hai tuần rồi ạ. |
+| **It doesn't** match the picture on your website. | Nó không giống ảnh trên trang web của bạn. |
+| **Could you** replace it **or** give me a refund? | Bạn đổi cái khác hoặc hoàn tiền giúp tôi được không? |
+
+| Answering a complaint | Nghĩa |
+| --- | --- |
+| Well … let me check it. | Vâng… để tôi kiểm tra ạ. |
+| **I'm sorry about that.** I'll send you another one. | Tôi rất xin lỗi. Tôi sẽ gửi bạn cái khác. |
+| **I'm sorry to hear that.** Do you have the receipt? | Rất tiếc khi nghe điều đó. Bạn có hoá đơn không ạ? |
+| We'll give you a full refund today. | Hôm nay chúng tôi sẽ hoàn lại toàn bộ tiền cho bạn. |
+
+> **Ghi chú:** Danh từ **complaint** đi với động từ **make** và giới từ
+> **about**: make a complaint **about** something. ❌ *make a complaint for
+> the shoes.* ✅ make a complaint **about** the shoes. Động từ tương ứng là
+> **complain about**: *She complained about the price.*
+
+> **Mẹo:** Lời phàn nàn trong tiếng Anh **mô tả vấn đề**, không đổ lỗi cho
+> người đang nghe. Nói *"There's a problem with this order"* thay vì
+> *"You sent me the wrong thing"*. Người bán hàng thường không phải người gây
+> ra lỗi, và câu nói lịch sự thì được giúp nhanh hơn.
+
+#### In a shop
+
+| Customer says | Nghĩa |
+| --- | --- |
+| Excuse me, do you have this **in stock**? | Xin lỗi, ở đây còn hàng này không ạ? |
+| Do you have this **in a larger size**? | Cái này có cỡ lớn hơn không ạ? |
+| Can I **try** it **on**? | Tôi thử được không ạ? |
+| How much **is** it **altogether**? | Tất cả hết bao nhiêu ạ? |
+| Is there a **discount** on this? | Cái này có giảm giá không ạ? |
+| Can I pay **by card**? | Tôi trả bằng thẻ được không ạ? |
+| I'd like a **refund**, please. Here's the **receipt**. | Tôi muốn hoàn tiền. Đây là hoá đơn ạ. |
+| I'm just **browsing**, thanks. | Tôi chỉ xem thôi, cảm ơn. |
+
+| Shop assistant says | Nghĩa |
+| --- | --- |
+| Can I help you at all? | Tôi giúp gì được cho bạn không? |
+| The fitting rooms are over there. | Phòng thử đồ ở đằng kia. |
+| I'm afraid we're **out of stock**. | Rất tiếc, chúng tôi hết hàng rồi. |
+| It's on **special offer** this week. | Tuần này món này đang có ưu đãi. |
+| That **comes to** 250,000 dong. | Tổng cộng là 250.000 đồng. |
+| Would you like a bag? | Bạn có cần túi không? |
+| **Delivery takes** two to three days. | Giao hàng mất hai đến ba ngày. |
+
+#### Bargaining at a market
+
+At a market — but **not** in a shopping centre — you can bargain.
+
+| Phrase | Nghĩa |
+| --- | --- |
+| How much is this? | Cái này bao nhiêu ạ? |
+| That's a bit **too much** for me. | Với tôi thì hơi đắt quá. |
+| Could you make it a bit cheaper? | Bác bớt cho cháu một chút được không? |
+| I'll take two if you give me a **discount**. | Cháu lấy hai cái nếu bác giảm giá. |
+| That seems **fair**. I'll take it. | Vậy thì hợp lý ạ. Cháu lấy cái này. |
+| It's a **bargain**! | Thật là món hời! |
+
+> **Ghi chú:** **fair** có hai nghĩa hay gặp khi mua bán: tính từ *hợp lý, phải
+> chăng* (a **fair** price · That seems **fair**.) và danh từ *hội chợ*
+> (a school **fair** · the spring **fair**).
+
+**Say it with someone.** One of you is the customer, the other the shop. Make a
+complaint about each of these, then swap: the cans of fish you bought at the
+shop went out of date five days ago; the T-shirt you ordered online arrived two
+sizes smaller than the one in the advertisement; an assistant at the shop was
+not very helpful when you asked for a larger size. Say what the problem is and
+stay polite, and use **I'd like to make a complaint
+about** and **I'm not happy with** at least once each. The shop answers with
+**I'm sorry about that** or **I'm sorry to hear that**.
+
 ---
 
-## Lesson 6 — Skills 2: Listening & Writing
+## Lesson 5 — Listening & Writing
 
 ### Listening — The stranger by the car park
 
@@ -939,7 +872,7 @@ either.
 midnight. Go and count your marks. There are four left.
 :::
 
-### 6.1 Listen and choose
+### 5.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
 - The stranger says the boy has been doing it wrong for {eight tides | eleven days | thirty years} = eight tides
@@ -950,7 +883,7 @@ midnight. Go and count your marks. There are four left.
 - He says the sea gives back one thing to {one person | a town | a whole market} = one person
 :::
 
-### 6.2 Listen and complete
+### 5.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion"
 - He says he has kept them for ___ . {a long time | eleven days | eight tides} = a long time
@@ -1023,9 +956,9 @@ The `-s` is easy to drop when you speak, so you have to listen for it.
 
 ---
 
-## Lesson 7 — Looking Back & Project
+## Lesson 6 — Looking Back & Project
 
-### 7.1 Vocabulary check
+### 6.1 Vocabulary check
 
 ::: task skill="course" type="gap-fill" ask="Choose the word from this unit that completes each sentence."
 - Keep the ___ so you can ask for a refund later. {receipt | discount | delivery} = receipt
@@ -1037,7 +970,7 @@ The `-s` is easy to drop when you speak, so you have to listen for it.
 - I like to ___ for half an hour before I buy anything. {browse | deliver | purchase} = browse
 :::
 
-### 7.2 Pronunciation check
+### 6.2 Pronunciation check
 
 ::: task skill="course" type="choice" opts="/sp/|/st/" ask="Which cluster is in the word?"
 - **sp**end = /sp/
@@ -1050,7 +983,7 @@ The `-s` is easy to drop when you speak, so you have to listen for it.
 - mi**st**ake = /st/
 :::
 
-### 7.3 Grammar check
+### 6.3 Grammar check
 
 **A.** Choose the right words.
 
@@ -1074,7 +1007,7 @@ The `-s` is easy to drop when you speak, so you have to listen for it.
 - I think it ___ tomorrow. {will rain | rains | rained} = will rain
 :::
 
-### 7.4 Error hunt
+### 6.4 Error hunt
 
 This paragraph has **seven** mistakes. Read it, then put them right one line
 at a time below.
@@ -1144,14 +1077,14 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for shopping | Lesson 2, Meet the words · Lesson 7, exercise 7.1 |
-| hear /sp/ and /st/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
-| put *always*, *usually*, *never* in the right place, and say what a timetable fixes (the market **opens** at five tomorrow) | Lesson 3, practice 3.1 · Lesson 7, exercises 7.3 and 7.4 |
-| make a complaint | Lesson 4, exercise 4.3 |
-| read about a market, its sellers and its prices | Lesson 5, exercises 5.1 and 5.2 |
-| talk about a place where I shop | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| follow a listening in which two people argue and pick out the facts and numbers in it | Lesson 6, exercises 6.1 and 6.2 |
-| write a paragraph about the good and the bad side of one kind of shopping | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| use the words for shopping | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
+| hear /sp/ and /st/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
+| put *always*, *usually*, *never* in the right place, and say what a timetable fixes (the market **opens** at five tomorrow) | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
+| make a complaint | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| read about a market, its sellers and its prices | Lesson 4, exercises 4.1 and 4.2 |
+| talk about a place where I shop | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| follow a listening in which two people argue and pick out the facts and numbers in it | Lesson 5, exercises 5.1 and 5.2 |
+| write a paragraph about the good and the bad side of one kind of shopping | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1176,20 +1109,3 @@ puff on the /p/ or /t/.
 **3.2** Answers will vary. Check: *always/never* directly after *be* or
 directly before a main verb, never at the front of the sentence; *sometimes* at
 the front in item 3; the frequency expression at the **end** in item 5.
-
-### Lesson 4
-
-**4.2** Answers will vary. Check: six lines, at least three phrases taken from
-the tables, one adverb of frequency in the correct position, and a clear
-attempt to bargain the price down from 150,000 to 100,000.
-
-**4.4** Answers will vary. Check: each complaint names the problem (*smaller
-than the one in the advertisement*, *five days past its date*, *nobody helped
-me find a larger size*); *complaint* is followed by **about**, never *for*;
-nothing blames the person you are speaking to; and each shop line offers
-something — a check, a replacement, a refund, or an apology.
-
-**4.6** Answers will vary. Check: item 1 names the place *and* says what kind
-of place it is (market, supermarket, convenience store, online shop…); item 2
-gives **one** reason with a detail, not a list of three; item 3 is a real
-drawback, not a second reason to like it.

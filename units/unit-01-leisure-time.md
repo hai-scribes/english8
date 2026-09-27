@@ -1,7 +1,7 @@
 # Unit 1 — Leisure Time
 
 > **Bài 1 — Thời gian rảnh rỗi**
-> Self-study pack. Work through Lessons 1–7 in order. Answers to every
+> Self-study pack. Work through Lessons 1–6 in order. Answers to every
 > exercise are in the [Answer Key](#answer-key) at the end — do the exercise
 > first, then check.
 
@@ -88,7 +88,7 @@ Below them the water climbs one step of the wall, and slides back down.
 
 ---
 
-## Lesson 2 — A Closer Look 1
+## Lesson 2 — Words & Sounds
 
 ### Meet the words
 
@@ -315,7 +315,7 @@ Read aloud three times, faster each time. Record yourself if you can.
 
 ---
 
-## Lesson 3 — A Closer Look 2
+## Lesson 3 — Grammar
 
 ### Grammar — Verbs of liking and disliking
 
@@ -459,99 +459,7 @@ Write true sentences about yourself. Use a different verb each time.
 
 ---
 
-## Lesson 4 — Communication
-
-### Everyday English — Inviting, suggesting, and responding
-
-#### Inviting someone
-
-An **invitation** names a plan and asks the other person to join it. The two
-most common openings both take a different form after them:
-
-| Inviting | Nghĩa |
-| --- | --- |
-| **Would you like to** **come** to the cooking club with me on Sunday? | Bạn có muốn... không? |
-| **Do you fancy** **going** for a walk? | Bạn có thích... không? |
-| **Would you like to** **try** my home-made pizza? | Bạn có muốn thử... không? |
-
-> ⚠️ Would you like **to come**? but Do you fancy **coming**? — the same
-> rule as Lesson 3.
-
-#### Accepting an invitation
-
-| Accepting | Nghĩa |
-| --- | --- |
-| **I'd love to. Thanks.** | Mình rất muốn. Cảm ơn nhé. |
-| **That's great. Thanks.** | Tuyệt quá. Cảm ơn bạn. |
-| **Yes, I'd love to.** | Có chứ, mình rất muốn. |
-| **Sounds good — count me in.** | Nghe hay đấy — cho mình tham gia với. |
-
-> **Ghi chú:** Sau **I'd love to** thường không nhắc lại động từ. Người ta nói
-> *"I'd love to."* chứ không nói *"I'd love to come to the cooking club."*
-
-#### Suggesting something
-
-A **suggestion** proposes something for *both* of you, so it usually says *we*:
-
-| Making a suggestion | Nghĩa |
-| --- | --- |
-| How about **going** to the cinema? | Đi xem phim thì sao? |
-| Why don't we **try** that new café? | Sao chúng ta không thử...? |
-| Shall we **meet** at ten? | Chúng ta gặp lúc 10 giờ nhé? |
-
-> ⚠️ How about **going**? but Why don't we **go**? and Shall we **go**?
-
-| Accepting | Refusing politely |
-| --- | --- |
-| That sounds great. | I'd rather not, if that's OK. |
-| Good idea! | Sorry, I can't make it. |
-| I'd love to. | Maybe another time? |
-| Sure, why not? | I'm not really into that. |
-
-### 4.1 Complete the mini-dialogues
-
-::: task skill="course" type="gap-fill" ask="**A** suggests, **B** answers. Choose what fits."
-- **A:** How about ___ (go) swimming? {going | to go | go} = going
-- **B:** ___ — I love the pool in summer. {That sounds great | Sorry, I can't | I'd rather not} = That sounds great
-- **A:** Why don't we ___ (watch) a movie? {watch | watching | to watch} = watch
-- **B:** Sorry, I ___ make it. I'm busy tonight. {can't | mustn't | needn't} = can't
-- **A:** Do you fancy ___ (play) football? {playing | to play | play} = playing
-- **B:** I'd ___ not — I hurt my ankle yesterday. {rather | like | love} = rather
-:::
-
-### 4.2 Write your own
-
-Someone suggests three activities. Write a reply to each — accept two, refuse
-one politely, and give a reason.
-
-1. "How about going to the bookshop on Saturday?"
-   → _______________________________
-2. "Shall we cook lunch together?"
-   → _______________________________
-3. "Do you fancy watching a three-hour film?"
-   → _______________________________
-
-### 4.3 Invite, then accept
-
-::: task skill="course" type="gap-fill" ask="Complete each invitation or reply."
-- Would you like ___ (come) to the board game club with me? {to come | coming | come} = to come
-- Do you fancy ___ (make) paper flowers this afternoon? {making | to make | make} = making
-- **A:** Would you like to try my home-made pizza? **B:** I'd ___ to. Thanks. {love | enjoy | mind} = love
-- **A:** Do you fancy going for a swim? **B:** That's ___ . Thanks. {great | a pity | too bad} = great
-- Would you like ___ (play) badminton with us on Sunday? {to play | playing | play} = to play
-:::
-
-### 4.4 Write the invitation
-
-Write **one** invitation for each situation, then write the acceptance you would
-like to get back.
-
-1. You want your friend to come to the new bookshop café.
-   → Invitation: _______________________________
-   → Reply: _______________________________
-2. You want your cousin to take up jigsaw puzzles with you.
-   → Invitation: _______________________________
-   → Reply: _______________________________
+## Lesson 4 — Reading & Speaking
 
 ### Teens' leisure activities around the world
 
@@ -573,43 +481,10 @@ and each of them can say **why**.
 > sport to start — you only need two rackets — and it takes the stress out of a
 > long school day."
 
-### 4.5 Complete the table
+**Talk about it.** Which of the three would you most like to try, and why? Which
+one would you never take up — and how would you say so politely? Use an
+expression from Lesson 2 (*be keen on, be fond of, be crazy about, be into*).
 
-::: task skill="course" type="gap-fill" ask="Read the three profiles again and complete each row."
-- Sakura's activity {origami | paper flowers | drawing} = origami
-- Sakura does it with {on her own | her best friend | her parents} = on her own
-- The benefit Sakura names {it makes her calm | her balance improves | she makes new friends} = it makes her calm
-- Eric's activity {snowboarding | skiing | hiking} = snowboarding
-- Eric does it with {his parents | his best friend | on his own} = his parents
-- The benefit Eric names {better balance | stronger legs | less stress} = better balance
-- Lan's activity {badminton | tennis | football} = badminton
-- Lan does it with {her best friend | her parents | on her own} = her best friend
-- The benefit Lan names {it takes the stress out | it makes her calm | better balance} = it takes the stress out
-:::
-
-### 4.6 Which teenager?
-
-::: task skill="course" type="choice" opts="Sakura|Eric|Lan" ask="Which of the three does each sentence describe?"
-- This person's activity costs almost nothing. = Sakura ~ *"It costs almost nothing"* — Lan needs two rackets, and Eric needs a ski resort
-- This person does the activity alone. = Sakura ~ *"I do it on my own"*
-- This person needs the mountains near their town to do the activity. = Eric ~ his town is near the mountains
-- This person does the activity nearly every day. = Lan ~ *"almost every afternoon"*
-- This person says a skill has got better since they started. = Eric ~ his balance has got much better
-:::
-
-### 4.7 And you?
-
-Answer in full sentences, using an expression from Lesson 2 (*be keen on, be
-fond of, be crazy about, be into*).
-
-1. Which of the three activities would you most like to try, and why?
-   → _______________________________
-2. Which one would you never take up? Say why, politely.
-   → _______________________________
-
----
-
-## Lesson 5 — Skills 1: Reading & Speaking
 
 ### Reading — *The best afternoon of the year*
 
@@ -668,7 +543,7 @@ fond of, be crazy about, be into*).
 > harbour wall, at about my shoulder. She would not say what it was for.
 :::
 
-### 5.1 True, False, or Not Given
+### 4.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**True**: the text says so. **False**: the text says the opposite. **Not Given**: the text does not say."
 - The fish was still in the bucket on Saturday morning. = F ~ on Saturday morning the bucket was empty
@@ -678,7 +553,7 @@ fond of, be crazy about, be into*).
 - Thảo asked questions about Bống. = F ~ she did not ask one question about her
 :::
 
-### 5.2 Answer the questions
+### 4.2 Answer the questions
 
 ::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
 - How long was the fish in the bucket? {three days | two days | a week} = three days
@@ -688,7 +563,7 @@ fond of, be crazy about, be into*).
 - What came back? {a board game | the fish | a piece of chalk} = a board game
 :::
 
-### 5.3 Vocabulary in context
+### 4.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means this. The clock is still running."
 - cut by hand, not by machine {hand-cut | wooden | short} = hand-cut
@@ -739,7 +614,7 @@ a sentence. One clear subject is easy for your listener to follow.
 
 Repeat Step 2 until you can answer all five clearly.
 
-### 5.4 Say it again, faster
+### 4.4 Say it again, faster
 
 ::: fluency mode="talk" secs="240|180|120" ask="Talk about **your own** free time — what you do, when, and what you can't stand. Use the words from this unit."
 - What you do on a weekday evening
@@ -748,10 +623,66 @@ Repeat Step 2 until you can answer all five clearly.
 - One thing you can't stand
 :::
 
+### Everyday English — Inviting, suggesting, and responding
+
+*A few fixed phrases for asking someone to join you. They fit the speaking
+above: next time you talk about your free time, invite someone to try it.*
+
+#### Inviting someone
+
+An **invitation** names a plan and asks the other person to join it. The two
+most common openings both take a different form after them:
+
+| Inviting | Nghĩa |
+| --- | --- |
+| **Would you like to** **come** to the cooking club with me on Sunday? | Bạn có muốn... không? |
+| **Do you fancy** **going** for a walk? | Bạn có thích... không? |
+| **Would you like to** **try** my home-made pizza? | Bạn có muốn thử... không? |
+
+> ⚠️ Would you like **to come**? but Do you fancy **coming**? — the same
+> rule as Lesson 3.
+
+#### Accepting an invitation
+
+| Accepting | Nghĩa |
+| --- | --- |
+| **I'd love to. Thanks.** | Mình rất muốn. Cảm ơn nhé. |
+| **That's great. Thanks.** | Tuyệt quá. Cảm ơn bạn. |
+| **Yes, I'd love to.** | Có chứ, mình rất muốn. |
+| **Sounds good — count me in.** | Nghe hay đấy — cho mình tham gia với. |
+
+> **Ghi chú:** Sau **I'd love to** thường không nhắc lại động từ. Người ta nói
+> *"I'd love to."* chứ không nói *"I'd love to come to the cooking club."*
+
+#### Suggesting something
+
+A **suggestion** proposes something for *both* of you, so it usually says *we*:
+
+| Making a suggestion | Nghĩa |
+| --- | --- |
+| How about **going** to the cinema? | Đi xem phim thì sao? |
+| Why don't we **try** that new café? | Sao chúng ta không thử...? |
+| Shall we **meet** at ten? | Chúng ta gặp lúc 10 giờ nhé? |
+
+> ⚠️ How about **going**? but Why don't we **go**? and Shall we **go**?
+
+| Accepting | Refusing politely |
+| --- | --- |
+| That sounds great. | I'd rather not, if that's OK. |
+| Good idea! | Sorry, I can't make it. |
+| I'd love to. | Maybe another time? |
+| Sure, why not? | I'm not really into that. |
+
+**Say it with someone.** Invite them to three things — to play badminton, to
+make paper flowers with you, to try your home-made pizza. They accept two and
+refuse one politely. Then swap. Use **Would you like to come**, **Do you fancy
+going** and **How about making** at least once each.
+
+
 
 ---
 
-## Lesson 6 — Skills 2: Listening & Writing
+## Lesson 5 — Listening & Writing
 
 ### Listening — What Chú Bảy used to do
 
@@ -785,7 +716,7 @@ where he got it, and I still have not asked him.
 :::
 
 ::: bridge name="Mark how sure you are" trains="Listening" cefr="A2→B1" marker="[T2]" src="03 §6.6"
-Next to every answer in **6.1** and **6.2**, write **● sure** or **○ not sure**
+Next to every answer in **5.1** and **5.2**, write **● sure** or **○ not sure**
 *before* you look at the key. Then fill this in:
 
 | | Answers | Of those, right |
@@ -801,7 +732,7 @@ they are, you can trust your feeling that you heard something correctly.
 > không.
 :::
 
-### 6.1 Listen and choose
+### 5.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
 - When it rained, the boys {played games they had made | went home | went fishing} = played games they had made
@@ -811,7 +742,7 @@ they are, you can trust your feeling that you heard something correctly.
 - When he saw the game again he {said nothing and played | took it back | told the boy's grandmother} = said nothing and played
 :::
 
-### 6.2 Listen and complete
+### 5.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion"
 - He cut the board out of ___ . {a plank | bottle tops | a tin box} = a plank
@@ -883,9 +814,9 @@ Your own life is the best material you have, as long as it answers the question.
 
 ---
 
-## Lesson 7 — Looking Back & Project
+## Lesson 6 — Looking Back & Project
 
-### 7.1 Vocabulary check
+### 6.1 Vocabulary check
 
 ::: task skill="course" type="gap-fill" ask="Complete with a word or phrase from this unit."
 - In my free time I like doing ___ . {jigsaw puzzles | football | badminton} = jigsaw puzzles
@@ -895,7 +826,7 @@ Your own life is the best material you have, as long as it answers the question.
 - We bought these comics at the new ___ in town. {bookshop | swimming pool | sports centre} = bookshop
 :::
 
-### 7.2 Pronunciation check
+### 6.2 Pronunciation check
 
 ::: task skill="course" type="choice" opts="/ʊ/|/uː/" ask="Which vowel is in the bold part?"
 - f**oo**tball = /ʊ/
@@ -906,7 +837,7 @@ Your own life is the best material you have, as long as it answers the question.
 - m**o**vie = /uː/
 :::
 
-### 7.3 Grammar check
+### 6.3 Grammar check
 
 ::: task skill="course" type="gap-fill" ask="Choose the right form of the verb."
 - I enjoy ___ (spend) time with my grandparents. {spending | to spend | spend} = spending
@@ -917,7 +848,7 @@ Your own life is the best material you have, as long as it answers the question.
 - My father hates ___ (drive) in the rain. {only driving | only to drive | driving or to drive} = driving or to drive ~ *hate* takes both
 :::
 
-### 7.4 From memory
+### 6.4 From memory
 
 ::: task skill="course" type="gap-fill" opts="swimming|to swim|swimming or to swim" ask="Don't look back. Which can go in the gap?"
 - I enjoy ___ . = swimming
@@ -928,7 +859,7 @@ Your own life is the best material you have, as long as it answers the question.
 - I avoid ___ . = swimming
 :::
 
-### 7.5 Error hunt
+### 6.5 Error hunt
 
 This paragraph has **six** mistakes. Below, it comes one line at a time.
 
@@ -982,14 +913,14 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for leisure activities, and the expressions for saying what I like and dislike | Lesson 2, Meet the words · Lesson 7, exercise 7.1 |
-| hear /ʊ/ and /uː/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
-| use verbs of liking and disliking with the right verb after them (enjoy **reading**, would like **to read**) | Lesson 3, practice 3.1 · Lesson 7, exercises 7.3 and 7.4 |
-| invite someone, and accept an invitation | Lesson 4, exercise 4.3 |
-| read about an afternoon a family and friends spent playing together | Lesson 5, exercises 5.1 and 5.2 |
-| talk about my own leisure time with my family | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to someone describing how they spent their free time | Lesson 6, exercises 6.1 and 6.2 |
-| write an email about my leisure time | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| use the words for leisure activities, and the expressions for saying what I like and dislike | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
+| hear /ʊ/ and /uː/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
+| use verbs of liking and disliking with the right verb after them (enjoy **reading**, would like **to read**) | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
+| invite someone, and accept an invitation | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| read about an afternoon a family and friends spent playing together | Lesson 4, exercises 4.1 and 4.2 |
+| talk about my own leisure time with my family | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| listen to someone describing how they spent their free time | Lesson 5, exercises 5.1 and 5.2 |
+| write an email about my leisure time | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1008,17 +939,3 @@ page can settle it, the row says so, and that one is yours to judge.
 **3.2** Answers will vary. Check the verb after each one: enjoy **reading**,
 can't stand **waiting**, would love **to go**, don't mind **helping**.
 
-### Lesson 4
-
-**4.2** Answers will vary. Check that two replies accept and one refuses
-politely with a reason.
-
-**4.4** Answers will vary. Check the form: **Would you like to** + verb
-(*Would you like to come to the bookshop café with me?*) or **Do you fancy** +
-an *-ing* word (*Do you fancy taking up jigsaw puzzles with me?*). The reply should be a
-short acceptance — *I'd love to. Thanks.* / *That's great. Thanks.* — and should
-**not** repeat the whole invitation.
-
-**4.7** Answers will vary. Check that each sentence uses one of the
-expressions from Lesson 2 with an *-ing* word after it (keen on **playing**), and that the refusal in 2 is
-polite: *I'm not really into snowboarding, I'm afraid* rather than *I hate it.*

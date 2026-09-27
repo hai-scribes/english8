@@ -1,7 +1,7 @@
 # Unit 9 — Natural Disasters
 
 > **Bài 9 — Thiên tai**
-> Self-study pack. Work through Lessons 1–7 in order. Marked exercises check
+> Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
 > themselves; the [Answer Key](#answer-key) covers the open ones.
 
 ## What this unit teaches
@@ -84,7 +84,7 @@
 
 ---
 
-## Lesson 2 — A Closer Look 1
+## Lesson 2 — Words & Sounds
 
 ### Meet the words
 
@@ -440,7 +440,7 @@ each time. Record yourself if you can.
 
 ---
 
-## Lesson 3 — A Closer Look 2
+## Lesson 3 — Grammar
 
 ### Grammar — The past continuous
 
@@ -630,9 +630,181 @@ Write true sentences. Use *was / were* + *-ing* at least once in each.
 
 ---
 
-## Lesson 4 — Communication
+## Lesson 4 — Reading & Speaking
 
-### Everyday English — Giving and responding to bad news, warning, worrying and reassuring
+### Knowledge of natural disasters
+
+Three people describe something they saw. None of them names the disaster.
+
+> **Nam.** "I was cycling home on the road under the hill. The rain had not
+> stopped for two days. Then the man in front of me put his foot down and
+> shouted. A wall of wet earth and big rocks was coming down the mountain and
+> spreading across the road in front of us. We turned round and rode back."
+>
+> **Ann.** "I was picking beans in the garden with my mother. The sky went a
+> strange green colour. Then I saw a huge grey funnel of wind moving across the
+> field towards our fence, very quickly. My mother pulled me down the cellar
+> steps and shut the door."
+>
+> **Tom.** "I was drawing at the table when everything in the room began to
+> shake. The glasses on the shelf were rattling and one of them fell. My little
+> sister and I hid under the table until it stopped. It lasted about twenty
+> seconds."
+
+Nam saw a **landslide** — earth and rocks coming down a hill onto the road
+below. Ann saw a **tornado** — a funnel of wind crossing a field. Tom felt an
+**earthquake** — the ground and everything on it shaking for a few seconds.
+
+Rocks and earth slide down a hill when the ground is too wet to
+hold together, so heavy rain is the commonest cause — and cutting down
+trees makes it far more likely, because roots are what hold the soil. The
+strength of an earthquake is given on the Richter scale, not in degrees; a
+big one can shake a hillside loose or push a wall of sea water towards the
+coast, so one disaster often causes another. Tornadoes are different again:
+they grow out of thunderstorms, and although they happen on every continent
+except Antarctica, far more of them are recorded in the USA than anywhere
+else.
+
+**Talk about it.** Think of a natural disaster that has happened where you live,
+or one you have seen on the news. Describe what a person there saw and heard —
+but do **not** say its name — and let someone else guess it.
+
+
+### Reading — *The night the town came back*
+
+*Tí writes it down two days later, sitting in the school shelter.*
+
+::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
+:::
+
+::: passage
+> The storm came in at nine, and by ten the siren at the school was sounding.
+> Bà Sáu sent me down to the slipway to pull our boat higher up the sand. Bống
+> came with me, because she was not staying in an empty house in a flood, and
+> because she had something to prove. I know exactly how that sounds.
+>
+> I was dragging the rope when the water lifted the whole boat and put it down
+> on top of me. My knee hit the stone. And behind me, with nobody asking her to,
+> Bống said the two words.
+>
+> Then she said, "Oh no." She said it very quietly, which is worse.
+>
+> What came back was the village under the water — the one the sea took when
+> Bà Sáu was a girl. It came back whole: a street of low houses, a school with
+> a green gate, a post office, a well with a bucket still on it. It stood out in
+> the bay, where thirty years of water stood before it.
+>
+> Nobody thinks about the next part, and I had not thought about it either.
+> The tide was already high. The village took its place, and the water it pushed
+> out had to go somewhere. It came over the harbour wall and into Bãi Sẻ.
+>
+> It reached our step in about four minutes. It was carrying fence posts,
+> chairs and a great deal of mud, and mud ruins whatever it touches. While the
+> men were shouting for boats, the women were pulling children onto the roofs.
+>
+> Bống got out in front of it and said, "Go well." She said it twice more, and
+> then again with her voice going thin, and nothing moved at all. She told me
+> all week that she could hold it, and that the stranger was wrong about her.
+> She was still saying it while the water came up the lane.
+>
+> I was still holding the rope. The ninth mark went under while I watched, and I
+> could not make myself move.
+>
+> By midnight it had stopped rising, and it had stopped being frightening. Our
+> lane was a canal. There were boats where the motorbikes go, and there was
+> somebody on every roof in the street, and a man two houses down was passing
+> lanterns across on a pole. Bà Sáu made tea up there. Nobody had anywhere to
+> be, and nobody was missing.
+:::
+
+### 4.1 True, False, or Not Given
+
+::: task skill="reading" type="true-false-not-given" ask="**True**: the text says so. **False**: the text says the opposite. **Not Given**: the text does not say."
+- The siren was sounding before the water came over the harbour wall. = T
+- Tí asked Bống to call that night. = F ~ she said the two words with nobody asking her to
+- The sea took that village before Bà Sáu was born. = F ~ it went when she was a girl, so she was already alive
+- More people lived in the drowned village than live in Bãi Sẻ now. = NG ~ the text never compares the two
+- The water reached the house in about four minutes. = T
+:::
+
+### 4.2 Answer the questions
+
+::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
+- What was sounding at the school by ten o'clock? {the siren | the storm | the lanterns} = the siren
+- What did the writer hit on the stone? {his knee | the boat | the rope} = his knee
+- What colour was the gate of the school that came back? {green | grey | blue} = green
+- For how long was the village under the water? {thirty years | four minutes | two days} = thirty years
+- How long did the water take to reach the step? {four minutes | two days | thirty years} = four minutes
+:::
+
+### 4.3 Vocabulary in context
+
+::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these."
+- spoils something completely {ruins | lifts | pulls} = ruins
+- soft wet earth left behind by water {mud | sand | stone} = mud
+- a sloping ramp for pulling boats out of the water {slipway | harbour wall | canal} = slipway
+- a loud machine that gives a warning sound {siren | lantern | pole} = siren
+:::
+
+### Speaking — Delivering a news report
+
+> **Working alone:** you have no partner, so do this in three steps.
+
+**Step 1 — Prepare.** You are a reporter. A storm hit a small coastal town last
+night. Fill in your notes — short phrases, not full sentences.
+
+| Reporter's notes | Your notes |
+| --- | --- |
+| Where and when did it happen? | |
+| What was the weather doing? (*it was raining…*) | |
+| What were people doing when it hit? (*we were eating when…*) | |
+| What damage did it cause? | |
+| Who helped, and how? | |
+| What should people do now? | |
+
+**Step 2 — Speak.** Deliver the report **aloud**, standing up, for about
+**one minute**, from your notes and not from a written-out script.
+
+A news report has four stages, in this order. Answer each question in your own
+words.
+
+| Stage | The question it answers | Roughly how long |
+| --- | --- | --- |
+| **Open** | Where are you, and what happened? | 10 seconds |
+| **Then** | What was happening when it hit? | 20 seconds |
+| **Now** | What does the town look like this morning, and who is helping? | 20 seconds |
+| **Close** | What are people being asked to do? | 10 seconds |
+
+> **Tiếng Việt:** Bản tin đi theo **bốn chặng** trên. Bảng này chỉ cho bạn *thứ
+> tự* và *câu hỏi cần trả lời* — câu chữ phải do bạn tự nghĩ ra.
+
+**Step 3 — Record and check.** Record yourself on your phone. Listen back and
+check three things:
+
+- Did you use **at least three** verbs like *was raining*, with the right *was*
+  or *were*?
+- Did you stress the right syllable in *disˈaster*, *deˈstruction*, *eˈvacuate*
+  and *ˈhurricane*?
+- Did you pause **at each new stage** of the report, and not inside a sentence?
+
+Repeat Step 2 until the report runs clearly from start to finish.
+
+### 4.4 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about a storm, a flood or a drought you know about."
+- What happened, and when
+- What people did before it
+- What the damage was
+- What helped afterwards
+:::
+
+### Everyday English — Giving and responding to bad news
+
+*A few fixed phrases for telling one person some bad news, and for answering
+when someone tells you. They fit the speaking above: a news report gives bad
+news to everyone at once — these are for when it is your own family or a
+friend. After them come the phrases for warning someone, saying you are
+worried, and reassuring someone.*
 
 #### Giving bad news
 
@@ -699,255 +871,17 @@ news came from, then the news itself.
 | **Calm down.** We have five full buckets. | Bình tĩnh nào. Nhà mình có năm xô đầy rồi. |
 | **We're safe here.** | Ở đây mình an toàn mà. |
 
-> ⚠️ **Be careful**, **Mind**, **Don't go** and **Try not to panic** all start
-> with the verb — no *you*. You will write like this in Lesson 6.
-
-### 4.1 Complete the mini-dialogues
-
-::: task skill="course" type="gap-fill" ask="Choose the word that completes each phrase."
-- **A:** Watch ___ ! There's broken glass on the step. **B:** Thanks. I didn't see it. {out | over | up} = out
-- **A:** I'm ___ about my grandmother. She lives near the river. {worried | careful | calm} = worried
-- **B:** Don't ___ — my uncle took her to the shelter this morning. {worry | watch | hope} = worry
-- **A:** ___ if the electricity goes off tonight? {What | Why | How} = What
-- **B:** Then we use the torch. Try not to ___ . {panic | watch | hope} = panic
-- **A:** Make ___ you charge your phone before you go to bed. **B:** Good idea. I'll do it now. {sure | safe | careful} = sure
-:::
-
-### 4.2 Write your own
-
-Write a short reply to each person: first a warning or a piece of reassurance,
-then a reason.
-
-1. "The water on our road is only up to my knees. I'll cycle through it."
-   → _______________________________
-2. "I'm really frightened. The wind sounds like it will take the roof off."
-   → _______________________________
-3. "There's a wire hanging down from the pole outside our gate."
-   → _______________________________
-
-### 4.3 Say the right thing back
-
-::: task skill="course" type="gap-fill" ask="Choose the word that completes each reply."
-- **A:** My grandparents called this morning. A flood destroyed their house. **B:** I'm sorry to ___ that. {hear | say | tell} = hear
-- **A:** It also damaged all of their crops. **B:** That's ___ . I hope they are safe. {awful | fine | lucky} = awful
-- **A:** A landslide blocked the only road into my village last night. **B:** Oh ___ ! Is everyone all right? {no | yes | good} = no
-- **A:** I'm ___ I've got some bad news. The school roof came off. {afraid | careful | calm} = afraid
-- **A:** Did you ___ about the earthquake in the north? **B:** Yes. That's terrible. {hear | listen | tell} = hear
-- **A:** Two of the fishermen are still missing. **B:** I'm sorry. I ___ they are found soon. {hope | wish | worry} = hope
-:::
-
-### 4.4 Bad news, and an answer to it
-
-Write a short exchange for each situation: **two** lines from A giving the news,
-and **two** lines from B answering it — one line of sympathy, one question or
-wish.
-
-1. Your cousin's village was flooded and the rice crop is gone.
-   → **A:** _______________________________
-   → **B:** _______________________________
-2. A storm pulled up the old tree in your friend's yard and it fell on the roof.
-   → **A:** _______________________________
-   → **B:** _______________________________
-3. An earthquake shook your penfriend's city and their school is closed.
-   → **A:** _______________________________
-   → **B:** _______________________________
-
-### Knowledge of natural disasters
-
-Three people describe something they saw. None of them names the disaster.
-
-> **Nam.** "I was cycling home on the road under the hill. The rain had not
-> stopped for two days. Then the man in front of me put his foot down and
-> shouted. A wall of wet earth and big rocks was coming down the mountain and
-> spreading across the road in front of us. We turned round and rode back."
->
-> **Ann.** "I was picking beans in the garden with my mother. The sky went a
-> strange green colour. Then I saw a huge grey funnel of wind moving across the
-> field towards our fence, very quickly. My mother pulled me down the cellar
-> steps and shut the door."
->
-> **Tom.** "I was drawing at the table when everything in the room began to
-> shake. The glasses on the shelf were rattling and one of them fell. My little
-> sister and I hid under the table until it stopped. It lasted about twenty
-> seconds."
-
-
-### 4.5 Name it, then test yourself
-
-::: task skill="course" type="choice" opts="landslide|tornado|earthquake" ask="Which natural disaster is each person describing?"
-- Nam = landslide ~ earth and rocks coming down a hill onto the road below
-- Ann = tornado ~ a funnel of wind crossing a field
-- Tom = earthquake ~ the ground and everything on it shaking for a few seconds
-:::
-
-::: task skill="course" type="choice" ask="Pick one answer for each question. Then read the facts below."
-- Which of these may cause a landslide? {heavy rain | wind | lightning} = heavy rain
-- Which human activity may cause a landslide? {littering | cutting down trees | polluting the air} = cutting down trees
-- What is used for measuring the strength of an earthquake? {Fahrenheit | Celsius | the Richter scale} = the Richter scale
-- Which of these can an earthquake cause? {a drought | a landslide | a hurricane} = a landslide
-- What do tornadoes form from? {an earthquake | a flood | a thunderstorm} = a thunderstorm
-- Where are most tornadoes recorded? {in the USA | in the UK | in Viet Nam} = in the USA
-:::
-
-Now some facts. Rocks and earth slide down a hill when the ground is too wet to
-hold together, so heavy rain is the commonest cause — and cutting down
-trees makes it far more likely, because roots are what hold the soil. The
-strength of an earthquake is given on the Richter scale, not in degrees; a
-big one can shake a hillside loose or push a wall of sea water towards the
-coast, so one disaster often causes another. Tornadoes are different again:
-they grow out of thunderstorms, and although they happen on every continent
-except Antarctica, far more of them are recorded in the USA than anywhere
-else.
-
-### 4.6 Describe one without naming it
-
-Think of a natural disaster that has happened where you live, or one you have
-seen on the news. Write **three or four sentences** describing what a person
-there saw and heard — but do **not** write the name of the disaster. Use the
-*was / were* + *-ing* at least once. Then write the name upside down at the bottom of
-the page and give it to someone else to guess.
-
-→ _______________________________________________________________
-
-→ _______________________________________________________________
-
-→ _______________________________________________________________
+**Say it with someone.** Take turns giving the news and answering it: a friend
+in the mountains tells you a landslide destroyed their family's garden
+yesterday; a big earthquake hit a city where your penfriend lives, and their
+school is closed; your cousin's village was flooded and the rice crop is gone.
+Give the news in two moves — where it came from, then the news. Answer with
+**I'm sorry to hear that**, **That's awful** or **That's terrible**, then a
+question or a wish.
 
 ---
 
-## Lesson 5 — Skills 1: Reading & Speaking
-
-### Reading — *The night the town came back*
-
-*Tí writes it down two days later, sitting in the school shelter.*
-
-::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
-:::
-
-::: passage
-> The storm came in at nine, and by ten the siren at the school was sounding.
-> Bà Sáu sent me down to the slipway to pull our boat higher up the sand. Bống
-> came with me, because she was not staying in an empty house in a flood, and
-> because she had something to prove. I know exactly how that sounds.
->
-> I was dragging the rope when the water lifted the whole boat and put it down
-> on top of me. My knee hit the stone. And behind me, with nobody asking her to,
-> Bống said the two words.
->
-> Then she said, "Oh no." She said it very quietly, which is worse.
->
-> What came back was the village under the water — the one the sea took when
-> Bà Sáu was a girl. It came back whole: a street of low houses, a school with
-> a green gate, a post office, a well with a bucket still on it. It stood out in
-> the bay, where thirty years of water stood before it.
->
-> Nobody thinks about the next part, and I had not thought about it either.
-> The tide was already high. The village took its place, and the water it pushed
-> out had to go somewhere. It came over the harbour wall and into Bãi Sẻ.
->
-> It reached our step in about four minutes. It was carrying fence posts,
-> chairs and a great deal of mud, and mud ruins whatever it touches. While the
-> men were shouting for boats, the women were pulling children onto the roofs.
->
-> Bống got out in front of it and said, "Go well." She said it twice more, and
-> then again with her voice going thin, and nothing moved at all. She told me
-> all week that she could hold it, and that the stranger was wrong about her.
-> She was still saying it while the water came up the lane.
->
-> I was still holding the rope. The ninth mark went under while I watched, and I
-> could not make myself move.
->
-> By midnight it had stopped rising, and it had stopped being frightening. Our
-> lane was a canal. There were boats where the motorbikes go, and there was
-> somebody on every roof in the street, and a man two houses down was passing
-> lanterns across on a pole. Bà Sáu made tea up there. Nobody had anywhere to
-> be, and nobody was missing.
-:::
-
-### 5.1 True, False, or Not Given
-
-::: task skill="reading" type="true-false-not-given" ask="**True**: the text says so. **False**: the text says the opposite. **Not Given**: the text does not say."
-- The siren was sounding before the water came over the harbour wall. = T
-- Tí asked Bống to call that night. = F ~ she said the two words with nobody asking her to
-- The sea took that village before Bà Sáu was born. = F ~ it went when she was a girl, so she was already alive
-- More people lived in the drowned village than live in Bãi Sẻ now. = NG ~ the text never compares the two
-- The water reached the house in about four minutes. = T
-:::
-
-### 5.2 Answer the questions
-
-::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
-- What was sounding at the school by ten o'clock? {the siren | the storm | the lanterns} = the siren
-- What did the writer hit on the stone? {his knee | the boat | the rope} = his knee
-- What colour was the gate of the school that came back? {green | grey | blue} = green
-- For how long was the village under the water? {thirty years | four minutes | two days} = thirty years
-- How long did the water take to reach the step? {four minutes | two days | thirty years} = four minutes
-:::
-
-### 5.3 Vocabulary in context
-
-::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these."
-- spoils something completely {ruins | lifts | pulls} = ruins
-- soft wet earth left behind by water {mud | sand | stone} = mud
-- a sloping ramp for pulling boats out of the water {slipway | harbour wall | canal} = slipway
-- a loud machine that gives a warning sound {siren | lantern | pole} = siren
-:::
-
-### Speaking — Delivering a news report
-
-> **Working alone:** you have no partner, so do this in three steps.
-
-**Step 1 — Prepare.** You are a reporter. A storm hit a small coastal town last
-night. Fill in your notes — short phrases, not full sentences.
-
-| Reporter's notes | Your notes |
-| --- | --- |
-| Where and when did it happen? | |
-| What was the weather doing? (*it was raining…*) | |
-| What were people doing when it hit? (*we were eating when…*) | |
-| What damage did it cause? | |
-| Who helped, and how? | |
-| What should people do now? | |
-
-**Step 2 — Speak.** Deliver the report **aloud**, standing up, for about
-**one minute**, from your notes and not from a written-out script.
-
-A news report has four stages, in this order. Answer each question in your own
-words.
-
-| Stage | The question it answers | Roughly how long |
-| --- | --- | --- |
-| **Open** | Where are you, and what happened? | 10 seconds |
-| **Then** | What was happening when it hit? | 20 seconds |
-| **Now** | What does the town look like this morning, and who is helping? | 20 seconds |
-| **Close** | What are people being asked to do? | 10 seconds |
-
-> **Tiếng Việt:** Bản tin đi theo **bốn chặng** trên. Bảng này chỉ cho bạn *thứ
-> tự* và *câu hỏi cần trả lời* — câu chữ phải do bạn tự nghĩ ra.
-
-**Step 3 — Record and check.** Record yourself on your phone. Listen back and
-check three things:
-
-- Did you use **at least three** verbs like *was raining*, with the right *was*
-  or *were*?
-- Did you stress the right syllable in *disˈaster*, *deˈstruction*, *eˈvacuate*
-  and *ˈhurricane*?
-- Did you pause **at each new stage** of the report, and not inside a sentence?
-
-Repeat Step 2 until the report runs clearly from start to finish.
-
-### 5.4 Say it again, faster
-
-::: fluency mode="talk" secs="240|180|120" ask="Talk about a storm, a flood or a drought you know about."
-- What happened, and when
-- What people did before it
-- What the damage was
-- What helped afterwards
-:::
-
----
-
-## Lesson 6 — Skills 2: Listening & Writing
+## Lesson 5 — Listening & Writing
 
 ### Listening — On the wall in the dark
 
@@ -1003,7 +937,7 @@ floor out of that building while you were whistling. It was sent, and it never
 arrived. Bring it, and do not open it in the rain. Three marks left.
 :::
 
-### 6.1 Listen and choose
+### 5.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
 - Tí says Đạt was last sitting {on the low wall | on the post office | upstairs} = on the low wall
@@ -1013,7 +947,7 @@ arrived. Bring it, and do not open it in the rain. Three marks left.
 - The tin box they find is {open and empty | still sealed | broken in half} = still sealed
 :::
 
-### 6.2 Listen and complete
+### 5.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion"
 - Tí saw Đạt on the wall ___ ago. {twenty minutes | an hour | ten minutes} = twenty minutes
@@ -1109,9 +1043,9 @@ You can use the comparatives from Unit 2.
 
 ---
 
-## Lesson 7 — Looking Back & Project
+## Lesson 6 — Looking Back & Project
 
-### 7.1 Vocabulary check
+### 6.1 Vocabulary check
 
 ::: task skill="course" type="gap-fill" ask="Complete with a word from this unit."
 - A long period with no rain at all is a ___ . {drought | flood | tornado} = drought
@@ -1122,7 +1056,7 @@ You can use the comparatives from Unit 2.
 - Lorries brought ___ supplies — rice, blankets and medicine. {relief | forecast | funnel} = relief
 :::
 
-### 7.2 Pronunciation check
+### 6.2 Pronunciation check
 
 ::: task skill="course" type="choice" ask="The loud syllable is in capitals. Which is right?"
 - disaster {dis-AS-ter | DIS-as-ter | dis-as-TER} = dis-AS-ter
@@ -1135,7 +1069,7 @@ You can use the comparatives from Unit 2.
 - earthquake {EARTH-quake | earth-QUAKE} = EARTH-quake
 :::
 
-### 7.3 Grammar check
+### 6.3 Grammar check
 
 ::: task skill="course" type="gap-fill" ask="Choose the right form of the verb."
 - At six o'clock yesterday evening it ___ (rain) heavily. {was raining | were raining | was rain} = was raining
@@ -1150,7 +1084,7 @@ You can use the comparatives from Unit 2.
 - My sister ___ (help) Bà Sáu while I was carrying the buckets. {was helping | were helping | was help} = was helping
 :::
 
-### 7.4 Error hunt
+### 6.4 Error hunt
 
 This paragraph has **six** mistakes. Below, it comes one line at a time: tap
 each mistake, then choose the fix.
@@ -1193,7 +1127,7 @@ instructions for your family, using **Before / During / After** and imperative
 verbs. Put it on the wall where everyone can see it.
 
 **Step 4 — Present it.** Explain your plan aloud in **one minute**, as if you
-were the reporter from Lesson 5. Record it and listen back once: check your
+were the reporter from Lesson 4. Record it and listen back once: check your
 imperatives and your word stress.
 
 > **Stretch:** Interview the oldest person in your family about the worst storm
@@ -1209,14 +1143,14 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for the types of natural disaster and for describing them | Lesson 2, Meet the words · Lesson 7, exercise 7.1 |
-| put the stress in the right place in words ending *-al* and *-ous* | Lesson 2, exercises 2.1 and 2.3 · Lesson 7, exercise 7.2. Saying them aloud is yours — record Lesson 2, exercise 2.5 and listen back. |
-| use the past continuous, on its own and beside the past simple | Lesson 3, practice 3.1 · Lesson 7, exercises 7.3 and 7.4 |
-| give bad news, and answer it | Lesson 4, exercise 4.3 |
-| read a first-hand account of a flood night | Lesson 5, exercises 5.1 and 5.2 |
-| talk about a natural disaster | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| follow two people talking in the middle of a flood, and catch the details | Lesson 6, exercises 6.1 and 6.2 |
-| write instructions for staying safe in a flood | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| use the words for the types of natural disaster and for describing them | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
+| put the stress in the right place in words ending *-al* and *-ous* | Lesson 2, exercises 2.1 and 2.3 · Lesson 6, exercise 6.2. Saying them aloud is yours — record Lesson 2, exercise 2.5 and listen back. |
+| use the past continuous, on its own and beside the past simple | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
+| give bad news, and answer it | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| read a first-hand account of a flood night | Lesson 4, exercises 4.1 and 4.2 |
+| talk about a natural disaster | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| follow two people talking in the middle of a flood, and catch the details | Lesson 5, exercises 5.1 and 5.2 |
+| write instructions for staying safe in a flood | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1247,36 +1181,12 @@ simple; in item 3 **both** verbs are past continuous; and no stative verb
 
 ### Lesson 4
 
-**4.2** Answers will vary. Check that each reply contains (a) an imperative
-warning or a reassuring phrase from the tables, and (b) a reason. Sample:
-1. "Don't cycle through it! Moving water can knock you off, and you cannot see
-what is under it."
-2. "Try not to panic. Come downstairs away from the windows — the roof was
-repaired last year."
-3. "Whatever you do, don't touch that wire. Tell an adult and stay inside."
-
-**4.4** Answers will vary. Check: A gives the news in two moves — where it came
-from, then what happened (*My aunt phoned last night. The flood took the whole
-rice crop.*); B answers with one of the fixed formulas exactly as written
-(*I'm sorry to hear that. · That's awful. · That's terrible.*) and then a
-question or a wish (*Is everyone all right? · I hope they are safe.*). Check
-that B has **not** replied *No problem* or *It's OK*, and that the formula has
-not been stretched into a longer sentence.
-
-**4.6** Answers will vary. Check: the description says what was seen and heard
-and never names the disaster; at least one past continuous verb with the right
-*was/were* (*I was cooking when…* · *the water was rising*); three or four
-sentences, not one long one. A good test is whether another reader can name the
-disaster from your sentences alone.
-
-### Lesson 5
-
 **Speaking** Answers will vary. Check: at least three past continuous verbs with
 the correct *was/were*, correct stress on *disˈaster, deˈstruction, eˈvacuate,
 ˈhurricane*, and pauses that fall at stage boundaries rather than inside a
 sentence.
 
-### Lesson 6
+### Lesson 5
 
 **Writing** Answers will vary. Check against the checklist: 80–100 words, the
 three headings, every instruction beginning with an imperative verb, at least

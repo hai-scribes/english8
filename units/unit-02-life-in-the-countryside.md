@@ -1,7 +1,7 @@
 # Unit 2 — Life in the Countryside
 
 > **Bài 2 — Cuộc sống ở vùng quê**
-> Self-study pack. Work through Lessons 1–7 in order. The marked exercises
+> Self-study pack. Work through Lessons 1–6 in order. The marked exercises
 > check themselves; the [Answer Key](#answer-key) at the end covers the open
 > ones — do the exercise first, then check.
 
@@ -86,7 +86,7 @@
 
 ---
 
-## Lesson 2 — A Closer Look 1
+## Lesson 2 — Words & Sounds
 
 ### Meet the words
 
@@ -343,7 +343,7 @@ Read aloud three times, faster each time. Record yourself if you can.
 
 ---
 
-## Lesson 3 — A Closer Look 2
+## Lesson 3 — Grammar
 
 ### Grammar — Comparative adverbs
 
@@ -544,114 +544,7 @@ Write true sentences about yourself. Use **than** in every sentence.
 
 ---
 
-## Lesson 4 — Communication
-
-### Everyday English — Compliments, and asking about a place
-
-#### Giving a compliment
-
-A **compliment** says you admire something that belongs to someone, or something
-they did. Two patterns cover almost every case:
-
-| Giving a compliment | Nghĩa |
-| --- | --- |
-| **What a beautiful** kite you have! | Con diều của bạn đẹp quá! |
-| **What a lovely** garden this is! | Khu vườn này đẹp quá! |
-| **You really have a nice** dress. | Chiếc váy của bạn đẹp thật đấy. |
-| **Your** rice cakes **are delicious.** | Bánh của bạn ngon thật. |
-
-> ⚠️ Note the word order after **What a…** — it is *not* a question, so the verb
-> stays at the end: *What a beautiful kite **you have**!*, never
-> ❌ *What a beautiful kite **do you have**?*
-
-#### Responding to a compliment
-
-| Responding | Nghĩa |
-| --- | --- |
-| **Thank you.** My dad made it for me last weekend. | Cảm ơn bạn. Bố mình làm cho đấy. |
-| **I'm glad you like it.** | Mình vui vì bạn thích nó. |
-| **Thanks. That's very kind of you.** | Cảm ơn. Bạn thật tốt bụng. |
-| **Thank you — I made it myself.** | Cảm ơn — mình tự làm đấy. |
-
-> **Ghi chú:** Trong tiếng Anh, khi được khen bạn hãy **cảm ơn** rồi nói thêm một
-> câu ngắn, đừng chối. ❌ *"No, no, it's not nice."* nghe rất lạ với người bản
-> ngữ. ✅ *"Thank you. I'm glad you like it."*
-
-### Everyday English — Asking about a place and reacting
-
-| Asking about a place | Nghĩa |
-| --- | --- |
-| What's it like there? | Ở đó thế nào? |
-| What's the countryside like around your village? | Vùng quê quanh làng bạn thế nào? |
-| Is it far from the city? | Có xa thành phố không? |
-| What do people do there? | Người dân ở đó làm nghề gì? |
-| How do you get there? | Bạn đi đến đó bằng cách nào? |
-
-| Describing it | Nghĩa |
-| --- | --- |
-| It's much quieter than the city. | Ở đó yên tĩnh hơn thành phố nhiều. |
-| Life moves more slowly there. | Cuộc sống ở đó trôi chậm hơn. |
-| People work far harder than you'd think. | Người ta làm việc vất vả hơn bạn tưởng nhiều. |
-| There isn't much to do in the evening. | Buổi tối không có nhiều thứ để làm. |
-| It's about two hours by bus. | Đi xe buýt mất khoảng hai tiếng. |
-
-| Reacting warmly | Reacting honestly |
-| --- | --- |
-| That sounds lovely. | I couldn't live like that, honestly. |
-| I'd love to see it. | It's not really for me. |
-| Really? Tell me more. | I'd miss the city too much. |
-| It sounds very peaceful. | I'd get bored after a week. |
-
-> ⚠️ Note the question form: **What's it like?** asks for a *description*.
-> **What does it look like?** asks only about *appearance*. Don't answer
-> *What's it like?* with "I like it very much" — that answers a different
-> question.
-
-### 4.1 Complete the mini-dialogues
-
-::: task skill="course" type="gap-fill" ask="Choose what completes each line."
-- **A:** What's your grandparents' village ___ ? {like | for | about} = like
-- **B:** It's much ___ (quiet) than here. You can hear the stream. {quieter | quietest | quietly} = quieter
-- **A:** Is it ___ from Ha Noi? {far | long | much} = far
-- **B:** About three hours ___ bus. {by | on | in} = by
-- **A:** Do people there have an ___ life? {easy | easily | ease} = easy
-- **B:** Not at all — they work far ___ (hard) than you'd think. {harder | more hard | more hardly} = harder
-- **A:** Really? ___ me more. {Tell | Say | Speak} = Tell
-:::
-
-### 4.2 Write your own
-
-A friend from abroad asks about a village or small town you know. Write a reply
-to each question. Use a comparative adverb in at least two of your answers.
-
-1. "What's it like there?"
-   → _______________________________
-2. "What do people do all day?"
-   → _______________________________
-3. "Could you live there for a year?"
-   → _______________________________
-
-### 4.3 Compliment, then reply
-
-::: task skill="course" type="gap-fill" ask="Choose what completes each compliment or reply."
-- ___ a beautiful garden you have! {What | How | Which} = What
-- You really ___ a nice bicycle. {have | are | do} = have
-- **A:** Your sticky rice is delicious. **B:** Thank you. I'm ___ you like it. {glad | kind | welcome} = glad
-- **A:** What a lovely kite! **B:** ___ you. My grandfather made it. {Thank | Thanks | Like} = Thank
-- **A:** You really have a nice school bag. **B:** Thanks. That's very ___ of you. {kind | glad | pleased} = kind
-:::
-
-### 4.4 Say it back
-
-Someone compliments you on each of these. Write a reply of **one or two
-sentences** — thank them, then add a detail.
-
-1. "What a picturesque village this is!"
-   → _______________________________
-2. "You really have a nice bicycle."
-   → _______________________________
-3. "Your grandmother's fruit is delicious."
-   → _______________________________
+## Lesson 4 — Reading & Speaking
 
 ### Two villages, two countries
 
@@ -673,32 +566,10 @@ surprisingly similar. Read these two short adverts.
 > them hire a boat for the day. The scenery is at its most picturesque in early
 > summer.
 
-### 4.5 Which village?
+**Talk about it.** Which of the two villages would you rather visit, and why?
+Say one thing they have in common and one way they are different — with a
+comparative adverb and **than**, if you can.
 
-::: task skill="course" type="choice" opts="Duong Lam|Giethoorn|Both" ask="Which village does each statement describe? Some describe both."
-- You can reach it by road. = Both ~ Duong Lam by car or bus; Giethoorn by road or by ferry
-- You can get there by bicycle. = Duong Lam
-- People travel around it by boat. = Giethoorn
-- Visitors can taste local specialities. = Duong Lam
-- You can reach it by ferry. = Giethoorn
-- It is a place tourists like to visit. = Both
-- It has more than 170 bridges. = Giethoorn
-- Its houses are built of stone. = Duong Lam
-:::
-
-### 4.6 Compare them
-
-Write **four** sentences comparing the two villages. Use a comparative adverb
-and **than** in at least two of them.
-
-1. Both villages _______________________________
-2. In Duong Lam, people _______________________________
-3. In Giethoorn, people _______________________________
-4. I would rather visit _______________________________ because _______________________________
-
----
-
-## Lesson 5 — Skills 1: Reading & Speaking
 
 ### Reading — *The old way to Bến Vàng*
 
@@ -758,7 +629,7 @@ and **than** in at least two of them.
 > hand's width above the first, and this time she told me what they were for.
 :::
 
-### 5.1 True, False, or Not Given
+### 4.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**True**: the text says so. **False**: the text says the opposite. **Not Given**: the text does not say."
 - Tí missed the ten o'clock bus by four minutes. = T ~ "by four minutes"
@@ -768,7 +639,7 @@ and **than** in at least two of them.
 - His uncle accepted that he had come by the road. = F ~ his uncle says he came more quickly than the road allows
 :::
 
-### 5.2 Answer the questions
+### 4.2 Answer the questions
 
 ::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
 - What time was the next bus? {at two o'clock | at ten o'clock | at four o'clock} = at two o'clock
@@ -778,7 +649,7 @@ and **than** in at least two of them.
 - Where did Bống put the second chalk mark? {on the harbour wall | on the uncle's gate | on the board game} = on the harbour wall
 :::
 
-### 5.3 Vocabulary in context
+### 4.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word in the text that means this. The clock is still running."
 - brushed clean of leaves and dust {swept | dry | narrow} = swept
@@ -817,7 +688,7 @@ check three things:
 
 Repeat Step 2 until each answer runs clearly from its first word to its last.
 
-### 5.4 Read it again, against the clock
+### 4.4 Read it again, against the clock
 
 Read the same text again, faster each time.
 
@@ -827,7 +698,7 @@ Read the same text again, faster each time.
 - Press **I finished** the moment you reach the last line
 :::
 
-### 5.5 Say it again, faster
+### 4.5 Say it again, faster
 
 ::: fluency mode="talk" secs="240|180|120" ask="Talk about a place in the countryside you know — or would like to know."
 - What it looks like
@@ -836,9 +707,74 @@ Read the same text again, faster each time.
 - One thing you could not get used to
 :::
 
+### Everyday English — Giving and responding to compliments
+
+*Two sets of fixed phrases. The first is a separate thing from the speaking
+above: how to give someone a compliment, and how to answer one. Learn them as
+they are. The second does fit it — how to ask someone about a place they know,
+and what to say back.*
+
+#### Giving a compliment
+
+A **compliment** says you admire something that belongs to someone, or something
+they did. Two patterns cover almost every case:
+
+| Giving a compliment | Nghĩa |
+| --- | --- |
+| **What a beautiful** kite you have! | Con diều của bạn đẹp quá! |
+| **What a lovely** garden this is! | Khu vườn này đẹp quá! |
+| **You really have a nice** dress. | Chiếc váy của bạn đẹp thật đấy. |
+| **Your** rice cakes **are delicious.** | Bánh của bạn ngon thật. |
+
+> ⚠️ Note the word order after **What a…** — it is *not* a question, so the verb
+> stays at the end: *What a beautiful kite **you have**!*, never
+> ❌ *What a beautiful kite **do you have**?*
+
+#### Responding to a compliment
+
+| Responding | Nghĩa |
+| --- | --- |
+| **Thank you.** My dad made it for me last weekend. | Cảm ơn bạn. Bố mình làm cho đấy. |
+| **I'm glad you like it.** | Mình vui vì bạn thích nó. |
+| **Thanks. That's very kind of you.** | Cảm ơn. Bạn thật tốt bụng. |
+| **Thank you — I made it myself.** | Cảm ơn — mình tự làm đấy. |
+
+> **Ghi chú:** Trong tiếng Anh, khi được khen bạn hãy **cảm ơn** rồi nói thêm một
+> câu ngắn, đừng chối. ❌ *"No, no, it's not nice."* nghe rất lạ với người bản
+> ngữ. ✅ *"Thank you. I'm glad you like it."*
+
+#### Asking about a place and reacting
+
+| Asking about a place | Nghĩa |
+| --- | --- |
+| What's it like there? | Ở đó thế nào? |
+| What's the countryside like around your village? | Vùng quê quanh làng bạn thế nào? |
+| Is it far from the city? | Có xa thành phố không? |
+| What do people do there? | Người dân ở đó làm nghề gì? |
+| How do you get there? | Bạn đi đến đó bằng cách nào? |
+
+| Reacting warmly | Reacting honestly |
+| --- | --- |
+| That sounds lovely. | I couldn't live like that, honestly. |
+| I'd love to see it. | It's not really for me. |
+| Really? Tell me more. | I'd miss the city too much. |
+| It sounds very peaceful. | I'd get bored after a week. |
+
+> ⚠️ Note the question form: **What's it like?** asks for a *description*.
+> **What does it look like?** asks only about *appearance*. Don't answer
+> *What's it like?* with "I like it very much" — that answers a different
+> question.
+
+**Say it with someone.** Compliment them on three things — a shirt, a
+bicycle, a school bag. They thank you and add one detail, never *"No, no, it's
+not nice."* Then swap. Use **What a beautiful …**, **You really have a nice …**
+and **I'm glad you like it** at least once each. After that, ask about a
+village or town they know — **What's it like there?** and two more questions
+from the table — and react to each answer.
+
 ---
 
-## Lesson 6 — Skills 2: Listening & Writing
+## Lesson 5 — Listening & Writing
 
 ### Listening — Thảo walks the path
 
@@ -875,7 +811,7 @@ either of us was born, and this morning it was under my feet. So whatever is
 doing this is not reaching back a week. It is reaching back years.
 :::
 
-### 6.1 Listen and choose
+### 5.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
 - She believed her friend {before she saw anything | only after she saw it | after a week} = before she saw anything
@@ -885,7 +821,7 @@ doing this is not reaching back a week. It is reaching back years.
 - Beside the river they found {an old landing | the well | another village} = an old landing
 :::
 
-### 6.2 Note completion
+### 5.2 Note completion
 
 Choose for each gap **as you listen**.
 
@@ -940,7 +876,7 @@ sentence, rewrite it or delete it.
 :::
 
 ::: bridge name="Give the biggest difference, once" trains="Task Achievement" cefr="B1" marker="[INF]" src="02 §2.1"
-In your Lesson 5 speaking notes and again in your paragraph, give the
+In your Lesson 4 speaking notes and again in your paragraph, give the
 **biggest** difference between the town and the village, once and clearly —
 not three differences of equal weight.
 
@@ -962,9 +898,9 @@ One clear difference tells your reader what matters most.
 
 ---
 
-## Lesson 7 — Looking Back & Project
+## Lesson 6 — Looking Back & Project
 
-### 7.1 Vocabulary check
+### 6.1 Vocabulary check
 
 ::: task skill="course" type="gap-fill" ask="Choose the word from this unit that fits."
 - My grandfather takes the ___ down to the river every morning. {buffalo | harvest | barn} = buffalo
@@ -975,7 +911,7 @@ One clear difference tells your reader what matters most.
 - The paddy fields are ___ — they reach the horizon. {vast | hospitable | well-trained} = vast
 :::
 
-### 7.2 Pronunciation check
+### 6.2 Pronunciation check
 
 ::: task skill="course" type="choice" opts="/ə/|/ɪ/" ask="Which vowel is in the **bold** part?"
 - farm**er** = /ə/
@@ -986,7 +922,7 @@ One clear difference tells your reader what matters most.
 - br**i**dge = /ɪ/
 :::
 
-### 7.3 Grammar check
+### 6.3 Grammar check
 
 ::: task skill="course" type="gap-fill" ask="Choose the right words."
 - My sister writes ___ (neatly) than I do. {more neatly | neatlier | most neatly} = more neatly
@@ -997,7 +933,7 @@ One clear difference tells your reader what matters most.
 - She did ___ (badly) in maths than in English. {worse | worst | badder} = worse
 :::
 
-### 7.4 Error hunt
+### 6.4 Error hunt
 
 This paragraph has **six** mistakes. Below, it comes one line at a time.
 
@@ -1058,14 +994,14 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for life in the countryside | Lesson 2, Meet the words · Lesson 7, exercise 7.1 |
-| hear /ə/ and /ɪ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
-| make and use comparative adverbs | Lesson 3, practice 3.1 · Lesson 7, exercises 7.3 and 7.4 |
-| give a compliment, and answer one | Lesson 4, exercises 4.1 and 4.3 |
-| read a teenager's account of a journey through the countryside | Lesson 5, exercises 5.1 and 5.2 |
-| talk about the village or town I know | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to someone describing a walk in the countryside | Lesson 6, exercises 6.1 and 6.2 |
-| write a paragraph about what I like and dislike about rural life | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| use the words for life in the countryside | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
+| hear /ə/ and /ɪ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
+| make and use comparative adverbs | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
+| give a compliment, and answer one | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| read a teenager's account of a journey through the countryside | Lesson 4, exercises 4.1 and 4.2 |
+| talk about the village or town I know | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| listen to someone describing a walk in the countryside | Lesson 5, exercises 5.1 and 5.2 |
+| write a paragraph about what I like and dislike about rural life | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1092,16 +1028,3 @@ page can settle it, the row says so, and that one is yours to judge.
 **better**, *early* → **earlier**, *carefully* → **more carefully**; and every
 sentence contains **than**.
 
-### Lesson 4
-
-**4.2** Answers will vary. Check: answer 1 describes the place (it does not say
-"I like it"), and at least two of the three answers contain a comparative
-adverb with *than*.
-
-**4.4** Answers will vary. Check: every reply **thanks** the speaker first and
-then adds one detail (who made it, where it came from, how long you have had
-it); no reply refuses the compliment — ❌ *"No, it isn't nice."*
-
-**4.6** Answers will vary. Check: sentence 1 says something that is true of
-**both** villages; at least two of the four sentences contain a comparative
-adverb with *than*; sentence 4 gives a reason after *because*.

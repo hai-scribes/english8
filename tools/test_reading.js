@@ -80,6 +80,12 @@ function load(rel, store, beforeParse) {
                                      the behaviour under test ever runs. */
                                   w.scrollTo = () => {};
                                   w.Element.prototype.scrollIntoView = function(){};
+                                  /* Every seed below is written in today's
+                                     six-lesson shape, so the one-time move from
+                                     seven lessons must not run on it. The test
+                                     of that move opts back in with `oldShape`. */
+                                  if (!(beforeParse && beforeParse.oldShape))
+                                    w.localStorage.setItem("en8:shape:6", "1");
                                   if (beforeParse) beforeParse(w);
                                 } });
   dom.window.scrollTo = () => {};
@@ -155,7 +161,7 @@ function owned2(doc, timer) {
 async function main() {
   /* ---- paragraph labels, highlighting, notes, and the question bar ------ */
   {
-    const win = await settled(load("docs/unit-06/lesson-5/index.html"));
+    const win = await settled(load("docs/unit-06/lesson-4/index.html"));
     const doc = win.document;
     const pg = doc.querySelector('[data-role="passage"]');
     ok("unit 06: the passage renders", !!pg);
@@ -179,13 +185,13 @@ async function main() {
     ok("highlight: the paragraph letter is not counted into the offsets",
        marks.length === 1 && marks[0].textContent[0] !== "B");
     ok("highlight: persisted",
-       JSON.parse(win.localStorage.getItem("en8:marks:06-5-p1") || "[]").length === 1);
+       JSON.parse(win.localStorage.getItem("en8:marks:06-4-p1") || "[]").length === 1);
 
     click(win, marks[0]);
     ok("highlight: selecting it again takes it off",
        body.querySelectorAll("mark").length === 0);
     ok("highlight: removal persisted",
-       JSON.parse(win.localStorage.getItem("en8:marks:06-5-p1") || "[]").length === 0);
+       JSON.parse(win.localStorage.getItem("en8:marks:06-4-p1") || "[]").length === 0);
 
     const pad = pg.querySelector('[data-pg="notepad"]');
     ok("notes: closed to start", pad.hidden);
@@ -194,7 +200,7 @@ async function main() {
     const ta = pg.querySelector(".pg-ta");
     ta.value = "whaling is in B";
     ta.dispatchEvent(new win.Event("input", { bubbles: true }));
-    ok("notes: persisted", win.localStorage.getItem("en8:notes:06-5-p1") === "whaling is in B");
+    ok("notes: persisted", win.localStorage.getItem("en8:notes:06-4-p1") === "whaling is in B");
 
     const nav = doc.querySelector(".c-nav");
     ok("nav: the question bar renders", !!nav);
@@ -209,7 +215,7 @@ async function main() {
     ok("flag: shows on the question bar", qs[2].dataset.flag === "1");
     ok("flag: shows on the question", flags[2].closest(".i").dataset.flag === "1");
     ok("flag: persisted",
-       JSON.parse(win.localStorage.getItem("en8:flags:06-5-c1") || "{}")["2"] === true);
+       JSON.parse(win.localStorage.getItem("en8:flags:06-4-c1") || "{}")["2"] === true);
     click(win, flags[2]);
     ok("flag: comes off again", qs[2].dataset.flag === "0");
 
@@ -227,7 +233,7 @@ async function main() {
 
   /* ---- the awkward ranges ----------------------------------------------- */
   {
-    const win = await settled(load("docs/unit-12/lesson-5/index.html"));
+    const win = await settled(load("docs/unit-12/lesson-4/index.html"));
     const body = win.document.querySelector('[data-pg="body"]');
     const paras = Array.from(body.querySelectorAll("p"));
     const pi = paras.findIndex(p => p.querySelector("strong"));
@@ -247,7 +253,7 @@ async function main() {
 
     drag(win, paras, pi, i - 4, pi, i + 20);
     ok("highlight: overlapping marks never nest", !paras[pi].querySelector("mark mark"));
-    const here = JSON.parse(win.localStorage.getItem("en8:marks:12-5-p1") || "[]")
+    const here = JSON.parse(win.localStorage.getItem("en8:marks:12-4-p1") || "[]")
                      .filter(m => m.p === pi);
     ok("highlight: an overlap merges into one range", here.length === 1, JSON.stringify(here));
     ok("highlight: the merged range covers both",
@@ -255,11 +261,11 @@ async function main() {
   }
 
   {
-    const win = await settled(load("docs/unit-12/lesson-5/index.html"));
+    const win = await settled(load("docs/unit-12/lesson-4/index.html"));
     const paras = Array.from(win.document.querySelectorAll('[data-pg="body"] p'));
     const t0 = plain(paras[0]), t1 = plain(paras[1]);
     drag(win, paras, 0, t0.length - 10, 1, 8);
-    const st = JSON.parse(win.localStorage.getItem("en8:marks:12-5-p1") || "[]");
+    const st = JSON.parse(win.localStorage.getItem("en8:marks:12-4-p1") || "[]");
     ok("highlight: a drag across paragraphs stores one range per paragraph",
        st.length === 2, JSON.stringify(st));
     ok("highlight: it runs to the end of the first",
@@ -273,9 +279,9 @@ async function main() {
   }
 
   {
-    const win = await settled(load("docs/unit-12/lesson-5/index.html", {
-      "en8:marks:12-5-p1": JSON.stringify([{ p:1, s:0, e:8 }]),
-      "en8:notes:12-5-p1": "kept",
+    const win = await settled(load("docs/unit-12/lesson-4/index.html", {
+      "en8:marks:12-4-p1": JSON.stringify([{ p:1, s:0, e:8 }]),
+      "en8:notes:12-4-p1": "kept",
     }));
     const paras = Array.from(win.document.querySelectorAll('[data-pg="body"] p'));
     const m = paras[1].querySelector("mark");
@@ -995,7 +1001,7 @@ async function main() {
     const win = await settled(load("docs/unit-01/lesson-2/index.html", null, fastPage));
     const doc = win.document;
     const box = doc.querySelector('[data-role="vocab"]');
-    ok("intake: the intake renders on A Closer Look 1", !!box);
+    ok("intake: the intake renders on Words & Sounds", !!box);
 
     const data = JSON.parse(doc.getElementById("page-data").textContent);
     const set = data.vocabIntake[0];
@@ -1194,6 +1200,12 @@ async function main() {
        !kindTable || !/total|overall|mastery|\bscore\b/i.test(kindTable.textContent),
        kindTable ? JSON.stringify(kindTable.textContent.slice(0, 80)) : "");
 
+    /* Today's pool, taken before the walk: answering an item reschedules it,
+       so afterwards nothing is due and the pool would be empty. */
+    const pool = win.todaysReview();
+    ok("review: the pool the queue draws from is the seeded one",
+       pool.length === due.length, pool.length + " of " + due.length);
+
     /* Run the queue and read the order of kinds off the rendered prompts. */
     const start = doc.querySelector("#startReview");
     ok("review: there is a start control", !!start);
@@ -1234,14 +1246,23 @@ async function main() {
     const labels = seen.filter(Boolean);
     ok("review: the queue presented the whole pool once",
        labels.length === due.length, labels.length + " of " + due.length);
-    /* Grouped would mean every run of one kind is contiguous. Interleaved
-       means at least one kind reappears after a different kind. */
     /* Grouped = every run of a kind is contiguous, i.e. no kind ever comes
-       back after a different kind has intervened. */
-    const grouped = labels.every((l, i) => i === 0 || l === labels[i - 1]
-      || !labels.slice(0, i).includes(l));
-    ok("review: kinds are interleaved, not grouped into blocks", !grouped,
-       JSON.stringify(labels));
+       back after a different kind has intervened.
+
+       Asked of the queue's own ordering, many times, and never of the one walk
+       above. The order is a shuffle, and a shuffle of three items of each of
+       two kinds lands in two clean blocks 72 times in 720 — so a single sample
+       failed one run in ten with nothing wrong, and a gate that fails at random
+       blocks a publish at random. A queue that groups BY DESIGN is grouped on
+       every draw, so this still catches the change it exists for; a shuffled
+       one is grouped on all 200 with probability 0.1^200. */
+    const isGrouped = ls => ls.every((l, i) => i === 0 || l === ls[i - 1]
+      || !ls.slice(0, i).includes(l));
+    let mixed = 0;
+    for (let n = 0; n < 200; n++)
+      if (!isGrouped(win.buildItems(pool, "review").map(q => q.w.type))) mixed++;
+    ok("review: kinds are interleaved, not grouped into blocks", mixed > 0,
+       mixed + " of 200 orderings interleaved · one walk: " + JSON.stringify(labels));
   }
 
   /* ---- Today: one next step, a capped review, and an end to the day -------
@@ -1266,13 +1287,13 @@ async function main() {
     ok("today: the rest of the course is one closed Browse section",
        doc.querySelector("details#browse") && !doc.querySelector("details#browse").open);
 
-    doc = (await seeded({ "en8:progress:v1": { "01": { lessons: lessons(7), test: null } } })
+    doc = (await seeded({ "en8:progress:v1": { "01": { lessons: lessons(6), test: null } } })
       ("docs/index.html")).document;
-    ok("today: after seven lessons the next step is the unit test",
+    ok("today: after six lessons the next step is the unit test",
        href(doc, "#startLink") === "unit-01/index.html#gate", href(doc, "#startLink"));
 
     const three = {};
-    for (const u of ["01", "02", "03"]) three[u] = { lessons: lessons(7), test: { best: 50, at: 1 } };
+    for (const u of ["01", "02", "03"]) three[u] = { lessons: lessons(6), test: { best: 50, at: 1 } };
     doc = (await seeded({ "en8:progress:v1": three })("docs/index.html")).document;
     ok("today: after Unit 03 the next step is Checkpoint 1",
        href(doc, "#startLink") === "review-1/index.html", href(doc, "#startLink"));
@@ -1323,6 +1344,45 @@ async function main() {
        JSON.stringify(d));
   }
 
+  /* ---- seven lessons become six, once, and the record follows -------------
+     Communication (old Lesson 4) is gone and 5, 6, 7 became 4, 5, 6. A learner's
+     stored record must move with them, or a spent reading clock is offered
+     again and a finished Skills 1 shows up as finished Listening & Writing. */
+  {
+    const old = w => {
+      const put = (k, v) => w.localStorage.setItem(k, typeof v === "string" ? v : JSON.stringify(v));
+      put("en8:progress:v1", { "01": { lessons: { 1: 1, 2: 1, 3: 1, 4: 1, 5: 1 }, test: null } });
+      put("en8:tasks:v1", { "01-4-4.1-1": { score: 1 }, "01-5-5.1-1": { score: 2 },
+                            "01-7-7.3-1": { score: 3 }, "01-3-3.1-1": { score: 4 } });
+      put("en8:write:v1", { "01-6-w1": { text: "hi", ticks: {} } });
+      put("en8:review:v1", { "01:function:4.1-2": { due: 1 }, "01:grammar:3.1-1": { due: 1 } });
+      put("en8:days:v1", { 5: { reviewed: 0, steps: ["01:L4", "01:L5", "01:L3"] } });
+      put("en8:clock:01-5-c1", { start: 1 });
+      put("en8:clock:01-6-c1", { start: 2 });
+      put("en8:thread:articles:06:6", { got: 3, all: 4 });
+    };
+    old.oldShape = true;
+    const w = await settled(load("docs/index.html", null, old));
+    const get = k => JSON.parse(w.localStorage.getItem(k) || "null");
+    const ls = get("en8:progress:v1")["01"].lessons;
+    ok("shape: old Lesson 5 (Skills 1) is now Lesson 4, and Communication is dropped",
+       Object.keys(ls).sort().join() === "1,2,3,4", JSON.stringify(ls));
+    ok("shape: task records move with their lesson and exercise number",
+       Object.keys(get("en8:tasks:v1")).sort().join() === "01-3-3.1-1,01-4-4.1-1,01-6-6.3-1"
+       && get("en8:tasks:v1")["01-4-4.1-1"].score === 2, JSON.stringify(get("en8:tasks:v1")));
+    ok("shape: the writing box keeps its text", !!(get("en8:write:v1")["01-5-w1"]));
+    ok("shape: the spent reading clock stays spent, under its new lesson",
+       get("en8:clock:01-4-c1").start === 1 && get("en8:clock:01-5-c1").start === 2,
+       w.localStorage.getItem("en8:clock:01-4-c1") + " / " + w.localStorage.getItem("en8:clock:01-5-c1"));
+    ok("shape: Everyday English items leave the review queue",
+       !get("en8:review:v1")["01:function:4.1-2"] && !!get("en8:review:v1")["01:grammar:3.1-1"]);
+    ok("shape: the day's record renames its steps",
+       get("en8:days:v1")[5].steps.join() === "01:L4,01:L3", JSON.stringify(get("en8:days:v1")));
+    ok("shape: a thread tally follows its lesson",
+       !!get("en8:thread:articles:06:5") && !w.localStorage.getItem("en8:thread:articles:06:6"));
+    ok("shape: the move runs once", w.localStorage.getItem("en8:shape:6") === "1");
+  }
+
   /* ---- every page can reach its stylesheet and script ----------------------
      The story and word pages shipped at the wrong depth and loaded neither,
      so the live story page could not open a chapter. The harness here injects
@@ -1351,10 +1411,10 @@ async function main() {
      unit carries no text box at all, and each closed widget must mark the
      right answer right, the wrong one wrong, and come back after a reload. */
   {
-    /* Every page with marked tasks: twelve units of seven lessons, four Reviews. */
+    /* Every page with marked tasks: twelve units of six lessons, four Reviews. */
     const pages = [];
     for (let u = 1; u <= 12; u++)
-      for (let l = 1; l <= 7; l++) pages.push("docs/unit-" + String(u).padStart(2, "0") + "/lesson-" + l + "/index.html");
+      for (let l = 1; l <= 6; l++) pages.push("docs/unit-" + String(u).padStart(2, "0") + "/lesson-" + l + "/index.html");
     for (let r = 1; r <= 4; r++) pages.push("docs/review-" + r + "/index.html");
     const withBoxes = [];
     for (const pg of pages) {
@@ -1469,7 +1529,7 @@ async function main() {
   /* The word practice engine never asks for a typed word either. */
   {
     const win = await settled(load("docs/unit-01/index.html", null, w => {
-      w.localStorage.setItem("en8:progress:v1", JSON.stringify({ "01": { lessons: { 1:1, 2:1, 3:1, 4:1, 5:1, 6:1, 7:1 }, test: null } }));
+      w.localStorage.setItem("en8:progress:v1", JSON.stringify({ "01": { lessons: { 1:1, 2:1, 3:1, 4:1, 5:1, 6:1 }, test: null } }));
       fastPage(w);
     }));
     const doc = win.document;

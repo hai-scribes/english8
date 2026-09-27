@@ -1,7 +1,7 @@
 # Unit 12 — Life on Other Planets
 
 > **Bài 12 — Sự sống trên các hành tinh khác**
-> Self-study pack. Work through Lessons 1–7 in order. Marked exercises check
+> Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
 > themselves; the [Answer Key](#answer-key) covers the open ones.
 
 ## What this unit teaches
@@ -83,7 +83,7 @@
 
 ---
 
-## Lesson 2 — A Closer Look 1
+## Lesson 2 — Words & Sounds
 
 ### Meet the words
 
@@ -337,7 +337,7 @@ some sounds are not perfect.
 > **Tiếng Việt:** Mô tả hành tinh của bạn theo **3–4 cụm**, dừng ngắn giữa các cụm.
 :::
 
-## Lesson 3 — A Closer Look 2
+## Lesson 3 — Grammar
 
 ### Grammar — Reported speech: questions
 
@@ -422,6 +422,20 @@ then the verb.
 > **(1)** không có *do / does / did*, **(2)** chủ ngữ đứng **trước** động từ,
 > **(3)** kết thúc bằng **dấu chấm**. Và đừng dùng *if* khi đã có từ để hỏi:
 > ✅ *She asked what I wanted.*
+
+#### 6 · Other ways to report a question
+
+**wanted to know** works like *asked*: the words after it are in normal order.
+**was asking about** takes a thing, not a question.
+
+**asked me if · wanted to know whether · asked me why · was asking about**
+
+> "Are you free on Saturday?" → She asked me **if I was** free on Saturday.
+> "Has the club started?" → He wanted to know **whether the club had** started.
+> "Why are you interested in Mars?" → They asked me **why I was** interested in Mars.
+> Someone was asking **about your telescope**.
+
+❌ *He wanted to know whether had the club started.*
 
 ### 3.1 Practice
 
@@ -522,119 +536,7 @@ full sentence, using *asked me*.
 
 ---
 
-## Lesson 4 — Communication
-
-### Everyday English — Saying how sure you are
-
-When you talk about life on other planets, nobody knows the answer. English
-has a whole ladder of phrases for how certain you are.
-
-#### Very sure
-
-| Very sure | Nghĩa |
-| --- | --- |
-| I'm **certain** there's life out there. | Tôi chắc chắn là… |
-| There's **definitely** water under the ice. | Chắc chắn là… |
-| It **must be** true — look at the photographs. | Chắc hẳn là… |
-
-#### The two you need most — and the reason that follows them
-
-These are the two answers you will give again and again. On their own they
-sound like a shrug. Say the phrase, then say **why**, and it becomes a real
-answer:
-
-| Someone asks | You answer |
-| --- | --- |
-| Do you think Mars can support life? | I'm not sure about it. Scientists are still looking for water there. |
-| Do you think Ha will win on Saturday? | I doubt it. She hurt her arm last week. |
-| Will the rocket launch on Friday? | I'm not sure about it. The weather forecast is bad. |
-| Can that photograph really be a UFO? | I doubt it. It looks exactly like a plane at night. |
-
-> **Ghi chú:** Công thức là **cụm từ + lý do**. *I'm not sure about it.* dùng
-> khi bạn **chưa biết**, còn *I doubt it.* dùng khi bạn **nghiêng về "không"**.
-> Cả hai đều kết thúc bằng **it** — đừng thêm tân ngữ dài phía sau:
-> ❌ *I doubt it that Mars has life.* ✅ *I doubt it. Mars is far too cold.*
-
-#### Not sure
-
-| Not sure | Nghĩa |
-| --- | --- |
-| It's **possible that** life began in water. | Có khả năng là… |
-| There **may / might be** creatures we can't see. | Có thể có… |
-| I **suppose** so. | Tôi cho là vậy. |
-| It **depends on** the temperature. | Còn tuỳ vào… |
-
-#### Doubting
-
-| Doubting | Nghĩa |
-| --- | --- |
-| I **doubt it**. | Tôi không nghĩ vậy đâu. |
-| I'm **not convinced**. | Tôi thấy chưa thuyết phục lắm. |
-| **Surely not!** | Không thể nào! |
-| That **can't be** right. | Điều đó không thể đúng được. |
-
-### Reporting a question back
-
-Very often you have to tell someone what a third person asked you. These are
-the frames you need most:
-
-| Frame | Example |
-| --- | --- |
-| **She asked me if…** | She asked me if I was free on Saturday. |
-| **He wanted to know whether…** | He wanted to know whether the club had started. |
-| **They asked me what/where/why…** | They asked me why I was interested in Mars. |
-| **Someone was asking about…** | Someone was asking about your telescope. |
-
-### 4.1 Complete the mini-dialogues
-
-::: task skill="course" type="gap-fill" ask="Choose the word that fits each gap."
-- **A:** Do you think there are aliens in our galaxy? — **B:** It's ___ that there are — the galaxy is enormous. {possible | impossible | unlikely} = possible
-- **A:** My cousin says he saw a spacecraft over the rice fields. — **B:** I ___ it. It was probably a plane. {doubt | believe | know} = doubt
-- **A:** Will humans live on Mars one day? — **B:** It depends ___ how fast the technology improves. {on | of | in} = on
-- **A:** Chi asked me something about you yesterday. — **B:** Really? What did she want to ___ ? {know | tell | doubt} = know
-- **A:** Cô Yến asked ___ you were joining the science club. — **B:** Tell her yes — I signed up on Monday. {if | when | why} = if
-:::
-
-### 4.2 Phrase first, then the reason
-
-::: task skill="course" type="choice" opts="I'm not sure about it.|I doubt it." ask="Which phrase goes before the reason?"
-- ___ The results of the tests only come out next week. = I'm not sure about it. ~ the speaker has no information either way yet
-- ___ There is no oxygen at all in the air there. = I doubt it. ~ the reason points firmly towards *no*
-- ___ Scientists are still arguing about the photographs. = I'm not sure about it. ~ even the experts have not settled it
-- ___ The ticket costs more than a house. = I doubt it. ~ the reason makes it very unlikely
-- ___ It depends on how much money the space agency gets. = I'm not sure about it. ~ the answer is still open
-- ___ She has never once finished a race. = I doubt it. ~ the evidence leans towards *no*
-:::
-
-### 4.3 Say how sure you are
-
-Answer each question in **two sentences**: the phrase first, then the reason.
-Use *I'm not sure about it.* twice and *I doubt it.* once.
-
-1. "Is there water on Mars?"
-   → _______________________________________________
-2. "Will your friend get a good mark in the English test?"
-   → _______________________________________________
-3. "Will the weather be fine tomorrow?"
-   → _______________________________________________
-
-### 4.4 Write your own
-
-Someone asks you these three questions. Write a reply that shows **how sure**
-you are, and give a reason.
-
-1. "Is there life on other planets?"
-   → _______________________________________________
-2. "Will you ever travel into space?"
-   → _______________________________________________
-3. "Could humans survive on Mars for ten years?"
-   → _______________________________________________
-
-Now report all three questions to a friend, starting *She asked me…*
-
-4. → _______________________________________________
-5. → _______________________________________________
-6. → _______________________________________________
+## Lesson 4 — Reading & Speaking
 
 ### Three planets in the solar system
 
@@ -665,33 +567,11 @@ them and see how much you can still say.
 > hanging low above the fields. That is Venus, and it is why people have called
 > it the **morning star** for thousands of years.
 
-### 4.5 Read the fact-files
+**Talk about it.** Cover the fact-files and tell someone about one of the three
+planets for about thirty seconds. Start like this, then keep going from memory:
+*I would like to tell you about Mercury. It is the smallest planet, and…* Give
+at least three facts, and say one thing that surprised you.
 
-::: task skill="course" type="short-answer" ask="Answer from the three fact-files above."
-- Which two planets have no moon? {Mercury and Venus | Mercury and Jupiter | Venus and Jupiter} = Mercury and Venus
-- Which planet is similar in size to the Earth? {Venus | Mercury | Jupiter} = Venus
-- Which planet is the smallest and the closest to the Sun? {Mercury | Venus | Jupiter} = Mercury
-- Which planet do people call the morning star? {Venus | Jupiter | Mercury} = Venus
-- Which planet is the largest and the stormiest? {Jupiter | Venus | Mercury} = Jupiter
-- About how many moons does Jupiter have? {about sixty-three | about eight | about three} = about sixty-three
-- Why is there no wind or weather on Mercury? {It has no atmosphere. | It has no moon. | It is the smallest planet.} = It has no atmosphere. ~ no air means nothing for the wind to be made of
-- When does the fact-file tell you to look east for Venus? {just before sunrise | just after sunset | at midnight} = just before sunrise
-:::
-
-### 4.6 Tell someone about one of them
-
-Choose **one** of the three planets and talk about it for about thirty seconds,
-without reading the fact-file. Start like this, then keep going from memory:
-
-> *I would like to tell you about Mercury. It is the smallest planet, and…*
-
-Give at least **three** facts, and say **one** thing that surprised you. Record
-yourself, listen back, and check that your list of facts ends with a falling
-tone.
-
----
-
-## Lesson 5 — Skills 1: Reading & Speaking
 
 ### Reading — *The twelfth mark*
 
@@ -763,7 +643,7 @@ tone.
 > Thảo asked how long the walk would take. Khoa already knew.
 :::
 
-### 5.1 True, False, or Not Given
+### 4.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**True** means the text says it. **False** means the text says the opposite. **Not Given** means the text does not say either way."
 - The writer has told this story before. = T ~ he says he has told it eleven times
@@ -775,7 +655,7 @@ tone.
 - The writer thinks he can decide what the sea brings back. = F ~ "You never choose what comes back"
 :::
 
-### 5.2 Answer the questions
+### 4.2 Answer the questions
 
 ::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
 - Which planet did Khoa point at, low over the roofs? {Venus | the moon | the habitable zone} = Venus
@@ -785,7 +665,7 @@ tone.
 - Which way did the water go after the tide turned? {out | in | up} = out
 :::
 
-### 5.3 Vocabulary in context
+### 4.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means this. The clock is still running."
 - changed direction, as the tide does {went over | came in | kept going} = went over
@@ -796,7 +676,7 @@ tone.
 :::
 
 ::: bridge name="Use only what the text says" trains="Reading" cefr="B1" marker="[Q]" src="04 §4.2"
-Go back to exercise **5.1** and answer it again as if you had **never met
+Go back to exercise **4.1** and answer it again as if you had **never met
 these people before.** For each statement, ask only: does *this text* say it,
 say the opposite, or say nothing?
 
@@ -834,7 +714,7 @@ check three things:
 
 Repeat Step 2 until each answer runs clearly from its first word to its last.
 
-### 5.4 Read it again, against the clock
+### 4.4 Read it again, against the clock
 
 Read the same text again, a little faster each time.
 
@@ -844,7 +724,7 @@ Read the same text again, a little faster each time.
 - Press **I finished** the moment you reach the last line
 :::
 
-### 5.5 Say it again, faster
+### 4.5 Say it again, faster
 
 ::: fluency mode="talk" secs="240|180|120" ask="Talk about living somewhere other than Earth."
 - Which planet, and why
@@ -853,9 +733,66 @@ Read the same text again, a little faster each time.
 - Whether you would actually go
 :::
 
+### Everyday English — Expressing uncertainty
+
+*A few fixed phrases for saying how sure you are — and above all how unsure.
+They fit the speaking above: nobody knows whether there is life somewhere else
+in the galaxy, so when you answer, say how sure you are, then say why.*
+
+#### The two you need most — and the reason that follows them
+
+These are the two answers you will give again and again. On their own they
+sound like a shrug. Say the phrase, then say **why**, and it becomes a real
+answer:
+
+| Someone asks | You answer |
+| --- | --- |
+| Do you think Mars can support life? | I'm not sure about it. Scientists are still looking for water there. |
+| Do you think Ha will win on Saturday? | I doubt it. She hurt her arm last week. |
+| Will the rocket launch on Friday? | I'm not sure about it. The weather forecast is bad. |
+| Can that photograph really be a UFO? | I doubt it. It looks exactly like a plane at night. |
+
+> **Ghi chú:** Công thức là **cụm từ + lý do**. *I'm not sure about it.* dùng
+> khi bạn **chưa biết**, còn *I doubt it.* dùng khi bạn **nghiêng về "không"**.
+> Cả hai đều kết thúc bằng **it** — đừng thêm tân ngữ dài phía sau:
+> ❌ *I doubt it that Mars has life.* ✅ *I doubt it. Mars is far too cold.*
+
+#### Not sure
+
+| Not sure | Nghĩa |
+| --- | --- |
+| It's **possible that** life began in water. | Có khả năng là… |
+| There **may / might be** creatures we can't see. | Có thể có… |
+| I **suppose** so. | Tôi cho là vậy. |
+| It **depends on** the temperature. | Còn tuỳ vào… |
+| I'm **not certain**. | Tôi không chắc lắm. |
+
+#### Doubting
+
+| Doubting | Nghĩa |
+| --- | --- |
+| I **doubt it**. | Tôi không nghĩ vậy đâu. |
+| I'm **not convinced**. | Tôi thấy chưa thuyết phục lắm. |
+| **Surely not!** | Không thể nào! |
+| That **can't be** right. | Điều đó không thể đúng được. |
+
+#### Very sure
+
+| Very sure | Nghĩa |
+| --- | --- |
+| I'm **certain** there's life out there. | Tôi chắc chắn là… |
+| There's **definitely** water under the ice. | Chắc chắn là… |
+| It **must be** true — look at the photographs. | Chắc hẳn là… |
+
+**Say it with someone.** They ask you three things, and you answer each one
+with the phrase first and the reason after it: whether there is water on Mars,
+whether a friend of yours will get a good mark in the English test, and whether
+the weather will be fine tomorrow. Say **I'm not sure about it.** for two of
+them and **I doubt it.** for one. Then swap.
+
 ---
 
-## Lesson 6 — Skills 2: Listening & Writing
+## Lesson 5 — Listening & Writing
 
 ### Listening — The man at the far end
 
@@ -893,7 +830,7 @@ And the girl asked me nothing at all, which is how I knew she had it back. Sao.
 I am sorry it took so long to reach her.
 :::
 
-### 6.1 Listen and choose
+### 5.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
 - The speaker says his visitors walked {nine days | eleven days | twelve days} = nine days
@@ -904,7 +841,7 @@ I am sorry it took so long to reach her.
 - He knew Sao had her name back because she {asked him nothing | asked him how long Minh could stay | asked him whether he was angry} = asked him nothing
 :::
 
-### 6.2 Listen and complete
+### 5.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion"
 - He says the least he can do is answer them in ___ . {order | the end | a good while} = order
@@ -983,9 +920,9 @@ Keep a detail only if it supports the first impression you opened with.
 
 ---
 
-## Lesson 7 — Looking Back & Project
+## Lesson 6 — Looking Back & Project
 
-### 7.1 Vocabulary check
+### 6.1 Vocabulary check
 
 ::: task skill="course" type="gap-fill" ask="Choose the word from this unit that fits."
 - Mars is the fourth ___ from the Sun. {planet | star | galaxy} = planet
@@ -998,7 +935,7 @@ Keep a detail only if it supports the first impression you opened with.
 - The Milky Way is the ___ that our solar system belongs to. {galaxy | atmosphere | planet} = galaxy
 :::
 
-### 7.2 Pronunciation check
+### 6.2 Pronunciation check
 
 ::: task skill="course" type="choice" opts="↗|↘" ask="Which way does your voice go on the **bold** item?"
 - We need **water**, oxygen and warmth. = ↗
@@ -1011,7 +948,7 @@ Keep a detail only if it supports the first impression you opened with.
 - You want the listener to know that the thing you have just named was the last one. Your voice on it… = ↘
 :::
 
-### 7.3 Grammar check
+### 6.3 Grammar check
 
 ::: task skill="course" type="short-answer" variant="sentence-build" ask="These were asked a few weeks ago. Report each one, starting with the words after the dash."
 - "Do you have a coat with you?" — He asked me = He asked me if I had a coat with me.
@@ -1022,7 +959,7 @@ Keep a detail only if it supports the first impression you opened with.
 - "How long will the film last?" — I asked my father {lasts | lasting} = I asked my father how long the film would last.
 :::
 
-### 7.4 Error hunt
+### 6.4 Error hunt
 
 This paragraph has **six** mistakes. Below, it comes one line at a time.
 
@@ -1042,7 +979,7 @@ This paragraph has **six** mistakes. Below, it comes one line at a time.
 - Everyone use it now. {uses | using | used} = use -> uses ~ everyone **uses**
 :::
 
-### 7.5 Word formation
+### 6.5 Word formation
 
 ::: task skill="course" type="gap-fill" ask="Choose the right form of the word in brackets."
 - Space ___ costs a great deal of money and takes a great deal of time. *(explore)* {exploration | explorer | explore} = exploration
@@ -1053,7 +990,7 @@ This paragraph has **six** mistakes. Below, it comes one line at a time.
 - The ___ of the new telescope is planned for next March. *(launch)* {launch | launcher | launched} = launch
 :::
 
-### 7.6 Report the question
+### 6.6 Report the question
 
 ::: task skill="course" type="gap-fill" ask="Choose the words that complete each reported question."
 - "What planet do you want to visit?" my friend asked me. → My friend asked me what planet ___ to visit. {I wanted | did I want | do I want} = I wanted
@@ -1105,14 +1042,14 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for space and for life beyond Earth | Lesson 2, Meet the words · Lesson 7, exercises 7.1 and 7.5 |
-| use the right intonation when I read a list aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 7, exercise 7.2. Saying them aloud is yours — record Lesson 2, exercise 2.3 and listen back. |
-| report a question somebody asked | Lesson 3, practice 3.1 · Lesson 7, exercises 7.3, 7.4 and 7.6 |
-| say how sure, or how unsure, I am | Lesson 4, exercises 4.1 and 4.2 |
-| read a first-person account closely and answer it in the writer's own words | Lesson 5, exercises 5.1 and 5.2 |
-| talk about what a planet needs before people could live on it | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen once to a spoken account and catch the questions reported in it | Lesson 6, exercises 6.1 and 6.2 |
-| write a paragraph describing creatures on another planet | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| use the words for space and for life beyond Earth | Lesson 2, Meet the words · Lesson 6, exercises 6.1 and 6.5 |
+| use the right intonation when I read a list aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. Saying them aloud is yours — record Lesson 2, exercise 2.3 and listen back. |
+| report a question somebody asked | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3, 6.4 and 6.6 |
+| say how sure, or how unsure, I am | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| read a first-person account closely and answer it in the writer's own words | Lesson 4, exercises 4.1 and 4.2 |
+| talk about what a planet needs before people could live on it | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| listen once to a spoken account and catch the questions reported in it | Lesson 5, exercises 5.1 and 5.2 |
+| write a paragraph describing creatures on another planet | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1142,27 +1079,7 @@ me if I had finished my homework. 3. My younger cousin asked me whether there
 were really aliens. 4. My neighbour asked me where I was going. 5. My mother
 asked me why I was awake so late.
 
-### Lesson 4
-
-**4.3** Answers will vary. Check: each answer is **two sentences** — the phrase,
-then a full stop, then a reason — and that *I doubt it.* appears exactly once,
-on the answer where you really do lean towards "no". Model answers:
-1. *I'm not sure about it. Scientists have found traces of water but no water
-itself.* 2. *I doubt it. She hasn't opened the book all week.* 3. *I'm not sure
-about it. The forecast keeps changing.*
-
-**4.4** Answers will vary. Check: items 1–3 each contain one phrase from the
-certainty tables plus a reason; items 4–6 are correctly reported questions —
-*She asked me if there was life on other planets. / She asked me if I would
-ever travel into space. / She asked me if humans could survive on Mars for ten
-years.*
-
-**4.6** Answers will vary. Check: you named the planet in your first sentence,
-gave **three** facts that the fact-file really contains, added one reaction of
-your own, and — if you listed the facts in one sentence — let your voice fall ↘
-on the last item.
-
-### Lesson 6
+### Lesson 5
 
 **Writing** Answers will vary. Check against the checklist: 80–100 words
 counted, a topic sentence naming the planet, six or more adjectives, four or

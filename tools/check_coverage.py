@@ -51,12 +51,15 @@ def unit_haystack(n):
 
 
 def communication_blocks(raw):
-    """Headings inside our Lesson 4 that are neither Everyday English nor an exercise.
+    """Headings inside our Lesson 4 that are not Everyday English, the reading,
+    the speaking, or an exercise.
 
     The book's Communication section has two halves: Everyday English, and a
-    named content block with its own exercises. Ours has historically had only
-    the first, so this reports the structural fact — what extra headings exist —
-    rather than guessing at the topic, which topic words cannot settle.
+    named content block. Ours had only the first for a long time, so this
+    reports the structural fact — what extra headings exist — rather than
+    guessing at the topic, which topic words cannot settle. Since 2026-09-27
+    both halves are read inside Lesson 4 (Reading & Speaking) rather than in a
+    lesson of their own, which is why the skills headings are skipped here.
     """
     body = re.search(r"^## Lesson 4 .*?(?=^## Lesson 5 |\Z)", raw, re.S | re.M)
     if not body:
@@ -69,7 +72,7 @@ def communication_blocks(raw):
         if not m:
             continue
         head = m.group(1)
-        if head.startswith("Everyday English"):
+        if head.startswith(("Everyday English", "Reading", "Speaking")):
             continue
         if re.match(r"^4\.\d", head):
             continue

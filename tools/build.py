@@ -7,7 +7,7 @@
 Three levels, one page each, plus the four cumulative reviews:
 
     docs/index.html                        every unit, then the four reviews
-    docs/unit-NN/index.html                that unit's seven lessons, then
+    docs/unit-NN/index.html                that unit's six lessons, then
                                            the gated practice + test
     docs/unit-NN/lesson-M/index.html       one lesson: teaching blocks and
                                            its exercises, inline, in order
@@ -15,7 +15,7 @@ Three levels, one page each, plus the four cumulative reviews:
 
 The ordering rule the site is built around: a lesson page never opens with
 an exercise, and a unit page never places practice or test above its lesson
-links. Lesson 7 ("Looking Back") is all checks in the source, so it is given
+links. Lesson 6 ("Looking Back") is all checks in the source, so it is given
 a real recap block first -- you should know what you are being checked on.
 
 The reviews follow from the same rule read one level up. Nothing in a Review
@@ -50,7 +50,15 @@ ASSETS = Path(__file__).resolve().parent / "assets"
 ART = ROOT / "art"
 
 SITE = "English 8 — Global Success"
-LESSONS = 7
+LESSONS = 6
+# The book's own name for each lesson, printed small above ours so the page and
+# the printed book can be matched in class. Ours says what the lesson is for;
+# the book's names ("A Closer Look 1") say where it sits. The book's Communication
+# section has no lesson of its own here: its Everyday English phrases and its
+# content block are read inside Lesson 4, beside the speaking they serve.
+BOOK_SECTION = {1: "Getting Started", 2: "A Closer Look 1", 3: "A Closer Look 2",
+                4: "Communication · Skills 1", 5: "Skills 2",
+                6: "Looking Back & Project"}
 
 RE_TITLE = re.compile(r"^#\s+Unit\s+(\d+)\s+—\s+(.+)$", re.M)
 RE_VI = re.compile(r"^>\s*\*\*Bài\s+\d+\s*—\s*(.+?)\*\*\s*$", re.M)
@@ -2129,18 +2137,21 @@ def practice_data(u) -> list:
 #
 # Nothing here is authored. Every non-word item is an item the unit ALREADY
 # asks, lifted from its own marked tasks, so the review queue cannot claim to
-# rehearse something the lessons never taught. The book's seven-section shape
-# fixes which lesson teaches which target, which is what makes the selection
-# mechanical rather than a guess:
+# rehearse something the lessons never taught. The lesson shape fixes which
+# lesson teaches which target, which is what makes the selection mechanical
+# rather than a guess:
 #
-#   Lesson 2  A Closer Look 1  -> vocabulary and PRONUNCIATION
-#   Lesson 3  A Closer Look 2  -> GRAMMAR
-#   Lesson 4  Communication    -> Everyday English (the FUNCTION) first, then
-#                                 the content block
+#   Lesson 2  Words & Sounds  -> vocabulary and PRONUNCIATION
+#   Lesson 3  Grammar         -> GRAMMAR
+#
+# The Everyday English function is not enrolled. It is read in Lesson 4 as a
+# set of phrases, with no marked task (decided by the operator on 2026-09-27),
+# so there is nothing of it for the queue to lift -- and this rule is that the
+# queue never authors.
 #
 # Caps are per unit and deliberately small: the queue is a spaced review, not a
 # second sitting of the unit.
-REVIEW_CAP = {"pron": 3, "grammar": 4, "function": 3, "colloc": 3}
+REVIEW_CAP = {"pron": 3, "grammar": 4, "colloc": 3}
 # Finding the pronunciation exercises needs three signals, not one, because the
 # syllabus changes what "pronunciation" MEANS half way through the book: units
 # 1-8 teach sound contrasts and label them in IPA, while units 9-12 teach stress
@@ -2237,8 +2248,7 @@ def review_items(u) -> list:
     # the gap-fill. What comes back seven days later should be the item that
     # asks the learner to PRODUCE the form, so produced items outrank picked
     # ones and the cap is applied to the ranked list.
-    cand = {"pron": [], "grammar": [], "function": []}
-    fn_block = None
+    cand = {"pron": [], "grammar": []}
     l2 = [blk.get("id") for lesson, blk, t in u["tasks"] if lesson == 2 and not t.get("genre")]
     last_l2 = l2[-1] if l2 else None
     for lesson, blk, t in u["tasks"]:
@@ -2250,15 +2260,6 @@ def review_items(u) -> list:
             kind = "pron"                      # a sound set, wherever it sits
         elif lesson == 3:
             kind = "grammar"
-        elif lesson == 4:
-            # Everyday English comes first in the book's Communication section;
-            # the named content block follows it. Only the first block is the
-            # speech act, so the queue does not rehearse the culture reading as
-            # if it were a function.
-            if fn_block is None:
-                fn_block = blk.get("id")
-            if blk.get("id") == fn_block:
-                kind = "function"
         if not kind:
             continue
         for n, item in enumerate(t["items"], 1):
@@ -2505,7 +2506,7 @@ def parse_unit(path: Path) -> dict:
 # test stopped at the edge of its own unit.
 #
 # A Review is deliberately NOT a thirteenth unit. It has no vocabulary table of
-# its own, no seven lessons and no progress gate — it re-tests words and
+# its own, no six lessons and no progress gate — it re-tests words and
 # structures that three units have already taught, so its `vocab` is the union
 # of those three tables and its parts are halves of one page, the way the book
 # prints them. Everything else is the same machinery: the same directives, the
@@ -2849,7 +2850,7 @@ def page_home(units, reviews=()) -> str:
       <li class="tstep" id="nextStep">
         <span class="tick" aria-hidden="true"></span>
         <div class="tbody">
-          <p class="tk" id="nextKicker">Unit 01 · Lesson 1 of 7</p>
+          <p class="tk" id="nextKicker">Unit 01 · Lesson 1 of 6</p>
           <h3 id="nextTitle">Getting Started</h3>
           <p class="lede" id="nextLede">Press <b>Finish lesson</b> at the bottom when you are done.</p>
           <div class="row">
@@ -2923,7 +2924,7 @@ def page_unit(u, reviews=()) -> str:
         rows.append(f"""    <a class="lesson" data-role="lesson-link" data-lesson="{L['n']}"
        href="lesson-{L['n']}/index.html">
       <span class="n">{L['n']}</span>
-      <span class="body"><span class="t">{e(L['title'])}</span><span class="d">{e(lesson_summary(L))}</span></span>
+      <span class="body"><span class="t">{e(L['title'])}</span><span class="bk">Book: {e(BOOK_SECTION[L['n']])}</span><span class="d">{e(lesson_summary(L))}</span></span>
       <span class="go" aria-hidden="true">→</span>
     </a>""")
 
@@ -3334,10 +3335,10 @@ exist in the file it names.
 
 
 def recap_block(u) -> str:
-    """Lesson 7 is all checks in the source. Open it with what is being checked.
+    """Lesson 6 is all checks in the source. Open it with what is being checked.
 
     This is the one block the generator authors rather than renders: without
-    it the consolidation lesson opens cold on exercise 7.1, which is both bad
+    it the consolidation lesson opens cold on exercise 6.1, which is both bad
     teaching and the one ordering rule this site is built to keep.
     """
     items = "".join(
@@ -3345,7 +3346,7 @@ def recap_block(u) -> str:
         for k, v in u["strands"])
     return f"""  <section class="block" data-role="teach">
     <h2>Before you start — what this checks</h2>
-    <p class="lede">Everything here comes from Lessons 1–6.</p>
+    <p class="lede">Everything here comes from Lessons 1–5.</p>
     <div class="strands">{items}</div>
   </section>"""
 
@@ -3589,6 +3590,7 @@ def page_lesson(u, L) -> str:
   <header class="masthead">
     <p class="eyebrow">Unit {u['num']:02d} · {e(u['title'])} · Lesson {L['n']} of {LESSONS}</p>
     <h1>{e(L['title'])}</h1>
+    <p class="booksec">In your book: {e(BOOK_SECTION[L['n']])}</p>
   </header>
 
 {chr(10).join(parts)}

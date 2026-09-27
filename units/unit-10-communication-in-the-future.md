@@ -1,7 +1,7 @@
 # Unit 10 — Communication in the Future
 
 > **Bài 10 — Giao tiếp trong tương lai**
-> Self-study pack. Work through Lessons 1–7 in order. Marked exercises
+> Self-study pack. Work through Lessons 1–6 in order. Marked exercises
 > check themselves; the [Answer Key](#answer-key) covers the open ones.
 
 ## What this unit teaches
@@ -83,7 +83,7 @@
 
 ---
 
-## Lesson 2 — A Closer Look 1
+## Lesson 2 — Words & Sounds
 
 ### Meet the words
 
@@ -300,7 +300,7 @@ syllable. Record yourself if you can.
 
 ---
 
-## Lesson 3 — A Closer Look 2
+## Lesson 3 — Grammar
 
 ### Grammar — Prepositions of place and time
 
@@ -559,115 +559,7 @@ Write true sentences about yourself. Use the words in brackets.
 
 ---
 
-## Lesson 4 — Communication
-
-### Everyday English — Making an online call work, and interrupting politely
-
-#### Making an online call work
-
-| Starting the call | Nghĩa |
-| --- | --- |
-| Can you hear me? | Bạn nghe thấy mình không? |
-| Can you see my screen? | Bạn nhìn thấy màn hình của mình chứ? |
-| You're on mute. | Bạn đang tắt tiếng đấy. |
-| Let me turn my camera on. | Để mình bật camera đã. |
-
-| When something goes wrong | Nghĩa |
-| --- | --- |
-| You're breaking up. | Tiếng của bạn bị ngắt quãng. |
-| Sorry, I lost you for a second. | Xin lỗi, mình bị mất kết nối một lát. |
-| The connection is bad here. | Đường truyền chỗ mình kém lắm. |
-| Could you say that again, please? | Bạn nói lại được không? |
-
-| Ending the call | Nghĩa |
-| --- | --- |
-| I'd better go now. | Mình phải đi đây. |
-| Let's talk again on Friday. | Thứ Sáu nói chuyện tiếp nhé. |
-| Say hello to your family for me. | Cho mình gửi lời chào gia đình bạn nhé. |
-| Bye for now! | Tạm biệt nhé! |
-
-> ⚠️ Note the prepositions inside these phrases: *on mute*, *on Friday*,
-> *for a second*, *for now*. Learn the whole phrase, not the single word.
-
-#### Interrupting politely
-
-Sometimes you have to break into what somebody is saying — you missed a step,
-or you want to suggest something different. English does this in two moves:
-**say sorry, then say the thing**, in one breath.
-
-| Breaking in | Nghĩa |
-| --- | --- |
-| **Sorry for interrupting, but** I think we should meet at nine. | Xin lỗi vì đã ngắt lời, nhưng… |
-| **Sorry to interrupt, but** we need to test the devices first. | Xin lỗi phải ngắt lời, nhưng… |
-| **Hold on.** Can you repeat that, please? | Khoan đã. Bạn nhắc lại được không? |
-| **Can I just say** something here? | Mình nói xen một câu được không? |
-| **Excuse me for a second.** | Cho mình xin một giây. |
-
-| Giving the turn back | Nghĩa |
-| --- | --- |
-| Sorry — please **go on**. | Xin lỗi — bạn nói tiếp đi. |
-| **Sorry about that.** You were saying? | Xin lỗi nhé. Bạn đang nói dở gì ấy nhỉ? |
-
-Both openings are polite. Say **Sorry for interrupting** or **Sorry to
-interrupt** — never *Sorry for interrupt*. After either one comes **but**, and
-then your point.
-
-> **Ghi chú:** Người nói tiếng Anh xin lỗi **trước khi** ngắt lời, chứ không
-> phải sau khi đã nói xong ý của mình. Câu *"Sorry for interrupting, but…"*
-> đứng **trước** điều bạn muốn nói. Nói hết ý rồi mới xin lỗi thì đã muộn, và
-> người nghe sẽ thấy bạn cắt ngang chứ không thấy bạn lịch sự.
-
-> ⚠️ **Bẫy thường gặp:** *Hold on.* là cách nói **thân mật**. Dùng với bạn bè,
-> anh chị em, bạn cùng nhóm thì bình thường, nhưng đừng dùng với thầy cô hay
-> người lớn mà bạn không quen. *Sorry for interrupting, but…* thì dùng ở đâu
-> cũng được — với bạn bè, trong lớp, hay trong một cuộc họp trực tuyến.
-
-### 4.1 Complete the mini-dialogues
-
-::: task skill="course" type="gap-fill" ask="Choose what fits each gap."
-- **A:** Hello? Hello? I can see you but I can't hear anything. **B:** Oh — sorry, I think ___ . {I'm on mute | you're on mute | I lost you for a second} = I'm on mute
-- **A:** …and then we went to the museum ___ Saturday and… sorry, what? {on | in | at} = on
-- **B:** ___ . Your voice keeps stopping. {You're breaking up | You're on mute | Bye for now} = You're breaking up
-- **A:** It's nearly ten o'clock here. **B:** ___ . Let's talk again on Friday. {I'd better go now | Can you hear me | Let me turn my camera on} = I'd better go now
-- **A:** Give my love to everyone at home. **B:** I will. And ___ to your parents for me. {Say hello | Hold on | Go on} = Say hello
-:::
-
-### 4.2 Write your own
-
-Write a short online-call conversation of **six lines** (A, B, A, B, A, B).
-Use at least one phrase from each of the three tables, and at least two
-prepositions of time.
-
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-
-### 4.3 Break in politely
-
-::: task skill="course" type="choice" opts="Sorry for interrupting, but|Hold on|Can I just say|Sorry about that|Go on" ask="Which phrase fits? Use each one once."
-- In an online lesson your teacher is in the middle of reading out the rules. You must stop her to suggest a different starting time, so you apologise first and give your idea in the same sentence. You begin… = Sorry for interrupting, but ~ it works with anybody, and it puts the apology before the idea
-- Your best friend is explaining how to move the webcam and you missed one step. You just want them to stop for a moment — two short, friendly words. You say… = Hold on ~ short and informal, which is fine with a friend
-- Everybody in the group has spoken and you have one short point to add. You ask… = Can I just say
-- You broke into your sister's story and now she has stopped talking. First you apologise, then you ask what she was saying: "… You were saying?" = Sorry about that
-- You have made your point and you want your friend to carry on. You say, "Sorry — please …" = Go on
-:::
-
-### 4.4 Interrupt, and say why
-
-Write what you would actually say. Use a different phrase each time, and put
-the reason in the same sentence as the apology.
-
-1. Your friend is explaining how to make a video call and you did not hear the
-   step about the webcam. You want that step again.
-   → _______________________________
-2. Your group is deciding where to meet on Saturday. Someone is still talking,
-   but you want to suggest the library instead of the café.
-   → _______________________________
-3. Write the one line you say afterwards to give the speaker the turn back.
-   → _______________________________
+## Lesson 4 — Reading & Speaking
 
 ### The future of language
 
@@ -693,37 +585,11 @@ questions Mark answered: **when**, **who**, **how** and **why**.
 | **How will it help?** | it translates comments and private messages in every language | it replies to customers instantly in every language |
 | **Why will it spread?** | it removes the language barrier | it helps them sell to customers in other countries |
 
-### 4.5 Read the predictions
+**Talk about it.** Make a prediction of your own, in the same shape as Mark's.
+Take one of the two fact-files, or invent a way of communicating yourself, and
+answer the four questions in order: **when**, **who**, **how**, **why**. Start
+like this: *"In ten years, I think…"*
 
-::: task skill="course" type="short-answer" ask="Answer from Mark's prediction and from the two fact-files."
-- What means of communication is Mark talking about? {emojis | emails | chatbots} = emojis
-- When does Mark think everybody will be using them? {in twenty years | in ten years | in fifty years} = in twenty years
-- Apart from teenagers, who does Mark name? {grandparents, teachers and bank managers | people who use social networks | people who sell things in online shops} = grandparents, teachers and bank managers
-- Why does an emoji work in every country? {a feeling does not need a language | it translates every comment | it replies to customers instantly} = a feeling does not need a language
-- Who will use the automatic translation function? {people who use social networks | people who sell things in online shops | teachers and bank managers} = people who use social networks
-- Why will the automatic translation function spread? {it removes the language barrier | it helps them sell to customers in other countries | it carries a feeling} = it removes the language barrier
-- How will a chatbot help the people who use it? {it replies to customers instantly in every language | it translates comments and private messages | it carries a feeling with no words} = it replies to customers instantly in every language
-- Why will sellers want one? {it helps them sell to customers in other countries | it translates private messages | it carries a feeling} = it helps them sell to customers in other countries
-:::
-
-### 4.6 Your own prediction
-
-Make a prediction of your own, in the same shape as Mark's. Take **one** of the
-two fact-files above, or invent a way of communicating yourself, and write
-**four or five sentences** answering the four questions in order: **when**,
-**who**, **how**, **why**.
-
-Start like this: *"In ten years, I think…"*
-
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-_______________________________________________
-
----
-
-## Lesson 5 — Skills 1: Reading & Speaking
 
 ### Reading — *The voice in the box*
 
@@ -763,7 +629,7 @@ _______________________________________________
 > she said, "and I cannot remember his face."
 :::
 
-### 5.1 True, False, or Not Given
+### 4.1 True, False, or Not Given
 
 ::: task skill="reading" type="true-false-not-given" ask="**False** means the passage says the opposite. **Not Given** means it does not say either way."
 - There was a letter inside the tin box. = F ~ there was no letter — only one small brass thing the size of a thumb
@@ -773,7 +639,7 @@ _______________________________________________
 - The keeper made the recording before the flood. = NG ~ the passage never says when he made it
 :::
 
-### 5.2 Answer the questions
+### 4.2 Answer the questions
 
 ::: task skill="reading" type="multiple-choice" ask="Choose the answer the passage gives."
 - How high did the water stand when the brass thing was put down? {the tenth mark | the fourth mark | the top of the harbour wall} = the tenth mark
@@ -783,7 +649,7 @@ _______________________________________________
 - Where did Bống sit down? {the wet stone | the tin box | the mud} = the wet stone
 :::
 
-### 5.3 Vocabulary in context
+### 4.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word or phrase in the passage that means this. The clock is still running."
 - changes words from one language into another {translating | signal | telepathy} = translating
@@ -827,7 +693,7 @@ check three things:
 
 Repeat Step 2 until you can speak for a full minute.
 
-### 5.4 Say it again, faster
+### 4.4 Say it again, faster
 
 ::: fluency mode="talk" secs="240|180|120" ask="Talk about how you keep in touch with people."
 - Which device you use most
@@ -836,9 +702,80 @@ Repeat Step 2 until you can speak for a full minute.
 - How it may change in ten years
 :::
 
+### Everyday English — Interrupting politely
+
+*A few fixed phrases for breaking in while someone is talking, and for giving
+the turn back. The one-minute talk above is yours alone, so nobody interrupts
+it — use these when you are talking with someone, on a call or face to face.
+After them come the phrases for making an online call work.*
+
+Sometimes you have to break into what somebody is saying — you missed a step,
+or you want to suggest something different. English does this in two moves:
+**say sorry, then say the thing**, in one breath.
+
+| Breaking in | Nghĩa |
+| --- | --- |
+| **Sorry for interrupting, but** I think we should meet at nine. | Xin lỗi vì đã ngắt lời, nhưng… |
+| **Sorry to interrupt, but** we need to test the devices first. | Xin lỗi phải ngắt lời, nhưng… |
+| **Hold on.** Can you repeat that, please? | Khoan đã. Bạn nhắc lại được không? |
+| **Can I just say** something here? | Mình nói xen một câu được không? |
+| **Excuse me for a second.** | Cho mình xin một giây. |
+
+| Giving the turn back | Nghĩa |
+| --- | --- |
+| Sorry — please **go on**. | Xin lỗi — bạn nói tiếp đi. |
+| **Sorry about that.** You were saying? | Xin lỗi nhé. Bạn đang nói dở gì ấy nhỉ? |
+
+Both openings are polite. Say **Sorry for interrupting** or **Sorry to
+interrupt** — never *Sorry for interrupt*. After either one comes **but**, and
+then your point.
+
+> **Ghi chú:** Người nói tiếng Anh xin lỗi **trước khi** ngắt lời, chứ không
+> phải sau khi đã nói xong ý của mình. Câu *"Sorry for interrupting, but…"*
+> đứng **trước** điều bạn muốn nói. Nói hết ý rồi mới xin lỗi thì đã muộn, và
+> người nghe sẽ thấy bạn cắt ngang chứ không thấy bạn lịch sự.
+
+> ⚠️ **Bẫy thường gặp:** *Hold on.* là cách nói **thân mật**. Dùng với bạn bè,
+> anh chị em, bạn cùng nhóm thì bình thường, nhưng đừng dùng với thầy cô hay
+> người lớn mà bạn không quen. *Sorry for interrupting, but…* thì dùng ở đâu
+> cũng được — với bạn bè, trong lớp, hay trong một cuộc họp trực tuyến.
+
+#### Making an online call work
+
+| Starting the call | Nghĩa |
+| --- | --- |
+| Can you hear me? | Bạn nghe thấy mình không? |
+| Can you see my screen? | Bạn nhìn thấy màn hình của mình chứ? |
+| You're on mute. | Bạn đang tắt tiếng đấy. |
+| Let me turn my camera on. | Để mình bật camera đã. |
+
+| When something goes wrong | Nghĩa |
+| --- | --- |
+| You're breaking up. | Tiếng của bạn bị ngắt quãng. |
+| Sorry, I lost you for a second. | Xin lỗi, mình bị mất kết nối một lát. |
+| The connection is bad here. | Đường truyền chỗ mình kém lắm. |
+| Could you say that again, please? | Bạn nói lại được không? |
+
+| Ending the call | Nghĩa |
+| --- | --- |
+| I'd better go now. | Mình phải đi đây. |
+| Let's talk again on Friday. | Thứ Sáu nói chuyện tiếp nhé. |
+| Say hello to your family for me. | Cho mình gửi lời chào gia đình bạn nhé. |
+| Bye for now! | Tạm biệt nhé! |
+
+> ⚠️ Note the prepositions inside these phrases: *on mute*, *on Friday*,
+> *for a second*, *for now*. Learn the whole phrase, not the single word.
+
+**Say it with someone.** One of you explains how to make a video call, step by
+step; the other breaks in to ask for a step again. Then one of you says where
+the group will meet next Saturday, and the other breaks in to suggest a
+different place. Swap each time. Use **Sorry for interrupting, but** or **Sorry
+to interrupt, but** with the reason in the same breath, and give the turn back
+afterwards with **Sorry — please go on**.
+
 ---
 
-## Lesson 6 — Skills 2: Listening & Writing
+## Lesson 5 — Listening & Writing
 
 ### Listening — The rest of the message
 
@@ -873,7 +810,7 @@ matters; the rest are copies. Take them, and read the last page first, because
 the last page tells you what the sea must never—
 :::
 
-### 6.1 Listen and choose
+### 5.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
 - The speaker says he posted the message at {the post office | a railway station | a market} = the post office
@@ -883,7 +820,7 @@ the last page tells you what the sea must never—
 - The message {stops in the middle of a sentence | ends with a goodbye | repeats the address} = stops in the middle of a sentence
 :::
 
-### 6.2 Note completion
+### 5.2 Note completion
 
 Choose for each gap **as you listen**.
 
@@ -965,9 +902,9 @@ The number will go up and down from week to week, and that is normal.
 
 ---
 
-## Lesson 7 — Looking Back & Project
+## Lesson 6 — Looking Back & Project
 
-### 7.1 Vocabulary check
+### 6.1 Vocabulary check
 
 ::: task skill="course" type="gap-fill" ask="Choose the word or phrase that fits."
 - My phone can ___ Japanese into English in a second. {translate | transmit | interact} = translate
@@ -977,7 +914,7 @@ The number will go up and down from week to week, and that is normal.
 - In the future, teachers may appear as ___ images. {holographic | telepathic | face-to-face} = holographic
 :::
 
-### 7.2 Pronunciation check
+### 6.2 Pronunciation check
 
 ::: task skill="course" type="choice" opts="final|not final" ask="Where is the stress — on the **final** syllable, or **not final**?"
 - Japanese = final
@@ -988,7 +925,7 @@ The number will go up and down from week to week, and that is normal.
 - guarantee = final
 :::
 
-### 7.3 Grammar check
+### 6.3 Grammar check
 
 ::: task skill="course" type="gap-fill" ask="Choose the word that fits."
 - The museum opens ___ half past eight. {at | on | in} = at
@@ -1001,7 +938,7 @@ The number will go up and down from week to week, and that is normal.
 - The blue helmet is ___ (they). {theirs | their | them} = theirs
 :::
 
-### 7.4 Error hunt
+### 6.4 Error hunt
 
 This paragraph has **six** mistakes. Below, it comes one line at a time.
 
@@ -1061,14 +998,14 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for communication technology | Lesson 2, Meet the words · Lesson 7, exercise 7.1 |
-| put the stress in the right place in words ending *-ese* and *-ee* | Lesson 2, exercises 2.1 and 2.2 · Lesson 7, exercise 7.2. Saying them aloud is yours — record Lesson 2, exercise 2.3 and listen back. |
-| say where and when (**under** the bed, **at** seven, **in** ten years, **by** Friday) and whose (**mine**, **yours**, a friend **of mine**) | Lesson 3, practice 3.1 · Lesson 7, exercises 7.3 and 7.4 |
-| interrupt politely | Lesson 4, exercise 4.3 |
-| read a text closely and answer it in the writer's own words | Lesson 5, exercises 5.1 and 5.2 |
-| talk about what is good and what is bad about a way of communicating | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen once to a recorded message and catch its dates, numbers and places | Lesson 6, exercises 6.1 and 6.2 |
-| write a paragraph describing a modern way of communicating | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| use the words for communication technology | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
+| put the stress in the right place in words ending *-ese* and *-ee* | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. Saying them aloud is yours — record Lesson 2, exercise 2.3 and listen back. |
+| say where and when (**under** the bed, **at** seven, **in** ten years, **by** Friday) and whose (**mine**, **yours**, a friend **of mine**) | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
+| interrupt politely | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| read a text closely and answer it in the writer's own words | Lesson 4, exercises 4.1 and 4.2 |
+| talk about what is good and what is bad about a way of communicating | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| listen once to a recorded message and catch its dates, numbers and places | Lesson 5, exercises 5.1 and 5.2 |
+| write a paragraph describing a modern way of communicating | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1098,29 +1035,10 @@ item 6 uses *in ten years* with *will* (*In ten years, phones will be…*).
 
 ### Lesson 4
 
-**4.2** Answers will vary. Check: one phrase from each of the three tables
-(starting / going wrong / ending), and two correct prepositions of time —
-for example *at eight*, *on Sunday*, *in the evening*.
-
-**4.4** Answers will vary. Check: the apology comes **before** the point, never
-after it; a different phrase in each of the three answers; item 1 asks for
-something to be said again (*Hold on. Can you repeat that, please?* — fine with
-a friend); item 2 begins *Sorry for interrupting, but…* or *Sorry to interrupt,
-but…* and then names the library; item 3 hands the turn back (*Sorry about that.
-Please go on.*).
-
-**4.6** Answers will vary. Check: the four questions are answered in that order
-— a time (*in ten years*), the people who will use it, what it will do, and the
-reason it will spread; every sentence is about the future, so each one needs
-*will* or *is going to*; and at least two words come from the Lesson 2 table
-(*chatbot, translation machine, private message, language barrier, instantly*).
-
-### Lesson 5
-
 **Speaking** Answers will vary. Check: you spoke for a full minute, used the
 pros/cons frame, and used *in / on / at* correctly with every day and time.
 
-### Lesson 6
+### Lesson 5
 
 **Writing** Answers will vary. Check against the checklist: 80–100 words, three
 correct prepositions of time, two of place, one possessive pronoun with no noun

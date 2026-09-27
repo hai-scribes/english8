@@ -76,9 +76,10 @@ catch you.**
 2. **Convert every exercise a key can settle into a `:::task`**, and leave the
    genuinely open ones as prose — except in Lessons 2 and 3, where vocabulary
    and grammar practice lives in the Meet-the-words pool and the practice bank
-   (see "Lesson 2 is Meet the words" below). **Say in the commit which went
-   which way.** A reveal-and-self-mark exercise is the arrangement every
-   directive here exists to replace.
+   (see "Lesson 2 is Meet the words" below), and the Communication material in
+   Lesson 4, which is read and never marked (see "Six lessons" below). **Say in
+   the commit which went which way.** A reveal-and-self-mark exercise is the
+   arrangement every directive here exists to replace.
 3. **Put the genre in a `variant`, never into `ask=` prose.** A task's own
    `ask=` is extra detail appended to the variant's, never a replacement — and
    odd-one-out without its variant renders as a free-text box, where spelling
@@ -106,6 +107,24 @@ Unit 1 has been rebuilt end to end as the pattern for the other eleven. Nothing
 below is a preference: each line is a defect the pilot found, with the fix that
 was shipped. **Process units 2–12 against this list**, one unit at a time,
 running every gate after each.
+
+### Six lessons, and Communication is read, not tested
+
+Decided by the operator on 2026-09-27. A unit is **Getting Started · Words &
+Sounds · Grammar · Reading & Speaking · Listening & Writing · Looking Back &
+Project**; `BOOK_SECTION` in `tools/build.py` prints the book's own name under
+each, so the page and the printed book still line up in class. The book's
+Communication section has no lesson: its content block opens Lesson 4 and its
+Everyday English phrases close it. Neither carries a `:::task` or a numbered
+exercise, and the review queue no longer has a `function` kind. **Do not put
+either back as a marked exercise**; the phrases get one unnumbered
+`**Say it with someone.**` paragraph built from the book's pair practice.
+
+Everyday English means fixed phrases for the book's one speech act. Grammar
+that had crept into it belongs in Lesson 3. The skills keep the book's pairing,
+reading with speaking and listening with writing, because each lesson takes
+something in and then uses it. `app.js` moves a learner's stored record from
+the seven-lesson numbering once (`reshapeOnce`), and `test_reading.js` holds it.
 
 ### An exercise a machine can mark is a `:::task`, not printed prose
 
@@ -208,7 +227,8 @@ wearing retrieval's clothes.
 The fixes generalise: **ask for the thing that is not on screen** (1.3 now
 names the verbs and sends the learner back to the dialogue to find the form),
 and **move a classification check away from the box that answers it** (3.1's
-went to Lesson 7, where it is a delayed check instead of a copying exercise).
+went to Looking Back, now Lesson 6, where it is a delayed check instead of a
+copying exercise).
 
 *Noticing* is a real activity and is worth keeping — but it must not be a
 scored, committed, one-shot attempt, because that is the machinery of
@@ -260,13 +280,13 @@ touching `data/cast.json` or `art/`. What must hold even without it:
 
 ### Lexis is met, not tabled
 
-`:::vocab` runs the three-stage intake in A Closer Look 1 — meet the words a
+`:::vocab` runs the three-stage intake in Lesson 2 (Words & Sounds) — meet the words a
 few at a time, answer on the set just met through the existing engine, then see
 the whole set with the offer to run it again. The table above it stays, as
 reference. This is **B8** (topic lexis pre-taught as a first-class step) doing
 the job a table never did, and it reuses `runEngine` on purpose: the engine
-already asks items as collocations (**F7**), already speaks them (**F3**) and
-already schedules what it touches.
+already asks items as collocations (**F7**) and already schedules what it
+touches.
 
 Bounded by **E5**: nothing is marked learned in the session that taught it, so
 the intake never says "mastered" and the delayed check stays the review queue's

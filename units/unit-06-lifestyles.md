@@ -1,7 +1,7 @@
 # Unit 6 — Lifestyles
 
 > **Bài 6 — Lối sống**
-> Self-study pack. Work through Lessons 1–7 in order. Marked exercises check
+> Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
 > themselves; the [Answer Key](#answer-key) at the end covers the open ones —
 > do the exercise first, then check.
 
@@ -79,7 +79,7 @@
 
 ---
 
-## Lesson 2 — A Closer Look 1
+## Lesson 2 — Words & Sounds
 
 ### Meet the words
 
@@ -321,7 +321,7 @@ Watch out for /p/ coming out as /b/.
 
 ---
 
-## Lesson 3 — A Closer Look 2
+## Lesson 3 — Grammar
 
 ### Grammar — The future simple: *will* and *won't*
 
@@ -515,111 +515,7 @@ Write true sentences about yourself. Use the words given each time.
 
 ---
 
-## Lesson 4 — Communication
-
-### Everyday English — Expressing certainty, predicting, promising, offering
-
-#### Expressing certainty
-
-Someone asks you for something, or tells you something and waits for you to
-agree. If the answer is yes and you have no doubt at all, English has a set of
-short replies that say so:
-
-| Expressing certainty | Nghĩa |
-| --- | --- |
-| **Sure.** You're welcome. | Được chứ. Cứ tự nhiên. |
-| **Yes, certainly.** | Vâng, chắc chắn rồi. |
-| **Certainly.** I'll bring it tomorrow. | Chắc chắn rồi. Ngày mai mình mang đến. |
-| **Of course.** | Tất nhiên rồi. |
-| **Definitely.** | Chắc chắn luôn. |
-| **I'm sure it will.** | Mình chắc là sẽ như vậy. |
-| **No doubt about it.** | Không nghi ngờ gì nữa. |
-
-> **Ghi chú:** Hãy so sánh hai nhóm câu trả lời.
-> **Chắc chắn:** *Definitely. · Yes, certainly. · I'm sure it will.*
-> **Chưa chắc:** *I'm not so sure. · I doubt it. · We'll see. · Maybe.*
-> Nhóm thứ hai nằm ở bảng **Doubting** phía dưới. Chọn nhầm nhóm là người nghe
-> hiểu ngược lại điều bạn muốn nói.
-
-> ⚠️ **Bẫy thường gặp:** **"Sure."** đứng một mình rất thân thiện nhưng cũng
-> rất **suồng sã** — chỉ dùng với bạn bè, người thân. Khi nói với thầy cô,
-> người lớn, hoặc khi viết, hãy dùng **"Yes, certainly."** hay **"Of course."**
-
-#### Predicting
-
-| Making a prediction | Nghĩa |
-| --- | --- |
-| I think it **will rain** later. | Mình nghĩ lát nữa trời sẽ mưa. |
-| I'm **sure** you**'ll love** it. | Mình chắc là bạn sẽ thích nó. |
-| It **probably won't be** easy. | Chắc là sẽ không dễ đâu. |
-| **Perhaps** we**'ll see** them there. | Có lẽ chúng ta sẽ gặp họ ở đó. |
-
-#### Promising and offering
-
-| Promising and offering | Nghĩa |
-| --- | --- |
-| I promise I**'ll help** you. | Mình hứa mình sẽ giúp bạn. |
-| I **won't tell** anyone. | Mình sẽ không nói với ai đâu. |
-| Don't worry — I**'ll do** it. | Đừng lo — để mình làm cho. |
-| **Shall I** carry that for you? | Mình cầm hộ bạn nhé? |
-
-> ⚠️ After **will / won't / shall** comes the plain verb — *I'll **help***,
-> not *I'll to help* or *I'll helps*.
-
-#### Agreeing, hoping, doubting
-
-| Agreeing / hoping | Doubting |
-| --- | --- |
-| That would be great. | I doubt it. |
-| Thanks, that's kind of you. | Do you really think so? |
-| I hope so. | I'm not so sure. |
-| You're probably right. | We'll see. |
-
-### 4.1 Complete the mini-dialogues
-
-::: task skill="course" type="gap-fill" ask="Choose what fits each gap."
-- **A:** I'm worried about the test tomorrow. — **B:** Don't worry. I'm ___ you'll do well. {sure | doubtful | afraid} = sure
-- **A:** This box is really heavy. — **B:** ___ carry it for you. {I'll | I didn't | I carried} = I'll
-- **A:** Do you think our team will win on Sunday? — **B:** I ___ it — the other team is much stronger. {doubt | hope | promise} = doubt
-- **A:** I promise I ___ tell anyone your secret. — **B:** Thanks, that's kind of you. {won't | will | willn't} = won't
-:::
-
-### 4.2 Certain, or not certain?
-
-::: task skill="course" type="choice" opts="certain|not certain" ask="Does the second speaker sound certain, or not?"
-- "Will the market be open at six?" — "Yes, certainly. It opens at five." = certain
-- "Do you think it will snow here one day?" — "I'm not so sure." = not certain
-- "Can you help me with my maths homework?" — "Sure. Bring it round after lunch." = certain
-- "Will your cousin come to the festival with us?" — "We'll see." = not certain
-- "Is rice the staple food in your area?" — "Definitely. We eat it twice a day." = certain
-- "Do you think our team will win on Sunday?" — "I doubt it." = not certain
-- "Are you in the habit of walking to school?" — "Of course. Every morning." = certain
-- "Will the old weaving skills survive?" — "Perhaps. Nobody knows." = not certain
-:::
-
-### 4.3 Say it with certainty
-
-Someone asks you something and you have no doubt about the answer. Write a
-short reply that says so, then add **one** sentence of your own explaining why.
-Use a different expression each time, and remember who you are talking to.
-
-1. Your friend asks: "Can I borrow your dictionary until Friday?"
-   → _______________________________
-2. Your teacher asks: "Is street food really cheaper than a restaurant here?"
-   → _______________________________
-3. A visitor asks: "Will your family be at the village festival on Sunday?"
-   → _______________________________
-
-### 4.4 Write your own
-
-Reply to each person. Use a prediction, a promise and an offer — one of each.
-
-1. "I've lost my dictionary and the test is tomorrow."
-   → _______________________________
-2. "Do you think our village will change a lot in ten years?"
-   → _______________________________
-3. "Please don't tell my parents about my marks."
-   → _______________________________
+## Lesson 4 — Reading & Speaking
 
 ### Greetings and cuisines around the world
 
@@ -660,36 +556,9 @@ normal. Beef, though, is generally avoided.
 Other countries are known for one dish above all the rest: **fish and chips** in
 England, **sushi** in Japan, **kimchi** in Korea.
 
-### 4.5 The quiz
-
-::: task skill="course" type="choice" ask="Answer from the two texts above."
-- The commonest way of greeting people around the world is probably {shaking hands | pressing noses together | bowing} = shaking hands ~ two people take each other's right hand and shake it
-- In the USA people greet one another by {saying "Hello" | shaking their heads | bowing low} = saying "Hello"
-- In Thailand a young person greets an older one by saying *sawadee* and {bowing slightly | pressing their noses together | shaking hands} = bowing slightly
-- The Maori of New Zealand greet by {pressing their noses together | kissing cheeks | shaking hands twice} = pressing their noses together ~ the two people share one breath
-- In Japan people normally {bow to each other | hug | touch hands} = bow to each other ~ how deeply you bow shows how much respect you mean
-- Which country is famous for pasta and pizza? {Italy | Thailand | India} = Italy
-- Which country is famous for kimchi? {Korea | Japan | England} = Korea
-- England is well known for {fish and chips | sushi | kimchi} = fish and chips
-- Sushi comes from {Japan | Korea | Italy} = Japan
-- Which food do people in India generally avoid? {beef | rice | bread} = beef
-:::
-
-### 4.6 The food where you live
-
-Now answer for your own area, in full sentences.
-
-1. What is the staple food in your area, and how often do people eat it?
-   → _______________________________
-2. What is your own favourite food, and where do you get it — at home, from a
-   restaurant, or as street food?
-   → _______________________________
-3. Which food is eaten on special occasions, and which occasion is it?
-   → _______________________________
-
----
-
-## Lesson 5 — Skills 1: Reading & Speaking
+**Talk about it.** Would you rather eat Italian food or Indian food, and why?
+Then talk about the food where you live: the staple food and how often people
+eat it, your own favourite, and one food eaten on a special occasion.
 
 ### Reading — *The week our lane went back*
 
@@ -733,7 +602,7 @@ Now answer for your own area, in full sentences.
 > have, if we keep doing this.
 :::
 
-### 5.1 Matching information
+### 4.1 Matching information
 
 The text has **five** paragraphs, **A** to **E**. Each statement below is in
 one of them, in different words.
@@ -746,7 +615,7 @@ one of them, in different words.
 - two opposite predictions about what will happen = E ~ the two sentences the lane argues in
 :::
 
-### 5.2 Answer the questions
+### 4.2 Answer the questions
 
 ::: task skill="reading" type="multiple-choice" ask="Choose the answer the text gives."
 - Where did they go on Tuesday? {the harbour wall | the well at the corner | the school} = the harbour wall
@@ -756,7 +625,7 @@ one of them, in different words.
 - How far away is the school? {two lanes | one lane | three lanes} = two lanes
 :::
 
-### 5.3 Vocabulary in context
+### 4.3 Vocabulary in context
 
 ::: task skill="course" type="synonym-search" ask="Find the word in the text that means this. The clock is still running."
 - sitting still and hardly moving at all {sedentary | flat | behind} = sedentary
@@ -793,7 +662,7 @@ check three things:
 
 Repeat Step 2 until each answer runs clearly from its first word to its last.
 
-### 5.4 Say it again, faster
+### 4.4 Say it again, faster
 
 ::: fluency mode="talk" secs="240|180|120" ask="Talk about how your life differs from your grandparents' at your age."
 - What they did at thirteen
@@ -802,9 +671,56 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 - One thing that was better then
 :::
 
+### Everyday English — Expressing certainty
+
+*A separate thing from the speaking above: a few short replies for saying yes
+with no doubt at all — or for saying you are not so sure. Learn them as they
+are.*
+
+#### Expressing certainty
+
+Someone asks you for something, or tells you something and waits for you to
+agree. If the answer is yes and you have no doubt at all, English has a set of
+short replies that say so:
+
+| Expressing certainty | Nghĩa |
+| --- | --- |
+| **Sure.** You're welcome. | Được chứ. Cứ tự nhiên. |
+| **Yes, certainly.** | Vâng, chắc chắn rồi. |
+| **Certainly.** I'll bring it tomorrow. | Chắc chắn rồi. Ngày mai mình mang đến. |
+| **Of course.** | Tất nhiên rồi. |
+| **Definitely.** | Chắc chắn luôn. |
+| **I'm sure it will.** | Mình chắc là sẽ như vậy. |
+| **No doubt about it.** | Không nghi ngờ gì nữa. |
+
+> **Ghi chú:** Hãy so sánh hai nhóm câu trả lời.
+> **Chắc chắn:** *Definitely. · Yes, certainly. · I'm sure it will.*
+> **Chưa chắc:** *I'm not so sure. · I doubt it. · We'll see. · Maybe.*
+> Nhóm thứ hai nằm ở bảng **Doubting** phía dưới. Chọn nhầm nhóm là người nghe
+> hiểu ngược lại điều bạn muốn nói.
+
+> ⚠️ **Bẫy thường gặp:** **"Sure."** đứng một mình rất thân thiện nhưng cũng
+> rất **suồng sã** — chỉ dùng với bạn bè, người thân. Khi nói với thầy cô,
+> người lớn, hoặc khi viết, hãy dùng **"Yes, certainly."** hay **"Of course."**
+
+#### Agreeing, hoping, doubting
+
+| Agreeing / hoping | Doubting |
+| --- | --- |
+| I think so too. | I doubt it. |
+| Exactly. | Do you really think so? |
+| I hope so. | I'm not so sure. |
+| You're probably right. | We'll see. |
+
+**Say it with someone.** Ask them to help you with your maths homework; they
+say yes with no doubt at all. Then tell them that Vietnamese people love
+seafood; they agree, and sound certain. Swap, and use a different reply each
+time — **Sure.**, **Yes, certainly.**, **Of course.** Then ask one question
+where the answer is *not* certain, and answer it from the **Doubting** column.
+
 ---
 
-## Lesson 6 — Skills 2: Listening & Writing
+## Lesson 5 — Listening & Writing
 
 ### Listening — A neighbour weighs up the week
 
@@ -839,7 +755,7 @@ Nobody is asking what we will bring back next. We are asking what will happen
 to the life we already have.
 :::
 
-### 6.1 Listen and choose
+### 5.1 Listen and choose
 
 ::: task skill="listening" type="multiple-choice"
 - The lane had no electricity for {six days | a whole morning | two days} = six days
@@ -849,7 +765,7 @@ to the life we already have.
 - The speaker says the lane is no longer asking {what they will bring back next | who called it back | where the well is} = what they will bring back next
 :::
 
-### 6.2 Listen and complete
+### 5.2 Listen and complete
 
 ::: task skill="listening" type="sentence-completion"
 - The speaker says it was not a power ___ . {cut | lamp | well} = cut
@@ -936,9 +852,9 @@ more convincing.
 
 ---
 
-## Lesson 7 — Looking Back & Project
+## Lesson 6 — Looking Back & Project
 
-### 7.1 Vocabulary check
+### 6.1 Vocabulary check
 
 ::: task skill="course" type="gap-fill" ask="Choose the word from this unit that completes each sentence."
 - Hanoi is a busy ___ area. {urban | rural | remote} = urban
@@ -951,7 +867,7 @@ more convincing.
 - Too much screen time is bad for your ___ . {well-being | generation | greeting} = well-being
 :::
 
-### 7.2 Pronunciation check
+### 6.2 Pronunciation check
 
 ::: task skill="course" type="choice" opts="/br/|/pr/" ask="Which cluster is in the part in bold?"
 - **br**ave = /br/
@@ -962,7 +878,7 @@ more convincing.
 - im**pr**ove = /pr/
 :::
 
-### 7.3 Grammar check
+### 6.3 Grammar check
 
 ::: task skill="course" type="gap-fill" ask="Choose the correct form of the verb in brackets."
 - I'm sure you ___ (enjoy) the film tomorrow. {will enjoy | enjoy | will enjoying} = will enjoy
@@ -973,7 +889,7 @@ more convincing.
 - "Will you help me with this?" — "Yes, I ___ ." {will | do | am} = will
 :::
 
-### 7.4 Error hunt
+### 6.4 Error hunt
 
 Six sentences from Tí's note about the lane, the week after. Each one has a
 mistake in it.
@@ -987,7 +903,7 @@ mistake in it.
 - If the water stays where it is, I sleep better tonight. {will sleep | slept | sleeping} = sleep -> will sleep ~ tonight is the future: I **will sleep**
 :::
 
-### 7.5 Say it the other way
+### 6.5 Say it the other way
 
 ::: task skill="course" type="gap-fill" ask="Make the second sentence mean the same as the first."
 - We'll go to the beach unless it rains. → If it ___ , we'll go to the beach. {doesn't rain | rains | won't rain} = doesn't rain
@@ -1043,14 +959,14 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for different lifestyles | Lesson 2, Meet the words · Lesson 7, exercise 7.1 |
-| hear /br/ and /pr/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
-| use *will* and the first conditional, *unless* included | Lesson 3, practice 3.1 · Lesson 7, exercises 7.3, 7.4 and 7.5 |
-| say how certain I am | Lesson 4, exercises 4.1 and 4.2 |
-| read about a way of living that came back, and what it cost | Lesson 5, exercises 5.1 and 5.2 |
-| talk about keeping a traditional way of life | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
-| listen to somebody weighing up the good and bad sides of a way of living | Lesson 6, exercises 6.1 and 6.2 |
-| write a paragraph about the good or the bad side of online learning | Lesson 6, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| use the words for different lifestyles | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
+| hear /br/ and /pr/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
+| use *will* and the first conditional, *unless* included | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3, 6.4 and 6.5 |
+| say how certain I am | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| read about a way of living that came back, and what it cost | Lesson 4, exercises 4.1 and 4.2 |
+| talk about keeping a traditional way of life | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| listen to somebody weighing up the good and bad sides of a way of living | Lesson 5, exercises 5.1 and 5.2 |
+| write a paragraph about the good or the bad side of online learning | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1080,29 +996,11 @@ when the *if* half comes first.
 
 ### Lesson 4
 
-**4.3** Answers will vary. Check: each reply opens with a **certainty**
-expression — *Sure. · Yes, certainly. · Certainly. · Of course. · Definitely. ·
-I'm sure…* — and never with a doubting one (*I'm not so sure. · I doubt it. ·
-We'll see.*). A bare *Sure.* is fine for the friend in 1, but not for the
-teacher in 2 or the visitor in 3; use *Yes, certainly.* or *Of course.* there.
-Each answer should be two sentences: the reply, then your reason.
-
-**4.4** Answers will vary. Check that you used one prediction (*I think… will*,
-*I'm sure… will*), one promise (*I promise I'll… / I won't…*) and one offer
-(*I'll… / Shall I…*), each with the plain verb after *will* or *shall* (*I'll **help***, not *I'll helps*).
-
-**4.6** Answers will vary. Check: full sentences, not single words; the word
-**staple** used as an adjective before *food* in 1 (*The staple food in my area
-is…*); and a named occasion in 3, not just "a party" — Tet, a wedding, a
-birthday, the mid-autumn festival.
-
-### Lesson 5
-
 **Speaking** Answers will vary. Check: *will/won't* in at least one sentence per
 question, at least one correct *if* sentence, and no *will* straight after
 *if* (*if it **rains***, not *if it will rain*).
 
-### Lesson 6
+### Lesson 5
 
 **Writing** Answers will vary. Check: 80–100 words; one side only; the four
 ordering words; at least one *if* sentence with no *will* straight after *if*;
