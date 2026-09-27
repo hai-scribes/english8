@@ -96,6 +96,12 @@ BEYOND = [
 # A structure the book does teach, keyed to the unit that first licenses it. A
 # hit only reports when it appears in an EARLIER unit than its key.
 FORWARD = [
+    (2, "comparative adverb",
+     re.compile(r"\b(more|less)\s+\w+ly\s+than\b", re.I)),
+    (3, "conjunctive adverb",
+     re.compile(r"\b(however|therefore|otherwise)\b", re.I)),
+    (7, "time clause with as soon as",
+     re.compile(r"\bas\s+soon\s+as\b", re.I)),
     (6, "future simple with will",
      re.compile(r"\b(will|won't|'ll)\s+\w+", re.I)),
     (6, "first conditional",
@@ -126,6 +132,8 @@ NOT_A_PARTICIPLE = re.compile(
     r"thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|"
     r"often|children|women|men|garden|kitchen|golden|wooden|sudden|listen|"
     r"oven|even|seven|eleven|dozen|green|kitten|"
+    r"amazing|interesting|boring|exciting|surprising|missing|relaxing|tiring|"
+    r"annoying|confusing|frightening|shocking|disappointing|charming|"
     r"need|indeed|red|bed|hundred|sacred|hatred|ahead|instead)$", re.I)
 
 
@@ -158,9 +166,56 @@ def fires(pat, s: str) -> bool:
     return False
 
 
+# The practice pools: Meet the words (`:::vocab`, Lesson 2) and the grammar
+# bank (`:::bank`, Lesson 3). A question sentence is not input the learner can
+# skim past -- it has to be understood to be answered -- so here a structure
+# taught later is a defect, not defensible input. Lesson 2 comes BEFORE its own
+# unit's grammar lesson, so a vocabulary question may use only what earlier
+# units taught; the grammar bank may use its own unit's grammar, since
+# teaching it is the bank's job.
+# Grade 8 revisits these, but the learner has already been taught them: the
+# Global Success Grade 6 book teaches the future with *will* (Unit 10) and the
+# first conditional (Unit 11). This is from the series itself, not from the
+# grade-8 record in curriculum/sgk/, which covers this year only.
+LEARNT_BEFORE_GRADE_8 = {"future simple with will", "first conditional"}
+RE_POOL = re.compile(r"^:::[ \t]*(?P<kind>vocab|bank)\b[^\n]*\n(?P<body>.*?)\n:::[ \t]*$", re.M | re.S)
+
+
+def pool_sentences(body: str):
+    """Each question line of a pool, gap filled with its key, as plain text."""
+    for line in body.splitlines():
+        m = re.match(r"^-\s+(?P<q>.*?)\s*(?:\{(?P<o>[^}]*)\})?\s*=\s*(?P<a>[^~]*)", line)
+        if not m:
+            continue
+        key = m.group("a").split("/")[0].split("->")[-1].strip()
+        q = m.group("q")
+        q = re.sub(r"_{3,}", key, q, count=1) if "___" in q else q
+        text = re.sub(r"[*`]", "", q)
+        for t in sentences(text):
+            yield t
+
+
 def scan_unit(nn: int, path: Path) -> list:
     text = path.read_text(encoding="utf-8")
     out = []
+    for m in RE_POOL.finditer(text):
+        kind = m.group("kind")
+        slot = "words" if kind == "vocab" else "bank"
+        for s in pool_sentences(m.group("body")):
+            for label, pat, why in BEYOND:
+                if fires(pat, s):
+                    out.append(("BEYOND", slot, label, why, s))
+            for first, label, pat in FORWARD:
+                if label in LEARNT_BEFORE_GRADE_8:
+                    continue
+                late = first >= nn if kind == "vocab" else first > nn
+                if late and fires(pat, s):
+                    out.append(("BEYOND", slot, label,
+                                f"a question may not use this before unit {first} "
+                                + ("teaches it" if kind == "bank" else "has taught it (Lesson 3)"), s))
+            if (nn < 11 if kind == "bank" else nn <= 11) and fires(PAST_PERFECT, s):
+                out.append(("BEYOND", slot, "past perfect",
+                            "a question may not use this before unit 11", s))
     for slot, rx in SLOTS:
         for m in rx.finditer(text):
             for s in sentences(m.group("body")):

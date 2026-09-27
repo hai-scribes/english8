@@ -210,6 +210,24 @@ are one `### 3.1 Practice` holding a `:::bank`** of 70+ items; open writing
 practice bank that repeats what they ask — a fixed drill under a pool is a
 second, smaller copy of the same practice.
 
+**Every word is asked a different question each time it comes back** (operator,
+2026-09-27). A run asks each word the pool question the learner has gone longest
+without seeing; a miss brings the word back as a *different* unseen question,
+never the same one; with nothing different left, nothing comes back. So the
+build holds every table word to **at least 12 questions** it can be asked in its
+own set (`VOCAB_MIN_VARIANTS`; `EN8_VARIANTS=1 python3 tools/build.py --check`
+lists the short words). A question counts for a word only when every table word
+it mentions is in that word's set or an earlier one. **No build-the-sentence in
+a vocabulary pool**: the word is printed in the cue, so tiles test order and
+form, not the word — they belong in Lesson 3's bank and Lesson 6. The grammar
+bank retries a miss with another item of the same genre, for the same reason.
+
+**A question uses only grammar already learnt.** `check_level.py` scans the
+pools as well as the story, and there a later structure is a failure, not
+defensible input: a Lesson 2 question may use only what earlier units taught
+(Lesson 3 has not taught its own unit's yet), a Lesson 3 bank may also use its
+own unit's. *will* and the first conditional are exempt — Grade 6 taught them.
+
 Grammar teaching is written for the page it renders on: one plain lead
 sentence, each rule under `#### N · <rule in plain words>` (a card), the words
 to learn as one bold `·`-separated line (chips), examples in a blockquote one

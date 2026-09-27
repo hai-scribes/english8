@@ -1088,6 +1088,66 @@ async function main() {
     ok("practice: and waits for Next", wrongWaits);
   }
 
+  /* ---- a word comes back, the question does not ---------------------------
+     Operator's rule, 2026-09-27: after a miss, and on every later run, the
+     learner meets the same WORD in a different question, so a right answer the
+     second time is about the word and not about remembering the sentence. */
+  {
+    const win = await settled(load("docs/unit-01/lesson-2/index.html", null, fastPage));
+    const box = win.document.querySelector('[data-role="vocab"]');
+    const walkRun = async () => {
+      const seen = [];
+      for (let step = 0; step < 80; step++) {
+        const card = box.querySelector(".card.engine");
+        if (!card) break;
+        const opts = [...card.querySelectorAll(".choices button")];
+        if (!opts.length) {
+          const nx = card.querySelector("#next");
+          if (nx) { click(win, nx); await new Promise(r => setTimeout(r, 15)); continue; }
+          /* Find-the-mistake: tap a word, pick a fix, then Check. */
+          const tok = card.querySelector(".i-tok"), go = card.querySelector("#go");
+          if (!tok || !go) break;
+          seen.push((card.querySelector(".i-q") || {}).textContent || "");
+          click(win, tok);
+          const fix = card.querySelector(".i-fix input");
+          if (fix) { fix.checked = true; fix.dispatchEvent(new win.Event("change", { bubbles: true })); }
+          click(win, go);
+          await new Promise(r => setTimeout(r, 15));
+          const nx2 = box.querySelector("#next");
+          if (nx2) { click(win, nx2); await new Promise(r => setTimeout(r, 15)); }
+          continue;
+        }
+        const sig = [(card.querySelector(".e-ask") || {}).textContent || "",
+                     (card.querySelector(".prompt") || {}).textContent || "",
+                     opts.map(o => o.textContent).sort().join("|")].join(" / ");
+        seen.push(sig);
+        /* The first option: some right, some wrong, so misses come back. */
+        click(win, opts[0]);
+        await new Promise(r => setTimeout(r, 15));
+        const nx = box.querySelector("#next");
+        if (nx) { click(win, nx); await new Promise(r => setTimeout(r, 15)); }
+      }
+      return seen;
+    };
+    for (let i = 0; i < 8; i++) {
+      const next = box.querySelector('[data-v="next"]');
+      if (!next) break;
+      click(win, next);
+      await new Promise(r => setTimeout(r, 15));
+    }
+    const run1 = await walkRun();
+    const dup1 = run1.filter((x, i) => run1.indexOf(x) !== i);
+    ok("variants: no question is asked twice in one run", run1.length > 8 && !dup1.length,
+       run1.length + " asked; repeated: " + dup1.slice(0, 2).join(" ; "));
+    const again = box.querySelector('[data-v="retest"]');
+    if (again) click(win, again);
+    await new Promise(r => setTimeout(r, 15));
+    const run2 = await walkRun();
+    const both = run2.filter(x => run1.includes(x));
+    ok("variants: running the set again asks new questions", run2.length > 8 && !both.length,
+       both.length + " of " + run2.length + " seen last run: " + both.slice(0, 2).join(" ; "));
+  }
+
   /* ---- single-pick tasks mark each answer the moment it is picked --------- */
   {
     const win = await settled(load("docs/unit-01/lesson-2/index.html", null, fastPage));
