@@ -579,27 +579,17 @@ Below them the water climbs one step of the wall, and slides back down.
 - origami · knitting · bracelet · DIY = bracelet ~ the others are activities; a bracelet is a thing
 - resort · bookshop · swimming pool · balance = balance ~ the others are places
 @ error-correction
-- My mum works in a hospital and has very little pastime. {leisure | craft | cook} = pastime -> leisure ~ *leisure* is free time; a *pastime* is one activity
+- My mum works in a hospital and has very little pastime. {leisure | DIY | craft} = pastime -> leisure ~ *leisure* is free time; a *pastime* is one activity
 - Cooking is my favourite leisure. {pastime | homework | time} = leisure -> pastime ~ a *pastime* is one thing you do for fun
-- My dad socialises dinner for us every evening. {cooks | washes | sleeps} = socialises -> cooks ~ you *cook* dinner
-- I bought a new dictionary at the pool. {bookshop | cinema | bank} = pool -> bookshop ~ you buy books at a *bookshop*
-- My friends and I play movie in the park after school. {football | cook | bookshop} = movie -> football ~ you *play football*; you watch a *movie*
-- We played a bookshop after dinner. It had dice and a board. {board game | swimming pool | music} = bookshop -> board game ~ a game with dice and a board is a *board game*
-- I did a 300-piece football with my sister. {jigsaw puzzle | movie | music} = football -> jigsaw puzzle ~ a picture in pieces is a *jigsaw puzzle*
-- We went to the cinema and watched a great music. {movie | bookshop | football} = music -> movie ~ you watch a *movie*
-- I often listen to movies on my phone. {music | football | bookshop} = movies -> music ~ you listen to *music*
-- My little brother learned to swim at the bookshop. {swimming pool | movie | board game} = bookshop -> swimming pool ~ you swim in a *swimming pool*
-- There are so many cakes! I can't cook one. {choose | take up | hang out} = cook -> choose ~ you *choose* one from many
-- I'm so tired. I need to detest on the sofa. {relax | cook | choose} = detest -> relax ~ you *relax* when you rest
-- I really relax homework on Sundays. I hate it! {detest | choose | cook} = relax -> detest ~ *detest* means hate very much
-- I'll knit you when I arrive at the station. {message | choose | cook} = knit -> message ~ you *message* someone
-- Grandma cooks beautiful scarves for all her grandchildren. {knits | messages | chooses} = cooks -> knits ~ you *knit* a scarf from wool
-- I made a paper flower. I love badminton! {origami | football | swimming} = badminton -> origami ~ folding paper is *origami*
-- Can you lend me your racket? I want to play football. {badminton | music | origami} = football -> badminton ~ you need a racket for *badminton*
-- It's raining, so we can't play indoors today. {outdoors | leisure | pastime} = indoors -> outdoors ~ rain stops you playing *outdoors*
-- I read a funny bracelet about a cat last night. {comic book | movie | dollhouse} = bracelet -> comic book ~ you read a *comic book*
-- She wears a gold judo on her left wrist. {bracelet | comic book | dollhouse} = judo -> bracelet ~ you wear a *bracelet* on your wrist
-- My sister keeps her tiny dolls in a pink bracelet. {dollhouse | comic book | judo} = bracelet -> dollhouse ~ dolls live in a *dollhouse*
+- I bought a new dictionary at the library. {bookshop | cinema | swimming pool} = library -> bookshop ~ you buy books at a *bookshop*; you borrow them from a library
+- We played a jigsaw puzzle after dinner. We took turns to throw the dice. {board game | football | badminton} = jigsaw puzzle -> board game ~ a game with dice that you play at a table is a *board game*
+- I did a 300-piece board game with my sister. {jigsaw puzzle | football | movie} = board game -> jigsaw puzzle ~ a picture in 300 pieces is a *jigsaw puzzle*
+- I watched a funny music with my family last night. {movie | jigsaw puzzle | board game} = music -> movie ~ you watch a *movie*; you listen to music
+- I often listen to movies on my phone. {music | board game | jigsaw puzzle} = movies -> music ~ you listen to *music*; you watch a movie
+- After a busy week, I like to socialise alone in my room with a book. {relax | take up | cook} = socialise -> relax ~ you *socialise* with other people; alone, you *relax*
+- I'm crazy about DIY. I can fold paper into birds and frogs. {origami | badminton | judo} = DIY -> origami ~ folding paper is *origami*; DIY is making or fixing things at home
+- Can you lend me your racket? I want to play football. {badminton | basketball | chess} = football -> badminton ~ you need a racket for *badminton*
+- It's raining, so we can't play indoors today. {outdoors | together | online} = indoors -> outdoors ~ rain stops you playing *outdoors*
 - I want to take on judo next year. {up | off | out} = on -> up ~ you *take up* a hobby
 - We often hang up with our friends after school. {out | on | off} = up -> out ~ you *hang out* with friends
 - She's keen in crafts. {on | of | about} = in -> on ~ *keen on*
@@ -612,6 +602,19 @@ Below them the water climbs one step of the wall, and slides back down.
 - He is keen of chess. {on | in | about} = of -> on ~ keen **on**
 - We hung off with our cousins all weekend. {out | up | on} = off -> out ~ hang **out**
 - I want to take in a new hobby. {up | on | off} = in -> up ~ take **up** a hobby
+@ gap-fill ask="Choose the word that fits."
+- Grandma taught me to ___ fish soup last summer. {cook | choose | relax} = cook
+- The water in the ___ was cold, so we didn't stay in long. {swimming pool | bookshop | cinema} = swimming pool
+- There are twenty kinds of bubble tea on the menu. It's hard to ___ one. {choose | cook | message} = choose
+- Hùng kicked the ball into the goal. He loves ___ . {football | badminton | music} = football
+- My brother ___ cold weather. He always wants to be warm. {detests | enjoys | chooses} = detests
+- When you get home, ___ me so I know you're safe. {message | choose | knit} = message
+- In winter, my aunt ___ warm hats for the whole family. {knits | cooks | messages} = knits
+- Tí keeps a pile of ___ under his bed. He reads one every night. {comic books | bracelets | dollhouses} = comic books
+- Mai made a ___ from small shells and wears it on her arm. {bracelet | dollhouse | comic book} = bracelet
+- My little sister's ___ has three floors, a tiny kitchen and a pink roof. {dollhouse | bracelet | comic book} = dollhouse
+- There's a small ___ near my school. It sells dictionaries and notebooks. {bookshop | swimming pool | cinema} = bookshop
+- It rained all weekend, so we stayed at home and played a ___ on the kitchen table. {board game | football | movie} = board game
 :::
 
 ### Vocabulary — Leisure time
@@ -995,7 +998,7 @@ Your own life is the best material you have, as long as it answers the question.
 :::
 
 ::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — the email to your friend, in **80–100 words**."
-- [ ] 80–100 words ~ words
+- [ ] At least 80 words — 80–100 is the aim ~ words
 - [ ] Paragraphs, not one solid block ~ paras:2
 - [ ] A greeting at the top ~ any:1 hi/hello/dear
 - [ ] A sign-off at the end ~ any:1 best wishes/see you soon/see you/write soon/love/bye for now/take care/all the best
@@ -1003,6 +1006,8 @@ Your own life is the best material you have, as long as it answers the question.
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
 - [ ] At least **three** verbs of liking or disliking ~ any:3 like/likes/love/loves/enjoy/enjoys/hate/hates/prefer/prefers/don't mind/do not mind/can't stand/cannot stand/adore/adores/dislike/dislikes/fancy/fancies/be into/am into/is into/are into
 - [ ] Each of those verbs has the right word after it — enjoy **playing**, but would like **to play**
+- [ ] Your own words — no long run copied from the task ~ nocopy:5
+- [ ] Read it once more, one sentence at a time, and fix any mistake you find
 :::
 
 ---

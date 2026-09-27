@@ -388,6 +388,18 @@
 - Can you add milk to the ___ ? {shopping list | price tag | receipt} = shopping list
 - Before the party, Thảo made a long ___ : cake, candles, cups and juice. {shopping list | complaint | receipt} = shopping list
 - If you shop without a ___ , you'll buy things you don't need. {shopping list | price tag | queue} = shopping list
+- Mum checks the ___ after she pays, to be sure the supermarket didn't take her money twice. {receipt | refund | discount} = receipt
+- Grandma keeps some ___ in a tin at home, because the stalls at her market don't take cards. {cash | receipts | discounts} = cash
+- The ___ man left our parcel with the neighbour because nobody was home. {delivery | queue | receipt} = delivery
+- My sister likes to ___ online shops at night, but she almost never buys anything. {browse | queue | try on} = browse
+- There were only two people in the ___ at the bakery, so we didn't wait long. {queue | delivery | discount} = queue
+- The night bus stops right outside Grandpa's gate. That's very ___ for him. {convenient | cheap | busy} = convenient
+- My uncle saved for three years to buy his motorbike, because it was very ___ . {expensive | convenient | home-made} = expensive
+- Grandma's village shop has a surprising ___ : rice, nails, medicine and fishing nets. {range of products | complaint | access} = range of products
+- The ___ for the new ice cream shows a cat eating it on a beach. {advertisement | complaint | range of products} = advertisement
+- Mum wrote a ___ to the restaurant because her soup was cold and the waiter was rude. {complaint | advertisement | access} = complaint
+- Students at the village school now have ___ to the Internet for two hours a day. {access | complaint | advertisement} = access
+- Grandpa says he is ___ to green tea — he can't start the day without it. {addicted | convenient | expensive} = addicted
 @ choice ask="Which word or phrase means this?"
 - a large building with many different shops inside {shopping centre | stall | convenience store} = shopping centre
 - a person who sells things in the street {street vendor | customer | shopaholic} = street vendor
@@ -545,6 +557,7 @@
 - convenient · stall · customer · refund = convenient ~ convenient describes something; the others are things or people
 - expensive · receipt · price tag · cash = expensive ~ the others are things you can hold
 - purchase · stall · shopping centre · department store = purchase ~ the others are places
+- We never buy tomatoes. Ours are ___ — Grandpa plants them behind the house. {home-grown | home-made | on sale} = home-grown
 - price tag · browse · try on · purchase = price tag ~ the others are things you do
 - on sale · customer · street vendor · shopaholic = on sale ~ the others are people
 - shopaholic · stall · shopping centre · department store = shopaholic ~ the others are places
@@ -561,39 +574,26 @@
 - Sorry, that jacket isn't on stock. {in | at | by} = on -> in ~ **in stock**
 - He's addicted with computer games. {to | on | in} = with -> to ~ **addicted to**
 - Can I pay on cash? {in | at | to} = on -> in ~ pay **in cash**
-- Keep the recipe in case you want to take it back. {receipt | refund | shopping list} = recipe -> receipt ~ a recipe tells you how to cook; a **receipt** shows you paid
-- The vegetables here are home-made — my uncle grows them. {home-grown | on sale | expensive} = home-made -> home-grown ~ vegetables are **home-grown**
+- Keep the recipe in case you want to return the shoes. {receipt | refund | discount} = recipe -> receipt ~ a recipe tells you how to cook; a **receipt** shows you paid
 - I did a complaint about the delivery. {made | took | gave} = did -> made ~ **make** a complaint
 - The shop gave me all my money back — a full discount. {refund | receipt | bargain} = discount -> refund ~ money given back is a **refund**
-- We watched a film at the street vendor on the fifth floor. {shopping centre | customer | bargain} = street vendor -> shopping centre ~ a **shopping centre** has many shops and a cinema
-- We bought a sofa and a lamp from the street vendor on Lê Lợi Street — it has five floors. {department store | customer | refund} = street vendor -> department store ~ a big shop with floors and sections is a **department store**
-- A customer came down our street, selling sweet potatoes from a basket. {street vendor | shopping centre | discount} = customer -> street vendor ~ a **street vendor** sells; a customer buys
-- Thảo's mother has a small customer at the market where she sells rice cakes. {stall | discount | refund} = customer -> stall ~ a **stall** is where you sell; a customer buys
-- The bakery was so busy that some stalls waited outside. {customers | refunds | discounts} = stalls -> customers ~ people who come to buy are **customers**
-- At the market, Dad refunded with the seller and paid 20,000 dong less. {bargained | discounted | stalled} = refunded -> bargained ~ you **bargain** to pay less
-- Show your student card and you get a 10% refund on every ticket. {discount | stall | customer} = refund -> discount ~ money off the price is a **discount**
-- The shoes were too small, so I took them back and got a full bargain. {refund | stall | customer} = bargain -> refund ~ money given back is a **refund**
-- Keep the delivery safe — without it, you can't take the shoes back. {receipt | queue | discount} = delivery -> receipt ~ the paper that shows you paid is a **receipt**
-- Sorry, our card machine isn't working. We only take receipt today. {cash | queues | stalls} = receipt -> cash ~ notes and coins are **cash**
-- The browse was very fast — the box came the next morning. {delivery | receipt | queue} = browse -> delivery ~ bringing the goods to you is **delivery**
-- I'm not buying anything today — I'm just queuing. {browsing | delivering | bargaining} = queuing -> browsing ~ looking without buying is **browsing**
-- The delivery at the till was so long that we left without buying anything. {queue | receipt | stall} = delivery -> queue ~ a line of people is a **queue**
-- The shop is open all night, so it's very difficult for people who work late. {convenient | far | slow} = difficult -> convenient ~ easy and useful is **convenient**
-- That watch costs ten million dong. It's very convenient. {expensive | home-made | in stock} = convenient -> expensive ~ a high price means **expensive**
-- I browsed a new phone with the money I saved — it cost three million dong. {purchased | queued | delivered} = browsed -> purchased ~ to buy is to **purchase**
-- There's no receipt on this bag, so I don't know how much it costs. {price tag | discount | queue} = receipt -> price tag ~ the label with the price is the **price tag**
+- We watched a film and ate noodles at the department store — it has a cinema and forty different stores inside. {shopping centre | stall | market} = department store -> shopping centre ~ one building with a cinema and many different stores is a **shopping centre**
+- In this shopping centre, every floor belongs to the same big shop — clothes on one, toys on the next. {department store | stall | market} = shopping centre -> department store ~ one big shop with a section on each floor is a **department store**
+- A customer comes down our lane every morning, selling bánh mì from a basket on her bike. {street vendor | shopkeeper | farmer} = customer -> street vendor ~ a **street vendor** sells as she moves; a customer buys
+- Thảo's mother has a small street vendor at the market, and she sells rice cakes there. {stall | department store | shopping centre} = street vendor -> stall ~ the vendor is the person; the **stall** is the place she sells from
+- On the Saturday before Tết, the street vendors in the supermarket queued for an hour to pay. {customers | shopkeepers | sellers} = street vendors -> customers ~ people who buy and pay are **customers**
+- At the market, Dad discounted with the seller and paid 20,000 dong less. {bargained | refunded | shopped} = discounted -> bargained ~ you **bargain** with a seller to pay less
+- The cinema gives a 10% refund on tickets on Tuesdays. {discount | bargain | price} = refund -> discount ~ money off before you pay is a **discount**; a refund comes after
+- The shoes were too small, so I took them back and got a full bargain. {refund | discount | price} = bargain -> refund ~ money given back is a **refund**
+- I browsed a new phone with the money I saved — it cost three million dong. {purchased | queued | delivered} = browsed -> purchased ~ to buy is to **purchase**; to browse is only to look
+- There's no receipt on this bag, so I don't know how much it costs. {price tag | discount | refund} = receipt -> price tag ~ the label on the item is the **price tag**; the receipt comes after you pay
 - Mum only cooks with home-made herbs from the pots on our balcony. {home-grown | expensive | on sale} = home-made -> home-grown ~ plants from your own pots are **home-grown**
 - Try this home-grown jam — my mother cooked it last night. {home-made | on sale | expensive} = home-grown -> home-made ~ things you cook or make are **home-made**
-- My cousin is a real bargain — she goes shopping every day. {shopaholic | stall | price tag} = bargain -> shopaholic ~ someone who shops too much is a **shopaholic**
-- I ran out of milk at eleven at night, so I went to the queue down the road. {convenience store | shopaholic | receipt} = queue -> convenience store ~ a small shop open late is a **convenience store**
-- The shoe advertisement on Lê Lợi Street sells only shoes, nothing else. {speciality shop | complaint | access} = advertisement -> speciality shop ~ a shop for one kind of goods is a **speciality shop**
-- Everything at the speciality shop costs 25,000 dong — cups, pens, toys, all of it. {dollar store | farmers' market | advertisement} = speciality shop -> dollar store ~ one low price for everything is a **dollar store**
-- We bought fresh eggs from the farmers at the dollar store in the village square. {farmers' market | speciality shop | advertisement} = dollar store -> farmers' market ~ farmers sell their own food at a **farmers' market**
-- This department store has a huge complaint: food, clothes, books and phones. {range of products | advertisement | access} = complaint -> range of products ~ all the kinds of goods a shop sells are its **range of products**
-- The complaint on TV tells everyone to buy the new drink. {advertisement | access | receipt} = complaint -> advertisement ~ a message that tries to sell is an **advertisement**
-- The shop manager read my advertisement about the dirty toilets and said sorry. {complaint | access | discount} = advertisement -> complaint ~ words saying you are unhappy are a **complaint**
-- Families in the mountains don't have easy complaint to clean water. {access | delivery | advertisement} = complaint -> access ~ being able to reach or use something is **access**
-- I think my sister is convenient to shopping — she buys something every day. {addicted | expensive | home-made} = convenient -> addicted ~ unable to stop is **addicted**
+- My aunt is a real customer — she buys new clothes every weekend, even when she doesn't need them. {shopaholic | street vendor | shopkeeper} = customer -> shopaholic ~ someone who can't stop buying is a **shopaholic**
+- I ran out of milk at eleven at night, so I went to the department store down the road. {convenience store | shopping centre | bookshop} = department store -> convenience store ~ a small shop open late is a **convenience store**
+- The shoe department store on Lê Lợi Street sells only shoes, nothing else. {speciality shop | dollar store | convenience store} = department store -> speciality shop ~ a shop for one kind of goods is a **speciality shop**
+- Everything at the speciality shop costs 25,000 dong — cups, pens, toys, all of it. {dollar store | department store | convenience store} = speciality shop -> dollar store ~ one low price for everything is a **dollar store**
+- Every Sunday, families from the villages sell their own eggs and vegetables at the supermarket in the square. {farmers' market | dollar store | department store} = supermarket -> farmers' market ~ growers sell their own food at a **farmers' market**
 - Dad forgot the price tag at home, so he called Mum to ask what to buy. {shopping list | receipt | advertisement} = price tag -> shopping list ~ the list of things to buy is the **shopping list**
 :::
 
@@ -1087,14 +1087,17 @@ The `-s` is easy to drop when you speak, so you have to listen for it.
 :::
 
 ::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours. One paragraph on the **advantages** *or* the **disadvantages** of **one** kind of shopping."
-- [ ] 80–100 words ~ words
+- [ ] At least 80 words — 80–100 is the aim ~ words
 - [ ] One paragraph, no bullet points ~ para:1
-- [ ] Linking words: *First, Second, Third* ~ all first/second/third
+- [ ] At least **three** words that order your points — *First, Second, Finally* ~ distinct:3 first/second/third/next/then/finally/lastly
+- [ ] …and no more than **four**: not every sentence needs one ~ max:4 first/second/third/next/then/finally/lastly
 - [ ] At least **five** words from the Lesson 2 vocabulary table ~ vocab:5
 - [ ] At least **three** adverbs of frequency ~ any:3 always/usually/often/sometimes/rarely/never/hardly ever/seldom/occasionally/frequently
 - [ ] Each of those adverbs is in the right place — before the main verb, after *be*
 - [ ] **One** side only — advantages *or* disadvantages
 - [ ] A topic sentence and a closing sentence
+- [ ] Your own words — no long run copied from the task ~ nocopy:5
+- [ ] Read it once more, one sentence at a time, and fix any mistake you find
 :::
 
 ---

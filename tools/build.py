@@ -1485,6 +1485,21 @@ def vocab_payload(u, lesson, a: dict, idx: int, groups: list = (), blk=None) -> 
         raise SystemExit(f"{where}: a build-the-sentence item is not a vocabulary "
                          f"question ({RE_TAG.sub('', str(tiled[0]['q']))[:60]!r}) — "
                          f"it belongs in Lesson 3's practice bank")
+    # A find-the-mistake whose sentence already names the fix is not a
+    # question: "learned to swim at the bookshop" -> *swimming pool* is read off
+    # the word "swim". Exact root comparison, so it does not cry wolf.
+    for r in pool:
+        if not r.get("tap") or not r.get("fix"):
+            continue
+        span = set(range(r["span"][0], r["span"][1] + 1)) if r.get("span") else set()
+        toks = [re.sub(r"[^a-z']", "", RE_TAG.sub("", t).lower())
+                for j, t in enumerate(r["tap"]) if j not in span]
+        roots = [w[:4] for w in re.findall(r"[a-z']+", r["fix"].lower()) if len(w) >= 4]
+        cue = [w for w in toks if len(w) >= 4 and w[:4] in roots]
+        if cue and VOCAB_VARIANTS_GATE:
+            raise SystemExit(f"{where}: the sentence gives away its own fix — "
+                             f"{cue[0]!r} points at {r['fix']!r} in "
+                             f"{RE_TAG.sub('', ' '.join(r['tap']))[:70]!r}")
     # Every word is asked a DIFFERENT question each time it comes back -- after a
     # miss, and on every later run -- so each needs enough of them. A question
     # counts for a word when the word is its answer and every word it mentions
@@ -1661,7 +1676,7 @@ def audio_html(p: dict) -> str:
 # and a band are outside it — **A2**, **D3** — and nothing here computes one.
 # The live word count is `09` **C9**'s, the one Writing affordance the real
 # screen has that this course did not.
-WRITE_ATTRS = {"words", "ask", "trains", "genre"}
+WRITE_ATTRS = {"words", "ask", "trains", "genre", "mins"}
 WRITE_REQUIRED = {"words", "ask", "trains"}
 RE_WORDS_RANGE = re.compile(r"^(\d{2,4})-(\d{2,4})$")
 
@@ -1683,7 +1698,12 @@ RE_CHECK_LINE = re.compile(r"^[-*][ \t]+\[[ xX]?\][ \t]*(?P<text>.+?)"
 #   para:N         exactly N paragraphs, and no bullet list
 #   paras:N        at least N paragraphs
 #   re:N pattern   at least N matches of a literal pattern
-CHECK_KINDS = {"words", "vocab", "any", "distinct", "all", "none", "para", "paras", "re"}
+#   max:N a/b/c    at most N hits from a closed list -- a ceiling, because a
+#                  linking word on every sentence is a fault the examiner names
+#                  (05 §4 [Q]), and a floor alone rewards piling them up
+#   nocopy:N       no run of N or more words copied from the task's own
+#                  wording: copied rubric earns nothing (05 §3.5 [Q])
+CHECK_KINDS = {"words", "vocab", "any", "distinct", "all", "none", "para", "paras", "re", "max", "nocopy"}
 
 
 def parse_check(spec: str) -> dict:
@@ -1696,7 +1716,7 @@ def parse_check(spec: str) -> dict:
     if n:
         c["n"] = int(n)
     rest = rest.strip()
-    if kind in ("any", "distinct", "all", "none"):
+    if kind in ("any", "distinct", "all", "none", "max"):
         if not rest:
             raise SystemExit(f"write: {kind} needs a list — '{kind} a/b/c'")
         c["l"] = [x.strip().lower() for x in rest.split("/") if x.strip()]
@@ -1796,9 +1816,16 @@ def write_payload(u, lesson, a: dict, body: str, idx: int = 0) -> dict:
         if m.group("check"):
             it["c"] = parse_check(m.group("check"))
         items.append(it)
+    # The clock a writing task runs on. The test's own pace, planning included,
+    # is about 6-7.5 words a minute (Task 1: 150 in 20; Task 2: 250 in 40), which
+    # puts 100 words near 16 minutes; a quarter more for A2 writers is our own
+    # allowance [INF] -- there is no A2 writing-rate evidence to set it by.
+    mins = float(a.get("mins") or (20 if int(hi) <= 100 else 25))
     return {
         "id": f"{u['nn']}-{lesson}-w{idx + 1}",
         "lo": int(lo), "hi": int(hi),
+        "secs": int(round(mins * 60)),
+        "ask": RE_TAG.sub("", inline(a["ask"])),
         "items": items,
         # Carried per task rather than per page: the vocabulary check has to
         # mean "this unit's table", and a lesson page knows nothing else.
@@ -1807,31 +1834,47 @@ def write_payload(u, lesson, a: dict, body: str, idx: int = 0) -> dict:
 
 
 def write_html(p: dict, a: dict) -> str:
-    n_auto = sum(1 for it in p["items"] if it.get("c"))
-    # A counted line's box is not the learner's to tick: it is set from what
-    # they wrote, and a box you can tick yourself is the tick-box this replaced.
+    """Timed like the real Writing screen (01 §9.1): a cover, then the task and
+    a notes box on the left, the answer on the right, a live word count and a
+    countdown. The checklist stays shut while drafting and runs on the text
+    when the learner finishes or time is up -- a checklist that updates on
+    every keystroke invites writing to the checklist."""
     auto = ' data-auto="1"'
     rows = "".join(
         f'<li class="w-i" data-i="{i}"{auto if it.get("c") else ""}>'
         f'<input type="checkbox"{" disabled" if it.get("c") else ""}>'
         f'<span class="w-t">{it["t"]}</span><span class="w-f" role="status"></span></li>'
         for i, it in enumerate(p["items"]))
+    mins = f'{p["secs"] / 60:g}'
     return (
         f'<div class="write" data-role="write" data-write="{e(p["id"])}">'
-        f'<div class="w-h"><span class="w-k">Write it here</span></div>'
-        f'<p class="w-ask">{inline(a["ask"])}</p>'
-        f'<textarea class="w-box" rows="10" spellcheck="false" '
+        f'<div class="w-cover">'
+        f'<p class="c-k">Timed writing</p>'
+        f'<p class="c-t">{e(mins)} minutes · {p["lo"]}–{p["hi"]} words</p>'
+        f'<p class="c-say">The task opens when you start. Plan, write, then read it through '
+        f'before the time is up.</p>'
+        f'<div class="c-ctl"><button class="btn w-start" type="button">Start</button></div>'
+        f'</div>'
+        f'<div class="w-main" hidden>'
+        f'<div class="w-left"><p class="w-ask">{inline(a["ask"])}</p>'
+        f'<label class="w-pl">Your notes <span>(not counted)</span>'
+        f'<textarea class="w-plan" rows="6" spellcheck="false"></textarea></label></div>'
+        f'<div class="w-right">'
+        f'<textarea class="w-box" rows="12" spellcheck="false" '
         f'placeholder="Write your {p["lo"]}–{p["hi"]} words here. It is saved as you type."'
         f'></textarea>'
         f'<div class="w-bar"><span class="w-n" role="status"></span>'
         f'<span class="w-r">{p["lo"]}–{p["hi"]} words</span></div>'
-        f'<h4 class="w-lh">Before you finish</h4>'
+        f'<div class="row"><button class="btn w-done" type="button">I\'ve finished</button></div>'
+        f'</div></div>'
+        f'<div class="w-after" hidden>'
+        f'<div class="w-drafts"></div>'
+        f'<h4 class="w-lh">Check your writing</h4>'
         f'<ul class="w-list">{rows}</ul>'
-        f'<p class="w-note"><b>{n_auto} of these {len(p["items"])} are checked for you</b>, '
-        f'from what you actually wrote. The rest you tick yourself — they need your '
-        f'judgement, not a count. Nothing here gives your writing a score.</p>'
-        f'<p class="w-note quiet">Trying longer sentences and newer words usually means '
-        f'more mistakes for a while. That is normal at this stage — keep going.</p>'
+        f'<p class="w-note">The lines with a mark are checked from what you wrote. '
+        f'Tick the others yourself, honestly. Nothing here gives your writing a score.</p>'
+        f'<div class="row"><button class="btn quiet w-again" type="button">Write draft 2</button></div>'
+        f'</div>'
         f'</div>')
 
 
@@ -1853,17 +1896,19 @@ def clock_payload(u, lesson, a: dict, idx: int = 0) -> dict:
 
 
 def clock_html(p: dict) -> str:
+    """The cover of a timed test: what it is, how long, and Start. Nothing of
+    the test shows until Start, as on the real computer screen, and nothing
+    here lists the questions -- the question bar appears with the test."""
     mins = p["secs"] / 60
-    shown = f"{mins:g}"
     return (f'<div class="clock" data-role="clock" data-clock="{e(p["id"])}">'
-            f'<div class="c-h"><span class="c-k">Reading</span>'
-            f'<span class="c-t">One clock — {e(shown)} minutes</span></div>'
-            f'<p class="c-say">{inline(p["for"]) + " " if p["for"] else ""}'
-            f'The clock covers <b>everything</b>: reading the text and answering. It does '
-            f'not stop, and there is no extra time at the end.</p>'
-            f'<div class="c-ctl"><button class="btn c-start" type="button">Start reading</button>'
+            f'<div class="c-cover">'
+            f'<p class="c-k">Timed test</p>'
+            f'<p class="c-t">{e(f"{mins:g}")} minutes</p>'
+            f'<p class="c-say">The text and its questions open when you start. '
+            f'The clock does not stop.</p>'
+            f'<div class="c-ctl"><button class="btn c-start" type="button">Start</button>'
             f'<span class="c-state" role="status"></span></div>'
-            f'</div>')
+            f'</div></div>')
 
 
 # --------------------------------------------------------------- passages ---
@@ -3715,6 +3760,11 @@ def page_lesson(u, L) -> str:
     # never recorded is a course that never ends. Finishing goes back to Today,
     # which is where the next step is decided.
     after = (f'Lesson {L["n"] + 1}' if L["n"] < LESSONS else "the unit test")
+    # Finishing goes straight on to the next step -- the next lesson, or after
+    # the last one the unit test -- with no stop on Today in between: the next
+    # step is already known, and a screen that only says so is a detour.
+    next_href = (f'../lesson-{L["n"] + 1}/index.html' if L["n"] < LESSONS
+                 else "../index.html#gate")
 
     body = f"""  <div class="rail" aria-label="Lessons in this unit">{rail}</div>
   <header class="masthead">
@@ -3729,7 +3779,7 @@ def page_lesson(u, L) -> str:
     {prev_l}
     <span class="sp"></span>
     <button class="btn quiet small" id="undoDone" type="button" hidden>Not finished yet</button>
-    <a class="btn" id="markDone" href="../../index.html">Finish lesson ✓</a>
+    <a class="btn" id="markDone" href="{next_href}">Finish lesson ✓</a>
   </div>
 {words_sheet(u)}"""
 

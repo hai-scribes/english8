@@ -497,39 +497,40 @@ Look at the word after each verb: told **us**, told **me** — but said **that**
 - phone · laptop · tablet · feedback = feedback ~ the others are devices
 - convenient · efficient · innovative · epidemic = epidemic ~ the others describe something good
 @ error-correction
-- Bell discovered the telephone in 1876. {invented | borrowed | forgot} = discovered -> invented ~ the telephone did not exist before; Bell **invented** it
-- The Wright brothers discovered the first real aeroplane. {invented | borrowed | lost} = discovered -> invented ~ the aeroplane did not exist before; they **invented** it
-- My phone uses biology to check my fingerprint. {biometrics | inventions | devices} = biology -> biometrics ~ checking a person by their body is **biometrics**
-- The lock reads my footprint when I press my thumb on it. {fingerprint | iris | invention} = footprint -> fingerprint ~ a thumb leaves a **fingerprint**
-- The scanner reads the colour of your nose to know who you are. {iris | fingerprint | invention} = nose -> iris ~ the coloured part of the eye is the **iris**
-- My phone uses face invention to unlock. {recognition | fingerprint | iris} = invention -> recognition ~ a phone that knows your face uses face **recognition**
-- A tablet is a useful fingerprint for reading at night. {device | iris | recognition} = fingerprint -> device ~ a tablet is a **device**
-- The factory borrowed its packing line, so robots now do the work. {automated | invented | forgot} = borrowed -> automated ~ machines doing the work means the line is **automated**
-- With nanolearning, each lesson lasts about three hours. {minutes | days | weeks} = hours -> minutes ~ nanolearning lessons are very short
-- The new rice cooker is very lazy — it cooks rice in ten minutes with little power. {efficient | broken | noisy} = lazy -> efficient ~ a machine that saves time and power is **efficient**
-- The robot that plants trees is an old-fashioned idea — nobody tried it before. {innovative | boring | lazy} = old-fashioned -> innovative ~ a new idea is **innovative**
-- The new medicine is a big breakdown — it saves many lives. {breakthrough | laboratory | device} = breakdown -> breakthrough ~ an important step forward is a **breakthrough**
-- Scientists do their tests in the breakthrough. {laboratory | device | invention} = breakthrough -> laboratory ~ scientists work in a **laboratory**
+- Bell discovered the telephone in 1876. {invented | found | noticed} = discovered -> invented ~ the telephone did not exist before; Bell **invented** it
+- The Wright brothers discovered the first real aeroplane. {invented | found | noticed} = discovered -> invented ~ the aeroplane did not exist before; they **invented** it
+- My phone uses biology to check my fingerprint. {biometrics | physics | inventions} = biology -> biometrics ~ checking a person by their body is **biometrics**
+- The police found the thief's footprints on the door handle. {fingerprints | signatures | stickers} = footprints -> fingerprints ~ hands leave **fingerprints**; feet leave footprints
+- Look into the scanner so it can read your fingerprint. {iris | eyelash | eyebrow} = fingerprint -> iris ~ a scanner you look into reads your **iris**
+- The factory invented its packing line, so robots now do the work. {automated | repaired | painted} = invented -> automated ~ machines doing the work means the line is **automated**
+- This light bulb is very effective: it gives bright light but uses little electricity. {efficient | innovative | expensive} = effective -> efficient ~ something that uses little power is **efficient**
+- Khoa's box is very efficient: nobody at school has made anything like it before. {innovative | expensive | popular} = efficient -> innovative ~ a new idea that nobody had before is **innovative**
+- The new medicine is a big breakdown — it saves many lives. {breakthrough | recognition | problem} = breakdown -> breakthrough ~ an important step forward is a **breakthrough**
 - Our class makes an experiment every Friday. {does | takes | gives} = makes -> does ~ you **do** an experiment
 - Robots will never change teachers completely. {replace | develop | invent} = change -> replace ~ one thing takes the place of another: **replace**
 - The main benefit for this app is that it is free. {of | in | at} = for -> of ~ the **benefit of** something
-- The biggest drawback of the new bus is that it is cheap and fast. {benefit | platform | experiment} = drawback -> benefit ~ cheap and fast are good points
-- The biggest benefit of this phone is its tiny battery — it dies by lunch. {drawback | invention | platform} = benefit -> drawback ~ a battery that dies by lunch is a bad point
-- I use a map breakthrough on my phone to find the way. {application | experiment | benefit} = breakthrough -> application ~ a program on a phone is an **application**
-- Our class meets every Monday on an online laboratory called Zoom. {platform | experiment | drawback} = laboratory -> platform ~ Zoom is an online **platform**
+- The biggest drawback of the new bus is that it is cheap and fast. {benefit | problem | weakness} = drawback -> benefit ~ cheap and fast are good points
+- The biggest benefit of this phone is its tiny battery — it dies by lunch. {drawback | advantage | strength} = benefit -> drawback ~ a battery that dies by lunch is a bad point
+- I downloaded a new device to learn English words. {application | experiment | benefit} = device -> application ~ a program you download onto a phone is an **application**
+- Our class meets every Monday in an online platform called Zoom. {on | at | by} = in -> on ~ you meet **on** a platform
 - Swimming every week invents strong muscles. {develops | replaces | discovers} = invents -> develops ~ the muscles are there already; swimming makes them better
-- My uncle reads the news on a wooden newspaper on his tablet. {digital | efficient | innovative} = wooden -> digital ~ news on a tablet is **digital**
-- The test uses fingerprints to see where students are looking. {eye-tracking | attendance | feedback} = fingerprints -> eye-tracking ~ following the eyes is **eye-tracking**
-- The teacher takes the feedback every morning to see who is absent. {attendance | truancy | cheating} = feedback -> attendance ~ checking who is here is taking **attendance**
-- The school wants to stop attendance, so it checks every student at the gate. {truancy | feedback | eye-tracking} = attendance -> truancy ~ the school wants to stop students missing class
-- Copying answers in a test is feedback. {cheating | attendance | truancy} = feedback -> cheating ~ copying answers is **cheating**
+- My uncle reads an electric newspaper on his tablet. {digital | printed | handwritten} = electric -> digital ~ news on a tablet is **digital**
+- The teacher takes attention every morning to see who is absent. {attendance | feedback | truancy} = attention -> attendance ~ checking who is here is taking **attendance**
+- The school wants to stop attendance, so it phones the parents of every student who is absent. {truancy | feedback | cheating} = attendance -> truancy ~ the school wants to stop students missing class
+- Copying answers in a test is truancy. {cheating | bullying | lateness} = truancy -> cheating ~ copying answers is **cheating**; truancy is missing school
 - The teacher gave me a useful feedback on my essay. {some | many | an} = a -> some ~ you give **some feedback**, never *a feedback*
-- In the Zoom class, we talked in groups of three in a laboratory. {breakout room | device | fingerprint} = laboratory -> breakout room ~ a small online group meets in a **breakout room**
+- In the Zoom class, the teacher sent us to a platform to talk in groups of three. {breakout room | waiting room | chat box} = platform -> breakout room ~ a small online group talks in a **breakout room**
 - I met my online friend face by face last summer. {to | with | in} = by -> to ~ **face to face**
-- It is very inconvenient to live next to the school — I walk there in two minutes. {convenient | efficient | digital} = inconvenient -> convenient ~ a two-minute walk is no trouble
+- It is very comfortable to live next to the school — I walk there in two minutes. {convenient | quiet | cheap} = comfortable -> convenient ~ a place that saves you time and trouble is **convenient**
 - She complained on the slow Internet. {about | at | for} = on -> about ~ you **complain about** something
-- Many people replaced about the long queue at the bank. {complained | developed | invented} = replaced -> complained ~ people who are not happy **complain about** it
-- The breakthrough spread fast, and many people got sick. {epidemic | benefit | experiment} = breakthrough -> epidemic ~ a disease that spreads is an **epidemic**
+- Many people explained about the slow service, and the bank said sorry. {complained | laughed | forgot} = explained -> complained ~ people who are not happy **complain about** it
+@ gap-fill ask="Choose the word that fits."
+- At the airport, a camera checks your face: this is face ___ . {recognition | invention | device} = recognition
+- A smartwatch is a small ___ that counts your steps and your heartbeat. {device | fingerprint | recognition} = device
+- Mai learns ten new words a day in two-minute lessons on her phone — that's ___ . {nanolearning | artificial intelligence | biometrics} = nanolearning
+- The school's new ___ has microscopes, test tubes and safety glasses. {laboratory | library | canteen} = laboratory
+- The online test uses ___ to check whether students look away from the screen. {eye-tracking | nanolearning | recognition} = eye-tracking
+- Last winter an ___ of flu kept half my class at home. {epidemic | experiment | invention} = epidemic
 :::
 
 ### Vocabulary — Science and technology
@@ -1023,7 +1024,7 @@ It takes ten seconds and shows you whether you have understood the question.
 :::
 
 ::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours — the opinion paragraph, **80–100 words**. A clear position, one point admitted, then your own argument."
-- [ ] 80–100 words ~ words
+- [ ] At least 80 words — 80–100 is the aim ~ words
 - [ ] One paragraph, not a list ~ para:1
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
 - [ ] One concession ~ any:1 it is true that/it is true/of course/admittedly/i admit that/certainly/there is no doubt that
@@ -1032,6 +1033,8 @@ It takes ten seconds and shows you whether you have understood the question.
 - [ ] At least **one** reported statement ~ any:1 said that/told me that/told us that/explained that/said he/said she/told me/told us
 - [ ] Your position is clear in the **first** sentence
 - [ ] A conclusion that repeats your position in different words
+- [ ] Your own words — no long run copied from the task ~ nocopy:5
+- [ ] Read it once more, one sentence at a time, and fix any mistake you find
 :::
 
 ---

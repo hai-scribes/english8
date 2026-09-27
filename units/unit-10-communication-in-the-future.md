@@ -181,15 +181,14 @@
 - emoji · gesture · smile · connection = connection ~ the others show a feeling without words
 - holographic · virtual · advanced · interviewee = interviewee ~ an interviewee is a person; the others describe things
 @ error-correction
-- Can you transmit this sentence into English? {translate | interact | zoom} = transmit -> translate ~ you **translate** words into another language
-- She ended her typed message with a laughing gesture. {emoji | webcam | network} = gesture -> emoji ~ a picture in a message is an **emoji**
+- Can you transmit this sentence into English? {translate | interact | communicate} = transmit -> translate ~ you **translate** words into another language
+- She ended her typed message with a laughing gesture. {emoji | hashtag | password} = gesture -> emoji ~ a little picture in a message is an **emoji**
 - The map is too small. Zoom out so I can read it. {in | up | off} = out -> in ~ **zoom in** makes it bigger
-- Our internet gesture is very slow today. {connection | device | emoji} = gesture -> connection ~ an internet **connection**
-- My grandfather prefers virtual visits — he likes to sit in the same room as us. {face-to-face | instantly | advanced} = virtual -> face-to-face ~ in the same room is **face-to-face**
+- My grandfather prefers virtual visits — he likes to sit in the same room as us. {face-to-face | holographic | telepathic} = virtual -> face-to-face ~ in the same room is **face-to-face**
 - It is hard to make friends abroad when there is a language carrier. {barrier | pigeon | machine} = carrier -> barrier ~ a **language barrier**
-- My message arrived slowly — Minh read it less than a second after I sent it. {instantly | late | virtual} = slowly -> instantly ~ with no waiting is **instantly**
+- Minh read my message instant — less than a second after I sent it. {instantly | lately | hardly} = instant -> instantly ~ with no waiting is **instantly**
 - The twins say they are holographic — each one knows what the other is thinking. {telepathic | virtual | advanced} = holographic -> telepathic ~ sharing thoughts is **telepathic**
-- Thảo sent me a group message so nobody else could read it. {private | holographic | virtual} = group -> private ~ only one person sees a **private** message
+- Thảo sent me a group message so nobody else could read it. {private | public | long} = group -> private ~ only one person sees a **private** message
 @ gap-fill ask="Choose the word that fits."
 - In the story, the two friends talk by ___ — they never open their mouths. {telepathy | video call | social media} = telepathy
 - Nobody can prove that ___ works — reading minds is still a mystery. {telepathy | a phone | a radio} = telepathy
@@ -525,46 +524,48 @@
 - webcam · smartphone · device · interviewee = interviewee ~ the others are machines
 - carrier pigeon · letter · postcard · translation machine = translation machine ~ the others carry written messages
 @ error-correction
-- Bống says she can hear her brother's thoughts by video call, even when her tablet is switched off. {telepathy | social media | face-to-face} = video call -> telepathy ~ hearing thoughts is **telepathy**
-- Some people believe twins share their thoughts through social media, with no phones at all. {telepathy | video call | face-to-face} = social media -> telepathy ~ thoughts with no phones is **telepathy**
-- The fortune teller has face-to-face powers — she can hear my thoughts. {telepathic | virtual | social media} = face-to-face -> telepathic ~ hearing thoughts is **telepathic**
-- Tí thinks his sister is slow, because she always knows his secrets before he tells her. {telepathic | face-to-face | video call} = slow -> telepathic ~ knowing thoughts is **telepathic**
-- We talked on a postcard for an hour, and I saw my cousin's new haircut on the screen. {video call | letter | radio} = postcard -> video call ~ talking and seeing on a screen is a **video call**
-- I found my old classmate on telepathy and sent him a friend request. {social media | video call | face-to-face} = telepathy -> social media ~ friend requests happen on **social media**
-- I sent my friend a video call that said "Happy birthday!" in small typed words. {instant message | social media | telepathy} = video call -> instant message ~ typed words are an **instant message**
-- She typed a quick postcard on her phone to tell me she was on the bus. {instant message | video call | telepathy} = postcard -> instant message ~ a typed note is an **instant message**
-- Tomorrow I'll meet my new tutor by video call, at her house. {face-to-face | telepathy | social media} = by video call -> face-to-face ~ meeting at her house is **face-to-face**
-- After the storm, the villagers held a telepathy meeting in the temple yard. {face-to-face | video call | social media} = telepathy -> face-to-face ~ a meeting in one place is **face-to-face**
-- Tí likes to argue with the dolphins in the bay: they swim, play and chase fish together. {interact | telepathy | social media} = argue -> interact ~ you **interact with** someone
-- The astronauts shake hands with the team on the Earth by radio. {communicate | telepathy | face-to-face} = shake hands -> communicate ~ by radio they **communicate**
-- We play with our cousins in France by email, sharing news and photos every week. {communicate | social media | video call} = play -> communicate ~ you **communicate** by email
-- He pointed at the door — a clear device that meant "Go out". {gesture | network | connection} = device -> gesture ~ pointing is a **gesture**
-- My phone has no gesture here, so I can't send the message. {signal | virtual | translate} = gesture -> signal ~ a phone needs a **signal**
-- The ship sent a gesture for help by radio. {signal | device | virtual} = gesture -> signal ~ a radio sends a **signal**
+- The twins in the story talk by telepathic — they never need a phone. {telepathy | video call | social media} = telepathic -> telepathy ~ after *by*, the noun: **telepathy**
+- Grandma believes in telepathic: she can feel when I am sad, even from far away. {telepathy | social media | video calls} = telepathic -> telepathy ~ you believe in a thing: **telepathy**
+- The fortune teller says she has telepathy powers — she can hear my thoughts. {telepathic | face-to-face | musical} = telepathy -> telepathic ~ before *powers*, the adjective: **telepathic**
+- Tí thinks his sister is telepathy, because she always knows his secrets before he tells her. {telepathic | face-to-face | shy} = telepathy -> telepathic ~ after *is*, the adjective: **telepathic**
+- We had an instant message for an hour; I could see and hear my cousin the whole time. {video call | phone call | text message} = instant message -> video call ~ seeing and hearing is a **video call**
+- I found my old classmate on instant message and sent him a friend request. {social media | the radio | television} = instant message -> social media ~ friend requests happen on **social media**
+- I sent Minh a video call that said "Happy birthday!" in three typed words, and he read it a second later. {instant message | phone call | parcel} = video call -> instant message ~ typed words that arrive at once are an **instant message**
+- Linh sent me a social media from the bus: "Two minutes away!" {instant message | parcel | birthday card} = social media -> instant message ~ one quick typed note is an **instant message**
+- Our class is online again today — we are all sitting together in Room 8. {face-to-face | by video call | on social media} = online -> face-to-face ~ together in one room is **face-to-face**
+- Tomorrow's parents' meeting is online: Mum has to go to school at six. {face-to-face | virtual | telepathic} = online -> face-to-face ~ going to the school is **face-to-face**
+- In the game, you can interaction with players from other countries. {interact | cook | swim} = interaction -> interact ~ after *can*, the verb: **interact**
+- The astronauts communication with the team on the Earth by radio. {communicate | travel | swim} = communication -> communicate ~ the verb is **communicate**
+- Our class has a pen friend school in Japan, and we communication by email every month. {communicate | travel | swim} = communication -> communicate ~ after *we*, the verb: **communicate**
+- Tí did a gesture to Bống: a finger on his lips. {made | took | said} = did -> made ~ you **make** a gesture
+- The radio on the boat picks up a gesture from the coast every hour. {signal | network | device} = gesture -> signal ~ a radio picks up a **signal**
+- Three short flashes of the torch were our secret gesture: "Come down to the beach." {signal | network | device} = gesture -> signal ~ flashes of light are a **signal**
 - Please communicate this word into Vietnamese. {translate | interact | signal} = communicate -> translate ~ into another language is **translate**
-- My phone and my tablet are both gestures that I use for school. {devices | networks | signals} = gestures -> devices ~ phones and tablets are **devices**
-- I can't get online — the school gesture is not working. {network | device | virtual} = gesture -> network ~ a school computer **network**
-- The storm cut the gesture, and we couldn't get online for a day. {connection | device | virtual} = gesture -> connection ~ getting online needs a **connection**
-- My device is weak in this room — the web pages take ages to open, but in the kitchen they open fast. {connection | gesture | virtual} = device -> connection ~ a weak internet **connection**
-- We visited a face-to-face zoo on the computer and saw lions from our sofa. {virtual | telepathic | translate} = face-to-face -> virtual ~ on the computer is **virtual**
-- The museum shows a telepathic whale made of light above our heads. {holographic | face-to-face | translate} = telepathic -> holographic ~ made of light is **holographic**
-- I read the news every morning on my emoji. {smartphone | gesture | holography} = emoji -> smartphone ~ you read news on a **smartphone**
-- My webcam rang in my pocket — it was Mum. {smartphone | emoji | gesture} = webcam -> smartphone ~ a **smartphone** rings
-- The webcam answered all the reporter's questions honestly. {interviewee | emoji | smartphone} = webcam -> interviewee ~ a person who answers is the **interviewee**
-- I sent Mai a smiling webcam to say thank you. {emoji | smartphone | holography} = webcam -> emoji ~ a smiling picture is an **emoji**
-- The managers had a voice message with cameras on, and everybody could see everybody. {video conference | emoji | smartphone} = voice message -> video conference ~ a meeting on camera is a **video conference**
-- My hands were wet, so I sent a webcam saying "I'm on my way home." {voice message | emoji | holography} = webcam -> voice message ~ a spoken recording is a **voice message**
-- Mum listened to my emoji three times because the sound was bad. {voice message | webcam | smartphone} = emoji -> voice message ~ you listen to a **voice message**
-- My emoji is so blurry that my teacher can't see my face. {webcam | smartphone | holography} = emoji -> webcam ~ the camera is the **webcam**
-- The map is too small — translate on it with two fingers. {zoom in | interact | communicate} = translate -> zoom in ~ to make it bigger, **zoom in**
-- The show used telepathy to put a 3D dinosaur of light in the room. {holography | social media | emoji} = telepathy -> holography ~ 3D pictures of light are **holography**
-- The tourist spoke into a carrier pigeon, and it answered in Vietnamese. {translation machine | group call | private message} = carrier pigeon -> translation machine ~ a **translation machine** changes the language
-- The group call between the Vietnamese and French players made it hard to plan together. {language barrier | carrier pigeon | chatbot} = group call -> language barrier ~ different languages make a **language barrier**
-- Long ago, people sent letters by chatbot, and the bird flew home. {carrier pigeon | group call | translation machine} = chatbot -> carrier pigeon ~ the bird is a **carrier pigeon**
-- Five friends joined the private message and talked together. {group call | chatbot | carrier pigeon} = private message -> group call ~ many people talking is a **group call**
-- I asked the carrier pigeon on the website, and it typed an answer at once. {chatbot | group call | language barrier} = carrier pigeon -> chatbot ~ a program that types answers is a **chatbot**
-- The school bought very old computers with the newest, fastest chips. {advanced | face-to-face | telepathic} = old -> advanced ~ the newest machines are **advanced**
+- My phone and my tablet are both networks that I use for school. {devices | signals | connections} = networks -> devices ~ phones and tablets are **devices**
+- Every classroom shares files on the school device. {network | signal | connection} = device -> network ~ computers joined together make a **network**
+- The internet connect in the hotel is very slow. {connection | gesture | password} = connect -> connection ~ the noun is **connection**
+- I lost my network to the internet halfway through the test. {connection | device | gesture} = network -> connection ~ your **connection** to the internet
+- We visited a face-to-face zoo on the laptop and watched lions from our sofa. {virtual | telepathic | wooden} = face-to-face -> virtual ~ on a computer is **virtual**
+- The museum shows a telepathic whale made of light above our heads. {holographic | face-to-face | wooden} = telepathic -> holographic ~ made of light is **holographic**
+- In the school video, Thảo asks the questions and Minh is the interviewer. {interviewee | reporter | interview} = interviewer -> interviewee ~ the person who answers is the **interviewee**
+- Grandpa's eyes are bad, so I record an instant message for him every evening. {voice message | emoji | video conference} = instant message -> voice message ~ a recording you send is a **voice message**
+- Is your video call turned on? I can't see your face. {webcam | microphone | speaker} = video call -> webcam ~ the camera is the **webcam**
+- The show used telepathy to put a 3D dinosaur of light in the room. {holography | social media | photography} = telepathy -> holography ~ 3D pictures of light are **holography**
+- The tourist bought a language barrier at the airport, and now it says her words in Vietnamese. {translation machine | webcam | carrier pigeon} = language barrier -> translation machine ~ a **translation machine** changes the language
+- Nobody in our team spoke French, so there was a big translation machine between us and the French players. {language barrier | group call | carrier pigeon} = translation machine -> language barrier ~ different languages make a **language barrier**
+- Five friends joined the private message and talked together. {group call | voice message | chatbot} = private message -> group call ~ many people talking is a **group call**
 - The radio tower translates signals to radios across the province. {transmits | interacts | zooms in} = translates -> transmits ~ a tower **transmits** signals
+@ gap-fill ask="Choose the word that fits."
+- The ___ dropped twice, so Bà Sáu's voice came in pieces. {connection | gesture | device} = connection
+- Bà Sáu's new ___ shows her the weather, the tides and her grandchildren's photos. {smartphone | webcam | network} = smartphone
+- Tí keeps his ___ in a plastic bag on the boat, so the sea can't break it. {smartphone | emoji | network} = smartphone
+- Nam never writes "I'm happy"; he just adds a big yellow smiling ___ . {emoji | webcam | network} = emoji
+- The ___ had six screens, one for each city, and the boss spoke first. {video conference | voice message | webcam} = video conference
+- Grandma pressed play and heard my ___ : "I got a ten in maths!" {voice message | emoji | webcam} = voice message
+- Nam ___ on the photo and found Bống's face in the crowd. {zoomed in | interacted | translated} = zoomed in
+- The ___ landed on the roof with a tiny letter in a tube on its leg. {carrier pigeon | chatbot | group call} = carrier pigeon
+- The ___ on the ferry website told me the boat leaves at nine. {chatbot | carrier pigeon | group call} = chatbot
+- Our new science lab has ___ microscopes that can see tiny cells. {advanced | telepathic | face-to-face} = advanced
 :::
 
 ### Vocabulary — Communication
@@ -1044,13 +1045,15 @@ The number will go up and down from week to week, and that is normal.
 :::
 
 ::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — **80–100 words** describing one way you communicate. What you see and hear, not only what you think."
-- [ ] 80–100 words ~ words
+- [ ] At least 80 words — 80–100 is the aim ~ words
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
 - [ ] At least **three** time phrases with *in / on / at* ~ any:3 in the morning/in the afternoon/in the evening/at night/at the weekend/at weekends/on monday/on tuesday/on wednesday/on thursday/on friday/on saturday/on sunday/at the moment/in the future/at midnight/at noon/on time/in time/at lunchtime/on my birthday
 - [ ] At least **two** prepositions of place ~ any:2 behind/next to/in front of/under/above/below/beside/near/between/opposite/on the left/on the right/on the screen/on the wall/on the table/at the top/at the bottom
 - [ ] At least **one** of *mine, yours, hers, ours, theirs* ~ any:1 mine/hers/his own/ours/theirs/yours
 - [ ] …and no noun after it — *that phone is mine*, never *mine phone*
 - [ ] One sentence about a sound, one about a picture
+- [ ] Your own words — no long run copied from the task ~ nocopy:5
+- [ ] Read it once more, one sentence at a time, and fix any mistake you find
 :::
 
 ---

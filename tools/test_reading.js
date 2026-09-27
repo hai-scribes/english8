@@ -1466,8 +1466,8 @@ async function main() {
     /* Finishing a lesson records it, and records it against today. */
     const lw = await seeded({})("docs/unit-01/lesson-2/index.html");
     const fin = lw.document.querySelector("#markDone");
-    ok("finish: the lesson's primary action is Finish, and it leads to Today",
-       fin && /Finish lesson/.test(fin.textContent) && fin.getAttribute("href") === "../../index.html",
+    ok("finish: the lesson's primary action is Finish, and it goes straight to the next lesson",
+       fin && /Finish lesson/.test(fin.textContent) && fin.getAttribute("href") === "../lesson-3/index.html",
        fin ? fin.textContent + " -> " + fin.getAttribute("href") : "missing");
     fin.dispatchEvent(new lw.MouseEvent("click", { bubbles: true, cancelable: true }));
     const p = JSON.parse(lw.localStorage.getItem("en8:progress:v1") || "{}");
@@ -1475,6 +1475,69 @@ async function main() {
     ok("finish: the lesson is recorded", !!(p["01"] && p["01"].lessons["2"]));
     ok("finish: the day's record names it", !!(d[day] && d[day].steps.includes("01:L2")),
        JSON.stringify(d));
+  }
+
+  /* ---- a timed test behaves like the real screen ---------------------------
+     Operator, 2026-09-27: hidden until Start; then only the text, the
+     questions and a countdown; everything marked together at the end. */
+  {
+    const w = await settled(load("docs/unit-06/lesson-4/index.html", null, fastPage));
+    const d = w.document;
+    const clock = d.querySelector('[data-role="clock"]');
+    const pg = d.querySelector('[data-role="passage"]');
+    const tasks = owned2(d, clock);
+    ok("exam: before Start the text is hidden", pg.hidden === true);
+    ok("exam: before Start the questions are hidden",
+       tasks.length && tasks.every(t => t.closest("section").hidden));
+    ok("exam: the cover lists no questions",
+       !/questions?\s*\d/i.test(clock.querySelector(".c-cover").textContent)
+       && (!clock.querySelector(".c-nav") || clock.querySelector(".c-nav").hidden));
+    click(w, clock.querySelector(".c-start"));
+    const bar = d.querySelector(".exam-bar");
+    ok("exam: Start shows the text, the questions and a countdown",
+       !pg.hidden && tasks.every(t => !t.closest("section").hidden) && !!bar
+       && /^\d+:\d\d$/.test(bar.querySelector(".eb-t").textContent),
+       bar ? bar.textContent : "no bar");
+    ok("exam: the page is in test mode", d.body.classList.contains("exam-on"));
+    ok("exam: no question is marked one by one during the test",
+       tasks.every(t => t.dataset.done !== "1"));
+    click(w, bar.querySelector(".eb-go"));
+    ok("exam: finishing marks every task at once",
+       tasks.every(t => t.dataset.done === "1"), tasks.map(t => t.dataset.done).join());
+    ok("exam: and leaves test mode", !d.body.classList.contains("exam-on") && !d.querySelector(".exam-bar"));
+  }
+
+  /* ---- the writing screen is timed, and the checklist waits ---------------- */
+  {
+    const w = await settled(load("docs/unit-01/lesson-4/index.html", null, fastPage));
+    const d = w.document;
+    const root = d.querySelector('[data-role="write"]');
+    ok("write: before Start only the cover shows",
+       !root.querySelector(".w-cover").hidden && root.querySelector(".w-main").hidden
+       && root.querySelector(".w-after").hidden);
+    click(w, root.querySelector(".w-start"));
+    const bar = d.querySelector(".exam-bar");
+    ok("write: Start opens the task and a countdown", !root.querySelector(".w-main").hidden && !!bar);
+    ok("write: the checklist is shut while drafting", root.querySelector(".w-after").hidden);
+    const box = root.querySelector(".w-box");
+    box.value = "Hi Mai, I like reading and I often hang out with my cousins at the weekend.";
+    box.dispatchEvent(new w.Event("input", { bubbles: true }));
+    ok("write: the live word count runs", /\d+ words/.test(root.querySelector(".w-n").textContent));
+    click(w, bar.querySelector(".eb-go"));
+    ok("write: finishing opens the checklist on what was written",
+       !root.querySelector(".w-after").hidden
+       && [...root.querySelectorAll(".w-i[data-auto]")].some(li => li.dataset.ok === "0" || li.dataset.ok === "1"));
+    const rec = JSON.parse(w.localStorage.getItem("en8:write:v1") || "{}")[root.dataset.write] || {};
+    ok("write: the draft is kept", rec.drafts && rec.drafts.length === 1);
+    ok("write: how long it took is never stored",
+       !/"(secs|elapsed|took|duration|spent)"/.test(JSON.stringify(rec)) && !rec.deadline, JSON.stringify(rec).slice(0, 120));
+    click(w, root.querySelector(".w-again"));
+    ok("write: draft 2 starts from draft 1, without a clock",
+       box.value.startsWith("Hi Mai") && !d.querySelector(".exam-bar") && !root.querySelector(".w-main").hidden);
+    click(w, root.querySelector(".w-done"));
+    const rec2 = JSON.parse(w.localStorage.getItem("en8:write:v1") || "{}")[root.dataset.write] || {};
+    ok("write: both drafts are kept, and never compared",
+       rec2.drafts && rec2.drafts.length === 2 && !/better|worse|improv/i.test(root.textContent));
   }
 
   /* ---- seven lessons become six, once, and the record follows -------------

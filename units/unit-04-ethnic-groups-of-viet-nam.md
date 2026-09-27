@@ -460,37 +460,38 @@
 - stilt house · communal house · hut · custom = custom ~ the others are buildings
 - dress · hat · scarf · heritage = heritage ~ the others are things you wear
 @ error-correction
-- The dancers wore their customs at the festival. {costumes | heritages | majorities} = customs -> costumes ~ you wear a *costume*; a *custom* is something people do
-- Lan put on her Tay heritage for the photo. {costume | custom | majority} = heritage -> costume ~ you put on a *costume*
-- It is our costume to visit the graves before Tet. {custom | heritage | majority} = costume -> custom ~ a *custom* is something people always do
-- In my village, it is a heritage to share the first rice with the neighbours. {custom | costume | majority} = heritage -> custom ~ a *custom* is something people always do
-- The Kinh are the minority in Viet Nam. {majority | heritage | custom} = minority -> majority ~ most people in Viet Nam are Kinh
-- My best friend belongs to the Tay stilt house, and she speaks Tay with her grandma. {ethnic group | costume | heritage} = stilt house -> ethnic group ~ the Tay are a group of people
-- The Hmong are a small costume in the north of Viet Nam. {ethnic minority | heritage | custom} = costume -> ethnic minority ~ the Hmong are a small group of people
-- At night, the Muong family sleeps in their terraced field, high above the ground. {stilt house | costume | custom} = terraced field -> stilt house ~ a family lives in a *stilt house*
-- Dad showed me the rice growing on the stilt houses, high up on the mountain. {terraced fields | costumes | customs} = stilt houses -> terraced fields ~ rice grows on *terraced fields*
-- Hoi An's old houses are an important part of Viet Nam's majority. {heritage | costume | custom} = majority -> heritage ~ old buildings are part of our *heritage*
-- The village held a special basket to ask for rain. {ritual | cave | gong} = basket -> ritual ~ a *ritual* is a ceremony
-- My uncle built the fence from green gong. {bamboo | ritual | heritage} = gong -> bamboo ~ a fence can be made of *bamboo*; a *gong* is a musical instrument
-- My grandmother cooks baskets from bamboo every afternoon. {weaves | drinks | swims} = cooks -> weaves ~ you *weave* a basket
-- The farmer put the vegetables into a cave and went to the market. {basket | ritual | gong} = cave -> basket ~ you carry things in a *basket*
-- At the festival, the young men beat the big basket, and the dancing starts. {gong | cave | ritual} = basket -> gong ~ you beat a *gong*
-- Bats live in the dark basket behind the waterfall. {cave | gong | ritual} = basket -> cave ~ bats live in a *cave*
-- The shape of this basket is common — no one else weaves like that. {unique | usual | ordinary} = common -> unique ~ if no one else does it, it is *unique*
-- The plants in this garden are very lonely: there are roses, beans, herbs and trees. {diverse | tiny | quiet} = lonely -> diverse ~ many different kinds make a *diverse* garden
-- At Tet, we eat modern food like bánh chưng. {traditional | diverse | unique} = modern -> traditional ~ bánh chưng is an old, *traditional* food
-- Every village in the Central Highlands has a tall livestock in the middle. {communal house | soil | gardening} = livestock -> communal house ~ the tall building is a *communal house*
-- My grandfather has a lot of heritage: pigs, goats and ducks. {livestock | soil | gardening} = heritage -> livestock ~ farm animals are *livestock*
-- My grandmother weaves pigs and chickens behind the house. {raises | overlooks | plays} = weaves -> raises ~ you *raise* animals
-- My mum's hobby is livestock; she grows roses and herbs. {gardening | weaving | soil} = livestock -> gardening ~ growing plants is *gardening*
-- We planted the seeds in the dark heritage. {soil | livestock | bamboo} = heritage -> soil ~ seeds go into the *soil*
-- Our window raises the river, so we can see the boats. {overlooks | weaves | plays} = raises -> overlooks ~ a window *overlooks* a view
-- We sat around the flute and told stories until the wood burnt out. {open fire | statue | gong} = flute -> open fire ~ wood burns in an *open fire*
-- The museum has a huge stone gong of a Cham dancer. {statue | flute | costume} = gong -> statue ~ a stone figure is a *statue*
-- In the evening, the boy on the buffalo blew a sad tune on his gong. {flute | basket | statue} = gong -> flute ~ you blow into a *flute*; you hit a *gong*
-- Lan plays the statue in the school band. {flute | costume | feature} = statue -> flute ~ you play a *flute*
-- The whole village sings a folk dance at the festival. {song | statue | feature} = dance -> song ~ you sing a *folk song*; you do a *folk dance*
-- The best ritual of my new school bag is a secret pocket inside. {feature | costume | custom} = ritual -> feature ~ a special part of a thing is a *feature*
+- The dancers wore their customs at the festival. {costumes | heritage | stilt houses} = customs -> costumes ~ you wear a *costume*; a *custom* is something people do
+- Lan put on her Tay custom for the photo. {costume | heritage | terraced field} = custom -> costume ~ clothes you put on are a *costume*; a *custom* is something people do
+- It is our costume to visit the graves before Tet. {custom | heritage | hobby} = costume -> custom ~ a *custom* is something people always do
+- In my village, it is a heritage to share the first rice with the neighbours. {custom | costume | holiday} = heritage -> custom ~ a thing people always do is a *custom*; *heritage* is what a country keeps from its past
+- The Kinh are the minority in Viet Nam: about 85 out of every 100 people are Kinh. {majority | heritage | custom} = minority -> majority ~ most people in Viet Nam are Kinh
+- The Kinh are the largest ethnic minority in Viet Nam. {ethnic group | heritage | custom} = ethnic minority -> ethnic group ~ the Kinh are most of the country, so they are not a minority
+- The Hmong, the Dao and the Tay are all majorities in Viet Nam; most people are Kinh. {ethnic minorities | costumes | customs} = majorities -> ethnic minorities ~ they are smaller groups, so they are *ethnic minorities*
+- At night, the Muong family sleeps in their terraced field, high above the ground. {stilt house | rice field | garden} = terraced field -> stilt house ~ a family lives in a *stilt house*; rice grows on a *terraced field*
+- Dad showed me the rice growing on the stilt houses, high up on the mountain. {terraced fields | villages | roads} = stilt houses -> terraced fields ~ rice grows on *terraced fields*
+- Hoi An's old houses are an important part of Viet Nam's custom. {heritage | costume | majority} = custom -> heritage ~ old buildings a country keeps are part of its *heritage*
+- The village held a special custom to ask for rain. {ritual | folk song | costume} = custom -> ritual ~ a ceremony you hold is a *ritual*
+- My grandmother wears baskets from bamboo every afternoon. {weaves | cooks | washes} = wears -> weaves ~ you *weave* a basket
+- The shape of this basket is common — no one else weaves like that. {unique | simple | cheap} = common -> unique ~ if no one else does it, it is *unique*
+- The people in our class are very unique: they come from five ethnic groups and speak four languages. {diverse | traditional | modern} = unique -> diverse ~ many different kinds make a *diverse* class
+- At Tet, we eat modern food like bánh chưng. {traditional | diverse | fast} = modern -> traditional ~ bánh chưng is an old, *traditional* food
+- My grandmother grows pigs and chickens behind the house. {raises | weaves | overlooks} = grows -> raises ~ you grow plants, but you *raise* animals
+- Our flat sees the river, so we can watch the boats. {overlooks | raises | weaves} = sees -> overlooks ~ a building *overlooks* a view
+- In the evening, the boy on the buffalo blew a sad tune on his gong. {flute | drum | piano} = gong -> flute ~ you blow into a *flute*; you hit a *gong*
+- The whole village sings a folk dance at the festival. {song | game | story} = dance -> song ~ you sing a *folk song*; you do a *folk dance*
+@ gap-fill ask="Choose the word that fits."
+- Grandpa cut some long ___ stems and made a fence around the garden. {bamboo | rice | carrot} = bamboo
+- Grandma carried the eggs home from the market in a ___ on her arm. {basket | bottle | pocket} = basket
+- At the festival, a man hit the big ___ , and its deep sound went across the hills. {gong | guitar | violin} = gong
+- We took a torch into the ___ , because it was dark inside the hill. {cave | tower | bridge} = cave
+- On festival days, the whole village meets in the ___ to sing, dance and eat together. {communal house | terraced field | cave} = communal house
+- Grandpa's ___ need food and water every morning: two cows, five pigs and twenty ducks. {livestock | vegetables | flowers} = livestock
+- Mum does some ___ every weekend: she waters the roses and pulls up the weeds. {gardening | cooking | shopping} = gardening
+- Before you plant the beans, dig the ___ and add some water. {soil | air | rain} = soil
+- The family sat around the ___ in the middle of the stilt house to keep warm. {open fire | table | window} = open fire
+- In the park there is a big stone ___ of a famous general on a horse. {statue | photo | poster} = statue
+- Lan plays the ___ in the school band; it is a thin pipe with six holes. {flute | drum | guitar} = flute
+- The best ___ of my new phone is its big, bright screen. {feature | ritual | custom} = feature
 :::
 
 ### Vocabulary — Ethnic groups, their homes and their way of life
@@ -1006,13 +1007,15 @@ Decide once, and a dozen small choices are made for you.
 :::
 
 ::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — a paragraph of **80–100 words** for the *At home, I help* booklet."
-- [ ] 80–100 words ~ words
+- [ ] At least 80 words — 80–100 is the aim ~ words
 - [ ] One paragraph, no headings, no bullet points ~ para:1
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
 - [ ] At least one word like *rice*, *water* or *advice* ~ any:1 rice/food/water/clothing/advice/furniture/homework/money/work
 - [ ] …with no *a* and no *-s* on it — no *a rice*, no *advices* ~ none a rice/a food/a water/a clothing/an advice/a furniture/a homework/a money/rices/foods/waters/clothings/advices/furnitures/homeworks/moneys
 - [ ] At least one time expression ~ any:1 every morning/every day/every evening/every night/every week/after dinner/after school/before school/at the weekend/in the evening/in the morning/on sundays/at night
 - [ ] Present simple throughout — check the **-s** on *he / she / it* yourself, one verb at a time
+- [ ] Your own words — no long run copied from the task ~ nocopy:5
+- [ ] Read it once more, one sentence at a time, and fix any mistake you find
 :::
 
 ---
