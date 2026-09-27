@@ -120,20 +120,20 @@ t("blank option",        one(ipa,"").why,     "blank");
 const cal = (oks, cs) => M.calibrationLine(oks.map(o => ({ok:o})), cs);
 const many = (n, v) => Array(n).fill(v);
 t("calibration: too few to read",
-  /Not enough of each/.test(cal([true,true,false,false], [1,1,0,0])), true);
+  /Not enough answers yet/.test(cal([true,true,false,false], [1,1,0,0])), true);
 t("calibration: sure beats unsure",
   /right much more often/.test(cal(many(4,true).concat(many(4,false)),
                                    many(4,1).concat(many(4,0)))), true);
 // A real listening set is 4-7 items, so the verdict must be reachable from a
 // 4/3 split accumulated across the unit, not from 8 items in one task.
 t("calibration: reachable from a real set size",
-  /Not enough of each/.test(cal(many(4,true).concat(many(3,false)),
+  /Not enough answers yet/.test(cal(many(4,true).concat(many(3,false)),
                                 many(4,1).concat(many(3,0)))), true);
 t("calibration: reversed is not a verdict",
-  /worth watching for now/.test(
+  /right more often when you felt unsure\./.test(
     cal(many(4,false).concat(many(4,true)), many(4,1).concat(many(4,0)))), true);
 t("calibration: one-sided",
-  /nothing to compare/.test(cal(many(4,true), many(4,1))), true);
+  /Mark some answers sure and some not sure/.test(cal(many(4,true), many(4,1))), true);
 // UK/US pairs no suffix rule reaches. A false REJECTION marks a right answer
 // wrong, which is the direction that must never regress.
 [["jewellery","jewelry"],["catalogue","catalog"],["defence","defense"],

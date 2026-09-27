@@ -1,18 +1,13 @@
 # Review 2 — Units 4–6
 
 > **Ôn tập 2 — Bài 4, 5 và 6**
-> The three units behind this one are about people: who they are, what they
-> keep doing every year, and how the way they live is changing. Everything
-> here has been taught already — only the order is new.
+> Everything here comes from Units 4, 5 and 6, mixed together.
 
 ## Part 1 — Language
 
 ### 1.1 Odd sound out
 
-Three pairs have come up: **/k/** against **/ɡ/**, **/n/** against **/ŋ/**,
-and **/br/** against **/pr/**. The lines below are not grouped by pair.
-
-::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **sound in bold**, not the meaning."
+::: task skill="course" type="choice" variant="odd-one-out" ask="Which word has a different sound in bold?"
 - **c**ostume · **c**ustom · **c**eremony · **c**ommunal = **c**eremony ~ *ceremony* begins with /s/; the other three begin with /k/
 - **g**ong · **g**arden · **g**eneration · **g**ather = **g**eneration ~ *generation* begins with /dʒ/; the other three begin with /ɡ/
 - ide**n**tify · da**n**ce · tha**n**k · pla**n** = tha**n**k ~ in *thank* the **n** is pulled to /ŋ/ by the /k/ after it
@@ -25,17 +20,17 @@ and **/br/** against **/pr/**. The lines below are not grouped by pair.
 
 ### 1.2 Verb and noun
 
-::: task skill="course" type="choice" opts="baskets|bad spirits|a family recipe|the rice cakes|a visitor" ask="Each verb goes with exactly one of these five. Choose it."
+::: task skill="course" type="choice" opts="baskets|bad spirits|a family recipe|the rice cakes|a visitor" ask="Which one goes with each verb?"
 - weave = baskets ~ you weave bamboo, cloth or a basket
-- chase away = bad spirits ~ what the drums and the lion dance are for
-- pass down = a family recipe ~ something handed from one generation to the next
-- wrap = the rice cakes ~ cover something tightly in leaves before it goes in the pot
-- greet = a visitor ~ what you do when somebody arrives
+- chase away = bad spirits ~ the drums **chase away** bad spirits
+- pass down = a family recipe ~ grandparents **pass down** a recipe to their grandchildren
+- wrap = the rice cakes ~ **wrap** the cakes in leaves before they go in the pot
+- greet = a visitor ~ you **greet** somebody when they arrive
 :::
 
 ### 1.3 One word missing
 
-The words come from Units 4, 5 and 6. Each goes in exactly one gap. One word is not needed.
+One of the words is not used.
 
 ::: task skill="course" type="gap-fill" opts="ethnic minority|lunar|sedentary|stilt house|superstition|well-being|ornamental tree" ask="Choose the word or phrase that fits each gap."
 - Sitting in front of a screen all afternoon is a ___ way to live. = sedentary
@@ -48,12 +43,12 @@ The words come from Units 4, 5 and 6. Each goes in exactly one gap. One word is 
 
 ### 1.4 One word, three choices
 
-::: task skill="course" type="choice" ask="Choose the word that completes each sentence. **—** means no word at all."
-- ___ ethnic groups live in the northern mountains? {How many | How much | How long} = How many ~ *How many* asks for a number
-- There is ___ ornamental tree beside almost every front door. {an | a | —} = an ~ *ornamental* begins with a vowel sound, so **an**
-- ___ do people wear at a wedding ceremony in your village? {What | How | Where} = What ~ the question asks for a thing, not a way or a place
-- We need ___ rice for the offering before Tet. {some | a few | many} = some ~ *rice* is uncountable, so *a few* and *many* cannot go with it
-- ___ oldest stilt house in the village is two hundred years old. {The | An | —} = The ~ a superlative takes **the**
+::: task skill="course" type="choice" ask="Choose the word that fits. **—** means no word."
+- ___ ethnic groups live in the northern mountains? {How many | How much | How long} = How many ~ **How many** groups? — a number
+- There is ___ ornamental tree beside almost every front door. {an | a | —} = an ~ **an** ornamental tree, **an** apple
+- ___ do people wear at a wedding ceremony in your village? {What | How | Where} = What ~ **What** do they wear? — a thing
+- We need ___ rice for the offering before Tet. {some | a few | many} = some ~ **some** rice — never *a few rice* or *many rice*
+- ___ oldest stilt house in the village is two hundred years old. {The | An | —} = The ~ **the** oldest, **the** biggest
 :::
 
 > ⚠️ **Bẫy thường gặp:** *informations* và *many information* đều sai.
@@ -62,12 +57,12 @@ The words come from Units 4, 5 and 6. Each goes in exactly one gap. One word is 
 
 ### 1.5 What will happen
 
-::: task skill="course" type="gap-fill" ask="Choose the correct form of the verb in brackets. Every sentence is about the future."
-- If it ___ (rain) tomorrow, the lion dance will move inside the communal house. {rains | will rain | rained} = rains ~ after *if*, the present simple — never *will*
-- Unless you ___ (leave) now, you will miss the offering. {leave | don't leave | will leave} = leave ~ *unless* already means *if… not*, so the verb stays positive
+::: task skill="course" type="gap-fill" ask="Choose the right form of the verb in brackets."
+- If it ___ (rain) tomorrow, the lion dance will move inside the communal house. {rains | will rain | rained} = rains ~ If it **rains**, … — never *if it will rain*
+- Unless you ___ (leave) now, you will miss the offering. {leave | don't leave | will leave} = leave ~ unless you **leave** = if you don't leave
 - I think people ___ (live) in smaller families in fifty years' time. {will live | lived | live} = will live
 - If nobody writes the songs down, the next generation ___ (not know) them. {won't know | won't knows | didn't know} = won't know
-- Unless the village ___ (teach) the craft to somebody, it will disappear. {teaches | will teach | teach} = teaches ~ *unless* takes the present simple too
+- Unless the village ___ (teach) the craft to somebody, it will disappear. {teaches | will teach | teach} = teaches ~ Unless the village **teaches** …, never *will teach*
 :::
 
 ## Part 2 — Skills
@@ -114,7 +109,7 @@ The words come from Units 4, 5 and 6. Each goes in exactly one gap. One word is 
 
 ### 2.1 Where is it said?
 
-::: task skill="reading" type="matching-information" opts="A|B|C|D|E" ask="The text has five paragraphs, lettered **A** to **E** above. Choose the paragraph each statement comes from. A letter may be the answer more than once."
+::: task skill="reading" type="matching-information" opts="A|B|C|D|E" ask="Which paragraph (A–E) says this? You can use a letter more than once."
 - A skill that was almost lost and then came back = C ~ nobody young wanted to learn, and that has reversed
 - People who take part even though they say they do not believe = D ~ the families who beat the drums anyway
 - Where animals are kept in winter = B ~ the space under the floor
@@ -134,7 +129,7 @@ The words come from Units 4, 5 and 6. Each goes in exactly one gap. One word is 
 
 ### 2.3 Find the word
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above covers this exercise too."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these."
 - animals kept on a farm {livestock | tools | guests} = livestock
 - things a family gives to the ancestors or the gods at a ceremony {offering | custom | calendar} = offering
 - goes on existing instead of dying out {survives | belongs | holds} = survives
@@ -144,7 +139,7 @@ The words come from Units 4, 5 and 6. Each goes in exactly one gap. One word is 
 
 ### Speaking — One custom, two generations
 
-> **Working alone:** three steps, out loud. A listener is welcome but not needed.
+> Do this alone, out loud, in three steps.
 
 **Step 1 — Prepare.** Choose one custom your family keeps: a festival day, a
 meal, a visit, a thing nobody is allowed to do. Make notes, not sentences.
@@ -157,23 +152,20 @@ meal, a visit, a thing nobody is allowed to do. Make notes, not sentences.
 | What do you think you will keep when you are older? | |
 | What would be lost if it stopped? | |
 
-**Step 2 — Speak.** Answer each question **aloud** in full sentences. Somewhere
-in your answers, use one **first conditional** — *If nobody cooks it, …* — and
-one sentence with **unless**.
+**Step 2 — Speak.** Answer each question **aloud** in full sentences. Use one
+sentence with **if** — *If nobody cooks it, it will …* — and one with **unless**.
 
 **Step 3 — Record and check.** Record yourself and listen back once:
 
-- After *if* and *unless*, did you use the present simple, or did *will* slip in
-  where it does not belong?
+- Did you say *if it rains*, not *if it will rain*?
 - Did you say *the* where the sentence needed nothing at all?
 - Are *sing* and *thin* still ending differently?
 
 ### Listening — What changed, and what did not
 
-You hear it **once**, read aloud by someone else. Read the five sentences first, then complete them while
-you listen rather than afterwards from memory.
+You hear it **once**. Read the five sentences first, then choose as you listen.
 
-**Nghe một lần duy nhất, do người khác đọc to.** Đọc năm câu trước, rồi vừa nghe vừa hoàn thành.
+**Nghe một lần.** Đọc năm câu trước, rồi vừa nghe vừa chọn.
 
 ::: audio orientation="You will hear a student called Phong talking about his family's customs and about the things that have changed in his village in the last few years."
 Hello. My name is Phong, and I have lived in the same village in the north all

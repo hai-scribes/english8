@@ -9,7 +9,7 @@
 | Strand | Target |
 | --- | --- |
 | **Pronunciation** | **Stress** in words ending *-ese* and *-ee* |
-| **Grammar** | **Prepositions** of place and time; possessive pronouns |
+| **Grammar** | Where and when — **under** the bed, **at** seven, **in** ten years, **by** Friday; whose — **mine**, **yours**, a friend **of mine** |
 | **Reading** | A voice out of a sealed box, and what it says the sea really is |
 | **Speaking** | The pros and cons of online calls |
 | **Listening** | The rest of a recorded message — an address, and where it stops |
@@ -20,8 +20,6 @@
 ## Lesson 1 — Getting Started
 
 ### Dialogue: Nothing is getting through
-
-*Read the conversation aloud. Then answer the questions below.*
 
 ::: dialogue title="Nothing is getting through" bg="harbour-wall" gramen="mine / yours — possessive pronouns" gramvi="Đại từ sở hữu đứng một mình, không có danh từ theo sau: *my phone* → **mine**." gramco="That one is mine"
 @cast Tí|annoyed, Thảo|neutral
@@ -49,7 +47,7 @@
 
 ### 1.1 Comprehension
 
-::: task skill="course" type="short-answer" ask="Read the scene, then choose."
+::: task skill="course" type="short-answer" ask="Choose the answer from the scene."
 - Thảo tells Tí to open the box. He answers with a question instead of a reason. Who does he not want watching? {Bà Sáu | Đạt | his mother} = Bà Sáu
 - Thảo suggests something Tí has already tried, more than once. How many times has he tried it? {four | three | six} = four
 - Tí is counting something that runs out before the water reaches the street. How many are left? {three | four | six} = three
@@ -68,15 +66,15 @@
 
 ### 1.3 Notice the grammar
 
-Look at the **bold** words.
-
-::: task skill="course" type="choice" opts="place|time|possessive" ask="Is the bold word telling you **where**, **when**, or **whose**?"
-- The mast stands **opposite** the old post office. = place
-- My mother rings **at** seven. = time
-- Is that phone **yours**? = possessive
-- The blue one was **mine**. = possessive
-- I'm never late **in** the morning. = time
-- The box is **under** the bed. = place
+::: task skill="course" type="gap-fill" ask="Find the line in the dialogue. Which word does the speaker use?"
+- Thảo: "It stands ___ the old post office." {opposite | between | behind} = opposite
+- Tí: "My mother rings ___ seven every Sunday evening." {at | in | on} = at
+- Thảo: "Is that phone ___ ?" {yours | your | you're} = yours
+- Tí: "The blue one was ___ ." {mine | my | me} = mine
+- Tí: "So ___ is the only phone left in the house." {hers | her | she} = hers
+- Tí: "The far bank has a signal all day — theirs works, ___ doesn't." {ours | our | us} = ours
+- Tí: "It's ___ my bed, in a rice sack." {under | above | behind} = under
+- Tí: "I'm never late ___ the morning." {in | at | on} = in
 :::
 
 > **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **giới từ chỉ nơi chốn
@@ -86,6 +84,119 @@ Look at the **bold** words.
 ---
 
 ## Lesson 2 — A Closer Look 1
+
+### Meet the words
+
+::: vocab size="8"
+@ gap-fill ask="Choose the word that fits."
+- Deaf people often use hand ___ to make their meaning clear. {gestures | devices | connections} = gestures
+- My grandmother prefers a ___ visit to a phone call — she likes to hug us. {face-to-face | virtual | holographic} = face-to-face
+- This app can ___ a whole page from English into Vietnamese in a second. {translate | transmit | interact} = translate
+- Our internet ___ is very slow tonight, so the picture keeps freezing. {connection | gesture | webcam} = connection
+- In the film, the twins could read each other's minds — they were ___ . {telepathic | holographic | virtual} = telepathic
+- Khoa sent me ___ during the lesson — three typed words, no sound and no pictures. {an instant message | a voice message | a video call} = an instant message
+- Thảo always adds a laughing ___ at the end of her messages. {emoji | webcam | chatbot} = emoji
+- Our class had a ___ with a school in Singapore — twenty students on each screen. {video conference | voice message | carrier pigeon} = video conference
+- My hands were full of shopping, so I sent Mum a ___ instead of typing. {voice message | private message | group call} = voice message
+- Move the ___ up a little — I can only see your chin. {webcam | chatbot | emoji} = webcam
+- With ___ , a singer can appear on a stage as a three-dimensional picture made of light. {holography | telepathy | social media} = holography
+- Five of us talked at the same time in one ___ . {group call | private message | voice message} = group call
+- Don't write your address in a comment — send it to me in a ___ . {private message | group call | video conference} = private message
+- Learning English helped my aunt get past the ___ in Australia. {language barrier | translation machine | carrier pigeon} = language barrier
+- Long ago, soldiers sent short notes tied to the leg of a ___ . {carrier pigeon | chatbot | webcam} = carrier pigeon
+- The shop can answer customers at three in the morning because its ___ never sleeps. {chatbot | group call | webcam} = chatbot
+- A tourist who speaks no Korean can carry a small ___ . {translation machine | carrier pigeon | private message} = translation machine
+- My uncle took a ___ to Japan so that he could read the menus. {translation machine | webcam | group call} = translation machine
+- The satellite can ___ live pictures to TVs all over the country. {transmit | translate | interact} = transmit
+- The reply arrived ___ — I had not even put my phone down. {instantly | slowly | late} = instantly
+- This robot is very ___ — it can cook, clean and answer questions. {advanced | old-fashioned | face-to-face} = advanced
+- ___ on the photo so we can see Bống's face. {Zoom in | Interact | Transmit} = Zoom in
+- Some people believe in ___ — sending thoughts to another person without speaking. {telepathy | holography | social media} = telepathy
+- I watch videos and read the news on my ___ . {smartphone | carrier pigeon | gesture} = smartphone
+- At the club, the older students ___ with the younger ones and help them. {interact | translate | transmit} = interact
+- Bà Sáu and my mother ___ by voice message, because calls keep breaking up. {communicate | transmit | zoom in} = communicate
+- There's no ___ on this beach — I can't make a call. {signal | gesture | emoji} = signal
+- A tablet, a laptop and a smartphone are all ___ . {devices | networks | gestures} = devices
+- When the mast fell, the whole phone ___ in the town stopped working. {network | device | gesture} = network
+- My brother had lessons in a ___ classroom — nobody was in the same room. {virtual | face-to-face | telepathic} = virtual
+- The museum shows a ___ dinosaur that looks real enough to touch, but it is only light. {holographic | telepathic | face-to-face} = holographic
+- The reporter asked the questions, and the ___ answered them slowly and carefully. {interviewee | webcam | chatbot} = interviewee
+- Ten people from five cities joined the ___ to plan the festival. {video conference | voice message | smartphone} = video conference
+- Grandpa sees his grandchildren on a ___ every Sunday. {video call | carrier pigeon | chatbot} = video call
+- My sister spends too much time on ___ — she posts a photo every hour. {social media | telepathy | holography} = social media
+- Tí could not speak, so he gave Thảo a ___ — he pointed at the door. {gesture | network | webcam} = gesture
+- The signal came back and all four messages went ___ . {instantly | advanced | virtual} = instantly
+- I can't see your face — is your ___ turned on? {webcam | emoji | network} = webcam
+@ choice ask="Which word or phrase means this?"
+- a small picture you add to a message to show a feeling {emoji | webcam | gesture} = emoji
+- a computer program that chats with you as if it were a person {chatbot | smartphone | webcam} = chatbot
+- a bird trained to carry letters {carrier pigeon | chatbot | emoji} = carrier pigeon
+- the problem when two people do not share a language {language barrier | connection | network} = language barrier
+- at once, with no waiting {instantly | advanced | virtual} = instantly
+- to send pictures or sound from one place to another {transmit | translate | interact} = transmit
+- to make a picture on a screen look bigger {zoom in | transmit | translate} = zoom in
+- a call with three or more people talking together {group call | private message | voice message} = group call
+- a message that only one person can see {private message | group call | social media} = private message
+- a meeting on screens with people in different places {video conference | face-to-face | carrier pigeon} = video conference
+- a small camera on or in a computer {webcam | chatbot | emoji} = webcam
+- a movement of your hand or head that shows what you mean {gesture | device | network} = gesture
+- the person who answers the questions in an interview {interviewee | chatbot | device} = interviewee
+- sharing thoughts with someone without speaking {telepathy | holography | social media} = telepathy
+- made by a computer, not in the real world {virtual | advanced | face-to-face} = virtual
+- a piece of equipment made for one job {device | network | signal} = device
+- a group of computers or phones joined together {network | device | webcam} = network
+- a sound, a light or a pulse that carries information {signal | gesture | emoji} = signal
+- made of light, so that it looks solid and three-dimensional {holographic | virtual | telepathic} = holographic
+- in person, in the same room {face-to-face | virtual | instantly} = face-to-face
+- using the newest ideas and machines {advanced | virtual | face-to-face} = advanced
+- the link between your phone and the internet {connection | gesture | emoji} = connection
+@ choice ask="What does this word or phrase mean?"
+- smartphone {a phone that works like a small computer | a camera on a computer | a bird that carries letters} = a phone that works like a small computer
+- telepathic {able to share thoughts without speaking | made of light | made by a computer} = able to share thoughts without speaking
+- interact {to talk and do things with other people | to change words into another language | to make a picture bigger} = to talk and do things with other people
+- communicate {to share news, ideas or feelings with other people | to make a picture bigger | to send pictures by cable} = to share news, ideas or feelings with other people
+- translation machine {a device that changes words into another language | a device that makes pictures bigger | a bird that carries letters} = a device that changes words into another language
+- social media {apps and websites where people share posts and photos | a call with many people | a meeting on screens} = apps and websites where people share posts and photos
+- voice message {a recording of your voice that you send | a typed message that only one person sees | a small picture in a message} = a recording of your voice that you send
+- instant message {a typed message that arrives at once | a recording of your voice | a letter carried by a bird} = a typed message that arrives at once
+- holography {making pictures out of light that look solid | sharing thoughts without speaking | changing words into another language} = making pictures out of light that look solid
+- video call {a call where you see the other person on a screen | a message you type | a recording of your voice} = a call where you see the other person on a screen
+- translate {to change words into another language | to send pictures by cable | to make a picture bigger} = to change words into another language
+@ choice opts="into|with|by|on|in" ask="Which word completes the phrase?"
+- Can you translate this letter ___ English? = into
+- Children need to interact ___ other children, not only with screens. = with
+- I'll send you the photos ___ private message. = by
+- My cousin is always ___ social media. = on
+- Tí is trying to communicate ___ his mother across the water. = with
+- Zoom ___ on the map so we can read the street names. = in
+- This app translates Japanese ___ Vietnamese. = into
+- I met my pen friend ___ social media. = on
+@ odd-one-out
+- smartphone · tablet · webcam · emoji = emoji ~ the others are machines you can hold or touch
+- video call · group call · video conference · carrier pigeon = carrier pigeon ~ the others let people talk live on a screen or phone
+- voice message · private message · instant message · webcam = webcam ~ the others are messages
+- translate · transmit · communicate · virtual = virtual ~ the others are things you do
+- instantly · quickly · at once · slowly = slowly ~ the others mean with no waiting
+- chatbot · translation machine · smartphone · gesture = gesture ~ the others are machines or programs
+- emoji · gesture · smile · connection = connection ~ the others show a feeling without words
+- holographic · virtual · advanced · interviewee = interviewee ~ an interviewee is a person; the others describe things
+@ error-correction
+- Can you transmit this sentence into English? {translate | interact | zoom} = transmit -> translate ~ you **translate** words into another language
+- She ended her typed message with a laughing gesture. {emoji | webcam | network} = gesture -> emoji ~ a picture in a message is an **emoji**
+- The map is too small. Zoom out so I can read it. {in | up | off} = out -> in ~ **zoom in** makes it bigger
+- Our internet gesture is very slow today. {connection | device | emoji} = gesture -> connection ~ an internet **connection**
+- My grandfather prefers to talk virtual, in the same room as us. {face-to-face | instantly | advanced} = virtual -> face-to-face ~ in the same room is **face-to-face**
+- It is hard to make friends abroad when there is a language carrier. {barrier | pigeon | machine} = carrier -> barrier ~ a **language barrier**
+- The reply came advanced — in less than a second. {instantly | virtual | telepathic} = advanced -> instantly ~ with no waiting is **instantly**
+- The twins say they are holographic — each one knows what the other is thinking. {telepathic | virtual | advanced} = holographic -> telepathic ~ sharing thoughts is **telepathic**
+- Thảo sent me a group message so nobody else could read it. {private | holographic | virtual} = group -> private ~ only one person sees a **private** message
+@ sentence-build
+- she / send / me / a voice message {to} = She sent me a voice message/She sent a voice message to me
+- the app / translate / my words / into English {in} = The app translates my words into English
+- my phone / have / no / signal {any} = My phone has no signal
+- zoom in / on / the map {at} = Zoom in on the map
+- Thảo / interact / with / her classmates {to} = Thảo interacts with her classmates
+:::
 
 ### Vocabulary — Communication
 
@@ -125,85 +236,6 @@ Look at the **bold** words.
 | 32 | advanced | /ədˈvɑːnst/ | adj | tiên tiến, hiện đại |
 | 33 | transmit | /trænzˈmɪt/ | v | truyền, chuyển đi |
 
-> ### ▶︎ [**Practise these 33 words**](../app/unit-10-vocab.html)
->
-> When you have finished this lesson, the unit page opens a **practice**
-> session over all thirty-three — the meaning, the word, and, more often than
-> either of those, **the word inside a phrase it actually lives in**. Wrong
-> answers come straight back, and everything returns a week later. The **unit
-> test** opens once all seven lessons are done.
->
-> **Luyện 33 từ này.** Học xong bài này, phần
-> **practice** ở trang bài sẽ mở ra để luyện cả 33 từ — trong đó phần lớn là
-> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
-> ngay, và mọi từ quay lại sau một tuần.
->
-> Do the exercises below as well — they put the words back inside sentences.
-
-### Meet the words
-
-The table above is there to look things up in. This is where you actually meet
-them: a few at a time, then answer on the few you have just met.
-
-::: vocab size="8"
-:::
-
-### 2.1 Complete the sentences
-
-::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
-- Deaf people often use hand ___ to make their meaning clear. {gestures | devices | connections} = gestures
-- My grandmother prefers a ___ visit to a phone call — she likes to hug us. {face-to-face | virtual | holographic} = face-to-face
-- This app can ___ a whole page from English into Vietnamese in a second. {translate | transmit | communicate} = translate
-- Our internet ___ is very slow tonight, so the picture keeps freezing. {connection | gesture | webcam} = connection
-- In the film, the twins could read each other's minds — they were ___ . {telepathic | holographic | virtual} = telepathic
-- She sent me ___ instead of ringing me — just typed words, no sound and no pictures. {an instant message | a voice message | an emoji} = an instant message
-:::
-
-### 2.2 Match the word to the meaning
-
-| | Meaning |
-| --- | --- |
-| **a** | a large group of connected computers, phones or people |
-| **b** | existing on a computer rather than in the real world |
-| **c** | a piece of equipment made for one particular job |
-| **d** | made of light, so that it looks solid and three-dimensional |
-| **e** | the person who answers the questions in an interview |
-| **f** | a sound, a light or an electrical pulse that carries information |
-
-::: task skill="course" type="choice" opts="a|b|c|d|e|f" ask="Choose the letter of the meaning for each word."
-- device = c
-- network = a
-- virtual = b
-- interviewee = e
-- signal = f
-- holographic = d
-:::
-
-### 2.3 Communication technology
-
-::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
-- Many people add ___ to a message to show how they feel. {an emoji | a webcam | a chatbot} = an emoji
-- Our club had a ___ with a school in Japan last Thursday. {video conference | voice message | carrier pigeon} = video conference
-- I send a ___ when I don't feel like typing. {voice message | private message | group call} = voice message
-- Move the ___ down a little — I can only see your forehead. {webcam | chatbot | emoji} = webcam
-- By using ___ , a speaker can appear in the room as a three-dimensional image. {holography | telepathy | emojis} = holography
-- Five of us talked at the same time in one ___ . {group call | private message | voice message} = group call
-- Don't put your phone number in a comment — send me a ___ instead. {private message | group call | video conference} = private message
-- Learning English helped my aunt get past the ___ in Australia. {language barrier | translation machine | carrier pigeon} = language barrier
-:::
-
-### 2.4 Which one fits?
-
-::: task skill="course" type="choice" ask="Pick the option that completes each sentence."
-- In the fifth century, an important message often travelled by ___ . {carrier pigeon | chatbot | webcam} = carrier pigeon ~ a bird carried it; the other two are electronic
-- The shop answers customers at midnight because its ___ never sleeps. {chatbot | group call | translation machine} = chatbot
-- A tourist who speaks no German can carry a small ___ . {translation machine | carrier pigeon | private message} = translation machine
-- A single cable can ___ live pictures to every screen in the hall. {transmit | translate | signal} = transmit
-- The reply arrived ___ — I had not even put my phone down. {instantly | slowly | late} = instantly
-- Technology keeps getting better, so in fifty years we will use far more ___ ways of talking to each other. {advanced | old-fashioned | face-to-face} = advanced
-- ___ on the map so that we can read the street names. {Zoom in | Interact | Signal} = Zoom in
-:::
-
 > **Mẹo:** Nhiều từ trong nhóm này là **cụm hai từ**, và phải học cả cụm:
 > *video conference*, *voice message*, *group call*, *private message*,
 > *language barrier*, *carrier pigeon*, *translation machine*. Học riêng lẻ
@@ -231,11 +263,11 @@ syllable becomes long and loud: /iːz/ or /iː/.
 > /ˌemplɔɪˈiː/ nhấn cuối, và /ɪmˈplɔɪiː/ nhấn giữa. Bài tập dưới đây không
 > dùng từ này.)*
 
-### 2.5 Sort by stress
+### 2.1 Sort by stress
 
-::: task skill="course" type="sort" opts="last syllable|not the last" ask="Does the stress fall on the **last** syllable, or not? Spelling in *-ese* or *-ee* is a strong clue, but it is not a law."
+::: task skill="course" type="sort" opts="last syllable|not the last" ask="Is the stress on the **last** syllable, or not?"
 - Chinese = last syllable
-- coffee = not the last ~ **ˈcof**fee — an old word, not one of the *-ee* family
+- coffee = not the last ~ **ˈcof**fee — the stress is on the first syllable
 - refugee = last syllable
 - committee = not the last ~ com**ˈmit**tee — the stress sits in the middle
 - Japanese = last syllable
@@ -248,16 +280,16 @@ syllable becomes long and loud: /iːz/ or /iː/.
 - interviewee = last syllable
 :::
 
-### 2.6 Odd stress out
+### 2.2 Odd stress out
 
-::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **stress**: three words carry it on the last syllable and one does not."
+::: task skill="course" type="choice" variant="odd-one-out" ask="Listen for the **stress**, not the meaning."
 - Japanese · Chinese · coffee · Portuguese = coffee ~ **ˈcof**fee — the stress is on the first syllable
 - refugee · committee · trainee · guarantee = committee ~ com**ˈmit**tee — the stress is in the middle
 - agree · toffee · degree · referee = toffee ~ **ˈtof**fee — the final *-ee* here is a short, weak /i/
 - interviewee · Frisbee · trainee · degree = Frisbee ~ **ˈFris**bee — spelt *-ee*, but not stressed at the end
 :::
 
-### 2.7 Say these sentences
+### 2.3 Say these sentences
 
 Read aloud three times, faster each time. Tap the desk on the stressed
 syllable. Record yourself if you can.
@@ -270,86 +302,132 @@ syllable. Record yourself if you can.
 
 ## Lesson 3 — A Closer Look 2
 
-### Part A — Prepositions of place
+### Grammar — Prepositions of place and time
 
-These little words tell us **where** something is.
+Small words like **in**, **on**, **at**, **under** and **opposite** tell you
+**where** something is, or **when** something happens.
 
-| Preposition | Meaning (Nghĩa) | Example |
+#### 1 · Where is it?
+
+**in · on · at · under · above · between · next to · in front of · behind · opposite**
+
+| Word | It means | Example |
 | --- | --- | --- |
 | **in** | inside something | The ticket is **in** the envelope. |
-| **on** | touching a surface | My phone is **on** the table. |
-| **at** | at a point / a place you use | We met **at** the gate. |
+| **on** | touching the top or a side | My phone is **on** the table. |
+| **at** | at a point or a place you use | We met **at** the gate. |
 | **under** | lower than, often covered | The charger is **under** the sofa. |
 | **above** | higher than, not touching | There is a clock **above** the door. |
 | **between** | in the middle of two things | The café is **between** a bank and a shop. |
-| **next to** | immediately beside | Sit **next to** me. |
-| **in front of** | before something, facing it | She stood **in front of** the screen. |
+| **next to** | right beside | Sit **next to** me. |
+| **in front of** | before something, facing the same way | She stood **in front of** the screen. |
 | **behind** | at the back of | The bin is **behind** the door. |
 | **opposite** | facing, across from | The museum is **opposite** the post office. |
 
-> ✅ The museum is **opposite** the post office. *(across the road)*
-> ✅ The café is **next to** the bookshop. *(side by side)*
-> ❌ *The museum is in opposite the post office.*
-> ❌ *The café is next the bookshop.* — you must keep **to**.
+> The museum is **opposite** the post office.
+> The café is **next to** the bookshop.
+> Lily's house is **at** the end of this street.
 
-### Part A — Prepositions of time
+❌ *The museum is in opposite the post office.*
 
-| Use | With | Examples |
+❌ *The café is next the bookshop.*
+
+> **Ghi chú:** **next to** luôn có **to**. **opposite** đứng một mình, không
+> thêm *in* phía trước.
+
+#### 2 · When is it? *at* a time, *on* a day, *in* a month or a year
+
+**at nine o'clock · on Monday · in May · in 2025**
+
+| Word | Goes with | Examples |
 | --- | --- | --- |
-| **in** | months, years, seasons, **parts of the day** | **in** May · **in** 2025 · **in** winter · **in** the morning / the afternoon / the evening |
-| **on** | days of the week, dates, a named day + part of day | **on** Monday · **on** 3 September · **on** Friday evening |
-| **at** | clock times, **at night**, festivals, *at the weekend* | **at** 9.15 · **at** half past four · **at** night · **at** Tet · **at** the weekend |
+| **at** | clock times, *night*, festivals, *the weekend* | **at** 9.15 · **at** half past four · **at** night · **at** Tet · **at** the weekend |
+| **on** | days and dates, a day + part of the day | **on** Monday · **on** 3 September · **on** Friday evening |
+| **in** | months, years, seasons, parts of the day | **in** May · **in** 2025 · **in** winter · **in** the morning |
 
-> ✅ We have English **on** Friday. ✅ The talk starts **at** nine o'clock.
-> ✅ She was born **in** 2011. ✅ I read **in** the evening but never **at** night.
+> We have English **on** Friday.
+> The talk starts **at** nine o'clock.
+> She was born **in** 2011.
+> I read **in** the evening, but never **at** night.
 
-> ⚠️ **Bẫy thường gặp:** Đây là bốn lỗi mà học sinh Việt Nam mắc nhiều nhất.
->
-> 1. ❌ *in Monday* → ✅ **on Monday**. Thứ và ngày tháng luôn đi với **on**.
-> 2. ❌ *on 2025* → ✅ **in 2025**. Năm, tháng, mùa luôn đi với **in**.
-> 3. ❌ *in night* → ✅ **at night**. Nhớ cặp đối lập:
->    **in** the morning / **in** the afternoon / **in** the evening
->    **NHƯNG at** night. Đây là ngoại lệ duy nhất, phải học thuộc.
-> 4. ❌ *in nine o'clock* → ✅ **at nine o'clock**. Giờ đồng hồ luôn đi với **at**.
->
-> Mẹo nhớ: **in** = khoảng dài (năm, tháng, buổi) → **on** = một ngày cụ thể →
-> **at** = một điểm thời gian. Càng ngắn thì càng dùng *at*.
+❌ *I never use my phone in night.*
 
-### Part B — Possessive pronouns
+> ⚠️ **Bẫy thường gặp:** Bốn lỗi hay gặp nhất:
+> ❌ *in Monday* → ✅ **on Monday** · ❌ *on 2025* → ✅ **in 2025** ·
+> ❌ *in night* → ✅ **at night** · ❌ *in nine o'clock* → ✅ **at nine o'clock**.
+> Nhớ cặp này: **in** the morning, **in** the afternoon, **in** the evening —
+> **nhưng at** night.
 
-A possessive **adjective** comes **before a noun**. A possessive **pronoun**
-**replaces** the noun completely.
+> **Ghi chú:** **in** = khoảng dài (năm, tháng, buổi) → **on** = một ngày →
+> **at** = một điểm thời gian.
 
-| Subject | Possessive adjective (+ noun) | Possessive pronoun (no noun) |
-| --- | --- | --- |
-| I | **my** phone | **mine** |
-| you | **your** phone | **yours** |
-| he | **his** phone | **his** |
-| she | **her** phone | **hers** |
-| we | **our** phone | **ours** |
-| they | **their** phone | **theirs** |
+#### 3 · How soon, how long, and not later than: *in*, *for*, *by*
 
-> ✅ This is **my** ticket. = This ticket is **mine**.
-> ✅ Her network is faster than **ours**.
-> ✅ *Whose phone is this?* — *It's **theirs**.*
+**in ten years · for three hours · by 6 p.m.**
 
-> ⚠️ **Bẫy thường gặp:** Hai lỗi phải tránh bằng mọi giá.
->
-> **Lỗi 1 — đại từ sở hữu KHÔNG bao giờ có danh từ đứng sau.**
-> ❌ *This is **mine** book.* → ✅ This is **my** book. / ✅ This book is **mine**.
-> ❌ *That is **hers** camera.* → ✅ That is **her** camera. / ✅ That camera is **hers**.
->
-> **Lỗi 2 — KHÔNG có dấu nháy đơn (') trong đại từ sở hữu.**
-> ❌ *your's, her's, their's, our's* → ✅ **yours, hers, theirs, ours**
-> Phân biệt cho kỹ:
-> - **its** = của nó (sở hữu) · **it's** = *it is* / *it has*
->   ✅ The phone lost **its** signal. ✅ **It's** a very old phone.
-> - **theirs** = của họ · **there's** = *there is*
->   ✅ The red bag is **theirs**. ✅ **There's** a bag on the chair.
+- **in** + an amount of time = that much time from now. *Robots will cook our dinner **in** ten years.*
+- **for** + an amount of time = how long it goes on. *It rained **for** three hours.*
+- **by** + a time or a day = not later than that. *Please be home **by** 6 p.m.*
 
-### 3.1 Place — choose the correct preposition
+> The bus leaves **in** five minutes.
+> We talked on a video call **for** two hours.
+> Send me your homework **by** Friday.
 
-::: task skill="course" type="gap-fill" ask="Choose the preposition that fits the picture the sentence gives you."
+❌ *It rained in three hours yesterday.*
+
+> **Ghi chú:** **in** ten years = mười năm **nữa**. **for** two hours = **trong
+> suốt** hai tiếng. **by** Friday = **chậm nhất là** thứ Sáu.
+
+### Grammar — *mine*, *yours*, *theirs*
+
+**My** phone needs a word after it. **Mine** stands alone: it means *my phone*,
+so you never add the noun again.
+
+#### 4 · *my phone* → *mine*
+
+| Before a word | Standing alone |
+| --- | --- |
+| **my** phone | **mine** |
+| **your** phone | **yours** |
+| **his** phone | **his** |
+| **her** phone | **hers** |
+| **our** phone | **ours** |
+| **their** phone | **theirs** |
+
+> This is **my** ticket. = This ticket is **mine**.
+> Her network is faster than **ours**.
+> Whose phone is this? — It's **theirs**.
+
+❌ *This is mine book.* → This is **my** book. / This book is **mine**.
+
+#### 5 · *a friend of mine*
+
+**a friend of mine · a cousin of yours · a neighbour of theirs**
+
+> Mi is one of my friends. = Mi is a friend **of mine**.
+> Jack is one of her cousins. = Jack is a cousin **of hers**.
+
+❌ *Mi is a friend of my.*
+
+❌ *Mi is a friend of me.*
+
+#### 6 · No ' in *yours*, *hers*, *ours*, *theirs*
+
+**yours · hers · ours · theirs · its**
+
+> The red bag is **theirs**.
+> The phone lost **its** signal.
+
+❌ *The blue headset is your's.*
+
+> ⚠️ **Bẫy thường gặp:** **its** = của nó · **it's** = *it is*.
+> **theirs** = của họ · **there's** = *there is*.
+> ✅ **It's** a very old phone. ✅ **There's** a bag on the chair.
+
+### 3.1 Practice
+
+::: bank draw="10"
+@ gap-fill ask="Choose the word that fits."
 - Grandma's glasses are ___ the kitchen table, right beside the fruit bowl. {on | under | in} = on
 - The dog is sleeping ___ my bed, on the floor where it is dark. {under | above | on} = under
 - A small lamp hangs high up ___ the front door, so we can see the steps at night. {above | under | behind} = above
@@ -358,11 +436,48 @@ A possessive **adjective** comes **before a noun**. A possessive **pronoun**
 - The pharmacy is ___ the bank — the two doors are side by side. {next to | opposite | above} = next to
 - The photos are still ___ the box — I haven't opened it yet. {in | on | under} = in
 - Minh is standing ___ Thảo and Khoa — Thảo on his left, Khoa on his right. {between | behind | opposite} = between
-:::
-
-### 3.2 Time — *in*, *on*, or *at*?
-
-::: task skill="course" type="choice" opts="in|on|at" ask="Choose **in**, **on**, or **at**."
+- Khoa lives ___ the end of our street, in the very last house. {at | on | between} = at
+- Don't walk in the road. Walk ___ the pavement. {on | under | between} = on
+- Bống hid ___ the curtain, so nobody could see her. {behind | in front of | opposite} = behind
+- There's a photo of my grandparents ___ the wall of the living room. {on | under | between} = on
+- The webcam is ___ the top of the screen. {at | under | between} = at
+- My charger is still ___ my school bag — I forgot to take it out. {in | on | above} = in
+- Tí and Thảo sat ___ each other on the wall, their shoulders touching. {next to | opposite | above} = next to
+- At dinner my brother sits ___ me, so I look at his face all through the meal. {opposite | next to | behind} = opposite
+- My mother rings ___ seven o'clock every Sunday. {at | on | in} = at
+- The school concert is ___ 20 November. {on | in | at} = on
+- We go to the beach a lot ___ summer. {in | on | at} = in
+- My cousin was born ___ 2012. {in | on | at} = in
+- The shop closes ___ midnight. {at | in | on} = at
+- We have PE ___ Wednesday afternoon. {on | in | at} = on
+- Bà Sáu gets up very early ___ the morning. {in | on | at} = in
+- The video call starts ___ half past eight. {at | in | on} = at
+- Hurry up — the film starts ___ ten minutes! {in | for | by} = in
+- The power was off ___ six hours yesterday, so the signal was bad all afternoon. {for | in | by} = for
+- Please return the library books ___ Friday — not a day later. {by | for | in} = by
+- Tí and his mother chatted ___ twenty minutes last Sunday. {for | by | in} = for
+- Tí sat on the wall ___ the whole morning, but the signal never came back. {for | in | by} = for
+- The water will reach the street ___ Saturday at the latest. {by | for | in} = by
+- I think our phones will be as thin as paper ___ ten years' time. {in | for | at} = in
+- My cousin stayed with us ___ a month last summer. {for | in | by} = for
+@ gap-fill ask="Choose the word that fits."
+- This isn't my pen. ___ is blue. {Mine | My | Me} = Mine
+- "Is this your bag, Khoa?" "Yes, it's ___ ." {mine | my | me} = mine
+- We cleaned our classroom, and they cleaned ___ . {theirs | their | them} = theirs
+- That's not Bà Sáu's phone. ___ is the old one with the crack. {Hers | Her | She} = Hers
+- "Whose charger is this?" "It's ___ , Tí. I saw you use it." {yours | your | you're} = yours
+- Their garden is small, but ___ is even smaller. {ours | our | us} = ours
+- Đạt is a friend of ___ . We sit together in class. {mine | my | me} = mine
+- Is Hùng a cousin of ___ , Thảo? {yours | your | you} = yours
+- Two classmates of ___ won the English prize this year. {ours | our | us} = ours
+- Mr Nam is an old neighbour of ___ — he lived next door to them for years. {theirs | their | them} = theirs
+- A friend of ___ is teaching Bà Sáu to send voice messages. She says he is very patient. {hers | her | she} = hers
+- The phone lost ___ signal at the harbour wall. {its | it's | it is} = its
+- ___ a very slow connection today. {It's | Its | It} = It's
+- ___ a webcam on the desk. {There's | Theirs | Their} = There's
+- The red bag isn't ours. It's ___ . {theirs | there's | their} = theirs
+- Khoa's tablet is new, but ___ charger is old. {his | him | he's} = his
+@ choice opts="in|on|at" ask="Choose **in**, **on**, or **at**."
 - ___ Monday morning = on
 - ___ 2019 = in
 - ___ half past seven = at
@@ -373,35 +488,61 @@ A possessive **adjective** comes **before a noun**. A possessive **pronoun**
 - ___ summer = in
 - ___ midnight = at
 - ___ Tuesday = on
-:::
-
-### 3.3 Rewrite with a possessive pronoun
-
-::: task skill="course" type="gap-fill" opts="mine|yours|his|hers|ours|theirs" ask="Keep the meaning."
+@ gap-fill opts="mine|yours|his|hers|ours|theirs" ask="Keep the meaning."
 - This is my tablet. → This tablet is ___ . = mine
 - That is her phone. → That phone is ___ . = hers
 - These are our tickets. → These tickets are ___ . = ours
 - That is their network. → That network is ___ . = theirs
 - Is this your charger? → Is this charger ___ ? = yours
-- That is his message. → That message is ___ . = his
+- Those are my headphones. → Those headphones are ___ . = mine
+- Minh is one of his classmates. → Minh is a classmate of ___ . = his
+- Is this one of your tablets? → Is this a tablet of ___ ? = yours
+- Are you one of their relatives? → Are you a relative of ___ ? = theirs
+@ choice ask="Which sentence is right?"
+- Tí points at the old phone. {That phone is mine. | That phone is my. | That phone is mine's.} = That phone is mine.
+- Thảo talks about Đạt. {Đạt is a friend of mine. | Đạt is a friend of my. | Đạt is a friend of me.} = Đạt is a friend of mine.
+- The test date. {The test is on 5 May. | The test is in 5 May. | The test is at 5 May.} = The test is on 5 May.
+- Bà Sáu's bag. {That bag is hers. | That bag is her's. | That bag is her.} = That bag is hers.
+- Where the café is. {The café is next to the bank. | The café is next the bank. | The café is in next to the bank.} = The café is next to the bank.
+- When Tí plays football. {I play in the afternoon, but never at night. | I play at the afternoon, but never in night. | I play on the afternoon, but never on night.} = I play in the afternoon, but never at night.
+- Two houses. {Their house is bigger than ours. | Their house is bigger than our. | Their house is bigger than our's.} = Their house is bigger than ours.
+- A long wait. {We waited for an hour. | We waited in an hour. | We waited by an hour.} = We waited for an hour.
+@ error-correction
+- My birthday is in 3 September. {on | at | by} = in -> on ~ **on** 3 September
+- The film starts in a quarter to eight. {at | on | for} = in -> at ~ **at** a quarter to eight
+- She studies English on the evening. {in | at | by} = on -> in ~ **in** the evening
+- Bống never goes to the beach in night. {at | on | for} = in -> at ~ **at** night
+- Is that mine charger? {my | me | I} = mine -> my ~ **my** tablet, but the tablet is **mine**
+- Their's is the red one. {Theirs | There's | Their} = Their's -> Theirs ~ **theirs** has no '
+- Is this umbrella your's? {yours | your | you're} = your's -> yours ~ **yours** has no '
+- Its a very good network. {It's | Its' | It} = Its -> It's ~ **it's** = it is
+- Hùng is a cousin of my. {mine | me | I} = my -> mine ~ a friend **of mine**
+- The storm lasted in two days. {for | by | on} = in -> for ~ it lasted **for** two days
+- My parents will buy a new laptop on two years. {in | at | by} = on -> in ~ **in** two years = two years from now
+- Three of ours cousins live in Hà Nội. {our | us | we} = ours -> our ~ **our** cousins
+- The cat is sleeping in the table. {on | at | for} = in -> on ~ **on** the table
+- The meeting will start in 9 a.m. {at | on | for} = in -> at ~ **at** 9 a.m.
+- Send me the photos in 8 p.m. — not later. {by | for | on} = in -> by ~ **by** 8 p.m. = not later than 8 p.m.
+@ sentence-build
+- this phone / be / mine {my} = This phone is mine/Is this phone mine
+- Khoa / be / a friend / of / mine {my} = Khoa is a friend of mine
+- that bag / be / not / hers {her} = That bag is not hers/Is that bag not hers
+- my phone / lose / its / signal {it's} = My phone lost its signal
+@ odd-one-out ask="Which one takes a different word before it?"
+- Monday · 5 May · Friday evening · night = night ~ **at** night, but **on** Monday, **on** 5 May, **on** Friday evening
+- 2025 · March · summer · midnight = midnight ~ **at** midnight, but **in** 2025, **in** March, **in** summer
+- nine o'clock · half past six · midnight · the morning = the morning ~ **in** the morning, but **at** nine o'clock, **at** half past six, **at** midnight
+- Tuesday · 1 June · the evening · Sunday morning = the evening ~ **in** the evening, but **on** Tuesday, **on** 1 June, **on** Sunday morning
+@ odd-one-out ask="Three can finish *That phone is ___.* Which one cannot?"
+- mine · yours · their · hers = their ~ That phone is **theirs**
+- ours · my · his · theirs = my ~ That phone is **mine**
+- her · yours · mine · ours = her ~ That phone is **hers**
+- hers · theirs · your · his = your ~ That phone is **yours**
 :::
 
-### 3.4 Correct the mistake
+### 3.2 About you
 
-::: task skill="course" type="short-answer" variant="error-correction"
-- My birthday is in 3 September. {on | at | by} = in -> on ~ a date takes *on*
-- The film starts in a quarter to eight. {at | on | for} = in -> at ~ a clock time takes *at*
-- She studies English on the evening. {in | at | by} = on -> in ~ a part of the day takes *in*
-- I never use my phone in night. {at | on | for} = in -> at ~ *night* is the exception: *at night*
-- This is mine tablet. {my | me | I} = mine -> my ~ a possessive **pronoun** stands alone; before a noun you need the adjective
-- Their's is the red one. {Theirs | There's | Their} = Their's -> Theirs ~ possessive pronouns never take an apostrophe
-- The blue headset is your's. {yours | your | you're} = your's -> yours ~ possessive pronouns never take an apostrophe
-- Its a very good network. {It's | Its' | It} = Its -> It's ~ *it's* = *it is*; *its* is the possessive
-:::
-
-### 3.5 About you
-
-Write true sentences about yourself. Use the word in brackets.
+Write true sentences about yourself. Use the words in brackets.
 
 1. (at + a clock time) When do you usually go to bed?
    → _______________________________
@@ -411,8 +552,9 @@ Write true sentences about yourself. Use the word in brackets.
    → _______________________________
 4. (next to / opposite) Describe where your school is.
    → _______________________________
-5. (mine / ours) Write one sentence comparing something of yours with
-   something of a friend's.
+5. (a friend of mine) Write one sentence about a friend.
+   → _______________________________
+6. (in ten years) Say one thing you think will be different.
    → _______________________________
 
 ---
@@ -466,9 +608,9 @@ or you want to suggest something different. English does this in two moves:
 | Sorry — please **go on**. | Xin lỗi — bạn nói tiếp đi. |
 | **Sorry about that.** You were saying? | Xin lỗi nhé. Bạn đang nói dở gì ấy nhỉ? |
 
-Both openings are polite, and the two forms after *sorry* are different:
-**Sorry for interrupt*ing*** (*for* + V-ing) and **Sorry *to* interrupt**
-(*to* + verb). After either one comes **but**, and then your point.
+Both openings are polite. Say **Sorry for interrupting** or **Sorry to
+interrupt** — never *Sorry for interrupt*. After either one comes **but**, and
+then your point.
 
 > **Ghi chú:** Người nói tiếng Anh xin lỗi **trước khi** ngắt lời, chứ không
 > phải sau khi đã nói xong ý của mình. Câu *"Sorry for interrupting, but…"*
@@ -505,7 +647,7 @@ _______________________________________________
 
 ### 4.3 Break in politely
 
-::: task skill="course" type="choice" opts="Sorry for interrupting, but|Hold on|Can I just say|Sorry about that|Go on" ask="Which phrase fits the situation? Use each one once."
+::: task skill="course" type="choice" opts="Sorry for interrupting, but|Hold on|Can I just say|Sorry about that|Go on" ask="Which phrase fits? Use each one once."
 - In an online lesson your teacher is in the middle of reading out the rules. You must stop her to suggest a different starting time, so you apologise first and give your idea in the same sentence. You begin… = Sorry for interrupting, but ~ it works with anybody, and it puts the apology before the idea
 - Your best friend is explaining how to move the webcam and you missed one step. You just want them to stop for a moment — two short, friendly words. You say… = Hold on ~ short and informal, which is fine with a friend
 - Everybody in the group has spoken and you have one short point to add. You ask… = Can I just say
@@ -643,7 +785,7 @@ _______________________________________________
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the passage that means each of these. The clock above covers this exercise too."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the passage that means this. The clock is still running."
 - changes words from one language into another {translating | signal | telepathy} = translating
 - a system of connected computers, devices or people {network | signal | station} = network
 - a movement of the hand, head or face that carries meaning {gesture | telepathy | voice} = gesture
@@ -683,8 +825,7 @@ check three things:
 - Did you say **mine, hers, theirs** with no noun after them?
 - Did you stress the last syllable in *Vietnamese*, *Japanese*, *guarantee*?
 
-Repeat Step 2 until you can speak for a full minute with your pauses falling
-between stages rather than inside a sentence.
+Repeat Step 2 until you can speak for a full minute.
 
 ### 5.4 Say it again, faster
 
@@ -701,9 +842,8 @@ between stages rather than inside a sentence.
 
 ### Listening — The rest of the message
 
-You hear it **once**, read aloud by someone else. This recording is dense with dates, numbers and places,
-so read both sets of questions first and answer as you
-listen.
+You hear it **once**, read aloud by someone else. Read both sets of questions
+first, then answer while you listen.
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
 
@@ -745,9 +885,7 @@ the last page tells you what the sea must never—
 
 ### 6.2 Note completion
 
-The notes below are the shape this type always takes: headings and fragments,
-never full sentences. Choose for each gap **as you listen** — there is no transfer
-time at the end.
+Choose for each gap **as you listen**.
 
 ::: task skill="listening" type="completion"
 - Message posted ___ years ago {sixty | sixteen | nine} = sixty
@@ -757,20 +895,17 @@ time at the end.
 - Read this page first — the ___ page {last | first | second} = last
 :::
 
-::: bridge name="Open → stand → close, out loud, with an audible pause at each turn" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
-The schema you named in Unit 6, spoken this time. In the pros-and-cons pair work:
+::: bridge name="Open, stand, close — pause between" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
+Say your pros-and-cons answer in three steps:
 
 1. **Open** — *"I want to talk about video calls with family."* — **pause.**
 2. **Stand** — *"I think they help more than they hurt."* — **pause.**
 3. **Close** — *"So that is why I would keep them."*
 
-The pause is not hesitation and should not be hidden. A short silence at the end
-of a stage tells your listener that one idea has finished and another is
-starting — it does the work punctuation does in writing. A silence in the middle
-of a sentence does the opposite. That is the distinction worth practising.
+A short pause between steps tells your listener one idea has finished. Don't
+pause in the middle of a sentence.
 
-> **Tiếng Việt:** Nói theo ba bước, **dừng rõ** giữa mỗi bước. Dừng ở ranh giới ý
-> là **điểm cộng**; dừng giữa câu thì không.
+> **Tiếng Việt:** Nói theo ba bước, **dừng ngắn** giữa mỗi bước, không dừng giữa câu.
 :::
 
 ### Writing — A descriptive paragraph
@@ -804,20 +939,15 @@ Cover the finished paragraph above. Answer in note form, in your own words.
 | What goes wrong | |
 | The closing feeling — one sentence, and no new topic | |
 
-::: bridge name="Prepositions, tracked the way Unit 5 tracks articles" trains="Grammatical Range & Accuracy" cefr="B1" marker="[INF]" src="07 §8.2"
-Same machinery as Unit 5, second structure. On your finished paragraph:
+::: bridge name="Count your prepositions" trains="Grammatical Range & Accuracy" cefr="B1" marker="[INF]" src="07 §8.2"
+On your finished paragraph, fill this in:
 
-> **Prepositions correct in ___ of ___ places that required one.**
+> **Prepositions correct in ___ of ___ places that needed one.**
 
-A fraction, not a mark. And the same reading rule applies: at this level the
-fraction moves around, and a lower one this week is not a step backwards.
+The number will go up and down from week to week, and that is normal.
 
-After articles, prepositions are the small words that go wrong most often — and
-like articles, they are not learned in one lesson but noticed over many. This is
-how you notice them.
-
-> **Tiếng Việt:** Ghi kết quả dạng **phân số**, giống Unit 5 — đúng bao nhiêu
-> trên tổng số vị trí bắt buộc.
+> **Tiếng Việt:** Ghi kết quả dạng **phân số**, giống Unit 5: đúng ___ trên ___ chỗ
+> cần giới từ.
 :::
 
 ::: thread id="articles" stage="check"
@@ -828,7 +958,7 @@ how you notice them.
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
 - [ ] At least **three** time phrases with *in / on / at* ~ any:3 in the morning/in the afternoon/in the evening/at night/at the weekend/at weekends/on monday/on tuesday/on wednesday/on thursday/on friday/on saturday/on sunday/at the moment/in the future/at midnight/at noon/on time/in time/at lunchtime/on my birthday
 - [ ] At least **two** prepositions of place ~ any:2 behind/next to/in front of/under/above/below/beside/near/between/opposite/on the left/on the right/on the screen/on the wall/on the table/at the top/at the bottom
-- [ ] At least **one** possessive pronoun ~ any:1 mine/hers/his own/ours/theirs/yours
+- [ ] At least **one** of *mine, yours, hers, ours, theirs* ~ any:1 mine/hers/his own/ours/theirs/yours
 - [ ] …and no noun after it — *that phone is mine*, never *mine phone*
 - [ ] One sentence about a sound, one about a picture
 :::
@@ -860,7 +990,7 @@ how you notice them.
 
 ### 7.3 Grammar check
 
-::: task skill="course" type="gap-fill" ask="Choose **in**, **on**, **at**, or the correct possessive pronoun."
+::: task skill="course" type="gap-fill" ask="Choose the word that fits."
 - The museum opens ___ half past eight. {at | on | in} = at
 - My grandparents got married ___ 1979. {in | on | at} = in
 - We have an English test ___ Friday. {on | in | at} = on
@@ -873,8 +1003,7 @@ how you notice them.
 
 ### 7.4 Error hunt
 
-This paragraph has **six** mistakes. Below, it comes one line at a time: tap
-each mistake, then choose the fix.
+This paragraph has **six** mistakes. Below, it comes one line at a time.
 
 > Two marks are left on the wall. The tin box came home in my pocket in Tuesday
 > evening, and the small brass thing from inside it sits in the table next to
@@ -882,13 +1011,13 @@ each mistake, then choose the fix.
 > box your's?" Bà Sáu asked at breakfast. Its not mine, and it is not hers
 > either. We are walking upriver in Saturday morning.
 
-::: task skill="course" type="short-answer" variant="error-correction" ask="Each line is part of the paragraph, with the earlier mistakes already put right."
-- The tin box came home in Tuesday evening. {on | at | to} = in -> on ~ a named day takes *on*
-- The small brass thing from inside it sits in the table next to my bed. {on | at | of} = in -> on ~ a surface takes *on*
-- Thảo says hers grandmother still remembers the old post office. {her | she | she's} = hers -> her ~ *hers* takes no noun after it
-- "Is this box your's?" Bà Sáu asked at breakfast. {yours | your | you're} = your's -> yours ~ a possessive pronoun takes no apostrophe
-- Its not mine, and it is not hers either. {It's | Its' | It} = Its -> It's ~ *it's* = *it is*; *its* is the possessive
-- We are walking upriver in Saturday morning. {on | at | to} = in -> on ~ a named day takes *on*
+::: task skill="course" type="short-answer" variant="error-correction" ask="Earlier mistakes are already fixed."
+- The tin box came home in Tuesday evening. {on | at | to} = in -> on ~ **on** Tuesday evening
+- The small brass thing from inside it sits in the table next to my bed. {on | at | of} = in -> on ~ **on** the table
+- Thảo says hers grandmother still remembers the old post office. {her | she | she's} = hers -> her ~ **her** grandmother; *hers* stands alone
+- "Is this box your's?" Bà Sáu asked at breakfast. {yours | your | you're} = your's -> yours ~ **yours** has no '
+- Its not mine, and it is not hers either. {It's | Its' | It} = Its -> It's ~ **it's** = it is
+- We are walking upriver in Saturday morning. {on | at | to} = in -> on ~ **on** Saturday morning
 :::
 
 ### Project — A message across a hundred years
@@ -912,7 +1041,7 @@ ill. Please come home."* Find out how that message would have reached a person
 
 **Step 3 — Write it up.** Write **100–120 words** answering: which of the three
 would you choose if the message really mattered, and why? Use at least four
-prepositions of time and two possessive pronouns.
+prepositions of time and two of *mine, yours, hers, ours, theirs*.
 
 **Step 4 — Present it.** Present your display aloud for **ninety seconds**
 without reading word for word. Record it. Listen back once and count how many
@@ -932,9 +1061,9 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for communication technology | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercise 7.1 |
-| put the stress in the right place in words ending *-ese* and *-ee* | Lesson 2, exercises 2.5 and 2.6 · Lesson 7, exercise 7.2. Saying them aloud is yours — record Lesson 2, exercise 2.7 and listen back. |
-| use prepositions of place and time, and possessive pronouns | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
+| use the words for communication technology | Lesson 2, Meet the words · Lesson 7, exercise 7.1 |
+| put the stress in the right place in words ending *-ese* and *-ee* | Lesson 2, exercises 2.1 and 2.2 · Lesson 7, exercise 7.2. Saying them aloud is yours — record Lesson 2, exercise 2.3 and listen back. |
+| say where and when (**under** the bed, **at** seven, **in** ten years, **by** Friday) and whose (**mine**, **yours**, a friend **of mine**) | Lesson 3, practice 3.1 · Lesson 7, exercises 7.3 and 7.4 |
 | interrupt politely | Lesson 4, exercise 4.3 |
 | read a text closely and answer it in the writer's own words | Lesson 5, exercises 5.1 and 5.2 |
 | talk about what is good and what is bad about a way of communicating | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
@@ -955,16 +1084,17 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 2
 
-**2.7** Answers will vary (this is a speaking task). Check: the stress lands on
+**2.3** Answers will vary (this is a speaking task). Check: the stress lands on
 *-nese*, *-nee*, *-tee*, *-gee*, *-ee* in *Japanese, trainee, Vietnamese,
 interviewee, guarantee, Portuguese, refugee, agree, Chinese* — and on the FIRST
 syllable of *coffee*, and the SECOND of *committee*.
 
 ### Lesson 3
 
-**3.5** Answers will vary. Check: item 1 uses *at* + a clock time, item 2 uses
+**3.2** Answers will vary. Check: item 1 uses *at* + a clock time, item 2 uses
 *in* + a year, item 3 uses *on* + a day, item 4 uses *next to* or *opposite*
-before a place, and item 5 uses *mine* or *ours* with **no** noun after it.
+before a place, item 5 says *a friend of mine* (never *of my* or *of me*), and
+item 6 uses *in ten years* with *will* (*In ten years, phones will be…*).
 
 ### Lesson 4
 

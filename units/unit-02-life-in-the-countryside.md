@@ -10,7 +10,7 @@
 | Strand | Target |
 | --- | --- |
 | **Pronunciation** | /ə/ vs /ɪ/ — the weak vowel in *farmer* vs the short vowel in *village* |
-| **Grammar** | **Comparative adverbs** — *-er* and *more* |
+| **Grammar** | Comparative adverbs — work **harder**, walk **more slowly**, sing **better** |
 | **Reading** | A teenager's account of getting to a village the old way |
 | **Speaking** | Describing a village or town you know |
 | **Listening** | Someone describing a walk out of the village, and where the path led |
@@ -22,9 +22,7 @@
 
 ### Dialogue: The long way round
 
-*Read the conversation aloud. Then answer the questions below.*
-
-::: dialogue title="The long way round" bg="kitchen" gramen="earlier / more slowly — comparative adverbs" gramvi="So sánh hơn với trạng từ: trạng từ ngắn thêm **-er** (*earlier*), trạng từ dài dùng **more** (*more slowly*). Sau đó dùng **than**." gramco="earlier than · more slowly than"
+::: dialogue title="The long way round" bg="kitchen" gramen="works harder · drives more carefully" gramvi="So sánh hơn với trạng từ: trạng từ ngắn thêm **-er** (*earlier*), trạng từ dài dùng **more** (*more slowly*). Sau đó dùng **than**." gramco="harder than · more carefully than"
 @cast Tí|neutral, Bà Sáu|neutral
 @item board-game at=center
 **Bà Sáu|neutral:** Tí. Your uncle sent word down this morning. He wants to see you about a game.
@@ -55,7 +53,7 @@
 
 ### 1.1 Comprehension
 
-::: task skill="course" type="short-answer" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+::: task skill="course" type="short-answer" ask="Choose the answer from the scene."
 - Bà Sáu never names the thing she hands over — she says only *take this to him*. What is it? {his medicine | a hat | a message} = his medicine
 - Tí suggests one way of travelling after another. How many does he suggest in all? {three | two | four} = three
 - Bà Sáu once walked to Bến Vàng herself. How old was she then? {thirteen | nine | thirty} = thirteen
@@ -65,7 +63,7 @@
 
 ### 1.2 Find the phrase
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these. Give yourself **two minutes** for all four — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the dialogue that means each of these."
 - a very long way to travel {miles | an hour on the bank | the other side} = miles
 - the point where something begins {the start of it | the other side | every gate} = the start of it
 - sent a message to somebody {sent word | did not ask | take this} = sent word
@@ -74,20 +72,171 @@
 
 ### 1.3 Notice the grammar
 
-::: task skill="course" type="choice" opts="-er|more + adverb|irregular" ask="Each of these adverbs appears in the dialogue above in a comparing form. Go back and find it. Which group does the form **there** belong to?"
-- slowly — how the bus goes = more + adverb
-- late — when the ferry runs = -er
-- well — how Bà Sáu knew the hill = irregular
-- early — when Bà Sáu started, as a girl = -er
+::: task skill="course" type="gap-fill" ask="Find the line in the dialogue. Which words does the speaker use?"
+- Bà Sáu: "The ferry runs ___ than it used to." {later | more late | more lately} = later
+- Bà Sáu: "The bus goes ___ than you walk." {more slowly | slowlier | more slow} = more slowly
+- Bà Sáu: "We got there far ___ than the boats did." {more quickly | quicklier | more quick} = more quickly
+- Bà Sáu: "We started ___ than anybody." {earlier | more early | earliest} = earlier
+- Bà Sáu: "I knew that hill ___ than I know this kitchen." {better | more well | weller} = better
 :::
 
-> **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **trạng từ so sánh hơn**
-> (comparative adverbs). Có ba nhóm: thêm **-er**, dùng **more**, và các dạng
-> **bất quy tắc**. Chi tiết ở Lesson 3.
+> **Ghi chú:** runs **later**, started **earlier** — thêm **-er**. Goes **more
+> slowly**, got there **more quickly** — thêm **more**. Knew it **better** —
+> *well* đổi hẳn thành **better**. Lesson 3 giải thích vì sao.
 
 ---
 
 ## Lesson 2 — A Closer Look 1
+
+### Meet the words
+
+::: vocab size="8"
+@ gap-fill ask="Choose the word that fits."
+- The farmer keeps his rice and his tools in a big wooden ___ . {barn | well | orchard} = barn
+- At night the buffaloes sleep in the ___ , out of the cold wind. {barn | well | stream} = barn
+- Every morning my grandmother goes out to ___ from the hens. {collect eggs | pick fruit | fly a kite} = collect eggs
+- We still drink water from the ___ behind the kitchen. {well | barn | orchard} = well
+- The old ___ in the yard is twenty metres deep, and its water is always cold. {well | barn | canal} = well
+- In September, schools close for a day so children can help with the rice ___ . {harvest | stream | herd} = harvest
+- This year the ___ was so good that there is no room left in the barn. {harvest | stream | scenery} = harvest
+- When the wind is strong, the children go up the hill to ___ . {fly a kite | collect eggs | catch fish} = fly a kite
+- It was so windy on the beach that we could ___ for hours. {fly a kite | collect eggs | milk a cow} = fly a kite
+- The paddy fields are ___ — you cannot see where they end. {vast | peaceful | hospitable} = vast
+- The Sahara is a ___ desert — you can travel for days and see nothing. {vast | hospitable | well-trained} = vast
+- The people in this village are kind and ___ to visitors. {hospitable | picturesque | vast} = hospitable
+- In Bà Sáu's village, every stranger was given tea and a seat. People were very ___ . {hospitable | picturesque | vast} = hospitable
+- The factory only hires ___ workers who know how to use the new machines. {well-trained | hospitable | picturesque} = well-trained
+- The nurses at the new clinic are ___ and very careful. {well-trained | picturesque | vast} = well-trained
+- Tourists come from Ha Noi to photograph the ___ old houses by the water. {picturesque | well-trained | hospitable} = picturesque
+- Hội An is so ___ that every street looks like a painting. {picturesque | hospitable | well-trained} = picturesque
+- The lake is ___ by tall bamboo on three sides. {surrounded | cultivated | unloaded} = surrounded ~ surrounded **by** bamboo
+- Our village is ___ by paddy fields, so it looks like an island in a green sea. {surrounded | cultivated | loaded} = surrounded ~ surrounded **by** fields
+- Tea is the main ___ on these hills. {crop | poultry | scenery} = crop
+- Rice is the most important ___ in the Mekong Delta. {crop | poultry | cattle} = crop
+- My grandmother keeps ___ behind the house — hens, ducks and two geese. {poultry | cattle | crops} = poultry
+- Hens, ducks and geese are all ___ . {poultry | cattle | crops} = poultry
+- Water reaches the fields along a narrow ___ dug by hand. {canal | well | ferry} = canal
+- In Giethoorn, people go to school by boat along the ___ . {canal | well | barn} = canal
+- There is no bridge, so we crossed to the island by ___ . {ferry | bus | train} = ferry
+- Chú Bảy crossed the river on the old ___ , with his bicycle beside him. {ferry | canal | lighthouse} = ferry
+- On a clear night, ships can see the light from the ___ far out at sea. {lighthouse | barn | canal} = lighthouse
+- The ___ at the end of the cape has kept ships safe for a hundred years. {lighthouse | barn | well} = lighthouse
+- Every visitor buys a box of the local ___ to take home. {speciality | scenery | cattle} = speciality
+- Bánh xèo is the ___ of this town — every visitor wants to try it. {speciality | scenery | harvest} = speciality
+- His family has ___ this hillside for four generations. {cultivated | unloaded | milked} = cultivated
+- The family ___ vegetables on every piece of land around the house. {cultivates | unloads | milks} = cultivates
+- We stopped at the top of the pass just to look at the ___ — mountains, rivers and rice fields below us. {scenery | speciality | poultry} = scenery
+- The village is famous for its ___ : green hills, a river and old stone bridges. {scenery | speciality | harvest} = scenery
+- One ___ can cut a whole field of rice in a single morning. {combine harvester | buffalo | herd} = combine harvester
+- The new ___ does the work of twenty people cutting rice by hand. {combine harvester | nomad | lighthouse} = combine harvester
+- My uncle takes his ___ out to the paddy field every morning. It pulls the plough. {buffalo | poultry | nomad} = buffalo
+- The ___ was strong enough to pull a cart full of rice all the way up the hill. {buffalo | nomad | poultry} = buffalo
+- The children lead the ___ down to the river to drink — twenty cows and six buffaloes. {cattle | poultry | crop} = cattle
+- A ___ of cows walked slowly across the road in front of our bus. {herd | crop | barn} = herd
+- We took off our shoes and walked across the cold ___ . {stream | well | barn} = stream
+- After school the boys catch small fish between the stones in the ___ . {stream | well | barn} = stream
+- The farmers use ___ to make fences, baskets and even houses. {bamboo | poultry | scenery} = bamboo
+- After the noise of the city, the village felt quiet and ___ . {peaceful | well-trained | cultivated} = peaceful
+- It is so ___ here in the evening — no cars, only the frogs. {peaceful | vast | well-trained} = peaceful
+- The men ___ the sacks of rice onto the truck before sunrise. {loaded | unloaded | milked} = loaded
+- At the end of market day, the traders ___ their empty baskets back onto the boat. {load | unload | plough} = load
+- When the boat reached the harbour, the fishermen began to ___ their catch. {unload | load | plough} = unload
+- In summer we go to my aunt's orchard to ___ — mangoes, longans and lychees. {pick fruit | collect eggs | catch fish} = pick fruit
+- We sat in the shade of the mango trees in my grandfather's ___ . {orchard | paddy field | canal} = orchard
+- Grandma walks along the edge of the ___ , where the rice is still green. {paddy field | orchard | barn} = paddy field
+- On the grasslands of Mongolia, children learn to ___ — they sit in the saddle at three years old. {ride a horse | fly a kite | catch fish} = ride a horse
+- I learnt to ___ at my uncle's farm. Now I can sit in the saddle for an hour. {ride a horse | fly a kite | catch fish} = ride a horse
+- My job on the farm is to ___ from the hen house before school. {collect eggs | pick fruit | ride a horse} = collect eggs
+- Grandad lets us ___ straight from the mango trees. {pick fruit | collect eggs | fly a kite} = pick fruit
+- A ___ does not live in one place. He moves his tent and his animals with the seasons. {nomad | farmer | buffalo} = nomad
+- Before planting, farmers ___ the field so the soil is soft. {plough | unload | dry} = plough
+- My cousin sits down beside the cow at five in the morning to ___ it, and brings the bucket back full. {milk | feed | plough} = milk
+- Bà Sáu spreads the rice on a mat in the yard to ___ it in the sun. {dry | milk | load} = dry
+- The fishermen go out at night to ___ in the bay. {catch fish | collect eggs | pick fruit} = catch fish
+- The rice fields ___ all the way to the mountains. {stretch | plough | unload} = stretch
+- Twice a day we ___ the pigs with rice and vegetable scraps. {feed | milk | dry} = feed
+@ choice opts="ploughing a field|milking cows|feeding pigs|catching fish|drying rice|unloading rice" ask="What is each person doing?"
+- Two men are lifting heavy sacks down from the back of a truck. = unloading rice
+- A buffalo pulls a curved blade slowly through the wet soil. = ploughing a field
+- My aunt sits beside the animal at five in the morning with a metal bucket. = milking cows
+- Grandfather throws a net from the bank into the canal. = catching fish
+- After the harvest the grain is spread out in the sun until it is hard. = drying rice
+- She carries a bucket of kitchen scraps out to the shed. = feeding pigs
+@ choice opts="herd|orchard|stream|nomad|paddy field|bamboo" ask="Which word means this?"
+- a group of cattle or buffaloes moving together = herd
+- a piece of land where fruit trees are grown = orchard
+- a small, narrow river = stream
+- someone who moves from place to place with animals = nomad
+- a wet field where rice is grown = paddy field
+- a tall, hard grass used for building and furniture = bamboo
+@ choice ask="Which word or phrase means this?"
+- a large animal that pulls a plough in the rice fields {buffalo | nomad | poultry} = buffalo
+- a building on a farm for animals, crops or tools {barn | well | orchard} = barn
+- a deep hole in the ground where people get water {well | stream | canal} = well
+- birds kept for eggs and meat, like hens and ducks {poultry | cattle | herd} = poultry
+- cows and buffaloes kept on a farm {cattle | poultry | crop} = cattle
+- a tall tower with a bright light that guides ships {lighthouse | ferry | canal} = lighthouse
+- a boat that carries people and cars across water {ferry | canal | lighthouse} = ferry
+- a long, narrow waterway dug for water or boats {canal | stream | well} = canal
+- a food that a place is famous for {speciality | scenery | harvest} = speciality
+- the hills, fields and rivers you see around you {scenery | speciality | crop} = scenery
+- very, very big {vast | peaceful | picturesque} = vast
+- quiet and calm, with no trouble {peaceful | vast | hospitable} = peaceful
+- friendly and generous to guests {hospitable | well-trained | picturesque} = hospitable
+- pretty enough to be in a painting {picturesque | hospitable | vast} = picturesque
+- to take things off a truck or a boat {unload | load | plough} = unload
+- to put things onto a truck or a boat {load | unload | cultivate} = load
+- to grow plants and crops on land {cultivate | unload | milk} = cultivate
+- to turn over the soil before planting {plough | dry | load} = plough
+- the time when crops are cut and collected {harvest | crop | scenery} = harvest
+- a machine that cuts and collects rice or wheat {combine harvester | ferry | lighthouse} = combine harvester
+@ choice ask="What does this word or phrase mean?"
+- nomad {someone who moves from place to place | someone who grows rice | someone who works on a ferry} = someone who moves from place to place
+- well-trained {good at a job because they have learned it | kind to visitors | very big} = good at a job because they have learned it
+- surrounded by {with something all around it | far away from it | on one side of it} = with something all around it
+- crop {a plant grown for food | a group of cows | a hole for water} = a plant grown for food
+- herd {a big group of animals of one kind | a field of rice | a small river} = a big group of animals of one kind
+- stretch {to spread over a large area | to cut and collect | to turn over the soil} = to spread over a large area
+@ choice opts="pick|ride|fly|catch|milk" ask="Which verb goes with the words?"
+- Every Sunday we ___ mangoes in Grandad's orchard. = pick
+- Can you ___ a horse without falling off? = ride
+- The wind is perfect today — let's ___ a kite. = fly
+- We sat on the bank all afternoon but didn't ___ a single fish. = catch
+- She gets up at five to ___ the cows. = milk
+- The boys ___ fish with a net in the canal. = catch
+- My little brother wants to ___ his new kite on the beach. = fly
+@ choice opts="vast|peaceful|hospitable|picturesque|well-trained" ask="Which word goes with the words?"
+- a ___ worker who can drive every machine on the farm = well-trained
+- ___ villagers who always invite strangers in for tea = hospitable
+- a ___ desert that goes on for hundreds of kilometres = vast
+- a ___ evening with no sound but the birds = peaceful
+- Every tourist takes a photo of the ___ old bridge. = picturesque
+@ odd-one-out
+- hen · duck · goose · buffalo = buffalo ~ the others are poultry
+- orchard · paddy field · vegetable garden · lighthouse = lighthouse ~ in the others, food grows
+- stream · canal · well · barn = barn ~ the others hold water
+- vast · peaceful · picturesque · plough = plough ~ the others describe a place
+- pick fruit · collect eggs · milk a cow · fly a kite = fly a kite ~ the others are jobs on a farm
+- plough · cultivate · harvest · nomad = nomad ~ the others are farm work
+- cattle · buffalo · poultry · bamboo = bamboo ~ the others are animals
+- hospitable · well-trained · friendly · picturesque = picturesque ~ the others describe people
+- rice · coffee · tea · scenery = scenery ~ the others are crops
+@ error-correction
+- We went to the orchard to catch fruit. {pick | ride | milk} = catch -> pick ~ you **pick** fruit
+- The children ride a kite on the hill every evening. {fly | pick | milk} = ride -> fly ~ you **fly** a kite
+- Grandma catches eggs from the hens every morning. {collects | rides | flies} = catches -> collects ~ you **collect** eggs
+- When the truck arrived, the men loaded the sacks and carried them into the barn. {unloaded | ploughed | milked} = loaded -> unloaded ~ you **unload** things off a truck
+- Farmers milk the fields before they plant rice. {plough | unload | ride} = milk -> plough ~ you **plough** a field
+- We crossed the river by lighthouse. {ferry | canal | well} = lighthouse -> ferry ~ a **ferry** carries you across water
+- The paddy fields are so hospitable that you can't see where they end. {vast | well-trained | picturesque} = hospitable -> vast ~ **vast** means very big
+- The people here are very picturesque — they always invite us in for tea. {hospitable | vast | well-trained} = picturesque -> hospitable ~ **picturesque** is for places, not people
+- The village is surrounded of rice fields. {by | from | at} = of -> by ~ surrounded **by**
+@ sentence-build
+- the village / be / surrounded by / paddy fields {are | surround} = The village is surrounded by paddy fields
+- the farmers / load / the rice / onto the truck {loading | loads} = The farmers load the rice onto the truck
+- tourists / love / the picturesque scenery / of the village {loves | hospitable} = Tourists love the picturesque scenery of the village / Tourists love the scenery of the picturesque village
+- my uncle / cultivate / the land / behind the house {unload | cultivating} = My uncle cultivates the land behind the house
+:::
 
 ### Vocabulary — Rural life
 
@@ -130,97 +279,12 @@
 | 35 | lighthouse | /ˈlaɪthaʊs/ | n | hải đăng, đèn biển |
 | 36 | speciality | /ˌspeʃiˈæləti/ | n | đặc sản |
 
-> ### ▶︎ [**Practise these 36 words**](../app/unit-02-vocab.html)
->
-> When you have finished this lesson, the unit page opens a **practice**
-> session over all thirty-six — the meaning, the word, and, more often than
-> either of those, **the word inside a phrase it actually lives in**. Wrong
-> answers come straight back, and everything returns a week later, because
-> what you can still recall after a gap is the only recall worth counting. The
-> **unit test** opens once all seven lessons are done.
->
-> **Luyện 36 từ này.** Học xong bài này, phần
-> **practice** ở trang bài sẽ mở ra để luyện cả 36 từ — trong đó phần lớn là
-> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
-> ngay, và mọi từ quay lại sau một tuần.
->
-> Do the exercises below as well — they put the words back inside sentences.
-
-### Meet the words
-
-The table above is there to look things up in. This is where you actually meet
-them: a few at a time, then answer on the few you have just met.
-
-::: vocab size="8"
-:::
-
-### 2.1 Complete the sentences
-
-::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
-- The farmer keeps his rice and his tools in a big wooden ___ . {barn | well | orchard} = barn
-- Every morning my grandmother goes out to ___ from the hens. {collect eggs | pick fruit | fly a kite} = collect eggs
-- We still drink water from the ___ behind the kitchen. {well | barn | orchard} = well
-- In September the whole village helps with the rice ___ . {harvest | stream | herd} = harvest
-- When the wind is strong the children go to the open field to ___ . {fly a kite | collect eggs | catch fish} = fly a kite
-- The paddy fields are ___ — you cannot see where they end. {vast | peaceful | hospitable} = vast
-:::
-
-### 2.2 Match the word to its meaning
-
-::: task skill="course" type="choice" opts="herd|orchard|stream|nomad|paddy field|bamboo" ask="Which word does each meaning define?"
-- a group of cattle or buffaloes moving together = herd
-- a piece of land where fruit trees are grown = orchard
-- a small, narrow river = stream
-- someone who moves from place to place with animals = nomad
-- a wet field where rice is grown = paddy field
-- a tall, hard grass used for building and furniture = bamboo
-:::
-
-### 2.3 Five adjectives for a place and its people
-
-::: task skill="course" type="gap-fill" ask="One word from the table fits each gap."
-- The people in this village are kind and ___ to visitors. {hospitable | picturesque | vast} = hospitable
-- The farm needs ___ workers who can drive the new machines. {well-trained | hospitable | picturesque} = well-trained
-- Tourists come from Ha Noi to photograph the ___ old houses by the water. {picturesque | well-trained | hospitable} = picturesque
-- The Sahara is a ___ desert — you can travel for days and see nothing. {vast | hospitable | well-trained} = vast
-- The lake is ___ by tall bamboo on three sides. {surrounded | cultivated | unloaded} = surrounded
-:::
-
-> **Ghi chú:** **surrounded** hầu như luôn đi với **by**: *surrounded **by**
-> trees*. **Picturesque** chỉ dùng cho cảnh vật, nhà cửa — không dùng cho người.
-> Còn **hospitable** không liên quan gì đến *hospital* (bệnh viện).
-
-### 2.4 Farm work
-
-::: task skill="course" type="choice" opts="ploughing a field|milking cows|feeding pigs|catching fish|drying rice|unloading rice" ask="What is each person doing?"
-- Two men are lifting heavy sacks down from the back of a truck. = unloading rice
-- A buffalo pulls a curved blade slowly through the wet soil. = ploughing a field
-- My aunt sits beside the animal at five in the morning with a metal bucket. = milking cows
-- Grandfather throws a net from the bank into the canal. = catching fish
-- After the harvest the grain is spread out on the road in the sun. = drying rice
-- She carries a bucket of kitchen scraps out to the shed. = feeding pigs
-:::
-
-### 2.5 Around the countryside
-
-::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
-- Coffee is the main ___ on these hills. {crop | poultry | scenery} = crop
-- My grandmother keeps ___ behind the house — hens, ducks and two geese. {poultry | cattle | crops} = poultry
-- Water reaches the fields along a narrow ___ dug by hand. {canal | well | ferry} = canal
-- There is no bridge, so we crossed to the island by ___ . {ferry | bus | train} = ferry
-- On a clear night, ships can see the light from the ___ far out at sea. {lighthouse | barn | canal} = lighthouse
-- Every visitor buys a box of the local ___ to take home. {speciality | scenery | cattle} = speciality
-- His family has ___ this hillside for four generations. {cultivated | unloaded | milked} = cultivated
-- We stopped at the top of the pass just to look at the ___ — mountains, rivers and rice fields below us. {scenery | speciality | poultry} = scenery
-- One ___ can cut a whole field of rice in a single morning. {combine harvester | buffalo | herd} = combine harvester
-:::
-
 ### Pronunciation — /ə/ and /ɪ/
 
 Both are **short**. The difference is **stress** and **tongue position**.
 
-- **/ə/** (the *schwa*) only ever appears in an **unstressed** syllable. The
-  mouth is completely relaxed — it is the laziest sound in English.
+- **/ə/** only ever appears in a weak, **unstressed** syllable. The mouth is
+  completely relaxed — it is the laziest sound in English.
 - **/ɪ/** is a real short vowel. It can be **stressed** (*v**i**llage*,
   *h**i**ll*) or unstressed (*chick**e**n*, *farm**i**ng*). The tongue is
   higher and further forward, and the lips are slightly spread.
@@ -231,8 +295,7 @@ Both are **short**. The difference is **stress** and **tongue position**.
 | **Mouth** | fully relaxed, jaw loose | lips slightly spread, tongue raised |
 | **Examples** | farm**er**, wat**er**, broth**er**, orch**ard**, neighb**our**, **a**bout, c**o**llect | v**i**llage, ch**i**cken, h**i**ll, p**i**ck, m**i**lk, br**i**dge |
 
-A useful pair to feel the difference — the endings of the comparative and the
-superlative:
+A useful set of pairs to feel the difference:
 
 | /ə/ | /ɪ/ |
 | --- | --- |
@@ -244,9 +307,9 @@ superlative:
 > trọng âm. Còn /ɪ/ thì lưỡi nâng cao hơn, môi hơi bè ra. Hãy so sánh đuôi
 > **-er** (/ə/) với đuôi **-est** và **-ing** (/ɪ/): *bigger* — *biggest*.
 
-### 2.6 Sort the sounds
+### 2.1 Sort the sounds
 
-::: task skill="course" type="sort" opts="/ə/|/ɪ/" ask="Which of the two sounds is in the **bold** part of each word?"
+::: task skill="course" type="sort" opts="/ə/|/ɪ/" ask="Which sound is in the **bold** part?"
 - farm**er** = /ə/
 - v**i**llage = /ɪ/
 - wat**er** = /ə/
@@ -261,16 +324,16 @@ superlative:
 - br**i**dge = /ɪ/
 :::
 
-### 2.7 Odd sound out
+### 2.2 Odd sound out
 
-::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **vowel** in the *italic* part, not the meaning."
+::: task skill="course" type="choice" variant="odd-one-out" ask="Listen for the **vowel** in the *italic* part, not the meaning."
 - farm*er* · farm*ing* · wat*er* · broth*er* = farm*ing* ~ *farming* ends in /ɪ/; the others are /ə/
 - v*i*llage · ch*i*cken · *a*bout · h*i*ll = *a*bout ~ *about* starts with /ə/; the others are /ɪ/
 - c*o*llect · *i*nside · *a*bout · b*a*nana = *i*nside ~ *inside* starts with /ɪ/; the others are /ə/
 - p*i*ck · m*i*lk · broth*er* · br*i*dge = broth*er* ~ *brother* ends in /ə/; the others are /ɪ/
 :::
 
-### 2.8 Say these sentences
+### 2.3 Say these sentences
 
 Read aloud three times, faster each time. Record yourself if you can.
 
@@ -284,21 +347,19 @@ Read aloud three times, faster each time. Record yourself if you can.
 
 ### Grammar — Comparative adverbs
 
-An **adverb** tells you *how* something is done. To compare two actions, we use
-the **comparative adverb** + **than**.
+An adverb says **how** someone does something: *hard*, *slowly*, *well*. To
+compare how two people do it, change the adverb and add **than**.
 
 > My cousin works **harder than** I do.
-> The wifi works **more slowly than** ours.
+> The bus goes **more slowly than** the ferry.
 
-There are **three groups**. Which group an adverb belongs to depends on its
-**shape**, not its meaning.
+How you change it depends on the adverb.
 
-#### Group 1 — short adverbs: add **-er**
+#### 1 · Short adverbs: add -er
 
-These adverbs look exactly like adjectives (no *-ly* ending):
-**hard · fast · early · late · long · near · high · soon · deep**
+**hard · fast · early · late · long · high · soon · near**
 
-| Adverb | Comparative |
+| Adverb | Comparing |
 | --- | --- |
 | hard | hard**er** |
 | fast | fast**er** |
@@ -309,33 +370,28 @@ These adverbs look exactly like adjectives (no *-ly* ending):
 
 > He gets up **earlier** than his sister.
 > Can you run **faster** than a buffalo?
+> The kite flew **higher** than the trees.
 
-#### Group 2 — adverbs ending in **-ly**: use **more**
+❌ *My brother works more hard than me.*
 
-**slowly · carefully · quietly · quickly · easily · politely · heavily ·
-clearly · badly**\*
+#### 2 · Adverbs ending in -ly: put more in front
 
-| Adverb | Comparative |
-| --- | --- |
-| slowly | **more** slowly |
-| carefully | **more** carefully |
-| quietly | **more** quietly |
-| easily | **more** easily |
-| heavily | **more** heavily |
+**slowly · carefully · quietly · quickly · easily · politely · heavily · clearly · fluently**
 
 > Please speak **more clearly**.
 > She drives **more carefully** than her brother.
+> It rains **more heavily** here than in the city.
 
-\* *badly* is the exception in this group — see Group 3.
+❌ *The bus goes slowlier than the train.*
 
-> ⚠️ **Chú ý:** Nhóm 2 là trạng từ được tạo ra bằng cách thêm *-ly* vào một
-> **tính từ** (*slow → slowly*). Từ **early** tuy kết thúc bằng chữ *-ly* nhưng
-> không phải như vậy — nó thuộc **Nhóm 1**: *earlier*, không bao giờ là
-> ❌ *more early*.
+> ⚠️ **Bẫy thường gặp:** **early** kết thúc bằng chữ *-ly*, nhưng nó là trạng từ
+> ngắn: **earlier**, không bao giờ là ❌ *more early*.
 
-#### Group 3 — the irregulars: learn them by heart
+#### 3 · Some adverbs change completely
 
-| Adverb | Comparative | Example |
+**well → better · badly → worse · far → farther · little → less · much → more**
+
+| Adverb | Comparing | Example |
 | --- | --- | --- |
 | well | **better** | She sings **better** than I do. |
 | badly | **worse** | I did **worse** in maths than in English. |
@@ -343,89 +399,141 @@ clearly · badly**\*
 | little | **less** | He talks **less** than his sister. |
 | much | **more** | It rains **more** in the countryside. |
 
+❌ *She sings more good than her sister.*
+
 > **Ghi chú:** *farther* thường nói về khoảng cách thật (*farther down the
 > road*), còn *further* dùng được cho cả khoảng cách lẫn nghĩa trừu tượng
-> (*further information*). Ở lớp 8, cả hai đều được chấp nhận khi nói về
-> khoảng cách.
+> (*further information*). Khi nói về khoảng cách, cả hai đều đúng.
 
-#### Making the comparison stronger
+#### 4 · After it, say than
 
-Put **much**, **far**, **a lot** or **a bit** *in front of* the comparative:
+> I run faster **than** my brother.
+> Bống climbs more easily **than** Tí.
+
+❌ *I run faster as my brother.*
+
+#### 5 · Make it stronger with much, far, a lot, a bit
+
+**much · far · a lot · a bit**
 
 > My cousin picks fruit **much faster** than me.
 > Life here moves **far more slowly** than in Ha Noi.
 > He speaks English **a lot better** than last year.
 > We arrived **a bit earlier** than the others.
 
-❌ *very faster* · ❌ *very more slowly* — **very** never goes with a
-comparative.
+❌ *Life here moves very more slowly.*
 
-> ⚠️ **Bẫy thường gặp:** Đừng nhầm **trạng từ** với **tính từ**. Tính từ mô tả
-> *danh từ*; trạng từ mô tả *động từ*.
->
-> ❌ *He drives more careful than me.*
-> ✅ *He drives **more carefully** than me.* — *drives* là động từ, nên phải
-> dùng trạng từ.
->
-> ❌ *She sings more good than her sister.*
-> ✅ *She sings **better** than her sister.*
->
-> ❌ *My brother works more hard.*
-> ✅ *My brother works **harder**.* — *hard* thuộc nhóm 1, thêm **-er**, không
-> dùng *more*.
->
-> Mẹo kiểm tra: hỏi "so sánh **cái gì**?" Nếu là **cách làm** một việc → trạng
-> từ. So sánh: *He is a **careful** driver* (tính từ) / *He drives
-> **carefully*** (trạng từ).
+> **Ghi chú:** **very** không bao giờ đi với dạng so sánh: không nói *very
+> faster*, *very more slowly*.
 
-### 3.1 Recognise the group
+#### 6 · How you do it, not what it is
 
-::: task skill="course" type="choice" opts="1|2|3" ask="Which group is each adverb in — **1** (add *-er*), **2** (use *more*), or **3** (irregular)?"
-- hard = 1
-- carefully = 2
-- well = 3
-- early = 1 ~ *early* is not an *-ly* adverb; it is Group 1
-- quietly = 2
-- badly = 3 ~ *badly* → **worse**, the exception in the *-ly* group
-- fast = 1
-- far = 3
+Describing a **person or thing**? Say *careful*. Describing **how someone does
+something**? Say *carefully*.
+
+> He is a **more careful** driver than me.
+> He drives **more carefully** than me.
+
+❌ *He drives more careful than me.*
+
+> ⚠️ **Bẫy thường gặp:** Tính từ mô tả *danh từ* (*a careful driver*); trạng từ
+> mô tả *động từ* (*drives carefully*). Mẹo: hỏi "so sánh **cách làm** một việc
+> à?" — nếu đúng, dùng trạng từ.
+
+### 3.1 Practice
+
+::: bank draw="10"
+@ gap-fill ask="Choose the right words."
+- My brother works ___ than I do. {harder | more hard | more hardly} = harder
+- Please speak ___ — I can't follow you. {more slowly | slowlier | more slow} = more slowly
+- She sings ___ than anyone in her class. {better | more well | weller} = better
+- We arrived at the market ___ than the others. {earlier | more early | earliest} = earlier
+- He drives ___ than his father. {more carefully | carefullier | more careful} = more carefully
+- A buffalo moves ___ than a horse. {more slowly | slowlier | more slow} = more slowly
+- My cousin picks fruit ___ than I do. {faster | more fast | more fastly} = faster
+- I did ___ in the test than last time. {worse | worst | more bad} = worse
+- My sister writes ___ than I do. {more neatly | neatlier | most neatly} = more neatly
+- We got to the market ___ than usual. {later | more late | lately} = later
+- It rained ___ yesterday than today. {more heavily | heavilier | most heavily} = more heavily
+- Mai dances ___ than her sister. {more beautifully | beautifullier | more beautiful} = more beautifully
+- Here the buses come ___ than the trains — every fifteen minutes. {more frequently | frequentlier | more frequent} = more frequently
+- After a day in the fields, I slept ___ than ever before. {more soundly | soundlier | more sound} = more soundly
+- Khoa speaks English ___ now than last year. {more fluently | fluentlier | more fluent} = more fluently
+- A plane flies ___ than a kite. {higher | more high | more highly} = higher
+- The bus came ___ than we expected, so we had to run. {sooner | more soon | soonest} = sooner
+- Grandma lives ___ from the school than we do. {farther | more far | farer} = farther
+- Tí eats ___ than Bống — she finishes everything. {less | littler | more little} = less
+- It rains ___ in September than in March. {more | much | most} = more
+- Bà Sáu gets up ___ than anybody in the house. {earlier | more early | early} = earlier
+- Hùng answered the teacher ___ than Khoa did. {more politely | politer | more polite} = more politely
+- The children worked ___ when the head teacher came in. {more quietly | quietlier | more quiet} = more quietly
+- You'll find the house ___ if you have a good map. {more easily | easilier | more easy} = more easily
+- Thảo played ___ than everyone else and won. {better | gooder | more good} = better
+- Our team played ___ this week than last week and lost 5–0. {worse | badder | worst} = worse
+- The swimmers trained ___ this year than last year. {longer | more long | more longly} = longer
+- Chú Bảy mends nets ___ than anyone at the harbour. {more quickly | quicklier | more quick} = more quickly
+@ gap-fill ask="Which word makes the comparison stronger?"
+- Life in the village moves ___ more slowly than in the city. {much | very | too} = much
+- The combine harvester works ___ faster than ten farmers. {far | very | so} = far
+- We arrived a ___ earlier than the others. {bit | very | much} = bit
+- He speaks English a ___ better than last year. {lot | very | so} = lot
+- The new road gets you there ___ more quickly. {much | very | more} = much
+@ gap-fill ask="Choose the right word."
+- He is a ___ driver than his brother. {more careful | more carefully | carefullier} = more careful
+- He drives ___ than his brother. {more carefully | more careful | carefullier} = more carefully
+- The village is ___ than the city at night. {quieter | more quietly | quietlier} = quieter
+- She closed the door ___ than her brother did. {more quietly | more quiet | quietlier} = more quietly
+@ choice ask="Which sentence is right?"
+- The bus and the walk {The bus goes more slowly than you walk. | The bus goes more slow than you walk. | The bus goes slowlier than you walk.} = The bus goes more slowly than you walk.
+- Tí and Hùng run a race. {Tí runs faster than Hùng. | Tí runs more fast than Hùng. | Tí runs more faster than Hùng.} = Tí runs faster than Hùng.
+- Thảo sings. {Thảo sings better than me. | Thảo sings more good than me. | Thảo sings more better than me.} = Thảo sings better than me.
+- Chú Bảy at work {Chú Bảy works harder than anybody. | Chú Bảy works more hard than anybody. | Chú Bảy works more harder than anybody.} = Chú Bảy works harder than anybody.
+- Getting up {Bống gets up earlier than Tí. | Bống gets up more early than Tí. | Bống gets up early than Tí.} = Bống gets up earlier than Tí.
+- Two brothers run. {I run faster than my brother does. | I run faster as my brother does. | I run faster that my brother does.} = I run faster than my brother does.
+- The ferry and the bus {The ferry goes much more slowly than the bus. | The ferry goes very more slowly than the bus. | The ferry goes much slowly than the bus.} = The ferry goes much more slowly than the bus.
+- The long walk {Bà Sáu walked farther than the others. | Bà Sáu walked more far than the others. | Bà Sáu walked farer than the others.} = Bà Sáu walked farther than the others.
+- Khoa is quiet. {Khoa talks less than his sister. | Khoa talks littler than his sister. | Khoa talks more little than his sister.} = Khoa talks less than his sister.
+- A good driver {He is a more careful driver than me. | He is a more carefully driver than me. | He is a carefullier driver than me.} = He is a more careful driver than me.
+- The harvest {We finished the harvest earlier this year. | We finished the harvest the earlier this year. | We finished the harvest more early this year.} = We finished the harvest earlier this year.
+- The climb {They climbed higher up the mountain than us. | They climbed more highly up the mountain than us. | They climbed more high up the mountain than us.} = They climbed higher up the mountain than us.
+@ error-correction
+- He drives more careful than my uncle. {more carefully | carefuller | most carefully} = more careful -> more carefully ~ *drives* needs **more carefully**
+- She works more hard than anybody in the village. {harder | more hardly | hardest} = more hard -> harder ~ hard → **harder**
+- My cousin can run more fast than me. {faster | more fastly | fastest} = more fast -> faster ~ fast → **faster**
+- I speak English more good than last year. {better | more well | best} = more good -> better ~ well → **better**
+- The bus goes slowlier than the train. {more slowly | more slow | slowliest} = slowlier -> more slowly ~ slowly → **more slowly**
+- We got up early than usual yesterday. {earlier | more early | earliest} = early -> earlier ~ early → **earlier**
+- I run faster as my brother does. {than | that | like} = as -> than ~ faster **than**
+- The farmers reacted quicklier than we expected. {more quickly | more quick | quickest} = quicklier -> more quickly ~ quickly → **more quickly**
+- You should work more hardly if you want to pass. {harder | more hard | hardest} = more hardly -> harder ~ hard → **harder**
+- We finished harvesting the earlier this year. {earlier | more early | earliest} = the earlier -> earlier ~ no *the*: just **earlier**
+- They climbed more highly up the mountain than us. {higher | more high | highest} = more highly -> higher ~ high → **higher**
+- The ferry goes very more slowly than the bus. {much | too | so} = very -> much ~ **much** more slowly, never *very*
+- Bống ate more little than Tí. {less | fewer | littler} = more little -> less ~ little → **less**
+- My uncle lives more far from the sea than we do. {farther | farer | farthest} = more far -> farther ~ far → **farther**
+- It rained more heavy today than yesterday. {more heavily | more heavier | heavilier} = more heavy -> more heavily ~ *rained* needs **more heavily**
+@ sentence-build
+- my grandmother / get up / early / than / I do {more | most} = My grandmother gets up earlier than I do
+- the bus / go / slowly / than / the ferry {slowlier | slow} = The bus goes more slowly than the ferry
+- Thảo / sing / well / than / her brother {more | gooder} = Thảo sings better than her brother
+- Bống / climb / easily / than / Tí {easilier | easy} = Bống climbs more easily than Tí
+- life in the city / move / fast / than / life in the village {more | fastly} = Life in the city moves faster than life in the village
+- the combine harvester / work / much / quickly / than / the farmers {very | quicklier} = The combine harvester works much more quickly than the farmers
+- Chú Bảy / learned / slowly / than / anybody in his class {slowlier | very} = Chú Bảy learned more slowly than anybody in his class
+@ odd-one-out ask="Which one changes in a different way?"
+- slowly · carefully · quietly · fast = fast ~ fast**er**, but **more** slowly, **more** carefully, **more** quietly
+- hard · late · soon · clearly = clearly ~ **more** clearly, but hard**er**, late**r**, soon**er**
+- early · fast · high · easily = easily ~ **more** easily, but earl**ier**, fast**er**, high**er**
+- politely · heavily · early · quickly = early ~ earl**ier**, but **more** politely, **more** heavily, **more** quickly
+- well · badly · far · long = long ~ long**er**, but well → **better**, badly → **worse**, far → **farther**
+@ odd-one-out ask="Which one is wrong?"
+- harder · faster · more slowly · more early = more early ~ it should be **earlier**
+- better · worse · more well · farther = more well ~ it should be **better**
+- more carefully · more quietly · more hard · later = more hard ~ it should be **harder**
+- sooner · higher · more fastly · more easily = more fastly ~ it should be **faster**
 :::
 
-### 3.2 Choose the comparative adverb
-
-::: task skill="course" type="gap-fill" ask="Choose the comparative form of the word in brackets."
-- My brother works ___ (hard) than I do. {harder | more hard | more hardly} = harder
-- Please speak ___ (slowly) — I can't follow you. {more slowly | slowlier | more slow} = more slowly
-- She sings ___ (well) than anyone in her class. {better | more well | weller} = better
-- We arrived at the market ___ (early) than the others. {earlier | more early | earliest} = earlier
-- He drives ___ (carefully) than his father. {more carefully | carefullier | more careful} = more carefully
-- Buffaloes walk ___ (slowly) than horses. {more slowly | slowlier | more slow} = more slowly
-- My cousin picks fruit ___ (fast) than I do. {faster | more fast | more fastly} = faster
-- I did ___ (badly) in the test than last time. {worse | worst | more bad} = worse
-:::
-
-### 3.3 Build the sentence
-
-::: task skill="course" type="short-answer" variant="sentence-build" ask="Every sentence needs a comparative adverb and **than**. Where you see **✚**, make the comparison stronger."
-- life in the countryside / move / slowly ✚ / life in the city {very | slow} = Life in the countryside moves much more slowly than life in the city / Life in the countryside moves far more slowly than life in the city / Life in the countryside moves a lot more slowly than life in the city
-- my grandmother / get up / early ✚ / I do {very | more} = My grandmother gets up much earlier than I do / My grandmother gets up far earlier than I do / My grandmother gets up a lot earlier than I do ~ *early* is Group 1, so *earlier* — never *more early*
-- the new road / take us / far ✚ / the old one {very | more} = The new road takes us much farther than the old one / The new road takes us much further than the old one / The new road takes us far farther than the old one / The new road takes us far further than the old one / The new road takes us a lot farther than the old one / The new road takes us a lot further than the old one ~ *farther* and *further* are both accepted for distance
-- he / swim / well ✚ / his sister {very | more} = He swims much better than his sister / He swims far better than his sister / He swims a lot better than his sister ~ *well* → *better*, irregular
-- it / rain / heavily ✚ / here / in the city {very | heavy} = It rains much more heavily here than in the city / It rains far more heavily here than in the city / It rains a lot more heavily here than in the city / Here it rains much more heavily than in the city / Here it rains far more heavily than in the city / Here it rains a lot more heavily than in the city
-:::
-
-### 3.4 Correct the mistake
-
-::: task skill="course" type="short-answer" variant="error-correction"
-- He drives more careful than my uncle. {more carefully | carefuller | most carefully} = more careful -> more carefully ~ *drives* is a verb, so it needs an adverb
-- She works more hard than anybody in the village. {harder | more hardly | hardest} = more hard -> harder ~ *hard* is a Group 1 adverb: add *-er*
-- My cousin can run more fast than me. {faster | more fastly | fastest} = more fast -> faster ~ *fast* is Group 1 too
-- I speak English more good than last year. {better | more well | best} = more good -> better ~ *well* → *better*, irregular
-- The bus goes slowlier than the train. {more slowly | more slow | slowliest} = slowlier -> more slowly ~ an *-ly* adverb takes *more*
-- We got up early than usual yesterday. {earlier | more early | earliest} = early -> earlier ~ *early* is Group 1 despite the *-ly* spelling
-:::
-
-### 3.5 About you
+### 3.2 About you
 
 Write true sentences about yourself. Use **than** in every sentence.
 
@@ -652,7 +760,7 @@ and **than** in at least two of them.
 
 ### 5.1 True, False, or Not Given
 
-::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and wanting to answer from what you know about villages is exactly the pull this type is built to catch."
+::: task skill="reading" type="true-false-not-given" ask="**True**: the text says so. **False**: the text says the opposite. **Not Given**: the text does not say."
 - Tí missed the ten o'clock bus by four minutes. = T ~ "by four minutes"
 - Bống was excited by the fields around them. = F ~ she looked at them "with no interest at all"
 - The path looked as if nobody had walked it for years. = F ~ it looked as if a hundred people had walked it that morning
@@ -672,7 +780,7 @@ and **than** in at least two of them.
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word in the article that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word in the text that means this. The clock is still running."
 - brushed clean of leaves and dust {swept | dry | narrow} = swept
 - an opening in something {gap | edge | landing} = gap
 - rising very sharply {steeply | gently | easily} = steeply
@@ -681,8 +789,7 @@ and **than** in at least two of them.
 
 ### Speaking — Describing a village or town you know
 
-> **Working alone:** You have no partner, so do this in three steps. It still
-> works — speaking practice is mostly about producing language out loud.
+> **Working alone:** You have no partner, so do this in three steps.
 
 **Step 1 — Prepare.** Choose one village or small town you actually know: your
 grandparents' place, somewhere you visited, or the area where you live. Write
@@ -703,8 +810,8 @@ at least four words from the Lesson 2 table.
 **Step 3 — Record and check.** Record yourself on your phone. Listen back and
 check three things:
 
-- Did you use **-er** with short adverbs and **more** with *-ly* adverbs — and
-  never both together?
+- Did you say *harder* and *faster*, but *more slowly* and *more carefully* —
+  never *more faster*?
 - Did you say *better* and *worse*, not *more good* / *more bad*?
 - Did your pauses fall **between** points rather than inside a sentence?
 
@@ -712,7 +819,7 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### 5.4 Read it again, against the clock
 
-You have already read *The old way to Bến Vàng* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
+Read the same text again, faster each time.
 
 ::: fluency mode="read" words="425" secs="210|170|130" ask="Read *The old way to Bến Vàng* again from the top. Stop the clock the moment you reach the end."
 - Do not stop to look anything up — you have met all of it
@@ -780,9 +887,7 @@ doing this is not reaching back a week. It is reaching back years.
 
 ### 6.2 Note completion
 
-The notes below are the shape this type always takes: headings and fragments,
-never full sentences. Choose for each gap **as you listen** — there is no time
-at the end.
+Choose for each gap **as you listen**.
 
 ::: task skill="listening" type="completion"
 - They started ___ than they needed to {earlier | later | more slowly} = earlier
@@ -813,8 +918,7 @@ adverbs.
 
 #### Plan it — 5 questions your paragraph has to answer
 
-Cover the finished paragraph above. Answer these in note form, in your
-own words. The plan is yours; the sentences come afterwards.
+Cover the paragraph above. Answer these in notes, in your own words.
 
 | The question | Your answer — notes, in your own words |
 | --- | --- |
@@ -824,33 +928,26 @@ own words. The plan is yours; the sentences come afterwards.
 | What is the one thing you dislike — a distance, a time, a missing thing? | |
 | Having said both, what is your overall feeling? | |
 
-::: bridge name="The one sentence a reader who reads nothing else should get" trains="Coherence & Cohesion" cefr="B1" marker="[Q]" src="05 §2.5"
-**Before you draft:** write the single sentence that a reader who read nothing
-else would still have to be given. That is your topic sentence.
+::: bridge name="Write your main sentence first" trains="Coherence & Cohesion" cefr="B1" marker="[Q]" src="05 §2.5"
+**Before you draft:** write the one sentence a reader must see if they read
+nothing else. That is your topic sentence.
 
-**After you draft:** read each remaining sentence and ask whether it supports
-that one. Delete or rewrite any that does not.
+**After you draft:** check each other sentence. If it does not support the topic
+sentence, rewrite it or delete it.
 
-This is not a slot to fill at the top of the paragraph. It is the harder thing:
-being given five facts and producing the one sentence that carries all of them.
-
-> **Tiếng Việt:** Trước khi viết, hãy viết **một câu** mà người chỉ đọc đúng câu
-> đó vẫn nắm được ý chính. Viết xong, kiểm tra từng câu còn lại: câu nào không
-> phục vụ câu chủ đề thì sửa hoặc bỏ.
+> **Tiếng Việt:** Trước khi viết, viết **một câu** nêu ý chính. Viết xong, câu nào
+> không phục vụ câu đó thì sửa hoặc bỏ.
 :::
 
-::: bridge name="One comparison, highlighted — not a list of differences" trains="Task Achievement" cefr="B1" marker="[INF]" src="02 §2.1"
-In your Lesson 5 speaking notes and again in your paragraph, give the **biggest** difference
-between the town and the village, stated once and clearly — instead of three
-parallel comparisons of equal weight.
+::: bridge name="Give the biggest difference, once" trains="Task Achievement" cefr="B1" marker="[INF]" src="02 §2.1"
+In your Lesson 5 speaking notes and again in your paragraph, give the
+**biggest** difference between the town and the village, once and clearly —
+not three differences of equal weight.
 
-Why one and not three: three tidy comparisons of equal weight leave your reader
-to work out which one matters. One difference, stated clearly, tells them. A
-list reports; a comparison points.
+One clear difference tells your reader what matters most.
 
-> **Tiếng Việt:** Hãy nêu **một** khác biệt lớn nhất, thật rõ — đừng liệt kê ba
-> khác biệt ngang nhau. **Làm nổi bật** một ý quan trọng hơn là *liệt kê* nhiều
-> ý ngang nhau.
+> **Tiếng Việt:** Nêu **một** khác biệt lớn nhất giữa thành phố và làng quê, thật
+> rõ — đừng liệt kê ba khác biệt ngang nhau.
 :::
 
 ::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — **one** paragraph of **80–100 words** on what you like and dislike about life in the countryside."
@@ -858,7 +955,7 @@ list reports; a comparison points.
 - [ ] **One** paragraph, not several ~ para:1
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
 - [ ] At least **three** comparative adverbs ~ any:3 more quickly/more slowly/more carefully/more easily/more often/more cheaply/more clearly/more loudly/better/worse/harder/faster/earlier/later/longer/closer/higher/lower/further/farther
-- [ ] Never both markers on one adverb — no *more faster*, no *more better* ~ none more faster/more better/more worse/more harder/more earlier/more later/more longer/more closer/more higher/more lower/more further
+- [ ] No *more faster* or *more better* ~ none more faster/more better/more worse/more harder/more earlier/more later/more longer/more closer/more higher/more lower/more further
 - [ ] Each comparative has **than** or a comparison the reader can see
 - [ ] Both a like **and** a dislike — the task asks for both
 :::
@@ -891,7 +988,7 @@ list reports; a comparison points.
 
 ### 7.3 Grammar check
 
-::: task skill="course" type="gap-fill" ask="Choose the comparative form of the word in brackets."
+::: task skill="course" type="gap-fill" ask="Choose the right words."
 - My sister writes ___ (neatly) than I do. {more neatly | neatlier | most neatly} = more neatly
 - Buffaloes work ___ (hard) than most people think. {harder | more hardly | hardest} = harder
 - He speaks Vietnamese ___ (well) than English. {better | more well | best} = better
@@ -902,8 +999,7 @@ list reports; a comparison points.
 
 ### 7.4 Error hunt
 
-This paragraph has **six** mistakes. Below, it comes one line at a time: tap
-each mistake, then choose the fix.
+This paragraph has **six** mistakes. Below, it comes one line at a time.
 
 > My friend walk faster than I do, so she reached the bamboo more early than
 > me. She climbs more quick than a goat and she reads a map more good than
@@ -911,13 +1007,13 @@ each mistake, then choose the fix.
 > myself, and now she wants to follow the path more far than we went on
 > Sunday.
 
-::: task skill="course" type="short-answer" variant="error-correction" ask="Each line is part of the paragraph, with the earlier mistakes already put right."
-- My friend walk faster than I do. {walks | walking | to walk} = walk -> walks ~ *walk* → *walks* — subject–verb agreement
-- She reached the bamboo more early than me. {earlier | earliest | more earlier} = more early -> earlier ~ *more early* → *earlier* — a short adverb takes *-er*
-- She climbs more quick than a goat. {more quickly | quickest | more quicker} = more quick -> more quickly ~ *more quick* → *more quickly* — it modifies a verb
-- She reads a map more good than anybody in our class. {better | best | more well} = more good -> better ~ *more good* → *better* — irregular
-- She believed my story more easy than I believed it myself. {more easily | easiest | more easier} = more easy -> more easily ~ *more easy* → *more easily* — it modifies a verb
-- Now she wants to follow the path more far than we went on Sunday. {farther | farest | more farther} = more far -> farther ~ *more far* → *farther* (or *further*) — irregular
+::: task skill="course" type="short-answer" variant="error-correction" ask="Earlier mistakes are already fixed."
+- My friend walk faster than I do. {walks | walking | to walk} = walk -> walks ~ my friend **walks**
+- She reached the bamboo more early than me. {earlier | earliest | more earlier} = more early -> earlier ~ early → **earlier**
+- She climbs more quick than a goat. {more quickly | quickest | more quicker} = more quick -> more quickly ~ climbs **more quickly**
+- She reads a map more good than anybody in our class. {better | best | more well} = more good -> better ~ well → **better**
+- She believed my story more easy than I believed it myself. {more easily | easiest | more easier} = more easy -> more easily ~ believed it **more easily**
+- Now she wants to follow the path more far than we went on Sunday. {farther | farest | more farther} = more far -> farther ~ far → **farther** (or **further**)
 :::
 
 ### Project — A village profile
@@ -962,9 +1058,9 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for life in the countryside | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercise 7.1 |
-| hear /ə/ and /ɪ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.6 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.8 and listen back. |
-| make and use comparative adverbs | Lesson 3, exercises 3.1 and 3.2 · Lesson 7, exercises 7.3 and 7.4 |
+| use the words for life in the countryside | Lesson 2, Meet the words · Lesson 7, exercise 7.1 |
+| hear /ə/ and /ɪ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
+| make and use comparative adverbs | Lesson 3, practice 3.1 · Lesson 7, exercises 7.3 and 7.4 |
 | give a compliment, and answer one | Lesson 4, exercises 4.1 and 4.3 |
 | read a teenager's account of a journey through the countryside | Lesson 5, exercises 5.1 and 5.2 |
 | talk about the village or town I know | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
@@ -985,14 +1081,14 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 2
 
-**2.8** Answers will vary — this is a speaking drill. Check: every *-er* ending
+**2.3** Answers will vary — this is a speaking drill. Check: every *-er* ending
 (*farmer, brother, water, neighbour, bigger*) is the relaxed /ə/, never a full
 "e" sound; *village, pick, chicken, bridge, biggest* all keep the short, bright
 /ɪ/.
 
 ### Lesson 3
 
-**3.5** Answers will vary. Check: *hard* → **harder** (no *more*), *well* →
+**3.2** Answers will vary. Check: *hard* → **harder** (no *more*), *well* →
 **better**, *early* → **earlier**, *carefully* → **more carefully**; and every
 sentence contains **than**.
 

@@ -929,6 +929,64 @@ async function main() {
     }
   }
 
+  /* ---- the practice bank and the Words sheet -----------------------------
+     A bank draws `draw` items from its pool, a fresh set each run, least
+     recently seen first; the Words sheet opens over the page and closes
+     without leaving the page unable to scroll. */
+  {
+    const win = await settled(load("docs/unit-01/lesson-3/index.html", null, fastPage));
+    const doc = win.document;
+    const data = JSON.parse(doc.getElementById("page-data").textContent);
+    const bank = (data.bank || [])[0];
+    ok("bank: Lesson 3 carries a practice bank", !!bank && bank.items.length >= bank.draw * 2);
+    ok("bank: no prompt, option or tile still carries a brace",
+       bank.items.every(it => !/[{}]/.test((it.q || "").replace(/<[^>]+>/g, ""))
+                           && !(it.tiles || []).some(t => /[{}]/.test(t))));
+    const root = doc.querySelector('[data-bank="' + bank.id + '"]');
+    click(win, root.querySelector('[data-b="go"]'));
+    await new Promise(r => setTimeout(r, 20));
+    ok("bank: a run starts, one question at a time",
+       !!root.querySelector(".engine") && /1 of 10/.test(root.textContent));
+    const seen = JSON.parse(win.localStorage.getItem("en8:seen:v1") || "{}")[bank.id] || {};
+    const first = Object.keys(seen).filter(k => k !== "_t");
+    ok("bank: the run drew exactly `draw` items", first.length === bank.draw, first.length);
+
+    /* A second draw takes none of the first, while unseen items remain. */
+    const w2 = await settled(load("docs/unit-01/lesson-3/index.html", {
+      "en8:seen:v1": JSON.stringify({ [bank.id]: seen }),
+    }, fastPage));
+    click(w2, w2.document.querySelector('[data-b="go"]'));
+    await new Promise(r => setTimeout(r, 20));
+    const seen2 = JSON.parse(w2.localStorage.getItem("en8:seen:v1"))[bank.id];
+    const second = Object.keys(seen2).filter(k => k !== "_t" && seen2[k] === seen2._t);
+    ok("bank: the next run draws items not asked last time",
+       second.length === bank.draw && second.every(k => !first.includes(k)));
+
+    const fab = doc.querySelector("[data-words-open]"), sheet = doc.getElementById("words");
+    ok("sheet: every lesson page has the Words button", !!fab && !!sheet);
+    ok("sheet: it holds the unit's whole vocabulary",
+       sheet.querySelectorAll(".entry").length === data.vocabIntake.length || sheet.querySelectorAll(".entry").length > 20);
+    click(win, fab);
+    ok("sheet: it opens", sheet.hasAttribute("open"));
+    click(win, sheet.querySelector("[data-words-close]"));
+    ok("sheet: closing it leaves the page scrollable",
+       !sheet.hasAttribute("open") && !doc.documentElement.classList.contains("sheet-open"));
+    const find = sheet.querySelector(".sheet-find input");
+    find.value = "thời gian";
+    find.dispatchEvent(new win.Event("input", { bubbles: true }));
+    const shown = [...sheet.querySelectorAll(".entry")].filter(x => !x.hidden);
+    ok("sheet: search finds a word by its Vietnamese", shown.length >= 1 && shown.length < 10, shown.length);
+  }
+
+  /* ---- the intake's sets open in order ---------------------------------- */
+  {
+    const win = await settled(load("docs/unit-01/lesson-2/index.html", null, fastPage));
+    const box = win.document.querySelector('[data-role="vocab"]');
+    const later = box.querySelector('.v-sets [data-set="3"]');
+    ok("intake: a set further on cannot be opened before the ones before it",
+       !!later && later.disabled);
+  }
+
   /* ---- the vocabulary intake: meet, recall, list -------------------------
      Three stages over one set. The stage that matters most is the last one,
      because it is where a well-meaning "you improved!" would go in and where
@@ -960,9 +1018,9 @@ async function main() {
        !!box.querySelector(".engine"), box.querySelector(".v-stage").innerHTML.slice(0, 60));
 
     /* Stage three is reached by seeding a finished attempt rather than by
-       answering through the engine: the engine re-queues a miss on purpose
-       ("wrong answers come straight back"), so a walk that answers everything
-       wrong never terminates. Seeding also exercises the restore path — a
+       answering through the engine: a miss comes back later in the run (twice
+       at most), so a walk that answers everything wrong is long and says
+       nothing about the listing. Seeding also exercises the restore path — a
        learner returning tomorrow lands on the set they finished, not back at
        word one. */
     const w2 = await settled(load("docs/unit-01/lesson-2/index.html", {
@@ -977,9 +1035,9 @@ async function main() {
     ok("intake: and is offered the same set again",
        !!box2.querySelector('[data-v="retest"]'));
 
-    const log = box2.querySelector(".v-log").textContent;
+    const log = (box2.querySelector(".runs") || { textContent: "" }).textContent;
     ok("intake: both attempts are listed separately",
-       /#1 — 5\/9/.test(log) && /#2 — 7\/9/.test(log), log.slice(0, 110));
+       /5\/9\D{0,4}7\/9/.test(log), log.slice(0, 110));
     ok("intake: nothing is totalled, averaged or called progress",
        !/total|average|overall|mastered|improv|better|worse|%/i.test(log),
        log.slice(0, 160));
@@ -1022,7 +1080,8 @@ async function main() {
     click(win, task.querySelector(".t-check"));
     await new Promise(r => setTimeout(r, 40));
     const hist = task.querySelector(".t-log").textContent;
-    ok("retake: both attempts are kept", /#1/.test(hist) && /#2/.test(hist), hist.slice(0, 90));
+    ok("retake: both attempts are kept",
+       task.querySelectorAll(".t-log .runs b").length === 2, hist.slice(0, 90));
     ok("retake: attempts are not totalled, averaged or called an improvement",
        !/total|average|overall|better|worse|improv|%/i.test(hist), hist.slice(0, 120));
 
@@ -1307,11 +1366,23 @@ async function main() {
     ok("picked: no marked task on any of the " + pages.length + " pages has a text box",
        withBoxes.length === 0, withBoxes.join(", "));
 
-    const win = await settled(load("docs/unit-01/lesson-3/index.html"));
+    /* The page is FOUND, not named: the first lesson whose own tasks carry a
+       built item, a tapped item and a picked gap. Naming one ties the test to
+       where a unit happens to put its drills, and the grammar drills moved
+       into a practice bank once already. */
+    const pageData = rel => JSON.parse(/<script id="page-data"[^>]*>([\s\S]*?)<\/script>/
+      .exec(fs.readFileSync(path.join(ROOT, rel), "utf8"))[1]);
+    const WIDGETS = pages.find(pg => {
+      const t = pageData(pg).tasks || [];
+      return t.some(x => x.items.some(it => it.tiles)) && t.some(x => x.items.some(it => it.tap))
+          && t.some(x => x.items.some(it => it.opts && !it.tap && /_{3,}/.test(it.q)));
+    });
+    ok("widgets: some lesson carries built, tapped and gap items", !!WIDGETS);
+    const win = await settled(load(WIDGETS));
     const doc = win.document;
     const P = JSON.parse(doc.getElementById("page-data").textContent);
     const taskOf = pred => P.tasks.find(t => t.items.some(pred));
-    const tt = taskOf(it => it.tiles), tp = taskOf(it => it.tap), tg = taskOf(it => it.opts && !it.tap);
+    const tt = taskOf(it => it.tiles), tp = taskOf(it => it.tap), tg = taskOf(it => it.opts && !it.tap && /_{3,}/.test(it.q));
     const rootOf = t => doc.querySelector('[data-task="' + t.id + '"]');
 
     /* Tiles: build item 1 right from its own tiles, leave the rest. */
@@ -1361,7 +1432,7 @@ async function main() {
        !!liC.querySelector(".i-tok.was"));
 
     /* A picked word lands in the sentence's gap. */
-    const gr = rootOf(tg), gi = tg.items.findIndex(it => /i-gap|___/.test(it.q) || true);
+    const gr = rootOf(tg), gi = tg.items.findIndex(it => /_{3,}/.test(it.q));
     const gli = gr.querySelector('.i[data-i="' + gi + '"]');
     const gap = gli.querySelector(".i-gap");
     if (gap) {
@@ -1378,7 +1449,7 @@ async function main() {
       const k = win.localStorage.key(i);
       store[k] = win.localStorage.getItem(k);
     }
-    const again = (await settled(load("docs/unit-01/lesson-3/index.html", null, w => {
+    const again = (await settled(load(WIDGETS, null, w => {
       for (const k of Object.keys(store)) w.localStorage.setItem(k, store[k]);
     }))).document;
     const back0 = again.querySelector('[data-task="' + tt.id + '"] .i[data-i="0"]');

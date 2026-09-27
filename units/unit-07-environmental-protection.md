@@ -9,7 +9,7 @@
 | Strand | Target |
 | --- | --- |
 | **Pronunciation** | /bl/ vs /kl/ — *blue* vs *clean* |
-| **Grammar** | **Complex sentences** with adverbial clauses of time |
+| **Grammar** | Sentences with a time clause — **When** the rain **stops**, we **will** plant the trees. |
 | **Reading** | The morning a reef came back through the harbour |
 | **Speaking** | Asking and answering about Vu Quang National Park |
 | **Listening** | A teacher tells the school what the coral has damaged |
@@ -20,8 +20,6 @@
 ## Lesson 1 — Getting Started
 
 ### Dialogue: The water behind the school
-
-*Read the conversation aloud. Then answer the questions below.*
 
 ::: dialogue title="The water behind the school" bg="school-yard" gramen="when — a time clause" gramvi="Mệnh đề thời gian bắt đầu bằng *when, before, after, until*. Nếu nó đứng trước mệnh đề chính thì có dấu phẩy ngăn cách." gramco="When the rain stops, we will go"
 @cast Tí|neutral, Thảo|worried
@@ -47,7 +45,7 @@
 
 ### 1.1 Comprehension
 
-::: task skill="course" type="short-answer" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+::: task skill="course" type="short-answer" ask="Choose the answer from the scene."
 - Tí saw the change before Thảo did. On which day? {Monday | Saturday | Sunday} = Monday
 - Tí believes a single workshop can destroy a whole harbour before anyone notices. Which relative gave him that idea? {his uncle | his grandmother | his father} = his uncle
 - Cô Yến put this lane in charge of the harbour after it failed at one thing. What could the lane not do? {agree about anything | organise a clean-up | find any evidence} = agree about anything
@@ -66,10 +64,7 @@
 
 ### 1.3 Notice the grammar
 
-Every line below is missing the word that joins its **time clause** to the rest
-of the sentence.
-
-::: task skill="course" type="choice" opts="after|as soon as|once|until|whenever" ask="Go back to the scene, find the line, and pick the joining word the speaker actually used."
+::: task skill="course" type="choice" opts="after|as soon as|once|until|whenever" ask="Find the line in the dialogue. Which word does the speaker use?"
 - **Tí:** It started changing colour ___ the workshop opened on the other bank. = after
 - **Tí:** ___ the fish went, the birds stopped coming too. = as soon as
 - **Tí:** ___ we have photographs and dates, she can take them to the district office. = once
@@ -77,13 +72,139 @@ of the sentence.
 - **Thảo:** ___ I walk past that water now, I feel angry. = whenever
 :::
 
-> **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **câu phức** với mệnh
-> đề trạng ngữ chỉ thời gian (*when, while, before, after, as soon as, until,
-> since, once, whenever*). Chi tiết ở Lesson 3.
+> **Ghi chú:** *after, as soon as, once, until, whenever* đều cho biết **khi
+> nào** việc gì xảy ra. Chúng mở đầu một **mệnh đề thời gian**. Lesson 3 giải
+> thích cách dùng.
 
 ---
 
 ## Lesson 2 — A Closer Look 1
+
+### Meet the words
+
+::: vocab size="7"
+@ gap-fill ask="Choose the word that fits."
+- Smoke from the brick kiln causes air ___ in our village. {pollution | conservation | wildlife} = pollution
+- Water ___ has killed most of the fish in the canal. {pollution | extinction | conservation} = pollution
+- People cut down so many trees on the hill that ___ caused floods in the valley. {deforestation | conservation | awareness} = deforestation
+- Farmers burned the forest to grow coffee, and now ___ is a big problem in the mountains. {deforestation | conservation | wildlife} = deforestation
+- The saola is ___ now; very few are left. {endangered | toxic | single-use} = endangered
+- Sea turtles are ___ animals, so the rangers guard their eggs day and night. {endangered | toxic | single-use} = endangered
+- The tiger and the saola are both ___ in Viet Nam. {endangered species | national parks | carbon footprints} = endangered species
+- Cutting down the forest destroys the ___ of hundreds of animals. {habitat | conservation | extinction} = habitat
+- The muddy river bank is the natural ___ of this small green frog. {habitat | species | pesticide} = habitat
+- Scientists found a new ___ of butterfly in the forest last year. {species | habitat | ecosystem} = species
+- More than twenty ___ of birds live around the lagoon. {species | habitats | ecosystems} = species
+- The Green Club works on the ___ of the mangrove forest and its animals. {conservation | pollution | extinction} = conservation
+- My aunt has a job in wildlife ___ — she helps to keep wild animals safe. {conservation | pollution | deforestation} = conservation
+- After the festival, the park was full of ___ — cans, paper and plastic bags. {litter | sewage | coral} = litter
+- People who ___ in the street should pay a fine. {litter | recycle | preserve} = litter
+- Don't throw that bottle away — we can ___ it. {recycle | reduce | contaminate} = recycle
+- The factory takes old newspapers and ___ them into new paper. {recycles | reduces | pollutes} = recycles
+- Turning off the fan when you leave the room will ___ the electricity bill. {reduce | reuse | preserve} = reduce
+- We want to ___ the amount of plastic in the school canteen by half. {reduce | recycle | contaminate} = reduce
+- Don't throw away that jam jar — ___ it as a pot for pens and pencils. {reuse | reduce | contaminate} = reuse
+- Thảo ___ the backs of her old worksheets for drawing. {reuses | reduces | pollutes} = reuses
+- The broken drain carries ___ into the harbour, and the water smells terrible. {sewage | coral | wildlife} = sewage
+- The houses along the canal pour their ___ straight into it. {sewage | coral | awareness} = sewage
+- Farmers here use less ___ than they did ten years ago, so there are more insects in the fields. {pesticide | sewage | litter} = pesticide
+- The farmer sprays ___ on his vegetables to kill the insects. {pesticide | sewage | coral} = pesticide
+- Oil from the boats can ___ the water in the harbour. {contaminate | preserve | reuse} = contaminate
+- Chemicals from the workshop have ___ the soil, so nothing grows there now. {contaminated | protected | recycled} = contaminated
+- The rangers ___ the turtles' eggs from dogs and birds. {protect | pollute | reduce} = protect
+- Wear a hat to ___ your face from the sun. {protect | recycle | reduce} = protect
+- The village wants to ___ its old wooden houses so that children can still see them in fifty years. {preserve | contaminate | reduce} = preserve
+- The old people of the village want to ___ the mangrove forest exactly as it is. {preserve | contaminate | litter} = preserve
+- We camped for two nights in a ___ near Huế and saw lots of rare birds. {national park | campfire | habitat} = national park
+- Phong Nha-Kẻ Bàng is a famous ___ with huge caves. {national park | species | wildlife} = national park
+- We saw monkeys, snakes and rare birds — the ___ in this forest is amazing. {wildlife | carbon dioxide | litter} = wildlife
+- Plastic in the sea is a danger to ___ such as turtles and seabirds. {wildlife | habitat | coral} = wildlife
+- Cô Yến's talk raised the students' ___ of the dirty harbour. {awareness | conservation | evidence} = awareness
+- Very few people in our village have any ___ of how dangerous the smoke is. {awareness | wildlife | habitat} = awareness
+- The club's main job is to raise ___ among younger students. {awareness | conservation | pollution} = awareness
+- The fish, the plants and the water in a coral reef all depend on one another: together they form one ___ . {ecosystem | habitat | species} = ecosystem
+- When one animal disappears from a lake, the whole ___ changes. {ecosystem | carbon footprint | campfire} = ecosystem
+- Trees take in ___ and release oxygen. {carbon dioxide | carbon footprint | global warming} = carbon dioxide
+- Cars and motorbikes give off ___ , a gas that warms the planet. {carbon dioxide | awareness | sewage} = carbon dioxide
+- Cycling to school instead of going by motorbike makes your ___ smaller. {carbon footprint | habitat | ecosystem} = carbon footprint
+- Buying fruit that grows near your home keeps your ___ small. {carbon footprint | campfire | coral} = carbon footprint
+- Burning coal, oil and gas is the main cause of ___ . {global warming | extinction | awareness} = global warming
+- Because of ___ , summers in Quy Nhơn are getting hotter every year. {global warming | conservation | wildlife} = global warming
+- Hunting pushed the Javan rhino in Viet Nam to ___ — the last one died in 2010. {extinction | conservation | pollution} = extinction
+- If nobody protects the saola, it will face ___ . {extinction | awareness | habitat} = extinction
+- Warmer seas have turned the ___ around the islands white. {coral | ecosystem | carbon footprint} = coral
+- Divers at Hòn Mun love the bright red and yellow ___ under the water. {coral | sewage | campfire} = coral
+- The waste behind the workshop is ___ , so nobody should touch it. {toxic | single-use | endangered} = toxic
+- Keep that cleaning liquid away from the baby — it's ___ . {toxic | endangered | single-use} = toxic
+- Bring your own bag — the shop doesn't give out ___ plastic bags any more. {single-use | toxic | endangered} = single-use
+- ___ straws are used for a few minutes and then stay in the sea for hundreds of years. {Single-use | Toxic | Endangered} = Single-use
+- Put out your ___ with water before you leave the campsite. {campfire | carbon footprint | ecosystem} = campfire
+- At the school camp we sat around the ___ and sang songs until late. {campfire | coral | habitat} = campfire
+- More than three hundred residents ___ in the clean-up last Sunday. {participated | protected | recycled} = participated
+- Would you like to ___ in the tree-planting day on Saturday? {participate | preserve | contaminate} = participate
+@ choice ask="Which word or phrase means this?"
+- the place where a particular kind of plant or animal lives {habitat | ecosystem | species} = habitat
+- the way the living and non-living things in one area are all connected {ecosystem | habitat | wildlife} = ecosystem
+- the amount of carbon dioxide a person or an activity puts into the air {carbon footprint | global warming | pollution} = carbon footprint
+- the moment when the last animal of a kind dies and the kind is gone for ever {extinction | deforestation | pollution} = extinction
+- made to be used once and then thrown away {single-use | toxic | endangered} = single-use
+- cutting down forests over a large area {deforestation | conservation | pollution} = deforestation
+- dirty waste water from houses and toilets {sewage | litter | pesticide} = sewage
+- a chemical that farmers use to kill insects {pesticide | sewage | carbon dioxide} = pesticide
+- to take part in an activity {participate | preserve | protect} = participate
+- to make something dirty or harmful by adding something bad to it {contaminate | reduce | reuse} = contaminate
+- the slow rise in the temperature of the whole planet {global warming | carbon dioxide | extinction} = global warming
+- a group of animals or plants of the same kind {species | wildlife | habitat} = species
+- knowing about a problem and understanding why it matters {awareness | conservation | extinction} = awareness
+- to use something again instead of throwing it away {reuse | reduce | recycle} = reuse
+- to make something smaller in amount {reduce | reuse | recycle} = reduce
+@ choice ask="What does this word mean?"
+- endangered {at risk of dying out | very dirty | used only once} = at risk of dying out
+- toxic {poisonous | very rare | made by hand} = poisonous
+- conservation {protecting nature | cutting down trees | making things dirty} = protecting nature
+- wildlife {animals and plants living in nature | a big park with a fence | a hunting trip} = animals and plants living in nature
+- litter {rubbish left lying in a public place | waste water in pipes | a gas from cars} = rubbish left lying in a public place
+- preserve {keep something as it is, so it is not lost | throw something away | make something dirty} = keep something as it is, so it is not lost
+- coral {a hard material built on the sea floor by tiny sea animals | a kind of sea grass | the sand on a beach} = a hard material built on the sea floor by tiny sea animals
+- campfire {an outdoor fire that people sit around | a stove in a kitchen | a lamp for a tent} = an outdoor fire that people sit around
+- national park {a large area of nature that the government protects | a small garden in a city | a farm for wild animals} = a large area of nature that the government protects
+- carbon dioxide {a gas that cars and factories give off | a liquid that kills insects | a kind of plastic} = a gas that cars and factories give off
+@ choice opts="in|of|from|into|on" ask="Which word completes the phrase?"
+- Over two hundred students participated ___ the clean-up. = in
+- After the festival, the river was full ___ litter. = of
+- Sunscreen protects your skin ___ burning. = from
+- The rangers protect the turtles ___ hunters. = from
+- The saola is ___ danger of extinction. = in
+- Many species are at risk ___ extinction. = of
+- The turtles depend ___ this beach to lay their eggs. = on
+- Fish cannot live ___ toxic water. = in
+- Old plastic bottles can be recycled ___ new bags. = into
+- This lagoon is the habitat ___ many rare birds. = of
+@ odd-one-out
+- reduce · reuse · recycle · contaminate = contaminate ~ the others are ways of making less waste
+- habitat · species · wildlife · sewage = sewage ~ the others are about living things and where they live
+- protect · preserve · conserve · pollute = pollute ~ the others mean to keep something safe
+- sewage · litter · pesticide · coral = coral ~ the others make nature dirty or harmful
+- pollution · deforestation · global warming · conservation = conservation ~ the others are problems for the environment
+- coral · turtle · dugong · campfire = campfire ~ the others live in the sea
+- plastic bag · straw · paper cup · national park = national park ~ the others are often single-use
+- carbon dioxide · smoke · sewage · awareness = awareness ~ the others make the air or the water dirty
+@ error-correction
+- Over three hundred people participated to the clean-up. {in | at | for} = to -> in ~ participate **in**
+- The rangers protect the turtles of hunters. {from | with | at} = of -> from ~ protect something **from** danger
+- Factories release a lot of carbon footprint into the air. {carbon dioxide | global warming | coral} = carbon footprint -> carbon dioxide ~ **carbon dioxide** is the gas; a **carbon footprint** is how much of it you cause
+- Take a cloth bag to the market to reuse plastic waste. {reduce | recycle | contaminate} = reuse -> reduce ~ a cloth bag means **less** plastic
+- The chemicals from the factory preserved the river. {contaminated | protected | reduced} = preserved -> contaminated ~ chemicals make water dirty
+- The tiger is toxic in Viet Nam; very few are left in the wild. {endangered | single-use | national} = toxic -> endangered ~ very few left means **endangered**
+- My uncle sprays sewage on his rice to kill the insects. {pesticide | coral | litter} = sewage -> pesticide ~ **pesticide** kills insects
+- Remember to put out the habitat before you go to sleep at the camp. {campfire | ecosystem | coral} = habitat -> campfire ~ you put out a **campfire**
+@ sentence-build
+- the rangers / protect / the turtles / from hunters {protects | of} = The rangers protect the turtles from hunters
+- factories / release / carbon dioxide / into the air {releases | in} = Factories release carbon dioxide into the air
+- many students / participate / in the clean-up {participates | to} = Many students participate in the clean-up
+- we / should / reuse / plastic bags {reuses | reusing} = We should reuse plastic bags/Should we reuse plastic bags
+- cycling / reduce / your carbon footprint {reducing} = Cycling reduces your carbon footprint
+:::
 
 ### Vocabulary — Environmental protection
 
@@ -118,76 +239,9 @@ of the sentence.
 | 27 | campfire | /ˈkæmpfaɪə(r)/ | n | lửa trại |
 | 28 | participate | /pɑːˈtɪsɪpeɪt/ | v | tham gia |
 
-> ### ▶︎ [**Practise these 28 words**](../app/unit-07-vocab.html)
->
-> When you have finished this lesson, the unit page opens a **practice**
-> session over all twenty-eight — the meaning, the word, and, more often than
-> either of those, **the word inside a phrase it actually lives in**. Wrong
-> answers come straight back, and everything returns a week later, because
-> what you can still recall after a gap is the only recall worth counting. The
-> **unit test** opens once all seven lessons are done.
->
-> **Luyện 28 từ này.** Học xong bài này, phần
-> **practice** ở trang bài sẽ mở ra để luyện cả 28 từ — trong đó phần lớn là
-> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
-> ngay, và mọi từ quay lại sau một tuần.
->
-> Do the exercises below as well — they put the words back inside sentences.
-
-### Meet the words
-
-The table above is there to look things up in. This is where you actually meet
-them: a few at a time, then answer on the few you have just met.
-
-::: vocab size="7"
-:::
-
-### 2.1 Complete the sentences
-
-::: task skill="course" type="gap-fill" ask="Choose the word from the table that fits."
-- Farmers here use less ___ than they did ten years ago, so there are more insects in the fields. {pesticide | sewage | litter} = pesticide
-- Cutting down the forest destroys the ___ of hundreds of animals. {habitat | conservation | extinction} = habitat
-- Don't throw that bottle away — we can ___ it. {recycle | reduce | contaminate} = recycle
-- The saola is ___ now; very few are left. {endangered | toxic | single-use} = endangered
-- Untreated ___ from the town runs straight into the river. {sewage | carbon dioxide | coral} = sewage
-- The club's main job is to raise ___ among younger students. {awareness | conservation | pollution} = awareness
-:::
-
-### 2.2 Odd one out
-
-::: task skill="course" type="choice" variant="odd-one-out" ask="The reason appears when you check."
-- reduce · contaminate · reuse · recycle = contaminate ~ the other three are ways of creating less waste
-- habitat · species · sewage · wildlife = sewage ~ the others are about living things and where they live
-- protect · preserve · conserve · pollute = pollute ~ the others mean to look after or keep something safe
-:::
-
-### 2.3 One word, one meaning
-
-The five terms below are the ones this unit is built on. Each has a meaning you
-can say in a single sentence — learn the sentence, not just the translation.
-
-::: task skill="course" type="choice" opts="ecosystem|habitat|carbon footprint|extinction|single-use" ask="Which term does each meaning describe?"
-- the way the living and non-living things in one area are all connected to each other = ecosystem ~ a whole area working together — a lake, a forest, a reef
-- the place where a particular kind of plant or animal lives = habitat ~ one species, one home
-- the amount of carbon dioxide a person or an activity releases into the environment = carbon footprint
-- the point at which the last animal of a kind dies and the kind is gone for ever = extinction
-- made to be used once and then thrown away = single-use
-:::
-
 > **Ghi chú:** **Ecosystem** rộng hơn **habitat**: một hệ sinh thái gồm nhiều
 > môi trường sống và cả những thứ không sống (nước, đất, ánh sáng). Một loài
 > chỉ có một **habitat**, nhưng sống trong cả một **ecosystem**.
-
-### 2.4 Complete the sentences
-
-::: task skill="course" type="gap-fill" ask="Choose one of the new words from rows 19–28."
-- Trees take in ___ and release oxygen. {carbon dioxide | carbon footprint | global warming} = carbon dioxide
-- Warmer seas have turned the ___ around the islands white. {coral | ecosystem | carbon footprint} = coral
-- The waste behind the workshop is ___ , so nobody should touch it. {toxic | single-use | endangered} = toxic
-- Burning coal, oil and gas is the main cause of ___ . {global warming | extinction | awareness} = global warming
-- Put out your ___ with water before you leave the campsite. {campfire | carbon footprint | ecosystem} = campfire
-- More than three hundred residents ___ in the clean-up last Sunday. {participated | participate | participating} = participated
-:::
 
 > ⚠️ **Bẫy thường gặp:** **participate** luôn đi với **in**: *participate **in**
 > a clean-up*. ❌ *participate a clean-up*. Còn **coral** vừa đếm được vừa
@@ -222,7 +276,7 @@ between them. The second sound is /l/ in both. Only the first sound differs.
 > **chemical** /ˈkemɪkl/ — *ch* ở đầu đọc là /k/ **không có** /l/ theo sau.
 > (Cụm /kl/ trong từ này nằm ở cuối, phần *-cal*.)
 
-### 2.5 Sort the sounds
+### 2.1 Sort the sounds
 
 ::: task skill="course" type="sort" opts="/bl/|/kl/" ask="Which sound is in each word?"
 - blue = /bl/
@@ -239,16 +293,16 @@ between them. The second sound is /l/ in both. Only the first sound differs.
 - include = /kl/
 :::
 
-### 2.6 Odd cluster out
+### 2.2 Odd sound out
 
-::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **cluster**, not the meaning."
+::: task skill="course" type="choice" variant="odd-one-out" ask="Listen for the **sound**, not the meaning."
 - blue · black · clean · blame = clean ~ *clean* is /kl/; the others are /bl/
 - blow · clear · climate · close = blow ~ *blow* is /bl/; the others are /kl/
 - problem · possible · recycle · terrible = recycle ~ *recycle* is /kl/; the others are /bl/
 - clothes · blossom · climb · clever = blossom ~ *blossom* is /bl/; the others are /kl/
 :::
 
-### 2.7 Say these sentences
+### 2.3 Say these sentences
 
 Read aloud three times, faster each time. Record yourself if you can.
 
@@ -259,126 +313,193 @@ Read aloud three times, faster each time. Record yourself if you can.
 
 ---
 
-::: bridge name="The same drill as Unit 6, on two new clusters" trains="Pronunciation" cefr="A2" marker="[S]" src="07 §5.5.3"
-Work /bl/ and /kl/ the way you worked /br/ and /pr/ in Unit 6: **the voice and
-the puff of air on the first consonant**, not the cluster.
+::: bridge name="Buzz and puff on /bl/ and /kl/" trains="Pronunciation" cefr="A2" marker="[S]" src="07 §5.5.3"
+Work /bl/ and /kl/ the way you worked /br/ and /pr/ in Unit 6: focus on the
+**first** sound.
 
-Hand on the throat for /b/ against /p/; strip of paper in front of the mouth for
-the puff of air. Then say *black* and *class* one after the other until the
-first sound of each is doing the work.
+Hand on your throat for the buzz of /b/; strip of paper in front of your mouth
+for the puff of /k/. Then say *black* and *class* one after the other.
 
-> **Tiếng Việt:** Cách luyện giống Unit 6: chú ý **thanh** và **hơi bật** ở phụ
-> âm đầu, không phải ở cụm phụ âm.
+> **Tiếng Việt:** Luyện như Unit 6: chú ý **độ rung** và **hơi bật** ở âm đầu, rồi
+> đọc *black* và *class* nối tiếp nhau.
 :::
 
 ## Lesson 3 — A Closer Look 2
 
 ### Grammar — Complex sentences with time clauses
 
-In Unit 3 you built **compound** sentences: two clauses of **equal** weight,
-joined by *and, but, or, so*. This unit adds the next step.
+A **time clause** tells you **when** something happens. It starts with a time
+word like *when, before* or *after*, and it hangs on to a main part that can
+stand alone. A sentence with both parts is called a **complex sentence**.
 
-| Type | Shape | Example |
+> We cleaned the beach **before the tide came in**.
+> **When the rain stops**, we will plant the trees.
+
+#### 1 · One part stands alone, the other cannot
+
+*We cleaned the beach.* is a sentence on its own.
+*Before the tide came in.* is not — it needs the other part.
+
+| | What it looks like | Example |
 | --- | --- | --- |
-| **Simple** | one clause | *We cleaned the beach.* |
-| **Compound** | clause **+ *and/but/or/so* +** clause — equal partners | *We cleaned the beach, **and** the rangers took the bags away.* |
-| **Complex** | main clause **+ dependent clause** — unequal | *We cleaned the beach **before the tide came in**.* |
+| **Simple** | one part | *We cleaned the beach.* |
+| **Compound** | two equal parts joined by *and, but, or, so* | *We cleaned the beach, **and** the lorry took the bags away.* |
+| **Complex** | a main part + a time clause | *We cleaned the beach **before the tide came in**.* |
 
-The **independent (main) clause** can stand alone: *We cleaned the beach.* ✅
-The **dependent (time) clause** begins with a **subordinator** and cannot:
-*Before the tide came in.* ❌ — that is not a sentence.
+> **Ghi chú:** Phần chính (independent clause) đứng một mình được. Mệnh đề thời
+> gian (dependent clause) thì không — nó phải đi kèm phần chính.
 
-#### The subordinators of time
+#### 2 · The time words
 
-| Subordinator | Meaning | Nghĩa | Example |
+**when · while · before · after · as soon as · until · since · once · whenever**
+
+| Time word | Meaning | Nghĩa | Example |
 | --- | --- | --- | --- |
 | **when** | at that time | khi | **When** the rain stops, we will plant the trees. |
-| **while** | during the same period | trong khi | I collected bottles **while** he swept the path. |
+| **while** | during the same time | trong khi | I collected bottles **while** he swept the path. |
 | **before** | earlier than | trước khi | Wash the jars **before** you recycle them. |
 | **after** | later than | sau khi | **After** the factory closed, the fish came back. |
-| **as soon as** | immediately after | ngay khi | **As soon as** the bell rings, we will leave. |
-| **until** | up to that point | cho đến khi | We will keep asking **until** they answer. |
-| **since** | from that point up to now | kể từ khi | The lake has been dirty **since** the workshop opened. |
+| **as soon as** | straight after | ngay khi | **As soon as** the bell rings, we will leave. |
+| **until** | up to that moment | cho đến khi | We will keep asking **until** they answer. |
+| **since** | from that moment up to now | kể từ khi | The lake has been dirty **since** the workshop opened. |
 | **once** | after this has happened | một khi | **Once** the eggs hatch, the rangers release the turtles. |
 | **whenever** | every time | mỗi khi | **Whenever** I walk past, I feel angry. |
 
-#### Rule 1 — Order and comma
+#### 3 · Time clause first? Put a comma after it
 
-The time clause can come **first** or **second**. The meaning does not change,
-but the punctuation does.
+The time clause can come first or second. The meaning stays the same.
+Only the comma changes.
 
-| Order | Comma? | Example |
-| --- | --- | --- |
-| Time clause **first** | **Yes** — comma after it | **After we sorted the rubbish,** we weighed it. |
-| Time clause **second** | **No** comma | We weighed the rubbish **after we sorted it**. |
+> **After we sorted the rubbish,** we weighed it.
+> We weighed the rubbish **after we sorted it**.
 
-✅ *When the tide goes out, the beach is covered in plastic.*
-✅ *The beach is covered in plastic when the tide goes out.*
 ❌ *The beach is covered in plastic, when the tide goes out.*
 
-#### Rule 2 — No future tense inside the time clause
+#### 4 · About the future? No *will* after the time word
 
-This is the rule Vietnamese learners break most often. If the whole sentence is
-about the future, the **main clause** takes *will*, but the **time clause**
-stays in the **present simple**. This holds for every subordinator above.
+The main part takes *will*. The time clause keeps the plain present:
+*finish, arrives, stops*.
 
-❌ *When I **will finish** my homework, I will join the clean-up.*
-✅ *When I **finish** my homework, I **will join** the clean-up.*
-❌ *We will start as soon as the teacher **will arrive**.*
-✅ *We will start as soon as the teacher **arrives**.*
+> When I **finish** my homework, I **will join** the clean-up.
+> We **will start** as soon as the teacher **arrives**.
+
+❌ *When I will finish my homework, I will join the clean-up.*
 
 > ⚠️ **Bẫy thường gặp:** Tiếng Việt nói "Khi tôi **sẽ** làm xong…" nghe vẫn ổn,
-> nhưng tiếng Anh **cấm** *will* trong mệnh đề thời gian. Nhớ công thức:
-> **when + hiện tại đơn , … will + V**.
-> Và đừng nhầm câu ghép với câu phức: *and, but, or, so* nối hai vế **ngang
-> hàng** (compound); *when, after, until…* tạo một vế **phụ thuộc** (complex).
+> nhưng tiếng Anh **không** dùng *will* sau *when, before, after, until, as
+> soon as, once, whenever*. Nhớ: **when I finish**, … **I will join**.
 
-### 3.1 Simple, compound, or complex?
+#### 5 · *since* points back to one moment in the past
 
-::: task skill="course" type="choice" opts="S|CD|CX" ask="**S** for simple, **CD** for compound, **CX** for complex. Careful — one of these looks compound and is not."
-- The rangers move the eggs to a safe hatchery. = S
-- We collected the litter, and the school lorry took it away. = CD
-- Before the sun rose, the turtles returned to the sea. = CX
-- Deforestation destroys habitats and threatens endangered species. = S ~ one clause with two verbs sharing one subject
-- She has volunteered at the park since she left school. = CX
-- The water looked clean, but the test showed pesticide in it. = CD
+> The lake has been dirty **since** the workshop **opened**.
+> Nobody has fished here **since** the reef **came** back.
+
+❌ *The lake has been dirty since the workshop has opened.*
+
+> **Ghi chú:** Đừng nhầm hai loại câu: *and, but, or, so* nối hai phần **ngang
+> hàng**; *when, after, until…* mở đầu một phần **phụ thuộc**, không đứng một
+> mình được.
+
+### 3.1 Practice
+
+::: bank draw="10"
+@ gap-fill ask="Choose the time word that fits."
+- Wash the jars ___ you put them in the recycling bin. {before | after | since} = before
+- We waited under the trees ___ the rain stopped. {until | since | before} = until
+- The canal has smelled bad ___ the new market opened. {since | until | while} = since
+- Bà Sáu was cooking dinner ___ Tí was sweeping the step. {while | since | until} = while
+- Turn off the lights ___ you leave the classroom. {before | since | while} = before
+- ___ the eggs hatch, the rangers carry the baby turtles to the sea. {Once | Before | Until} = Once
+- We called the forest guards ___ we saw the smoke — we didn't wait a second. {as soon as | until | before} = as soon as
+- ___ it rains heavily, sewage flows into the stream. {Whenever | Before | Until} = Whenever
+- Thảo has photographed the water every morning ___ the workshop opened. {since | until | before} = since
+- We will keep writing letters ___ the district office answers. {until | since | while} = until
+- My brother was listening to music ___ he was doing his homework. {while | after | until} = while
+- ___ the factory closed, the fish came back to the river. {After | Until | While} = After
+- Put out the campfire ___ you go to sleep. {before | since | until} = before
+- Don't swim in the lake ___ the water is clean again. {until | since | while} = until
+- The birds stopped coming ___ the trees were cut down. {after | until | whenever} = after
+@ choice ask="Which part tells you **when**?"
+- As soon as the factory opened, the lake changed colour. {As soon as the factory opened | the lake changed colour} = As soon as the factory opened
+- We will not stop until the river is clean. {until the river is clean | We will not stop} = until the river is clean
+- Whenever it rains heavily, sewage flows into the stream. {Whenever it rains heavily | sewage flows into the stream} = Whenever it rains heavily
+- The birds came back after the villagers stopped using pesticide. {after the villagers stopped using pesticide | The birds came back} = after the villagers stopped using pesticide
+- While my sister sorted the plastic, I washed the glass. {While my sister sorted the plastic | I washed the glass} = While my sister sorted the plastic
+- Tí said nothing at all until the tide turned. {until the tide turned | Tí said nothing at all} = until the tide turned
+- Before any of us understood, the coral lifted a boat out of the water. {Before any of us understood | the coral lifted a boat out of the water} = Before any of us understood
+@ choice ask="Which one is a full sentence on its own?"
+- The beach {We cleaned the beach. | Before the tide came in.} = We cleaned the beach.
+- The river {After the factory closed. | The fish came back.} = The fish came back.
+- The rain {The volunteers will plant trees. | As soon as the rain stops.} = The volunteers will plant trees.
+- The recycling {While my sister sorted the plastic. | I washed the glass.} = I washed the glass.
+- The letters {Until the river is clean. | We will not stop.} = We will not stop.
+@ choice ask="Which sentence has a time clause?"
+- The turtles {We collected the litter, and the lorry took it away. | Before the sun rose, the turtles returned to the sea. | The rangers move the eggs to a safe place.} = Before the sun rose, the turtles returned to the sea.
+- The park {The water looked clean, but the test showed pesticide in it. | She has helped at the park since she left school. | Deforestation destroys habitats and threatens wildlife.} = She has helped at the park since she left school.
+- The door {Bà Sáu was angry, so she shut the door. | Bà Sáu shut the door when the wind came. | Bà Sáu shut the door and the window.} = Bà Sáu shut the door when the wind came.
+- The wall {Tí said nothing until the tide turned. | Tí said nothing and waited. | Tí said nothing, but Thảo understood.} = Tí said nothing until the tide turned.
+@ gap-fill ask="Choose the right form of the verb."
+- When I ___ my homework, I will join the clean-up. {finish | will finish | finished} = finish
+- We will start as soon as the teacher ___ . {arrives | will arrive | arrived} = arrives
+- I will call you after the meeting ___ . {ends | will end | ended} = ends
+- Don't go home until the teacher ___ you. {tells | will tell | told} = tells
+- Before you ___ that bottle away, check whether it can be recycled. {throw | will throw | threw} = throw
+- Once the club ___ enough bottles next month, we will sell them. {collects | will collect | collected} = collects
+- The rangers ___ the young turtles next week, once the eggs hatch. {will release | releasing | released} = will release
+- While Thảo takes photos tomorrow, Tí ___ the sacks. {will carry | carries | carried} = will carry
+- I ___ you a message as soon as I get home tonight. {will send | send | sent} = will send
+- We ___ up until the district office answers our letter. {won't give | don't give | didn't give} = won't give
+- The lake has been dirty since the workshop ___ . {opened | has opened | opens} = opened
+- Nobody has fished here since the reef ___ back. {came | has come | comes} = came
+- Hùng ___ in Quy Nhơn since he was born. {has lived | lives | will live} = has lived
+- Whenever Bống ___ a door, Bà Sáu shuts it again. {opens | will open | opened} = opens
+- Yesterday, when Tí ___ the coral, he ran to tell Thảo. {saw | sees | will see} = saw
+- After Chú Bảy ___ the net last night, he found only one fish in it. {pulled up | pulls up | will pull up} = pulled up
+- My mum always turns off the gas before she ___ the house. {leaves | will leave | left} = leaves
+- As soon as the tide ___ out this evening, we will look for the coral. {goes | will go | went} = goes
+@ choice ask="Which sentence is right?"
+- The beach {When the tide goes out, the beach is covered in plastic. | When the tide goes out the beach, is covered in plastic. | The beach is covered in plastic, when the tide goes out.} = When the tide goes out, the beach is covered in plastic.
+- The rubbish {We weighed the rubbish after we sorted it. | We weighed the rubbish, after we sorted it. | After we sorted the rubbish we, weighed it.} = We weighed the rubbish after we sorted it.
+- After school {When I finish school, I will help my dad. | When I will finish school, I will help my dad. | When I will finish school, I help my dad.} = When I finish school, I will help my dad.
+- The factory {The river has been dirty since the factory opened. | The river has been dirty since the factory has opened. | The river is dirty since the factory will open.} = The river has been dirty since the factory opened.
+- The tide {Before the tide came in, we cleaned the beach. | Before the tide came in we cleaned, the beach. | Before the tide will come in, we cleaned the beach.} = Before the tide came in, we cleaned the beach.
+- Thảo's plan {I'll photograph the water while I walk to school. | I'll photograph the water while I will walk to school. | I photograph the water while I will walk to school.} = I'll photograph the water while I walk to school.
+- The clean-up {We will start as soon as Cô Yến arrives. | We will start as soon as Cô Yến will arrive. | We start as soon as Cô Yến will arrive.} = We will start as soon as Cô Yến arrives.
+@ error-correction
+- When I will grow up, I want to work in conservation. {grow | grew | growing} = will grow -> grow ~ When I **grow** up — no *will* after *when*
+- I will call you after the meeting will end. {ends | ended | ending} = will end -> ends ~ after the meeting **ends**
+- Until the government will act, the pollution will continue. {acts | acted | acting} = will act -> acts ~ until the government **acts**
+- Once the club will collect enough bottles, we will sell them to the recycling centre. {collects | collected | collecting} = will collect -> collects ~ once the club **collects**
+- The canal has smelled bad since the new market has moved here. {moved | moves | will move} = has moved -> moved ~ since the market **moved**
+- The volunteers will plant the seedlings as soon as the ground will be soft. {is | was | being} = will be -> is ~ as soon as the ground **is** soft
+- Before you will leave, turn off the fan. {leave | left | leaving} = will leave -> leave ~ before you **leave**
+- While Tí will carry the sacks tomorrow, Thảo will take photos. {carries | carried | carrying} = will carry -> carries ~ while Tí **carries**
+- The fish came back after the factory closes. {closed | will close | closing} = closes -> closed ~ the fish **came** back after the factory **closed**
+- Thảo has lived on this lane since she is three. {was | will be | has been} = is -> was ~ since she **was** three
+- We waited on the wall until the tide turns. {turned | will turn | turning} = turns -> turned ~ we **waited** until the tide **turned**
+- Whenever it will rain, the drain overflows. {rains | rained | raining} = will rain -> rains ~ whenever it **rains**
+@ sentence-build
+- after / the lesson / finish / we'll / walk / to the lake {finished} = After the lesson finishes, we'll walk to the lake/We'll walk to the lake after the lesson finishes
+- before / you / leave / the house / turn off / the lights {left} = Before you leave the house, turn off the lights/Before you leave the house, turn the lights off/Turn off the lights before you leave the house/Turn the lights off before you leave the house
+- whenever / I / see / litter / pick / it / up {sees | picked} = Whenever I see litter, I pick it up/I pick it up whenever I see litter
+- as soon as / the rain / stop / we'll / plant / the trees {stopped | will} = As soon as the rain stops, we'll plant the trees/We'll plant the trees as soon as the rain stops
+- after / the storm / pass / we / go out / to check / the nets {will pass} = After the storm passed, we went out to check the nets/We went out to check the nets after the storm passed
+- since / the workshop / open / the lake / be / dirty {has opened | is} = Since the workshop opened, the lake has been dirty/The lake has been dirty since the workshop opened
+- until / the tide / turn / Tí / wait / on the wall {will turn | waiting} = Until the tide turned, Tí waited on the wall/Tí waited on the wall until the tide turned
+- while / Thảo / take / photos / Tí / carry / the sacks {will take | carrying} = While Thảo took photos, Tí carried the sacks/Tí carried the sacks while Thảo took photos/While Tí carried the sacks, Thảo took photos/Thảo took photos while Tí carried the sacks
+- once / the eggs / hatch / the rangers / release / the baby turtles {hatches | releases} = Once the eggs hatch, the rangers release the baby turtles/The rangers release the baby turtles once the eggs hatch
+@ odd-one-out ask="Which word does not tell you when?"
+- when · after · until · because = because ~ *because* gives a reason: *because it rained*
+- before · since · and · as soon as = and ~ *and* just joins two equal parts
+- while · once · but · whenever = but ~ *but* joins two equal parts that disagree
+- until · so · after · when = so ~ *so* gives a result: *it rained, so we stayed in*
+- after · before · or · whenever = or ~ *or* gives a choice
 :::
 
-### 3.2 Find the time clause
+### 3.2 About you
 
-Say the time clause in each sentence, then check the Answer Key.
-
-1. As soon as the factory opened, the lake changed colour. → _______________
-2. We will not stop until the river is clean. → _______________
-3. Whenever it rains heavily, sewage flows into the stream. → _______________
-4. The birds came back after the villagers stopped using pesticide. → _______________
-5. While my sister sorted the plastic, I washed the glass. → _______________
-
-### 3.3 Join the two sentences
-
-::: task skill="course" type="short-answer" variant="sentence-build" ask="Use the subordinator in brackets, put the time clause **first**, and punctuate it correctly."
-- The lesson finishes. We will walk to the lake. *(after)* {finish | walks} = After the lesson finishes, we will walk to the lake./After the lesson finishes, we'll walk to the lake. ~ the time clause comes first, so it takes a comma after it
-- You leave the house. Turn off all the lights. *(before)* {leaves | turns} = Before you leave the house, turn off all the lights./Before you leave the house, turn all the lights off.
-- I see litter in the playground. I pick it up. *(whenever)* {sees | picked} = Whenever I see litter in the playground, I pick it up.
-- The rain stops. The volunteers will plant. *(as soon as)* {stop | plants} = As soon as the rain stops, the volunteers will plant. ~ no *will* inside the time clause, even though the sentence is about the future
-- The storm passed. We went out to check the nets. *(after)* {passes | goes} = After the storm passed, we went out to check the nets.
-:::
-
-### 3.4 Correct the mistake
-
-::: task skill="course" type="short-answer" variant="error-correction"
-- When I will grow up, I want to work in conservation. {grow | grew | growing} = will grow -> grow ~ no *will* inside a time clause
-- I will call you after the meeting will end. {ends | ended | ending} = will end -> ends ~ present simple in the time clause
-- Until the government will act, the pollution will continue. {acts | acted | acting} = will act -> acts ~ present simple in the time clause
-- Once the club will collect enough bottles, we will sell them to the recycling centre. {collects | collected | collecting} = will collect -> collects ~ present simple in the time clause
-- The canal has smelled bad since the new market has moved here. {moved | moves | will move} = has moved -> moved ~ *since* points back to one moment in the past, so its clause takes the past simple
-- The volunteers will plant the seedlings as soon as the ground will be soft. {is | was | being} = will be -> is ~ present simple in the time clause
-:::
-
-### 3.5 About you
-
-Finish each sentence so it is **true for you**. Keep the time clause in the
-present simple.
+Finish each sentence so it is **true for you**. After the time word, don't use
+*will*.
 
 1. When I finish school today, ______________________
 2. I always feel happy whenever ______________________
@@ -414,16 +535,12 @@ present simple.
 | **The reason is that** nobody treats the waste. | Lý do là... |
 | Farmers use too much pesticide. **That's why** the fish died. | ...Đó là lý do... |
 
-> ⚠️ Note the grammar: after **why don't we** and **we could** use the **bare
-> infinitive** (*talk*, *start*); after **start by** use **V-ing**
-> (*collecting*).
+> ⚠️ why don't we **talk**, we could **start** — but start by **collecting**.
 
 #### Asking for clarification
 
-This unit is full of terms nobody is born knowing — *endangered species*, *in
-the wild*, *carbon footprint*. Stopping to ask what one means is not a sign
-that your English is weak. It is what people who use a second language well do
-all day.
+When you meet a term you don't know — *endangered species*, *in the wild*,
+*carbon footprint* — ask what it means.
 
 | Asking what a word means | Nghĩa |
 | --- | --- |
@@ -456,7 +573,7 @@ all day.
 
 ### 4.1 Complete the mini-dialogues
 
-::: task skill="course" type="gap-fill" ask="**A** raises a worry, **B** answers it. Choose the word that fits — every one is in the tables above."
+::: task skill="course" type="gap-fill" ask="**A** raises a worry, **B** answers. Choose the word that fits."
 - **A:** I'm ___ about the smoke from the brick kiln. {worried | terrible | clear} = worried
 - **B:** You're ___ . My little brother coughs every evening. {right | worried | clear} = right
 - **A:** ___ causes the brown colour in the lake? {What | Why | Because} = What
@@ -587,7 +704,7 @@ Answer in full sentences.
 
 ### 5.1 True, False, or Not Given
 
-::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way"
+::: task skill="reading" type="true-false-not-given" ask="**True**: the text says so. **False**: the text says the opposite. **Not Given**: the text does not say."
 - The writer brought Bống to the clean-up by accident. = F ~ he brought her on purpose, meaning to send her home
 - By ten o'clock the students had filled forty sacks. = T
 - The reef came back slowly, over several days. = F ~ it came back all at once
@@ -609,7 +726,7 @@ Answer in full sentences.
 
 ### 5.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. The clock above is still running."
+::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. The clock is still running."
 - large rough bags for carrying heavy things {sacks | moorings | propellers} = sacks
 - a wall built out into the sea to keep the waves off a harbour {breakwater | slipway | channel} = breakwater
 - the deep lane of water that boats come in along {channel | shallows | moorings} = channel
@@ -618,8 +735,7 @@ Answer in full sentences.
 
 ### Speaking — Asking and answering about Vu Quang National Park
 
-> **Working alone:** you have no partner, so do this in three steps. It still
-> works — speaking practice is mostly about producing language out loud.
+> **Working alone:** you have no partner, so do this in three steps.
 
 **Fact file — Vu Quang National Park**
 
@@ -658,7 +774,7 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### 5.4 Read it again, against the clock
 
-You have already read *The morning the reef came back* and answered questions on it, so nothing here is new. This is about **speed**: the same text, read again, in less time.
+Read the same text again, faster each time.
 
 ::: fluency mode="read" words="307" secs="170|135|105" ask="Read *The morning the reef came back* again from the top. Stop the clock the moment you reach the end."
 - Do not stop to look anything up — you have met all of it
@@ -681,9 +797,8 @@ You have already read *The morning the reef came back* and answered questions on
 
 ### Listening — What the coral did
 
-You hear it **once**, read aloud by someone else. The talk gives the damage first and then what the school
-must do, in that order, and the two question sets follow it. Read both sets
-first, then answer as you listen — not afterwards, from memory.
+You hear it **once**, read aloud by someone else. Read both sets of questions
+first, then answer as you listen.
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả hai phần câu hỏi, rồi vừa
 nghe vừa trả lời.
@@ -726,9 +841,7 @@ goes over a second time. After that it stops being my decision.
 
 ### 6.2 Note completion
 
-The notes below are the shape this type always takes: headings and fragments,
-never full sentences. Choose each word **as you listen** — there is no transfer
-time at the end.
+Choose each word **as you listen**.
 
 ::: task skill="listening" type="completion"
 - Damage — the ___ is closed from end to end {channel | pipe | drain} = channel
@@ -739,19 +852,17 @@ time at the end.
 - Safety — a mooring rope parted at ___ in the morning {four | two | three} = four
 :::
 
-::: bridge name="Two cause-and-result sentences on what you just heard" trains="Grammatical Range & Accuracy" cefr="B1" marker="[Q]" src="05 §2.6"
+::: bridge name="Link a cause to its result" trains="Grammatical Range & Accuracy" cefr="B1" marker="[Q]" src="05 §2.6"
 After the listening, before the notice: write **two** sentences, each linking one
-named cause from the recording to one named effect. Use *because*, *as a result*
-or *this causes*.
+cause from the recording to one result. Use *because*, *as a result* or *this
+causes*.
 
 > Factories release waste into the river. **As a result,** fish die downstream.
 
-The listening you have just done is full of causes and effects. The only thing
-being added here is the words that name the link between them — which is what
-turns two facts into an explanation.
+The linking word turns two facts into an explanation.
 
-> **Tiếng Việt:** Viết **hai** câu nối một nguyên nhân với một kết quả từ bài
-> nghe, dùng *because / as a result / this causes*.
+> **Tiếng Việt:** Viết **hai** câu nối một nguyên nhân với một kết quả từ bài nghe,
+> dùng *because / as a result / this causes*.
 :::
 
 ### Writing — A notice
@@ -803,8 +914,7 @@ back at the friendly email you wrote in Unit 1 and notice the difference.
 
 #### Plan it — 6 questions your notice has to answer
 
-A notice is read standing up, once. Answer these in note form; anything
-that does not answer one of them does not belong on the notice.
+Answer these in note form. Leave out anything that answers none of them.
 
 | The question | Your answer — notes, in your own words |
 | --- | --- |
@@ -815,21 +925,18 @@ that does not answer one of them does not belong on the notice.
 | Who do they ask if something is unclear? | |
 | Whose notice is this? | |
 
-::: bridge name="Write the same three facts twice, and name what changed" trains="Lexical Resource" cefr="B1" marker="[SPEC]" src="07 §4.6"
+::: bridge name="Rewrite three facts for a friend" trains="Lexical Resource" cefr="B1" marker="[SPEC]" src="07 §4.6"
 Five minutes, after the notice is finished. Take **three facts** from it and
-write them again as a message to a friend. Then write one line naming what
-changed — word choice, sentence length, what you left out.
+write them again as a message to a friend. Then write one line saying what
+changed — the words, the sentence length, what you left out.
 
 > *Notice:* Volunteers should assemble at the main gate by 07:00.
 > *Message:* Meet me at the gate at 7 — don't be late!
 
-Same facts, different reader. Writing them twice is what makes the difference
-visible: a notice has to be complete and impersonal, a message to a friend can
-leave out anything they already know. Naming what changed is the part that
-sticks.
+A notice must give everything; a friend already knows some of it.
 
-> **Tiếng Việt:** Viết lại **ba** thông tin dưới dạng tin nhắn cho bạn, rồi nêu
-> **điều gì đã thay đổi** — cùng một nội dung, khác người đọc.
+> **Tiếng Việt:** Viết lại **ba** thông tin trong thông báo thành tin nhắn cho bạn,
+> rồi ghi một dòng: điều gì đã thay đổi.
 :::
 
 ::: thread id="articles" stage="check"
@@ -877,9 +984,9 @@ sticks.
 
 ### 7.3 Grammar check
 
-::: task skill="course" type="short-answer" variant="sentence-build" ask="Every verb in brackets needs putting into the right form."
-- When the rain (stop) this afternoon, we (plant) the seedlings. = When the rain stops this afternoon, we will plant the seedlings./We will plant the seedlings when the rain stops this afternoon./We will plant the seedlings this afternoon when the rain stops./When the rain stops, we will plant the seedlings this afternoon./When the rain stops this afternoon, we'll plant the seedlings.
-- I (call) you as soon as I (get) home tonight. {will | gets} = I will call you as soon as I get home tonight./I will call you tonight as soon as I get home./I'll call you as soon as I get home tonight.
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Put each verb in brackets into the right form."
+- When the rain (stop) this afternoon, we (plant) the seedlings. = When the rain stops this afternoon, we will plant the seedlings./We will plant the seedlings when the rain stops this afternoon./We will plant the seedlings this afternoon when the rain stops./When the rain stops, we will plant the seedlings this afternoon./When the rain stops this afternoon, we'll plant the seedlings./This afternoon we will plant the seedlings when the rain stops./This afternoon, we will plant the seedlings when the rain stops.
+- I (call) you as soon as I (get) home tonight. {will | gets} = I will call you as soon as I get home tonight./I will call you tonight as soon as I get home./I'll call you as soon as I get home tonight./Tonight I will call you as soon as I get home.
 - Before you (throw) that away, (check) whether it can be recycled. {throws | checks} = Before you throw that away, check whether it can be recycled./Check whether it can be recycled before you throw that away.
 - The river has been dirty since the factory (open) last year. = The river has been dirty since the factory opened last year.
 - We (not give) up until the district office (answer) our letter. = We will not give up until the district office answers our letter./We won't give up until the district office answers our letter.
@@ -888,8 +995,7 @@ sticks.
 
 ### 7.4 Error hunt
 
-This paragraph has **four** mistakes. Below, it comes one line at a time: tap
-each mistake, then choose the fix.
+This paragraph has **four** mistakes. Below, it comes one line at a time.
 
 > Seven marks are on the wall now, and Bống sits in the kitchen where
 > everybody can see her. When we will clear the last of the coral, the channel
@@ -899,7 +1005,7 @@ each mistake, then choose the fix.
 > will not sleep until this will leave our house. Cô Yến says our job now is
 > to pollute what is left of the harbour.
 
-::: task skill="course" type="short-answer" variant="error-correction" ask="Each line is part of the paragraph, with the earlier mistakes already put right."
+::: task skill="course" type="short-answer" variant="error-correction" ask="Earlier mistakes are already fixed."
 - When we will clear the last of the coral, the channel will be open again. {clear | cleared | clearing} = will clear -> clear ~ no *will* inside a time clause
 - Nobody has fished here since the reef has come back. {came | comes | coming} = has come -> came ~ *since* points back to one moment in the past, so its clause takes the past simple
 - Bà Sáu will not sleep until this will leave our house. {leaves | left | leaving} = will leave -> leaves ~ no *will* inside a time clause
@@ -947,9 +1053,9 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for protecting the environment | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 7, exercise 7.1 |
-| hear /bl/ and /kl/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
-| build complex sentences with a time clause | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 7, exercises 7.3 and 7.4 |
+| use the words for protecting the environment | Lesson 2, Meet the words · Lesson 7, exercise 7.1 |
+| hear /bl/ and /kl/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 7, exercise 7.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
+| build complex sentences with a time clause | Lesson 3, practice 3.1 · Lesson 7, exercises 7.3 and 7.4 |
 | ask someone to explain what they mean | Lesson 4, exercise 4.3 |
 | read a first-hand account of the morning the reef came back | Lesson 5, exercises 5.1 and 5.2 |
 | talk about Vu Quang National Park | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
@@ -970,20 +1076,15 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 2
 
-**2.7** Answers will vary — this is a speaking drill. Check: your /b/ buzzes and
+**2.3** Answers will vary — this is a speaking drill. Check: your /b/ buzzes and
 your /k/ does not, and there is no vowel between the consonant and the /l/.
 Item 4 is a knowledge check: *rubbish* is /ˈrʌbɪʃ/ (no /bl/) and *chemical* is
 /ˈkemɪkl/ (the *ch* is a plain /k/).
 
 ### Lesson 3
 
-**3.2** 1. As soon as the factory opened — *as soon as* 2. until the river is
-clean — *until* 3. Whenever it rains heavily — *whenever* 4. after the
-villagers stopped using pesticide — *after* 5. While my sister sorted the
-plastic — *while*
-
-**3.5** Answers will vary. Check: every time clause uses the **present simple**
-(no *will* after *when, whenever, before, until, as soon as*), and sentences
+**3.2** Answers will vary. Check: no *will* after *when, whenever, before,
+until, as soon as* (*When I **finish**…*, not *When I will finish…*), and sentences
 1, 3 and 5 have a comma after the time clause because it comes first.
 
 ### Lesson 4
@@ -998,7 +1099,7 @@ concrete, doable action (*We could start by…*, *Why don't we…*).
 what global warming is?*) — never *What means…?*, and never *What do you mean
 '…'?* without **by**. Then check the answers: one sentence each, starting *It
 means…* / *That means…*, and using your own words rather than the wording of
-the table in 2.3.
+the vocabulary table.
 
 **4.6** Answers will vary. Check: question 1 names **two** of the four actions
 and says **where** — a road, a beach, the school yard, your street — not just

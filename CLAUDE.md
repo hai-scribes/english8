@@ -74,9 +74,11 @@ catch you.**
    official book, and the two things our shape has historically dropped are the
    Everyday English function and the Communication content block.
 2. **Convert every exercise a key can settle into a `:::task`**, and leave the
-   genuinely open ones as prose. Expect roughly a dozen per unit, and **say in
-   the commit which went which way.** A reveal-and-self-mark exercise is the
-   arrangement every directive here exists to replace.
+   genuinely open ones as prose — except in Lessons 2 and 3, where vocabulary
+   and grammar practice lives in the Meet-the-words pool and the practice bank
+   (see "Lesson 2 is Meet the words" below). **Say in the commit which went
+   which way.** A reveal-and-self-mark exercise is the arrangement every
+   directive here exists to replace.
 3. **Put the genre in a `variant`, never into `ask=` prose.** A task's own
    `ask=` is extra detail appended to the variant's, never a replacement — and
    odd-one-out without its variant renders as a free-text box, where spelling
@@ -155,6 +157,46 @@ completion. Do not put a text box back.
 Distractors are where this can go wrong the other way: an option that is also
 right in that sentence marks a right answer wrong. **Read every option against
 its sentence** — no gate can see it. `check_ielts.py` fails any typed item.
+
+### Options are the words themselves, never grammar labels
+
+Decided by the operator on 2026-09-27: a beginner who has not been taught
+"V-ing" or "to-V" cannot use them, so unit 1's 1.3 asking `V-ing | to-V` was
+vague exactly where it should have been concrete. **An option is always the
+real word or phrase in its sentence** — `{hearing | to hear}`, `{swimming | to
+swim | swimming or to swim}` — and in Lesson 1 it is **the exact words the
+dialogue uses**, so the question sends the learner back to the scene. No
+`V-ing|to-V`, `S|C`, group numbers, `PC|PS`, `Y/N|Wh-O` or any other code or
+term as the thing clicked, and no label in a `~ why` either: write `enjoy
+**playing**, but would like **to play**`. Grammar names may still title a
+lesson; they are never the answer.
+
+### Instructions are one short sentence of what to do
+
+Also 2026-09-27. Every `ask=` and every line telling the learner what to do says
+what to do and stops: "Choose the answer from the scene." — not "None of these
+answers can be found by searching for the words in the question", not "the
+reason appears when you check", not an account of why the task is built as it
+is. The same holds for the generator's own copy in `build.py` and `app.js`.
+
+### Lesson 2 is Meet the words; Lesson 3 is one practice bank
+
+Also 2026-09-27. **Meet the words is the first section of Lesson 2 and the only
+vocabulary practice**: its `:::vocab` body is a pool of 100+ items across the
+genres (README §`:::bank`), every table word the answer of at least one, drawn
+fresh on every run. The vocabulary table stays in the source but renders only in
+the floating **Words** sheet on every lesson page. **Lesson 3's grammar drills
+are one `### 3.1 Practice` holding a `:::bank`** of 70+ items; open writing
+("About you") stays as prose after it. Nothing sits under Meet the words or the
+practice bank that repeats what they ask — a fixed drill under a pool is a
+second, smaller copy of the same practice.
+
+Grammar teaching is written for the page it renders on: one plain lead
+sentence, each rule under `#### N · <rule in plain words>` (a card), the words
+to learn as one bold `·`-separated line (chips), examples in a blockquote one
+per line, a common mistake as `❌ *…*`, Vietnamese help as `> **Ghi chú:**` and
+traps as `> ⚠️ **Bẫy thường gặp:**`. Never nest bold inside italic — the
+renderer breaks `*a **b***`; write `a **b**`.
 
 ### A marked task must not print its own answer
 
@@ -299,10 +341,10 @@ own exercises; ours has had only the first).
 nothing in it is published — see its `README.md` for what "recorded" means and
 why passages are described rather than reproduced.
 
-## Ten directives, and what each one is for
+## Eleven directives, and what each one is for
 
-`:::bridge` makes an IELTS *claim*. The other nine make the app *behave* like
-IELTS, which is a different job — see `README.md` for the full syntax.
+`:::bridge` makes an IELTS *claim*. The other ten make the app *behave* like
+IELTS, or make practice happen — see `README.md` for the full syntax.
 
 | | What it does | The rule it stops you breaking |
 | --- | --- | --- |
@@ -314,7 +356,8 @@ IELTS, which is a different job — see `README.md` for the full syntax.
 | `:::thread` | A strand that says it recurs is made to recur | the course's promises about itself |
 | `:::dialogue` | The Getting Started text glosses its own words, in Vietnamese, in Lesson 1 only, and plays as a comic | support where the word is, and withdrawn afterwards |
 | `:::fluency` | Repeated performance on known material against a shrinking clock | fluency practice as an activity in its own right, on material already known — which a printed instruction to "read it again, faster" never actually delivered |
-| `:::vocab` | New words are met a few at a time, then answered on | B8: lexis pre-taught as a first-class step, not tabled |
+| `:::vocab` | New words are met a few at a time, then answered on, from a pool drawn fresh each run | B8: lexis pre-taught as a first-class step, not tabled |
+| `:::bank` | A practice pool: a fresh draw every run, least recently seen first, runs listed and never added up | a fixed drill retaken is a memory test of the first go; E3/E9 bound what a run may report |
 
 The right-hand column is **design rationale, not citation**. Where a cell reads
 like a code — **B8**, **D9**, **C1–C5** — it indexes the checklist in `09` §1

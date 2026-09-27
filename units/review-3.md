@@ -7,10 +7,7 @@
 
 ### 1.1 Odd sound out
 
-Two pairs of clusters have come up: **/bl/** against **/kl/**, and **/sp/**
-against **/st/**.
-
-::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **cluster** the word begins with, not the meaning."
+::: task skill="course" type="choice" variant="odd-one-out" ask="Which word begins with a different sound?"
 - blue · blame · clean · blanket = clean ~ *clean* begins /kl/; the other three begin /bl/
 - store · speaker · storm · stall = speaker ~ *speaker* begins /sp/; the other three begin /st/
 - clear · close · blow · climb = blow ~ *blow* begins /bl/; the other three begin /kl/
@@ -22,16 +19,16 @@ against **/st/**.
 
 ### 1.2 Odd stress out
 
-::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **stress pattern**, not the meaning."
-- humorous · numerous · tremendous · generous = tremendous ~ tre**men**dous is stressed on the second syllable; the other three are stressed on the first syllable
-- national · natural · arrival · typical = arrival ~ a**rri**val keeps the stress of *a**rrive***; the other three keep a first-syllable stem
-- festival · poisonous · ambitious · cultural = ambitious ~ am**bi**tious keeps the stress of *am**bi**tion*
-- practical · additional · tropical · musical = additional ~ a**ddi**tional keeps the stress of *a**ddi**tion*
+::: task skill="course" type="choice" variant="odd-one-out" ask="Which word is stressed differently?"
+- humorous · numerous · tremendous · generous = tremendous ~ tre**men**dous; the others: **hu**morous, **nu**merous, **ge**nerous
+- national · natural · arrival · typical = arrival ~ a**rri**val, like a**rrive**; the others: **na**tional, **na**tural, **ty**pical
+- festival · poisonous · ambitious · cultural = ambitious ~ am**bi**tious, like am**bi**tion
+- practical · additional · tropical · musical = additional ~ a**ddi**tional, like a**ddi**tion
 :::
 
 ### 1.3 One word missing
 
-The words below come from Units 7, 8 and 9. Two of them fit no gap.
+Two of the words are not used.
 
 ::: task skill="course" type="gap-fill" opts="bargain|drought|evacuate|habitat|receipt|single-use|toxic|tornado" ask="Choose the word that fits each gap."
 - Take a cloth bag to the market and you will not need a ___ plastic one. = single-use
@@ -44,7 +41,7 @@ The words below come from Units 7, 8 and 9. Two of them fit no gap.
 
 ### 1.4 One word, another form
 
-::: task skill="course" type="gap-fill" ask="Choose the correct form of the word in brackets. The part of speech the gap needs is not always the one in the brackets, or the word may need a prefix."
+::: task skill="course" type="gap-fill" ask="Choose the right form of the word in brackets."
 - **(destroy)** The storm was the most ___ one in ten years. {destructive | destruction | destroyed} = destructive
 - **(extinct)** Hunting has put the rhino in danger of ___ . {extinction | extinct | extinctions} = extinction
 - **(addict)** A sale that never quite ends can be ___ . {addictive | addicted | addiction} = addictive
@@ -56,11 +53,11 @@ The words below come from Units 7, 8 and 9. Two of them fit no gap.
 > ⚠️ **Bẫy thường gặp:** *protect* → *protection* (danh từ) nhưng *protective*
 > (tính từ). Hãy đọc kỹ chỗ trống cần **từ loại** nào trước khi đổi đuôi.
 
-### 1.5 Which tense?
+### 1.5 Which form of the verb?
 
-::: task skill="course" type="gap-fill" ask="Choose the correct form of the verb in brackets."
+::: task skill="course" type="gap-fill" ask="Choose the right form of the verb in brackets."
 - While we ___ (carry) the boxes upstairs, the water reached the gate. {were carrying | was carrying | are carrying} = were carrying
-- The market ___ (open) at five tomorrow morning, as it does every day. {opens | open | opened} = opens ~ a fixed timetable takes the present simple, even about tomorrow
+- The market ___ (open) at five tomorrow morning, as it does every day. {opens | open | opened} = opens ~ a timetable: the market **opens** at five, every day
 - As soon as the flood warning ___ (arrive), my uncle moved the rice upstairs. {arrived | arrives | was arriving} = arrived
 - I ___ (queue) at the till when the lights went out. {was queuing | were queuing | am queuing} = was queuing
 - The delivery ___ (come) on Friday, so somebody has to be at home. {comes | come | came} = comes
@@ -119,7 +116,7 @@ The words below come from Units 7, 8 and 9. Two of them fit no gap.
 
 ### 2.1 Where is it said?
 
-::: task skill="reading" type="matching-information" opts="A|B|C|D|E" ask="The text has five paragraphs, lettered **A** to **E** above. Choose the paragraph each statement comes from. A letter may be the answer more than once."
+::: task skill="reading" type="matching-information" opts="A|B|C|D|E" ask="Which paragraph (A–E) says this? You can use a letter more than once."
 - A decision that went against what the officials had planned = C ~ the council expected to rebuild in the same place; the traders voted otherwise
 - The reason nobody was injured = A ~ the warning arrived the evening before
 - A change that the people affected did not want at first = D ~ the traders were against the ban
@@ -139,7 +136,7 @@ The words below come from Units 7, 8 and 9. Two of them fit no gap.
 
 ### 2.3 Find the word
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above covers this exercise too."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these."
 - a message that something dangerous is coming {warning | storm | damage} = warning
 - the goods a shop or a stall has to sell {stock | drains | platform} = stock
 - fell down suddenly {collapsed | ruined | moved} = collapsed
@@ -149,8 +146,7 @@ The words below come from Units 7, 8 and 9. Two of them fit no gap.
 
 ### Speaking — Where you buy things, and what it costs
 
-> **Working alone:** three steps, out loud. A recording is enough of an
-> audience.
+> Do this alone, out loud, in three steps.
 
 **Step 1 — Prepare.** Think about the last four things your family bought.
 Notes only.
@@ -163,23 +159,21 @@ Notes only.
 | Has anything about the way you shop changed in two years? | |
 | Is there a shop near you that a storm or a flood would reach? | |
 
-**Step 2 — Speak.** Answer each one **aloud**, in full sentences. Use at least
-one **time clause** in each answer — *before we go*, *until the delivery
+**Step 2 — Speak.** Answer each one **aloud**, in full sentences. Use *before*,
+*until* or *as soon as* in each answer — *before we go*, *until the delivery
 arrives*, *as soon as the market opens*.
 
 **Step 3 — Record and check.** Listen back once:
 
-- Did the time clause keep its own subject and verb, or did it collapse into a
-  phrase?
+- After *before*, *until* or *as soon as*, did you say who did what — *until* **the delivery arrives**?
 - Did you say *store* and *speciality* with one syllable at the start, not two?
 - Which of *national*, *natural* and *arrival* did you stress correctly?
 
 ### Listening — What is actually in the air
 
-You hear it **once**, read aloud by someone else. Read the five gaps first, then choose while you listen
-rather than afterwards from memory.
+You hear it **once**. Read the five gaps first, then choose as you listen.
 
-**Nghe một lần duy nhất, do người khác đọc to.** Đọc năm câu hỏi trước, rồi vừa nghe vừa chọn.
+**Nghe một lần.** Đọc năm câu trước, rồi vừa nghe vừa chọn.
 
 ::: audio orientation="You will hear a speaker at a school assembly explaining what makes the air in the city dirty, who it harms most, and one thing about it that surprises people."
 Good morning. I want to talk about the air in this city, and about one thing

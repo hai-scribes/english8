@@ -1,24 +1,22 @@
 # Review 4 — Units 10–12
 
 > **Ôn tập 4 — Bài 10, 11 và 12**
-> The last three units all look forward: at how people will talk to each other,
-> at what machines will be doing, and at what might be living somewhere else.
-> This page asks about all three at once.
+> Everything here comes from Units 10, 11 and 12, mixed together.
 
 ## Part 1 — Language
 
 ### 1.1 Odd stress out
 
-::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **stress pattern**, not the meaning. Say each word aloud before you choose."
-- referee · amazing · historic · invention = referee ~ refe**ree** is stressed on the last syllable; the other three on the middle one
-- digital · conference · Japanese · difficult = Japanese ~ Japa**nese** is stressed on the last syllable; the other three on the first
-- Vietnamese · refugee · engineer · telescope = telescope ~ **te**lescope is stressed on the first syllable; the other three on the last
-- astronaut · atmosphere · discovery · gravity = discovery ~ dis**co**very is stressed on the second syllable; the other three on the first
+::: task skill="course" type="choice" variant="odd-one-out" ask="Say each word aloud. Which one is stressed differently?"
+- referee · amazing · historic · invention = referee ~ refe**ree**; the others: a**ma**zing, his**to**ric, in**ven**tion
+- digital · conference · Japanese · difficult = Japanese ~ Japa**nese**; the others: **di**gital, **con**ference, **dif**ficult
+- Vietnamese · refugee · engineer · telescope = telescope ~ **te**lescope; the others: Vietna**mese**, refu**gee**, engi**neer**
+- astronaut · atmosphere · discovery · gravity = discovery ~ dis**co**very; the others: **as**tronaut, **at**mosphere, **gra**vity
 :::
 
 ### 1.2 First or last?
 
-::: task skill="course" type="sort" opts="first syllable|last syllable" ask="Where does the main stress fall? Say each word aloud before you choose."
+::: task skill="course" type="sort" opts="first syllable|last syllable" ask="Say each word aloud. Where is the stress?"
 - interviewee = last syllable
 - satellite = first syllable
 - Taiwanese = last syllable
@@ -26,24 +24,20 @@
 - trainee = last syllable
 - planet = first syllable
 - guarantee = last syllable
-- coffee = first syllable ~ **cof**fee ends in -ee but is stressed on the first syllable, so say it aloud rather than trusting the ending
+- coffee = first syllable ~ **cof**fee
 :::
 
 ### 1.3 Read these aloud
 
-Nothing to write here. Read each line three times, faster each time, and
-record yourself if you can.
+Read each line aloud three times, faster each time.
 
-**Sentence stress.** In a question, the words that carry the meaning are
-stressed and the small grammar words are not. The stressed words are in
-CAPITALS.
+**Sentence stress.** Stress the words in CAPITALS.
 
 1. How WILL people TRAVEL to WORK in the FUTURE?
 2. Will techNOlogy rePLACE TEACHers? — No, it WON'T.
 3. WHAT did the sciENtist SAY about the exPERiment?
 
-**Lists.** Your voice rises on each item and falls on the last one, which is
-how a listener knows the list has finished.
+**Lists.** Your voice goes up ↗ on each item and down ↘ on the last one.
 
 4. I can name three planets: **Venus** ↗, **Neptune** ↗ and **Mars** ↘.
 5. The room has **a screen** ↗, **a webcam** ↗, **a table** ↗ and **four
@@ -73,21 +67,21 @@ how a listener knows the list has finished.
 ### 1.6 Small words, big difference
 
 ::: task skill="course" type="choice" ask="Choose the word that completes each sentence."
-- We ran the experiment ___ three hours without stopping. {for | on | at} = for ~ *for* + a length of time
-- The talk about future communication starts ___ 2 p.m. {at | in | on} = at ~ *at* + a clock time
-- That telescope is not ___ — we brought the small one by the window. {ours | our | our's} = ours ~ a possessive pronoun stands alone and never takes an apostrophe
-- A friend ___ mine wants to work on the Mars programme. {of | in | from} = of ~ *a friend of mine*, never *a friend of me*
-- Please hand in your poster ___ Friday at the latest — the contest closes that evening. {by | until | since} = by ~ *by* + a deadline means "on or before then"; *until* is for something that goes on up to that time
+- We ran the experiment ___ three hours without stopping. {for | on | at} = for ~ **for** three hours, **for** a week
+- The talk about future communication starts ___ 2 p.m. {at | in | on} = at ~ **at** 2 p.m., **at** six o'clock
+- That telescope is not ___ — we brought the small one by the window. {ours | our | our's} = ours ~ not **ours**; *our* needs a word after it — *our telescope*
+- A friend ___ mine wants to work on the Mars programme. {of | in | from} = of ~ a friend **of** mine, never *a friend of me*
+- Please hand in your poster ___ Friday at the latest — the contest closes that evening. {by | until | since} = by ~ **by** Friday = on Friday or before
 :::
 
 ### 1.7 What they said
 
-::: task skill="course" type="gap-fill" ask="Choose the words that complete the reported sentence so it says the same thing."
+::: task skill="course" type="gap-fill" ask="Choose the words that report what was said."
 - "I am reading a book about future communication," she told me. → She told me that she ___ a book about future communication. {was reading | had read | would read} = was reading
-- "What planet do you want to visit?" my friend asked me. → My friend asked me what planet ___ to visit. {I wanted | did I want | do I want} = I wanted ~ in a reported question the word order goes back to a statement's: *I wanted*, not *did I want*
+- "What planet do you want to visit?" my friend asked me. → My friend asked me what planet ___ to visit. {I wanted | did I want | do I want} = I wanted ~ asked me what planet **I wanted**, not *did I want*
 - "We are having a video conference next week," our club president said. → Our president said that we ___ a video conference the following week. {were having | had had | have had} = were having
-- "How will teachers check attendance?" Lan asked Nam. → Lan asked Nam how ___ check attendance. {teachers would | would teachers | will teachers} = teachers would ~ statement order again: *teachers would*, and no question mark at the end
-- "When will there be a full moon?" I asked my mum. → I asked my mum when ___ a full moon. {there would be | would there be | will there be} = there would be ~ statement order: *there would be*
+- "How will teachers check attendance?" Lan asked Nam. → Lan asked Nam how ___ check attendance. {teachers would | would teachers | will teachers} = teachers would ~ asked how **teachers would** check, not *would teachers*
+- "When will there be a full moon?" I asked my mum. → I asked my mum when ___ a full moon. {there would be | would there be | will there be} = there would be ~ asked when **there would be**, not *would there be*
 :::
 
 ## Part 2 — Skills
@@ -134,7 +128,7 @@ how a listener knows the list has finished.
 
 ### 2.1 Where is it said?
 
-::: task skill="reading" type="matching-information" opts="A|B|C|D|E" ask="The text has five paragraphs, lettered **A** to **E** above. Choose the paragraph each statement comes from. A letter may be the answer more than once."
+::: task skill="reading" type="matching-information" opts="A|B|C|D|E" ask="Which paragraph (A–E) says this? You can use a letter more than once."
 - A speaker admitting the limits of what she knew = B ~ how often she said she did not know
 - An argument that turned on something other than teaching skill = C ~ noticing why a student is quiet
 - Something that had to be repeated because too many people came = A ~ the library talk was given twice
@@ -154,7 +148,7 @@ how a listener knows the list has finished.
 
 ### 2.3 Find the word
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above covers this exercise too."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these."
 - a room or building where scientific work is done {laboratory | library | classroom} = laboratory
 - a machine that would turn one language into another {translation machine | telescope | robot teacher} = translation machine
 - to go on living somewhere difficult {survive | communicate | convince} = survive
@@ -164,8 +158,7 @@ how a listener knows the list has finished.
 
 ### Speaking — The device you actually use
 
-> **Working alone:** three steps, out loud. Record yourself; that is the
-> listener.
+> Do this alone, out loud, in three steps.
 
 **Step 1 — Prepare.** Choose one device or one app you use for studying.
 Notes, not sentences.
@@ -178,24 +171,21 @@ Notes, not sentences.
 | What goes wrong with it? | |
 | Will you still be using it in five years? | |
 
-**Step 2 — Speak.** Answer each one **aloud**, in full sentences. Then do it a
-second time in **reported speech**, as if you were telling somebody else what
-you had just said: *I said that I used it every evening…*
+**Step 2 — Speak.** Answer each one **aloud**, in full sentences. Then say it all
+again as if telling somebody else what you said: *I said that I used it every
+evening…*
 
 **Step 3 — Record and check.** Listen back once:
 
-- In the reported version, did the tense step back, and did the question word
-  order go back to normal?
-- Did the stressed words in your questions carry the meaning, or did you stress
-  *do*, *will* and *is*?
+- In the second version, did *use* become *used* and *will* become *would*?
+- Did you stress the important words, not *do*, *will* and *is*?
 - When you listed things, did your voice fall on the last item?
 
 ### Listening — Round the solar system
 
-You hear it **once**, read aloud by someone else. Read the five gaps first, then choose while you listen
-rather than afterwards from memory.
+You hear it **once**. Read the five gaps first, then choose as you listen.
 
-**Nghe một lần duy nhất, do người khác đọc to.** Đọc năm câu hỏi trước, rồi vừa nghe vừa chọn.
+**Nghe một lần.** Đọc năm câu trước, rồi vừa nghe vừa chọn.
 
 ::: audio orientation="You will hear a guide called Mark taking a group of visitors round the solar system before they go into the planetarium."
 Hello, everyone. My name is Mark and I look after the planetarium here. Before
@@ -268,7 +258,7 @@ Cover the model. Answer in note form, in your own words.
 - [ ] At least **two** reasons given, not just facts ~ any:2 because/so/since
 - [ ] At least **one** sentence about the future ~ re:1 \b(will|won't|will not)\b
 - [ ] At least **two** clauses joined after a comma with *and, but, so, or, yet* ~ re:2 ,\s+(and|but|so|or|yet)\s
-- [ ] One drawback, stated plainly — a paragraph with nothing wrong in it reads as an advertisement
+- [ ] One thing that goes wrong with it
 :::
 
 > **Mẹo:** Câu hỏi thứ tư là câu dễ bỏ quên nhất. Hãy đọc lại bài viết và kiểm
