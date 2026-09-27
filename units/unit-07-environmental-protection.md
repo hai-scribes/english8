@@ -199,10 +199,10 @@
 - My uncle sprays sewage on his rice to kill the insects. {pesticide | coral | litter} = sewage -> pesticide ~ **pesticide** kills insects
 - Remember to put out the habitat before you go to sleep at the camp. {campfire | ecosystem | coral} = habitat -> campfire ~ you put out a **campfire**
 @ sentence-build
-- the rangers / protect / the turtles / from hunters {protects | of} = The rangers protect the turtles from hunters
-- factories / release / carbon dioxide / into the air {releases | in} = Factories release carbon dioxide into the air
-- many students / participate / in the clean-up {participates | to} = Many students participate in the clean-up
-- we / should / reuse / plastic bags {reuses | reusing} = We should reuse plastic bags/Should we reuse plastic bags
+- the ranger / protect / the turtles / hunters {of} = The ranger protects the turtles from hunters
+- this factory / release / carbon dioxide / the air {in} = This factory releases carbon dioxide into the air
+- my sister / participate / the clean-up {to} = My sister participates in the clean-up
+- she / reuse / plastic bags / every week {reusing} = She reuses plastic bags every week
 - cycling / reduce / your carbon footprint {reducing} = Cycling reduces your carbon footprint
 :::
 
@@ -931,7 +931,7 @@ A notice must give everything; a friend already knows some of it.
 ::: task skill="course" type="short-answer" variant="sentence-build" ask="Put each verb in brackets into the right form."
 - When the rain (stop) this afternoon, we (plant) the seedlings. = When the rain stops this afternoon, we will plant the seedlings./We will plant the seedlings when the rain stops this afternoon./We will plant the seedlings this afternoon when the rain stops./When the rain stops, we will plant the seedlings this afternoon./When the rain stops this afternoon, we'll plant the seedlings./This afternoon we will plant the seedlings when the rain stops./This afternoon, we will plant the seedlings when the rain stops.
 - I (call) you as soon as I (get) home tonight. {will | gets} = I will call you as soon as I get home tonight./I will call you tonight as soon as I get home./I'll call you as soon as I get home tonight./Tonight I will call you as soon as I get home.
-- Before you (throw) that away, (check) whether it can be recycled. {throws | checks} = Before you throw that away, check whether it can be recycled./Check whether it can be recycled before you throw that away.
+- Before she (throw) that away, she (check) whether it can be recycled. {threw | checked} = Before she throws that away, she checks whether it can be recycled./She checks whether it can be recycled before she throws that away.
 - The river has been dirty since the factory (open) last year. = The river has been dirty since the factory opened last year.
 - We (not give) up until the district office (answer) our letter. = We will not give up until the district office answers our letter./We won't give up until the district office answers our letter.
 - Once the eggs (hatch) next week, the rangers (release) the young turtles. {will | hatches} = Once the eggs hatch next week, the rangers will release the young turtles./The rangers will release the young turtles once the eggs hatch next week./The rangers will release the young turtles next week once the eggs hatch./Once the eggs hatch, the rangers will release the young turtles next week.

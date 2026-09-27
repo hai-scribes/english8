@@ -1120,6 +1120,7 @@ function runEngine(mode, words, unit, hostSel, opts){
        of the session, and that second showing is not another item reviewed. */
     if (st.mode === "review" && !q.counted){ q.counted = true; logReviewed(); }
     if (st.mode === "test"){ st.i++; return paintQ(); }
+    if (opts.conf === false) return quickVerdict(q, w, ok, given, res);
     const why = res.why === "two"
       ? '<div class="n">Two answers in one gap score nothing, even when one of them is right.</div>'
       : (given && !ok ? '<div class="n">You chose: ' + esc(given) + '</div>' : "");
@@ -1138,6 +1139,41 @@ function runEngine(mode, words, unit, hostSel, opts){
        stubborn item cannot make a session endless. */
     if (!ok && (q.back = (q.back || 0) + 1) <= 2) st.items.push(q);
     $("#next", host).addEventListener("click", () => { st.i++; paintQ(); });
+  }
+
+  /* The in-lesson practices (Meet the words, the practice banks) mark in place.
+     Right: the answer glows green for a moment and the next question comes on
+     its own, because a right answer needs nothing from the learner. Wrong: the
+     question stays, the right answer shows beside it, and only then is there a
+     button -- the one moment worth stopping for. */
+  function answerHTML(w){
+    return w.word
+      ? '<b>' + esc(w.word) + '</b> — ' + esc(w.vi)
+      : (w.aH || esc(w.a)) + (w.why ? ' <span class="ipa">' + w.why + '</span>' : "");
+  }
+  function quickVerdict(q, w, ok, given, res){
+    const card = $(".card.engine", host);
+    if (!card) return;
+    $$("button, input", card).forEach(x => { x.disabled = true; });
+    const li = $(".i", card);
+    if (li) li.dataset.ok = ok ? "1" : "0";
+    if (ok){
+      card.classList.add("is-right");
+      clearTimeout(st.auto);
+      st.auto = setTimeout(() => { st.i++; paintQ(); }, 900);
+      return;
+    }
+    card.classList.add("is-wrong");
+    if (!ok && (q.back = (q.back || 0) + 1) <= 2) st.items.push(q);
+    const two = res.why === "two" ? '<div class="n">Two answers in one gap score nothing.</div>' : "";
+    card.insertAdjacentHTML("beforeend", '<div class="e-fix" role="status">'
+      + '<div class="e-ans"><span class="no">&#10007;</span> ' + answerHTML(w) + '</div>' + two
+      + (w.colloc ? '<p class="note small"><b>Goes with:</b> ' + w.colloc.map(esc).join(" · ") + '</p>' : "")
+      + '<div class="row"><button class="btn" id="next">Next</button></div></div>');
+    const nx = $("#next", card);
+    nx.disabled = false;
+    nx.addEventListener("click", () => { st.i++; paintQ(); });
+    try { nx.focus({ preventScroll:true }); } catch(e){}
   }
 
   function calibrationLine(){
@@ -1227,7 +1263,8 @@ function runEngine(mode, words, unit, hostSel, opts){
         else if (c === b) c.classList.add("no");
         else c.classList.add("dim");
       });
-      setTimeout(() => settle({ ok }, q.options[i].t), 300);
+      if (opts.conf === false) settle({ ok }, q.options[i].t);
+      else setTimeout(() => settle({ ok }, q.options[i].t), 300);
       return;
     }
     if (q.fmt === "recall-tiles" || q.fmt === "recall-tap"){
@@ -1886,9 +1923,7 @@ function initTasks(){
        The recording already remembers that its one play is spent; the task it
        belongs to has to remember the same way, or F5 is a retry button and
        every rule in the box above is optional. */
-    const settle = (answers, confArr, record) => {
-      const marks = markTask(t, answers);
-      marks.forEach((m, i) => {
+    const paintMark = (m, i) => {
         const li = $('.i[data-i="' + i + '"]', root);
         li.dataset.ok = m.ok ? "1" : "0";
         const why = WHY_TEXT[m.why] || "";
@@ -1914,7 +1949,10 @@ function initTasks(){
         });
         if (it.tap) $$(".i-tok", li).forEach(x => x.classList.toggle("was",
           Number(x.dataset.j) >= it.span[0] && Number(x.dataset.j) <= it.span[1]));
-      });
+    };
+    const settle = (answers, confArr, record) => {
+      const marks = markTask(t, answers);
+      marks.forEach(paintMark);
       const score = marks.filter(m => m.ok).length;
       out.dataset.all = score === marks.length ? "1" : "0";
       out.innerHTML = score === marks.length
@@ -1936,7 +1974,29 @@ function initTasks(){
       return marks;
     };
 
-    check.addEventListener("click", () => {
+    /* A task of single picks, outside a timer and with no sure/not-sure mark,
+       is marked the moment each answer is picked: there is nothing to weigh up
+       before committing one tap, so a Check button only delayed the answer.
+       The attempt is recorded, exactly as Check records it, when the last
+       item is answered. */
+    const instant = t.skill === "course" && !t.conf && !t.either && !ownerTimer()
+      && t.items.every(it => it.opts && !it.tap && !it.tiles);
+    if (instant){
+      check.hidden = true;
+      root.classList.add("is-instant");
+      box.addEventListener("change", ev => {
+        const inp = ev.target;
+        const li = inp.closest && inp.closest(".i");
+        if (!li || root.dataset.done === "1" || li.dataset.ok !== undefined) return;
+        const i = Number(li.dataset.i), it = t.items[i];
+        li.classList.add("is-instant");
+        paintMark(markOne(t, it, inp.value), i);
+        if (t.items.every((_, j) => $('.i[data-i="' + j + '"]', root).dataset.ok !== undefined))
+          commit();
+      });
+    }
+
+    const commit = () => {
       const answers = read();
       const marks = settle(answers, conf, true);
       const score = marks.filter(m => m.ok).length;
@@ -1947,7 +2007,8 @@ function initTasks(){
       saveTasks();
       paintLog();
       document.dispatchEvent(new CustomEvent("en8:task-done", { detail:{ id:t.id } }));
-    });
+    };
+    check.addEventListener("click", commit);
 
     /* ---- taking it again ---------------------------------------------------
        Repeated retrieval is the thing that builds durable memory, so locking a

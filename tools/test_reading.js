@@ -1047,6 +1047,76 @@ async function main() {
     ok("intake: nothing is totalled, averaged or called progress",
        !/total|average|overall|mastered|improv|better|worse|%/i.test(log),
        log.slice(0, 160));
+
+    /* In-lesson practice marks in place. A right pick glows and moves on by
+       itself, with no verdict card and no button; a wrong pick keeps the
+       question, shows the answer under it, and only then offers Next. */
+    const eng = box.querySelector(".engine").parentNode;
+    const counter = () => (eng.querySelector(".qbar .counter") || { textContent: "" }).textContent;
+    let sawRight = false, sawWrong = false, rightMoved = false, rightNoBtn = false,
+        wrongShows = false, wrongWaits = false;
+    for (let step = 0; step < 40 && !(sawRight && sawWrong); step++) {
+      const opts = [...eng.querySelectorAll(".choices button")];
+      if (!opts.length) {
+        const nx = eng.querySelector("#next"), go = eng.querySelector("#go");
+        if (nx) { click(win, nx); } else if (go) { const t = eng.querySelector(".i-tile"); if (t) click(win, t); click(win, go); }
+        else break;
+        await new Promise(r => setTimeout(r, 20));
+        continue;
+      }
+      const before = counter();
+      /* Alternate first and last option so both verdicts turn up. */
+      click(win, opts[step % 2 ? opts.length - 1 : 0]);
+      const card = eng.querySelector(".card.engine");
+      if (card.classList.contains("is-right")) {
+        sawRight = true;
+        rightNoBtn = !card.querySelector("#next") && !card.querySelector(".verdict");
+        await new Promise(r => setTimeout(r, 30));
+        rightMoved = counter() !== before;
+      } else if (card.classList.contains("is-wrong")) {
+        sawWrong = true;
+        wrongShows = !!card.querySelector(".e-fix .e-ans") && !!card.querySelector(".choices button.ok");
+        await new Promise(r => setTimeout(r, 30));
+        wrongWaits = counter() === before && !!eng.querySelector("#next");
+        click(win, eng.querySelector("#next"));
+        await new Promise(r => setTimeout(r, 20));
+      } else break;
+    }
+    ok("practice: a right pick glows with no verdict card and no button", sawRight && rightNoBtn);
+    ok("practice: and moves on by itself", rightMoved);
+    ok("practice: a wrong pick shows the answer in place", sawWrong && wrongShows);
+    ok("practice: and waits for Next", wrongWaits);
+  }
+
+  /* ---- single-pick tasks mark each answer the moment it is picked --------- */
+  {
+    const win = await settled(load("docs/unit-01/lesson-2/index.html", null, fastPage));
+    const doc = win.document;
+    const data = JSON.parse(doc.getElementById("page-data").textContent);
+    const t = data.tasks.find(x => /Sort the sounds/i.test(
+      (doc.querySelector('[data-task="' + x.id + '"]') || { closest: () => null })
+        .closest("[data-ex]") ? doc.querySelector('[data-task="' + x.id + '"]').closest("[data-ex]").textContent : ""));
+    const root = t && doc.querySelector('[data-task="' + t.id + '"]');
+    ok("instant: Sort the sounds is on the page", !!root);
+    ok("instant: it has no Check button", root && root.querySelector(".t-check").hidden);
+    const pickItem = (i, right) => {
+      const li = root.querySelector('.i[data-i="' + i + '"]');
+      const inp = [...li.querySelectorAll(".i-opt input")].find(x => (x.value === t.items[i].key) === right);
+      inp.checked = true;
+      inp.dispatchEvent(new win.Event("change", { bubbles: true }));
+      return li;
+    };
+    const l0 = pickItem(0, true);
+    ok("instant: a right pick is marked at once", l0.dataset.ok === "1" && root.dataset.done !== "1");
+    const l1 = pickItem(1, false);
+    ok("instant: a wrong pick is marked at once and shows the answer",
+       l1.dataset.ok === "0" && !!l1.querySelector(".i-opt.is-key"));
+    ok("instant: an answered item cannot be changed", [...l1.querySelectorAll("input")].every(x => x.disabled));
+    for (let i = 2; i < t.items.length; i++) pickItem(i, true);
+    const rec = JSON.parse(win.localStorage.getItem("en8:tasks:v1") || "{}")[t.id];
+    ok("instant: the last answer records the attempt",
+       root.dataset.done === "1" && rec && rec.score === t.items.length - 1, JSON.stringify(rec));
+    ok("instant: and offers Try it again", !root.querySelector(".t-again").hidden);
   }
 
   /* ---- a retake is a new attempt, and never reaches a spent timer ---------

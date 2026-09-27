@@ -422,7 +422,20 @@ def parse_task_body(a: dict, body: str) -> dict:
             item["q"] = prompt
         if widget == "tiles":
             tiles = sentence_tiles(key)
-            decoys = cue_decoys(prompt, tiles) + (own or [])
+            # A cue that already IS the sentence, in order, asks the learner to
+            # copy it: "we / hang out / with our cousins" built "We hang out
+            # with our cousins" by tapping the tiles in the order printed. The
+            # cue has to leave something to do -- a form to change, a word to
+            # supply. This is an exact comparison, so it cannot cry wolf.
+            # Punctuation counts: where a comma goes can be the whole question.
+            cue_text = re.sub(r"<[^>]+>|[()*]", " ", prompt).replace("/", " ")
+            if [w.lower() for w in sentence_tiles(cue_text)] == [w.lower() for w in tiles]:
+                raise SystemExit(f"variant=sentence-build: {prompt!r} already reads "
+                                 f"{key!r} in order — there is nothing to build")
+            decoys = []
+            for d in cue_decoys(prompt, tiles) + (own or []):
+                if d.lower() not in {x.lower() for x in tiles + decoys}:
+                    decoys.append(d)
             item["tiles"] = stable_shuffle(tiles + decoys, prompt)
             item["q"] = inline(prompt)
             items.append(item)

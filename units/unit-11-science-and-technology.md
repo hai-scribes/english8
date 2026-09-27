@@ -212,7 +212,7 @@ Look at the word after each verb: told **us**, told **me** — but said **that**
 @ sentence-build
 - Khoa / invent / a new lock {inventing | to} = Khoa invented a new lock
 - the teacher / give / us / useful feedback {giving | a} = The teacher gave us useful feedback
-- robots / can / replace / some workers {replaces} = Robots can replace some workers / Some robots can replace workers
+- robot / can / replace / some workers {replaces} = Robots can replace some workers / Some robots can replace workers
 - she / complain / about / the slow Internet {on} = She complained about the slow Internet
 - my sister / not like / contact lenses {don't} = My sister doesn't like contact lenses
 :::

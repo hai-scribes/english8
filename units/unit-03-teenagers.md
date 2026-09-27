@@ -231,7 +231,7 @@
 - she / participate / in / the language club {on} = She participates in the language club
 - Khoa / upload / a video / of the chess game {browsed} = Khoa uploaded a video of the chess game
 - my parents / have / high / expectation {has} = My parents have high expectations
-- she / can't / keep up with / the class {keeps | to} = She can't keep up with the class
+- he / never / keep up with / the class {keeping} = He never keeps up with the class
 - I / want / join / the arts and crafts club {joining} = I want to join the arts and crafts club
 :::
 

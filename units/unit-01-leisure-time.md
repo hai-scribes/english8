@@ -215,9 +215,9 @@ Below them the water climbs one step of the wall, and slides back down.
 - I want to take in a new hobby. {up | on | off} = in -> up ~ take **up** a hobby
 @ sentence-build
 - she / be keen on / knit / scarves {to knit | knits} = She is keen on knitting scarves
-- we / hang out / with our cousins {hangs | hanging} = We hang out with our cousins
+- my brother / hang out / with his friends / every Sunday {hanging} = My brother hangs out with his friends every Sunday
 - my dad / be fond of / do / DIY {to do | does} = My dad is fond of doing DIY
-- I / keep in touch / with my old friends {keeps | keeping} = I keep in touch with my old friends
+- Lan / keep in touch / with her old friends {keeping} = Lan keeps in touch with her old friends
 - Lan / be crazy about / badminton {are | on} = Lan is crazy about badminton
 :::
 
