@@ -846,30 +846,6 @@ Pause between your ideas, not in the middle of a sentence.
 - One thing that has gone wrong
 :::
 
-### My favourite shopping place
-
-Three people, three very different places — and why each of them likes it.
-
-> **Trang, 14.** "My favourite place is the open-air market at the end of our
-> lane. My mother and I go every Sunday morning. The vegetables are home-grown
-> and the sellers bring them in before six, so nothing is more than a day old.
-> And you can bargain there. Nothing has a price tag, so the price you pay
-> depends on how well you ask."
->
-> **Bảo, 13.** "I like the discount shop behind the school best. Everything
-> costs less than it does in the supermarket — notebooks, pens, sports socks,
-> all of it. I get my pocket money on the first of the month, and it goes twice
-> as far there. My sister says the bags fall apart, but mine hasn't yet."
->
-> **Khanh, 14.** "For me it's the convenience store on our corner. It's open
-> 24/7, it's ninety seconds from my front door, and I can be back before the
-> rice boils over. It's not cheap and the range of products is small, but when
-> my mother has forgotten the fish sauce again, it saves me half an hour."
-
-**Talk about it.** What is your own favourite shopping place, and what kind of
-place is it? Give **one** clear reason why you like it — not three — and name
-one thing you do **not** like about it.
-
 ### Everyday English — Making complaints
 
 *A few fixed phrases for when something you bought is wrong. They fit the

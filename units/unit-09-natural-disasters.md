@@ -921,43 +921,6 @@ Repeat Step 2 until the report runs clearly from start to finish.
 - What helped afterwards
 :::
 
-### Knowledge of natural disasters
-
-Three people describe something they saw. None of them names the disaster.
-
-> **Nam.** "I was cycling home on the road under the hill. The rain had not
-> stopped for two days. Then the man in front of me put his foot down and
-> shouted. A wall of wet earth and big rocks was coming down the mountain and
-> spreading across the road in front of us. We turned round and rode back."
->
-> **Ann.** "I was picking beans in the garden with my mother. The sky went a
-> strange green colour. Then I saw a huge grey funnel of wind moving across the
-> field towards our fence, very quickly. My mother pulled me down the cellar
-> steps and shut the door."
->
-> **Tom.** "I was drawing at the table when everything in the room began to
-> shake. The glasses on the shelf were rattling and one of them fell. My little
-> sister and I hid under the table until it stopped. It lasted about twenty
-> seconds."
-
-Nam saw a **landslide** — earth and rocks coming down a hill onto the road
-below. Ann saw a **tornado** — a funnel of wind crossing a field. Tom felt an
-**earthquake** — the ground and everything on it shaking for a few seconds.
-
-Rocks and earth slide down a hill when the ground is too wet to
-hold together, so heavy rain is the commonest cause — and cutting down
-trees makes it far more likely, because roots are what hold the soil. The
-strength of an earthquake is given on the Richter scale, not in degrees; a
-big one can shake a hillside loose or push a wall of sea water towards the
-coast, so one disaster often causes another. Tornadoes are different again:
-they grow out of thunderstorms, and although they happen on every continent
-except Antarctica, far more of them are recorded in the USA than anywhere
-else.
-
-**Talk about it.** Think of a natural disaster that has happened where you live,
-or one you have seen on the news. Describe what a person there saw and heard —
-but do **not** say its name — and let someone else guess it.
-
 ### Everyday English — Giving and responding to bad news
 
 *A few fixed phrases for telling one person some bad news, and for answering

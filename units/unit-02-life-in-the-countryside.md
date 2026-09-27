@@ -808,30 +808,6 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 - One thing you could not get used to
 :::
 
-### Two villages, two countries
-
-Villages look different around the world, but the reasons people love them are
-surprisingly similar. Read these two short adverts.
-
-> **Duong Lam, Viet Nam**
-> One of the oldest villages near Ha Noi, in Son Tay. You can get there from the
-> centre of Ha Noi by car, by bus, or even by bicycle. Duong Lam is famous for
-> its ancient pagoda, its temples, and its traditional houses built of laterite
-> stone. The people are hospitable, and visitors are welcome to watch the locals
-> making their specialities — *kẹo dồi*, *chè lam* — and then to taste them.
-
-> **Giethoorn, the Netherlands**
-> A small village in the north of the Netherlands with almost no roads. People
-> travel along the **canals** by small boat, and cross them on more than 170
-> wooden bridges. The houses have thatched roofs and are surrounded by gardens
-> and water. Visitors reach the village by road or by **ferry**, and most of
-> them hire a boat for the day. The scenery is at its most picturesque in early
-> summer.
-
-**Talk about it.** Which of the two villages would you rather visit, and why?
-Say one thing they have in common and one way they are different — with a
-comparative adverb and **than**, if you can.
-
 ### Everyday English — Giving and responding to compliments
 
 *Two sets of fixed phrases. The first is a separate thing from the speaking

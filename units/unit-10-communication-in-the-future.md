@@ -795,35 +795,6 @@ Repeat Step 2 until you can speak for a full minute.
 - How it may change in ten years
 :::
 
-### The future of language
-
-Mark, 14, was asked what will change about the way people talk to each other.
-This is what he said.
-
-> **Mark:** "In twenty years I think everybody will be using emojis — not only
-> teenagers, but grandparents, teachers and bank managers too. An emoji carries
-> a feeling, and a feeling does not need a language: a smiling face means the
-> same thing in Hà Nội, in Tokyo and in London, so nobody has to translate it.
-> That is why more and more people will use them. Emojis can even replace
-> words, up to a point — I often answer my sister with one picture and no
-> letters at all. So one day you may open an email and find nothing inside it
-> but emojis, and you will still understand every line."
-
-Here are two more predictions, in note form. Each one answers the same four
-questions Mark answered: **when**, **who**, **how** and **why**.
-
-| | **An automatic translation function** | **A chatbot** |
-| --- | --- | --- |
-| **When?** | in ten years | in ten years |
-| **Who will use it?** | people who use social networks | people who sell things in online shops |
-| **How will it help?** | it translates comments and private messages in every language | it replies to customers instantly in every language |
-| **Why will it spread?** | it removes the language barrier | it helps them sell to customers in other countries |
-
-**Talk about it.** Make a prediction of your own, in the same shape as Mark's.
-Take one of the two fact-files, or invent a way of communicating yourself, and
-answer the four questions in order: **when**, **who**, **how**, **why**. Start
-like this: *"In ten years, I think…"*
-
 ### Everyday English — Interrupting politely
 
 *A few fixed phrases for breaking in while someone is talking, and for giving

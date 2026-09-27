@@ -823,40 +823,6 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 - Whether you would actually go
 :::
 
-### Three planets in the solar system
-
-Three of our neighbours, in three short fact-files. Read them once, then cover
-them and see how much you can still say.
-
-> **MERCURY**
-> The smallest of the eight planets, and the one that sits closest to the Sun.
-> It travels alone: not a single moon goes round it. Standing on the daytime
-> side would roast you, and yet the night side turns bitterly cold, because
-> there is no atmosphere to hold the heat in. That missing air has one other
-> effect worth knowing — with no air, there is no wind and no weather of any
-> kind. Nothing on Mercury has ever blown, rained or snowed.
-
-> **JUPITER**
-> The giant of the family. Jupiter is the largest planet by a long way, and
-> about sixty-three moons travel round it, so it is more like a small solar
-> system of its own. It is also the stormiest place we know: enormous storms
-> turn in its clouds for years at a time. Even from here it is easy to find,
-> because after the Moon and Venus it is the third brightest object in the
-> night sky.
-
-> **VENUS**
-> Our nearest neighbour in size — Venus is very nearly as big as the Earth, and
-> people once called it our twin. The likeness stops at the surface. Venus is
-> the hottest planet of all, hotter even than Mercury, and like Mercury it has
-> no moon. Look east just before sunrise and you may see a steady white point
-> hanging low above the fields. That is Venus, and it is why people have called
-> it the **morning star** for thousands of years.
-
-**Talk about it.** Cover the fact-files and tell someone about one of the three
-planets for about thirty seconds. Start like this, then keep going from memory:
-*I would like to tell you about Mercury. It is the smallest planet, and…* Give
-at least three facts, and say one thing that surprised you.
-
 ### Everyday English — Expressing uncertainty
 
 *A few fixed phrases for saying how sure you are — and above all how unsure.

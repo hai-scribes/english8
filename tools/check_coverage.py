@@ -50,6 +50,14 @@ def unit_haystack(n):
     return text, md[0].name, raw
 
 
+# The book's Communication content blocks (Teens' leisure activities, Earth Day
+# …) are not carried: the operator decided on 2026-09-27 that the course uses
+# its own reading material. A unit without one is therefore the expected state,
+# shown as "—" rather than MISS. An extra Lesson 5 block is still listed, so a
+# reintroduced one is visible.
+BLOCKS_DROPPED = True
+
+
 def communication_blocks(raw):
     """Headings inside our Lesson 5 that are not Everyday English, the
     listening, the speaking, or an exercise.
@@ -219,7 +227,8 @@ def main():
         tick = lambda ok: paint("  ok  ", GREEN) if ok else paint(" MISS ", RED)
         gram_ok = not r["missing_grammar"]
         print(f"U{r['unit']:02d}  {r['title']:<28} {lex}  "
-              f"{tick(bool(r['ee_hit']))}{tick(r['block_hit'])}"
+              f"{tick(bool(r['ee_hit']))}"
+              f"{paint('  —   ', DIM) if BLOCKS_DROPPED and not r['block_hit'] else tick(r['block_hit'])}"
               f"{paint(' ok  ', GREEN) if gram_ok else paint('MISS ', RED)}"
               f"{paint(' ok  ', GREEN) if r['pron_hit'] else paint('MISS ', RED)}")
 
@@ -231,6 +240,8 @@ def main():
                 print(f"     {DIM}our Lesson 5 also has:{OFF} "
                       f"{paint('; '.join(r['extra_blocks']), YELLOW)} "
                       f"{DIM}— check by hand whether it does the same job{OFF}")
+            elif BLOCKS_DROPPED:
+                print(f"     {DIM}not carried — the course uses its own reading (2026-09-27){OFF}")
             else:
                 print(f"     {paint('our Lesson 5 has no block beyond Everyday English', RED)}")
             for g in r["missing_grammar"]:
@@ -250,8 +261,11 @@ def main():
     blk_missing = sum(1 for r in results if not r["block_hit"])
     print(f"  Everyday English functions not covered: "
           f"{paint(str(ee_missing), RED if ee_missing else GREEN)} of {len(results)}")
-    print(f"  Lesson 5s with no block beyond Everyday English: "
-          f"{paint(str(blk_missing), RED if blk_missing else GREEN)} of {len(results)}")
+    if BLOCKS_DROPPED:
+        print(f"  Book content blocks: {DIM}not carried, by decision (2026-09-27){OFF}")
+    else:
+        print(f"  Lesson 5s with no block beyond Everyday English: "
+              f"{paint(str(blk_missing), RED if blk_missing else GREEN)} of {len(results)}")
     if not detail:
         print(f"\n  {DIM}Run with --full, or --unit N, to list every missing item.{OFF}")
     print()

@@ -762,49 +762,6 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 - One thing that was better then
 :::
 
-### Greetings and cuisines around the world
-
-Every country says hello, and every country eats. Almost nothing about *how*
-they do it is the same.
-
-#### How people say hello
-
-Shaking hands is probably the commonest greeting on Earth: two people meet,
-take each other's right hand, and shake it once or twice. In the USA that
-handshake usually arrives with a word attached — people greet one another by
-saying **"Hello"**. But the hand is not the only part of the body that greets.
-In Thailand, a young person greeting an older one says **sawadee** and bows the
-head slightly at the same time. The Maori people of New Zealand press their
-noses together, so that two people share one breath. And in Japan nobody needs
-to touch at all: people bow, and how deeply they bow says how much respect they
-mean.
-
-None of these is polite everywhere. A greeting that is warm in one country can
-look strange, or even rude, in the next one — which is why careful visitors
-watch first and copy second.
-
-#### What people eat
-
-**Italy** is famous for two dishes the whole world now cooks. A pizza is a flat
-round base of bread baked with cheese, meat or vegetables on top; pasta comes
-in dozens of shapes and almost as many sauces. Italians are just as proud of
-their cheese, and they have plenty to be proud of — the country makes more than
-four hundred kinds. One of them is left out for flies to lay their eggs in, and
-its taste is not something visitors forget.
-
-**India** does not really have one cuisine; it has a great many. Curry — meat or
-vegetables cooked in a thick sauce and eaten with rice or bread — is common
-almost everywhere, but the sauce changes from region to region. In some areas
-most people prefer vegetarian food, while in others chicken, lamb or goat is
-normal. Beef, though, is generally avoided.
-
-Other countries are known for one dish above all the rest: **fish and chips** in
-England, **sushi** in Japan, **kimchi** in Korea.
-
-**Talk about it.** Would you rather eat Italian food or Indian food, and why?
-Then talk about the food where you live: the staple food and how often people
-eat it, your own favourite, and one food eaten on a special occasion.
-
 ### Everyday English — Expressing certainty
 
 *A separate thing from the speaking above: a few short replies for saying yes

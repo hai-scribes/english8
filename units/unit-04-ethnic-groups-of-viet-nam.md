@@ -841,42 +841,6 @@ A one-sentence answer makes your partner think of a new question every time.
 - Why it is worth knowing about
 :::
 
-### Lifestyle of the ethnic minority groups
-
-Fifty-four ethnic groups live in Viet Nam. Fifty-three of them are called
-**ethnic minorities**, and together they make up roughly **13%** of the
-country's people — about one person in eight. Most of them live in the
-**mountains**: the high north, the long chain of hills down the middle of the
-country, and the Central Highlands. That is why so many of the words in this
-unit are about slopes, wood, weather and animals.
-
-Living in the mountains shapes everything else. Flat ground is scarce, so rice
-is grown on terraced fields. Rain is heavy, so houses stand on posts. Villages
-are far apart, so each one needs a communal house of its own. And because a
-family cannot buy everything it needs, it grows, weaves, carves or raises most
-of it.
-
-#### One group: the Jrai
-
-> **The Jrai.** In 2019 there were **513,930** Jrai people, which makes them the
-> largest minority group in the Central Highlands. Most of them live in **Gia
-> Lai**. They build **stilt houses**, and they live from the land in several
-> ways at once: they grow food crops, they weave, they plant industrial trees
-> such as coffee, cacao and rubber, and they raise buffaloes and elephants.
-> Their traditional culture is rich in folk dances, folk songs, games and
-> musical instruments. Inside a Jrai family, it is the **women** who hold the
-> dominant role.
-
-Two details there are worth stopping on. First, the Jrai economy is not one
-job but four, and each one answers a different risk: a bad harvest does not
-empty the house if there is cloth to sell. Second, the elephants are not
-decoration — they were, and in places still are, working animals.
-
-**Talk about it.** Which fact about the Jrai surprised you most, and why? The
-Jrai earn a living in four ways — which one would you like to learn? Begin
-with *I think …* or *In my opinion …*; there are more ways to say it at the
-end of this lesson.
-
 ### Everyday English — Giving opinions
 
 *A few fixed phrases for saying what you think, and for asking someone else.

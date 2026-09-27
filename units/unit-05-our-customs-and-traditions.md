@@ -794,31 +794,6 @@ Repeat Step 2 until all six exchanges run clearly.
 - Whether you will keep it yourself
 :::
 
-### The Japanese lion dance and the Vietnamese unicorn dance
-
-Two New Year dances, two countries, and a costume that looks much the same from
-the other side of the street. Read both, and see what separates them.
-
-> **The Japanese lion dance.** In Japan the dance is called *shishi-mai*. It
-> belongs above all to New Year celebrations, but it is brought out for other
-> important occasions too — the opening of a business, or a wedding. One
-> performer on his own is enough, though there are often more, and whoever
-> wears the head has to be excellent at acrobatics. There is nobody dancing
-> alongside him. The music comes from flutes and drums. The purpose is to chase
-> away bad spirits and to bring good luck.
->
-> **The Vietnamese unicorn dance.** In Viet Nam the dance is *múa lân*. Children
-> know it from the Mid-Autumn Festival first of all, and it appears again at the
-> New Year Festival — and, like the Japanese dance, at business openings and at
-> weddings. One performer is enough here as well, though most teams are larger,
-> and the dancers are trained in martial arts as well as acrobatics. This dance
-> does have a partner: a round, smiling figure called *ông Địa*, who walks in
-> front of the head and fans it. A drum keeps the beat, and there is nothing
-> else. The whole dance is a wish for luck and success in the year ahead.
-
-**Talk about it.** Say **one** thing that is the same about the two dances and
-**one** thing that is different. Put the difference last.
-
 ### Everyday English — Giving advice
 
 *A few fixed phrases for telling a guest what to do. They fit the speaking

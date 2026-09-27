@@ -801,35 +801,6 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 - One thing that would actually help
 :::
 
-### Earth Day
-
-One day a year, the same idea turns up in more than 190 countries at once.
-
-> Earth Day falls on **22 April**. It began in **1970**, in America, when
-> millions of people came out on the same day to say that the air and the water
-> around them were getting worse and that somebody should act. It was one
-> country and one day. It did not stay that way.
->
-> Today more than **190 countries** mark it, and more than **one billion**
-> people take part each year — which makes Earth Day one of the largest
-> movements on the planet. What people actually do on the day is small and
-> ordinary. They pick up litter along a road, a river or a beach. They plant
-> trees. They look for green products in the shops instead of the cheapest
-> thing on the shelf. They practise the three Rs: **reduce, reuse, recycle**.
->
-> And that is the catch in it. A beach cleaned on 22 April is dirty again by
-> May if nobody comes back. The point of the day is not the day. It is to
-> start something you keep doing on the other 364.
-
-Each of those small actions does its own job. Planting trees takes in carbon
-dioxide and gives animals a home. Buying green products puts fewer harmful
-chemicals into the things we use. Picking up litter keeps roads, rivers and
-beaches clean. And turning off the lights saves electricity.
-
-**Talk about it.** Which **two** of those actions could you really do this year,
-and where? Pick one of them: how would you keep doing it after 22 April, on an
-ordinary week in June?
-
 ### Everyday English — Asking for clarification
 
 *A few fixed phrases for stopping someone and asking what a word means. They

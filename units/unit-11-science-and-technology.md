@@ -814,39 +814,6 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 - What might replace it
 :::
 
-### Online learning
-
-Four students, four platforms. Each of them names one thing that works and one
-thing that does not.
-
-> **Lan.** "My class moved onto Zoom during the epidemic and I have kept it for
-> my extra English lessons. It is very convenient — I save nearly an hour of
-> travelling every evening and I start the moment I put my school bag down. The
-> trouble is the connection at my house. It drops in the middle of a sentence,
-> and I have to ask the teacher to say everything twice."
->
-> **Bảo.** "Our extra maths class is on Google Meet. The best part is the
-> breakout rooms: four of us go into one and argue about a problem until
-> somebody proves it, so I still talk to my classmates properly. What I do not
-> like is what it does to my eyes. After two hours in front of a screen they get
-> tired, and I cannot read anything else that night."
->
-> **Khánh.** "My school put every subject on Microsoft Teams. I have become much
-> more independent — nobody stands behind me, so I plan my own week, hand my
-> work in on time, and the teacher's feedback appears under it the next morning.
-> On the other hand, it is hard to concentrate at home. My little sister sings in
-> the next room, and I feel more stressed than I ever did in a real classroom."
->
-> **Nga.** "Our English club meets on Skype on Sunday mornings, so nobody has to
-> cross the city and nobody sits in a traffic jam. But two of our members have no
-> computer or smartphone of their own. They can only join when an older brother
-> is free, and they complain — fairly — that they miss half of every club. I
-> would still rather meet face to face."
-
-**Talk about it.** Which of the four would you most like to swap places with,
-and why? Say one thing online learning does well for you and one thing it does
-badly.
-
 ### Everyday English — Giving and responding to good news
 
 *A separate thing from the speaking above: a few fixed phrases for telling

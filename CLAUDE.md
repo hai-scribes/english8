@@ -71,8 +71,9 @@ catch you.**
 1. **Read the book's own section first** — `curriculum/sgk/unit-NN.md`, found
    through `index.jsonl`, never by reading the record wholesale — then run
    `python3 tools/check_coverage.py --unit NN`. We never ship less than the
-   official book, and the two things our shape has historically dropped are the
-   Everyday English function and the Communication content block.
+   official book, and the thing our shape has historically dropped is the
+   Everyday English function. (The Communication content block is left out on
+   purpose — see "Six lessons" below.)
 2. **Convert every exercise a key can settle into a `:::task`**, and leave the
    genuinely open ones as prose — except in Lessons 2 and 3, where vocabulary
    and grammar practice lives in the Meet-the-words pool and the practice bank
@@ -115,20 +116,23 @@ Sounds · Grammar · Reading & Writing · Listening & Speaking · Looking Back &
 Project** — the skills paired by kind, *not* the book's Skills 1/Skills 2
 pairing (an earlier pass got this wrong). `BOOK_SECTION` in `tools/build.py`
 prints the book's own name under each, so the page and the printed book still
-line up in class. The book's Communication section has no lesson: its content
-block and its Everyday English phrases close Lesson 5, after the speaking.
+line up in class. The book's Communication section has no lesson: its Everyday
+English phrases close Lesson 5, after the speaking. **Its content block is not
+carried at all** (operator, 2026-09-27: "we use our own materials") — Teens'
+leisure activities, Earth Day and the rest were removed from all twelve units,
+and `check_coverage.py` shows the Block column as `—` by decision. Do not add
+one back; if a book word is lost with it, place the word in our own material.
 Lesson 4's reading keeps its clock, tasks and any read-again fluency; the
 writing follows it and has no marked tasks, so the clock never reaches it.
-Neither Communication half carries a `:::task` or a numbered exercise, and the
+Everyday English carries no `:::task` or a numbered exercise, and the
 review queue no longer has a `function` kind. **Do not put
-either back as a marked exercise**; the phrases get one unnumbered
+it back as a marked exercise**; the phrases get one unnumbered
 `**Say it with someone.**` paragraph built from the book's pair practice.
 
 Everyday English means fixed phrases for the book's one speech act. Grammar
-that had crept into it belongs in Lesson 3. The skills keep the book's pairing,
-reading with speaking and listening with writing, because each lesson takes
-something in and then uses it. `app.js` moves a learner's stored record from
-the seven-lesson numbering once (`reshapeOnce`), and `test_reading.js` holds it.
+that had crept into it belongs in Lesson 3. `app.js` moves a learner's stored
+record from the seven-lesson numbering once (`reshapeOnce`), then to the
+paired-by-kind shape once (`pairByKindOnce`), and `test_reading.js` holds both.
 
 ### An exercise a machine can mark is a `:::task`, not printed prose
 
@@ -355,11 +359,11 @@ exits 0** — coverage is a curriculum decision, and the point is to make the
 decision visible rather than fail a build over it. Do not close a gap by editing
 `targets.json`; that file records what the book does, not what we wish it did.
 
-Two things the book has that our shape has historically dropped, so check them
-first: the **Everyday English function** (the book names a different speech act
-in each unit) and the **Communication content block** (the book's Communication
-section has two halves — Everyday English *and* a named content block with its
-own exercises; ours has had only the first).
+Check the **Everyday English function** first (the book names a different
+speech act in each unit); our shape has dropped it before. The book's
+Communication section also has a named content block — that one is left out by
+the operator's decision of 2026-09-27, and its lexis is the one place a coverage
+drop is expected (unit 1's *balance* and *resort*).
 
 `curriculum/sgk/` is reference material. `tools/build.py` never reads it and
 nothing in it is published — see its `README.md` for what "recorded" means and

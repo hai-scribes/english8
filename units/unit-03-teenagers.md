@@ -801,36 +801,6 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 - One thing that genuinely helps
 :::
 
-### Social media popular among teens
-
-One question went up on a class forum: *Which social media do you use, and what
-do you actually do on it?* Four members of 8A answered.
-
-> **Vinh, 14.** "I log on to a video site almost every evening. I watch other
-> people's clips for half an hour, and about once a month I upload one of my
-> own — usually the chess club playing far too fast to follow. It is enjoyable;
-> however, it eats my evening. So I set an alarm now, and when it rings I
-> stop."
->
-> **Quyen, 13.** "A photo app, and only that. Every Sunday I post a picture of
-> whatever I have drawn that week, and then I check my notifications far more
-> often than I should. When somebody I have never met likes a drawing, my whole
-> afternoon improves. I don't browse for hours — I just want the comments."
->
-> **Bao, 14.** "I don't have a social media account at all. My parents said not
-> until I am fifteen, and honestly I don't mind much. I use our class forum on
-> the school website for homework questions, and that is enough for me. It is
-> not user-friendly, and it looks about twenty years old, but it works."
->
-> **Diep, 14.** "A messaging app, all day. I connect with my cousins in Hue and
-> with two friends who moved to another school last year. We never post
-> anything in public. Before the midterm tests we made a group and asked each
-> other questions in it every night; therefore, nobody in that group panicked."
-
-**Talk about it.** Whose answer is closest to yours, and what is different
-about yours? Bao has no account at all — would a year without one be easy or
-hard for you? Say why.
-
 ### Everyday English — Making requests
 
 *A few fixed phrases for asking someone to do something for you. They fit the

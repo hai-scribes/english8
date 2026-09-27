@@ -18,9 +18,10 @@ just taught; the unit test opens only once all six lessons are done.
 
 Every lesson page prints the book's name for it under ours, so the site and the
 book can be matched in class. The book's Communication section has no lesson of
-its own (operator's decision, 2026-09-27): its content block and its Everyday
-English phrases close Lesson 5, beside the speaking they serve. Neither carries a
-marked task, and neither is enrolled in the review queue. The skills are paired
+its own (operator's decision, 2026-09-27): its Everyday English phrases close
+Lesson 5, beside the speaking they serve, with no marked task and no place in
+the review queue. Its content block is not carried — the course uses its own
+reading material. The skills are paired
 by kind, not as the book prints them (operator's decision, 2026-09-27): Lesson 4
 is the two done on paper, reading then writing, and Lesson 5 the two done out
 loud, listening then speaking.
@@ -599,8 +600,9 @@ The site's job is to be **at least as complete as the official student's book**,
 never less. `curriculum/sgk/` records what that book actually teaches — all
 twelve units section by section, its 282-word glossary, and its four cumulative
 Reviews — and `python3 tools/check_coverage.py` checks our units against it:
-the lexis, the Everyday English function, the Communication content block, and
-each named grammar and pronunciation target.
+the lexis, the Everyday English function, and each named grammar and
+pronunciation target. The one deliberate exception is the Communication content
+block, which the course replaces with its own reading (2026-09-27).
 
 The Reviews are the one part of that record the site used to have no shape
 for, and `units/review-1..4.md` now carry them — see

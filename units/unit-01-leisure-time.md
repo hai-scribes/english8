@@ -732,30 +732,6 @@ Repeat Step 2 until you can answer all five clearly.
 - One thing you can't stand
 :::
 
-### Teens' leisure activities around the world
-
-Three teenagers, in three countries, spend their free time very differently —
-and each of them can say **why**.
-
-> **Sakura, 14 — Kyoto, Japan.** "I'm fond of origami, the art of paper folding.
-> I do it on my own, usually in the evening. With a few sheets of paper I can
-> make a bird, a flower, or a box. It costs almost nothing, and it makes me calm
-> when I have too much schoolwork."
->
-> **Eric, 13 — St. Gallen, Switzerland.** "I'm keen on snowboarding. My town is
-> near the mountains, so my parents take me to a ski resort most weekends in
-> winter. It's hard on the legs, but my balance has got much better since I
-> started."
->
-> **Lan, 14 — Quang Binh, Viet Nam.** "I'm crazy about badminton. My best friend
-> lives next door, so we play almost every afternoon in the yard. It's an easy
-> sport to start — you only need two rackets — and it takes the stress out of a
-> long school day."
-
-**Talk about it.** Which of the three would you most like to try, and why? Which
-one would you never take up — and how would you say so politely? Use an
-expression from Lesson 2 (*be keen on, be fond of, be crazy about, be into*).
-
 ### Everyday English — Inviting, suggesting, and responding
 
 *A few fixed phrases for asking someone to join you. They fit the speaking
