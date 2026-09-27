@@ -10,7 +10,7 @@
 | Strand | Target |
 | --- | --- |
 | **Pronunciation** | /br/ vs /pr/ — *bright* vs *price* |
-| **Grammar** | **Future simple** and the **first conditional** |
+| **Grammar** | *will* and *won't* — she **will come**, she **won't come** · *if* and *unless* — If it **rains**, we **will stay** in |
 | **Reading** | A way of living that came back to one lane |
 | **Speaking** | How communities keep their traditions |
 | **Listening** | A neighbour on a week with no electricity |
@@ -21,8 +21,6 @@
 ## Lesson 1 — Getting Started
 
 ### Dialogue: Everybody wants something
-
-*Read the conversation aloud. Then answer the questions below.*
 
 ::: dialogue title="Everybody wants something" bg="lane" gramen="will — the future simple" gramvi="**will** + động từ nguyên thể để nói về tương lai. Câu điều kiện loại 1: *If* + hiện tại đơn, **will** + nguyên thể." gramco="If it rains, we will stay in"
 @cast Tí|worried, Thảo|annoyed
@@ -47,7 +45,7 @@
 
 ### 1.1 Comprehension
 
-::: task skill="course" type="short-answer" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+::: task skill="course" type="short-answer" ask="Choose the answer from the scene."
 - Thảo counted four people on her way here. How many stopped Tí? {five | four | seven} = five
 - Tí mentions two people who want lost things back. One wants a ring. What does the other want? {his father's boat | her mother's ring | the lanterns} = his father's boat
 - Which person, seen at the water on the festival night, is the reason the whole lane is now asking Tí for things? {Bống | Bà Sáu | Chú Bảy} = Bống
@@ -66,9 +64,9 @@
 
 ### 1.3 Notice the grammar
 
-::: task skill="course" type="gap-fill" ask="Each line is from the dialogue with its future words taken out. Go back to the scene, find the line, and choose what the speaker actually said."
+::: task skill="course" type="gap-fill" ask="Find the line in the dialogue. Which words does the speaker use?"
 - **Thảo:** If you explain the rule, they ___ asking. {will stop | will stopping | will to stop} = will stop
-- **Tí:** They ___ . They think I am hiding something better. {won't | will | willn't} = won't
+- **Tí:** They ___ . They think I am hiding something better. {won't | will | don't} = won't
 - **Thảo:** And what ___ you tell him? {will | are | does} = will
 - **Tí:** Then it never happens again, and nobody in this community ___ at me the same way. {will look | will looks | will looking} = will look
 - **Tí:** Seven to go before the water is over the street. I ___ one on a ring. {won't spend | won't spent | won't to spend} = won't spend
@@ -82,6 +80,131 @@
 ---
 
 ## Lesson 2 — Words & Sounds
+
+### Meet the words
+
+::: vocab size="8"
+@ gap-fill ask="Choose the word that fits."
+- Sitting in front of a computer all day is a very ___ lifestyle. {sedentary | active | nomadic} = sedentary
+- Office workers often have ___ jobs — they sit at a desk from morning to evening. {sedentary | active | nomadic} = sedentary
+- My grandparents' village is so ___ that you can only reach it by boat. {remote | urban | modern} = remote
+- Teachers in ___ mountain villages sometimes walk two hours to get to school. {remote | urban | independent} = remote
+- Museums help us to ___ the past for our children and grandchildren. {preserve | adapt | greet} = preserve
+- We should ___ old buildings, not knock them down. {preserve | greet | interact} = preserve
+- Tí's ___ went up to six hours a day during the summer holidays. {screen time | well-being | lifestyle} = screen time
+- When my family moved to the city, it took me a year to ___ . {adapt | interact | hunt} = adapt
+- Polar bears have ___ to life in the cold. {adapted | interacted | preserved} = adapted
+- My phone is the only ___ I really need. {gadget | greeting | community} = gadget
+- My uncle loves new ___ — he has three smartwatches and a talking speaker. {gadgets | greetings | generations} = gadgets
+- The older people in the village try hard to ___ the old way of life. {maintain | greet | hunt} = maintain
+- It is hard to ___ a friendship when you live far apart. {maintain | greet | hunt} = maintain
+- Rice is the ___ food of most families in this part of the country. {staple | remote | offline} = staple
+- Rice and fish are the ___ foods in Bà Sáu's kitchen. {staple | tribal | offline} = staple
+- In our town it is ___ to visit your grandparents on the first day of Tết. {common practice | street food | well-being} = common practice
+- Chú Bảy wants to ___ the old boat market that closed years ago. {revive | greet | hunt} = revive
+- Families in that region still lead a ___ life, moving with their animals. {nomadic | sedentary | modern} = nomadic
+- Hà Nội and Hồ Chí Minh City are big ___ areas with millions of people. {urban | rural | remote} = urban
+- My cousin lives on a farm in a small ___ village. {rural | urban | nomadic} = rural
+- Our school has a new ___ computer room with fast internet. {modern | traditional | nomadic} = modern
+- At Tết my grandmother always wears a ___ áo dài. {traditional | sedentary | urban} = traditional
+- My grandfather is still very ___ — he walks five kilometres every day. {active | sedentary | remote} = active
+- Everyone in our ___ helped to clean the beach after the storm. {community | gadget | lifestyle} = community
+- People of my grandparents' ___ grew up without television. {generation | gadget | impact} = generation
+- In the far north, people once had to ___ seals for food. {hunt | greet | adapt} = hunt
+- Long ago, ___ was an important job in some fishing towns — men went to sea to catch the biggest animals in the ocean. {whaling | weaving | greeting} = whaling
+- The children pulled a small wooden ___ up the snowy hill. {sled | igloo | musher} = sled
+- The ___ race in Alaska is famous — teams of dogs run for days across the snow. {dogsled | igloo | whaling} = dogsled
+- The ___ shouted to his dogs to turn left. {musher | igloo | sled} = musher
+- The hunters built an ___ from blocks of snow and slept inside it. {igloo | sled | gadget} = igloo
+- Getting enough sleep is good for your ___ . {well-being | screen time | impact} = well-being
+- In online lessons, it is hard for students to ___ with their teachers. {interact | adapt | preserve} = interact
+- The new road had a big ___ on life in the village. {impact | greeting | generation} = impact
+- When the internet stopped, we played ___ games — cards and chess on the kitchen table. {offline | online | remote} = offline
+- Bánh mì and bánh xèo are popular ___ in Quy Nhơn — you buy them from a cart. {street food | staple | gadget} = street food
+- I want to ___ life in a big city before I decide where to live. {experience | maintain | greet} = experience
+- Tourists come to Quy Nhơn to ___ the life of a fishing village. {experience | maintain | greet} = experience
+- My sister is very ___ — she cooks, cleans and travels on her own. {independent | sedentary | tribal} = independent
+- In Japan, people ___ each other with a bow. {greet | interact | revive} = greet
+- "Hello" is the most common ___ in English. {greeting | greet | impact} = greeting
+- Grandmothers teach ___ to the girls of the village, and they make beautiful cloth. {weaving | whaling | hunting} = weaving
+- The village museum shows ___ — masks, carvings and paintings by the first people who lived there. {native art | street food | screen time} = native art
+- People from the mountain villages performed a ___ dance at the festival. {tribal | sedentary | remote} = tribal
+- Moving from a village to the city changed my whole ___ . {lifestyle | generation | greeting} = lifestyle
+- Eating well and sleeping enough are part of a healthy ___ . {lifestyle | community | gadget} = lifestyle
+@ choice opts="to|with|on|of|in" ask="Which word completes the phrase?"
+- It took Bống a long time to adapt ___ life on land. = to
+- It took Thảo's family a year to adapt ___ city life. = to
+- Students need to interact ___ each other in class. = with
+- Khoa likes to interact ___ people from other countries. = with
+- Screen time has a big impact ___ our sleep. = on
+- The new bridge had a huge impact ___ the village. = on
+- My grandfather is in the habit ___ getting up at five. = of
+- Grandma is ___ the habit of drinking green tea after lunch. = in
+@ choice ask="Which word or phrase means this?"
+- a way of living {lifestyle | generation | community} = lifestyle
+- in or of the countryside {rural | urban | modern} = rural
+- in or of a town or city {urban | rural | remote} = urban
+- far away from towns and other people {remote | urban | modern} = remote
+- new, and using the latest ideas {modern | traditional | tribal} = modern
+- done in the same way for a very long time {traditional | modern | independent} = traditional
+- moving your body a lot {active | sedentary | offline} = active
+- sitting a lot and moving very little {sedentary | active | nomadic} = sedentary
+- moving from place to place, not living in one home {nomadic | remote | tribal} = nomadic
+- to bring something old back to life {revive | preserve | adapt} = revive
+- to keep something as it is, so it is not lost {preserve | revive | hunt} = preserve
+- to change so you can live well in a new place {adapt | maintain | greet} = adapt
+- all the people born around the same time {generation | community | lifestyle} = generation
+- the people who live in one area {community | generation | lifestyle} = community
+- able to do things without help from others {independent | active | modern} = independent
+- the time you spend looking at phones, computers and TV {screen time | well-being | gadget} = screen time
+- being healthy and happy {well-being | lifestyle | impact} = well-being
+- a small, clever electronic tool {gadget | sled | igloo} = gadget
+- not connected to the internet {offline | remote | urban} = offline
+- cheap food you buy from a stall or a cart {street food | staple food | native art} = street food
+- the main food people eat almost every day {staple food | street food | native art} = staple food
+- something most people in a place usually do {common practice | lifestyle | experience} = common practice
+- to do something often, because you always do it {be in the habit of | be independent | adapt} = be in the habit of
+- the job of catching whales {whaling | weaving | greeting} = whaling
+- to do or feel something yourself {experience | interact | preserve} = experience
+- to talk and work together with other people {interact | greet | adapt} = interact
+- to keep something going in the same way {maintain | revive | hunt} = maintain
+- to say hello to someone {greet | interact | hunt} = greet
+- to chase and catch wild animals for food {hunt | greet | adapt} = hunt
+- a round house built from blocks of hard snow {igloo | sled | musher} = igloo
+- the person who drives a team of dogs across the snow {musher | igloo | sled} = musher
+- making cloth by passing threads over and under each other {weaving | whaling | native art} = weaving
+- a vehicle with no wheels that dogs pull over ice {dogsled | igloo | musher} = dogsled
+- a vehicle with no wheels for sliding over snow {sled | gadget | igloo} = sled
+- carving, painting and craft made by the first people of a place {native art | weaving | street food} = native art
+- belonging to a group of families who share a language and customs {tribal | urban | modern} = tribal
+- what you say or do when you meet someone {greeting | impact | generation} = greeting
+- the effect one thing has on another {impact | greeting | lifestyle} = impact
+@ odd-one-out
+- rural · remote · peaceful · urban = urban ~ the others are about the countryside or places far from a city
+- sled · hunt · whaling · gadget = gadget ~ the others belong to an old way of life in the Arctic
+- active · fit · healthy · sedentary = sedentary ~ the others describe a healthy body
+- dogsled · musher · igloo · street food = street food ~ the others belong to life in the snow
+- greet · interact · adapt · greeting = greeting ~ you can say *to greet*, *to interact*, *to adapt* — but not *to greeting*
+- screen time · gadget · offline · weaving = weaving ~ the others are about phones and computers
+- street food · staple food · rice · musher = musher ~ the others are about food
+- weaving · native art · crafts · whaling = whaling ~ the others are things people make with their hands
+- remote · rural · urban · offline = offline ~ the others describe where a place is
+@ error-correction
+- My uncle is on the habit of walking by the river. {in | at | of} = on -> in ~ **in** the habit of
+- It took me a year to adapt with city life. {to | on | of} = with -> to ~ adapt **to** city life
+- Too much screen time has a bad impact to your sleep. {on | with | of} = to -> on ~ an impact **on** something
+- Students interact to each other in group work. {with | on | of} = to -> with ~ interact **with** someone
+- She is in the habit of walk to school. {walking | walks | walked} = walk -> walking ~ in the habit of **walking**
+- Rice is the street food of most families in Viet Nam. {staple | offline | remote} = street -> staple ~ rice is the **staple** food — the main one
+- My grandfather is very sedentary — he swims every morning and works in his garden all day. {active | remote | nomadic} = sedentary -> active ~ he moves a lot, so he is **active**
+- Hà Nội is a big rural city. {urban | remote | nomadic} = rural -> urban ~ a city is **urban**
+- The dogs pulled the igloo across the snow. {sled | whaling | greeting} = igloo -> sled ~ dogs pull a **sled**; an igloo is a snow house
+@ sentence-build
+- my grandmother / be in the habit of / drink / green tea {to drink | drinks} = My grandmother is in the habit of drinking green tea
+- it / take / me / a year / adapt to / city life {adapting | taking} = It took me a year to adapt to city life
+- screen time / have / a big impact / our sleep {with | of} = Screen time has a big impact on our sleep
+- we / want / preserve / our traditions {preserving | wants} = We want to preserve our traditions
+:::
 
 ### Vocabulary — Lifestyles
 
@@ -126,86 +249,10 @@
 | 37 | experience | /ɪkˈspɪəriəns/ | v, n | trải nghiệm; kinh nghiệm |
 | 38 | independent | /ˌɪndɪˈpendənt/ | adj | độc lập, tự chủ |
 
-> ### ▶︎ [**Practise these 38 words**](../app/unit-06-vocab.html)
->
-> When you have finished this lesson, the unit page opens a **practice**
-> session over all thirty-eight — the meaning, the word, and, more often than
-> either of those, **the word inside a phrase it actually lives in**. Wrong
-> answers come straight back, and everything returns a week later, because
-> what you can still recall after a gap is the only recall worth counting. The
-> **unit test** opens once all six lessons are done.
->
-> **Luyện 38 từ này.** Học xong bài này, phần
-> **practice** ở trang bài sẽ mở ra để luyện cả 38 từ — trong đó phần lớn là
-> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
-> ngay, và mọi từ quay lại sau một tuần.
->
-> Do the exercises below as well — they put the words back inside sentences.
-
-### Meet the words
-
-The table above is there to look things up in. This is where you actually meet
-them: a few at a time, then answer on the few you have just met.
-
-::: vocab size="8"
-:::
-
-### 2.1 Complete the sentences
-
-::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
-- Sitting in front of a computer all day is a very ___ lifestyle. {sedentary | active | nomadic} = sedentary
-- My grandparents' village is so ___ that you can only reach it by boat. {remote | urban | modern} = remote
-- Museums help us to ___ the past for future generations. {preserve | adapt | greet} = preserve
-- Doctors say too much ___ is bad for children's sleep. {screen time | well-being | common practice} = screen time
-- When my family moved to the city, it took me a year to ___ . {adapt | interact | hunt} = adapt
-- My phone is the only ___ I really need. {gadget | greeting | community} = gadget
-:::
-
-### 2.2 Odd one out
-
-::: task skill="course" type="choice" variant="odd-one-out" ask="The reason appears when you check."
-- rural · remote · peaceful · urban = urban ~ the other three are about the countryside or places far from a city
-- sled · hunt · whaling · gadget = gadget ~ the other three belong to a traditional Arctic lifestyle
-- active · fit · healthy · sedentary = sedentary ~ the other three describe a healthy lifestyle
-:::
-
-### 2.3 The phrases these words live in
-
-Some of the new words almost never turn up alone. Learn each one together with
-the words around it, not on its own.
-
-::: task skill="course" type="gap-fill" ask="Choose the word or phrase that fits."
-- The elders work hard to ___ their traditional lifestyle. {maintain | greet | hunt} = maintain
-- Rice is the ___ food of most families in this part of the country. {staple | street | offline} = staple
-- Buying breakfast on the way to school is ___ here — almost nobody cooks at home. {common practice | street food | well-being} = common practice
-- My uncle is ___ walking by the river before six every morning. {in the habit of | on the habit of | at the habit of} = in the habit of
-- A group of young singers is trying to ___ the folk songs their grandparents sang. {revive | greet | hunt} = revive
-- Families in that region still lead a ___ life, moving with their animals. {nomadic | sedentary | modern} = nomadic
-:::
-
-> **Ghi chú:** Sau *in the habit of* luôn là **V-ing**: ✅ *in the habit of
-> **walking***, ❌ *in the habit of walk*. Còn *common practice* thường đứng
-> **không có mạo từ**: *It is **common practice** here.*
-
-### 2.4 Which word?
-
-::: task skill="course" type="choice" opts="dogsled|musher|igloo|weaving|native art|tribal|greeting|impact" ask="Which word does each description point to?"
-- a shelter built from blocks of hard snow = igloo
-- the person who drives a team of dogs across the snow = musher
-- making cloth by passing threads over and under each other = weaving
-- a vehicle with no wheels that dogs pull over ice = dogsled
-- carving, painting and craft made by the first people of a place = native art
-- belonging to a group of families who share a language and customs = tribal
-- what you say or do when you meet someone = greeting
-- the effect one thing has on another = impact
-:::
-
 ### Pronunciation — /br/ and /pr/
 
-Two consonant clusters that are easy to swap. The two sounds are made in
-exactly the same place — **both lips** — so only one thing separates them: the
-**voice**. That is where the difficulty actually sits, and the bridge at the end
-of this block gives the measurement behind that claim.
+Two sounds that are easy to swap. Both are made with **both lips**, so only one
+thing separates them: the **voice**.
 
 | | /br/ — as in *bright* | /pr/ — as in *price* |
 | --- | --- | --- |
@@ -227,7 +274,7 @@ of this block gives the measurement behind that claim.
 > từ đầu; với **/pr/** (*price*) thì không rung, và có một luồng hơi nhỏ bật
 > ra. Thử đặt tờ giấy trước miệng: *price* làm giấy động, *bright* thì không.
 
-### 2.5 Sort the sounds
+### 2.1 Sort the sounds
 
 ::: task skill="course" type="sort" opts="/br/|/pr/" ask="Which sound is in each word?"
 - bright = /br/
@@ -244,16 +291,16 @@ of this block gives the measurement behind that claim.
 - celebrate = /br/
 :::
 
-### 2.6 Odd sound out
+### 2.2 Odd sound out
 
-::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **cluster**, not the meaning."
+::: task skill="course" type="choice" variant="odd-one-out" ask="Listen for **br** or **pr**, not the meaning."
 - bring · brave · print · brush = print ~ *print* is /pr/; the others are /br/
 - price · practice · brother · protect = brother ~ *brother* is /br/; the others are /pr/
 - surprise · umbrella · improve · prefer = umbrella ~ *umbrella* is /br/; the others are /pr/
 - celebrate · break · bright · produce = produce ~ *produce* is /pr/; the others are /br/
 :::
 
-### 2.7 Say these sentences
+### 2.3 Say these sentences
 
 Read aloud three times, faster each time. Record yourself if you can.
 
@@ -261,150 +308,210 @@ Read aloud three times, faster each time. Record yourself if you can.
 2. The **bright** red **umbrella** was a very good **price**.
 3. **Bring** the **brush** — we will **print** the poster and **celebrate**.
 
----
+::: bridge name="Feel the buzz and the puff" trains="Pronunciation" cefr="A2" marker="[S]" src="07 §5.5.3"
+In *brother* and *price*, work on the **first** sound. Put a hand on your throat:
+/b/ buzzes, /p/ does not. Hold a strip of paper in front of your mouth: /p/
+moves it, /b/ does not.
 
-::: bridge name="This is a voicing drill, not a cluster drill" trains="Pronunciation" cefr="A2" marker="[S]" src="07 §5.5.3"
-Work the **voice and the puff of air**, not the consonants. Put a hand on your
-throat: /b/ buzzes, /p/ does not. Hold a strip of paper in front of your mouth:
-/p/ moves it, /b/ does not.
+Watch out for /p/ coming out as /b/.
 
-Here is why that is the drill. When these clusters go wrong, the usual slip is
-not a missing consonant — it is /p/ coming out as /b/, the voicing changing
-while both consonants stay put. Fixing the voicing fixes the cluster; drilling
-the cluster does not fix the voicing.
-
-> **Tiếng Việt:** Đây là bài luyện **thanh (voicing) và hơi bật (aspiration)**,
-> không phải bài luyện cụm phụ âm. Lỗi phổ biến nhất là đổi /p/ thành /b/, chứ
-> không phải lược bỏ phụ âm.
+> **Tiếng Việt:** Chú ý âm đầu: /b/ làm cổ **rung**, /p/ có **hơi bật** làm mẩu
+> giấy bay. Cẩn thận đừng đọc /p/ thành /b/.
 :::
+
+---
 
 ## Lesson 3 — Grammar
 
 ### Grammar — The future simple: *will* and *won't*
 
-**Form:** subject + **will** + **bare infinitive** (no *to*, no *-s*, no *-ing*).
+We use **will** to talk about the future. After *will* comes the plain verb:
+*will **go***, *will **help***, *won't **come***.
 
-| | Statement |
-| --- | --- |
-| **+** | I / you / he / she / it / we / they **will go**. (**'ll go**) |
-| **−** | I / you / he / she / it / we / they **will not go**. (**won't go**) |
-| **?** | **Will** you **go**? |
+#### 1 · will + the plain verb — no *to*, no *-s*, no *-ing*
 
-Short answers: *Yes, I **will**.* / *No, I **won't**.* — never *Yes, I will go.*
-in a short answer, and never *No, I willn't.*
+**will · 'll · will not · won't**
 
-✅ She **will move** to the city next year.
-❌ *She will moves…* · *She will to move…* · *She won't goes.*
+> She **will move** to the city next year.
+> I**'ll carry** it for you.
+> They **won't come** today.
+> **Will** you **help** me?
 
-We use *will* for **three** things at this level:
+❌ *She will moves to the city.*
 
-| Use | Example | Nghĩa |
+❌ *She will to move to the city.*
+
+> **Ghi chú:** *won't* = *will not*. Câu trả lời ngắn: *Yes, I **will**.* /
+> *No, I **won't**.* — không bao giờ nói *No, I willn't.*
+
+#### 2 · Three jobs *will* does
+
+| Job | Example | Nghĩa |
 | --- | --- | --- |
-| **Prediction** — what we think, guess or expect | I think it **will rain** this afternoon. | dự đoán |
-| **Spontaneous decision** — decided at the moment of speaking | That bag looks heavy. I**'ll carry** it for you. | quyết định tức thì |
-| **Promise / refusal** | I **won't tell** anyone, I promise. | lời hứa / lời từ chối |
+| **Guessing the future** (a prediction) | I think it **will rain** this afternoon. | dự đoán |
+| **Deciding right now** | That bag looks heavy. I**'ll carry** it for you. | quyết định tức thì |
+| **Promising, or saying no** | I **won't tell** anyone, I promise. | lời hứa / lời từ chối |
 
-Useful signposts: *tomorrow, next week/year, in 2035, soon, later, one day,
-I think…, I'm sure…, probably, perhaps*.
+Words that often come with *will*:
 
-> **Ghi chú:** *probably* đứng **sau** *will* nhưng **trước** *won't*:
-> *She **will probably** come.* / *She **probably won't** come.*
+**tomorrow · next week · next year · soon · later · one day · I think · I'm sure · probably · perhaps**
 
-### Grammar — The first conditional
+#### 3 · *probably* goes after *will*, but before *won't*
 
-We use it for a **real, possible** future situation and its result.
+> She **will probably** come.
+> She **probably won't** come.
 
-> **If + present simple**, **will + bare infinitive**
+❌ *She won't probably come.*
 
-| If-clause (condition) | Main clause (result) |
-| --- | --- |
-| If it **rains** tomorrow, | we **will stay** at home. |
-| If you **eat** more vegetables, | you **will feel** better. |
-| If I **don't hurry**, | I **will miss** the bus. |
+### Grammar — The first conditional: *If it rains, we will stay in*
 
-**Clause order and the comma.** Both orders mean exactly the same thing; the
-comma depends on which clause comes first:
+Something might happen in the future. We say what will happen **if** it does.
+The *if* half uses the present — *if it **rains*** — and the other half uses
+*will* — *we **will stay** in*.
 
-✅ **If you study hard, you will pass.** — if-clause first → **use a comma**
-✅ **You will pass if you study hard.** — main clause first → **no comma**
+#### 1 · *if* + present, then *will* + plain verb
 
-**unless** = *if … not*. After *unless*, the verb is **positive**.
+> If it **rains** tomorrow, we **will stay** at home.
+> If you **eat** more vegetables, you **will feel** better.
+> If I **don't hurry**, I **will miss** the bus.
 
-✅ **Unless** you hurry, you will miss the bus. = **If** you **don't** hurry,
-you will miss the bus.
-❌ *Unless you don't hurry, you will miss the bus.* — double negative.
-
-**when vs if** in a future clause. Both take the **present simple**, but they
-mean different things:
-
-| | Meaning | Example |
-| --- | --- | --- |
-| **when** | it is **certain** to happen | **When** I **am** eighteen, I **will** vote. |
-| **if** | it is only **possible** | **If** I **pass**, I **will** celebrate. |
-
-❌ *When I will be eighteen…* — never *will* after *when* in a future clause.
+❌ *If it will rain tomorrow, we will stay at home.*
 
 > ⚠️ **Bẫy thường gặp:** Tiếng Việt nói "**Nếu** ngày mai trời **sẽ** mưa…",
 > nên học sinh Việt Nam hay viết *If it **will** rain tomorrow…* — **SAI**.
-> Trong tiếng Anh, **mệnh đề *if* không bao giờ có *will***, dù nói về tương lai:
-> ✅ *If it **rains** tomorrow, we **will** stay at home.*
-> ❌ *If it **will rain** tomorrow, we will stay at home.*
-> Quy tắc ngắn gọn: **chỉ một chữ *will*, và nó nằm ở mệnh đề kết quả.**
-> Điều này áp dụng cho cả *unless* và *when*: ❌ *Unless it will stop…*,
-> ❌ *When she will arrive…*
+> Trong tiếng Anh, **vế có *if* không bao giờ có *will***, dù nói về tương lai.
+> Chỉ **một** chữ *will*, và nó nằm ở vế kết quả. Điều này đúng cả với
+> *unless* và *when*.
 
-### 3.1 Recognise the correct sentence
+#### 2 · Either half can come first — the comma comes after the *if* half
 
-::: task skill="course" type="choice" ask="Pick the correct sentence in each pair."
-- Pair 1 {If the sea will be calm, the boats will go out. | If the sea is calm, the boats will go out.} = If the sea is calm, the boats will go out. ~ no *will* in an *if*-clause
-- Pair 2 {I think she'll like the present. | I think she'll likes the present.} = I think she'll like the present. ~ bare infinitive after *will*
-- Pair 3 {When I finish my homework, I'll call you. | When I will finish my homework, I'll call you.} = When I finish my homework, I'll call you. ~ no *will* after *when* in a future clause
-- Pair 4 {Unless the boats don't come back, the market will close early. | Unless the boats come back, the market will close early.} = Unless the boats come back, the market will close early. ~ *unless* takes a positive verb
-- Pair 5 {We will stay indoors if it snows tomorrow. | We will stay indoors if it will snow tomorrow.} = We will stay indoors if it snows tomorrow. ~ no *will* in an *if*-clause, whichever clause comes first
-- Pair 6 {If he will miss the bus, we'll start without him. | If he misses the bus, we'll start without him.} = If he misses the bus, we'll start without him. ~ present simple in the *if*-clause
+> If you study hard, you will pass.
+> You will pass if you study hard.
+
+> **Ghi chú:** *If* đứng đầu câu → có dấu phẩy. *if* ở giữa câu → không có
+> dấu phẩy. Nghĩa hai câu như nhau.
+
+#### 3 · *unless* means *if … not*
+
+> **Unless** you hurry, you will miss the bus.
+> **If** you **don't** hurry, you will miss the bus.
+
+❌ *Unless you don't hurry, you will miss the bus.*
+
+> **Ghi chú:** Hai câu đầu cùng nghĩa. Sau *unless*, động từ **không** có
+> *don't* / *doesn't* — *unless* đã mang nghĩa phủ định rồi.
+
+#### 4 · *when* for what is sure, *if* for what only might happen
+
+| | Meaning | Example |
+| --- | --- | --- |
+| **when** | it is **sure** to happen | **When** I **am** eighteen, I **will** vote. |
+| **if** | it **might** happen | **If** I **pass**, I **will** celebrate. |
+
+❌ *When I will be eighteen, I will vote.*
+
+### 3.1 Practice
+
+::: bank draw="10"
+@ gap-fill ask="Choose the words that fit."
+- Don't worry — I ___ anyone your secret. {won't tell | will tell | won't tells} = won't tell
+- Look at those dark clouds! It ___ . {will rain | won't rain | will rains} = will rain
+- I'm really tired. I think I ___ to bed early. {will go | won't go | will to go} = will go
+- She's very careful, so she ___ that mistake again. {won't make | will make | won't makes} = won't make
+- That box looks heavy. I ___ it for you. {will carry | won't carry | will carrying} = will carry
+- Their team is much stronger than ours. We ___ . {won't win | will win | won't to win} = won't win
+- I think it ___ cold tonight. {will be | will is | will being} = will be
+- Perhaps we ___ Bống at the market. {will see | will saw | will seeing} = will see
+- Hùng ___ probably come to the party. {will | won't | is} = will ~ *will probably* — but *probably won't*
+- Bống has a bad cold. She ___ come to the beach. {probably won't | won't probably | not will probably} = probably won't
+- "Will Chú Bảy come with us?" — "No, he ___ ." {won't | willn't | doesn't} = won't
+- "Will it be sunny tomorrow?" — "I'm sure it ___ ." {will | does | is} = will
+- My brother ___ to Đà Nẵng next year. {will move | will moves | will moving} = will move
+- The phone is ringing. ___ it. {I'll answer | I answered | I'm answer} = I'll answer
+- I promise I ___ late again. {won't be | won't being | not will be} = won't be
+- Khoa ___ his grandmother when he is in Hà Nội next month. {will visit | visited | visiting} = will visit
+@ gap-fill ask="Choose the form that fits."
+- If it ___ tomorrow, we won't go to the beach. {rains | will rain | rain} = rains ~ *if it **rains*** — no *will* after *if*
+- If you eat more vegetables, you ___ better. {will feel | will feels | feeling} = will feel
+- We ___ the bus if we don't leave now. {will miss | will missing | missed} = will miss
+- Unless she ___ every day, she won't improve. {practises | will practise | doesn't practise} = practises ~ *unless she **practises*** — no *will*, no *doesn't*
+- If the internet is slow, I ___ the online lesson. {won't join | won't joining | not will join} = won't join
+- When I ___ eighteen, I will move to the city. {am | will be | be} = am ~ *when I **am*** — no *will* after *when*
+- If Tí ___ to the harbour wall, Bống will go with him. {goes | will go | go} = goes
+- If you ___ your homework now, you will be free after dinner. {finish | will finish | finishing} = finish
+- If we plant more trees, the air ___ cleaner. {will be | be | being} = will be
+- Bà Sáu ___ angry if the fish goes bad again. {will be | be | being} = will be
+- If Thảo ___ the bus, she will be late for school. {misses | will miss | miss} = misses
+- If they ___ hard, they will pass the test. {study | will study | studies} = study
+- If it is sunny on Sunday, we ___ to the beach. {will go | went | going} = will go
+- Unless you ___ a coat, you will get cold. {wear | will wear | don't wear} = wear
+- Unless the boats ___ back soon, the market will close. {come | will come | don't come} = come
+- We won't finish on time unless everybody ___ . {helps | will help | doesn't help} = helps
+- When the tide ___ , the water will cover the steps. {turns | will turn | turn} = turns
+- I will call you when I ___ home. {get | will get | got} = get
+@ gap-fill ask="Is it sure to happen, or only possible? Choose the word."
+- ___ I am eighteen, I will be able to vote. {When | If} = When ~ everyone turns eighteen one day
+- ___ I pass the test — and I'm not sure I will — I'll celebrate. {If | When} = If ~ it only might happen
+- ___ the sun goes down tonight, the lanterns will be lit. {When | If} = When ~ the sun always goes down
+- ___ it rains tomorrow — and it might — we won't go to the beach. {If | When} = If ~ it only might happen
+- ___ Tết comes, we will visit our grandparents. {When | If} = When ~ Tết comes every year
+@ gap-fill ask="Choose the word that fits."
+- ___ you water the plants, they will die. {Unless | If | When} = Unless ~ *unless you water* = *if you don't water*
+- You won't get better ___ you take your medicine. {unless | if | when} = unless ~ = *if you don't take*
+- Unless it ___ , we'll play football outside. {rains | doesn't rain | will rain} = rains ~ *unless it rains* = *if it doesn't rain*
+@ choice ask="Which sentence is right?"
+- Chú Bảy talks about the boats. {If the sea is calm, the boats will go out. | If the sea will be calm, the boats will go out. | If the sea calm, the boats will go out.} = If the sea is calm, the boats will go out.
+- Thảo talks about a present. {I think she'll like the present. | I think she'll likes the present. | I think she'll to like the present.} = I think she'll like the present.
+- Tí makes a plan. {When I finish my homework, I'll call you. | When I will finish my homework, I'll call you. | When I finished my homework, I'll call you.} = When I finish my homework, I'll call you.
+- Bà Sáu talks about the market. {Unless the boats come back, the market will close early. | Unless the boats don't come back, the market will close early. | Unless the boats will come back, the market will close early.} = Unless the boats come back, the market will close early.
+- The weather tomorrow. {We will stay indoors if it snows tomorrow. | We will stay indoors if it will snow tomorrow. | We stay indoors if it will snow tomorrow.} = We will stay indoors if it snows tomorrow.
+- Hùng is late. {If he misses the bus, we'll start without him. | If he will miss the bus, we'll start without him. | If he miss the bus, we'll start without him.} = If he misses the bus, we'll start without him.
+- A promise. {I won't forget your birthday. | I won't forgetting your birthday. | I willn't forget your birthday.} = I won't forget your birthday.
+- An offer. {I'll open the window for you. | I'll to open the window for you. | I'll opening the window for you.} = I'll open the window for you.
+- A plan for later in life. {When I am older, I will live by the sea. | When I will be older, I will live by the sea. | When I am older, I living by the sea.} = When I am older, I will live by the sea.
+- A guess about Thảo. {She probably won't come. | She won't probably come. | She probably not will come.} = She probably won't come.
+- A guess about Khoa. {He will probably pass. | He will probably passes. | He probably will to pass.} = He will probably pass.
+@ error-correction
+- If the weather will be good, we will go for a walk. {is | be | are} = will be -> is ~ *if the weather **is** good*
+- I think it will rains this afternoon. {rain | raining | rained} = rains -> rain ~ will **rain**
+- Unless you will wear a coat, you will get cold. {wear | wears | wore} = will wear -> wear ~ *unless you **wear***
+- When the tide will turn, we will go down to the harbour wall. {turns | turn | turned} = will turn -> turns ~ *when the tide **turns***
+- He won't to come to the party on Saturday. {won't come | won't coming | won't comes} = won't to come -> won't come ~ won't **come**
+- If we don't leave now, we missed the last bus tonight. {will miss | missing | misses} = missed -> will miss ~ *we **will miss** the bus*
+- Thảo will helps you with your maths. {help | helping | to help} = helps -> help ~ will **help**
+- If Bống will see the sea, she will run to it. {sees | see | saw} = will see -> sees ~ *if Bống **sees***
+- I promise I willn't tell anyone. {won't | don't | not} = willn't -> won't ~ *won't* = *will not*
+- Unless you don't study, you will fail the test. {study | studies | studying} = don't study -> study ~ *unless you **study*** = *if you don't study*
+- We will to visit Quy Nhơn next summer. {will visit | will visiting | will visits} = will to visit -> will visit ~ will **visit**
+- When Khoa will arrive, we will start the game. {arrives | arrive | arrived} = will arrive -> arrives ~ *when Khoa **arrives***
+- If it rain tomorrow, the market will close. {rains | raining | rained} = rain -> rains ~ *if it **rains***
+- If you will need help, call me. {need | needs | needed} = will need -> need ~ *if you **need***
+- Hùng is sure his team win on Sunday. {will win | winning | to win} = win -> will win ~ his team **will win**
+- She won't probably come to the festival. {probably won't | won't not | probably not} = won't probably -> probably won't ~ she **probably won't** come
+@ sentence-build
+- if / it / rain / we / stay / at home {will rain | stays} = If it rains, we will stay at home / We will stay at home if it rains
+- if / you / eat / vegetables / you / feel / better {will eat | feels} = If you eat vegetables, you will feel better / You will feel better if you eat vegetables
+- unless / we / hurry / we / miss / the bus {will hurry | don't} = Unless we hurry, we will miss the bus / We will miss the bus unless we hurry
+- when / the boats / come back / the market / open {will come | opening} = When the boats come back, the market will open / The market will open when the boats come back
+- I / promise / I / not / be late / again {willn't | am} = I promise I won't be late again
+- Tí / carry / the bucket / for you {to carry | carrying} = Tí will carry the bucket for you
+@ odd-one-out ask="Which one is wrong?"
+- will go · will see · will goes · will help = will goes ~ will **go**, will **see**, will **help** — never *will goes*
+- won't come · won't to come · won't stay · won't tell = won't to come ~ won't **come** — no *to*
+- if it rains · if she comes · if it will rain · if we go = if it will rain ~ *if it **rains*** — no *will* after *if*
+- unless you hurry · unless you will hurry · unless it stops · unless we leave = unless you will hurry ~ *unless you **hurry*** — no *will* after *unless*
+- when I am older · when I will be older · when the tide turns · when she arrives = when I will be older ~ *when I **am** older* — no *will* after *when*
+- I'll help · I'll call · I'll helps · I'll carry = I'll helps ~ I'll **help** — no *-s*
 :::
 
-### 3.2 *will* or *won't*
+### 3.2 About you
 
-::: task skill="course" type="gap-fill" ask="Choose **will** or **won't** with the verb in brackets."
-- Don't worry — I ___ (tell) anyone your secret. {won't tell | will tell | won't tells} = won't tell
-- Look at those clouds! It ___ (rain). {will rain | won't rain | will rains} = will rain
-- I'm really tired. I think I ___ (go) to bed early. {will go | won't go | will to go} = will go
-- She's very careful, so she ___ (make) that mistake again. {won't make | will make | won't makes} = won't make
-- That box looks heavy. I ___ (carry) it for you. {will carry | won't carry | will carrying} = will carry
-- Their team is much stronger than ours. We ___ (win). {won't win | will win | won't to win} = won't win
-:::
-
-### 3.3 First conditional
-
-::: task skill="course" type="gap-fill" ask="One half of each sentence is already done for you. Choose the form of the verb in brackets that the **other** half needs."
-- If it ___ (rain) tomorrow, we won't go to the beach. {rains | will rain | rain} = rains ~ present simple in the *if*-clause, even when the sentence is about the future
-- If you eat more vegetables, you ___ (feel) better. {will feel | will feels | feeling} = will feel
-- We ___ (miss) the bus if we don't leave now. {will miss | will missing | missed} = will miss
-- Unless she ___ (practise) every day, she won't improve. {practises | will practise | doesn't practise} = practises ~ *unless* takes a present-simple verb, and a positive one
-- If the internet is slow, I ___ (not join) the online lesson. {won't join | won't joining | not will join} = won't join
-- When I ___ (be) eighteen, I will move to the city. {am | will be | be} = am ~ no *will* after *when* in a future clause
-:::
-
-### 3.4 Correct the mistake
-
-::: task skill="course" type="short-answer" variant="error-correction"
-- If the weather will be good, we will go for a walk. {is | be | are} = will be -> is ~ no *will* inside an *if*-clause
-- I think it will rains this afternoon. {rain | raining | rained} = rains -> rain ~ bare infinitive after *will*
-- Unless you will wear a coat, you will get cold. {wear | wears | wore} = will wear -> wear ~ no *will* after *unless*, just as after *if*
-- When the tide will turn, we will go down to the harbour wall. {turns | turn | turned} = will turn -> turns ~ no *will* after *when* in a future clause
-- He won't to come to the party on Saturday. {won't come | won't coming | won't comes} = won't to come -> won't come ~ no *to* after *won't*
-- If we don't leave now, we missed the last bus tonight. {will miss | missing | misses} = missed -> will miss ~ the result clause needs *will*
-:::
-
-### 3.5 About you
-
-Write true sentences about yourself. Use the structure given each time.
+Write true sentences about yourself. Use the words given each time.
 
 1. (a promise, with *won't*) _______________________________
-2. (If + present simple, will…) _______________________________
-3. (Unless…) _______________________________
-4. (When I am older, I will…) _______________________________
+2. (If …, I will …) _______________________________
+3. (Unless …) _______________________________
+4. (When I am older, I will …) _______________________________
 
 ---
 
@@ -497,11 +604,10 @@ eat it, your own favourite, and one food eaten on a special occasion.
 
 ### 4.1 Matching information
 
-The text has **five** paragraphs, **A** to **E**, in the order they are
-printed. Each statement below is somewhere in one of them — but never in the
-same words. You are looking for the information, not for the sentence.
+The text has **five** paragraphs, **A** to **E**. Each statement below is in
+one of them, in different words.
 
-::: task skill="reading" type="matching-information" opts="A|B|C|D|E" ask="Which paragraph contains each piece of information? A paragraph may be used once, more than once, or not at all."
+::: task skill="reading" type="matching-information" opts="A|B|C|D|E" ask="Which paragraph has this? You can use a letter more than once, or not at all."
 - a description of what replaced the electric light = B ~ *oil lamps in every window*
 - an example of somebody whose health improved = C ~ the grandmother's knees *hurt less, not more*
 - a problem caused by having nowhere cold to store things = D ~ *the fish went bad by noon*
@@ -521,7 +627,7 @@ same words. You are looking for the information, not for the sentence.
 
 ### 4.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too."
+::: task skill="course" type="synonym-search" ask="Find the word in the text that means this. The clock is still running."
 - sitting still and hardly moving at all {sedentary | flat | behind} = sedentary
 - making cloth by hand {weaving | pounded | print} = weaving
 - with no electricity left in it {flat | bad | cold} = flat
@@ -530,8 +636,7 @@ same words. You are looking for the information, not for the sentence.
 
 ### Speaking — How communities keep their traditions
 
-> **Working alone:** You have no partner, so do this in three steps. It still
-> works — speaking practice is mostly about producing language out loud.
+> **Working alone:** You have no partner, so do this in three steps.
 
 **Step 1 — Prepare.** Write short notes (not full sentences) for each question.
 
@@ -550,7 +655,7 @@ one first conditional across the whole talk.
 **Step 3 — Record and check.** Record yourself on your phone. Listen back and
 check three things:
 
-- Did you keep *will* **out** of every *if*-clause?
+- Did you keep *will* **out** of the *if* half — *if it **rains***, not *if it will rain*?
 - Did you pronounce /br/ and /pr/ differently in words like *celebrate* and
   *preserve*?
 - Did your pauses fall **between** points rather than inside a sentence?
@@ -703,41 +808,32 @@ Cover the finished paragraph above. Answer in note form, in your own words.
 | One real point on the other side that you are willing to admit | |
 | Where does the reader see your position for the second time? | |
 
-::: bridge name="Open → stand → close. Learn the name once; you will meet it three more times" trains="Task Response" cefr="B1" marker="[Q]" src="05 §3.1"
-Three moves, and this unit is where they get their name:
+::: bridge name="Open, say what you think, close" trains="Task Response" cefr="B1" marker="[Q]" src="05 §3.1"
+Build your paragraph in three moves:
 
 - **Open** — say what the paragraph is about.
-- **Stand** — say where you stand, in a sentence a reader cannot miss.
-- **Close** — leave the reader holding your position, not a new idea.
+- **Stand** — say clearly what you think.
+- **Close** — end on your opinion, not a new idea.
 
-You will use it again in Unit 8, Unit 10 (spoken) and Unit 11. **Do not turn it
-into sentences you reuse.** The three moves are questions you answer — *what is
-my position, and where does the reader first see it?* — never a frame to fill
-with the same words every time.
+Answer each move in your own words every time — don't reuse the same sentences.
+The middle move is the one people skip, and without it the reader does not know
+what you think.
 
-The middle move is the one people skip. A paragraph that describes both sides
-and never says where the writer stands leaves the reader with nothing to hold.
-
-> **Tiếng Việt:** Ba bước: **mở → nêu quan điểm → chốt**. Đây là bộ **câu hỏi**
-> bạn tự trả lời, **không phải mẫu câu** để chép lại.
+> **Tiếng Việt:** Ba bước: **mở → nêu quan điểm → chốt**. Mỗi lần hãy tự viết bằng
+> lời của mình, đừng chép lại câu cũ.
 :::
 
-::: bridge name="One concession sentence — built from two simple sentences" trains="Task Response" cefr="A2" marker="[INF]" src="05 §5"
-Add exactly one pair like this to your paragraph:
+::: bridge name="Show the other side in one pair" trains="Task Response" cefr="A2" marker="[INF]" src="05 §5"
+Add exactly one pair of short sentences like this to your paragraph:
 
 > Some people say online learning is lonely. I think the time it saves is worth
 > more.
 
-Two simple sentences. **Not** a subordinate clause — you have not met
-subordination yet; that is Unit 7. This is deliberately buildable with the
-grammar you already have.
+Saying what others think, and then why you still disagree, makes your opinion
+more convincing.
 
-Why bother: showing that you know the other side, and then saying why you still
-think what you think, is what makes an opinion convincing instead of stubborn.
-One pair is enough — two starts to sound like you cannot decide.
-
-> **Tiếng Việt:** Thêm đúng **một** cặp câu nhượng bộ, dùng **hai câu đơn** —
-> chưa cần mệnh đề phụ (Unit 7 mới học).
+> **Tiếng Việt:** Thêm đúng **một** cặp hai câu đơn: một câu nêu ý kiến người khác,
+> một câu nêu ý của bạn.
 :::
 
 ::: thread id="articles" stage="check"
@@ -749,8 +845,8 @@ One pair is enough — two starts to sound like you cannot decide.
 - [ ] Four ordering words: *First, Second, Third, Finally* ~ all first/second/third/finally
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
 - [ ] At least **one** *if* sentence ~ re:1 \bif\b
-- [ ] …with **no** *will* inside the *if*-clause ~ none if it will/if i will/if you will/if we will/if they will/if he will/if she will/if there will/if people will/if students will
-- [ ] At least **one** sentence with *will* or *won't* in the main clause ~ any:1 will/won't/will not
+- [ ] …with **no** *will* straight after *if* ~ none if it will/if i will/if you will/if we will/if they will/if he will/if she will/if there will/if people will/if students will
+- [ ] At least **one** sentence with *will* or *won't* ~ any:1 will/won't/will not
 - [ ] One side only — do not mix advantages and disadvantages
 :::
 
@@ -799,21 +895,17 @@ Six sentences from Tí's note about the lane, the week after. Each one has a
 mistake in it.
 
 ::: task skill="course" type="short-answer" variant="error-correction"
-- Six marks are on our wall now, and I will not calls anything back again. {call | calling | called} = calls -> call ~ *will* is followed by the bare infinitive
-- If we will bring back another week like that one, half the lane will be ill. {bring | brought | bringing} = will bring -> bring ~ no *will* inside the *if*-clause
-- Half the lane will be ill, and the other half won't speaks to us. {speak | speaking | spoke} = speaks -> speak ~ *won't* + bare infinitive
-- My grandmother says she will to keep the oil lamps anyway. {will keep | will keeping | will kept} = will to keep -> will keep ~ *will* + bare infinitive — no *to*
-- Unless we stops now, somebody will get hurt. {stop | stopping | stopped} = stops -> stop ~ after *we*, the present simple is *stop*
-- If the water stays where it is, I sleep better tonight. {will sleep | slept | sleeping} = sleep -> will sleep ~ a prediction about the future takes *will*
+- Six marks are on our wall now, and I will not calls anything back again. {call | calling | called} = calls -> call ~ will **call**
+- If we will bring back another week like that one, half the lane will be ill. {bring | brought | bringing} = will bring -> bring ~ *if we **bring*** — no *will* after *if*
+- Half the lane will be ill, and the other half won't speaks to us. {speak | speaking | spoke} = speaks -> speak ~ won't **speak**
+- My grandmother says she will to keep the oil lamps anyway. {will keep | will keeping | will kept} = will to keep -> will keep ~ will **keep** — no *to*
+- Unless we stops now, somebody will get hurt. {stop | stopping | stopped} = stops -> stop ~ *we **stop***, not *we stops*
+- If the water stays where it is, I sleep better tonight. {will sleep | slept | sleeping} = sleep -> will sleep ~ tonight is the future: I **will sleep**
 :::
 
 ### 6.5 Say it the other way
 
-*If* and *unless* say the same thing from opposite ends, so turning a sentence
-from one into the other is the quickest way to find out whether the negative is
-where you think it is.
-
-::: task skill="course" type="gap-fill" ask="Complete the second sentence so that it means the same as the first."
+::: task skill="course" type="gap-fill" ask="Make the second sentence mean the same as the first."
 - We'll go to the beach unless it rains. → If it ___ , we'll go to the beach. {doesn't rain | rains | won't rain} = doesn't rain
 - If you don't hurry up, you will be late. → ___ you hurry up, you will be late. {Unless | If | When} = Unless
 - Unless the teacher explains it again, we won't understand it. → If the teacher ___ explain it again, we won't understand it. {doesn't | does | don't} = doesn't
@@ -867,9 +959,9 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for different lifestyles | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 6, exercise 6.1 |
-| hear /br/ and /pr/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
-| use *will* and the first conditional, *unless* included | Lesson 3, exercises 3.2 and 3.3 · Lesson 6, exercises 6.3, 6.4 and 6.5 |
+| use the words for different lifestyles | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
+| hear /br/ and /pr/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
+| use *will* and the first conditional, *unless* included | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3, 6.4 and 6.5 |
 | say how certain I am | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
 | read about a way of living that came back, and what it cost | Lesson 4, exercises 4.1 and 4.2 |
 | talk about keeping a traditional way of life | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
@@ -890,25 +982,26 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 2
 
-**2.7** Answers will vary (spoken). Check: your throat buzzes on the **br** of
+**2.3** Answers will vary (spoken). Check: your throat buzzes on the **br** of
 *brother, bright, bring, brush, celebrate, umbrella* — at the very start in the
 first four, and in the middle of *celebrate* and *umbrella* — and does not buzz
 on the **pr** of *practise, improve, price, print*.
 
 ### Lesson 3
 
-**3.5** Answers will vary. Check: no *will* anywhere in an *if*- or *when*-clause;
-*unless* followed by a **positive** verb; a bare infinitive after *will/won't*;
-a comma only when the *if*-clause comes first.
+**3.2** Answers will vary. Check: no *will* straight after *if*, *unless* or
+*when* (*if I **pass***, not *if I will pass*); no *don't* after *unless*; the
+plain verb after *will* / *won't* (*will **go***, not *will goes*); a comma only
+when the *if* half comes first.
 
 ### Lesson 4
 
 **Speaking** Answers will vary. Check: *will/won't* in at least one sentence per
-question, at least one correct first conditional, and no *will* inside any
-*if*-clause.
+question, at least one correct *if* sentence, and no *will* straight after
+*if* (*if it **rains***, not *if it will rain*).
 
 ### Lesson 5
 
 **Writing** Answers will vary. Check: 80–100 words; one side only; the four
-ordering words; at least one first conditional with the present simple in the
-*if*-clause; at least four words from the Lesson 2 table.
+ordering words; at least one *if* sentence with no *will* straight after *if*;
+at least four words from the Lesson 2 table.

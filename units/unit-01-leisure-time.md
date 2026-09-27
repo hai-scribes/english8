@@ -10,7 +10,7 @@
 | Strand | Target |
 | --- | --- |
 | **Pronunciation** | /ʊ/ vs /uː/ — short *book* vs long *food* |
-| **Grammar** | Verbs of liking & disliking + **V-ing** vs **to-V** |
+| **Grammar** | Verbs of liking & disliking — enjoy **reading**, would like **to read** |
 | **Reading** | A teenager's account of an afternoon spent playing with family and friends |
 | **Speaking** | Asking and answering about leisure activities |
 | **Listening** | How someone spent their free time as a boy, and something they lost |
@@ -22,9 +22,7 @@
 
 ### Dialogue: The list in the yard
 
-*Read the conversation aloud. Then answer the questions below.*
-
-::: dialogue title="The list in the yard" bg="harbour-wall" gramen="enjoy / can't stand + V-ing" gramvi="Sau các động từ enjoy, can't stand, don't mind, động từ theo sau thêm **-ing**." gramco="I enjoy cooking · I can't stand waiting"
+::: dialogue title="The list in the yard" bg="harbour-wall" gramen="enjoy cooking · can't stand waiting" gramvi="Sau các động từ enjoy, can't stand, don't mind, động từ theo sau thêm **-ing**." gramco="I enjoy cooking · I can't stand waiting"
 @cast none
 @fx birds on=panel
 The [[tide]] is out. The wet steps of the [[harbour wall|harbour]] go all the way down into the water.
@@ -59,7 +57,7 @@ Below them the water climbs one step of the wall, and slides back down.
 
 ### 1.1 Comprehension
 
-::: task skill="course" type="short-answer" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+::: task skill="course" type="short-answer" ask="Choose the answer from the scene."
 - Hùng stopped reading the list at one name. Which name? {Khoa | Tí | Thảo} = Khoa
 - What does Tí say he does not like? {playing board games | card games | reading lists out loud} = playing board games
 - Tí thinks one person already knows he is not telling the truth. Who? {Thảo | Hùng | Khoa} = Thảo
@@ -78,19 +76,150 @@ Below them the water climbs one step of the wall, and slides back down.
 
 ### 1.3 Notice the grammar
 
-::: task skill="course" type="choice" opts="V-ing|to-V" ask="Each of these verbs appears in the dialogue above. Go back and find it. Which form follows it **there**?"
-- can't stand = V-ing
-- don't mind = V-ing
-- would love = to-V
-- enjoy = V-ing
+::: task skill="course" type="gap-fill" ask="Find the line in the dialogue. Which words does the speaker use?"
+- Thảo: "I can't stand ___ him read things out like that." {hearing | hear} = hearing
+- Thảo: "I don't mind ___ you a card game." {teaching | to teach} = teaching
+- Tí: "I'd love ___ ." {to go | going} = to go
+- Thảo: "I enjoy ___ here with you." {sitting | to sit} = sitting
 :::
 
-> **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — động từ chỉ sự yêu
-> thích đi với **V-ing** hoặc **to-V**. Chi tiết ở Lesson 3.
+> **Ghi chú:** enjoy **sitting**, can't stand **hearing**, don't mind
+> **teaching** — nhưng would love **to go**. Lesson 3 giải thích vì sao.
 
 ---
 
 ## Lesson 2 — Words & Sounds
+
+### Meet the words
+
+::: vocab size="8"
+@ gap-fill ask="Choose the word that fits."
+- My aunt sells her ___ at the Sunday market — paper boxes, small baskets and cards. {crafts | puzzles | concerts} = crafts
+- I want to ___ photography next year — I've just bought a camera. {take up | give up | hang out} = take up
+- On Sundays I like to ___ with my cousins at the park. {hang out | take up | choose} = hang out
+- He ___ loud music when he is trying to study. {can't stand | takes up | hangs out} = can't stand
+- In her ___ time, my sister does jigsaw puzzles. {leisure | pastime | craft} = leisure
+- We couldn't ___ between the film and the football match. {choose | relax | take up} = choose
+- Fishing is my grandfather's favourite ___ . {pastime | leisure | outdoors} = pastime
+- After a long day at school, I like to ___ on the sofa with a comic book. {relax | detest | socialise} = relax
+- My dad fixes everything in our house himself. He loves ___ . {DIY | origami | judo} = DIY
+- I ___ with my cousin in Da Nang — we send messages every week. {keep in touch | stay in shape | take up} = keep in touch
+- I go swimming three times a week to ___ . {stay in shape | keep in touch | hang out} = stay in shape
+- Lan's grandmother taught her to ___ a scarf from wool. {knit | cook | message} = knit
+- She folded one sheet of paper into a bird. She's very good at ___ . {origami | DIY | judo} = origami
+- You need two rackets and a shuttlecock to play ___ . {badminton | football | judo} = badminton
+- My sister made a ___ from coloured string and wore it on her wrist. {bracelet | dollhouse | comic book} = bracelet
+- He spends two hours every evening ___ the net. {surfing | knitting | cooking} = surfing
+- Can you ___ me when you get home, so I know you're safe? {message | knit | relax} = message
+- My brother does ___ at the sports centre. He has a black belt. {judo | badminton | origami} = judo
+- It's sunny today. Let's play ___ instead of watching TV. {outdoors | leisure | pastime} = outdoors
+- My cousin still plays with her old ___ . It has three floors and tiny chairs. {dollhouse | bracelet | board game} = dollhouse
+- I read a ___ every week — I love the pictures more than the words. {comic book | jigsaw puzzle | board game} = comic book
+- There is a 1,000-piece ___ on our table. We finish a little of it every night. {jigsaw puzzle | comic book | bracelet} = jigsaw puzzle
+- Teenagers often ___ with friends at the weekend, at a café or in the park. {socialise | detest | choose} = socialise
+- I ___ getting up early on Sundays. I hate it more than anything. {detest | enjoy | fancy} = detest
+- We watched a funny ___ at the cinema last night. {movie | music | pastime} = movie
+- Doctors say young people should ___ for an hour every day. {play sport | surf the net | message} = play sport
+- We bought three comic books at the new ___ . {bookshop | swimming pool | dollhouse} = bookshop
+- Tí beat everyone at the ___ Hùng got for his birthday. {board game | bracelet | bookshop} = board game
+- On hot days the ___ is full of children. {swimming pool | bookshop | dollhouse} = swimming pool
+- My mother likes to ___ fish with ginger for dinner. {cook | knit | choose} = cook
+- On rainy afternoons we stay in and do a ___ with 500 pieces. {jigsaw puzzle | board game | bracelet} = jigsaw puzzle
+- Khoa ___ loud people on the bus. He really hates them. {can't stand | is keen on | is fond of} = can't stand
+- My grandfather reads the newspaper to ___ after lunch. {relax | socialise | detest} = relax
+- Bống loves being ___ — on the beach, in the yard, anywhere with sky. {outdoors | indoors | inside} = outdoors
+- Thảo wants to ___ a new hobby this summer, maybe drawing. {take up | hang out | keep in touch} = take up
+- Please ___ your partner for the project carefully. {choose | relax | knit} = choose
+- My aunt can ___ a hat in one evening. She's very fast with wool. {knit | cook | surf} = knit
+- I ___ my friends every night to say goodnight. {message | knit | choose} = message
+- The children made a tiny ___ for their dolls from an old shoebox. {dollhouse | bookshop | swimming pool} = dollhouse
+- She listens to ___ while she does her homework. {music | movies | crafts} = music
+- Our class ___ a lot at the end-of-year party — everyone talked to everyone. {socialised | detested | knitted} = socialised
+- My brother is on the school ___ team. They play every Saturday. {football | origami | DIY} = football
+- Hùng spends too much time ___ the net and not enough time outside. {surfing | playing | cooking} = surfing
+- Going for a run every morning helps my dad ___ . {stay in shape | keep in touch | take up} = stay in shape
+- Grandma's favourite ___ is growing vegetables in the garden. {pastime | leisure | DIY} = pastime
+- After school Lan and her friends ___ at the bubble tea shop. {hang out | take up | stay in shape} = hang out
+- I ___ spiders! I scream every time I see one. {detest | am keen on | am into} = detest
+- We made cards and small boxes in our art and ___ club. {craft | judo | football} = craft
+- Can you ___ dinner tonight? I'm too tired. {cook | knit | relax} = cook
+- Let's ___ a board game. I like the one with the dragons. {choose | message | knit} = choose
+- My cousin ___ judo twice a week. {does | plays | goes} = does ~ you **do** judo
+- I'm not very sporty, but I ___ badminton with my dad on Sundays. {play | do | go} = play ~ you **play** a game with a racket or a ball
+@ choice opts="on|of|about|in|into" ask="Which word completes the phrase?"
+- I'm keen ___ playing badminton. = on
+- She's fond ___ making paper flowers. = of
+- My cousin is crazy ___ football. = about
+- Are you interested ___ joining the chess club? = in
+- He's really ___ snowboarding. = into ~ *be into* has no adjective in the middle
+- My grandmother is very fond ___ her garden. = of
+- Tí is not interested ___ comic books at all. = in
+- Thảo is crazy ___ card games. = about
+- We're all keen ___ going to the swimming pool this summer. = on
+- My little brother is ___ dinosaurs at the moment. = into
+@ choice ask="Which word or phrase means this?"
+- something you enjoy doing in your free time {pastime | leisure | craft} = pastime
+- to start doing a new hobby {take up | hang out | keep in touch} = take up
+- to spend time with other people in a friendly way {socialise | relax | detest} = socialise
+- to hate something very much {detest | relax | choose} = detest
+- the art of folding paper into shapes {origami | DIY | judo} = origami
+- outside, not in a building {outdoors | leisure | bookshop} = outdoors
+- to stay healthy and strong {stay in shape | keep in touch | take up} = stay in shape
+- to go on the internet and look at websites {surf the net | message | play sport} = surf the net
+- to rest and stop worrying {relax | detest | socialise} = relax
+- to fix or make things in your home yourself {DIY | origami | judo} = DIY
+- to send someone a short text {message | knit | choose} = message
+- a set of small pieces you fit together to make a picture {jigsaw puzzle | board game | comic book} = jigsaw puzzle
+- a shop that sells books {bookshop | swimming pool | dollhouse} = bookshop
+- a game played on a board, often with counters or dice {board game | jigsaw puzzle | judo} = board game
+- a small house for dolls, used as a toy {dollhouse | bookshop | craft} = dollhouse
+- a Japanese sport in which you try to throw the other person {judo | origami | badminton} = judo
+- to make clothes from wool with two long needles {knit | cook | choose} = knit
+- a book of stories told in pictures {comic book | movie | jigsaw puzzle} = comic book
+- to stay friends with someone by calling or messaging {keep in touch | hang out | socialise} = keep in touch
+- to pick one thing from several {choose | relax | knit} = choose
+- a piece of jewellery you wear round your wrist {bracelet | dollhouse | craft} = bracelet
+@ choice ask="What does it mean?"
+- hang out {spend free time with friends | start a new hobby | stay healthy} = spend free time with friends
+- detest {hate very much | like a little | not mind} = hate very much
+- be crazy about {like very much | not like at all | not know about} = like very much
+- keep in touch {stay in contact | stay healthy | stay at home} = stay in contact
+- outdoors {outside | inside | at school} = outside
+- leisure {free time | hard work | homework} = free time
+- socialise {spend time with other people | spend time alone | spend money} = spend time with other people
+- take up {start doing | stop doing | finish doing} = start doing
+@ odd-one-out
+- cook · bake · relax · fry = relax ~ the others are ways of cooking
+- football · badminton · judo · bookshop = bookshop ~ the others are sports
+- knit · origami · DIY · swimming pool = swimming pool ~ the others are things you do with your hands
+- be keen on · be fond of · be into · detest = detest ~ the others mean you like something
+- comic book · jigsaw puzzle · board game · stay in shape = stay in shape ~ the others are things you play with or read
+- movie · music · comic book · judo = judo ~ the others are things you watch, hear or read
+- bookshop · swimming pool · cinema · bracelet = bracelet ~ the others are places
+- bracelet · dollhouse · board game · outdoors = outdoors ~ the others are things
+- socialise · hang out · keep in touch · detest = detest ~ the others are things you do with other people
+- keep in touch · message · surf the net · stay in shape = stay in shape ~ you can do the others on a phone
+- origami · knit · bracelet · DIY = bracelet ~ the others are things you do; a bracelet is a thing
+@ error-correction
+- I'd like to take on judo next year. {up | off | out} = on -> up ~ you *take up* a hobby
+- We often hang up with our friends after school. {out | on | off} = up -> out ~ you *hang out* with friends
+- She's keen in making bracelets. {on | of | about} = in -> on ~ *keen on*
+- My brother is fond on comic books. {of | in | about} = on -> of ~ *fond of*
+- I keep on touch with my cousins by message. {in | at | to} = on -> in ~ *keep in touch*
+- I play judo every Saturday. {do | make | go} = play -> do ~ you *do* judo; you *play* a game with a ball
+- I stay on shape by cycling to school. {in | at | with} = on -> in ~ *stay in shape*
+- She is interested about origami. {in | on | of} = about -> in ~ *interested in*
+- My sister is crazy of comic books. {about | on | in} = of -> about ~ crazy **about**
+- He is keen of playing chess. {on | in | about} = of -> on ~ keen **on**
+- We hung off with our cousins all weekend. {out | up | on} = off -> out ~ hang **out**
+- I want to take in a new hobby. {up | on | off} = in -> up ~ take **up** a hobby
+@ sentence-build
+- she / be keen on / knit / scarves {to knit | knits} = She is keen on knitting scarves
+- we / hang out / with our cousins {hangs | hanging} = We hang out with our cousins
+- my dad / be fond of / do / DIY {to do | does} = My dad is fond of doing DIY
+- I / keep in touch / with my old friends {keeps | keeping} = I keep in touch with my old friends
+- Lan / be crazy about / badminton {are | on} = Lan is crazy about badminton
+:::
 
 ### Vocabulary — Leisure time
 
@@ -134,83 +263,12 @@ Below them the water climbs one step of the wall, and slides back down.
 | 36 | judo | /ˈdʒuːdəʊ/ | n | võ judo |
 | 37 | dollhouse | /ˈdɒlhaʊs/ | n | nhà búp bê |
 
-> ### ▶︎ [**Practise these 37 words**](../app/unit-01-vocab.html)
->
-> When you have finished this lesson, the unit page opens a **practice**
-> session over all thirty-seven — the meaning, the word, and, more often than
-> either of those, **the word inside a phrase it actually lives in**. Wrong
-> answers come straight back, and everything returns a week later, because
-> what you can still recall after a gap is the only recall worth counting. The
-> **unit test** opens once all six lessons are done.
->
-> **Luyện 37 từ này.** Học xong bài này, phần
-> **practice** ở trang bài sẽ mở ra để luyện cả 37 từ — trong đó phần lớn là
-> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
-> ngay, và mọi từ quay lại sau một tuần.
->
-> Do the exercises below as well — they put the words back inside sentences.
-
-### Meet the words
-
-The table above is there to look things up in. This is where you actually meet
-them: a few at a time, then answer on the few you have just met.
-
-::: vocab size="8"
-:::
-
-### 2.1 Complete the sentences
-
-::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
-- My grandmother makes beautiful paper flowers. Her ___ are lovely. {crafts | puzzles | concerts} = crafts
-- I want to ___ photography next year — I've just bought a camera. {take up | give up | hang out} = take up
-- On Sundays I like to ___ with my cousins at the park. {hang out | take up | choose} = hang out
-- He ___ loud music when he is trying to study. {can't stand | takes up | hangs out} = can't stand
-- In her ___ time, my sister does jigsaw puzzles. {leisure | pastime | craft} = leisure
-- We couldn't ___ between the film and the football match. {choose | relax | take up} = choose
-:::
-
-### 2.2 Odd one out
-
-::: task skill="course" type="choice" variant="odd-one-out" ask="The reason appears when you check."
-- cook · bake · relax · fry = relax ~ the others are ways of cooking
-- football · swimming · cycling · bookshop = bookshop ~ the others are sports or physical activities
-- movie · music · craft · concert = craft ~ the others involve listening or watching
-:::
-
-### 2.3 Which preposition?
-
-Five of the commonest ways to say you like something are **be** + adjective +
-preposition. The preposition is fixed — learn the whole phrase, not the parts.
-
-::: task skill="course" type="choice" opts="on|of|about|in|into" ask="Which preposition completes each expression?"
-- I'm keen ___ playing badminton. = on
-- She's fond ___ making paper flowers. = of
-- My cousin is crazy ___ football. = about
-- Are you interested ___ joining the chess club? = in
-- He's really ___ snowboarding. = into ~ *be into* is the only one with no adjective — the preposition follows *be* directly
-:::
-
-> ⚠️ **Bẫy thường gặp:** Cả năm cụm này đều đi với **V-ing**, không bao giờ với
-> *to*. ❌ *I'm keen on to play.* ✅ *I'm keen on **playing**.*
-> Muốn nói điều mình **không** thích, thêm **not** sau *be*:
-> *I'm **not** keen on it. · She's **not** into cooking.*
-
-### 2.4 Say it about yourself
-
-::: task skill="course" type="gap-fill" opts="keen|fond|crazy|interested|into" ask="Complete with an expression from 2.3. Look at the word after the gap — only one fits each time."
-- I'm ___ on cooking — I make lunch every Sunday. = keen
-- My sister is ___ of doing jigsaw puzzles. = fond
-- They're ___ about playing football after school. = crazy
-- We're not ___ in watching long films. = interested
-- He's not ___ knitting at all. = into
-:::
-
 ### Pronunciation — /ʊ/ and /uː/
 
-Two sounds that are easy to merge, because English spells both of them "oo".
-The difference is **length** and **tension**.
+Two sounds that are easy to mix up, because English spells both of them "oo".
+The difference is **length**.
 
-| | /ʊ/ — short, relaxed | /uː/ — long, tense |
+| | /ʊ/ — short | /uː/ — long |
 | --- | --- | --- |
 | **Lips** | slightly rounded, loose | tightly rounded, pushed forward |
 | **Length** | very short | held about twice as long |
@@ -219,18 +277,7 @@ The difference is **length** and **tension**.
 > **Mẹo:** Cùng viết là "oo" nhưng phát âm khác nhau. **book** ngắn, **food**
 > dài. Hãy đặt tay trước miệng — với /uː/ bạn sẽ thấy môi đẩy ra xa hơn.
 
-> ⚠️ **Don't learn this length from a computer voice.** Text-to-speech tools
-> are a good model of *which word* you are hearing, and a bad model of *how
-> long* the vowel is: most voices make **food** and **book** almost the same
-> length, and some read **full** as longer than **fool** — the reverse of the
-> rule above. Use a voice to check the word; use the table, and a human
-> speaker, to check the length.
->
-> **Lưu ý:** Đừng học độ dài nguyên âm từ công cụ đọc văn bản. Máy đọc đúng
-> **từ nào**, nhưng đọc sai **dài bao nhiêu** — nhiều giọng đọc *food* và
-> *book* dài gần bằng nhau. Hãy tin vào bảng trên và vào giọng người thật.
-
-### 2.5 Sort the sounds
+### 2.1 Sort the sounds
 
 ::: task skill="course" type="sort" opts="/ʊ/|/uː/" ask="Which sound is in each word?"
 - cool = /uː/
@@ -247,18 +294,18 @@ The difference is **length** and **tension**.
 - movie = /uː/
 :::
 
-*Compare **foot** /fʊt/ with **boot** /buːt/ — same consonants, and the vowel
-is the only thing that tells them apart.*
-### 2.6 Odd sound out
+*Compare **foot** /fʊt/ with **boot** /buːt/ — only the vowel tells them apart.*
 
-::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **vowel sound**, not the meaning."
+### 2.2 Odd sound out
+
+::: task skill="course" type="choice" variant="odd-one-out" ask="Listen for the **vowel sound**, not the meaning."
 - book · cook · food · look = food ~ *food* is the long /uː/; the other three are short /ʊ/
 - school · pool · good · cool = good ~ *good* is the short /ʊ/; the other three are long /uː/
 - would · could · should · choose = choose ~ *choose* is the long /uː/; the other three are short /ʊ/
 - music · sugar · blue · movie = sugar ~ *sugar* is the short /ʊ/; the other three are long /uː/
 :::
 
-### 2.7 Say these sentences
+### 2.3 Say these sentences
 
 Read aloud three times, faster each time. Record yourself if you can.
 
@@ -272,10 +319,16 @@ Read aloud three times, faster each time. Record yourself if you can.
 
 ### Grammar — Verbs of liking and disliking
 
-After verbs like *love, like, enjoy, hate*, the next verb changes form. There
-are **three groups**. Learn which group each verb belongs to.
+When one verb comes straight after another, the second verb has one of two
+shapes:
 
-#### Group 1 — always + V-ing
+| The **-ing** shape | The **to** shape |
+| --- | --- |
+| read**ing**, cook**ing**, play**ing** | **to** read, **to** cook, **to** play |
+
+Which shape you use depends on the **first** verb. There are three groups.
+
+#### 1 · These take the -ing shape
 
 **enjoy · don't mind · can't stand · dislike · avoid · practise · fancy**
 
@@ -283,64 +336,119 @@ are **three groups**. Learn which group each verb belongs to.
 > She **can't stand waiting** in queues.
 > He **doesn't mind doing** the washing-up.
 
-❌ *I enjoy to read.* — never correct.
+❌ *I enjoy to read.*
 
-#### Group 2 — both, with (almost) no change in meaning
+#### 2 · These take either shape
 
 **like · love · hate · prefer**
 
 > I **love cooking**. = I **love to cook**.
 > They **hate getting** up early. = They **hate to get** up early.
 
-> **Ghi chú:** Với nhóm này, **V-ing** thường nói về sở thích chung, còn
-> **to-V** thường nói về lựa chọn trong một tình huống cụ thể. Ở lớp 8, cả hai
-> đều được chấp nhận.
+> **Ghi chú:** Hai cách nói gần như cùng nghĩa. Ở lớp 8, cả hai đều đúng.
 
-#### Group 3 — would + like/love/prefer → always to-V
+#### 3 · *would like*, *would love*, *would prefer* take the to shape
 
 **would like · would love · would prefer**
 
-> I **would like to try** that café. (= I want to, now)
-> She **'d love to take up** the guitar.
+> I **would like to try** that café.
+> She**'d love to take up** the guitar.
 
-❌ *I would like trying that café.* — never correct.
+❌ *I would like trying that café.*
 
-> ⚠️ **Bẫy thường gặp:** *like* + V-ing (sở thích chung) nhưng *would like* +
-> to-V (mong muốn cụ thể). So sánh:
-> *I **like swimming**.* — Tôi thích bơi (nói chung).
-> *I **would like to swim**.* — Tôi muốn đi bơi (bây giờ).
+> ⚠️ **Bẫy thường gặp:** I **like swimming**. — Tôi thích bơi (nói chung).
+> I **would like to swim**. — Tôi muốn đi bơi (bây giờ).
 
-### 3.1 One form only
+### 3.1 Practice
 
-::: task skill="course" type="gap-fill" ask="Put the verb in brackets into the correct form. Only **one** answer is possible."
-- I can't stand ___ (queue) for tickets. {queuing | queued | queue} = queuing
-- She'd like ___ (join) the chess club. {to join | joining | join} = to join
-- My brother avoids ___ (cook) whenever he can. {cooking | to cook | cook} = cooking
-- We don't mind ___ (walk) if it isn't far. {walking | to walk | walk} = walking
-- Would you prefer ___ (stay) in tonight? {to stay | stayed | stay} = to stay
-- He practises ___ (play) the piano every evening. {playing | to play | play} = playing
-:::
-
-### 3.2 Two forms possible
-
-::: task skill="course" type="short-answer" variant="sentence-build" ask="These two verbs take **both** forms. Build each sentence twice."
-- I / love / watch / films with my dad — use **V-ing** = I love watching films with my dad
-- I / love / watch / films with my dad — use **to-V** {watching | watches} = I love to watch films with my dad
-- She / hate / get up / before seven — use **V-ing** = She hates getting up before seven
-- She / hate / get up / before seven — use **to-V** {getting | gets} = She hates to get up before seven
-:::
-
-### 3.3 Correct the mistake
-
-::: task skill="course" type="short-answer" variant="error-correction"
+::: bank draw="10"
+@ gap-fill ask="Choose the right form of the verb."
+- I can't stand ___ for the bus in the rain. {waiting | waited | wait} = waiting
+- She'd like ___ the chess club. {to join | joining | join} = to join
+- My brother avoids ___ whenever he can. {cooking | to cook | cook} = cooking
+- We don't mind ___ if it isn't far. {walking | to walk | walk} = walking
+- He practises ___ the piano every evening. {playing | to play | play} = playing
+- Tí enjoys ___ board games with his friends. {playing | to play | play} = playing
+- Bà Sáu can't stand ___ food. {wasting | wasted | waste} = wasting
+- Would you like ___ badminton with us? {to play | playing | play} = to play
+- I'd love ___ Quy Nhơn beach again. {to visit | visiting | visit} = to visit
+- Do you fancy ___ to the cinema tonight? {going | to go | go} = going
+- My mum dislikes ___ the washing-up. {doing | to do | do} = doing
+- I don't mind ___ my little brother with his homework. {helping | to help | help} = helping
+- Thảo enjoys ___ comic books in bed. {reading | to read | read} = reading
+- They avoid ___ sweets before dinner. {eating | to eat | eat} = eating
+- She practises ___ English every day. {speaking | to speak | speak} = speaking
+- I detest ___ up early at the weekend. {getting | to get | get} = getting
+- He'd like ___ judo next year. {to take up | taking up | take up} = to take up
+- My cousins enjoy ___ out at the shopping centre. {hanging | to hang | hang} = hanging
+- Would you like ___ my home-made pizza? {to try | trying | try} = to try
+- Bống doesn't enjoy ___ at board games. {losing | to lose | lose} = losing
+- Would you prefer ___ tea or juice? {to have | having | have} = to have
+- Hùng avoids ___ at Tí in the yard. {looking | to look | look} = looking
+- My grandparents enjoy ___ in the park every morning. {walking | to walk | walk} = walking
+- Do you fancy ___ a card game with us? {learning | to learn | learn} = learning
+- Chú Bảy practises ___ knots on his boat. {tying | to tie | tie} = tying
+- I'd like ___ you something. {to show | showing | show} = to show
+- She dislikes ___ on the phone for a long time. {talking | to talk | talk} = talking
+- We'd love ___ you at the party. {to see | seeing | see} = to see
+@ gap-fill ask="Which can go in the gap?"
+- My dad loves ___ fish on Sundays. {only cooking | only to cook | cooking or to cook} = cooking or to cook ~ *love* takes both
+- She hates ___ up early. {only getting | only to get | getting or to get} = getting or to get ~ *hate* takes both
+- I like ___ in the sea. {only swimming | only to swim | swimming or to swim} = swimming or to swim ~ *like* takes both
+- He prefers ___ at home. {only studying | only to study | studying or to study} = studying or to study ~ *prefer* takes both
+- I enjoy ___ with my friends. {only chatting | only to chat | chatting or to chat} = only chatting ~ *enjoy* takes only *chatting*
+- I'd like ___ a new hobby. {only taking up | only to take up | taking up or to take up} = only to take up ~ *would like* takes only *to take up*
+- We'd love ___ you on Saturday. {only seeing | only to see | seeing or to see} = only to see ~ *would love* takes only *to see*
+- Khoa hates ___ homework on Sunday nights. {only doing | only to do | doing or to do} = doing or to do ~ hate **doing** = hate **to do**
+- Chú Bảy prefers ___ early in the morning. {only fishing | only to fish | fishing or to fish} = fishing or to fish ~ prefer **fishing** = prefer **to fish**
+- Bống would prefer ___ the door open. {only leaving | only to leave | leaving or to leave} = only to leave ~ would prefer **to leave**
+- Thảo doesn't mind ___ . {only waiting | only to wait | waiting or to wait} = only waiting ~ don't mind **waiting**
+- My sister loves ___ photos of the sea. {only taking | only to take | taking or to take} = taking or to take ~ love **taking** = love **to take**
+@ choice ask="Which sentence is right?"
+- Tí talks about board games. {I enjoy playing board games. | I enjoy to play board games. | I enjoy play board games.} = I enjoy playing board games.
+- Thảo invites Tí. {Would you like to come to my house? | Would you like coming to my house? | Would you like come to my house?} = Would you like to come to my house?
+- Bà Sáu talks about her kitchen. {I can't stand losing food. | I can't stand to losing food. | I can't stand lose food.} = I can't stand losing food.
+- Tí says what he wants. {I'd love to go. | I'd love going. | I'd love go.} = I'd love to go.
+- Thảo offers to help. {I don't mind teaching you. | I don't mind to teach you. | I don't mind teach you.} = I don't mind teaching you.
+- Bà Sáu talks about Bống. {She dislikes closing doors. | She dislikes to close doors. | She dislikes close doors.} = She dislikes closing doors.
+- Khoa talks about the holidays. {I'd love to visit the islands. | I'd love visiting the islands. | I'd love visit the islands.} = I'd love to visit the islands.
+- Tí talks about fishing. {I don't mind getting wet. | I don't mind to get wet. | I don't mind get wet.} = I don't mind getting wet.
+- Thảo asks a question. {Do you fancy going out? | Do you fancy to go out? | Do you fancy go out?} = Do you fancy going out?
+@ error-correction
 - I would like going to the new bookshop. {to go | go | went} = going -> to go
 - My sister enjoys to make paper crafts. {making | make | made} = to make -> making
 - They avoid to arrive late. {arriving | arrive | arrived} = to arrive -> arriving
 - He doesn't mind to help with the cooking. {helping | help | helped} = to help -> helping
 - I would love watching a movie tonight. {to watch | watch | watched} = watching -> to watch
+- Bống dislikes to keep her hands still. {keeping | keep | kept} = to keep -> keeping
+- Do you fancy to go for a walk? {going | go | went} = to go -> going
+- She practises to play the guitar every day. {playing | play | played} = to play -> playing
+- I'd like visiting my grandparents this weekend. {to visit | visit | visited} = visiting -> to visit
+- Tí enjoy playing board games. {enjoys | enjoying | to enjoy} = enjoy -> enjoys ~ *Tí* is one person: *enjoys*
+- My friends dislike to do homework on Sundays. {doing | do | did} = to do -> doing
+- We avoid to talk in the library. {talking | talk | talked} = to talk -> talking
+- Would you like playing chess with me? {to play | play | played} = playing -> to play
+- My grandmother practises to speak English with me. {speaking | speak | spoke} = to speak -> speaking
+- Hùng doesn't mind lend his bike. {lending | lent | lends} = lend -> lending
+@ sentence-build
+- she / enjoy / make / paper flowers {to} = She enjoys making paper flowers
+- we / would like / join / the chess club {joining} = We would like to join the chess club
+- he / can't stand / lose / at board games {lost} = He can't stand losing at board games
+- my grandmother / not mind / cook / for everyone {don't | to} = My grandmother doesn't mind cooking for everyone
+- Tí / would love / win / the game {winning} = Tí would love to win the game
+- they / avoid / eat / fast food {to} = They avoid eating fast food
+- I / fancy / go / to the beach {to} = I fancy going to the beach
+- Bống / dislike / wear / shoes {to} = Bống dislikes wearing shoes
+- we / would prefer / stay / at home {staying} = We would prefer to stay at home
+- Thảo / practise / play / the guitar {to} = Thảo practises playing the guitar
+@ odd-one-out ask="Which verb is followed by a different shape?"
+- enjoy · avoid · don't mind · would like = would like ~ would like **to go**, but enjoy **going**, avoid **going**, don't mind **going**
+- can't stand · practise · would love · dislike = would love ~ would love **to play**, but can't stand **playing**, practise **playing**, dislike **playing**
+- fancy · would prefer · enjoy · avoid = would prefer ~ would prefer **to stay**, but fancy **staying**, enjoy **staying**, avoid **staying**
+- would like · would love · would prefer · detest = detest ~ detest **waiting**, but would like **to wait**, would love **to wait**, would prefer **to wait**
 :::
 
-### 3.4 About you
+### 3.2 About you
 
 Write true sentences about yourself. Use a different verb each time.
 
@@ -437,7 +545,7 @@ expression from Lesson 2 (*be keen on, be fond of, be crazy about, be into*).
 
 ### 4.1 True, False, or Not Given
 
-::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way — and answering from what feels likely is exactly the pull this type is built to catch."
+::: task skill="reading" type="true-false-not-given" ask="**True**: the text says so. **False**: the text says the opposite. **Not Given**: the text does not say."
 - The fish was still in the bucket on Saturday morning. = F ~ on Saturday morning the bucket was empty
 - Bống explains what the sea does. = T ~ "The sea gives back what it took"
 - The board game that came back was new. = F ~ it is wooden and hand-cut, with a lid that does not fit
@@ -457,7 +565,7 @@ expression from Lesson 2 (*be keen on, be fond of, be crazy about, be into*).
 
 ### 4.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means this. The clock is still running."
 - cut by hand, not by machine {hand-cut | wooden | short} = hand-cut
 - the hard grey material the harbour wall is made of {concrete | chalk | shell} = concrete
 - the time when the sea is at its lowest {low water | the tide | Saturday morning} = low water
@@ -488,26 +596,20 @@ alone for 30 seconds, as if telling someone who was not there.
 **Step 4 — Record and check.** Record yourself on your phone. Listen back and
 check three things:
 
-- Did you use **V-ing** or **to-V** correctly after each liking verb?
+- Did you use the right word after each liking verb (enjoy **playing**, would like **to play**)?
 - Did you pronounce /ʊ/ and /uː/ differently in words like *book* and *food*?
 - In Step 3, did every sentence serve the one subject you chose?
 
-::: bridge name="One turn, one subject" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
-Before the 30-second turn in Step 3, say in one short phrase what the turn is
-**for** — *"the hobby I want to start"*, not *"my free time"*. Then drop
-anything that does not serve it, however good the sentence is.
+::: bridge name="Talk about one thing per turn" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
+Before your 30-second turn in Step 3, say in a few words what the turn is
+**for** — *"the hobby I want to start"*, not *"my free time"*. Then leave out
+anything that does not fit it, however good the sentence is.
 
-A listener can follow one interest described well. Several interests described
-at once is where a turn becomes hard to follow, however good the sentences are.
+Pause between your ideas — *"So that's the first thing."* — not in the middle of
+a sentence. One clear subject is easy for your listener to follow.
 
-**And do not chase silence.** Pausing where your talk turns a corner — with a
-short marker like *"So that's the first thing."* — helps your listener. What
-does not help is a pause in the middle of a clause. Pause between your ideas,
-not inside them.
-
-> **Tiếng Việt:** Trước khi nói, hãy gọi tên **một** chủ đề duy nhất cho lượt
-> nói đó, rồi bỏ mọi câu không phục vụ chủ đề ấy. Dừng đúng chỗ chuyển ý là
-> **điểm cộng**, không phải điểm trừ.
+> **Tiếng Việt:** Trước khi nói, chọn **một** chủ đề cho lượt nói và bỏ những câu
+> không liên quan. Dừng giữa các ý, không dừng giữa câu.
 :::
 
 Repeat Step 2 until you can answer all five clearly.
@@ -537,8 +639,8 @@ most common openings both take a different form after them:
 | **Do you fancy** **going** for a walk? | Bạn có thích... không? |
 | **Would you like to** **try** my home-made pizza? | Bạn có muốn thử... không? |
 
-> ⚠️ **Would you like to** takes **to + verb**. **Do you fancy** takes **V-ing**.
-> This is the Lesson 3 rule again: *would like* → to-V, *fancy* → V-ing.
+> ⚠️ Would you like **to come**? but Do you fancy **coming**? — the same
+> rule as Lesson 3.
 
 #### Accepting an invitation
 
@@ -562,8 +664,7 @@ A **suggestion** proposes something for *both* of you, so it usually says *we*:
 | Why don't we **try** that new café? | Sao chúng ta không thử...? |
 | Shall we **meet** at ten? | Chúng ta gặp lúc 10 giờ nhé? |
 
-> ⚠️ Note the forms: **How about** takes **V-ing**.
-> **Why don't we** and **Shall we** take the **bare infinitive**.
+> ⚠️ How about **going**? but Why don't we **go**? and Shall we **go**?
 
 | Accepting | Refusing politely |
 | --- | --- |
@@ -574,8 +675,8 @@ A **suggestion** proposes something for *both* of you, so it usually says *we*:
 
 **Say it with someone.** Invite them to three things — to play badminton, to
 make paper flowers with you, to try your home-made pizza. They accept two and
-refuse one politely. Then swap. Use **Would you like to** + verb, **Do you
-fancy** + V-ing, and **How about** + V-ing at least once each.
+refuse one politely. Then swap. Use **Would you like to come**, **Do you fancy
+going** and **How about making** at least once each.
 
 
 
@@ -614,7 +715,7 @@ I didn't say anything. I sat down and played, and I lost. I would love to know
 where he got it, and I still have not asked him.
 :::
 
-::: bridge name="Mark how sure you are, then check your calibration" trains="Listening" cefr="A2→B1" marker="[T2]" src="03 §6.6"
+::: bridge name="Mark how sure you are" trains="Listening" cefr="A2→B1" marker="[T2]" src="03 §6.6"
 Next to every answer in **5.1** and **5.2**, write **● sure** or **○ not sure**
 *before* you look at the key. Then fill this in:
 
@@ -623,19 +724,12 @@ Next to every answer in **5.1** and **5.2**, write **● sure** or **○ not sur
 | ● sure | | |
 | ○ not sure | | |
 
-**What you are looking for is not the score.** It is whether the **● sure**
-answers are right much more often than the **○ not sure** ones. If they are,
-you can trust your own sense of when you have heard something correctly — and
-under time pressure that is worth having. If they are not, you cannot, and
-knowing *that* is worth more than two extra right answers.
-
-**Every listening exercise in this course carries this column**, and the
-practice on each unit page asks you the same question and works the sums out
-for you.
+Are your **● sure** answers right more often than your **○ not sure** ones? If
+they are, you can trust your feeling that you heard something correctly.
 
 > **Tiếng Việt:** Trước khi dò đáp án, đánh dấu **● chắc chắn** hoặc **○ không
-> chắc** cho từng câu. Điều đáng quan tâm không phải điểm số, mà là bạn **tự đánh
-> giá có chuẩn không**.
+> chắc** cho từng câu. Rồi xem câu "chắc chắn" có đúng nhiều hơn câu "không chắc"
+> không.
 :::
 
 ### 5.1 Listen and choose
@@ -697,19 +791,14 @@ in note form. The plan is yours; the sentences come later.
 | What do you want to know back from them? | |
 | How do you close a message to a friend? | |
 
-::: bridge name="Your own life is evidence — but it has to support a point" trains="Task Response" cefr="B1" marker="[C] 3-0" src="05 §3.1"
-There is no phrase list above, and there will not be one anywhere in this
-course. Sentences copied from a list are not yours, and a reader can tell. A
-plan you filled in yourself cannot be borrowed from anyone, because it did not
-exist before you wrote it.
+::: bridge name="Use your own life to answer" trains="Task Response" cefr="B1" marker="[C] 3-0" src="05 §3.1"
+Plan with your own ideas, in your own words — not sentences copied from a list.
+Every one of your six notes should answer the question in the left-hand column.
 
-Your own life is the best material you have — but only when it **answers the
-question you were asked**. Every one of your six notes should point back at the
-question in the left-hand column.
+Your own life is the best material you have, as long as it answers the question.
 
-> **Tiếng Việt:** Không có bảng "mẫu câu" ở đây, và cả khoá học cũng không có.
-> Hãy tự viết kế hoạch bằng ngôn từ của mình. Trải nghiệm cá nhân là dẫn chứng
-> tốt, miễn là nó **trả lời đúng câu hỏi**.
+> **Tiếng Việt:** Lập kế hoạch bằng ý và lời của chính mình, không chép mẫu câu.
+> Mỗi ghi chú phải trả lời đúng câu hỏi.
 :::
 
 ::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — the email to your friend, in **80–100 words**."
@@ -720,7 +809,7 @@ question in the left-hand column.
 - [ ] One question to your friend ~ re:1 \?
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
 - [ ] At least **three** verbs of liking or disliking ~ any:3 like/likes/love/loves/enjoy/enjoys/hate/hates/prefer/prefers/don't mind/do not mind/can't stand/cannot stand/adore/adores/dislike/dislikes/fancy/fancies/be into/am into/is into/are into
-- [ ] Each of those verbs is followed by the right form — V-ing, or *to* + verb after *would like/love/prefer*
+- [ ] Each of those verbs has the right word after it — enjoy **playing**, but would like **to play**
 :::
 
 ---
@@ -750,47 +839,42 @@ question in the left-hand column.
 
 ### 6.3 Grammar check
 
-::: task skill="course" type="gap-fill" ask="Choose the correct form of the verb. The last one asks which forms fit."
+::: task skill="course" type="gap-fill" ask="Choose the right form of the verb."
 - I enjoy ___ (spend) time with my grandparents. {spending | to spend | spend} = spending
 - She'd love ___ (visit) Da Nang next summer. {to visit | visiting | visit} = to visit
 - They don't mind ___ (wait) for ten minutes. {waiting | to wait | wait} = waiting
 - He can't stand ___ (lose) at board games. {losing | lost | lose} = losing
 - Would you like ___ (come) with us? {to come | coming | come} = to come
-- My father hates (drive) in the rain. Which forms fit after *hates*? {only driving | only to drive | both} = both ~ *hate* takes both forms
+- My father hates ___ (drive) in the rain. {only driving | only to drive | driving or to drive} = driving or to drive ~ *hate* takes both
 :::
 
-### 6.4 Which group?
+### 6.4 From memory
 
-Lesson 3 sorted these verbs into three groups. Do not look back — this only
-tells you something if you answer it from memory.
-
-::: task skill="course" type="choice" opts="1|2|3" ask="**1** = always V-ing · **2** = both forms · **3** = always to-V."
-- enjoy = 1
-- would love = 3
-- hate = 2
-- can't stand = 1
-- prefer = 2
-- avoid = 1
+::: task skill="course" type="gap-fill" opts="swimming|to swim|swimming or to swim" ask="Don't look back. Which can go in the gap?"
+- I enjoy ___ . = swimming
+- I would love ___ . = to swim
+- I hate ___ . = swimming or to swim
+- I don't mind ___ . = swimming
+- I prefer ___ . = swimming or to swim
+- I avoid ___ . = swimming
 :::
 
 ### 6.5 Error hunt
 
-This paragraph has **six** mistakes. Five are about verb forms after
-liking/disliking verbs; one is a subject–verb agreement slip. Below, it comes
-one line at a time: tap each mistake, then choose the fix.
+This paragraph has **six** mistakes. Below, it comes one line at a time.
 
 > One mark is on the wall now, at my shoulder, and the game stays. Bống enjoy to
 > play it and she is terrible at it. She avoids to lose, so she practises to
 > move the counters while nobody is looking. I don't mind watch her do it, but I
 > would like doing something about that lid.
 
-::: task skill="course" type="short-answer" variant="error-correction" ask="Each line is part of the paragraph, with the earlier mistakes already put right."
+::: task skill="course" type="short-answer" variant="error-correction" ask="Earlier mistakes are already fixed."
 - Bống enjoy it, and she is terrible at it. {enjoys | enjoying | to enjoy} = enjoy -> enjoys ~ subject–verb agreement
-- She enjoys to play it. {playing | play | played} = to play -> playing ~ *enjoy* takes V-ing
-- She avoids to lose. {losing | lose | lost} = to lose -> losing ~ *avoid* takes V-ing
-- She practises to move the counters while nobody is looking. {moving | move | moved} = to move -> moving ~ *practise* takes V-ing
-- I don't mind watch her do it. {watching | to watching | watched} = watch -> watching ~ *don't mind* takes V-ing
-- I would like doing something about that lid. {to do | do | did} = doing -> to do ~ *would like* takes to-V
+- She enjoys to play it. {playing | play | played} = to play -> playing ~ enjoy **playing**
+- She avoids to lose. {losing | lose | lost} = to lose -> losing ~ avoid **losing**
+- She practises to move the counters while nobody is looking. {moving | move | moved} = to move -> moving ~ practise **moving**
+- I don't mind watch her do it. {watching | to watching | watched} = watch -> watching ~ don't mind **watching**
+- I would like doing something about that lid. {to do | do | did} = doing -> to do ~ would like **to do**
 :::
 
 ### Project — Your leisure profile
@@ -829,9 +913,9 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for leisure activities, and the expressions for saying what I like and dislike | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 6, exercise 6.1 |
-| hear /ʊ/ and /uː/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
-| use verbs of liking and disliking with **V-ing** and with **to-V** | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 6, exercises 6.3 and 6.4 |
+| use the words for leisure activities, and the expressions for saying what I like and dislike | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
+| hear /ʊ/ and /uː/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
+| use verbs of liking and disliking with the right verb after them (enjoy **reading**, would like **to read**) | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
 | invite someone, and accept an invitation | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
 | read about an afternoon a family and friends spent playing together | Lesson 4, exercises 4.1 and 4.2 |
 | talk about my own leisure time with my family | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
@@ -852,6 +936,6 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 3
 
-**3.4** Answers will vary. Check: *enjoy* + V-ing, *can't stand* + V-ing,
-*would love* + to-V, *don't mind* + V-ing.
+**3.2** Answers will vary. Check the verb after each one: enjoy **reading**,
+can't stand **waiting**, would love **to go**, don't mind **helping**.
 

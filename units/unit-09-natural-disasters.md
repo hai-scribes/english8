@@ -9,7 +9,7 @@
 | Strand | Target |
 | --- | --- |
 | **Pronunciation** | **Word stress** in multi-syllable words, and in words ending *-al* and *-ous* |
-| **Grammar** | **Past continuous** — and past continuous with past simple |
+| **Grammar** | The past continuous — it **was raining**, and I **was cooking** when the storm **hit** |
 | **Reading** | The night a drowned town came back, and where its water went |
 | **Speaking** | Preparing and delivering a news report |
 | **Listening** | Two people in the dark, looking for someone in a flood |
@@ -21,9 +21,7 @@
 
 ### Dialogue: The forecast turns west
 
-*Read the conversation aloud. Then answer the questions below.*
-
-::: dialogue title="The forecast turns west" bg="lane" gramen="was / were + V-ing — the past continuous" gramvi="Quá khứ tiếp diễn tả việc **đang** xảy ra tại một thời điểm trong quá khứ. Thường đi cùng quá khứ đơn: *while* + tiếp diễn, *when* + đơn." gramco="I was sleeping when it started"
+::: dialogue title="The forecast turns west" bg="lane" gramen="was sleeping · were eating" gramvi="Quá khứ tiếp diễn tả việc **đang** xảy ra tại một thời điểm trong quá khứ. Thường đi cùng quá khứ đơn: *while* + tiếp diễn, *when* + đơn." gramco="I was sleeping when it started"
 @cast Tí|sad, Thảo|worried
 @item radio at=left
 @fx rain on=panel
@@ -53,7 +51,7 @@
 
 ### 1.1 Comprehension
 
-::: task skill="course" type="short-answer" ask="Read the scene, then answer."
+::: task skill="course" type="short-answer" ask="Choose the answer from the scene."
 - Thảo assumes Tí was allowed up the ladder. He corrects her. What was his job? {holding the ladder | counting the damage | carrying rice upstairs} = holding the ladder
 - Tí says his whole lane ignored the warning. Thảo answers him by naming one person who did not. Who? {her uncle | the stranger | Bống} = her uncle
 - The stranger's trick left Bà Sáu's tin empty. How did she react? {she laughed | she cried | she said nothing} = she laughed
@@ -72,20 +70,146 @@
 
 ### 1.3 Notice the grammar
 
-::: task skill="course" type="choice" opts="past continuous|past simple" ask="Look at the **bold** verb in each line. Which tense is it?"
-- The wind **was pushing** at our shutters. = past continuous
-- A branch **came** down on the roof. = past simple
-- The radio **was giving** the same warning. = past continuous
-- I **turned** back at the bottom of the lane. = past simple
+::: task skill="course" type="gap-fill" ask="Find the line in the dialogue. Which words does the speaker use?"
+- Tí: "The wind ___ at our shutters from about two o'clock." {was pushing | pushed} = was pushing
+- Tí: "Then a branch ___ down on the roof." {came | was coming} = came
+- Tí: "The radio ___ the same warning all yesterday afternoon." {was giving | gave} = was giving
+- Thảo: "He ___ rice up to the loft before breakfast." {was carrying | carried} = was carrying
+- Tí: "I went down to look this morning and ___ back." {turned | was turning} = turned
 :::
 
-> **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **thì quá khứ tiếp diễn**
-> (*was/were* + V-ing) và cách kết hợp nó với thì quá khứ đơn bằng *when* và
-> *while*. Chi tiết đầy đủ ở Lesson 3.
+> **Ghi chú:** the wind **was pushing**, the radio **was giving** — việc **đang**
+> diễn ra lúc đó. A branch **came** down, I **turned** back — việc xảy ra một lần,
+> rất nhanh. Lesson 3 giải thích cách dùng.
 
 ---
 
 ## Lesson 2 — Words & Sounds
+
+### Meet the words
+
+::: vocab size="8"
+@ gap-fill ask="Choose the word that fits."
+- There has been no rain here for eight months — it is the worst ___ in twenty years. {drought | flood | landslide} = drought
+- The police told everyone near the coast to ___ before the wave arrived. {evacuate | erupt | collapse} = evacuate
+- Heavy rain caused a ___ that buried the mountain road. {landslide | drought | tornado} = landslide
+- Three days after the earthquake, the team found another ___ under the building — a boy of eleven. {survivor | shelter | warning} = survivor
+- The storm did not ___ our house completely, but it broke every window. {destroy | rescue | predict} = destroy
+- The typhoon did a lot of ___ to the school roof. {damage | rescue | forecast} = damage
+- Lorries brought ___ supplies — rice, blankets and clean water — to the village. {relief | warning | victim} = relief
+- A ___ is a column of wind that spins very fast and can lift a car. {tornado | tsunami | volcano} = tornado
+- The wind was so strong that it ___ two young trees in our yard, roots and all. {pulled up | rescued | predicted} = pulled up
+- The whole floor began to ___ , and the glasses fell off the shelf. {shake | erupt | rescue} = shake
+- I woke up because my bed was ___ slightly. {trembling | erupting | rescuing} = trembling
+- Scientists still cannot ___ exactly when an earthquake will happen. {predict | destroy | evacuate} = predict
+- The local ___ told every family near the river to move upstairs. {authorities | droughts | volcanoes} = authorities
+- Keep a ___ in your pocket, so you can call for help when nobody can see you. {whistle | funnel | shelter} = whistle
+- Every family should prepare an ___ with a torch, water and medicine. {emergency kit | earthquake | authority} = emergency kit
+- Two ___ carried an old woman out of the flooded house. {rescue workers | forecasts | warnings} = rescue workers
+- Last year's earthquake was 5.9 on the ___ . {Richter scale | forecast | funnel} = Richter scale
+- Three boys from our school are still ___ , and the police are looking for them. {missing | destroyed | predicted} = missing
+- The volcano erupted ___ , and the ash reached the next province. {violently | calmly | slightly} = violently
+- A huge wave that comes after an earthquake under the sea is a ___ . {tsunami | tornado | drought} = tsunami
+- There is an old ___ near the town. Smoke sometimes comes out of the top. {volcano | tsunami | landslide} = volcano
+- Hot rock was coming out of the mountain. It was starting to ___ . {erupt | predict | evacuate} = erupt
+- After three days of rain, the river came over its banks and there was a terrible ___ . {flood | drought | tornado} = flood
+- When the river ___ , the water came into our kitchen. {flooded | erupted | trembled} = flooded
+- The ground shook for forty seconds. It was the strongest ___ in the city for fifty years. {earthquake | drought | tornado} = earthquake
+- The school hall became a ___ for families whose houses were under water. {shelter | victim | forecast} = shelter
+- During the typhoon, forty families ___ in the school. {sheltered | erupted | predicted} = sheltered
+- Fishermen helped the police ___ the people on the roofs. {rescue | destroy | predict} = rescue
+- The old wooden bridge ___ under the weight of the water. {collapsed | evacuated | predicted} = collapsed
+- The radio gave a ___ : "A storm is coming. Stay indoors." {warning | victim | relief} = warning
+- The weather ___ says it will rain all week. {forecast | survivor | funnel} = forecast
+- Many ___ of the flood lost their homes and their animals. {victims | authorities | funnels} = victims
+- The dark ___ of the tornado touched the ground. {funnel | whistle | shelter} = funnel
+- Hùng blew his ___ three times, and the boats turned towards him. {whistle | funnel | warning} = whistle
+- My legs were ___ with fear after the ground stopped moving. {trembling | predicting | evacuating} = trembling
+- The earthquake ___ the whole city for thirty seconds. {shook | predicted | rescued} = shook
+- The storm ___ an old mango tree and threw it across the lane. {pulled up | shook up | put up} = pulled up
+- Chú Bảy's boat has been ___ since the storm. Nobody has seen it. {missing | rescued | sheltered} = missing
+- The wind blew so ___ that the shutters broke. {violently | slightly | calmly} = violently
+- Put a torch, a whistle and some water in your ___ . {emergency kit | Richter scale | funnel} = emergency kit
+- The ___ closed the beach because of the storm warning. {authorities | victims | survivors} = authorities
+- After the landslide, ___ searched the mud for three days. {rescue workers | forecasts | droughts} = rescue workers
+- An earthquake of 7.0 on the ___ is very strong. {Richter scale | forecast | shelter} = Richter scale
+- The ___ of the old bridge took only a few seconds. {destruction | destroy | destroyed} = destruction
+- The last ___ of that volcano covered three villages in ash. {eruption | erupt | erupted} = eruption
+- Nobody heard the ___ about the landslide. {warning | warn | warned} = warning
+- Her ___ was right: it rained all weekend. {prediction | predict | predicted} = prediction
+- The ___ to the school will cost a lot to repair. {damage | damaged | damaging} = damage
+- The ___ of the wall blocked the road for a week. {collapse | collapsed | collapses} = collapse
+- The only ___ was a girl of nine. She was under the table. {survivor | survive | survived} = survivor
+- The farmers lost all their coffee plants because of the long ___ . {drought | earthquake | tsunami} = drought
+- The police ___ the whole street because the hill above it was moving. {evacuated | erupted | trembled} = evacuated
+@ choice opts="to|on|from|in|up" ask="Which word completes the phrase?"
+- The storm did a lot of damage ___ our school. = to
+- The earthquake in the north measured 6.5 ___ the Richter scale. = on
+- A rescue worker pulled the boy ___ the river onto the bank. = from
+- We took shelter ___ the school hall until the wind stopped. = in
+- The wind pulled ___ three trees in our lane. = up
+- The families were evacuated ___ their homes to the school. = from
+- There was a warning ___ the radio: stay indoors. = on
+- Everyone in the lane gave money ___ the flood relief. = to
+@ choice ask="Which word or phrase means this?"
+- a long time with little or no rain {drought | flood | tsunami} = drought
+- a mass of earth and rock that falls down a hill {landslide | earthquake | tornado} = landslide
+- to tell everyone to leave a place before danger arrives {evacuate | destroy | predict} = evacuate
+- to save someone from danger {rescue | predict | erupt} = rescue
+- a person who lives through a disaster {survivor | volcano | shelter} = survivor
+- a person who is hurt, or loses a home, in a disaster {victim | authority | whistle} = victim
+- a mountain that sends out fire, smoke and hot rock {volcano | tornado | tsunami} = volcano
+- to shake a little, because you are cold or afraid {tremble | collapse | erupt} = tremble
+- to say what will happen in the future {predict | evacuate | destroy} = predict
+- food, water and blankets for people after a disaster {relief | damage | warning} = relief
+- a safe place to stay during a storm {shelter | funnel | drought} = shelter
+- a bag of things you need in a disaster, like a torch and water {emergency kit | Richter scale | funnel} = emergency kit
+- the people who make the rules for a town or a country {authorities | survivors | victims} = authorities
+- not found yet — nobody knows where they are {missing | destroyed | violently} = missing
+- with great force {violently | slightly | calmly} = violently
+- a small thing you blow into to make a loud, high sound {whistle | funnel | shelter} = whistle
+- to pull a plant or tree out of the ground {pull up | shake | predict} = pull up
+- to move quickly from side to side, or up and down {shake | predict | evacuate} = shake
+@ choice ask="What does this word mean?"
+- collapse {to fall down suddenly | to shake a little | to leave a dangerous place} = to fall down suddenly
+- erupt {to send out fire, smoke and hot rock | to fall down suddenly | to save someone} = to send out fire, smoke and hot rock
+- forecast {what the weather will probably do | a safe place in a storm | a loud high sound} = what the weather will probably do
+- funnel {a shape that is wide at the top and narrow at the bottom | a very big wave | a bag for a torch and water} = a shape that is wide at the top and narrow at the bottom
+- tsunami {a very big wave that hits the coast | a wind that spins very fast | a long time with no rain} = a very big wave that hits the coast
+- tornado {a wind that spins very fast | a very big wave that hits the coast | earth and rock falling down a hill} = a wind that spins very fast
+- damage {harm that breaks or spoils something | help for people after a disaster | a sign that danger is coming} = harm that breaks or spoils something
+- destroy {to break something so badly that nothing is left | to save someone | to shake a little} = to break something so badly that nothing is left
+- Richter scale {a way of measuring how strong an earthquake is | a map of all the volcanoes | a list of missing people} = a way of measuring how strong an earthquake is
+- rescue worker {a person whose job is to save people in danger | a person hurt in a disaster | a person who reads the weather news} = a person whose job is to save people in danger
+- earthquake {a sudden shaking of the ground | a very big wave | a long time with no rain} = a sudden shaking of the ground
+- flood {a lot of water over land that is usually dry | a mass of falling rock | a wind that spins very fast} = a lot of water over land that is usually dry
+- warning {words that tell you danger is coming | food for people after a disaster | a person who is missing} = words that tell you danger is coming
+@ odd-one-out
+- earthquake · flood · landslide · shelter = shelter ~ the others are disasters; a shelter is a safe place
+- destroy · damage · collapse · rescue = rescue ~ the others are about breaking things
+- warning · forecast · siren · drought = drought ~ the others tell you something is coming
+- victim · survivor · volcano · rescue worker = volcano ~ the others are people
+- tremble · shake · predict · rattle = predict ~ the others are about moving quickly
+- torch · whistle · bottled water · volcano = volcano ~ the others go in an emergency kit
+- evacuate · rescue · shelter · erupt = erupt ~ the others are things people do to keep others safe
+- violently · slowly · quickly · missing = missing ~ the others say how something happens
+@ error-correction
+- The storm made a lot of damage to our roof. {did | took | gave} = made -> did ~ you **do** damage
+- Yesterday's earthquake was 6.1 in the Richter scale. {on | at | by} = in -> on ~ **on** the Richter scale
+- We took shelter on the school hall during the storm. {in | of | with} = on -> in ~ take shelter **in** a place
+- The volcano collapsed and sent hot rock into the sky. {erupted | trembled | evacuated} = collapsed -> erupted ~ a volcano **erupts**
+- The tornado erupted two houses in our village. {destroyed | evacuated | predicted} = erupted -> destroyed ~ a tornado **destroys** houses
+- Rescue workers destroyed three children from the river. {rescued | predicted | erupted} = destroyed -> rescued ~ you **rescue** people from danger
+- My hands were collapsing with cold. {trembling | erupting | predicting} = collapsing -> trembling ~ your hands **tremble**
+- Put a torch and some water in your emergency shelter. {kit | funnel | scale} = shelter -> kit ~ an emergency **kit**
+- Five fishermen are still victim after the storm. {missing | trembling | relief} = victim -> missing ~ nobody has found them: they are **missing**
+@ sentence-build
+- the authorities / evacuate / the village / yesterday {evacuating} = The authorities evacuated the village yesterday/Yesterday the authorities evacuated the village
+- the earthquake / measure / 6.4 / on the Richter scale {measuring} = The earthquake measured 6.4 on the Richter scale
+- the tornado / destroy / three houses / in our village {destroying} = The tornado destroyed three houses in our village/In our village the tornado destroyed three houses
+- every family / need / an emergency kit {needing} = Every family needs an emergency kit
+- Bống / be / missing / for two hours {is | were} = Bống was missing for two hours/For two hours Bống was missing
+:::
 
 ### Vocabulary — Natural disasters
 
@@ -123,114 +247,36 @@
 | 30 | missing | /ˈmɪsɪŋ/ | adj | mất tích, chưa tìm thấy |
 | 31 | violently | /ˈvaɪələntli/ | adv | dữ dội, mãnh liệt |
 
-> ### ▶︎ [**Practise these 31 words**](../app/unit-09-vocab.html)
->
-> When you have finished this lesson, the unit page opens a **practice**
-> session over all thirty-one — the meaning, the word, and, more often than
-> either of those, **the word inside a phrase it actually lives in**. Wrong
-> answers come straight back, and everything returns a week later. The **unit
-> test** opens once all six lessons are done.
->
-> **Luyện 31 từ này.** Học xong bài này, phần
-> **practice** ở trang bài sẽ mở ra để luyện cả 31 từ — trong đó phần lớn là
-> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
-> ngay, và mọi từ quay lại sau một tuần.
->
-> Do the exercises below as well — they put the words back inside sentences.
+> **Ghi chú:** *warning*, *eruption*, *destruction*, *survivor* là **danh từ**
+> làm từ động từ: warn → **warning**, erupt → **eruption**, destroy →
+> **destruction**, survive → **survivor**. The radio gave a **warning** — "một
+> lời cảnh báo", chứ không phải "đang cảnh báo".
 
-### Meet the words
+### Pronunciation — Word stress
 
-The table above is there to look things up in. This is where you actually meet
-them: a few at a time, then answer on the few you have just met.
+In every word of two or more syllables, **one** syllable is louder, longer and
+clearer than the others. That is the **stressed** syllable. Dictionaries put a
+small mark `ˈ` **before** it:
 
-::: vocab size="8"
-:::
+> disˈaster = dis-**AS**-ter
+> ˈhurricane = **HUR**-ri-cane
 
-### 2.1 Complete the sentences
+Get the stress wrong and a listener may not know the word, even if every sound
+is right.
 
-::: task skill="course" type="gap-fill" ask="Choose the word from the table that fits."
-- There has been no rain here for eight months — it is the worst ___ in twenty years. {drought | flood | landslide} = drought
-- The police told everyone near the coast to ___ before the wave arrived. {evacuate | erupt | collapse} = evacuate
-- Heavy rain caused a ___ that buried the mountain road. {landslide | drought | tornado} = landslide
-- Three days after the earthquake the team found another ___ under the building — a boy of eleven. {survivor | shelter | warning} = survivor
-- The storm did not ___ our house completely. {destroy | rescue | predict} = destroy
-- It did a lot of ___ to the roof, though. {damage | rescue | forecast} = damage
-- Lorries brought ___ supplies — rice, blankets and clean water — to the village. {relief | warning | victim} = relief
-:::
+#### 1 · Two-syllable words: nouns Oo, verbs oO
 
-### 2.2 The words a report actually uses
+**Oo** = the 1st syllable is loud. **oO** = the 2nd syllable is loud.
 
-::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
-- A ___ looks like a huge funnel of wind, and it can move at 480 kilometres an hour. {tornado | tsunami | volcano} = tornado
-- The wind was so strong that it ___ two young trees in our yard. {pulled up | rescued | predicted} = pulled up
-- The whole floor began to ___ , and the glasses fell off the shelf. {shake | erupt | rescue} = shake
-- I woke up because my bed was ___ slightly. {trembling | erupting | rescuing} = trembling
-- Scientists still cannot ___ exactly when an earthquake will happen. {predict | destroy | evacuate} = predict
-- The local ___ told every family near the river to move upstairs. {authorities | droughts | volcanoes} = authorities
-- Keep a ___ in your pocket, so you can call for help when nobody can see you. {whistle | funnel | shelter} = whistle
-- Every family should prepare an ___ with a torch, water and medicine. {emergency kit | earthquake | authority} = emergency kit
-- Two ___ carried an old woman out of the flooded house. {rescue workers | forecasts | warnings} = rescue workers
-- The earthquake measured 6.2 on the ___ . {Richter scale | forecast | funnel} = Richter scale
-- Four fishermen are still ___ , and the boats are looking for them. {missing | destroyed | predicted} = missing
-- The volcano erupted ___ , and the ash reached the next province. {violently | calmly | slightly} = violently
-:::
-
-### 2.3 Odd one out
-
-::: task skill="course" type="choice" variant="odd-one-out" ask="The reason appears when you check."
-- earthquake · flood · landslide · shelter = shelter ~ the others are natural disasters; a shelter is a safe place
-- destroy · damage · collapse · rescue = rescue ~ the others mean to break or harm something
-- warning · forecast · siren · drought = drought ~ the others tell you that something dangerous is coming
-- victim · survivor · volcano · rescue team = volcano ~ the others are people
-- tremble · shake · predict · rattle = predict ~ the others describe something moving quickly from side to side
-:::
-
-### 2.4 From verb to noun
-
-A news report needs the noun far more often than the verb: *the volcano
-**erupted*** becomes *the **eruption** lasted three days*. Four endings do most
-of the work — **-tion**, **-ion**, **-ing**, **-er/-or** — and a few nouns do not
-change at all.
-
-::: task skill="course" type="gap-fill" ask="Choose the noun that fits each sentence. Two of the nouns are the same as their verb."
-- The ___ of the old bridge took only a few seconds. {destruction | destroy | destroyed} = destruction
-- The last ___ of that volcano covered three villages in ash. {eruption | erupt | erupted} = eruption
-- Nobody heard the ___ about the landslide. {warning | warn | warned} = warning
-- Her ___ was right: it rained all weekend. {prediction | predict | predicted} = prediction
-- The ___ to the school will cost a lot to repair. {damage | damaged | damaging} = damage
-- The ___ of the wall blocked the road for a week. {collapse | collapsed | collapses} = collapse
-- The only ___ was a boy of eleven. {survivor | survive | survived} = survivor
-- A ___ pulled the old man out of the water. {rescuer | rescue | rescued} = rescuer
-:::
-
-> **Ghi chú:** *warning* và *flooding* là danh từ tạo từ đuôi **-ing**, không
-> phải động từ đang chia. *The radio gave a **warning*** — "một lời cảnh báo",
-> chứ không phải "đang cảnh báo".
-
-### Pronunciation — Word stress in multi-syllable words
-
-Every English word of two or more syllables has **one** syllable that is louder,
-longer and clearer than the others. That is the **stressed** syllable.
-Dictionaries mark it with a small vertical line `ˈ` placed **before** the
-stressed syllable:
-
-> disˈaster = dis-**AS**-ter · ˈhurricane = **HUR**-ri-cane
-
-Get the stress wrong and a listener may not recognise the word at all, even if
-every sound in it is correct.
-
-#### Rule 1 — two-syllable words: nouns **Oo**, verbs **oO**
-
-| Two-syllable **nouns** — stress 1st (Oo) | Two-syllable **verbs** — stress 2nd (oO) |
+| Nouns — Oo | Verbs — oO |
 | --- | --- |
 | ˈdamage, ˈshelter, ˈwarning | deˈstroy, eˈrupt, colˈlapse |
 | ˈvictim, ˈdanger, ˈflooding | preˈpare, surˈvive, esˈcape |
 
-This is a strong tendency, not a law — *ˈrescue* is a first-stressed verb, and
-*beˈlief* is a second-stressed noun. But it is right far more often than it is
-wrong.
+This is true most of the time, not always: *ˈrescue* is a verb stressed on the
+1st syllable, and *beˈlief* is a noun stressed on the 2nd.
 
-#### Rule 2 — the same spelling, two stresses, two words
+#### 2 · Same spelling, different stress, different word
 
 | Noun — Oo | Verb — oO |
 | --- | --- |
@@ -238,11 +284,12 @@ wrong.
 | a ˈpresent /ˈpreznt/ — món quà | to preˈsent /prɪˈzent/ — trình bày |
 | an ˈincrease /ˈɪŋkriːs/ — sự gia tăng | to inˈcrease /ɪnˈkriːs/ — tăng lên |
 
-#### Rule 3 — the suffixes that pull the stress
+#### 3 · -tion, -sion, -ic, -ity: stress the syllable just before
 
-The endings **-tion, -sion, -ic** and **-ity** never take the stress themselves.
-They pull it onto the syllable **immediately before** them. This rule is
-reliable, so learn it once and you can stress hundreds of words correctly.
+**-tion · -sion · -ic · -ity**
+
+These endings are never stressed. The stress falls on the syllable **right
+before** them.
 
 | Word | Stress marked | Syllable that takes it |
 | --- | --- | --- |
@@ -255,18 +302,16 @@ reliable, so learn it once and you can stress hundreds of words correctly.
 | ability | aˈbility /əˈbɪləti/ | -bil- (before *-ity*) |
 | electricity | elecˈtricity /ɪˌlekˈtrɪsəti/ | -tric- (before *-ity*) |
 
-Notice what happens to a word family: volˈcano → volˈcanic; deˈstroy →
-deˈstruction; eˈrupt → eˈruption. Here the stress **stays put** — it was
-already on the syllable before the ending, which is what makes these three
-families easy. But when the stem is stressed somewhere else, the ending
-**pulls** the stress onto the syllable in front of it: *ˈphotograph* →
+Sometimes the stress stays where it was: volˈcano → volˈcanic, deˈstroy →
+deˈstruction, eˈrupt → eˈruption. Sometimes it moves: *ˈphotograph* →
 *photoˈgraphic*, *eˈlectric* → *elecˈtricity*.
 
-#### Rule 4 — the two endings that leave the stress alone: **-al** and **-ous**
+#### 4 · -al and -ous: the stress stays on the stem
 
-Rule 3 endings move things. The endings **-al** and **-ous** do the opposite.
-Neither one is ever stressed itself, and in the words this unit uses, the stress
-**stays on the stem syllable** — where it already was in the stem word.
+**-al · -ous**
+
+These endings are never stressed, and they do not move the stress. Find the stem
+word: the stress stays where it was.
 
 | Stem word | + **-al** | Where the stress went |
 | --- | --- | --- |
@@ -285,9 +330,9 @@ Neither one is ever stressed itself, and in the words this unit uses, the stress
 | ˈmountain | ˈmountainous | nowhere — still on *moun-* |
 | ˈnumber | ˈnumerous | nowhere — still on *nu-* |
 
-Put the two behaviours side by side and the difference is easy to hear:
+Side by side:
 
-| Same stem | with a **Rule 3** ending — the stress moves | with **-al** or **-ous** — the stress stays |
+| Same stem | with a Rule 3 ending — the stress moves | with **-al** or **-ous** — the stress stays |
 | --- | --- | --- |
 | ˈmusic | — | ˈmusical |
 | eˈlectric | elecˈtricity | eˈlectrical |
@@ -322,9 +367,9 @@ Put the two behaviours side by side and the difference is easy to hear:
 > nhẹ và nhanh. Mẹo kiểm tra: vỗ tay một cái mạnh đúng vào âm tiết đó —
 > *dis-**AS**-ter*, chứ không phải *DIS-as-ter*.
 
-### 2.5 Sort by stress pattern
+### 2.1 Sort by stress pattern
 
-::: task skill="course" type="sort" opts="Oo|oO" ask="Which stress pattern does each two-syllable word have? **Oo** = stress on the 1st syllable · **oO** = stress on the 2nd."
+::: task skill="course" type="sort" opts="Oo|oO" ask="**Oo**: the 1st syllable is loud. **oO**: the 2nd syllable is loud. Which is each word?"
 - damage = Oo
 - destroy = oO
 - shelter = Oo
@@ -339,54 +384,54 @@ Put the two behaviours side by side and the difference is easy to hear:
 - escape = oO
 :::
 
-### 2.6 Use the suffix rule
+### 2.2 Use Rule 3
 
-::: task skill="course" type="gap-fill" ask="Which one has `ˈ` in front of the stressed syllable? Do not use a dictionary — use Rule 3."
-- information {inforˈmation | ˈinformation | inˈformation} = inforˈmation
-- decision {deˈcision | ˈdecision | deciˈsion} = deˈcision
-- scientific {scienˈtific | ˈscientific | sciˈentific} = scienˈtific
-- activity {acˈtivity | ˈactivity | actiˈvity} = acˈtivity
-- pollution {polˈlution | ˈpollution | polluˈtion} = polˈlution
-- economic {ecoˈnomic | ˈeconomic | eˈconomic} = ecoˈnomic
-- community {comˈmunity | ˈcommunity | commuˈnity} = comˈmunity
-- celebration {celeˈbration | ˈcelebration | ceˈlebration} = celeˈbration
+::: task skill="course" type="choice" ask="The loud syllable is in capitals. Which is right?"
+- information {in-for-MA-tion | IN-for-ma-tion | in-FOR-ma-tion} = in-for-MA-tion
+- decision {de-CI-sion | DE-ci-sion | de-ci-SION} = de-CI-sion
+- scientific {sci-en-TIF-ic | SCI-en-tif-ic | sci-EN-tif-ic} = sci-en-TIF-ic
+- activity {ac-TIV-i-ty | AC-tiv-i-ty | ac-tiv-I-ty} = ac-TIV-i-ty
+- pollution {pol-LU-tion | POL-lu-tion | pol-lu-TION} = pol-LU-tion
+- economic {ec-o-NOM-ic | EC-o-nom-ic | ec-O-nom-ic} = ec-o-NOM-ic
+- community {com-MU-ni-ty | COM-mu-ni-ty | com-mu-NI-ty} = com-MU-ni-ty
+- celebration {cel-e-BRA-tion | CEL-e-bra-tion | cel-E-bra-tion} = cel-e-BRA-tion
 :::
 
-### 2.7 Which syllable? — *-al* and *-ous*
+### 2.3 Words ending in *-al* and *-ous*
 
-::: task skill="course" type="choice" opts="1|2|3" ask="Which syllable takes the stress? Pick **1**, **2** or **3**. Use Rule 4: find the stem first, and keep the stress where the stem had it."
-- cultural = 1 ~ from ˈculture
-- seasonal = 1 ~ from ˈseason
-- traditional = 2 ~ from traˈdition
-- nervous = 1 ~ from ˈnerve
-- emotional = 2 ~ from eˈmotion
-- regional = 1 ~ from ˈregion
-- adventurous = 2 ~ from adˈventure
-- marvellous = 1 ~ from ˈmarvel
-- occasional = 2 ~ from ocˈcasion
-- professional = 2 ~ from proˈfession
+::: task skill="course" type="choice" ask="The loud syllable is in capitals. Which is right? Think of the stem word first."
+- cultural {CUL-tur-al | cul-TUR-al | cul-tur-AL} = CUL-tur-al ~ from CUL-ture
+- seasonal {SEA-son-al | sea-SON-al | sea-son-AL} = SEA-son-al ~ from SEA-son
+- traditional {tra-DI-tion-al | TRA-di-tion-al | tra-di-TION-al} = tra-DI-tion-al ~ from tra-DI-tion
+- nervous {NER-vous | ner-VOUS} = NER-vous ~ from NERVE
+- emotional {e-MO-tion-al | E-mo-tion-al | e-mo-TION-al} = e-MO-tion-al ~ from e-MO-tion
+- regional {RE-gion-al | re-GION-al | re-gion-AL} = RE-gion-al ~ from RE-gion
+- adventurous {ad-VEN-tur-ous | AD-ven-tur-ous | ad-ven-TUR-ous} = ad-VEN-tur-ous ~ from ad-VEN-ture
+- marvellous {MAR-vel-lous | mar-VEL-lous | mar-vel-LOUS} = MAR-vel-lous ~ from MAR-vel
+- occasional {oc-CA-sion-al | OC-ca-sion-al | oc-ca-SION-al} = oc-CA-sion-al ~ from oc-CA-sion
+- professional {pro-FES-sion-al | PRO-fes-sion-al | pro-fes-SION-al} = pro-FES-sion-al ~ from pro-FES-sion
 :::
 
-### 2.8 Odd stress out
+### 2.4 Odd stress out
 
-::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **stress pattern**, not the meaning."
-- humorous · tremendous · numerous · generous = tremendous ~ the other three are stressed on the first syllable
-- natural · national · personal · original = original ~ oˈriginal is stressed on the second syllable; the other three on the first
-- dangerous · poisonous · mountainous · delicious = delicious ~ the other three are stressed on the first syllable
-- musical · practical · tropical · additional = additional ~ aˈdditional keeps the stress of aˈddition; the other three keep a first-syllable stem
+::: task skill="course" type="choice" variant="odd-one-out" ask="Which word is stressed differently?"
+- humorous · tremendous · numerous · generous = tremendous ~ tre-MEN-dous; the others are loud on the 1st syllable
+- natural · national · personal · original = original ~ o-RI-gin-al; the others are loud on the 1st syllable
+- dangerous · poisonous · mountainous · delicious = delicious ~ de-LI-cious; the others are loud on the 1st syllable
+- musical · practical · tropical · additional = additional ~ ad-DI-tion-al, from ad-DI-tion; the others are loud on the 1st syllable
 :::
 
 > **Mẹo:** Muốn đọc đúng một từ *-al* hoặc *-ous*, đừng nhìn vào đuôi — hãy tìm
 > **từ gốc** trước: *ˈnature* → *ˈnatural*, *ˈdanger* → *ˈdangerous*. Trọng âm
 > của từ gốc thường là trọng âm của từ mới.
 
-### 2.9 Say these aloud
+### 2.5 Say these aloud
 
 The stressed syllable is in CAPITALS. Read each sentence three times, faster
 each time. Record yourself if you can.
 
 1. The vol-**CA**-no was quiet for years before the e-**RUP**-tion.
-2. A **HUR**-ri-cane and a tsu-**NA**-mi are very different di-**SAS**-ters.
+2. A **HUR**-ri-cane and a tsu-**NA**-mi are very different dis-**AS**-ters.
 3. The de-**STRUC**-tion was so bad that they had to e-**VAC**-u-ate the town.
 4. There was no e-lec-**TRI**-ci-ty, so we could not re-**CORD** the **WARN**-ing.
 5. A **MOUN**-tain-ous province with **NU**-mer-ous storms is a **DAN**-ger-ous
@@ -399,42 +444,48 @@ each time. Record yourself if you can.
 
 ### Grammar — The past continuous
 
-The past continuous describes an action that was **in progress** at a moment in
-the past. It was already going on; it had not finished.
+Use the past continuous for something that **was going on** at a moment in the
+past: at eight o'clock it **was raining**. It often sits next to the past
+simple: I **was cooking** when the storm **hit**.
+
+#### 1 · was / were + the -ing word
+
+**I was · he was · she was · it was · you were · we were · they were**
 
 > At eight o'clock last night it **was raining** hard.
-> The rescue team **were carrying** an old woman to the boat.
+> The rescue workers **were carrying** an old woman to the boat.
 
-#### Form: *was / were* + V-ing
-
-| | Positive | Negative | Question |
+| | Yes | No | Question |
 | --- | --- | --- | --- |
-| I / he / she / it | I **was** working | I **was not (wasn't)** working | **Was** I working? |
-| you / we / they | We **were** working | We **were not (weren't)** working | **Were** we working? |
+| I / he / she / it | I **was** working | I **wasn't** working | **Was** I working? |
+| you / we / they | We **were** working | We **weren't** working | **Were** we working? |
 
-Wh- questions put the question word first: *What **were** you **doing**?*
-Short answers: *Yes, I **was**. / No, we **weren't**.*
+> What **were** you **doing**?
+> Yes, I **was**. / No, we **weren't**.
 
-#### Spelling of the -ing form
+❌ *My sister were crying.*
 
-| Rule | Examples |
+#### 2 · Spelling the -ing word
+
+| What to do | Examples |
 | --- | --- |
 | Most verbs — just add *-ing* | work → work**ing**, rain → rain**ing**, carry → carry**ing** |
-| Ends in silent *-e* — drop the *e* | make → mak**ing**, rise → ris**ing**, evacuate → evacuat**ing** |
-| One syllable, one vowel + one consonant — double it | run → ru**nn**ing, swim → swi**mm**ing, dig → di**gg**ing |
+| Ends in *-e* — drop the *e* | make → mak**ing**, rise → ris**ing**, evacuate → evacuat**ing** |
+| Short word, one vowel + one consonant — double it | run → ru**nn**ing, swim → swi**mm**ing, dig → di**gg**ing |
 | Ends in *-ie* — change to *-y* | lie → **ly**ing, die → **dy**ing, tie → **ty**ing |
 
-❌ *makeing* · ❌ *runing* · ❌ *lieing*
+❌ *makeing*
 
-#### Combination 1 — interrupted action: *when* + past simple
+❌ *runing*
 
-A long action was in progress; a short action cut across it.
+❌ *lieing*
+
+#### 3 · A long action, cut by a short one: *when*
+
+The long action: *was cooking*. The short, sudden one comes after *when*: *hit*.
 
 > I **was cooking** when the storm **hit**.
 > They **were driving** to the shelter when a tree **fell** across the road.
-
-The **long** action takes the past continuous. The **short**, sudden one takes
-the past simple after *when*.
 
 ```
 was cooking  ───────────────────────►
@@ -442,82 +493,132 @@ was cooking  ──────────────────────�
              the storm hit
 ```
 
-#### Combination 2 — two actions at the same time: *while*
+❌ *I cooked when the storm was hitting.*
 
-Two long actions were happening together. Both take the past continuous.
+#### 4 · Two long actions at the same time: *while*
+
+Both actions use *was / were* + *-ing*.
 
 > **While** it **was raining**, we **were filling** sandbags.
 > **While** my mother **was packing** our papers, my father **was checking** the roof.
 
-#### *when* or *while*?
-
-| Word | What follows it | Meaning |
+| Word | What usually comes after it | Example |
 | --- | --- | --- |
-| **when** | usually the **past simple** — the short action | *…when the siren sounded.* |
-| **while** | usually the **past continuous** — the long action | *While the siren was sounding…* |
+| **when** | the short action — *hit, fell, sounded* | *…when the siren sounded.* |
+| **while** | the long action — *was raining, was sounding* | *While the siren was sounding…* |
 
-Either clause can come first. If the time clause comes first, put a comma after
-it:
+Either half can come first. If *when* or *while* starts the sentence, put a
+comma after its half:
 
-> ✅ We were filling sandbags **while** it was raining.
-> ✅ **While** it was raining, we were filling sandbags.
+> We were filling sandbags **while** it was raining.
+> **While** it was raining, we were filling sandbags.
 
-> ⚠️ **Bẫy thường gặp:** Có một nhóm động từ **không dùng ở thì tiếp diễn** —
-> gọi là *stative verbs* (động từ chỉ trạng thái): **know, understand, believe,
-> want, need, like, love, hate, own, belong, seem**. Chúng nói về trạng thái,
-> không phải hành động đang diễn ra.
-> ❌ *I **was knowing** about the storm.* → ✅ *I **knew** about the storm.*
-> ❌ *She **was wanting** to help.* → ✅ *She **wanted** to help.*
-> Bẫy thứ hai: nhớ chia đúng **was** (I/he/she/it) và **were** (you/we/they).
-> ❌ *My sister **were** crying.* → ✅ *My sister **was** crying.*
+#### 5 · Some verbs never take -ing here
 
-### 3.1 Recognise the tense
+**know · understand · believe · want · need · like · love · hate · own · belong · seem**
 
-::: task skill="course" type="choice" opts="PC|PS" ask="**PC** for past continuous, **PS** for past simple. Judge the **bold** verb only."
-- At midnight my father **was checking** the roof. = PC
-- The wall **collapsed** just after midnight. = PS
-- While we **were packing**, the lights went out. = PC
-- My father **filled** ten buckets with water. = PS
-- The radio **was warning** people all afternoon. = PC
-- Nobody **heard** the siren. = PS
-- The children **were sleeping** upstairs when the water came in. = PC
-- That volcano **erupted** in 2010. = PS
+> I **knew** about the storm.
+> She **wanted** to help.
+> My uncle **owned** two boats.
+
+❌ *I was knowing about the storm.*
+
+> **Ghi chú:** Những động từ này nói về **trạng thái** (biết, muốn, thích, sở
+> hữu…), không phải hành động đang diễn ra, nên không dùng *was / were + -ing*.
+
+> ⚠️ **Bẫy thường gặp:** nhớ chia đúng **was** (I / he / she / it) và **were**
+> (you / we / they). *Hùng and I* là số nhiều → **were**.
+
+### 3.1 Practice
+
+::: bank draw="10"
+@ gap-fill ask="Choose the right form of the verb."
+- At seven o'clock we ___ to the forecast. {were listening | was listening | were listen} = were listening
+- She ___ when the branch fell on the roof. {wasn't sleeping | weren't sleeping | wasn't sleep} = wasn't sleeping
+- What were you ___ when the earthquake started? {doing | do | did} = doing
+- The men ___ a channel behind the school. {were digging | were diging | was digging} = were digging
+- My grandmother ___ on the sofa with the radio on. {was lying | was lieing | were lying} = was lying
+- The water ___ far more quickly than anyone expected. {was rising | was riseing | were rising} = was rising
+- At midnight the rescue boats ___ for the fishermen. {were looking | was looking | were look} = were looking
+- Bà Sáu ___ the damage when I got home. {was counting | were counting | was count} = was counting
+- It ___ hard all night. {was raining | were raining | was rain} = was raining
+- Tí and Thảo ___ on the harbour wall at six o'clock. {were sitting | was sitting | were siting} = were sitting
+- The children ___ in the yard when the siren sounded. {were playing | was playing | were play} = were playing
+- I ___ in the sea when the wind suddenly changed. {was swimming | was swiming | were swimming} = was swimming
+- The dog ___ under the table during the storm. {was hiding | was hideing | were hiding} = was hiding
+- My parents ___ TV when the lights went out. {weren't watching | wasn't watching | weren't watch} = weren't watching
+- ___ you sleeping when the earthquake started? {Were | Was | Did} = Were
+- ___ Khoa helping his father at nine o'clock last night? {Was | Were | Did} = Was
+- What ___ the rescue workers carrying? {were | was | did} = were
+- Where ___ Bống standing when the wave came? {was | were | did} = was
+- Chú Bảy ___ the boat to the post when the wave hit it. {was tying | was tieing | were tying} = was tying
+- We ___ the boat while Chú Bảy was tying the rope. {were pushing | was pushing | were push} = were pushing
+- Thảo's uncle ___ rice up to the loft before breakfast. {was carrying | were carrying | was carring} = was carrying
+- The wind ___ the shutters all night. {was shaking | was shakeing | were shaking} = was shaking
+- "Were you listening to the radio?" "Yes, I ___ ." {was | were | did} = was
+- "Were your cousins staying with you?" "No, they ___ ." {weren't | wasn't | didn't} = weren't
+- "Was it raining when you left?" "No, it ___ ." {wasn't | weren't | didn't} = wasn't
+- Hùng was fixing his bike when the storm ___ . {hit | hitting | was hit} = hit
+- We were walking home when a branch ___ in front of us. {fell | falled | falling} = fell
+- While we were eating, the roof ___ to leak. {started | start | starting} = started
+- The phone ___ when I was watching the news. {rang | rung | ring} = rang
+- I was sleeping when the earthquake ___ . {started | starting | was start} = started
+- My sister was reading when the lights ___ out. {went | goed | going} = went
+- Bống was standing on the step when the wave ___ . {came | come | coming} = came
+- While Tí was holding the rope, the boat ___ on top of him. {landed | land | landing} = landed
+- We were playing football when it ___ to rain. {began | begun | begin} = began
+- When the siren ___ , everyone ran to the school. {sounded | sound | sounding} = sounded
+@ gap-fill ask="Choose the word that fits."
+- I was sleeping ___ the phone rang. {when | during | because of} = when
+- ___ I was waiting for the bus, it started to rain. {While | During | So} = While
+- The lights went out ___ we were eating dinner. {while | during | then} = while
+- Tí was holding the ladder ___ Bà Sáu was counting the tiles. {while | during | then} = while
+- ___ the storm, we stayed upstairs. {During | While | When} = During ~ **during** + a thing: *during the storm*
+- The wall collapsed ___ the night. {during | while | when} = during
+- We were watching TV ___ the earthquake started. {when | during | then} = when
+@ choice ask="Which sentence is right?"
+- Tí talks about the storm. {The wind was pushing at our shutters. | The wind were pushing at our shutters. | The wind was push at our shutters.} = The wind was pushing at our shutters.
+- Thảo asks about last night. {What were you doing at midnight? | What was you doing at midnight? | What were you do at midnight?} = What were you doing at midnight?
+- Tí talks about the radio. {I understood the warning. | I was understanding the warning. | I was understand the warning.} = I understood the warning.
+- Thảo talks about Bống. {Bống needed a rest. | Bống was needing a rest. | Bống were needing a rest.} = Bống needed a rest.
+- Khoa talks about the sea. {The sea seemed calm. | The sea was seeming calm. | The sea were seeming calm.} = The sea seemed calm.
+- Hùng talks about the flood. {While Mum was cooking, we were closing the shutters. | While Mum cooking, we were closing the shutters. | While Mum was cooking, we closing the shutters.} = While Mum was cooking, we were closing the shutters.
+- Bà Sáu talks about the yard. {I was sweeping the yard when the rain started. | I was sweeping the yard when the rain was start. | I sweeping the yard when the rain started.} = I was sweeping the yard when the rain started.
+- Chú Bảy talks about his sons. {They weren't sleeping. | They wasn't sleeping. | They weren't sleep.} = They weren't sleeping.
+- A reporter talks about the river. {The water was rising fast. | The water was riseing fast. | The water were rising fast.} = The water was rising fast.
+- Tí talks about the tin box. {This box belonged to someone in the old village. | This box was belonging to someone in the old village. | This box were belonging to someone in the old village.} = This box belonged to someone in the old village.
+@ error-correction
+- While the water was rise, we moved everything upstairs. {rising | rises | rose} = rise -> rising ~ was **rising**
+- Chú Bảy was owning a small shop near the harbour. {owned | owns | own} = was owning -> owned ~ say **owned**
+- They were fill buckets when the tap stopped working. {filling | filled | fills} = fill -> filling ~ were **filling**
+- At midnight the rescue boats were look for the fishermen. {looking | looked | looks} = look -> looking ~ were **looking**
+- Bà Sáu were counting the damage when I got home. {was | is | be} = were -> was ~ one person: **was**
+- The children was playing outside when the rain started. {were | is | be} = was -> were ~ the children: **were**
+- I was knowing the answer, but I didn't say it. {knew | knowing | known} = was knowing -> knew ~ say **knew**
+- We were swiming in the river when the siren sounded. {swimming | swam | swims} = swiming -> swimming ~ swi**mm**ing
+- The rain was fall all night. {falling | falls | fell} = fall -> falling ~ was **falling**
+- She was makeing tea when the lights went out. {making | make | makes} = makeing -> making ~ make → **making**
+- I was reading when the earthquake was starting. {started | starts | start} = was starting -> started ~ the short action: **started**
+- Were Hùng helping his father at nine? {Was | Be | Did} = Were -> Was ~ one person: **Was**
+- What was you doing when the storm hit? {were | are | did} = was -> were ~ you **were**
+@ sentence-build
+- Thảo / walk home / when / the storm / hit the town {were} = Thảo was walking home when the storm hit the town/When the storm hit the town Thảo was walking home/When Thảo was walking home the storm hit the town/The storm hit the town when Thảo was walking home
+- they / cycle to school / when / a tree / fall across the road {was | falling} = They were cycling to school when a tree fell across the road/When a tree fell across the road they were cycling to school/When they were cycling to school a tree fell across the road/A tree fell across the road when they were cycling to school
+- the wind / blow hard / while / we / close the shutters = While the wind was blowing hard we were closing the shutters/We were closing the shutters while the wind was blowing hard/The wind was blowing hard while we were closing the shutters/While we were closing the shutters the wind was blowing hard
+- my sister / do her homework / when / the lights / go out {were} = My sister was doing her homework when the lights went out/When the lights went out my sister was doing her homework/When my sister was doing her homework the lights went out/The lights went out when my sister was doing her homework
+- what / you / do / at midnight {was} = What were you doing at midnight/At midnight what were you doing
+@ odd-one-out ask="Which one is wrong?"
+- was raining · were digging · was knowing · was shaking = was knowing ~ say **knew**
+- were running · was swimming · was makeing · were lying = was makeing ~ **making**
+- I was · you were · we were · she were = she were ~ she **was**
+- making · riseing · digging · lying = riseing ~ **rising**
+- was wanting · was waiting · was working · was walking = was wanting ~ say **wanted**
+- they was · he was · it was · I was = they was ~ they **were**
 :::
 
-### 3.2 Put the verb into the past continuous
+### 3.2 About you
 
-::: task skill="course" type="gap-fill" ask="Watch the spelling of the *-ing* form."
-- At seven o'clock we ___ (listen) to the forecast. {were listening | was listening | were listen} = were listening
-- She ___ (not / sleep) when the branch fell on the roof. {wasn't sleeping | weren't sleeping | wasn't sleep} = wasn't sleeping
-- What were you ___ (do) when the earthquake started? {doing | do | did} = doing
-- The men ___ (dig) a channel behind the school. {were digging | were diging | was digging} = were digging
-- My grandmother ___ (lie) on the sofa with the radio on. {was lying | was lieing | were lying} = was lying
-- The water ___ (rise) far more quickly than anyone expected. {was rising | was riseing | were rising} = was rising
-:::
-
-### 3.3 Join with *when* or *while*
-
-::: task skill="course" type="short-answer" variant="sentence-build" ask="The double slash marks where one half ends and the other begins. Keep the two halves in that order. Put **when** before a short action that interrupted a long one, and **while** before a long action that was going on at the same time."
-- I / cook dinner // the storm / hit the village {while | ,} = I was cooking dinner when the storm hit the village./While I was cooking dinner, the storm hit the village./While I was cooking dinner the storm hit the village./When I was cooking dinner, the storm hit the village./When I was cooking dinner the storm hit the village. ~ the short action interrupts, so it takes *when* and the past simple
-- it / rain hard // we / fill sandbags = While it was raining hard, we were filling sandbags./While it was raining hard we were filling sandbags./It was raining hard while we were filling sandbags. ~ two long actions at once, so both verbs are past continuous
-- they / drive to the shelter // a tree / fall across the road {while | ,} = They were driving to the shelter when a tree fell across the road./While they were driving to the shelter, a tree fell across the road./While they were driving to the shelter a tree fell across the road./When they were driving to the shelter, a tree fell across the road./When they were driving to the shelter a tree fell across the road.
-- the children / play in the yard // the siren / sound {while | ,} = The children were playing in the yard when the siren sounded./While the children were playing in the yard, the siren sounded./While the children were playing in the yard the siren sounded./When the children were playing in the yard, the siren sounded./When the children were playing in the yard the siren sounded.
-- my mother / pack our papers // my father / check the roof = While my mother was packing our papers, my father was checking the roof./While my mother was packing our papers my father was checking the roof./My mother was packing our papers while my father was checking the roof.
-:::
-
-### 3.4 Correct the mistake
-
-::: task skill="course" type="short-answer" variant="error-correction"
-- While the water was rise, we moved everything upstairs. {rising | rises | rose} = rise -> rising ~ *was/were* takes the *-ing* form
-- My uncle was owning two boats before the storm. {owned | owns | own} = was owning -> owned ~ *own* is stative; it does not go in the continuous
-- They were fill buckets when the tap stopped working. {filling | filled | fills} = fill -> filling ~ *was/were* takes the *-ing* form
-- At midnight the rescue boats were look for the fishermen. {looking | looked | looks} = look -> looking ~ *was/were* takes the *-ing* form
-- Bà Sáu were counting the damage when I got home. {was | is | be} = were -> was ~ one person, so the singular form of *be*
-:::
-
-### 3.5 About you
-
-Write true sentences. Use the past continuous at least once in each.
+Write true sentences. Use *was / were* + *-ing* at least once in each.
 
 1. What were you doing at eight o'clock yesterday evening?
    → _______________________________
@@ -533,8 +634,7 @@ Write true sentences. Use the past continuous at least once in each.
 
 ### Knowledge of natural disasters
 
-Three people describe something they saw. None of them names the disaster —
-each one only says what it looked like, which is how most people describe one.
+Three people describe something they saw. None of them names the disaster.
 
 > **Nam.** "I was cycling home on the road under the hill. The rain had not
 > stopped for two days. Then the man in front of me put his foot down and
@@ -619,7 +719,7 @@ but do **not** say its name — and let someone else guess it.
 
 ### 4.1 True, False, or Not Given
 
-::: task skill="reading" type="true-false-not-given" ask="**False** means the text says the opposite. **Not Given** means the text does not say either way. Go by the text, not by what you already know."
+::: task skill="reading" type="true-false-not-given" ask="**True**: the text says so. **False**: the text says the opposite. **Not Given**: the text does not say."
 - The siren was sounding before the water came over the harbour wall. = T
 - Tí asked Bống to call that night. = F ~ she said the two words with nobody asking her to
 - The sea took that village before Bà Sáu was born. = F ~ it went when she was a girl, so she was already alive
@@ -639,7 +739,7 @@ but do **not** say its name — and let someone else guess it.
 
 ### 4.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these. The clock above is still running."
+::: task skill="course" type="synonym-search" ask="Find the word in the text that means each of these."
 - spoils something completely {ruins | lifts | pulls} = ruins
 - soft wet earth left behind by water {mud | sand | stone} = mud
 - a sloping ramp for pulling boats out of the water {slipway | harbour wall | canal} = slipway
@@ -648,9 +748,7 @@ but do **not** say its name — and let someone else guess it.
 
 ### Speaking — Delivering a news report
 
-> **Working alone:** you have no partner and no camera crew, so do this in three
-> steps. It still works — a news report is one speaker talking to an audience
-> anyway, which is exactly what you can practise on your own.
+> **Working alone:** you have no partner, so do this in three steps.
 
 **Step 1 — Prepare.** You are a reporter. A storm hit a small coastal town last
 night. Fill in your notes — short phrases, not full sentences.
@@ -658,8 +756,8 @@ night. Fill in your notes — short phrases, not full sentences.
 | Reporter's notes | Your notes |
 | --- | --- |
 | Where and when did it happen? | |
-| What was the weather doing? (past continuous) | |
-| What were people doing when it hit? (past continuous + past simple) | |
+| What was the weather doing? (*it was raining…*) | |
+| What were people doing when it hit? (*we were eating when…*) | |
 | What damage did it cause? | |
 | Who helped, and how? | |
 | What should people do now? | |
@@ -667,9 +765,8 @@ night. Fill in your notes — short phrases, not full sentences.
 **Step 2 — Speak.** Deliver the report **aloud**, standing up, for about
 **one minute**, from your notes and not from a written-out script.
 
-A news report moves through four stages, and the only thing fixed about it is
-the *order*. Nothing here gives you words: the table asks questions, and the
-sentences that answer them have to be yours.
+A news report has four stages, in this order. Answer each question in your own
+words.
 
 | Stage | The question it answers | Roughly how long |
 | --- | --- | --- |
@@ -684,7 +781,7 @@ sentences that answer them have to be yours.
 **Step 3 — Record and check.** Record yourself on your phone. Listen back and
 check three things:
 
-- Did you use **at least three** past continuous verbs, with the correct *was*
+- Did you use **at least three** verbs like *was raining*, with the right *was*
   or *were*?
 - Did you stress the right syllable in *disˈaster*, *deˈstruction*, *eˈvacuate*
   and *ˈhurricane*?
@@ -788,10 +885,8 @@ question or a wish.
 
 ### Listening — On the wall in the dark
 
-You hear it **once**, read aloud by someone else — nobody in a flood says it
-twice. Two people are speaking
-here, so read both sets of questions first and decide
-which of them each answer will come from.
+You hear it **once**, read aloud by someone else. Two people are speaking. Read
+both sets of questions first.
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
 
@@ -847,7 +942,7 @@ arrived. Bring it, and do not open it in the rain. Three marks left.
 ::: task skill="listening" type="multiple-choice"
 - Tí says Đạt was last sitting {on the low wall | on the post office | upstairs} = on the low wall
 - Hùng went in after him carrying {a rope | a whistle | a tin box} = a rope
-- The keeper tells Tí to stop looking at the water and look at {the sky | the gate | the roofs} = the roofs ~ two places are named in that line — only one is the one he tells him to look at
+- The keeper tells Tí to stop looking at the water and look at {the sky | the gate | the roofs} = the roofs ~ "look at the roofs"
 - Hùng shouts that Đạt is {hurt | still missing | cold and complaining} = cold and complaining
 - The tin box they find is {open and empty | still sealed | broken in half} = still sealed
 :::
@@ -862,17 +957,15 @@ arrived. Bring it, and do not open it in the rain. Three marks left.
 - The keeper says there are ___ marks left. {three | twenty | two} = three
 :::
 
-::: bridge name="Same ninety seconds, more facts in it" trains="Listening" cefr="B1" marker="[T2]" src="03 §2.1"
-When you re-record or re-read this unit's recording for extra practice, do not
-reach for harder words. **Pack more separate facts into the same ninety
-seconds** — a second name, another place, one more time.
+::: bridge name="Add facts, not hard words" trains="Listening" cefr="B1" marker="[T2]" src="03 §2.1"
+When you re-record or re-read this unit's recording for extra practice, don't
+use harder words. **Fit more facts into the same ninety seconds** — another
+name, another place, one more time.
 
-What makes a recording hard to follow is how much information it carries, not
-how long it lasts or how difficult the words are. Adding facts makes you work;
-adding vocabulary just sends you to a dictionary.
+More facts make it harder to follow; harder words just send you to a dictionary.
 
-> **Tiếng Việt:** Muốn bài nghe khó hơn, hãy **nhồi thêm thông tin** vào cùng 90
-> giây — **đừng** dùng từ khó hơn. Độ khó nằm ở mật độ thông tin, không ở độ dài.
+> **Tiếng Việt:** Muốn bài nghe khó hơn, hãy **thêm thông tin** vào cùng 90 giây —
+> đừng dùng từ khó hơn.
 :::
 
 ### Writing — Instructions: flood safety
@@ -911,10 +1004,9 @@ and **after** a flood.
 
 *(100 words)*
 
-#### Plan it — 5 questions your instructions has to answer
+#### Plan it — five questions your instructions must answer
 
-Answer in note form. Instructions are read by someone in a hurry, so every
-line has to earn its place.
+Answer in note form.
 
 | The question | Your answer — notes, in your own words |
 | --- | --- |
@@ -924,19 +1016,16 @@ line has to earn its place.
 | **After** — three steps: water, cleaning, reporting damage | |
 | Which **one** of the three stages matters most, and why? | |
 
-::: bridge name="After the three stages, one sentence saying which matters most" trains="Task Achievement" cefr="B1" marker="[C] 2-1" src="05 §2.2"
-Your instructions run *before → during → after*. Add **one** sentence at the end:
+::: bridge name="End with the stage that matters most" trains="Task Achievement" cefr="B1" marker="[C] 2-1" src="05 §2.2"
+Your instructions run *before → during → after*. Add **one** sentence at the end
+saying which stage matters most, and why:
 
 > Of the three stages, the preparation before the storm matters most, because
 > nothing you do afterwards can replace it.
 
-Instructions on their own only ever say *what happens next*. That last sentence
-is the one place you say *what matters most* — which is the harder and more
-useful thing to be able to write. It reuses the comparatives from Unit 2, so it
-costs you no new grammar.
+You can use the comparatives from Unit 2.
 
-> **Tiếng Việt:** Thêm **một** câu so sánh ở cuối: giai đoạn nào quan trọng nhất
-> và vì sao — đây mới là câu khó viết và đáng viết nhất.
+> **Tiếng Việt:** Thêm **một** câu ở cuối: giai đoạn nào quan trọng nhất và vì sao.
 :::
 
 ::: thread id="articles" stage="check"
@@ -949,7 +1038,7 @@ costs you no new grammar.
 - [ ] At least one **negative** instruction ~ any:1 do not/don't/never
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
 - [ ] No *I think*, no *you should* ~ none i think/you should/in my opinion/i believe/i feel that/maybe you
-- [ ] Every instruction starts with an **imperative** verb
+- [ ] Every instruction starts with a verb — **Turn off…**, **Never walk…**
 :::
 
 ---
@@ -969,26 +1058,26 @@ costs you no new grammar.
 
 ### 6.2 Pronunciation check
 
-::: task skill="course" type="choice" opts="1|2|3" ask="Which syllable takes the stress? Pick **1**, **2** or **3**."
-- disaster = 2 ~ disˈaster
-- hurricane = 1 ~ ˈhurricane
-- destruction = 2 ~ deˈstruction
-- tsunami = 2 ~ tsuˈnami
-- volcanic = 2 ~ volˈcanic
-- evacuate = 2 ~ eˈvacuate
-- eruption = 2 ~ eˈruption
-- earthquake = 1 ~ ˈearthquake
+::: task skill="course" type="choice" ask="The loud syllable is in capitals. Which is right?"
+- disaster {dis-AS-ter | DIS-as-ter | dis-as-TER} = dis-AS-ter
+- hurricane {HUR-ri-cane | hur-RI-cane | hur-ri-CANE} = HUR-ri-cane
+- destruction {de-STRUC-tion | DE-struc-tion | de-struc-TION} = de-STRUC-tion
+- tsunami {tsu-NA-mi | TSU-na-mi | tsu-na-MI} = tsu-NA-mi
+- volcanic {vol-CAN-ic | VOL-can-ic | vol-can-IC} = vol-CAN-ic
+- evacuate {e-VAC-u-ate | E-vac-u-ate | e-vac-u-ATE} = e-VAC-u-ate
+- eruption {e-RUP-tion | E-rup-tion | e-rup-TION} = e-RUP-tion
+- earthquake {EARTH-quake | earth-QUAKE} = EARTH-quake
 :::
 
 ### 6.3 Grammar check
 
-::: task skill="course" type="gap-fill" ask="Choose the past continuous or the past simple."
+::: task skill="course" type="gap-fill" ask="Choose the right form of the verb."
 - At six o'clock yesterday evening it ___ (rain) heavily. {was raining | were raining | was rain} = was raining
 - While my mother ___ (cook), the power went off. {was cooking | were cooking | was cook} = was cooking
 - The roof ___ (start) to leak while we were eating. {started | start | starting} = started
 - The children ___ (play) outside when the siren sounded. {were playing | was playing | were play} = were playing
 - The phone ___ (ring) when I was watching the news. {rang | rung | ring} = rang
-- I ___ (not / know) anything about the warning. {didn't know | wasn't knowing | didn't knew} = didn't know ~ *know* is not used in the continuous
+- I ___ (not / know) anything about the warning. {didn't know | wasn't knowing | didn't knew} = didn't know ~ say *didn't know*, never *wasn't knowing*
 - What ___ your father doing when the landslide happened? {was | were | did} = was
 - ___ your brothers sleeping when the storm started? {Were | Was | Did} = Were
 - While the men ___ (fill) sandbags, the women moved the rice upstairs. {were filling | was filling | were fill} = were filling
@@ -1006,13 +1095,13 @@ each mistake, then choose the fix.
 > post office. Later Hùng and I was carrying the tin box home. It was belonging to
 > someone in the old village, and it is still shut.
 
-::: task skill="course" type="short-answer" variant="error-correction" ask="Each line is part of the paragraph, with the earlier mistakes already put right."
-- On Tuesday night I was stand on the slipway when the boat came down on my knee. {standing | stands | to stand} = stand -> standing ~ *was/were* takes the *-ing* form
-- The wind was blow very hard. {blowing | blows | blew} = blow -> blowing ~ *was/were* takes the *-ing* form
-- While the keeper was tell me what to do, I was watching the water. {telling | told | tells} = tell -> telling ~ *was/were* takes the *-ing* form
+::: task skill="course" type="short-answer" variant="error-correction" ask="Earlier mistakes are already fixed."
+- On Tuesday night I was stand on the slipway when the boat came down on my knee. {standing | stands | to stand} = stand -> standing ~ was **standing**
+- The wind was blow very hard. {blowing | blows | blew} = blow -> blowing ~ was **blowing**
+- While the keeper was tell me what to do, I was watching the water. {telling | told | tells} = tell -> telling ~ was **telling**
 - Hùng were swimming to the post office. {was | be | been} = were -> was ~ the swimmer is one person — *was*, not *were*
 - Later Hùng and I was carrying the tin box home. {were | is | be} = was -> were ~ *Hùng and I* is plural — *were*
-- It was belonging to someone in the old village. {belonged | belong | belonging} = was belonging -> belonged ~ *belong* is not used in the continuous
+- It was belonging to someone in the old village. {belonged | belong | belonging} = was belonging -> belonged ~ say **belonged**, never *was belonging*
 :::
 
 ### Project — Your family's disaster plan
@@ -1043,7 +1132,7 @@ imperatives and your word stress.
 
 > **Stretch:** Interview the oldest person in your family about the worst storm
 > or flood they remember. Ask what they were doing when it started, and write
-> their story in 120 words. Use at least four past continuous verbs.
+> their story in 120 words. Use *was / were* + *-ing* at least four times.
 
 ### Now I can …
 
@@ -1054,9 +1143,9 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for the types of natural disaster and for describing them | Lesson 2, exercises 2.1, 2.2 and 2.4 · Lesson 6, exercise 6.1 |
-| put the stress in the right place in words ending *-al* and *-ous* | Lesson 2, exercises 2.5 and 2.7 · Lesson 6, exercise 6.2. Saying them aloud is yours — record Lesson 2, exercise 2.9 and listen back. |
-| use the past continuous, on its own and beside the past simple | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 6, exercises 6.3 and 6.4 |
+| use the words for the types of natural disaster and for describing them | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
+| put the stress in the right place in words ending *-al* and *-ous* | Lesson 2, exercises 2.1 and 2.3 · Lesson 6, exercise 6.2. Saying them aloud is yours — record Lesson 2, exercise 2.5 and listen back. |
+| use the past continuous, on its own and beside the past simple | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
 | give bad news, and answer it | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
 | read a first-hand account of a flood night | Lesson 4, exercises 4.1 and 4.2 |
 | talk about a natural disaster | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
@@ -1077,7 +1166,7 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 2
 
-**2.9** Spoken. Check: the capitalised syllable is longer, louder and clearer,
+**2.5** Spoken. Check: the capitalised syllable is longer, louder and clearer,
 and every other syllable is short and light. If *disaster* comes out as
 *DIS-as-ter*, slow down and try again. In sentences 5 and 6, check that the
 *-al* and *-ous* words keep the stress of their stem — *ˈmountainous*,
@@ -1085,7 +1174,7 @@ and every other syllable is short and light. If *disaster* comes out as
 
 ### Lesson 3
 
-**3.5** Answers will vary. Check: *was* with I/he/she/it and *were* with
+**3.2** Answers will vary. Check: *was* with I/he/she/it and *were* with
 you/we/they; a correct *-ing* spelling; in item 2 the *when* clause is past
 simple; in item 3 **both** verbs are past continuous; and no stative verb
 (*know, want, like*) is used in the continuous.

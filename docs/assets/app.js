@@ -948,8 +948,11 @@ function wordDecoys(words, w, n){
   return out;
 }
 
-function buildItems(words, mode){
+function buildItems(words, mode, decoyPool){
   const list = shuffle(words);
+  /* Decoys and meanings come from real words only: a pool item mixed into the
+     list has no headword and no gloss, and offering it would print a blank. */
+  const vocab = (decoyPool || words).filter(x => x.word);
   return list.map((w, i) => {
     /* The four non-word kinds are asked exactly as their own lesson asked
        them: the prompt the unit printed, marked against the key the unit
@@ -963,7 +966,7 @@ function buildItems(words, mode){
       if (w.tap) return { fmt:"recall-tap", w };
       if (w.opts && w.opts.length){
         return { fmt:"recall-mc", w,
-                 options:shuffle(w.opts.map(o => ({ t:o, ok:o === w.a }))) };
+                 options:shuffle(w.opts.map((o, i) => ({ t:o, h:(w.optsH || [])[i], ok:o === w.a }))) };
       }
       return { fmt:"recall", w, keys:[w.a] };
     }
@@ -979,7 +982,7 @@ function buildItems(words, mode){
     }
     const q = { fmt, w };
     if (fmt === "mc"){
-      const others = shuffle(words.filter(x => x.word !== w.word)).slice(0, 3);
+      const others = shuffle(vocab.filter(x => x.word !== w.word)).slice(0, 3);
       q.options = shuffle(others.map(x => ({ t:x.vi, ok:false })).concat([{ t:w.vi, ok:true }]));
     } else {
       /* Every other format is answered by picking the English word, never by
@@ -987,7 +990,7 @@ function buildItems(words, mode){
          inflected cloze key, the headword a collocation was blanked on. */
       if (fmt === "colloc") q.phrase = pick(w.colloc);
       const right = fmt === "cloze" ? (w.clozeKey || bareWord(w)) : bareWord(w);
-      q.options = shuffle(wordDecoys(words, w, 3).map(x => ({ t:bareWord(x), ok:false }))
+      q.options = shuffle(wordDecoys(vocab, w, 3).map(x => ({ t:bareWord(x), ok:false }))
         .concat([{ t:right, ok:true }]));
     }
     return q;
@@ -1004,7 +1007,7 @@ function runEngine(mode, words, unit, hostSel, opts){
   opts = opts || {};
   const host = $(hostSel || "#engine");
   if (!host || !words || !words.length) return;
-  const st = { items:buildItems(words, mode), i:0, right:0, wrong:[], mode, unit,
+  const st = { items:buildItems(words, mode, opts.decoys), i:0, right:0, wrong:[], mode, unit,
                conf:{ sure:0, sureRight:0, unsure:0, unsureRight:0 }, pending:null };
   host.hidden = false;
   host.scrollIntoView({ behavior:"smooth", block:"start" });
@@ -1013,7 +1016,7 @@ function runEngine(mode, words, unit, hostSel, opts){
 
   function chrome(inner, note){
     return '<div class="card engine"><div class="qbar">'
-      + '<span class="chip">' + MODE_LABEL[st.mode] + '</span>'
+      + '<span class="chip">' + esc(opts.label || MODE_LABEL[st.mode]) + '</span>'
       + '<span class="counter">' + Math.min(st.i + 1, st.items.length) + ' of ' + st.items.length + '</span>'
       + '<span class="counter sp">' + (st.mode === "test" ? "no feedback until the end" : st.right + " right") + '</span>'
       + '</div><div class="bar"><i style="width:' + (st.i / st.items.length * 100) + '%"></i></div>'
@@ -1033,24 +1036,28 @@ function runEngine(mode, words, unit, hostSel, opts){
     let body = "", note = "";
     const KIND = { grammar:"Grammar", function:"Everyday English",
                    pron:"Pronunciation", colloc:"Collocation" };
-    if (q.fmt === "recall-tiles" || q.fmt === "recall-tap"){
-      body = '<p class="lede">' + esc(KIND[w.type] || "From this unit")
+    /* A pool item says what to do and nothing else; a review item also says
+       where it came back from, because days have passed since that lesson. */
+    const head = w.genre
+      ? '<p class="e-ask">' + (w.ask || "") + '</p>'
+      : '<p class="lede">' + esc(KIND[w.type] || "From this unit")
         + (w.from ? ' · ' + esc(w.from) : "") + '</p>'
-        + (w.ask ? '<p class="note small">' + w.ask + '</p>' : "")
+        + (w.ask ? '<p class="e-ask">' + w.ask + '</p>' : "");
+    const holed = html => String(html).replace(/_{3,}/, '<b class="hole"></b>');
+    if (q.fmt === "recall-tiles" || q.fmt === "recall-tap"){
+      body = head
         + '<ol class="items rv">' + itemHTML({ id:"rv" }, w, 0) + '</ol>'
         + '<div class="row"><button class="btn" id="go">Check</button></div>';
     } else if (q.fmt === "recall" || q.fmt === "recall-mc"){
       /* The prompt has already been through the generator's inline renderer, so
          it is HTML. Escaping it again printed literal <strong> tags and turned
          &#x27; into visible text. */
-      body = '<p class="lede">' + esc(KIND[w.type] || "From this unit")
-        + (w.from ? ' · ' + esc(w.from) : "") + '</p>'
-        + (w.ask ? '<p class="note small">' + w.ask + '</p>' : "")
-        + '<div class="prompt sent">' + w.q + '</div>'
+      body = head
+        + (w.q ? '<div class="prompt sent">' + holed(w.q) + '</div>' : "")
         + (q.fmt === "recall-mc"
             ? '<div class="choices">'
               + q.options.map((o, i) => '<button data-i="' + i + '">'
-                  + esc(o.t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
+                  + (o.h || esc(o.t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>"))
                   + '</button>').join("")
               + '</div>'
             : field("your answer"));
@@ -1060,16 +1067,16 @@ function runEngine(mode, words, unit, hostSel, opts){
         + q.options.map((o, i) => '<button data-i="' + i + '">' + esc(o.t) + '</button>').join("")
         + '</div>';
     } else if (q.fmt === "colloc"){
-      body = '<p class="lede">Complete the phrase. Learn the word with the words it lives with.</p>'
+      body = '<p class="e-ask">Complete the phrase.</p>'
         + '<div class="prompt gap">' + blankOut(q.phrase, bareWord(w)) + '</div>'
         + '<p class="lede">' + esc(w.vi) + '</p>' + choices();
     } else if (q.fmt === "cloze"){
-      body = '<p class="lede">One word is missing. Pick the form this sentence needs.</p>'
+      body = '<p class="e-ask">Choose the missing word.</p>'
         + '<div class="prompt sent">' + esc(w.cloze).split(GAP).join('<b class="hole"></b>') + '</div>'
         + choices();
     } else {
       body = '<div class="prompt">' + esc(w.vi) + '<span class="ipa">' + esc(w.pos || "") + '</span></div>'
-        + '<p class="lede">Which English word means this?</p>' + choices();
+        + '<p class="e-ask">Which English word means this?</p>' + choices();
     }
     if (q.fmt === "recall")
       note = '<p class="note small">Spelling counts. UK and US spellings are both accepted; '
@@ -1081,6 +1088,14 @@ function runEngine(mode, words, unit, hostSel, opts){
     if (inp){ try { inp.focus({ preventScroll:true }); } catch(e){ inp.focus(); } }
   }
 
+  /* Practice inside a lesson goes straight to the verdict. The confidence
+     question stays where its comparison is reported: the practice, test and
+     review sessions that end with the calibration table. */
+  function settle(res, given){
+    if (opts.conf === false){ st.pending = { res, given }; grade(); }
+    else askConfidence(res, given);
+  }
+
   /* Confidence is asked after the answer and before the verdict, so it cannot
      be read off the feedback. */
   function askConfidence(res, given){
@@ -1090,16 +1105,17 @@ function runEngine(mode, words, unit, hostSel, opts){
       + '<div class="choices conf">'
       + '<button data-conf="1">● Sure</button>'
       + '<button data-conf="0">○ Not sure</button></div>',
-      '<p class="note small">Asked before you see the result, so it measures what you '
-      + 'actually knew. The gap between your confidence and your accuracy is the thing '
-      + 'worth watching.</p>');
+      "");
   }
 
   function grade(){
     const { res, given } = st.pending;
     const q = st.items[st.i], w = q.w, ok = res.ok;
     if (ok) st.right++; else st.wrong.push({ q, given, why:res.why });
-    schedule(q.w._u || st.unit, w.type || "word", w.id || w.word, ok);
+    /* Practice inside a lesson leaves the review schedule alone: an item
+       joins the cycle when its lesson is finished (enrolReview), never
+       because it was practised early. */
+    if (opts.schedule !== false) schedule(q.w._u || st.unit, w.type || "word", w.id || w.word, ok);
     /* Once per item, not per showing: a missed item is asked again at the end
        of the session, and that second showing is not another item reviewed. */
     if (st.mode === "review" && !q.counted){ q.counted = true; logReviewed(); }
@@ -1114,11 +1130,13 @@ function runEngine(mode, words, unit, hostSel, opts){
             ? esc(w.word) + ' — ' + esc(w.vi)
             /* A non-word item has no gloss to show, so the answer IS the
                feedback — plus the unit's own reason where it wrote one. */
-            : esc(w.a) + (w.why ? ' <span class="ipa">' + esc(w.why) + '</span>' : ""))
+            : (w.aH || esc(w.a)) + (w.why ? ' <span class="ipa">' + w.why + '</span>' : ""))
         + '</div>' + why + '</div>'
       + (w.colloc ? '<p class="note small"><b>Goes with:</b> ' + w.colloc.map(esc).join(" · ") + '</p>' : "")
       + '<div class="row"><button class="btn" id="next">Continue</button></div>');
-    if (!ok) st.items.push(q);                 // wrong items come back
+    /* A wrong item comes back later in the run -- twice at most, so one
+       stubborn item cannot make a session endless. */
+    if (!ok && (q.back = (q.back || 0) + 1) <= 2) st.items.push(q);
     $("#next", host).addEventListener("click", () => { st.i++; paintQ(); });
   }
 
@@ -1128,13 +1146,11 @@ function runEngine(mode, words, unit, hostSel, opts){
     const pc = (r, n) => n ? Math.round(r / n * 100) : null;
     const s = pc(c.sureRight, c.sure), n = pc(c.unsureRight, c.unsure);
     let verdict;
-    if (s === null || n === null) verdict = "Answer some of both kinds to see how well calibrated you are.";
-    else if (s - n >= 25) verdict = "Well calibrated — when you feel sure, you generally are. "
-      + "That is worth trusting when you are short of time.";
-    else if (s - n >= 10) verdict = "Roughly calibrated. Your certainty means something, but not much.";
-    else if (s >= n) verdict = "Not calibrated yet — you were about as accurate when unsure as when sure, "
-      + "so the feeling of certainty is not yet telling you anything. Most people start here.";
-    else verdict = "Inverted — you did better on the ones you doubted. Slow down on the ones that feel easy.";
+    if (s === null || n === null) verdict = "Mark some answers sure and some not sure to compare them.";
+    else if (s - n >= 25) verdict = "When you feel sure, you are usually right.";
+    else if (s - n >= 10) verdict = "Feeling sure helps a little.";
+    else if (s >= n) verdict = "You were as often right when unsure as when sure.";
+    else verdict = "You did better on the ones you doubted. Slow down on the easy-looking ones.";
     return '<div class="calib"><h3>Calibration</h3><div class="scroll"><table><thead><tr>'
       + '<th></th><th>Answered</th><th>Right</th><th></th></tr></thead><tbody>'
       + '<tr><td>● Sure</td><td>' + c.sure + '</td><td>' + c.sureRight + '</td>'
@@ -1162,21 +1178,15 @@ function runEngine(mode, words, unit, hostSel, opts){
     }
     const missed = names.length
       ? '<div class="note"><b>Back tomorrow:</b> ' + names.map(esc).join(" \u00b7 ") + '</div>'
-      : '<div class="note">Every item right. They are scheduled to come back in '
-        + REVIEW_DAYS + ' days.</div>';
+      : '<div class="note">Every item right. They come back in ' + REVIEW_DAYS + ' days.</div>';
     host.innerHTML = '<div class="card engine"><h2>'
       + (st.mode === "test" ? "Unit test — result" : MODE_LABEL[st.mode] + " finished") + '</h2>'
-      + '<p class="tally-line"><b>' + st.right + ' of ' + total + '</b> right in this session.</p>'
+      + '<p class="tally-line"><b>' + st.right + ' of ' + total + '</b> right</p>'
       + calibrationLine()
       + (ret.checked
-          ? '<p class="note"><b>Kept after a week:</b> ' + ret.kept + ' of ' + ret.checked
-            + ' items were still right when they came back after a real gap. That is the number '
-            + 'worth watching.</p>'
-          : '<p class="note">Come back in ' + REVIEW_DAYS + ' days and these items will be waiting. '
-            + 'What you remember after a gap is what counts, so nothing is marked learned today.</p>')
+          ? '<p class="note"><b>Still right after a week:</b> ' + ret.kept + ' of ' + ret.checked + '</p>'
+          : "")
       + missed
-      + '<p class="note small">This is a score on this unit\'s word list, not a measure of your '
-      + 'English overall.</p>'
       /* No "go again" on a review: the same items straight back is massed
          practice, and today's allowance is spent. A unit test ends the unit,
          so its way out is Today, where the next step is. */
@@ -1217,7 +1227,7 @@ function runEngine(mode, words, unit, hostSel, opts){
         else if (c === b) c.classList.add("no");
         else c.classList.add("dim");
       });
-      setTimeout(() => askConfidence({ ok }, q.options[i].t), 300);
+      setTimeout(() => settle({ ok }, q.options[i].t), 300);
       return;
     }
     if (q.fmt === "recall-tiles" || q.fmt === "recall-tap"){
@@ -1244,14 +1254,14 @@ function runEngine(mode, words, unit, hostSel, opts){
           res = { ok: li.dataset.tap !== undefined && n >= q.w.span[0] && n <= q.w.span[1]
                       && !!on && on.value === q.w.fix };
         }
-        askConfidence(res, given);
+        settle(res, given);
       }
       return;
     }
     if (b.id === "go"){
       const v = ($("#ans", host) || {}).value || "";
       const keys = q.keys || [q.w.word, bareWord(q.w)];
-      askConfidence(markAnswer(v, keys), v.trim());
+      settle(markAnswer(v, keys), v.trim());
       return;
     }
   });
@@ -1723,21 +1733,15 @@ function calibrationLine(marks, conf, unit, record){
   const hi = pct(tot[1]), lo = pct(tot[0]);
   let verdict;
   if (hi == null || lo == null)
-    verdict = "So far you have marked every answer the same way, so there is nothing to "
-            + "compare yet.";
+    verdict = "Mark some answers sure and some not sure to compare them.";
   else if (tot[1].n < MIN_CAL || tot[0].n < MIN_CAL)
-    verdict = "Not enough of each yet — a handful of answers cannot tell you what your "
-            + "sense of certainty is worth. Keep marking them; this total carries across "
-            + "the whole unit.";
+    verdict = "Not enough answers yet. Keep marking them — this adds up across the unit.";
   else if (hi - lo >= 25)
-    verdict = "Across this unit your sure answers have been right much more often than "
-            + "your unsure ones. Watch whether that holds as the unit goes on.";
+    verdict = "Your sure answers are right much more often than your unsure ones.";
   else if (hi >= lo)
-    verdict = "Being sure has barely separated right from wrong so far. Noticing that is "
-            + "the point of the column — keep marking.";
+    verdict = "Feeling sure has not told right from wrong yet. Keep marking.";
   else
-    verdict = "You have been right more often when you felt unsure. That happens most on "
-            + "hard questions — worth watching for now.";
+    verdict = "You were right more often when you felt unsure.";
   const row = (label, here, all) =>
     '<tr><td>' + label + '</td><td>' + here.n + '</td><td>'
     + (here.n ? Math.round(here.ok / here.n * 100) + "%" : "—") + '</td><td>' + all.n
@@ -1924,9 +1928,8 @@ function initTasks(){
         $$(".i-conf button", root).forEach(x => { x.disabled = true; });
         const html = calibrationLine(marks, confArr, DATA.unit, record);
         $(".t-foot", root).insertAdjacentHTML("afterend", html || '<div class="t-cal">'
-          + '<b>Calibration</b><p>You did not mark how sure you were, so there is '
-          + 'nothing to compare. Next time mark each answer before you check — on '
-          + 'listening items that comparison is worth more than the score.</p></div>');
+          + '<b>Calibration</b><p>Next time, mark each answer ● sure or ○ not sure '
+          + 'before you check.</p></div>');
       }
       check.disabled = true;
       root.dataset.done = "1";
@@ -1982,11 +1985,7 @@ function initTasks(){
       /* One line per attempt, each carrying its own count. Never a total, a
          percentage or an arrow. */
       logBox.innerHTML = log.length < 2 ? "" :
-        '<p class="t-hist"><b>Your attempts:</b> '
-        + log.map((a, i) => "#" + (i + 1) + " — " + a.score + "/" + a.of).join(" · ")
-        + '</p><p class="t-hist small">These are separate attempts, not a score '
-        + 'going up or down. What you remember after a few days is the part that '
-        + 'counts, and that is what the review queue checks.</p>';
+        runsLine(log.map(a => ({ right: a.score, total: a.of })));
       if (!again) return;
       again.hidden = !(root.dataset.done === "1" && !timerSpent());
     }
@@ -4151,101 +4150,221 @@ function initScene(root, p){
 
    What the last stage may say is bounded exactly as a task's attempt log is:
    one line per run, nothing summed, nothing called progress. */
+/* ---------------- drawing from a pool -------------------------------------
+   Least recently seen first, ties broken at random. A learner who runs a
+   practice ten times works through the whole pool before anything comes back,
+   and the order is different every time. What was seen is kept per pool in the
+   browser; losing it only means the next run starts the cycle again. */
+const SEEN_KEY = "en8:seen:v1";
+function drawFresh(poolId, items, n){
+  let seen = {};
+  try { seen = JSON.parse(localStorage.getItem(SEEN_KEY) || "{}"); } catch(e){}
+  const mine = seen[poolId] || {};
+  const at = x => (mine[x.id] === undefined ? -1 : mine[x.id]);
+  const out = shuffle(items).sort((a, b) => at(a) - at(b)).slice(0, n);
+  const tick = (mine._t || 0) + 1;
+  mine._t = tick;
+  out.forEach(x => { mine[x.id] = tick; });
+  seen[poolId] = mine;
+  try { localStorage.setItem(SEEN_KEY, JSON.stringify(seen)); } catch(e){}
+  return shuffle(out);
+}
+
+/* One line per run, as it happened. No total, no average, no arrow (E3, E9). */
+function runsLine(log){
+  if (!log.length) return "";
+  return '<p class="runs"><span>Your runs</span> '
+    + log.slice(-8).map(a => '<b>' + a.right + '/' + a.total + '</b>')
+      .join('<span class="sr-only">, </span>') + '</p>';
+}
+
 function initVocab(){
   (DATA.vocabIntake || []).forEach(p => {
     const root = document.querySelector('[data-vocab="' + p.id + '"]');
     if (!root || !p.words.length) return;
-    const stage = $(".v-stage", root), logBox = $(".v-log", root);
+    const stage = $(".v-stage", root);
     const KEY = "en8:intake:" + p.id;
+    const pool = p.pool || [];
+    const byN = {};
+    p.words.forEach(w => { byN[w.n] = w; });
 
     const sets = [];
     for (let i = 0; i < p.words.length; i += p.size)
       sets.push(p.words.slice(i, i + p.size));
+    const metUpTo = si => new Set(sets.slice(0, si + 1).flat().map(w => w.n));
+    const fits = (x, met) => (x.all || []).every(n => met.has(n));
 
     let log = [];
     try { log = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch(e){}
     const save = () => { try { localStorage.setItem(KEY, JSON.stringify(log)); } catch(e){} };
+    const setsDone = () => new Set(log.map(a => a.set));
 
-    function paintLog(){
-      /* Grouped by set, one line per attempt at that set. No total across
-         sets, no average, no arrow: `09` E3 and E9. */
-      const bySet = {};
-      for (const a of log) (bySet[a.set] = bySet[a.set] || []).push(a);
-      const rows = Object.keys(bySet).sort((a, b) => a - b).map(k =>
-        '<div>Set ' + (Number(k) + 1) + ': '
-        + bySet[k].map((a, i) => "#" + (i + 1) + " — " + a.right + "/" + a.total).join(" · ")
-        + '</div>').join("");
-      logBox.innerHTML = rows
-        ? '<p class="t-hist"><b>What you have answered so far</b></p>'
-          + '<div class="v-rows">' + rows + '</div>'
-          + '<p class="t-hist small">Separate attempts, listed as they happened. '
-          + 'Answering the same set again today is worth much less than answering '
-          + 'it again next week, which is what the review queue is for.</p>'
-        : "";
+    function dots(si){
+      const done = setsDone();
+      return '<div class="v-sets" aria-label="Sets">' + sets.map((_, i) =>
+        '<button type="button" data-set="' + i + '" class="' + (i === si ? "cur" : done.has(i) ? "ok" : "")
+        + '" aria-label="Set ' + (i + 1) + '"' + (i > reachable() && i !== si ? " disabled" : "")
+        + '>' + (i + 1) + '</button>').join("") + '</div>';
     }
+    /* A set can be opened once the one before it has been answered: the
+       questions on a set may use any word met before it. */
+    const reachable = () => Math.max(-1, ...setsDone()) + 1;
+    stage.addEventListener("click", ev => {
+      const d = ev.target.closest("[data-set]");
+      if (d && Number(d.dataset.set) <= reachable()) meet(Number(d.dataset.set), 0);
+    });
 
-    /* ---- stage 1: meet them, one at a time ---- */
+    /* ---- 1. meet the words, one at a time ---- */
     function meet(si, wi){
       const set = sets[si], w = set[wi];
-      const eg = w.cloze ? w.cloze.replace("\x01", "<b>" + esc(w.clozeKey) + "</b>") : "";
+      const eg = w.cloze ? esc(w.cloze).replace("\x01", "<b>" + esc(w.clozeKey) + "</b>") : "";
       stage.innerHTML =
-        '<div class="v-card"><div class="qbar">'
-        + '<span class="chip">Set ' + (si + 1) + ' of ' + sets.length + '</span>'
-        + '<span class="counter">' + (wi + 1) + ' of ' + set.length + '</span></div>'
-        + '<div class="bar"><i style="width:' + (wi / set.length * 100) + '%"></i></div>'
-        + '<p class="v-w">' + esc(w.word)
-        + (w.ipa ? ' <span class="v-ipa">' + esc(w.ipa) + '</span>' : "")
-        + '</p>'
-        + (w.pos ? '<p class="v-pos">' + esc(w.pos) + '</p>' : "")
+        '<div class="v-card">' + dots(si)
+        + '<div class="bar"><i style="width:' + ((wi + 1) / set.length * 100) + '%"></i></div>'
+        + '<p class="v-count">Word ' + (wi + 1) + ' of ' + set.length + '</p>'
+        + '<p class="v-w">' + esc(w.word) + '</p>'
+        + '<p class="v-meta">' + (w.pos ? '<span class="v-pos">' + esc(w.pos) + '</span>' : "")
+        + (w.ipa ? '<span class="v-ipa">' + esc(w.ipa) + '</span>' : "") + '</p>'
         + '<p class="v-vi">' + esc(w.vi) + '</p>'
-        + (w.colloc && w.colloc.length
-            ? '<p class="v-co"><b>Goes with:</b> ' + w.colloc.map(esc).join(" · ") + '</p>' : "")
         + (eg ? '<p class="v-eg">' + eg + '</p>' : "")
-        + '<div class="row"><button class="btn" data-v="next">'
-        + (wi + 1 < set.length ? "Next word" : "Answer on these " + set.length) + '</button></div>'
+        + (w.colloc && w.colloc.length
+            ? '<p class="v-co">' + w.colloc.map(c => '<span>' + esc(c) + '</span>').join("") + '</p>' : "")
+        + '<div class="row v-nav">'
+        + (wi > 0 ? '<button class="btn quiet" data-v="back">Back</button>' : "")
+        + '<button class="btn" data-v="next">'
+        + (wi + 1 < set.length ? "Next word" : "Check these " + set.length) + '</button></div>'
         + '</div>';
       $('[data-v="next"]', stage).addEventListener("click", () =>
         wi + 1 < set.length ? meet(si, wi + 1) : recall(si));
+      const bk = $('[data-v="back"]', stage);
+      if (bk) bk.addEventListener("click", () => meet(si, wi - 1));
     }
 
-    /* ---- stage 2: the set just met, through the real engine ---- */
+    /* ---- 2. questions on the set just met: its words, plus pool items about
+       them that mention nothing not yet met ---- */
     function recall(si){
-      stage.innerHTML = '<div id="v-eng-' + p.id + '"></div>';
-      runEngine("practice", sets[si], null, "#v-eng-" + p.id, {
-        onDone: r => {
-          log.push({ set: si, right: r.right, total: r.total, at: Date.now() });
-          save(); paintLog(); listing(si);
-        },
-      });
+      const set = sets[si], met = metUpTo(si), mine = new Set(set.map(w => w.n));
+      const fromPool = drawFresh(p.id, pool.filter(x =>
+        (x.k || []).some(n => mine.has(n)) && fits(x, met)), Math.max(4, Math.ceil(set.length * .75)));
+      ask(set.concat(fromPool), "Set " + (si + 1), r => {
+        log.push({ set: si, right: r.right, total: r.total, at: Date.now() });
+        save(); listing(si);
+      }, p.words.filter(w => met.has(w.n)));
     }
 
-    /* ---- stage 3: the whole set, and the offer to go again ---- */
+    /* ---- mixed: everything met so far, a fresh draw every time ---- */
+    function mixed(si){
+      const met = metUpTo(Math.max(-1, ...setsDone())), words = p.words.filter(w => met.has(w.n));
+      const fromPool = drawFresh(p.id, pool.filter(x => fits(x, met)), 8);
+      const fromWords = drawFresh(p.id + ":w", words.map(w => Object.assign({ id: w.word }, w)), 12 - fromPool.length);
+      ask(fromWords.concat(fromPool), "Mixed", r => {
+        log.push({ set: -1, right: r.right, total: r.total, at: Date.now() });
+        save(); listing(si);
+      }, words);
+    }
+
+    function ask(items, label, done, decoys){
+      stage.innerHTML = '<div id="v-eng-' + p.id + '"></div>';
+      runEngine("practice", items, null, "#v-eng-" + p.id,
+                { conf: false, schedule: false, label, decoys, onDone: done });
+    }
+
+    /* ---- 3. the set at a glance, and where to go next ---- */
     function listing(si){
-      const set = sets[si];
+      const set = sets[si], last = si + 1 >= sets.length;
+      const runs = log.filter(a => a.set === si);
       stage.innerHTML =
-        '<div class="v-card"><h3>Set ' + (si + 1) + ' — all ' + set.length + ' words</h3>'
-        + '<div class="scroll"><table class="v-list"><tbody>'
-        + set.map(w => '<tr><td><b>' + esc(w.word) + '</b>'
-            + (w.ipa ? ' <span class="v-ipa">' + esc(w.ipa) + '</span>' : "")
-            + '</td><td>' + esc(w.vi) + '</td></tr>').join("")
-        + '</tbody></table></div>'
-        + '<div class="row"><button class="btn" data-v="retest">Answer this set again</button>'
-        + (si + 1 < sets.length
-            ? '<button class="btn quiet" data-v="on">Go on to set ' + (si + 2) + '</button>'
-            : '<button class="btn quiet" data-v="restart">Start again from set 1</button>')
+        '<div class="v-card">' + dots(si)
+        + '<h3 class="v-h3">Set ' + (si + 1) + '</h3>'
+        + '<ul class="v-list">'
+        + set.map(w => '<li><b>' + esc(w.word) + '</b><span>' + esc(w.vi) + '</span></li>').join("")
+        + '</ul>' + runsLine(runs)
+        + '<div class="row v-nav">'
+        + (last ? "" : '<button class="btn" data-v="on">Next set</button>')
+        + '<button class="btn' + (last ? "" : " quiet") + '" data-v="mixed">Mixed practice</button>'
+        + '<button class="btn quiet" data-v="retest">This set again</button>'
         + '</div></div>';
       $('[data-v="retest"]', stage).addEventListener("click", () => recall(si));
+      $('[data-v="mixed"]', stage).addEventListener("click", () => mixed(si));
       const on = $('[data-v="on"]', stage);
       if (on) on.addEventListener("click", () => meet(si + 1, 0));
-      const again = $('[data-v="restart"]', stage);
-      if (again) again.addEventListener("click", () => meet(0, 0));
     }
 
-    paintLog();
-    /* A returning learner lands on the list of the last set they answered,
-       not back at word one of set one. */
-    const last = log.length ? log[log.length - 1].set : null;
-    if (last === null) meet(0, 0); else listing(last);
+    /* A returning learner lands on the last set they answered, not on word one. */
+    const lastSet = log.filter(a => a.set >= 0).map(a => a.set).pop();
+    if (lastSet === undefined) meet(0, 0); else listing(lastSet);
+  });
+}
+
+/* ---------------- practice banks ------------------------------------------
+   A fresh draw from the pool on every run, one question at a time, answered
+   straight away. Runs are listed one per line and never added up. */
+function initBanks(){
+  (DATA.bank || []).forEach(p => {
+    const root = document.querySelector('[data-bank="' + p.id + '"]');
+    if (!root || !p.items.length) return;
+    const stage = $(".bk-stage", root), KEY = "en8:bank:" + p.id;
+    let log = [];
+    try { log = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch(e){}
+    const save = () => { try { localStorage.setItem(KEY, JSON.stringify(log)); } catch(e){} };
+
+    function cover(){
+      stage.innerHTML = '<div class="bk-cover">'
+        + '<p class="bk-n"><b>' + p.draw + '</b> questions</p>'
+        + '<p class="bk-say">A new mix every time, from ' + p.items.length + '.</p>'
+        + runsLine(log)
+        + '<div class="row"><button class="btn" data-b="go">'
+        + (log.length ? "New questions" : "Start") + '</button></div></div>';
+      $('[data-b="go"]', stage).addEventListener("click", run);
+    }
+    function run(){
+      const items = drawFresh(p.id, p.items, p.draw)
+        .map(x => Object.assign({ type: p.type }, x));
+      stage.innerHTML = '<div id="b-eng-' + p.id + '"></div>';
+      runEngine("practice", items, DATA.unit || null, "#b-eng-" + p.id, {
+        conf: false, schedule: false, label: "Practice",
+        onDone: r => { log.push({ right: r.right, total: r.total, at: Date.now() }); save(); cover(); },
+      });
+    }
+    cover();
+  });
+}
+
+/* ---------------- the Words sheet ---------------------------------------- */
+function initWordsSheet(){
+  const dlg = $("#words");
+  if (!dlg) return;
+  const open = () => {
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+    document.documentElement.classList.add("sheet-open");
+    /* Focus lands on the title, not the close button or the search field:
+       nothing lights up, and no keyboard jumps up on a phone. */
+    const h = $("#words-h", dlg);
+    if (h){ h.tabIndex = -1; try { h.focus({ preventScroll:true }); } catch(e){} }
+  };
+  const close = () => {
+    if (dlg.close) dlg.close(); else dlg.removeAttribute("open");
+    document.documentElement.classList.remove("sheet-open");
+  };
+  /* Without <dialog> support the browser gives no Escape; give it one. */
+  if (!dlg.showModal) document.addEventListener("keydown", ev => {
+    if (ev.key === "Escape" && dlg.hasAttribute("open")) close();
+  });
+  dlg.addEventListener("close", () => document.documentElement.classList.remove("sheet-open"));
+  $$("[data-words-open]").forEach(b => b.addEventListener("click", open));
+  $$("[data-words-close]", dlg).forEach(b => b.addEventListener("click", close));
+  /* A tap on the dimmed page behind the sheet closes it. */
+  dlg.addEventListener("click", ev => { if (ev.target === dlg) close(); });
+  const find = $(".sheet-find input", dlg), none = $(".sheet-none", dlg);
+  if (find) find.addEventListener("input", () => {
+    const q = foldSearch(find.value.trim());
+    let shown = 0;
+    $$(".entry", dlg).forEach(el => {
+      const hit = !q || foldSearch(el.textContent).includes(q);
+      el.hidden = !hit;
+      if (hit) shown++;
+    });
+    if (none) none.hidden = shown > 0;
   });
 }
 
@@ -4870,6 +4989,8 @@ function boot(){
   initTasks();
   initDialogue();
   initVocab();
+  initBanks();
+  initWordsSheet();
   initFluency();
   initAudio();
   initPassage();

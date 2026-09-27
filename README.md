@@ -260,6 +260,44 @@ The same prohibitions are scanned over `tools/build.py`, because the generator
 authors learner-facing copy too — the home page, the unit cards, the widget
 that wraps every task.
 
+### `:::bank` — a practice pool, drawn fresh on every run
+
+A printed drill is the same six questions every time, so the second go tests
+memory of the first. A bank is a pool written once and drawn from on every run:
+`draw` questions at a time, least recently seen first, one at a time with the
+answer straight after. Runs are listed one per line and never added up.
+
+```
+### 3.1 Practice
+
+::: bank draw="10"
+@ gap-fill ask="Choose the right form of the verb."
+- Tí enjoys ___ board games with his friends. {playing | to play | play} = playing
+@ choice ask="Which sentence is right?"
+- Tí says what he wants. {I'd love to go. | I'd love going. | I'd love go.} = I'd love to go.
+@ odd-one-out ask="Which verb is followed by a different shape?"
+- enjoy · avoid · don't mind · would like = would like ~ would like **to go**, but enjoy **going**
+@ error-correction
+- I would like going to the new bookshop. {to go | go | went} = going -> to go
+@ sentence-build
+- she / enjoy / make / paper flowers {to} = She enjoys making paper flowers
+:::
+```
+
+`@ genre` opens a group — `gap-fill`, `choice`, `odd-one-out`,
+`error-correction` or `sentence-build` — and takes only `ask=` and `opts=`.
+Every item under it is parsed exactly as a `:::task` item of that genre, so the
+key checks, tiles and tap spans are the same code; a typed item fails the build,
+and so does a bank with fewer than twice `draw` items. The groups are exposed to
+the gates as tasks, so everything `check_ielts.py` enforces on a task holds here.
+
+The same body inside `:::vocab` is the pool **Meet the words** asks from. Each
+item is tagged with the vocabulary rows it tests, so a set's questions only ever
+use words already met; a pool item that tests no table word waits for
+**Mixed practice**. Lesson 2 carries one pool and Lesson 3 one bank — together
+they replace the vocabulary and grammar drills that used to be printed under
+them.
+
 ### `:::audio` — the script is read aloud once, by someone else
 
 ```markdown
@@ -521,6 +559,10 @@ Read `CLAUDE.md` and `research/ielts/09-design-principles.md` §1 before adding
 one.
 
 ## Vocabulary entries
+
+The unit's vocabulary table stays in Lesson 2's source, but the page does not
+print it: every lesson page carries a floating **Words** button that opens the
+whole unit's vocabulary in a sheet, searchable in English or Vietnamese.
 
 Each word is a dictionary entry rather than a table row. The flat view shows the
 most common sense — part of speech, an English definition, the Vietnamese under

@@ -7,11 +7,7 @@
 
 ### 1.1 Odd sound out
 
-Three sounds have come up so far, one in each unit: short **/ʊ/** against long
-**/uː/**, the weak **/ə/** against short **/ɪ/**, and **/ʊə/** against **/ɔɪ/**.
-They are all in this exercise, and the lines are not grouped by unit.
-
-::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **sound in bold**, not the meaning."
+::: task skill="course" type="choice" variant="odd-one-out" ask="Which word has a different sound in bold?"
 - g**oo**d · c**oo**l · f**oo**t · c**oo**k = c**oo**l ~ *cool* has the long /uː/; the other three are short /ʊ/
 - J**u**ne · r**u**de · tr**u**th · p**u**t = p**u**t ~ *put* is short /ʊ/; the other three are long /uː/
 - vill**a**ge · cott**a**ge · short**a**ge · breakf**a**st = breakf**a**st ~ *breakfast* has the weak /ə/; the other three have /ɪ/
@@ -25,16 +21,16 @@ They are all in this exercise, and the lines are not grouped by unit.
 ### 1.2 Which word fits?
 
 ::: task skill="course" type="choice" ask="Choose the word that completes each sentence."
-- Mai is really into ___ photos of the paddy fields near her house. {taking | take | to take} = taking ~ after *be into* the verb takes **-ing**
-- My uncle is keen ___ fishing in the stream behind the barn. {on | in | at} = on ~ *be keen **on***
-- I can't stand ___ my notifications every ten minutes. {checking | check | checked} = checking ~ after *can't stand* the verb takes **-ing**
-- Nam is not fond ___ jigsaw puzzles, so don't buy him one. {of | on | with} = of ~ *be fond **of***
-- I spent an hour ___ the club's forum, just reading old posts and looking at photos. {browsing | uploading to | logging on to} = browsing ~ reading and looking around a site is *browsing* it; *uploading to* it adds something, and *logging on to* it only gets you in
+- Mai is really into ___ photos of the paddy fields near her house. {taking | take | to take} = taking ~ be into **taking**
+- My uncle is keen ___ fishing in the stream behind the barn. {on | in | at} = on ~ keen **on** fishing
+- I can't stand ___ my notifications every ten minutes. {checking | check | checked} = checking ~ can't stand **checking**
+- Nam is not fond ___ jigsaw puzzles, so don't buy him one. {of | on | with} = of ~ fond **of** puzzles
+- I spent an hour ___ the club's forum, just reading old posts and looking at photos. {browsing | uploading to | logging on to} = browsing ~ reading and looking around a site is **browsing** it
 :::
 
 ### 1.3 One word missing
 
-Eight words and phrases from Units 1, 2 and 3. Six of them fit — one in each gap.
+Two of the words are not used.
 
 ::: task skill="course" type="gap-fill" opts="harvest|hospitable|peer pressure|picturesque|get involved|take up|relax|vast" ask="Choose the word or phrase that fits each gap."
 - The people in my grandmother's village are very ___ : a stranger is fed before anyone asks who they are. = hospitable
@@ -47,19 +43,19 @@ Eight words and phrases from Units 1, 2 and 3. Six of them fit — one in each g
 
 ### 1.4 Choose the right form
 
-::: task skill="course" type="choice" ask="One form is right in each sentence."
-- My grandmother gets up ___ than anyone else in the house. {earlier | more early | more earlier} = earlier ~ *early* is short, so it takes **-er** — never both at once
-- Duy enjoys ___ board games with his cousins on Sunday. {playing | play | to play} = playing ~ after *enjoy* the verb takes **-ing**
-- We decided ___ the kite on the hill behind the barn. {to fly | flying | fly} = to fly ~ after *decide* the verb takes **to**
-- Buses run ___ in town than in the village. {more frequently | more frequent | most frequently} = more frequently ~ *frequently* is a long adverb, so it takes **more**, and it stays an adverb
-- My cousin detests ___ up before six o'clock. {getting | get | got} = getting ~ after *detest* the verb takes **-ing**
+::: task skill="course" type="choice" ask="Choose the right form."
+- My grandmother gets up ___ than anyone else in the house. {earlier | more early | more earlier} = earlier ~ early → **earlier**, never *more earlier*
+- Duy enjoys ___ board games with his cousins on Sunday. {playing | play | to play} = playing ~ enjoy **playing**
+- We decided ___ the kite on the hill behind the barn. {to fly | flying | fly} = to fly ~ decided **to fly**
+- Buses run ___ in town than in the village. {more frequently | more frequent | most frequently} = more frequently ~ run **more frequently** than
+- My cousin detests ___ up before six o'clock. {getting | get | got} = getting ~ detests **getting** up
 :::
 
 > **Mẹo:** Đọc cả câu trước khi chọn — có *than* thì phải là dạng so sánh.
 
 ### 1.5 Join the two halves
 
-::: task skill="course" type="choice" ask="Pick the joining word that makes sense. Read both halves before you choose."
+::: task skill="course" type="choice" ask="Choose the word that joins the two halves."
 - I wanted to join the cooking club, ___ it was already full. {but | so | or} = but ~ the second half is a problem, not a result
 - Leave before six; ___ , you will miss the last ferry. {otherwise | therefore | however} = otherwise ~ *otherwise* = if you do not do this, here is what happens
 - The village has no cinema; ___ , nobody seems to mind. {however | therefore | otherwise} = however ~ the second half is a surprise after the first
@@ -69,7 +65,7 @@ Eight words and phrases from Units 1, 2 and 3. Six of them fit — one in each g
 
 > **Ghi chú:** *however*, *therefore* và *otherwise* không phải là liên từ. Trước
 > chúng dùng dấu chấm phẩy hoặc dấu chấm, sau chúng dùng dấu phẩy —
-> *My village is small; **however**, its market is huge.*
+> My village is small; **however**, its market is huge.
 
 ## Part 2 — Skills
 
@@ -112,7 +108,7 @@ Eight words and phrases from Units 1, 2 and 3. Six of them fit — one in each g
 
 ### 2.1 Where is it said?
 
-::: task skill="reading" type="matching-information" opts="A|B|C|D|E" ask="The text has five paragraphs, lettered **A** to **E** above. Choose the paragraph each statement comes from. A letter may be the answer more than once, and one paragraph is not used at all."
+::: task skill="reading" type="matching-information" opts="A|B|C|D|E" ask="Which paragraph (A–E) says this? You can use a letter more than once."
 - Somebody who did not expect the activity to work = C ~ *He did not believe her.*
 - A hobby that earns money = D ~ she sells the bracelets at the market
 - Work that is over before the middle of the day = B ~ *The work is finished by ten.*
@@ -132,7 +128,7 @@ Eight words and phrases from Units 1, 2 and 3. Six of them fit — one in each g
 
 ### 2.3 Find the word
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock is still running and it covers this exercise too."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these."
 - birds kept for their eggs and their meat {poultry | barn | kite} = poultry
 - a piece of land planted with fruit trees {orchard | dyke | barn} = orchard
 - sure of yourself {self-confident | surprised | sorry} = self-confident
@@ -142,7 +138,7 @@ Eight words and phrases from Units 1, 2 and 3. Six of them fit — one in each g
 
 ### Speaking — Saturday, and where you spend it
 
-> **Working alone:** there is no partner here, so do this in three steps.
+> Do this alone, in three steps.
 
 **Step 1 — Prepare.** Think of one person you know well: a cousin, a
 neighbour, an older brother or sister. Make short notes, not sentences.
@@ -164,7 +160,7 @@ verb that follows each.
 **Step 3 — Record and check.** Record yourself on your phone and listen back
 once. Three things to listen for:
 
-- Did you use a comparative anywhere — *earlier than*, *more often than*?
+- Did you compare anything — *earlier than*, *more often than*?
 - Did you join any two ideas with *and*, *but*, *so*, *or* or *yet*, or was
   every sentence short and separate?
 - Did *good* and *food* come out with different vowel lengths?
@@ -174,10 +170,9 @@ stopping.
 
 ### Listening — Two Saturdays, two places
 
-You hear it **once**, read aloud by someone else. Read the five gaps first, then choose while you listen
-rather than afterwards from memory.
+You hear it **once**. Read the five gaps first, then choose as you listen.
 
-**Nghe một lần duy nhất, do người khác đọc to.** Đọc năm câu hỏi trước, rồi vừa nghe vừa chọn.
+**Nghe một lần.** Đọc năm câu trước, rồi vừa nghe vừa chọn.
 
 ::: audio orientation="You will hear two students, Tom and Mai, comparing what a Saturday is like in the town where Tom lives and in the village where Mai lives."
 Tom: You have never lived in a city, have you, Mai?

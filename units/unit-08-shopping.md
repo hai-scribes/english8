@@ -10,7 +10,7 @@
 | Strand | Target |
 | --- | --- |
 | **Pronunciation** | /sp/ vs /st/ — *spend* vs *store* |
-| **Grammar** | **Adverbs of frequency**; present simple for future events |
+| **Grammar** | How often — she **usually goes**, he **is always** late; a timetable — the market **opens** at five tomorrow |
 | **Reading** | A market, its sellers and its prices |
 | **Speaking** | Asking and answering about a local market or centre |
 | **Listening** | Money a shop will not take |
@@ -22,9 +22,7 @@
 
 ### Dialogue: Four days until the fifteenth
 
-*Read the conversation aloud. Then answer the questions below.*
-
-::: dialogue title="Four days until the fifteenth" bg="kitchen" gramen="usually — an adverb of frequency" gramvi="Trạng từ tần suất đứng **trước** động từ thường, nhưng **sau** động từ *to be*." gramco="I usually go · She is always late"
+::: dialogue title="Four days until the fifteenth" bg="kitchen" gramen="often walks · is never late · the bus leaves at six" gramvi="Trạng từ tần suất đứng **trước** động từ thường, nhưng **sau** động từ *to be*." gramco="I usually go · She is always late"
 @cast Tí|worried, Thảo|neutral
 @item money at=Tí
 **Thảo|neutral:** Your grandmother was counting coins at the kitchen table when I came in.
@@ -54,7 +52,7 @@
 
 ### 1.1 Comprehension
 
-::: task skill="course" type="short-answer" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+::: task skill="course" type="short-answer" ask="Choose the answer from the scene."
 - Thảo defends Đạt with a single word. What does she say he is **not**? {unkind | rich | proud} = unkind
 - A woman came to the house at the weekend and left without what she had asked for. Who was she? {Cô Yến | Bà Sáu | the woman at the stall} = Cô Yến
 - Two boys have already been in to see Bống. One of them is Đạt. Who is the other? {Hùng | Tí | Khoa} = Hùng
@@ -73,22 +71,165 @@
 
 ### 1.3 Notice the grammar
 
-::: task skill="course" type="choice" opts="A|F" ask="Look at the **bold** word. Choose **A** if it is an adverb of frequency, or **F** if it is a present simple verb used for a **future** event."
-- He **always** has money on a Tuesday. = A
-- The money from my parents **arrives** on the fifteenth. = F
-- She **usually** goes to the stall at the end of our lane. = A
-- The market **opens** at five tomorrow. = F
-- The rice truck **comes** at six. = F
-- The fish sellers **never** put their good baskets out twice. = A
+::: task skill="course" type="gap-fill" ask="Find the line in the dialogue. Which words does the speaker use?"
+- Tí: "She ___ to the stall at the end of our lane." {usually goes | goes usually | usually go} = usually goes
+- Tí: "He ___ money on a Tuesday." {always has | has always | always have} = always has
+- Tí: "___ ever." {Hardly | Always | Usually} = Hardly
+- Tí: "The market ___ at five tomorrow." {opens | open | opening} = opens
+- Thảo: "The rice truck ___ at six." {comes | come | coming} = comes
+- Thảo: "The fish sellers ___ their good baskets out twice." {never put | put never | never puts} = never put
 :::
 
-> **Ghi chú:** Bạn vừa gặp hai trọng tâm ngữ pháp của bài — **trạng từ chỉ tần
-> suất** và **thì hiện tại đơn dùng cho sự việc tương lai đã lên lịch**. Vị trí
-> đặt trạng từ mới là phần khó nhất. Chi tiết ở Lesson 3.
+> **Ghi chú:** she **usually goes**, he **always has** — từ chỉ mức độ thường
+> xuyên đứng **trước** động từ. The market **opens** at five tomorrow — giờ
+> mở cửa cố định, nên dùng hiện tại đơn dù là ngày mai. Lesson 3 giải thích kỹ.
 
 ---
 
 ## Lesson 2 — Words & Sounds
+
+### Meet the words
+
+::: vocab size="8"
+@ gap-fill ask="Choose the word that fits."
+- The new ___ on the ring road has sixty shops, a cinema and a food court. {shopping centre | street vendor | stall} = shopping centre
+- Dad took me to the ___ in town — clothes on the ground floor, toys on the third. {department store | farmers' market | convenience store} = department store
+- A ___ pushes his cart of sugar cane juice past our school every afternoon. {street vendor | customer | shopaholic} = street vendor
+- Bà Sáu's friend has a small fruit ___ at the end of our lane. {stall | queue | receipt} = stall
+- Hundreds of ___ came into the shop on the Saturday before Tết. {customers | receipts | price tags} = customers
+- My aunt works at the till. She serves about three hundred ___ a day. {customers | stalls | discounts} = customers
+- I bought this schoolbag for half price. What a ___ ! {bargain | refund | complaint} = bargain
+- At the market you can ___ with the seller, but not in a supermarket. {bargain | purchase | queue} = bargain
+- Show your student card and you get a small ___ on every book. {discount | receipt | delivery} = discount
+- There's a ___ on all school bags this week: 20% off. {discount | refund | delivery} = discount
+- The phone stopped working after two days, so the shop gave me a full ___ . {refund | receipt | queue} = refund
+- The shop won't take the shoes back without the ___ . {receipt | discount | range of products} = receipt
+- The woman at the fish stall doesn't take cards, so bring ___ . {cash | delivery | access} = cash
+- Good news — they have the blue schoolbag ___ again. {in stock | home-grown | convenient} = in stock
+- ___ is free if you spend more than 300,000 dong online. {Delivery | Queue | Complaint} = Delivery
+- The ___ took five days, and the box arrived wet. {delivery | refund | queue} = delivery
+- I like to ___ in the bookshop for an hour before I choose anything. {browse | purchase | queue} = browse
+- Hùng ___ online for an hour but didn't buy anything. {browsed | purchased | queued} = browsed
+- They look small. Can I ___ these jeans before I pay? {try on | queue | refund} = try on
+- Tí ___ three pairs of trainers, but none of them fitted. {tried on | queued | browsed} = tried on
+- There was a long ___ at the till, so we waited twenty minutes. {queue | stall | discount} = queue
+- We ___ for half an hour to buy tickets for the film. {queued | browsed | purchased} = queued
+- The shop is next to the bus stop, which is very ___ for me. {convenient | expensive | home-made} = convenient
+- Online shopping is ___ — you don't have to leave the house. {convenient | expensive | addicted} = convenient
+- Mangoes are ___ in winter — nearly double the summer price. {expensive | convenient | in stock} = expensive
+- That watch costs more than my father earns in a month. It's too ___ . {expensive | convenient | home-grown} = expensive
+- You can ___ tickets online or at the door. {purchase | queue | complain} = purchase
+- She ___ a new bike with the money from her birthday. {purchased | browsed | queued} = purchased
+- There's no ___ on this hat. Can you ask how much it is? {price tag | receipt | shopping list} = price tag
+- Don't forget to cut the ___ off your new shirt before you wear it. {price tag | shopping list | complaint} = price tag
+- Winter coats are ___ this week — 30% off. {on sale | home-grown | convenient} = on sale
+- I waited until the trainers were ___ , and then I bought them for half price. {on sale | home-grown | addicted} = on sale
+- We only eat ___ vegetables — my grandmother grows them in the garden. {home-grown | home-made | on sale} = home-grown
+- The lemons on this stall are ___ . The seller picked them from her own trees this morning. {home-grown | home-made | addicted} = home-grown
+- Thảo's mother sells ___ rice cakes at the market — she makes them at night. {home-made | home-grown | in stock} = home-made
+- This jam isn't from a factory. It's ___ . {home-made | home-grown | convenient} = home-made
+- My cousin can't stop buying clothes, even when she doesn't need them. She's a ___ . {shopaholic | street vendor | price tag} = shopaholic
+- A ___ goes shopping to feel better, not because she needs anything. {shopaholic | price tag | street vendor} = shopaholic
+- The ___ near our house is open all night, so we can buy milk at midnight. {convenience store | farmers' market | department store} = convenience store
+- We ran out of bread at ten at night, so I went to the ___ . {convenience store | farmers' market | speciality shop} = convenience store
+- For football boots, go to the ___ — it only sells sports shoes. {speciality shop | dollar store | farmers' market} = speciality shop
+- My uncle buys his fishing hooks at a ___ that sells nothing but fishing things. {speciality shop | convenience store | department store} = speciality shop
+- Everything costs the same low price at the ___ . {dollar store | speciality shop | department store} = dollar store
+- Every item at the ___ costs 20,000 dong, from pens to plates. {dollar store | speciality shop | farmers' market} = dollar store
+- My grandmother bought new pots in the kitchen section of the ___ . {department store | street vendor | farmers' market} = department store
+- Every Saturday, people from the villages sell their own eggs and vegetables at the ___ in the square. {farmers' market | department store | convenience store} = farmers' market
+- You can buy fruit straight from the people who grew it at the ___ . {farmers' market | dollar store | department store} = farmers' market
+- The supermarket has a huge ___ — food, clothes, toys and even bikes. {range of products | shopping list | price tag} = range of products
+- The corner shop is small, so its ___ is small too. {range of products | shopping list | complaint} = range of products
+- The ___ said the phone was cheap, but it wasn't. {advertisement | delivery | queue} = advertisement
+- I saw the new trainers in an ___ on TV. {advertisement | access | complaint} = advertisement
+- Bà Sáu made a ___ to the shop owner about the bad rice. {complaint | refund | discount} = complaint
+- The shop has had three ___ about the same broken toy. {complaints | discounts | deliveries} = complaints
+- Most homes in our town now have Internet ___ . {access | delivery | stock} = access
+- Without ___ to the Internet, you can't order anything online. {access | delivery | advertisement} = access
+- My brother is ___ to online games — he plays until midnight. {addicted | convenient | expensive} = addicted
+- Some people are ___ to shopping. They buy things every single day. {addicted | home-made | convenient} = addicted
+- Before we go to the market, Mum writes rice, fish sauce and eggs on the ___ . {shopping list | price tag | receipt} = shopping list
+- I forgot my ___ , so I only remembered half of the things we needed. {shopping list | price tag | discount} = shopping list
+@ choice ask="Which word or phrase means this?"
+- a large building with many different shops inside {shopping centre | stall | convenience store} = shopping centre
+- a person who sells things in the street {street vendor | customer | shopaholic} = street vendor
+- a person who buys things from a shop {customer | street vendor | price tag} = customer
+- money given back to you when you return something {refund | discount | cash} = refund
+- money in notes and coins, not a card {cash | receipt | discount} = cash
+- a piece of paper that shows you have paid {receipt | price tag | shopping list} = receipt
+- to look at things in a shop without planning to buy {browse | purchase | bargain} = browse
+- a line of people waiting {queue | stall | range of products} = queue
+- useful and easy, because it saves you time {convenient | expensive | home-made} = convenient
+- to buy (a formal word) {purchase | browse | try on} = purchase
+- grown in your own garden {home-grown | home-made | in stock} = home-grown
+- a small shop that stays open very late and sells food and everyday things {convenience store | department store | speciality shop} = convenience store
+- a list of the things you plan to buy {shopping list | price tag | receipt} = shopping list
+- the chance to use something, like the Internet {access | delivery | advertisement} = access
+- what you say when you are not happy with something you bought {complaint | advertisement | refund} = complaint
+- in the shop now, ready to buy {in stock | expensive | home-made} = in stock
+- sold at a lower price for a short time {on sale | in stock | home-made} = on sale
+@ choice ask="What does it mean?"
+- a shopaholic {someone who shops far too much | someone who sells in a shop | someone who never shops} = someone who shops far too much
+- a bargain {something bought for much less than usual | money given back to you | a line of people} = something bought for much less than usual
+- a price tag {a label that shows how much something costs | a list of things to buy | a paper that shows you paid} = a label that shows how much something costs
+- a department store {a big shop with a section for each kind of goods | a shop where everything is the same low price | a small shop open all night} = a big shop with a section for each kind of goods
+- a dollar store {a shop where everything is the same low price | a shop that sells one kind of goods | a big shop on many floors} = a shop where everything is the same low price
+- a speciality shop {a shop that sells one or two kinds of goods | a shop that is open all night | a market for farmers} = a shop that sells one or two kinds of goods
+- a farmers' market {a market where people sell food they have grown | a big shop with many floors | a shop on the Internet} = a market where people sell food they have grown
+- a range of products {the different kinds of goods a shop sells | the price of one thing | the people who work in a shop} = the different kinds of goods a shop sells
+- a stall {a table or small open shop in a market | a line of people | a paper with a price on it} = a table or small open shop in a market
+- delivery {taking goods to the person who bought them | money in coins and notes | a lower price} = taking goods to the person who bought them
+- an advertisement {a notice or film that tries to make you buy something | a letter saying you are not happy | a list of prices} = a notice or film that tries to make you buy something
+- addicted to {not able to stop doing something | happy to wait for something | ready to buy something} = not able to stop doing something
+- home-made {made at home, not in a factory | grown in a garden | sold at a lower price} = made at home, not in a factory
+- expensive {costing a lot of money | easy to get to | made at home} = costing a lot of money
+- a discount {an amount taken off the price | a paper that shows you paid | a shop in the street} = an amount taken off the price
+@ choice opts="to|on|in|about|at" ask="Which word completes the phrase?"
+- My brother is addicted ___ his phone. = to
+- These trainers are ___ sale — half price! = on
+- Sorry, we don't have that size ___ stock. = in
+- I'd like to make a complaint ___ the delivery. = about
+- It looks nice. Can I try it ___ ? = on
+- The fish seller only wants to be paid ___ cash. = in
+- Many people are addicted ___ online shopping. = to
+- Is this shirt ___ stock in blue? = in
+- Every student has access ___ the school library. = to
+- She's always complaining ___ the prices at the market. = about
+- Everything in the shop is ___ sale this weekend. = on
+@ choice ask="Which shopping place is it?" opts="a speciality shop|a discount shop|a supermarket|an online shop|an open-air market"
+- It offers only one or two kinds of goods. = a speciality shop ~ a florist's sells flowers and very little else
+- It offers lower prices on all its products, all year round. = a discount shop
+- It is a large indoor shopping place, and every item has a fixed price. = a supermarket ~ nobody bargains here
+- It uses the Internet to sell goods and services. = an online shop
+- It is often outdoors, sells a wide range of goods, and buyers can bargain. = an open-air market
+@ odd-one-out
+- stall · customer · street vendor · shopaholic = stall ~ the others are people
+- cash · receipt · card · coins = receipt ~ the others are ways to pay
+- discount · bargain · on sale · delivery = delivery ~ the others are about a lower price
+- department store · convenience store · dollar store · price tag = price tag ~ the others are shops
+- receipt · price tag · shopping list · queue = queue ~ the others are pieces of paper
+- farmers' market · shopping centre · speciality shop · customer = customer ~ the others are places
+- browse · try on · purchase · complaint = complaint ~ the others are things you do in a shop
+- expensive · cheap · a bargain · in stock = in stock ~ the others are about the price
+@ error-correction
+- I'd like to make a complaint for the shoes I bought. {about | with | to} = for -> about ~ make a complaint **about** something
+- Can I try up this dress? {on | in | at} = up -> on ~ you **try on** clothes
+- These shoes are in sale — only 150,000 dong. {on | at | by} = in -> on ~ **on sale**
+- Sorry, that jacket isn't on stock. {in | at | by} = on -> in ~ **in stock**
+- He's addicted with computer games. {to | on | in} = with -> to ~ **addicted to**
+- Can I pay on cash? {in | at | to} = on -> in ~ pay **in cash**
+- Keep the recipe in case you want to take it back. {receipt | refund | price tag} = recipe -> receipt ~ a recipe tells you how to cook; a **receipt** shows you paid
+- The vegetables here are home-made — my uncle grows them. {home-grown | on sale | expensive} = home-made -> home-grown ~ vegetables are **home-grown**
+- I did a complaint about the delivery. {made | took | gave} = did -> made ~ **make** a complaint
+- The shop gave me all my money back — a full discount. {refund | receipt | bargain} = discount -> refund ~ money given back is a **refund**
+@ sentence-build
+- she / be / addicted / to / shopping {are | addict} = She is addicted to shopping/Is she addicted to shopping
+- can / I / try / it / on {tries | trying} = Can I try it on/I can try it on
+- the shop / not have / that size / in stock {don't | haven't} = The shop doesn't have that size in stock/Doesn't the shop have that size in stock
+- we / want / make / a complaint / about the delivery {making | for} = We want to make a complaint about the delivery
+- she / be / a real / shopaholic {are} = She is a real shopaholic/Is she a real shopaholic
+:::
 
 ### Vocabulary — Shopping
 
@@ -128,90 +269,14 @@
 | 32 | addicted (to) | /əˈdɪktɪd/ | adj | nghiện, say mê |
 | 33 | shopping list | /ˈʃɒpɪŋ lɪst/ | n | danh sách những thứ cần mua |
 
-> ### ▶︎ [**Practise these 33 words**](../app/unit-08-vocab.html)
->
-> When you have finished this lesson, the unit page opens a **practice**
-> session over all thirty-three — the meaning, the word, and, more often than
-> either of those, **the word inside a phrase it actually lives in**. Wrong
-> answers come straight back, and everything returns a week later, because
-> what you can still recall after a gap is the only recall worth counting. The
-> **unit test** opens once all six lessons are done.
->
-> **Luyện 33 từ này.** Học xong bài này, phần
-> **practice** ở trang bài sẽ mở ra để luyện cả 33 từ — trong đó phần lớn là
-> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
-> ngay, và mọi từ quay lại sau một tuần.
->
-> Do the exercises below as well — they put the words back inside sentences.
-
-### Meet the words
-
-The table above is there to look things up in. This is where you actually meet
-them: a few at a time, then answer on the few you have just met.
-
-::: vocab size="8"
-:::
-
-### 2.1 Complete the sentences
-
-::: task skill="course" type="gap-fill" ask="Choose the word or phrase from the table that fits."
-- I asked for a ___ because the shirt had a hole in it. {refund | receipt | price tag} = refund
-- Keep your ___ — you cannot return anything without it. {receipt | refund | discount} = receipt
-- That jacket is far too ___ for me. I'll look somewhere else. {expensive | convenient | home-made} = expensive
-- Sorry, that size isn't ___ at the moment. Try again next week. {in stock | home-made | convenient} = in stock
-- She buys mangoes from a ___ on the corner every morning. {street vendor | customer | shopaholic} = street vendor
-- Always ___ a pair of shoes before you pay for them. {try on | browse | purchase} = try on
-:::
-
-### 2.2 Odd one out
-
-::: task skill="course" type="choice" variant="odd-one-out" ask="The reason appears when you check."
-- stall · customer · street vendor · shopkeeper = stall ~ the others are people; a stall is a thing
-- cash · receipt · card · coin = receipt ~ the others are ways of paying; a receipt is proof you paid
-- discount · bargain · sale · delivery = delivery ~ the others all mean a lower price
-:::
-
-### 2.3 Which shopping place?
-
-Five kinds of shopping place, and the one thing that tells each of them apart
-from the others.
-
-::: task skill="course" type="choice" opts="a speciality shop|a discount shop|a supermarket|an online shop|an open-air market" ask="Read what makes each place different and choose the place."
-- It offers only one or two specific kinds of goods. = a speciality shop ~ a florist's sells flowers and very little else
-- It offers lower prices on all its products, all year round. = a discount shop
-- It is a large indoor shopping place, and every item has a fixed price. = a supermarket ~ the price tag is the giveaway — nobody bargains here
-- It uses the Internet to sell goods and services. = an online shop
-- It is often outdoors, offers a wide range of goods, and buyers can bargain. = an open-air market
-:::
-
 > **Ghi chú:** **speciality shop** = cửa hàng chuyên bán một hai loại hàng
 > (hiệu sách, hàng hoa, hàng giày). **discount shop** = cửa hàng bán hạ giá mọi
 > mặt hàng. Đừng nhầm **discount shop** (cửa hàng) với **discount** (sự giảm
 > giá) — siêu thị nào cũng có *a discount*, nhưng nó không phải *a discount shop*.
 
-### 2.4 The new words
-
-::: task skill="course" type="gap-fill" ask="Choose the word or phrase that fits."
-- Everything in this shop is one dollar, so we call it a ___ . {dollar store | convenience store | speciality shop} = dollar store
-- My aunt bakes the cakes in her own kitchen, so they are ___ . {home-made | home-grown | on sale} = home-made
-- The tomatoes are ___ — my grandfather grows them behind the house. {home-grown | home-made | on sale} = home-grown
-- Look at the ___ before you take it to the till. {price tag | complaint | access} = price tag
-- These jeans are ___ this week: 400,000 dong instead of 600,000. {on sale | home-made | home-grown} = on sale
-- She buys three pairs of shoes a month. She is a real ___ . {shopaholic | street vendor | complaint} = shopaholic
-- I need milk at eleven at night, so I go to the ___ on the corner. {convenience store | farmers' market | advertisement} = convenience store
-- Write a ___ before you go, or you will forget the rice again. {shopping list | complaint | price tag} = shopping list
-- I saw ___ for that phone on my brother's tablet. {an advertisement | a complaint | a farmers' market} = an advertisement
-- Without Internet ___ , you cannot shop online at all. {access | delivery | advertisement} = access
-- I'd like to make ___ about the shoes I ordered last week. {a complaint | an advertisement | a shopping list} = a complaint
-- My uncle sells the vegetables he grows at the ___ every Saturday. {farmers' market | department store | dollar store} = farmers' market
-- A big supermarket offers a wide ___ , from rice to raincoats. {range of products | price tag | shopping list} = range of products
-- He is ___ to shopping — he cannot walk past a sale. {addicted | convenient | on sale} = addicted
-:::
-
 > ⚠️ **Bẫy thường gặp:** **home-grown** là *tự trồng* (rau, quả), **home-made**
 > là *tự làm* (bánh, mứt, đồ thủ công). Đừng nói ❌ *home-made vegetables*.
-> Và **on sale** trong tiếng Anh–Anh nghĩa là **đang hạ giá**, không phải
-> "đang được bày bán" — muốn nói bày bán thì dùng *for sale*.
+> Và **on sale** ở đây nghĩa là **đang hạ giá**.
 
 ### Pronunciation — /sp/ and /st/
 
@@ -226,16 +291,16 @@ has no clusters like this, so learners often add a small vowel
 | **Where you meet it** | **sp**end, **sp**ecial, **sp**are, **sp**ort, di**sp**lay, e**xp**ensive | **st**ore, **st**all, **st**ock, **st**yle, cu**st**omer, mi**st**ake, in**st**ead |
 | **Full list to drill** | spend, special, spare, sport, display, expensive | store, stall, stock, style, customer, mistake, instead |
 
-Notice that the cluster does not have to start the word: *di**sp**lay*,
-*e**xp**ensive* → /ɪkˈ**sp**ensɪv/, *cu**st**omer* → /ˈkʌ**st**əmə(r)/,
-*mi**st**ake* → /mɪˈ**st**eɪk/, *in**st**ead* → /ɪnˈ**st**ed/.
+Notice that the cluster does not have to start the word: di**sp**lay,
+e**xp**ensive → /ɪkˈ**sp**ensɪv/, cu**st**omer → /ˈkʌ**st**əmə(r)/,
+mi**st**ake → /mɪˈ**st**eɪk/, in**st**ead → /ɪnˈ**st**ed/.
 
 > **Mẹo:** Sau /s/, âm /p/ và /t/ **mất hơi bật** (không bật hơi). Vì vậy
 > *spend* nghe gần như "sbend" và *store* nghe gần như "sdore" với tai người
 > Việt. Đó là điều bình thường — đừng cố bật hơi mạnh. Điều quan trọng là
 > **không thêm nguyên âm** vào giữa /s/ và phụ âm sau nó.
 
-### 2.5 Sort the sounds
+### 2.1 Sort the sounds
 
 ::: task skill="course" type="sort" opts="/sp/|/st/" ask="Which sound is in each word?"
 - spend = /sp/
@@ -253,16 +318,16 @@ Notice that the cluster does not have to start the word: *di**sp**lay*,
 - expensive = /sp/
 :::
 
-### 2.6 Odd sound out
+### 2.2 Odd sound out
 
-::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **cluster**, not the meaning."
+::: task skill="course" type="choice" variant="odd-one-out" ask="Listen for /sp/ or /st/, not the meaning."
 - spend · special · store · sport = store ~ *store* is /st/; the others are /sp/
 - stall · stock · style · spare = spare ~ *spare* is /sp/; the others are /st/
 - customer · mistake · display · instead = display ~ *display* is /sp/; the others are /st/
 - expensive · display · spare · stock = stock ~ *stock* is /st/; the others are /sp/
 :::
 
-### 2.7 Say these sentences
+### 2.3 Say these sentences
 
 Read aloud three times, faster each time. Do not put a vowel before the /p/
 or the /t/. Record yourself if you can.
@@ -276,11 +341,12 @@ or the /t/. Record yourself if you can.
 
 ## Lesson 3 — Grammar
 
-### Part A — Adverbs of frequency
+### Grammar — Adverbs of frequency
 
-Adverbs of frequency answer the question **How often?**
+Words like **always**, **usually** and **never** answer the question **How
+often?** Each one has a fixed place in the sentence.
 
-| Adverb | Roughly | Nghĩa |
+| Word | How often | Nghĩa |
 | --- | --- | --- |
 | always | 100% | luôn luôn |
 | usually | ~90% | thường xuyên |
@@ -290,11 +356,9 @@ Adverbs of frequency answer the question **How often?**
 | hardly ever | ~5% | hầu như không bao giờ |
 | never | 0% | không bao giờ |
 
-#### The position rule — this is the whole lesson
+#### 1 · After *am, is, are, was, were*
 
-There are **three** positions, and which one you use depends on the verb.
-
-**Rule 1 — AFTER the verb *be*.**
+**is always · are usually · am never**
 
 > She **is always** at the market on Sunday.
 > The stalls **are usually** open by six.
@@ -302,54 +366,47 @@ There are **three** positions, and which one you use depends on the verb.
 
 ❌ *She always is at the market.*
 
-**Rule 2 — BEFORE any other main verb.**
+#### 2 · Before every other verb
 
+**usually buys · often browse · rarely pays**
+
+> Bà Sáu **usually buys** rice at the stall.
 > I **often browse** without buying anything.
-> He **rarely pays** in cash.
-> We **sometimes queue** for twenty minutes.
+> He **rarely pays** by card.
 
-❌ *I browse often without buying anything.*
+❌ *I visit often the market.*
 
-**Rule 3 — BETWEEN the auxiliary and the main verb.**
+> **Ghi chú:** Động từ vẫn giữ **-s** như bình thường: she **usually gets**,
+> he **always pays**. ❌ *She usually get there early.*
 
-That means after *have, has, do, does, can, will, must, would*…
+#### 3 · Between two verbs: *have, has, do, does, can, will* + a verb
+
+**have never asked · doesn't usually shop · can always try**
 
 > I **have never asked** for a refund.
 > She **doesn't usually shop** online.
 > You **can always try** it on first.
-> They **will probably never** open on Sundays.
 
-❌ *I never have asked for a refund.*
+❌ *I have asked never for a refund.*
 
-> **Lưu ý:** Với câu **phủ định**, các trạng từ *usually, often, sometimes* còn
-> có thể đứng **trước** trợ động từ, và nghĩa không đổi: *I **usually don't**
-> get up before ten.* = *I **don't usually** get up before ten.* Riêng *never*
-> và *always* thì không dùng được như vậy.
+> **Ghi chú:** Với câu **phủ định**, *usually, often, sometimes* còn có thể đứng
+> **trước** trợ động từ, nghĩa không đổi: I **usually don't** get up before
+> ten. = I **don't usually** get up before ten. Riêng *never* và *always*
+> thì không dùng như vậy.
 
-#### The one-line summary
+#### 4 · *Sometimes, usually, often* can start a sentence — *always* and *never* cannot
 
-| Verb type | Position | Example |
-| --- | --- | --- |
-| *be* | after it | He **is often** here. |
-| main verb alone | before it | He **often comes** here. |
-| auxiliary + main verb | between them | He **has often come** here. |
-
-#### Starting a sentence
-
-**sometimes**, **usually**, **often** and **occasionally** can also come at
-the **front** of a sentence, for emphasis.
+**Sometimes I … · Usually we … · Often my uncle …**
 
 > **Sometimes** I buy fruit from a street vendor.
 > **Usually** we go to the shopping centre instead.
 
-But **always** and **never** cannot.
-
 ❌ *Always I go to that stall.*
 ❌ *Never I buy things online.*
 
-#### Frequency expressions go at the END
+#### 5 · *once a week*, *twice a month*, *every day* go at the end
 
-*once a week · twice a month · three times a year · every day · every Saturday*
+**once a week · twice a month · three times a year · every Saturday**
 
 > My mother goes to the market **every morning**.
 > We visit the shopping centre **twice a month**.
@@ -358,103 +415,173 @@ But **always** and **never** cannot.
 ❌ *I once a week get a delivery.*
 
 > ⚠️ **Bẫy thường gặp:** **never** đã mang nghĩa phủ định, nên **không** dùng
-> thêm *not / don't*.
-> ❌ *I don't never go there.*
-> ✅ *I **never** go there.* = ✅ *I **don't** go there.*
-> Tương tự với *rarely, seldom, hardly ever*:
-> ❌ *She doesn't hardly ever pay in cash.* → ✅ *She **hardly ever** pays in cash.*
-> Và nhớ: **always/never** không được đứng đầu câu, còn *sometimes/usually/often*
-> thì được.
+> thêm *not / don't*. ❌ *I don't never go there.* → ✅ I **never** go there.
+> Tương tự với *rarely, seldom, hardly ever*: ❌ *She doesn't hardly ever pay in
+> cash.* → ✅ She **hardly ever** pays in cash.
 
-### Part B — Present simple for future events
+### Grammar — The present simple for a fixed time in the future
 
-We usually use the **present simple** for things on a **timetable or
-schedule** — something fixed by a shop, a bus company, a cinema, a calendar.
+When a timetable or a schedule fixes the time — a shop, a bus, a film, a
+calendar — we use the same form as for every day: the shop **opens**, the film **starts**.
+
+#### 1 · A timetable: *opens, starts, leaves*
+
+**start · finish · open · close · begin · end · leave · arrive · come**
 
 > The sale **starts** on Monday.
 > The shop **opens** at 8 a.m. tomorrow.
 > The last bus **leaves** at 9:15 this evening.
 > The delivery **arrives** on Thursday.
-> The centre **closes** early on Tet.
+> The centre **closes** early on the first day of Tết.
 
-Common verbs in this pattern: *start, finish, open, close, begin, end, leave,
-arrive, depart, come, be*.
+❌ *The sale start on Monday.*
 
-#### Present simple or *will*?
+#### 2 · A guess or a promise: *will*
 
-| Use present simple when… | Use *will* when… |
+**will rain · 'll pay · will like**
+
+> I think it **will rain** later.
+> Don't worry — I**'ll pay** you back on Friday.
+> I'm sure she **will like** this scarf.
+
+❌ *Don't worry — I pay you back on Friday.*
+
+| Timetable → *opens* | Guess or promise → *will* |
 | --- | --- |
-| a timetable or an official schedule decides it | you predict, decide now, or promise |
 | The film **begins** at seven. | I think it **will rain** later. |
-| The shop **opens** at nine tomorrow. | I **'ll buy** it if it's cheap. |
-| Our train **leaves** at six on Friday. | She **will probably** like this. |
+| The shop **opens** at nine tomorrow. | I**'ll buy** it if it's cheap. |
+| Our train **leaves** at six on Friday. | She **will** probably **like** this. |
 
-> **Ghi chú:** Cả hai câu đều nói về tương lai, nhưng **hiện tại đơn** nói về
-> lịch trình cố định, còn **will** nói về dự đoán hoặc quyết định. So sánh:
-> *The store **opens** at nine.* (giờ mở cửa cố định)
-> *I think the store **will open** late today.* (dự đoán của người nói)
+> **Ghi chú:** Cả hai đều nói về tương lai. **Hiện tại đơn** dùng cho lịch
+> trình cố định, còn **will** dùng cho dự đoán, quyết định hoặc lời hứa.
+> The store **opens** at nine. (giờ mở cửa cố định) ·
+> I think the store **will open** late today. (người nói đoán)
 
-### 3.1 Order the adverbs
+### 3.1 Practice
 
-Put these adverbs in order from **most often (1)** to **least often (7)**:
-**often · never · always · hardly ever · sometimes · usually · rarely**
-
-1. ___________  2. ___________  3. ___________  4. ___________
-5. ___________  6. ___________  7. ___________
-
-### 3.2 Put the adverb in the right place
-
-::: task skill="course" type="short-answer" variant="sentence-build" ask="Put the adverb in brackets into the sentence."
-- My sister is at the shopping centre at the weekend. (always) {are | be} = My sister is always at the shopping centre at the weekend./At the weekend my sister is always at the shopping centre. ~ after *be*, not before it
-- I browse the stalls before I buy anything. (usually) {browses | buys} = I usually browse the stalls before I buy anything./Usually I browse the stalls before I buy anything./Before I buy anything I usually browse the stalls.
-- Thảo has bought trainers online. (never) {have | buys} = Thảo has never bought trainers online./Never has Thảo bought trainers online. ~ between the auxiliary and the main verb
-- We queue for more than ten minutes. (rarely) {queues | queuing} = We rarely queue for more than ten minutes.
-- Street vendors take cards. (hardly ever) {takes | taking} = Street vendors hardly ever take cards.
-- You can find a bargain there. (often) {finds | found} = You can often find a bargain there./Often you can find a bargain there./You can find a bargain there often./There you can often find a bargain. ~ *often* usually goes between the modal and the main verb, but the end of the sentence is fine too
-- My uncle doesn't bargain at the fish row. (usually) {bargains | don't} = My uncle doesn't usually bargain at the fish row./My uncle usually doesn't bargain at the fish row./Usually my uncle doesn't bargain at the fish row./At the fish row my uncle doesn't usually bargain./At the fish row my uncle usually doesn't bargain.
-:::
-
-### 3.3 Present simple or *will*?
-
-Every sentence here is about the future. Why does each one use the form in **bold**?
-
-::: task skill="course" type="choice" opts="a timetable|a prediction|a promise" ask="Choose the reason for the form in bold."
+::: bank draw="10"
+@ gap-fill ask="Choose the word that fits the meaning."
+- Tí eats rice every single day. He ___ eats rice. {always | sometimes | never} = always
+- Thảo has not been to the shopping centre once in her life. She ___ goes there. {never | often | usually} = never
+- Hùng goes to the cinema about once a year. He ___ goes to the cinema. {hardly ever | usually | often} = hardly ever
+- Khoa pays in cash nine times out of ten. He ___ pays in cash. {usually | rarely | never} = usually
+- On about half of our free days, we go to the beach. We ___ go to the beach. {sometimes | always | never} = sometimes
+- Bống gets up before six on six mornings a week. She ___ gets up early. {usually | rarely | never} = usually
+@ choice ask="Which word means this?"
+- 100% of the time {always | usually | often} = always
+- 0% of the time {never | rarely | sometimes} = never
+- about half the time {sometimes | always | hardly ever} = sometimes
+- almost never {hardly ever | usually | sometimes} = hardly ever
+- almost always {usually | sometimes | rarely} = usually
+- not often at all {rarely | often | always} = rarely
+@ gap-fill ask="Choose the right words."
+- My sister ___ at the shopping centre on Saturdays. {is always | always | are always} = is always
+- The stalls ___ open before six. {are usually | usually | is usually} = are usually
+- I ___ late for school. {am never | never | is never} = am never
+- Street food ___ cheap in Quy Nhơn. {is often | often | are often} = is often
+- Bống ___ quiet at the market. {is always | always | are always} = is always
+- The bread ___ fresh at this bakery. {is usually | usually | are usually} = is usually
+- My parents ___ busy on Sunday mornings. {are hardly ever | hardly ever | is hardly ever} = are hardly ever
+- The queue at the till ___ long. {is rarely | rarely | are rarely} = is rarely
+- Bà Sáu ___ rice from the stall at the end of our lane. {usually buys | buys usually | usually buy} = usually buys
+- Hùng ___ his lunch money at the canteen. {often spends | spends often | often spend} = often spends
+- I ___ the stalls without buying anything. {sometimes browse | browse sometimes | sometimes browses} = sometimes browse
+- We ___ fish on Fridays. {always eat | eat always | always eats} = always eat
+- Tí ___ the price tag first. {always checks | checks always | always check} = always checks
+- My mum ___ at the supermarket. {never bargains | bargains never | never bargain} = never bargains
+- Khoa ___ his receipts. {hardly ever keeps | keeps hardly ever | hardly ever keep} = hardly ever keeps
+- The fish sellers ___ their good baskets out twice. {never put | put never | never puts} = never put
+- They ___ a delivery on Mondays. {usually get | get usually | usually gets} = usually get
+- I ___ for a refund. {have never asked | have asked never | has never asked} = have never asked
+- She ___ online. {doesn't usually shop | doesn't shop usually | don't usually shop} = doesn't usually shop
+- You ___ it on first. {can always try | can try always | can always tries} = can always try
+- Thảo ___ trainers online. {has never bought | has bought never | have never bought} = has never bought
+- You ___ a good price at the fish row. {can often get | can get often | can often gets} = can often get
+- Hùng ___ late for class. {doesn't usually arrive | doesn't arrive usually | don't usually arrive} = doesn't usually arrive
+- I ___ that shop before. {have never visited | have visited never | has never visited} = have never visited
+- ___ I buy fruit from a street vendor. {Sometimes | Always | Never} = Sometimes
+- ___ we walk to the market. {Usually | Always | Never} = Usually
+- ___ my uncle takes me to the fish row. {Often | Always | Never} = Often
+- I go to the farmers' market ___ . {once a week | once week | a week once} = once a week
+- We get rice delivered ___ . {twice a month | two a month | twice month} = twice a month
+- Chú Bảy goes fishing ___ . {three times a week | three time a week | three times week} = three times a week
+- I ___ go to that shop. It's too expensive. {never | don't never | not never} = never
+- Bà Sáu ___ pays by card. {hardly ever | doesn't hardly ever | don't hardly ever} = hardly ever
+- We ___ get a receipt at the market. {rarely | don't rarely | not rarely} = rarely
+@ choice opts="a timetable|a guess|a promise" ask="Why is the bold word in this form?"
 - The department store **opens** at 9:30 tomorrow. = a timetable
-- I think prices **will go** up again next month. = a prediction
+- I think prices **will go** up again next month. = a guess
 - The sale **starts** next Monday — it says so on the poster. = a timetable
 - I **will send** you the photos tonight — I won't forget. = a promise
 - Our delivery **arrives** next Tuesday morning — the app says so. = a timetable
-- I'm sure your mother **will like** this scarf. = a prediction
-:::
-
-Now choose the form. In these three, only one is right.
-
-::: task skill="course" type="choice" ask="Choose the correct form."
-- I think these trainers ___ too small for you next year. {will be | are | were} = will be
-- I promise I ___ you the money next Friday. {will give | give | gave} = will give
-- Put those bags down — I ___ them to the car for you. {will carry | carry | carried} = will carry
-:::
-
-### 3.4 Correct the mistake
-
-::: task skill="course" type="short-answer" variant="error-correction"
-- We can't hardly ever find a bargain at the centre — maybe once a year. {can | cannot | could not} = can't -> can ~ *hardly ever* is already negative, so no *not*
+- I'm sure your mother **will like** this scarf. = a guess
+- The last boat **leaves** at five this afternoon. = a timetable
+- The school trip **begins** at eight on Friday — it's on the schedule. = a timetable
+- Don't worry — I **will pay** you back on Friday. = a promise
+- Maybe the new stall **will be** cheaper. = a guess
+@ gap-fill ask="Choose the right form."
+- The film ___ at seven tonight. {starts | start | starting} = starts
+- The market ___ at five tomorrow. {opens | open | opening} = opens
+- The shopping centre ___ early on the first day of Tết. {closes | close | closing} = closes
+- Our bus ___ at 6:15 tomorrow morning. {leaves | leave | leaving} = leaves
+- The sale ___ on Sunday evening. {ends | end | ending} = ends
+- The rice truck ___ at six tomorrow. {comes | come | coming} = comes
+- The new stall ___ next Monday. {opens | open | opening} = opens
+- School ___ on 5th September this year. {begins | begin | beginning} = begins
+- I think these trainers ___ too small for you next year. {will be | are | being} = will be
+- I promise I ___ you the money next Friday. {will give | give | giving} = will give
+- Put those bags down — I ___ them to the car for you. {will carry | carry | carrying} = will carry
+- Look at those clouds! I think it ___ soon. {will rain | rains | raining} = will rain
+- Don't worry, I ___ you back tomorrow. {will pay | pay | paying} = will pay
+@ choice ask="Which sentence is right?"
+- Bà Sáu talks about her Sundays. {She is always at the market on Sunday. | She is at always the market on Sunday. | Always she is at the market on Sunday.} = She is always at the market on Sunday.
+- Tí talks about shopping. {I usually check the price first. | I check usually the price first. | I usually checks the price first.} = I usually check the price first.
+- A seller talks about cards. {We never take cards here. | We don't never take cards here. | Never we take cards here.} = We never take cards here.
+- Thảo talks about her uncle. {My uncle goes to the market twice a week. | My uncle twice a week goes to the market. | My uncle go to the market twice a week.} = My uncle goes to the market twice a week.
+- Khoa reads the ticket. {The film starts at eight tonight. | The film start at eight tonight. | The film starting at eight tonight.} = The film starts at eight tonight.
+- Hùng talks about bread. {Sometimes we buy bread from the corner shop. | Always we buy bread from the corner shop. | We buy sometimes bread from the corner shop.} = Sometimes we buy bread from the corner shop.
+- Thảo talks about Hùng. {Hùng has never used a dollar store. | Hùng has used never a dollar store. | Hùng have never used a dollar store.} = Hùng has never used a dollar store.
+- Tí makes a promise. {I'll bring your bag back tomorrow. | I bring your bag back tomorrow. | I bringing your bag back tomorrow.} = I'll bring your bag back tomorrow.
+@ error-correction
+- We can't hardly ever find a bargain at the centre. {can | cannot | could not} = can't -> can ~ *hardly ever* is already negative
 - Always my uncle buys his rice at the same stall. {My uncle always buys | My uncle buys always | Always my uncle buy} = Always my uncle buys -> My uncle always buys ~ *always* cannot start the sentence
-- Hùng has bought never anything online. {never bought | ever bought | bought ever} = bought never -> never bought ~ the adverb goes between the auxiliary and the main verb
-- You can get often a good price at the fish row. {often get | often gets | gets often} = get often -> often get ~ between the modal and the main verb
-- Bà Sáu hardly ever pay by card. {pays | paying | to pay} = pay -> pays ~ the adverb does not change the verb: *she pays*, so *she hardly ever pays*
-- The sale starts at nine tomorrow and finish at noon. {finishes | finishing | finished} = finish -> finishes ~ a timetable, so the present simple — and *the sale* takes *-es*
-- Don't worry, I pay you back on Friday. {will pay | paying | pays} = pay -> will pay ~ a promise, not a timetable, so *will*
+- Hùng has bought never anything online. {never bought | ever bought | bought ever} = bought never -> never bought ~ has **never bought**
+- You can get often a good price at the fish row. {often get | often gets | gets often} = get often -> often get ~ can **often get**
+- Bà Sáu hardly ever pay by card. {pays | paying | to pay} = pay -> pays ~ she **pays**, so she hardly ever **pays**
+- The sale starts at nine tomorrow and finish at noon. {finishes | finishing | finished} = finish -> finishes ~ it **starts** and **finishes**
+- Don't worry, I pay you back on Friday. {will pay | paying | pays} = pay -> will pay ~ a promise: I **will pay**
+- She is late never for school. {never late | late ever | ever late} = late never -> never late ~ she **is never** late
+- I don't never shop online. {never | not never | never not} = don't never -> never ~ I **never** shop online
+- My brother usually buy his lunch at school. {buys | buying | to buy} = buy -> buys ~ he usually **buys**
+- The bus leave at seven tomorrow morning. {leaves | leaving | to leave} = leave -> leaves ~ the bus **leaves**
+- I think the queue is very long this Saturday. {will be | be | being} = is -> will be ~ a guess: it **will be**
+- Thảo are sometimes late for school. {is | be | being} = are -> is ~ Thảo **is** sometimes late
+- They visit often their grandparents on Sundays. {often visit | visits often | often visits} = visit often -> often visit ~ they **often visit**
+@ sentence-build
+- Bà Sáu / never / pay / by card {paid} = Bà Sáu never pays by card
+- my brother / always / check / the price tag {checking} = My brother always checks the price tag
+- they / hardly ever / queue / for long {queues} = They hardly ever queue for long
+- Tí / never / buy / snacks {buying} = Tí never buys snacks
+- what time / do / the market / open {opens} = What time does the market open
+@ odd-one-out ask="Which one goes in a different place in the sentence?"
+- always · usually · often · once a week = once a week ~ she **always goes**, but she **goes** there **once a week**
+- never · rarely · every day · sometimes = every day ~ he **never walks**, but he **walks every day**
+- twice a month · three times a year · every Saturday · hardly ever = hardly ever ~ she **hardly ever shops**, but she **shops every Saturday**
+@ odd-one-out ask="Which one cannot start a sentence?"
+- sometimes · usually · often · always = always ~ **Sometimes** I go … is fine, but not *Always I go …*
+- often · never · sometimes · usually = never ~ **Often** we walk … is fine, but not *Never we walk …*
+@ odd-one-out ask="Which one means something different?"
+- always · usually · often · hardly ever = hardly ever ~ the others mean a lot of the time
+- never · rarely · hardly ever · usually = usually ~ the others mean almost never or not at all
 :::
 
-### 3.5 About you
+### 3.2 About you
 
-Write true sentences about yourself. Use the adverb given, in the correct
-position.
+Write true sentences about yourself. Use the word given, in the right place.
 
 1. (always) _______________________________
 2. (hardly ever) _______________________________
-3. (sometimes, at the front of the sentence) _______________________________
+3. (sometimes, at the start of the sentence) _______________________________
 4. (never) _______________________________
 5. (once a week / twice a month) _______________________________
 
@@ -554,7 +681,7 @@ one thing you do **not** like about it.
 
 ### 4.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these."
 - an open space where cars are left {car park | fish row | lane} = car park
 - a line of stalls selling the same kind of goods {row | lane | counter} = row
 - the money you get back when you have paid too much {change | old money | price} = change
@@ -584,27 +711,22 @@ simple at least once for opening or closing times.
 **Step 3 — Record and check.** Record yourself on your phone. Listen back and
 check three things:
 
-- Was every adverb of frequency in the **right position** — after *be*, before
-  a main verb, between auxiliary and main verb?
+- Was every *always, usually, never* in the **right place** — *is always*,
+  *usually goes*, *have never been*?
 - Did you say /sp/ and /st/ with **no vowel** between the two consonants, in
   words like *spend*, *store*, *stall*?
 - Did your pauses fall **between** points rather than inside a sentence?
 
 Repeat Step 2 until each answer runs clearly from its first word to its last.
 
-::: bridge name="One turn, one subject — again, and for the same reason" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
-Same rule as Unit 1, on the market report-back. Before you speak, name in one
-phrase what the turn is **for** — *"why I still go to the wet market"*, not
-*"shopping"* — then drop everything that does not serve it.
+::: bridge name="Talk about one thing per turn" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
+In the market report-back, say in a few words what your turn is **for** —
+*"why I still go to the wet market"*, not *"shopping"* — then leave out anything
+that does not fit.
 
-It is the same failure as in Unit 1, and it is never caused by weak English: a
-turn becomes hard to follow when it describes several things at once instead of
-one thing properly.
+Pause between your ideas, not in the middle of a sentence.
 
-And as in Unit 1: **pause between your stages, not inside your sentences.** A
-pause where one idea ends is help for your listener, not a mistake.
-
-> **Tiếng Việt:** Một lượt nói, **một** chủ đề. Dừng giữa các ý — đó là điểm cộng.
+> **Tiếng Việt:** Một lượt nói, **một** chủ đề. Dừng giữa các ý, không dừng giữa câu.
 :::
 
 
@@ -645,8 +767,8 @@ you say it.
 | We'll give you a full refund today. | Hôm nay chúng tôi sẽ hoàn lại toàn bộ tiền cho bạn. |
 
 > **Ghi chú:** Danh từ **complaint** đi với động từ **make** và giới từ
-> **about**: *make a complaint **about** something*. ❌ *make a complaint for
-> the shoes.* ✅ *make a complaint **about** the shoes.* Động từ tương ứng là
+> **about**: make a complaint **about** something. ❌ *make a complaint for
+> the shoes.* ✅ make a complaint **about** the shoes. Động từ tương ứng là
 > **complain about**: *She complained about the price.*
 
 > **Mẹo:** Lời phàn nàn trong tiếng Anh **mô tả vấn đề**, không đổ lỗi cho
@@ -691,8 +813,8 @@ At a market — but **not** in a shopping centre — you can bargain.
 | It's a **bargain**! | Thật là món hời! |
 
 > **Ghi chú:** **fair** có hai nghĩa hay gặp khi mua bán: tính từ *hợp lý, phải
-> chăng* (*a **fair** price* · *That seems **fair**.*) và danh từ *hội chợ*
-> (*a school **fair*** · *the spring **fair***).
+> chăng* (a **fair** price · That seems **fair**.) và danh từ *hội chợ*
+> (a school **fair** · the spring **fair**).
 
 **Say it with someone.** One of you is the customer, the other the shop. Make a
 complaint about each of these, then swap: the cans of fish you bought at the
@@ -709,9 +831,7 @@ about** and **I'm not happy with** at least once each. The shop answers with
 
 ### Listening — The stranger by the car park
 
-You hear it **once**, read aloud by someone else. Two people are speaking here, so read both sets of
-questions first and decide which of them each answer will
-come from.
+You hear it **once**. Read both sets of questions first.
 
 **Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
 
@@ -807,23 +927,17 @@ Cover the finished paragraph above. Answer in note form, in your own words.
 | One point on the other side that you admit is true | |
 | Where does the reader see your position for the second time? | |
 
-::: bridge name="Re-score the frequency drill: say it aloud first, and count the -s" trains="Grammatical Range & Accuracy" cefr="B1" marker="[S]" src="07 §4.5"
-Exercise **3.2** does not change. How you run it does:
+::: bridge name="Say it aloud and listen for -s" trains="Grammatical Range & Accuracy" cefr="B1" marker="[S]" src="07 §4.5"
+In practice **3.1**, before you choose:
 
-1. **Say every sentence aloud first, and record it.** Then build them.
-2. Mark each sentence **supplied** or **omitted** — did the third-person `-s`
-   actually appear? Report the fraction, not a score.
+1. **Say the sentence aloud and record it.**
+2. Listen back. Did you say the `-s` on *he/she* verbs (she **pays**, he
+   **gets**)? Count how many times you did, out of how many times you should have.
 
-Why aloud first: the third-person `-s` goes missing far more often in speech
-than in writing, and you will never hear yourself drop it while your eyes are on
-the page. Recording it first catches the ones writing would hide.
+The `-s` is easy to drop when you speak, so you have to listen for it.
 
-Almost none of these are wrong choices — they are simply absent. That is why you
-count *supplied* against *required* rather than marking sentences right or wrong.
-
-> **Tiếng Việt:** **Nói trước, viết sau.** Đếm số lần `-s` ngôi thứ ba **có xuất
-> hiện** trên tổng số vị trí bắt buộc — lỗi hầu như luôn là **thiếu**, không phải
-> dùng sai.
+> **Tiếng Việt:** Đọc to câu và ghi âm, rồi nghe lại: đếm số lần có `-s` với
+> *he/she* trên tổng số lần cần có.
 :::
 
 ::: thread id="articles" stage="check"
@@ -853,7 +967,7 @@ count *supplied* against *required* rather than marking sentences right or wrong
 - I never pay by card at the market — I always use ___ . {cash | stock | delivery} = cash
 - That phone is far too ___ for a student. {expensive | convenient | home-made} = expensive
 - Sorry, that colour isn't in ___ this week. {stock | sale | cash} = stock
-- I like to ___ for half an hour before I buy anything. {browse | queue | purchase} = browse
+- I like to ___ for half an hour before I buy anything. {browse | deliver | purchase} = browse
 :::
 
 ### 6.2 Pronunciation check
@@ -871,20 +985,20 @@ count *supplied* against *required* rather than marking sentences right or wrong
 
 ### 6.3 Grammar check
 
-**A.** Put the adverb where it belongs.
+**A.** Choose the right words.
 
-::: task skill="course" type="short-answer" variant="sentence-build" ask="Put the word or phrase in brackets into the sentence."
-- She is late for school. (never) {are | be} = She is never late for school./Never is she late for school.
-- Bà Sáu buys fish from that seller. (three times a week) {buy | buying} = Bà Sáu buys fish from that seller three times a week./Three times a week Bà Sáu buys fish from that seller.
-- I have bought clothes online. (rarely) {has | buy} = I have rarely bought clothes online./Rarely have I bought clothes online.
-- He doesn't buy clothes at the market. (usually) {buys | don't} = He doesn't usually buy clothes at the market./He usually doesn't buy clothes at the market./Usually he doesn't buy clothes at the market./At the market he doesn't usually buy clothes./At the market he usually doesn't buy clothes.
+::: task skill="course" type="gap-fill" ask="Choose the right words."
+- She ___ late for school. {is never | never | are never} = is never
+- Bà Sáu buys fish from that seller ___ . {three times a week | three times week | a week three times} = three times a week
+- I ___ clothes online. {have rarely bought | have bought rarely | has rarely bought} = have rarely bought
+- He ___ clothes at the market. {doesn't usually buy | doesn't buy usually | don't usually buy} = doesn't usually buy
 :::
 
 **B.** Present simple or *will*?
 
-::: task skill="course" type="choice" opts="a timetable|a prediction|a promise" ask="Choose the reason for the form in bold."
+::: task skill="course" type="choice" opts="a timetable|a guess|a promise" ask="Why is the bold word in this form?"
 - Our bus **leaves** at 6:15 tomorrow morning. = a timetable
-- I think the queue **will be** very long on Saturday. = a prediction
+- I think the queue **will be** very long on Saturday. = a guess
 - Don't worry — I **will bring** your umbrella back tomorrow. = a promise
 - The sale **starts** next Friday — look at the sign. = a timetable
 :::
@@ -906,7 +1020,7 @@ at a time below.
 > stall opens at five tomorrow and close at noon. The big sale begin at eight
 > tomorrow.
 
-::: task skill="course" type="short-answer" variant="error-correction" ask="Each line is part of the paragraph, with the earlier mistakes already put right."
+::: task skill="course" type="short-answer" variant="error-correction" ask="Earlier mistakes are already fixed."
 - Bà Sáu goes twice a week there. {there twice a week | twice there a week | there a week twice} = twice a week there -> there twice a week ~ the place comes before a frequency expression, and the frequency expression goes at the end
 - She usually get there before the rice truck. {gets | getting | to get} = get -> gets ~ the adverb does not change the verb: *she gets*
 - She can't hardly ever pay by card, because only two stalls take cards. {can | cannot | could not} = can't -> can ~ *hardly ever* is already negative
@@ -963,9 +1077,9 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for shopping | Lesson 2, exercises 2.1, 2.3 and 2.4 · Lesson 6, exercise 6.1 |
-| hear /sp/ and /st/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.5 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.7 and listen back. |
-| put an adverb of frequency in the right place, and use the present simple for a fixed future | Lesson 3, exercises 3.1, 3.2 and 3.3 · Lesson 6, exercises 6.3 and 6.4 |
+| use the words for shopping | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
+| hear /sp/ and /st/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
+| put *always*, *usually*, *never* in the right place, and say what a timetable fixes (the market **opens** at five tomorrow) | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
 | make a complaint | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
 | read about a market, its sellers and its prices | Lesson 4, exercises 4.1 and 4.2 |
 | talk about a place where I shop | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
@@ -986,16 +1100,12 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 2
 
-**2.7** Answers will vary — this is a speaking task. Check: no vowel sound
+**2.3** Answers will vary — this is a speaking task. Check: no vowel sound
 between /s/ and /p/ or between /s/ and /t/ (*not* "sờ-pend"), and no aspiration
 puff on the /p/ or /t/.
 
 ### Lesson 3
 
-**3.1** 1. always 2. usually 3. often 4. sometimes 5. rarely 6. hardly ever
-7. never
-
-**3.5** Answers will vary. Check: *always/never* directly after *be* or
+**3.2** Answers will vary. Check: *always/never* directly after *be* or
 directly before a main verb, never at the front of the sentence; *sometimes* at
 the front in item 3; the frequency expression at the **end** in item 5.
-

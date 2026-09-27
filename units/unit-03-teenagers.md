@@ -10,7 +10,7 @@
 | Strand | Target |
 | --- | --- |
 | **Pronunciation** | /ʊə/ vs /ɔɪ/ — *tourist* vs *choice* |
-| **Grammar** | **Simple and compound sentences** — coordinating conjunctions *and, but, so, or, yet*, and conjunctive adverbs *however, therefore, otherwise* |
+| **Grammar** | **Simple and compound sentences** — I was tired, **so** I stopped · I was tired**; therefore,** I stopped |
 | **Reading** | A teenager's account of the evening a friend came back |
 | **Speaking** | Asking and answering about a club |
 | **Listening** | A girl describing that evening, and the choice that was not made |
@@ -21,8 +21,6 @@
 ## Lesson 1 — Getting Started
 
 ### Dialogue: The list on the wall
-
-*Read the conversation aloud. Then answer the questions below.*
 
 ::: dialogue title="The list on the wall" bg="school-yard" gramen="so — a compound sentence" gramvi="Hai mệnh đề đầy đủ nối với nhau bằng dấu phẩy + **and / but / so / or / yet**. Vế sau **so** là kết quả của vế trước." gramco="I was tired, so I stopped"
 @cast Tí|sad, Thảo|neutral
@@ -60,7 +58,7 @@
 
 ### 1.1 Comprehension
 
-::: task skill="course" type="short-answer" ask="None of these answers can be found by searching for the words in the question. Read the scene, then answer."
+::: task skill="course" type="short-answer" ask="Choose the answer from the scene."
 - One person is the reason the whole yard knows Tí's mark. Who? {Cô Yến | Thảo | Hùng} = Cô Yến
 - Tí thinks one classmate's place at the top was fairly won. Which classmate? {Khoa | Hùng | Minh} = Khoa
 - Thảo insists nothing happened at sea to the family who left. What does she say made them go? {money | school | the list} = money
@@ -79,23 +77,163 @@
 
 ### 1.3 Notice the grammar
 
-Each sentence below joins **two** ideas with a small word in **bold**. What is
-that word doing?
-
-::: task skill="course" type="choice" opts="addition|contrast|result|choice" ask="What relation does the **bold** conjunction set up between the two ideas?"
-- Half of them are behind too, **but** nobody says it out loud. = contrast
-- You can read that wall again, **or** you can walk down to the water with me. = choice
-- You always go on your own, **so** today I'm coming too. = result
-- Hùng did no work at all, **yet** he came out two places above me. = contrast
-- Khoa plays chess, **and** Hùng plays football. = addition
+::: task skill="course" type="gap-fill" ask="Find the line in the dialogue. Which word joins the two halves?"
+- Thảo: "Half of them are behind too, ___ nobody says it out loud." {but | so | or} = but
+- Thảo: "You can stand here and read that wall again, ___ you can walk down to the water with me." {or | but | so} = or
+- Thảo: "You always go on your own, ___ today I'm coming too." {so | or | because} = so
+- Tí: "Hùng did no work at all, ___ he came out two places above me." {yet | so | or} = yet
+- Tí: "It was lost before I was born, ___ it came back anyway." {and | so | or} = and
 :::
 
-> **Ghi chú:** Bạn vừa gặp trọng tâm ngữ pháp của bài — **câu đơn** và **câu
-> ghép** nối bằng các liên từ *and, but, so, or, yet*. Chi tiết ở Lesson 3.
+> **Ghi chú:** **and** = và · **but**, **yet** = nhưng · **so** = vì vậy ·
+> **or** = hoặc. Mỗi từ nối hai câu đầy đủ thành một câu. Lesson 3 giải thích
+> kỹ hơn.
 
 ---
 
 ## Lesson 2 — Words & Sounds
+
+### Meet the words
+
+::: vocab size="7"
+@ gap-fill ask="Choose the word that fits."
+- My brother turns thirteen next week. Then he will be a ___ . {teenager | adolescence | peer pressure} = teenager
+- "You're a ___ now, so you can cycle to school on your own," Mum told me. {teenager | adolescence | peer pressure} = teenager
+- Your body and your feelings change a lot during ___ . {adolescence | teenager | peer pressure} = adolescence
+- Some people are shy in ___ and more confident later, when they are adults. {adolescence | teenager | peer pressure} = adolescence
+- Nam didn't want to try it, but ___ from his friends made him say yes. {peer pressure | adolescence | teenager} = peer pressure
+- Some teens start smoking because of ___ , not because they want to. {peer pressure | adolescence | teenager} = peer pressure
+- Lan answers every question in class, and she never looks nervous. She is very ___ . {self-confident | embarrassed | frustrated} = self-confident
+- Grandma was ___ when all her grandchildren came home for Tết. {delighted | frustrated | embarrassed} = delighted
+- Bống was ___ with her new shell. She smiled all afternoon. {delighted | frustrated | embarrassed} = delighted
+- My face went red when I called my teacher "Mum". I was so ___ ! {embarrassed | delighted | self-confident} = embarrassed
+- The printer broke three times in one morning, and Dad got really ___ . {frustrated | delighted | self-confident} = frustrated
+- Nobody could understand my message, and I got more and more ___ . {frustrated | delighted | self-confident} = frustrated
+- I have three tests and a project tomorrow, and I feel very ___ . {stressed | curious | delighted} = stressed
+- Too much schoolwork makes a lot of teenagers ___ . {stressed | curious | delighted} = stressed
+- My little sister opens every box she finds. She is very ___ . {curious | stressed | frustrated} = curious
+- Tí is ___ about where Minh went. He really wants to know. {curious | stressed | embarrassed} = curious
+- Hùng loves parties. He likes to ___ with lots of different people. {socialise | stressed | curious} = socialise
+- Ask questions and compare the clubs first. That way you make ___ . {an informed decision | a life skill | the housework} = an informed decision
+- Swimming is a ___ every child in Quy Nhơn should learn. {life skill | housework | teenager} = life skill
+- Knowing how to cook rice is a basic ___ . {life skill | housework | adolescence} = life skill
+- Mum cooks, and I do the rest of the ___ — sweeping, washing up and ironing. {housework | life skill | adolescence} = housework
+- I want to meet new people, so I'm going to ___ at school this year. {join a club | stressed | curious} = join a club
+- Khoa wants to ___ in the beach clean-up on Sunday. {get involved | keep up | hang out} = get involved
+- Tí walks so fast that Bống has to run to ___ him. {keep up with | deal with | get involved in} = keep up with
+- After two weeks in hospital, Hùng found it hard to ___ the rest of his class. {keep up with | get involved | deal} = keep up with
+- A good teacher can ___ problems in class quickly and calmly. {deal with | keep up with | hang out with} = deal with
+- When I'm stressed, I ___ it by going for a walk on the beach. {deal with | keep up with | hang out with} = deal with
+- On Saturdays I ___ my cousins at the beach. We just chat and swim. {hang out with | deal with | get involved} = hang out with
+- If you want to speak better English, join the ___ . {language club | sports club | arts and crafts} = language club
+- Thảo practises French with her friends at the ___ every Friday. {language club | sports club | housework} = language club
+- The ___ plays football and basketball after school. {sports club | language club | arts and crafts} = sports club
+- In ___ we make paper lanterns and paint pictures. {arts and crafts | sports club | language club} = arts and crafts
+- The chess club has two ___ a week, on Monday and Thursday. {sessions | forums | teamwork} = sessions
+- Our first ___ of the drawing club starts at three o'clock. {session | forum | teamwork} = session
+- Forty students ___ in the school's music festival every year. {participate | socialise | deal} = participate
+- You don't have to win. It's great just to ___ in the race. {participate | teamwork | deal} = participate
+- Our team won because of good ___ , not because of one star player. {teamwork | session | forum} = teamwork
+- Cleaning the beach at Quy Nhơn is a kind of ___ . {community service | housework | session} = community service
+- Reading to old people at the village centre is ___ . {community service | peer pressure | housework} = community service
+- The school trip was really ___ . Everyone wants to go again. {enjoyable | curious | embarrassed} = enjoyable
+- Many teenagers use ___ to share photos with their friends. {social media | teamwork | a session} = social media
+- I asked a question about the homework on the class ___ , and three people answered. {forum | session | teamwork} = forum
+- You need a password to open your ___ . {account | website | notification} = account
+- Don't share the password to your ___ with anyone. {account | forum | notification} = account
+- Every evening I ___ to my account with my password. {log on | upload | browse} = log on
+- Khoa ___ a video of the chess game so his friends could watch it. {uploaded | browsed | logged on} = uploaded
+- Can you help me ___ these photos to the class page? {upload | browse | log on} = upload
+- I ___ a few shopping sites to find a present for Mum. {browsed | uploaded | logged on} = browsed
+- My phone keeps buzzing with ___ from the class group. {notifications | accounts | websites} = notifications
+- The app lets you ___ with people who like the same books as you. {connect | upload | browse} = connect
+- Our school has a ___ where you can read about every club. {website | notification | account} = website
+- The new app is ___ — my grandma learned it in five minutes. {user-friendly | mature | focused} = user-friendly
+- Our ___ exams start next Monday, in the middle of the term. {midterm | mature | focused} = midterm
+- Her parents have high ___ of her, so she works very hard. {expectations | notifications | sessions} = expectations
+- It's hard to ___ on your homework with the TV on. {concentrate | focused | connect} = concentrate
+- When Khoa plays chess, he is completely ___ and hears nothing around him. {focused | mature | curious} = focused
+- Turn off your phone so you can stay ___ on your work. {focused | mature | user-friendly} = focused
+- Hùng is only thirteen, but he is very ___ — he always thinks before he speaks. {mature | focused | user-friendly} = mature
+- A ___ pushed my little brother and took his lunch. {bully | forum | session} = bully
+- If someone tries to ___ you, tell a teacher at once. {bully | expect | concentrate} = bully
+- I'd like to ___ the school newspaper. I could write the sports page. {get involved in | keep up with | deal with} = get involved in
+@ choice ask="Which word or phrase means this?"
+- someone aged from thirteen to nineteen {teenager | adolescence | bully} = teenager
+- extremely happy about something {delighted | curious | stressed} = delighted
+- feeling shy and silly in front of other people {embarrassed | frustrated | mature} = embarrassed
+- keen to find out about things {curious | focused | stressed} = curious
+- sure of yourself and what you can do {self-confident | embarrassed | stressed} = self-confident
+- cleaning, cooking and washing at home {housework | teamwork | community service} = housework
+- working well together as a group {teamwork | session | housework} = teamwork
+- to take part in something {participate | concentrate | browse} = participate
+- to look through pages online, with no clear plan {browse | upload | log on} = browse
+- to put a file or a photo onto the internet {upload | browse | log on} = upload
+- a message that pops up on your phone {notification | forum | account} = notification
+- easy to use, even the first time {user-friendly | enjoyable | focused} = user-friendly
+- in the middle of the school term {midterm | session | adolescence} = midterm
+- what people think you will do or achieve {expectation | informed decision | notification} = expectation
+- behaving sensibly, like an adult {mature | curious | delighted} = mature
+- someone who hurts or frightens weaker people {bully | teenager | forum} = bully
+- unpaid work to help the people in your area {community service | housework | teamwork} = community service
+- to think only about what you are doing {concentrate | participate | browse} = concentrate
+- to spend time with friends in a relaxed way {hang out | deal with | keep up with} = hang out
+- to solve or handle a problem {deal with | keep up with | hang out} = deal with
+- to go as fast as the others {keep up with | deal with | get involved} = keep up with
+- sites and apps where people share posts, photos and videos {social media | forum | account} = social media
+- a school club where you learn to speak another language {language club | sports club | arts and crafts} = language club
+@ choice ask="What does it mean?"
+- frustrated {annoyed because you can't do something | happy about good news | shy in front of others} = annoyed because you can't do something
+- adolescence {the years when a child becomes an adult | a club for teenagers | pressure from friends} = the years when a child becomes an adult
+- peer pressure {feeling you must do what people your age do | help from your teachers | a test in the middle of term} = feeling you must do what people your age do
+- socialise {spend time with other people in a friendly way | study alone in your room | put photos online} = spend time with other people in a friendly way
+- a life skill {something you need to manage everyday life | a school subject | a kind of sport} = something you need to manage everyday life
+- a forum {a place online where people leave messages about one subject | a password | a school test} = a place online where people leave messages about one subject
+- an account {your own name and password on a site or app | a message from an app | a place online for homework} = your own name and password on a site or app
+- enjoyable {pleasant, so you are glad you did it | easy to use | very tiring} = pleasant, so you are glad you did it
+- a session {one period of time spent on an activity | a school club | a group of friends} = one period of time spent on an activity
+- stressed {worried and tense | very happy | calm and relaxed} = worried and tense
+- log on {type your name and password to start using a site | put a photo online | look through pages} = type your name and password to start using a site
+- connect with {get in touch with people | switch off your phone | look for a website} = get in touch with people
+- an informed decision {a choice you make after finding out the facts | a rule your parents make | a guess} = a choice you make after finding out the facts
+- join a club {become a member of a club | start a new school | leave a club} = become a member of a club
+@ choice opts="with|in|on|to|up" ask="Which word completes the phrase?"
+- I find it hard to concentrate ___ my homework after dinner. = on
+- More than thirty students participate ___ the book club. = in
+- Mum knows how to deal ___ my little brother when he cries. = with
+- Log on ___ the forum and read the new message. = to
+- I can't keep ___ with my sister when we run. = up
+- Bống likes to hang out ___ Tí on the harbour wall. = with
+- Khoa is completely focused ___ the chess board. = on
+- Thảo is very keen to participate ___ community service this year. = in
+@ odd-one-out
+- delighted · embarrassed · frustrated · website = website ~ the others are feelings
+- upload · browse · log on · housework = housework ~ the others are things you do online
+- language club · sports club · arts and crafts · peer pressure = peer pressure ~ the others are clubs you can join
+- forum · website · account · teamwork = teamwork ~ the others are things on the internet
+- stressed · frustrated · embarrassed · delighted = delighted ~ the others are bad feelings
+- mature · self-confident · focused · user-friendly = user-friendly ~ the others describe people; *user-friendly* describes an app or a site
+- join a club · participate · get involved · browse = browse ~ the others mean take part
+- curious · stressed · bully · embarrassed = bully ~ the others describe how you feel
+@ error-correction
+- I want to participate on the language club. {in | to | at} = on -> in ~ participate **in**
+- It's hard to concentrate in my homework with the TV on. {on | at | to} = in -> on ~ concentrate **on**
+- I log on at my account every evening. {to | in | with} = at -> to ~ log on **to** an account
+- Can you help me download this photo to the class page? {upload | browse | connect} = download -> upload ~ you **upload** a photo onto the internet
+- I uploaded three websites to find a good present. {browsed | logged | connected} = uploaded -> browsed ~ you **browse** websites
+- I can't keep up to the rest of the class. {with | on | for} = to -> with ~ keep up **with**
+- My mum does all the homework — cooking, cleaning and washing. {housework | teamwork | life skill} = homework -> housework ~ **housework** is work at home; homework comes from school
+- I was very embarrassing when I fell over on the stage. {embarrassed | embarrass | embarrassment} = embarrassing -> embarrassed ~ you **feel** embarrassed
+- Khoa felt frustrating because the app kept crashing. {frustrated | frustrate | frustration} = frustrating -> frustrated ~ you **feel** frustrated
+- The club was very enjoying. {enjoyable | enjoyed | enjoys} = enjoying -> enjoyable
+- How do you deal about stress? {with | on | in} = about -> with ~ deal **with**
+@ sentence-build
+- she / participate / in / the language club {on} = She participates in the language club
+- Khoa / upload / a video / of the chess game {browsed} = Khoa uploaded a video of the chess game
+- my parents / have / high / expectation {has} = My parents have high expectations
+- she / can't / keep up with / the class {keeps | to} = She can't keep up with the class
+- I / want / join / the arts and crafts club {joining} = I want to join the arts and crafts club
+:::
 
 ### Vocabulary — Teen life, school clubs, and life online
 
@@ -148,98 +286,6 @@ and **what school does to you** (rows 37–42).
 | 41 | mature | /məˈtʃʊə(r)/ | adj | chín chắn, trưởng thành |
 | 42 | bully | /ˈbʊli/ | n, v | kẻ bắt nạt; bắt nạt |
 
-> ### ▶︎ [**Practise these 42 words**](../app/unit-03-vocab.html)
->
-> When you have finished this lesson, the unit page opens a **practice**
-> session over all forty-two — the meaning, the word, and, more often than
-> either of those, **the word inside a phrase it actually lives in**, because
-> *upload a picture* and *log on to an account* are learned as whole phrases
-> or not at all. Wrong answers come straight back, and everything returns a
-> week later, because what you can still recall after a gap is the only recall
-> worth counting. The **unit test** opens once all six lessons are done.
->
-> **Luyện 42 từ này.** Học xong bài này, phần
-> **practice** ở trang bài sẽ mở ra để luyện cả 42 từ — trong đó phần lớn là
-> luyện **từ nằm trong cụm từ**, không phải từ đứng một mình. Từ sai quay lại
-> ngay, và mọi từ quay lại sau một tuần.
->
-> Do the exercises below as well — they put the words back inside sentences.
-
-### Meet the words
-
-The table above is there to look things up in. This is where you actually meet
-them: a few at a time, then answer on the few you have just met.
-
-::: vocab size="7"
-:::
-
-### 2.1 Complete the sentences
-
-::: task skill="course" type="gap-fill" ask="Choose the word or phrase from rows 1–18 of the table that fits."
-- She never puts her hand up in class. She isn't very ___ . {self-confident | embarrassed | frustrated} = self-confident
-- My brother refuses to smoke, even though his friends all do. He ignores ___ . {peer pressure | adolescence | housework} = peer pressure
-- I do the ___ every Saturday — washing up, sweeping and ironing. {housework | session | teamwork} = housework
-- Cooking a simple meal for your family is an important ___ . {life skill | informed decision | peer pressure} = life skill
-- Read about all the clubs first, then make an ___ . {informed decision | expectation | adolescence} = informed decision
-- I was ___ when the results came out — I passed everything! {delighted | embarrassed | frustrated} = delighted
-:::
-
-### 2.2 Match the feeling
-
-::: task skill="course" type="choice" opts="embarrassed|frustrated|stressed|delighted|self-confident"
-- You forget your lines in front of the whole school. = embarrassed
-- You have tried the same maths problem six times and still cannot solve it. = frustrated
-- You have four tests and a project, all in the same week. = stressed
-- Your team wins the school football final. = delighted
-- You walk onto the stage and speak clearly, without shaking. = self-confident
-:::
-
-### 2.3 Verb + object: the five pairs
-
-Online, five verbs almost always take the same object. Learn each verb with the
-thing that follows it — separately, they are much harder to remember.
-
-::: task skill="course" type="gap-fill" ask="Choose the verb that goes with each object."
-- ___ a picture of the club poster {upload | log on to | connect with} = upload
-- ___ a website looking for the timetable {browse | upload | connect with} = browse
-- ___ your notifications between lessons {check | upload | log on to} = check
-- ___ your account with a password {log on to | upload | browse} = log on to
-- ___ friends in another school {connect with | upload | browse} = connect with
-:::
-
-> ⚠️ **Bẫy thường gặp:** Đừng dịch từng từ. **upload** đi với *a picture, a
-> video, a file* — thứ bạn **gửi lên**; không nói *upload a website*, vì trang
-> mạng đã ở sẵn trên đó. **browse** đi với *a website, a page*. Và **log on**
-> phải có **to** khi nói rõ tài khoản: *log on **to** your account*.
-
-### 2.4 Life online
-
-::: task skill="course" type="gap-fill" ask="Choose the word or phrase from rows 27–36 of the table that fits."
-- Ann ___ three photos of the club poster the same evening. {uploaded | upload | connected} = uploaded
-- I ___ to my account every night and read the class forum. {log on | logs on | upload} = log on
-- My phone showed forty ___ before I had even had breakfast. {notifications | accounts | forums} = notifications
-- The school ___ tells you which room each club meets in. {website | session | midterm} = website
-- Nobody needed any help with the new app, because it is so ___ . {user-friendly | focused | mature} = user-friendly
-- Half of my class use ___ for more than three hours a day. {social media | teamwork | housework} = social media
-:::
-
-### 2.5 Clubs, and the pressure around them
-
-::: task skill="course" type="gap-fill" ask="Choose the word or phrase from rows 19–26 or rows 37–42 that fits."
-- The ___ club makes greeting cards and paper flowers. {arts and crafts | language | sports} = arts and crafts
-- Each club ___ lasts forty minutes. {session | forum | website} = session
-- My parents have high ___ , and I don't want to disappoint them. {expectations | notifications | sessions} = expectations
-- Chess taught me to ___ on one problem at a time. {concentrate | socialise | participate} = concentrate
-- Repairing old books for a village school is a kind of ___ . {community service | housework | peer pressure} = community service
-- She is only fourteen, but she is more ___ than most of us. {mature | user-friendly | enjoyable} = mature
-- I want to ___ in two clubs this year, not five. {participate | concentrate | connect} = participate
-- The ___ tests are the ones held halfway through the term. {midterm | enjoyable | user-friendly} = midterm
-:::
-
-> **Ghi chú:** *participate* luôn đi với **in** (*participate **in** a club*),
-> còn *join* thì không cần giới từ (*join the club*). *Concentrate* cũng luôn đi
-> với **on**.
-
 ### Pronunciation — /ʊə/ and /ɔɪ/
 
 Both sounds are **diphthongs**: your mouth *moves* from one vowel to another
@@ -261,7 +307,7 @@ and travel in opposite directions.
 > Lưu ý: một số người Anh ngày nay đọc *sure* và *poor* thành /ʃɔː/, /pɔː/.
 > Trong bài này ta chỉ luyện những từ mà /ʊə/ luôn đúng.
 
-### 2.6 Sort the sounds
+### 2.1 Sort the sounds
 
 ::: task skill="course" type="sort" opts="/ʊə/|/ɔɪ/" ask="Which sound is in each word?"
 - tourist = /ʊə/
@@ -278,16 +324,16 @@ and travel in opposite directions.
 - boy = /ɔɪ/
 :::
 
-### 2.7 Odd sound out
+### 2.2 Odd sound out
 
-::: task skill="course" type="choice" variant="odd-one-out" ask="Here the odd one out is the **vowel sound**, not the meaning."
+::: task skill="course" type="choice" variant="odd-one-out" ask="Listen for the **vowel sound**, not the meaning."
 - tourist · pure · point · during = point ~ *point* is /ɔɪ/; the others are /ʊə/
 - choice · noise · voice · cure = cure ~ *cure* is /ʊə/; the others are /ɔɪ/
 - enjoy · Europe · annoy · employ = Europe ~ *Europe* is /ˈjʊərəp/; the others are /ɔɪ/
 - jury · furious · toy · curious = toy ~ *toy* is /ɔɪ/; the others are /ʊə/
 :::
 
-### 2.8 Say these sentences
+### 2.3 Say these sentences
 
 Read aloud three times, faster each time. Record yourself if you can.
 
@@ -305,196 +351,209 @@ Read aloud three times, faster each time. Record yourself if you can.
 
 ### Grammar — Simple and compound sentences
 
-Everything in this lesson rests on one idea: the **independent clause**.
+A **simple sentence** is one complete idea: *Thảo plays the guitar.*
+A **compound sentence** joins two complete ideas into one: *Thảo plays the
+guitar, and her brother sings.*
 
-> An **independent clause** has a subject and a verb, and it makes complete
-> sense on its own.
-> *Khoa joined the chess club.* ✅ — complete
-> *Because Khoa joined the chess club* ❌ — not complete, it leaves you waiting
+#### 1 · A simple sentence is one complete idea
 
-#### A simple sentence = ONE independent clause
+Someone or something (*Thảo*), then what they do (*plays*). It makes sense on
+its own.
 
-> **Thảo** **plays** the guitar.
-> **The wellbeing club** **meets** on Thursdays.
-> **I** **felt** embarrassed.
+> Thảo **plays** the guitar.
+> The chess club **meets** on Thursdays.
+> I **felt** embarrassed.
 
-#### A compound sentence = TWO independent clauses, joined by a coordinating conjunction
+❌ *Because Khoa joined the chess club.*
 
-> **Thảo plays the guitar**, **and** **her brother sings**.
-> **I revised for six hours**, **but** **I still felt frustrated**.
+> **Ghi chú:** Câu đơn có **một** chủ ngữ và **một** động từ chính, và tự nó
+> đủ nghĩa. *Because Khoa joined the chess club* chưa đủ nghĩa — người nghe còn
+> chờ vế sau.
 
-Both halves could stand alone as sentences. The conjunction glues them
-together as equals — neither one is "inside" the other.
+#### 2 · Join two complete ideas with a comma and a joining word
 
-#### The seven coordinating conjunctions — FANBOYS
+**and · but · so · or · yet**
 
-| Letter | Word | What it does | Example |
-| --- | --- | --- | --- |
-| **F** | for | gives the reason (formal, quite rare) | I went home early, **for** I was exhausted. |
-| **A** | and | adds | I joined the club, **and** I made new friends. |
-| **N** | nor | adds a second negative (word order inverts!) | He doesn't socialise, **nor** does he play sport. |
-| **B** | but | contrasts | The work is hard, **but** the club is fun. |
-| **O** | or | offers a choice | You can plan your week, **or** you can panic on Sunday. |
-| **Y** | yet | contrasts, with a note of surprise | She is very busy, **yet** she seems calm. |
-| **S** | so | gives the result | I had three tests, **so** I didn't sleep. |
+> I joined the club, **and** I made new friends.
+> The work is hard, **but** the club is fun.
+> I had three tests, **so** I didn't sleep much.
+> You can plan your week, **or** you can panic on Sunday.
+> She is very busy, **yet** she seems calm.
 
-At grade 8 you mainly need the five in **bold** on the syllabus: **and, but,
-so, or, yet**. Learn *for* and *nor* so you recognise them in reading.
+| Word | What it does | Nghĩa |
+| --- | --- | --- |
+| **and** | adds one more thing | và |
+| **but** | says something different | nhưng |
+| **so** | says what happened because of it | vì vậy |
+| **or** | gives a choice | hoặc |
+| **yet** | says something surprising | nhưng, vậy mà |
 
-#### The comma rule
+The book calls these words **coordinating conjunctions**. Two more you will
+meet in reading: **for** means *because* (*I went home early, **for** I was
+tired.*), and **nor** adds a second *not* (*He doesn't cook, **nor** does he
+clean.*).
 
-Put a **comma before** the conjunction when it joins two independent clauses.
+#### 3 · A comma goes before the joining word — only between two complete ideas
 
-> ✅ I finished my homework, **and** then I went to bed.
-> ❌ I finished my homework **and** then I went to bed. *(comma missing)*
+> I finished my homework, **and** then I went to bed.
+> I finished my homework **and** my chores.
 
-But **no comma** when the conjunction only joins two words or two phrases —
-because there is only one clause.
+In the second sentence, *my chores* has no verb of its own. It is still one
+simple sentence, so there is no comma.
 
-> ✅ I finished my homework **and** my chores. *(one clause, two objects)*
-> ❌ I finished my homework, **and** my chores.
+❌ *I finished my homework, and my chores.*
 
-#### The second way to join two clauses — a conjunctive adverb
+> ⚠️ **Bẫy thường gặp:** Có "and" **không** có nghĩa là câu ghép.
+> *Thảo **and** Khoa joined the club **and** won a prize.* → **câu đơn**, không
+> có dấu phẩy.
+> *Thảo joined the club, **and** Khoa won a prize.* → **câu ghép**, có dấu phẩy.
+> Cách kiểm tra: che phần trước "and". Phần sau có **chủ ngữ riêng** không? Có →
+> dấu phẩy. Không → không dấu phẩy.
 
-A conjunction is not the only glue. You can also join two independent clauses
-with a **conjunctive adverb**: *however, therefore, otherwise*.
+#### 4 · Or join them with however, therefore or otherwise
 
-> Mark is hard-working**; therefore,** he usually gets high scores.
+**however · therefore · otherwise**
+
 > Lan wants to join the music club**; however,** she cannot play an instrument.
+> Mark works hard**; therefore,** he usually gets high marks.
 > Plan your week on Sunday**; otherwise,** the pile keeps growing in your head.
 
-| Word | What it means | Nearest conjunction |
+| Word | Means about the same as | Nghĩa |
 | --- | --- | --- |
-| **however** | contrast — the second clause goes against the first | but |
-| **therefore** | result — the second clause follows from the first | so |
-| **otherwise** | the bad alternative — *if you don't do the first, this happens* | or |
+| **however** | but | tuy nhiên |
+| **therefore** | so | vì vậy, do đó |
+| **otherwise** | or — *if you don't, this will happen* | nếu không thì |
 
-#### The punctuation rule, and it is not optional
+The book calls these **conjunctive adverbs**.
 
-**Semicolon before. Comma after.**
+#### 5 · Semicolon before however, therefore, otherwise — comma after
 
-> ✅ I was exhausted**; therefore,** I went to bed at nine.
-> ❌ I was exhausted, therefore I went to bed at nine. *(a comma splice — see
-> below)*
-> ❌ I was exhausted; therefore I went to bed at nine. *(comma missing)*
+> I was exhausted**; therefore,** I went to bed at nine.
+> I was exhausted**. Therefore,** I went to bed at nine.
 
-A full stop also works, and then the adverb starts a new sentence:
+❌ *I was exhausted, therefore I went to bed at nine.*
 
-> ✅ I was exhausted. **Therefore,** I went to bed at nine.
+> ⚠️ **Bẫy thường gặp:** *however, therefore, otherwise* không nối được hai câu
+> chỉ bằng một dấu phẩy. Trước chúng là **dấu chấm phẩy (;)** hoặc **dấu chấm
+> (.)**, sau chúng là **dấu phẩy (,)**.
 
-> ⚠️ **Bẫy thường gặp:** *however, therefore, otherwise* **không phải** là liên
-> từ. Chúng không đủ sức nối hai mệnh đề bằng một dấu phẩy. Trước chúng phải là
-> **dấu chấm phẩy** (;) hoặc **dấu chấm** (.), sau chúng là **dấu phẩy** (,).
->
-> ❌ *I revised hard, however I failed.*
-> ✅ *I revised hard**; however,** I failed.*
-> ✅ *I revised hard**,** but I failed.* — nếu muốn dùng dấu phẩy thì phải dùng
-> liên từ **but**.
->
-> Cách nhớ: **dấu phẩy đi với FANBOYS; dấu chấm phẩy đi với however / therefore
-> / otherwise.**
+> **Ghi chú:** Cách nhớ: **dấu phẩy đi với and / but / so / or / yet; dấu chấm
+> phẩy đi với however / therefore / otherwise.**
 
-#### Two ways to break a compound sentence
+#### 6 · A comma alone cannot join two complete ideas
 
-| Error | What it looks like | Fix |
-| --- | --- | --- |
-| **Run-on** (no punctuation at all) | ❌ *I joined the club it was fun.* | Add a conjunction: *I joined the club, **and** it was fun.* |
-| **Comma splice** (a comma doing a conjunction's job) | ❌ *I joined the club, it was fun.* | Add a conjunction after the comma, or use a full stop. |
+❌ *I joined the club it was fun.*
 
-A comma is **not strong enough** to hold two independent clauses together on
-its own. This is the single most common mistake in grade-8 writing.
+❌ *I joined the club, it was fun.*
 
-> ⚠️ **Bẫy thường gặp:** Có "and" **không** có nghĩa là câu ghép! Nếu "and"
-> chỉ nối hai **chủ ngữ** hoặc hai **động từ** thì câu vẫn là **câu đơn**, và
-> **không có dấu phẩy**.
->
-> *Thảo **and** Khoa joined the club **and** won a prize.* → **CÂU ĐƠN**
-> (một chủ ngữ ghép *Thảo and Khoa* + một vị ngữ ghép *joined … and won …*).
->
-> *Thảo joined the club, **and** Khoa won a prize.* → **CÂU GHÉP**
-> (hai mệnh đề độc lập, mỗi mệnh đề có chủ ngữ và động từ riêng).
->
-> Cách kiểm tra: che phần sau liên từ. Phần đó có **chủ ngữ riêng** không? Có
-> → câu ghép, cần dấu phẩy. Không → câu đơn, bỏ dấu phẩy.
+Add a joining word after the comma, or use a full stop:
 
-### 3.1 Simple or compound?
+> I joined the club, **and** it was fun.
+> I joined the club. It was fun.
 
-::: task skill="course" type="choice" opts="S|C" ask="**S** for simple, **C** for compound. Careful — three of these are traps."
-- My sister and I do the housework together. = S ~ compound subject *My sister and I*, one verb
-- My sister does the housework, and I cook. = C
-- Teenagers need sleep, yet most of them stay up late. = C
-- Hùng joined the club and made three new friends. = S ~ one subject *Hùng*, compound verb *joined … and made*
-- You can walk to school, or you can take the bus. = C
-- Peer pressure is powerful, but it is not unbeatable. = C
-- Đạt takes photos and edits them on her phone. = S ~ compound verb
-- I was exhausted, so I went to bed at nine. = C
-:::
+> **Ghi chú:** Lỗi này rất hay gặp khi viết. Một dấu phẩy **một mình** không đủ
+> để nối hai câu đầy đủ.
 
-### 3.2 Choose the conjunction
+### 3.1 Practice
 
-::: task skill="course" type="gap-fill" ask="Choose the conjunction that completes each compound sentence."
-- I had four tests last week, ___ I hardly slept. {so | but | or} = so
+::: bank draw="10"
+@ gap-fill ask="Choose the word that joins the two parts."
 - Khoa wanted to join the debate club, ___ it was already full. {but | so | or} = but
 - You can talk to a teacher, ___ you can talk to your parents. {or | so | yet} = or
-- She does two hours of homework every evening, ___ she still finds time for the cooking club. {yet | so | or} = yet
-- The volunteer club repairs old books, ___ it sends them to a primary school. {and | or | yet} = and
+- It rained all morning, ___ we played chess inside. {so | but | or} = so
+- Bống eats everything, ___ she is still hungry. {yet | so | or} = yet
+- Thảo plays the guitar, ___ her brother plays the drums. {and | so | or} = and
+- I had four tests last week, ___ I hardly slept. {so | yet | or} = so
+- Hurry up, ___ we will miss the bus. {or | and | so} = or
+- The app is free, ___ it is not easy to use. {but | so | or} = but
+- Hùng did no homework, ___ he got a good mark. {yet | so | or} = yet
+- I was hungry, ___ Bà Sáu gave me some rice. {so | or | yet} = so
+- Tí likes chess, ___ Thảo likes card games. {and | so | or} = and
+- We can take the bus, ___ we can walk to the beach. {or | so | yet} = or
+- Minh was away for a year, ___ he looked exactly the same. {yet | so | or} = yet
+- The club is fun, ___ it takes a lot of time. {but | so | or} = but
+- It was my birthday, ___ Mum made my favourite cake. {so | but | or} = so
+- Turn off your phone, ___ you won't be able to concentrate. {or | and | so} = or
+- My sister cooks dinner, ___ I wash the dishes. {and | or | yet} = and
+@ gap-fill ask="Choose the word that fits after the semicolon."
+- He does very well at school; ___ , he is never happy with his marks. {however | therefore | otherwise} = however
+- Write your week down on Sunday; ___ , the pile keeps growing in your head. {otherwise | however | therefore} = otherwise
+- Mi wants more friends; ___ , she is too shy to talk to new people. {however | therefore | otherwise} = however
+- Phong is behind in maths; ___ , he must study harder this term. {therefore | however | otherwise} = therefore
+- Tell a teacher about a bully; ___ , nothing will change. {otherwise | therefore | however} = otherwise
+- It rained all day; ___ , the football match was cancelled. {therefore | however | otherwise} = therefore
+- The website is easy to use; ___ , my grandmother still needs help with it. {however | therefore | otherwise} = however
+- Wear a hat; ___ , you will get sunburnt on the beach. {otherwise | however | therefore} = otherwise
+- Khoa practises chess every day; ___ , he wins most of his games. {therefore | however | otherwise} = therefore
+- Bống can't stand closed doors; ___ , she leaves every door open. {therefore | however | otherwise} = therefore
+- The test was hard; ___ , most of the class passed. {however | therefore | otherwise} = however
+- Save your work every ten minutes; ___ , you might lose it. {otherwise | however | therefore} = otherwise
+- Tí had a bad cold; ___ , he stayed at home. {therefore | however | otherwise} = therefore
+@ choice ask="Which sentence is right?"
+- With **but**: {The club is fun, but it takes a lot of time. | The club is fun but, it takes a lot of time. | The club is fun, but, it takes a lot of time.} = The club is fun, but it takes a lot of time.
+- With **however**: {The club is fun; however, it takes a lot of time. | The club is fun, however it takes a lot of time. | The club is fun however, it takes a lot of time.} = The club is fun; however, it takes a lot of time.
+- With **therefore**: {I missed the bus; therefore, I was late. | I missed the bus, therefore I was late. | I missed the bus therefore, I was late.} = I missed the bus; therefore, I was late.
+- With **otherwise**: {Log on before Friday; otherwise, you will miss the session. | Log on before Friday, otherwise you will miss the session. | Log on before Friday otherwise, you will miss the session.} = Log on before Friday; otherwise, you will miss the session.
+- Two people, one action: {Thảo and Khoa joined the chess club. | Thảo, and Khoa joined the chess club. | Thảo and, Khoa joined the chess club.} = Thảo and Khoa joined the chess club.
+- One person, two actions: {Đạt takes photos and posts the best ones. | Đạt takes photos, and posts the best ones. | Đạt takes photos and, posts the best ones.} = Đạt takes photos and posts the best ones.
+- Two people, two actions: {Thảo joined the club, and Khoa won a prize. | Thảo joined the club and, Khoa won a prize. | Thảo joined the club, Khoa won a prize.} = Thảo joined the club, and Khoa won a prize.
+- Two ideas: {I joined the club. It was fun. | I joined the club, it was fun. | I joined the club it was fun.} = I joined the club. It was fun.
+- One idea: {I finished my homework and my chores. | I finished my homework, and my chores. | I finished my homework; and my chores.} = I finished my homework and my chores.
+- With **or**: {You can walk, or you can take the bus. | You can walk or, you can take the bus. | You can walk, you can take the bus.} = You can walk, or you can take the bus.
+- With **yet**: {Hùng did no work, yet he passed. | Hùng did no work yet, he passed. | Hùng did no work, he passed.} = Hùng did no work, yet he passed.
+- With **however**: {Mi is shy; however, she joined the drama club. | Mi is shy, however, she joined the drama club. | Mi is shy however she joined the drama club.} = Mi is shy; however, she joined the drama club.
+@ choice ask="Which sentence could you cut into two full sentences?"
+- Housework: {My sister does the housework, and I cook. | My sister and I do the housework. | My sister cooks and cleans.} = My sister does the housework, and I cook.
+- Hùng: {Hùng joined the club, and he made three friends. | Hùng joined the club and made three friends. | Hùng and Khoa joined the club.} = Hùng joined the club, and he made three friends.
+- Sleep: {Teenagers need sleep, yet most stay up late. | Teenagers need sleep and exercise. | Teenagers and adults need sleep.} = Teenagers need sleep, yet most stay up late.
+- Photos: {Đạt takes photos, and his sister edits them. | Đạt takes photos and edits them. | Đạt and his sister take photos.} = Đạt takes photos, and his sister edits them.
+- Bedtime: {I was tired, so I went to bed. | I was tired and hungry. | I went to bed at nine.} = I was tired, so I went to bed.
+- Getting to school: {You can walk, or you can take the bus. | You can walk or take the bus. | You and I can walk.} = You can walk, or you can take the bus.
+@ error-correction
+- I was very stressed, I didn't tell anyone. {stressed, but I | stressed, however I | stressed, therefore I} = stressed, I -> stressed, but I ~ a comma on its own cannot join two full sentences
+- She joined the chess club, she sleeps better now. {club, and she | club, however she | club and, she} = club, she -> club, and she ~ a comma on its own cannot join two full sentences
+- My parents want good marks; and a tidy room. {marks and | marks; however, | marks, therefore} = marks; and -> marks and ~ *a tidy room* is not a full sentence, so nothing goes before *and*
+- Hùng went to the club on Thursday he enjoyed it. {Thursday, and he | Thursday, he | Thursday and, he} = Thursday he -> Thursday, and he ~ nothing at all holds the two sentences apart
+- Thảo and Đạt take photos; and put them on the noticeboard. {photos and | photos; however, | photos, therefore} = photos; and -> photos and ~ the same people do both things, so nothing goes before *and*
+- The app is user-friendly, however I still needed help with it. {user-friendly; however, | user-friendly, however, | user-friendly; therefore,} = user-friendly, however -> user-friendly; however, ~ semicolon before *however*, comma after
+- She uploaded the photos late, therefore nobody saw them until Monday. {late; therefore, | late, therefore, | late; otherwise,} = late, therefore -> late; therefore, ~ semicolon before *therefore*, comma after
+- Take an umbrella, otherwise you will get wet. {umbrella; otherwise, | umbrella, otherwise, | umbrella; however,} = umbrella, otherwise -> umbrella; otherwise, ~ semicolon before *otherwise*, comma after
+- I like maths, so I don't like tests. {but | or | therefore} = so -> but ~ the second part says something different: **but**
+- It was raining, but we stayed inside. {so | or | yet} = but -> so ~ we stayed inside because of the rain: **so**
+- Hurry up, and you will be late. {or | so | yet} = and -> or ~ *if you don't hurry up*: **or**
+- He studied hard; however, he passed every test. {therefore | otherwise | but} = however -> therefore ~ he passed because he studied: **therefore**
+- Eat something now; therefore, you will be hungry in class. {otherwise | however | so} = therefore -> otherwise ~ *if you don't eat*: **otherwise**
+- Minh is only thirteen; therefore, he is very mature. {however | otherwise | or} = therefore -> however ~ the second part is surprising: **however**
+- The club is fun, yet I go every week. {so | or | but} = yet -> so ~ I go because it is fun: **so**
+@ sentence-build ask="Join the two sentences with the word given. Keep them in the same order."
+- Teenagers need eight hours of sleep. Most get six. — use **but** {;} = Teenagers need eight hours of sleep, but most get six
+- I felt frustrated. I asked my brother for help. — use **so** {;} = I felt frustrated, so I asked my brother for help
+- You can join the chess club. You can join the football club. — use **or** {;} = You can join the chess club, or you can join the football club
+- The wellbeing club is new. It is very popular. — use **yet** {;} = The wellbeing club is new, yet it is very popular
+- Khoa likes chess. Hùng likes football. — use **and** {;} = Khoa likes chess, and Hùng likes football
+- Bống lost the game. She laughed. — use **but** {;} = Bống lost the game, but she laughed
+- Tí was tired. He kept walking. — use **yet** {;} = Tí was tired, yet he kept walking
+- I had four tests. I did not sleep much. — use **so** {;} = I had four tests, so I did not sleep much
+- Phong is in three clubs. His marks have not fallen. — use **however** {but} = Phong is in three clubs; however, his marks have not fallen / Phong is in three clubs; his marks have not fallen, however
+- Thảo wants to be more focused. She leaves her phone downstairs. — use **therefore** {so} = Thảo wants to be more focused; therefore, she leaves her phone downstairs / Thảo wants to be more focused; she therefore leaves her phone downstairs
+- Log on before Friday. You will miss the first session. — use **otherwise** {or} = Log on before Friday; otherwise, you will miss the first session / Log on before Friday; you will otherwise miss the first session / Log on before Friday; you will miss the first session otherwise
+- The test was hard. Most of us passed. — use **however** {but} = The test was hard; however, most of us passed / The test was hard; most of us passed, however
+@ odd-one-out ask="Which word needs different punctuation before it?"
+- and · but · so · however = however ~ *; however,* — but *, and* · *, but* · *, so*
+- however · therefore · otherwise · yet = yet ~ *, yet* — but *; however,* · *; therefore,* · *; otherwise,*
+- or · otherwise · so · and = otherwise ~ *; otherwise,* — but *, or* · *, so* · *, and*
+@ odd-one-out ask="Which word has a different meaning?"
+- but · yet · however · so = so ~ *so* gives a result; the others say something different or surprising
+- so · therefore · but = but ~ *so* and *therefore* give a result; *but* says something different
+- or · otherwise · and = and ~ *or* and *otherwise* both mean *if not*
+- but · however · and · yet = and ~ *and* just adds; the others say something different
 :::
 
-### 3.3 However, therefore, or otherwise?
+### 3.2 About you
 
-::: task skill="course" type="choice" opts="however|therefore|otherwise" ask="The semicolon is already there. Choose the word that fits the meaning."
-- He does very well at school; ___ , he is never satisfied with his marks. = however ~ the second clause goes **against** the first
-- We sometimes feel lonely and sad; ___ , talking to somebody matters. = therefore ~ the second clause **follows from** the first
-- Write your week down on Sunday; ___ , the pile keeps growing in your head. = otherwise ~ *if you don't write it down, this is what happens*
-- Mi wants more friends; ___ , she does not connect well with new people. = however
-- Phong is behind in maths; ___ , he must study harder this term. = therefore
-- Tell a teacher about a bully; ___ , nothing changes. = otherwise
-:::
-
-### 3.4 Comma or semicolon? Conjunction or conjunctive adverb?
-
-The punctuation tells you which kind of word the gap needs. A **comma** takes a
-conjunction; a **semicolon** takes a conjunctive adverb.
-
-::: task skill="course" type="choice" ask="Look at the punctuation first, then at the meaning."
-- Schoolwork causes pressure, ___ many teens feel pressure at home too. {and | so | however} = and ~ comma → a conjunction, and the two ideas simply add up
-- The club is free, ___ you have to bring your own racket. {but | so | however} = but ~ comma → a conjunction, and the second idea pushes back
-- I had three tests last week, ___ I hardly slept. {so | but | therefore} = so ~ comma → a conjunction, and the second idea is the result
-- Minh loves the chess club; ___ , he never wins a game. {however | therefore | but} = however ~ semicolon → a conjunctive adverb, contrast
-- She wanted to prepare properly; ___ , she turned off her phone. {therefore | however | so} = therefore ~ semicolon → a conjunctive adverb, result
-- Teenagers should learn to work in a group; ___ , they struggle later. {otherwise | therefore | and} = otherwise ~ semicolon → a conjunctive adverb, the bad alternative
-:::
-
-### 3.5 Join them up
-
-::: task skill="course" type="short-answer" variant="sentence-build" ask="Here you are given two sentences and the joining word. Combine each pair into **one** compound sentence."
-- Teenagers need eight hours of sleep. Most get six. — use **but** {; | ,} = Teenagers need eight hours of sleep, but most get six / Teenagers need eight hours of sleep but most get six
-- I felt frustrated. I asked my brother for help. — use **so** {; | ,} = I felt frustrated, so I asked my brother for help / I felt frustrated so I asked my brother for help
-- You can join the chess club. You can join the football club. — use **or** {; | ,} = You can join the chess club, or you can join the football club / You can join the chess club or you can join the football club
-- The wellbeing club is new. It is already the most popular. — use **yet** {; | ,} = The wellbeing club is new, yet it is already the most popular / The wellbeing club is new, yet it's already the most popular / The wellbeing club is new yet it is already the most popular
-- Khanh could not boil rice in September. Now he cooks dinner every Sunday. — use **and** {; | ,} = Khanh could not boil rice in September, and now he cooks dinner every Sunday / Khanh couldn't boil rice in September, and now he cooks dinner every Sunday / Khanh could not boil rice in September and now he cooks dinner every Sunday
-- Phong participates in three clubs. His marks have not fallen. — use **however** {; | ,} = Phong participates in three clubs; however, his marks have not fallen / Phong participates in three clubs; however, his marks haven't fallen / Phong participates in three clubs; his marks, however, have not fallen / Phong participates in three clubs; his marks have not fallen, however ~ semicolon before, comma after
-- Thảo wants to be more focused. She leaves her phone downstairs. — use **therefore** {; | ,} = Thảo wants to be more focused; therefore, she leaves her phone downstairs / Thảo wants to be more focused; therefore she leaves her phone downstairs / Thảo wants to be more focused; she, therefore, leaves her phone downstairs / Thảo wants to be more focused; she therefore leaves her phone downstairs ~ semicolon before, comma after
-- You should log on and check the notice. You will miss the first session. — use **otherwise** {; | ,} = You should log on and check the notice; otherwise, you will miss the first session / You should log on and check the notice; otherwise, you'll miss the first session / You should log on and check the notice; otherwise you will miss the first session ~ semicolon before, comma after
-:::
-
-### 3.6 Correct the mistake
-
-::: task skill="course" type="short-answer" variant="error-correction"
-- I was very stressed, I didn't tell anyone. {stressed, but I | stressed, however I | stressed, therefore I} = stressed, I -> stressed, but I ~ a comma on its own cannot hold two clauses together
-- She joined the wellbeing club, she sleeps better now. {club, and she | club, however she | club and, she} = club, she -> club, and she ~ a comma on its own cannot hold two clauses together
-- My parents want good marks; and a tidy room. {marks and | marks; however, | marks, therefore} = marks; and -> marks and ~ *and* joins two objects here, not two clauses — nothing goes before it
-- Hùng went to the club on Thursday he enjoyed it. {Thursday, and he | Thursday, he | Thursday and, he} = Thursday he -> Thursday, and he ~ a run-on: nothing at all is holding the two clauses apart
-- Thảo and Đạt take photos; and put them on the noticeboard. {photos and | photos; however, | photos, therefore} = photos; and -> photos and ~ one subject, two verbs — still a simple sentence, so nothing goes before *and*
-- The app is user-friendly, however I still needed help with it. {user-friendly; however, | user-friendly, however, | user-friendly; therefore,} = user-friendly, however -> user-friendly; however, ~ *however* is not a conjunction: semicolon before, comma after
-- She uploaded the photos late, therefore nobody saw them until Monday. {late; therefore, | late, therefore, | late; otherwise,} = late, therefore -> late; therefore, ~ *therefore* is not a conjunction: semicolon before, comma after
-:::
-
-### 3.7 About you
-
-Write true sentences about yourself. Sentences 1–5 must be **compound**
-sentences with a comma and the conjunction given. Sentences 6–8 must use a
-semicolon, the conjunctive adverb given, and a comma after it.
+Write true sentences about yourself. In 1–5, join two full ideas with a comma
+and the word given. In 6–8, put a semicolon before the word given and a comma
+after it.
 
 1. (and) _______________________________
 2. (but) _______________________________
@@ -580,10 +639,8 @@ hard for you? Say why.
 
 ### 4.1 Matching headings
 
-The account has **six** paragraphs, **A** to **F**, lettered in the text above.
-Below are **eight** headings — two of them match no paragraph at all. That is
-how this question type is always built, and it is the whole difficulty: a
-heading that fits nothing still looks plausible.
+The account has **six** paragraphs, **A** to **F**. There are **eight**
+headings — two of them match no paragraph.
 
 | | Heading |
 | --- | --- |
@@ -596,7 +653,7 @@ heading that fits nothing still looks plausible.
 | **vii** | What the sea will and will not do |
 | **viii** | The walk up the lane |
 
-::: task skill="reading" type="matching-headings" opts="i|ii|iii|iv|v|vi|vii|viii" ask="Choose the correct heading for each paragraph. Read the whole paragraph before you choose: a heading that matches one sentence of it is the commonest way to get this wrong."
+::: task skill="reading" type="matching-headings" opts="i|ii|iii|iv|v|vi|vii|viii" ask="Choose the heading for each paragraph."
 - Paragraph A = iii ~ the water is flat and grey and ordinary, and nothing at all was going to happen
 - Paragraph B = vi ~ a figure appears above them with a school bag over one shoulder
 - Paragraph C = iv ~ he is the height, shirt and haircut of last September
@@ -617,7 +674,7 @@ heading that fits nothing still looks plausible.
 
 ### 4.3 Vocabulary in context
 
-::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these. The clock above is still running, and it covers this exercise too — searching against a clock is the point, not reading carefully."
+::: task skill="course" type="synonym-search" ask="Find the word or phrase in the text that means each of these."
 - a sloping ramp for pulling boats out of the water {slipway | harbour wall | lane} = slipway
 - smooth and level, with no waves on it {flat | grey | ordinary} = flat
 - with nothing unusual about it {ordinary | flat | frightening} = ordinary
@@ -627,8 +684,7 @@ heading that fits nothing still looks plausible.
 
 ### Speaking — Asking and answering about a club
 
-> **Working alone:** You have no partner, so do this in three steps. It still
-> works — speaking practice is mostly about producing language out loud.
+> **Working alone:** You have no partner, so do this in three steps.
 
 **Step 1 — Prepare.** Choose one club: a real club at your school, or an
 imaginary one you would like to start. Write short notes (not full sentences).
@@ -643,15 +699,13 @@ imaginary one you would like to start. Write short notes (not full sentences).
 | Is there anything you don't like about it? | |
 
 **Step 2 — Speak.** Answer each question **aloud** from your notes, in full
-sentences. Use at least one **compound sentence** in every answer — join two
-ideas with *and, but, so, or,* or *yet*. In at least one answer, join them the
-other way instead: a pause where the semicolon would be, then *however*,
-*therefore* or *otherwise*.
+sentences. In every answer, join two ideas with *and, but, so, or* or *yet*.
+Once, use *however*, *therefore* or *otherwise* instead.
 
 **Step 3 — Record and check.** Record yourself on your phone. Listen back and
 check three things:
 
-- Did you actually produce compound sentences, or only short simple ones?
+- Did you join two ideas with *and, but, so, or, yet* — or only say short sentences?
 - Did you pronounce /ʊə/ and /ɔɪ/ differently in *curious* and *join*?
 - Did your pauses fall **between** points rather than inside a sentence?
 
@@ -814,8 +868,7 @@ stress and **two solutions**.
 
 #### Plan it — 6 questions your paragraph has to answer
 
-Cover the finished paragraph above. Answer these in note form, in your
-own words — no opening phrases are supplied, and none are needed.
+Cover the paragraph above. Answer these in note form, in your own words.
 
 | The question | Your answer — notes, in your own words |
 | --- | --- |
@@ -826,34 +879,26 @@ own words — no opening phrases are supplied, and none are needed.
 | Which two solutions, and which of them do you think is better? | |
 | What do you want the reader left with? | |
 
-::: bridge name="One marker per stage, none inside a stage" trains="Coherence & Cohesion" cefr="B1" marker="[Q]" src="05 §4"
-You have just learned coordinating conjunctions, and this is the moment the
-habit forms. The rule for the paragraph below, and for every paragraph after it:
+::: bridge name="One linking word per new point" trains="Coherence & Cohesion" cefr="B1" marker="[Q]" src="05 §4"
+In the paragraph below, and in every paragraph after it: **one linking word at
+the start of each new point, and none inside it.**
 
-**One linking word at each new stage of the argument. None inside a stage.**
+*First… Second… Third…* at the start of your three causes is right. *First, and
+also, moreover, in addition* inside one cause is too many.
 
-*First… Second… Third…* at the head of your three causes is one marker per
-stage — that is correct use. *First, and also, moreover, in addition* inside a
-single cause is four markers inside one stage, and that is the failure.
+When every sentence starts with a linking word, none of them helps the reader.
 
-Linking words are worth having: without them the stages of your argument run
-into each other. But too many is just as bad — when every sentence starts with
-a connective, none of them tells the reader anything. You are aiming between
-the two, and the cheapest way to land there is a hard count.
-
-**This upgrade asks you to write less, not more.**
-
-> **Tiếng Việt:** Mỗi ý lớn dùng **một** từ nối. Trong cùng một ý thì **không**
-> dùng thêm từ nối nào nữa. Dùng quá nhiều từ nối bị trừ điểm y như dùng quá ít.
+> **Tiếng Việt:** Mỗi ý lớn dùng **một** từ nối ở đầu. Trong cùng một ý thì không
+> thêm từ nối nào nữa.
 :::
 
 ::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — **one** paragraph of **80–100 words** on the causes of teenage stress and what helps."
 - [ ] 80–100 words ~ words
 - [ ] One paragraph, not a list ~ para:1
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
-- [ ] At least **four** compound sentences — a comma, then the conjunction ~ re:4 ,\s+(and|but|so|or|yet)\s
-- [ ] At least **three** different conjunctions from *and, but, so, or, yet* ~ distinct:3 and/but/so/or/yet
-- [ ] No comma splices — every comma you wrote joins with a conjunction, or it is not joining two clauses at all
+- [ ] At least **four** sentences joined with a comma and *and, but, so, or* or *yet* ~ re:4 ,\s+(and|but|so|or|yet)\s
+- [ ] At least **three** different joining words from *and, but, so, or, yet* ~ distinct:3 and/but/so/or/yet
+- [ ] No comma on its own between two full sentences
 :::
 
 ---
@@ -873,7 +918,7 @@ the two, and the cheapest way to land there is a hard count.
 
 ### 6.2 Pronunciation check
 
-::: task skill="course" type="choice" opts="/ʊə/|/ɔɪ/" ask="Which vowel is in the underlined part?"
+::: task skill="course" type="choice" opts="/ʊə/|/ɔɪ/" ask="Which vowel sound is in the bold part?"
 - t**ou**rist = /ʊə/
 - ch**oi**ce = /ɔɪ/
 - c**u**re = /ʊə/
@@ -884,37 +929,35 @@ the two, and the cheapest way to land there is a hard count.
 
 ### 6.3 Grammar check
 
-**Part A.** Simple or compound?
+**Part A.** Two full ideas, or one?
 
-::: task skill="course" type="choice" opts="S|C" ask="**S** = simple (one clause) · **C** = compound (two clauses joined)."
-- Khoa and Hùng joined the wellbeing club. = S
-- Khoa joined the wellbeing club, and Hùng joined the debate club. = C
-- I was frustrated, yet I kept trying. = C
-- She takes photos and edits them at home. = S
+::: task skill="course" type="choice" ask="Which sentence could you cut into two full sentences?"
+- Clubs: {Khoa joined the wellbeing club, and Hùng joined the debate club. | Khoa and Hùng joined the wellbeing club. | Khoa joined the wellbeing club and made friends.} = Khoa joined the wellbeing club, and Hùng joined the debate club.
+- Trying: {I was frustrated, yet I kept trying. | I was frustrated and tired. | I tried and tried again.} = I was frustrated, yet I kept trying.
+- Photos: {She takes photos, and her brother posts them. | She takes photos and edits them at home. | She and her brother take photos.} = She takes photos, and her brother posts them.
 :::
 
 **Part B.** The punctuation at the join.
 
-::: task skill="course" type="choice" ask="Choose what each sentence needs at the join. Not every sentence needs anything."
-- The club is free however you have to bring your own racket. {a semicolon before however and a comma after it | a comma after however only | a comma before and after however} = a semicolon before however and a comma after it
-- Đạt takes photos and posts the best ones. {a comma before and | a comma after and | no comma} = no comma
-- I missed the bus therefore I was late for school. {a semicolon before therefore and a comma after it | a comma after therefore only | a comma before and after therefore} = a semicolon before therefore and a comma after it
-- He does his homework and his chores before dinner. {a comma before and | a comma after and | no comma} = no comma
+::: task skill="course" type="choice" ask="Which sentence is right?"
+- With **however**: {The club is free; however, you have to bring your own racket. | The club is free, however you have to bring your own racket. | The club is free however, you have to bring your own racket.} = The club is free; however, you have to bring your own racket.
+- One person, two actions: {Đạt takes pictures and shares the best ones. | Đạt takes pictures, and shares the best ones. | Đạt takes pictures and, shares the best ones.} = Đạt takes pictures and shares the best ones.
+- With **therefore**: {I missed the bus; therefore, I was late for school. | I missed the bus, therefore I was late for school. | I missed the bus therefore, I was late for school.} = I missed the bus; therefore, I was late for school.
+- One action, two things: {He does his homework and his chores before dinner. | He does his homework, and his chores before dinner. | He does his homework and, his chores before dinner.} = He does his homework and his chores before dinner.
 :::
 
 **Part C.** Join them up.
 
-::: task skill="course" type="short-answer" variant="sentence-build" ask="Join each pair with the word you are given, keeping the two halves in that order."
-- The website is user-friendly. I still could not find the form. — use **however** {; | ,} = The website is user-friendly; however, I still could not find the form / The website is user-friendly; however, I still couldn't find the form / The website is user-friendly; I, however, still could not find the form / The website is user-friendly; I still could not find the form, however
-- Hùng wants to be more focused. He has joined the chess club. — use **therefore** {; | ,} = Hùng wants to be more focused; therefore, he has joined the chess club / Hung wants to be more focused; therefore, he has joined the chess club / Hùng wants to be more focused; therefore, he's joined the chess club / Hung wants to be more focused; therefore, he's joined the chess club / Hùng wants to be more focused; therefore he has joined the chess club / Hùng wants to be more focused; he has, therefore, joined the chess club / Hùng wants to be more focused; he has therefore joined the chess club
-- Log on before Friday. You will miss the first session. — use **otherwise** {; | ,} = Log on before Friday; otherwise, you will miss the first session / Log on before Friday; otherwise, you'll miss the first session / Log on before Friday; otherwise you will miss the first session
-- I had four tests in one week. I did not sleep much. — use **so** {; | ,} = I had four tests in one week, so I did not sleep much / I had four tests in one week, so I didn't sleep much / I had four tests in one week so I did not sleep much / I had four tests in one week so I didn't sleep much ~ *so* is a conjunction, so a comma before it is all it needs
+::: task skill="course" type="short-answer" variant="sentence-build" ask="Join each pair with the word given. Keep them in the same order."
+- The website is user-friendly. I still could not find the form. — use **however** {; | ,} = The website is user-friendly; however, I still could not find the form / The website is user-friendly; I, however, still could not find the form / The website is user-friendly; I still, however, could not find the form / The website is user-friendly; I still could not find the form, however
+- Hùng wants to be more focused. He has joined the chess club. — use **therefore** {; | ,} = Hùng wants to be more focused; therefore, he has joined the chess club / Hùng wants to be more focused; he has, therefore, joined the chess club / Hùng wants to be more focused; he has therefore joined the chess club
+- Log on before Friday. You will miss the first session. — use **otherwise** {; | ,} = Log on before Friday; otherwise, you will miss the first session / Log on before Friday; you will otherwise miss the first session / Log on before Friday; you will miss the first session otherwise
+- I had four tests in one week. I did not sleep much. — use **so** {; | ,} = I had four tests in one week, so I did not sleep much ~ *so* only needs a comma before it
 :::
 
 ### 6.4 Error hunt
 
-This paragraph has **six** mistakes. Below, it comes one line at a time: tap
-each mistake, then choose the fix.
+This paragraph has **six** mistakes. Below, it comes one line at a time.
 
 > Minh came back on Tuesday, he has not changed at all. He asked about the
 > football final, there was no final this year. The rest of us are a year older,
@@ -922,21 +965,21 @@ each mistake, then choose the fix.
 > him. He did not send him back, he walked home. Now Minh sit with us at
 > lunch every day.
 
-::: task skill="course" type="short-answer" variant="error-correction" ask="Each line is part of the paragraph, with the earlier mistakes already put right."
-- Minh came back on Tuesday, he has not changed at all. {Tuesday, and he | Tuesday, however he | Tuesday and, he} = Tuesday, he -> Tuesday, and he ~ comma splice — *and* joins the two clauses
-- He asked about the football final, there was no final this year. {final, but there | final, however there | final but, there} = final, there -> final, but there ~ comma splice — *but* joins the two clauses
-- The rest of us are a year older, he had to hear it from us. {older, so he | older, however he | older so, he} = older, he -> older, so he ~ comma splice — *so* joins the two clauses
-- Tí could have sent him back, he could have kept him. {back, or he | back, therefore he | back or, he} = back, he -> back, or he ~ comma splice — *or* joins the two clauses
-- He did not send him back, he walked home. {back, and he | back, therefore he | back and, he} = back, he -> back, and he ~ comma splice — *and* joins the two clauses
-- Now Minh sit with us at lunch every day. {sits | sitting | to sit} = sit -> sits ~ subject–verb agreement
+::: task skill="course" type="short-answer" variant="error-correction" ask="Earlier mistakes are already fixed."
+- Minh came back on Tuesday, he has not changed at all. {Tuesday, and he | Tuesday, however he | Tuesday and, he} = Tuesday, he -> Tuesday, and he ~ a comma alone cannot join two full sentences: *, and he*
+- He asked about the football final, there was no final this year. {final, but there | final, however there | final but, there} = final, there -> final, but there ~ a comma alone cannot join two full sentences: *, but there*
+- The rest of us are a year older, he had to hear it from us. {older, so he | older, however he | older so, he} = older, he -> older, so he ~ a comma alone cannot join two full sentences: *, so he*
+- Tí could have sent him back, he could have kept him. {back, or he | back, therefore he | back or, he} = back, he -> back, or he ~ a comma alone cannot join two full sentences: *, or he*
+- He did not send him back, he walked home. {back, and he | back, therefore he | back and, he} = back, he -> back, and he ~ a comma alone cannot join two full sentences: *, and he*
+- Now Minh sit with us at lunch every day. {sits | sitting | to sit} = sit -> sits ~ *Minh* is one person: **sits**
 :::
 
 ### 6.5 Word formation
 
-Most of this unit's words come in a family — *decide* and *decision*, *enjoy*
-and *enjoyable*. The sentence around the gap tells you which member it wants.
+Words come in families — *decide*, *decision*. Choose the one that fits the
+sentence.
 
-::: task skill="course" type="gap-fill" ask="Choose the right form of the word in brackets. Some gaps want a noun, some want an adjective."
+::: task skill="course" type="gap-fill" ask="Choose the right form of the word in brackets."
 - My parents have high ___ of me, and that is where most of my pressure comes from. *(expect)* {expectations | expecting | expectant} = expectations
 - Talking it over with someone you trust helps you make an informed ___ . *(decide)* {decision | decisive | deciding} = decision
 - Regular ___ in one club is worth more than signing up for five. *(participate)* {participation | participant | participate} = participation
@@ -991,9 +1034,9 @@ page can settle it, the row says so, and that one is yours to judge.
 
 | Now I can … | Where my answer already is |
 | --- | --- |
-| use the words for school clubs, life online and teen stress | Lesson 2, exercises 2.1, 2.4 and 2.5 · Lesson 6, exercises 6.1 and 6.5 |
-| hear /ʊə/ and /ɔɪ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercise 2.6 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.8 and listen back. |
-| write simple sentences and compound sentences | Lesson 3, exercises 3.1 and 3.5 · Lesson 6, exercises 6.3 and 6.4 |
+| use the words for school clubs, life online and teen stress | Lesson 2, Meet the words · Lesson 6, exercises 6.1 and 6.5 |
+| hear /ʊə/ and /ɔɪ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
+| write simple sentences and compound sentences | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
 | make a request politely | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
 | read a teenager's account of the evening a friend came back | Lesson 4, exercises 4.1 and 4.2 |
 | ask and answer questions about a club | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
@@ -1014,14 +1057,14 @@ page can settle it, the row says so, and that one is yours to judge.
 
 ### Lesson 2
 
-**2.8** Answers will vary. Check: your lips **spread into a smile** at the end
+**2.3** Answers will vary. Check: your lips **spread into a smile** at the end
 of *choice, enjoy, noise, boys, enjoyable*, and **relax back to the centre** at
 the end of *tourist, curious, during, furious, mature*.
 
 ### Lesson 3
 
-**3.7** Answers will vary. Check: each sentence has **two** independent
-clauses (cover the joining word — does the second half have its own subject and
-verb?). For 1–5, a **comma before** the conjunction asked for. For 6–8, a
-**semicolon before** the adverb and a **comma after** it.
+**3.2** Answers will vary. Check: each sentence has **two** full ideas (cover
+the joining word — does the second half have its own subject and verb?). For
+1–5, a **comma before** the word given. For 6–8, a **semicolon before** the word
+given and a **comma after** it.
 
