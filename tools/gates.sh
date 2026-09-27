@@ -116,6 +116,9 @@ run 'check_level.py --strict-through 12' python3 tools/check_level.py --strict-t
 run 'check_cast.py' python3 tools/check_cast.py
 run 'index_sgk.py --check' python3 tools/index_sgk.py --check
 run 'test_marking.js' node tools/test_marking.js
+# The art generator's offline half: the keyer every sheet and cut-out goes
+# through, the checks, and the promotion rules. No key and no network needed.
+run 'test_artgen.py' python3 tools/test_artgen.py
 
 # The two that read the built pages. They only mean anything after build.py —
 # and a failed build leaves docs/ emptied, so running them anyway would print

@@ -46,10 +46,12 @@ import sys
 from pathlib import Path
 
 try:
-    from PIL import Image, ImageChops, ImageDraw
+    from PIL import Image
 except ImportError:
     print("FAIL: this needs Pillow — `pip3 install Pillow`")
     sys.exit(2)
+
+from artgen import cutout
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -71,45 +73,22 @@ PLATE_PX = 1800
 PLATE_Q = 85
 MASTER_EXT = (".png", ".jpg", ".jpeg", ".webp")
 
-# Shared with make_sheet.py, and deliberately identical: a prop drawn in the
-# same session as a character must key the same way or the two will not sit in
-# one panel together.
-WHITE_TOL = 12
-SENTINEL = (1, 2, 3)
-
-
+# The keyer lives in artgen/cutout.py and is shared with make_sheet.py and the
+# generator: a prop drawn in the same session as a character must key the same
+# way or the two will not sit in one panel together.
 def is_keyed(im: Image.Image) -> bool:
-    """Does this drawing already carry transparency? Generators increasingly
-    return a cut-out, and keying one again is at best a no-op and at worst
-    destroys it — RGBA to RGB drops the alpha and leaves black behind."""
-    if im.mode not in ("RGBA", "LA"):
-        return False
-    return im.convert("RGBA").getchannel("A").getextrema()[0] < 250
+    return cutout.is_keyed(im)
 
 
 def key_white(im: Image.Image) -> Image.Image:
-    """White that touches the border becomes transparent; enclosed white stays."""
-    rgb = im.convert("RGB")
-    w, h = rgb.size
-    px = rgb.load()
-    near = lambda p: all(c >= 255 - WHITE_TOL for c in p)
-
-    border = ([(x, 0) for x in range(w)] + [(x, h - 1) for x in range(w)]
-              + [(0, y) for y in range(h)] + [(w - 1, y) for y in range(h)])
-    for xy in border:
-        if near(px[xy]):
-            ImageDraw.floodfill(rgb, xy, SENTINEL, thresh=WHITE_TOL)
-
-    out = im.convert("RGBA")
-    op = out.load()
-    cleared = 0
-    for y in range(h):
-        for x in range(w):
-            if px[x, y] == SENTINEL:
-                op[x, y] = (255, 255, 255, 0)
-                cleared += 1
-    if not cleared:
+    """Background that touches the border becomes transparent; enclosed white
+    stays. See artgen/cutout.py for how, and for the leak and fringe handling."""
+    out, rep = cutout.key(im)
+    if not rep["keyed_frac"]:
         print("      note: nothing was keyed — is the background actually white?")
+    if rep["leak_frac"] >= 0.03:
+        print(f"      WARNING: {rep['leak_frac']:.1%} of the drawing was flooded "
+              f"through a gap in the outline — it will look hollow")
     return out
 
 

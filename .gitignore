@@ -30,3 +30,10 @@ saved-progress/archive/*.md
 .specs/.orchestra/
 reports/*.lock
 reports/.*.lock
+
+# Art generation (tools/art.py): candidates, previews, the call log and the
+# optional style reference — none of it is published, and the reference may be
+# a film still we have no right to redistribute.
+.artgen/
+# API keys. tools/artgen/config.py reads .secrets/gemini.key.
+.secrets/

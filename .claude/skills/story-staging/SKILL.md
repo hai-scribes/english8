@@ -430,6 +430,7 @@ python3 tools/check_cast.py
 ## The pipeline
 
 ```sh
+python3 tools/art.py gen <slug>       # draw it with Gemini — see the art-generation skill
 python3 tools/build.py                # regenerate docs/ — validates all of the above
 python3 tools/check_cast.py           # what is declared, and what is drawn
 python3 tools/make_sheet.py --all     # six character drawings -> one sheet each
