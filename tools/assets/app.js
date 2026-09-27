@@ -185,6 +185,43 @@ function unitRec(u){
   return PROG[u];
 }
 const lessonDone = (u, l) => !!unitRec(u).lessons[String(l)];
+/* "Complete" is not "finished". Finished is the button; complete is the work:
+   every marked task attempted, every Meet-the-words set answered, the practice
+   bank run, the writing handed in, the timed test taken. Attempted, not
+   scored -- in-session accuracy is not retention (pedagogy P6), so a lesson
+   is not complete "when you got 80%". Each lesson page decides it for itself
+   and records it; the rail on every page reads the record. */
+const lessonComplete = (u, l) => !!(unitRec(u).complete || {})[String(l)];
+function noteProgress(){
+  if (typeof DATA === "undefined" || DATA.kind !== "lesson" || !DATA.unit) return;
+  const read = k => { try { return JSON.parse(localStorage.getItem(k) || "null"); } catch(e){ return null; } };
+  const tasksOk = (DATA.tasks || []).every(t => {
+    const r = (read("en8:tasks:v1") || {})[t.id];
+    return r && typeof r.score === "number";
+  });
+  const vocabOk = (DATA.vocabIntake || []).every(p => {
+    const sets = Math.ceil(((p.words || []).length || 1) / (p.size || 8));
+    const done = new Set((read("en8:intake:" + p.id) || []).map(a => a.set));
+    for (let i = 0; i < sets; i++) if (!done.has(i)) return false;
+    return true;
+  });
+  const bankOk = (DATA.bank || []).every(p => (read("en8:bank:" + p.id) || []).length > 0);
+  const writeOk = (DATA.write || []).every(p => {
+    const r = (read("en8:write:v1") || {})[p.id];
+    return r && r.drafts && r.drafts.length > 0;
+  });
+  const clockOk = (DATA.clock || []).every(p => !!read("en8:clock:" + p.id));
+  const any = (DATA.tasks || []).length + (DATA.vocabIntake || []).length + (DATA.bank || []).length
+            + (DATA.write || []).length + (DATA.clock || []).length;
+  const r = unitRec(DATA.unit);
+  r.complete = r.complete || {};
+  const now = any > 0 && tasksOk && vocabOk && bankOk && writeOk && clockOk;
+  if (now === !!r.complete[String(DATA.lesson)]) return;
+  if (now) r.complete[String(DATA.lesson)] = Date.now();
+  else delete r.complete[String(DATA.lesson)];
+  saveProg();
+  document.dispatchEvent(new CustomEvent("en8:complete"));
+}
 const lessonsDone = u => Object.keys(unitRec(u).lessons).length;
 function markLesson(u, l, on){
   const r = unitRec(u);
@@ -519,15 +556,18 @@ function initLesson(){
       const n = el.dataset.lesson;
       if (!n) return;
       const t = (DATA.titles || {})[n];
+      const full = lessonComplete(unit, Number(n));
       if (t){
-        el.title = "Lesson " + n + " — " + t;
+        el.title = "Lesson " + n + " — " + t + (full ? " (complete)" : "");
         el.setAttribute("aria-label", "Lesson " + n + ": " + t
-          + (lessonDone(unit, Number(n)) ? " (done)" : ""));
+          + (full ? " (complete)" : "") + (el.classList.contains("cur") ? " (you are here)" : ""));
       }
-      if (lessonDone(unit, Number(n))) el.classList.add("ok");
+      el.classList.toggle("ok", full);
     });
   };
   if (btn) btn.addEventListener("click", () => { if (!isDone()) setDone(true); });
+  document.addEventListener("en8:complete", paint);
+  noteProgress();
   if (undo) undo.addEventListener("click", () => { setDone(false); paint(); });
   paint();
 }
@@ -1329,7 +1369,13 @@ function runEngine(mode, words, unit, hostSel, opts){
         paintTiles(li, q.w);
         return;
       }
-      if (b.classList.contains("i-tok")){ li.dataset.tap = b.dataset.j; paintTap(li, q.w); return; }
+      if (b.classList.contains("i-tok")){
+        if (li.dataset.tap !== undefined && li.dataset.tap !== "") return;
+        /* Found it: now choose the fix. Missed it: that is the answer. */
+        if (!commitTap(li, q.w, Number(b.dataset.j)))
+          settle({ ok:false }, q.w.tap[Number(b.dataset.j)].replace(/<[^>]+>/g, ""));
+        return;
+      }
       if (b.id === "go"){
         let given, res;
         if (q.fmt === "recall-tiles"){
@@ -1558,6 +1604,7 @@ let TASKS = (() => {
   try { return JSON.parse(localStorage.getItem(T_KEY)) || {}; } catch(e){ return {}; }
 })();
 function saveTasks(){
+  setTimeout(noteProgress, 0);
   try { localStorage.setItem(T_KEY, JSON.stringify(TASKS)); } catch(e){}
 }
 
@@ -1879,7 +1926,23 @@ function paintTap(li, it){
   const j = li.dataset.tap;
   $$(".i-tok", li).forEach(b => b.classList.toggle("on", b.dataset.j === j));
   const fix = $(".i-fix", li);
-  if (fix) fix.hidden = j === undefined || j === "";
+  /* The fix choices open only once the mistake has been FOUND. Opened on any
+     tap, the same list appeared whatever word was tapped, so tapping around
+     previewed the answer's kind and pointed at the wrong word. */
+  const found = j !== undefined && j !== "" && inSpan(it, Number(j));
+  if (fix) fix.hidden = !found;
+}
+const inSpan = (it, n) => !!it.span && n >= it.span[0] && n <= it.span[1];
+/* A tap is the answer to "where is the mistake?" and it is final: the words
+   lock, and a wrong tap shows at once where the mistake really was. */
+function commitTap(li, it, j){
+  li.dataset.tap = String(j);
+  $$(".i-tok", li).forEach(b => { b.disabled = true; });
+  paintTap(li, it);
+  if (inSpan(it, j)) return true;
+  $$(".i-tok", li).forEach(x => x.classList.toggle("was", inSpan(it, Number(x.dataset.j))));
+  li.dataset.missed = "1";
+  return false;
 }
 function paintGap(li){
   const gap = $(".i-gap", li), on = $("input:checked", li);
@@ -1913,8 +1976,8 @@ function initTasks(){
         li.dataset.seq = seq.join(",");
         paintTiles(li, it);
       } else if (b.classList.contains("i-tok")){
-        li.dataset.tap = b.dataset.j;
-        paintTap(li, it);
+        if (li.dataset.tap !== undefined && li.dataset.tap !== "") return;
+        commitTap(li, it, Number(b.dataset.j));
       }
     });
     box.addEventListener("change", ev => {
@@ -2139,6 +2202,7 @@ function initTasks(){
         $$(".i-tile, .i-tok", li).forEach(x => { x.disabled = false; x.classList.remove("was"); });
         $$(".i-opt", li).forEach(x => x.classList.remove("is-key", "is-wrong"));
         delete li.dataset.tap;
+        delete li.dataset.missed;
         li.dataset.seq = "";
         if (it.tiles) paintTiles(li, it);
         if (it.tap) paintTap(li, it);
@@ -4315,7 +4379,7 @@ function initVocab(){
 
     let log = [];
     try { log = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch(e){}
-    const save = () => { try { localStorage.setItem(KEY, JSON.stringify(log)); } catch(e){} };
+    const save = () => { try { localStorage.setItem(KEY, JSON.stringify(log)); } catch(e){} setTimeout(noteProgress, 0); };
     const setsDone = () => new Set(log.map(a => a.set));
 
     function dots(si){
@@ -4449,7 +4513,7 @@ function initBanks(){
     const stage = $(".bk-stage", root), KEY = "en8:bank:" + p.id;
     let log = [];
     try { log = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch(e){}
-    const save = () => { try { localStorage.setItem(KEY, JSON.stringify(log)); } catch(e){} };
+    const save = () => { try { localStorage.setItem(KEY, JSON.stringify(log)); } catch(e){} setTimeout(noteProgress, 0); };
 
     function cover(){
       stage.innerHTML = '<div class="bk-cover">'
@@ -4650,6 +4714,7 @@ let WRITE = (() => {
   try { return JSON.parse(localStorage.getItem(W_KEY)) || {}; } catch(e){ return {}; }
 })();
 function saveWrite(){
+  setTimeout(noteProgress, 0);
   try { localStorage.setItem(W_KEY, JSON.stringify(WRITE)); } catch(e){}
 }
 
@@ -5167,6 +5232,7 @@ function initClock(){
       if (btn.disabled) return;
       btn.disabled = true;
       try { localStorage.setItem(KEY, "true"); } catch(e){}
+      setTimeout(noteProgress, 0);
       root.dataset.running = "1";
       hideTest(false);
       parts.textSect.forEach(x => x.classList.add("exam-text"));

@@ -1477,6 +1477,39 @@ async function main() {
        JSON.stringify(d));
   }
 
+  /* ---- "complete" is the work done, not the button pressed ------------------ */
+  {
+    const page = "docs/unit-01/lesson-3/index.html";
+    const w1 = await settled(load(page, null, w => {
+      w.localStorage.setItem("en8:progress:v1", JSON.stringify({ "01": { lessons: { 3: 1 }, test: null } }));
+    }));
+    const cur1 = w1.document.querySelector(".rail .cur");
+    ok("rail: the current lesson has its own mark", !!cur1 && cur1.dataset.lesson === "3");
+    ok("rail: pressing Finish does not make a lesson complete", !cur1.classList.contains("ok"));
+    const D = JSON.parse(w1.document.getElementById("page-data").textContent);
+    const seed = w => {
+      const tasks = {};
+      (D.tasks || []).forEach(t => { tasks[t.id] = { score: 1, of: 1, at: 1, given: [], log: [] }; });
+      w.localStorage.setItem("en8:tasks:v1", JSON.stringify(tasks));
+      (D.bank || []).forEach(b => w.localStorage.setItem("en8:bank:" + b.id, JSON.stringify([{ right: 1, total: 1, at: 1 }])));
+      (D.vocabIntake || []).forEach(p => {
+        const sets = Math.ceil(p.words.length / p.size);
+        w.localStorage.setItem("en8:intake:" + p.id,
+          JSON.stringify([...Array(sets).keys()].map(i => ({ set: i, right: 1, total: 1, at: 1 }))));
+      });
+      const wr = {};
+      (D.write || []).forEach(p => { wr[p.id] = { text: "x", drafts: ["x"], committed: true }; });
+      w.localStorage.setItem("en8:write:v1", JSON.stringify(wr));
+      (D.clock || []).forEach(p => w.localStorage.setItem("en8:clock:" + p.id, "true"));
+    };
+    const w2 = await settled(load(page, null, seed));
+    const cur2 = w2.document.querySelector(".rail .cur");
+    ok("rail: doing the lesson's work makes it complete, with its own mark",
+       cur2.classList.contains("ok") && cur2.classList.contains("cur"));
+    const prog = JSON.parse(w2.localStorage.getItem("en8:progress:v1") || "{}");
+    ok("rail: completion is recorded for the other pages", !!(prog["01"] && prog["01"].complete && prog["01"].complete["3"]));
+  }
+
   /* ---- a timed test behaves like the real screen ---------------------------
      Operator, 2026-09-27: hidden until Start; then only the text, the
      questions and a countdown; everything marked together at the end. */
@@ -1722,6 +1755,9 @@ async function main() {
     const liB = tapIt(1, b2.span[0], b2.opts.find(o => o.k !== b2.fix).k);
     const liC = tapIt(2, c.span[0] === 0 ? c.span[1] + 1 : 0, c.fix);
     ok("tap: the fix panel opens once a word is tapped", !liA.querySelector(".i-fix").hidden);
+    ok("tap: a wrong tap does not open the fix choices", liC.querySelector(".i-fix").hidden);
+    ok("tap: a tap is final — the words lock", [...liC.querySelectorAll(".i-tok")].every(x => x.disabled));
+    ok("tap: a wrong tap shows where the mistake really was", !!liC.querySelector(".i-tok.was"));
     click(win, pr.querySelector(".t-check"));
     ok("tap: right word and right fix is right", liA.dataset.ok === "1");
     ok("tap: right word, wrong fix is wrong", liB.dataset.ok === "0");

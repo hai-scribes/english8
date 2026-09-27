@@ -176,6 +176,25 @@ same kind of word; and the build fails any item whose sentence shares a
 four-letter root with its fix. A word with no real confusable partner gets a
 gap-fill instead.
 
+**The tap is the answer.** The operator found the second hole: the fix list
+opened on any tap and was the same whatever word was tapped, so tapping around
+previewed the answer's kind and pointed at the mistake. This two-step format
+was our own design; the standard exam form (Vietnamese school tests, TOEIC,
+TOEFL) underlines four parts A–D and asks only which is wrong. Now the first
+tap is final: the words lock, a wrong tap is marked wrong at once and shows
+where the mistake really was, and the fix choices open only after the mistake
+has been found (`commitTap` in `app.js`).
+
+### Complete is the work, not the button (operator, 2026-09-27)
+
+The lesson strip carries two separate marks: **current** (filled) and
+**complete** (a green tick). Complete means every marked task on that page has
+an attempt, every Meet-the-words set has been answered, the practice bank has
+been run, the writing handed in and the timed test taken — recorded by the
+page itself (`noteProgress`), never by pressing *Finish*. Attempted, not
+scored: in-session accuracy is not retention (pedagogy **P6**), so there is no
+pass mark.
+
 ### An exercise a machine can mark is a `:::task`, not printed prose
 
 Unit 1 had nine printed exercises with no directive. Four were genuinely open

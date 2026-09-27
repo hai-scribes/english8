@@ -1868,3 +1868,13 @@ body.exam-on .exam-write .w-done{display:none}
   body.exam-on .exam-write .w-left{position:sticky;top:4.2rem}
   body.exam-on .exam-write .w-box{min-height:60vh}
 }
+
+/* Lesson strip: where you are, and what is complete, are two different marks.
+   Current = filled teal. Complete (the work done, not the button pressed) =
+   a green tick in the corner. Both can be true at once. */
+.rail a,.rail span{position:relative}
+.rail .ok{color:var(--ink)}
+.rail .ok::after{content:"✓";position:absolute;top:-4px;right:-3px;width:15px;height:15px;border-radius:50%;
+  background:var(--green);color:#fff;font-size:10px;line-height:15px;text-align:center;font-weight:700;
+  box-shadow:0 0 0 2px var(--sunk)}
+.rail .cur.ok{background:var(--teal);color:var(--teal-ink)}
