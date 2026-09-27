@@ -12,17 +12,18 @@ just taught; the unit test opens only once all six lessons are done.
 | 1 | Getting Started | Getting Started |
 | 2 | Words & Sounds | A Closer Look 1 |
 | 3 | Grammar | A Closer Look 2 |
-| 4 | Reading & Speaking | Communication · Skills 1 |
-| 5 | Listening & Writing | Skills 2 |
+| 4 | Reading & Writing | Skills 1 · Skills 2 |
+| 5 | Listening & Speaking | Skills 2 · Skills 1 · Communication |
 | 6 | Looking Back & Project | Looking Back & Project |
 
 Every lesson page prints the book's name for it under ours, so the site and the
 book can be matched in class. The book's Communication section has no lesson of
-its own (operator's decision, 2026-09-27): its content block is read at the top
-of Lesson 4, and its Everyday English phrases close Lesson 4, beside the
-speaking they serve. Neither carries a marked task, and neither is enrolled in
-the review queue. The skills keep the book's pairing, reading with speaking and
-listening with writing: each lesson takes something in, then uses it.
+its own (operator's decision, 2026-09-27): its content block and its Everyday
+English phrases close Lesson 5, beside the speaking they serve. Neither carries a
+marked task, and neither is enrolled in the review queue. The skills are paired
+by kind, not as the book prints them (operator's decision, 2026-09-27): Lesson 4
+is the two done on paper, reading then writing, and Lesson 5 the two done out
+loud, listening then speaking.
 
 The second job is mostly not something the pages *say* — it is how they
 behave. 1,143 questions are marked the way a real answer key marks; twelve
@@ -297,6 +298,21 @@ use words already met; a pool item that tests no table word waits for
 **Mixed practice**. Lesson 2 carries one pool and Lesson 3 one bank — together
 they replace the vocabulary and grammar drills that used to be printed under
 them.
+
+### `:::jot` — "About you", written freely and kept
+
+```markdown
+::: jot
+- (enjoy)
+- Something a teacher said to your class. → My teacher told us that
+:::
+```
+
+For sentences only the learner can write. Each line is a prompt with its own
+box that grows as she types and keeps its text on the device. Text after `→` is
+a starter the box opens with. Nothing is marked and there is no answer to
+reveal, so a jot never has an Answer Key entry. If one right answer exists, it
+is a `:::task`, not a jot.
 
 ### `:::audio` — the script is read aloud once, by someone else
 

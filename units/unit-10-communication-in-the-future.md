@@ -544,56 +544,22 @@ so you never add the noun again.
 
 Write true sentences about yourself. Use the words in brackets.
 
-1. (at + a clock time) When do you usually go to bed?
-   → _______________________________
-2. (in + a year) When were you born?
-   → _______________________________
-3. (on + a day) When do you have your English lesson?
-   → _______________________________
-4. (next to / opposite) Describe where your school is.
-   → _______________________________
-5. (a friend of mine) Write one sentence about a friend.
-   → _______________________________
-6. (in ten years) Say one thing you think will be different.
-   → _______________________________
+::: jot
+- (at + a clock time) When do you usually go to bed?
+- (in + a year) When were you born?
+- (on + a day) When do you have your English lesson?
+- (next to / opposite) Describe where your school is.
+- (a friend of mine) Write one sentence about a friend.
+- (in ten years) Say one thing you think will be different.
+:::
 
 ---
 
-## Lesson 4 — Reading & Speaking
-
-### The future of language
-
-Mark, 14, was asked what will change about the way people talk to each other.
-This is what he said.
-
-> **Mark:** "In twenty years I think everybody will be using emojis — not only
-> teenagers, but grandparents, teachers and bank managers too. An emoji carries
-> a feeling, and a feeling does not need a language: a smiling face means the
-> same thing in Hà Nội, in Tokyo and in London, so nobody has to translate it.
-> That is why more and more people will use them. Emojis can even replace
-> words, up to a point — I often answer my sister with one picture and no
-> letters at all. So one day you may open an email and find nothing inside it
-> but emojis, and you will still understand every line."
-
-Here are two more predictions, in note form. Each one answers the same four
-questions Mark answered: **when**, **who**, **how** and **why**.
-
-| | **An automatic translation function** | **A chatbot** |
-| --- | --- | --- |
-| **When?** | in ten years | in ten years |
-| **Who will use it?** | people who use social networks | people who sell things in online shops |
-| **How will it help?** | it translates comments and private messages in every language | it replies to customers instantly in every language |
-| **Why will it spread?** | it removes the language barrier | it helps them sell to customers in other countries |
-
-**Talk about it.** Make a prediction of your own, in the same shape as Mark's.
-Take one of the two fact-files, or invent a way of communicating yourself, and
-answer the four questions in order: **when**, **who**, **how**, **why**. Start
-like this: *"In ten years, I think…"*
-
+## Lesson 4 — Reading & Writing
 
 ### Reading — *The voice in the box*
 
-::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
+::: clock mins="17" for="You have 17 minutes for the text and its questions."
 :::
 
 *Tí writes down what happened on the harbour wall, four days after the flood.*
@@ -658,6 +624,133 @@ like this: *"In ten years, I think…"*
 - in person, with the other person in the same room {face-to-face | telepathy | phone call} = face-to-face
 :::
 
+### Writing — A descriptive paragraph
+
+**Task.** Describe **one** way you communicate: a **video call** you often make,
+**or** the **social media** app you use most. Write **80–100 words**. Describe
+what you see and hear, not only what you think.
+
+#### Model paragraph — read this first
+
+> On Sunday my mother makes a video call from the factory city, always in the
+> evening. Bà Sáu puts the smartphone on the table, next to the rice, and leans
+> in until only her forehead is on the screen. Behind my mother there is a grey
+> wall and a row of coats that are not ours. The connection is poor, so her
+> voice arrives a second after her mouth moves, and she waves at the wrong
+> moment. At night I play the voice message she leaves. It is short, and it is
+> mine.
+
+*(93 words)*
+
+#### Plan it — 6 questions your paragraph has to answer
+
+Cover the finished paragraph above. Answer in note form, in your own words.
+
+| The question | Your answer — notes, in your own words |
+| --- | --- |
+| What is this paragraph about, and why does it matter to you? | |
+| When and where — and which of *in / on / at* does each one take? | |
+| What you **see**: one or two visual details | |
+| What you **hear**: voices, delay, background noise | |
+| What goes wrong | |
+| The closing feeling — one sentence, and no new topic | |
+
+::: bridge name="Count your prepositions" trains="Grammatical Range & Accuracy" cefr="B1" marker="[INF]" src="07 §8.2"
+On your finished paragraph, fill this in:
+
+> **Prepositions correct in ___ of ___ places that needed one.**
+
+The number will go up and down from week to week, and that is normal.
+
+> **Tiếng Việt:** Ghi kết quả dạng **phân số**, giống Unit 5: đúng ___ trên ___ chỗ
+> cần giới từ.
+:::
+
+::: thread id="articles" stage="check"
+:::
+
+::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — **80–100 words** describing one way you communicate. What you see and hear, not only what you think."
+- [ ] 80–100 words ~ words
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] At least **three** time phrases with *in / on / at* ~ any:3 in the morning/in the afternoon/in the evening/at night/at the weekend/at weekends/on monday/on tuesday/on wednesday/on thursday/on friday/on saturday/on sunday/at the moment/in the future/at midnight/at noon/on time/in time/at lunchtime/on my birthday
+- [ ] At least **two** prepositions of place ~ any:2 behind/next to/in front of/under/above/below/beside/near/between/opposite/on the left/on the right/on the screen/on the wall/on the table/at the top/at the bottom
+- [ ] At least **one** of *mine, yours, hers, ours, theirs* ~ any:1 mine/hers/his own/ours/theirs/yours
+- [ ] …and no noun after it — *that phone is mine*, never *mine phone*
+- [ ] One sentence about a sound, one about a picture
+:::
+
+---
+
+## Lesson 5 — Listening & Speaking
+
+### Listening — The rest of the message
+
+You hear it **once**, read aloud by someone else. Read both sets of questions
+first, then answer while you listen.
+
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
+
+::: audio orientation="You will hear one speaker recording a message for somebody he has never met. He says where he sent it from, where he is now, and what he wants the listener to go and find."
+**The keeper:** …to whoever is holding this now. My name does not matter. The
+work does.
+
+I posted this at the post office in a town that is not there any more, on the
+ninth of June, and that was sixty years ago. I paid for it in coins. I have
+waited ever since to learn whether it arrived, and I know now that it did
+not, because you are only hearing it today.
+
+Listen carefully. I hold the far end, from the far side of the water. I can
+stand on your shore for an hour at a time and no longer, and I cannot come home
+at all while the line is open — and it has to stay open, or everything lost
+between here and there stays lost. That is the whole of it.
+
+And if the child is still with you — boy, she was never taught the second
+half. That is my fault and not hers.
+
+Everything I built is in my workroom. Go upriver, past the stilt house, to the
+old mill. The workroom is under the mill, behind the wheel, and the door is the
+colour of the water, so you will walk past it twice.
+
+My notebooks are on the shelf above the bench. The green one is the one that
+matters; the rest are copies. Take them, and read the last page first, because
+the last page tells you what the sea must never—
+:::
+
+### 5.1 Listen and choose
+
+::: task skill="listening" type="multiple-choice"
+- The speaker says he posted the message at {the post office | a railway station | a market} = the post office
+- He says he is now {on the far side of the water | upriver at the mill | in his workroom} = on the far side of the water
+- The workroom is {under the mill | above the mill | opposite the mill} = under the mill ~ *above* belongs to the shelf, not to the room
+- The notebook that matters is {the green one | the blue one | the first one} = the green one
+- The message {stops in the middle of a sentence | ends with a goodbye | repeats the address} = stops in the middle of a sentence
+:::
+
+### 5.2 Note completion
+
+Choose for each gap **as you listen**.
+
+::: task skill="listening" type="completion"
+- Message posted ___ years ago {sixty | sixteen | nine} = sixty
+- Where to go — upriver, past the ___ , to the old mill {stilt house | workroom | shelf} = stilt house
+- The workroom — behind the ___ {wheel | bench | shelf} = wheel
+- The notebooks — on the shelf above the ___ {bench | wheel | door} = bench
+- Read this page first — the ___ page {last | first | second} = last
+:::
+
+::: bridge name="Open, stand, close — pause between" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
+Say your pros-and-cons answer in three steps:
+
+1. **Open** — *"I want to talk about video calls with family."* — **pause.**
+2. **Stand** — *"I think they help more than they hurt."* — **pause.**
+3. **Close** — *"So that is why I would keep them."*
+
+A short pause between steps tells your listener one idea has finished. Don't
+pause in the middle of a sentence.
+
+> **Tiếng Việt:** Nói theo ba bước, **dừng ngắn** giữa mỗi bước, không dừng giữa câu.
+:::
+
 ### Speaking — The pros and cons of online calls
 
 > **Working alone:** You have no partner, so do this in three steps.
@@ -693,7 +786,7 @@ check three things:
 
 Repeat Step 2 until you can speak for a full minute.
 
-### 4.4 Say it again, faster
+### 5.3 Say it again, faster
 
 ::: fluency mode="talk" secs="240|180|120" ask="Talk about how you keep in touch with people."
 - Which device you use most
@@ -701,6 +794,35 @@ Repeat Step 2 until you can speak for a full minute.
 - What you use it for
 - How it may change in ten years
 :::
+
+### The future of language
+
+Mark, 14, was asked what will change about the way people talk to each other.
+This is what he said.
+
+> **Mark:** "In twenty years I think everybody will be using emojis — not only
+> teenagers, but grandparents, teachers and bank managers too. An emoji carries
+> a feeling, and a feeling does not need a language: a smiling face means the
+> same thing in Hà Nội, in Tokyo and in London, so nobody has to translate it.
+> That is why more and more people will use them. Emojis can even replace
+> words, up to a point — I often answer my sister with one picture and no
+> letters at all. So one day you may open an email and find nothing inside it
+> but emojis, and you will still understand every line."
+
+Here are two more predictions, in note form. Each one answers the same four
+questions Mark answered: **when**, **who**, **how** and **why**.
+
+| | **An automatic translation function** | **A chatbot** |
+| --- | --- | --- |
+| **When?** | in ten years | in ten years |
+| **Who will use it?** | people who use social networks | people who sell things in online shops |
+| **How will it help?** | it translates comments and private messages in every language | it replies to customers instantly in every language |
+| **Why will it spread?** | it removes the language barrier | it helps them sell to customers in other countries |
+
+**Talk about it.** Make a prediction of your own, in the same shape as Mark's.
+Take one of the two fact-files, or invent a way of communicating yourself, and
+answer the four questions in order: **when**, **who**, **how**, **why**. Start
+like this: *"In ten years, I think…"*
 
 ### Everyday English — Interrupting politely
 
@@ -772,133 +894,6 @@ the group will meet next Saturday, and the other breaks in to suggest a
 different place. Swap each time. Use **Sorry for interrupting, but** or **Sorry
 to interrupt, but** with the reason in the same breath, and give the turn back
 afterwards with **Sorry — please go on**.
-
----
-
-## Lesson 5 — Listening & Writing
-
-### Listening — The rest of the message
-
-You hear it **once**, read aloud by someone else. Read both sets of questions
-first, then answer while you listen.
-
-**Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả hai phần câu hỏi, rồi vừa nghe vừa trả lời.
-
-::: audio orientation="You will hear one speaker recording a message for somebody he has never met. He says where he sent it from, where he is now, and what he wants the listener to go and find."
-**The keeper:** …to whoever is holding this now. My name does not matter. The
-work does.
-
-I posted this at the post office in a town that is not there any more, on the
-ninth of June, and that was sixty years ago. I paid for it in coins. I have
-waited ever since to learn whether it arrived, and I know now that it did
-not, because you are only hearing it today.
-
-Listen carefully. I hold the far end, from the far side of the water. I can
-stand on your shore for an hour at a time and no longer, and I cannot come home
-at all while the line is open — and it has to stay open, or everything lost
-between here and there stays lost. That is the whole of it.
-
-And if the child is still with you — boy, she was never taught the second
-half. That is my fault and not hers.
-
-Everything I built is in my workroom. Go upriver, past the stilt house, to the
-old mill. The workroom is under the mill, behind the wheel, and the door is the
-colour of the water, so you will walk past it twice.
-
-My notebooks are on the shelf above the bench. The green one is the one that
-matters; the rest are copies. Take them, and read the last page first, because
-the last page tells you what the sea must never—
-:::
-
-### 5.1 Listen and choose
-
-::: task skill="listening" type="multiple-choice"
-- The speaker says he posted the message at {the post office | a railway station | a market} = the post office
-- He says he is now {on the far side of the water | upriver at the mill | in his workroom} = on the far side of the water
-- The workroom is {under the mill | above the mill | opposite the mill} = under the mill ~ *above* belongs to the shelf, not to the room
-- The notebook that matters is {the green one | the blue one | the first one} = the green one
-- The message {stops in the middle of a sentence | ends with a goodbye | repeats the address} = stops in the middle of a sentence
-:::
-
-### 5.2 Note completion
-
-Choose for each gap **as you listen**.
-
-::: task skill="listening" type="completion"
-- Message posted ___ years ago {sixty | sixteen | nine} = sixty
-- Where to go — upriver, past the ___ , to the old mill {stilt house | workroom | shelf} = stilt house
-- The workroom — behind the ___ {wheel | bench | shelf} = wheel
-- The notebooks — on the shelf above the ___ {bench | wheel | door} = bench
-- Read this page first — the ___ page {last | first | second} = last
-:::
-
-::: bridge name="Open, stand, close — pause between" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
-Say your pros-and-cons answer in three steps:
-
-1. **Open** — *"I want to talk about video calls with family."* — **pause.**
-2. **Stand** — *"I think they help more than they hurt."* — **pause.**
-3. **Close** — *"So that is why I would keep them."*
-
-A short pause between steps tells your listener one idea has finished. Don't
-pause in the middle of a sentence.
-
-> **Tiếng Việt:** Nói theo ba bước, **dừng ngắn** giữa mỗi bước, không dừng giữa câu.
-:::
-
-### Writing — A descriptive paragraph
-
-**Task.** Describe **one** way you communicate: a **video call** you often make,
-**or** the **social media** app you use most. Write **80–100 words**. Describe
-what you see and hear, not only what you think.
-
-#### Model paragraph — read this first
-
-> On Sunday my mother makes a video call from the factory city, always in the
-> evening. Bà Sáu puts the smartphone on the table, next to the rice, and leans
-> in until only her forehead is on the screen. Behind my mother there is a grey
-> wall and a row of coats that are not ours. The connection is poor, so her
-> voice arrives a second after her mouth moves, and she waves at the wrong
-> moment. At night I play the voice message she leaves. It is short, and it is
-> mine.
-
-*(93 words)*
-
-#### Plan it — 6 questions your paragraph has to answer
-
-Cover the finished paragraph above. Answer in note form, in your own words.
-
-| The question | Your answer — notes, in your own words |
-| --- | --- |
-| What is this paragraph about, and why does it matter to you? | |
-| When and where — and which of *in / on / at* does each one take? | |
-| What you **see**: one or two visual details | |
-| What you **hear**: voices, delay, background noise | |
-| What goes wrong | |
-| The closing feeling — one sentence, and no new topic | |
-
-::: bridge name="Count your prepositions" trains="Grammatical Range & Accuracy" cefr="B1" marker="[INF]" src="07 §8.2"
-On your finished paragraph, fill this in:
-
-> **Prepositions correct in ___ of ___ places that needed one.**
-
-The number will go up and down from week to week, and that is normal.
-
-> **Tiếng Việt:** Ghi kết quả dạng **phân số**, giống Unit 5: đúng ___ trên ___ chỗ
-> cần giới từ.
-:::
-
-::: thread id="articles" stage="check"
-:::
-
-::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — **80–100 words** describing one way you communicate. What you see and hear, not only what you think."
-- [ ] 80–100 words ~ words
-- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
-- [ ] At least **three** time phrases with *in / on / at* ~ any:3 in the morning/in the afternoon/in the evening/at night/at the weekend/at weekends/on monday/on tuesday/on wednesday/on thursday/on friday/on saturday/on sunday/at the moment/in the future/at midnight/at noon/on time/in time/at lunchtime/on my birthday
-- [ ] At least **two** prepositions of place ~ any:2 behind/next to/in front of/under/above/below/beside/near/between/opposite/on the left/on the right/on the screen/on the wall/on the table/at the top/at the bottom
-- [ ] At least **one** of *mine, yours, hers, ours, theirs* ~ any:1 mine/hers/his own/ours/theirs/yours
-- [ ] …and no noun after it — *that phone is mine*, never *mine phone*
-- [ ] One sentence about a sound, one about a picture
-:::
 
 ---
 
@@ -1001,11 +996,11 @@ page can settle it, the row says so, and that one is yours to judge.
 | use the words for communication technology | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
 | put the stress in the right place in words ending *-ese* and *-ee* | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. Saying them aloud is yours — record Lesson 2, exercise 2.3 and listen back. |
 | say where and when (**under** the bed, **at** seven, **in** ten years, **by** Friday) and whose (**mine**, **yours**, a friend **of mine**) | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
-| interrupt politely | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| interrupt politely | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 5 with someone, and decide. |
 | read a text closely and answer it in the writer's own words | Lesson 4, exercises 4.1 and 4.2 |
-| talk about what is good and what is bad about a way of communicating | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| talk about what is good and what is bad about a way of communicating | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
 | listen once to a recorded message and catch its dates, numbers and places | Lesson 5, exercises 5.1 and 5.2 |
-| write a paragraph describing a modern way of communicating | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| write a paragraph describing a modern way of communicating | Lesson 4, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1025,22 +1020,3 @@ page can settle it, the row says so, and that one is yours to judge.
 *-nese*, *-nee*, *-tee*, *-gee*, *-ee* in *Japanese, trainee, Vietnamese,
 interviewee, guarantee, Portuguese, refugee, agree, Chinese* — and on the FIRST
 syllable of *coffee*, and the SECOND of *committee*.
-
-### Lesson 3
-
-**3.2** Answers will vary. Check: item 1 uses *at* + a clock time, item 2 uses
-*in* + a year, item 3 uses *on* + a day, item 4 uses *next to* or *opposite*
-before a place, item 5 says *a friend of mine* (never *of my* or *of me*), and
-item 6 uses *in ten years* with *will* (*In ten years, phones will be…*).
-
-### Lesson 4
-
-**Speaking** Answers will vary. Check: you spoke for a full minute, used the
-pros/cons frame, and used *in / on / at* correctly with every day and time.
-
-### Lesson 5
-
-**Writing** Answers will vary. Check against the checklist: 80–100 words, three
-correct prepositions of time, two of place, one possessive pronoun with no noun
-after it, four unit vocabulary words, and one sentence each about a sound and a
-picture.

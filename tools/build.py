@@ -53,11 +53,15 @@ SITE = "English 8 — Global Success"
 LESSONS = 6
 # The book's own name for each lesson, printed small above ours so the page and
 # the printed book can be matched in class. Ours says what the lesson is for;
-# the book's names ("A Closer Look 1") say where it sits. The book's Communication
-# section has no lesson of its own here: its Everyday English phrases and its
-# content block are read inside Lesson 4, beside the speaking they serve.
+# the book's names ("A Closer Look 1") say where it sits. The skills are paired
+# by kind rather than as the book prints them: Lesson 4 is the two you do on
+# paper (Skills 1's reading, Skills 2's writing) and Lesson 5 the two you do out
+# loud (Skills 2's listening, Skills 1's speaking), closed by the book's
+# Communication section — its content block and Everyday English phrases,
+# beside the speaking they serve.
 BOOK_SECTION = {1: "Getting Started", 2: "A Closer Look 1", 3: "A Closer Look 2",
-                4: "Communication · Skills 1", 5: "Skills 2",
+                4: "Skills 1 · Skills 2",
+                5: "Skills 2 · Skills 1 · Communication",
                 6: "Looking Back & Project"}
 
 RE_TITLE = re.compile(r"^#\s+Unit\s+(\d+)\s+—\s+(.+)$", re.M)
@@ -166,7 +170,7 @@ RE_THREAD = re.compile(r"^:::[ \t]*thread\b(?P<attrs>[^\n]*)\n(?P<body>.*?)"
 # a misspelled directive name (":::taskk") fails to match instead of matching
 # ":::task" with the rest silently dropped.
 RE_DIRECTIVE = re.compile(
-    r"^:::[ \t]*(?P<kind>task|audio|write|clock|thread|passage|dialogue|fluency|vocab|bank)\b(?P<attrs>[^\n]*)\n"
+    r"^:::[ \t]*(?P<kind>task|audio|write|clock|thread|passage|dialogue|fluency|vocab|bank|jot)\b(?P<attrs>[^\n]*)\n"
     r"(?P<body>.*?)\n?:::[ \t]*$", re.M | re.S)
 WIDGET = "\x00W%d\x00"
 
@@ -225,6 +229,12 @@ PICK_SETS = {
     "true-false-not-given": ["T", "F", "NG"],
     "yes-no-not-given":     ["YES", "NO", "NG"],
 }
+# What the learner sees on each of those buttons: a mark and the whole word, so
+# the choice reads at a glance. The key stays the letter the marking uses.
+PICK_FACE = {k: f'<i class="i-ic" data-k="{k}" aria-hidden="true">{ic}</i>{t}'
+             for k, ic, t in [("T", "✓", "True"), ("F", "✕", "False"),
+                              ("YES", "✓", "Yes"), ("NO", "✕", "No"),
+                              ("NG", "?", "Not given")]}
 
 # ------------------------------------------------------------- the variants --
 # A `type` says what an exercise IS in the test's own vocabulary. It does not
@@ -499,6 +509,8 @@ def parse_task_body(a: dict, body: str) -> dict:
         if item.get("opts"):
             item["q"] = re.sub(r"\s*(→|->)?\s*_{3,}\s*$", "", item["q"]).strip()
             item["opts"] = [{"k": o["k"], "t": inline(o["t"])} for o in item["opts"]]
+            if a.get("type") in PICK_SETS:
+                item["opts"] = [{"k": o["k"], "t": PICK_FACE[o["k"]]} for o in item["opts"]]
         # Prompts are escaped and their **bold**/*italic* honoured here rather
         # than in the browser: a pronunciation item is written "t**ou**rist"
         # and the marked-up syllable is the whole point of the question.
@@ -1442,6 +1454,40 @@ def vocab_html(p: dict) -> str:
             f'<div class="v-stage"></div></div>')
 
 
+# ------------------------------------------------------------- free writing --
+# "About you": sentences only the learner can write, so nothing marks them and
+# there is no answer to reveal. Each line is a prompt with its own box, kept on
+# this device. A prompt may carry a starter after an arrow, which opens the box:
+#
+#   ::: jot
+#   - (enjoy)
+#   - Something a teacher said to your class. → My teacher told us that
+#   :::
+RE_JOT_ITEM = re.compile(r"^(?:[-*]|\d+\.)\s+", re.M)
+
+
+def jot_html(jid: str, body: str, where: str) -> str:
+    items = [x for x in RE_JOT_ITEM.split(body.strip()) if x.strip()]
+    if not items:
+        raise SystemExit(f"{where}: a jot needs at least one prompt")
+    rows = []
+    for i, raw in enumerate(items, 1):
+        text = " ".join(raw.split())
+        prompt, _, starter = text.partition("→")
+        prompt = re.sub(r"_{3,}", "", prompt).strip()
+        starter = re.sub(r"\s*_{3,}.*$", "", starter).strip()
+        if not prompt and not starter:
+            raise SystemExit(f"{where}: prompt {i} is empty")
+        bid = f"{jid}-{i}"
+        label = (f'<label class="j-q" for="{e(bid)}">{inline(prompt)}</label>' if prompt
+                 else f'<label class="sr-only" for="{e(bid)}">Sentence {i}</label>')
+        rows.append(f'<li>{label}<textarea class="j-box" id="{e(bid)}" data-jot="{e(bid)}" '
+                    f'rows="2" data-starter="{e(starter)}" autocapitalize="sentences" '
+                    f'spellcheck="true"></textarea></li>')
+    return (f'<div class="jot" data-role="jot"><ol class="j-list">{"".join(rows)}</ol>'
+            f'<p class="note small">Saved on this device.</p></div>')
+
+
 # --------------------------------------------------------- the fluency strand --
 # Nation's four strands give roughly equal time to meaning-focused input,
 # meaning-focused output, language-focused learning and FLUENCY DEVELOPMENT —
@@ -2157,7 +2203,7 @@ def practice_data(u) -> list:
 #   Lesson 2  Words & Sounds  -> vocabulary and PRONUNCIATION
 #   Lesson 3  Grammar         -> GRAMMAR
 #
-# The Everyday English function is not enrolled. It is read in Lesson 4 as a
+# The Everyday English function is not enrolled. It is read in Lesson 5 as a
 # set of phrases, with no marked task (decided by the operator on 2026-09-27),
 # so there is nothing of it for the queue to lift -- and this rule is that the
 # queue never authors.
@@ -2405,7 +2451,7 @@ def parse_block_run(body: str):
                 _w.append((kind, parse_task_body(a, m.group("body"))))
             elif kind in ("bank", "vocab"):
                 _w.append((kind, (a, parse_bank(m.group("body"), f"{head or 'intro'} ({kind})"))))
-            elif kind in ("audio", "write", "passage", "dialogue", "fluency"):
+            elif kind in ("audio", "write", "passage", "dialogue", "fluency", "jot"):
                 _w.append((kind, (a, m.group("body"))))
             else:
                 _w.append((kind, a))
@@ -3376,7 +3422,7 @@ def block_prose(u, lesson, b, payload) -> str:
     """
     out = render(b["md"])
     n_task = n_audio = n_write = n_clock = n_pass = 0
-    n_dlg, n_flu, n_voc, n_bank = [0], [0], [0], [0]
+    n_dlg, n_flu, n_voc, n_bank, n_jot = [0], [0], [0], [0], [0]
     for i, (kind, d) in enumerate(b["widgets"]):
         if kind == "passage":
             p, html_ = passage_block(u, lesson, d[0], d[1], n_pass)
@@ -3419,6 +3465,10 @@ def block_prose(u, lesson, b, payload) -> str:
             n_voc[0] += 1
             payload.setdefault("vocabIntake", []).append(p)
             html_ = vocab_html(p)
+        elif kind == "jot":
+            html_ = jot_html(f"{u['nn']}-{lesson}-j{n_jot[0] + 1}", d[1],
+                             f"{u['src']} lesson {lesson} (jot)")
+            n_jot[0] += 1
         elif kind == "thread":
             html_ = thread_html(d, THREADS)
         else:

@@ -508,63 +508,22 @@ The *if* half uses the present — *if it **rains*** — and the other half uses
 
 Write true sentences about yourself. Use the words given each time.
 
-1. (a promise, with *won't*) _______________________________
-2. (If …, I will …) _______________________________
-3. (Unless …) _______________________________
-4. (When I am older, I will …) _______________________________
+::: jot
+- (a promise, with *won't*)
+- (If …, I will …)
+- (Unless …)
+- (When I am older, I will …)
+:::
 
 ---
 
-## Lesson 4 — Reading & Speaking
-
-### Greetings and cuisines around the world
-
-Every country says hello, and every country eats. Almost nothing about *how*
-they do it is the same.
-
-#### How people say hello
-
-Shaking hands is probably the commonest greeting on Earth: two people meet,
-take each other's right hand, and shake it once or twice. In the USA that
-handshake usually arrives with a word attached — people greet one another by
-saying **"Hello"**. But the hand is not the only part of the body that greets.
-In Thailand, a young person greeting an older one says **sawadee** and bows the
-head slightly at the same time. The Maori people of New Zealand press their
-noses together, so that two people share one breath. And in Japan nobody needs
-to touch at all: people bow, and how deeply they bow says how much respect they
-mean.
-
-None of these is polite everywhere. A greeting that is warm in one country can
-look strange, or even rude, in the next one — which is why careful visitors
-watch first and copy second.
-
-#### What people eat
-
-**Italy** is famous for two dishes the whole world now cooks. A pizza is a flat
-round base of bread baked with cheese, meat or vegetables on top; pasta comes
-in dozens of shapes and almost as many sauces. Italians are just as proud of
-their cheese, and they have plenty to be proud of — the country makes more than
-four hundred kinds. One of them is left out for flies to lay their eggs in, and
-its taste is not something visitors forget.
-
-**India** does not really have one cuisine; it has a great many. Curry — meat or
-vegetables cooked in a thick sauce and eaten with rice or bread — is common
-almost everywhere, but the sauce changes from region to region. In some areas
-most people prefer vegetarian food, while in others chicken, lamb or goat is
-normal. Beef, though, is generally avoided.
-
-Other countries are known for one dish above all the rest: **fish and chips** in
-England, **sushi** in Japan, **kimchi** in Korea.
-
-**Talk about it.** Would you rather eat Italian food or Indian food, and why?
-Then talk about the food where you live: the staple food and how often people
-eat it, your own favourite, and one food eaten on a special occasion.
+## Lesson 4 — Reading & Writing
 
 ### Reading — *The week our lane went back*
 
 *Tí writes down what happened on his lane after the tide turned on Tuesday.*
 
-::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
+::: clock mins="17" for="You have 17 minutes for the text and its questions."
 :::
 
 ::: passage label="A"
@@ -632,147 +591,6 @@ one of them, in different words.
 - making cloth by hand {weaving | pounded | print} = weaving
 - with no electricity left in it {flat | bad | cold} = flat
 - a deep hole in the ground that gives water {well | yard | step} = well
-:::
-
-### Speaking — How communities keep their traditions
-
-> **Working alone:** You have no partner, so do this in three steps.
-
-**Step 1 — Prepare.** Write short notes (not full sentences) for each question.
-
-| Question | Your notes |
-| --- | --- |
-| Which traditions does your family or village still keep? | |
-| Who teaches them to the younger generation? | |
-| Which tradition do you think will disappear first? Why? | |
-| What will happen if young people stop learning it? | |
-| What will you do to preserve one tradition you care about? | |
-
-**Step 2 — Speak.** Answer each question **aloud** from your notes, in full
-sentences. Use **will / won't** at least once in every answer, and at least
-one first conditional across the whole talk.
-
-**Step 3 — Record and check.** Record yourself on your phone. Listen back and
-check three things:
-
-- Did you keep *will* **out** of the *if* half — *if it **rains***, not *if it will rain*?
-- Did you pronounce /br/ and /pr/ differently in words like *celebrate* and
-  *preserve*?
-- Did your pauses fall **between** points rather than inside a sentence?
-
-Repeat Step 2 until each answer runs clearly from its first word to its last.
-
-### 4.4 Say it again, faster
-
-::: fluency mode="talk" secs="240|180|120" ask="Talk about how your life differs from your grandparents' at your age."
-- What they did at thirteen
-- What you do
-- One thing that is better now
-- One thing that was better then
-:::
-
-### Everyday English — Expressing certainty
-
-*A separate thing from the speaking above: a few short replies for saying yes
-with no doubt at all — or for saying you are not so sure. Learn them as they
-are.*
-
-#### Expressing certainty
-
-Someone asks you for something, or tells you something and waits for you to
-agree. If the answer is yes and you have no doubt at all, English has a set of
-short replies that say so:
-
-| Expressing certainty | Nghĩa |
-| --- | --- |
-| **Sure.** You're welcome. | Được chứ. Cứ tự nhiên. |
-| **Yes, certainly.** | Vâng, chắc chắn rồi. |
-| **Certainly.** I'll bring it tomorrow. | Chắc chắn rồi. Ngày mai mình mang đến. |
-| **Of course.** | Tất nhiên rồi. |
-| **Definitely.** | Chắc chắn luôn. |
-| **I'm sure it will.** | Mình chắc là sẽ như vậy. |
-| **No doubt about it.** | Không nghi ngờ gì nữa. |
-
-> **Ghi chú:** Hãy so sánh hai nhóm câu trả lời.
-> **Chắc chắn:** *Definitely. · Yes, certainly. · I'm sure it will.*
-> **Chưa chắc:** *I'm not so sure. · I doubt it. · We'll see. · Maybe.*
-> Nhóm thứ hai nằm ở bảng **Doubting** phía dưới. Chọn nhầm nhóm là người nghe
-> hiểu ngược lại điều bạn muốn nói.
-
-> ⚠️ **Bẫy thường gặp:** **"Sure."** đứng một mình rất thân thiện nhưng cũng
-> rất **suồng sã** — chỉ dùng với bạn bè, người thân. Khi nói với thầy cô,
-> người lớn, hoặc khi viết, hãy dùng **"Yes, certainly."** hay **"Of course."**
-
-#### Agreeing, hoping, doubting
-
-| Agreeing / hoping | Doubting |
-| --- | --- |
-| I think so too. | I doubt it. |
-| Exactly. | Do you really think so? |
-| I hope so. | I'm not so sure. |
-| You're probably right. | We'll see. |
-
-**Say it with someone.** Ask them to help you with your maths homework; they
-say yes with no doubt at all. Then tell them that Vietnamese people love
-seafood; they agree, and sound certain. Swap, and use a different reply each
-time — **Sure.**, **Yes, certainly.**, **Of course.** Then ask one question
-where the answer is *not* certain, and answer it from the **Doubting** column.
-
----
-
-## Lesson 5 — Listening & Writing
-
-### Listening — A neighbour weighs up the week
-
-You hear it **once**, read aloud by someone else, so read both sets of
-questions first, then answer while you listen rather than afterwards from memory.
-
-**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
-
-::: audio orientation="You will hear a man from the lane telling a visitor what the week was like, and what his neighbours now cannot agree about."
-Good evening. You want to know about our lane, so I will tell you honestly,
-and then you can decide for yourself.
-
-For six days there was no electricity here. Not a power cut — there was
-simply nothing to cut. Oil lamps in the windows and a well at the corner, the
-way it was when my mother was a girl.
-
-Some of it I loved. I slept properly for the first time in years. My
-neighbours came out after supper and sat with me on the step until it was
-late. Nobody stared at a small screen all evening. The children learned to
-make things with their hands.
-
-But my medicine has to stay cold, and for six days it was not cold. My sister
-is sixty-eight, and she filled two buckets at that well every morning. The
-market lost a whole morning of fish. And the students on this lane missed
-their lessons — every single one of them.
-
-Now we cannot agree. Half of us say that if this goes on, somebody will be
-seriously ill. The other half say that if it ends, we will go straight back to
-sitting alone in the blue light of a telephone.
-
-Nobody is asking what we will bring back next. We are asking what will happen
-to the life we already have.
-:::
-
-### 5.1 Listen and choose
-
-::: task skill="listening" type="multiple-choice"
-- The lane had no electricity for {six days | a whole morning | two days} = six days
-- In the evenings the neighbours {came out and sat together | stayed indoors | went to the market} = came out and sat together
-- The speaker's medicine {was not kept cold | ran out | cost too much} = was not kept cold
-- One half of the lane predicts that somebody will {be seriously ill | move away | lose money} = be seriously ill
-- The speaker says the lane is no longer asking {what they will bring back next | who called it back | where the well is} = what they will bring back next
-:::
-
-### 5.2 Listen and complete
-
-::: task skill="listening" type="sentence-completion"
-- The speaker says it was not a power ___ . {cut | lamp | well} = cut
-- The speaker slept ___ for the first time in years. {properly | late | honestly} = properly
-- The speaker's sister is ___ years old. {sixty-eight | sixty-six | eighty-six} = sixty-eight
-- His sister filled two ___ every morning. {buckets | lamps | windows} = buckets
-- The students on the lane missed their ___ . {lessons | supper | market} = lessons
 :::
 
 ### Writing — A paragraph about online learning
@@ -849,6 +667,190 @@ more convincing.
 - [ ] At least **one** sentence with *will* or *won't* ~ any:1 will/won't/will not
 - [ ] One side only — do not mix advantages and disadvantages
 :::
+
+---
+
+## Lesson 5 — Listening & Speaking
+
+### Listening — A neighbour weighs up the week
+
+You hear it **once**, read aloud by someone else, so read both sets of
+questions first, then answer while you listen rather than afterwards from memory.
+
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
+
+::: audio orientation="You will hear a man from the lane telling a visitor what the week was like, and what his neighbours now cannot agree about."
+Good evening. You want to know about our lane, so I will tell you honestly,
+and then you can decide for yourself.
+
+For six days there was no electricity here. Not a power cut — there was
+simply nothing to cut. Oil lamps in the windows and a well at the corner, the
+way it was when my mother was a girl.
+
+Some of it I loved. I slept properly for the first time in years. My
+neighbours came out after supper and sat with me on the step until it was
+late. Nobody stared at a small screen all evening. The children learned to
+make things with their hands.
+
+But my medicine has to stay cold, and for six days it was not cold. My sister
+is sixty-eight, and she filled two buckets at that well every morning. The
+market lost a whole morning of fish. And the students on this lane missed
+their lessons — every single one of them.
+
+Now we cannot agree. Half of us say that if this goes on, somebody will be
+seriously ill. The other half say that if it ends, we will go straight back to
+sitting alone in the blue light of a telephone.
+
+Nobody is asking what we will bring back next. We are asking what will happen
+to the life we already have.
+:::
+
+### 5.1 Listen and choose
+
+::: task skill="listening" type="multiple-choice"
+- The lane had no electricity for {six days | a whole morning | two days} = six days
+- In the evenings the neighbours {came out and sat together | stayed indoors | went to the market} = came out and sat together
+- The speaker's medicine {was not kept cold | ran out | cost too much} = was not kept cold
+- One half of the lane predicts that somebody will {be seriously ill | move away | lose money} = be seriously ill
+- The speaker says the lane is no longer asking {what they will bring back next | who called it back | where the well is} = what they will bring back next
+:::
+
+### 5.2 Listen and complete
+
+::: task skill="listening" type="sentence-completion"
+- The speaker says it was not a power ___ . {cut | lamp | well} = cut
+- The speaker slept ___ for the first time in years. {properly | late | honestly} = properly
+- The speaker's sister is ___ years old. {sixty-eight | sixty-six | eighty-six} = sixty-eight
+- His sister filled two ___ every morning. {buckets | lamps | windows} = buckets
+- The students on the lane missed their ___ . {lessons | supper | market} = lessons
+:::
+
+### Speaking — How communities keep their traditions
+
+> **Working alone:** You have no partner, so do this in three steps.
+
+**Step 1 — Prepare.** Write short notes (not full sentences) for each question.
+
+| Question | Your notes |
+| --- | --- |
+| Which traditions does your family or village still keep? | |
+| Who teaches them to the younger generation? | |
+| Which tradition do you think will disappear first? Why? | |
+| What will happen if young people stop learning it? | |
+| What will you do to preserve one tradition you care about? | |
+
+**Step 2 — Speak.** Answer each question **aloud** from your notes, in full
+sentences. Use **will / won't** at least once in every answer, and at least
+one first conditional across the whole talk.
+
+**Step 3 — Record and check.** Record yourself on your phone. Listen back and
+check three things:
+
+- Did you keep *will* **out** of the *if* half — *if it **rains***, not *if it will rain*?
+- Did you pronounce /br/ and /pr/ differently in words like *celebrate* and
+  *preserve*?
+- Did your pauses fall **between** points rather than inside a sentence?
+
+Repeat Step 2 until each answer runs clearly from its first word to its last.
+
+### 5.3 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about how your life differs from your grandparents' at your age."
+- What they did at thirteen
+- What you do
+- One thing that is better now
+- One thing that was better then
+:::
+
+### Greetings and cuisines around the world
+
+Every country says hello, and every country eats. Almost nothing about *how*
+they do it is the same.
+
+#### How people say hello
+
+Shaking hands is probably the commonest greeting on Earth: two people meet,
+take each other's right hand, and shake it once or twice. In the USA that
+handshake usually arrives with a word attached — people greet one another by
+saying **"Hello"**. But the hand is not the only part of the body that greets.
+In Thailand, a young person greeting an older one says **sawadee** and bows the
+head slightly at the same time. The Maori people of New Zealand press their
+noses together, so that two people share one breath. And in Japan nobody needs
+to touch at all: people bow, and how deeply they bow says how much respect they
+mean.
+
+None of these is polite everywhere. A greeting that is warm in one country can
+look strange, or even rude, in the next one — which is why careful visitors
+watch first and copy second.
+
+#### What people eat
+
+**Italy** is famous for two dishes the whole world now cooks. A pizza is a flat
+round base of bread baked with cheese, meat or vegetables on top; pasta comes
+in dozens of shapes and almost as many sauces. Italians are just as proud of
+their cheese, and they have plenty to be proud of — the country makes more than
+four hundred kinds. One of them is left out for flies to lay their eggs in, and
+its taste is not something visitors forget.
+
+**India** does not really have one cuisine; it has a great many. Curry — meat or
+vegetables cooked in a thick sauce and eaten with rice or bread — is common
+almost everywhere, but the sauce changes from region to region. In some areas
+most people prefer vegetarian food, while in others chicken, lamb or goat is
+normal. Beef, though, is generally avoided.
+
+Other countries are known for one dish above all the rest: **fish and chips** in
+England, **sushi** in Japan, **kimchi** in Korea.
+
+**Talk about it.** Would you rather eat Italian food or Indian food, and why?
+Then talk about the food where you live: the staple food and how often people
+eat it, your own favourite, and one food eaten on a special occasion.
+
+### Everyday English — Expressing certainty
+
+*A separate thing from the speaking above: a few short replies for saying yes
+with no doubt at all — or for saying you are not so sure. Learn them as they
+are.*
+
+#### Expressing certainty
+
+Someone asks you for something, or tells you something and waits for you to
+agree. If the answer is yes and you have no doubt at all, English has a set of
+short replies that say so:
+
+| Expressing certainty | Nghĩa |
+| --- | --- |
+| **Sure.** You're welcome. | Được chứ. Cứ tự nhiên. |
+| **Yes, certainly.** | Vâng, chắc chắn rồi. |
+| **Certainly.** I'll bring it tomorrow. | Chắc chắn rồi. Ngày mai mình mang đến. |
+| **Of course.** | Tất nhiên rồi. |
+| **Definitely.** | Chắc chắn luôn. |
+| **I'm sure it will.** | Mình chắc là sẽ như vậy. |
+| **No doubt about it.** | Không nghi ngờ gì nữa. |
+
+> **Ghi chú:** Hãy so sánh hai nhóm câu trả lời.
+> **Chắc chắn:** *Definitely. · Yes, certainly. · I'm sure it will.*
+> **Chưa chắc:** *I'm not so sure. · I doubt it. · We'll see. · Maybe.*
+> Nhóm thứ hai nằm ở bảng **Doubting** phía dưới. Chọn nhầm nhóm là người nghe
+> hiểu ngược lại điều bạn muốn nói.
+
+> ⚠️ **Bẫy thường gặp:** **"Sure."** đứng một mình rất thân thiện nhưng cũng
+> rất **suồng sã** — chỉ dùng với bạn bè, người thân. Khi nói với thầy cô,
+> người lớn, hoặc khi viết, hãy dùng **"Yes, certainly."** hay **"Of course."**
+
+#### Agreeing, hoping, doubting
+
+| Agreeing / hoping | Doubting |
+| --- | --- |
+| I think so too. | I doubt it. |
+| Exactly. | Do you really think so? |
+| I hope so. | I'm not so sure. |
+| You're probably right. | We'll see. |
+
+**Say it with someone.** Ask them to help you with your maths homework; they
+say yes with no doubt at all. Then tell them that Vietnamese people love
+seafood; they agree, and sound certain. Swap, and use a different reply each
+time — **Sure.**, **Yes, certainly.**, **Of course.** Then ask one question
+where the answer is *not* certain, and answer it from the **Doubting** column.
 
 ---
 
@@ -962,11 +964,11 @@ page can settle it, the row says so, and that one is yours to judge.
 | use the words for different lifestyles | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
 | hear /br/ and /pr/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
 | use *will* and the first conditional, *unless* included | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3, 6.4 and 6.5 |
-| say how certain I am | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| say how certain I am | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 5 with someone, and decide. |
 | read about a way of living that came back, and what it cost | Lesson 4, exercises 4.1 and 4.2 |
-| talk about keeping a traditional way of life | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| talk about keeping a traditional way of life | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
 | listen to somebody weighing up the good and bad sides of a way of living | Lesson 5, exercises 5.1 and 5.2 |
-| write a paragraph about the good or the bad side of online learning | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| write a paragraph about the good or the bad side of online learning | Lesson 4, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -986,22 +988,3 @@ page can settle it, the row says so, and that one is yours to judge.
 *brother, bright, bring, brush, celebrate, umbrella* — at the very start in the
 first four, and in the middle of *celebrate* and *umbrella* — and does not buzz
 on the **pr** of *practise, improve, price, print*.
-
-### Lesson 3
-
-**3.2** Answers will vary. Check: no *will* straight after *if*, *unless* or
-*when* (*if I **pass***, not *if I will pass*); no *don't* after *unless*; the
-plain verb after *will* / *won't* (*will **go***, not *will goes*); a comma only
-when the *if* half comes first.
-
-### Lesson 4
-
-**Speaking** Answers will vary. Check: *will/won't* in at least one sentence per
-question, at least one correct *if* sentence, and no *will* straight after
-*if* (*if it **rains***, not *if it will rain*).
-
-### Lesson 5
-
-**Writing** Answers will vary. Check: 80–100 words; one side only; the four
-ordering words; at least one *if* sentence with no *will* straight after *if*;
-at least four words from the Lesson 2 table.

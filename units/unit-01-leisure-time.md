@@ -452,45 +452,22 @@ Which shape you use depends on the **first** verb. There are three groups.
 
 Write true sentences about yourself. Use a different verb each time.
 
-1. (enjoy) _______________________________
-2. (can't stand) _______________________________
-3. (would love) _______________________________
-4. (don't mind) _______________________________
+::: jot
+- (enjoy)
+- (can't stand)
+- (would love)
+- (don't mind)
+:::
 
 ---
 
-## Lesson 4 — Reading & Speaking
-
-### Teens' leisure activities around the world
-
-Three teenagers, in three countries, spend their free time very differently —
-and each of them can say **why**.
-
-> **Sakura, 14 — Kyoto, Japan.** "I'm fond of origami, the art of paper folding.
-> I do it on my own, usually in the evening. With a few sheets of paper I can
-> make a bird, a flower, or a box. It costs almost nothing, and it makes me calm
-> when I have too much schoolwork."
->
-> **Eric, 13 — St. Gallen, Switzerland.** "I'm keen on snowboarding. My town is
-> near the mountains, so my parents take me to a ski resort most weekends in
-> winter. It's hard on the legs, but my balance has got much better since I
-> started."
->
-> **Lan, 14 — Quang Binh, Viet Nam.** "I'm crazy about badminton. My best friend
-> lives next door, so we play almost every afternoon in the yard. It's an easy
-> sport to start — you only need two rackets — and it takes the stress out of a
-> long school day."
-
-**Talk about it.** Which of the three would you most like to try, and why? Which
-one would you never take up — and how would you say so politely? Use an
-expression from Lesson 2 (*be keen on, be fond of, be crazy about, be into*).
-
+## Lesson 4 — Reading & Writing
 
 ### Reading — *The best afternoon of the year*
 
 *Tí, 13, writes about a Saturday in Bãi Sẻ.*
 
-::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
+::: clock mins="17" for="You have 17 minutes for the text and its questions."
 :::
 
 ::: passage
@@ -572,117 +549,70 @@ expression from Lesson 2 (*be keen on, be fond of, be crazy about, be into*).
 - the metal caps from drinks {bottle tops | counters | lid} = bottle tops
 :::
 
-### Speaking — Talking about your leisure time
+### Writing — An email about your leisure time
 
-> **Working alone:** You have no partner, so do this in four steps. It still
-> works — speaking practice is mostly about producing language out loud.
+**Task.** A friend from another country has asked what you do in your free
+time. Write an email of **80–100 words**.
 
-**Step 1 — Prepare.** Write short notes (not full sentences) for each question.
+#### One finished email — read it, then cover it
 
-| Question | Your notes |
+> Hi Ngọc,
+>
+> Thanks for your message! You asked what we do here at the weekend, so here
+> it is.
+>
+> Usually nothing. But last Saturday my friend found an old wooden board game
+> down on the harbour wall, and nine of us played it there until dark. His
+> grandmother came to shout and stayed for four games. I enjoy winning and I
+> can't stand losing, so I was not very polite.
+>
+> Sitting by the water is how I relax. I'd love to take up card games next.
+> Do you know a good one?
+>
+> Write soon,
+>
+> Thảo
+
+*(95 words)*
+
+#### Plan it — six questions your email has to answer
+
+Cover Thảo's email. Answer these in the right-hand column **in your own words**,
+in note form. The plan is yours; the sentences come later.
+
+| The question | Your answer (notes, not sentences) |
 | --- | --- |
+| Who are you writing to, and what did they ask? | |
 | What do you usually do in your free time? | |
-| Who do you spend your free time with? | |
-| Is there a hobby you would like to take up? | |
-| What kind of activity can't you stand? | |
-| How is your weekend different from your weekdays? | |
+| Who with, and when? | |
+| What is new this year, or what do you want to start? | |
+| What do you want to know back from them? | |
+| How do you close a message to a friend? | |
 
-**Step 2 — Speak.** Answer each question **aloud** from your notes, in full
-sentences. Use at least one verb of liking or disliking in every answer.
+::: bridge name="Use your own life to answer" trains="Task Response" cefr="B1" marker="[C] 3-0" src="05 §3.1"
+Plan with your own ideas, in your own words — not sentences copied from a list.
+Every one of your six notes should answer the question in the left-hand column.
 
-**Step 3 — Report back.** Pick **one** of the five questions and talk about it
-alone for 30 seconds, as if telling someone who was not there.
+Your own life is the best material you have, as long as it answers the question.
 
-**Step 4 — Record and check.** Record yourself on your phone. Listen back and
-check three things:
-
-- Did you use the right word after each liking verb (enjoy **playing**, would like **to play**)?
-- Did you pronounce /ʊ/ and /uː/ differently in words like *book* and *food*?
-- In Step 3, did every sentence serve the one subject you chose?
-
-::: bridge name="Talk about one thing per turn" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
-Before your 30-second turn in Step 3, say in a few words what the turn is
-**for** — *"the hobby I want to start"*, not *"my free time"*. Then leave out
-anything that does not fit it, however good the sentence is.
-
-Pause between your ideas — *"So that's the first thing."* — not in the middle of
-a sentence. One clear subject is easy for your listener to follow.
-
-> **Tiếng Việt:** Trước khi nói, chọn **một** chủ đề cho lượt nói và bỏ những câu
-> không liên quan. Dừng giữa các ý, không dừng giữa câu.
+> **Tiếng Việt:** Lập kế hoạch bằng ý và lời của chính mình, không chép mẫu câu.
+> Mỗi ghi chú phải trả lời đúng câu hỏi.
 :::
 
-Repeat Step 2 until you can answer all five clearly.
-
-### 4.4 Say it again, faster
-
-::: fluency mode="talk" secs="240|180|120" ask="Talk about **your own** free time — what you do, when, and what you can't stand. Use the words from this unit."
-- What you do on a weekday evening
-- What you do at the weekend
-- One thing you are keen on, and why
-- One thing you can't stand
+::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — the email to your friend, in **80–100 words**."
+- [ ] 80–100 words ~ words
+- [ ] Paragraphs, not one solid block ~ paras:2
+- [ ] A greeting at the top ~ any:1 hi/hello/dear
+- [ ] A sign-off at the end ~ any:1 best wishes/see you soon/see you/write soon/love/bye for now/take care/all the best
+- [ ] One question to your friend ~ re:1 \?
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] At least **three** verbs of liking or disliking ~ any:3 like/likes/love/loves/enjoy/enjoys/hate/hates/prefer/prefers/don't mind/do not mind/can't stand/cannot stand/adore/adores/dislike/dislikes/fancy/fancies/be into/am into/is into/are into
+- [ ] Each of those verbs has the right word after it — enjoy **playing**, but would like **to play**
 :::
-
-### Everyday English — Inviting, suggesting, and responding
-
-*A few fixed phrases for asking someone to join you. They fit the speaking
-above: next time you talk about your free time, invite someone to try it.*
-
-#### Inviting someone
-
-An **invitation** names a plan and asks the other person to join it. The two
-most common openings both take a different form after them:
-
-| Inviting | Nghĩa |
-| --- | --- |
-| **Would you like to** **come** to the cooking club with me on Sunday? | Bạn có muốn... không? |
-| **Do you fancy** **going** for a walk? | Bạn có thích... không? |
-| **Would you like to** **try** my home-made pizza? | Bạn có muốn thử... không? |
-
-> ⚠️ Would you like **to come**? but Do you fancy **coming**? — the same
-> rule as Lesson 3.
-
-#### Accepting an invitation
-
-| Accepting | Nghĩa |
-| --- | --- |
-| **I'd love to. Thanks.** | Mình rất muốn. Cảm ơn nhé. |
-| **That's great. Thanks.** | Tuyệt quá. Cảm ơn bạn. |
-| **Yes, I'd love to.** | Có chứ, mình rất muốn. |
-| **Sounds good — count me in.** | Nghe hay đấy — cho mình tham gia với. |
-
-> **Ghi chú:** Sau **I'd love to** thường không nhắc lại động từ. Người ta nói
-> *"I'd love to."* chứ không nói *"I'd love to come to the cooking club."*
-
-#### Suggesting something
-
-A **suggestion** proposes something for *both* of you, so it usually says *we*:
-
-| Making a suggestion | Nghĩa |
-| --- | --- |
-| How about **going** to the cinema? | Đi xem phim thì sao? |
-| Why don't we **try** that new café? | Sao chúng ta không thử...? |
-| Shall we **meet** at ten? | Chúng ta gặp lúc 10 giờ nhé? |
-
-> ⚠️ How about **going**? but Why don't we **go**? and Shall we **go**?
-
-| Accepting | Refusing politely |
-| --- | --- |
-| That sounds great. | I'd rather not, if that's OK. |
-| Good idea! | Sorry, I can't make it. |
-| I'd love to. | Maybe another time? |
-| Sure, why not? | I'm not really into that. |
-
-**Say it with someone.** Invite them to three things — to play badminton, to
-make paper flowers with you, to try your home-made pizza. They accept two and
-refuse one politely. Then swap. Use **Would you like to come**, **Do you fancy
-going** and **How about making** at least once each.
-
-
 
 ---
 
-## Lesson 5 — Listening & Writing
+## Lesson 5 — Listening & Speaking
 
 ### Listening — What Chú Bảy used to do
 
@@ -751,66 +681,135 @@ they are, you can trust your feeling that you heard something correctly.
 - He looked for it on that beach for ___ . {a month | a week | a wet season} = a month
 :::
 
-### Writing — An email about your leisure time
+### Speaking — Talking about your leisure time
 
-**Task.** A friend from another country has asked what you do in your free
-time. Write an email of **80–100 words**.
+> **Working alone:** You have no partner, so do this in four steps. It still
+> works — speaking practice is mostly about producing language out loud.
 
-#### One finished email — read it, then cover it
+**Step 1 — Prepare.** Write short notes (not full sentences) for each question.
 
-> Hi Ngọc,
->
-> Thanks for your message! You asked what we do here at the weekend, so here
-> it is.
->
-> Usually nothing. But last Saturday my friend found an old wooden board game
-> down on the harbour wall, and nine of us played it there until dark. His
-> grandmother came to shout and stayed for four games. I enjoy winning and I
-> can't stand losing, so I was not very polite.
->
-> Sitting by the water is how I relax. I'd love to take up card games next.
-> Do you know a good one?
->
-> Write soon,
->
-> Thảo
-
-*(95 words)*
-
-#### Plan it — six questions your email has to answer
-
-Cover Thảo's email. Answer these in the right-hand column **in your own words**,
-in note form. The plan is yours; the sentences come later.
-
-| The question | Your answer (notes, not sentences) |
+| Question | Your notes |
 | --- | --- |
-| Who are you writing to, and what did they ask? | |
 | What do you usually do in your free time? | |
-| Who with, and when? | |
-| What is new this year, or what do you want to start? | |
-| What do you want to know back from them? | |
-| How do you close a message to a friend? | |
+| Who do you spend your free time with? | |
+| Is there a hobby you would like to take up? | |
+| What kind of activity can't you stand? | |
+| How is your weekend different from your weekdays? | |
 
-::: bridge name="Use your own life to answer" trains="Task Response" cefr="B1" marker="[C] 3-0" src="05 §3.1"
-Plan with your own ideas, in your own words — not sentences copied from a list.
-Every one of your six notes should answer the question in the left-hand column.
+**Step 2 — Speak.** Answer each question **aloud** from your notes, in full
+sentences. Use at least one verb of liking or disliking in every answer.
 
-Your own life is the best material you have, as long as it answers the question.
+**Step 3 — Report back.** Pick **one** of the five questions and talk about it
+alone for 30 seconds, as if telling someone who was not there.
 
-> **Tiếng Việt:** Lập kế hoạch bằng ý và lời của chính mình, không chép mẫu câu.
-> Mỗi ghi chú phải trả lời đúng câu hỏi.
+**Step 4 — Record and check.** Record yourself on your phone. Listen back and
+check three things:
+
+- Did you use the right word after each liking verb (enjoy **playing**, would like **to play**)?
+- Did you pronounce /ʊ/ and /uː/ differently in words like *book* and *food*?
+- In Step 3, did every sentence serve the one subject you chose?
+
+::: bridge name="Talk about one thing per turn" trains="Fluency & Coherence" cefr="B1" marker="[C] 3-0" src="06 §2"
+Before your 30-second turn in Step 3, say in a few words what the turn is
+**for** — *"the hobby I want to start"*, not *"my free time"*. Then leave out
+anything that does not fit it, however good the sentence is.
+
+Pause between your ideas — *"So that's the first thing."* — not in the middle of
+a sentence. One clear subject is easy for your listener to follow.
+
+> **Tiếng Việt:** Trước khi nói, chọn **một** chủ đề cho lượt nói và bỏ những câu
+> không liên quan. Dừng giữa các ý, không dừng giữa câu.
 :::
 
-::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — the email to your friend, in **80–100 words**."
-- [ ] 80–100 words ~ words
-- [ ] Paragraphs, not one solid block ~ paras:2
-- [ ] A greeting at the top ~ any:1 hi/hello/dear
-- [ ] A sign-off at the end ~ any:1 best wishes/see you soon/see you/write soon/love/bye for now/take care/all the best
-- [ ] One question to your friend ~ re:1 \?
-- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
-- [ ] At least **three** verbs of liking or disliking ~ any:3 like/likes/love/loves/enjoy/enjoys/hate/hates/prefer/prefers/don't mind/do not mind/can't stand/cannot stand/adore/adores/dislike/dislikes/fancy/fancies/be into/am into/is into/are into
-- [ ] Each of those verbs has the right word after it — enjoy **playing**, but would like **to play**
+Repeat Step 2 until you can answer all five clearly.
+
+### 5.3 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about **your own** free time — what you do, when, and what you can't stand. Use the words from this unit."
+- What you do on a weekday evening
+- What you do at the weekend
+- One thing you are keen on, and why
+- One thing you can't stand
 :::
+
+### Teens' leisure activities around the world
+
+Three teenagers, in three countries, spend their free time very differently —
+and each of them can say **why**.
+
+> **Sakura, 14 — Kyoto, Japan.** "I'm fond of origami, the art of paper folding.
+> I do it on my own, usually in the evening. With a few sheets of paper I can
+> make a bird, a flower, or a box. It costs almost nothing, and it makes me calm
+> when I have too much schoolwork."
+>
+> **Eric, 13 — St. Gallen, Switzerland.** "I'm keen on snowboarding. My town is
+> near the mountains, so my parents take me to a ski resort most weekends in
+> winter. It's hard on the legs, but my balance has got much better since I
+> started."
+>
+> **Lan, 14 — Quang Binh, Viet Nam.** "I'm crazy about badminton. My best friend
+> lives next door, so we play almost every afternoon in the yard. It's an easy
+> sport to start — you only need two rackets — and it takes the stress out of a
+> long school day."
+
+**Talk about it.** Which of the three would you most like to try, and why? Which
+one would you never take up — and how would you say so politely? Use an
+expression from Lesson 2 (*be keen on, be fond of, be crazy about, be into*).
+
+### Everyday English — Inviting, suggesting, and responding
+
+*A few fixed phrases for asking someone to join you. They fit the speaking
+above: next time you talk about your free time, invite someone to try it.*
+
+#### Inviting someone
+
+An **invitation** names a plan and asks the other person to join it. The two
+most common openings both take a different form after them:
+
+| Inviting | Nghĩa |
+| --- | --- |
+| **Would you like to** **come** to the cooking club with me on Sunday? | Bạn có muốn... không? |
+| **Do you fancy** **going** for a walk? | Bạn có thích... không? |
+| **Would you like to** **try** my home-made pizza? | Bạn có muốn thử... không? |
+
+> ⚠️ Would you like **to come**? but Do you fancy **coming**? — the same
+> rule as Lesson 3.
+
+#### Accepting an invitation
+
+| Accepting | Nghĩa |
+| --- | --- |
+| **I'd love to. Thanks.** | Mình rất muốn. Cảm ơn nhé. |
+| **That's great. Thanks.** | Tuyệt quá. Cảm ơn bạn. |
+| **Yes, I'd love to.** | Có chứ, mình rất muốn. |
+| **Sounds good — count me in.** | Nghe hay đấy — cho mình tham gia với. |
+
+> **Ghi chú:** Sau **I'd love to** thường không nhắc lại động từ. Người ta nói
+> *"I'd love to."* chứ không nói *"I'd love to come to the cooking club."*
+
+#### Suggesting something
+
+A **suggestion** proposes something for *both* of you, so it usually says *we*:
+
+| Making a suggestion | Nghĩa |
+| --- | --- |
+| How about **going** to the cinema? | Đi xem phim thì sao? |
+| Why don't we **try** that new café? | Sao chúng ta không thử...? |
+| Shall we **meet** at ten? | Chúng ta gặp lúc 10 giờ nhé? |
+
+> ⚠️ How about **going**? but Why don't we **go**? and Shall we **go**?
+
+| Accepting | Refusing politely |
+| --- | --- |
+| That sounds great. | I'd rather not, if that's OK. |
+| Good idea! | Sorry, I can't make it. |
+| I'd love to. | Maybe another time? |
+| Sure, why not? | I'm not really into that. |
+
+**Say it with someone.** Invite them to three things — to play badminton, to
+make paper flowers with you, to try your home-made pizza. They accept two and
+refuse one politely. Then swap. Use **Would you like to come**, **Do you fancy
+going** and **How about making** at least once each.
 
 ---
 
@@ -916,26 +915,14 @@ page can settle it, the row says so, and that one is yours to judge.
 | use the words for leisure activities, and the expressions for saying what I like and dislike | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
 | hear /ʊ/ and /uː/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
 | use verbs of liking and disliking with the right verb after them (enjoy **reading**, would like **to read**) | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
-| invite someone, and accept an invitation | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| invite someone, and accept an invitation | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 5 with someone, and decide. |
 | read about an afternoon a family and friends spent playing together | Lesson 4, exercises 4.1 and 4.2 |
-| talk about my own leisure time with my family | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| talk about my own leisure time with my family | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
 | listen to someone describing how they spent their free time | Lesson 5, exercises 5.1 and 5.2 |
-| write an email about my leisure time | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| write an email about my leisure time | Lesson 4, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
 > xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
 > trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
 > đánh giá.
-
----
-
-## Answer Key
-
-> **Đáp án.** Chỉ xem sau khi đã tự làm bài.
-
-### Lesson 3
-
-**3.2** Answers will vary. Check the verb after each one: enjoy **reading**,
-can't stand **waiting**, would love **to go**, don't mind **helping**.
-

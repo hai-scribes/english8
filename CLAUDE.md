@@ -111,12 +111,16 @@ running every gate after each.
 ### Six lessons, and Communication is read, not tested
 
 Decided by the operator on 2026-09-27. A unit is **Getting Started · Words &
-Sounds · Grammar · Reading & Speaking · Listening & Writing · Looking Back &
-Project**; `BOOK_SECTION` in `tools/build.py` prints the book's own name under
-each, so the page and the printed book still line up in class. The book's
-Communication section has no lesson: its content block opens Lesson 4 and its
-Everyday English phrases close it. Neither carries a `:::task` or a numbered
-exercise, and the review queue no longer has a `function` kind. **Do not put
+Sounds · Grammar · Reading & Writing · Listening & Speaking · Looking Back &
+Project** — the skills paired by kind, *not* the book's Skills 1/Skills 2
+pairing (an earlier pass got this wrong). `BOOK_SECTION` in `tools/build.py`
+prints the book's own name under each, so the page and the printed book still
+line up in class. The book's Communication section has no lesson: its content
+block and its Everyday English phrases close Lesson 5, after the speaking.
+Lesson 4's reading keeps its clock, tasks and any read-again fluency; the
+writing follows it and has no marked tasks, so the clock never reaches it.
+Neither Communication half carries a `:::task` or a numbered exercise, and the
+review queue no longer has a `function` kind. **Do not put
 either back as a marked exercise**; the phrases get one unnumbered
 `**Say it with someone.**` paragraph built from the book's pair practice.
 
@@ -361,9 +365,9 @@ own exercises; ours has had only the first).
 nothing in it is published — see its `README.md` for what "recorded" means and
 why passages are described rather than reproduced.
 
-## Eleven directives, and what each one is for
+## Twelve directives, and what each one is for
 
-`:::bridge` makes an IELTS *claim*. The other ten make the app *behave* like
+`:::bridge` makes an IELTS *claim*. The other eleven make the app *behave* like
 IELTS, or make practice happen — see `README.md` for the full syntax.
 
 | | What it does | The rule it stops you breaking |
@@ -378,6 +382,7 @@ IELTS, or make practice happen — see `README.md` for the full syntax.
 | `:::fluency` | Repeated performance on known material against a shrinking clock | fluency practice as an activity in its own right, on material already known — which a printed instruction to "read it again, faster" never actually delivered |
 | `:::vocab` | New words are met a few at a time, then answered on, from a pool drawn fresh each run | B8: lexis pre-taught as a first-class step, not tabled |
 | `:::bank` | A practice pool: a fresh draw every run, least recently seen first, runs listed and never added up | a fixed drill retaken is a memory test of the first go; E3/E9 bound what a run may report |
+| `:::jot` | "About you": one box per prompt, kept on the device, never marked, with no answer to reveal | printed blanks nobody can type into, and an "Answers will vary" reveal for a question only the learner can answer |
 
 The right-hand column is **design rationale, not citation**. Where a cell reads
 like a code — **B8**, **D9**, **C1–C5** — it indexes the checklist in `09` §1

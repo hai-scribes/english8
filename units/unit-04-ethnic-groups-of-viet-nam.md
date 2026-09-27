@@ -583,60 +583,24 @@ Put a word for the container or the piece in front.
 Write true answers in full sentences. Then write **two more questions** you
 would like to ask a classmate from a different ethnic group.
 
-1. Where does your family live? _______________________________
-2. How many people are there in your home? _______________________________
-3. What traditional food does your family cook at Tet?
-   _______________________________
-4. Who does most of the cooking in your house? _______________________________
-5. Your question 1: _______________________________
-6. Your question 2: _______________________________
+::: jot
+- Where does your family live?
+- How many people are there in your home?
+- What traditional food does your family cook at Tet?
+- Who does most of the cooking in your house?
+- Your question 1:
+- Your question 2:
+:::
 
 ---
 
-## Lesson 4 — Reading & Speaking
-
-### Lifestyle of the ethnic minority groups
-
-Fifty-four ethnic groups live in Viet Nam. Fifty-three of them are called
-**ethnic minorities**, and together they make up roughly **13%** of the
-country's people — about one person in eight. Most of them live in the
-**mountains**: the high north, the long chain of hills down the middle of the
-country, and the Central Highlands. That is why so many of the words in this
-unit are about slopes, wood, weather and animals.
-
-Living in the mountains shapes everything else. Flat ground is scarce, so rice
-is grown on terraced fields. Rain is heavy, so houses stand on posts. Villages
-are far apart, so each one needs a communal house of its own. And because a
-family cannot buy everything it needs, it grows, weaves, carves or raises most
-of it.
-
-#### One group: the Jrai
-
-> **The Jrai.** In 2019 there were **513,930** Jrai people, which makes them the
-> largest minority group in the Central Highlands. Most of them live in **Gia
-> Lai**. They build **stilt houses**, and they live from the land in several
-> ways at once: they grow food crops, they weave, they plant industrial trees
-> such as coffee, cacao and rubber, and they raise buffaloes and elephants.
-> Their traditional culture is rich in folk dances, folk songs, games and
-> musical instruments. Inside a Jrai family, it is the **women** who hold the
-> dominant role.
-
-Two details there are worth stopping on. First, the Jrai economy is not one
-job but four, and each one answers a different risk: a bad harvest does not
-empty the house if there is cloth to sell. Second, the elephants are not
-decoration — they were, and in places still are, working animals.
-
-**Talk about it.** Which fact about the Jrai surprised you most, and why? The
-Jrai earn a living in four ways — which one would you like to learn? Begin
-with *I think …* or *In my opinion …*; there are more ways to say it at the
-end of this lesson.
-
+## Lesson 4 — Reading & Writing
 
 ### Reading — *The house that stands on legs*
 
 *Tí, 13, writes down the Saturday he went up the river with ten questions.*
 
-::: clock mins="18" for="You have 18 minutes for the text and every exercise below it."
+::: clock mins="18" for="You have 18 minutes for the text and its questions."
 :::
 
 ::: passage label="A"
@@ -719,6 +683,114 @@ Questions rarely use the same words as the text, so look for the meaning.
 > với mỗi cụm từ. Làm càng nhanh càng tốt.
 :::
 
+### Writing — A paragraph about what you do for your family
+
+**Task.** Your class is making a booklet called *At home, I help*. Write a
+paragraph of **80–100 words** about what you do for your family. Say what you do
+every day, what you do at the weekend, and how you feel about it.
+
+#### Model paragraph — read this first
+
+> In my family everyone has a job to do, and mine is not the hardest one. Every
+> morning I sweep the yard and feed the chickens before school. After dinner I
+> carry the water in and wash the bowls, because my grandmother's knees hurt on
+> the stairs. At the weekend I go with her to the market and carry the heavy
+> baskets home. She is teaching me to weave bamboo in the traditional way,
+> because it is an old custom here. My baskets are still crooked, but she says I
+> ask better questions than I did.
+
+*(96 words)*
+
+#### Plan it — 5 questions your paragraph has to answer
+
+Cover the finished paragraph above. Answer in note form, in your own words.
+
+| The question | Your answer — notes, in your own words |
+| --- | --- |
+| What is the one thing this paragraph is about? | |
+| Two or three jobs you do daily — and when? | |
+| One bigger or different job — and when? | |
+| One job you do **with** or **for** someone else in the family | |
+| How do you feel about it, or what are you still learning to do? | |
+
+::: bridge name="Mark each noun C or U first" trains="Grammatical Range & Accuracy" cefr="B1" marker="[S]" src="07 §4.4"
+Before you write, mark every noun in your plan **C** (countable) or **U**
+(uncountable). That tells you whether it takes *a / an / the / some / much /
+many* or no article at all.
+
+Decide once, and a dozen small choices are made for you.
+
+> **Tiếng Việt:** Trước khi viết, đánh dấu mọi danh từ là **đếm được (C)** hay
+> **không đếm được (U)** — điều đó quyết định mạo từ và lượng từ đi kèm.
+:::
+
+::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — a paragraph of **80–100 words** for the *At home, I help* booklet."
+- [ ] 80–100 words ~ words
+- [ ] One paragraph, no headings, no bullet points ~ para:1
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] At least one word like *rice*, *water* or *advice* ~ any:1 rice/food/water/clothing/advice/furniture/homework/money/work
+- [ ] …with no *a* and no *-s* on it — no *a rice*, no *advices* ~ none a rice/a food/a water/a clothing/an advice/a furniture/a homework/a money/rices/foods/waters/clothings/advices/furnitures/homeworks/moneys
+- [ ] At least one time expression ~ any:1 every morning/every day/every evening/every night/every week/after dinner/after school/before school/at the weekend/in the evening/in the morning/on sundays/at night
+- [ ] Present simple throughout — check the **-s** on *he / she / it* yourself, one verb at a time
+:::
+
+---
+
+## Lesson 5 — Listening & Speaking
+
+### Listening — Bà Sáu answers the four questions
+
+You hear it **once**, read aloud by someone else, so read both sets of
+questions first, then answer while you listen. The questions come in the
+order you hear the answers.
+
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
+
+::: audio orientation="You will hear a grandmother taking a boy's four project questions one at a time, and telling him what she knows about the families who lived along one stretch of the river."
+Read them out again. Slowly. Do you think I am deaf? I am old, not deaf.
+
+Who lived there? That one I can answer. I can name every family on that stretch
+of the river, because my mother came from it and she said the names to me until
+I could say them in my sleep. Above the ford there stood nine houses, and I know
+all nine.
+
+How many people? In a house of that size, ten or eleven. But you tell me there
+were three baskets on the floor. How many baskets does a family of eleven wear
+out in a year, child? More than three. That is none of my nine.
+
+How much rice? Nobody along there ever grew enough to sell — enough for the
+year and no more. And how much rice does a family of eleven eat in a year, do
+you think? So a family with rice to spare is not a family my mother ever told me
+about.
+
+How many years? Now stop. You are asking how long a house stood that nobody
+remembers standing, and I am telling you it did not stand there, not in my
+mother's time and not in hers.
+
+One thing, and then go and eat. My mother said the people above the ford held
+a festival in the ninth month. Three days of it, with gongs. Nobody has held
+it since before I was born, and nobody left can tell you what it was for.
+:::
+
+### 5.1 Listen and choose
+
+::: task skill="listening" type="multiple-choice"
+- She learned the names of the families from {her mother | the people at the ford | the festival} = her mother
+- Above the ford there stood {nine houses | three houses | eleven houses} = nine houses
+- She says the number of baskets is wrong for a household of {ten or eleven | three | nine} = ten or eleven
+- Families along that stretch of the river grew rice {for the year and no more | to sell at the market | only in a bad year} = for the year and no more
+- She believes the house the boy describes {was never one of the nine | burned down | belonged to her mother} = was never one of the nine
+:::
+
+### 5.2 Listen and complete
+
+::: task skill="listening" type="sentence-completion"
+- She heard the names until she could say them in her ___ . {sleep | time | year} = sleep
+- A family with rice to ___ is not one her mother knew. {spare | eat | grow} = spare
+- Nobody has held the festival since before she was ___ . {born | deaf} = born
+- The festival was held in the ___ month of the year. {ninth | third | eleventh} = ninth
+:::
+
 ### Speaking — Talking about homes
 
 > **Working alone:** You have no partner, so do this in three steps.
@@ -760,7 +832,7 @@ A one-sentence answer makes your partner think of a new question every time.
 :::
 
 
-### 4.4 Say it again, faster
+### 5.3 Say it again, faster
 
 ::: fluency mode="talk" secs="240|180|120" ask="Talk about a group of people in Viet Nam and how they live."
 - Where they live
@@ -768,6 +840,42 @@ A one-sentence answer makes your partner think of a new question every time.
 - One custom of theirs
 - Why it is worth knowing about
 :::
+
+### Lifestyle of the ethnic minority groups
+
+Fifty-four ethnic groups live in Viet Nam. Fifty-three of them are called
+**ethnic minorities**, and together they make up roughly **13%** of the
+country's people — about one person in eight. Most of them live in the
+**mountains**: the high north, the long chain of hills down the middle of the
+country, and the Central Highlands. That is why so many of the words in this
+unit are about slopes, wood, weather and animals.
+
+Living in the mountains shapes everything else. Flat ground is scarce, so rice
+is grown on terraced fields. Rain is heavy, so houses stand on posts. Villages
+are far apart, so each one needs a communal house of its own. And because a
+family cannot buy everything it needs, it grows, weaves, carves or raises most
+of it.
+
+#### One group: the Jrai
+
+> **The Jrai.** In 2019 there were **513,930** Jrai people, which makes them the
+> largest minority group in the Central Highlands. Most of them live in **Gia
+> Lai**. They build **stilt houses**, and they live from the land in several
+> ways at once: they grow food crops, they weave, they plant industrial trees
+> such as coffee, cacao and rubber, and they raise buffaloes and elephants.
+> Their traditional culture is rich in folk dances, folk songs, games and
+> musical instruments. Inside a Jrai family, it is the **women** who hold the
+> dominant role.
+
+Two details there are worth stopping on. First, the Jrai economy is not one
+job but four, and each one answers a different risk: a bad harvest does not
+empty the house if there is cloth to sell. Second, the elephants are not
+decoration — they were, and in places still are, working animals.
+
+**Talk about it.** Which fact about the Jrai surprised you most, and why? The
+Jrai earn a living in four ways — which one would you like to learn? Begin
+with *I think …* or *In my opinion …*; there are more ways to say it at the
+end of this lesson.
 
 ### Everyday English — Giving opinions
 
@@ -845,114 +953,6 @@ games?*, then the same about living close to nature. They answer each with a
 different opening — **I think**, **In my opinion**, **To my way of thinking** —
 and a reason, then turn it round: **What about you? What do you think?** Answer
 back, and disagree politely at least once. Then swap.
-
----
-
-## Lesson 5 — Listening & Writing
-
-### Listening — Bà Sáu answers the four questions
-
-You hear it **once**, read aloud by someone else, so read both sets of
-questions first, then answer while you listen. The questions come in the
-order you hear the answers.
-
-**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
-
-::: audio orientation="You will hear a grandmother taking a boy's four project questions one at a time, and telling him what she knows about the families who lived along one stretch of the river."
-Read them out again. Slowly. Do you think I am deaf? I am old, not deaf.
-
-Who lived there? That one I can answer. I can name every family on that stretch
-of the river, because my mother came from it and she said the names to me until
-I could say them in my sleep. Above the ford there stood nine houses, and I know
-all nine.
-
-How many people? In a house of that size, ten or eleven. But you tell me there
-were three baskets on the floor. How many baskets does a family of eleven wear
-out in a year, child? More than three. That is none of my nine.
-
-How much rice? Nobody along there ever grew enough to sell — enough for the
-year and no more. And how much rice does a family of eleven eat in a year, do
-you think? So a family with rice to spare is not a family my mother ever told me
-about.
-
-How many years? Now stop. You are asking how long a house stood that nobody
-remembers standing, and I am telling you it did not stand there, not in my
-mother's time and not in hers.
-
-One thing, and then go and eat. My mother said the people above the ford held
-a festival in the ninth month. Three days of it, with gongs. Nobody has held
-it since before I was born, and nobody left can tell you what it was for.
-:::
-
-### 5.1 Listen and choose
-
-::: task skill="listening" type="multiple-choice"
-- She learned the names of the families from {her mother | the people at the ford | the festival} = her mother
-- Above the ford there stood {nine houses | three houses | eleven houses} = nine houses
-- She says the number of baskets is wrong for a household of {ten or eleven | three | nine} = ten or eleven
-- Families along that stretch of the river grew rice {for the year and no more | to sell at the market | only in a bad year} = for the year and no more
-- She believes the house the boy describes {was never one of the nine | burned down | belonged to her mother} = was never one of the nine
-:::
-
-### 5.2 Listen and complete
-
-::: task skill="listening" type="sentence-completion"
-- She heard the names until she could say them in her ___ . {sleep | time | year} = sleep
-- A family with rice to ___ is not one her mother knew. {spare | eat | grow} = spare
-- Nobody has held the festival since before she was ___ . {born | deaf} = born
-- The festival was held in the ___ month of the year. {ninth | third | eleventh} = ninth
-:::
-
-### Writing — A paragraph about what you do for your family
-
-**Task.** Your class is making a booklet called *At home, I help*. Write a
-paragraph of **80–100 words** about what you do for your family. Say what you do
-every day, what you do at the weekend, and how you feel about it.
-
-#### Model paragraph — read this first
-
-> In my family everyone has a job to do, and mine is not the hardest one. Every
-> morning I sweep the yard and feed the chickens before school. After dinner I
-> carry the water in and wash the bowls, because my grandmother's knees hurt on
-> the stairs. At the weekend I go with her to the market and carry the heavy
-> baskets home. She is teaching me to weave bamboo in the traditional way,
-> because it is an old custom here. My baskets are still crooked, but she says I
-> ask better questions than I did.
-
-*(96 words)*
-
-#### Plan it — 5 questions your paragraph has to answer
-
-Cover the finished paragraph above. Answer in note form, in your own words.
-
-| The question | Your answer — notes, in your own words |
-| --- | --- |
-| What is the one thing this paragraph is about? | |
-| Two or three jobs you do daily — and when? | |
-| One bigger or different job — and when? | |
-| One job you do **with** or **for** someone else in the family | |
-| How do you feel about it, or what are you still learning to do? | |
-
-::: bridge name="Mark each noun C or U first" trains="Grammatical Range & Accuracy" cefr="B1" marker="[S]" src="07 §4.4"
-Before you write, mark every noun in your plan **C** (countable) or **U**
-(uncountable). That tells you whether it takes *a / an / the / some / much /
-many* or no article at all.
-
-Decide once, and a dozen small choices are made for you.
-
-> **Tiếng Việt:** Trước khi viết, đánh dấu mọi danh từ là **đếm được (C)** hay
-> **không đếm được (U)** — điều đó quyết định mạo từ và lượng từ đi kèm.
-:::
-
-::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — a paragraph of **80–100 words** for the *At home, I help* booklet."
-- [ ] 80–100 words ~ words
-- [ ] One paragraph, no headings, no bullet points ~ para:1
-- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
-- [ ] At least one word like *rice*, *water* or *advice* ~ any:1 rice/food/water/clothing/advice/furniture/homework/money/work
-- [ ] …with no *a* and no *-s* on it — no *a rice*, no *advices* ~ none a rice/a food/a water/a clothing/an advice/a furniture/a homework/a money/rices/foods/waters/clothings/advices/furnitures/homeworks/moneys
-- [ ] At least one time expression ~ any:1 every morning/every day/every evening/every night/every week/after dinner/after school/before school/at the weekend/in the evening/in the morning/on sundays/at night
-- [ ] Present simple throughout — check the **-s** on *he / she / it* yourself, one verb at a time
-:::
 
 ---
 
@@ -1064,11 +1064,11 @@ page can settle it, the row says so, and that one is yours to judge.
 | use the words for the way ethnic groups live | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
 | hear /k/ and /ɡ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
 | ask questions (*Do you…? Where do you…? Who lives…?*) and use *how many*, *how much*, *a few* and *a little* | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
-| give my opinion | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| give my opinion | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 5 with someone, and decide. |
 | read about a stilt house and how one is built | Lesson 4, exercises 4.1 and 4.2 |
-| talk about the kind of home I live in | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| talk about the kind of home I live in | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
 | listen to someone answering questions about how a family lived | Lesson 5, exercises 5.1 and 5.2 |
-| write a paragraph about the things I do for my family | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| write a paragraph about the things I do for my family | Lesson 4, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1087,22 +1087,3 @@ page can settle it, the row says so, and that one is yours to judge.
 **2.3** Answers will vary. Check: the bold letters in *goat, group, grandmother*
 buzz (put a hand on your throat), while *coat, cave, customs, costumes, basket*
 are silent at the throat and start with a small puff of air.
-
-### Lesson 3
-
-**3.2** Answers will vary. Check: every answer is a full sentence with the
-**-s** where it is needed (*My mother **cooks**…*); and your two new questions
-look like *Where **do** you **live**?* — unless *who* is the one doing it, as in
-*Who **cooks**…?*, which takes no *do / does*.
-
-### Lesson 4
-
-**Speaking** Answers will vary. Check: you said *Where **do** you live?* with
-*do* in the right place, *Who **lives** here?* with no *do*, and *How many
-rooms* but *How much rice*.
-
-### Lesson 5
-
-**Writing** Answers will vary. Check: 80–100 words, one paragraph, present
-simple with correct third-person **-s**, at least four Lesson 2 words, and one
-uncountable noun used with no plural *-s*.

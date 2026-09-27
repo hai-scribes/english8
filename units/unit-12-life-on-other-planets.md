@@ -523,61 +523,23 @@ then the verb.
 Yesterday five different people asked you these questions. Report each one in a
 full sentence, using *asked me*.
 
-1. Your friend: "What do you want to be?"
-   → _______________________________________________
-2. Your teacher: "Did you finish your homework?"
-   → _______________________________________________
-3. A younger cousin: "Are there really aliens?"
-   → _______________________________________________
-4. Your neighbour: "Where are you going?"
-   → _______________________________________________
-5. Your mother: "Why are you awake so late?"
-   → _______________________________________________
+::: jot
+- Your friend: "What do you want to be?" → My friend asked me
+- Your teacher: "Did you finish your homework?" → My teacher asked me
+- A younger cousin: "Are there really aliens?" → My cousin asked me
+- Your neighbour: "Where are you going?" → My neighbour asked me
+- Your mother: "Why are you awake so late?" → My mother asked me
+:::
 
 ---
 
-## Lesson 4 — Reading & Speaking
-
-### Three planets in the solar system
-
-Three of our neighbours, in three short fact-files. Read them once, then cover
-them and see how much you can still say.
-
-> **MERCURY**
-> The smallest of the eight planets, and the one that sits closest to the Sun.
-> It travels alone: not a single moon goes round it. Standing on the daytime
-> side would roast you, and yet the night side turns bitterly cold, because
-> there is no atmosphere to hold the heat in. That missing air has one other
-> effect worth knowing — with no air, there is no wind and no weather of any
-> kind. Nothing on Mercury has ever blown, rained or snowed.
-
-> **JUPITER**
-> The giant of the family. Jupiter is the largest planet by a long way, and
-> about sixty-three moons travel round it, so it is more like a small solar
-> system of its own. It is also the stormiest place we know: enormous storms
-> turn in its clouds for years at a time. Even from here it is easy to find,
-> because after the Moon and Venus it is the third brightest object in the
-> night sky.
-
-> **VENUS**
-> Our nearest neighbour in size — Venus is very nearly as big as the Earth, and
-> people once called it our twin. The likeness stops at the surface. Venus is
-> the hottest planet of all, hotter even than Mercury, and like Mercury it has
-> no moon. Look east just before sunrise and you may see a steady white point
-> hanging low above the fields. That is Venus, and it is why people have called
-> it the **morning star** for thousands of years.
-
-**Talk about it.** Cover the fact-files and tell someone about one of the three
-planets for about thirty seconds. Start like this, then keep going from memory:
-*I would like to tell you about Mercury. It is the smallest planet, and…* Give
-at least three facts, and say one thing that surprised you.
-
+## Lesson 4 — Reading & Writing
 
 ### Reading — *The twelfth mark*
 
 *Tí, 13, writes about the twelfth and last time the sea came back.*
 
-::: clock mins="20" for="You have 20 minutes for the text and every exercise below it."
+::: clock mins="20" for="You have 20 minutes for the text and its questions."
 :::
 
 ::: passage
@@ -687,33 +649,6 @@ is true.
 > **Not Given**, kể cả khi bạn biết điều đó đúng.
 :::
 
-### Speaking — What does a planet need for life?
-
-> **Working alone:** you have no partner, so do this in three steps.
-
-**Step 1 — Prepare.** Write short notes (not full sentences) for each
-question.
-
-| Question | Your notes |
-| --- | --- |
-| What are the four most important conditions for life? | |
-| Which of them does Mars already have? | |
-| Which does Mars **not** have? | |
-| Do you think there is life somewhere else in the galaxy? | |
-| If a spacecraft could take you to one planet, which would it be, and why? | |
-
-**Step 2 — Speak.** Answer each question **aloud** from your notes, in full
-sentences. In your first answer, say a **list of at least four items**.
-
-**Step 3 — Record and check.** Record yourself on your phone. Listen back and
-check three things:
-
-- In your list, did every item **except the last** rise ↗, and the last one **fall ↘**?
-- Did you use at least four words from the Lesson 2 vocabulary table?
-- Did your pauses fall **between** points rather than inside a sentence?
-
-Repeat Step 2 until each answer runs clearly from its first word to its last.
-
 ### 4.4 Read it again, against the clock
 
 Read the same text again, a little faster each time.
@@ -722,134 +657,6 @@ Read the same text again, a little faster each time.
 - Do not stop to look anything up — you have met all of it
 - Read for the sense of it, not word by word
 - Press **I finished** the moment you reach the last line
-:::
-
-### 4.5 Say it again, faster
-
-::: fluency mode="talk" secs="240|180|120" ask="Talk about living somewhere other than Earth."
-- Which planet, and why
-- What you would need to survive
-- What you would miss
-- Whether you would actually go
-:::
-
-### Everyday English — Expressing uncertainty
-
-*A few fixed phrases for saying how sure you are — and above all how unsure.
-They fit the speaking above: nobody knows whether there is life somewhere else
-in the galaxy, so when you answer, say how sure you are, then say why.*
-
-#### The two you need most — and the reason that follows them
-
-These are the two answers you will give again and again. On their own they
-sound like a shrug. Say the phrase, then say **why**, and it becomes a real
-answer:
-
-| Someone asks | You answer |
-| --- | --- |
-| Do you think Mars can support life? | I'm not sure about it. Scientists are still looking for water there. |
-| Do you think Ha will win on Saturday? | I doubt it. She hurt her arm last week. |
-| Will the rocket launch on Friday? | I'm not sure about it. The weather forecast is bad. |
-| Can that photograph really be a UFO? | I doubt it. It looks exactly like a plane at night. |
-
-> **Ghi chú:** Công thức là **cụm từ + lý do**. *I'm not sure about it.* dùng
-> khi bạn **chưa biết**, còn *I doubt it.* dùng khi bạn **nghiêng về "không"**.
-> Cả hai đều kết thúc bằng **it** — đừng thêm tân ngữ dài phía sau:
-> ❌ *I doubt it that Mars has life.* ✅ *I doubt it. Mars is far too cold.*
-
-#### Not sure
-
-| Not sure | Nghĩa |
-| --- | --- |
-| It's **possible that** life began in water. | Có khả năng là… |
-| There **may / might be** creatures we can't see. | Có thể có… |
-| I **suppose** so. | Tôi cho là vậy. |
-| It **depends on** the temperature. | Còn tuỳ vào… |
-| I'm **not certain**. | Tôi không chắc lắm. |
-
-#### Doubting
-
-| Doubting | Nghĩa |
-| --- | --- |
-| I **doubt it**. | Tôi không nghĩ vậy đâu. |
-| I'm **not convinced**. | Tôi thấy chưa thuyết phục lắm. |
-| **Surely not!** | Không thể nào! |
-| That **can't be** right. | Điều đó không thể đúng được. |
-
-#### Very sure
-
-| Very sure | Nghĩa |
-| --- | --- |
-| I'm **certain** there's life out there. | Tôi chắc chắn là… |
-| There's **definitely** water under the ice. | Chắc chắn là… |
-| It **must be** true — look at the photographs. | Chắc hẳn là… |
-
-**Say it with someone.** They ask you three things, and you answer each one
-with the phrase first and the reason after it: whether there is water on Mars,
-whether a friend of yours will get a good mark in the English test, and whether
-the weather will be fine tomorrow. Say **I'm not sure about it.** for two of
-them and **I doubt it.** for one. Then swap.
-
----
-
-## Lesson 5 — Listening & Writing
-
-### Listening — The man at the far end
-
-You hear it **once**, read aloud by someone else. Read both sets of questions
-first, then answer while you listen.
-
-**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
-
-::: audio orientation="You will hear one speaker at the end of a long walk, replying to the visitors who have come to find him and saying what he intends to do with what they have carried to him."
-Sit down, all of you. You walked nine days to give me back a thing I put down
-myself, so the least I can do is answer you in order.
-
-The girl asked me first why I never came home. Because the line only opens
-from this end. If I let go of it, every lost thing still travelling will stop
-where it is, halfway, for ever. That is the whole answer, and it is not a brave
-one.
-
-The boy asked whether I was angry about the twelve marks. I am not. I asked
-him what he had spent them on, and he told me the lot: a game, a path, a
-friend, a house, a festival, a way of living, a reef, a market, a town, a
-voice and a workroom. Eleven. And then a name. I would spend them worse.
-
-Minh asked me the one none of the others would ask out loud. He wanted to know
-how long a person who has been called back is allowed to stay. As long as
-somebody keeps a good hold of who he was — that is the whole of it, and I am
-told the boy beside him has never in his life forgotten a face. So he stays.
-He will be thirteen a good while yet, which is a strange thing to be, and I
-have nothing that mends it and nothing that needs mending.
-
-Somebody asked whether the marks can be made again. They cannot. The line was
-never yours, and it is not mine either — I only hold it open. It closes behind
-me tonight, and the water goes out with me, and by morning the wall will be dry.
-
-And the girl asked me nothing at all, which is how I knew she had it back. Sao.
-I am sorry it took so long to reach her.
-:::
-
-### 5.1 Listen and choose
-
-::: task skill="listening" type="multiple-choice"
-- The speaker says his visitors walked {nine days | eleven days | twelve days} = nine days
-- He says the line only opens {from this end | from both ends | halfway} = from this end
-- He says he is {not angry about the twelve marks | angry about the twelve marks | unable to remember the twelve marks} = not angry about the twelve marks
-- About the way the marks were spent, he says he would spend them {worse | better | exactly the same} = worse
-- He says the marks {cannot be made again | can be made again | will close behind him tonight} = cannot be made again
-- He knew Sao had her name back because she {asked him nothing | asked him how long Minh could stay | asked him whether he was angry} = asked him nothing
-:::
-
-### 5.2 Listen and complete
-
-::: task skill="listening" type="sentence-completion"
-- He says the least he can do is answer them in ___ . {order | the end | a good while} = order
-- Every lost thing still travelling will ___ where it is. {stop | close | go out} = stop
-- The boy's list began with a game, a path and a ___ . {friend | house | reef} = friend
-- By morning, he says, the harbour ___ will be dry. {wall | line | workroom} = wall
-- The line closes behind him ___ . {tonight | first | halfway} = tonight
-- He is sorry it took so long to ___ her. {reach | mend | hold} = reach
 :::
 
 ### Writing — A descriptive paragraph about aliens
@@ -917,6 +724,195 @@ Keep a detail only if it supports the first impression you opened with.
 - [ ] At least **six** descriptive adjectives
 - [ ] One strange detail nobody else would think of
 :::
+
+---
+
+## Lesson 5 — Listening & Speaking
+
+### Listening — The man at the far end
+
+You hear it **once**, read aloud by someone else. Read both sets of questions
+first, then answer while you listen.
+
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
+
+::: audio orientation="You will hear one speaker at the end of a long walk, replying to the visitors who have come to find him and saying what he intends to do with what they have carried to him."
+Sit down, all of you. You walked nine days to give me back a thing I put down
+myself, so the least I can do is answer you in order.
+
+The girl asked me first why I never came home. Because the line only opens
+from this end. If I let go of it, every lost thing still travelling will stop
+where it is, halfway, for ever. That is the whole answer, and it is not a brave
+one.
+
+The boy asked whether I was angry about the twelve marks. I am not. I asked
+him what he had spent them on, and he told me the lot: a game, a path, a
+friend, a house, a festival, a way of living, a reef, a market, a town, a
+voice and a workroom. Eleven. And then a name. I would spend them worse.
+
+Minh asked me the one none of the others would ask out loud. He wanted to know
+how long a person who has been called back is allowed to stay. As long as
+somebody keeps a good hold of who he was — that is the whole of it, and I am
+told the boy beside him has never in his life forgotten a face. So he stays.
+He will be thirteen a good while yet, which is a strange thing to be, and I
+have nothing that mends it and nothing that needs mending.
+
+Somebody asked whether the marks can be made again. They cannot. The line was
+never yours, and it is not mine either — I only hold it open. It closes behind
+me tonight, and the water goes out with me, and by morning the wall will be dry.
+
+And the girl asked me nothing at all, which is how I knew she had it back. Sao.
+I am sorry it took so long to reach her.
+:::
+
+### 5.1 Listen and choose
+
+::: task skill="listening" type="multiple-choice"
+- The speaker says his visitors walked {nine days | eleven days | twelve days} = nine days
+- He says the line only opens {from this end | from both ends | halfway} = from this end
+- He says he is {not angry about the twelve marks | angry about the twelve marks | unable to remember the twelve marks} = not angry about the twelve marks
+- About the way the marks were spent, he says he would spend them {worse | better | exactly the same} = worse
+- He says the marks {cannot be made again | can be made again | will close behind him tonight} = cannot be made again
+- He knew Sao had her name back because she {asked him nothing | asked him how long Minh could stay | asked him whether he was angry} = asked him nothing
+:::
+
+### 5.2 Listen and complete
+
+::: task skill="listening" type="sentence-completion"
+- He says the least he can do is answer them in ___ . {order | the end | a good while} = order
+- Every lost thing still travelling will ___ where it is. {stop | close | go out} = stop
+- The boy's list began with a game, a path and a ___ . {friend | house | reef} = friend
+- By morning, he says, the harbour ___ will be dry. {wall | line | workroom} = wall
+- The line closes behind him ___ . {tonight | first | halfway} = tonight
+- He is sorry it took so long to ___ her. {reach | mend | hold} = reach
+:::
+
+### Speaking — What does a planet need for life?
+
+> **Working alone:** you have no partner, so do this in three steps.
+
+**Step 1 — Prepare.** Write short notes (not full sentences) for each
+question.
+
+| Question | Your notes |
+| --- | --- |
+| What are the four most important conditions for life? | |
+| Which of them does Mars already have? | |
+| Which does Mars **not** have? | |
+| Do you think there is life somewhere else in the galaxy? | |
+| If a spacecraft could take you to one planet, which would it be, and why? | |
+
+**Step 2 — Speak.** Answer each question **aloud** from your notes, in full
+sentences. In your first answer, say a **list of at least four items**.
+
+**Step 3 — Record and check.** Record yourself on your phone. Listen back and
+check three things:
+
+- In your list, did every item **except the last** rise ↗, and the last one **fall ↘**?
+- Did you use at least four words from the Lesson 2 vocabulary table?
+- Did your pauses fall **between** points rather than inside a sentence?
+
+Repeat Step 2 until each answer runs clearly from its first word to its last.
+
+### 5.3 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about living somewhere other than Earth."
+- Which planet, and why
+- What you would need to survive
+- What you would miss
+- Whether you would actually go
+:::
+
+### Three planets in the solar system
+
+Three of our neighbours, in three short fact-files. Read them once, then cover
+them and see how much you can still say.
+
+> **MERCURY**
+> The smallest of the eight planets, and the one that sits closest to the Sun.
+> It travels alone: not a single moon goes round it. Standing on the daytime
+> side would roast you, and yet the night side turns bitterly cold, because
+> there is no atmosphere to hold the heat in. That missing air has one other
+> effect worth knowing — with no air, there is no wind and no weather of any
+> kind. Nothing on Mercury has ever blown, rained or snowed.
+
+> **JUPITER**
+> The giant of the family. Jupiter is the largest planet by a long way, and
+> about sixty-three moons travel round it, so it is more like a small solar
+> system of its own. It is also the stormiest place we know: enormous storms
+> turn in its clouds for years at a time. Even from here it is easy to find,
+> because after the Moon and Venus it is the third brightest object in the
+> night sky.
+
+> **VENUS**
+> Our nearest neighbour in size — Venus is very nearly as big as the Earth, and
+> people once called it our twin. The likeness stops at the surface. Venus is
+> the hottest planet of all, hotter even than Mercury, and like Mercury it has
+> no moon. Look east just before sunrise and you may see a steady white point
+> hanging low above the fields. That is Venus, and it is why people have called
+> it the **morning star** for thousands of years.
+
+**Talk about it.** Cover the fact-files and tell someone about one of the three
+planets for about thirty seconds. Start like this, then keep going from memory:
+*I would like to tell you about Mercury. It is the smallest planet, and…* Give
+at least three facts, and say one thing that surprised you.
+
+### Everyday English — Expressing uncertainty
+
+*A few fixed phrases for saying how sure you are — and above all how unsure.
+They fit the speaking above: nobody knows whether there is life somewhere else
+in the galaxy, so when you answer, say how sure you are, then say why.*
+
+#### The two you need most — and the reason that follows them
+
+These are the two answers you will give again and again. On their own they
+sound like a shrug. Say the phrase, then say **why**, and it becomes a real
+answer:
+
+| Someone asks | You answer |
+| --- | --- |
+| Do you think Mars can support life? | I'm not sure about it. Scientists are still looking for water there. |
+| Do you think Ha will win on Saturday? | I doubt it. She hurt her arm last week. |
+| Will the rocket launch on Friday? | I'm not sure about it. The weather forecast is bad. |
+| Can that photograph really be a UFO? | I doubt it. It looks exactly like a plane at night. |
+
+> **Ghi chú:** Công thức là **cụm từ + lý do**. *I'm not sure about it.* dùng
+> khi bạn **chưa biết**, còn *I doubt it.* dùng khi bạn **nghiêng về "không"**.
+> Cả hai đều kết thúc bằng **it** — đừng thêm tân ngữ dài phía sau:
+> ❌ *I doubt it that Mars has life.* ✅ *I doubt it. Mars is far too cold.*
+
+#### Not sure
+
+| Not sure | Nghĩa |
+| --- | --- |
+| It's **possible that** life began in water. | Có khả năng là… |
+| There **may / might be** creatures we can't see. | Có thể có… |
+| I **suppose** so. | Tôi cho là vậy. |
+| It **depends on** the temperature. | Còn tuỳ vào… |
+| I'm **not certain**. | Tôi không chắc lắm. |
+
+#### Doubting
+
+| Doubting | Nghĩa |
+| --- | --- |
+| I **doubt it**. | Tôi không nghĩ vậy đâu. |
+| I'm **not convinced**. | Tôi thấy chưa thuyết phục lắm. |
+| **Surely not!** | Không thể nào! |
+| That **can't be** right. | Điều đó không thể đúng được. |
+
+#### Very sure
+
+| Very sure | Nghĩa |
+| --- | --- |
+| I'm **certain** there's life out there. | Tôi chắc chắn là… |
+| There's **definitely** water under the ice. | Chắc chắn là… |
+| It **must be** true — look at the photographs. | Chắc hẳn là… |
+
+**Say it with someone.** They ask you three things, and you answer each one
+with the phrase first and the reason after it: whether there is water on Mars,
+whether a friend of yours will get a good mark in the English test, and whether
+the weather will be fine tomorrow. Say **I'm not sure about it.** for two of
+them and **I doubt it.** for one. Then swap.
 
 ---
 
@@ -1045,11 +1041,11 @@ page can settle it, the row says so, and that one is yours to judge.
 | use the words for space and for life beyond Earth | Lesson 2, Meet the words · Lesson 6, exercises 6.1 and 6.5 |
 | use the right intonation when I read a list aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. Saying them aloud is yours — record Lesson 2, exercise 2.3 and listen back. |
 | report a question somebody asked | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3, 6.4 and 6.6 |
-| say how sure, or how unsure, I am | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| say how sure, or how unsure, I am | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 5 with someone, and decide. |
 | read a first-person account closely and answer it in the writer's own words | Lesson 4, exercises 4.1 and 4.2 |
-| talk about what a planet needs before people could live on it | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| talk about what a planet needs before people could live on it | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
 | listen once to a spoken account and catch the questions reported in it | Lesson 5, exercises 5.1 and 5.2 |
-| write a paragraph describing creatures on another planet | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| write a paragraph describing creatures on another planet | Lesson 4, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1068,20 +1064,3 @@ page can settle it, the row says so, and that one is yours to judge.
 **2.3** Answers will vary. Check: in items 1–3 your voice steps **up** on
 every item except the last, and clearly **down** on the last one; in item 4 the "open" version
 ends with a rise, which should sound as though you were about to continue.
-
-### Lesson 3
-
-**3.2** Answers will vary. Check: every sentence begins *…asked me*, contains
-**no** *do/does/did*, puts the person **before** the verb (*where I was going*),
-ends with a **full stop**, and uses *if/whether* only in items 2 and 3.
-Model answers: 1. My friend asked me what I wanted to be. 2. My teacher asked
-me if I had finished my homework. 3. My younger cousin asked me whether there
-were really aliens. 4. My neighbour asked me where I was going. 5. My mother
-asked me why I was awake so late.
-
-### Lesson 5
-
-**Writing** Answers will vary. Check against the checklist: 80–100 words
-counted, a topic sentence naming the planet, six or more adjectives, four or
-more Lesson 2 words, one list of three or more items, and present simple
-throughout.

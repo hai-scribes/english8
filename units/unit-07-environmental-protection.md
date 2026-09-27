@@ -501,50 +501,23 @@ The main part takes *will*. The time clause keeps the plain present:
 Finish each sentence so it is **true for you**. After the time word, don't use
 *will*.
 
-1. When I finish school today, ______________________
-2. I always feel happy whenever ______________________
-3. Before I go to bed, ______________________
-4. I will not stop studying English until ______________________
-5. As soon as the holidays begin, ______________________
+::: jot
+- → When I finish school today,
+- → I always feel happy whenever
+- → Before I go to bed,
+- → I will not stop studying English until
+- → As soon as the holidays begin,
+:::
 
 ---
 
-## Lesson 4 — Reading & Speaking
-
-### Earth Day
-
-One day a year, the same idea turns up in more than 190 countries at once.
-
-> Earth Day falls on **22 April**. It began in **1970**, in America, when
-> millions of people came out on the same day to say that the air and the water
-> around them were getting worse and that somebody should act. It was one
-> country and one day. It did not stay that way.
->
-> Today more than **190 countries** mark it, and more than **one billion**
-> people take part each year — which makes Earth Day one of the largest
-> movements on the planet. What people actually do on the day is small and
-> ordinary. They pick up litter along a road, a river or a beach. They plant
-> trees. They look for green products in the shops instead of the cheapest
-> thing on the shelf. They practise the three Rs: **reduce, reuse, recycle**.
->
-> And that is the catch in it. A beach cleaned on 22 April is dirty again by
-> May if nobody comes back. The point of the day is not the day. It is to
-> start something you keep doing on the other 364.
-
-Each of those small actions does its own job. Planting trees takes in carbon
-dioxide and gives animals a home. Buying green products puts fewer harmful
-chemicals into the things we use. Picking up litter keeps roads, rivers and
-beaches clean. And turning off the lights saves electricity.
-
-**Talk about it.** Which **two** of those actions could you really do this year,
-and where? Pick one of them: how would you keep doing it after 22 April, on an
-ordinary week in June?
+## Lesson 4 — Reading & Writing
 
 ### Reading — *The morning the reef came back*
 
 *Tí writes down what happened on the day of the clean-up.*
 
-::: clock mins="19" for="You have 19 minutes for the text and every exercise below it."
+::: clock mins="19" for="You have 19 minutes for the text and its questions."
 :::
 
 ::: passage
@@ -607,45 +580,6 @@ ordinary week in June?
 - the animals and plants that live in a particular place {residents | shallows | moorings} = residents
 :::
 
-### Speaking — Asking and answering about Vu Quang National Park
-
-> **Working alone:** you have no partner, so do this in three steps.
-
-**Fact file — Vu Quang National Park**
-
-| Question | Facts you can use |
-| --- | --- |
-| Where is it? | In Ha Tinh province, in north-central Viet Nam, near the border with Laos |
-| What is the landscape like? | Mountainous, with thick forest and steep valleys |
-| What is it famous for? | Rare forest animals — above all the **saola**, which scientists first recorded there in 1992 |
-| Why does it matter? | It protects the habitat of species found almost nowhere else |
-| What threatens it? | Hunting, illegal logging, and pressure on the forest from nearby land use |
-
-**Step 1 — Prepare.** Write short notes (not full sentences) for each question.
-
-| Question | Your notes |
-| --- | --- |
-| Where is Vu Quang National Park? | |
-| What is the landscape like? | |
-| Which animal made it famous, and when? | |
-| Why do we need national parks like this one? | |
-| What do you think will happen if the hunting continues? | |
-
-**Step 2 — Speak.** Answer each question **aloud** from your notes, in full
-sentences. Use **at least one time clause** in every answer — for example:
-*When scientists visited the forest in 1992, they found a species nobody had
-recorded before.*
-
-**Step 3 — Record and check.** Record yourself on your phone. Listen back and
-check three things:
-
-- Did you keep the **present simple** inside every time clause, with no *will*?
-- Did you pronounce /bl/ and /kl/ clearly in words like *problem* and *climate*,
-  with no extra vowel in the middle?
-- Did your pauses fall **between** points rather than inside a sentence?
-
-Repeat Step 2 until each answer runs clearly from its first word to its last.
-
 ### 4.4 Read it again, against the clock
 
 Read the same text again, faster each time.
@@ -654,159 +588,6 @@ Read the same text again, faster each time.
 - Do not stop to look anything up — you have met all of it
 - Read for the sense of it, not word by word
 - Press **I finished** the moment you reach the last line
-:::
-
-### 4.5 Say it again, faster
-
-::: fluency mode="talk" secs="240|180|120" ask="Talk about one environmental problem near you."
-- What the problem is
-- What is causing it
-- Who it affects
-- One thing that would actually help
-:::
-
-### Everyday English — Asking for clarification
-
-*A few fixed phrases for stopping someone and asking what a word means. They
-fit the speaking above: if a listener stops at* saola *or* illegal logging*,
-this is how they ask — and how you explain.*
-
-#### Asking for clarification
-
-When you meet a term you don't know — *endangered species*, *in the wild*,
-*carbon footprint* — ask what it means.
-
-| Asking what a word means | Nghĩa |
-| --- | --- |
-| **What does** 'endangered species' **mean**? | '...' nghĩa là gì? |
-| **What do you mean by** 'in the wild'? | Ý bạn nói '...' là gì? |
-| **Could you explain** what a carbon footprint is? | Bạn giải thích... được không? |
-| Sorry, **what is** a dugong? | Xin lỗi, ... là gì vậy? |
-
-| Giving the clarification | Nghĩa |
-| --- | --- |
-| **That means** animals that live in their natural habitats, not in zoos. | Điều đó có nghĩa là... |
-| **It means** the amount of carbon dioxide we release into the environment. | Nó có nghĩa là... |
-| **In other words**, the last one has died and there are none left. | Nói cách khác,... |
-
-| Showing you have understood | Nghĩa |
-| --- | --- |
-| **Oh, I get it now.** Thanks. | À, giờ mình hiểu rồi. Cảm ơn nhé. |
-| **Ah, I see.** | À, mình hiểu rồi. |
-| **Right, that's much clearer.** | Ừ, rõ hơn nhiều rồi. |
-
-> ⚠️ **Bẫy thường gặp:** Câu hỏi này cần trợ động từ **do/does**, và động từ
-> chính giữ nguyên dạng:
-> ✅ *What **does** 'toxic' **mean**?* ❌ *What means 'toxic'?*
-> ✅ *What **do** these words **mean**?* ❌ *What mean these words?*
-> Và sau *what do you mean* luôn có **by**:
-> ✅ *What do you mean **by** 'single-use'?* ❌ *What do you mean 'single-use'?*
-
-> **Mẹo:** Khi trả lời, dùng **That means…** hoặc **It means…** rồi giải thích
-> bằng lời của mình. Không cần một định nghĩa hoàn hảo — một câu dễ hiểu là đủ.
-
-#### Expressing concern and giving reasons
-
-| Expressing concern | Nghĩa |
-| --- | --- |
-| I'm **worried about** the river. | Tôi lo lắng về con sông. |
-| It's **terrible that** nobody has reported it. | Thật tệ là chưa ai báo cáo. |
-| **What worries me is** the smell at night. | Điều làm tôi lo là mùi vào ban đêm. |
-
-| Responding and suggesting action | Nghĩa |
-| --- | --- |
-| You're right. Something has to change. | Bạn nói đúng. Phải thay đổi thôi. |
-| **We could start by** collecting evidence. | Chúng ta có thể bắt đầu bằng cách... |
-| **Why don't we** talk to the Green Club? | Sao chúng ta không...? |
-
-| Asking for and giving reasons | Nghĩa |
-| --- | --- |
-| **Why** has the water changed colour? | Tại sao...? |
-| **What causes** the smell? | Cái gì gây ra...? |
-| **Because** the factory releases sewage at night. | Bởi vì... |
-| **The reason is that** nobody treats the waste. | Lý do là... |
-| Farmers use too much pesticide. **That's why** the fish died. | ...Đó là lý do... |
-
-> ⚠️ why don't we **talk**, we could **start** — but start by **collecting**.
-
-**Say it with someone.** They use two terms you pretend not to know —
-*single-use products* and *global warming*. Ask what each one means, a
-different way each time; they explain it in one sentence with **That means…**
-or **It means…**, and you finish with **Oh, I get it now.** Then swap, with
-*ecosystem* and *endangered species*.
-
----
-
-## Lesson 5 — Listening & Writing
-
-### Listening — What the coral did
-
-You hear it **once**, read aloud by someone else. Read both sets of questions
-first, then answer as you listen.
-
-**Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả hai phần câu hỏi, rồi vừa
-nghe vừa trả lời.
-
-::: audio orientation="You will hear a teacher speaking to students about the damage the new coral has done, and about somebody she wants to meet."
-Good morning, everyone. Sit down, please. Nobody is going home until I have
-finished, so listen.
-
-You have all seen the harbour. I am going to tell you what is in it, and
-then I am going to tell you what happens next.
-
-First, the damage. The channel is closed from end to end; nothing can get in
-or out until the coral is cut away by hand, and that is weeks of work. Two boats have lost their propellers. The water pipe under the yard is
-cracked, so there is no clean water in this school today, and sewage from the
-broken drain is running into the harbour we cleaned on Saturday. Three families
-have no way of working at all.
-
-Second, and I want you to hear this clearly: nobody was hurt. A mooring rope
-parted at four in the morning, when the boat was empty.
-
-Third. The adults of this town met last night, and we know that what happened
-was not the weather. We are not angry with anyone yet, and while I am still
-not angry is the time to come and talk to me. Somebody brought somebody down to
-that water on Saturday, and that person knows exactly what I am talking about.
-
-So bring her to my house. Not to the school — to my house, and before this
-goes over a second time. After that it stops being my decision.
-:::
-
-### 5.1 Listen and choose
-
-::: task skill="listening" type="multiple-choice"
-- The speaker begins by telling everybody to {sit down | go home | bring her to my house} = sit down
-- Nothing can get in or out because of {the coral | the weather | a boat} = the coral
-- Today the school has no {clean water | boats | visitors} = clean water
-- The broken drain is emptying into a place the students {cleaned on Saturday | met in last night | fished in as children} = cleaned on Saturday
-- When the mooring rope parted, the boat was {empty | cracked | closed} = empty
-- The adults of the town met {last night | on Saturday | this morning} = last night
-:::
-
-### 5.2 Note completion
-
-Choose each word **as you listen**.
-
-::: task skill="listening" type="completion"
-- Damage — the ___ is closed from end to end {channel | pipe | drain} = channel
-- Damage — two boats have lost their ___ {propellers | drains | pipes} = propellers
-- Damage — the water ___ under the yard is cracked {pipe | channel | rope} = pipe
-- Damage — ___ from the broken drain is reaching the harbour {sewage | coral | propellers} = sewage
-- Damage — ___ families have no way of working {three | two | four} = three
-- Safety — a mooring rope parted at ___ in the morning {four | two | three} = four
-:::
-
-::: bridge name="Link a cause to its result" trains="Grammatical Range & Accuracy" cefr="B1" marker="[Q]" src="05 §2.6"
-After the listening, before the notice: write **two** sentences, each linking one
-cause from the recording to one result. Use *because*, *as a result* or *this
-causes*.
-
-> Factories release waste into the river. **As a result,** fish die downstream.
-
-The linking word turns two facts into an explanation.
-
-> **Tiếng Việt:** Viết **hai** câu nối một nguyên nhân với một kết quả từ bài nghe,
-> dùng *because / as a result / this causes*.
 :::
 
 ### Writing — A notice
@@ -900,6 +681,227 @@ A notice must give everything; a friend already knows some of it.
 
 ---
 
+## Lesson 5 — Listening & Speaking
+
+### Listening — What the coral did
+
+You hear it **once**, read aloud by someone else. Read both sets of questions
+first, then answer as you listen.
+
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả hai phần câu hỏi, rồi vừa
+nghe vừa trả lời.
+
+::: audio orientation="You will hear a teacher speaking to students about the damage the new coral has done, and about somebody she wants to meet."
+Good morning, everyone. Sit down, please. Nobody is going home until I have
+finished, so listen.
+
+You have all seen the harbour. I am going to tell you what is in it, and
+then I am going to tell you what happens next.
+
+First, the damage. The channel is closed from end to end; nothing can get in
+or out until the coral is cut away by hand, and that is weeks of work. Two boats have lost their propellers. The water pipe under the yard is
+cracked, so there is no clean water in this school today, and sewage from the
+broken drain is running into the harbour we cleaned on Saturday. Three families
+have no way of working at all.
+
+Second, and I want you to hear this clearly: nobody was hurt. A mooring rope
+parted at four in the morning, when the boat was empty.
+
+Third. The adults of this town met last night, and we know that what happened
+was not the weather. We are not angry with anyone yet, and while I am still
+not angry is the time to come and talk to me. Somebody brought somebody down to
+that water on Saturday, and that person knows exactly what I am talking about.
+
+So bring her to my house. Not to the school — to my house, and before this
+goes over a second time. After that it stops being my decision.
+:::
+
+### 5.1 Listen and choose
+
+::: task skill="listening" type="multiple-choice"
+- The speaker begins by telling everybody to {sit down | go home | bring her to my house} = sit down
+- Nothing can get in or out because of {the coral | the weather | a boat} = the coral
+- Today the school has no {clean water | boats | visitors} = clean water
+- The broken drain is emptying into a place the students {cleaned on Saturday | met in last night | fished in as children} = cleaned on Saturday
+- When the mooring rope parted, the boat was {empty | cracked | closed} = empty
+- The adults of the town met {last night | on Saturday | this morning} = last night
+:::
+
+### 5.2 Note completion
+
+Choose each word **as you listen**.
+
+::: task skill="listening" type="completion"
+- Damage — the ___ is closed from end to end {channel | pipe | drain} = channel
+- Damage — two boats have lost their ___ {propellers | drains | pipes} = propellers
+- Damage — the water ___ under the yard is cracked {pipe | channel | rope} = pipe
+- Damage — ___ from the broken drain is reaching the harbour {sewage | coral | propellers} = sewage
+- Damage — ___ families have no way of working {three | two | four} = three
+- Safety — a mooring rope parted at ___ in the morning {four | two | three} = four
+:::
+
+::: bridge name="Link a cause to its result" trains="Grammatical Range & Accuracy" cefr="B1" marker="[Q]" src="05 §2.6"
+After the listening, before the notice: write **two** sentences, each linking one
+cause from the recording to one result. Use *because*, *as a result* or *this
+causes*.
+
+> Factories release waste into the river. **As a result,** fish die downstream.
+
+The linking word turns two facts into an explanation.
+
+> **Tiếng Việt:** Viết **hai** câu nối một nguyên nhân với một kết quả từ bài nghe,
+> dùng *because / as a result / this causes*.
+:::
+
+### Speaking — Asking and answering about Vu Quang National Park
+
+> **Working alone:** you have no partner, so do this in three steps.
+
+**Fact file — Vu Quang National Park**
+
+| Question | Facts you can use |
+| --- | --- |
+| Where is it? | In Ha Tinh province, in north-central Viet Nam, near the border with Laos |
+| What is the landscape like? | Mountainous, with thick forest and steep valleys |
+| What is it famous for? | Rare forest animals — above all the **saola**, which scientists first recorded there in 1992 |
+| Why does it matter? | It protects the habitat of species found almost nowhere else |
+| What threatens it? | Hunting, illegal logging, and pressure on the forest from nearby land use |
+
+**Step 1 — Prepare.** Write short notes (not full sentences) for each question.
+
+| Question | Your notes |
+| --- | --- |
+| Where is Vu Quang National Park? | |
+| What is the landscape like? | |
+| Which animal made it famous, and when? | |
+| Why do we need national parks like this one? | |
+| What do you think will happen if the hunting continues? | |
+
+**Step 2 — Speak.** Answer each question **aloud** from your notes, in full
+sentences. Use **at least one time clause** in every answer — for example:
+*When scientists visited the forest in 1992, they found a species nobody had
+recorded before.*
+
+**Step 3 — Record and check.** Record yourself on your phone. Listen back and
+check three things:
+
+- Did you keep the **present simple** inside every time clause, with no *will*?
+- Did you pronounce /bl/ and /kl/ clearly in words like *problem* and *climate*,
+  with no extra vowel in the middle?
+- Did your pauses fall **between** points rather than inside a sentence?
+
+Repeat Step 2 until each answer runs clearly from its first word to its last.
+
+### 5.3 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about one environmental problem near you."
+- What the problem is
+- What is causing it
+- Who it affects
+- One thing that would actually help
+:::
+
+### Earth Day
+
+One day a year, the same idea turns up in more than 190 countries at once.
+
+> Earth Day falls on **22 April**. It began in **1970**, in America, when
+> millions of people came out on the same day to say that the air and the water
+> around them were getting worse and that somebody should act. It was one
+> country and one day. It did not stay that way.
+>
+> Today more than **190 countries** mark it, and more than **one billion**
+> people take part each year — which makes Earth Day one of the largest
+> movements on the planet. What people actually do on the day is small and
+> ordinary. They pick up litter along a road, a river or a beach. They plant
+> trees. They look for green products in the shops instead of the cheapest
+> thing on the shelf. They practise the three Rs: **reduce, reuse, recycle**.
+>
+> And that is the catch in it. A beach cleaned on 22 April is dirty again by
+> May if nobody comes back. The point of the day is not the day. It is to
+> start something you keep doing on the other 364.
+
+Each of those small actions does its own job. Planting trees takes in carbon
+dioxide and gives animals a home. Buying green products puts fewer harmful
+chemicals into the things we use. Picking up litter keeps roads, rivers and
+beaches clean. And turning off the lights saves electricity.
+
+**Talk about it.** Which **two** of those actions could you really do this year,
+and where? Pick one of them: how would you keep doing it after 22 April, on an
+ordinary week in June?
+
+### Everyday English — Asking for clarification
+
+*A few fixed phrases for stopping someone and asking what a word means. They
+fit the speaking above: if a listener stops at* saola *or* illegal logging*,
+this is how they ask — and how you explain.*
+
+#### Asking for clarification
+
+When you meet a term you don't know — *endangered species*, *in the wild*,
+*carbon footprint* — ask what it means.
+
+| Asking what a word means | Nghĩa |
+| --- | --- |
+| **What does** 'endangered species' **mean**? | '...' nghĩa là gì? |
+| **What do you mean by** 'in the wild'? | Ý bạn nói '...' là gì? |
+| **Could you explain** what a carbon footprint is? | Bạn giải thích... được không? |
+| Sorry, **what is** a dugong? | Xin lỗi, ... là gì vậy? |
+
+| Giving the clarification | Nghĩa |
+| --- | --- |
+| **That means** animals that live in their natural habitats, not in zoos. | Điều đó có nghĩa là... |
+| **It means** the amount of carbon dioxide we release into the environment. | Nó có nghĩa là... |
+| **In other words**, the last one has died and there are none left. | Nói cách khác,... |
+
+| Showing you have understood | Nghĩa |
+| --- | --- |
+| **Oh, I get it now.** Thanks. | À, giờ mình hiểu rồi. Cảm ơn nhé. |
+| **Ah, I see.** | À, mình hiểu rồi. |
+| **Right, that's much clearer.** | Ừ, rõ hơn nhiều rồi. |
+
+> ⚠️ **Bẫy thường gặp:** Câu hỏi này cần trợ động từ **do/does**, và động từ
+> chính giữ nguyên dạng:
+> ✅ *What **does** 'toxic' **mean**?* ❌ *What means 'toxic'?*
+> ✅ *What **do** these words **mean**?* ❌ *What mean these words?*
+> Và sau *what do you mean* luôn có **by**:
+> ✅ *What do you mean **by** 'single-use'?* ❌ *What do you mean 'single-use'?*
+
+> **Mẹo:** Khi trả lời, dùng **That means…** hoặc **It means…** rồi giải thích
+> bằng lời của mình. Không cần một định nghĩa hoàn hảo — một câu dễ hiểu là đủ.
+
+#### Expressing concern and giving reasons
+
+| Expressing concern | Nghĩa |
+| --- | --- |
+| I'm **worried about** the river. | Tôi lo lắng về con sông. |
+| It's **terrible that** nobody has reported it. | Thật tệ là chưa ai báo cáo. |
+| **What worries me is** the smell at night. | Điều làm tôi lo là mùi vào ban đêm. |
+
+| Responding and suggesting action | Nghĩa |
+| --- | --- |
+| You're right. Something has to change. | Bạn nói đúng. Phải thay đổi thôi. |
+| **We could start by** collecting evidence. | Chúng ta có thể bắt đầu bằng cách... |
+| **Why don't we** talk to the Green Club? | Sao chúng ta không...? |
+
+| Asking for and giving reasons | Nghĩa |
+| --- | --- |
+| **Why** has the water changed colour? | Tại sao...? |
+| **What causes** the smell? | Cái gì gây ra...? |
+| **Because** the factory releases sewage at night. | Bởi vì... |
+| **The reason is that** nobody treats the waste. | Lý do là... |
+| Farmers use too much pesticide. **That's why** the fish died. | ...Đó là lý do... |
+
+> ⚠️ why don't we **talk**, we could **start** — but start by **collecting**.
+
+**Say it with someone.** They use two terms you pretend not to know —
+*single-use products* and *global warming*. Ask what each one means, a
+different way each time; they explain it in one sentence with **That means…**
+or **It means…**, and you finish with **Oh, I get it now.** Then swap, with
+*ecosystem* and *endangered species*.
+
+---
+
 ## Lesson 6 — Looking Back & Project
 
 ### 6.1 Vocabulary check
@@ -983,7 +985,7 @@ told you, what you think the causes are, and two actions you would suggest.
 Use at least **four** complex sentences with time clauses.
 
 **Step 5 — Post it.** Turn the last part into a **notice** for your class
-board, inviting classmates to a clean-up. Reuse the Lesson 5 structure.
+board, inviting classmates to a clean-up. Reuse the Lesson 4 structure.
 
 > **Stretch:** Repeat Step 1 in three months and compare your six columns. Did
 > anything change after your notice went up?
@@ -1000,11 +1002,11 @@ page can settle it, the row says so, and that one is yours to judge.
 | use the words for protecting the environment | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
 | hear /bl/ and /kl/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
 | build complex sentences with a time clause | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
-| ask someone to explain what they mean | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| ask someone to explain what they mean | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 5 with someone, and decide. |
 | read a first-hand account of the morning the reef came back | Lesson 4, exercises 4.1 and 4.2 |
-| talk about Vu Quang National Park | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| talk about Vu Quang National Park | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
 | listen to a teacher listing damage and giving an instruction | Lesson 5, exercises 5.1 and 5.2 |
-| write a notice | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| write a notice | Lesson 4, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1024,22 +1026,3 @@ page can settle it, the row says so, and that one is yours to judge.
 your /k/ does not, and there is no vowel between the consonant and the /l/.
 Item 4 is a knowledge check: *rubbish* is /ˈrʌbɪʃ/ (no /bl/) and *chemical* is
 /ˈkemɪkl/ (the *ch* is a plain /k/).
-
-### Lesson 3
-
-**3.2** Answers will vary. Check: no *will* after *when, whenever, before,
-until, as soon as* (*When I **finish**…*, not *When I will finish…*), and sentences
-1, 3 and 5 have a comma after the time clause because it comes first.
-
-### Lesson 4
-
-**Speaking** Answers will vary. Check: you gave the province (Ha Tinh), said
-the landscape is mountainous forest, named the saola and the year 1992, used at
-least one time clause per answer, and kept *will* out of every time clause.
-
-### Lesson 5
-
-**Writing** Answers will vary. Check against the checklist: 100–120 words, a
-NOTICE heading, date/time/place all present, at least one time clause with no
-*will* inside it, four unit words, a contact line and a signature, and no
-friendly greeting or sign-off.

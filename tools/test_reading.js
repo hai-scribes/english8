@@ -81,11 +81,14 @@ function load(rel, store, beforeParse) {
                                   w.scrollTo = () => {};
                                   w.Element.prototype.scrollIntoView = function(){};
                                   /* Every seed below is written in today's
-                                     six-lesson shape, so the one-time move from
-                                     seven lessons must not run on it. The test
-                                     of that move opts back in with `oldShape`. */
-                                  if (!(beforeParse && beforeParse.oldShape))
+                                     shape, so neither one-time move (seven
+                                     lessons to six, then skills paired by
+                                     kind) may run on it. The test of those
+                                     moves opts back in with `oldShape`. */
+                                  if (!(beforeParse && beforeParse.oldShape)){
                                     w.localStorage.setItem("en8:shape:6", "1");
+                                    w.localStorage.setItem("en8:shape:6b", "1");
+                                  }
                                   if (beforeParse) beforeParse(w);
                                 } });
   dom.window.scrollTo = () => {};
@@ -1430,6 +1433,8 @@ async function main() {
       put("en8:clock:01-5-c1", { start: 1 });
       put("en8:clock:01-6-c1", { start: 2 });
       put("en8:thread:articles:06:6", { got: 3, all: 4 });
+      put("en8:fluency:01-5-f1", { runs: 1 });
+      put("en8:fluency:02-5-f1", { runs: 2 });
     };
     old.oldShape = true;
     const w = await settled(load("docs/index.html", null, old));
@@ -1440,7 +1445,14 @@ async function main() {
     ok("shape: task records move with their lesson and exercise number",
        Object.keys(get("en8:tasks:v1")).sort().join() === "01-3-3.1-1,01-4-4.1-1,01-6-6.3-1"
        && get("en8:tasks:v1")["01-4-4.1-1"].score === 2, JSON.stringify(get("en8:tasks:v1")));
-    ok("shape: the writing box keeps its text", !!(get("en8:write:v1")["01-5-w1"]));
+    /* ...and then paired by kind: writing 5 -> 4, talk fluency 4 -> 5. */
+    ok("shape: the writing box keeps its text, now in Reading & Writing",
+       !!(get("en8:write:v1")["01-4-w1"]) && Object.keys(get("en8:write:v1")).length === 1,
+       JSON.stringify(get("en8:write:v1")));
+    ok("shape: the talk fluency moves to Listening & Speaking",
+       get("en8:fluency:01-5-f1").runs === 1 && !w.localStorage.getItem("en8:fluency:01-4-f1"));
+    ok("shape: where Lesson 4 also held a read-again, its record stays with the reading",
+       get("en8:fluency:02-4-f1").runs === 2 && !w.localStorage.getItem("en8:fluency:02-5-f1"));
     ok("shape: the spent reading clock stays spent, under its new lesson",
        get("en8:clock:01-4-c1").start === 1 && get("en8:clock:01-5-c1").start === 2,
        w.localStorage.getItem("en8:clock:01-4-c1") + " / " + w.localStorage.getItem("en8:clock:01-5-c1"));
@@ -1449,8 +1461,41 @@ async function main() {
     ok("shape: the day's record renames its steps",
        get("en8:days:v1")[5].steps.join() === "01:L4,01:L3", JSON.stringify(get("en8:days:v1")));
     ok("shape: a thread tally follows its lesson",
-       !!get("en8:thread:articles:06:5") && !w.localStorage.getItem("en8:thread:articles:06:6"));
-    ok("shape: the move runs once", w.localStorage.getItem("en8:shape:6") === "1");
+       !!get("en8:thread:articles:06:4") && !w.localStorage.getItem("en8:thread:articles:06:6")
+       && !w.localStorage.getItem("en8:thread:articles:06:5"));
+    ok("shape: the move runs once", w.localStorage.getItem("en8:shape:6") === "1"
+       && w.localStorage.getItem("en8:shape:6b") === "1");
+  }
+
+  /* ---- "About you" is written freely, and kept --------------------------------
+     It used to be printed blanks with an "Answers will vary" reveal: nothing to
+     type into, and an answer to a question only the learner can answer. */
+  {
+    const w = await settled(load("docs/unit-01/lesson-3/index.html"));
+    const boxes = [...w.document.querySelectorAll(".j-box")];
+    ok("about you: one box per prompt", boxes.length === 4, String(boxes.length));
+    ok("about you: no answer to reveal", !w.document.querySelector('[data-ex="3.2"] [data-role="answer"]'));
+    boxes[0].value = "I enjoy reading comics.";
+    boxes[0].dispatchEvent(new w.Event("input"));
+    const saved = w.localStorage.getItem("en8:jot:v1");
+    const w2 = await settled(load("docs/unit-01/lesson-3/index.html", { "en8:jot:v1": saved }));
+    ok("about you: the text is there after a reload",
+       w2.document.querySelector(".j-box").value === "I enjoy reading comics.");
+    const s11 = await settled(load("docs/unit-11/lesson-3/index.html"));
+    ok("about you: a starter opens its box",
+       /^My teacher told us that /.test(s11.document.querySelector(".j-box").value));
+  }
+
+  /* ---- True / False / Not given read as words, not letters ------------------ */
+  {
+    const w = await settled(load("docs/unit-01/lesson-4/index.html"));
+    const opts = [...w.document.querySelectorAll('[data-ex="4.1"] .i-opt')].slice(0, 3);
+    ok("tfng: each button carries a mark and the word",
+       opts.map(o => o.textContent.replace(/\s+/g, " ").trim()).join("|") === "✓True|✕False|?Not given"
+       && opts.every(o => o.querySelector(".i-ic")),
+       opts.map(o => o.textContent).join("|"));
+    ok("tfng: the value marked is still the letter",
+       opts.map(o => o.querySelector("input").value).join() === "T,F,NG");
   }
 
   /* ---- every page can reach its stylesheet and script ----------------------

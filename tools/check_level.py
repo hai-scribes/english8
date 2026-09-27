@@ -6,8 +6,8 @@ Run: python3 tools/check_level.py
      python3 tools/check_level.py --strict-through 3      # the build gate
 
 Twelve chapters of narrative prose sit in the four story slots of every unit —
-the Getting Started dialogue, the Lesson 4 passage, the Lesson 5 recording and
-its writing model. Prose written to be *good* drifts above the syllabus without
+the Getting Started dialogue, the Lesson 4 passage and its writing model, and
+the Lesson 5 recording. Prose written to be *good* drifts above the syllabus without
 anybody noticing, because no exercise ever asks about the structure that drifted.
 This is the check nothing else performs.
 
@@ -40,7 +40,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# The four story slots. The book's Communication material (read inside Lesson 4)
+# The four story slots. The book's Communication material (read inside Lesson 5)
 # is prescribed and never restoried (`research/story/chapter-briefs.md` §0), so
 # it carries no narrative prose.
 RE_DIALOGUE = re.compile(r"^:::[ \t]*dialogue\b[^\n]*\n(?P<body>.*?)\n:::[ \t]*$", re.M | re.S)

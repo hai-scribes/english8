@@ -51,17 +51,17 @@ def unit_haystack(n):
 
 
 def communication_blocks(raw):
-    """Headings inside our Lesson 4 that are not Everyday English, the reading,
-    the speaking, or an exercise.
+    """Headings inside our Lesson 5 that are not Everyday English, the
+    listening, the speaking, or an exercise.
 
     The book's Communication section has two halves: Everyday English, and a
     named content block. Ours had only the first for a long time, so this
     reports the structural fact — what extra headings exist — rather than
-    guessing at the topic, which topic words cannot settle. Since 2026-09-27
-    both halves are read inside Lesson 4 (Reading & Speaking) rather than in a
-    lesson of their own, which is why the skills headings are skipped here.
+    guessing at the topic, which topic words cannot settle. Both halves close
+    Lesson 5 (Listening & Speaking) rather than having a lesson of their own,
+    which is why the skills headings are skipped here.
     """
-    body = re.search(r"^## Lesson 4 .*?(?=^## Lesson 5 |\Z)", raw, re.S | re.M)
+    body = re.search(r"^## Lesson 5 .*?(?=^## Lesson 6 |\Z)", raw, re.S | re.M)
     if not body:
         return []
     out = []
@@ -72,9 +72,9 @@ def communication_blocks(raw):
         if not m:
             continue
         head = m.group(1)
-        if head.startswith(("Everyday English", "Reading", "Speaking")):
+        if head.startswith(("Everyday English", "Listening", "Speaking")):
             continue
-        if re.match(r"^4\.\d", head):
+        if re.match(r"^5\.\d", head):
             continue
         out.append(head)
     return out
@@ -228,11 +228,11 @@ def main():
                   f" — {paint('found: ' + r['ee_hit'], GREEN) if r['ee_hit'] else paint('no exponent present', RED)}")
             print(f"     {DIM}Content block the book has:{OFF} {r['culture_block']}")
             if r["extra_blocks"]:
-                print(f"     {DIM}our Lesson 4 also has:{OFF} "
+                print(f"     {DIM}our Lesson 5 also has:{OFF} "
                       f"{paint('; '.join(r['extra_blocks']), YELLOW)} "
                       f"{DIM}— check by hand whether it does the same job{OFF}")
             else:
-                print(f"     {paint('our Lesson 4 has no block beyond Everyday English', RED)}")
+                print(f"     {paint('our Lesson 5 has no block beyond Everyday English', RED)}")
             for g in r["missing_grammar"]:
                 print(f"     {paint('grammar not found:', RED)} {g}")
             if not r["pron_hit"]:
@@ -250,7 +250,7 @@ def main():
     blk_missing = sum(1 for r in results if not r["block_hit"])
     print(f"  Everyday English functions not covered: "
           f"{paint(str(ee_missing), RED if ee_missing else GREEN)} of {len(results)}")
-    print(f"  Lesson 4s with no block beyond Everyday English: "
+    print(f"  Lesson 5s with no block beyond Everyday English: "
           f"{paint(str(blk_missing), RED if blk_missing else GREEN)} of {len(results)}")
     if not detail:
         print(f"\n  {DIM}Run with --full, or --unit N, to list every missing item.{OFF}")

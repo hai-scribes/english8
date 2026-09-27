@@ -130,6 +130,39 @@ const LESSONS = 6;
   try { localStorage.setItem(FLAG, "1"); } catch(e){}
 })();
 
+/* Later the same day the skills were paired by kind: Lesson 4 became Reading &
+   Writing and Lesson 5 Listening & Speaking. The reading, its clock and its
+   tasks did not move, and neither did the listening. What moved is the writing
+   (5 -> 4, with its articles tally) and the talk-mode fluency (4 -> 5). In
+   units 02, 07 and 12 Lesson 4 also held a read-mode fluency under the same
+   id, which stays with the reading, so their talk records are left alone. */
+(function pairByKindOnce(){
+  const FLAG = "en8:shape:6b";
+  try { if (localStorage.getItem(FLAG)) return; } catch(e){ return; }
+  try {
+    const w = JSON.parse(localStorage.getItem("en8:write:v1") || "null");
+    if (w){
+      const out = {};
+      for (const k of Object.keys(w)) out[k.replace(/^(\d\d)-5-(w\d+)$/, "$1-4-$2")] = w[k];
+      localStorage.setItem("en8:write:v1", JSON.stringify(out));
+    }
+    const keys = [];
+    for (let i = 0; i < localStorage.length; i++) keys.push(localStorage.key(i));
+    const move = (from, to) => {
+      if (from === to || localStorage.getItem(to) !== null) return;
+      localStorage.setItem(to, localStorage.getItem(from));
+      localStorage.removeItem(from);
+    };
+    keys.forEach(k => {
+      let m = /^en8:thread:(.+):(\d\d):5$/.exec(k || "");
+      if (m) return move(k, "en8:thread:" + m[1] + ":" + m[2] + ":4");
+      m = /^en8:fluency:(\d\d)-4-(f\d+)$/.exec(k || "");
+      if (m && !["02", "07", "12"].includes(m[1])) move(k, "en8:fluency:" + m[1] + "-5-" + m[2]);
+    });
+  } catch(e){}
+  try { localStorage.setItem(FLAG, "1"); } catch(e){}
+})();
+
 /* ---------------- progress ------------------------------------------------ */
 /* { "01": { lessons: {"1": epochMs, ...}, test: {best: 0-100, at: epochMs} } } */
 const P_KEY = "en8:progress:v1";
@@ -1923,6 +1956,12 @@ function initTasks(){
        The recording already remembers that its one play is spent; the task it
        belongs to has to remember the same way, or F5 is a retry button and
        every rule in the box above is optional. */
+    /* True / False / Not given: the answer is shown with the same mark and
+       word as its button, never as the bare letter the marking stores. */
+    const keyFace = it => {
+      const o = it.opts && it.opts.find(x => typeof x === "object" && x.k === it.key && /i-ic/.test(x.t));
+      return o ? o.t : esc(it.key).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+    };
     const paintMark = (m, i) => {
         const li = $('.i[data-i="' + i + '"]', root);
         li.dataset.ok = m.ok ? "1" : "0";
@@ -1933,7 +1972,7 @@ function initTasks(){
         $(".i-out", li).innerHTML = m.ok
           ? '<span class="ok">&#10003; Right</span>'
             + (it.why ? ' <span class="why">' + it.why + '</span>' : "")
-          : '<span class="no">&#10007;</span> <span class="ans">' + esc(it.key).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>") + '</span>'
+          : '<span class="no">&#10007;</span> <span class="ans">' + keyFace(it) + '</span>'
             + (why ? ' <i>— ' + esc(why) + '</i>' : "")
             + (it.why ? ' <span class="why">' + it.why + '</span>' : "");
         $$("input, .i-tile, .i-tok", li).forEach(x => { x.disabled = true; });
@@ -4638,6 +4677,28 @@ function runCheck(c, text, p){
   return null;
 }
 
+/* ---------------- free writing ("About you") ------------------------------
+   Sentences only the learner can write: nothing marks them and nothing
+   reveals an answer. Each box keeps what was typed, on this device. */
+const J_KEY = "en8:jot:v1";
+function initJot(){
+  const boxes = $$(".j-box");
+  if (!boxes.length) return;
+  let rec = {};
+  try { rec = JSON.parse(localStorage.getItem(J_KEY)) || {}; } catch(e){}
+  const grow = b => { b.style.height = "auto"; b.style.height = b.scrollHeight + 2 + "px"; };
+  boxes.forEach(b => {
+    const id = b.dataset.jot, st = b.dataset.starter;
+    b.value = typeof rec[id] === "string" ? rec[id] : (st ? st + " " : "");
+    grow(b);
+    b.addEventListener("input", () => {
+      rec[id] = b.value;
+      try { localStorage.setItem(J_KEY, JSON.stringify(rec)); } catch(e){}
+      grow(b);
+    });
+  });
+}
+
 function initWrite(){
   (DATA.write || []).forEach(p => {
     const root = document.querySelector('[data-write="' + p.id + '"]');
@@ -5058,6 +5119,7 @@ function boot(){
   initClock();
   initReadingNav();     // after initTasks: it numbers the items those render
   initWrite();
+  initJot();
   initThreads();
 }
 if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);

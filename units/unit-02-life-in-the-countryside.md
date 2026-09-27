@@ -537,45 +537,22 @@ something**? Say *carefully*.
 
 Write true sentences about yourself. Use **than** in every sentence.
 
-1. (hard) _______________________________
-2. (well) _______________________________
-3. (early) _______________________________
-4. (carefully) _______________________________
+::: jot
+- (hard)
+- (well)
+- (early)
+- (carefully)
+:::
 
 ---
 
-## Lesson 4 — Reading & Speaking
-
-### Two villages, two countries
-
-Villages look different around the world, but the reasons people love them are
-surprisingly similar. Read these two short adverts.
-
-> **Duong Lam, Viet Nam**
-> One of the oldest villages near Ha Noi, in Son Tay. You can get there from the
-> centre of Ha Noi by car, by bus, or even by bicycle. Duong Lam is famous for
-> its ancient pagoda, its temples, and its traditional houses built of laterite
-> stone. The people are hospitable, and visitors are welcome to watch the locals
-> making their specialities — *kẹo dồi*, *chè lam* — and then to taste them.
-
-> **Giethoorn, the Netherlands**
-> A small village in the north of the Netherlands with almost no roads. People
-> travel along the **canals** by small boat, and cross them on more than 170
-> wooden bridges. The houses have thatched roofs and are surrounded by gardens
-> and water. Visitors reach the village by road or by **ferry**, and most of
-> them hire a boat for the day. The scenery is at its most picturesque in early
-> summer.
-
-**Talk about it.** Which of the two villages would you rather visit, and why?
-Say one thing they have in common and one way they are different — with a
-comparative adverb and **than**, if you can.
-
+## Lesson 4 — Reading & Writing
 
 ### Reading — *The old way to Bến Vàng*
 
 *Tí, 13, writes about a road he did not take.*
 
-::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
+::: clock mins="17" for="You have 17 minutes for the text and its questions."
 :::
 
 ::: passage
@@ -658,6 +635,140 @@ comparative adverb and **than**, if you can.
 - the way in through a wall or fence {gate | edge | landing} = gate
 :::
 
+### 4.4 Read it again, against the clock
+
+Read the same text again, faster each time.
+
+::: fluency mode="read" words="425" secs="210|170|130" ask="Read *The old way to Bến Vàng* again from the top. Stop the clock the moment you reach the end."
+- Do not stop to look anything up — you have met all of it
+- Read for the sense of it, not word by word
+- Press **I finished** the moment you reach the last line
+:::
+
+### Writing — A paragraph about rural life
+
+**Task.** Write **one paragraph of 80–100 words** about what you like and
+dislike about life in the countryside. Use at least **three** comparative
+adverbs.
+
+#### Model paragraph — read this first
+
+> I have only walked out to Bến Vàng once, but I have thought about it more
+> often since than about anywhere else. What I like is the space. The paddy
+> fields are vast, a stream runs the whole way down beside you, and the old
+> well at the bottom of the lane still gives water. People there move more
+> slowly than we do and work far harder than we do, which is not the same
+> thing. What I dislike is the distance: the last bus home leaves earlier than
+> it should. Even so, I sleep better out there.
+
+*(98 words)*
+
+#### Plan it — 5 questions your paragraph has to answer
+
+Cover the paragraph above. Answer these in notes, in your own words.
+
+| The question | Your answer — notes, in your own words |
+| --- | --- |
+| Which place are you describing, and how do you know it? | |
+| What is the **one** thing you like most about it? | |
+| What is the **biggest** single difference between it and where you live? | |
+| What is the one thing you dislike — a distance, a time, a missing thing? | |
+| Having said both, what is your overall feeling? | |
+
+::: bridge name="Write your main sentence first" trains="Coherence & Cohesion" cefr="B1" marker="[Q]" src="05 §2.5"
+**Before you draft:** write the one sentence a reader must see if they read
+nothing else. That is your topic sentence.
+
+**After you draft:** check each other sentence. If it does not support the topic
+sentence, rewrite it or delete it.
+
+> **Tiếng Việt:** Trước khi viết, viết **một câu** nêu ý chính. Viết xong, câu nào
+> không phục vụ câu đó thì sửa hoặc bỏ.
+:::
+
+::: bridge name="Give the biggest difference, once" trains="Task Achievement" cefr="B1" marker="[INF]" src="02 §2.1"
+In your paragraph, and again when you talk about it in Lesson 5, give the
+**biggest** difference between the town and the village, once and clearly —
+not three differences of equal weight.
+
+One clear difference tells your reader what matters most.
+
+> **Tiếng Việt:** Nêu **một** khác biệt lớn nhất giữa thành phố và làng quê, thật
+> rõ — đừng liệt kê ba khác biệt ngang nhau.
+:::
+
+::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — **one** paragraph of **80–100 words** on what you like and dislike about life in the countryside."
+- [ ] 80–100 words ~ words
+- [ ] **One** paragraph, not several ~ para:1
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] At least **three** comparative adverbs ~ any:3 more quickly/more slowly/more carefully/more easily/more often/more cheaply/more clearly/more loudly/better/worse/harder/faster/earlier/later/longer/closer/higher/lower/further/farther
+- [ ] No *more faster* or *more better* ~ none more faster/more better/more worse/more harder/more earlier/more later/more longer/more closer/more higher/more lower/more further
+- [ ] Each comparative has **than** or a comparison the reader can see
+- [ ] Both a like **and** a dislike — the task asks for both
+:::
+
+---
+
+## Lesson 5 — Listening & Speaking
+
+### Listening — Thảo walks the path
+
+You hear it **once**, read aloud by someone else, so read both sets of
+questions first, then answer while you listen rather than afterwards from memory.
+
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
+
+::: audio orientation="You will hear a girl describing a walk she took with a friend along a path outside the village, and what happened when they followed it the other way."
+I want to say first that I believed him before I saw anything. He does not
+invent things. He is not clever enough to keep it up for a whole week.
+
+So we went on Sunday morning. We started earlier than we needed to, with two
+bottles of water. The opening in
+the bamboo is exactly where he told me it would be. The ground under your feet
+is hard, and it is clean, and that is the part I cannot explain. Clean. Every
+day. By nobody.
+
+Going down towards the village it behaves itself. It cuts the distance in half,
+it climbs more steeply than the road does, and it brings you out beside the well
+at the bottom of the lane far more quickly than the bus would. Fine.
+
+Then we turned round and followed it the other way, uphill. We went up it a good
+deal more slowly than we had come down, and it does not end. It runs beside the river and keeps going north for an hour and a half,
+much further than either of us has ever been from home. There are steps cut
+into the bank. There is an old landing, and wooden posts standing out in the
+water.
+
+Nothing has tied up there in my lifetime. Nothing goes up that river any more.
+The path does.
+
+And here is the part I keep coming back to. That path went thirty years before
+either of us was born, and this morning it was under my feet. So whatever is
+doing this is not reaching back a week. It is reaching back years.
+:::
+
+### 5.1 Listen and choose
+
+::: task skill="listening" type="multiple-choice"
+- She believed her friend {before she saw anything | only after she saw it | after a week} = before she saw anything
+- They walked the path on {Sunday morning | Saturday evening | Monday morning} = Sunday morning
+- The thing she cannot explain is that the path is {clean | new | narrow} = clean
+- Going uphill they followed it for about {an hour and a half | half an hour | one hour} = an hour and a half
+- Beside the river they found {an old landing | the well | another village} = an old landing
+:::
+
+### 5.2 Note completion
+
+Choose for each gap **as you listen**.
+
+::: task skill="listening" type="completion"
+- They started ___ than they needed to {earlier | later | more slowly} = earlier
+- Bottles of water they carried: ___ {two | one | three} = two
+- Going down, the path comes out beside the ___ {well | river | bamboo} = well
+- Direction it keeps going: ___ {north | south | east} = north
+- Cut into the bank: ___ {steps | posts | a landing} = steps
+- Standing out in the water: wooden ___ {posts | steps | landing} = posts
+:::
+
 ### Speaking — Describing a village or town you know
 
 > **Working alone:** You have no partner, so do this in three steps.
@@ -688,17 +799,7 @@ check three things:
 
 Repeat Step 2 until each answer runs clearly from its first word to its last.
 
-### 4.4 Read it again, against the clock
-
-Read the same text again, faster each time.
-
-::: fluency mode="read" words="425" secs="210|170|130" ask="Read *The old way to Bến Vàng* again from the top. Stop the clock the moment you reach the end."
-- Do not stop to look anything up — you have met all of it
-- Read for the sense of it, not word by word
-- Press **I finished** the moment you reach the last line
-:::
-
-### 4.5 Say it again, faster
+### 5.3 Say it again, faster
 
 ::: fluency mode="talk" secs="240|180|120" ask="Talk about a place in the countryside you know — or would like to know."
 - What it looks like
@@ -706,6 +807,30 @@ Read the same text again, faster each time.
 - One thing you like about it
 - One thing you could not get used to
 :::
+
+### Two villages, two countries
+
+Villages look different around the world, but the reasons people love them are
+surprisingly similar. Read these two short adverts.
+
+> **Duong Lam, Viet Nam**
+> One of the oldest villages near Ha Noi, in Son Tay. You can get there from the
+> centre of Ha Noi by car, by bus, or even by bicycle. Duong Lam is famous for
+> its ancient pagoda, its temples, and its traditional houses built of laterite
+> stone. The people are hospitable, and visitors are welcome to watch the locals
+> making their specialities — *kẹo dồi*, *chè lam* — and then to taste them.
+
+> **Giethoorn, the Netherlands**
+> A small village in the north of the Netherlands with almost no roads. People
+> travel along the **canals** by small boat, and cross them on more than 170
+> wooden bridges. The houses have thatched roofs and are surrounded by gardens
+> and water. Visitors reach the village by road or by **ferry**, and most of
+> them hire a boat for the day. The scenery is at its most picturesque in early
+> summer.
+
+**Talk about it.** Which of the two villages would you rather visit, and why?
+Say one thing they have in common and one way they are different — with a
+comparative adverb and **than**, if you can.
 
 ### Everyday English — Giving and responding to compliments
 
@@ -771,130 +896,6 @@ not nice."* Then swap. Use **What a beautiful …**, **You really have a nice �
 and **I'm glad you like it** at least once each. After that, ask about a
 village or town they know — **What's it like there?** and two more questions
 from the table — and react to each answer.
-
----
-
-## Lesson 5 — Listening & Writing
-
-### Listening — Thảo walks the path
-
-You hear it **once**, read aloud by someone else, so read both sets of
-questions first, then answer while you listen rather than afterwards from memory.
-
-**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
-
-::: audio orientation="You will hear a girl describing a walk she took with a friend along a path outside the village, and what happened when they followed it the other way."
-I want to say first that I believed him before I saw anything. He does not
-invent things. He is not clever enough to keep it up for a whole week.
-
-So we went on Sunday morning. We started earlier than we needed to, with two
-bottles of water. The opening in
-the bamboo is exactly where he told me it would be. The ground under your feet
-is hard, and it is clean, and that is the part I cannot explain. Clean. Every
-day. By nobody.
-
-Going down towards the village it behaves itself. It cuts the distance in half,
-it climbs more steeply than the road does, and it brings you out beside the well
-at the bottom of the lane far more quickly than the bus would. Fine.
-
-Then we turned round and followed it the other way, uphill. We went up it a good
-deal more slowly than we had come down, and it does not end. It runs beside the river and keeps going north for an hour and a half,
-much further than either of us has ever been from home. There are steps cut
-into the bank. There is an old landing, and wooden posts standing out in the
-water.
-
-Nothing has tied up there in my lifetime. Nothing goes up that river any more.
-The path does.
-
-And here is the part I keep coming back to. That path went thirty years before
-either of us was born, and this morning it was under my feet. So whatever is
-doing this is not reaching back a week. It is reaching back years.
-:::
-
-### 5.1 Listen and choose
-
-::: task skill="listening" type="multiple-choice"
-- She believed her friend {before she saw anything | only after she saw it | after a week} = before she saw anything
-- They walked the path on {Sunday morning | Saturday evening | Monday morning} = Sunday morning
-- The thing she cannot explain is that the path is {clean | new | narrow} = clean
-- Going uphill they followed it for about {an hour and a half | half an hour | one hour} = an hour and a half
-- Beside the river they found {an old landing | the well | another village} = an old landing
-:::
-
-### 5.2 Note completion
-
-Choose for each gap **as you listen**.
-
-::: task skill="listening" type="completion"
-- They started ___ than they needed to {earlier | later | more slowly} = earlier
-- Bottles of water they carried: ___ {two | one | three} = two
-- Going down, the path comes out beside the ___ {well | river | bamboo} = well
-- Direction it keeps going: ___ {north | south | east} = north
-- Cut into the bank: ___ {steps | posts | a landing} = steps
-- Standing out in the water: wooden ___ {posts | steps | landing} = posts
-:::
-
-### Writing — A paragraph about rural life
-
-**Task.** Write **one paragraph of 80–100 words** about what you like and
-dislike about life in the countryside. Use at least **three** comparative
-adverbs.
-
-#### Model paragraph — read this first
-
-> I have only walked out to Bến Vàng once, but I have thought about it more
-> often since than about anywhere else. What I like is the space. The paddy
-> fields are vast, a stream runs the whole way down beside you, and the old
-> well at the bottom of the lane still gives water. People there move more
-> slowly than we do and work far harder than we do, which is not the same
-> thing. What I dislike is the distance: the last bus home leaves earlier than
-> it should. Even so, I sleep better out there.
-
-*(98 words)*
-
-#### Plan it — 5 questions your paragraph has to answer
-
-Cover the paragraph above. Answer these in notes, in your own words.
-
-| The question | Your answer — notes, in your own words |
-| --- | --- |
-| Which place are you describing, and how do you know it? | |
-| What is the **one** thing you like most about it? | |
-| What is the **biggest** single difference between it and where you live? | |
-| What is the one thing you dislike — a distance, a time, a missing thing? | |
-| Having said both, what is your overall feeling? | |
-
-::: bridge name="Write your main sentence first" trains="Coherence & Cohesion" cefr="B1" marker="[Q]" src="05 §2.5"
-**Before you draft:** write the one sentence a reader must see if they read
-nothing else. That is your topic sentence.
-
-**After you draft:** check each other sentence. If it does not support the topic
-sentence, rewrite it or delete it.
-
-> **Tiếng Việt:** Trước khi viết, viết **một câu** nêu ý chính. Viết xong, câu nào
-> không phục vụ câu đó thì sửa hoặc bỏ.
-:::
-
-::: bridge name="Give the biggest difference, once" trains="Task Achievement" cefr="B1" marker="[INF]" src="02 §2.1"
-In your Lesson 4 speaking notes and again in your paragraph, give the
-**biggest** difference between the town and the village, once and clearly —
-not three differences of equal weight.
-
-One clear difference tells your reader what matters most.
-
-> **Tiếng Việt:** Nêu **một** khác biệt lớn nhất giữa thành phố và làng quê, thật
-> rõ — đừng liệt kê ba khác biệt ngang nhau.
-:::
-
-::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — **one** paragraph of **80–100 words** on what you like and dislike about life in the countryside."
-- [ ] 80–100 words ~ words
-- [ ] **One** paragraph, not several ~ para:1
-- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
-- [ ] At least **three** comparative adverbs ~ any:3 more quickly/more slowly/more carefully/more easily/more often/more cheaply/more clearly/more loudly/better/worse/harder/faster/earlier/later/longer/closer/higher/lower/further/farther
-- [ ] No *more faster* or *more better* ~ none more faster/more better/more worse/more harder/more earlier/more later/more longer/more closer/more higher/more lower/more further
-- [ ] Each comparative has **than** or a comparison the reader can see
-- [ ] Both a like **and** a dislike — the task asks for both
-:::
 
 ---
 
@@ -997,11 +998,11 @@ page can settle it, the row says so, and that one is yours to judge.
 | use the words for life in the countryside | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
 | hear /ə/ and /ɪ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
 | make and use comparative adverbs | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
-| give a compliment, and answer one | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| give a compliment, and answer one | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 5 with someone, and decide. |
 | read a teenager's account of a journey through the countryside | Lesson 4, exercises 4.1 and 4.2 |
-| talk about the village or town I know | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| talk about the village or town I know | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
 | listen to someone describing a walk in the countryside | Lesson 5, exercises 5.1 and 5.2 |
-| write a paragraph about what I like and dislike about rural life | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| write a paragraph about what I like and dislike about rural life | Lesson 4, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1021,10 +1022,3 @@ page can settle it, the row says so, and that one is yours to judge.
 (*farmer, brother, water, neighbour, bigger*) is the relaxed /ə/, never a full
 "e" sound; *village, pick, chicken, bridge, biggest* all keep the short, bright
 /ɪ/.
-
-### Lesson 3
-
-**3.2** Answers will vary. Check: *hard* → **harder** (no *more*), *well* →
-**better**, *early* → **earlier**, *carefully* → **more carefully**; and every
-sentence contains **than**.
-

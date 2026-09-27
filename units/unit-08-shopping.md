@@ -579,45 +579,23 @@ calendar — we use the same form as for every day: the shop **opens**, the film
 
 Write true sentences about yourself. Use the word given, in the right place.
 
-1. (always) _______________________________
-2. (hardly ever) _______________________________
-3. (sometimes, at the start of the sentence) _______________________________
-4. (never) _______________________________
-5. (once a week / twice a month) _______________________________
+::: jot
+- (always)
+- (hardly ever)
+- (sometimes, at the start of the sentence)
+- (never)
+- (once a week / twice a month)
+:::
 
 ---
 
-## Lesson 4 — Reading & Speaking
-
-### My favourite shopping place
-
-Three people, three very different places — and why each of them likes it.
-
-> **Trang, 14.** "My favourite place is the open-air market at the end of our
-> lane. My mother and I go every Sunday morning. The vegetables are home-grown
-> and the sellers bring them in before six, so nothing is more than a day old.
-> And you can bargain there. Nothing has a price tag, so the price you pay
-> depends on how well you ask."
->
-> **Bảo, 13.** "I like the discount shop behind the school best. Everything
-> costs less than it does in the supermarket — notebooks, pens, sports socks,
-> all of it. I get my pocket money on the first of the month, and it goes twice
-> as far there. My sister says the bags fall apart, but mine hasn't yet."
->
-> **Khanh, 14.** "For me it's the convenience store on our corner. It's open
-> 24/7, it's ninety seconds from my front door, and I can be back before the
-> rice boils over. It's not cheap and the range of products is small, but when
-> my mother has forgotten the fish sauce again, it saves me half an hour."
-
-**Talk about it.** What is your own favourite shopping place, and what kind of
-place is it? Give **one** clear reason why you like it — not three — and name
-one thing you do **not** like about it.
+## Lesson 4 — Reading & Writing
 
 ### Reading — *The morning the market came back*
 
 *Tí writes down what happened at five o'clock on the fifteenth.*
 
-::: clock mins="19" for="You have 19 minutes for the text and every exercise below it."
+::: clock mins="19" for="You have 19 minutes for the text and its questions."
 :::
 
 ::: passage
@@ -689,6 +667,135 @@ one thing you do **not** like about it.
 - the long flat surface you are served across in a shop {counter | corner | gate} = counter
 :::
 
+### Writing — A paragraph about one kind of shopping
+
+**Task.** Write a paragraph of **80–100 words** about the **advantages** *or*
+the **disadvantages** of **one** kind of shopping: a local market, a shopping
+centre, or online shopping. Choose one side only — do not write both.
+
+*This is the paragraph Tí handed in the week after the market came back.*
+
+#### Model paragraph — read this first
+
+> Shopping at our local market has three clear advantages. First, it is cheap.
+> Vegetables and fruit usually cost less than in a department store, and you
+> can always bargain with the seller. Second, the food is fresh, because the
+> stalls get their delivery before five every morning. Third, a market
+> remembers you. Bà Sáu rarely goes anywhere else, and the sellers let her pay
+> on Friday. Of course, you often have to queue, and you hardly ever get a
+> receipt. Even so, I think a market is still the most convenient place for a
+> family with little cash.
+
+*(98 words)*
+
+#### Plan it — 6 questions your paragraph has to answer
+
+Cover the finished paragraph above. Answer in note form, in your own words.
+
+| The question | Your answer — notes, in your own words |
+| --- | --- |
+| Which kind of shopping, and what is your position on it? | |
+| Point 1, plus one detail that is not a repeat of the point | |
+| Point 2, plus one detail | |
+| Point 3, plus one detail | |
+| One point on the other side that you admit is true | |
+| Where does the reader see your position for the second time? | |
+
+::: bridge name="Say it aloud and listen for -s" trains="Grammatical Range & Accuracy" cefr="B1" marker="[S]" src="07 §4.5"
+In practice **3.1**, before you choose:
+
+1. **Say the sentence aloud and record it.**
+2. Listen back. Did you say the `-s` on *he/she* verbs (she **pays**, he
+   **gets**)? Count how many times you did, out of how many times you should have.
+
+The `-s` is easy to drop when you speak, so you have to listen for it.
+
+> **Tiếng Việt:** Đọc to câu và ghi âm, rồi nghe lại: đếm số lần có `-s` với
+> *he/she* trên tổng số lần cần có.
+:::
+
+::: thread id="articles" stage="check"
+:::
+
+::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours. One paragraph on the **advantages** *or* the **disadvantages** of **one** kind of shopping."
+- [ ] 80–100 words ~ words
+- [ ] One paragraph, no bullet points ~ para:1
+- [ ] Linking words: *First, Second, Third* ~ all first/second/third
+- [ ] At least **five** words from the Lesson 2 vocabulary table ~ vocab:5
+- [ ] At least **three** adverbs of frequency ~ any:3 always/usually/often/sometimes/rarely/never/hardly ever/seldom/occasionally/frequently
+- [ ] Each of those adverbs is in the right place — before the main verb, after *be*
+- [ ] **One** side only — advantages *or* disadvantages
+- [ ] A topic sentence and a closing sentence
+:::
+
+---
+
+## Lesson 5 — Listening & Speaking
+
+### Listening — The stranger by the car park
+
+You hear it **once**. Read both sets of questions first.
+
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
+
+::: audio orientation="You will hear a stranger speaking to a boy beside a market, and short replies from the boy. He has come a long way and he is not pleased with him."
+**The keeper:** Take her home. You are doing this wrong, and you have done it
+wrong for eight tides.
+
+**Tí:** Who are you?
+
+**The keeper:** My name is not the useful part. I keep the tide tables. I have
+kept them for a long time, and I always come when a town starts paying for its
+vegetables with money that stopped existing before its grandparents were
+born.
+
+**Tí:** It was an accident. I didn't —
+
+**The keeper:** You looked it up. Go and read your own wall. Eight marks, and
+the eighth one is above your knee. Who told her twelve?
+
+**Tí:** Nobody told her anything. She's my —
+
+**The keeper:** She is a child, and she has been ashore eleven days, and
+nobody has finished teaching her one single thing. Twelve is where somebody
+stopped talking. That is half a sentence. This was never meant to be used the
+way you are using it. The sea gives back one thing to one person who lost it.
+Not a whole market, with its sellers and its prices, to a town that has moved
+on and spent thirty years learning to.
+
+**The keeper:** And you have steered it. She told you that you cannot
+choose what comes back. She did not tell you the rest, because she does not
+know it: you choose where you stand when she calls. Upriver. The
+slipway. This car park. That is not the same rule, and it is not allowed
+either.
+
+**Tí:** Then say the other half. Please.
+
+**The keeper:** I usually don't explain myself to boys who read tide tables at
+midnight. Go and count your marks. There are four left.
+:::
+
+### 5.1 Listen and choose
+
+::: task skill="listening" type="multiple-choice"
+- The stranger says the boy has been doing it wrong for {eight tides | eleven days | thirty years} = eight tides
+- He says that what he keeps is {tide tables | marks | a market} = tide tables
+- He says the girl has been ashore for {eleven days | eight tides | thirty years} = eleven days
+- He says the marks still left number {four | eight | twelve} = four
+- He says that what the girl was told is {half a sentence | the same rule | the useful part} = half a sentence
+- He says the sea gives back one thing to {one person | a town | a whole market} = one person
+:::
+
+### 5.2 Listen and complete
+
+::: task skill="listening" type="sentence-completion"
+- He says he has kept them for ___ . {a long time | eleven days | eight tides} = a long time
+- The money stopped existing before the town's ___ were born. {grandparents | boys | sellers} = grandparents
+- The stranger tells the boy to go and read his own ___ . {wall | knee | slipway} = wall
+- The town has spent ___ learning to move on. {thirty years | eight tides | eleven days} = thirty years
+- The stranger tells the boy to go and count his ___ . {marks | tides | sellers} = marks
+:::
+
 ### Speaking — Your local market or shopping centre
 
 > **Working alone:** You have no partner, so do this in three steps.
@@ -730,7 +837,7 @@ Pause between your ideas, not in the middle of a sentence.
 :::
 
 
-### 4.4 Say it again, faster
+### 5.3 Say it again, faster
 
 ::: fluency mode="talk" secs="240|180|120" ask="Talk about how and where you shop."
 - Where your family shops
@@ -738,6 +845,30 @@ Pause between your ideas, not in the middle of a sentence.
 - Online or in a shop, and why
 - One thing that has gone wrong
 :::
+
+### My favourite shopping place
+
+Three people, three very different places — and why each of them likes it.
+
+> **Trang, 14.** "My favourite place is the open-air market at the end of our
+> lane. My mother and I go every Sunday morning. The vegetables are home-grown
+> and the sellers bring them in before six, so nothing is more than a day old.
+> And you can bargain there. Nothing has a price tag, so the price you pay
+> depends on how well you ask."
+>
+> **Bảo, 13.** "I like the discount shop behind the school best. Everything
+> costs less than it does in the supermarket — notebooks, pens, sports socks,
+> all of it. I get my pocket money on the first of the month, and it goes twice
+> as far there. My sister says the bags fall apart, but mine hasn't yet."
+>
+> **Khanh, 14.** "For me it's the convenience store on our corner. It's open
+> 24/7, it's ninety seconds from my front door, and I can be back before the
+> rice boils over. It's not cheap and the range of products is small, but when
+> my mother has forgotten the fish sauce again, it saves me half an hour."
+
+**Talk about it.** What is your own favourite shopping place, and what kind of
+place is it? Give **one** clear reason why you like it — not three — and name
+one thing you do **not** like about it.
 
 ### Everyday English — Making complaints
 
@@ -824,135 +955,6 @@ not very helpful when you asked for a larger size. Say what the problem is and
 stay polite, and use **I'd like to make a complaint
 about** and **I'm not happy with** at least once each. The shop answers with
 **I'm sorry about that** or **I'm sorry to hear that**.
-
----
-
-## Lesson 5 — Listening & Writing
-
-### Listening — The stranger by the car park
-
-You hear it **once**. Read both sets of questions first.
-
-**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
-
-::: audio orientation="You will hear a stranger speaking to a boy beside a market, and short replies from the boy. He has come a long way and he is not pleased with him."
-**The keeper:** Take her home. You are doing this wrong, and you have done it
-wrong for eight tides.
-
-**Tí:** Who are you?
-
-**The keeper:** My name is not the useful part. I keep the tide tables. I have
-kept them for a long time, and I always come when a town starts paying for its
-vegetables with money that stopped existing before its grandparents were
-born.
-
-**Tí:** It was an accident. I didn't —
-
-**The keeper:** You looked it up. Go and read your own wall. Eight marks, and
-the eighth one is above your knee. Who told her twelve?
-
-**Tí:** Nobody told her anything. She's my —
-
-**The keeper:** She is a child, and she has been ashore eleven days, and
-nobody has finished teaching her one single thing. Twelve is where somebody
-stopped talking. That is half a sentence. This was never meant to be used the
-way you are using it. The sea gives back one thing to one person who lost it.
-Not a whole market, with its sellers and its prices, to a town that has moved
-on and spent thirty years learning to.
-
-**The keeper:** And you have steered it. She told you that you cannot
-choose what comes back. She did not tell you the rest, because she does not
-know it: you choose where you stand when she calls. Upriver. The
-slipway. This car park. That is not the same rule, and it is not allowed
-either.
-
-**Tí:** Then say the other half. Please.
-
-**The keeper:** I usually don't explain myself to boys who read tide tables at
-midnight. Go and count your marks. There are four left.
-:::
-
-### 5.1 Listen and choose
-
-::: task skill="listening" type="multiple-choice"
-- The stranger says the boy has been doing it wrong for {eight tides | eleven days | thirty years} = eight tides
-- He says that what he keeps is {tide tables | marks | a market} = tide tables
-- He says the girl has been ashore for {eleven days | eight tides | thirty years} = eleven days
-- He says the marks still left number {four | eight | twelve} = four
-- He says that what the girl was told is {half a sentence | the same rule | the useful part} = half a sentence
-- He says the sea gives back one thing to {one person | a town | a whole market} = one person
-:::
-
-### 5.2 Listen and complete
-
-::: task skill="listening" type="sentence-completion"
-- He says he has kept them for ___ . {a long time | eleven days | eight tides} = a long time
-- The money stopped existing before the town's ___ were born. {grandparents | boys | sellers} = grandparents
-- The stranger tells the boy to go and read his own ___ . {wall | knee | slipway} = wall
-- The town has spent ___ learning to move on. {thirty years | eight tides | eleven days} = thirty years
-- The stranger tells the boy to go and count his ___ . {marks | tides | sellers} = marks
-:::
-
-### Writing — A paragraph about one kind of shopping
-
-**Task.** Write a paragraph of **80–100 words** about the **advantages** *or*
-the **disadvantages** of **one** kind of shopping: a local market, a shopping
-centre, or online shopping. Choose one side only — do not write both.
-
-*This is the paragraph Tí handed in the week after the market came back.*
-
-#### Model paragraph — read this first
-
-> Shopping at our local market has three clear advantages. First, it is cheap.
-> Vegetables and fruit usually cost less than in a department store, and you
-> can always bargain with the seller. Second, the food is fresh, because the
-> stalls get their delivery before five every morning. Third, a market
-> remembers you. Bà Sáu rarely goes anywhere else, and the sellers let her pay
-> on Friday. Of course, you often have to queue, and you hardly ever get a
-> receipt. Even so, I think a market is still the most convenient place for a
-> family with little cash.
-
-*(98 words)*
-
-#### Plan it — 6 questions your paragraph has to answer
-
-Cover the finished paragraph above. Answer in note form, in your own words.
-
-| The question | Your answer — notes, in your own words |
-| --- | --- |
-| Which kind of shopping, and what is your position on it? | |
-| Point 1, plus one detail that is not a repeat of the point | |
-| Point 2, plus one detail | |
-| Point 3, plus one detail | |
-| One point on the other side that you admit is true | |
-| Where does the reader see your position for the second time? | |
-
-::: bridge name="Say it aloud and listen for -s" trains="Grammatical Range & Accuracy" cefr="B1" marker="[S]" src="07 §4.5"
-In practice **3.1**, before you choose:
-
-1. **Say the sentence aloud and record it.**
-2. Listen back. Did you say the `-s` on *he/she* verbs (she **pays**, he
-   **gets**)? Count how many times you did, out of how many times you should have.
-
-The `-s` is easy to drop when you speak, so you have to listen for it.
-
-> **Tiếng Việt:** Đọc to câu và ghi âm, rồi nghe lại: đếm số lần có `-s` với
-> *he/she* trên tổng số lần cần có.
-:::
-
-::: thread id="articles" stage="check"
-:::
-
-::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours. One paragraph on the **advantages** *or* the **disadvantages** of **one** kind of shopping."
-- [ ] 80–100 words ~ words
-- [ ] One paragraph, no bullet points ~ para:1
-- [ ] Linking words: *First, Second, Third* ~ all first/second/third
-- [ ] At least **five** words from the Lesson 2 vocabulary table ~ vocab:5
-- [ ] At least **three** adverbs of frequency ~ any:3 always/usually/often/sometimes/rarely/never/hardly ever/seldom/occasionally/frequently
-- [ ] Each of those adverbs is in the right place — before the main verb, after *be*
-- [ ] **One** side only — advantages *or* disadvantages
-- [ ] A topic sentence and a closing sentence
-:::
 
 ---
 
@@ -1080,11 +1082,11 @@ page can settle it, the row says so, and that one is yours to judge.
 | use the words for shopping | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
 | hear /sp/ and /st/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
 | put *always*, *usually*, *never* in the right place, and say what a timetable fixes (the market **opens** at five tomorrow) | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
-| make a complaint | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| make a complaint | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 5 with someone, and decide. |
 | read about a market, its sellers and its prices | Lesson 4, exercises 4.1 and 4.2 |
-| talk about a place where I shop | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| talk about a place where I shop | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
 | follow a listening in which two people argue and pick out the facts and numbers in it | Lesson 5, exercises 5.1 and 5.2 |
-| write a paragraph about the good and the bad side of one kind of shopping | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| write a paragraph about the good and the bad side of one kind of shopping | Lesson 4, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1103,9 +1105,3 @@ page can settle it, the row says so, and that one is yours to judge.
 **2.3** Answers will vary — this is a speaking task. Check: no vowel sound
 between /s/ and /p/ or between /s/ and /t/ (*not* "sờ-pend"), and no aspiration
 puff on the /p/ or /t/.
-
-### Lesson 3
-
-**3.2** Answers will vary. Check: *always/never* directly after *be* or
-directly before a main verb, never at the front of the sentence; *sometimes* at
-the front in item 3; the frequency expression at the **end** in item 5.

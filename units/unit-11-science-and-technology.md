@@ -566,60 +566,23 @@ You are reporting later, and somewhere else.
 Write true reported sentences. Use *said* in some and *told* + a person in
 others, and change the pronouns.
 
-1. Something a teacher said to your class this month.
-   → My teacher told us that _______________________________
-2. Something a family member said to you yesterday.
-   → _______________________________
-3. Something you said about your own plans for next week.
-   → I said that _______________________________
-4. Something that is always true, which a science teacher has told you (keep the present).
-   → _______________________________
-5. Something a friend said about a device or app they like.
-   → _______________________________
+::: jot
+- Something a teacher said to your class this month. → My teacher told us that
+- Something a family member said to you yesterday.
+- Something you said about your own plans for next week. → I said that
+- Something that is always true, which a science teacher has told you (keep the present).
+- Something a friend said about a device or app they like.
+:::
 
 ---
 
-## Lesson 4 — Reading & Speaking
-
-### Online learning
-
-Four students, four platforms. Each of them names one thing that works and one
-thing that does not.
-
-> **Lan.** "My class moved onto Zoom during the epidemic and I have kept it for
-> my extra English lessons. It is very convenient — I save nearly an hour of
-> travelling every evening and I start the moment I put my school bag down. The
-> trouble is the connection at my house. It drops in the middle of a sentence,
-> and I have to ask the teacher to say everything twice."
->
-> **Bảo.** "Our extra maths class is on Google Meet. The best part is the
-> breakout rooms: four of us go into one and argue about a problem until
-> somebody proves it, so I still talk to my classmates properly. What I do not
-> like is what it does to my eyes. After two hours in front of a screen they get
-> tired, and I cannot read anything else that night."
->
-> **Khánh.** "My school put every subject on Microsoft Teams. I have become much
-> more independent — nobody stands behind me, so I plan my own week, hand my
-> work in on time, and the teacher's feedback appears under it the next morning.
-> On the other hand, it is hard to concentrate at home. My little sister sings in
-> the next room, and I feel more stressed than I ever did in a real classroom."
->
-> **Nga.** "Our English club meets on Skype on Sunday mornings, so nobody has to
-> cross the city and nobody sits in a traffic jam. But two of our members have no
-> computer or smartphone of their own. They can only join when an older brother
-> is free, and they complain — fairly — that they miss half of every club. I
-> would still rather meet face to face."
-
-**Talk about it.** Which of the four would you most like to swap places with,
-and why? Say one thing online learning does well for you and one thing it does
-badly.
-
+## Lesson 4 — Reading & Writing
 
 ### Reading — *The workroom under the wheel*
 
 *Tí writes down what they found upriver, six days after the voice in the box.*
 
-::: clock mins="19" for="You have 19 minutes for the text and every exercise below it."
+::: clock mins="19" for="You have 19 minutes for the text and its questions."
 :::
 
 ::: passage
@@ -699,6 +662,119 @@ badly.
 - knowing a person by the face alone {face recognition | fingerprint | iris} = face recognition
 :::
 
+### Writing — An opinion paragraph
+
+**Task.** Your school magazine asks: **Will robots replace teachers?** Write an
+**opinion paragraph** of **80–100 words**. Take a clear position, admit one
+point on the other side, then argue your own.
+
+#### Model paragraph — read this first
+
+> Robots will never replace teachers, and I do not want them to. It is true
+> that a machine is more efficient than a person: an application can mark
+> thirty tests in a second and give feedback the same evening. However, a
+> device only answers the question you type into it. Last year a teacher looked
+> at my face across a laboratory and told me that I had understood nothing, and
+> she was right. No invention I have seen can do that. Robots will take the
+> boring half of teaching, but the human half is not theirs.
+
+*(96 words)*
+
+#### Plan it — 6 questions your paragraph has to answer
+
+Cover the finished paragraph above. Answer in note form, in your own words.
+
+
+| The question | Your answer — notes, in your own words |
+| --- | --- |
+| What is your position, in one sentence? | |
+| One real point on the other side | |
+| Why it does not change your mind | |
+| One concrete example from your own life | |
+| A second reason, different in kind from the first | |
+| Where does the reader see your position for the second time? | |
+
+::: bridge name="Say the question in your own words" trains="Lexical Resource" cefr="B1" marker="[D]" src="02 §7"
+Before you write the opinion paragraph, say the task out loud **in your own
+words** — not the wording above. Then write, without a learned-by-heart opening.
+
+It takes ten seconds and shows you whether you have understood the question.
+
+> **Tiếng Việt:** Trước khi viết, **nói lại đề bằng lời của mình**, và đừng dùng câu
+> mở bài học thuộc.
+:::
+
+::: thread id="articles" stage="check"
+:::
+
+::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours — the opinion paragraph, **80–100 words**. A clear position, one point admitted, then your own argument."
+- [ ] 80–100 words ~ words
+- [ ] One paragraph, not a list ~ para:1
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] One concession ~ any:1 it is true that/it is true/of course/admittedly/i admit that/certainly/there is no doubt that
+- [ ] One *However* ~ any:1 however/nevertheless/even so/on the other hand/all the same
+- [ ] At least **one** concrete example ~ any:1 for example/for instance/such as/in my school/in my class/last year/last week
+- [ ] At least **one** reported statement ~ any:1 said that/told me that/told us that/explained that/said he/said she/told me/told us
+- [ ] Your position is clear in the **first** sentence
+- [ ] A conclusion that repeats your position in different words
+:::
+
+---
+
+## Lesson 5 — Listening & Speaking
+
+### Listening — The apprentice says what he was taught
+
+You hear it **once**, read aloud by someone else. Read 5.1 and 5.2 first, then
+answer while you listen.
+
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả 5.1 và 5.2, rồi vừa
+nghe vừa trả lời.
+
+::: audio orientation="You will hear one speaker, sitting in the workroom, telling the others what her teacher taught her, what she was never taught, and what she thinks they should do with what is left."
+**Bống:** He was not a kind man to work for. He said the same things every
+morning until I could say them back to him in my sleep.
+
+He told me that this is not a wish and never was. He said that everything the
+sea brings home belonged to somebody once. He said it travels home along a
+line, and that a line has two ends. He told me my end was the near one. He
+said his was the far one, and that his was the harder one.
+
+He told me I would get my name back on the day I had learned the whole of it. I
+never learned the whole of it. He went, and my name went with him, and I have
+stood at the near end ever since with half a lesson.
+
+Now listen to me, both of you. There is one mark left on that wall. I know
+what you are going to say, because I want the same thing you want. But he
+wrote that page and he underlined it, and I heard him say it out loud more
+times than I can count.
+
+Spend it on anything in the world. Do not spend it on him.
+:::
+
+### 5.1 Listen and choose
+
+::: task skill="listening" type="multiple-choice"
+- The speaker says her teacher was {not kind to work for | kind to work for | hardly ever there} = not kind to work for
+- She was told that this is {not a wish | a wish | a machine} = not a wish
+- A line, she says, has {two ends | one end | no end at all} = two ends
+- Her own end of the line was {the near one | the far one | the harder one} = the near one
+- She was to get her name back on the day she had {learned the whole of it | said them back to him | stood at the near end} = learned the whole of it
+- Her advice about the last mark is to spend it on {anything else | her teacher | nothing at all} = anything else
+:::
+
+### 5.2 Listen and complete
+
+::: task skill="listening" type="sentence-completion"
+- She heard the same things every ___ . {morning | evening | week} = morning
+- Everything the sea brings home ___ to somebody once. {belonged | travelled | went} = belonged
+- She said a lost thing ___ home along a line. {travels | belongs | brings} = travels
+- Her teacher said his own end was the ___ one. {harder | near | easier} = harder
+- She has stood at her end ever since with half a ___ . {lesson | line | name} = lesson
+- There is one ___ left on that wall. {mark | line | page} = mark
+- Her teacher wrote the page and ___ it. {underlined | tore out | learned} = underlined
+:::
+
 ### Speaking — The technology you use, and why
 
 > **Working alone:** You have no partner, so do this in three steps.
@@ -729,7 +805,7 @@ check three things:
 
 Repeat Step 2 until each answer runs clearly from its first word to its last.
 
-### 4.4 Say it again, faster
+### 5.3 Say it again, faster
 
 ::: fluency mode="talk" secs="240|180|120" ask="Talk about one invention you would not want to lose."
 - What it is
@@ -737,6 +813,39 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 - Who uses it most
 - What might replace it
 :::
+
+### Online learning
+
+Four students, four platforms. Each of them names one thing that works and one
+thing that does not.
+
+> **Lan.** "My class moved onto Zoom during the epidemic and I have kept it for
+> my extra English lessons. It is very convenient — I save nearly an hour of
+> travelling every evening and I start the moment I put my school bag down. The
+> trouble is the connection at my house. It drops in the middle of a sentence,
+> and I have to ask the teacher to say everything twice."
+>
+> **Bảo.** "Our extra maths class is on Google Meet. The best part is the
+> breakout rooms: four of us go into one and argue about a problem until
+> somebody proves it, so I still talk to my classmates properly. What I do not
+> like is what it does to my eyes. After two hours in front of a screen they get
+> tired, and I cannot read anything else that night."
+>
+> **Khánh.** "My school put every subject on Microsoft Teams. I have become much
+> more independent — nobody stands behind me, so I plan my own week, hand my
+> work in on time, and the teacher's feedback appears under it the next morning.
+> On the other hand, it is hard to concentrate at home. My little sister sings in
+> the next room, and I feel more stressed than I ever did in a real classroom."
+>
+> **Nga.** "Our English club meets on Skype on Sunday mornings, so nobody has to
+> cross the city and nobody sits in a traffic jam. But two of our members have no
+> computer or smartphone of their own. They can only join when an older brother
+> is free, and they complain — fairly — that they miss half of every club. I
+> would still rather meet face to face."
+
+**Talk about it.** Which of the four would you most like to swap places with,
+and why? Say one thing online learning does well for you and one thing it does
+badly.
 
 ### Everyday English — Giving and responding to good news
 
@@ -812,119 +921,6 @@ them next time you talk about a device or an app.*
 | The biggest drawback is **the price**. | Nhược điểm lớn nhất là giá cả. |
 | To be honest, I couldn't live without it. | Thật lòng mà nói, tôi không thể sống thiếu nó. |
 | I'd rather use a book, actually. | Thật ra tôi thích dùng sách hơn. |
-
----
-
-## Lesson 5 — Listening & Writing
-
-### Listening — The apprentice says what he was taught
-
-You hear it **once**, read aloud by someone else. Read 5.1 and 5.2 first, then
-answer while you listen.
-
-**Nghe một lần duy nhất, do người khác đọc to.** Đọc trước cả 5.1 và 5.2, rồi vừa
-nghe vừa trả lời.
-
-::: audio orientation="You will hear one speaker, sitting in the workroom, telling the others what her teacher taught her, what she was never taught, and what she thinks they should do with what is left."
-**Bống:** He was not a kind man to work for. He said the same things every
-morning until I could say them back to him in my sleep.
-
-He told me that this is not a wish and never was. He said that everything the
-sea brings home belonged to somebody once. He said it travels home along a
-line, and that a line has two ends. He told me my end was the near one. He
-said his was the far one, and that his was the harder one.
-
-He told me I would get my name back on the day I had learned the whole of it. I
-never learned the whole of it. He went, and my name went with him, and I have
-stood at the near end ever since with half a lesson.
-
-Now listen to me, both of you. There is one mark left on that wall. I know
-what you are going to say, because I want the same thing you want. But he
-wrote that page and he underlined it, and I heard him say it out loud more
-times than I can count.
-
-Spend it on anything in the world. Do not spend it on him.
-:::
-
-### 5.1 Listen and choose
-
-::: task skill="listening" type="multiple-choice"
-- The speaker says her teacher was {not kind to work for | kind to work for | hardly ever there} = not kind to work for
-- She was told that this is {not a wish | a wish | a machine} = not a wish
-- A line, she says, has {two ends | one end | no end at all} = two ends
-- Her own end of the line was {the near one | the far one | the harder one} = the near one
-- She was to get her name back on the day she had {learned the whole of it | said them back to him | stood at the near end} = learned the whole of it
-- Her advice about the last mark is to spend it on {anything else | her teacher | nothing at all} = anything else
-:::
-
-### 5.2 Listen and complete
-
-::: task skill="listening" type="sentence-completion"
-- She heard the same things every ___ . {morning | evening | week} = morning
-- Everything the sea brings home ___ to somebody once. {belonged | travelled | went} = belonged
-- She said a lost thing ___ home along a line. {travels | belongs | brings} = travels
-- Her teacher said his own end was the ___ one. {harder | near | easier} = harder
-- She has stood at her end ever since with half a ___ . {lesson | line | name} = lesson
-- There is one ___ left on that wall. {mark | line | page} = mark
-- Her teacher wrote the page and ___ it. {underlined | tore out | learned} = underlined
-:::
-
-### Writing — An opinion paragraph
-
-**Task.** Your school magazine asks: **Will robots replace teachers?** Write an
-**opinion paragraph** of **80–100 words**. Take a clear position, admit one
-point on the other side, then argue your own.
-
-#### Model paragraph — read this first
-
-> Robots will never replace teachers, and I do not want them to. It is true
-> that a machine is more efficient than a person: an application can mark
-> thirty tests in a second and give feedback the same evening. However, a
-> device only answers the question you type into it. Last year a teacher looked
-> at my face across a laboratory and told me that I had understood nothing, and
-> she was right. No invention I have seen can do that. Robots will take the
-> boring half of teaching, but the human half is not theirs.
-
-*(96 words)*
-
-#### Plan it — 6 questions your paragraph has to answer
-
-Cover the finished paragraph above. Answer in note form, in your own words.
-
-
-| The question | Your answer — notes, in your own words |
-| --- | --- |
-| What is your position, in one sentence? | |
-| One real point on the other side | |
-| Why it does not change your mind | |
-| One concrete example from your own life | |
-| A second reason, different in kind from the first | |
-| Where does the reader see your position for the second time? | |
-
-::: bridge name="Say the question in your own words" trains="Lexical Resource" cefr="B1" marker="[D]" src="02 §7"
-Before you write the opinion paragraph, say the task out loud **in your own
-words** — not the wording above. Then write, without a learned-by-heart opening.
-
-It takes ten seconds and shows you whether you have understood the question.
-
-> **Tiếng Việt:** Trước khi viết, **nói lại đề bằng lời của mình**, và đừng dùng câu
-> mở bài học thuộc.
-:::
-
-::: thread id="articles" stage="check"
-:::
-
-::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours — the opinion paragraph, **80–100 words**. A clear position, one point admitted, then your own argument."
-- [ ] 80–100 words ~ words
-- [ ] One paragraph, not a list ~ para:1
-- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
-- [ ] One concession ~ any:1 it is true that/it is true/of course/admittedly/i admit that/certainly/there is no doubt that
-- [ ] One *However* ~ any:1 however/nevertheless/even so/on the other hand/all the same
-- [ ] At least **one** concrete example ~ any:1 for example/for instance/such as/in my school/in my class/last year/last week
-- [ ] At least **one** reported statement ~ any:1 said that/told me that/told us that/explained that/said he/said she/told me/told us
-- [ ] Your position is clear in the **first** sentence
-- [ ] A conclusion that repeats your position in different words
-:::
 
 ---
 
@@ -1070,40 +1066,14 @@ page can settle it, the row says so, and that one is yours to judge.
 | use the words for science and technology | Lesson 2, Meet the words · Lesson 6, exercises 6.1 and 6.5 |
 | say a statement and a question with the stress in the right places | Lesson 2, exercises 2.1, 2.2 and 2.3 · Lesson 6, exercise 6.2. Saying them aloud is yours — record Lesson 2, exercise 2.3 and listen back. |
 | report what somebody said | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3, 6.4 and 6.6 |
-| give good news, and answer it | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| give good news, and answer it | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 5 with someone, and decide. |
 | read a text closely and answer questions on it | Lesson 4, exercises 4.1 and 4.2 |
-| talk about a piece of technology or an invention | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| talk about a piece of technology or an invention | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
 | listen once to a spoken account and catch what was reported in it | Lesson 5, exercises 5.1 and 5.2 |
-| write a paragraph saying whether robots will replace teachers | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| write a paragraph saying whether robots will replace teachers | Lesson 4, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
 > xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
 > trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
 > đánh giá.
-
----
-
-## Answer Key
-
-> **Đáp án.** Chỉ xem sau khi đã tự làm bài.
-
-### Lesson 3
-
-**3.2** Answers will vary. Check: (1) *told us that* — a person after *told*;
-(2) a person after *told* / no person after *said*; (3) *I said that* with the
-pronoun and time word shifted; (4) present tense kept, because it is a general
-truth; (5) the pronoun changed from *I/my* to *he/she/his/her*.
-
-### Lesson 4
-
-**Speaking** Answers will vary. Check: no person after *said*, a person after
-*told*; every answer contains a reason; question 5 answered with a reported
-statement.
-
-### Lesson 5
-
-**Writing** Answers will vary. Check against the checklist: 80–100 words, a
-position in the first sentence, one *It is true that…* concession, one
-*However*, a concrete personal example, four unit vocabulary words, one
-reported statement, and a conclusion that restates the position.

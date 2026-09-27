@@ -602,6 +602,15 @@ footer.foot p{margin:0;max-width:74ch}
 .i-opt input:checked+span{background:var(--teal);border-color:var(--teal);color:var(--teal-ink)}
 .i-opt input:disabled+span{cursor:default}
 .i-opt input:disabled:not(:checked)+span{opacity:.6}
+/* True / False / Not given: a small mark before the word. The mark keeps its
+   own colour on a chosen chip, so the three still read apart once picked. */
+.i-ic{display:inline-grid;place-items:center;width:1.3em;height:1.3em;margin:0 .4em 0 -.2em;
+  border-radius:50%;font-style:normal;font-weight:700;font-size:.82em;line-height:1;
+  vertical-align:-.1em;background:var(--sunk);color:var(--muted)}
+.i-ic[data-k="T"],.i-ic[data-k="YES"]{background:var(--green-wash);color:var(--green)}
+.i-ic[data-k="F"],.i-ic[data-k="NO"]{background:var(--red-wash);color:var(--red)}
+.i-opt input:checked+span .i-ic{background:var(--surface)}
+.i-out .ans .i-ic{margin-left:0}
 /* The gap a picked word lands in. */
 .i-gap{display:inline-block;min-width:4.5rem;border-bottom:2px solid var(--clay);padding:0 .3rem;
   text-align:center;color:var(--teal);font-weight:600}
@@ -1766,3 +1775,25 @@ dialog.sheet::backdrop{background:rgba(0,0,0,.28);backdrop-filter:blur(2px);-web
 @media (prefers-reduced-motion:reduce){
   .card.engine.is-right .choices button.ok,.card.engine.is-right .i-line,
   .task .i.is-instant[data-ok="1"] .i-opt input:checked+span{animation:none}}
+
+/* Free writing ("About you"): one box per prompt, growing as you write. */
+.j-list{margin:.4rem 0 .2rem;padding-left:1.4rem}
+.j-list li{margin:0 0 .85rem}
+.j-q{display:block;margin:0 0 .3rem;font-size:.95rem}
+.j-box{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:1rem;
+  line-height:1.55;padding:.55rem .7rem;min-height:2.9rem;resize:none;overflow:hidden;
+  border:1px solid var(--rule);border-radius:var(--r);background:var(--surface);color:var(--ink)}
+.j-box:focus{outline:2px solid var(--teal);outline-offset:1px;border-color:transparent}
+
+/* True / False / Not given sit on one row as three equal buttons: the same
+   three every time, so they should never reflow between questions. */
+.i-opts:has(.i-ic){display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.4rem}
+.i-opts:has(.i-ic) .i-opt span{width:100%;justify-content:center;padding-left:.4rem;padding-right:.4rem;white-space:nowrap}
+.i-opts:has(.i-ic) .i-opt{display:flex}
+.i-opts:has(.i-ic) .i-opt span{font-size:.88rem;padding-left:.25rem;padding-right:.25rem}
+.i-opts:has(.i-ic) .i-ic{margin:0 .3em 0 0}
+.i-ic[data-k="NG"]{background:var(--surface);color:var(--muted);box-shadow:0 0 0 1px var(--rule) inset}
+@media (max-width:359px){
+  .i-opts:has(.i-ic) .i-opt span{flex-direction:column;gap:.15rem;padding-top:.4rem;padding-bottom:.4rem}
+  .i-opts:has(.i-ic) .i-ic{margin:0}
+}

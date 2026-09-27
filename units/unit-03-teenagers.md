@@ -555,55 +555,26 @@ Write true sentences about yourself. In 1–5, join two full ideas with a comma
 and the word given. In 6–8, put a semicolon before the word given and a comma
 after it.
 
-1. (and) _______________________________
-2. (but) _______________________________
-3. (so) _______________________________
-4. (or) _______________________________
-5. (yet) _______________________________
-6. (however) _______________________________
-7. (therefore) _______________________________
-8. (otherwise) _______________________________
+::: jot
+- (and)
+- (but)
+- (so)
+- (or)
+- (yet)
+- (however)
+- (therefore)
+- (otherwise)
+:::
 
 ---
 
-## Lesson 4 — Reading & Speaking
-
-### Social media popular among teens
-
-One question went up on a class forum: *Which social media do you use, and what
-do you actually do on it?* Four members of 8A answered.
-
-> **Vinh, 14.** "I log on to a video site almost every evening. I watch other
-> people's clips for half an hour, and about once a month I upload one of my
-> own — usually the chess club playing far too fast to follow. It is enjoyable;
-> however, it eats my evening. So I set an alarm now, and when it rings I
-> stop."
->
-> **Quyen, 13.** "A photo app, and only that. Every Sunday I post a picture of
-> whatever I have drawn that week, and then I check my notifications far more
-> often than I should. When somebody I have never met likes a drawing, my whole
-> afternoon improves. I don't browse for hours — I just want the comments."
->
-> **Bao, 14.** "I don't have a social media account at all. My parents said not
-> until I am fifteen, and honestly I don't mind much. I use our class forum on
-> the school website for homework questions, and that is enough for me. It is
-> not user-friendly, and it looks about twenty years old, but it works."
->
-> **Diep, 14.** "A messaging app, all day. I connect with my cousins in Hue and
-> with two friends who moved to another school last year. We never post
-> anything in public. Before the midterm tests we made a group and asked each
-> other questions in it every night; therefore, nobody in that group panicked."
-
-**Talk about it.** Whose answer is closest to yours, and what is different
-about yours? Bao has no account at all — would a year without one be easy or
-hard for you? Say why.
-
+## Lesson 4 — Reading & Writing
 
 ### Reading — *The evening at the landing*
 
 *Tí, 13, writes down what happened while he still remembers all of it.*
 
-::: clock mins="18" for="You have 18 minutes for the text and every exercise below it."
+::: clock mins="18" for="You have 18 minutes for the text and its questions."
 :::
 
 ::: passage label="A"
@@ -682,6 +653,116 @@ headings — two of them match no paragraph.
 - a narrow road between houses {lane | slipway | harbour wall} = lane
 :::
 
+### Writing — A paragraph about stress
+
+**Task.** Your school magazine has asked students to write about stress. Write
+**one paragraph of 80–100 words** giving **two or three causes** of teenage
+stress and **two solutions**.
+
+#### Model paragraph — read this first
+
+> Everyone in my class is stressed this term, and there are three reasons.
+> First, the midterm tests are next week, so we cannot keep up with every
+> subject. Second, our teacher reads the marks out in the yard, and nobody
+> wants to be at the bottom of that list. Third, peer pressure is strong, yet
+> nobody admits it. Two things help. You can plan the week on Sunday, or you
+> can tell one person what is wrong. Talking is better. Somebody listened to me
+> for an hour last night, and that was enough.
+
+*(93 words)*
+
+#### Plan it — 6 questions your paragraph has to answer
+
+Cover the paragraph above. Answer these in note form, in your own words.
+
+| The question | Your answer — notes, in your own words |
+| --- | --- |
+| What is the problem, in one sentence a reader could repeat back? | |
+| Cause 1 — what is it, and *why* does it cause stress? | |
+| Cause 2 — what, and why? | |
+| Cause 3 — keep this only if you still have words left | |
+| Which two solutions, and which of them do you think is better? | |
+| What do you want the reader left with? | |
+
+::: bridge name="One linking word per new point" trains="Coherence & Cohesion" cefr="B1" marker="[Q]" src="05 §4"
+In the paragraph below, and in every paragraph after it: **one linking word at
+the start of each new point, and none inside it.**
+
+*First… Second… Third…* at the start of your three causes is right. *First, and
+also, moreover, in addition* inside one cause is too many.
+
+When every sentence starts with a linking word, none of them helps the reader.
+
+> **Tiếng Việt:** Mỗi ý lớn dùng **một** từ nối ở đầu. Trong cùng một ý thì không
+> thêm từ nối nào nữa.
+:::
+
+::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — **one** paragraph of **80–100 words** on the causes of teenage stress and what helps."
+- [ ] 80–100 words ~ words
+- [ ] One paragraph, not a list ~ para:1
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] At least **four** sentences joined with a comma and *and, but, so, or* or *yet* ~ re:4 ,\s+(and|but|so|or|yet)\s
+- [ ] At least **three** different joining words from *and, but, so, or, yet* ~ distinct:3 and/but/so/or/yet
+- [ ] No comma on its own between two full sentences
+:::
+
+---
+
+## Lesson 5 — Listening & Speaking
+
+### Listening — Thảo, later the same evening
+
+You hear it **once**, read aloud by someone else, so read both sets of
+questions first, then answer while you listen rather than afterwards from memory.
+
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
+
+::: audio orientation="You will hear a girl telling a friend about an evening she spent with two boys and a younger girl, and about a decision one of them had to make."
+I want to say first that I was the one who told him to send Minh home, so if
+anybody is angry, be angry with me.
+
+I came down after eight. They were both on the step, and neither of them was
+talking. Bống says there are twelve chalk marks to come on the harbour wall
+altogether. This was the third.
+
+Minh was very calm about it. He worked out that a whole year had gone
+past, and after that he asked us almost nothing, because every question he
+started belonged to last September and he could hear it. Then he said the thing
+that finished me. He said we should not keep him. He said two words at the
+water's edge would end it, and nobody would blame us for anything.
+
+Tí took him down to the water. They stood there, right at the edge, for about
+a minute. His face did not move at all.
+
+Then he turned round and walked back up.
+
+Neither of us said one word about it afterwards, and I don't think we ever
+will. On the way home Minh told us something else. His family went north, up
+the river, and there are people up there who talk about a whole village the
+water took and then gave back for one night. He says this has happened before,
+more than once, and long before any of us were born.
+:::
+
+### 5.1 Listen and choose
+
+::: task skill="listening" type="multiple-choice"
+- The speaker says the blame should fall on {herself | Tí | Bống} = herself
+- She arrived at the water {after eight | before six | at midnight} = after eight
+- Of the chalk marks on the harbour wall, this one was {the third | the second | the twelfth} = the third
+- Minh asked them very little because {his questions belonged to last year | he was angry | he could not speak} = his questions belonged to last year
+- Tí took Minh down to the water and then {turned round and walked back up | said the two words | pushed the boat out} = turned round and walked back up
+:::
+
+### 5.2 Listen and complete
+
+::: task skill="listening" type="sentence-completion"
+- Chalk marks to come on the harbour wall: ___ {twelve | two | eight} = twelve
+- When she came down, neither of the two was ___ . {talking | calm | on the step} = talking
+- Minh said that nobody would ___ them for anything. {blame | keep | send} = blame
+- Length of time they stood at the water's edge: about a ___ {minute | year | night} = minute
+- Direction his family went: ___ {north | home | down to the water} = north
+:::
+
 ### Speaking — Asking and answering about a club
 
 > **Working alone:** You have no partner, so do this in three steps.
@@ -711,7 +792,7 @@ check three things:
 
 Repeat Step 2 until each answer runs clearly from its first word to its last.
 
-### 4.4 Say it again, faster
+### 5.3 Say it again, faster
 
 ::: fluency mode="talk" secs="240|180|120" ask="Talk about the pressures on someone your age, and what helps."
 - What makes a school week stressful
@@ -719,6 +800,36 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 - One thing adults get wrong about it
 - One thing that genuinely helps
 :::
+
+### Social media popular among teens
+
+One question went up on a class forum: *Which social media do you use, and what
+do you actually do on it?* Four members of 8A answered.
+
+> **Vinh, 14.** "I log on to a video site almost every evening. I watch other
+> people's clips for half an hour, and about once a month I upload one of my
+> own — usually the chess club playing far too fast to follow. It is enjoyable;
+> however, it eats my evening. So I set an alarm now, and when it rings I
+> stop."
+>
+> **Quyen, 13.** "A photo app, and only that. Every Sunday I post a picture of
+> whatever I have drawn that week, and then I check my notifications far more
+> often than I should. When somebody I have never met likes a drawing, my whole
+> afternoon improves. I don't browse for hours — I just want the comments."
+>
+> **Bao, 14.** "I don't have a social media account at all. My parents said not
+> until I am fifteen, and honestly I don't mind much. I use our class forum on
+> the school website for homework questions, and that is enough for me. It is
+> not user-friendly, and it looks about twenty years old, but it works."
+>
+> **Diep, 14.** "A messaging app, all day. I connect with my cousins in Hue and
+> with two friends who moved to another school last year. We never post
+> anything in public. Before the midterm tests we made a group and asked each
+> other questions in it every night; therefore, nobody in that group panicked."
+
+**Talk about it.** Whose answer is closest to yours, and what is different
+about yours? Bao has no account at all — would a year without one be easy or
+hard for you? Say why.
 
 ### Everyday English — Making requests
 
@@ -790,116 +901,6 @@ some advice on your science project — **Could you …, please?** once and **Ca
 you …, please?** once. They answer with **Certainly.** and one detail. Then
 swap. After that, tell them one thing you are worried about, and let them
 reassure you with a phrase from the table.
-
----
-
-## Lesson 5 — Listening & Writing
-
-### Listening — Thảo, later the same evening
-
-You hear it **once**, read aloud by someone else, so read both sets of
-questions first, then answer while you listen rather than afterwards from memory.
-
-**Nghe một lần duy nhất, do người khác đọc to.** Đọc câu hỏi trước, rồi vừa nghe vừa trả lời.
-
-::: audio orientation="You will hear a girl telling a friend about an evening she spent with two boys and a younger girl, and about a decision one of them had to make."
-I want to say first that I was the one who told him to send Minh home, so if
-anybody is angry, be angry with me.
-
-I came down after eight. They were both on the step, and neither of them was
-talking. Bống says there are twelve chalk marks to come on the harbour wall
-altogether. This was the third.
-
-Minh was very calm about it. He worked out that a whole year had gone
-past, and after that he asked us almost nothing, because every question he
-started belonged to last September and he could hear it. Then he said the thing
-that finished me. He said we should not keep him. He said two words at the
-water's edge would end it, and nobody would blame us for anything.
-
-Tí took him down to the water. They stood there, right at the edge, for about
-a minute. His face did not move at all.
-
-Then he turned round and walked back up.
-
-Neither of us said one word about it afterwards, and I don't think we ever
-will. On the way home Minh told us something else. His family went north, up
-the river, and there are people up there who talk about a whole village the
-water took and then gave back for one night. He says this has happened before,
-more than once, and long before any of us were born.
-:::
-
-### 5.1 Listen and choose
-
-::: task skill="listening" type="multiple-choice"
-- The speaker says the blame should fall on {herself | Tí | Bống} = herself
-- She arrived at the water {after eight | before six | at midnight} = after eight
-- Of the chalk marks on the harbour wall, this one was {the third | the second | the twelfth} = the third
-- Minh asked them very little because {his questions belonged to last year | he was angry | he could not speak} = his questions belonged to last year
-- Tí took Minh down to the water and then {turned round and walked back up | said the two words | pushed the boat out} = turned round and walked back up
-:::
-
-### 5.2 Listen and complete
-
-::: task skill="listening" type="sentence-completion"
-- Chalk marks to come on the harbour wall: ___ {twelve | two | eight} = twelve
-- When she came down, neither of the two was ___ . {talking | calm | on the step} = talking
-- Minh said that nobody would ___ them for anything. {blame | keep | send} = blame
-- Length of time they stood at the water's edge: about a ___ {minute | year | night} = minute
-- Direction his family went: ___ {north | home | down to the water} = north
-:::
-
-### Writing — A paragraph about stress
-
-**Task.** Your school magazine has asked students to write about stress. Write
-**one paragraph of 80–100 words** giving **two or three causes** of teenage
-stress and **two solutions**.
-
-#### Model paragraph — read this first
-
-> Everyone in my class is stressed this term, and there are three reasons.
-> First, the midterm tests are next week, so we cannot keep up with every
-> subject. Second, our teacher reads the marks out in the yard, and nobody
-> wants to be at the bottom of that list. Third, peer pressure is strong, yet
-> nobody admits it. Two things help. You can plan the week on Sunday, or you
-> can tell one person what is wrong. Talking is better. Somebody listened to me
-> for an hour last night, and that was enough.
-
-*(93 words)*
-
-#### Plan it — 6 questions your paragraph has to answer
-
-Cover the paragraph above. Answer these in note form, in your own words.
-
-| The question | Your answer — notes, in your own words |
-| --- | --- |
-| What is the problem, in one sentence a reader could repeat back? | |
-| Cause 1 — what is it, and *why* does it cause stress? | |
-| Cause 2 — what, and why? | |
-| Cause 3 — keep this only if you still have words left | |
-| Which two solutions, and which of them do you think is better? | |
-| What do you want the reader left with? | |
-
-::: bridge name="One linking word per new point" trains="Coherence & Cohesion" cefr="B1" marker="[Q]" src="05 §4"
-In the paragraph below, and in every paragraph after it: **one linking word at
-the start of each new point, and none inside it.**
-
-*First… Second… Third…* at the start of your three causes is right. *First, and
-also, moreover, in addition* inside one cause is too many.
-
-When every sentence starts with a linking word, none of them helps the reader.
-
-> **Tiếng Việt:** Mỗi ý lớn dùng **một** từ nối ở đầu. Trong cùng một ý thì không
-> thêm từ nối nào nữa.
-:::
-
-::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — **one** paragraph of **80–100 words** on the causes of teenage stress and what helps."
-- [ ] 80–100 words ~ words
-- [ ] One paragraph, not a list ~ para:1
-- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
-- [ ] At least **four** sentences joined with a comma and *and, but, so, or* or *yet* ~ re:4 ,\s+(and|but|so|or|yet)\s
-- [ ] At least **three** different joining words from *and, but, so, or, yet* ~ distinct:3 and/but/so/or/yet
-- [ ] No comma on its own between two full sentences
-:::
 
 ---
 
@@ -1037,11 +1038,11 @@ page can settle it, the row says so, and that one is yours to judge.
 | use the words for school clubs, life online and teen stress | Lesson 2, Meet the words · Lesson 6, exercises 6.1 and 6.5 |
 | hear /ʊə/ and /ɔɪ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
 | write simple sentences and compound sentences | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
-| make a request politely | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| make a request politely | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 5 with someone, and decide. |
 | read a teenager's account of the evening a friend came back | Lesson 4, exercises 4.1 and 4.2 |
-| ask and answer questions about a club | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| ask and answer questions about a club | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
 | listen to someone describing an evening and a hard choice | Lesson 5, exercises 5.1 and 5.2 |
-| write a paragraph about what makes me stressed and what helps | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| write a paragraph about what makes me stressed and what helps | Lesson 4, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1060,11 +1061,3 @@ page can settle it, the row says so, and that one is yours to judge.
 **2.3** Answers will vary. Check: your lips **spread into a smile** at the end
 of *choice, enjoy, noise, boys, enjoyable*, and **relax back to the centre** at
 the end of *tourist, curious, during, furious, mature*.
-
-### Lesson 3
-
-**3.2** Answers will vary. Check: each sentence has **two** full ideas (cover
-the joining word — does the second half have its own subject and verb?). For
-1–5, a **comma before** the word given. For 6–8, a **semicolon before** the word
-given and a **comma after** it.
-

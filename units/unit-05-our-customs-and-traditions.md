@@ -533,51 +533,23 @@ mean *the building or the thing itself*.
 
 Write true sentences about your own family.
 
-1. A tradition in your family. Use **a/an** in the first sentence and **the**
-   in the second. _______________________________
-2. Someone in your family, using **the oldest**, **the youngest** or **the best**.
-   _______________________________
-3. A Vietnamese food you like, speaking generally — so **no word** in front.
-   _______________________________
-4. What time you **go to bed** before a festival — no word before *bed*.
-   _______________________________
-5. Something you can see in **the sky** at your favourite festival.
-   _______________________________
+::: jot
+- A tradition in your family. Use **a/an** in the first sentence and **the** in the second.
+- Someone in your family, using **the oldest**, **the youngest** or **the best**.
+- A Vietnamese food you like, speaking generally — so **no word** in front.
+- What time you **go to bed** before a festival — no word before *bed*.
+- Something you can see in **the sky** at your favourite festival.
+:::
 
 ---
 
-## Lesson 4 — Reading & Speaking
-
-### The Japanese lion dance and the Vietnamese unicorn dance
-
-Two New Year dances, two countries, and a costume that looks much the same from
-the other side of the street. Read both, and see what separates them.
-
-> **The Japanese lion dance.** In Japan the dance is called *shishi-mai*. It
-> belongs above all to New Year celebrations, but it is brought out for other
-> important occasions too — the opening of a business, or a wedding. One
-> performer on his own is enough, though there are often more, and whoever
-> wears the head has to be excellent at acrobatics. There is nobody dancing
-> alongside him. The music comes from flutes and drums. The purpose is to chase
-> away bad spirits and to bring good luck.
->
-> **The Vietnamese unicorn dance.** In Viet Nam the dance is *múa lân*. Children
-> know it from the Mid-Autumn Festival first of all, and it appears again at the
-> New Year Festival — and, like the Japanese dance, at business openings and at
-> weddings. One performer is enough here as well, though most teams are larger,
-> and the dancers are trained in martial arts as well as acrobatics. This dance
-> does have a partner: a round, smiling figure called *ông Địa*, who walks in
-> front of the head and fans it. A drum keeps the beat, and there is nothing
-> else. The whole dance is a wish for luck and success in the year ahead.
-
-**Talk about it.** Say **one** thing that is the same about the two dances and
-**one** thing that is different. Put the difference last.
+## Lesson 4 — Reading & Writing
 
 ### Reading — *The night the lane filled up*
 
 *Tí, 13, writes down what happened the night before the whale festival.*
 
-::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
+::: clock mins="17" for="You have 17 minutes for the text and its questions."
 :::
 
 ::: passage
@@ -649,160 +621,6 @@ the other side of the street. Read both, and see what separates them.
 - a line of people moving forward together in a ceremony {procession | shallows | moorings} = procession
 - not tight; likely to come off {loose | wet | cold} = loose
 - left in water for a long time {soaked | wrapped | carried} = soaked
-:::
-
-### Speaking — Building a dialogue about a family event
-
-> **Working alone:** you have no partner, so play **both** parts.
-
-**Step 1 — Prepare.** Choose one real family event (Tet, a wedding, a death
-anniversary, a village festival, a birthday). Write short notes — not full
-sentences.
-
-| Question a visitor would ask | Your notes |
-| --- | --- |
-| What is the event called, and when is it? | |
-| Who gets together, and where? | |
-| What do you prepare beforehand? | |
-| What is the most important ritual of the day? | |
-| Is there anything a guest should **not** do? | |
-| Why does your family keep this custom? | |
-
-**Step 2 — Speak.** Build the whole conversation aloud. Say the visitor's
-question, then your answer, then the next question. Aim for **six exchanges**.
-Use at least one phrase from the Everyday English tables at the end of this
-lesson in every answer, and at least three words from the Lesson 2 table across the whole dialogue.
-
-**Step 3 — Record and check.** Record yourself on your phone. Listen back and
-check three things:
-
-- Did you put **a**, **an**, **the** or no word in front of each noun? Listen
-  especially for things in general — *Customs*, not *The customs*.
-- Did you keep /n/ and /ŋ/ apart in words like *thin*, *sun*, *thing*, *gong*?
-- Did your pauses fall **between** turns rather than inside a sentence?
-
-Repeat Step 2 until all six exchanges run clearly.
-
-### 4.4 Say it again, faster
-
-::: fluency mode="talk" secs="240|180|120" ask="Talk about one custom your family keeps."
-- What happens, and when
-- Who does what
-- Why your family keeps it
-- Whether you will keep it yourself
-:::
-
-### Everyday English — Giving advice
-
-*A few fixed phrases for telling a guest what to do. They fit the speaking
-above: when the visitor asks what a guest should not do, answer with advice.*
-
-#### Giving advice
-
-**Advice** tells a visitor what to do. Three ways to say it, from the gentlest
-to the most direct:
-
-| Giving advice | Nghĩa |
-| --- | --- |
-| Well, **perhaps you should** wait for the host to start eating. | Có lẽ bạn nên đợi chủ nhà bắt đầu ăn trước. |
-| **Perhaps you should** ask my grandmother before you sit down. | Có lẽ bạn nên hỏi bà tôi trước khi ngồi xuống. |
-| **It's a good idea to** hand bowls with both hands. | Đưa bát bằng cả hai tay là một ý hay. |
-| **It's a good idea to** try a little of every dish. | Nên nếm thử mỗi món một chút. |
-| **You should** take your shoes off at the door. | Bạn nên bỏ giày ở cửa. |
-| And **don't** hit the bowl with your chopsticks. | Và đừng gõ đũa vào bát. |
-| **Don't** take the last piece without offering it round. | Đừng lấy miếng cuối cùng mà không mời người khác. |
-
-> ⚠️ **you should wait**, **don't wait** — no *to*. Never *you should to wait*.
-> But **it's a good idea to wait** — with **to**.
-
-> **Ghi chú:** *Perhaps you should…* nhẹ nhàng hơn *You must…* rất nhiều. Với
-> người mới quen, hoặc với khách nước ngoài, câu nhẹ thường dễ nghe hơn — và
-> vẫn được hiểu là lời khuyên. *Don't…* thì thẳng, nhưng không hề bất lịch sự
-> khi bạn đang giúp ai đó tránh một lỗi.
-
-#### Asking about a custom
-
-| Asking about a custom | Nghĩa |
-| --- | --- |
-| What's the custom at Tet? | Phong tục ngày Tết là gì? |
-| Is there anything I shouldn't do? | Có điều gì tôi không nên làm không? |
-| Am I supposed to bring a gift? | Tôi có phải mang quà không? |
-| What does this ritual mean? | Nghi lễ này có ý nghĩa gì? |
-| Is it OK if I take a photo? | Tôi chụp ảnh có được không? |
-
-#### Explaining a custom
-
-| Explaining a custom | Nghĩa |
-| --- | --- |
-| You're supposed to bow three times. | Bạn phải cúi chào ba lần. |
-| It's a tradition to wear new clothes. | Mặc quần áo mới là một truyền thống. |
-| We usually get together on the last evening. | Chúng tôi thường sum họp vào tối cuối năm. |
-| It's considered bad luck to sweep on the first day. | Quét nhà ngày mùng một bị coi là xui xẻo. |
-| It's a taboo here — please don't do it. | Ở đây đó là điều cấm kỵ — xin đừng làm vậy. |
-| Don't worry, nobody will mind. | Đừng lo, không ai để ý đâu. |
-
-> ⚠️ **supposed to bow**, **a tradition to wear**, **bad luck to sweep** — all
-> with **to**. But after **don't**, no *to*: *don't point*, *don't sweep*.
-
-**Say it with someone.** One of you is going to Sa Pa in winter and doesn't know
-what to wear; the other gives advice. Then swap: one of you is going to a
-birthday party and doesn't know what gift to bring. Use **Perhaps you should**,
-**It's a good idea to** and **Don't** at least once each, and give a short
-reason with each piece of advice.
-
----
-
-## Lesson 5 — Listening & Writing
-
-### Listening — A market seller tells a neighbour what she saw
-
-You hear it **once**, read aloud by someone else. Read both sets of questions
-first, then answer while you listen.
-
-**Nghe một lần duy nhất, do người khác đọc to.** Đọc trước câu hỏi, rồi vừa nghe vừa trả lời.
-
-::: audio orientation="You will hear a woman who sells at the market telling a neighbour what she saw on the night of the whale festival, and what her grandmother once told her."
-Listen to me. I am not a woman who invents things, and I am telling you what
-I saw with my own eyes.
-
-I walked down to the communal house on the night of the festival, the way I
-do every year. Six old women and a plate of fruit — that is what it has been
-since my son was small. Instead there were three hundred people in that lane.
-There were lanterns all the way from the gate down to the water. Drums until
-it was light, and cakes I have not eaten since I was a girl. And I did not
-know one single face. I have lived in this lane for fifty-one years.
-
-Near the water there was a boy from our own street, and beside him a small
-girl nobody in this lane has ever seen. Wet hair. A shirt three sizes too big.
-And when the water went out, it went out around her feet last.
-
-Now. My grandmother worked in a house upriver when she was young, and she
-told me about a child like that one. She said the sea sends them up and then
-comes after them, and everything it ever took comes with it. I laughed at her.
-I was eleven.
-
-I am not laughing now. Ask anybody who stood in that lane. And then ask
-yourself what else the sea can bring back, because I asked myself that all
-week, and so did everybody at the market.
-:::
-
-### 5.1 Listen and choose
-
-::: task skill="listening" type="multiple-choice"
-- In recent years the festival has been {large and noisy | small and quiet | cancelled} = small and quiet
-- About the three hundred people in the lane, the speaker says she {did not know one single face | knew every face | knew a few faces} = did not know one single face
-- Beside the boy near the water there was {a small girl nobody knew | a girl from her own street | an old woman she knew} = a small girl nobody knew
-- When she was young, the speaker's grandmother worked in a house {upriver | near the market | near the water} = upriver
-- The speaker now wants to know {who the boy is | what else the sea can bring back | how the lanterns were made} = what else the sea can bring back
-:::
-
-### 5.2 Listen and complete
-
-::: task skill="listening" type="sentence-completion"
-- On the night of the festival the speaker walked down to the ___ house. {communal | market | upriver} = communal
-- The speaker has lived in the lane for ___ years. {fifty-one | eleven | six} = fifty-one
-- The boy she saw was from her own ___ . {street | market | house} = street
-- The speaker was ___ when she laughed at her grandmother. {eleven | fifty-one | six} = eleven
 :::
 
 ### Writing — An email of advice
@@ -879,6 +697,185 @@ The number will go up and down as you try harder sentences, and that is normal.
 - [ ] At least **two** dos — things you tell them **to** do
 - [ ] *a* or *an* by sound, *the* for the one we both know, no word for things in general (*Customs*, not *The customs*)
 :::
+
+---
+
+## Lesson 5 — Listening & Speaking
+
+### Listening — A market seller tells a neighbour what she saw
+
+You hear it **once**, read aloud by someone else. Read both sets of questions
+first, then answer while you listen.
+
+**Nghe một lần duy nhất, do người khác đọc to.** Đọc trước câu hỏi, rồi vừa nghe vừa trả lời.
+
+::: audio orientation="You will hear a woman who sells at the market telling a neighbour what she saw on the night of the whale festival, and what her grandmother once told her."
+Listen to me. I am not a woman who invents things, and I am telling you what
+I saw with my own eyes.
+
+I walked down to the communal house on the night of the festival, the way I
+do every year. Six old women and a plate of fruit — that is what it has been
+since my son was small. Instead there were three hundred people in that lane.
+There were lanterns all the way from the gate down to the water. Drums until
+it was light, and cakes I have not eaten since I was a girl. And I did not
+know one single face. I have lived in this lane for fifty-one years.
+
+Near the water there was a boy from our own street, and beside him a small
+girl nobody in this lane has ever seen. Wet hair. A shirt three sizes too big.
+And when the water went out, it went out around her feet last.
+
+Now. My grandmother worked in a house upriver when she was young, and she
+told me about a child like that one. She said the sea sends them up and then
+comes after them, and everything it ever took comes with it. I laughed at her.
+I was eleven.
+
+I am not laughing now. Ask anybody who stood in that lane. And then ask
+yourself what else the sea can bring back, because I asked myself that all
+week, and so did everybody at the market.
+:::
+
+### 5.1 Listen and choose
+
+::: task skill="listening" type="multiple-choice"
+- In recent years the festival has been {large and noisy | small and quiet | cancelled} = small and quiet
+- About the three hundred people in the lane, the speaker says she {did not know one single face | knew every face | knew a few faces} = did not know one single face
+- Beside the boy near the water there was {a small girl nobody knew | a girl from her own street | an old woman she knew} = a small girl nobody knew
+- When she was young, the speaker's grandmother worked in a house {upriver | near the market | near the water} = upriver
+- The speaker now wants to know {who the boy is | what else the sea can bring back | how the lanterns were made} = what else the sea can bring back
+:::
+
+### 5.2 Listen and complete
+
+::: task skill="listening" type="sentence-completion"
+- On the night of the festival the speaker walked down to the ___ house. {communal | market | upriver} = communal
+- The speaker has lived in the lane for ___ years. {fifty-one | eleven | six} = fifty-one
+- The boy she saw was from her own ___ . {street | market | house} = street
+- The speaker was ___ when she laughed at her grandmother. {eleven | fifty-one | six} = eleven
+:::
+
+### Speaking — Building a dialogue about a family event
+
+> **Working alone:** you have no partner, so play **both** parts.
+
+**Step 1 — Prepare.** Choose one real family event (Tet, a wedding, a death
+anniversary, a village festival, a birthday). Write short notes — not full
+sentences.
+
+| Question a visitor would ask | Your notes |
+| --- | --- |
+| What is the event called, and when is it? | |
+| Who gets together, and where? | |
+| What do you prepare beforehand? | |
+| What is the most important ritual of the day? | |
+| Is there anything a guest should **not** do? | |
+| Why does your family keep this custom? | |
+
+**Step 2 — Speak.** Build the whole conversation aloud. Say the visitor's
+question, then your answer, then the next question. Aim for **six exchanges**.
+Use at least one phrase from the Everyday English tables at the end of this
+lesson in every answer, and at least three words from the Lesson 2 table across the whole dialogue.
+
+**Step 3 — Record and check.** Record yourself on your phone. Listen back and
+check three things:
+
+- Did you put **a**, **an**, **the** or no word in front of each noun? Listen
+  especially for things in general — *Customs*, not *The customs*.
+- Did you keep /n/ and /ŋ/ apart in words like *thin*, *sun*, *thing*, *gong*?
+- Did your pauses fall **between** turns rather than inside a sentence?
+
+Repeat Step 2 until all six exchanges run clearly.
+
+### 5.3 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about one custom your family keeps."
+- What happens, and when
+- Who does what
+- Why your family keeps it
+- Whether you will keep it yourself
+:::
+
+### The Japanese lion dance and the Vietnamese unicorn dance
+
+Two New Year dances, two countries, and a costume that looks much the same from
+the other side of the street. Read both, and see what separates them.
+
+> **The Japanese lion dance.** In Japan the dance is called *shishi-mai*. It
+> belongs above all to New Year celebrations, but it is brought out for other
+> important occasions too — the opening of a business, or a wedding. One
+> performer on his own is enough, though there are often more, and whoever
+> wears the head has to be excellent at acrobatics. There is nobody dancing
+> alongside him. The music comes from flutes and drums. The purpose is to chase
+> away bad spirits and to bring good luck.
+>
+> **The Vietnamese unicorn dance.** In Viet Nam the dance is *múa lân*. Children
+> know it from the Mid-Autumn Festival first of all, and it appears again at the
+> New Year Festival — and, like the Japanese dance, at business openings and at
+> weddings. One performer is enough here as well, though most teams are larger,
+> and the dancers are trained in martial arts as well as acrobatics. This dance
+> does have a partner: a round, smiling figure called *ông Địa*, who walks in
+> front of the head and fans it. A drum keeps the beat, and there is nothing
+> else. The whole dance is a wish for luck and success in the year ahead.
+
+**Talk about it.** Say **one** thing that is the same about the two dances and
+**one** thing that is different. Put the difference last.
+
+### Everyday English — Giving advice
+
+*A few fixed phrases for telling a guest what to do. They fit the speaking
+above: when the visitor asks what a guest should not do, answer with advice.*
+
+#### Giving advice
+
+**Advice** tells a visitor what to do. Three ways to say it, from the gentlest
+to the most direct:
+
+| Giving advice | Nghĩa |
+| --- | --- |
+| Well, **perhaps you should** wait for the host to start eating. | Có lẽ bạn nên đợi chủ nhà bắt đầu ăn trước. |
+| **Perhaps you should** ask my grandmother before you sit down. | Có lẽ bạn nên hỏi bà tôi trước khi ngồi xuống. |
+| **It's a good idea to** hand bowls with both hands. | Đưa bát bằng cả hai tay là một ý hay. |
+| **It's a good idea to** try a little of every dish. | Nên nếm thử mỗi món một chút. |
+| **You should** take your shoes off at the door. | Bạn nên bỏ giày ở cửa. |
+| And **don't** hit the bowl with your chopsticks. | Và đừng gõ đũa vào bát. |
+| **Don't** take the last piece without offering it round. | Đừng lấy miếng cuối cùng mà không mời người khác. |
+
+> ⚠️ **you should wait**, **don't wait** — no *to*. Never *you should to wait*.
+> But **it's a good idea to wait** — with **to**.
+
+> **Ghi chú:** *Perhaps you should…* nhẹ nhàng hơn *You must…* rất nhiều. Với
+> người mới quen, hoặc với khách nước ngoài, câu nhẹ thường dễ nghe hơn — và
+> vẫn được hiểu là lời khuyên. *Don't…* thì thẳng, nhưng không hề bất lịch sự
+> khi bạn đang giúp ai đó tránh một lỗi.
+
+#### Asking about a custom
+
+| Asking about a custom | Nghĩa |
+| --- | --- |
+| What's the custom at Tet? | Phong tục ngày Tết là gì? |
+| Is there anything I shouldn't do? | Có điều gì tôi không nên làm không? |
+| Am I supposed to bring a gift? | Tôi có phải mang quà không? |
+| What does this ritual mean? | Nghi lễ này có ý nghĩa gì? |
+| Is it OK if I take a photo? | Tôi chụp ảnh có được không? |
+
+#### Explaining a custom
+
+| Explaining a custom | Nghĩa |
+| --- | --- |
+| You're supposed to bow three times. | Bạn phải cúi chào ba lần. |
+| It's a tradition to wear new clothes. | Mặc quần áo mới là một truyền thống. |
+| We usually get together on the last evening. | Chúng tôi thường sum họp vào tối cuối năm. |
+| It's considered bad luck to sweep on the first day. | Quét nhà ngày mùng một bị coi là xui xẻo. |
+| It's a taboo here — please don't do it. | Ở đây đó là điều cấm kỵ — xin đừng làm vậy. |
+| Don't worry, nobody will mind. | Đừng lo, không ai để ý đâu. |
+
+> ⚠️ **supposed to bow**, **a tradition to wear**, **bad luck to sweep** — all
+> with **to**. But after **don't**, no *to*: *don't point*, *don't sweep*.
+
+**Say it with someone.** One of you is going to Sa Pa in winter and doesn't know
+what to wear; the other gives advice. Then swap: one of you is going to a
+birthday party and doesn't know what gift to bring. Use **Perhaps you should**,
+**It's a good idea to** and **Don't** at least once each, and give a short
+reason with each piece of advice.
 
 ---
 
@@ -1001,11 +998,11 @@ page can settle it, the row says so, and that one is yours to judge.
 | use the words for customs and traditions | Lesson 2, Meet the words · Lesson 6, exercises 6.1 and 6.5 |
 | hear /n/ and /ŋ/ apart in words, and keep them apart when I read aloud | Lesson 2, exercises 2.1 and 2.2 · Lesson 6, exercise 6.2. The reading-aloud half is yours — record Lesson 2, exercise 2.3 and listen back. |
 | use *a*, *an*, *the*, and no word at all | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
-| give advice | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| give advice | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 5 with someone, and decide. |
 | read about a village festival night | Lesson 4, exercises 4.1 and 4.2 |
-| talk about a family event I take part in | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| talk about a family event I take part in | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
 | listen to someone describing what they saw at a festival | Lesson 5, exercises 5.1 and 5.2 |
-| write an email of advice about joining a festival | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| write an email of advice about joining a festival | Lesson 4, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1025,11 +1022,3 @@ page can settle it, the row says so, and that one is yours to judge.
 of your mouth with the tongue tip **down**, and *thin*, *banners*, *lane*,
 *incense*, *dinner*, *nine* all have the tongue tip **up** behind the teeth.
 *Thank* has /ŋ/, not /n/.
-
-### Lesson 3
-
-**3.2** Answers will vary. Check: (1) *a/an* first, then *the* for the same
-thing; (2) *the youngest*, *the busiest*, *the best*; (3) **no**
-word — *I like phở*, not *the phở*; (4) *go to bed*, never *go to the bed*;
-(5) *the sky*, *the moon*, *the sun* — all take *the*.
-

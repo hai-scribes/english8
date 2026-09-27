@@ -620,61 +620,22 @@ comma after its half:
 
 Write true sentences. Use *was / were* + *-ing* at least once in each.
 
-1. What were you doing at eight o'clock yesterday evening?
-   → _______________________________
-2. Finish with *when*: I was _______________ when _______________.
-3. Write one sentence with *while* and **two** actions happening together.
-   → _______________________________
-4. Think of the last heavy rain or storm where you live. What was your family
-   doing? → _______________________________
+::: jot
+- What were you doing at eight o'clock yesterday evening?
+- Finish with *when*. → I was
+- Write one sentence with *while* and **two** actions happening together.
+- Think of the last heavy rain or storm where you live. What was your family doing?
+:::
 
 ---
 
-## Lesson 4 — Reading & Speaking
-
-### Knowledge of natural disasters
-
-Three people describe something they saw. None of them names the disaster.
-
-> **Nam.** "I was cycling home on the road under the hill. The rain had not
-> stopped for two days. Then the man in front of me put his foot down and
-> shouted. A wall of wet earth and big rocks was coming down the mountain and
-> spreading across the road in front of us. We turned round and rode back."
->
-> **Ann.** "I was picking beans in the garden with my mother. The sky went a
-> strange green colour. Then I saw a huge grey funnel of wind moving across the
-> field towards our fence, very quickly. My mother pulled me down the cellar
-> steps and shut the door."
->
-> **Tom.** "I was drawing at the table when everything in the room began to
-> shake. The glasses on the shelf were rattling and one of them fell. My little
-> sister and I hid under the table until it stopped. It lasted about twenty
-> seconds."
-
-Nam saw a **landslide** — earth and rocks coming down a hill onto the road
-below. Ann saw a **tornado** — a funnel of wind crossing a field. Tom felt an
-**earthquake** — the ground and everything on it shaking for a few seconds.
-
-Rocks and earth slide down a hill when the ground is too wet to
-hold together, so heavy rain is the commonest cause — and cutting down
-trees makes it far more likely, because roots are what hold the soil. The
-strength of an earthquake is given on the Richter scale, not in degrees; a
-big one can shake a hillside loose or push a wall of sea water towards the
-coast, so one disaster often causes another. Tornadoes are different again:
-they grow out of thunderstorms, and although they happen on every continent
-except Antarctica, far more of them are recorded in the USA than anywhere
-else.
-
-**Talk about it.** Think of a natural disaster that has happened where you live,
-or one you have seen on the news. Describe what a person there saw and heard —
-but do **not** say its name — and let someone else guess it.
-
+## Lesson 4 — Reading & Writing
 
 ### Reading — *The night the town came back*
 
 *Tí writes it down two days later, sitting in the school shelter.*
 
-::: clock mins="17" for="You have 17 minutes for the text and every exercise below it."
+::: clock mins="17" for="You have 17 minutes for the text and its questions."
 :::
 
 ::: passage
@@ -746,142 +707,82 @@ but do **not** say its name — and let someone else guess it.
 - a loud machine that gives a warning sound {siren | lantern | pole} = siren
 :::
 
-### Speaking — Delivering a news report
+### Writing — Instructions: flood safety
 
-> **Working alone:** you have no partner, so do this in three steps.
+**Task.** Your school is making a leaflet for younger students. Write the flood
+safety instructions in **80–100 words**, in three parts: **before**, **during**
+and **after** a flood.
 
-**Step 1 — Prepare.** You are a reporter. A storm hit a small coastal town last
-night. Fill in your notes — short phrases, not full sentences.
+#### What makes this an instruction text — not a paragraph
 
-| Reporter's notes | Your notes |
-| --- | --- |
-| Where and when did it happen? | |
-| What was the weather doing? (*it was raining…*) | |
-| What were people doing when it hit? (*we were eating when…*) | |
-| What damage did it cause? | |
-| Who helped, and how? | |
-| What should people do now? | |
-
-**Step 2 — Speak.** Deliver the report **aloud**, standing up, for about
-**one minute**, from your notes and not from a written-out script.
-
-A news report has four stages, in this order. Answer each question in your own
-words.
-
-| Stage | The question it answers | Roughly how long |
+| Feature | What to do | Example |
 | --- | --- | --- |
-| **Open** | Where are you, and what happened? | 10 seconds |
-| **Then** | What was happening when it hit? | 20 seconds |
-| **Now** | What does the town look like this morning, and who is helping? | 20 seconds |
-| **Close** | What are people being asked to do? | 10 seconds |
+| **Imperative verbs** | Start with the bare verb. No *you*, no *I*. | **Turn off** the electricity. |
+| **Negative imperative** | *Do not* / *Never* + bare verb | **Never walk** through moving water. |
+| **Sequencing signals** | *First, Next, Then, Finally* + comma | **First,** listen to the forecast. |
+| **Short sentences** | One instruction per sentence | ❌ *Turn off the electricity and move upstairs and stay there because…* |
+| **Headings** | Before / During / After | **During the flood.** |
 
-> **Tiếng Việt:** Bản tin đi theo **bốn chặng** trên. Bảng này chỉ cho bạn *thứ
-> tự* và *câu hỏi cần trả lời* — câu chữ phải do bạn tự nghĩ ra.
+❌ *You should to turn off the electricity.* → ✅ *Turn off the electricity.*
+❌ *I think it is good to boil water.* → ✅ *Boil all drinking water.*
 
-**Step 3 — Record and check.** Record yourself on your phone. Listen back and
-check three things:
+#### Model instructions — read this first
 
-- Did you use **at least three** verbs like *was raining*, with the right *was*
-  or *were*?
-- Did you stress the right syllable in *disˈaster*, *deˈstruction*, *eˈvacuate*
-  and *ˈhurricane*?
-- Did you pause **at each new stage** of the report, and not inside a sentence?
+> **Flood safety — pinned up at the school shelter**
+>
+> **Before the flood.** First, listen to the forecast and to every official
+> warning. Next, put your papers, a torch and medicine in a plastic bag on a
+> high shelf. Then turn off the electricity at the main switch.
+>
+> **During the flood.** Go to the shelter if the authorities say so. If you
+> stay, move upstairs. Never walk through moving water. Never touch a switch
+> with wet hands.
+>
+> **After the flood.** Wait for an official message before going home. Then
+> boil all drinking water. Finally, wear boots while you clean the mud.
 
-Repeat Step 2 until the report runs clearly from start to finish.
+*(100 words)*
 
-### 4.4 Say it again, faster
+#### Plan it — five questions your instructions must answer
 
-::: fluency mode="talk" secs="240|180|120" ask="Talk about a storm, a flood or a drought you know about."
-- What happened, and when
-- What people did before it
-- What the damage was
-- What helped afterwards
+Answer in note form.
+
+| The question | Your answer — notes, in your own words |
+| --- | --- |
+| What are these instructions for? | |
+| **Before** — three steps: listening, packing, agreeing a plan | |
+| **During** — three steps, one of them a *Never…* | |
+| **After** — three steps: water, cleaning, reporting damage | |
+| Which **one** of the three stages matters most, and why? | |
+
+::: bridge name="End with the stage that matters most" trains="Task Achievement" cefr="B1" marker="[C] 2-1" src="05 §2.2"
+Your instructions run *before → during → after*. Add **one** sentence at the end
+saying which stage matters most, and why:
+
+> Of the three stages, the preparation before the storm matters most, because
+> nothing you do afterwards can replace it.
+
+You can use the comparatives from Unit 2.
+
+> **Tiếng Việt:** Thêm **một** câu ở cuối: giai đoạn nào quan trọng nhất và vì sao.
 :::
 
-### Everyday English — Giving and responding to bad news
+::: thread id="articles" stage="check"
+:::
 
-*A few fixed phrases for telling one person some bad news, and for answering
-when someone tells you. They fit the speaking above: a news report gives bad
-news to everyone at once — these are for when it is your own family or a
-friend. After them come the phrases for warning someone, saying you are
-worried, and reassuring someone.*
-
-#### Giving bad news
-
-Bad news is normally given in two moves: a short sentence that says where the
-news came from, then the news itself.
-
-| English | Nghĩa |
-| --- | --- |
-| My grandparents called this morning. **A flood destroyed their house.** | Ông bà mình gọi sáng nay. Lũ đã cuốn mất nhà ông bà. |
-| **It also damaged all of their crops.** | Lũ còn làm hỏng hết hoa màu của ông bà nữa. |
-| **I'm afraid I've got some bad news.** | Mình e là mình có tin xấu. |
-| **Did you hear about** the landslide on the mountain road? | Cậu nghe tin vụ sạt lở trên đường núi chưa? |
-
-#### Responding to bad news
-
-| English | Nghĩa |
-| --- | --- |
-| **I'm sorry to hear that.** | Mình rất tiếc khi nghe tin đó. |
-| **That's awful.** | Thật kinh khủng. |
-| **That's terrible.** | Thật khủng khiếp. |
-| **Oh no! Is everyone all right?** | Ôi không! Mọi người có sao không? |
-| **I hope your grandparents are safe.** | Mong ông bà bạn bình an. |
-
-> **Ghi chú:** Những câu đáp trên là **công thức ngắn cố định**. Người ta nói
-> nguyên cả câu như vậy, không đổi từ, không thêm bớt. Học thuộc cả cụm —
-> *That's awful.* chứ không phải *That is very awful.*
->
-> Thường có **hai** phần trong lời đáp: một câu cảm thông (*I'm sorry to hear
-> that.*) rồi một câu hỏi thăm hoặc mong ước (*I hope they are safe.*).
-
-> ⚠️ **Bẫy thường gặp:** ***I'm sorry to hear that*** không phải là lời **xin
-> lỗi**. Ở đây *sorry* nghĩa là "thương cảm, tiếc cho bạn", không phải "tôi có
-> lỗi". Người nói không hề gây ra chuyện đó. Đừng dịch thành "Tôi xin lỗi".
-> Cũng đừng đáp *"No problem."* hay *"It's OK."* — đó là câu trả lời cho một
-> lời xin lỗi thật, và ở đây nghe rất lạ.
-
-#### Warning someone
-
-| English | Nghĩa |
-| --- | --- |
-| **Watch out!** | Coi chừng! |
-| **Be careful** — the road is flooded. | Cẩn thận — đường đang ngập. |
-| **Don't go** near the river. | Đừng lại gần sông. |
-| **Mind** the broken glass. | Coi chừng mảnh kính vỡ. |
-| **Make sure you** take a torch. | Nhớ mang theo đèn pin nhé. |
-| **Whatever you do, don't** touch that wire. | Dù thế nào cũng đừng chạm vào dây điện đó. |
-
-#### Saying you are worried
-
-| English | Nghĩa |
-| --- | --- |
-| I'm **worried about** my grandparents. | Mình lo cho ông bà mình quá. |
-| **What if** the water comes into the house? | Nhỡ nước tràn vào nhà thì sao? |
-| I'm **not sure** we have enough clean water. | Mình không chắc nhà mình đủ nước sạch. |
-| This is **really frightening**. | Chuyện này đáng sợ thật. |
-
-#### Reassuring someone
-
-| English | Nghĩa |
-| --- | --- |
-| **Don't worry** — they moved upstairs this morning. | Đừng lo — sáng nay họ lên gác rồi. |
-| **It'll be all right.** | Rồi sẽ ổn thôi. |
-| **Try not to panic.** | Cố đừng hoảng nhé. |
-| **Calm down.** We have five full buckets. | Bình tĩnh nào. Nhà mình có năm xô đầy rồi. |
-| **We're safe here.** | Ở đây mình an toàn mà. |
-
-**Say it with someone.** Take turns giving the news and answering it: a friend
-in the mountains tells you a landslide destroyed their family's garden
-yesterday; a big earthquake hit a city where your penfriend lives, and their
-school is closed; your cousin's village was flooded and the rice crop is gone.
-Give the news in two moves — where it came from, then the news. Answer with
-**I'm sorry to hear that**, **That's awful** or **That's terrible**, then a
-question or a wish.
+::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours — the flood safety instructions, in **80–100 words**, in three parts."
+- [ ] 80–100 words ~ words
+- [ ] Three headings: **Before**, **During**, **After** ~ all before/during/after
+- [ ] At least **four** sequencing signals ~ any:4 first/next/then/finally/after that/lastly/second/third/straight away/immediately
+- [ ] At least one **negative** instruction ~ any:1 do not/don't/never
+- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
+- [ ] No *I think*, no *you should* ~ none i think/you should/in my opinion/i believe/i feel that/maybe you
+- [ ] Every instruction starts with a verb — **Turn off…**, **Never walk…**
+:::
 
 ---
 
-## Lesson 5 — Listening & Writing
+## Lesson 5 — Listening & Speaking
 
 ### Listening — On the wall in the dark
 
@@ -968,78 +869,175 @@ More facts make it harder to follow; harder words just send you to a dictionary.
 > đừng dùng từ khó hơn.
 :::
 
-### Writing — Instructions: flood safety
+### Speaking — Delivering a news report
 
-**Task.** Your school is making a leaflet for younger students. Write the flood
-safety instructions in **80–100 words**, in three parts: **before**, **during**
-and **after** a flood.
+> **Working alone:** you have no partner, so do this in three steps.
 
-#### What makes this an instruction text — not a paragraph
+**Step 1 — Prepare.** You are a reporter. A storm hit a small coastal town last
+night. Fill in your notes — short phrases, not full sentences.
 
-| Feature | What to do | Example |
-| --- | --- | --- |
-| **Imperative verbs** | Start with the bare verb. No *you*, no *I*. | **Turn off** the electricity. |
-| **Negative imperative** | *Do not* / *Never* + bare verb | **Never walk** through moving water. |
-| **Sequencing signals** | *First, Next, Then, Finally* + comma | **First,** listen to the forecast. |
-| **Short sentences** | One instruction per sentence | ❌ *Turn off the electricity and move upstairs and stay there because…* |
-| **Headings** | Before / During / After | **During the flood.** |
-
-❌ *You should to turn off the electricity.* → ✅ *Turn off the electricity.*
-❌ *I think it is good to boil water.* → ✅ *Boil all drinking water.*
-
-#### Model instructions — read this first
-
-> **Flood safety — pinned up at the school shelter**
->
-> **Before the flood.** First, listen to the forecast and to every official
-> warning. Next, put your papers, a torch and medicine in a plastic bag on a
-> high shelf. Then turn off the electricity at the main switch.
->
-> **During the flood.** Go to the shelter if the authorities say so. If you
-> stay, move upstairs. Never walk through moving water. Never touch a switch
-> with wet hands.
->
-> **After the flood.** Wait for an official message before going home. Then
-> boil all drinking water. Finally, wear boots while you clean the mud.
-
-*(100 words)*
-
-#### Plan it — five questions your instructions must answer
-
-Answer in note form.
-
-| The question | Your answer — notes, in your own words |
+| Reporter's notes | Your notes |
 | --- | --- |
-| What are these instructions for? | |
-| **Before** — three steps: listening, packing, agreeing a plan | |
-| **During** — three steps, one of them a *Never…* | |
-| **After** — three steps: water, cleaning, reporting damage | |
-| Which **one** of the three stages matters most, and why? | |
+| Where and when did it happen? | |
+| What was the weather doing? (*it was raining…*) | |
+| What were people doing when it hit? (*we were eating when…*) | |
+| What damage did it cause? | |
+| Who helped, and how? | |
+| What should people do now? | |
 
-::: bridge name="End with the stage that matters most" trains="Task Achievement" cefr="B1" marker="[C] 2-1" src="05 §2.2"
-Your instructions run *before → during → after*. Add **one** sentence at the end
-saying which stage matters most, and why:
+**Step 2 — Speak.** Deliver the report **aloud**, standing up, for about
+**one minute**, from your notes and not from a written-out script.
 
-> Of the three stages, the preparation before the storm matters most, because
-> nothing you do afterwards can replace it.
+A news report has four stages, in this order. Answer each question in your own
+words.
 
-You can use the comparatives from Unit 2.
+| Stage | The question it answers | Roughly how long |
+| --- | --- | --- |
+| **Open** | Where are you, and what happened? | 10 seconds |
+| **Then** | What was happening when it hit? | 20 seconds |
+| **Now** | What does the town look like this morning, and who is helping? | 20 seconds |
+| **Close** | What are people being asked to do? | 10 seconds |
 
-> **Tiếng Việt:** Thêm **một** câu ở cuối: giai đoạn nào quan trọng nhất và vì sao.
+> **Tiếng Việt:** Bản tin đi theo **bốn chặng** trên. Bảng này chỉ cho bạn *thứ
+> tự* và *câu hỏi cần trả lời* — câu chữ phải do bạn tự nghĩ ra.
+
+**Step 3 — Record and check.** Record yourself on your phone. Listen back and
+check three things:
+
+- Did you use **at least three** verbs like *was raining*, with the right *was*
+  or *were*?
+- Did you stress the right syllable in *disˈaster*, *deˈstruction*, *eˈvacuate*
+  and *ˈhurricane*?
+- Did you pause **at each new stage** of the report, and not inside a sentence?
+
+Repeat Step 2 until the report runs clearly from start to finish.
+
+### 5.3 Say it again, faster
+
+::: fluency mode="talk" secs="240|180|120" ask="Talk about a storm, a flood or a drought you know about."
+- What happened, and when
+- What people did before it
+- What the damage was
+- What helped afterwards
 :::
 
-::: thread id="articles" stage="check"
-:::
+### Knowledge of natural disasters
 
-::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours — the flood safety instructions, in **80–100 words**, in three parts."
-- [ ] 80–100 words ~ words
-- [ ] Three headings: **Before**, **During**, **After** ~ all before/during/after
-- [ ] At least **four** sequencing signals ~ any:4 first/next/then/finally/after that/lastly/second/third/straight away/immediately
-- [ ] At least one **negative** instruction ~ any:1 do not/don't/never
-- [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
-- [ ] No *I think*, no *you should* ~ none i think/you should/in my opinion/i believe/i feel that/maybe you
-- [ ] Every instruction starts with a verb — **Turn off…**, **Never walk…**
-:::
+Three people describe something they saw. None of them names the disaster.
+
+> **Nam.** "I was cycling home on the road under the hill. The rain had not
+> stopped for two days. Then the man in front of me put his foot down and
+> shouted. A wall of wet earth and big rocks was coming down the mountain and
+> spreading across the road in front of us. We turned round and rode back."
+>
+> **Ann.** "I was picking beans in the garden with my mother. The sky went a
+> strange green colour. Then I saw a huge grey funnel of wind moving across the
+> field towards our fence, very quickly. My mother pulled me down the cellar
+> steps and shut the door."
+>
+> **Tom.** "I was drawing at the table when everything in the room began to
+> shake. The glasses on the shelf were rattling and one of them fell. My little
+> sister and I hid under the table until it stopped. It lasted about twenty
+> seconds."
+
+Nam saw a **landslide** — earth and rocks coming down a hill onto the road
+below. Ann saw a **tornado** — a funnel of wind crossing a field. Tom felt an
+**earthquake** — the ground and everything on it shaking for a few seconds.
+
+Rocks and earth slide down a hill when the ground is too wet to
+hold together, so heavy rain is the commonest cause — and cutting down
+trees makes it far more likely, because roots are what hold the soil. The
+strength of an earthquake is given on the Richter scale, not in degrees; a
+big one can shake a hillside loose or push a wall of sea water towards the
+coast, so one disaster often causes another. Tornadoes are different again:
+they grow out of thunderstorms, and although they happen on every continent
+except Antarctica, far more of them are recorded in the USA than anywhere
+else.
+
+**Talk about it.** Think of a natural disaster that has happened where you live,
+or one you have seen on the news. Describe what a person there saw and heard —
+but do **not** say its name — and let someone else guess it.
+
+### Everyday English — Giving and responding to bad news
+
+*A few fixed phrases for telling one person some bad news, and for answering
+when someone tells you. They fit the speaking above: a news report gives bad
+news to everyone at once — these are for when it is your own family or a
+friend. After them come the phrases for warning someone, saying you are
+worried, and reassuring someone.*
+
+#### Giving bad news
+
+Bad news is normally given in two moves: a short sentence that says where the
+news came from, then the news itself.
+
+| English | Nghĩa |
+| --- | --- |
+| My grandparents called this morning. **A flood destroyed their house.** | Ông bà mình gọi sáng nay. Lũ đã cuốn mất nhà ông bà. |
+| **It also damaged all of their crops.** | Lũ còn làm hỏng hết hoa màu của ông bà nữa. |
+| **I'm afraid I've got some bad news.** | Mình e là mình có tin xấu. |
+| **Did you hear about** the landslide on the mountain road? | Cậu nghe tin vụ sạt lở trên đường núi chưa? |
+
+#### Responding to bad news
+
+| English | Nghĩa |
+| --- | --- |
+| **I'm sorry to hear that.** | Mình rất tiếc khi nghe tin đó. |
+| **That's awful.** | Thật kinh khủng. |
+| **That's terrible.** | Thật khủng khiếp. |
+| **Oh no! Is everyone all right?** | Ôi không! Mọi người có sao không? |
+| **I hope your grandparents are safe.** | Mong ông bà bạn bình an. |
+
+> **Ghi chú:** Những câu đáp trên là **công thức ngắn cố định**. Người ta nói
+> nguyên cả câu như vậy, không đổi từ, không thêm bớt. Học thuộc cả cụm —
+> *That's awful.* chứ không phải *That is very awful.*
+>
+> Thường có **hai** phần trong lời đáp: một câu cảm thông (*I'm sorry to hear
+> that.*) rồi một câu hỏi thăm hoặc mong ước (*I hope they are safe.*).
+
+> ⚠️ **Bẫy thường gặp:** ***I'm sorry to hear that*** không phải là lời **xin
+> lỗi**. Ở đây *sorry* nghĩa là "thương cảm, tiếc cho bạn", không phải "tôi có
+> lỗi". Người nói không hề gây ra chuyện đó. Đừng dịch thành "Tôi xin lỗi".
+> Cũng đừng đáp *"No problem."* hay *"It's OK."* — đó là câu trả lời cho một
+> lời xin lỗi thật, và ở đây nghe rất lạ.
+
+#### Warning someone
+
+| English | Nghĩa |
+| --- | --- |
+| **Watch out!** | Coi chừng! |
+| **Be careful** — the road is flooded. | Cẩn thận — đường đang ngập. |
+| **Don't go** near the river. | Đừng lại gần sông. |
+| **Mind** the broken glass. | Coi chừng mảnh kính vỡ. |
+| **Make sure you** take a torch. | Nhớ mang theo đèn pin nhé. |
+| **Whatever you do, don't** touch that wire. | Dù thế nào cũng đừng chạm vào dây điện đó. |
+
+#### Saying you are worried
+
+| English | Nghĩa |
+| --- | --- |
+| I'm **worried about** my grandparents. | Mình lo cho ông bà mình quá. |
+| **What if** the water comes into the house? | Nhỡ nước tràn vào nhà thì sao? |
+| I'm **not sure** we have enough clean water. | Mình không chắc nhà mình đủ nước sạch. |
+| This is **really frightening**. | Chuyện này đáng sợ thật. |
+
+#### Reassuring someone
+
+| English | Nghĩa |
+| --- | --- |
+| **Don't worry** — they moved upstairs this morning. | Đừng lo — sáng nay họ lên gác rồi. |
+| **It'll be all right.** | Rồi sẽ ổn thôi. |
+| **Try not to panic.** | Cố đừng hoảng nhé. |
+| **Calm down.** We have five full buckets. | Bình tĩnh nào. Nhà mình có năm xô đầy rồi. |
+| **We're safe here.** | Ở đây mình an toàn mà. |
+
+**Say it with someone.** Take turns giving the news and answering it: a friend
+in the mountains tells you a landslide destroyed their family's garden
+yesterday; a big earthquake hit a city where your penfriend lives, and their
+school is closed; your cousin's village was flooded and the rice crop is gone.
+Give the news in two moves — where it came from, then the news. Answer with
+**I'm sorry to hear that**, **That's awful** or **That's terrible**, then a
+question or a wish.
 
 ---
 
@@ -1127,7 +1125,7 @@ instructions for your family, using **Before / During / After** and imperative
 verbs. Put it on the wall where everyone can see it.
 
 **Step 4 — Present it.** Explain your plan aloud in **one minute**, as if you
-were the reporter from Lesson 4. Record it and listen back once: check your
+were the reporter from Lesson 5. Record it and listen back once: check your
 imperatives and your word stress.
 
 > **Stretch:** Interview the oldest person in your family about the worst storm
@@ -1146,11 +1144,11 @@ page can settle it, the row says so, and that one is yours to judge.
 | use the words for the types of natural disaster and for describing them | Lesson 2, Meet the words · Lesson 6, exercise 6.1 |
 | put the stress in the right place in words ending *-al* and *-ous* | Lesson 2, exercises 2.1 and 2.3 · Lesson 6, exercise 6.2. Saying them aloud is yours — record Lesson 2, exercise 2.5 and listen back. |
 | use the past continuous, on its own and beside the past simple | Lesson 3, practice 3.1 · Lesson 6, exercises 6.3 and 6.4 |
-| give bad news, and answer it | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 4 with someone, and decide. |
+| give bad news, and answer it | **Your own judgement** — nothing on the page marks this. Say the Everyday English phrases at the end of Lesson 5 with someone, and decide. |
 | read a first-hand account of a flood night | Lesson 4, exercises 4.1 and 4.2 |
-| talk about a natural disaster | **Your own judgement** — nothing on the page heard you. Record the Lesson 4 speaking task, listen back once, and decide. |
+| talk about a natural disaster | **Your own judgement** — nothing on the page heard you. Record the Lesson 5 speaking task, listen back once, and decide. |
 | follow two people talking in the middle of a flood, and catch the details | Lesson 5, exercises 5.1 and 5.2 |
-| write instructions for staying safe in a flood | Lesson 5, the writing box — the checklist under it settles every line it can from what you actually wrote |
+| write instructions for staying safe in a flood | Lesson 4, the writing box — the checklist under it settles every line it can from what you actually wrote |
 
 > **Ghi chú:** Đây không phải bài kiểm tra, và không có tổng nào được cộng lại.
 > Mỗi dòng chỉ vào đúng bài tập đã trả lời câu hỏi đó — hãy mở lại bài ấy và
@@ -1171,24 +1169,3 @@ and every other syllable is short and light. If *disaster* comes out as
 *DIS-as-ter*, slow down and try again. In sentences 5 and 6, check that the
 *-al* and *-ous* words keep the stress of their stem — *ˈmountainous*,
 *ˈnumerous*, *ˈdangerous*, *ˈnational*, *ˈpractical*, *ˈpoisonous*.
-
-### Lesson 3
-
-**3.2** Answers will vary. Check: *was* with I/he/she/it and *were* with
-you/we/they; a correct *-ing* spelling; in item 2 the *when* clause is past
-simple; in item 3 **both** verbs are past continuous; and no stative verb
-(*know, want, like*) is used in the continuous.
-
-### Lesson 4
-
-**Speaking** Answers will vary. Check: at least three past continuous verbs with
-the correct *was/were*, correct stress on *disˈaster, deˈstruction, eˈvacuate,
-ˈhurricane*, and pauses that fall at stage boundaries rather than inside a
-sentence.
-
-### Lesson 5
-
-**Writing** Answers will vary. Check against the checklist: 80–100 words, the
-three headings, every instruction beginning with an imperative verb, at least
-four sequencing signals, at least one *Do not…* or *Never…*, four unit
-vocabulary words, and no *I think* or *you should*.
