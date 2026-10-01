@@ -143,6 +143,58 @@ work checks itself, "About you" is a `:::jot`, and a spoken drill carries its
 own `**Listen back for:**` line under the sentences. A reveal button over
 "Answers will vary" answers nothing, so do not add one back.
 
+### A timed test looks like the real one (operator, 2026-09-27)
+
+`:::clock` and `:::write` both run as the computer-delivered test does
+(`01` §9.1): a cover card with only the time and **Start**, and nothing of the
+test on the page until then — no text, no questions, no question list. After
+Start the page is only the text, its questions and a countdown upper-middle
+that flashes at ten and five minutes (`body.exam-on`); on a wide screen the
+text is left and the questions right, and the question bar runs along the
+bottom. Reading answers are marked **together** at the end — on *Finish test*
+or at zero — never one by one. Writing puts the task and a notes box left and
+the answer right, keeps the checklist shut while drafting (it runs on the text
+at *I've finished* or at zero), and offers *Write draft 2* as a new, untimed
+attempt; both drafts are kept and never compared. Only the deadline is stored,
+never how long anything took (pedagogy **P1**). A writing clock defaults to
+20 minutes for up to 100 words and 25 above (`mins=` overrides) — our own
+allowance, `[INF]`. `words` fails under the range and only *notes* going
+over it; `max:N` is a ceiling (a linking word on every sentence is a named
+fault) and `nocopy:N` catches a run copied from the task line.
+
+**Finishing a lesson goes straight to the next one** (the unit test after
+Lesson 6), with no stop on Today. A checkpoint still returns to Today.
+
+### Find-the-mistake is a real mistake (operator, 2026-09-27)
+
+"Learned to swim at the **bookshop**" → *swimming pool* was called meaningless,
+and it was: the sentence names the fix ("swim"), only one option is a place,
+and nobody makes that mistake. An error-correction item confuses **two words a
+learner could really mix up** (*pastime* for *leisure*, *rescue* for
+*evacuate*) or the right word in a wrong collocation; its three fixes are the
+same kind of word; and the build fails any item whose sentence shares a
+four-letter root with its fix. A word with no real confusable partner gets a
+gap-fill instead.
+
+**The tap is the answer.** The operator found the second hole: the fix list
+opened on any tap and was the same whatever word was tapped, so tapping around
+previewed the answer's kind and pointed at the mistake. This two-step format
+was our own design; the standard exam form (Vietnamese school tests, TOEIC,
+TOEFL) underlines four parts A–D and asks only which is wrong. Now the first
+tap is final: the words lock, a wrong tap is marked wrong at once and shows
+where the mistake really was, and the fix choices open only after the mistake
+has been found (`commitTap` in `app.js`).
+
+### Complete is the work, not the button (operator, 2026-09-27)
+
+The lesson strip carries two separate marks: **current** (filled) and
+**complete** (a green tick). Complete means every marked task on that page has
+an attempt, every Meet-the-words set has been answered, the practice bank has
+been run, the writing handed in and the timed test taken — recorded by the
+page itself (`noteProgress`), never by pressing *Finish*. Attempted, not
+scored: in-session accuracy is not retention (pedagogy **P6**), so there is no
+pass mark.
+
 ### An exercise a machine can mark is a `:::task`, not printed prose
 
 Unit 1 had nine printed exercises with no directive. Four were genuinely open

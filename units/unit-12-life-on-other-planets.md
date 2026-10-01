@@ -395,30 +395,31 @@
 - Nobody knows if there is life in Mars. {on | at | into} = in -> on ~ life **on** Mars
 - The satellite is now on orbit around the Earth. {in | at | into} = on -> in ~ **in** orbit
 - Scientists found traces from water in the rock. {of | on | at} = from -> of ~ traces **of** water
-- Tí wants to be an orbit when he grows up and fly to Mars. {astronaut | atmosphere | oxygen} = orbit -> astronaut ~ an **astronaut** is a person who travels into space
-- Scientists want to launch the surface of Mars with robots. {explore | survive | orbit} = launch -> explore ~ you **explore** a place; you **launch** a rocket
-- Tí's first drawing was very habitable, so his teacher asked him to join the art club. {promising | alien | extraterrestrial} = habitable -> promising ~ **promising** means likely to be good later
-- Mars is a small red orbit next to the Earth. {planet | gravity | oxygen} = orbit -> planet ~ Mars is a **planet**; an orbit is its path
-- The Moon takes about a month to finish one oxygen round the Earth. {orbit | planet | atmosphere} = oxygen -> orbit ~ one trip round is one **orbit**
-- The rain falls because oxygen pulls it down. {gravity | orbit | planet} = oxygen -> gravity ~ **gravity** is the force that pulls things down
-- The Earth's orbit keeps us warm at night, like a blanket. {atmosphere | gravity | planet} = orbit -> atmosphere ~ the **atmosphere** is the air round the Earth
-- Plants make gravity, and we breathe it in. {oxygen | orbit | planet} = gravity -> oxygen ~ we breathe **oxygen**
-- Scientists found a hungry planet with water and air. {habitable | sleepy | angry} = hungry -> habitable ~ a **habitable** planet is one people could live on
-- Linh watched the stars all night through her new spacecraft. {telescope | surface | orbit} = spacecraft -> telescope ~ you look at stars through a **telescope**
-- The astronauts climbed into the telescope and flew up to the space station. {spacecraft | surface | planet} = telescope -> spacecraft ~ a **spacecraft** carries people into space
-- Some people think habitable visitors made the stone circles in the field. {extraterrestrial | telescope | oxygen} = habitable -> extraterrestrial ~ **extraterrestrial** means from outside the Earth
-- Tí drew an astronaut with four arms and green skin from Mars. {alien | orbit | atmosphere} = astronaut -> alien ~ a being from another planet is an **alien**
-- The film is about a friendly telescope with big eyes and long arms. {creature | surface | orbit} = telescope -> creature ~ a living thing is a **creature**
-- Water bears can orbit for thirty years without food. {survive | explore | sing} = orbit -> survive ~ to stay alive is to **survive**
-- The children survived the forest behind the school and found a small river. {explored | orbited | breathed} = survived -> explored ~ you **explore** a place to find out about it
-- Next month the country will explore a new spacecraft into space. {launch | survive | orbit} = explore -> launch ~ you **launch** a spacecraft
-- Our galaxy has eight planets and one Sun. {solar system | atmosphere | orbit} = galaxy -> solar system ~ the Sun and its planets are the **solar system**
-- There are billions of stars in our solar system. {galaxy | planet | UFO} = solar system -> galaxy ~ billions of stars make a **galaxy**
-- My uncle saw a strange galaxy flying low over the sea last night. {UFO | planet | telescope} = galaxy -> UFO ~ a flying thing nobody can explain is a **UFO**
-- After Saturn, the next planet out from the Sun is Mars. {Uranus | Venus | Earth} = Mars -> Uranus ~ **Uranus** comes after Saturn
-- The astronauts all listened to their creature and followed her orders. {commander | galaxy | trace} = creature -> commander ~ the **commander** gives the orders
-- Many villagers explore the new factory because it will make the river dirty. {oppose | survive | launch} = explore -> oppose ~ to be against something is to **oppose** it
-- There was a small surface of mud on the door. {trace | galaxy | commander} = surface -> trace ~ a small sign left behind is a **trace**
+- Mars is a small red star next to the Earth. {planet | moon | comet} = star -> planet ~ Mars goes round the Sun, so it is a **planet**; a star makes its own light
+- Things fall to the ground because of the Earth's orbit. {gravity | atmosphere | oxygen} = orbit -> gravity ~ **gravity** is the force that pulls things down; an orbit is a path round something
+- The Earth's oxygen is like a blanket of air round the whole world. {atmosphere | gravity | orbit} = oxygen -> atmosphere ~ the **atmosphere** is all the air round a planet; oxygen is one gas in it
+- Plants give out atmosphere, and we breathe it in. {oxygen | gravity | orbit} = atmosphere -> oxygen ~ we breathe **oxygen**; the atmosphere is all the air round the Earth
+- Linh saw the rings of Saturn through her new microscope. {telescope | glasses | window} = microscope -> telescope ~ a **telescope** shows things far away; a microscope shows very small things
+- The three astronauts climbed into the satellite, and it took them to the Moon. {spacecraft | submarine | helicopter} = satellite -> spacecraft ~ a **spacecraft** can carry people into space; a satellite carries no people
+- Some people believe foreign visitors from another planet made the stone circles in the field. {extraterrestrial | habitable | local} = foreign -> extraterrestrial ~ **extraterrestrial** means from outside the Earth; foreign means from another country
+- Tí drew an astronaut with four arms and green skin from Mars. {alien | pilot | scientist} = astronaut -> alien ~ a being from another planet is an **alien**; an astronaut is a person who travels into space
+- Scientists found a strange alien at the bottom of the sea. It had ten legs, and it was still alive. {creature | robot | stone} = alien -> creature ~ any living thing is a **creature**; an alien comes from another planet
+- Next month the country will land a new spacecraft into space. {launch | explore | survive} = land -> launch ~ you **launch** a spacecraft to send it up; it lands when it comes back down
+- Our galaxy has eight planets and one Sun. {solar system | atmosphere | orbit} = galaxy -> solar system ~ the Sun and its planets are the **solar system**; a galaxy has billions of stars
+- There are billions of stars in our solar system. {galaxy | planet | atmosphere} = solar system -> galaxy ~ billions of stars make a **galaxy**; our solar system has only one star, the Sun
+- After Saturn, the next planet out from the Sun is Jupiter. {Uranus | Venus | Mars} = Jupiter -> Uranus ~ Jupiter comes before Saturn; **Uranus** comes after it
+- Hà gave the orders to the other five people on the spacecraft. She was their astronaut. {commander | engineer | passenger} = astronaut -> commander ~ the person who gives the orders is the **commander**
+- Many villagers support the new factory because it will make the river dirty. {oppose | like | welcome} = support -> oppose ~ to be against something is to **oppose** it; to support it is to be for it
+@ gap-fill ask="Choose the word that fits."
+- The space station goes round the Earth sixteen times a day. Each ___ takes about ninety minutes. {orbit | atmosphere | gravity} = orbit
+- Scientists hope to find a ___ planet with water and air, where people could live one day. {habitable | frozen | burning} = habitable
+- The first ___ to walk on the Moon was Neil Armstrong, in 1969. {astronaut | farmer | doctor} = astronaut
+- A small robot will drive across Mars and ___ its rocks and caves. {explore | survive | orbit} = explore
+- On Sunday the children ___ the caves near the beach and found some old shells. {explored | survived | orbited} = explored
+- Water bears are tiny animals. They can ___ for thirty years without food. {survive | explore | orbit} = survive
+- My uncle saw a strange light over the sea last night. Nobody knew what it was, so people called it a ___ . {UFO | galaxy | planet} = UFO
+- Linh's first science project was very ___, so her teacher asked her to join the science club. {promising | boring | careless} = promising
+- The rock from Mars had a tiny ___ of water inside it — just a little. {trace | lake | bottle} = trace
 :::
 
 ### Vocabulary — Space and life beyond Earth
@@ -928,7 +929,7 @@ Keep a detail only if it supports the first impression you opened with.
 :::
 
 ::: write words="80-100" trains="Lexical Resource" ask="Now write yours — **80–100 words** describing the creatures on your planet."
-- [ ] 80–100 words ~ words
+- [ ] At least 80 words — 80–100 is the aim ~ words
 - [ ] One paragraph ~ para:1
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
 - [ ] One list of three or more items — *X, Y and Z* ~ re:1 \w+,\s+\w+[\w\s]*,?\s+and\s+\w+
@@ -936,6 +937,8 @@ Keep a detail only if it supports the first impression you opened with.
 - [ ] A topic sentence that names the planet
 - [ ] At least **six** descriptive adjectives
 - [ ] One strange detail nobody else would think of
+- [ ] Your own words — no long run copied from the task ~ nocopy:5
+- [ ] Read it once more, one sentence at a time, and fix any mistake you find
 :::
 
 ---

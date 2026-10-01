@@ -197,12 +197,12 @@
 - The storm made a lot of damage to our roof. {did | took | gave} = made -> did ~ you **do** damage
 - Yesterday's earthquake was 6.1 in the Richter scale. {on | at | by} = in -> on ~ **on** the Richter scale
 - We took shelter on the school hall during the storm. {in | of | with} = on -> in ~ take shelter **in** a place
-- The volcano collapsed and sent hot rock into the sky. {erupted | trembled | evacuated} = collapsed -> erupted ~ a volcano **erupts**
-- The tornado erupted two houses in our village. {destroyed | evacuated | predicted} = erupted -> destroyed ~ a tornado **destroys** houses
-- Rescue workers destroyed three children from the river. {rescued | predicted | erupted} = destroyed -> rescued ~ you **rescue** people from danger
-- My hands collapsed with cold. {trembled | erupted | predicted} = collapsed -> trembled ~ your hands **tremble**
+- We heard the tsunami warning in the radio. {on | at | by} = in -> on ~ you hear something **on** the radio
+- The typhoon caused a lot of damages to the village. {damage | damaged | damaging} = damages -> damage ~ you cannot count it: a lot of **damage**
+- Before the storm, the army rescued the whole village to the school on the hill. {evacuated | flooded | erupted} = rescued -> evacuated ~ before danger comes, you **evacuate** people; you rescue people who are already in danger
+- The referee played his whistle, and the match stopped. {blew | hit | rang} = played -> blew ~ you **blow** a whistle
 - Put a torch and some water in your emergency shelter. {kit | funnel | scale} = shelter -> kit ~ an emergency **kit**
-- Five fishermen are still victim after the storm. {missing | trembling | relief} = victim -> missing ~ nobody has found them: they are **missing**
+- Five fishermen are still missed after the storm, and their families are waiting for news. {missing | trembling | violent} = missed -> missing ~ nobody can find them: they are **missing**
 @ gap-fill ask="Choose the word that fits."
 - Our teacher told us to get under the desks when the ___ started. {earthquake | drought | flood} = earthquake
 - During the ___ , the pictures fell off the walls and the lights swung. {earthquake | drought | flood} = earthquake
@@ -493,35 +493,36 @@
 - tornado · flood · drought · survivor = survivor ~ the others are disasters; a survivor is a person
 - earthquake · landslide · eruption · tornado = tornado ~ the others come from the ground; a tornado is a wind
 @ error-correction
-- We felt a drought last night: the whole floor moved. {earthquake | flood | tsunami} = drought -> earthquake ~ the ground moves in an **earthquake**
-- After the storm, a drought of brown water came into our kitchen. {flood | volcano | eruption} = drought -> flood ~ too much water is a **flood**
-- There was a flood this year, so the rice fields had no water at all. {drought | tsunami | volcano} = flood -> drought ~ no water at all is a **drought**
-- A tsunami of mud and rocks came down the hill behind the school. {landslide | drought | volcano} = tsunami -> landslide ~ mud and rocks from a hill: a **landslide**
-- A huge drought came from the sea and covered the town. {tsunami | landslide | volcano} = drought -> tsunami ~ a huge wave from the sea is a **tsunami**
-- Lý Sơn island has an old tsunami, and you can climb to the top. {volcano | landslide | drought} = tsunami -> volcano ~ you climb a **volcano**
-- The volcano flooded, and ash covered the town. {erupted | evacuated | moved} = flooded -> erupted ~ a volcano **erupts**
-- The police erupted everyone from the hotel before the tsunami came. {evacuated | flooded | dropped} = erupted -> evacuated ~ you **evacuate** people from danger
-- The firefighters damaged two children from the burning house. {rescued | erupted | flooded} = damaged -> rescued ~ you **rescue** people from a fire
-- The storm rescued many boats in the harbour. {damaged | evacuated | sheltered} = rescued -> damaged ~ a storm **damages** boats
-- The earthquake rescued the old temple completely. {destroyed | sheltered | evacuated} = rescued -> destroyed ~ nothing is left: it **destroyed** it
-- The heavy rain made the mud wall of the house erupt. {collapse | rescue | shelter} = erupt -> collapse ~ a wall **collapses**
-- The fisherman shouted a shelter to the boys: "Get out of the water now!" {warning | victim | damage} = shelter -> warning ~ he gave them a **warning**
-- I always listen to the weather victim before I ride to school. {forecast | shelter | damage} = victim -> forecast ~ the weather **forecast**
-- The shelters of the typhoon got free rice from the market. {victims | warnings | forecasts} = shelters -> victims ~ people hurt by a disaster are **victims**
-- The Red Cross sent damage to the typhoon victims: food, water and tents. {relief | funnel | forecast} = damage -> relief ~ food and water for victims is **relief**
-- Three funnels of the flood waited on a roof for help. {survivors | tornadoes | forecasts} = funnels -> survivors ~ people who stay alive are **survivors**
-- A drought spun across the field and threw the roof of a barn into the air. {tornado | tsunami | survivor} = drought -> tornado ~ a spinning wind is a **tornado**
-- Use a whistle to pour the petrol into the motorbike. {funnel | shelter | relief} = whistle -> funnel ~ you pour through a **funnel**
-- My knees predicted with fear when the ground moved. {trembled | survived | erupted} = predicted -> trembled ~ knees **tremble**
-- The strong wind made the old wooden gate predict all night. {shake | survive | erupt} = predict -> shake ~ the wind makes the gate **shake**
-- The weather experts survived rain for tomorrow. {predicted | trembled | collapsed} = survived -> predicted ~ you **predict** the weather
-- The lifeguard blew her funnel and waved at the swimmers. {whistle | shelter | relief} = funnel -> whistle ~ you blow a **whistle**
-- Dad put a phone charger and some candles in the Richter scale. {emergency kit | relief | forecast} = Richter scale -> emergency kit ~ you keep things in an **emergency kit**
-- The victims came in boats and saved us from the roof. {rescue workers | forecasts | droughts} = victims -> rescue workers ~ **rescue workers** save people
-- The earthquake was 6.5 on the emergency kit. {Richter scale | forecast | shelter} = emergency kit -> Richter scale ~ on the **Richter scale**
-- Strong winds collapsed three trees, roots and all. {pulled up | rescued | predicted} = collapsed -> pulled up ~ the wind **pulled up** the trees
-- The little boy was violently for two hours, and then we found him at the market. {missing | relief | shelter} = violently -> missing ~ nobody has found them: they are **missing**
-- After three days of rain, the river rushed missing through the village. {violently | calmly | slightly} = missing -> violently ~ with great force: **violently**
+- In last night's landslide, the ground moved under the whole city for thirty seconds. {earthquake | tsunami | flood} = landslide -> earthquake ~ the ground under a city moves in an **earthquake**; a landslide is earth sliding down a hill
+- After three days of heavy rain, a tsunami filled the streets with brown water. {flood | landslide | drought} = tsunami -> flood ~ rain water in the streets is a **flood**; a tsunami comes from the sea
+- There was a flood this year, so the rice fields had no water at all. {drought | tsunami | landslide} = flood -> drought ~ no water at all is a **drought**
+- After the heavy rain, a tsunami of mud and rocks came down the hill behind the school. {landslide | earthquake | drought} = tsunami -> landslide ~ mud and rocks from a hill: a **landslide**
+- Minutes after the earthquake under the sea, a flood ten metres high hit the beach. {tsunami | landslide | drought} = flood -> tsunami ~ a giant wave from the sea is a **tsunami**
+- Lý Sơn island has an old erupt, and you can climb to the top of it. {volcano | landslide | earthquake} = erupt -> volcano ~ *erupt* is a verb; the mountain is a **volcano**
+- The police escaped all the tourists to the hill before the tsunami came. {evacuated | erupted | flooded} = escaped -> evacuated ~ you escape yourself; you **evacuate** other people
+- A fisherman evacuated a small dog from the river just before it went under the water. {rescued | damaged | destroyed} = evacuated -> rescued ~ the dog was already in danger: he **rescued** it
+- The storm destroyed a few tiles on our roof, but the house is fine. {damaged | sheltered | evacuated} = destroyed -> damaged ~ only a few tiles, and the house is fine: it **damaged** the roof
+- The fire damaged the old wooden market, and nothing was left of it. {destroyed | sheltered | rescued} = damaged -> destroyed ~ nothing was left: it **destroyed** the market
+- The old bridge destroyed during the earthquake. {collapsed | erupted | evacuated} = destroyed -> collapsed ~ the bridge fell down by itself: it **collapsed**
+- The fisherman shouted a forecast to the boys: "Get out of the water now!" {warning | shelter | victim} = forecast -> warning ~ he told them about danger: a **warning**
+- I always check the weather warning before I ride to school, to see if it will be sunny. {forecast | shelter | damage} = warning -> forecast ~ a weather **forecast** says what the weather will be; a warning tells you about danger
+- The Red Cross sent rescue to the typhoon victims: food, water and tents. {relief | warning | forecast} = rescue -> relief ~ food, water and tents for victims are **relief**
+- A tsunami spun across the fields and lifted a car into the air. {tornado | landslide | flood} = tsunami -> tornado ~ a spinning wind is a **tornado**; a tsunami is a wave
+- The two captains stood up to tremble hands before the match. {shake | whistle | predict} = tremble -> shake ~ you **shake** hands
+- Nobody can prevent exactly when an earthquake will come. {predict | rescue | destroy} = prevent -> predict ~ you **predict** when it will come; to prevent it is to stop it
+- The lifeguard blew her bell and waved at the swimmers to come back. {whistle | funnel | shelter} = bell -> whistle ~ you ring a bell; you blow a **whistle**
+- The victims came in boats and pulled us off the roof — saving people is their job. {rescue workers | survivors | tornadoes} = victims -> rescue workers ~ saving people is the job of **rescue workers**
+- The storm took up the old mango tree in our garden, roots and all. {pulled up | shook | rescued} = took up -> pulled up ~ the tree came out of the ground: the storm **pulled** it **up**
+- After three days of rain, the river rushed violent through the village. {violently | calmly | slightly} = violent -> violently ~ it says how the river rushed: **violently**
+@ gap-fill ask="Choose the word that fits."
+- Smoke and hot ash came out when the old mountain began to ___ . {erupt | evacuate | flood} = erupt
+- The ___ of the typhoon lost their homes and got free rice from the market. {victims | warnings | forecasts} = victims
+- Nobody else on the boat lived. The only ___ was a boy of twelve, who swam to the shore. {survivor | victim | relief} = survivor
+- Put a ___ in the top of the bottle, so the water goes in and does not spill. {funnel | whistle | shelter} = funnel
+- She was so frightened that her voice began to ___ . {tremble | collapse | whistle} = tremble
+- Dad packed a torch, some candles and a phone charger in our ___ . {emergency kit | shelter | Richter scale} = emergency kit
+- The earthquake measured 6.5 on the ___ . {Richter scale | forecast | emergency kit} = Richter scale
+- Nobody could find the little boy after the flood. He was ___ for two days. {missing | calm | violent} = missing
 :::
 
 ### Vocabulary — Natural disasters
@@ -1090,13 +1091,15 @@ You can use the comparatives from Unit 2.
 :::
 
 ::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours — the flood safety instructions, in **80–100 words**, in three parts."
-- [ ] 80–100 words ~ words
+- [ ] At least 80 words — 80–100 is the aim ~ words
 - [ ] Three headings: **Before**, **During**, **After** ~ all before/during/after
 - [ ] At least **four** sequencing signals ~ any:4 first/next/then/finally/after that/lastly/second/third/straight away/immediately
 - [ ] At least one **negative** instruction ~ any:1 do not/don't/never
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
 - [ ] No *I think*, no *you should* ~ none i think/you should/in my opinion/i believe/i feel that/maybe you
 - [ ] Every instruction starts with a verb — **Turn off…**, **Never walk…**
+- [ ] Your own words — no long run copied from the task ~ nocopy:5
+- [ ] Read it once more, one sentence at a time, and fix any mistake you find
 :::
 
 ---

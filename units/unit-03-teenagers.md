@@ -222,9 +222,9 @@
 - I uploaded three websites to find a good present. {browsed | logged | connected} = uploaded -> browsed ~ you **browse** websites
 - I can't keep up to the rest of the class. {with | on | for} = to -> with ~ keep up **with**
 - My mum does all the homework — cooking, cleaning and washing. {housework | teamwork | life skill} = homework -> housework ~ **housework** is work at home; homework comes from school
-- I was very embarrassing when I fell over on the stage. {embarrassed | embarrass | embarrassment} = embarrassing -> embarrassed ~ you **feel** embarrassed
-- Khoa felt frustrating because the app kept crashing. {frustrated | frustrate | frustration} = frustrating -> frustrated ~ you **feel** frustrated
-- The club was very enjoying. {enjoyable | enjoyed | enjoys} = enjoying -> enjoyable
+- I was very embarrassing when I fell over on the stage. {embarrassed | frustrated | delighted} = embarrassing -> embarrassed ~ you **feel** embarrassed when people see a silly mistake
+- Khoa felt frustrating because the app kept crashing. {frustrated | delighted | self-confident} = frustrating -> frustrated ~ you **feel** frustrated when something keeps going wrong
+- The club was very enjoying. Everyone had fun. {enjoyable | delighted | curious} = enjoying -> enjoyable ~ a club or an activity is **enjoyable**; people are delighted
 - How do you deal about stress? {with | on | in} = about -> with ~ deal **with**
 @ gap-fill ask="Choose the word that fits."
 - Most ___ in my class have a phone. {teenagers | adolescence | peer pressure} = teenagers
@@ -648,38 +648,39 @@
 - boring · tiring · stressful · enjoyable = enjoyable ~ the others are unpleasant
 - volleyball · table tennis · running · social media = social media ~ the others are sports
 @ error-correction
-- Two adolescences from our school won the swimming race. {teenagers | peer pressures | self-confidents} = adolescences -> teenagers
-- Many young people feel shy in their teenager. {adolescence | peer pressure | delighted} = teenager -> adolescence
-- Nam bought the expensive shoes because of adolescence from his friends. {peer pressure | teenager | self-confident} = adolescence -> peer pressure
-- Khoa is very embarrassed. He happily sings on stage in front of hundreds of people. {self-confident | frustrated | peer pressure} = embarrassed -> self-confident
-- Nam was frustrated with his birthday present. He thanked his aunt again and again. {delighted | embarrassed | self-confident} = frustrated -> delighted
-- I dropped my tray in the canteen. Everyone looked at me. I felt very self-confident. {embarrassed | delighted | adolescence} = self-confident -> embarrassed
-- I couldn't find my bike key anywhere. I felt so delighted! {frustrated | self-confident | adolescence} = delighted -> frustrated
-- The exam is tomorrow, and I can't sleep. I feel very curious. {stressed | delighted | socialise} = curious -> stressed
-- My sister reads every book about space. She is very stressed about the stars. {curious | embarrassed | frustrated} = stressed -> curious
-- Grandpa made a curious decision. He asked three doctors first. {informed | stressed | self-confident} = curious -> informed
-- Reading a map is a useful housework. {life skill | teenager | peer pressure} = housework -> life skill
-- Mum asked me to help with the homework. I swept the kitchen and washed the plates. {housework | life skill | teenager} = homework -> housework
-- Mai wants to deal in the school's music show. {get involved | keep up | hang out} = deal -> get involved
-- Our dance club has a long teamwork on Saturday morning. {session | forum | social media} = teamwork -> session
-- The rowers won the race thanks to great session. {teamwork | forum | social media} = session -> teamwork
-- Mai does housework at the village clinic every Saturday. She helps the nurses for free. {community service | teenager | life skill} = housework -> community service
-- We had an enjoyed afternoon at the beach. {enjoyable | enjoying | enjoy} = enjoyed -> enjoyable
-- I saw the festival news on teamwork this morning. {social media | session | community service} = teamwork -> social media
-- I asked for help on the gaming teamwork. Three people replied. {forum | session | housework} = teamwork -> forum
-- I can't remember the password for my notification. {account | forum | session} = notification -> account
-- I uploaded to my account with my password. {logged on | browsed | notification} = uploaded -> logged on
-- Khoa browsed his video to the class forum. {uploaded | connected | logged on} = browsed -> uploaded
-- I got an account from the school app: "No classes tomorrow!" {notification | forum | website} = account -> notification
-- I use this app to browse with friends in other cities. {connect | upload | log on} = browse -> connect
-- I read about the festival on the town's notification. {website | account | session} = notification -> website
-- This app is very mature. My little brother uses it easily. {user-friendly | focused | midterm} = mature -> user-friendly
-- The mature test is in the seventh week of the term. {midterm | focused | user-friendly} = mature -> midterm
-- Grandma has high notifications for my future. {expectations | sessions | accounts} = notifications -> expectations
-- I can't bully on the lesson. The boys behind me are too noisy. {concentrate | expect | upload} = bully -> concentrate
-- Hùng was very user-friendly during the exam. He didn't look up once. {focused | midterm | enjoyable} = user-friendly -> focused
-- My cousin behaves like an adult. Everyone says he is very midterm. {mature | user-friendly | enjoyable} = midterm -> mature
-- Big boys shouldn't concentrate little children. {bully | expect | upload} = concentrate -> bully
+- My cousins are adolescences now. They are fifteen and sixteen. {teenagers | adults | babies} = adolescences -> teenagers ~ a **teenager** is a person; adolescence is a time of life
+- From fourteen to eighteen, you are in your teenager. {adolescence | childhood | peer pressure} = teenager -> adolescence ~ **adolescence** is a time of life; a teenager is a person
+- I dropped my tray in the canteen, and everyone laughed. My face went red. I felt so frustrated! {embarrassed | delighted | self-confident} = frustrated -> embarrassed ~ you feel **embarrassed** when people see you make a silly mistake
+- I was alone in the kitchen. I tried to open the jar ten times, but it didn't open. I felt so embarrassed! {frustrated | delighted | self-confident} = embarrassed -> frustrated ~ nobody saw you, so you feel **frustrated**, not embarrassed
+- The trip to the beach was really delighted. We swam all day. {enjoyable | stressed | curious} = delighted -> enjoyable ~ people are delighted; a trip is **enjoyable**
+- Reading a map is a useful housework. {life skill | informed decision | peer pressure} = housework -> life skill ~ reading a map is a **life skill**, not a job in the house
+- Mum asked me to help with the homework. I swept the kitchen and washed the plates. {housework | life skill | informed decision} = homework -> housework ~ sweeping and washing are **housework**
+- Mai wants to hang out in the school's music show. {get involved | keep up | deal} = hang out -> get involved ~ you **get involved in** a show; you **hang out** with friends
+- Our dance club has a long teamwork on Saturday morning. {session | forum | social media} = teamwork -> session ~ a club meets for a **session**
+- Our class won the boat race thanks to great session. {teamwork | forum | social media} = session -> teamwork ~ working well together is **teamwork**
+- Mai does housework at the village clinic every Saturday. She helps the nurses for free. {community service | teamwork | session} = housework -> community service ~ helping people for free is **community service**
+- Khoa browsed his video to the class forum. {uploaded | connected | logged on} = browsed -> uploaded ~ you **upload** a video
+- I use this app to browse with friends in other cities. {connect | upload | log on} = browse -> connect ~ you **connect with** people
+- I typed my password and uploaded to my account. {logged on | browsed | connected} = uploaded -> logged on ~ you **log on to** an account
+- Hùng was very concentrated during the exam. He didn't look up once. {focused | mature | curious} = concentrated -> focused ~ a person is **focused**; you concentrate on something
+@ gap-fill ask="Choose the word that fits."
+- Tuấn wore the band's T-shirt only because all his friends did. That was ___ . {peer pressure | adolescence | good manners} = peer pressure
+- Khoa loves singing on stage in front of hundreds of people. He is very ___ . {self-confident | embarrassed | frustrated} = self-confident
+- Grandpa was ___ with the drawing I gave him. He put it on the wall and showed everyone. {delighted | embarrassed | frustrated} = delighted
+- Dad works late every night and never has a day off. He looks really ___ . {stressed | curious | delighted} = stressed
+- Bống asks a hundred questions about every new fish she sees. She is very ___ . {curious | stressed | embarrassed} = curious
+- Mai read about three phones and asked her friends before she chose one. She made an ___ decision. {informed | embarrassed | excited} = informed
+- Lan posts photos of her cat on ___ every day, and lots of people like them. {social media | teamwork | community service} = social media
+- I had a question about my game, so I asked on a ___ . Five people answered. {forum | session | teamwork} = forum
+- I can't remember my password, so I can't get into my ___ . {account | notification | session} = account
+- My phone made a sound. It was a ___ from the school app: "No classes tomorrow!" {notification | account | website} = notification
+- You can find the bus times on the city's ___ . {website | account | notification} = website
+- My grandpa sends photos on this app without any help. It is very ___ . {user-friendly | mature | focused} = user-friendly
+- Our ___ tests are in October, and the final ones are in December. {midterm | focused | mature} = midterm
+- My parents have high ___ for me. They want me to be a doctor. {expectations | sessions | accounts} = expectations
+- Please turn off the music. I can't ___ on my maths. {concentrate | expect | bully} = concentrate
+- My cousin always says sorry when he is wrong, and he looks after his little brothers. He is very ___ . {mature | curious | embarrassed} = mature
+- Two older girls call Lan bad names every day. They ___ her. {bully | expect | concentrate} = bully
 :::
 
 ### Vocabulary — Teen life, school clubs, and life online
@@ -1149,12 +1150,15 @@ When every sentence starts with a linking word, none of them helps the reader.
 :::
 
 ::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — **one** paragraph of **80–100 words** on the causes of teenage stress and what helps."
-- [ ] 80–100 words ~ words
+- [ ] At least 80 words — 80–100 is the aim ~ words
 - [ ] One paragraph, not a list ~ para:1
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
 - [ ] At least **four** sentences joined with a comma and *and, but, so, or* or *yet* ~ re:4 ,\s+(and|but|so|or|yet)\s
 - [ ] At least **three** different joining words from *and, but, so, or, yet* ~ distinct:3 and/but/so/or/yet
+- [ ] No more than **eight** joining words in all — not every sentence needs one ~ max:8 and/but/so/or/yet
 - [ ] No comma on its own between two full sentences
+- [ ] Your own words — no long run copied from the task ~ nocopy:5
+- [ ] Read it once more, one sentence at a time, and fix any mistake you find
 :::
 
 ---

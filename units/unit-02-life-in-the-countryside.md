@@ -505,46 +505,47 @@
 - bus · train · ferry · lighthouse = lighthouse ~ the others carry people
 - ferry · canal · lighthouse · orchard = orchard ~ the others are about boats
 @ error-correction
-- The farmer rides his barn to the field every morning. {buffalo | well | orchard} = barn -> buffalo ~ a **buffalo** is an animal you can ride
-- We planted young rice in the orchard, in water up to our ankles. {paddy field | barn | well} = orchard -> paddy field ~ rice grows in a **paddy field**
-- The rice herd was very good this year, so the family is happy. {harvest | barn | well} = herd -> harvest ~ a **harvest** is what farmers cut and collect
-- My uncle grows oranges and mangoes in his big barn. {orchard | well | herd} = barn -> orchard ~ fruit trees grow in an **orchard**
-- The orchard eat grass on the hill all day, and the farmer counts them at night. {cattle | well | harvest} = orchard -> cattle ~ cows are **cattle**
-- A barn of cattle stood under the trees. {herd | well | harvest} = barn -> herd ~ a group of animals is a **herd**
-- The farmer put the hay in the well to keep it out of the rain. {barn | orchard | herd} = well -> barn ~ you keep things inside a **barn**
-- Every morning Mai gets water from the barn in the yard. {well | orchard | herd} = barn -> well ~ water comes from a **well**
-- A small orchard runs past the school, and we can hear the water. {stream | well | barn} = orchard -> stream ~ water runs in a **stream**
-- My uncle made a small bridge across the stream from herd. {bamboo | well | barn} = herd -> bamboo ~ **bamboo** is good for building
-- The desert is so tiny that it takes a week to cross it. {vast | peaceful | narrow} = tiny -> vast ~ very big is **vast**
-- The village is very noisy at night; you can only hear the stream. {peaceful | vast | busy} = noisy -> peaceful ~ quiet and calm is **peaceful**
+- Our cattle has long curved horns and works all day in the wet rice field. {buffalo | herd | goat} = cattle -> buffalo ~ **cattle** means many cows; one big animal with horns is a **buffalo**
+- We planted young rice in the orchard, in water up to our ankles. {paddy field | garden | well} = orchard -> paddy field ~ rice grows in a **paddy field**
+- We cut all the rice in one week, and this year's herd was the best ever. {harvest | orchard | cattle} = herd -> harvest ~ a **harvest** is what farmers cut and collect
+- My uncle grows oranges and mangoes in the paddy field behind his house. {orchard | barn | well} = paddy field -> orchard ~ fruit trees grow in an **orchard**
+- A cattle of buffaloes walked slowly across the road. {herd | crowd | flock} = cattle -> herd ~ a group of animals is a **herd**
+- A small well runs past the school, and we can hear the water. {stream | paddy field | orchard} = well -> stream ~ water runs along in a **stream**
+- The desert is so peaceful that it takes a week to cross it. {vast | quiet | narrow} = peaceful -> vast ~ very big is **vast**
+- The village is very vast at night; you can only hear the stream. {peaceful | busy | wide} = vast -> peaceful ~ quiet and calm is **peaceful**
 - The workers picked the heavy sacks onto the lorry. {loaded | rode | collected} = picked -> loaded ~ you **load** things onto a lorry
 - We went to the orchard to catch fruit. {pick fruit | ride a horse | collect eggs} = catch fruit -> pick fruit ~ you **pick** fruit
 - Grandma catches eggs from the hens every morning. {collects eggs | picks fruit | rides a horse} = catches eggs -> collects eggs ~ you **collect** eggs
-- My cousin can fly a horse very fast. {ride a horse | collect eggs | pick fruit} = fly a horse -> ride a horse ~ you **ride** a horse
-- The children ride a kite on the hill every evening. {fly a kite | pick fruit | collect eggs} = ride a kite -> fly a kite ~ you **fly** a kite
-- An orchard moves with his camels from one oasis to the next. {nomad | barn | well} = orchard -> nomad ~ a **nomad** moves from place to place
+- My cousin can fly a horse along the beach at full speed. {ride a horse | collect eggs | pick fruit} = fly a horse -> ride a horse ~ you **ride** a horse
+- The children ride a kite on the hill, and it goes up high into the sky. {fly a kite | ride a horse | pick fruit} = ride a kite -> fly a kite ~ you **fly** a kite
 - The people here are very picturesque — they always invite us in for tea. {hospitable | vast | well-trained} = picturesque -> hospitable ~ **picturesque** is for places, not people
 - The hospitable workers know how to fix every machine on the farm. {well-trained | picturesque | vast} = hospitable -> well-trained ~ they learned the job, so they are **well-trained**
-- The old town is very well-trained, with pretty streets and flowers. {picturesque | hospitable | nomad} = well-trained -> picturesque ~ a pretty place is **picturesque**
+- Every tourist takes a photo of the hospitable old bridge. {picturesque | well-trained | vast} = hospitable -> picturesque ~ **hospitable** is for people; a pretty place is **picturesque**
 - The farmhouse is loaded by tall trees on all sides. {surrounded | picked | collected} = loaded -> surrounded ~ **surrounded by** trees
 - The village is surrounded of rice fields. {by | from | at} = of -> by ~ surrounded **by**
-- We stopped the car to enjoy the beautiful harvest — green hills and a blue lake. {scenery | herd | well} = harvest -> scenery ~ what you see around you is the **scenery**
-- The farmer used a buffalo to cut and collect all his rice in one hour. {combine harvester | barn | nomad} = buffalo -> combine harvester ~ a machine does it fast
-- Farmers milk the fields before planting rice. {plough | unload | ride} = milk -> plough ~ you **plough** a field
-- Before planting, the farmer unloads the whole field with his buffalo. {ploughs | milks | dries} = unloads -> ploughs ~ you **plough** a field
-- My grandparents milk coffee on their farm in Đắk Lắk. {cultivate | unload | plough} = milk -> cultivate ~ you **cultivate** a crop
-- Rice is the main poultry in this area. {crop | herd | barn} = poultry -> crop ~ rice is a **crop**
-- The farmer keeps cattle in the yard: forty hens and ten ducks. {poultry | crops | ploughs} = cattle -> poultry ~ hens and ducks are **poultry**
-- The fishermen go out to sea to pick fish before sunrise. {catch fish | collect eggs | plough} = pick fish -> catch fish ~ you **catch** fish
-- My aunt ploughs the cows every morning with a metal bucket beside her. {milks | dries | unloads} = ploughs -> milks ~ you **milk** a cow
-- Wet clothes milk quickly on a hot, windy day. {dry | plough | unload} = milk -> dry ~ the sun and wind **dry** clothes
+- The farmer used a buffalo to cut and collect all his rice in one hour. {combine harvester | lorry | motorbike} = buffalo -> combine harvester ~ a machine does it fast
+- Farmers harvest the fields with a buffalo before they plant the rice. {plough | milk | unload} = harvest -> plough ~ you **plough** before planting and **harvest** after
+- My grandparents plough coffee on their farm in Đắk Lắk. {cultivate | unload | milk} = plough -> cultivate ~ you **plough** the soil, but you **cultivate** a crop
+- Rice is the main poultry in this area. {crop | cattle | herd} = poultry -> crop ~ rice is a **crop**
+- The farmer keeps cattle in the yard: forty hens and ten ducks. {poultry | crops | herds} = cattle -> poultry ~ hens and ducks are **poultry**
+- The boats go out to sea at night to pick fish for the market. {catch fish | collect eggs | pick fruit} = pick fish -> catch fish ~ you **catch** fish
 - When the truck arrived, the men loaded the sacks and carried them into the barn. {unloaded | ploughed | milked} = loaded -> unloaded ~ you **unload** things off a truck
 - We got home and loaded the vegetables from the car into the kitchen. {unloaded | milked | dried} = loaded -> unloaded ~ you **unload** things from a car
-- Boats carry fruit to the floating market along the lighthouse. {canal | ferry | speciality} = lighthouse -> canal ~ boats travel along a **canal**
-- We crossed the river by lighthouse. {ferry | canal | well} = lighthouse -> ferry ~ a **ferry** carries you across water
-- The canal leaves the harbour every hour and takes people to the island. {ferry | lighthouse | speciality} = canal -> ferry ~ a **ferry** is a boat
-- The canal on the cape flashes every ten seconds to warn ships. {lighthouse | ferry | speciality} = canal -> lighthouse ~ a **lighthouse** has a light
-- Nem chua is a famous lighthouse of Thanh Hóa. {speciality | canal | ferry} = lighthouse -> speciality ~ a food a place is famous for is a **speciality**
+- Boats carry fruit to the floating market along the ferry. {canal | well | paddy field} = ferry -> canal ~ boats travel along a **canal**; a **ferry** is a boat
+- There is no bridge, so we crossed the river by canal. {ferry | bus | lighthouse} = canal -> ferry ~ a **ferry** carries you across water
+- The canal leaves the harbour every hour and takes people to the island. {ferry | lighthouse | stream} = canal -> ferry ~ a **ferry** is a boat
+- Nem chua is the most famous scenery of Thanh Hóa. {speciality | harvest | crop} = scenery -> speciality ~ a food a place is famous for is a **speciality**
+@ gap-fill ask="Choose the word that fits."
+- Uncle Bảy's ___ eat grass on the hill all day and come home to the barn at night. {cattle | hens | ducks} = cattle
+- Grandpa keeps the hay in the ___ all winter, out of the rain. {barn | orchard | paddy field} = barn
+- There is no tap in Grandma's house, so she gets water from the ___ in the yard. {well | barn | paddy field} = well
+- Grandpa cut some tall ___ and made a small bridge across the stream. {bamboo | rice | corn} = bamboo
+- A ___ has no home in one village; he moves his animals from place to place to find grass. {nomad | farmer | fisherman} = nomad
+- We stopped the car to enjoy the ___ — green hills and a blue lake. {scenery | harvest | herd} = scenery
+- The buffalo pulls the blade through the soil while Grandpa ___ the field. {ploughs | milks | unloads} = ploughs
+- Every morning my aunt ___ the cows, and we have a warm white drink for breakfast. {milks | feeds | washes} = milks
+- After the rain, we spread the rice on mats so the sun can ___ it. {dry | cook | plant} = dry
+- The ___ on the cape flashes every ten seconds to warn ships. {lighthouse | ferry | canal} = lighthouse
 :::
 
 ### Vocabulary — Rural life
@@ -1011,13 +1012,15 @@ One clear difference tells your reader what matters most.
 :::
 
 ::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — **one** paragraph of **80–100 words** on what you like and dislike about life in the countryside."
-- [ ] 80–100 words ~ words
+- [ ] At least 80 words — 80–100 is the aim ~ words
 - [ ] **One** paragraph, not several ~ para:1
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
 - [ ] At least **three** comparative adverbs ~ any:3 more quickly/more slowly/more carefully/more easily/more often/more cheaply/more clearly/more loudly/better/worse/harder/faster/earlier/later/longer/closer/higher/lower/further/farther
 - [ ] No *more faster* or *more better* ~ none more faster/more better/more worse/more harder/more earlier/more later/more longer/more closer/more higher/more lower/more further
 - [ ] Each comparative has **than** or a comparison the reader can see
 - [ ] Both a like **and** a dislike — the task asks for both
+- [ ] Your own words — no long run copied from the task ~ nocopy:5
+- [ ] Read it once more, one sentence at a time, and fix any mistake you find
 :::
 
 ---

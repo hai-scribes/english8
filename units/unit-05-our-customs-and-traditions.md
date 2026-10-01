@@ -426,6 +426,7 @@
 - Many ___ towns in Viet Nam have a temple for the whale. {coastal | decorative | lunar} = coastal
 - Nha Trang and Đà Nẵng are both ___ cities. {coastal | lunar | blooming} = coastal
 - The ___ path goes past the fishing boats and the beach. {coastal | lunar | blooming} = coastal
+- Seafood is cheap in ___ towns because the boats bring it in every morning. {coastal | lunar | decorative} = coastal
 - My grandparents live in a small ___ village with a big harbour. {coastal | lunar | blooming} = coastal
 - Don't talk with your mouth full — that's bad ___ . {table manners | superstition | ritual} = table manners
 - In Viet Nam, good ___ mean you invite older people to eat first. {table manners | martial arts | acrobatics} = table manners
@@ -629,15 +630,14 @@
 - custom · tradition · worship · incense = incense ~ incense is a thing you can touch and burn; the others are things people do or keep
 - grandmother · ancestor · uncle · festival = festival ~ the others are people
 @ error-correction
-- Teaching the songs to children keeps the tradition live. {alive | life | lived} = live -> alive ~ keep a tradition **alive**
+- Making bánh chưng together is a festival in our family: we do it every Tet. {tradition | worship | offering} = festival -> tradition ~ something a family does every year for a long time is a **tradition**; a festival is a big public event
 - Our grandparents passed up these stories to us. {down | away | out} = up -> down ~ stories are passed **down**
 - The whole family gets along at Tet for a big dinner. {together | up | away} = along -> together ~ families **get together**
 - My uncle broke to tradition and had no bánh chưng at Tet. {with | at | on} = to -> with ~ **break with** tradition
 - We decorated the New Year with fireworks. {celebrated | wrapped | worshipped} = decorated -> celebrated ~ you **celebrate** a festival
-- Bà Sáu celebrated the cakes in banana leaves. {wrapped | decorated | worshipped} = celebrated -> wrapped ~ you **wrap** cakes in leaves
-- The children admired a fish into the river. {released | prayed | wrapped} = admired -> released ~ you **release** a fish into a river
+- Bà Sáu decorated the rice cakes in banana leaves and tied them with string. {wrapped | celebrated | worshipped} = decorated -> wrapped ~ you **wrap** something when you cover it completely; you decorate it to make it pretty
+- On his birthday, Grandpa chased away ten birds from their cage, and they flew happily into the sky. {released | passed down | celebrated} = chased away -> released ~ you **release** an animal to let it go free; you chase it away to make it leave
 - My grandmother prays of good health every morning. {for | at | on} = of -> for ~ **pray for** something
-- The fishermen live in a lunar village and go out to sea every morning. {coastal | decorative | blooming} = lunar -> coastal ~ near the sea is **coastal**
 - We wrapped the classroom with flowers and balloons. {decorated | celebrated | worshipped} = wrapped -> decorated ~ you **decorate** a room
 :::
 
@@ -1106,7 +1106,7 @@ The number will go up and down as you try harder sentences, and that is normal.
 :::
 
 ::: write words="80-100" trains="Grammatical Range & Accuracy" ask="Now write yours — the email of advice, in **80–100 words**."
-- [ ] 80–100 words ~ words
+- [ ] At least 80 words — 80–100 is the aim ~ words
 - [ ] Paragraphs, not one solid block ~ paras:2
 - [ ] A greeting at the top ~ any:1 hi/hello/dear
 - [ ] A sign-off at the end ~ any:1 best wishes/see you soon/see you/write soon/love/bye for now/take care/all the best
@@ -1114,6 +1114,8 @@ The number will go up and down as you try harder sentences, and that is normal.
 - [ ] At least **two** don'ts ~ any:2 don't/do not/never/avoid/mustn't/must not/should not/shouldn't
 - [ ] At least **two** dos — things you tell them **to** do
 - [ ] *a* or *an* by sound, *the* for the one we both know, no word for things in general (*Customs*, not *The customs*)
+- [ ] Your own words — no long run copied from the task ~ nocopy:5
+- [ ] Read it once more, one sentence at a time, and fix any mistake you find
 :::
 
 ---

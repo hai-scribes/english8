@@ -185,6 +185,43 @@ function unitRec(u){
   return PROG[u];
 }
 const lessonDone = (u, l) => !!unitRec(u).lessons[String(l)];
+/* "Complete" is not "finished". Finished is the button; complete is the work:
+   every marked task attempted, every Meet-the-words set answered, the practice
+   bank run, the writing handed in, the timed test taken. Attempted, not
+   scored -- in-session accuracy is not retention (pedagogy P6), so a lesson
+   is not complete "when you got 80%". Each lesson page decides it for itself
+   and records it; the rail on every page reads the record. */
+const lessonComplete = (u, l) => !!(unitRec(u).complete || {})[String(l)];
+function noteProgress(){
+  if (typeof DATA === "undefined" || DATA.kind !== "lesson" || !DATA.unit) return;
+  const read = k => { try { return JSON.parse(localStorage.getItem(k) || "null"); } catch(e){ return null; } };
+  const tasksOk = (DATA.tasks || []).every(t => {
+    const r = (read("en8:tasks:v1") || {})[t.id];
+    return r && typeof r.score === "number";
+  });
+  const vocabOk = (DATA.vocabIntake || []).every(p => {
+    const sets = Math.ceil(((p.words || []).length || 1) / (p.size || 8));
+    const done = new Set((read("en8:intake:" + p.id) || []).map(a => a.set));
+    for (let i = 0; i < sets; i++) if (!done.has(i)) return false;
+    return true;
+  });
+  const bankOk = (DATA.bank || []).every(p => (read("en8:bank:" + p.id) || []).length > 0);
+  const writeOk = (DATA.write || []).every(p => {
+    const r = (read("en8:write:v1") || {})[p.id];
+    return r && r.drafts && r.drafts.length > 0;
+  });
+  const clockOk = (DATA.clock || []).every(p => !!read("en8:clock:" + p.id));
+  const any = (DATA.tasks || []).length + (DATA.vocabIntake || []).length + (DATA.bank || []).length
+            + (DATA.write || []).length + (DATA.clock || []).length;
+  const r = unitRec(DATA.unit);
+  r.complete = r.complete || {};
+  const now = any > 0 && tasksOk && vocabOk && bankOk && writeOk && clockOk;
+  if (now === !!r.complete[String(DATA.lesson)]) return;
+  if (now) r.complete[String(DATA.lesson)] = Date.now();
+  else delete r.complete[String(DATA.lesson)];
+  saveProg();
+  document.dispatchEvent(new CustomEvent("en8:complete"));
+}
 const lessonsDone = u => Object.keys(unitRec(u).lessons).length;
 function markLesson(u, l, on){
   const r = unitRec(u);
@@ -503,11 +540,12 @@ function initLesson(){
   const paint = () => {
     const done = isDone();
     if (btn){
-      /* Finishing is a link to Today, and the click records the step first.
-         A finished lesson keeps the same button, reworded: going back to
-         Today is still the next thing to do. */
-      btn.textContent = done ? "✓ Finished — back to Today"
-                             : (isCheck ? "Finish checkpoint ✓" : "Finish lesson ✓");
+      /* Finishing is a link straight to the next step (the next lesson, or
+         the unit test), and the click records the lesson first. A checkpoint
+         still returns to Today, which decides what follows it. */
+      btn.textContent = done
+        ? (isCheck ? "✓ Finished — back to Today" : "✓ Finished — " + (after || "next") + " →")
+        : (isCheck ? "Finish checkpoint ✓" : "Finish lesson ✓");
       btn.title = done || !after ? "" : "Records this lesson. Next on the path: " + after;
     }
     if (undo) undo.hidden = !done;
@@ -518,15 +556,18 @@ function initLesson(){
       const n = el.dataset.lesson;
       if (!n) return;
       const t = (DATA.titles || {})[n];
+      const full = lessonComplete(unit, Number(n));
       if (t){
-        el.title = "Lesson " + n + " — " + t;
+        el.title = "Lesson " + n + " — " + t + (full ? " (complete)" : "");
         el.setAttribute("aria-label", "Lesson " + n + ": " + t
-          + (lessonDone(unit, Number(n)) ? " (done)" : ""));
+          + (full ? " (complete)" : "") + (el.classList.contains("cur") ? " (you are here)" : ""));
       }
-      if (lessonDone(unit, Number(n))) el.classList.add("ok");
+      el.classList.toggle("ok", full);
     });
   };
   if (btn) btn.addEventListener("click", () => { if (!isDone()) setDone(true); });
+  document.addEventListener("en8:complete", paint);
+  noteProgress();
   if (undo) undo.addEventListener("click", () => { setDone(false); paint(); });
   paint();
 }
@@ -1328,7 +1369,13 @@ function runEngine(mode, words, unit, hostSel, opts){
         paintTiles(li, q.w);
         return;
       }
-      if (b.classList.contains("i-tok")){ li.dataset.tap = b.dataset.j; paintTap(li, q.w); return; }
+      if (b.classList.contains("i-tok")){
+        if (li.dataset.tap !== undefined && li.dataset.tap !== "") return;
+        /* Found it: now choose the fix. Missed it: that is the answer. */
+        if (!commitTap(li, q.w, Number(b.dataset.j)))
+          settle({ ok:false }, q.w.tap[Number(b.dataset.j)].replace(/<[^>]+>/g, ""));
+        return;
+      }
       if (b.id === "go"){
         let given, res;
         if (q.fmt === "recall-tiles"){
@@ -1557,6 +1604,7 @@ let TASKS = (() => {
   try { return JSON.parse(localStorage.getItem(T_KEY)) || {}; } catch(e){ return {}; }
 })();
 function saveTasks(){
+  setTimeout(noteProgress, 0);
   try { localStorage.setItem(T_KEY, JSON.stringify(TASKS)); } catch(e){}
 }
 
@@ -1878,7 +1926,23 @@ function paintTap(li, it){
   const j = li.dataset.tap;
   $$(".i-tok", li).forEach(b => b.classList.toggle("on", b.dataset.j === j));
   const fix = $(".i-fix", li);
-  if (fix) fix.hidden = j === undefined || j === "";
+  /* The fix choices open only once the mistake has been FOUND. Opened on any
+     tap, the same list appeared whatever word was tapped, so tapping around
+     previewed the answer's kind and pointed at the wrong word. */
+  const found = j !== undefined && j !== "" && inSpan(it, Number(j));
+  if (fix) fix.hidden = !found;
+}
+const inSpan = (it, n) => !!it.span && n >= it.span[0] && n <= it.span[1];
+/* A tap is the answer to "where is the mistake?" and it is final: the words
+   lock, and a wrong tap shows at once where the mistake really was. */
+function commitTap(li, it, j){
+  li.dataset.tap = String(j);
+  $$(".i-tok", li).forEach(b => { b.disabled = true; });
+  paintTap(li, it);
+  if (inSpan(it, j)) return true;
+  $$(".i-tok", li).forEach(x => x.classList.toggle("was", inSpan(it, Number(x.dataset.j))));
+  li.dataset.missed = "1";
+  return false;
 }
 function paintGap(li){
   const gap = $(".i-gap", li), on = $("input:checked", li);
@@ -1912,8 +1976,8 @@ function initTasks(){
         li.dataset.seq = seq.join(",");
         paintTiles(li, it);
       } else if (b.classList.contains("i-tok")){
-        li.dataset.tap = b.dataset.j;
-        paintTap(li, it);
+        if (li.dataset.tap !== undefined && li.dataset.tap !== "") return;
+        commitTap(li, it, Number(b.dataset.j));
       }
     });
     box.addEventListener("change", ev => {
@@ -2138,6 +2202,7 @@ function initTasks(){
         $$(".i-tile, .i-tok", li).forEach(x => { x.disabled = false; x.classList.remove("was"); });
         $$(".i-opt", li).forEach(x => x.classList.remove("is-key", "is-wrong"));
         delete li.dataset.tap;
+        delete li.dataset.missed;
         li.dataset.seq = "";
         if (it.tiles) paintTiles(li, it);
         if (it.tap) paintTap(li, it);
@@ -4314,7 +4379,7 @@ function initVocab(){
 
     let log = [];
     try { log = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch(e){}
-    const save = () => { try { localStorage.setItem(KEY, JSON.stringify(log)); } catch(e){} };
+    const save = () => { try { localStorage.setItem(KEY, JSON.stringify(log)); } catch(e){} setTimeout(noteProgress, 0); };
     const setsDone = () => new Set(log.map(a => a.set));
 
     function dots(si){
@@ -4448,7 +4513,7 @@ function initBanks(){
     const stage = $(".bk-stage", root), KEY = "en8:bank:" + p.id;
     let log = [];
     try { log = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch(e){}
-    const save = () => { try { localStorage.setItem(KEY, JSON.stringify(log)); } catch(e){} };
+    const save = () => { try { localStorage.setItem(KEY, JSON.stringify(log)); } catch(e){} setTimeout(noteProgress, 0); };
 
     function cover(){
       stage.innerHTML = '<div class="bk-cover">'
@@ -4649,6 +4714,7 @@ let WRITE = (() => {
   try { return JSON.parse(localStorage.getItem(W_KEY)) || {}; } catch(e){ return {}; }
 })();
 function saveWrite(){
+  setTimeout(noteProgress, 0);
   try { localStorage.setItem(W_KEY, JSON.stringify(WRITE)); } catch(e){}
 }
 
@@ -4682,9 +4748,26 @@ function runCheck(c, text, p){
   const bulleted = /^\s*([-*•]|\d+[.)])\s+/m.test(text);
   switch (c.k){
     case "words": {
+      /* Under the range is a miss. Over it is not: the test does not mark a
+         long answer down for its length (01 §5.2 [S]), so it is said, not failed. */
       const n = wordsIn(text).length;
-      return { ok: n >= p.lo && n <= p.hi, found: n + " words",
+      return { ok: n >= p.lo, found: n + " words" + (n > p.hi ? " — more than asked, that is fine" : ""),
                need: p.lo + "–" + p.hi };
+    }
+    case "max": {
+      const n = hits(text, c.l).length;
+      return { ok: n <= c.n, found: n + " used", need: "no more than " + c.n };
+    }
+    case "nocopy": {
+      /* The longest run of words taken straight from the task line. */
+      const norm = t => wordsIn(String(t).toLowerCase().replace(/[^a-z' \n]/g, " "));
+      const task = norm(p.ask || ""), mine = norm(text);
+      const grams = new Set();
+      for (let i = 0; i + c.n <= task.length; i++) grams.add(task.slice(i, i + c.n).join(" "));
+      let copied = 0;
+      for (let i = 0; i + c.n <= mine.length; i++) if (grams.has(mine.slice(i, i + c.n).join(" "))) copied++;
+      return { ok: !copied, found: copied ? "copied from the task: " + copied + " time" + (copied > 1 ? "s" : "")
+                                          : "your own words" };
     }
     case "vocab": {
       const got = [];
@@ -4752,15 +4835,28 @@ function initJot(){
   });
 }
 
+/* The writing screen, timed like the real one (01 §9.1): a cover; then the
+   task and notes left, the answer right, a live word count and a countdown
+   upper-middle that flashes at ten and five minutes. The checklist is shut
+   while drafting and runs on the text at "I've finished" or at zero. A second
+   draft is a new attempt: both are kept, and nothing compares them (E9).
+   How long anything took is never stored or shown (pedagogy P1) -- only the
+   deadline, so a reload mid-draft keeps the same clock. */
 function initWrite(){
   (DATA.write || []).forEach(p => {
     const root = document.querySelector('[data-write="' + p.id + '"]');
     if (!root) return;
-    const box = $(".w-box", root), count = $(".w-n", root);
-    const rows = $$(".w-i", root);
+    const box = $(".w-box", root), count = $(".w-n", root), plan = $(".w-plan", root);
+    const cover = $(".w-cover", root), main = $(".w-main", root), after = $(".w-after", root);
+    const rows = $$(".w-i", root), drafts = $(".w-drafts", root);
+    const sect = root.closest("section.block") || root;
 
     const rec = WRITE[p.id] || { text:"", ticks:{} };
+    rec.drafts = rec.drafts || [];
+    const save = () => { WRITE[p.id] = rec; saveWrite(); };
     box.value = rec.text || "";
+    if (plan) plan.value = rec.plan || "";
+
     rows.forEach(li => {
       if (li.dataset.auto) return;
       const cb = $("input", li), i = li.dataset.i;
@@ -4768,35 +4864,112 @@ function initWrite(){
       cb.addEventListener("change", () => {
         rec.ticks = rec.ticks || {};
         rec.ticks[i] = cb.checked;
-        WRITE[p.id] = rec; saveWrite();
+        save();
       });
     });
 
-    const paint = () => {
-      const text = box.value;
-      const n = wordsIn(text).length;
-      /* C9: the live word count the real Writing screen has. It reports the
-         number and the range; it does not stop you and it does not judge. */
+    /* C9: the live word count the real screen has -- a number, no judgement. */
+    const live = () => {
+      const n = wordsIn(box.value).length;
       count.textContent = n + (n === 1 ? " word" : " words");
-      count.dataset.state = !n ? "" : (n < p.lo ? "under" : n > p.hi ? "over" : "in");
-
-      rows.forEach(li => {
-        const c = p.items[Number(li.dataset.i)].c;
-        if (!c) return;
-        const r = runCheck(c, text, p);
-        const cb = $("input", li), out = $(".w-f", li);
-        if (!r || !text.trim()){ cb.checked = false; out.textContent = ""; li.dataset.ok = ""; return; }
-        cb.checked = !!r.ok;
-        li.dataset.ok = r.ok ? "1" : "0";
-        out.textContent = r.found + (r.ok || !r.need ? "" : " · " + r.need);
-        out.title = r.list && r.list.length ? r.list.join(", ") : "";
-      });
-
-      rec.text = text;
-      WRITE[p.id] = rec; saveWrite();
+      count.dataset.state = !n ? "" : (n < p.lo ? "under" : "in");
+      rec.text = box.value;
+      save();
     };
-    box.addEventListener("input", paint);
-    paint();
+    box.addEventListener("input", live);
+    if (plan) plan.addEventListener("input", () => { rec.plan = plan.value; save(); });
+
+    const runList = text => rows.forEach(li => {
+      const c = p.items[Number(li.dataset.i)].c;
+      if (!c) return;
+      const r = runCheck(c, text, p);
+      const cb = $("input", li), out = $(".w-f", li);
+      if (!r || !text.trim()){ cb.checked = false; out.textContent = ""; li.dataset.ok = ""; return; }
+      cb.checked = !!r.ok;
+      li.dataset.ok = r.ok ? "1" : "0";
+      out.textContent = r.found + (r.ok || !r.need ? "" : " · " + r.need);
+      out.title = r.list && r.list.length ? r.list.join(", ") : "";
+    });
+
+    const paintDrafts = () => {
+      drafts.innerHTML = rec.drafts.map((d, k) =>
+        '<details class="w-d"' + (k === rec.drafts.length - 1 ? " open" : "") + '><summary>Draft '
+        + (k + 1) + ' · ' + wordsIn(d).length + ' words</summary><p class="w-dt">'
+        + esc(d).replace(/\n/g, "<br>") + '</p></details>').join("");
+    };
+
+    let iv = null, bar = null;
+    const exit = () => {
+      clearInterval(iv); iv = null;
+      document.body.classList.remove("exam-on");
+      sect.classList.remove("exam-q", "exam-write");
+      if (bar){ bar.remove(); bar = null; }
+    };
+    const showAfter = () => {
+      cover.hidden = true; main.hidden = true; after.hidden = false;
+      paintDrafts();
+      runList(rec.drafts[rec.drafts.length - 1] || "");
+      $(".w-again", root).hidden = rec.drafts.length >= 3;
+    };
+    const commit = () => {
+      exit();
+      rec.drafts.push(box.value);
+      rec.deadline = null;
+      rec.committed = true;
+      save();
+      showAfter();
+      root.scrollIntoView({ behavior:"smooth", block:"start" });
+    };
+
+    const open = timed => {
+      cover.hidden = true; after.hidden = true; main.hidden = false;
+      live();
+      if (!timed){ box.focus(); return; }
+      document.body.classList.add("exam-on");
+      sect.classList.add("exam-q", "exam-write");
+      bar = document.createElement("div");
+      bar.className = "exam-bar";
+      bar.setAttribute("role", "timer");
+      bar.innerHTML = '<span class="eb-k">Writing</span><span class="eb-t"></span>'
+        + '<button class="btn small eb-go" type="button">I\'ve finished</button>';
+      document.body.appendChild(bar);
+      $(".eb-go", bar).addEventListener("click", commit);
+      const t = $(".eb-t", bar);
+      const tick = () => {
+        const left = Math.max(0, Math.round((rec.deadline - Date.now()) / 1000));
+        t.textContent = Math.floor(left / 60) + ":" + String(left % 60).padStart(2, "0");
+        if (left === 600 || left === 300){
+          bar.classList.add("flash");
+          setTimeout(() => bar && bar.classList.remove("flash"), 6000);
+        }
+        bar.classList.toggle("low", left <= 300);
+        if (left <= 0) commit();
+      };
+      tick();
+      iv = setInterval(tick, 1000);
+      window.scrollTo({ top:0 });
+      box.focus({ preventScroll:true });
+    };
+
+    $(".w-start", root).addEventListener("click", () => {
+      rec.deadline = Date.now() + p.secs * 1000;
+      save();
+      open(true);
+    });
+    $(".w-done", root).addEventListener("click", commit);
+    /* Draft 2 starts from draft 1 -- a revision -- and runs without a clock:
+       the test has no second draft, so this is practice around it. */
+    $(".w-again", root).addEventListener("click", () => {
+      box.value = rec.drafts[rec.drafts.length - 1] || "";
+      rec.committed = false;
+      save();
+      open(false);
+    });
+
+    if (rec.committed) showAfter();
+    else if (rec.deadline && rec.deadline > Date.now()) open(true);
+    else if (rec.deadline) commit();                 // the time ran out while away
+    else if (rec.drafts.length) open(false);         // a revision in progress
   });
 }
 
@@ -4986,47 +5159,117 @@ function initPassage(){
    other rule here exists to replace. When it runs out the unfinished reading
    answers stop taking input, exactly as the listening review window does;
    Check stays live, so whatever is written can still be marked. */
+/* ---------------- the timed test -------------------------------------------
+   Built to look and behave like the computer-delivered test (01 §9.1): the
+   test stays closed until Start; then the page is the text, its questions and
+   the clock -- nothing else -- with the text on the left and the questions on
+   the right where the screen is wide enough. The clock sits upper-middle and
+   flashes when ten and then five minutes are left. Answers are marked together
+   at the end, when time runs out or the learner finishes: the real test gives
+   no verdict question by question. */
+function examParts(root){
+  const sect = el => el.closest("section.block") || el;
+  const text = [];
+  const pg = $$('[data-role="passage"]').find(x =>
+    root.compareDocumentPosition(x) & Node.DOCUMENT_POSITION_FOLLOWING);
+  if (pg && owned(root).length && pg.compareDocumentPosition(owned(root)[0]) & Node.DOCUMENT_POSITION_FOLLOWING)
+    text.push(pg);
+  const qs = [...new Set(owned(root).map(sect))].filter(x => !text.some(t => sect(t) === x));
+  return { text, textSect: text.map(sect), qs, tasks: owned(root) };
+}
+
 function initClock(){
   (DATA.clock || []).forEach(p => {
     const root = document.querySelector('[data-clock="' + p.id + '"]');
     if (!root) return;
     const btn = $(".c-start", root), state = $(".c-state", root);
     const KEY = "en8:clock:" + p.id;
-    /* Everything below the clock and above the next timer -- not just the
-       tasks labelled `reading`. The synonym-search that follows the passage is
-       inside the reading block too, and a clock that claims to cover an
-       exercise it does not stop is the loose instruction this replaced. But it
-       stops at the listening player: see the note on `owned`. */
-    const covered = () => owned(root);
+    const parts = examParts(root);
+    const hideTest = on => {
+      parts.text.forEach(x => { x.hidden = on; });
+      parts.qs.forEach(x => { x.hidden = on; });
+    };
 
-    const timeUp = () => {
-      state.innerHTML = "<b>Time.</b> Check what you have.";
-      root.dataset.done = "1";
-      covered().forEach(x => {
+    /* Mark every answer at once -- each task through its own Check, so the
+       record and the "Try it again" rules are the ones every task keeps. */
+    const markAll = () => {
+      parts.tasks.forEach(x => {
         if (x.dataset.done === "1") return;
-        $$(".i-in, .i-opt input", x).forEach(y => { y.disabled = true; });
-        x.dataset.timeup = "1";
+        const c = $(".t-check", x);
+        if (c){ c.disabled = false; c.click(); }
       });
+    };
+
+    let iv = null, bar = null;
+    const leave = why => {
+      clearInterval(iv);
+      root.dataset.running = "";
+      root.dataset.done = "1";
+      document.body.classList.remove("exam-on");
+      parts.textSect.forEach(x => x.classList.remove("exam-text"));
+      parts.qs.forEach(x => x.classList.remove("exam-q"));
+      if (bar) bar.remove();
+      const nav = $(".c-nav", root);
+      if (nav) nav.hidden = true;
+      if (why === "time") parts.tasks.forEach(x => { if (x.dataset.done !== "1") x.dataset.timeup = "1"; });
+      markAll();
+      state.innerHTML = why === "time" ? "<b>Time.</b> Your answers are marked below."
+                                       : "<b>Finished.</b> Your answers are marked below.";
+      root.scrollIntoView({ behavior:"smooth", block:"start" });
     };
 
     let spent = false;
     try { spent = !!JSON.parse(localStorage.getItem(KEY) || "null"); } catch(e){}
-    if (spent){ btn.disabled = true; state.innerHTML = "<b>Already run.</b> One clock, once."; }
+    if (spent){
+      btn.hidden = true;
+      state.innerHTML = "<b>Done.</b> This test runs once. Your answers are below.";
+      root.dataset.done = "1";
+    } else {
+      hideTest(true);
+    }
 
     btn.addEventListener("click", () => {
       if (btn.disabled) return;
       btn.disabled = true;
       try { localStorage.setItem(KEY, "true"); } catch(e){}
+      setTimeout(noteProgress, 0);
       root.dataset.running = "1";
+      hideTest(false);
+      parts.textSect.forEach(x => x.classList.add("exam-text"));
+      parts.qs.forEach(x => x.classList.add("exam-q"));
+      document.body.classList.add("exam-on");
+      const nav = $(".c-nav", root);
+      if (nav) nav.hidden = false;
+      /* Per-task Check buttons are for practice; in the test they wait. */
+      parts.tasks.forEach(x => { const c = $(".t-check", x); if (c) c.hidden = true; });
+
+      bar = document.createElement("div");
+      bar.className = "exam-bar";
+      bar.setAttribute("role", "timer");
+      bar.innerHTML = '<span class="eb-k">' + esc(p.label || "Reading") + '</span>'
+        + '<span class="eb-t" aria-live="off"></span>'
+        + '<button class="btn small eb-go" type="button">Finish test</button>';
+      document.body.appendChild(bar);
+      const t = $(".eb-t", bar);
+      $(".eb-go", bar).addEventListener("click", () => leave("finish"));
+
       let left = p.secs;
       const show = () => {
         const m = Math.floor(left / 60), s = left % 60;
-        state.textContent = m + ":" + String(s).padStart(2, "0") + " left";
+        t.textContent = m + ":" + String(s).padStart(2, "0");
+        if (left === 600 || left === 300){
+          bar.classList.add("flash");
+          setTimeout(() => bar && bar.classList.remove("flash"), 6000);
+        }
+        bar.classList.toggle("low", left <= 300);
       };
       show();
-      const iv = setInterval(() => {
+      window.scrollTo({ top:0 });
+      const first = parts.text[0] || parts.qs[0];
+      if (first) first.scrollIntoView({ block:"start" });
+      iv = setInterval(() => {
         left--;
-        if (left <= 0){ clearInterval(iv); root.dataset.running = ""; timeUp(); return; }
+        if (left <= 0){ left = 0; show(); leave("time"); return; }
         show();
       }, 1000);
     });
@@ -5064,6 +5307,8 @@ function initReadingNav(){
 
     const nav = document.createElement("div");
     nav.className = "c-nav";
+    /* The bar belongs to the test, not its cover: it appears at Start. */
+    nav.hidden = root.dataset.running !== "1";
     nav.innerHTML = '<p class="c-nl">Questions ' + 1 + "–" + items.length + "</p>"
       + '<div class="c-ns"></div>'
       + '<p class="c-nh">A number fills in once you answer it. Tap ⚑ beside a '

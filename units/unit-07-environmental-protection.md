@@ -432,36 +432,37 @@
 - carbon dioxide · smoke · sewage · awareness = awareness ~ the others make the air or the water dirty
 - safe · harmless · healthy · toxic = toxic ~ the others mean not dangerous
 @ error-correction
-- The black smoke from the factory brings a lot of conservation to the town. {pollution | habitat | species} = conservation -> pollution ~ smoke brings **pollution**
-- The company cut down half the forest, so conservation is now a problem here. {deforestation | habitat | species} = conservation -> deforestation ~ cutting down trees is **deforestation**
-- Only a few tigers live in the wild in Viet Nam now, so they are polluted. {endangered | noisy | common} = polluted -> endangered ~ very few left means **endangered**
-- The river bank is the natural species of this frog. {habitat | pollution | litter} = species -> habitat ~ the place where it lives is its **habitat**
-- The tiger is an endangered habitat. {species | litter | pollution} = habitat -> species ~ the tiger is a kind of animal: a **species**
-- The club works on the pollution of the forest and its animals. {conservation | litter | species} = pollution -> conservation ~ keeping the forest safe is **conservation**
-- Don't drop habitat on the road; put it in the bin. {litter | species | conservation} = habitat -> litter ~ rubbish on the ground is **litter**
-- We reduce old newspapers into new paper at the centre. {recycle | protect | pollute} = reduce -> recycle ~ making new paper from old paper is **recycling**
+- The black smoke from the factory causes a lot of conservation in the town. {pollution | deforestation | litter} = conservation -> pollution ~ smoke makes the air dirty: that is **pollution**
+- The company cut down thousands of trees on the hills, so conservation is now a big problem here. {deforestation | pollution | litter} = conservation -> deforestation ~ cutting down trees is **deforestation**; conservation is keeping nature safe
+- Only a few tigers live in the wild in Viet Nam now, so they are dangerous. {endangered | common | safe} = dangerous -> endangered ~ very few left means **endangered**; dangerous means they can hurt you
+- The river bank is the natural species of this frog. {habitat | food | enemy} = species -> habitat ~ the place where an animal lives is its **habitat**
+- Viet Nam has more than 900 habitats of birds, from tiny sunbirds to big storks. {species | nests | eggs} = habitats -> species ~ a kind of bird is a **species**; a habitat is where it lives
+- The club raises money for the pollution of the forest and its animals. {conservation | deforestation | litter} = pollution -> conservation ~ keeping the forest and its animals safe is **conservation**
+- We reduce old newspapers into new paper at the centre. {recycle | reuse | contaminate} = reduce -> recycle ~ making new paper from old paper is **recycling**
 - Take a cloth bag to the market to reuse plastic waste. {reduce | recycle | contaminate} = reuse -> reduce ~ a cloth bag means **less** plastic
-- My grandma washes her old plastic bags and reduces them. {reuses | pollutes | litters} = reduces -> reuses ~ she uses them **again**
-- The toilets in the old building send their litter into the river. {sewage | habitat | species} = litter -> sewage ~ dirty water from toilets is **sewage**
-- My uncle sprays sewage on his rice to kill the insects. {pesticide | habitat | litter} = sewage -> pesticide ~ **pesticide** kills insects
-- The chemicals from the factory protected the river. {contaminated | recycled | reduced} = protected -> contaminated ~ chemicals make water dirty
-- The villagers pollute the forest from hunters. {protect | reduce | recycle} = pollute -> protect ~ you **protect** something from danger
-- The villagers want to contaminate their old traditions for their grandchildren. {preserve | reduce | recycle} = contaminate -> preserve ~ keeping something as it is means you **preserve** it
-- We saw gibbons and rare birds in Cát Tiên Shopping Centre. {National Park | Habitat | Ecosystem} = Shopping Centre -> National Park ~ wild animals live in a **national park**
-- The national park is famous for its awareness: gibbons, deer and hornbills. {wildlife | carbon dioxide | sewage} = awareness -> wildlife ~ wild animals are **wildlife**
-- The club wants to raise wildlife of the plastic problem. {awareness | habitat | ecosystem} = wildlife -> awareness ~ you raise **awareness** of a problem
-- The lake is a small carbon footprint: fish, plants and birds all need one another. {ecosystem | awareness | sewage} = carbon footprint -> ecosystem ~ living things that need one another form an **ecosystem**
-- Factories release a lot of carbon footprint into the air. {carbon dioxide | awareness | ecosystem} = carbon footprint -> carbon dioxide ~ **carbon dioxide** is the gas; a **carbon footprint** is how much of it you cause
-- Taking the bus instead of a taxi makes your wildlife smaller. {carbon footprint | habitat | species} = wildlife -> carbon footprint ~ the bus makes your **carbon footprint** smaller
-- Cars and factories add to extinction, so the Earth gets hotter every year. {global warming | awareness | coral} = extinction -> global warming ~ a hotter Earth means **global warming**
-- The rangers are working hard to save the turtles from awareness. {extinction | coral | campfire} = awareness -> extinction ~ they want to save the turtles from **extinction**
-- The divers took photos of the beautiful campfire on the sea floor. {coral | sewage | pesticide} = campfire -> coral ~ **coral** grows on the sea floor
-- Don't drink that water — it's single-use. {toxic | extinct | endangered} = single-use -> toxic ~ water that can hurt you is **toxic**
-- The shop gives out toxic plastic bags that people use once and throw away. {single-use | endangered | extinct} = toxic -> single-use ~ used once means **single-use**
-- Remember to put out the habitat at the camp tonight. {campfire | ecosystem | coral} = habitat -> campfire ~ you put out a **campfire**
+- My grandma washes her old plastic bags and reduces them for shopping. {reuses | recycles | contaminates} = reduces -> reuses ~ she uses the same bags **again**
+- The toilets in the old building send their litter into the river. {sewage | pesticide | deforestation} = litter -> sewage ~ dirty water from toilets is **sewage**; litter is rubbish on the ground
+- My uncle sprays sewage on his rice to kill the insects. {pesticide | water | paint} = sewage -> pesticide ~ **pesticide** kills insects
+- The national park is famous for its habitat: gibbons, deer and hornbills. {wildlife | conservation | awareness} = habitat -> wildlife ~ the wild animals themselves are **wildlife**; a habitat is where they live
+- The lake is a small habitat: fish, plants and birds all need one another. {ecosystem | national park | garden} = habitat -> ecosystem ~ living things that need one another form an **ecosystem**
+- Factories release a lot of carbon footprint into the air. {carbon dioxide | oxygen | fresh air} = carbon footprint -> carbon dioxide ~ **carbon dioxide** is the gas; a **carbon footprint** is how much of it you cause
+- Taking the bus instead of a taxi makes your carbon dioxide smaller. {carbon footprint | ecosystem | awareness} = carbon dioxide -> carbon footprint ~ the gas itself does not get smaller; your **carbon footprint** does
+- The rangers are working hard to save the turtles from endangered. {extinction | awareness | conservation} = endangered -> extinction ~ after *from* you need a noun: **extinction**
 - My little brother wants to participate to the singing contest. {in | at | for} = to -> in ~ participate **in**
 - A helmet protects your head of injury. {from | with | at} = of -> from ~ protect something **from** danger
-- Everyone in my family contaminated in the tree-planting day. {participated | recycled | preserved} = contaminated -> participated ~ taking part means you **participated**
+@ gap-fill ask="Choose the word that fits."
+- After the festival, the children picked up all the ___ on the beach. {litter | pollution | habitat} = litter
+- Oil from the boats ___ the water in the harbour last month. {contaminated | reduced | recycled} = contaminated
+- The rangers ___ the turtles' nests from dogs and thieves. {protect | contaminate | reuse} = protect
+- The old women teach the village songs to the children to ___ them for the future. {preserve | reduce | contaminate} = preserve
+- We saw gibbons and rare birds in Cát Tiên ___ . {National Park | Ecosystem | Habitat} = National Park
+- Our posters will raise ___ of the plastic problem in our school. {awareness | wildlife | conservation} = awareness
+- Many scientists say that ___ is making our summers longer and our storms stronger. {global warming | extinction | awareness} = global warming
+- Near Hòn Khô the water is clear, and the ___ there is like a pink garden under the sea. {coral | sand | sewage} = coral
+- The smoke from burning plastic is ___, so don't breathe it in. {toxic | single-use | endangered} = toxic
+- Our school café stopped selling drinks in ___ cups and gave everyone a steel one. {single-use | toxic | endangered} = single-use
+- On the last night of the trip, we lit a ___ and cooked fish over it. {campfire | coral | global warming} = campfire
+- Forty students from my school ___ in the river clean-up on Earth Day. {participated | recycled | protected} = participated
 :::
 
 ### Vocabulary — Environmental protection
@@ -930,7 +931,7 @@ A notice must give everything; a friend already knows some of it.
 :::
 
 ::: write words="100-120" trains="Grammatical Range & Accuracy" ask="Now write yours — the notice, in **100–120 words**."
-- [ ] 100–120 words ~ words
+- [ ] At least 100 words — 100–120 is the aim ~ words
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
 - [ ] At least **two** numbers — the date and the time ~ re:2 \d+
 - [ ] At least **one** time clause ~ any:1 after/before/once/when/until/as soon as/while/whenever
@@ -939,6 +940,8 @@ A notice must give everything; a friend already knows some of it.
 - [ ] A clear heading and a title for the event
 - [ ] The place is there, and easy to find
 - [ ] A contact line and a signature
+- [ ] Your own words — no long run copied from the task ~ nocopy:5
+- [ ] Read it once more, one sentence at a time, and fix any mistake you find
 :::
 
 ---

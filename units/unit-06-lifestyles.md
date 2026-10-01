@@ -548,41 +548,42 @@
 - Too much screen time has a bad impact to your sleep. {on | with | of} = to -> on ~ an impact **on** something
 - Students interact to each other in group work. {with | on | of} = to -> with ~ interact **with** someone
 - She is in the habit of walk to school. {walking | walks | walked} = walk -> walking ~ in the habit of **walking**
-- Rice is the street food of most families in Viet Nam. {staple | tribal | remote} = street -> staple ~ rice is the **staple** food — the main one
-- My grandfather is very sedentary — he swims every morning and works in his garden all day. {active | remote | urban} = sedentary -> active ~ he moves a lot, so he is **active**
-- Hà Nội is a big rural city. {urban | remote | sedentary} = rural -> urban ~ a city is **urban**
-- Grandpa has a very healthy uniform: he walks and eats vegetables every day. {lifestyle | modern | remote} = uniform -> lifestyle ~ the way he lives is his **lifestyle**
-- Children love the modern games of our grandparents, like tug of war. {traditional | urban | remote} = modern -> traditional ~ games from long ago are **traditional**
-- Our city has a very traditional hospital — everything in it is new. {modern | ancient | sedentary} = traditional -> modern ~ new things are **modern**
-- Tí is very active — he sits at his computer from morning to night. {sedentary | modern | urban} = active -> sedentary ~ he sits all day, so he is **sedentary**
-- My grandparents live in a small urban village with rice fields all around. {rural | modern | active} = urban -> rural ~ a village with fields is **rural**
-- Our village is very urban — the nearest shop is three hours away by boat. {remote | modern | active} = urban -> remote ~ far from everything is **remote**
-- The whole generation came to the beach to clean it — every family in the village. {community | gadget | lifestyle} = generation -> community ~ all the people of a place are a **community**
-- Children of my gadget love video games. {generation | sled | lifestyle} = gadget -> generation ~ people born around the same time are a **generation**
-- The city wants to hunt the old French buildings, not knock them down. {preserve | lose | break} = hunt -> preserve ~ to keep them safe is to **preserve** them
-- Eagles preserve fish from the sea. {hunt | adapt | sled} = preserve -> hunt ~ eagles **hunt** fish
-- The children slid down the hill on a wooden gadget. {sled | community | generation} = gadget -> sled ~ you slide on snow on a **sled**
-- In the past, men in this town went to sea for community. {whaling | gadget | generation} = community -> whaling ~ going to sea to catch whales is **whaling**
-- My dad has a new community that checks his heart. {gadget | sled | generation} = community -> gadget ~ a small electronic tool is a **gadget**
-- Too much well-being is bad for your eyes. {screen time | lifestyle | weaving} = well-being -> screen time ~ looking at screens is **screen time**
-- Our teacher says laughing is good for our screen time. {well-being | weaving | generation} = screen time -> well-being ~ being healthy and happy is **well-being**
-- Grandpa hunts his old bicycle — he cleans and oils it every week. {maintains | adapts | weaves} = hunts -> maintains ~ keeping it in good condition is **maintaining** it
-- The villagers want to preserve a dance that died out long ago. {revive | hunt | adapt} = preserve -> revive ~ bringing it back to life is **reviving** it
-- The villagers danced a sedentary dance around the fire, with drums and masks. {tribal | urban | remote} = sedentary -> tribal ~ a dance of the village group is **tribal**
+- Rice is the street food of most families in Viet Nam — we eat it at every meal. {staple | modern | urban} = street -> staple ~ the main food people eat every day is the **staple** food
+- My grandfather is very sedentary — he swims every morning and works in his garden all day. {active | lazy | sleepy} = sedentary -> active ~ he moves a lot, so he is **active**
+- My cousin loves rural life — the noise, the traffic and the shopping centres. {urban | remote | traditional} = rural -> urban ~ life in a city is **urban** life
+- Children love the modern games of our grandparents, like tug of war. {traditional | urban | sedentary} = modern -> traditional ~ games from long ago are **traditional**
+- Our city has a very traditional hospital — everything in it is new. {modern | ancient | remote} = traditional -> modern ~ new things are **modern**
+- Tí is very active — he sits at his computer from morning to night. {sedentary | healthy | friendly} = active -> sedentary ~ he sits all day, so he is **sedentary**
+- My grandparents' village is very urban — there are rice fields and buffalo everywhere. {rural | modern | busy} = urban -> rural ~ a place with fields and farm animals is **rural**
+- Our island is very urban — the nearest shop is three hours away by boat. {remote | modern | busy} = urban -> remote ~ far from everything is **remote**
+- The whole generation came to the beach to clean it — every family in the village. {community | team | class} = generation -> community ~ all the people of a place are a **community**
+- My dad and I are from different communities — he was born in 1980, and I was born in 2012. {generations | families | teams} = communities -> generations ~ people born around the same time are a **generation**
+- Grandpa revives his old bicycle every week — he cleans it and oils it. {maintains | sells | breaks} = revives -> maintains ~ keeping it in good condition is **maintaining** it
+- The villagers want to preserve a dance that died out long ago. {revive | forget | sell} = preserve -> revive ~ bringing it back to life is **reviving** it
 - Many sedentary families move their tents three times a year. {nomadic | urban | modern} = sedentary -> nomadic ~ families who keep moving are **nomadic**
-- The museum has a lot of screen time — masks and wood carvings made by the Ba Na people. {native art | lifestyle | well-being} = screen time -> native art ~ art from the first people of a place is **native art**
-- My grandmother is good at whaling — she makes all our blankets. {weaving | hunting | screen time} = whaling -> weaving ~ making cloth is **weaving**
-- The musher drove his igloo across the snow. {dogsled | community | staple} = igloo -> dogsled ~ a musher drives a **dogsled**
-- The igloo gave orders to the dogs, and they started running. {musher | dogsled | staple} = igloo -> musher ~ the person who drives the dogs is the **musher**
-- We slept in a musher made of snow. {igloo | dogsled | staple} = musher -> igloo ~ a snow house is an **igloo**
-- In my class, it is street food to say thank you to the teacher at the end of the lesson. {common practice | staple | igloo} = street food -> common practice ~ what people usually do is **common practice**
-- After school we buy igloo from the carts outside the gate. {street food | dogsled | musher} = igloo -> street food ~ food from a cart is **street food**
-- Lan always hunts her neighbours with a friendly "Good morning". {greets | weaves | revives} = hunts -> greets ~ you **greet** people when you say hello
-- Everyone smiled at the warm impact the host gave us at the door. {greeting | gadget | staple} = impact -> greeting ~ a hello at the door is a **greeting**
-- Social media has a big greeting on young people. {impact | gadget | igloo} = greeting -> impact ~ an effect on someone is an **impact**
-- When the Wi-Fi broke, the whole class was remote. {offline | urban | sedentary} = remote -> offline ~ with no internet you are **offline**
-- Visiting the lantern festival was a wonderful greeting for our class. {experience | igloo | staple} = greeting -> experience ~ something you do and remember is an **experience**
-- My brother is very tribal now — he pays his own bills and needs no help from anyone. {independent | offline | remote} = tribal -> independent ~ living without help is being **independent**
+- The museum has a room of Ba Na weaving — masks and wood carvings made by the first people of the Central Highlands. {native art | furniture | clothing} = weaving -> native art ~ masks and carvings are not woven; art from the first people of a place is **native art**
+- My grandmother is good at whaling — she makes all our blankets. {weaving | cooking | hunting} = whaling -> weaving ~ making cloth is **weaving**
+- The musher drove his igloo across the snow. {dogsled | tent | boat} = igloo -> dogsled ~ a musher drives a **dogsled**
+- The igloo gave orders to the dogs, and they started running. {musher | teacher | cook} = igloo -> musher ~ the person who drives the dogs is the **musher**
+- We slept in a musher made of snow. {igloo | tent | boat} = musher -> igloo ~ a snow house is an **igloo**
+- The host gave us a warm greet at the door: "Welcome! Come in!" {greeting | impact | staple} = greet -> greeting ~ the thing you say is a **greeting**; to **greet** is the verb
+- When the Wi-Fi broke, the whole class was remote. {offline | independent | active} = remote -> offline ~ with no internet you are **offline**
+@ gap-fill ask="Choose the word that fits."
+- My parents moved to the countryside because they wanted a slower ___ . {lifestyle | holiday | weather} = lifestyle
+- The village wants to ___ its old wooden houses, so it does not let anyone knock them down. {preserve | sell | build} = preserve
+- Owls ___ mice at night. {hunt | preserve | adapt} = hunt
+- In winter, the children sit on a ___ and go fast down the snowy hill. {sled | boat | bus} = sled
+- In many countries, ___ is now against the law, because the biggest animals in the sea are in danger. {whaling | sailing | swimming} = whaling
+- My dad wears a small ___ on his wrist that counts his steps. {gadget | ribbon | glove} = gadget
+- Mum says two hours of ___ a day is enough, so she turns off the TV and the tablet after that. {screen time | well-being | weaving} = screen time
+- Sleeping enough, laughing and seeing friends are all good for your ___ . {well-being | screen time | homework} = well-being
+- Each ___ group in the mountains has its own language, songs and clothes. {tribal | urban | modern} = tribal
+- Taking off your shoes before you go into someone's house is ___ in Viet Nam — almost everyone does it. {common practice | a big surprise | very rare} = common practice
+- After school we buy cheap ___ from the carts outside the gate, like bánh mì and sweet corn. {street food | school bags | flowers} = street food
+- When guests arrive, Mum ___ them at the door with a big smile. {greets | hunts | preserves} = greets
+- Moving to a new city had a big ___ on my little sister — she was sad for months. {impact | greeting | gadget} = impact
+- Sleeping in a tent on the beach was a new ___ for me — I will never forget it. {experience | greeting | impact} = experience
+- My cousin is 18 and very ___ : she has a job, pays for her own room and cooks for herself. {independent | lazy | shy} = independent
 :::
 
 ### Vocabulary — Lifestyles
@@ -1042,14 +1043,17 @@ more convincing.
 :::
 
 ::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours — a paragraph of **80–100 words** on the advantages *or* the disadvantages of online learning."
-- [ ] 80–100 words ~ words
+- [ ] At least 80 words — 80–100 is the aim ~ words
 - [ ] One paragraph, not a list ~ para:1
-- [ ] Four ordering words: *First, Second, Third, Finally* ~ all first/second/third/finally
+- [ ] At least **three** ordering words — *First, Second, Next, Finally* ~ distinct:3 first/second/third/next/then/finally/lastly
+- [ ] …and no more than **four**: not every sentence needs one ~ max:4 first/second/third/next/then/finally/lastly
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
 - [ ] At least **one** *if* sentence ~ re:1 \bif\b
 - [ ] …with **no** *will* straight after *if* ~ none if it will/if i will/if you will/if we will/if they will/if he will/if she will/if there will/if people will/if students will
 - [ ] At least **one** sentence with *will* or *won't* ~ any:1 will/won't/will not
 - [ ] One side only — do not mix advantages and disadvantages
+- [ ] Your own words — no long run copied from the task ~ nocopy:5
+- [ ] Read it once more, one sentence at a time, and fix any mistake you find
 :::
 
 ---
