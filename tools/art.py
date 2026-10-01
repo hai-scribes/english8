@@ -7,8 +7,10 @@
     python3 tools/art.py gen props/cakes         3 candidates, checked + critiqued
     python3 tools/art.py gen --missing fx -n 2   every undrawn effect
     python3 tools/art.py gen bong --accept       promote passing drawings
+    python3 tools/art.py gen ti/sad --trial      redraw a finished one, to test consistency
     python3 tools/art.py accept props/cakes      promote the best logged candidate
     python3 tools/art.py contact props/cakes     one image of every candidate
+    python3 tools/art.py recheck props/cakes     judge them again (no new images)
     python3 tools/art.py cut in.png -o out.png   any drawing -> transparent
     python3 tools/art.py check art/props/src/x.png --kind props
     python3 tools/art.py free --kind props "A dented tin kettle…" --out .artgen/free/kettle
@@ -103,10 +105,13 @@ def cmd_gen(a):
         print(f"  {t.id}")
         try:
             r = produce.produce(t, n=a.n, accept=a.accept, replace=a.replace,
-                                critic=not a.no_critic, run=run)
+                                critic=not a.no_critic, run=run, trial=a.trial)
         except produce.BudgetExhausted as e:
             print(f"    {e}")
             break
+        except gemini.QuotaError as e:
+            print(f"\n  STOPPED: {e}")
+            return 2
         if r["status"] in ("exists", "retired"):
             print(f"    skipped: {r['note']}")
         summary.append((t.id, r["status"], (r.get("best") or {}).get("file")))
@@ -140,6 +145,14 @@ def cmd_accept(a):
         best = max(rows, key=lambda r: (r.get("critic") or {}).get("score", 0))
         cand = config.ROOT / best["file"]
     produce.promote(t, cand, replace=a.replace)
+    return 0
+
+
+def cmd_recheck(a):
+    config.api_key()
+    for t in prompts.find(a.target):
+        print(f"  {t.id}")
+        produce.recheck(t, produce.Run(critic_model=a.critic_model))
     return 0
 
 
@@ -254,11 +267,14 @@ def main():
     s.add_argument("--accept", action="store_true", help="promote the best passing candidate into art/")
     s.add_argument("--replace", action="store_true", help="allow replacing an existing master")
     s.add_argument("--no-critic", action="store_true", help="machine checks only")
+    s.add_argument("--trial", action="store_true",
+                   help="redraw something already drawn, into .artgen/trial/, to compare; never promotes")
     s.add_argument("--budget", type=int, default=config.DEFAULT_BUDGET, help="max image calls")
     s.add_argument("--model"); s.add_argument("--critic-model")
 
     s = sub.add_parser("accept"); s.add_argument("target"); s.add_argument("file", nargs="?")
     s.add_argument("--replace", action="store_true")
+    s = sub.add_parser("recheck"); s.add_argument("target"); s.add_argument("--critic-model")
     s = sub.add_parser("contact"); s.add_argument("target"); s.add_argument("--last", type=int, default=12)
 
     s = sub.add_parser("cut"); s.add_argument("src"); s.add_argument("-o", "--out")

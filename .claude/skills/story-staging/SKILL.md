@@ -54,7 +54,7 @@ from a delta to a coast.
 ::: dialogue title="…" bg="harbour-wall" gramen="…" gramvi="…" gramco="…"
 @cast Tí|sad, Thảo|neutral
 @item bucket at=left
-@fx birds on=panel
+@fx rain on=panel
 **Thảo|neutral:** You've been down here all morning.
 **Thảo|annoyed|shout:** Tí.
 Narration has no speaker: a plate, a caption box, no avatar.
@@ -94,7 +94,7 @@ where this list and that file disagree, that file is right.
 | **Places** | `harbour-wall` · `kitchen` · `school-yard` · `fish-market` · `lane` · `town-beach` · `science-room` · `flooded-street` · `cliff-road` · `whale-temple` · `under-water` |
 | **Props** (`at=left\|center\|right\|<person>`) | `board-game` · `class-list` · `notebook` · `green-notebook` · `cakes` · `money` · `radio` · `phone` · `box` · `worksheet` |
 | **Effects over one figure** (`on=<person>`) | `impact` · `sparkle` · `dizzy` · `sweat` · `flush` · `anger` · `question` · `gloom` · `speed` |
-| **Effects over the frame** (`on=panel`) | `birds` · `splash` · `rain` |
+| **Effects over the frame** (`on=panel`) | `splash` · `rain` |
 | **Panel breaks** | any `@` line |
 
 Adding a slug to any of those rows means adding it to `data/cast.json` and to
@@ -381,6 +381,14 @@ effect's prompt therefore carries a *"Where the mark goes"* paragraph asking for
 the mark only, positioned against an imagined figure in the lower three-quarters
 of the square. Copy that paragraph and change only the position. Without it the
 generator centres the mark and a sweat drop lands on somebody's chest.
+
+**When the mark has to land on one feature of the face** — a blush on the
+cheeks — do not ask the generator to position it at all. It draws the mark well
+and cannot place it, whatever percentages the prompt gives. Ask for the mark
+alone, and give the effect a `place` list in `data/cast.json`: `[x, y, width]`
+per stamp, in fractions of the effect square. `make_overlay.py` trims the
+drawing and stamps it there. `flush` is the worked example, and
+`tools/artgen/place.py` has the measured positions of the cheeks.
 
 ### Editing a prompt when the story changes
 

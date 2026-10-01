@@ -27,7 +27,7 @@ from pathlib import Path
 
 from PIL import Image
 
-from . import config, cutout, gemini, prompts, qa
+from . import config, cutout, gemini, place, prompts, qa
 
 EXT = {"image/png": ".png", "image/jpeg": ".jpg", "image/webp": ".webp"}
 MASTER_EXT = (".png", ".jpg", ".jpeg", ".webp")
@@ -133,6 +133,12 @@ CHECKLIST = {
 - watercoloured, soft-edged or paper-textured instead of flat cel with a closed dark outline
 - not recognisable when imagined about two centimetres tall
 - hands, people or animals; more than one object; any text or letters (on a class list or worksheet, illegible squiggles are fine; real words are not)""",
+    "fx-panel": """\
+- painted, shaded or glowing instead of flat ink marks
+- any character, face, body or scenery drawn (it must be the marks alone)
+- the important marks sit at the extreme edges, where a phone crop removes them
+- so dense that the scene underneath stops reading
+- any text or letters""",
     "fx": """\
 - painted, shaded or glowing instead of flat ink marks
 - any character, face, body or scenery drawn (it must be the mark alone)
@@ -146,14 +152,20 @@ def critique(t, raw, cut, run, findings):
     notes = ["Image 1 is the picture as generated."]
     if cut is not None:
         prev = cutout.preview(cut)
-        if t.kind == "fx":
-            prev = _fx_on_figure(cut) or prev
+        if t.kind == "fx" and _fx_over(t) == "panel":
+            prev = _fx_on_plate(cut) or prev
+            notes.append("Image 2 is the mark cut out and laid over a whole comic "
+                         "panel, cropped as the page crops it. It is meant to cover "
+                         "the frame; characters stand in front of the plate later.")
+        elif t.kind == "fx":
+            prev = _fx_on_figure(_placed(t, cut)) or prev
             notes.append("Image 2 is the mark cut out and laid over a character on a "
-                         "dark background, at the scale the page uses.")
+                         "dark background, at exactly the position and scale the page uses.")
         else:
             notes.append("Image 2 is the automatic cut-out over dark teal: holes, "
                          "hollowed areas or a pale halo there are defects.")
-        images.append(_png(prev.resize((768, 768))))
+        prev.thumbnail((1024, 1024))
+        images.append(_png(prev))
     if t.kind == "cast":
         refs, _ = references(t)
         for r in refs[:1]:
@@ -172,7 +184,7 @@ The artist was given this prompt, and it is the standard:
 >>>
 
 Look hard for these known failure modes of this kind of drawing:
-{CHECKLIST[t.kind]}
+{CHECKLIST["fx-panel" if t.kind == "fx" and _fx_over(t) == "panel" else t.kind]}
 
 Automatic measurements already flagged:
 {machine}
@@ -186,6 +198,8 @@ A defect is fatal if the picture needs re-rolling rather than accepting.
 cannot see."""
     try:
         return gemini.judge(prompt, images, model=run.critic_model)
+    except gemini.QuotaError:
+        raise
     except gemini.GeminiError as e:
         return {"verdict": "error", "score": 0, "defects": [], "summary": str(e)[:300]}
 
@@ -196,32 +210,62 @@ def _png(im):
     return b.getvalue(), "image/png"
 
 
+# app.js paintFx: a figure effect is a square 1.34 x the figure's height,
+# standing on the floor and centred on the figure — so the figure's own square
+# cell is the bottom-centre 1/1.34 of the effect. Change one, change the other.
+FIG_IN_FX = 1 / 1.34
+
+
 def _fx_on_figure(mark):
-    """Composite a figure effect over a real character at the page's scale, so
-    both the critic and a person can see where it lands."""
+    """Lay a figure effect over a real character exactly as the page does, so
+    the critic and a person both see where it lands on a face."""
     for slug in ("thao", "ti", "khoa", "basau", "bong"):
         m = _existing(config.ROOT / "art" / "cast" / slug / "neutral.png")
         if m:
             fig, _ = cutout.key(Image.open(m[0]))
+            side = mark.size[0]
+            cell = round(side * FIG_IN_FX)
             base = Image.new("RGBA", mark.size, (38, 110, 120, 255))
-            base.alpha_composite(fig.resize(mark.size, Image.LANCZOS))
+            base.alpha_composite(fig.resize((cell, cell), Image.LANCZOS),
+                                 ((side - cell) // 2, side - cell))
             base.alpha_composite(mark.convert("RGBA"))
             return base.convert("RGB")
     return None
 
 
+def _fx_on_plate(mark):
+    """Lay a panel effect over a plate, cropped to the 3:2 frame the way
+    `background-size: cover` crops it."""
+    plates = sorted((config.ROOT / "art" / "bg").glob("*.jpg"))
+    if not plates:
+        return None
+    plate = Image.open(plates[0]).convert("RGBA")
+    W, H = plate.size
+    m = mark.convert("RGBA")
+    s = max(W / m.width, H / m.height)
+    m = m.resize((round(m.width * s), round(m.height * s)), Image.LANCZOS)
+    m = m.crop(((m.width - W) // 2, (m.height - H) // 2,
+                (m.width - W) // 2 + W, (m.height - H) // 2 + H))
+    plate.alpha_composite(m)
+    return plate.convert("RGB")
+
+
 # ------------------------------------------------------------- the search --
 def produce(t: prompts.Target, n=3, accept=False, replace=False, critic=True,
-            run: Run = None):
+            run: Run = None, trial=False):
+    """`trial` draws a target that already exists, to compare against the
+    original — the consistency test — and can never promote."""
     run = run or Run()
     master = config.ROOT / t.path
+    if trial and (accept or replace):
+        raise ValueError("a trial never promotes")
     if t.retired:
         return {"id": t.id, "status": "retired", "note": "the prompts file marks this retired"}
-    if _existing(master) and not replace:
+    if _existing(master) and not replace and not trial:
         return {"id": t.id, "status": "exists", "note": f"{t.path} is drawn; pass --replace"}
 
     fx_over = _cast()["fx"].get(t.slug, {}).get("over") if t.kind == "fx" else None
-    cand_dir = config.WORK / "cand" / t.id.replace("/", "__")
+    cand_dir = config.WORK / ("trial" if trial else "cand") / t.id.replace("/", "__")
     cand_dir.mkdir(parents=True, exist_ok=True)
     refs, preamble = references(t)
     results = []
@@ -236,8 +280,10 @@ def produce(t: prompts.Target, n=3, accept=False, replace=False, critic=True,
         try:
             data, mime = gemini.generate_image(preamble + t.prompt, refs, t.aspect,
                                                model=run.model)
+        except gemini.QuotaError:
+            raise
         except gemini.GeminiError as e:
-            print(f"    #{i}: generation failed — {e}")
+            print(f"    #{i}: generation failed — {gemini._short(str(e))}")
             results.append({"i": i, "error": str(e)})
             continue
         raw_path = stem.with_suffix(EXT.get(mime, ".png"))
@@ -248,7 +294,11 @@ def produce(t: prompts.Target, n=3, accept=False, replace=False, critic=True,
         cut, rep = (None, None)
         if t.kind != "bg":
             cut, rep = cutout.key(im)
-            cutout.preview(cut).save(stem.with_name(stem.name + "-cut.jpg"), quality=88)
+            shown = None
+            if t.kind == "fx":
+                shown = (_fx_on_plate(cut) if _fx_over(t) == "panel" else _fx_on_figure(_placed(t, cut)))
+            (shown or cutout.preview(cut)).save(stem.with_name(stem.name + "-cut.jpg"),
+                                                quality=88)
         findings = qa.check(t.kind, im, rep, fx_over)
         verdict = None
         if critic and not qa.failed(findings):
@@ -274,12 +324,54 @@ def produce(t: prompts.Target, n=3, accept=False, replace=False, critic=True,
     return out
 
 
+def recheck(t: prompts.Target, run: Run = None):
+    """Judge the candidates already on disk again — after the checks or the
+    critic improve — without paying for a single new image."""
+    run = run or Run()
+    fx_over = _fx_over(t) if t.kind == "fx" else None
+    d = config.WORK / "cand" / t.id.replace("/", "__")
+    out = []
+    for side in sorted(d.glob("*.json")) if d.is_dir() else []:
+        r = json.loads(side.read_text())
+        raw = config.ROOT / r["file"]
+        data = raw.read_bytes()
+        im = Image.open(io.BytesIO(data))
+        im.load()
+        cut, rep = (None, None)
+        if t.kind != "bg":
+            cut, rep = cutout.key(im)
+            shown = None
+            if t.kind == "fx":
+                shown = _fx_on_plate(cut) if fx_over == "panel" else _fx_on_figure(_placed(t, cut))
+            (shown or cutout.preview(cut)).save(
+                raw.with_name(raw.stem + "-cut.jpg"), quality=88)
+        findings = qa.check(t.kind, im, rep, fx_over)
+        mime = "image/png" if raw.suffix == ".png" else "image/jpeg"
+        verdict = None if qa.failed(findings) else critique(t, (data, mime), cut, run, findings)
+        r.update(qa=findings, cut=rep, critic=verdict, ok=_ok(findings, verdict, True))
+        side.write_text(json.dumps(r, indent=1, ensure_ascii=False))
+        _log(run, t, {**r, "recheck": True})
+        print(f"    #{r['i']} {raw.stem}: {_line(r)}")
+        out.append(r)
+    return out
+
+
 def _ok(findings, verdict, critic):
     if qa.failed(findings):
         return False
     if not critic:
         return True
     return bool(verdict) and verdict.get("verdict") == "pass"
+
+
+def _fx_over(t):
+    return _cast()["fx"].get(t.slug, {}).get("over")
+
+
+def _placed(t, cut):
+    """The effect as the page will get it: stamped, if cast.json places it."""
+    places = _cast()["fx"].get(t.slug, {}).get("place") if t.kind == "fx" else None
+    return place.stamp(cut, places, cut.size[0]) if places else cut
 
 
 def _line(r):

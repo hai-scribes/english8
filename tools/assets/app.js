@@ -2252,6 +2252,7 @@ function wireGlosses(scope, glosses, prefix){
     const host = btn.closest(".d-bub") || btn.closest("p")
               || btn.closest(".d-said") || scope;
     host.parentNode.insertBefore(g, host.nextSibling);
+    if (host.classList.contains("d-bub")) g.__bub = host;
 
     btn.addEventListener("click", () => {
       const was = btn.getAttribute("aria-expanded") === "true";
@@ -2259,12 +2260,35 @@ function wireGlosses(scope, glosses, prefix){
       if (was){ shut(btn); return; }
       btn.setAttribute("aria-expanded", "true");
       g.hidden = false;
+      if (g.__bub) placeGloss(g);
       open = btn;
     });
   });
   scope.addEventListener("keydown", ev => {
     if (ev.key === "Escape" && open) shut(open);
   });
+}
+
+/* A gloss opened from a balloon is placed against THAT balloon, inside the
+   frame. Anchored to the balloon layer instead, it hung off the layer's bottom
+   edge — the bottom of the picture — where the stage's own clipping cut it off,
+   so a tap lit the word and showed nothing. Under the balloon when it fits,
+   above it when it does not, and never outside the frame. */
+function placeGloss(g){
+  const layer = g.offsetParent, bub = g.__bub;
+  if (!layer || !bub) return;
+  const lr = layer.getBoundingClientRect();
+  const body = $("path.d-body-path", bub);
+  const br = (body && body.getAttribute("d") ? body : bub).getBoundingClientRect();
+  const M = 6;
+  g.style.maxWidth = Math.max(120, Math.min(lr.width - M * 2, 340)) + "px";
+  const gw = g.offsetWidth, gh = g.offsetHeight;
+  const left = clamp(br.left + br.width / 2 - gw / 2 - lr.left, M, Math.max(M, lr.width - gw - M));
+  let top = br.bottom - lr.top + M;
+  if (top + gh > lr.height - M) top = br.top - lr.top - gh - M;
+  top = clamp(top, M, Math.max(M, lr.height - gh - M));
+  g.style.left = left.toFixed(1) + "px";
+  g.style.top = top.toFixed(1) + "px";
 }
 
 function initDialogue(){
@@ -2558,14 +2582,18 @@ function balloonPaths(kind, cw, ch, aim, seed, hand){
      pixels on a fifty-pixel tail, swamped by the run along the contour. A
      letterer brings the tail out of the side of the balloon nearer the speaker
      and curves it in. That offset is the signal; the bow follows it. */
+  /* Measured on the drawn page, that offset was the defect: at 0.34 rad the
+     mouth left the balloon well to one side, the sweep then had to bend the
+     tail back, and what arrived was a flat hook pointing past the speaker.
+     A lean of a few degrees keeps the handedness and the point on the face. */
   let ang = Math.atan2(aim.y - cy, aim.x - cx);
-  ang = clamp(ang + (hand || 1) * 0.34, 0.55, Math.PI - 0.55);
+  ang = clamp(ang + (hand || 1) * 0.08, 0.55, Math.PI - 0.55);
   /* The mouth is a WIDTH, not a sample count. Three samples off a small
      balloon is a narrow tail and off a large one is a funnel, because the
      sample spacing is fixed and the count is not — so the tail came out thick
      on exactly the balloons that carry the most text. Set the chord instead
      and let the count follow it. */
-  const chord = clamp(cw * 0.055, 7, 14);
+  const chord = clamp(cw * 0.09, 12, 20);
   const gap = spec.gap ? clamp(Math.round(chord / (perim / n)), 1, 4) : 0;
   const centre = Math.round(ang / (Math.PI * 2) * n);
   const i1 = centre - Math.ceil(gap / 2), i2 = i1 + gap;
@@ -2579,15 +2607,7 @@ function balloonPaths(kind, cw, ch, aim, seed, hand){
   else body = ovoidPath(pts, from, count);
   if (!gap) body += " Z";
 
-  /* The direction the contour is TRAVELLING at each side of the mouth. The
-     tail leaves along it, so the outline runs on without a corner. */
-  const tangent = i => {
-    const a = at(i - 1), b = at(i + 1);
-    const dx = b.x - a.x, dy = b.y - a.y, L = Math.hypot(dx, dy) || 1;
-    return { x: dx / L, y: dy / L };
-  };
-  const tail = tailPath(kind, at(i1), at(i2), aim, cx, cy, cw, ch,
-                        tangent(i1), tangent(i2), hand);
+  const tail = tailPath(kind, at(i1), at(i2), aim, cx, cy, cw, ch, hand);
 
   /* The extent has to cover the spikes and the tail, because the svg is sized
      to it and anything outside is not drawn. */
@@ -2615,7 +2635,7 @@ function balloonPaths(kind, cw, ch, aim, seed, hand){
    A thought does not get a sliver at all. Its trail of shrinking bubbles is the
    one balloon convention a reader decodes with no instruction, and it aims at
    the head rather than the mouth. */
-function tailPath(kind, r1, r2, aim, cx, cy, cw, ch, t1, t2, hand){
+function tailPath(kind, r1, r2, aim, cx, cy, cw, ch, hand){
   if (kind === "think"){
     /* The trail starts OUTSIDE the cloud. Spacing it as a fraction of the whole
        distance from the cloud's CENTRE put the first bubble inside the balloon,
@@ -2642,33 +2662,22 @@ function tailPath(kind, r1, r2, aim, cx, cy, cw, ch, t1, t2, hand){
   let dx = aim.x - mx, dy = aim.y - my;
   const L = Math.hypot(dx, dy) || 1;
   dx /= L; dy /= L;
-  /* THE FLANKS LEAVE ALONG THE CONTOUR AND SWEEP TO ONE SIDE. What this
-     replaces was two cubics whose control points ran straight at the tip, which
-     on a short tail is a triangle with a kink where it meets the balloon — the
-     outline arrives round the curve and then turns a corner. Reading it at four
-     times size, that corner is most of why the tail looked thick and blunt: a
-     wedge stuck on, rather than a stroke coming off.
-
-     Two things fix it and they are separable. The root controls run along the
-     contour's own tangent, so the outline continues rather than turning; and
-     the bow lives entirely in the controls near the POINT, so the sliver leans
-     to one side as it tapers instead of being skewed bodily sideways. Which
-     side is `hand`, taken from where the speaker is standing. */
+  /* TWO FLANKS THAT TAPER TO A POINT ON THE LINE TO THE SPEAKER. What this
+     replaces started each flank along the contour's own tangent — and at the
+     mouth that tangent runs ACROSS the mouth, so the two flanks crossed inside
+     the balloon (a black seam through the opening) and the point was dragged
+     sideways into a hook that aimed at nobody. Each flank now heads for the
+     point from its own root, and the only curve is one shared bow across the
+     tail, small enough that the point still lands where it was aimed. Which
+     way it bows is `hand`, taken from where the speaker is standing. */
   const px = -dy, py = dx;              /* across the tail */
-  const k = L * 0.30;                   /* how far the flanks run along the curve */
-  const back = L * 0.34;                /* control distance back from the point */
-  const bow = -hand * L * 0.62;         /* the sweep, all of it near the point */
-  const c1x = r1.x + t1.x * k, c1y = r1.y + t1.y * k;
-  const c2x = aim.x - dx * back + px * bow,
-        c2y = aim.y - dy * back + py * bow;
-  const c3x = aim.x - dx * back * 0.78 + px * bow * 0.42,
-        c3y = aim.y - dy * back * 0.78 + py * bow * 0.42;
-  const c4x = r2.x - t2.x * k, c4y = r2.y - t2.y * k;
+  const bow = -(hand || 1) * L * 0.12;
+  const q = (r, f) => ({ x: r.x + (aim.x - r.x) * f + px * bow,
+                         y: r.y + (aim.y - r.y) * f + py * bow });
+  const c1 = q(r1, 0.5), c2 = q(r2, 0.5);
   return "M" + P(r1.x) + " " + P(r1.y)
-       + " C" + P(c1x) + " " + P(c1y) + " " + P(c2x) + " " + P(c2y)
-              + " " + P(aim.x) + " " + P(aim.y)
-       + " C" + P(c3x) + " " + P(c3y) + " " + P(c4x) + " " + P(c4y)
-              + " " + P(r2.x) + " " + P(r2.y);
+       + " Q" + P(c1.x) + " " + P(c1.y) + " " + P(aim.x) + " " + P(aim.y)
+       + " Q" + P(c2.x) + " " + P(c2.y) + " " + P(r2.x) + " " + P(r2.y);
 }
 
 /* Narration is the one thing that stays a rectangle, and deliberately: a
@@ -3063,6 +3072,15 @@ function initScene(root, p){
            the head. */
         el.style.height = (h * 1.34 * 100) + "%";
         el.style.aspectRatio = "1";
+        /* Mirrored with the figure it sits on, by the same rule paintFigure
+           uses. The art is drawn for a figure looking right, so a cheek, a
+           temple or the side a sweat drop hangs from is one particular side of
+           the face — unflipped over a flipped figure, the blush lands on the
+           ear. The square is centred on the figure, so flipping it about its
+           own centre is flipping it about the figure's. `transform` composes
+           with the `translate` centring and the pop's `scale`; it replaces
+           neither. */
+        el.style.transform = (p.faceIn !== false && figX(i, n) > 0.5) ? "scaleX(-1)" : "";
         /* Centred by `translate` in the stylesheet, not by a transform written
            here — the pop scales this element, and a scale applied over a
            `transform` translation drags the offset with it. See the note at
@@ -3990,7 +4008,11 @@ function initScene(root, p){
     const span = dist - rE;
     let tipD = rE + clamp(span * TAIL_REACH, Math.min(13, span * 0.5), span * 0.84);
     if (uy > 0.05){
-      const stopY = headTop - Math.max(9, figH * 0.035);
+      /* The figure's box is not the top of its head: every drawing carries a
+         band of empty sheet above the hair, about a twentieth of its height.
+         Stopping a fixed clearance above the BOX therefore stopped the point
+         thirty pixels short of anybody, floating. Stop at the hair instead. */
+      const stopY = headTop + figH * 0.035;
       const room = (stopY - ccy) / uy;
       if (isFinite(room)) tipD = Math.min(tipD, Math.max(rE + 3, room));
     }
@@ -4032,7 +4054,11 @@ function initScene(root, p){
      balloon and aiming the tail are no longer four things that can disagree
      about what the balloon is. Four callers ask for it — a new panel, a resize,
      going full screen, and a balloon that changed size under the observer. */
-  function relayout(){ layoutBalloons(); }
+  function relayout(){
+    layoutBalloons();
+    /* An open gloss follows its balloon when the balloon is placed again. */
+    $$(".gloss", bubble).forEach(g => { if (!g.hidden) placeGloss(g); });
+  }
 
   /* THE FIGURES WALK ON, and a balloon placed before they arrive is placed
      against where they were standing. `.d-fig` transitions `left` over

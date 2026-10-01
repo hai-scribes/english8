@@ -173,6 +173,16 @@ def test_gemini():
             {"text": 'Sure!\n```json\n{"verdict": "pass", "score": 9}\n```'}]}}]}
         ok(gemini.judge("x", [], model="c")["score"] == 9, "fenced JSON from the critic is read")
 
+        def zero(*a, **k):
+            raise gemini.GeminiError('HTTP 429: {"error": {"message": "Quota exceeded for '
+                                     'metric: generate_content_free_tier_requests, limit: 0"}}')
+        gemini.transport = zero
+        try:
+            gemini.generate_image("x", model="m")
+            ok(False, "a zero quota raises")
+        except gemini.QuotaError as e:
+            ok("billing" in str(e), "a zero quota stops at once and says to turn on billing")
+
         gemini.transport = lambda *a, **k: {"candidates": [{"finishReason": "SAFETY"}]}
         try:
             gemini.generate_image("x", model="m")

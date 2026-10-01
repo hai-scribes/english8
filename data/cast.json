@@ -263,6 +263,11 @@
     "drawn faces cannot: embarrassment is not one of the six and would have cost",
     "five more drawings.",
     "",
+    "`place`, where an effect has one, is a list of [x, y, width] in fractions of",
+    "the effect square: the mark is drawn ALONE and the build stamps it at each",
+    "position. It exists because an image model draws a blush well and cannot put",
+    "one on a cheek — see tools/artgen/place.py, which has the measurements.",
+    "",
     "Drawn as flat cut-outs on white and keyed the same way as the props, except",
     "`rain` and `gloom`, which are drawn as loose full-frame washes."
   ],
@@ -272,12 +277,12 @@
     "sparkle":  { "over": "figure", "is": "Soft rising glints — the sea working, or something arriving" },
     "dizzy":    { "over": "figure", "is": "Small stars and birds circling above the head, stunned" },
     "sweat":    { "over": "figure", "is": "One large drop at the temple — caught out, or working hard at a lie" },
-    "flush":    { "over": "figure", "is": "Pink strokes across the cheeks and ears — embarrassed" },
+    "flush":    { "over": "figure", "is": "Pink strokes across the cheeks and ears — embarrassed",
+                  "place": [[0.518, 0.559, 0.052], [0.610, 0.555, 0.032]] },
     "anger":    { "over": "figure", "is": "The cross-shaped popping vein at the temple — lost patience" },
     "question": { "over": "figure", "is": "One floating question mark — did not follow that" },
     "gloom":    { "over": "figure", "is": "Vertical shadow bars down the figure from above — dread" },
     "speed":    { "over": "figure", "is": "Straight motion lines behind the figure — moving, or moving off" },
-    "birds":    { "over": "panel",  "is": "Three or four small seabirds crossing the frame" },
     "splash":   { "over": "panel",  "is": "A white water burst up the near edge of the frame" },
     "rain":     { "over": "panel",  "is": "Slanting rain across the whole frame, grey, no colour" }
   }

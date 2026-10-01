@@ -938,6 +938,43 @@ async function main() {
     }
   }
 
+  /* ---- an effect over a person is mirrored with that person -------------
+     The art for a figure effect is drawn for a figure looking right, so a
+     blush, a sweat drop or a vein belongs to one side of the face. Over a
+     figure the page has flipped, an unflipped effect lands on the ear. Walk
+     every panel of every chapter and compare each effect with the figure
+     standing under it — and insist a flipped one was among them, or the
+     check passes on a year of chapters that only ever mark the left speaker. */
+  {
+    let seen = 0, flipped = 0, wrong = 0;
+    const units = fs.readdirSync(path.join(ROOT, "docs")).filter(d => /^unit-\d\d$/.test(d));
+    for (const unit of units){
+      const win = await settled(load(`docs/${unit}/lesson-1/index.html`, null, fastPage));
+      const dlg = win.document.querySelector('[data-role="dialogue"]');
+      for (let k = 0; k < 80; k++){
+        for (const fx of dlg.querySelectorAll('.d-fx-one[data-over="figure"]')){
+          const fig = [...dlg.querySelectorAll(".d-fig")]
+                        .find(f => f.style.left === fx.style.left);
+          if (!fig) continue;
+          seen++;
+          const figFlip = /scaleX\(-1\)/.test(fig.style.transform);
+          if (figFlip) flipped++;
+          if (figFlip !== /scaleX\(-1\)/.test(fx.style.transform)) wrong++;
+        }
+        if (dlg.querySelector(".d-next").disabled) break;
+        const was = dlg.querySelector(".d-count").textContent;
+        click(win, dlg.querySelector(".d-next"));
+        if (dlg.querySelector(".d-count").textContent === was)
+          click(win, dlg.querySelector(".d-next"));
+      }
+    }
+    ok("effects: a figure effect is found over its figure", seen > 0, seen + " seen");
+    ok("effects: at least one sits over a flipped figure", flipped > 0,
+       flipped + " of " + seen);
+    ok("effects: flipped exactly when the figure under it is flipped",
+       wrong === 0, `${wrong} of ${seen} wrong (${flipped} over a flipped figure)`);
+  }
+
   /* ---- the practice bank and the Words sheet -----------------------------
      A bank draws `draw` items from its pool, a fresh set each run, least
      recently seen first; the Words sheet opens over the page and closes

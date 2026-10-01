@@ -51,7 +51,7 @@ except ImportError:
     print("FAIL: this needs Pillow — `pip3 install Pillow`")
     sys.exit(2)
 
-from artgen import cutout
+from artgen import cutout, place
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -112,7 +112,7 @@ def fit(im: Image.Image, longest: int) -> Image.Image:
     return im.resize((max(1, round(w * s)), max(1, round(h * s))), Image.LANCZOS)
 
 
-def build(kind: str, slug: str, keep_white: bool, do_trim: bool) -> bool:
+def build(kind: str, slug: str, keep_white: bool, do_trim: bool, places=None) -> bool:
     out_dir = ROOT / "art" / kind
     src_dir = out_dir / "src"
     found = [src_dir / f"{slug}{e}" for e in MASTER_EXT]
@@ -129,7 +129,10 @@ def build(kind: str, slug: str, keep_white: bool, do_trim: bool) -> bool:
     elif already:
         print("      (already cut out — keying skipped)")
 
-    if do_trim:
+    if places:
+        # The mark was drawn alone; where it lands on the face is arithmetic.
+        im = place.stamp(im, places, FX_PX)
+    elif do_trim:
         im = trim(im)
     im = fit(im, PROP_PX if kind == "props" else FX_PX)
 
@@ -208,7 +211,8 @@ def main() -> int:
         # A panel-wide effect is a wash across the whole frame, so its canvas
         # IS the composition and trimming it would crop the composition away.
         do_trim = kind == "props"
-        if build(kind, slug, args.keep_white, do_trim):
+        places = fx[slug].get("place") if kind == "fx" else None
+        if build(kind, slug, args.keep_white, do_trim, places):
             made += 1
     print(f"\n{made} of {len(want)} written.")
     return 0 if made else 1

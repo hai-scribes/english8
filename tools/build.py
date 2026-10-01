@@ -210,9 +210,14 @@ READING_TYPES = {
 COURSE_TYPES = {
     "gap-fill":        "Gap-fill",
     "choice":          "Choose the right one",
-    "short-answer":    "Short answer",
+    # "Short answer" described a text box that no longer exists — every answer
+    # is picked (2026-09-25). A noun, not an instruction: twelve of these sit
+    # directly above "Choose the answer from the scene."
+    "short-answer":    "Questions",
     "sort":            "Sort into groups",
-    "synonym-search":  "Synonym search against the clock",
+    # No "against the clock": only a task under a `:::clock` is timed, and the
+    # clock announces itself there. In Lesson 1 the label was simply untrue.
+    "synonym-search":  "Synonym search",
 }
 TASK_TYPES = {"listening": LISTENING_TYPES, "reading": READING_TYPES, "course": COURSE_TYPES}
 
