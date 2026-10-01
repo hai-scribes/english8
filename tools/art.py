@@ -105,7 +105,7 @@ def cmd_gen(a):
         print(f"  {t.id}")
         try:
             r = produce.produce(t, n=a.n, accept=a.accept, replace=a.replace,
-                                critic=not a.no_critic, run=run, trial=a.trial)
+                                critic=not a.no_critic, run=run, trial=a.trial, like=a.like)
         except produce.BudgetExhausted as e:
             print(f"    {e}")
             break
@@ -267,6 +267,7 @@ def main():
     s.add_argument("--accept", action="store_true", help="promote the best passing candidate into art/")
     s.add_argument("--replace", action="store_true", help="allow replacing an existing master")
     s.add_argument("--no-critic", action="store_true", help="machine checks only")
+    s.add_argument("--like", help="an earlier drawing whose LOOK is right: redraw it to the prompt")
     s.add_argument("--trial", action="store_true",
                    help="redraw something already drawn, into .artgen/trial/, to compare; never promotes")
     s.add_argument("--budget", type=int, default=config.DEFAULT_BUDGET, help="max image calls")

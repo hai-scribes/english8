@@ -79,10 +79,19 @@ def _style_ref():
 
 
 # ------------------------------------------------------------- references --
-def references(t: prompts.Target):
+def references(t: prompts.Target, like=None):
     """(images, preamble). A preamble says what each attachment is FOR; the
-    prompt itself is sent unaltered after it."""
+    prompt itself is sent unaltered after it. `like` is a drawing of this same
+    target whose LOOK is right and whose execution is not — a candidate that was
+    liked but floats, say — to be redrawn rather than re-invented."""
     refs, lines = [], []
+    if like:
+        refs.append(_read(Path(like)))
+        lines.append(
+            "The first attached image is an earlier drawing of this same subject. Its "
+            "look is approved: keep the same person — identical face, hair, clothes, "
+            "colours, line and proportions. Redraw it so that it satisfies everything in "
+            "the prompt below; where that drawing and the prompt disagree, the prompt wins.")
     if t.kind == "cast":
         # Another drawing of the same person is the strongest consistency
         # signal there is. Neutral first — the prompts file says it is the one
@@ -272,7 +281,7 @@ def _fx_on_plate(mark):
 
 # ------------------------------------------------------------- the search --
 def produce(t: prompts.Target, n=3, accept=False, replace=False, critic=True,
-            run: Run = None, trial=False):
+            run: Run = None, trial=False, like=None):
     """`trial` draws a target that already exists, to compare against the
     original — the consistency test — and can never promote."""
     run = run or Run()
@@ -287,7 +296,7 @@ def produce(t: prompts.Target, n=3, accept=False, replace=False, critic=True,
     fx_over = _cast()["fx"].get(t.slug, {}).get("over") if t.kind == "fx" else None
     cand_dir = config.WORK / ("trial" if trial else "cand") / t.id.replace("/", "__")
     cand_dir.mkdir(parents=True, exist_ok=True)
-    refs, preamble = references(t)
+    refs, preamble = references(t, like)
     results = []
 
     for i in range(n):

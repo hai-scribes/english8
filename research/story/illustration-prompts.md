@@ -251,11 +251,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **neutral**: an ordinary talking
 > face, mouth slightly open, no strong feeling; hands resting together in
@@ -365,11 +370,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **happy**: a real open smile, eyes
 > curved; shoulders lifted, one hand raised in a small open gesture. Keep
@@ -479,11 +489,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **worried**: brows raised and pulled
 > together, mouth a small flat line; shoulders drawn in, hands close to the
@@ -593,11 +608,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **annoyed**: brows down and level,
 > mouth pressed or turned down at one corner; arms folded. Keep every
@@ -707,11 +727,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **surprised**: eyes wide and round,
 > brows high, mouth open in a small circle; shoulders up, both hands lifted
@@ -821,11 +846,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **sad**: eyes lowered, brows slack,
 > mouth a short downward curve; shoulders dropped, one hand held loosely at
@@ -928,11 +958,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **neutral**: an ordinary talking
 > face, mouth slightly open, no strong feeling; **one hand turned palm-up at
@@ -1031,11 +1066,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **happy**: a real open smile, eyes
 > curved; **both hands closed into small fists in front of her chest**,
@@ -1134,11 +1174,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **worried**: brows raised and pulled
 > together, mouth a small flat line; **one hand at her chin, the other arm
@@ -1238,11 +1283,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **annoyed**: brows down and level,
 > one a little higher than the other, mouth pressed or turned down at one
@@ -1342,11 +1392,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **surprised**: eyes wide and round,
 > brows high, mouth open in a small circle; **both hands stopped open in the
@@ -1445,11 +1500,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **sad**: eyes lowered, brows slack,
 > mouth a short downward curve; **both hands clasped together in front of
@@ -1550,11 +1610,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **neutral**: an ordinary talking
 > face, mouth slightly open, no strong feeling; **one thick forearm laid
@@ -1652,11 +1717,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **happy**: a real open smile, the
 > eyes curving further into their two crescents; **one hand raised flat and
@@ -1753,11 +1823,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **worried**: brows raised and pulled
 > together, mouth a small flat line; **one hand pressed flat over her heart,
@@ -1854,11 +1929,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **annoyed**: brows down and level,
 > mouth pressed flat and the deep line at each corner deeper; **one index
@@ -1956,11 +2036,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **surprised**: the eyes open to full
 > circles — the only time they do — brows high, mouth open in a small
@@ -2058,11 +2143,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **sad**: eyes lowered, brows slack,
 > mouth a short downward curve; **both hands folded together and let down to
@@ -2163,11 +2253,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **neutral**: an ordinary talking
 > face, mouth slightly open, no strong feeling; **the green notebook held
@@ -2264,11 +2359,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **happy**: a real open smile, eyes
 > curved; **the notebook lowered into one hand while the other lifts in a
@@ -2365,11 +2465,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **worried**: brows raised and pulled
 > together, mouth a small flat line; **both hands closed a little too
@@ -2466,11 +2571,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **annoyed**: brows down and level,
 > mouth pressed — a mild and patient annoyance, never a sneer; **the
@@ -2568,11 +2678,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **surprised**: eyes wide and round,
 > brows high, mouth open in a small circle; **the notebook slipping in his
@@ -2669,11 +2784,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **sad**: eyes lowered, brows slack,
 > mouth a short downward curve; **the notebook held closed in both hands and
@@ -2781,11 +2901,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **neutral**: an ordinary talking
 > face, mouth slightly open, no strong feeling. **Both hands held up at
@@ -2891,11 +3016,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **happy**: a wide open laugh, eyes
 > squeezed into upward curves, head tipped back a little. **Both fists up
@@ -3001,11 +3131,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **worried**: brows raised and pulled
 > together, eyes very round, mouth a small flat line. **Both hands laid flat
@@ -3110,11 +3245,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **annoyed**: brows down and level,
 > chin tucked, **cheeks puffed out** and mouth pushed into a small pout —
@@ -3220,11 +3360,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **surprised**: eyes wide and
 > perfectly round, brows high, mouth a round open O. **Both hands flying
@@ -3329,11 +3474,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **sad**: eyes lowered, brows drawn
 > up in the middle, mouth small and turned down at one corner. **Both hands
@@ -5568,6 +5718,7 @@ Two things you still do **not** have to do:
 | It comes back as glossy modern digital anime — airbrushed skin, gradient shading, shining hair | Re-paste **Line**, **Colour** and **Figures** in full; they are the whole defence and they degrade the moment they are summarised. The words that pull it back are *flat colour*, *one hard-edged shadow shape* and *cel* |
 | A drawing comes back as a grid, a sheet or a set of panels | Every prompt asks for one figure with one expression. Re-roll rather than cropping a panel out of it — a cropped cell will not share a scale or an eye level with the other five, and `make_sheet.py` cannot fix a mismatch it was never given |
 | Two characters come back doing the same thing with their hands | The pose was taken from another character's block, or from the old shared wording. Each character's six poses are their own — see the note under *Part 1* — and the tell is a column of the finished sheet where everybody is sad identically. Re-paste that character's own **The expression** line |
+| A figure comes back as a bust: the body ends inside the picture with a closing outline, a flat cut or empty space under it | The prompt used to say *nothing may be cropped by the edge*, and the model obeyed it at the bottom too. The cast is half-body and stands on the floor of the panel, so the body must **run off the bottom edge** at full width. Re-paste **Framing**. `art.py` now rejects a figure that does not, and it cannot be fixed by sliding the drawing down — the corners beside the arms stay empty |
 | The head jumps or resizes between expressions | The six drawings were framed differently. `make_sheet.py` squares and scales them to one cell but cannot re-frame a head — re-roll the odd one out, matching the head size and eye level of the `neutral` drawing, which is the one to draw first and judge the rest against |
 | An avatar has a white box behind it | `make_sheet.py` keys the white itself, so this means it found none to key — check the drawing's background really is white and not a very pale grey, or re-run with the tolerance in mind |
 | A drawing comes back with a grey-and-white chequered pattern behind the figure | The generator has *drawn* a transparency checkerboard instead of leaving alpha. Re-roll: every prompt already forbids it by name, so this is a miss rather than an ambiguity, and a drawn checkerboard is much harder to key than plain white |

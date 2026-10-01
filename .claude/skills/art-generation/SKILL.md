@@ -108,6 +108,14 @@ Each of these cost real generations to find. None is a guess.
 - **A new character is sent the drawn cast as style references.** With no
   reference, three Bà Sáus came back in three styles. `produce.references`
   now attaches other characters' neutrals, for style only.
+- **A character's body runs off the bottom edge.** The prompts once said
+  "nothing may be cropped by the edge" and the model finished the body inside
+  the picture, like a bust — a gap under the figure that the drawn cast does
+  not have. The operator caught it; a check now does. Sliding the drawing down
+  does not fix it, because the corners beside the arms stay empty.
+- **`gen --like <file>` redraws a look that is right but badly executed.** It
+  kept Bà Sáu's face exactly and changed only the framing. Expect most of the
+  redraws to copy the fault along with the look; take the one the checks pass.
 - **The critic is good at style and bad at detail.** It passed a kitchen that
   faded out at the edges and missed a wrong hand pose; it also failed good
   birds when the preview was wrong. Read the contact sheet yourself.

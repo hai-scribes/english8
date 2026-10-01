@@ -13,6 +13,7 @@ import numpy as np
 from . import cutout
 
 LEAK_FAIL = 0.03   # of the figure's area, reached only through a gap in the line
+BASE_FAIL = 0.20   # of the bottom edge a cropped half-body figure must cover
 FLAT_FAIL = 0.90   # of the top/left/right edges within tolerance of the bg colour
 # An effect is often ANCHORED to an edge — speed lines start at one, a gloom
 # hangs from the top, a burst reaches all four — so most of an edge may be ink.
@@ -65,8 +66,17 @@ def check(kind, im, rep=None, fx_over=None):
         if touches - {"bottom"}:
             out.append(("fail", "the figure is cropped by the "
                                 + "/".join(sorted(touches - {"bottom"})) + " edge"))
+        # The cast is half-body and stands on the floor of the panel. A figure
+        # that ends inside the picture leaves a gap under it on the page, next
+        # to two characters who have none — and it cannot be slid down, because
+        # the corners beside the arms stay empty.
         if "bottom" not in touches:
-            out.append(("warn", "the figure does not reach the bottom edge (floats)"))
+            out.append(("fail", "the body ends inside the picture, leaving a gap under the "
+                                "figure — it must run off the bottom edge"))
+        elif rep.get("base_frac", 1) < BASE_FAIL:
+            out.append(("fail", f"the figure meets the bottom edge on only "
+                                f"{rep.get('base_frac', 0):.0%} of its width — the body must "
+                                f"run off the edge, not rest on it"))
         if not 0.15 <= fg <= 0.75:
             out.append(("fail", f"the figure covers {fg:.0%} of the square"))
     elif kind == "props":

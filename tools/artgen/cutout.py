@@ -167,7 +167,13 @@ def _report(fg, bg, flat, leak_frac, keyed_px, pre_cut=False, **extra):
         bbox = [int(x0), int(y0), int(x1) + 1, int(y1) + 1]
     else:
         touches, bbox = [], None
+    # How much of the bottom edge the figure covers. A half-body figure the frame
+    # crops covers a third of it or more; a bust that ends inside the picture
+    # covers none, or stands on a point.
+    band = max(2, round(h * 0.004))
+    base = float(fg[-band:].any(axis=0).mean())
     return {
+        "base_frac": round(base, 4),
         "pre_cut": pre_cut,
         "bg": None if bg is None else [int(v) for v in bg],
         "edge_flat": round(flat, 4),

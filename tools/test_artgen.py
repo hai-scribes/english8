@@ -131,6 +131,18 @@ def test_qa():
     f = qa.check("cast", crop, cutout.key(crop)[1])
     ok(any("cropped by the left" in m for _, m in f), "a figure cropped by the side edge fails")
 
+    # A bust: the body ends inside the picture, with a gap under it.
+    bust = Image.new("RGB", (600, 600), (255, 255, 255))
+    ImageDraw.Draw(bust).ellipse((120, 150, 480, 560), fill=(60, 60, 140), outline=(0, 0, 0), width=8)
+    f = qa.check("cast", bust, cutout.key(bust)[1])
+    ok(any("ends inside the picture" in m for lvl, m in f if lvl == "fail"),
+       "a figure that ends above the bottom edge fails")
+    # …and the same figure cropped by the frame, as a half-body is, passes.
+    half = Image.new("RGB", (600, 600), (255, 255, 255))
+    ImageDraw.Draw(half).ellipse((120, 150, 480, 900), fill=(60, 60, 140), outline=(0, 0, 0), width=8)
+    ok(not qa.failed(qa.check("cast", half, cutout.key(half)[1])),
+       "a figure that runs off the bottom edge passes")
+
     f = qa.check("props", ring(gap=3), cutout.key(ring(gap=3))[1])
     ok(any("gap" in m for lvl, m in f if lvl == "fail"), "a hollowed figure fails")
 
