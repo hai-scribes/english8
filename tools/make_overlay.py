@@ -112,7 +112,8 @@ def fit(im: Image.Image, longest: int) -> Image.Image:
     return im.resize((max(1, round(w * s)), max(1, round(h * s))), Image.LANCZOS)
 
 
-def build(kind: str, slug: str, keep_white: bool, do_trim: bool, places=None) -> bool:
+def build(kind: str, slug: str, keep_white: bool, do_trim: bool, places=None,
+          upright: bool = False) -> bool:
     out_dir = ROOT / "art" / kind
     src_dir = out_dir / "src"
     found = [src_dir / f"{slug}{e}" for e in MASTER_EXT]
@@ -129,9 +130,14 @@ def build(kind: str, slug: str, keep_white: bool, do_trim: bool, places=None) ->
     elif already:
         print("      (already cut out — keying skipped)")
 
+    if upright and not places:
+        print(f"  {kind}/{slug}: `upright` needs `place` — a mark composed by the "
+              f"generator cannot be re-stamped at mirrored positions")
+        return False
+    mark = im
     if places:
         # The mark was drawn alone; where it lands on the face is arithmetic.
-        im = place.stamp(im, places, FX_PX)
+        im = place.stamp(mark, places, FX_PX)
     elif do_trim:
         im = trim(im)
     im = fit(im, PROP_PX if kind == "props" else FX_PX)
@@ -141,6 +147,10 @@ def build(kind: str, slug: str, keep_white: bool, do_trim: bool, places=None) ->
     im.save(out, "WEBP", quality=WEBP_Q, method=6)
     print(f"  {kind}/{slug}: {master.name} -> {out.relative_to(ROOT)} "
           f"({im.size[0]}x{im.size[1]}, {out.stat().st_size // 1024} KB)")
+    if upright:
+        flip = out_dir / f"{slug}.flip.webp"
+        place.stamp(mark, places, FX_PX, mirrored=True).save(flip, "WEBP", quality=WEBP_Q, method=6)
+        print(f"  {kind}/{slug}: … and {flip.relative_to(ROOT)} for a flipped figure")
     return True
 
 
@@ -212,7 +222,8 @@ def main() -> int:
         # IS the composition and trimming it would crop the composition away.
         do_trim = kind == "props"
         places = fx[slug].get("place") if kind == "fx" else None
-        if build(kind, slug, args.keep_white, do_trim, places):
+        upright = bool(fx[slug].get("upright")) if kind == "fx" else False
+        if build(kind, slug, args.keep_white, do_trim, places, upright):
             made += 1
     print(f"\n{made} of {len(want)} written.")
     return 0 if made else 1

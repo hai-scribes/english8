@@ -28,7 +28,7 @@ import numpy as np
 from PIL import Image, ImageDraw
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from artgen import config, cutout, gemini, produce, prompts, qa  # noqa: E402
+from artgen import config, cutout, gemini, place, produce, prompts, qa  # noqa: E402
 
 FAILS = []
 
@@ -85,6 +85,25 @@ def test_cutout():
     ImageDraw.Draw(pre).ellipse((20, 20, 80, 80), fill=(200, 10, 10, 255))
     out, rep = cutout.key(pre)
     ok(rep["pre_cut"] and out.tobytes() == pre.tobytes(), "an existing cut-out is untouched")
+
+
+def test_place():
+    print("place")
+    # An asymmetric mark: a red bar with a blue block at its RIGHT end.
+    mark = Image.new("RGBA", (300, 200), (0, 0, 0, 0))
+    d = ImageDraw.Draw(mark)
+    d.rectangle((60, 80, 240, 120), fill=(255, 0, 0, 255))
+    d.rectangle((200, 80, 240, 120), fill=(0, 0, 255, 255))
+    out = place.stamp(mark, [[0.25, 0.5, 0.2]], 1000)
+    bb = out.getchannel("A").getbbox()
+    ok(abs((bb[0] + bb[2]) / 2 - 250) <= 1 and abs((bb[1] + bb[3]) / 2 - 500) <= 1,
+       f"a mark is trimmed and stamped centred on its position ({bb})")
+    ok(abs((bb[2] - bb[0]) - 200) <= 1, "…at the width the manifest gives it")
+    flip = place.stamp(mark, [[0.25, 0.5, 0.2]], 1000, mirrored=True)
+    fb = flip.getchannel("A").getbbox()
+    ok(abs((fb[0] + fb[2]) / 2 - 750) <= 1, "mirrored: the POSITION is mirrored")
+    ok(flip.getpixel((fb[2] - 5, 500))[:3] == (0, 0, 255),
+       "mirrored: the mark itself is not — its right end is still its right end")
 
 
 def test_qa():
@@ -243,7 +262,7 @@ if __name__ == "__main__":
     # A dummy key: every call below goes to a fake transport, never the network.
     import os
     os.environ.setdefault("GEMINI_API_KEY", "test-key-never-sent")
-    for t in (test_cutout, test_qa, test_prompts, test_gemini, test_produce):
+    for t in (test_cutout, test_place, test_qa, test_prompts, test_gemini, test_produce):
         t()
     print(f"\n{'FAIL' if FAILS else 'PASS'}: {len(FAILS)} failure(s)")
     sys.exit(1 if FAILS else 0)

@@ -14,6 +14,10 @@ from . import cutout
 
 LEAK_FAIL = 0.03   # of the figure's area, reached only through a gap in the line
 FLAT_FAIL = 0.90   # of the top/left/right edges within tolerance of the bg colour
+# An effect is often ANCHORED to an edge — speed lines start at one, a gloom
+# hangs from the top, a burst reaches all four — so most of an edge may be ink.
+# The background still has to be the commonest thing on the border.
+FX_FLAT_FAIL = 0.55
 
 
 def _checkerboard(rgb, bg):
@@ -50,7 +54,7 @@ def check(kind, im, rep=None, fx_over=None):
     rgb = np.asarray(im.convert("RGB")).astype(np.int16)
     if _checkerboard(rgb, np.array(rep["bg"])):
         out.append(("fail", "a transparency checkerboard is drawn into the background"))
-    elif rep["edge_flat"] < FLAT_FAIL:
+    elif rep["edge_flat"] < (FX_FLAT_FAIL if kind == "fx" else FLAT_FAIL):
         out.append(("fail", f"background is not flat: only {rep['edge_flat']:.0%} of the "
                             f"edges match {tuple(rep['bg'])} — a surface, gradient or scene"))
     if min(rep["bg"]) < 225:

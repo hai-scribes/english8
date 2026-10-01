@@ -88,6 +88,35 @@ to `.artgen/replaced/`, never deleted.
   copies into `docs/assets/`. Commit the art, the rebuilt `docs/` and any prompt
   edit together.
 
+## What the first runs taught
+
+Each of these cost real generations to find. None is a guess.
+
+- **The model draws a mark well and cannot place it.** Six blushes across two
+  prompt versions landed on hair and eyes whatever percentages were given. An
+  effect that must land on a feature is drawn **alone** and stamped by
+  `make_overlay.py` at the `place` positions in `data/cast.json`
+  (`tools/artgen/place.py` has the measurements). `flush`, `question` and
+  `speed` work this way. Do not write coordinates into a prompt.
+- **Keep a stamp out of the band above the head.** The speaker's balloon sits
+  there and is drawn over effects. Beside the head, in front of the face, is
+  free.
+- **An effect is drawn OVER its figure**, so anything "behind" the figure must
+  stop short of it. Speed lines are stamped into the space behind the head.
+- **A glyph gets `"upright": true`.** The page mirrors a figure effect with its
+  figure; a mirrored question mark is another character.
+- **A new character is sent the drawn cast as style references.** With no
+  reference, three Bà Sáus came back in three styles. `produce.references`
+  now attaches other characters' neutrals, for style only.
+- **The critic is good at style and bad at detail.** It passed a kitchen that
+  faded out at the edges and missed a wrong hand pose; it also failed good
+  birds when the preview was wrong. Read the contact sheet yourself.
+- **Check the preview before believing a verdict.** A critic judging a wrong
+  composite gives confident, wrong answers. `art.py recheck` re-judges for free
+  once the preview is fixed.
+- **Look at the real page, not only the composite.** The question mark passed
+  every check and was half hidden by a balloon on the page.
+
 ## Getting better over time
 
 `python3 tools/art.py report` groups every logged candidate by kind: pass rate,

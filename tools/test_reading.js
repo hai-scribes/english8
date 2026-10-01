@@ -946,7 +946,7 @@ async function main() {
      standing under it — and insist a flipped one was among them, or the
      check passes on a year of chapters that only ever mark the left speaker. */
   {
-    let seen = 0, flipped = 0, wrong = 0;
+    let seen = 0, flipped = 0, wrong = 0, upright = 0;
     const units = fs.readdirSync(path.join(ROOT, "docs")).filter(d => /^unit-\d\d$/.test(d));
     for (const unit of units){
       const win = await settled(load(`docs/${unit}/lesson-1/index.html`, null, fastPage));
@@ -959,7 +959,12 @@ async function main() {
           seen++;
           const figFlip = /scaleX\(-1\)/.test(fig.style.transform);
           if (figFlip) flipped++;
-          if (figFlip !== /scaleX\(-1\)/.test(fx.style.transform)) wrong++;
+          /* Mirrored, or — for a glyph — the pre-mirrored `.flip` file,
+             never both and never neither. */
+          const mirrored = /scaleX\(-1\)/.test(fx.style.transform);
+          const flipFile = /\.flip\.webp/.test(fx.style.backgroundImage);
+          if (figFlip !== (mirrored !== flipFile)) wrong++;
+          if (flipFile) upright++;
         }
         if (dlg.querySelector(".d-next").disabled) break;
         const was = dlg.querySelector(".d-count").textContent;
@@ -971,6 +976,8 @@ async function main() {
     ok("effects: a figure effect is found over its figure", seen > 0, seen + " seen");
     ok("effects: at least one sits over a flipped figure", flipped > 0,
        flipped + " of " + seen);
+    ok("effects: a glyph over a flipped figure takes the upright file",
+       upright > 0, upright + " seen");
     ok("effects: flipped exactly when the figure under it is flipped",
        wrong === 0, `${wrong} of ${seen} wrong (${flipped} over a flipped figure)`);
   }

@@ -99,6 +99,26 @@ def references(t: prompts.Target):
                 f"same person: identical face, hair, clothes, colours, line and "
                 f"proportions, at the same size in the frame and the same eye level. "
                 f"Only the expression and the hands change, as described below.")
+        if not others:
+            # A character nobody has drawn yet has nothing to agree with, and
+            # the first three Bà Sáus came back in three different styles — one
+            # of them not this comic's at all. The cast that IS drawn is the
+            # style reference we own: same hand, different person.
+            mates = []
+            for c in _cast()["characters"].values():
+                if c["slug"] != t.slug:
+                    mates += _existing(config.ROOT / "art" / "cast" / c["slug"] / "neutral.png")[:1]
+            for p in mates[:2]:
+                refs.append(_read(p))
+            if mates:
+                lines.append(
+                    f"The first {len(mates[:2])} attached image(s) show OTHER characters "
+                    f"from the same comic, drawn by the same hand. They are attached for "
+                    f"the drawing style only: match their line weight and colour, the "
+                    f"flat fills with one hard-edged shadow, the way a face is built from "
+                    f"a few lines, the cheek blush, and how large the figure is in the "
+                    f"frame. The person you are drawing is somebody else entirely — "
+                    f"do not copy their face, hair, age, clothes or pose.")
     style = _style_ref() if t.kind in ("cast", "bg", "props") else None
     if style:
         refs.append(_read(style))

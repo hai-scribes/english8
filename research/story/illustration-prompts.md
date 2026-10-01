@@ -5231,34 +5231,17 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine
-> a child standing in the **lower three-quarters** of the square, seen from
-> the chest up and turned three-quarters toward the **right-hand side** of the
-> frame, with the top of their head about **a third of the way down** from the
-> top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the mark **alone,
+> centred, filling most of the square**. The build trims it and stamps it
+> above and beside the head at a measured position (`place` in
+> `data/cast.json`), so its position and size in this picture do not matter.
+> Only its shape does.
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from **41% to 63%
-> across** — and runs from about **31% to 63% of the way down**. Because the
-> child looks to the right, the face is the right-hand part of the head: the
-> eyes are at about 47% down, the cheeks at about 55% down and the chin at
-> about 63%, and the left-hand part of the head is hair. Most of this square
-> is empty background, so a mark meant for a face that drifts outward lands on
-> the scenery beside the character instead of on them. When this block says
-> *beside the face*, it does not mean beside the frame. **Do not draw the
-> child.** Draw only the mark, positioned where it would fall on or around
-> that figure, and leave every other part of the square plain white. The page
-> composites this square directly over the character at exactly that scale, so
-> the mark's position inside the frame *is* the information — a mark drawn in
-> the middle of an empty square lands on the character's chest wherever it was
-> meant to go.
->
-> One question mark floating **above and to the right of the head**, at about
-> **62–74% across and 10–28% of the way down**, tilted a few degrees off
-> vertical. Drawn as a fat cartoon glyph with a thick black outline and a
-> white fill, not as a typeface — this is a *drawn symbol*, the only mark in
-> this file that is allowed to be shaped like a character. Nothing else in the
-> frame.
+> **One** question mark, tilted a few degrees off vertical. Drawn as a fat
+> cartoon glyph with a thick black outline and a white fill, not as a typeface
+> — this is a *drawn symbol*, the only mark in this file that is allowed to be
+> shaped like a character. The outline closes all the way round, on the curve
+> and on the dot. One mark only. The rest of the square is empty white.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -5336,29 +5319,17 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine
-> a child standing in the **lower three-quarters** of the square, seen from
-> the chest up and turned three-quarters toward the **right-hand side** of the
-> frame, with the top of their head about **a third of the way down** from the
-> top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the block of lines
+> **alone**, starting at the left edge. The build trims it and stamps it into
+> the space behind the figure's head (`place` in `data/cast.json`), stopping
+> short of the hair: an effect is drawn OVER its figure, so lines that reached
+> the head would cross the face.
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from **41% to 63%
-> across** — and runs from about **31% to 63% of the way down**. Because the
-> child looks to the right, the face is the right-hand part of the head: the
-> eyes are at about 47% down, the cheeks at about 55% down and the chin at
-> about 63%, and the left-hand part of the head is hair. Most of this square
-> is empty background, so a mark meant for a face that drifts outward lands on
-> the scenery beside the character instead of on them. When this block says
-> *beside the face*, it does not mean beside the frame. **Do not draw the
-> child.** Draw only the mark, positioned where it would fall on or around
-> that figure, and leave every other part of the square plain white. The page
-> composites this square directly over the character at exactly that scale, so
-> the mark's position inside the frame *is* the information — a mark drawn in
-> the middle of an empty square lands on the character's chest wherever it was
-> meant to go.
->
-> Straight horizontal motion lines sweeping in **from the left edge**, behind where the figure stands — twelve or so fine black lines of varying length and weight, densest at the edge and petering out toward the middle of the frame, all strictly parallel. The right half of the frame is empty. Sharp, ruled, ink only.
+> Straight horizontal motion lines sweeping in **from the left edge** — twelve
+> or so fine black lines of varying length and weight, densest at the edge and
+> petering out toward the middle of the frame, all strictly parallel and
+> strictly horizontal. The right half of the frame is empty. Sharp, ruled, ink
+> only.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency

@@ -3059,6 +3059,7 @@ function initScene(root, p){
       const el = document.createElement("div");
       el.className = "d-fx-one";
       el.dataset.fx = f.slug;
+      let flip = false;
       if (f.on === "panel"){
         el.dataset.over = "panel";
       } else {
@@ -3080,13 +3081,17 @@ function initScene(root, p){
            own centre is flipping it about the figure's. `transform` composes
            with the `translate` centring and the pop's `scale`; it replaces
            neither. */
-        el.style.transform = (p.faceIn !== false && figX(i, n) > 0.5) ? "scaleX(-1)" : "";
+        flip = p.faceIn !== false && figX(i, n) > 0.5;
+        /* …except a glyph. A mirrored question mark is another character, so an
+           `upright` effect ships a second file with the mark at the mirrored
+           POSITION and the right way round, and takes that instead. */
+        el.style.transform = (flip && !f.up) ? "scaleX(-1)" : "";
         /* Centred by `translate` in the stylesheet, not by a transform written
            here — the pop scales this element, and a scale applied over a
            `transform` translation drags the offset with it. See the note at
            `.d-fx-one`. */
       }
-      const src = up + ASSET_FX + f.slug + ".webp";
+      const src = up + ASSET_FX + f.slug + (flip && f.up ? ".flip" : "") + ".webp";
       el.style.backgroundImage = 'url("' + src + '")';
       const probe = new Image();
       probe.onerror = () => { if (el.isConnected) el.remove(); };

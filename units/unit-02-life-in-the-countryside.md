@@ -32,14 +32,14 @@
 **Tí|surprised:** Bến Vàng? That's your village. That's miles.
 **Bà Sáu|neutral:** Nine kilometres by the new road. Your uncle needs his medicine today, not tomorrow.
 **Tí|neutral:** I'll take the [[ferry]].
-**Bà Sáu|neutral:** The ferry runs **later** than it used to. That means an hour on the bank.
+**Bà Sáu|neutral:** The ferry runs later [[than|gram:than]] it used to. That means an hour on the bank.
 **Tí|annoyed:** The bus, then.
 @fx speed on=basau
-**Bà Sáu|annoyed:** The bus goes **more slowly** than you walk. It stops at every gate between here and the [[canal]].
+**Bà Sáu|annoyed:** The bus goes more slowly than you walk. It stops at every gate between here and the [[canal]].
 **Tí|neutral:** So how did you get there when you were thirteen?
 **Bà Sáu|happy:** There was a path. Behind the [[paddy fields|paddy field]], along the [[stream]], straight up over the hill and down the other side.
 **Tí|surprised:** Was it any quicker?
-**Bà Sáu|happy:** We got there far **more quickly** than the boats did, and we started **earlier** than anybody. I knew that hill **better** than I know this kitchen.
+**Bà Sáu|happy:** We got there far more quickly than the boats did, and we started earlier than anybody. I knew that hill better than I know this kitchen.
 **Tí|neutral:** Then I'll take the path.
 **Bà Sáu|sad:** You can't. The new road went through it thirty years ago. Nobody has walked it since.
 **Tí|worried:** Somebody must know where it begins.
@@ -80,9 +80,8 @@
 - Bà Sáu: "I knew that hill ___ than I know this kitchen." {better | more well | weller} = better
 :::
 
-> **Ghi chú:** runs **later**, started **earlier** — thêm **-er**. Goes **more
-> slowly**, got there **more quickly** — thêm **more**. Knew it **better** —
-> *well* đổi hẳn thành **better**. Lesson 3 giải thích vì sao.
+> **Ghi chú:** trạng từ ngắn thêm **-er**, trạng từ dài dùng **more**, và
+> *well* đổi hẳn dạng. Lesson 3 giải thích vì sao.
 
 ---
 

@@ -1159,7 +1159,13 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
                 raise SystemExit(f"{where}: two effects on {on} in one panel — "
                                  f"one is the limit, and it is the limit because "
                                  f"two do not read")
-            pending_fx.append({"slug": slug, "on": on})
+            fx_row = {"slug": slug, "on": on}
+            # A glyph cannot be mirrored with its figure — a flipped question
+            # mark is a different character. The page swaps in the `.flip` file
+            # make_overlay.py writes: mirrored POSITION, unmirrored mark.
+            if CAST_FX[slug].get("upright"):
+                fx_row["up"] = True
+            pending_fx.append(fx_row)
             seen_fx.add(slug)
             breaks = True
             continue

@@ -390,6 +390,12 @@ per stamp, in fractions of the effect square. `make_overlay.py` trims the
 drawing and stamps it there. `flush` is the worked example, and
 `tools/artgen/place.py` has the measured positions of the cheeks.
 
+**If the mark is a glyph, add `"upright": true`.** The page mirrors a figure
+effect with its figure, and a mirrored question mark is a different character.
+An upright effect gets a second file, `<slug>.flip.webp` — the mirrored
+position, the mark the right way round — and the page uses it over a flipped
+figure. `question` is the worked example.
+
 ### Editing a prompt when the story changes
 
 Do this whenever the prose starts naming something the picture does not have —

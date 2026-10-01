@@ -23,6 +23,18 @@ figure, and mirrored with it), and the expressions are aligned by
 Tí and Thảo, all twelve drawings: near cheek (0.510-0.526, 0.558-0.561), far
 cheek (0.607-0.614, 0.553-0.556).
 
+`upright` marks an effect whose mark is a glyph. The page mirrors a figure
+effect with its figure, and a mirrored question mark is a different character,
+so `make_overlay.py` also writes `<slug>.flip.webp` — stamped at the mirrored
+positions, the mark unmirrored — and the page takes that one for a flipped
+figure instead of flipping the square.
+
+Keep a stamp OUT of the band above the head. A speaker's balloon sits there,
+balloons are drawn over effects, and the first position tried for `question`
+(above the head, y 0.23) put half the mark under the balloon of the very line
+it belonged to. Beside the head, in front of the face, is free: the head runs
+0.41-0.63 across and 0.31-0.63 down.
+
 An effect with no `place` is composed by the generator inside the square, as
 before — right for a burst behind the head or lines from an edge, which are
 placed against the frame rather than against a feature.
@@ -35,10 +47,15 @@ def trim(im: Image.Image) -> Image.Image:
     return im.crop(bb) if bb else im
 
 
-def stamp(mark: Image.Image, places, side: int) -> Image.Image:
+def stamp(mark: Image.Image, places, side: int, mirrored: bool = False) -> Image.Image:
+    """`mirrored` puts each stamp at the mirror-image POSITION and leaves the
+    mark itself the right way round — the file an `upright` effect uses over a
+    figure the page has flipped."""
     mark = trim(mark.convert("RGBA"))
     out = Image.new("RGBA", (side, side), (255, 255, 255, 0))
     for x, y, w in places:
+        if mirrored:
+            x = 1 - x
         mw = max(1, round(w * side))
         mh = max(1, round(mark.height * mw / mark.width))
         m = mark.resize((mw, mh), Image.LANCZOS)
