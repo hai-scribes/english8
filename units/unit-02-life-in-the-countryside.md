@@ -137,7 +137,7 @@
 - The farmers use ___ to make fences, baskets and even houses. {bamboo | poultry | scenery} = bamboo
 - After the noise of the city, the village felt quiet and ___ . {peaceful | well-trained | cultivated} = peaceful
 - It is so ___ here in the evening — no cars, only the frogs. {peaceful | vast | well-trained} = peaceful
-- The men ___ the sacks of rice onto the truck before sunrise. {loaded | unloaded | milked} = loaded
+- The men ___ the sacks of rice onto the truck before sunrise. {loaded | ploughed | milked} = loaded
 - At the end of market day, the traders ___ their empty baskets back onto the boat. {load | unload | plough} = load
 - When the boat reached the harbour, the fishermen began to ___ their catch. {unload | load | plough} = unload
 - In summer we go to my aunt's orchard to ___ — mangoes, longans and lychees. {pick fruit | collect eggs | catch fish} = pick fruit
@@ -284,8 +284,8 @@ Both are **short**. The difference is **stress** and **tongue position**.
 
 - **/ə/** only ever appears in a weak, **unstressed** syllable. The mouth is
   completely relaxed — it is the laziest sound in English.
-- **/ɪ/** is a real short vowel. It can be **stressed** (*v**i**llage*,
-  *h**i**ll*) or unstressed (*chick**e**n*, *farm**i**ng*). The tongue is
+- **/ɪ/** is a real short vowel. It can be **stressed** (v**i**llage,
+  h**i**ll) or unstressed (chick**e**n, farm**i**ng). The tongue is
   higher and further forward, and the lips are slightly spread.
 
 | | /ə/ — relaxed, never stressed | /ɪ/ — short, tongue high and forward |
@@ -309,27 +309,27 @@ A useful set of pairs to feel the difference:
 ### 2.1 Sort the sounds
 
 ::: task skill="course" type="sort" opts="/ə/|/ɪ/" ask="Which sound is in the **bold** part?"
-- farm**er** = /ə/
-- v**i**llage = /ɪ/
-- wat**er** = /ə/
-- ch**i**cken = /ɪ/
-- broth**er** = /ə/
-- p**i**ck = /ɪ/
-- orch**ar**d = /ə/
-- h**i**ll = /ɪ/
-- c**o**llect = /ə/
-- m**i**lk = /ɪ/
-- neighb**our** = /ə/
-- br**i**dge = /ɪ/
+- sist**er** = /ə/
+- f**i**sh = /ɪ/
+- c**a**nal = /ə/ ~ say it /kəˈnæl/
+- r**i**ver = /ɪ/
+- **a**go = /ə/
+- harv**e**st = /ɪ/ ~ say it /ˈhɑːvɪst/
+- hospit**a**ble = /ə/ ~ say it /hɒˈspɪtəbl/
+- b**u**sy = /ɪ/ ~ say it /ˈbɪzi/
+- col**our** = /ə/
+- cott**a**ge = /ɪ/ ~ say it /ˈkɒtɪdʒ/
+- buff**a**lo = /ə/ ~ say it /ˈbʌfələʊ/
+- k**i**tchen = /ɪ/
 :::
 
 ### 2.2 Odd sound out
 
 ::: task skill="course" type="choice" variant="odd-one-out" ask="Listen for the **vowel** in the *italic* part, not the meaning."
-- farm*er* · farm*ing* · wat*er* · broth*er* = farm*ing* ~ *farming* ends in /ɪ/; the others are /ə/
-- v*i*llage · ch*i*cken · *a*bout · h*i*ll = *a*bout ~ *about* starts with /ə/; the others are /ɪ/
-- c*o*llect · *i*nside · *a*bout · b*a*nana = *i*nside ~ *inside* starts with /ɪ/; the others are /ə/
-- p*i*ck · m*i*lk · broth*er* · br*i*dge = broth*er* ~ *brother* ends in /ə/; the others are /ɪ/
+- teach*er* · teach*ing* · doct*or* · sug*ar* = teach*ing* ~ *teaching* ends in /ɪŋ/; the others end in /ə/
+- w*i*nd · s*i*x · *a*long · l*i*ttle = *a*long ~ *along* starts with /ə/; the others have /ɪ/
+- t*o*day · *i*nto · *a*way · p*o*lice = *i*nto ~ *into* starts with /ɪ/; the others have /ə/
+- mark*e*t · bask*e*t · pict*ure* · tick*e*t = pict*ure* ~ *picture* ends in /ə/; the others have /ɪ/
 :::
 
 ### 2.3 Say these sentences
@@ -471,6 +471,8 @@ something**? Say *carefully*.
 - Our team played ___ this week than last week and lost 5–0. {worse | badder | worst} = worse
 - The swimmers trained ___ this year than last year. {longer | more long | more longly} = longer
 - Chú Bảy mends nets ___ than anyone at the harbour. {more quickly | quicklier | more quick} = more quickly
+- Please write ___ — I can't read your answer. {more clearly | clearlier | more clear} = more clearly
+- If you work harder, you will do ___ in your exam. {better | more well | weller} = better
 @ gap-fill ask="Which word makes the comparison stronger?"
 - Life in the village moves ___ more slowly than in the city. {much | very | too} = much
 - The combine harvester works ___ faster than ten farmers. {far | very | so} = far
@@ -495,6 +497,12 @@ something**? Say *carefully*.
 - A good driver {He is a more careful driver than me. | He is a more carefully driver than me. | He is a carefullier driver than me.} = He is a more careful driver than me.
 - The harvest {We finished the harvest earlier this year. | We finished the harvest the earlier this year. | We finished the harvest more early this year.} = We finished the harvest earlier this year.
 - The climb {They climbed higher up the mountain than us. | They climbed more highly up the mountain than us. | They climbed more high up the mountain than us.} = They climbed higher up the mountain than us.
+@ choice ask="Which sentence is true?"
+- The red car goes 200 km an hour and the blue car goes 160. {The red car goes faster than the blue car. | The blue car goes faster than the red car. | The red car goes more slowly than the blue car.} = The red car goes faster than the blue car.
+- Hùng jumped 1.5 metres and Tí jumped 1.3. {Hùng jumped higher than Tí. | Tí jumped higher than Hùng. | Hùng jumped lower than Tí.} = Hùng jumped higher than Tí.
+- Thảo got 90% in the test and Khoa got 80%. {Thảo did better than Khoa. | Khoa did better than Thảo. | Thảo did worse than Khoa.} = Thảo did better than Khoa.
+- We expected the bus at 7.00, and it came at 6.30. {The bus came earlier than we expected. | The bus came later than we expected. | The bus came much later than we expected.} = The bus came earlier than we expected.
+- A bus leaves every 15 minutes and a train leaves every 30. {Buses leave more frequently than trains. | Trains leave more frequently than buses. | Trains leave more often than buses.} = Buses leave more frequently than trains.
 @ error-correction
 - He drives more careful than my uncle. {more carefully | carefuller | most carefully} = more careful -> more carefully ~ *drives* needs **more carefully**
 - She works more hard than anybody in the village. {harder | more hardly | hardest} = more hard -> harder ~ hard → **harder**
@@ -508,7 +516,7 @@ something**? Say *carefully*.
 - We finished harvesting the earlier this year. {earlier | more early | earliest} = the earlier -> earlier ~ no *the*: just **earlier**
 - They climbed more highly up the mountain than us. {higher | more high | highest} = more highly -> higher ~ high → **higher**
 - The ferry goes very more slowly than the bus. {much | too | so} = very -> much ~ **much** more slowly, never *very*
-- Bống ate more little than Tí. {less | fewer | littler} = more little -> less ~ little → **less**
+- Bống ate more little than Tí. {less | least | littler} = more little -> less ~ little → **less**
 - My uncle lives more far from the sea than we do. {farther | farer | farthest} = more far -> farther ~ far → **farther**
 - It rained more heavy today than yesterday. {more heavily | more heavier | heavilier} = more heavy -> more heavily ~ *rained* needs **more heavily**
 @ sentence-build
@@ -781,6 +789,8 @@ short notes (not full sentences).
 | Where is it, and how do you get there? | |
 | What can you see when you arrive? | |
 | What do people do there for a living? | |
+| How do people there get on with each other? | |
+| What is special about it? | |
 | How is it different from a big city? *(use a comparative adverb)* | |
 | What do you like most, and least, about it? | |
 
@@ -809,10 +819,8 @@ Repeat Step 2 until each answer runs clearly from its first word to its last.
 
 ### Everyday English — Giving and responding to compliments
 
-*Two sets of fixed phrases. The first is a separate thing from the speaking
-above: how to give someone a compliment, and how to answer one. Learn them as
-they are. The second does fit it — how to ask someone about a place they know,
-and what to say back.*
+*Fixed phrases for giving a compliment and answering one, then for asking
+someone about a place they know.*
 
 #### Giving a compliment
 
@@ -827,8 +835,8 @@ they did. Two patterns cover almost every case:
 | **Your** rice cakes **are delicious.** | Bánh của bạn ngon thật. |
 
 > ⚠️ Note the word order after **What a…** — it is *not* a question, so the verb
-> stays at the end: *What a beautiful kite **you have**!*, never
-> ❌ *What a beautiful kite **do you have**?*
+> stays at the end: What a beautiful kite **you have**!, never
+> ❌ What a beautiful kite **do you have**?
 
 #### Responding to a compliment
 
@@ -885,6 +893,9 @@ from the table — and react to each answer.
 - There is an old ___ behind the kitchen; we get our water there. {well | barn | orchard} = well
 - A group of cattle moving together is called a ___ . {herd | nomad | barn} = herd
 - The paddy fields are ___ — they reach the horizon. {vast | hospitable | well-trained} = vast
+- The family was so ___ that they gave us dinner and a bed for the night. {hospitable | picturesque | vast} = hospitable
+- Painters love this ___ village, with its old bridge and wooden houses. {picturesque | well-trained | surrounded} = picturesque
+- It took four men an hour to ___ the rice from the truck. {unload | plough | cultivate} = unload
 :::
 
 ### 6.2 Pronunciation check
