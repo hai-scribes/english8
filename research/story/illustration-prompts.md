@@ -154,6 +154,7 @@ even when she is sad; Bà Sáu is planted and her hands are always doing or havi
 just done something; Khoa has the notebook in every panel and it is his hands'
 whole vocabulary; Bống uses both hands at once for everything, badly, because
 she has not had them long.
+**Khoa's book is brick red, not green.** The green notebook is the keeper's and Tí carries it — unit 11 puts it on stage as a prop while Khoa says *bring the green notebook*. Khoa's six were first drawn hugging a green one, so a reader saw two; his masters were recoloured (originals in `.artgen/replaced/`), and his prompts now say *red exercise book*.
 **Do not normalise these back to one description.** The one thing they do share
 is the last line — every gesture stays at chest height or above, because the
 crop is chest-up and a hand below it is a hand nobody sees.
@@ -2239,16 +2240,25 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Khoa** — a boy of thirteen, half a head taller than
-> the others, neat and calm. A straight vertical silhouette, arms at rest,
-> the stillest figure in the cast. Warm brown-black hair, combed flat and
-> lying smoother than anyone else's, with **a clean side parting** — the
-> only parting in the cast. Eyes even ovals with
-> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
-> **never smug, never sneering.** White shirt buttoned to the collar.
+> **The character.** **Khoa** — a boy of thirteen, the tallest of the children
+> and the thinnest: a long neck, narrow shoulders, all elbows. **He has
+> outgrown his shirt** — a plain white school shirt, clean, worn open at the
+> neck, whose long sleeves stop well short of his wrists — and **it sits a
+> little crooked on him**, one point of the collar higher than the other.
+> **Round wire glasses, a little too big, sitting low on his nose**, one arm
+> of them bound with a wrap of white thread where it once broke. Warm
+> brown-black hair combed flat with a clean side parting — the only parting in
+> the cast — except for **one lock that has fallen forward across the top of
+> his glasses**. **A short pencil stub tucked behind his ear**, and a smudge
+> of blue ink on his fingers. Behind the lenses his eyes are even ovals, a
+> little wide, looking slightly past whoever he is talking to, as if he is
+> still working something out. A small real smile, closed and a bit lopsided.
+> He is the cleverest person in the room and has not noticed: kind,
+> absent-minded, a little awkward, **never smug, never sneering, never cool.**
 > Reproduce that design exactly, with no change to hair, face, clothing,
-> colour or proportion. **Must not:** be drawn as a rival or a snob;
-> resemble any existing Studio Ghibli character.
+> colour or proportion. **Must not:** be drawn as a rival, a snob or a neat
+> prefect; wear a tie or a blazer; resemble any existing Studio Ghibli
+> character.
 >
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
@@ -2264,13 +2274,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > may be cropped by the top or side edges, least of all a hand**, so keep the
 > hands well above the bottom edge.
 >
-> **The expression.** The expression is **neutral**: an ordinary talking
-> face, mouth slightly open, no strong feeling; **the green notebook held
-> flat against his chest in both hands**, arms at rest. The stillest figure
-> in the cast. Keep every gesture at chest height or above.
+> **The expression.** The expression is **neutral**: an ordinary talking face,
+> mouth slightly open, no strong feeling; **one arm holding the red exercise book
+> flat against his chest, loose papers sticking out of its edges, while the
+> other hand pushes his glasses up his nose with one bent knuckle.**
+> Unhurried, a little elsewhere. Keep every gesture at chest height or above.
 >
-> **Keep visible:** the clean side parting, and the green notebook — he has
-> it in his hands in every panel, though what his hands do with it changes.
+> **Keep visible:** the round glasses low on his nose, the lock of hair fallen
+> across them, the pencil stub behind his ear, the sleeves that are too short
+> for his arms, and the red exercise book — he has it in his hands in every
+> panel, though what his hands do with it changes.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper
@@ -2345,16 +2358,25 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Khoa** — a boy of thirteen, half a head taller than
-> the others, neat and calm. A straight vertical silhouette, arms at rest,
-> the stillest figure in the cast. Warm brown-black hair, combed flat and
-> lying smoother than anyone else's, with **a clean side parting** — the
-> only parting in the cast. Eyes even ovals with
-> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
-> **never smug, never sneering.** White shirt buttoned to the collar.
+> **The character.** **Khoa** — a boy of thirteen, the tallest of the children
+> and the thinnest: a long neck, narrow shoulders, all elbows. **He has
+> outgrown his shirt** — a plain white school shirt, clean, worn open at the
+> neck, whose long sleeves stop well short of his wrists — and **it sits a
+> little crooked on him**, one point of the collar higher than the other.
+> **Round wire glasses, a little too big, sitting low on his nose**, one arm
+> of them bound with a wrap of white thread where it once broke. Warm
+> brown-black hair combed flat with a clean side parting — the only parting in
+> the cast — except for **one lock that has fallen forward across the top of
+> his glasses**. **A short pencil stub tucked behind his ear**, and a smudge
+> of blue ink on his fingers. Behind the lenses his eyes are even ovals, a
+> little wide, looking slightly past whoever he is talking to, as if he is
+> still working something out. A small real smile, closed and a bit lopsided.
+> He is the cleverest person in the room and has not noticed: kind,
+> absent-minded, a little awkward, **never smug, never sneering, never cool.**
 > Reproduce that design exactly, with no change to hair, face, clothing,
-> colour or proportion. **Must not:** be drawn as a rival or a snob;
-> resemble any existing Studio Ghibli character.
+> colour or proportion. **Must not:** be drawn as a rival, a snob or a neat
+> prefect; wear a tie or a blazer; resemble any existing Studio Ghibli
+> character.
 >
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
@@ -2370,13 +2392,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > may be cropped by the top or side edges, least of all a hand**, so keep the
 > hands well above the bottom edge.
 >
-> **The expression.** The expression is **happy**: a real open smile, eyes
-> curved; **the notebook lowered into one hand while the other lifts in a
-> small open gesture**, and his shoulders come up slightly. Keep every
-> gesture at chest height or above.
+> **The expression.** The expression is **happy**: a real open smile, a bit
+> lopsided, eyes curved behind the lenses; **one finger raised beside his head
+> like a found answer, the notebook hugged against his chest with the other
+> arm.** His shoulders come up slightly. Keep every gesture at chest height or
+> above.
 >
-> **Keep visible:** the clean side parting, and the green notebook — he has
-> it in his hands in every panel, though what his hands do with it changes.
+> **Keep visible:** the round glasses low on his nose, the lock of hair fallen
+> across them, the pencil stub behind his ear, the sleeves that are too short
+> for his arms, and the red exercise book — he has it in his hands in every
+> panel, though what his hands do with it changes.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper
@@ -2451,16 +2476,25 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Khoa** — a boy of thirteen, half a head taller than
-> the others, neat and calm. A straight vertical silhouette, arms at rest,
-> the stillest figure in the cast. Warm brown-black hair, combed flat and
-> lying smoother than anyone else's, with **a clean side parting** — the
-> only parting in the cast. Eyes even ovals with
-> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
-> **never smug, never sneering.** White shirt buttoned to the collar.
+> **The character.** **Khoa** — a boy of thirteen, the tallest of the children
+> and the thinnest: a long neck, narrow shoulders, all elbows. **He has
+> outgrown his shirt** — a plain white school shirt, clean, worn open at the
+> neck, whose long sleeves stop well short of his wrists — and **it sits a
+> little crooked on him**, one point of the collar higher than the other.
+> **Round wire glasses, a little too big, sitting low on his nose**, one arm
+> of them bound with a wrap of white thread where it once broke. Warm
+> brown-black hair combed flat with a clean side parting — the only parting in
+> the cast — except for **one lock that has fallen forward across the top of
+> his glasses**. **A short pencil stub tucked behind his ear**, and a smudge
+> of blue ink on his fingers. Behind the lenses his eyes are even ovals, a
+> little wide, looking slightly past whoever he is talking to, as if he is
+> still working something out. A small real smile, closed and a bit lopsided.
+> He is the cleverest person in the room and has not noticed: kind,
+> absent-minded, a little awkward, **never smug, never sneering, never cool.**
 > Reproduce that design exactly, with no change to hair, face, clothing,
-> colour or proportion. **Must not:** be drawn as a rival or a snob;
-> resemble any existing Studio Ghibli character.
+> colour or proportion. **Must not:** be drawn as a rival, a snob or a neat
+> prefect; wear a tie or a blazer; resemble any existing Studio Ghibli
+> character.
 >
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
@@ -2477,12 +2511,15 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > hands well above the bottom edge.
 >
 > **The expression.** The expression is **worried**: brows raised and pulled
-> together, mouth a small flat line; **both hands closed a little too
-> tightly on the notebook**, holding it up against his chest like something
-> to stand behind. Keep every gesture at chest height or above.
+> together, mouth a small flat line; **the knuckle of one bent finger pressed
+> against his lower lip, the notebook clutched to his chest with the other
+> arm** like something to stand behind. Looking down and to one side, working
+> it out. Keep every gesture at chest height or above.
 >
-> **Keep visible:** the clean side parting, and the green notebook — he has
-> it in his hands in every panel, though what his hands do with it changes.
+> **Keep visible:** the round glasses low on his nose, the lock of hair fallen
+> across them, the pencil stub behind his ear, the sleeves that are too short
+> for his arms, and the red exercise book — he has it in his hands in every
+> panel, though what his hands do with it changes.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper
@@ -2557,16 +2594,25 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Khoa** — a boy of thirteen, half a head taller than
-> the others, neat and calm. A straight vertical silhouette, arms at rest,
-> the stillest figure in the cast. Warm brown-black hair, combed flat and
-> lying smoother than anyone else's, with **a clean side parting** — the
-> only parting in the cast. Eyes even ovals with
-> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
-> **never smug, never sneering.** White shirt buttoned to the collar.
+> **The character.** **Khoa** — a boy of thirteen, the tallest of the children
+> and the thinnest: a long neck, narrow shoulders, all elbows. **He has
+> outgrown his shirt** — a plain white school shirt, clean, worn open at the
+> neck, whose long sleeves stop well short of his wrists — and **it sits a
+> little crooked on him**, one point of the collar higher than the other.
+> **Round wire glasses, a little too big, sitting low on his nose**, one arm
+> of them bound with a wrap of white thread where it once broke. Warm
+> brown-black hair combed flat with a clean side parting — the only parting in
+> the cast — except for **one lock that has fallen forward across the top of
+> his glasses**. **A short pencil stub tucked behind his ear**, and a smudge
+> of blue ink on his fingers. Behind the lenses his eyes are even ovals, a
+> little wide, looking slightly past whoever he is talking to, as if he is
+> still working something out. A small real smile, closed and a bit lopsided.
+> He is the cleverest person in the room and has not noticed: kind,
+> absent-minded, a little awkward, **never smug, never sneering, never cool.**
 > Reproduce that design exactly, with no change to hair, face, clothing,
-> colour or proportion. **Must not:** be drawn as a rival or a snob;
-> resemble any existing Studio Ghibli character.
+> colour or proportion. **Must not:** be drawn as a rival, a snob or a neat
+> prefect; wear a tie or a blazer; resemble any existing Studio Ghibli
+> character.
 >
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
@@ -2583,13 +2629,15 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > hands well above the bottom edge.
 >
 > **The expression.** The expression is **annoyed**: brows down and level,
-> mouth pressed — a mild and patient annoyance, never a sneer; **the
-> notebook held closed in one hand at chest height, the other hand resting
-> flat on its cover**, as if he had stopped reading mid-page. Keep every
-> gesture at chest height or above.
+> mouth pressed — a mild and patient annoyance at a problem, never at a
+> person, never a sneer; **looking over the top of his glasses, one finger
+> tapping the closed notebook he holds at chest height.** Keep every gesture
+> at chest height or above.
 >
-> **Keep visible:** the clean side parting, and the green notebook — he has
-> it in his hands in every panel, though what his hands do with it changes.
+> **Keep visible:** the round glasses low on his nose, the lock of hair fallen
+> across them, the pencil stub behind his ear, the sleeves that are too short
+> for his arms, and the red exercise book — he has it in his hands in every
+> panel, though what his hands do with it changes.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper
@@ -2664,16 +2712,25 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Khoa** — a boy of thirteen, half a head taller than
-> the others, neat and calm. A straight vertical silhouette, arms at rest,
-> the stillest figure in the cast. Warm brown-black hair, combed flat and
-> lying smoother than anyone else's, with **a clean side parting** — the
-> only parting in the cast. Eyes even ovals with
-> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
-> **never smug, never sneering.** White shirt buttoned to the collar.
+> **The character.** **Khoa** — a boy of thirteen, the tallest of the children
+> and the thinnest: a long neck, narrow shoulders, all elbows. **He has
+> outgrown his shirt** — a plain white school shirt, clean, worn open at the
+> neck, whose long sleeves stop well short of his wrists — and **it sits a
+> little crooked on him**, one point of the collar higher than the other.
+> **Round wire glasses, a little too big, sitting low on his nose**, one arm
+> of them bound with a wrap of white thread where it once broke. Warm
+> brown-black hair combed flat with a clean side parting — the only parting in
+> the cast — except for **one lock that has fallen forward across the top of
+> his glasses**. **A short pencil stub tucked behind his ear**, and a smudge
+> of blue ink on his fingers. Behind the lenses his eyes are even ovals, a
+> little wide, looking slightly past whoever he is talking to, as if he is
+> still working something out. A small real smile, closed and a bit lopsided.
+> He is the cleverest person in the room and has not noticed: kind,
+> absent-minded, a little awkward, **never smug, never sneering, never cool.**
 > Reproduce that design exactly, with no change to hair, face, clothing,
-> colour or proportion. **Must not:** be drawn as a rival or a snob;
-> resemble any existing Studio Ghibli character.
+> colour or proportion. **Must not:** be drawn as a rival, a snob or a neat
+> prefect; wear a tie or a blazer; resemble any existing Studio Ghibli
+> character.
 >
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
@@ -2689,13 +2746,17 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > may be cropped by the top or side edges, least of all a hand**, so keep the
 > hands well above the bottom edge.
 >
-> **The expression.** The expression is **surprised**: eyes wide and round,
-> brows high, mouth open in a small circle; **the notebook slipping in his
-> grip so that both hands catch at it** — the one moment his stillness
-> breaks. Keep every gesture at chest height or above.
+> **The expression.** The expression is **surprised**: eyes wide and round
+> behind the lenses, brows high, mouth open in a small circle; **his glasses
+> have slipped right down to the tip of his nose, and the notebook is sliding
+> out of his grip with two loose pages escaping, both hands catching at it** —
+> the one moment he is not somewhere else. Keep every gesture at chest height
+> or above.
 >
-> **Keep visible:** the clean side parting, and the green notebook — he has
-> it in his hands in every panel, though what his hands do with it changes.
+> **Keep visible:** the round glasses low on his nose, the lock of hair fallen
+> across them, the pencil stub behind his ear, the sleeves that are too short
+> for his arms, and the red exercise book — he has it in his hands in every
+> panel, though what his hands do with it changes.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper
@@ -2770,16 +2831,25 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Khoa** — a boy of thirteen, half a head taller than
-> the others, neat and calm. A straight vertical silhouette, arms at rest,
-> the stillest figure in the cast. Warm brown-black hair, combed flat and
-> lying smoother than anyone else's, with **a clean side parting** — the
-> only parting in the cast. Eyes even ovals with
-> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
-> **never smug, never sneering.** White shirt buttoned to the collar.
+> **The character.** **Khoa** — a boy of thirteen, the tallest of the children
+> and the thinnest: a long neck, narrow shoulders, all elbows. **He has
+> outgrown his shirt** — a plain white school shirt, clean, worn open at the
+> neck, whose long sleeves stop well short of his wrists — and **it sits a
+> little crooked on him**, one point of the collar higher than the other.
+> **Round wire glasses, a little too big, sitting low on his nose**, one arm
+> of them bound with a wrap of white thread where it once broke. Warm
+> brown-black hair combed flat with a clean side parting — the only parting in
+> the cast — except for **one lock that has fallen forward across the top of
+> his glasses**. **A short pencil stub tucked behind his ear**, and a smudge
+> of blue ink on his fingers. Behind the lenses his eyes are even ovals, a
+> little wide, looking slightly past whoever he is talking to, as if he is
+> still working something out. A small real smile, closed and a bit lopsided.
+> He is the cleverest person in the room and has not noticed: kind,
+> absent-minded, a little awkward, **never smug, never sneering, never cool.**
 > Reproduce that design exactly, with no change to hair, face, clothing,
-> colour or proportion. **Must not:** be drawn as a rival or a snob;
-> resemble any existing Studio Ghibli character.
+> colour or proportion. **Must not:** be drawn as a rival, a snob or a neat
+> prefect; wear a tie or a blazer; resemble any existing Studio Ghibli
+> character.
 >
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
@@ -2796,12 +2866,15 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > hands well above the bottom edge.
 >
 > **The expression.** The expression is **sad**: eyes lowered, brows slack,
-> mouth a short downward curve; **the notebook held closed in both hands and
-> lowered to just below his chest**, forgotten. Keep every gesture at chest
-> height or above.
+> mouth a short downward curve; **both arms wrapped round the closed notebook,
+> holding it to his chest, his head tipped down so that he looks over the top
+> of his glasses at nothing.** Very still. Keep every gesture at chest height
+> or above.
 >
-> **Keep visible:** the clean side parting, and the green notebook — he has
-> it in his hands in every panel, though what his hands do with it changes.
+> **Keep visible:** the round glasses low on his nose, the lock of hair fallen
+> across them, the pencil stub behind his ear, the sleeves that are too short
+> for his arms, and the red exercise book — he has it in his hands in every
+> panel, though what his hands do with it changes.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper

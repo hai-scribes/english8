@@ -207,7 +207,7 @@ def cmd_cut(a):
 
 def cmd_check(a):
     im = Image.open(a.src)
-    rep = None if a.kind == "bg" else cutout.key(im)[1]
+    rep = None if a.kind == "bg" else cutout.key(im, stands=(a.kind == "cast"))[1]
     findings = qa.check(a.kind, im, rep, a.over)
     if rep:
         print(json.dumps(rep))

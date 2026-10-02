@@ -104,8 +104,46 @@ def measure_bg(rgb):
     return bg, flat, edge
 
 
-def key(im: Image.Image, tol: int = TOL, repair: bool = False, gap: int = None):
-    """Return (RGBA cut-out, report). Never modifies an already-keyed image."""
+POCKET_TOL = 5      # how close to the paper an enclosed region must be to BE paper
+# Of the image. The white of an eye is paper-white too, and enclosed: at 0.0004
+# this took the whites out of Bà Sáu's startled eyes. An eye is under 0.1% of
+# the picture and the gap inside a raised arm is over 1%, so the line goes
+# between them, with room on both sides.
+POCKET_MIN = 0.004
+
+
+def pockets(rgb, bg, near, bgm):
+    """Paper the border flood could not reach: the gap inside a raised arm, the
+    space between a hand and a face. It is enclosed by the figure, so it looks
+    to the flood exactly like a white shirt — but it is not painted. A cel white
+    is a slightly warm off-white, a dozen levels from the paper; a pocket IS the
+    paper, within a level or two. Only regions that close to it are taken."""
+    enclosed = near & ~bgm
+    tight = enclosed & (np.abs(rgb - bg).max(axis=2) <= POCKET_TOL)
+    out = np.zeros_like(bgm)
+    m = tight.copy()
+    least = POCKET_MIN * m.size
+    for _ in range(64):
+        if not m.any():
+            break
+        y, x = np.argwhere(m)[0]
+        seed = np.zeros_like(m)
+        seed[y, x] = True
+        r = flood(seed, m)
+        m &= ~r
+        if r.sum() >= least and np.abs(rgb[r].mean(axis=0) - bg).max() <= POCKET_TOL / 2:
+            out |= r
+    return out
+
+
+def key(im: Image.Image, tol: int = TOL, repair: bool = False, gap: int = None,
+        stands: bool = False):
+    """Return (RGBA cut-out, report). Never modifies an already-keyed image.
+
+    `stands` is for a figure the frame crops at the bottom — every character.
+    The flood is then not seeded from the bottom edge, where the figure's own
+    clothes meet the border with no outline between them (a white shirt running
+    off the edge was eaten from below), and enclosed paper is taken out."""
     w, h = im.size
     if is_keyed(im):
         a = np.asarray(im.convert("RGBA").getchannel("A")) > 12
@@ -114,8 +152,19 @@ def key(im: Image.Image, tol: int = TOL, repair: bool = False, gap: int = None):
     rgb = np.asarray(im.convert("RGB")).astype(np.int16)
     bg, flat, _ = measure_bg(rgb)
     near = (np.abs(rgb - bg).max(axis=2) <= tol)
-    edges = border_mask(near.shape)
+    edges = border_mask(near.shape, bottom=not stands)
     bgm = flood(edges, near)
+    # Pockets are found now and added AFTER the leak is measured: a pocket is
+    # paper the flood never reached, and counted in with the flood it reads as
+    # a leak of exactly its own size — three sound drawings were rejected so.
+    pk = pockets(rgb, bg, near, bgm) if stands else np.zeros_like(bgm)
+    pocket_px = int(pk.sum())
+    if pocket_px:
+        # A pocket is found at a tight tolerance, which stops a pixel or two
+        # short of the outline and leaves a pale dotted ring. Take the rest of
+        # the paper up to the line — but only a step, never a flood: the cel
+        # white next door is inside the ordinary tolerance too.
+        pk = dilate(pk, max(2, round(min(w, h) / 400))) & near & ~bgm
 
     # The same flood with every narrow gap in the outline closed. Whatever the
     # first flood reached that this one (grown back over the band it gave up)
@@ -130,6 +179,7 @@ def key(im: Image.Image, tol: int = TOL, repair: bool = False, gap: int = None):
     leak_frac = float(leak.sum()) / fg_area
     if repair and leak.any():
         bgm = recovered
+    bgm = bgm | pk
 
     alpha = np.where(bgm, 0.0, 1.0)
     out = rgb.astype(np.float64)
@@ -153,7 +203,7 @@ def key(im: Image.Image, tol: int = TOL, repair: bool = False, gap: int = None):
     fg = alpha > 0.05
     return (Image.fromarray(rgba, "RGBA"),
             _report(fg, bg, flat, leak_frac, int(bgm.sum()), leak_px=int(leak.sum()),
-                    repaired=bool(repair and leak.any()), gap=gap))
+                    repaired=bool(repair and leak.any()), gap=gap, pocket_px=pocket_px))
 
 
 def wash(im: Image.Image, strength: float = 1.0):

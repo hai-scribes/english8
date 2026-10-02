@@ -153,7 +153,7 @@ def build(slug: str, emotions: list, cols: int, rows: int, keep_white: bool,
         # Key at full resolution, before any resampling: the edge is softened
         # from the drawn line itself rather than from a 640 px copy of it.
         if not keyed and not keep_white:
-            im, rep = cutout.key(im)
+            im, rep = cutout.key(im, stands=True)
             keyed = True
             if not rep["keyed_frac"]:
                 print(f"      note: {emo}: nothing was keyed — is the background white?")

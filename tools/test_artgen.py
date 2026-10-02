@@ -81,6 +81,24 @@ def test_cutout():
     ok(0 < ca[3] < 255 and max(ca[:3]) < 60,
        f"an anti-aliased edge is un-mixed, not left pale ({ca})")
 
+    # A figure the frame crops at the bottom, in an off-white shirt that runs
+    # off the edge, with a paper-white gap enclosed by a raised arm and two
+    # paper-white eyes.
+    fig = Image.new("RGB", (1000, 1000), (255, 255, 255))
+    d = ImageDraw.Draw(fig)
+    d.rectangle((250, 300, 750, 999), fill=(245, 245, 240), outline=(40, 30, 25), width=10)
+    d.rectangle((262, 985, 738, 999), fill=(245, 245, 240))            # no outline along the frame edge
+    d.ellipse((560, 420, 700, 560), fill=(255, 255, 255), outline=(40, 30, 25), width=8)   # the pocket
+    d.ellipse((330, 380, 352, 402), fill=(255, 255, 255), outline=(40, 30, 25), width=4)   # an eye
+    plain, _ = cutout.key(fig)
+    ok(plain.getpixel((500, 900))[3] == 0, "unseated: the shirt is eaten from the bottom edge (the known fault)")
+    cut, rep = cutout.key(fig, stands=True)
+    ok(cut.getpixel((500, 900))[3] == 255, "stands: a shirt running off the bottom edge is kept")
+    ok(cut.getpixel((630, 490))[3] == 0 and rep["pocket_px"] > 0, "stands: paper enclosed by an arm is removed")
+    ok(cut.getpixel((341, 391))[3] == 255, "stands: the white of an eye is not a pocket")
+    ok(rep["leak_frac"] < 0.01, f"stands: a removed pocket is not counted as a leak ({rep['leak_frac']})")
+    ok(cut.getpixel((100, 100))[3] == 0, "stands: the background is still keyed from the other three edges")
+
     # A see-through effect: darkness becomes opacity, capped by `strength`.
     g = Image.new("RGB", (200, 200), (255, 255, 255))
     ImageDraw.Draw(g).rectangle((0, 0, 60, 199), fill=(0, 0, 0))

@@ -443,7 +443,10 @@ def _cut(t, im):
     """Cut a drawing out the way make_overlay.py will: a wash for a see-through
     effect, the border flood for everything else."""
     w = _cast()["fx"].get(t.slug, {}).get("wash") if t.kind == "fx" else None
-    return cutout.wash(im, float(w)) if w else cutout.key(im)
+    if w:
+        return cutout.wash(im, float(w))
+    # A character is cropped by the bottom of the frame: see cutout.key(stands=).
+    return cutout.key(im, stands=(t.kind == "cast"))
 
 
 def _placed(t, cut):
