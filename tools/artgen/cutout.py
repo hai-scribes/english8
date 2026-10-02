@@ -156,6 +156,36 @@ def key(im: Image.Image, tol: int = TOL, repair: bool = False, gap: int = None):
                     repaired=bool(repair and leak.any()), gap=gap))
 
 
+def wash(im: Image.Image, strength: float = 1.0):
+    """A see-through effect: darkness becomes opacity, everywhere.
+
+    `key` answers "what is background and what is drawing", and makes the
+    drawing solid. That is right for a figure and wrong for a shadow, a rain
+    shower or a gloom: those are drawn pale-on-white because paper cannot be
+    half transparent, and keyed solid they would paint opaque bars across the
+    face they are meant to darken. Here every pixel is un-mixed from the paper —
+    white becomes nothing, black becomes solid, a pale grey becomes thin black —
+    and `strength` caps how opaque the darkest part may be, so the picture
+    underneath always reads through.
+    """
+    if is_keyed(im):
+        a = np.asarray(im.convert("RGBA").getchannel("A")) > 12
+        return im.convert("RGBA"), _report(a, None, 1.0, 0.0, 0, pre_cut=True)
+    rgb = np.asarray(im.convert("RGB")).astype(np.float64)
+    # The paper is the brightest common colour. The edges cannot be trusted
+    # here: a gloom hangs from the top edge and rain crosses all four.
+    bg = np.percentile(rgb.reshape(-1, 3), 95, axis=0)
+    a = np.clip(((bg - rgb) / np.maximum(bg, 1)).max(axis=2), 0.0, 1.0)
+    a[a < 0.04] = 0.0                      # paper grain and JPEG noise
+    safe = np.maximum(a, 1e-3)[..., None]
+    col = np.clip((rgb - (1 - a)[..., None] * bg) / safe, 0, 255)
+    out = np.dstack([col, a * strength * 255]).round().astype(np.uint8)
+    out[a == 0] = (255, 255, 255, 0)
+    fg = a > 0.05
+    return (Image.fromarray(out, "RGBA"),
+            _report(fg, bg, 1.0, 0.0, int((~fg).sum()), wash=strength))
+
+
 def _report(fg, bg, flat, leak_frac, keyed_px, pre_cut=False, **extra):
     h, w = fg.shape
     ys, xs = np.nonzero(fg)

@@ -113,7 +113,7 @@ def fit(im: Image.Image, longest: int) -> Image.Image:
 
 
 def build(kind: str, slug: str, keep_white: bool, do_trim: bool, places=None,
-          upright: bool = False) -> bool:
+          upright: bool = False, wash=None) -> bool:
     out_dir = ROOT / "art" / kind
     src_dir = out_dir / "src"
     found = [src_dir / f"{slug}{e}" for e in MASTER_EXT]
@@ -125,7 +125,10 @@ def build(kind: str, slug: str, keep_white: bool, do_trim: bool, places=None,
     im = Image.open(master)
     im = im.convert("RGBA") if im.mode != "RGBA" else im
     already = is_keyed(im)
-    if not keep_white and not already:
+    if wash and not already:
+        # A see-through effect: darkness becomes opacity. See cutout.wash.
+        im = cutout.wash(im, float(wash))[0]
+    elif not keep_white and not already:
         im = key_white(im)
     elif already:
         print("      (already cut out — keying skipped)")
@@ -223,7 +226,8 @@ def main() -> int:
         do_trim = kind == "props"
         places = fx[slug].get("place") if kind == "fx" else None
         upright = bool(fx[slug].get("upright")) if kind == "fx" else False
-        if build(kind, slug, args.keep_white, do_trim, places, upright):
+        wash = fx[slug].get("wash") if kind == "fx" else None
+        if build(kind, slug, args.keep_white, do_trim, places, upright, wash):
             made += 1
     print(f"\n{made} of {len(want)} written.")
     return 0 if made else 1

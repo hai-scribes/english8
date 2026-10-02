@@ -81,6 +81,17 @@ def test_cutout():
     ok(0 < ca[3] < 255 and max(ca[:3]) < 60,
        f"an anti-aliased edge is un-mixed, not left pale ({ca})")
 
+    # A see-through effect: darkness becomes opacity, capped by `strength`.
+    g = Image.new("RGB", (200, 200), (255, 255, 255))
+    ImageDraw.Draw(g).rectangle((0, 0, 60, 199), fill=(0, 0, 0))
+    ImageDraw.Draw(g).rectangle((61, 0, 100, 199), fill=(128, 128, 128))
+    w, _ = cutout.wash(g, 0.5)
+    ok(w.getpixel((190, 100))[3] == 0, "wash: white paper becomes nothing")
+    ok(abs(w.getpixel((30, 100))[3] - 128) <= 2, "wash: black is capped at the given strength")
+    half = w.getpixel((80, 100))
+    ok(abs(half[3] - 64) <= 3 and max(half[:3]) < 12,
+       f"wash: a pale grey becomes thin BLACK, not opaque grey ({half})")
+
     pre = Image.new("RGBA", (100, 100), (0, 0, 0, 0))
     ImageDraw.Draw(pre).ellipse((20, 20, 80, 80), fill=(200, 10, 10, 255))
     out, rep = cutout.key(pre)

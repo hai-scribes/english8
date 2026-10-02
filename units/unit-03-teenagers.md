@@ -22,7 +22,7 @@
 
 ### Dialogue: The list on the wall
 
-::: dialogue title="The list on the wall" bg="school-yard" gramen="so — a compound sentence" gramvi="Hai mệnh đề đầy đủ nối với nhau bằng dấu phẩy + **and / but / so / or / yet**. Vế sau **so** là kết quả của vế trước." gramco="I was tired, so I stopped"
+::: dialogue title="The list on the wall" bg="school-yard" gramen="and · but · so — a compound sentence" gramvi="Hai mệnh đề đầy đủ nối với nhau bằng dấu phẩy + **and / but / so / or / yet**. Vế sau **so** là kết quả của vế trước." gramco="I was tired, so I stopped"
 @cast Tí|sad, Thảo|neutral
 @item class-list at=right
 **Thảo|neutral:** You have read that list four times, Tí. It says the same thing every time.
@@ -31,29 +31,29 @@
 @fx gloom on=Tí
 **Tí|annoyed:** It counts in the yard. Cô Yến read the whole list out at lunch.
 **Thảo|annoyed:** She reads everybody's out. That's her, not you.
-**Tí|sad:** Khoa was top, and that's fair, because he works. Hùng did no work at all, **yet** he came out two places above me.
+**Tí|sad:** Khoa was top, and that's fair, because he works. Hùng did no work at all, yet he came out two places above me.
 **Thảo|worried:** You're [[stressed]], and stressed people read lists four times.
 **Tí|sad:** Everyone in that room is [[keeping up|keep up with]]. I'm not. That's the part I can't [[deal with]].
-**Thảo|neutral:** Half of them are behind too, **but** nobody says it out loud.
+**Thảo|neutral:** Half of them are behind too, but nobody says it out loud.
 **Tí|neutral:** Can I tell you what I actually keep thinking about? The path.
 **Thảo|neutral:** The one we walked on Sunday.
-**Tí|surprised:** It was lost before I was born, **and** it came back anyway. Thirty years, Thảo. Not thirty days.
+**Tí|surprised:** It was lost before I was born, and it came back anyway. Thirty years, Thảo. Not thirty days.
 **Thảo|worried:** …
 **Tí|neutral:** Minh used to say things out loud.
 **Thảo|sad:** …
 **Tí|neutral:** Second row, by the window. He always laughed at lists like that.
 **Thảo|sad:** He did.
-**Tí|sad:** Cô Yến moved his desk in September, **and** now the room just looks normal.
+**Tí|sad:** Cô Yến moved his desk in September, [[and|gram:and]] now the room just looks normal.
 **Thảo|worried|whisper:** We don't talk about that at school. You know we don't.
-**Tí|neutral:** They sold the boat in the summer and went north in the night, **and** nobody in this town has said one word about it since.
+**Tí|neutral:** They sold the boat in the summer and went north in the night, and nobody in this town has said one word about it since.
 **Thảo|worried:** Nobody drowned, Tí. It was money. That is all it was.
 **Tí|neutral:** I know nobody drowned. That isn't what I'm asking. I'm not upset either. I'm [[curious]]. A whole year, and not one person has asked where he went.
 **Thảo|sad:** Asking never brought anybody back, Tí.
 **Tí|neutral:** …
-**Thảo|neutral:** So. You can stand here and read that wall again, **or** you can walk down to the water with me.
+**Thảo|neutral:** So. You can stand here and read that wall again, or you can walk down to the water with me.
 **Tí|annoyed:** I'll go on my own.
 @fx speed on=Thảo
-**Thảo|happy:** You always go on your own, [[so|gram:so]] today I'm coming too.
+**Thảo|happy:** You always go on your own, so today I'm coming too.
 :::
 
 ### 1.1 Comprehension

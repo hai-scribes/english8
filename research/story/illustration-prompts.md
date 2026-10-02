@@ -3749,7 +3749,7 @@ extra re-rolls; the rest appear once or twice each.
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
 >
-> A concrete school yard in flat hard midday light. A painted noticeboard
+> A concrete school yard in flat hard midday light. **The yellow-washed wall of the school building fills the right-hand third of the frame, from the top edge down to the ground, and it is bare**: plain sunlit plaster with nothing pinned, hung or painted on it, because the page hangs the class list there. On the left, a flame tree in full red flower throwing a hard shadow across the concrete, and a bicycle rack beneath it. Beyond a low wall at the back, the roofs of the fishing quarter and the blue of the bay.
 > on a yellow-washed wall, a flame tree in full red flower throwing a hard
 > shadow, a bicycle rack. Along one side a low wall, and below and beyond it
 > the roofs of the fishing quarter and the blue of the bay.
@@ -5419,29 +5419,16 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine
-> a child standing in the **lower three-quarters** of the square, seen from
-> the chest up and turned three-quarters toward the **right-hand side** of the
-> frame, with the top of their head about **a third of the way down** from the
-> top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the block of bars
+> **alone**, hanging from the top edge. The build trims it, makes it
+> see-through and stamps it over the figure's head (`wash` and `place` in
+> `data/cast.json`).
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from **41% to 63%
-> across** — and runs from about **31% to 63% of the way down**. Because the
-> child looks to the right, the face is the right-hand part of the head: the
-> eyes are at about 47% down, the cheeks at about 55% down and the chin at
-> about 63%, and the left-hand part of the head is hair. Most of this square
-> is empty background, so a mark meant for a face that drifts outward lands on
-> the scenery beside the character instead of on them. When this block says
-> *beside the face*, it does not mean beside the frame. **Do not draw the
-> child.** Draw only the mark, positioned where it would fall on or around
-> that figure, and leave every other part of the square plain white. The page
-> composites this square directly over the character at exactly that scale, so
-> the mark's position inside the frame *is* the information — a mark drawn in
-> the middle of an empty square lands on the character's chest wherever it was
-> meant to go.
->
-> Vertical shadow bars hanging **down from the top edge** over the upper half of the frame — eight to twelve straight lines of uneven width, closely spaced, their lower ends ragged and unequal, like a curtain of dark coming down over somebody. Flat dark blue-grey at about two-thirds opacity where they cover, thinning out as they descend. The lower third of the frame is clear.
+> Vertical shadow bars hanging **down from the top edge** — eight to twelve
+> straight lines of uneven width, closely spaced, their lower ends ragged and
+> unequal, like a curtain of dark coming down over somebody. Flat dark
+> blue-grey, solid at the top and paler as they descend. The lower half of the
+> frame is empty white.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency

@@ -116,6 +116,11 @@ Each of these cost real generations to find. None is a guess.
 - **`gen --like <file>` redraws a look that is right but badly executed.** It
   kept Bà Sáu's face exactly and changed only the framing. Expect most of the
   redraws to copy the fault along with the look; take the one the checks pass.
+- **The background style is settled: keep it.** The operator reviewed the plates
+  against *Ponyo* on 2026-10-02, saw trial redraws in a denser crayon-and-pastel
+  style, and chose to keep the watercolour look of `harbour-wall` and `kitchen`.
+  Do not rewrite the plate prompts' style paragraphs. A new plate is sent the
+  existing plates as style references automatically, so it matches them.
 - **The critic is good at style and bad at detail.** It passed a kitchen that
   faded out at the edges and missed a wrong hand pose; it also failed good
   birds when the preview was wrong. Read the contact sheet yourself.

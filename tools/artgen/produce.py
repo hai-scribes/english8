@@ -128,6 +128,22 @@ def references(t: prompts.Target, like=None):
                     f"a few lines, the cheek blush, and how large the figure is in the "
                     f"frame. The person you are drawing is somebody else entirely — "
                     f"do not copy their face, hair, age, clothes or pose.")
+    if t.kind == "bg" and not like:
+        # The plates that exist ARE the house style: the operator reviewed them
+        # against the film on 2026-10-02 and kept them. A new plate is shown
+        # them so the eleven read as one book, not eleven attempts at a brief.
+        mine = config.ROOT / t.path
+        plates = [p for p in sorted((config.ROOT / "art" / "bg").glob("*.jpg"))
+                  if p.stem != mine.stem][:2]
+        for p in plates:
+            refs.append(_read(p))
+        if plates:
+            lines.append(
+                f"The first {len(plates)} attached image(s) are finished backgrounds from "
+                f"this same comic, showing OTHER places. They are attached for the way "
+                f"they are painted only: match their medium, line, colour, light and "
+                f"level of detail, so this picture belongs in the same book. Draw the "
+                f"place the prompt below describes, not theirs.")
     style = _style_ref() if t.kind in ("cast", "bg", "props") else None
     if style:
         refs.append(_read(style))
@@ -156,7 +172,8 @@ CHECKLIST = {
 - vague, empty or blurred where the prompt names concrete objects
 - the top quarter is busy (balloons and a caption go there) or the lower third is cluttered (figures stand there)
 - chalk marks or tally marks on a wall
-- not painted as soft watercolour and coloured pencil""",
+- not painted as soft watercolour and coloured pencil
+- fades out, vignettes or leaves bare paper at the edges instead of filling the frame""",
     "props": """\
 - the object sits on a table, floor or surface, or casts a drop shadow
 - watercoloured, soft-edged or paper-textured instead of flat cel with a closed dark outline
@@ -322,7 +339,7 @@ def produce(t: prompts.Target, n=3, accept=False, replace=False, critic=True,
 
         cut, rep = (None, None)
         if t.kind != "bg":
-            cut, rep = cutout.key(im)
+            cut, rep = _cut(t, im)
             shown = None
             if t.kind == "fx":
                 shown = (_fx_on_plate(cut) if _fx_over(t) == "panel" else _fx_on_figure(_placed(t, cut)))
@@ -368,7 +385,7 @@ def recheck(t: prompts.Target, run: Run = None):
         im.load()
         cut, rep = (None, None)
         if t.kind != "bg":
-            cut, rep = cutout.key(im)
+            cut, rep = _cut(t, im)
             shown = None
             if t.kind == "fx":
                 shown = _fx_on_plate(cut) if fx_over == "panel" else _fx_on_figure(_placed(t, cut))
@@ -395,6 +412,13 @@ def _ok(findings, verdict, critic):
 
 def _fx_over(t):
     return _cast()["fx"].get(t.slug, {}).get("over")
+
+
+def _cut(t, im):
+    """Cut a drawing out the way make_overlay.py will: a wash for a see-through
+    effect, the border flood for everything else."""
+    w = _cast()["fx"].get(t.slug, {}).get("wash") if t.kind == "fx" else None
+    return cutout.wash(im, float(w)) if w else cutout.key(im)
 
 
 def _placed(t, cut):
