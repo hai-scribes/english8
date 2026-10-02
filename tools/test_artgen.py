@@ -225,6 +225,16 @@ def test_gemini():
         except gemini.QuotaError as e:
             ok("billing" in str(e), "a zero quota stops at once and says to turn on billing")
 
+        def broke(*a, **k):
+            raise gemini.GeminiError('HTTP 429: {"error": {"message": "Your prepayment credits '
+                                     'are depleted. Learn more at .../billing#prepay."}}')
+        gemini.transport = broke
+        try:
+            gemini.generate_image("x", model="m")
+            ok(False, "depleted credit raises")
+        except gemini.QuotaError as e:
+            ok("top it up" in str(e), "depleted credit stops the run at once and says to top up")
+
         gemini.transport = lambda *a, **k: {"candidates": [{"finishReason": "SAFETY"}]}
         try:
             gemini.generate_image("x", model="m")

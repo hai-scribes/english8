@@ -283,13 +283,17 @@
   ],
 
   "fx": {
-    "impact":   { "over": "figure", "is": "A hard white starburst behind the figure — shock, or a blow landing" },
+    "impact": { "over": "figure", "is": "Sharp shock lines bursting outward round the head — shock, or a blow landing",
+                  "place": [[0.52, 0.46, 0.52]] },
     "sparkle":  { "over": "figure", "is": "Soft rising glints — the sea working, or something arriving" },
-    "dizzy":    { "over": "figure", "is": "Small stars and birds circling above the head, stunned" },
-    "sweat":    { "over": "figure", "is": "One large drop at the temple — caught out, or working hard at a lie" },
+    "dizzy": { "over": "figure", "is": "Small stars and birds circling above the head, stunned",
+                  "place": [[0.52, 0.345, 0.34]] },
+    "sweat": { "over": "figure", "is": "One large drop at the temple — caught out, or working hard at a lie",
+                  "place": [[0.685, 0.40, 0.055]] },
     "flush":    { "over": "figure", "is": "Pink strokes across the cheeks and ears — embarrassed",
                   "place": [[0.518, 0.559, 0.052], [0.610, 0.555, 0.032]] },
-    "anger":    { "over": "figure", "is": "The cross-shaped popping vein at the temple — lost patience" },
+    "anger": { "over": "figure", "is": "The cross-shaped popping vein at the temple — lost patience",
+                  "place": [[0.352, 0.39, 0.075]] },
     "question": { "over": "figure", "is": "One floating question mark — did not follow that",
                   "place": [[0.745, 0.42, 0.085]], "upright": true },
     "gloom":    { "over": "figure", "is": "Vertical shadow bars down the figure from above — dread",
@@ -297,6 +301,7 @@
     "speed":    { "over": "figure", "is": "Straight motion lines behind the figure — moving, or moving off",
                   "place": [[0.185, 0.50, 0.37]] },
     "splash":   { "over": "panel",  "is": "A white water burst up the near edge of the frame" },
-    "rain":     { "over": "panel",  "is": "Slanting rain across the whole frame, grey, no colour" }
+    "rain": { "over": "panel", "is": "Slanting rain across the whole frame, grey, no colour",
+                  "wash": 0.75 }
   }
 }

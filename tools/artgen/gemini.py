@@ -69,6 +69,13 @@ def _call(model, body, key=None, retries=3):
             # repeating it only spends time. A 429 against a limit of 0 is not
             # a rate limit at all — it is a plan that does not include this model.
             msg = str(e)
+            # Out of money is not a rate limit either: every later call in the
+            # run fails the same way, so stop instead of spending the budget on
+            # refusals.
+            if "credits are depleted" in msg or "billing#prepay" in msg:
+                raise QuotaError(
+                    "the Gemini account's prepaid credit has run out — top it up at "
+                    "https://ai.studio/projects (Billing), then run this again")
             if "HTTP 429" in msg and "limit: 0" in msg:
                 raise QuotaError(
                     f"{model}: this key's quota for it is 0 — "

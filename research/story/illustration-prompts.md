@@ -5061,7 +5061,7 @@ effect shows up.
 
 ## 1. `impact` — over one character
 
-**File:** `art/fx/src/impact.png`  ·  A hard white starburst behind the figure — shock, or a blow landing
+**File:** `art/fx/src/impact.png`  ·  Sharp shock lines bursting outward round the head — shock, or a blow landing
 
 > **Do not attach a style reference.** These are not Ghibli drawings and a
 > *Ponyo* still pulls them toward being one. They are the flat graphic marks a
@@ -5078,29 +5078,18 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine
-> a child standing in the **lower three-quarters** of the square, seen from
-> the chest up and turned three-quarters toward the **right-hand side** of the
-> frame, with the top of their head about **a third of the way down** from the
-> top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the mark **alone,
+> centred, filling most of the square**. The build trims it and stamps it at a
+> measured position on or beside the figure's head (`place` in
+> `data/cast.json`), so its position and size in this picture do not matter.
+> Only its shape does.
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from **41% to 63%
-> across** — and runs from about **31% to 63% of the way down**. Because the
-> child looks to the right, the face is the right-hand part of the head: the
-> eyes are at about 47% down, the cheeks at about 55% down and the chin at
-> about 63%, and the left-hand part of the head is hair. Most of this square
-> is empty background, so a mark meant for a face that drifts outward lands on
-> the scenery beside the character instead of on them. When this block says
-> *beside the face*, it does not mean beside the frame. **Do not draw the
-> child.** Draw only the mark, positioned where it would fall on or around
-> that figure, and leave every other part of the square plain white. The page
-> composites this square directly over the character at exactly that scale, so
-> the mark's position inside the frame *is* the information — a mark drawn in
-> the middle of an empty square lands on the character's chest wherever it was
-> meant to go.
->
-> A hard white starburst — a ragged many-pointed flash — bursting out from behind where the figure's head and shoulders are, its points radiating outward past them to the edges of the frame. Thick black ink outline, white fill, the points uneven in length and sharp. Nothing in the middle of the burst: the character shows through there.
+> A ring of shock lines bursting outward — fourteen to eighteen short, sharp,
+> tapered black strokes of uneven length radiating from a centre, like a
+> starburst with its middle taken out. Each stroke is thick near the centre
+> and comes to a point at its outer end. **The middle is completely empty**:
+> nothing is drawn inside the ring, because a face shows through there. Solid
+> black ink only. The rest of the square is empty white.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -5178,35 +5167,18 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine
-> a child standing in the **lower three-quarters** of the square, seen from
-> the chest up and turned three-quarters toward the **right-hand side** of the
-> frame, with the top of their head about **a third of the way down** from the
-> top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the mark **alone,
+> centred, filling most of the square**. The build trims it and stamps it at a
+> measured position on or beside the figure's head (`place` in
+> `data/cast.json`), so its position and size in this picture do not matter.
+> Only its shape does.
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from **41% to 63%
-> across** — and runs from about **31% to 63% of the way down**. Because the
-> child looks to the right, the face is the right-hand part of the head: the
-> eyes are at about 47% down, the cheeks at about 55% down and the chin at
-> about 63%, and the left-hand part of the head is hair. Most of this square
-> is empty background, so a mark meant for a face that drifts outward lands on
-> the scenery beside the character instead of on them. When this block says
-> *beside the face*, it does not mean beside the frame. **Do not draw the
-> child.** Draw only the mark, positioned where it would fall on or around
-> that figure, and leave every other part of the square plain white. The page
-> composites this square directly over the character at exactly that scale, so
-> the mark's position inside the frame *is* the information — a mark drawn in
-> the middle of an empty square lands on the character's chest wherever it was
-> meant to go.
->
-> Three or four small birds and a scatter of little stars circling in a flat
-> ring **above the head** of where the figure stands, centred at about **52%
-> across** and between about **14% and 30% of the way down** — just clear of
-> the top of the head. The birds are the simplest possible ink shapes — a
-> shallow double curve each, like a distant gull — and the stars are small
-> five-pointed outlines. The ring reads as going round: the far side of it is
-> drawn smaller. Black ink only. Below the ring the frame is empty.
+> A flat ring of four small five-pointed stars and two tiny birds, circling as
+> if round the top of somebody's head: a wide, shallow ellipse seen from
+> slightly above, with the far side of the ring drawn smaller. The stars have
+> a thick black outline and a **flat yellow** fill; the birds are the simplest
+> ink shapes, a shallow double curve each. **The middle of the ring is
+> empty.** The rest of the square is empty white.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -5234,34 +5206,16 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine
-> a child standing in the **lower three-quarters** of the square, seen from
-> the chest up and turned three-quarters toward the **right-hand side** of the
-> frame, with the top of their head about **a third of the way down** from the
-> top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the mark **alone,
+> centred, filling most of the square**. The build trims it and stamps it at a
+> measured position on or beside the figure's head (`place` in
+> `data/cast.json`), so its position and size in this picture do not matter.
+> Only its shape does.
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from **41% to 63%
-> across** — and runs from about **31% to 63% of the way down**. Because the
-> child looks to the right, the face is the right-hand part of the head: the
-> eyes are at about 47% down, the cheeks at about 55% down and the chin at
-> about 63%, and the left-hand part of the head is hair. Most of this square
-> is empty background, so a mark meant for a face that drifts outward lands on
-> the scenery beside the character instead of on them. When this block says
-> *beside the face*, it does not mean beside the frame. **Do not draw the
-> child.** Draw only the mark, positioned where it would fall on or around
-> that figure, and leave every other part of the square plain white. The page
-> composites this square directly over the character at exactly that scale, so
-> the mark's position inside the frame *is* the information — a mark drawn in
-> the middle of an empty square lands on the character's chest wherever it was
-> meant to go.
->
-> One large drop hanging **at the side of the head**, near the temple, just
-> outside the right-hand edge of the head — at about **63–70% across and
-> 36–46% of the way down**. Classic manga shape — a fat rounded teardrop with
+> **One** large sweat drop. Classic manga shape — a fat rounded teardrop with
 > the point up and the bulge down, drawn as a thick black outline with a white
-> fill and one small white highlight. Big enough to be comic. Nothing else in
-> the frame.
+> fill and one small white highlight. The outline closes all the way round.
+> One mark only. The rest of the square is empty white.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -5326,34 +5280,17 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine
-> a child standing in the **lower three-quarters** of the square, seen from
-> the chest up and turned three-quarters toward the **right-hand side** of the
-> frame, with the top of their head about **a third of the way down** from the
-> top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the mark **alone,
+> centred, filling most of the square**. The build trims it and stamps it at a
+> measured position on or beside the figure's head (`place` in
+> `data/cast.json`), so its position and size in this picture do not matter.
+> Only its shape does.
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from **41% to 63%
-> across** — and runs from about **31% to 63% of the way down**. Because the
-> child looks to the right, the face is the right-hand part of the head: the
-> eyes are at about 47% down, the cheeks at about 55% down and the chin at
-> about 63%, and the left-hand part of the head is hair. Most of this square
-> is empty background, so a mark meant for a face that drifts outward lands on
-> the scenery beside the character instead of on them. When this block says
-> *beside the face*, it does not mean beside the frame. **Do not draw the
-> child.** Draw only the mark, positioned where it would fall on or around
-> that figure, and leave every other part of the square plain white. The page
-> composites this square directly over the character at exactly that scale, so
-> the mark's position inside the frame *is* the information — a mark drawn in
-> the middle of an empty square lands on the character's chest wherever it was
-> meant to go.
->
-> The cross-shaped popping-vein mark — two short crossed lines with a small
-> loop at each of the four ends, the standard manga sign — sitting **on the
-> upper part of the head**, over the hair toward the left, at about **44–52%
-> across and 32–40% of the way down**. Bold solid black ink, slightly
-> irregular, about a tenth of the frame's width — the head itself is only a
-> fifth. Nothing else in the frame.
+> **One** cross-shaped popping-vein mark — four short curved strokes back to
+> back, like a plus sign with its arms bent outward, the standard manga sign
+> for lost patience. Bold strokes in **flat red**, each with a thin black
+> outline, slightly irregular. One mark only. The rest of the square is empty
+> white.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
