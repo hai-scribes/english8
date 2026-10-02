@@ -30,11 +30,11 @@
 **Tí|worried:** My mother rings at seven every Sunday evening. If she gets nothing, she'll think the water took the house.
 @fx question on=Thảo
 **Thảo|surprised:** Is that phone yours?
-**Tí|sad:** No. It's Bà Sáu's. The blue one was [[mine|gram:mine]], and it went into the mud on Tuesday, so hers is the only phone left in the house.
+**Tí|sad:** No. It's Bà Sáu's. The blue one was mine, and it went into the mud on Tuesday, so hers is the only phone left in the house.
 **Thảo|neutral:** Then send a [[voice message]]. It waits in the [[network]] and goes the moment the [[connection]] comes back.
 **Tí|annoyed:** I've sent four. All four are still sitting there with a little grey clock next to them.
 **Thảo|happy:** Try the school gate. Đạt says there's one bar at the top of the steps, between the two big trees.
-**Tí|annoyed:** Đạt says a lot of things. The far bank has a signal all day — theirs works, ours doesn't.
+**Tí|annoyed:** Đạt says a lot of things. The far bank has a signal all day — [[theirs|gram:theirs]] works, ours doesn't.
 **Thảo|neutral:** And the box?
 **Tí|worried:** Still shut. It's under my bed, in a rice sack, and it has been there four days.
 **Thảo|annoyed:** Open it, then.

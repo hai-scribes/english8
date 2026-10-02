@@ -79,9 +79,8 @@
 - "___ you weave?" {Can | Does | Are} = Can
 :::
 
-> **Ghi chú:** *Where **does** your family live?* — có *does*. Nhưng *Who
-> **looks** after the house?* — không có *does*. Và: how **many** rooms, nhưng
-> how **much** rice. Lesson 3 giải thích vì sao.
+> **Ghi chú:** có câu hỏi cần *do / does*, có câu hỏi thì không; và có hai
+> cách hỏi "bao nhiêu". Lesson 3 giải thích vì sao.
 
 ---
 
