@@ -2,7 +2,7 @@
 
 > **Bài 12 — Sự sống trên các hành tinh khác**
 > Self-study pack. Work through Lessons 1–6 in order. Marked exercises check
-> themselves; the [Answer Key](#answer-key) covers the open ones.
+> themselves; open ones say what to listen or look for.
 
 ## What this unit teaches
 
@@ -89,91 +89,278 @@
 
 ::: vocab size="5"
 @ gap-fill ask="Choose the word that fits."
-- Without a thick ___ , a planet cannot keep its heat in. {atmosphere | surface | orbit} = atmosphere
-- Mars has a very thin ___ , so its sky is not blue like ours. {atmosphere | surface | gravity} = atmosphere
-- The Moon ___ the Earth about once a month. {orbits | launches | explores} = orbits
-- It takes the Earth one year to go once round the Sun — one full ___ . {orbit | trace | surface} = orbit
-- We need ___ to breathe, and on Mars there is almost none. {oxygen | gravity | surface} = oxygen
-- Chú Bảy can hold his breath for a long time, but in the end even he needs ___ . {oxygen | gravity | orbit} = oxygen
-- On the Moon, ___ is weak, so astronauts can jump very high. {gravity | oxygen | orbit} = gravity
+- Venus is the ___ between Mercury and the Earth. {planet | orbit | atmosphere} = planet
+- Jupiter is the largest ___ that goes round our Sun. {planet | orbit | oxygen} = planet
+- People call Mars the red ___ because of its colour. {planet | gravity | oxygen} = planet
+- Our teacher asked us to draw a ___ with two moons. {planet | oxygen | gravity} = planet
+- The Earth is the only ___ with rivers and seas on it. {planet | atmosphere | orbit} = planet
+- Saturn is a huge ___ with beautiful rings round it. {planet | gravity | oxygen} = planet
+- From Quy Nhơn beach at night, Thảo saw a bright ___ near the Moon. It was Venus. {planet | orbit | gravity} = planet
+- The Moon ___ the Earth about once a month. {orbits | drinks | cooks} = orbits
+- It takes the Earth one year to go once round the Sun — one full ___ . {orbit | planet | oxygen} = orbit
+- Venus ___ the Sun faster than the Earth does. {orbits | breathes | sleeps} = orbits
+- The new satellite will ___ the Earth sixteen times a day. {orbit | swim | climb} = orbit
+- Mercury has the shortest ___ of all — only 88 days to go round the Sun. {orbit | atmosphere | oxygen} = orbit
+- In our model, a small ball on a string moved round a lamp to show the Earth's ___ . {orbit | oxygen | weather} = orbit
+- Bống ran round and round the table, like a little moon in ___ . {orbit | oxygen | gravity} = orbit
+- On the Moon, ___ is weak, so people can jump very high. {gravity | oxygen | orbit} = gravity
 - If you drop a spoon, ___ pulls it down to the floor. {gravity | oxygen | atmosphere} = gravity
-- A planet with water, air and the right temperature might be ___ for humans. {habitable | extraterrestrial | alien} = habitable
-- After the flood, the old house was not ___ any more — the family moved out. {habitable | promising | extraterrestrial} = habitable
+- Jupiter is much bigger than the Earth, so its ___ is much stronger. {gravity | oxygen | orbit} = gravity
+- Apples fall from trees because of ___ . {gravity | oxygen | atmosphere} = gravity
+- When Hùng jumps off the rock, ___ brings him back down into the sea. {gravity | oxygen | orbit} = gravity
+- A ball falls back down after you throw it up. That is ___ at work. {gravity | oxygen | orbit} = gravity
+- People say Isaac Newton started to think about ___ when an apple fell on his head. {gravity | oxygen | atmosphere} = gravity
+- The Earth's ___ holds the Moon close, so the Moon never flies away. {gravity | oxygen | atmosphere} = gravity
+- Without a thick ___ , a planet cannot keep its heat in. {atmosphere | gravity | orbit} = atmosphere
+- Mars has a very thin ___ , so its sky is not blue like ours. {atmosphere | gravity | orbit} = atmosphere
+- The Earth's ___ protects us from the strong heat of the Sun. {atmosphere | orbit | gravity} = atmosphere
+- The ___ of Venus is full of thick yellow clouds. {atmosphere | orbit | gravity} = atmosphere
+- Rockets have to fly through the ___ before they reach space. {atmosphere | planet | orbit} = atmosphere
+- The Moon has no ___ , so there is no wind and no weather there. {atmosphere | orbit | planet} = atmosphere
+- Our ___ is a layer of air about 100 kilometres thick. {atmosphere | gravity | orbit} = atmosphere
+- We need ___ to breathe, and on Mars there is almost none. {oxygen | gravity | orbit} = oxygen
+- Chú Bảy can hold his breath for a long time, but in the end even he needs ___ . {oxygen | gravity | orbit} = oxygen
+- Fire needs ___ to burn — without it, the flame goes out. {oxygen | gravity | orbit} = oxygen
+- Divers carry tanks of ___ on their backs when they go deep under the sea. {oxygen | gravity | atmosphere} = oxygen
+- Trees and plants give us the ___ that we breathe. {oxygen | gravity | orbit} = oxygen
+- At the top of very high mountains there is less ___ , so climbers breathe hard. {oxygen | orbit | planet} = oxygen
+- Fish take ___ from the water through their gills. {oxygen | gravity | orbit} = oxygen
+- A planet with water, air and the right temperature might be ___ for humans. {habitable | hungry | sleepy} = habitable
+- Soldiers helped to make the flooded houses ___ , so families could move back in. {habitable | hungry | careful} = habitable
+- Scientists are looking for a ___ planet far away, with water and air like the Earth. {habitable | sleepy | angry} = habitable
+- Venus is too hot to be ___ — its surface is hotter than an oven. {habitable | hungry | polite} = habitable
+- With a new roof and clean water, the old hut on the island became ___ again. {habitable | hungry | lazy} = habitable
+- Only a world with air and water is ___ for plants and animals. {habitable | hungry | angry} = habitable
+- Scientists want to find a ___ place on Mars for people to build homes. {habitable | hungry | shy} = habitable
+- Our class drew a map of a ___ island, with fresh water, trees and fruit. {habitable | hungry | angry} = habitable
 - The robot took photos of the rocks on the Moon's ___ . {surface | atmosphere | orbit} = surface
 - A leaf floated on the ___ of the water. {surface | orbit | atmosphere} = surface
-- Khoa looked at Saturn's rings through a small ___ on the school roof. {telescope | spacecraft | galaxy} = telescope
-- You can see the craters on the Moon if you use a ___ . {telescope | spacecraft | trace} = telescope
+- Water covers most of the Earth's ___ . {surface | oxygen | gravity} = surface
+- The ___ of Mercury is grey and full of craters. {surface | oxygen | gravity} = surface
+- The table has a smooth, shiny ___ . {surface | orbit | oxygen} = surface
+- The whale came up to the ___ of the sea to breathe. {surface | orbit | gravity} = surface
+- The ___ of the old road is full of holes. {surface | oxygen | telescope} = surface
+- Khoa looked at Saturn's rings through a small ___ on the school roof. {telescope | spacecraft | planet} = telescope
+- You can see the craters on the Moon if you use a ___ . {telescope | surface | orbit} = telescope
+- Grandpa gave Thảo an old ___ , and now she watches the stars every night. {telescope | atmosphere | orbit} = telescope
+- The biggest ___ in the world are on top of high mountains. {telescopes | orbits | surfaces} = telescopes
+- Sailors long ago used a small ___ to see ships far away across the sea. {telescope | spacecraft | planet} = telescope
+- Galileo used a ___ to find four moons of Jupiter. {telescope | surface | atmosphere} = telescope
+- At the science fair, Hùng made a ___ out of two glass lenses and a paper tube. {telescope | surface | orbit} = telescope
 - The ___ put on her space suit and floated out of the station. {astronaut | spacecraft | telescope} = astronaut
-- Thảo wants to be an ___ and walk on the Moon one day. {astronaut | alien | commander} = astronaut
-- The ___ came down in the sea near the island, and three astronauts climbed out. {spacecraft | telescope | galaxy} = spacecraft
-- A ___ with no people on board is flying towards Jupiter. {spacecraft | creature | commander} = spacecraft
-- Some people believe that ___ visitors came to Earth long ago. {extraterrestrial | habitable | promising} = extraterrestrial
-- Scientists are listening for radio signals from ___ life. {extraterrestrial | promising | habitable} = extraterrestrial
-- My little brother thinks an ___ from Mars lives under his bed. {alien | astronaut | commander} = alien
-- In the film, a friendly ___ with green skin lands in a village. {alien | telescope | galaxy} = alien
+- Thảo wants to be an ___ and walk on the Moon one day. {astronaut | atmosphere | orbit} = astronaut
+- The ___ ate their dinner from little bags, because food floats in space. {astronauts | telescopes | planets} = astronauts
+- Before a trip to space, an ___ trains for years. {astronaut | oxygen | orbit} = astronaut
+- Neil Armstrong was the first ___ to walk on the Moon. {astronaut | spacecraft | telescope} = astronaut
+- Vietnam's first ___ , Phạm Tuân, flew into space in 1980. {astronaut | planet | telescope} = astronaut
+- The ___ on the space station sleep in bags on the wall. {astronauts | surfaces | telescopes} = astronauts
+- The ___ came down in the sea near the island, and three astronauts climbed out. {spacecraft | telescope | planet} = spacecraft
+- A ___ with no people on board is flying towards Jupiter. {spacecraft | surface | atmosphere} = spacecraft
+- The ___ needs a lot of fuel to leave the Earth's gravity. {spacecraft | telescope | surface} = spacecraft
+- Inside the ___ , the astronauts float around because they feel no weight. {spacecraft | surface | planet} = spacecraft
+- Engineers are building a new ___ that can carry six people to Mars. {spacecraft | telescope | surface} = spacecraft
+- At the museum, Bống climbed into a model of an old Russian ___ . {spacecraft | oxygen | orbit} = spacecraft
+- The little ___ landed on the Moon and sent photos back to Earth. {spacecraft | atmosphere | oxygen} = spacecraft
+- A Chinese ___ with no crew brought rocks from the Moon back to Earth. {spacecraft | surface | atmosphere} = spacecraft
+- Some people believe that ___ visitors came to Earth long ago. {extraterrestrial | habitable | underwater} = extraterrestrial
+- Scientists are listening for radio signals from ___ life. {extraterrestrial | habitable | wooden} = extraterrestrial
+- In the story, an ___ lands in Quy Nhơn and asks for directions to the beach. {extraterrestrial | oxygen | atmosphere} = extraterrestrial
+- The film is about a small, friendly ___ who wants to go home to its own planet. {extraterrestrial | telescope | surface} = extraterrestrial
+- In the story, Khoa finds a stone with strange ___ writing on it — nobody on Earth can read it. {extraterrestrial | habitable | gravity} = extraterrestrial
+- My cousin says he met an ___ with three eyes, but I think it was a dream. {extraterrestrial | telescope | orbit} = extraterrestrial
+- Children at the space club drew pictures of ___ cities on faraway planets. {extraterrestrial | oxygen | gravity} = extraterrestrial
+- The space club's poster shows an ___ with a big head and thin arms. {extraterrestrial | orbit | atmosphere} = extraterrestrial
+- My little brother thinks an ___ from Mars lives under his bed. {alien | orbit | atmosphere} = alien
+- In the film, a friendly ___ with green skin lands in a village. {alien | telescope | surface} = alien
+- The ___ in the cartoon had big eyes and spoke no human language. {alien | astronaut | planet} = alien
+- At the Mid-Autumn Festival, Bống wore a silver ___ costume with two antennae. {alien | oxygen | orbit} = alien
+- "Look, an ___ !" shouted Tí, but it was only a big green balloon. {alien | orbit | atmosphere} = alien
+- Do you think ___ are real, or only in films? {aliens | surfaces | orbits} = aliens
+- The ___ came out of its spaceship and waved at the farmers. {alien | telescope | planet} = alien
+- The children's play was about an ___ who wanted to learn Vietnamese. {alien | oxygen | orbit} = alien
 - Bống drew a strange ___ with six legs and two tails. {creature | planet | telescope} = creature
-- Many strange ___ live at the bottom of the sea, where it is always dark. {creatures | planets | traces} = creatures
+- Many strange ___ live at the bottom of the sea, where it is always dark. {creatures | planets | telescopes} = creatures
+- The tiny sea ___ in Chú Bảy's net had long pink arms. {creature | surface | orbit} = creature
+- In old stories, a sea ___ lives under the waves near the fishing village. {creature | telescope | planet} = creature
+- A dog is a friendly ___ , but a snake can be dangerous. {creature | planet | surface} = creature
+- No ___ can live on the Moon without air. {creature | surface | telescope} = creature
+- The forest at night is full of small ___ that sing and buzz. {creatures | planets | surfaces} = creatures
+- Hùng lifted a rock in the pool and a small ___ ran away sideways. {creature | planet | surface} = creature
 - No plant can ___ for long at minus one hundred degrees. {survive | explore | orbit} = survive
-- Tiny animals called water bears can ___ in space for days. {survive | launch | oppose} = survive
-- Scientists want to ___ the deep oceans under the ice of Europa, one of Jupiter's moons. {explore | launch | oppose} = explore
-- Hùng likes to ___ the rocky beach and look in every pool. {explore | launch | orbit} = explore
-- They will ___ a new rocket towards the Moon next spring. {launch | explore | oppose} = launch
-- The rocket takes off at six. Thousands of people are coming to watch the ___ . {launch | orbit | trace} = launch
+- Tiny water bears can ___ in space for days. {survive | sing | cook} = survive
+- The fishermen were lucky to ___ the big storm last year. {survive | explore | orbit} = survive
+- Camels can ___ for weeks in the desert without water. {survive | orbit | sing} = survive
+- People need oxygen tanks to ___ on Mars. {survive | orbit | paint} = survive
+- The old banyan tree in the village ___ three floods and a big fire. {survived | explored | orbited} = survived
+- Polar bears need thick fur to ___ the cold winter. {survive | explore | orbit} = survive
+- Scientists want to ___ the deep oceans under the ice of Europa, one of Jupiter's moons. {explore | breathe | cook} = explore
+- Hùng likes to ___ the rocky beach and look in every pool. {explore | survive | orbit} = explore
+- Robots ___ places that are too dangerous for people. {explore | breathe | orbit} = explore
+- On the first day of the holiday, we ___ the old streets of Hội An on foot. {explored | survived | orbited} = explored
+- Thảo loves ___ caves with her uncle. {exploring | surviving | orbiting} = exploring
+- The robot will ___ the surface of Mars for two years. {explore | cook | breathe} = explore
+- Divers went down to ___ an old ship at the bottom of the sea near Quy Nhơn. {explore | survive | breathe} = explore
+- Next summer, my family will ___ the islands near Quy Nhơn by boat. {explore | survive | orbit} = explore
+- They will ___ a new rocket towards the Moon next spring. {launch | explore | survive} = launch
+- The rocket takes off at six. Thousands of people are coming to watch the ___ . {launch | orbit | surface} = launch
+- India ___ a spacecraft to Mars in 2013. {launched | explored | survived} = launched
+- The ___ was late because of strong winds. {launch | galaxy | surface} = launch
+- At school, we ___ our paper rockets from the football field. {launched | survived | orbited} = launched
+- Before the ___ , the astronauts wave goodbye to their families. {launch | galaxy | atmosphere} = launch
+- Vietnam is going to ___ a new satellite next year. {launch | survive | explore} = launch
+- Crowds on the beach cheered when the rocket's ___ went well. {launch | galaxy | surface} = launch
 - The Sun and the eight planets that go round it make up the ___ . {solar system | galaxy | atmosphere} = solar system
-- Mercury is the smallest planet in our ___ . {solar system | galaxy | atmosphere} = solar system
+- Mercury is the smallest planet in our ___ . {solar system | atmosphere | surface} = solar system
+- The Sun is at the centre of our ___ . {solar system | atmosphere | orbit} = solar system
+- Our science club made a model of the ___ with nine balls of different sizes. {solar system | atmosphere | telescope} = solar system
+- Is there another planet with life in our ___ ? Scientists are not sure. {solar system | atmosphere | UFO} = solar system
+- People once counted Pluto as the ninth planet of the ___ . {solar system | atmosphere | orbit} = solar system
+- A trip to the edge of the ___ will take a spacecraft many years. {solar system | atmosphere | telescope} = solar system
 - Our Sun is only one of billions of stars in our ___ . {galaxy | solar system | planet} = galaxy
 - On a clear night you can see a pale band of stars across the sky. It is part of our ___ , the Milky Way. {galaxy | solar system | atmosphere} = galaxy
-- Venus is the ___ that comes closest to the Earth. {planet | galaxy | solar system} = planet
-- Jupiter is the largest ___ that goes round our Sun. {planet | galaxy | orbit} = planet
-- My grandfather says he saw a ___ over the sea one night — a round light that flew away very fast. {UFO | telescope | trace} = UFO
-- Something bright moved across the sky, and nobody knew what it was. The newspaper called it a ___ . {UFO | trace | galaxy} = UFO
-- ___ spins on its side, and it takes 84 years to go once round the Sun. {Uranus | Neptune | Venus} = Uranus
-- The seventh planet from the Sun is ___ . {Uranus | Neptune | Mercury} = Uranus
-- The eighth planet, ___ , has the strongest winds in the solar system. {Neptune | Uranus | Mercury} = Neptune
+- There are billions of ___ in space, and each one has millions of stars. {galaxies | planets | UFOs} = galaxies
+- The Milky Way is a ___ with the shape of a big spiral. {galaxy | planet | telescope} = galaxy
+- The nearest big ___ to ours has the name Andromeda. {galaxy | UFO | orbit} = galaxy
+- With a strong telescope, Khoa saw a faraway ___ that looked like a tiny cloud of light. {galaxy | spacecraft | astronaut} = galaxy
+- Our solar system is a very small part of the ___ . {galaxy | atmosphere | oxygen} = galaxy
+- My grandfather says he saw a ___ over the sea one night — a round light that flew away very fast. {UFO | telescope | galaxy} = UFO
+- Something bright moved across the sky, and nobody knew what it was. The newspaper called it a ___ . {UFO | surface | galaxy} = UFO
+- Everybody thought the light over the rice fields was a ___ , but it was only a kite with a lamp. {UFO | galaxy | surface} = UFO
+- In the film, a big ___ lands in the school yard and a little alien comes out. {UFO | galaxy | telescope} = UFO
+- Tí told his class that he saw a ___ with flashing lights above his house. {UFO | galaxy | solar system} = UFO
+- Many people take photos of ___ , but most of them are just planes or birds. {UFOs | galaxies | astronauts} = UFOs
+- The shiny round thing flew across the sky with no sound, and the children shouted, "A ___ !" {UFO | surface | oxygen} = UFO
+- Bống made a toy ___ from two paper plates and some silver paint. {UFO | galaxy | solar system} = UFO
+- In the planet song Bống learnt at school, the seventh planet is ___ . {Uranus | Mercury | Venus} = Uranus
+- The Vietnamese name for ___ is sao Thiên Vương. {Uranus | Mars | Jupiter} = Uranus
+- In "My Very Excellent Mother Just Served Us Noodles", the word "Us" stands for ___ . {Uranus | Venus | Mercury} = Uranus
+- ___ is one of the four outer planets, and it is much colder than the Earth. {Uranus | Mars | Venus} = Uranus
+- You can hardly see ___ without a telescope, because it is so far away. {Uranus | Venus | Mars} = Uranus
+- A spacecraft from the Earth will pass Jupiter and Saturn before it reaches ___ . {Uranus | Mars | Venus} = Uranus
+- Khoa's model of the solar system has a small blue-green ball for ___ , between Saturn and the last planet. {Uranus | Mars | Venus} = Uranus
+- Bống's planet poster ends with a small blue ball for ___ , the last planet. {Neptune | Mercury | Venus} = Neptune
 - ___ is so far away that one year there lasts about 165 Earth years. {Neptune | Mercury | Venus} = Neptune
+- The Vietnamese name for ___ is sao Hải Vương. {Neptune | Uranus | Saturn} = Neptune
+- In "My Very Excellent Mother Just Served Us Noodles", the last word, "Noodles", stands for ___ . {Neptune | Uranus | Mercury} = Neptune
+- Of all eight planets, ___ is the farthest from the Sun. {Neptune | Mercury | Venus} = Neptune
+- A spacecraft needs about twelve years to reach ___ , the eighth planet. {Neptune | Mars | Venus} = Neptune
+- Uranus is the seventh planet, and ___ is the eighth. {Neptune | Saturn | Mars} = Neptune
+- Next to Uranus, ___ looks like its twin — both are big, cold and blue. {Neptune | Mercury | Mars} = Neptune
 - Everyone on the ship had to obey the ___ . {commander | creature | trace} = commander
 - The ___ of the spacecraft told the crew to get ready for landing. {commander | alien | trace} = commander
+- The army ___ gave the order to stop fighting. {commander | galaxy | surface} = commander
+- On the boat, Chú Bảy is the ___ — everyone listens to him. {commander | creature | trace} = commander
+- In our treasure-hunt game, Linh was the ___ and gave everyone their jobs. {commander | trace | galaxy} = commander
+- The ___ checked the oxygen tanks before the astronauts walked outside. {commander | galaxy | telescope} = commander
+- In the game, Tí is the ___ and the other children are his soldiers. {commander | UFO | planet} = commander
+- Before the launch, the ___ said a few words to her crew. {commander | surface | galaxy} = commander
 - Many parents ___ the plan to close the village school. {oppose | explore | survive} = oppose
 - Hùng's mother wanted to cut down the old tree, but the whole family ___ her. {opposed | explored | launched} = opposed
+- The fishermen ___ the new hotel because it will stop them using the beach. {oppose | orbit | launch} = oppose
+- Some people ___ spending money on space trips; they want new schools instead. {oppose | explore | orbit} = oppose
+- If you ___ the idea, you should say so at the meeting. {oppose | orbit | survive} = oppose
+- Nobody in our class ___ the teacher's plan for the trip to Quy Nhơn — everyone liked it. {opposed | orbited | explored} = opposed
+- Linh wants a dog, but her father ___ it because their flat is too small. {opposes | launches | orbits} = opposes
 - Khoa is a ___ young scientist — his teachers think he will do great things. {promising | habitable | extraterrestrial} = promising
 - The first photos from the new telescope look very ___ , and the scientists are excited. {promising | habitable | extraterrestrial} = promising
+- The weather looks ___ for tomorrow's trip — the sky is clear. {promising | habitable | extraterrestrial} = promising
+- Mars is the most ___ place to look for life, because it once had water. {promising | sleepy | angry} = promising
+- Bống's first cake was not perfect, but it was a ___ start. {promising | habitable | extraterrestrial} = promising
+- The young footballer from Quy Nhơn is very ___ — he may play for Vietnam one day. {promising | habitable | hungry} = promising
+- After two dry years, this year's rice crop looks ___ . {promising | habitable | extraterrestrial} = promising
+- Our new school garden had a ___ first month: the beans are already tall. {promising | habitable | extraterrestrial} = promising
 - The thief left no ___ — not even a footprint. {trace | surface | orbit} = trace
-- The sea water dried in the sun and left a ___ of salt on the rocks. {trace | surface | creature} = trace
+- The sea water dried in the sun and left a ___ of salt on the rocks. {trace | creature | galaxy} = trace
+- The boat disappeared in the storm without a ___ . {trace | galaxy | UFO} = trace
+- There was a ___ of chocolate on Tí's face, so we knew who ate the cake. {trace | planet | UFO} = trace
+- After the rain, there was no ___ of the children's sandcastle on the beach. {trace | galaxy | commander} = trace
+- Scientists look for ___ of life in very old rocks. {traces | orbits | commanders} = traces
+- The old Cham tower still shows ___ of red paint on its walls. {traces | galaxies | UFOs} = traces
+- Chú Bảy washed the boat until there was no ___ of fish oil on it. {trace | commander | galaxy} = trace
 @ choice ask="Which word or phrase means this?"
-- the path a planet follows round the Sun {orbit | surface | galaxy} = orbit
-- a very large round object in space that moves round a star {planet | galaxy | trace} = planet
+- a very large round object in space that moves round a star {planet | orbit | gravity} = planet
+- Mercury, Venus and Mars are each one of these {planet | atmosphere | orbit} = planet
+- the path a planet follows round the Sun {orbit | atmosphere | gravity} = orbit
+- to move in a circle round a planet or a star {orbit | breathe | shine} = orbit
 - the force that pulls things down to the ground {gravity | oxygen | atmosphere} = gravity
-- the layer of gases round a planet {atmosphere | surface | orbit} = atmosphere
+- what keeps your feet on the ground and makes rain fall {gravity | oxygen | orbit} = gravity
+- the layer of gases round a planet {atmosphere | orbit | gravity} = atmosphere
+- the air round the Earth, from the ground up to space {atmosphere | gravity | orbit} = atmosphere
 - the gas in the air that we need to breathe {oxygen | gravity | orbit} = oxygen
-- good enough for people to live in {habitable | promising | extraterrestrial} = habitable
-- the outside or top layer of something {surface | trace | atmosphere} = surface
-- an instrument that makes faraway things look nearer {telescope | spacecraft | trace} = telescope
-- a person trained to travel and work in space {astronaut | commander | alien} = astronaut
+- what your body takes from the air each time you breathe in {oxygen | gravity | orbit} = oxygen
+- good enough for people to live in {habitable | hungry | famous} = habitable
+- with enough air, water and warmth for living things {habitable | famous | noisy} = habitable
+- the outside or top layer of something {surface | orbit | gravity} = surface
+- the top of the water in a lake or the sea {surface | telescope | orbit} = surface
+- an instrument that makes faraway things look nearer {telescope | spacecraft | astronaut} = telescope
+- a long tube with glass inside; you look through it at the stars {telescope | spacecraft | surface} = telescope
+- a person trained to travel and work in space {astronaut | spacecraft | telescope} = astronaut
+- someone whose job is to fly into space {astronaut | planet | surface} = astronaut
 - a vehicle that travels in space {spacecraft | telescope | planet} = spacecraft
-- to stay alive through something dangerous {survive | explore | oppose} = survive
-- to travel through a place to learn about it {explore | launch | orbit} = explore
+- a machine that carries people or robots into space {spacecraft | telescope | astronaut} = spacecraft
+- from outside the Earth; from another world {extraterrestrial | habitable | underwater} = extraterrestrial
+- not from the Earth, but from somewhere in space {extraterrestrial | habitable | astronaut} = extraterrestrial
+- a being that comes from another planet {alien | astronaut | telescope} = alien
+- a strange creature from space in films and stories {alien | astronaut | spacecraft} = alien
+- any living thing that can move, real or imagined {creature | planet | telescope} = creature
+- an animal, or a strange living thing from a story {creature | spacecraft | surface} = creature
+- to stay alive through something dangerous {survive | explore | orbit} = survive
+- to keep living, even when life is very hard {survive | explore | orbit} = survive
+- to travel through a place to learn about it {explore | survive | orbit} = explore
+- to look around a new place to find out what is there {explore | survive | orbit} = explore
 - to send a rocket up into space {launch | explore | orbit} = launch
+- the moment when a rocket leaves the ground {launch | orbit | galaxy} = launch
 - the Sun and all the planets that go round it {solar system | galaxy | atmosphere} = solar system
+- our Sun with its planets, moons and everything else that moves round it {solar system | galaxy | orbit} = solar system
 - a huge group of billions of stars {galaxy | solar system | planet} = galaxy
+- a giant family of stars, gas and dust in space {galaxy | UFO | atmosphere} = galaxy
 - a light or object in the sky that nobody can explain {UFO | galaxy | telescope} = UFO
-- a being that comes from another planet {alien | astronaut | commander} = alien
-- any living thing that can move, real or imagined {creature | planet | trace} = creature
-- the person who gives the orders on a ship or a spacecraft {commander | astronaut | creature} = commander
+- a strange flying object; some people think aliens fly in it {UFO | galaxy | astronaut} = UFO
+- the seventh planet from the Sun {Uranus | Saturn | Jupiter} = Uranus
+- the cold outer planet that comes right after Saturn {Uranus | Jupiter | Mars} = Uranus
+- the blue planet that comes after Uranus {Neptune | Saturn | Jupiter} = Neptune
+- the last of the four outer planets {Neptune | Jupiter | Mars} = Neptune
+- the person who gives the orders on a ship or a spacecraft {commander | telescope | trace} = commander
+- the leader of a group of soldiers or a crew {commander | creature | galaxy} = commander
 - to be against a plan or an idea {oppose | survive | launch} = oppose
+- to say "no" to something because you think it is wrong {oppose | explore | orbit} = oppose
+- likely to be good or successful later {promising | habitable | extraterrestrial} = promising
+- showing signs that it will go well {promising | alien | habitable} = promising
 - a small sign that something was there {trace | surface | orbit} = trace
+- a very small amount of something that is left {trace | galaxy | commander} = trace
 @ choice ask="What does the word mean?"
-- habitable {people could live there | nobody has explored it | it is very far away} = people could live there
+- planet {a large round object that moves round a star | a gas we breathe | a force that pulls things down} = a large round object that moves round a star
+- orbit {to go round and round something in space | to fall to the ground | to fly away for ever} = to go round and round something in space
+- gravity {the force that makes things fall | the gas that we breathe | the path round the Sun} = the force that makes things fall
+- atmosphere {the blanket of air and gases around a world | the path round a star | the hard ground of a world} = the blanket of air and gases around a world
+- oxygen {a gas that people and animals need to live | a force that pulls things down | a big round object in space} = a gas that people and animals need to live
+- habitable {people could live there | nobody went there | it is very far away} = people could live there
+- surface {the outside or top part of something | a large group of stars | a machine that flies in space} = the outside or top part of something
+- telescope {a tool for looking at things that are far away | a person who travels into space | the air round a planet} = a tool for looking at things that are far away
+- astronaut {a person who travels into space | an instrument for looking at stars | the path of a planet} = a person who travels into space
+- spacecraft {a vehicle that travels in space | a person who works in space | the top layer of a planet} = a vehicle that travels in space
 - extraterrestrial {from outside the Earth | under the sea | very, very small} = from outside the Earth
+- alien {a being from another world | a kind of telescope | a very thin atmosphere} = a being from another world
+- creature {a living thing, like an animal | a place where people live | a machine for space travel} = a living thing, like an animal
+- survive {to stay alive | to travel to a new place | to go round a planet} = to stay alive
+- explore {to travel round a place to find out about it | to stay alive | to be against something} = to travel round a place to find out about it
+- launch {to make a rocket take off | to look at stars through a telescope | to stay alive in space} = to make a rocket take off
+- solar system {the Sun and all the worlds that go round it | all the stars in the sky | the air round the Earth} = the Sun and all the worlds that go round it
+- galaxy {a very large group of stars | one planet and its moons | a flying object nobody can explain} = a very large group of stars
+- UFO {a strange flying object that nobody can explain | a group of billions of stars | a person who flies into space} = a strange flying object that nobody can explain
+- Uranus {a cold world far out from the Sun | a hot world next to the Sun | the star at the centre of our solar system} = a cold world far out from the Sun
+- Neptune {a cold blue world, the farthest from the Sun | a hot world next to the Sun | the biggest world of all} = a cold blue world, the farthest from the Sun
+- commander {a person in charge who tells others what to do | a machine that flies in space | a small sign that something was there} = a person in charge who tells others what to do
 - promising {likely to be good later | very old | dangerous} = likely to be good later
 - oppose {to be against | to agree with | to look at closely} = to be against
 - trace {a small sign that something was there | a very bright star | a kind of spacecraft} = a small sign that something was there
 @ choice opts="on|in|through|into|of" ask="Which word completes the phrase?"
 - There is no liquid water ___ the surface of Mars. = on
 - Could humans survive for long ___ Mars? = on
-- We looked at the Moon ___ a telescope. = through
-- Twelve astronauts have walked ___ the Moon. = on
+- Thảo can see Saturn's rings ___ her new telescope. = through
+- In 1969, two astronauts walked ___ the Moon for the first time. = on
 - The rocket carried the astronauts up ___ space. = into
-- The new satellite is now ___ orbit around the Earth. = in
+- Hundreds of satellites are ___ orbit above us right now. = in
 - Mars has very little oxygen ___ its atmosphere. = in
 - The robot is moving slowly across the surface ___ Mars. = of
 - The Earth is one ___ the eight planets that go round the Sun. = of
@@ -195,21 +382,44 @@
 - rocket · spacecraft · UFO · creature = creature ~ the others fly through the sky; a creature is a living thing
 - oppose · survive · explore · creature = creature ~ the others are things you do; a creature is a living thing
 - habitable · promising · extraterrestrial · orbit = orbit ~ the others describe something: a habitable planet, a promising start
+- river · mountain · forest · planet = planet ~ the others are things you find on the Earth; a planet is a whole world in space
+- cat · dog · bird · gravity = gravity ~ the others are animals; gravity is a force
+- creature · animal · insect · telescope = telescope ~ the others are living things; a telescope is a machine
+- Mars · Venus · Jupiter · solar system = solar system ~ the others are planets; the solar system is the Sun and all its planets together
+- Mercury · Venus · Mars · Uranus = Uranus ~ the others are inner planets, close to the Sun; Uranus is an outer planet
+- Mercury · Venus · Earth · Neptune = Neptune ~ the others are inner planets; Neptune is the last outer planet
+- agree · like · support · oppose = oppose ~ the others mean being for something; oppose means being against it
 @ error-correction
 - We looked at Jupiter in a telescope. {through | on | at} = in -> through ~ you look **through** a telescope
-- There is no liquid water in the surface of the Moon. {on | at | through} = in -> on ~ **on** the surface
+- The spacecraft landed in the surface of Mars last night. {on | at | through} = in -> on ~ **on** the surface
 - Nobody knows if there is life in Mars. {on | at | into} = in -> on ~ life **on** Mars
 - The satellite is now on orbit around the Earth. {in | at | into} = on -> in ~ **in** orbit
 - Scientists found traces from water in the rock. {of | on | at} = from -> of ~ traces **of** water
-- My brother wants to become an alien and fly to the Moon. {astronaut | creature | commander} = alien -> astronaut ~ an **astronaut** is a person who travels into space
-- Scientists want to launch the surface of Mars with robots. {explore | survive | orbit} = launch -> explore ~ you **explore** a place; you **launch** a rocket
-- Tí's first drawing was very habitable, so his teacher asked him to join the art club. {promising | alien | extraterrestrial} = habitable -> promising ~ **promising** means likely to be good later
-@ sentence-build
-- the Moon / have / no atmosphere {having | to have} = The Moon has no atmosphere
-- Mercury / have / no moons {having | to have} = Mercury has no moons
-- the Earth / orbit / the Sun {orbiting | to orbit} = The Earth orbits the Sun
-- Khoa / want / explore / the solar system {exploring} = Khoa wants to explore the solar system
-- my uncle / oppose / the plan {opposing} = My uncle opposes the plan
+- Mars is a small red star next to the Earth. {planet | moon | comet} = star -> planet ~ Mars goes round the Sun, so it is a **planet**; a star makes its own light
+- Things fall to the ground because of the Earth's orbit. {gravity | atmosphere | oxygen} = orbit -> gravity ~ **gravity** is the force that pulls things down; an orbit is a path round something
+- The Earth's oxygen is like a blanket of air round the whole world. {atmosphere | gravity | orbit} = oxygen -> atmosphere ~ the **atmosphere** is all the air round a planet; oxygen is one gas in it
+- Plants give out atmosphere, and we breathe it in. {oxygen | gravity | orbit} = atmosphere -> oxygen ~ we breathe **oxygen**; the atmosphere is all the air round the Earth
+- Linh saw the rings of Saturn through her new microscope. {telescope | glasses | window} = microscope -> telescope ~ a **telescope** shows things far away; a microscope shows very small things
+- The three astronauts climbed into the satellite, and it took them to the Moon. {spacecraft | submarine | helicopter} = satellite -> spacecraft ~ a **spacecraft** can carry people into space; a satellite carries no people
+- Some people believe foreign visitors from another planet made the stone circles in the field. {extraterrestrial | habitable | local} = foreign -> extraterrestrial ~ **extraterrestrial** means from outside the Earth; foreign means from another country
+- Tí drew an astronaut with four arms and green skin from Mars. {alien | pilot | scientist} = astronaut -> alien ~ a being from another planet is an **alien**; an astronaut is a person who travels into space
+- Scientists found a strange alien at the bottom of the sea. It had ten legs, and it was still alive. {creature | robot | stone} = alien -> creature ~ any living thing is a **creature**; an alien comes from another planet
+- Next month the country will land a new spacecraft into space. {launch | explore | survive} = land -> launch ~ you **launch** a spacecraft to send it up; it lands when it comes back down
+- Our galaxy has eight planets and one Sun. {solar system | atmosphere | orbit} = galaxy -> solar system ~ the Sun and its planets are the **solar system**; a galaxy has billions of stars
+- There are billions of stars in our solar system. {galaxy | planet | atmosphere} = solar system -> galaxy ~ billions of stars make a **galaxy**; our solar system has only one star, the Sun
+- After Saturn, the next planet out from the Sun is Jupiter. {Uranus | Venus | Mars} = Jupiter -> Uranus ~ Jupiter comes before Saturn; **Uranus** comes after it
+- Hà gave the orders to the other five people on the spacecraft. She was their astronaut. {commander | engineer | passenger} = astronaut -> commander ~ the person who gives the orders is the **commander**
+- Many villagers support the new factory because it will make the river dirty. {oppose | like | welcome} = support -> oppose ~ to be against something is to **oppose** it; to support it is to be for it
+@ gap-fill ask="Choose the word that fits."
+- The space station goes round the Earth sixteen times a day. Each ___ takes about ninety minutes. {orbit | atmosphere | gravity} = orbit
+- Scientists hope to find a ___ planet with water and air, where people could live one day. {habitable | frozen | burning} = habitable
+- The first ___ to walk on the Moon was Neil Armstrong, in 1969. {astronaut | farmer | doctor} = astronaut
+- A small robot will drive across Mars and ___ its rocks and caves. {explore | survive | orbit} = explore
+- On Sunday the children ___ the caves near the beach and found some old shells. {explored | survived | orbited} = explored
+- Water bears are tiny animals. They can ___ for thirty years without food. {survive | explore | orbit} = survive
+- My uncle saw a strange light over the sea last night. Nobody knew what it was, so people called it a ___ . {UFO | galaxy | planet} = UFO
+- Linh's first science project was very ___, so her teacher asked her to join the science club. {promising | boring | careless} = promising
+- The rock from Mars had a tiny ___ of water inside it — just a little. {trace | lake | bottle} = trace
 :::
 
 ### Vocabulary — Space and life beyond Earth
@@ -321,6 +531,10 @@ normal speed. Record yourself and check that the last item really falls.
 3. She asked me my ↗name, my ↗age and where I ↘lived.
 4. Now try the same list twice — once **closed**, once **open**:
    *I've read about Mars, Venus and Mercury.*
+
+**Listen back for:** in items 1–3 your voice steps **up** on every item except
+the last, and clearly **down** on the last one; in item 4 the "open" version
+ends with a rise, which should sound as though you were about to continue.
 
 ---
 
@@ -715,7 +929,7 @@ Keep a detail only if it supports the first impression you opened with.
 :::
 
 ::: write words="80-100" trains="Lexical Resource" ask="Now write yours — **80–100 words** describing the creatures on your planet."
-- [ ] 80–100 words ~ words
+- [ ] At least 80 words — 80–100 is the aim ~ words
 - [ ] One paragraph ~ para:1
 - [ ] At least **four** words from the Lesson 2 vocabulary table ~ vocab:4
 - [ ] One list of three or more items — *X, Y and Z* ~ re:1 \w+,\s+\w+[\w\s]*,?\s+and\s+\w+
@@ -723,6 +937,8 @@ Keep a detail only if it supports the first impression you opened with.
 - [ ] A topic sentence that names the planet
 - [ ] At least **six** descriptive adjectives
 - [ ] One strange detail nobody else would think of
+- [ ] Your own words — no long run copied from the task ~ nocopy:5
+- [ ] Read it once more, one sentence at a time, and fix any mistake you find
 :::
 
 ---
@@ -1018,15 +1234,3 @@ page can settle it, the row says so, and that one is yours to judge.
 > xem mình đã viết gì. Dòng nào ghi **your own judgement** là dòng không có gì
 > trên trang quyết định thay bạn được: hãy tự ghi âm, nghe lại một lần, rồi tự
 > đánh giá.
-
----
-
-## Answer Key
-
-> **Đáp án.** Chỉ xem sau khi đã tự làm bài.
-
-### Lesson 2
-
-**2.3** Answers will vary. Check: in items 1–3 your voice steps **up** on
-every item except the last, and clearly **down** on the last one; in item 4 the "open" version
-ends with a rise, which should sound as though you were about to continue.

@@ -335,14 +335,25 @@ and `review` timed the spoken player and were removed with it.
 ### `:::write` — the writing task is attempted on the page, and counted
 
 ```markdown
-::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours."
-- [ ] 80–100 words ~ words
+::: write words="80-100" trains="Coherence & Cohesion" ask="Now write yours." mins="20"
+- [ ] At least 80 words — 80–100 is the aim ~ words
 - [ ] One paragraph, no bullet points ~ para:1
-- [ ] Linking words: *First, Second, Third* ~ all first/second/third
+- [ ] At least **three** words that order your points ~ distinct:3 first/second/next/finally
+- [ ] …and no more than **four** ~ max:4 first/second/next/finally
 - [ ] At least **five** words from the Lesson 2 vocabulary table ~ vocab:5
+- [ ] Your own words — no long run copied from the task ~ nocopy:5
 - [ ] A topic sentence and a closing sentence
 :::
 ```
+
+It runs like the computer-delivered Writing screen: a cover with the time and
+**Start**; then the task and a notes box on the left, the answer on the right,
+a live word count and a countdown that flashes at ten and five minutes. The
+checklist stays shut while drafting and runs on the text at *I've finished* or
+at zero; *Write draft 2* is a new, untimed attempt, and both drafts are kept.
+`mins=` defaults to 20 for up to 100 words and 25 above. `words` fails only
+under the range; `max:N list` is a ceiling; `nocopy:N` flags a run of N words
+copied from the `ask=` line.
 
 Writing was the last part of this course that was still a printed worksheet: a
 model, a plan table, tick-boxes and six blank underscore lines. Nothing about
