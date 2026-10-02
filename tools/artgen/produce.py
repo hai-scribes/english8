@@ -31,13 +31,18 @@ from . import config, cutout, gemini, place, prompts, qa
 
 EXT = {"image/png": ".png", "image/jpeg": ".jpg", "image/webp": ".webp"}
 MASTER_EXT = (".png", ".jpg", ".jpeg", ".webp")
-EARLY_STOP = 8     # a passing candidate scoring this or better ends the search
+# The search stops at the FIRST candidate that passes the checks and the critic.
+# It used to wait for a score of 8, and the critic gives every pass a 7 — so it
+# never stopped, and drew three of everything whether or not the first was
+# fine. `keep_going` draws all n, for the times a choice between several is the
+# point (a character's first drawing).
 
 
 @dataclass
 class Run:
     budget: int = config.DEFAULT_BUDGET
     spent: int = 0
+    cost: float = 0.0
     model: str = None
     critic_model: str = None
     log: list = field(default_factory=list)
@@ -194,12 +199,12 @@ CHECKLIST = {
 
 
 def critique(t, raw, cut, run, findings):
-    images = [raw]
+    images = [_small(raw)]
     notes = ["Image 1 is the picture as generated."]
     if cut is not None:
         prev = cutout.preview(cut)
         if t.kind == "fx" and _fx_over(t) == "panel":
-            prev = _fx_on_plate(cut) or prev
+            prev = _fx_on_plate(_placed(t, cut)) or prev
             notes.append("Image 2 is the mark cut out and laid over a whole comic "
                          "panel, cropped as the page crops it. It is meant to cover "
                          "the frame; characters stand in front of the plate later.")
@@ -215,7 +220,7 @@ def critique(t, raw, cut, run, findings):
     if t.kind == "cast":
         refs, _ = references(t)
         for r in refs[:1]:
-            images.append(r)
+            images.append(_small(r))
             notes.append(f"Image {len(images)} is an accepted drawing of the same "
                          f"character, for comparison.")
     machine = "\n".join(f"- ({lvl}) {msg}" for lvl, msg in findings) or "- none"
@@ -248,6 +253,18 @@ cannot see."""
         raise
     except gemini.GeminiError as e:
         return {"verdict": "error", "score": 0, "defects": [], "summary": str(e)[:300]}
+
+
+def _small(img, px=1024):
+    """An image for the critic, at most `px` on a side. It is judging style and
+    faults, and input tokens are charged by size."""
+    data, mime = img
+    im = Image.open(io.BytesIO(data))
+    if max(im.size) <= px:
+        return img
+    im = im.convert("RGB"); im.thumbnail((px, px))
+    b = io.BytesIO(); im.save(b, "JPEG", quality=88)
+    return b.getvalue(), "image/jpeg"
 
 
 def _png(im):
@@ -298,7 +315,7 @@ def _fx_on_plate(mark):
 
 # ------------------------------------------------------------- the search --
 def produce(t: prompts.Target, n=3, accept=False, replace=False, critic=True,
-            run: Run = None, trial=False, like=None):
+            run: Run = None, trial=False, like=None, keep_going=False):
     """`trial` draws a target that already exists, to compare against the
     original — the consistency test — and can never promote."""
     run = run or Run()
@@ -324,8 +341,11 @@ def produce(t: prompts.Target, n=3, accept=False, replace=False, critic=True,
             break
         stem = cand_dir / f"{_now()}-{i}"
         try:
+            model = config.image_model(t.kind, run.model, t.id)
+            size = config.SIZE_BY_KIND.get(t.kind, "1K")
             data, mime = gemini.generate_image(preamble + t.prompt, refs, t.aspect,
-                                               model=run.model)
+                                               size=size, model=model)
+            run.cost += config.price(model, size)
         except gemini.QuotaError:
             raise
         except gemini.GeminiError as e:
@@ -342,13 +362,14 @@ def produce(t: prompts.Target, n=3, accept=False, replace=False, critic=True,
             cut, rep = _cut(t, im)
             shown = None
             if t.kind == "fx":
-                shown = (_fx_on_plate(cut) if _fx_over(t) == "panel" else _fx_on_figure(_placed(t, cut)))
+                shown = (_fx_on_plate(_placed(t, cut)) if _fx_over(t) == "panel" else _fx_on_figure(_placed(t, cut)))
             (shown or cutout.preview(cut)).save(stem.with_name(stem.name + "-cut.jpg"),
                                                 quality=88)
-        findings = qa.check(t.kind, im, rep, fx_over)
+        findings = qa.check(t.kind, im, rep, fx_over, _white_paper(t))
         verdict = None
         if critic and not qa.failed(findings):
             verdict = critique(t, (data, mime), cut, run, findings)
+            run.cost += config.CRITIC_PRICE
 
         r = {"i": i, "file": str(raw_path.relative_to(config.ROOT)), "qa": findings,
              "cut": rep, "critic": verdict, "ok": _ok(findings, verdict, critic)}
@@ -356,7 +377,7 @@ def produce(t: prompts.Target, n=3, accept=False, replace=False, critic=True,
         results.append(r)
         _log(run, t, r)
         print(f"    #{i}: {_line(r)}")
-        if r["ok"] and (not critic or (verdict or {}).get("score", 0) >= EARLY_STOP):
+        if r["ok"] and not keep_going:
             break
 
     good = [r for r in results if r.get("ok")]
@@ -388,10 +409,10 @@ def recheck(t: prompts.Target, run: Run = None):
             cut, rep = _cut(t, im)
             shown = None
             if t.kind == "fx":
-                shown = _fx_on_plate(cut) if fx_over == "panel" else _fx_on_figure(_placed(t, cut))
+                shown = _fx_on_plate(_placed(t, cut)) if fx_over == "panel" else _fx_on_figure(_placed(t, cut))
             (shown or cutout.preview(cut)).save(
                 raw.with_name(raw.stem + "-cut.jpg"), quality=88)
-        findings = qa.check(t.kind, im, rep, fx_over)
+        findings = qa.check(t.kind, im, rep, fx_over, _white_paper(t))
         mime = "image/png" if raw.suffix == ".png" else "image/jpeg"
         verdict = None if qa.failed(findings) else critique(t, (data, mime), cut, run, findings)
         r.update(qa=findings, cut=rep, critic=verdict, ok=_ok(findings, verdict, True))
@@ -412,6 +433,10 @@ def _ok(findings, verdict, critic):
 
 def _fx_over(t):
     return _cast()["fx"].get(t.slug, {}).get("over")
+
+
+def _white_paper(t):
+    return not (t.kind == "fx" and _cast()["fx"].get(t.slug, {}).get("paper"))
 
 
 def _cut(t, im):
@@ -443,7 +468,8 @@ def _line(r):
 def _log(run, t, r):
     config.WORK.mkdir(exist_ok=True)
     row = {"ts": _now(), "id": t.id, "kind": t.kind,
-           "model": run.model or config.IMAGE_MODEL, **r}
+           "model": config.image_model(t.kind, run.model, t.id),
+           "size": config.SIZE_BY_KIND.get(t.kind, "1K"), **r}
     with open(config.LOG, "a", encoding="utf-8") as f:
         f.write(json.dumps(row, ensure_ascii=False) + "\n")
 

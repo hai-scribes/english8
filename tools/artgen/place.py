@@ -35,6 +35,12 @@ balloons are drawn over effects, and the first position tried for `question`
 it belonged to. Beside the head, in front of the face, is free: the head runs
 0.41-0.63 across and 0.31-0.63 down.
 
+A PANEL effect can be placed too, and `splash` is: the page shows a square
+effect through a 3:2 window (`background-size: cover`), so only the middle two
+thirds of its height is seen on a desktop and everything drawn low in the
+square rides up the frame. Unplaced, the splash covered the speaker's face.
+Stamped low and full width, it covers the bottom two fifths on both shapes.
+
 An effect with no `place` is composed by the generator inside the square, as
 before — right for a burst behind the head or lines from an edge, which are
 placed against the frame rather than against a feature.

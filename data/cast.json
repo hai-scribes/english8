@@ -273,6 +273,9 @@
     "the darkest part may be, so the face underneath still reads. Keyed solid, a",
     "gloom would paint opaque bars across the face it is meant to darken.",
     "",
+    "`paper` names the backdrop when it is not white. A white effect cannot be cut",
+    "out of white paper, so `splash` is drawn on flat blue and the blue is removed.",
+    "",
     "`upright` is for a mark that is a GLYPH. The page mirrors a figure effect with",
     "its figure, and a mirrored question mark is a different character — so an",
     "upright effect gets a second file, stamped at the mirrored position and the",
@@ -284,8 +287,9 @@
 
   "fx": {
     "impact": { "over": "figure", "is": "Sharp shock lines bursting outward round the head — shock, or a blow landing",
-                  "place": [[0.52, 0.46, 0.52]] },
-    "sparkle":  { "over": "figure", "is": "Soft rising glints — the sea working, or something arriving" },
+                  "place": [[0.52, 0.47, 0.92]] },
+    "sparkle":  { "over": "figure", "is": "Soft rising glints — the sea working, or something arriving",
+                  "place": [[0.52, 0.50, 0.86]] },
     "dizzy": { "over": "figure", "is": "Small stars and birds circling above the head, stunned",
                   "place": [[0.52, 0.345, 0.34]] },
     "sweat": { "over": "figure", "is": "One large drop at the temple — caught out, or working hard at a lie",
@@ -300,7 +304,8 @@
                   "wash": 0.55, "place": [[0.52, 0.30, 0.36]] },
     "speed":    { "over": "figure", "is": "Straight motion lines behind the figure — moving, or moving off",
                   "place": [[0.185, 0.50, 0.37]] },
-    "splash":   { "over": "panel",  "is": "A white water burst up the near edge of the frame" },
+    "splash":   { "over": "panel",  "is": "A white water burst up the near edge of the frame",
+                  "paper": "blue", "place": [[0.5, 0.80, 1.0]] },
     "rain": { "over": "panel", "is": "Slanting rain across the whole frame, grey, no colour",
                   "wash": 0.75 }
   }

@@ -5117,29 +5117,18 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine
-> a child standing in the **lower three-quarters** of the square, seen from
-> the chest up and turned three-quarters toward the **right-hand side** of the
-> frame, with the top of their head about **a third of the way down** from the
-> top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the marks **alone**,
+> filling most of the square. The build trims them and stamps them round the
+> figure (`place` in `data/cast.json`), so their position and size in this
+> picture do not matter. Only their shape does.
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from **41% to 63%
-> across** — and runs from about **31% to 63% of the way down**. Because the
-> child looks to the right, the face is the right-hand part of the head: the
-> eyes are at about 47% down, the cheeks at about 55% down and the chin at
-> about 63%, and the left-hand part of the head is hair. Most of this square
-> is empty background, so a mark meant for a face that drifts outward lands on
-> the scenery beside the character instead of on them. When this block says
-> *beside the face*, it does not mean beside the frame. **Do not draw the
-> child.** Draw only the mark, positioned where it would fall on or around
-> that figure, and leave every other part of the square plain white. The page
-> composites this square directly over the character at exactly that scale, so
-> the mark's position inside the frame *is* the information — a mark drawn in
-> the middle of an empty square lands on the character's chest wherever it was
-> meant to go.
->
-> Small four-pointed glints rising around the figure — a dozen of them, different sizes, scattered up both sides and over the head, sparser toward the top. Drawn as fine sharp stars with long thin points, in white with a thin dark outline, plus a few tiny solid ones. Light and airy, not a cloud; the figure must be visible between them. One flat colour is allowed here and it is a pale sea-green.
+> A loose scatter of about a dozen small four-pointed glints of different
+> sizes, arranged as a tall ring: up the left side, across the top and down
+> the right side, sparser toward the top. **The middle of the ring is empty**
+> — a face shows through there. Each glint is a fine sharp star with long thin
+> points, in white with a thin dark outline, plus a few tiny solid ones. Light
+> and airy. One flat colour is allowed here and it is a pale sea-green. The
+> rest of the square is empty white.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -5469,8 +5458,11 @@ effect shows up.
 > **Colour.** Black ink, and white where the mark needs a fill. Colour only
 > where this block asks for it by name, and then one flat colour and no more.
 >
-> **Composition.** A **square** picture on **flat pure white**, with nothing in
-> it but the mark itself.
+> **Composition.** A **square** picture on a **flat, even mid-blue
+> background** — one single uniform colour, a plain medium blue, edge to edge
+> — with nothing in it but the mark itself. The blue is only a backdrop to
+> show white water against, and the build removes it: white water on white
+> paper cannot be cut out.
 >
 > **Where the mark goes.** It covers the whole frame. Spread it across the
 > square and keep the important parts **away from the extreme edges**: the page
@@ -5478,7 +5470,12 @@ effect shows up.
 > so up to a third of one dimension can be cropped away. Anything that only
 > works if the corner survives will not survive.
 >
-> A burst of white water thrown up across the **lower and near edge** of the frame — one big irregular sheet of spray with a ragged, feathered top edge, breaking into separate flying droplets as it rises. Drawn as flat white with a fine dark blue-grey outline and a few darker shapes inside for the heavier water. It reaches about halfway up the frame at its highest. The upper half is empty white.
+> A burst of white water thrown up across the **lower and near edge** of the
+> frame — one big irregular sheet of spray with a ragged, feathered top edge,
+> breaking into separate flying droplets as it rises. **Solid, opaque flat
+> white**, every part of it, with a fine dark blue-grey outline and a few
+> darker shapes inside for the heavier water. It reaches about halfway up the
+> frame at its highest. The upper half is empty flat blue background.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -5657,6 +5654,7 @@ Two things you still do **not** have to do:
 | A prop comes back on a table, on a floor, or with a drop shadow under it | Re-paste **Composition**. A surface is the commonest thing a generator supplies unasked, and it cannot be keyed away: the flood comes in from the border, meets the table, and stops — leaving the prop sitting on a white slab in the middle of the panel |
 | A prop comes back watercoloured, soft-edged or textured like paper | Part 2's vocabulary leaked into a Part 3 prompt. Props are **cel**, like the cast, and for the same technical reason: a soft edge has no closed contour, so the keyer eats into it. Re-paste **Art style** and **Line** |
 | A prop is unrecognisable in the panel | It was drawn with detail that only reads at full size. These are seen at about two centimetres — re-roll asking for the silhouette to carry the object, and check it by looking at the file scaled down before composing |
+| A WHITE effect — a splash, a burst of spray — comes out hollow after cutting, just outlines over the scene | It was drawn on white paper, and the cutter cannot tell white water from white paper where the two touch. Draw it on a flat mid-blue backdrop instead and mark the effect `"paper": "blue"` in `data/cast.json`; the cutter measures whatever the backdrop is and removes that. `splash` is the worked example |
 | An effect comes back beautiful, shaded and painted | A style reference was attached. Part 4 says attach nothing, and this is why: these are ink marks over a picture, and a *Ponyo* still makes them into a picture of their own |
 | An effect that belongs on one feature of the face — a blush on the cheeks — comes back too large, too far apart or on the hair, whatever percentages the prompt gives | Stop asking. Six generations across two prompt versions showed the model draws the mark well and cannot place it. Ask for the mark **alone** and give the effect a `place` list in `data/cast.json`; `make_overlay.py` trims it and stamps it at those positions (`tools/artgen/place.py`). `flush` is the worked example |
 | An effect lands beside the character rather than on them — blush on the wall either side of a head, a drop out over the scenery | The mark was placed against the frame instead of against the face. The head is only the middle fifth of the square; re-paste **Where the mark goes** in full, including the paragraph about how small it is, and give the cluster explicit percentages as `flush` does |

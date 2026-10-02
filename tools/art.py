@@ -99,13 +99,16 @@ def cmd_gen(a):
     if not ts:
         print("nothing to generate")
         return 0
-    print(f"{len(ts)} target(s), up to {a.n} candidate(s) each, budget {a.budget} calls\n")
+    print(f"{len(ts)} target(s), up to {a.n} attempt(s) each"
+          f"{'' if a.keep_going else ', stopping at the first that passes'}, "
+          f"budget {a.budget} calls\n")
     summary = []
     for t in ts:
         print(f"  {t.id}")
         try:
             r = produce.produce(t, n=a.n, accept=a.accept, replace=a.replace,
-                                critic=not a.no_critic, run=run, trial=a.trial, like=a.like)
+                                critic=not a.no_critic, run=run, trial=a.trial, like=a.like,
+                                keep_going=a.keep_going)
         except produce.BudgetExhausted as e:
             print(f"    {e}")
             break
@@ -118,7 +121,7 @@ def cmd_gen(a):
         if run.spent >= run.budget:
             print(f"\nbudget of {run.budget} image calls spent — stopping")
             break
-    print(f"\n{run.spent} image call(s) spent")
+    print(f"\n{run.spent} image call(s) spent, about ${run.cost:.2f}")
     for tid, status, f in summary:
         print(f"  {status:10} {tid}" + (f"  ({f})" if f else ""))
     print("\nLook before you commit: python3 tools/art.py contact <target>")
@@ -233,6 +236,10 @@ def cmd_report(a):
         print("no generations logged yet")
         return 0
     rows = [json.loads(l) for l in config.LOG.read_text().splitlines() if l.strip()]
+    drawn = [r for r in rows if not r.get("recheck") and "error" not in r]
+    spend = sum(config.price(r.get("model", config.IMAGE_MODEL), r.get("size", "2K")) for r in drawn) \
+        + config.CRITIC_PRICE * sum(1 for r in rows if r.get("critic"))
+    print(f"{len(drawn)} images drawn, about ${spend:.2f} in all (an estimate; the bill is the truth)")
     by = collections.defaultdict(list)
     for r in rows:
         by[r["kind"]].append(r)
@@ -267,6 +274,8 @@ def main():
     s.add_argument("--accept", action="store_true", help="promote the best passing candidate into art/")
     s.add_argument("--replace", action="store_true", help="allow replacing an existing master")
     s.add_argument("--no-critic", action="store_true", help="machine checks only")
+    s.add_argument("--keep-going", action="store_true",
+                   help="draw all -n candidates instead of stopping at the first that passes")
     s.add_argument("--like", help="an earlier drawing whose LOOK is right: redraw it to the prompt")
     s.add_argument("--trial", action="store_true",
                    help="redraw something already drawn, into .artgen/trial/, to compare; never promotes")

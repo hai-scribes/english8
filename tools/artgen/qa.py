@@ -33,7 +33,7 @@ def _checkerboard(rgb, bg):
     return grey.mean() > 0.8
 
 
-def check(kind, im, rep=None, fx_over=None):
+def check(kind, im, rep=None, fx_over=None, white_paper=True):
     out = []
     w, h = im.size
     if min(w, h) < 1000:
@@ -58,7 +58,8 @@ def check(kind, im, rep=None, fx_over=None):
     elif rep["edge_flat"] < (FX_FLAT_FAIL if kind == "fx" else FLAT_FAIL):
         out.append(("fail", f"background is not flat: only {rep['edge_flat']:.0%} of the "
                             f"edges match {tuple(rep['bg'])} — a surface, gradient or scene"))
-    if min(rep["bg"]) < 225:
+    # A white effect is drawn on a coloured backdrop (`paper` in cast.json).
+    if white_paper and min(rep["bg"]) < 225:
         out.append(("fail", f"background is not white: {tuple(rep['bg'])}"))
 
     fg, touches = rep["fg_frac"], set(rep["touches"])

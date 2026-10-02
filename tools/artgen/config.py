@@ -30,6 +30,48 @@ LOG = WORK / "log.jsonl"
 # costs more; worth trying for a character whose set keeps drifting.
 IMAGE_MODEL = os.environ.get("GEMINI_IMAGE_MODEL", "gemini-3.1-flash-image")
 
+# The cheaper sibling, for the kinds that are flat ink marks rather than
+# painting. At a third of the price a miss costs little, and `--model` puts any
+# target back on the main model.
+IMAGE_MODEL_BY_KIND = {
+    "fx": os.environ.get("GEMINI_IMAGE_MODEL_FX", "gemini-3.1-flash-lite-image"),
+}
+
+# Ask for the size the page can use, not the largest on offer. The price is per
+# output size: a prop is published at 512 px, an effect at 768 and a character
+# cell at 640, so 1K covers all three; only a plate (1800 px wide) needs 2K.
+# Everything was drawn at 2K at first, which was a third more than it had to be
+# on every image that was not a plate.
+SIZE_BY_KIND = {"bg": "2K", "cast": "1K", "props": "1K", "fx": "1K"}
+
+# USD per image, from https://ai.google.dev/gemini-api/docs/pricing (2026-10).
+# An ESTIMATE for the run summary and `art.py report` — the bill is the truth.
+PRICE = {
+    "gemini-3.1-flash-image":      {"1K": 0.067, "2K": 0.101, "4K": 0.151},
+    "gemini-3.1-flash-lite-image": {"1K": 0.034, "2K": 0.034},
+    "gemini-3-pro-image":          {"1K": 0.134, "2K": 0.134, "4K": 0.24},
+    "gemini-2.5-flash-image":      {"1K": 0.039, "2K": 0.039},
+}
+CRITIC_PRICE = 0.004      # a rough figure per judgement: three small images in, a line of JSON out
+
+
+# Targets the cheaper model could not do. `splash` is a solid white body of
+# water, not an ink mark, and came back as thin scribbles.
+MAIN_MODEL_ONLY = {"fx/splash"}
+
+
+def image_model(kind, override=None, target_id=None):
+    if override:
+        return override
+    if target_id in MAIN_MODEL_ONLY:
+        return IMAGE_MODEL
+    return IMAGE_MODEL_BY_KIND.get(kind, IMAGE_MODEL)
+
+
+def price(model, size):
+    return PRICE.get(model, {}).get(size or "1K", 0.10)
+
+
 # The critic only reads images and writes JSON. The `-latest` alias follows
 # Google's current Flash text model, so it does not need chasing.
 CRITIC_MODEL = os.environ.get("GEMINI_CRITIC_MODEL", "gemini-flash-latest")
