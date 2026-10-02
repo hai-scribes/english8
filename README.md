@@ -490,7 +490,7 @@ exercises are answered against.
 ::: dialogue title="The list in the yard" bg="harbour-wall"
              gramen="love / can't stand + V-ing" gramvi="…" gramco="…"
 @cast Tí|sad, Thảo|neutral
-@fx birds on=panel
+@fx flush on=Tí
 **Thảo|neutral:** You've been down on the wall all morning. What's [[wrong]]?
 **Thảo|annoyed|shout:** Tí.
 A line with no speaker is narration: the plate, a caption box, no avatar.

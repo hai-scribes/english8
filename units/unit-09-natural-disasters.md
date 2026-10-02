@@ -27,11 +27,11 @@
 @fx rain on=panel
 **Thảo|worried:** You look tired, Tí. Were you awake all night again?
 @fx impact on=Tí
-**Tí|sad:** Nearly. The wind [[was|gram:was]] pushing at our shutters from about two o'clock. Then a branch came down on the roof.
+**Tí|sad:** Nearly. The wind was pushing at our shutters from about two o'clock. Then a branch came down on the roof.
 **Thảo|surprised:** Did it break anything?
 **Tí|neutral:** One tile. While Bà Sáu was up the ladder counting the damage, I was filling every bucket in the house with clean water.
 **Thảo|surprised:** She let you go up the ladder?
-**Tí|annoyed:** She did not. I was holding it. That is a different job.
+**Tí|annoyed:** She did not. I [[was|gram:was]] holding it. That is a different job.
 **Thảo|worried:** Did you hear the six o'clock [[forecast]]? The storm turns west tonight.
 **Tí|worried:** I heard it. The radio was giving the same [[warning]] all yesterday afternoon, and nobody in our lane moved a thing upstairs.
 **Thảo|neutral:** My uncle did. He was carrying rice up to the loft before breakfast.
@@ -78,9 +78,8 @@
 - Tí: "I went down to look this morning and ___ back." {turned | was turning} = turned
 :::
 
-> **Ghi chú:** the wind **was pushing**, the radio **was giving** — việc **đang**
-> diễn ra lúc đó. A branch **came** down, I **turned** back — việc xảy ra một lần,
-> rất nhanh. Lesson 3 giải thích cách dùng.
+> **Ghi chú:** có việc **đang** diễn ra lúc đó, có việc xảy ra một lần, rất
+> nhanh — hai dạng động từ khác nhau. Lesson 3 giải thích cách dùng.
 
 ---
 

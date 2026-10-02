@@ -23,7 +23,6 @@
 
 ::: dialogue title="The list in the yard" bg="harbour-wall" gramen="enjoy cooking · can't stand waiting" gramvi="Sau các động từ enjoy, can't stand, don't mind, động từ theo sau thêm **-ing**." gramco="I enjoy cooking · I can't stand waiting"
 @cast none
-@fx birds on=panel
 The [[tide]] is out. The wet steps of the [[harbour wall|harbour]] go all the way down into the water.
 @cast Tí|sad
 @move Thảo in from=right
@@ -82,8 +81,8 @@ Below them the water climbs one step of the wall, and slides back down.
 - Thảo: "I enjoy ___ here with you." {sitting | to sit} = sitting
 :::
 
-> **Ghi chú:** enjoy **sitting**, can't stand **hearing**, don't mind
-> **teaching** — nhưng would love **to go**. Lesson 3 giải thích vì sao.
+> **Ghi chú:** sau một số động từ là **-ing**, sau một số khác là **to** +
+> động từ. Lesson 3 giải thích vì sao.
 
 ---
 

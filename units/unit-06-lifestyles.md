@@ -31,12 +31,12 @@
 **Tí|sad:** They won't. They think I am hiding something better.
 **Thảo|worried:** Bà Sáu says the older [[generation]] on our lane want more than a ring. They want the whole [[lifestyle]] they grew up inside.
 **Tí|surprised:** I know. Chú Bảy asked me to [[revive]] the boat market. The whole boat market.
-**Thảo|surprised:** And what [[will|gram:will]] you tell him?
+**Thảo|surprised:** And what will you tell him?
 **Tí|worried:** Nothing yet. If I take her down there once for one person, they will [[queue]] at our door tomorrow morning.
 **Thảo|neutral:** And if you never do it again?
 @fx anger on=Tí
 **Tí|annoyed|shout:** Then it never happens again, and nobody in this [[community]] will look at me the same way.
-**Thảo|happy:** Nobody? Bà Sáu will. I will.
+**Thảo|happy:** Nobody? Bà Sáu [[will|gram:will]]. I will.
 **Tí|neutral:** Five marks on that wall already. Seven to go before the water is over the street. I won't spend one on a ring.
 **Thảo|neutral:** Good. Unless you are certain, don't do it at all.
 **Tí|worried:** I'll be certain by Sunday. I promise.

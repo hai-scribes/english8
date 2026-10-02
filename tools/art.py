@@ -7,8 +7,10 @@
     python3 tools/art.py gen props/cakes         3 candidates, checked + critiqued
     python3 tools/art.py gen --missing fx -n 2   every undrawn effect
     python3 tools/art.py gen bong --accept       promote passing drawings
+    python3 tools/art.py gen ti/sad --trial      redraw a finished one, to test consistency
     python3 tools/art.py accept props/cakes      promote the best logged candidate
     python3 tools/art.py contact props/cakes     one image of every candidate
+    python3 tools/art.py recheck props/cakes     judge them again (no new images)
     python3 tools/art.py cut in.png -o out.png   any drawing -> transparent
     python3 tools/art.py check art/props/src/x.png --kind props
     python3 tools/art.py free --kind props "A dented tin kettle…" --out .artgen/free/kettle
@@ -97,23 +99,29 @@ def cmd_gen(a):
     if not ts:
         print("nothing to generate")
         return 0
-    print(f"{len(ts)} target(s), up to {a.n} candidate(s) each, budget {a.budget} calls\n")
+    print(f"{len(ts)} target(s), up to {a.n} attempt(s) each"
+          f"{'' if a.keep_going else ', stopping at the first that passes'}, "
+          f"budget {a.budget} calls\n")
     summary = []
     for t in ts:
         print(f"  {t.id}")
         try:
             r = produce.produce(t, n=a.n, accept=a.accept, replace=a.replace,
-                                critic=not a.no_critic, run=run)
+                                critic=not a.no_critic, run=run, trial=a.trial, like=a.like,
+                                keep_going=a.keep_going)
         except produce.BudgetExhausted as e:
             print(f"    {e}")
             break
+        except gemini.QuotaError as e:
+            print(f"\n  STOPPED: {e}")
+            return 2
         if r["status"] in ("exists", "retired"):
             print(f"    skipped: {r['note']}")
         summary.append((t.id, r["status"], (r.get("best") or {}).get("file")))
         if run.spent >= run.budget:
             print(f"\nbudget of {run.budget} image calls spent — stopping")
             break
-    print(f"\n{run.spent} image call(s) spent")
+    print(f"\n{run.spent} image call(s) spent, about ${run.cost:.2f}")
     for tid, status, f in summary:
         print(f"  {status:10} {tid}" + (f"  ({f})" if f else ""))
     print("\nLook before you commit: python3 tools/art.py contact <target>")
@@ -140,6 +148,14 @@ def cmd_accept(a):
         best = max(rows, key=lambda r: (r.get("critic") or {}).get("score", 0))
         cand = config.ROOT / best["file"]
     produce.promote(t, cand, replace=a.replace)
+    return 0
+
+
+def cmd_recheck(a):
+    config.api_key()
+    for t in prompts.find(a.target):
+        print(f"  {t.id}")
+        produce.recheck(t, produce.Run(critic_model=a.critic_model))
     return 0
 
 
@@ -191,7 +207,7 @@ def cmd_cut(a):
 
 def cmd_check(a):
     im = Image.open(a.src)
-    rep = None if a.kind == "bg" else cutout.key(im)[1]
+    rep = None if a.kind == "bg" else cutout.key(im, stands=(a.kind == "cast"))[1]
     findings = qa.check(a.kind, im, rep, a.over)
     if rep:
         print(json.dumps(rep))
@@ -220,6 +236,10 @@ def cmd_report(a):
         print("no generations logged yet")
         return 0
     rows = [json.loads(l) for l in config.LOG.read_text().splitlines() if l.strip()]
+    drawn = [r for r in rows if not r.get("recheck") and "error" not in r]
+    spend = sum(config.price(r.get("model", config.IMAGE_MODEL), r.get("size", "2K")) for r in drawn) \
+        + config.CRITIC_PRICE * sum(1 for r in rows if r.get("critic"))
+    print(f"{len(drawn)} images drawn, about ${spend:.2f} in all (an estimate; the bill is the truth)")
     by = collections.defaultdict(list)
     for r in rows:
         by[r["kind"]].append(r)
@@ -254,11 +274,17 @@ def main():
     s.add_argument("--accept", action="store_true", help="promote the best passing candidate into art/")
     s.add_argument("--replace", action="store_true", help="allow replacing an existing master")
     s.add_argument("--no-critic", action="store_true", help="machine checks only")
+    s.add_argument("--keep-going", action="store_true",
+                   help="draw all -n candidates instead of stopping at the first that passes")
+    s.add_argument("--like", help="an earlier drawing whose LOOK is right: redraw it to the prompt")
+    s.add_argument("--trial", action="store_true",
+                   help="redraw something already drawn, into .artgen/trial/, to compare; never promotes")
     s.add_argument("--budget", type=int, default=config.DEFAULT_BUDGET, help="max image calls")
     s.add_argument("--model"); s.add_argument("--critic-model")
 
     s = sub.add_parser("accept"); s.add_argument("target"); s.add_argument("file", nargs="?")
     s.add_argument("--replace", action="store_true")
+    s = sub.add_parser("recheck"); s.add_argument("target"); s.add_argument("--critic-model")
     s = sub.add_parser("contact"); s.add_argument("target"); s.add_argument("--last", type=int, default=12)
 
     s = sub.add_parser("cut"); s.add_argument("src"); s.add_argument("-o", "--out")

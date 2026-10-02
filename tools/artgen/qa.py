@@ -13,7 +13,12 @@ import numpy as np
 from . import cutout
 
 LEAK_FAIL = 0.03   # of the figure's area, reached only through a gap in the line
+BASE_FAIL = 0.20   # of the bottom edge a cropped half-body figure must cover
 FLAT_FAIL = 0.90   # of the top/left/right edges within tolerance of the bg colour
+# An effect is often ANCHORED to an edge — speed lines start at one, a gloom
+# hangs from the top, a burst reaches all four — so most of an edge may be ink.
+# The background still has to be the commonest thing on the border.
+FX_FLAT_FAIL = 0.55
 
 
 def _checkerboard(rgb, bg):
@@ -28,7 +33,7 @@ def _checkerboard(rgb, bg):
     return grey.mean() > 0.8
 
 
-def check(kind, im, rep=None, fx_over=None):
+def check(kind, im, rep=None, fx_over=None, white_paper=True):
     out = []
     w, h = im.size
     if min(w, h) < 1000:
@@ -50,10 +55,11 @@ def check(kind, im, rep=None, fx_over=None):
     rgb = np.asarray(im.convert("RGB")).astype(np.int16)
     if _checkerboard(rgb, np.array(rep["bg"])):
         out.append(("fail", "a transparency checkerboard is drawn into the background"))
-    elif rep["edge_flat"] < FLAT_FAIL:
+    elif rep["edge_flat"] < (FX_FLAT_FAIL if kind == "fx" else FLAT_FAIL):
         out.append(("fail", f"background is not flat: only {rep['edge_flat']:.0%} of the "
                             f"edges match {tuple(rep['bg'])} — a surface, gradient or scene"))
-    if min(rep["bg"]) < 225:
+    # A white effect is drawn on a coloured backdrop (`paper` in cast.json).
+    if white_paper and min(rep["bg"]) < 225:
         out.append(("fail", f"background is not white: {tuple(rep['bg'])}"))
 
     fg, touches = rep["fg_frac"], set(rep["touches"])
@@ -61,8 +67,17 @@ def check(kind, im, rep=None, fx_over=None):
         if touches - {"bottom"}:
             out.append(("fail", "the figure is cropped by the "
                                 + "/".join(sorted(touches - {"bottom"})) + " edge"))
+        # The cast is half-body and stands on the floor of the panel. A figure
+        # that ends inside the picture leaves a gap under it on the page, next
+        # to two characters who have none — and it cannot be slid down, because
+        # the corners beside the arms stay empty.
         if "bottom" not in touches:
-            out.append(("warn", "the figure does not reach the bottom edge (floats)"))
+            out.append(("fail", "the body ends inside the picture, leaving a gap under the "
+                                "figure — it must run off the bottom edge"))
+        elif rep.get("base_frac", 1) < BASE_FAIL:
+            out.append(("fail", f"the figure meets the bottom edge on only "
+                                f"{rep.get('base_frac', 0):.0%} of its width — the body must "
+                                f"run off the edge, not rest on it"))
         if not 0.15 <= fg <= 0.75:
             out.append(("fail", f"the figure covers {fg:.0%} of the square"))
     elif kind == "props":

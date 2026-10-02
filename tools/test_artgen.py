@@ -28,7 +28,7 @@ import numpy as np
 from PIL import Image, ImageDraw
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from artgen import config, cutout, gemini, produce, prompts, qa  # noqa: E402
+from artgen import config, cutout, gemini, place, produce, prompts, qa  # noqa: E402
 
 FAILS = []
 
@@ -81,10 +81,58 @@ def test_cutout():
     ok(0 < ca[3] < 255 and max(ca[:3]) < 60,
        f"an anti-aliased edge is un-mixed, not left pale ({ca})")
 
+    # A figure the frame crops at the bottom, in an off-white shirt that runs
+    # off the edge, with a paper-white gap enclosed by a raised arm and two
+    # paper-white eyes.
+    fig = Image.new("RGB", (1000, 1000), (255, 255, 255))
+    d = ImageDraw.Draw(fig)
+    d.rectangle((250, 300, 750, 999), fill=(245, 245, 240), outline=(40, 30, 25), width=10)
+    d.rectangle((262, 985, 738, 999), fill=(245, 245, 240))            # no outline along the frame edge
+    d.ellipse((560, 420, 700, 560), fill=(255, 255, 255), outline=(40, 30, 25), width=8)   # the pocket
+    d.ellipse((330, 380, 352, 402), fill=(255, 255, 255), outline=(40, 30, 25), width=4)   # an eye
+    plain, _ = cutout.key(fig)
+    ok(plain.getpixel((500, 900))[3] == 0, "unseated: the shirt is eaten from the bottom edge (the known fault)")
+    cut, rep = cutout.key(fig, stands=True)
+    ok(cut.getpixel((500, 900))[3] == 255, "stands: a shirt running off the bottom edge is kept")
+    ok(cut.getpixel((630, 490))[3] == 0 and rep["pocket_px"] > 0, "stands: paper enclosed by an arm is removed")
+    ok(cut.getpixel((341, 391))[3] == 255, "stands: the white of an eye is not a pocket")
+    ok(rep["leak_frac"] < 0.01, f"stands: a removed pocket is not counted as a leak ({rep['leak_frac']})")
+    ok(cut.getpixel((100, 100))[3] == 0, "stands: the background is still keyed from the other three edges")
+
+    # A see-through effect: darkness becomes opacity, capped by `strength`.
+    g = Image.new("RGB", (200, 200), (255, 255, 255))
+    ImageDraw.Draw(g).rectangle((0, 0, 60, 199), fill=(0, 0, 0))
+    ImageDraw.Draw(g).rectangle((61, 0, 100, 199), fill=(128, 128, 128))
+    w, _ = cutout.wash(g, 0.5)
+    ok(w.getpixel((190, 100))[3] == 0, "wash: white paper becomes nothing")
+    ok(abs(w.getpixel((30, 100))[3] - 128) <= 2, "wash: black is capped at the given strength")
+    half = w.getpixel((80, 100))
+    ok(abs(half[3] - 64) <= 3 and max(half[:3]) < 12,
+       f"wash: a pale grey becomes thin BLACK, not opaque grey ({half})")
+
     pre = Image.new("RGBA", (100, 100), (0, 0, 0, 0))
     ImageDraw.Draw(pre).ellipse((20, 20, 80, 80), fill=(200, 10, 10, 255))
     out, rep = cutout.key(pre)
     ok(rep["pre_cut"] and out.tobytes() == pre.tobytes(), "an existing cut-out is untouched")
+
+
+def test_place():
+    print("place")
+    # An asymmetric mark: a red bar with a blue block at its RIGHT end.
+    mark = Image.new("RGBA", (300, 200), (0, 0, 0, 0))
+    d = ImageDraw.Draw(mark)
+    d.rectangle((60, 80, 240, 120), fill=(255, 0, 0, 255))
+    d.rectangle((200, 80, 240, 120), fill=(0, 0, 255, 255))
+    out = place.stamp(mark, [[0.25, 0.5, 0.2]], 1000)
+    bb = out.getchannel("A").getbbox()
+    ok(abs((bb[0] + bb[2]) / 2 - 250) <= 1 and abs((bb[1] + bb[3]) / 2 - 500) <= 1,
+       f"a mark is trimmed and stamped centred on its position ({bb})")
+    ok(abs((bb[2] - bb[0]) - 200) <= 1, "…at the width the manifest gives it")
+    flip = place.stamp(mark, [[0.25, 0.5, 0.2]], 1000, mirrored=True)
+    fb = flip.getchannel("A").getbbox()
+    ok(abs((fb[0] + fb[2]) / 2 - 750) <= 1, "mirrored: the POSITION is mirrored")
+    ok(flip.getpixel((fb[2] - 5, 500))[:3] == (0, 0, 255),
+       "mirrored: the mark itself is not — its right end is still its right end")
 
 
 def test_qa():
@@ -111,6 +159,18 @@ def test_qa():
     ImageDraw.Draw(crop).ellipse((-50, 100, 300, 700), fill=(80, 120, 60), outline=(0, 0, 0), width=8)
     f = qa.check("cast", crop, cutout.key(crop)[1])
     ok(any("cropped by the left" in m for _, m in f), "a figure cropped by the side edge fails")
+
+    # A bust: the body ends inside the picture, with a gap under it.
+    bust = Image.new("RGB", (600, 600), (255, 255, 255))
+    ImageDraw.Draw(bust).ellipse((120, 150, 480, 560), fill=(60, 60, 140), outline=(0, 0, 0), width=8)
+    f = qa.check("cast", bust, cutout.key(bust)[1])
+    ok(any("ends inside the picture" in m for lvl, m in f if lvl == "fail"),
+       "a figure that ends above the bottom edge fails")
+    # …and the same figure cropped by the frame, as a half-body is, passes.
+    half = Image.new("RGB", (600, 600), (255, 255, 255))
+    ImageDraw.Draw(half).ellipse((120, 150, 480, 900), fill=(60, 60, 140), outline=(0, 0, 0), width=8)
+    ok(not qa.failed(qa.check("cast", half, cutout.key(half)[1])),
+       "a figure that runs off the bottom edge passes")
 
     f = qa.check("props", ring(gap=3), cutout.key(ring(gap=3))[1])
     ok(any("gap" in m for lvl, m in f if lvl == "fail"), "a hollowed figure fails")
@@ -173,6 +233,26 @@ def test_gemini():
             {"text": 'Sure!\n```json\n{"verdict": "pass", "score": 9}\n```'}]}}]}
         ok(gemini.judge("x", [], model="c")["score"] == 9, "fenced JSON from the critic is read")
 
+        def zero(*a, **k):
+            raise gemini.GeminiError('HTTP 429: {"error": {"message": "Quota exceeded for '
+                                     'metric: generate_content_free_tier_requests, limit: 0"}}')
+        gemini.transport = zero
+        try:
+            gemini.generate_image("x", model="m")
+            ok(False, "a zero quota raises")
+        except gemini.QuotaError as e:
+            ok("billing" in str(e), "a zero quota stops at once and says to turn on billing")
+
+        def broke(*a, **k):
+            raise gemini.GeminiError('HTTP 429: {"error": {"message": "Your prepayment credits '
+                                     'are depleted. Learn more at .../billing#prepay."}}')
+        gemini.transport = broke
+        try:
+            gemini.generate_image("x", model="m")
+            ok(False, "depleted credit raises")
+        except gemini.QuotaError as e:
+            ok("top it up" in str(e), "depleted credit stops the run at once and says to top up")
+
         gemini.transport = lambda *a, **k: {"candidates": [{"finishReason": "SAFETY"}]}
         try:
             gemini.generate_image("x", model="m")
@@ -233,7 +313,7 @@ if __name__ == "__main__":
     # A dummy key: every call below goes to a fake transport, never the network.
     import os
     os.environ.setdefault("GEMINI_API_KEY", "test-key-never-sent")
-    for t in (test_cutout, test_qa, test_prompts, test_gemini, test_produce):
+    for t in (test_cutout, test_place, test_qa, test_prompts, test_gemini, test_produce):
         t()
     print(f"\n{'FAIL' if FAILS else 'PASS'}: {len(FAILS)} failure(s)")
     sys.exit(1 if FAILS else 0)

@@ -145,7 +145,7 @@ that is *also* a story, never a story that used to be a course.
 | **Bà Sáu** | yes | the grandmother; sells at the fish market before light; strict, funny, worried about money out loud |
 | **Chú Bảy** | yes | an uncle on a boat, who was also bad at school and is fine |
 | **Cô Yến** | yes | the teacher; makes failure public |
-| **Khoa** | no | top of everything and genuinely kind |
+| **Khoa** | no | top of everything and genuinely kind — and has not noticed; lives in his own head (glasses, pencil behind his ear, the notebook) |
 | **Minh** | no | Chapter 3 on. The boy who left on the boat a year ago and comes back still thirteen |
 | **the keeper** | — | the lighthouse keeper who measured the tides and stayed in the water; Act III on; the farewell belongs to him |
 | **the whale** | — | unnamed, silent, twice: Chapter 5 and Chapter 12 |

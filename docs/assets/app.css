@@ -1206,9 +1206,10 @@ footer.foot p{margin:0;max-width:74ch}
    than inheriting a shape that was cut for speech. Taken out of flow as well as
    out of the shape: a balloon is exactly as wide as its widest line, and a
    gloss left in flow would stretch it to 44ch the moment somebody tapped a
-   word — moving the balloon off the speaker it was placed over. */
-.d-bubble .gloss{position:absolute;top:100%;left:50%;transform:translateX(-50%);
-  width:max-content;max-width:min(78vw,34ch);margin:.4rem 0 0;z-index:3;
+   word — moving the balloon off the speaker it was placed over. Where it goes
+   is set in app.js (`placeGloss`), under its own balloon and inside the frame. */
+.d-bubble .gloss{position:absolute;top:0;left:0;
+  width:max-content;max-width:min(78vw,34ch);margin:0;z-index:3;
   background:#f4f2ec;color:#111;border-left-color:#b4503c;pointer-events:auto}
 
 /* ---- the controls, under the picture -------------------------------------

@@ -27,7 +27,7 @@
 **Thảo|neutral:** Your grandmother was counting coins at the kitchen table when I came in.
 **Tí|worried:** She counts them every morning now. Rice went up, and the money from my parents arrives on the fifteenth.
 **Thảo|worried:** That's four days away. What do you do until then?
-**Tí|neutral:** We buy less. She [[usually|gram:usually]] goes to the [[stall]] at the end of our lane, because the woman there lets her pay on Friday.
+**Tí|neutral:** We buy less. She usually goes to the [[stall]] at the end of our lane, because the woman there lets her pay on Friday.
 **Thảo|neutral:** Does she ever go to the [[shopping centre]] on the ring road?
 **Tí|annoyed:** Hardly ever. Everything there costs more, and they want [[cash]] or a card at a counter where nobody knows your face.
 **Thảo|surprised:** Đạt was at the centre yesterday. He bought two pairs of trainers and kept the [[receipt]] for both, so he can ask for a [[refund]] on the pair he likes less.
@@ -45,7 +45,7 @@
 **Thảo|surprised:** So where does she sleep now?
 **Tí|neutral:** At the table, in front of everybody, where anybody who walks in can see her. Bà Sáu says a child you hide behind the house is a child you are still planning to use.
 **Thảo|worried:** Đạt has already been in to look at her. So has Hùng. They both know exactly where she is.
-**Tí|annoyed:** Everybody does. The sea gives back what it took — you never choose what. I'm not doing that again.
+**Tí|annoyed:** Everybody does. The sea gives back what it took — you [[never|gram:never]] choose what. I'm not doing that again.
 **Thảo|neutral:** Nobody asked you to, Tí.
 :::
 
@@ -79,9 +79,8 @@
 - Thảo: "The fish sellers ___ their good baskets out twice." {never put | put never | never puts} = never put
 :::
 
-> **Ghi chú:** she **usually goes**, he **always has** — từ chỉ mức độ thường
-> xuyên đứng **trước** động từ. The market **opens** at five tomorrow — giờ
-> mở cửa cố định, nên dùng hiện tại đơn dù là ngày mai. Lesson 3 giải thích kỹ.
+> **Ghi chú:** để ý từ chỉ mức độ thường xuyên đứng ở đâu so với động từ, và
+> động từ ở thì nào khi nói về một giờ cố định. Lesson 3 giải thích kỹ.
 
 ---
 

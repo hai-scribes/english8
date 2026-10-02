@@ -211,9 +211,14 @@ READING_TYPES = {
 COURSE_TYPES = {
     "gap-fill":        "Gap-fill",
     "choice":          "Choose the right one",
-    "short-answer":    "Short answer",
+    # "Short answer" described a text box that no longer exists — every answer
+    # is picked (2026-09-25). A noun, not an instruction: twelve of these sit
+    # directly above "Choose the answer from the scene."
+    "short-answer":    "Questions",
     "sort":            "Sort into groups",
-    "synonym-search":  "Synonym search against the clock",
+    # No "against the clock": only a task under a `:::clock` is timed, and the
+    # clock announces itself there. In Lesson 1 the label was simply untrue.
+    "synonym-search":  "Synonym search",
 }
 TASK_TYPES = {"listening": LISTENING_TYPES, "reading": READING_TYPES, "course": COURSE_TYPES}
 
@@ -1155,7 +1160,13 @@ def dialogue_payload(a: dict, body: str, did: str, where: str) -> dict:
                 raise SystemExit(f"{where}: two effects on {on} in one panel — "
                                  f"one is the limit, and it is the limit because "
                                  f"two do not read")
-            pending_fx.append({"slug": slug, "on": on})
+            fx_row = {"slug": slug, "on": on}
+            # A glyph cannot be mirrored with its figure — a flipped question
+            # mark is a different character. The page swaps in the `.flip` file
+            # make_overlay.py writes: mirrored POSITION, unmirrored mark.
+            if CAST_FX[slug].get("upright"):
+                fx_row["up"] = True
+            pending_fx.append(fx_row)
             seen_fx.add(slug)
             breaks = True
             continue

@@ -19,7 +19,7 @@ page composites them in that depth order:
 | | …composed by `tools/make_sheet.py` into the 3 × 2 sheet the page loads | `art/cast/<slug>.webp` |
 | **Part 2** | Eleven background plates — the story's places, drawn empty | `art/bg/<slug>.jpg` |
 | **Part 3** | Fourteen props — things in the scene a line can point at, cut out | `art/props/src/<slug>.png` → `art/props/<slug>.webp` |
-| **Part 4** | Twelve effects — the manga marks that go *over* a picture | `art/fx/src/<slug>.png` → `art/fx/<slug>.webp` |
+| **Part 4** | Eleven effects — the manga marks that go *over* a picture | `art/fx/src/<slug>.png` → `art/fx/<slug>.webp` |
 
 `data/cast.json` is the contract. It declares the slugs, the six emotions and
 their panel order, the four balloon shapes, every prop and every effect, and
@@ -101,9 +101,9 @@ resembling a character from the film, it is wrong even when it is beautiful.
 > the way round with no gaps** and that nothing fades out past it. Plates are
 > never keyed, so nothing constrains them.
 
-**What unit 1 needs:** Part 2 §1 (`harbour-wall`), and from Part 4 `birds` and
-`flush`. Tí's and Thảo's sheets are already drawn, and unit 1 places no props —
-so that is **three files**, and the unit is complete.
+**What unit 1 needs:** Part 2 §1 (`harbour-wall`), and from Part 4 `flush`.
+Tí's and Thảo's sheets are already drawn, and unit 1 places no props — so that
+is **two files**, and the unit is complete.
 
 **All twelve dialogues are now staged**, so nothing here is speculative any
 more: every prompt in this file is named by a chapter that ships, and a unit
@@ -154,6 +154,7 @@ even when she is sad; Bà Sáu is planted and her hands are always doing or havi
 just done something; Khoa has the notebook in every panel and it is his hands'
 whole vocabulary; Bống uses both hands at once for everything, badly, because
 she has not had them long.
+**Khoa's book is brick red, not green.** The green notebook is the keeper's and Tí carries it — unit 11 puts it on stage as a prop while Khoa says *bring the green notebook*. Khoa's six were first drawn hugging a green one, so a reader saw two; his masters were recoloured (originals in `.artgen/replaced/`), and his prompts now say *red exercise book*.
 **Do not normalise these back to one description.** The one thing they do share
 is the last line — every gesture stays at chest height or above, because the
 crop is chest-up and a hand below it is a hand nobody sees.
@@ -251,11 +252,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **neutral**: an ordinary talking
 > face, mouth slightly open, no strong feeling; hands resting together in
@@ -365,11 +371,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **happy**: a real open smile, eyes
 > curved; shoulders lifted, one hand raised in a small open gesture. Keep
@@ -479,11 +490,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **worried**: brows raised and pulled
 > together, mouth a small flat line; shoulders drawn in, hands close to the
@@ -593,11 +609,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **annoyed**: brows down and level,
 > mouth pressed or turned down at one corner; arms folded. Keep every
@@ -707,11 +728,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **surprised**: eyes wide and round,
 > brows high, mouth open in a small circle; shoulders up, both hands lifted
@@ -821,11 +847,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **sad**: eyes lowered, brows slack,
 > mouth a short downward curve; shoulders dropped, one hand held loosely at
@@ -928,11 +959,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **neutral**: an ordinary talking
 > face, mouth slightly open, no strong feeling; **one hand turned palm-up at
@@ -1031,11 +1067,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **happy**: a real open smile, eyes
 > curved; **both hands closed into small fists in front of her chest**,
@@ -1134,11 +1175,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **worried**: brows raised and pulled
 > together, mouth a small flat line; **one hand at her chin, the other arm
@@ -1238,11 +1284,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **annoyed**: brows down and level,
 > one a little higher than the other, mouth pressed or turned down at one
@@ -1342,11 +1393,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **surprised**: eyes wide and round,
 > brows high, mouth open in a small circle; **both hands stopped open in the
@@ -1445,11 +1501,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **sad**: eyes lowered, brows slack,
 > mouth a short downward curve; **both hands clasped together in front of
@@ -1550,11 +1611,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **neutral**: an ordinary talking
 > face, mouth slightly open, no strong feeling; **one thick forearm laid
@@ -1652,11 +1718,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **happy**: a real open smile, the
 > eyes curving further into their two crescents; **one hand raised flat and
@@ -1753,11 +1824,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **worried**: brows raised and pulled
 > together, mouth a small flat line; **one hand pressed flat over her heart,
@@ -1854,11 +1930,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **annoyed**: brows down and level,
 > mouth pressed flat and the deep line at each corner deeper; **one index
@@ -1956,11 +2037,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **surprised**: the eyes open to full
 > circles — the only time they do — brows high, mouth open in a small
@@ -2058,11 +2144,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **sad**: eyes lowered, brows slack,
 > mouth a short downward curve; **both hands folded together and let down to
@@ -2149,33 +2240,50 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Khoa** — a boy of thirteen, half a head taller than
-> the others, neat and calm. A straight vertical silhouette, arms at rest,
-> the stillest figure in the cast. Warm brown-black hair, combed flat and
-> lying smoother than anyone else's, with **a clean side parting** — the
-> only parting in the cast. Eyes even ovals with
-> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
-> **never smug, never sneering.** White shirt buttoned to the collar.
+> **The character.** **Khoa** — a boy of thirteen, the tallest of the children
+> and the thinnest: a long neck, narrow shoulders, all elbows. **He has
+> outgrown his shirt** — a plain white school shirt, clean, worn open at the
+> neck, whose long sleeves stop well short of his wrists — and **it sits a
+> little crooked on him**, one point of the collar higher than the other.
+> **Round wire glasses, a little too big, sitting low on his nose**, one arm
+> of them bound with a wrap of white thread where it once broke. Warm
+> brown-black hair combed flat with a clean side parting — the only parting in
+> the cast — except for **one lock that has fallen forward across the top of
+> his glasses**. **A short pencil stub tucked behind his ear**, and a smudge
+> of blue ink on his fingers. Behind the lenses his eyes are even ovals, a
+> little wide, looking slightly past whoever he is talking to, as if he is
+> still working something out. A small real smile, closed and a bit lopsided.
+> He is the cleverest person in the room and has not noticed: kind,
+> absent-minded, a little awkward, **never smug, never sneering, never cool.**
 > Reproduce that design exactly, with no change to hair, face, clothing,
-> colour or proportion. **Must not:** be drawn as a rival or a snob;
-> resemble any existing Studio Ghibli character.
+> colour or proportion. **Must not:** be drawn as a rival, a snob or a neat
+> prefect; wear a tie or a blazer; resemble any existing Studio Ghibli
+> character.
 >
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
-> **The expression.** The expression is **neutral**: an ordinary talking
-> face, mouth slightly open, no strong feeling; **the green notebook held
-> flat against his chest in both hands**, arms at rest. The stillest figure
-> in the cast. Keep every gesture at chest height or above.
+> **The expression.** The expression is **neutral**: an ordinary talking face,
+> mouth slightly open, no strong feeling; **one arm holding the red exercise book
+> flat against his chest, loose papers sticking out of its edges, while the
+> other hand pushes his glasses up his nose with one bent knuckle.**
+> Unhurried, a little elsewhere. Keep every gesture at chest height or above.
 >
-> **Keep visible:** the clean side parting, and the green notebook — he has
-> it in his hands in every panel, though what his hands do with it changes.
+> **Keep visible:** the round glasses low on his nose, the lock of hair fallen
+> across them, the pencil stub behind his ear, the sleeves that are too short
+> for his arms, and the red exercise book — he has it in his hands in every
+> panel, though what his hands do with it changes.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper
@@ -2250,33 +2358,50 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Khoa** — a boy of thirteen, half a head taller than
-> the others, neat and calm. A straight vertical silhouette, arms at rest,
-> the stillest figure in the cast. Warm brown-black hair, combed flat and
-> lying smoother than anyone else's, with **a clean side parting** — the
-> only parting in the cast. Eyes even ovals with
-> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
-> **never smug, never sneering.** White shirt buttoned to the collar.
+> **The character.** **Khoa** — a boy of thirteen, the tallest of the children
+> and the thinnest: a long neck, narrow shoulders, all elbows. **He has
+> outgrown his shirt** — a plain white school shirt, clean, worn open at the
+> neck, whose long sleeves stop well short of his wrists — and **it sits a
+> little crooked on him**, one point of the collar higher than the other.
+> **Round wire glasses, a little too big, sitting low on his nose**, one arm
+> of them bound with a wrap of white thread where it once broke. Warm
+> brown-black hair combed flat with a clean side parting — the only parting in
+> the cast — except for **one lock that has fallen forward across the top of
+> his glasses**. **A short pencil stub tucked behind his ear**, and a smudge
+> of blue ink on his fingers. Behind the lenses his eyes are even ovals, a
+> little wide, looking slightly past whoever he is talking to, as if he is
+> still working something out. A small real smile, closed and a bit lopsided.
+> He is the cleverest person in the room and has not noticed: kind,
+> absent-minded, a little awkward, **never smug, never sneering, never cool.**
 > Reproduce that design exactly, with no change to hair, face, clothing,
-> colour or proportion. **Must not:** be drawn as a rival or a snob;
-> resemble any existing Studio Ghibli character.
+> colour or proportion. **Must not:** be drawn as a rival, a snob or a neat
+> prefect; wear a tie or a blazer; resemble any existing Studio Ghibli
+> character.
 >
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
-> **The expression.** The expression is **happy**: a real open smile, eyes
-> curved; **the notebook lowered into one hand while the other lifts in a
-> small open gesture**, and his shoulders come up slightly. Keep every
-> gesture at chest height or above.
+> **The expression.** The expression is **happy**: a real open smile, a bit
+> lopsided, eyes curved behind the lenses; **one finger raised beside his head
+> like a found answer, the notebook hugged against his chest with the other
+> arm.** His shoulders come up slightly. Keep every gesture at chest height or
+> above.
 >
-> **Keep visible:** the clean side parting, and the green notebook — he has
-> it in his hands in every panel, though what his hands do with it changes.
+> **Keep visible:** the round glasses low on his nose, the lock of hair fallen
+> across them, the pencil stub behind his ear, the sleeves that are too short
+> for his arms, and the red exercise book — he has it in his hands in every
+> panel, though what his hands do with it changes.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper
@@ -2351,33 +2476,50 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Khoa** — a boy of thirteen, half a head taller than
-> the others, neat and calm. A straight vertical silhouette, arms at rest,
-> the stillest figure in the cast. Warm brown-black hair, combed flat and
-> lying smoother than anyone else's, with **a clean side parting** — the
-> only parting in the cast. Eyes even ovals with
-> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
-> **never smug, never sneering.** White shirt buttoned to the collar.
+> **The character.** **Khoa** — a boy of thirteen, the tallest of the children
+> and the thinnest: a long neck, narrow shoulders, all elbows. **He has
+> outgrown his shirt** — a plain white school shirt, clean, worn open at the
+> neck, whose long sleeves stop well short of his wrists — and **it sits a
+> little crooked on him**, one point of the collar higher than the other.
+> **Round wire glasses, a little too big, sitting low on his nose**, one arm
+> of them bound with a wrap of white thread where it once broke. Warm
+> brown-black hair combed flat with a clean side parting — the only parting in
+> the cast — except for **one lock that has fallen forward across the top of
+> his glasses**. **A short pencil stub tucked behind his ear**, and a smudge
+> of blue ink on his fingers. Behind the lenses his eyes are even ovals, a
+> little wide, looking slightly past whoever he is talking to, as if he is
+> still working something out. A small real smile, closed and a bit lopsided.
+> He is the cleverest person in the room and has not noticed: kind,
+> absent-minded, a little awkward, **never smug, never sneering, never cool.**
 > Reproduce that design exactly, with no change to hair, face, clothing,
-> colour or proportion. **Must not:** be drawn as a rival or a snob;
-> resemble any existing Studio Ghibli character.
+> colour or proportion. **Must not:** be drawn as a rival, a snob or a neat
+> prefect; wear a tie or a blazer; resemble any existing Studio Ghibli
+> character.
 >
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **worried**: brows raised and pulled
-> together, mouth a small flat line; **both hands closed a little too
-> tightly on the notebook**, holding it up against his chest like something
-> to stand behind. Keep every gesture at chest height or above.
+> together, mouth a small flat line; **the knuckle of one bent finger pressed
+> against his lower lip, the notebook clutched to his chest with the other
+> arm** like something to stand behind. Looking down and to one side, working
+> it out. Keep every gesture at chest height or above.
 >
-> **Keep visible:** the clean side parting, and the green notebook — he has
-> it in his hands in every panel, though what his hands do with it changes.
+> **Keep visible:** the round glasses low on his nose, the lock of hair fallen
+> across them, the pencil stub behind his ear, the sleeves that are too short
+> for his arms, and the red exercise book — he has it in his hands in every
+> panel, though what his hands do with it changes.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper
@@ -2452,34 +2594,50 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Khoa** — a boy of thirteen, half a head taller than
-> the others, neat and calm. A straight vertical silhouette, arms at rest,
-> the stillest figure in the cast. Warm brown-black hair, combed flat and
-> lying smoother than anyone else's, with **a clean side parting** — the
-> only parting in the cast. Eyes even ovals with
-> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
-> **never smug, never sneering.** White shirt buttoned to the collar.
+> **The character.** **Khoa** — a boy of thirteen, the tallest of the children
+> and the thinnest: a long neck, narrow shoulders, all elbows. **He has
+> outgrown his shirt** — a plain white school shirt, clean, worn open at the
+> neck, whose long sleeves stop well short of his wrists — and **it sits a
+> little crooked on him**, one point of the collar higher than the other.
+> **Round wire glasses, a little too big, sitting low on his nose**, one arm
+> of them bound with a wrap of white thread where it once broke. Warm
+> brown-black hair combed flat with a clean side parting — the only parting in
+> the cast — except for **one lock that has fallen forward across the top of
+> his glasses**. **A short pencil stub tucked behind his ear**, and a smudge
+> of blue ink on his fingers. Behind the lenses his eyes are even ovals, a
+> little wide, looking slightly past whoever he is talking to, as if he is
+> still working something out. A small real smile, closed and a bit lopsided.
+> He is the cleverest person in the room and has not noticed: kind,
+> absent-minded, a little awkward, **never smug, never sneering, never cool.**
 > Reproduce that design exactly, with no change to hair, face, clothing,
-> colour or proportion. **Must not:** be drawn as a rival or a snob;
-> resemble any existing Studio Ghibli character.
+> colour or proportion. **Must not:** be drawn as a rival, a snob or a neat
+> prefect; wear a tie or a blazer; resemble any existing Studio Ghibli
+> character.
 >
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **annoyed**: brows down and level,
-> mouth pressed — a mild and patient annoyance, never a sneer; **the
-> notebook held closed in one hand at chest height, the other hand resting
-> flat on its cover**, as if he had stopped reading mid-page. Keep every
-> gesture at chest height or above.
+> mouth pressed — a mild and patient annoyance at a problem, never at a
+> person, never a sneer; **looking over the top of his glasses, one finger
+> tapping the closed notebook he holds at chest height.** Keep every gesture
+> at chest height or above.
 >
-> **Keep visible:** the clean side parting, and the green notebook — he has
-> it in his hands in every panel, though what his hands do with it changes.
+> **Keep visible:** the round glasses low on his nose, the lock of hair fallen
+> across them, the pencil stub behind his ear, the sleeves that are too short
+> for his arms, and the red exercise book — he has it in his hands in every
+> panel, though what his hands do with it changes.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper
@@ -2554,33 +2712,51 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Khoa** — a boy of thirteen, half a head taller than
-> the others, neat and calm. A straight vertical silhouette, arms at rest,
-> the stillest figure in the cast. Warm brown-black hair, combed flat and
-> lying smoother than anyone else's, with **a clean side parting** — the
-> only parting in the cast. Eyes even ovals with
-> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
-> **never smug, never sneering.** White shirt buttoned to the collar.
+> **The character.** **Khoa** — a boy of thirteen, the tallest of the children
+> and the thinnest: a long neck, narrow shoulders, all elbows. **He has
+> outgrown his shirt** — a plain white school shirt, clean, worn open at the
+> neck, whose long sleeves stop well short of his wrists — and **it sits a
+> little crooked on him**, one point of the collar higher than the other.
+> **Round wire glasses, a little too big, sitting low on his nose**, one arm
+> of them bound with a wrap of white thread where it once broke. Warm
+> brown-black hair combed flat with a clean side parting — the only parting in
+> the cast — except for **one lock that has fallen forward across the top of
+> his glasses**. **A short pencil stub tucked behind his ear**, and a smudge
+> of blue ink on his fingers. Behind the lenses his eyes are even ovals, a
+> little wide, looking slightly past whoever he is talking to, as if he is
+> still working something out. A small real smile, closed and a bit lopsided.
+> He is the cleverest person in the room and has not noticed: kind,
+> absent-minded, a little awkward, **never smug, never sneering, never cool.**
 > Reproduce that design exactly, with no change to hair, face, clothing,
-> colour or proportion. **Must not:** be drawn as a rival or a snob;
-> resemble any existing Studio Ghibli character.
+> colour or proportion. **Must not:** be drawn as a rival, a snob or a neat
+> prefect; wear a tie or a blazer; resemble any existing Studio Ghibli
+> character.
 >
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
-> **The expression.** The expression is **surprised**: eyes wide and round,
-> brows high, mouth open in a small circle; **the notebook slipping in his
-> grip so that both hands catch at it** — the one moment his stillness
-> breaks. Keep every gesture at chest height or above.
+> **The expression.** The expression is **surprised**: eyes wide and round
+> behind the lenses, brows high, mouth open in a small circle; **his glasses
+> have slipped right down to the tip of his nose, and the notebook is sliding
+> out of his grip with two loose pages escaping, both hands catching at it** —
+> the one moment he is not somewhere else. Keep every gesture at chest height
+> or above.
 >
-> **Keep visible:** the clean side parting, and the green notebook — he has
-> it in his hands in every panel, though what his hands do with it changes.
+> **Keep visible:** the round glasses low on his nose, the lock of hair fallen
+> across them, the pencil stub behind his ear, the sleeves that are too short
+> for his arms, and the red exercise book — he has it in his hands in every
+> panel, though what his hands do with it changes.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper
@@ -2655,33 +2831,50 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > own description asks for one. Each garment reads at a glance as a single
 > block of colour.
 >
-> **The character.** **Khoa** — a boy of thirteen, half a head taller than
-> the others, neat and calm. A straight vertical silhouette, arms at rest,
-> the stillest figure in the cast. Warm brown-black hair, combed flat and
-> lying smoother than anyone else's, with **a clean side parting** — the
-> only parting in the cast. Eyes even ovals with
-> the pupil centred, and a small level closed-mouth smile. Genuinely kind;
-> **never smug, never sneering.** White shirt buttoned to the collar.
+> **The character.** **Khoa** — a boy of thirteen, the tallest of the children
+> and the thinnest: a long neck, narrow shoulders, all elbows. **He has
+> outgrown his shirt** — a plain white school shirt, clean, worn open at the
+> neck, whose long sleeves stop well short of his wrists — and **it sits a
+> little crooked on him**, one point of the collar higher than the other.
+> **Round wire glasses, a little too big, sitting low on his nose**, one arm
+> of them bound with a wrap of white thread where it once broke. Warm
+> brown-black hair combed flat with a clean side parting — the only parting in
+> the cast — except for **one lock that has fallen forward across the top of
+> his glasses**. **A short pencil stub tucked behind his ear**, and a smudge
+> of blue ink on his fingers. Behind the lenses his eyes are even ovals, a
+> little wide, looking slightly past whoever he is talking to, as if he is
+> still working something out. A small real smile, closed and a bit lopsided.
+> He is the cleverest person in the room and has not noticed: kind,
+> absent-minded, a little awkward, **never smug, never sneering, never cool.**
 > Reproduce that design exactly, with no change to hair, face, clothing,
-> colour or proportion. **Must not:** be drawn as a rival or a snob;
-> resemble any existing Studio Ghibli character.
+> colour or proportion. **Must not:** be drawn as a rival, a snob or a neat
+> prefect; wear a tie or a blazer; resemble any existing Studio Ghibli
+> character.
 >
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **sad**: eyes lowered, brows slack,
-> mouth a short downward curve; **the notebook held closed in both hands and
-> lowered to just below his chest**, forgotten. Keep every gesture at chest
-> height or above.
+> mouth a short downward curve; **both arms wrapped round the closed notebook,
+> holding it to his chest, his head tipped down so that he looks over the top
+> of his glasses at nothing.** Very still. Keep every gesture at chest height
+> or above.
 >
-> **Keep visible:** the clean side parting, and the green notebook — he has
-> it in his hands in every panel, though what his hands do with it changes.
+> **Keep visible:** the round glasses low on his nose, the lock of hair fallen
+> across them, the pencil stub behind his ear, the sleeves that are too short
+> for his arms, and the red exercise book — he has it in his hands in every
+> panel, though what his hands do with it changes.
 >
 > **The background** is pure flat white #FFFFFF, edge to edge, with no
 > shadow under or behind the figure, no gradient, no texture and no paper
@@ -2781,11 +2974,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **neutral**: an ordinary talking
 > face, mouth slightly open, no strong feeling. **Both hands held up at
@@ -2891,11 +3089,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **happy**: a wide open laugh, eyes
 > squeezed into upward curves, head tipped back a little. **Both fists up
@@ -3001,11 +3204,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **worried**: brows raised and pulled
 > together, eyes very round, mouth a small flat line. **Both hands laid flat
@@ -3110,11 +3318,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **annoyed**: brows down and level,
 > chin tucked, **cheeks puffed out** and mouth pushed into a small pout —
@@ -3220,11 +3433,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **surprised**: eyes wide and
 > perfectly round, brows high, mouth a round open O. **Both hands flying
@@ -3329,11 +3547,16 @@ crop is chest-up and a hand below it is a hand nobody sees.
 > **Framing.** Draw the character from the **chest up** — head, shoulders,
 > upper chest, and both arms and hands. The character is in **three-quarter
 > view, not facing the camera**: body and head turned about 30 to 45 degrees
-> off straight-on, **looking toward the right-hand side of the frame**, as
-> if speaking to somebody standing off to their right — never out at the
-> reader. The picture is **square, 1:1**, with the figure centred across it
-> and sitting on the bottom edge. Leave a little clear space at the top and
-> both sides: **nothing may be cropped by the edge, least of all a hand.**
+> off straight-on, **looking toward the right-hand side of the frame**, as if
+> speaking to somebody standing off to their right — never out at the reader.
+> The picture is **square, 1:1**, with the figure centred across it. **The
+> body runs off the bottom edge of the picture**: the frame cuts the figure at
+> about the waist, the way a photograph crops a person, and the torso and
+> clothes carry on past it at full width. The body never ends inside the
+> picture — no lower edge, no hem, no closing outline and no empty space under
+> the figure. Leave a little clear space at the top and both sides: **nothing
+> may be cropped by the top or side edges, least of all a hand**, so keep the
+> hands well above the bottom edge.
 >
 > **The expression.** The expression is **sad**: eyes lowered, brows drawn
 > up in the middle, mouth small and turned down at one corner. **Both hands
@@ -3599,7 +3822,7 @@ extra re-rolls; the rest appear once or twice each.
 > **No people, no animals, and no characters of any kind anywhere in the
 > frame. Draw the place only.**
 >
-> A concrete school yard in flat hard midday light. A painted noticeboard
+> A concrete school yard in flat hard midday light. **The yellow-washed wall of the school building fills the right-hand third of the frame, from the top edge down to the ground, and it is bare**: plain sunlit plaster with nothing pinned, hung or painted on it, because the page hangs the class list there. On the left, a flame tree in full red flower throwing a hard shadow across the concrete, and a bicycle rack beneath it. Beyond a low wall at the back, the roofs of the fishing quarter and the blue of the bay.
 > on a yellow-washed wall, a flame tree in full red flower throwing a hard
 > shadow, a bicycle rack. Along one side a low wall, and below and beyond it
 > the roofs of the fishing quarter and the blue of the bay.
@@ -4911,7 +5134,7 @@ effect shows up.
 
 ## 1. `impact` — over one character
 
-**File:** `art/fx/src/impact.png`  ·  A hard white starburst behind the figure — shock, or a blow landing
+**File:** `art/fx/src/impact.png`  ·  Sharp shock lines bursting outward round the head — shock, or a blow landing
 
 > **Do not attach a style reference.** These are not Ghibli drawings and a
 > *Ponyo* still pulls them toward being one. They are the flat graphic marks a
@@ -4928,25 +5151,18 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
-> child standing in the **lower three-quarters** of the square, facing you, seen
-> from the waist up, with the top of their head about a quarter of the way down
-> from the top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the mark **alone,
+> centred, filling most of the square**. The build trims it and stamps it at a
+> measured position on or beside the figure's head (`place` in
+> `data/cast.json`), so its position and size in this picture do not matter.
+> Only its shape does.
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from 40% to 60% across —
-> and runs from about a quarter to about half of the way down. The face is
-> inside that. Most of this square is empty background, so a mark meant for a
-> face that drifts outward lands on the scenery beside the character instead
-> of on them. When this block says *beside the face*, it does not mean beside
-> the frame. **Do not draw the child.** Draw only the mark, positioned
-> where it would fall on or around that figure, and leave every other part of
-> the square plain white. The page composites this square directly over the
-> character at exactly that scale, so the mark's position inside the frame *is*
-> the information — a mark drawn in the middle of an empty square lands on the
-> character's chest wherever it was meant to go.
->
-> A hard white starburst — a ragged many-pointed flash — bursting out from behind where the figure's head and shoulders are, its points radiating outward past them to the edges of the frame. Thick black ink outline, white fill, the points uneven in length and sharp. Nothing in the middle of the burst: the character shows through there.
+> A ring of shock lines bursting outward — fourteen to eighteen short, sharp,
+> tapered black strokes of uneven length radiating from a centre, like a
+> starburst with its middle taken out. Each stroke is thick near the centre
+> and comes to a point at its outer end. **The middle is completely empty**:
+> nothing is drawn inside the ring, because a face shows through there. Solid
+> black ink only. The rest of the square is empty white.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -4974,25 +5190,18 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
-> child standing in the **lower three-quarters** of the square, facing you, seen
-> from the waist up, with the top of their head about a quarter of the way down
-> from the top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the marks **alone**,
+> filling most of the square. The build trims them and stamps them round the
+> figure (`place` in `data/cast.json`), so their position and size in this
+> picture do not matter. Only their shape does.
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from 40% to 60% across —
-> and runs from about a quarter to about half of the way down. The face is
-> inside that. Most of this square is empty background, so a mark meant for a
-> face that drifts outward lands on the scenery beside the character instead
-> of on them. When this block says *beside the face*, it does not mean beside
-> the frame. **Do not draw the child.** Draw only the mark, positioned
-> where it would fall on or around that figure, and leave every other part of
-> the square plain white. The page composites this square directly over the
-> character at exactly that scale, so the mark's position inside the frame *is*
-> the information — a mark drawn in the middle of an empty square lands on the
-> character's chest wherever it was meant to go.
->
-> Small four-pointed glints rising around the figure — a dozen of them, different sizes, scattered up both sides and over the head, sparser toward the top. Drawn as fine sharp stars with long thin points, in white with a thin dark outline, plus a few tiny solid ones. Light and airy, not a cloud; the figure must be visible between them. One flat colour is allowed here and it is a pale sea-green.
+> A loose scatter of about a dozen small four-pointed glints of different
+> sizes, arranged as a tall ring: up the left side, across the top and down
+> the right side, sparser toward the top. **The middle of the ring is empty**
+> — a face shows through there. Each glint is a fine sharp star with long thin
+> points, in white with a thin dark outline, plus a few tiny solid ones. Light
+> and airy. One flat colour is allowed here and it is a pale sea-green. The
+> rest of the square is empty white.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -5020,25 +5229,18 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
-> child standing in the **lower three-quarters** of the square, facing you, seen
-> from the waist up, with the top of their head about a quarter of the way down
-> from the top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the mark **alone,
+> centred, filling most of the square**. The build trims it and stamps it at a
+> measured position on or beside the figure's head (`place` in
+> `data/cast.json`), so its position and size in this picture do not matter.
+> Only its shape does.
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from 40% to 60% across —
-> and runs from about a quarter to about half of the way down. The face is
-> inside that. Most of this square is empty background, so a mark meant for a
-> face that drifts outward lands on the scenery beside the character instead
-> of on them. When this block says *beside the face*, it does not mean beside
-> the frame. **Do not draw the child.** Draw only the mark, positioned
-> where it would fall on or around that figure, and leave every other part of
-> the square plain white. The page composites this square directly over the
-> character at exactly that scale, so the mark's position inside the frame *is*
-> the information — a mark drawn in the middle of an empty square lands on the
-> character's chest wherever it was meant to go.
->
-> Three or four small birds and a scatter of little stars circling in a flat ring **above the head** of where the figure stands, at the top of the frame. The birds are the simplest possible ink shapes — a shallow double curve each, like a distant gull — and the stars are small five-pointed outlines. The ring reads as going round: the far side of it is drawn smaller. Black ink only. Below the ring the frame is empty.
+> A flat ring of four small five-pointed stars and two tiny birds, circling as
+> if round the top of somebody's head: a wide, shallow ellipse seen from
+> slightly above, with the far side of the ring drawn smaller. The stars have
+> a thick black outline and a **flat yellow** fill; the birds are the simplest
+> ink shapes, a shallow double curve each. **The middle of the ring is
+> empty.** The rest of the square is empty white.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -5066,25 +5268,16 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
-> child standing in the **lower three-quarters** of the square, facing you, seen
-> from the waist up, with the top of their head about a quarter of the way down
-> from the top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the mark **alone,
+> centred, filling most of the square**. The build trims it and stamps it at a
+> measured position on or beside the figure's head (`place` in
+> `data/cast.json`), so its position and size in this picture do not matter.
+> Only its shape does.
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from 40% to 60% across —
-> and runs from about a quarter to about half of the way down. The face is
-> inside that. Most of this square is empty background, so a mark meant for a
-> face that drifts outward lands on the scenery beside the character instead
-> of on them. When this block says *beside the face*, it does not mean beside
-> the frame. **Do not draw the child.** Draw only the mark, positioned
-> where it would fall on or around that figure, and leave every other part of
-> the square plain white. The page composites this square directly over the
-> character at exactly that scale, so the mark's position inside the frame *is*
-> the information — a mark drawn in the middle of an empty square lands on the
-> character's chest wherever it was meant to go.
->
-> One large drop hanging **at the side of the head**, near the temple, at the upper right of where the figure stands. Classic manga shape — a fat rounded teardrop with the point up and the bulge down, drawn as a thick black outline with a white fill and one small white highlight. Big enough to be comic. Nothing else in the frame.
+> **One** large sweat drop. Classic manga shape — a fat rounded teardrop with
+> the point up and the bulge down, drawn as a thick black outline with a white
+> fill and one small white highlight. The outline closes all the way round.
+> One mark only. The rest of the square is empty white.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -5112,25 +5305,16 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
-> child standing in the **lower three-quarters** of the square, facing you, seen
-> from the waist up, with the top of their head about a quarter of the way down
-> from the top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the mark **alone,
+> centred, filling about half of the square**. The build trims it and stamps
+> it onto both cheeks at measured positions (`place` in `data/cast.json`), so
+> its position and size in this picture do not matter. Only its shape does.
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from 40% to 60% across —
-> and runs from about a quarter to about half of the way down. The face is
-> inside that. Most of this square is empty background, so a mark meant for a
-> face that drifts outward lands on the scenery beside the character instead
-> of on them. When this block says *beside the face*, it does not mean beside
-> the frame. **Do not draw the child.** Draw only the mark, positioned
-> where it would fall on or around that figure, and leave every other part of
-> the square plain white. The page composites this square directly over the
-> character at exactly that scale, so the mark's position inside the frame *is*
-> the information — a mark drawn in the middle of an empty square lands on the
-> character's chest wherever it was meant to go.
->
-> Two small clusters of three or four short parallel diagonal strokes, one on **each side of the FACE — not of the frame**. The left cluster sits at about **40–46% across**, the right at about **54–60% across**, and both at about **38–47% of the way down**, with the gap between them left empty for the nose and eyes. **They are small**: each cluster is about a twentieth of the frame wide, the width of a cheek. Drawn in a flat warm pink, softly tapered at both ends, no outline. The rest of the square is empty white.
+> **One** small cluster of three short parallel diagonal strokes, close
+> together and leaning the same way, like a hatch: the manga sign for a blush.
+> Flat warm pink, each stroke softly tapered at both ends, no outline, no
+> shading. One cluster only, not a pair. The rest of the square is empty
+> white.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -5158,25 +5342,17 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
-> child standing in the **lower three-quarters** of the square, facing you, seen
-> from the waist up, with the top of their head about a quarter of the way down
-> from the top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the mark **alone,
+> centred, filling most of the square**. The build trims it and stamps it at a
+> measured position on or beside the figure's head (`place` in
+> `data/cast.json`), so its position and size in this picture do not matter.
+> Only its shape does.
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from 40% to 60% across —
-> and runs from about a quarter to about half of the way down. The face is
-> inside that. Most of this square is empty background, so a mark meant for a
-> face that drifts outward lands on the scenery beside the character instead
-> of on them. When this block says *beside the face*, it does not mean beside
-> the frame. **Do not draw the child.** Draw only the mark, positioned
-> where it would fall on or around that figure, and leave every other part of
-> the square plain white. The page composites this square directly over the
-> character at exactly that scale, so the mark's position inside the frame *is*
-> the information — a mark drawn in the middle of an empty square lands on the
-> character's chest wherever it was meant to go.
->
-> The cross-shaped popping-vein mark — two short crossed lines with a small loop at each of the four ends, the standard manga sign — sitting **at the upper left, beside the temple** of where the figure's head would be. Bold solid black ink, slightly irregular, about a fifth of the frame's width. Nothing else in the frame.
+> **One** cross-shaped popping-vein mark — four short curved strokes back to
+> back, like a plus sign with its arms bent outward, the standard manga sign
+> for lost patience. Bold strokes in **flat red**, each with a thin black
+> outline, slightly irregular. One mark only. The rest of the square is empty
+> white.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -5204,25 +5380,17 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
-> child standing in the **lower three-quarters** of the square, facing you, seen
-> from the waist up, with the top of their head about a quarter of the way down
-> from the top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the mark **alone,
+> centred, filling most of the square**. The build trims it and stamps it
+> above and beside the head at a measured position (`place` in
+> `data/cast.json`), so its position and size in this picture do not matter.
+> Only its shape does.
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from 40% to 60% across —
-> and runs from about a quarter to about half of the way down. The face is
-> inside that. Most of this square is empty background, so a mark meant for a
-> face that drifts outward lands on the scenery beside the character instead
-> of on them. When this block says *beside the face*, it does not mean beside
-> the frame. **Do not draw the child.** Draw only the mark, positioned
-> where it would fall on or around that figure, and leave every other part of
-> the square plain white. The page composites this square directly over the
-> character at exactly that scale, so the mark's position inside the frame *is*
-> the information — a mark drawn in the middle of an empty square lands on the
-> character's chest wherever it was meant to go.
->
-> One question mark floating **above and to the right of the head**, near the top of the frame, tilted a few degrees off vertical. Drawn as a fat cartoon glyph with a thick black outline and a white fill, not as a typeface — this is a *drawn symbol*, the only mark in this file that is allowed to be shaped like a character. Nothing else in the frame.
+> **One** question mark, tilted a few degrees off vertical. Drawn as a fat
+> cartoon glyph with a thick black outline and a white fill, not as a typeface
+> — this is a *drawn symbol*, the only mark in this file that is allowed to be
+> shaped like a character. The outline closes all the way round, on the curve
+> and on the dot. One mark only. The rest of the square is empty white.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -5250,25 +5418,16 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
-> child standing in the **lower three-quarters** of the square, facing you, seen
-> from the waist up, with the top of their head about a quarter of the way down
-> from the top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the block of bars
+> **alone**, hanging from the top edge. The build trims it, makes it
+> see-through and stamps it over the figure's head (`wash` and `place` in
+> `data/cast.json`).
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from 40% to 60% across —
-> and runs from about a quarter to about half of the way down. The face is
-> inside that. Most of this square is empty background, so a mark meant for a
-> face that drifts outward lands on the scenery beside the character instead
-> of on them. When this block says *beside the face*, it does not mean beside
-> the frame. **Do not draw the child.** Draw only the mark, positioned
-> where it would fall on or around that figure, and leave every other part of
-> the square plain white. The page composites this square directly over the
-> character at exactly that scale, so the mark's position inside the frame *is*
-> the information — a mark drawn in the middle of an empty square lands on the
-> character's chest wherever it was meant to go.
->
-> Vertical shadow bars hanging **down from the top edge** over the upper half of the frame — eight to twelve straight lines of uneven width, closely spaced, their lower ends ragged and unequal, like a curtain of dark coming down over somebody. Flat dark blue-grey at about two-thirds opacity where they cover, thinning out as they descend. The lower third of the frame is clear.
+> Vertical shadow bars hanging **down from the top edge** — eight to twelve
+> straight lines of uneven width, closely spaced, their lower ends ragged and
+> unequal, like a curtain of dark coming down over somebody. Flat dark
+> blue-grey, solid at the top and paler as they descend. The lower half of the
+> frame is empty white.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -5296,25 +5455,17 @@ effect shows up.
 > **Composition.** A **square** picture on **flat pure white**, with nothing in
 > it but the mark itself.
 >
-> **Where the mark goes — read this carefully, it is the whole job.** Imagine a
-> child standing in the **lower three-quarters** of the square, facing you, seen
-> from the waist up, with the top of their head about a quarter of the way down
-> from the top edge.
+> **Where the mark goes.** Nowhere in particular. Draw the block of lines
+> **alone**, starting at the left edge. The build trims it and stamps it into
+> the space behind the figure's head (`place` in `data/cast.json`), stopping
+> short of the hair: an effect is drawn OVER its figure, so lines that reached
+> the head would cross the face.
 >
-> **Their head is small, and this is the part that goes wrong.** It occupies
-> only about the middle fifth of the width — roughly from 40% to 60% across —
-> and runs from about a quarter to about half of the way down. The face is
-> inside that. Most of this square is empty background, so a mark meant for a
-> face that drifts outward lands on the scenery beside the character instead
-> of on them. When this block says *beside the face*, it does not mean beside
-> the frame. **Do not draw the child.** Draw only the mark, positioned
-> where it would fall on or around that figure, and leave every other part of
-> the square plain white. The page composites this square directly over the
-> character at exactly that scale, so the mark's position inside the frame *is*
-> the information — a mark drawn in the middle of an empty square lands on the
-> character's chest wherever it was meant to go.
->
-> Straight horizontal motion lines sweeping in **from the left edge**, behind where the figure stands — twelve or so fine black lines of varying length and weight, densest at the edge and petering out toward the middle of the frame, all strictly parallel. The right half of the frame is empty. Sharp, ruled, ink only.
+> Straight horizontal motion lines sweeping in **from the left edge** — twelve
+> or so fine black lines of varying length and weight, densest at the edge and
+> petering out toward the middle of the frame, all strictly parallel and
+> strictly horizontal. The right half of the frame is empty. Sharp, ruled, ink
+> only.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -5326,6 +5477,13 @@ effect shows up.
 ## 10. `birds` — over the whole frame
 
 **File:** `art/fx/src/birds.png`  ·  Three or four small seabirds crossing the frame
+
+> **Not currently placed by any dialogue — do not generate this yet.**
+> Retired 2026-10-01. Its only use was the opening panel of unit 1, an empty
+> harbour under a narration line that never mentions birds; the plate carries
+> that shot by itself, and three generated flocks all came back too large for a
+> frame whose lower 62% is figures. If a scene brings it back, ask for the
+> flock small and high: the top third of the frame, clear of the heads.
 
 > **Do not attach a style reference.** These are not Ghibli drawings and a
 > *Ponyo* still pulls them toward being one. They are the flat graphic marks a
@@ -5373,8 +5531,11 @@ effect shows up.
 > **Colour.** Black ink, and white where the mark needs a fill. Colour only
 > where this block asks for it by name, and then one flat colour and no more.
 >
-> **Composition.** A **square** picture on **flat pure white**, with nothing in
-> it but the mark itself.
+> **Composition.** A **square** picture on a **flat, even mid-blue
+> background** — one single uniform colour, a plain medium blue, edge to edge
+> — with nothing in it but the mark itself. The blue is only a backdrop to
+> show white water against, and the build removes it: white water on white
+> paper cannot be cut out.
 >
 > **Where the mark goes.** It covers the whole frame. Spread it across the
 > square and keep the important parts **away from the extreme edges**: the page
@@ -5382,7 +5543,12 @@ effect shows up.
 > so up to a third of one dimension can be cropped away. Anything that only
 > works if the corner survives will not survive.
 >
-> A burst of white water thrown up across the **lower and near edge** of the frame — one big irregular sheet of spray with a ragged, feathered top edge, breaking into separate flying droplets as it rises. Drawn as flat white with a fine dark blue-grey outline and a few darker shapes inside for the heavier water. It reaches about halfway up the frame at its highest. The upper half is empty white.
+> A burst of white water thrown up across the **lower and near edge** of the
+> frame — one big irregular sheet of spray with a ragged, feathered top edge,
+> breaking into separate flying droplets as it rises. **Solid, opaque flat
+> white**, every part of it, with a fine dark blue-grey outline and a few
+> darker shapes inside for the heavier water. It reaches about halfway up the
+> frame at its highest. The upper half is empty flat blue background.
 >
 > **Do not include:** any text, letters, numbers, captions, watermarks,
 > signatures, speech bubbles, logos, panel borders or a transparency
@@ -5546,6 +5712,7 @@ Two things you still do **not** have to do:
 | It comes back as glossy modern digital anime — airbrushed skin, gradient shading, shining hair | Re-paste **Line**, **Colour** and **Figures** in full; they are the whole defence and they degrade the moment they are summarised. The words that pull it back are *flat colour*, *one hard-edged shadow shape* and *cel* |
 | A drawing comes back as a grid, a sheet or a set of panels | Every prompt asks for one figure with one expression. Re-roll rather than cropping a panel out of it — a cropped cell will not share a scale or an eye level with the other five, and `make_sheet.py` cannot fix a mismatch it was never given |
 | Two characters come back doing the same thing with their hands | The pose was taken from another character's block, or from the old shared wording. Each character's six poses are their own — see the note under *Part 1* — and the tell is a column of the finished sheet where everybody is sad identically. Re-paste that character's own **The expression** line |
+| A figure comes back as a bust: the body ends inside the picture with a closing outline, a flat cut or empty space under it | The prompt used to say *nothing may be cropped by the edge*, and the model obeyed it at the bottom too. The cast is half-body and stands on the floor of the panel, so the body must **run off the bottom edge** at full width. Re-paste **Framing**. `art.py` now rejects a figure that does not, and it cannot be fixed by sliding the drawing down — the corners beside the arms stay empty |
 | The head jumps or resizes between expressions | The six drawings were framed differently. `make_sheet.py` squares and scales them to one cell but cannot re-frame a head — re-roll the odd one out, matching the head size and eye level of the `neutral` drawing, which is the one to draw first and judge the rest against |
 | An avatar has a white box behind it | `make_sheet.py` keys the white itself, so this means it found none to key — check the drawing's background really is white and not a very pale grey, or re-run with the tolerance in mind |
 | A drawing comes back with a grey-and-white chequered pattern behind the figure | The generator has *drawn* a transparency checkerboard instead of leaving alpha. Re-roll: every prompt already forbids it by name, so this is a miss rather than an ambiguity, and a drawn checkerboard is much harder to key than plain white |
@@ -5560,7 +5727,9 @@ Two things you still do **not** have to do:
 | A prop comes back on a table, on a floor, or with a drop shadow under it | Re-paste **Composition**. A surface is the commonest thing a generator supplies unasked, and it cannot be keyed away: the flood comes in from the border, meets the table, and stops — leaving the prop sitting on a white slab in the middle of the panel |
 | A prop comes back watercoloured, soft-edged or textured like paper | Part 2's vocabulary leaked into a Part 3 prompt. Props are **cel**, like the cast, and for the same technical reason: a soft edge has no closed contour, so the keyer eats into it. Re-paste **Art style** and **Line** |
 | A prop is unrecognisable in the panel | It was drawn with detail that only reads at full size. These are seen at about two centimetres — re-roll asking for the silhouette to carry the object, and check it by looking at the file scaled down before composing |
+| A WHITE effect — a splash, a burst of spray — comes out hollow after cutting, just outlines over the scene | It was drawn on white paper, and the cutter cannot tell white water from white paper where the two touch. Draw it on a flat mid-blue backdrop instead and mark the effect `"paper": "blue"` in `data/cast.json`; the cutter measures whatever the backdrop is and removes that. `splash` is the worked example |
 | An effect comes back beautiful, shaded and painted | A style reference was attached. Part 4 says attach nothing, and this is why: these are ink marks over a picture, and a *Ponyo* still makes them into a picture of their own |
+| An effect that belongs on one feature of the face — a blush on the cheeks — comes back too large, too far apart or on the hair, whatever percentages the prompt gives | Stop asking. Six generations across two prompt versions showed the model draws the mark well and cannot place it. Ask for the mark **alone** and give the effect a `place` list in `data/cast.json`; `make_overlay.py` trims it and stamps it at those positions (`tools/artgen/place.py`). `flush` is the worked example |
 | An effect lands beside the character rather than on them — blush on the wall either side of a head, a drop out over the scenery | The mark was placed against the frame instead of against the face. The head is only the middle fifth of the square; re-paste **Where the mark goes** in full, including the paragraph about how small it is, and give the cluster explicit percentages as `flush` does |
 | An effect lands in the wrong place on the character — stars on the chest, a sweat drop at the knee | The mark was drawn centred in an empty square instead of positioned. Re-paste **Where the mark goes** in full. The square maps onto the figure at a fixed scale, so the mark's position in the frame *is* its position on the character, and there is nothing in the code that can move it |
 | An effect hides the character underneath it | It was drawn solid where it should be open. Every figure effect leaves the middle clear: a burst radiates from behind the head, a ring of stars sits above it, a hatch of blush has a gap for the face. Re-roll — an overlay that has to be seen through is the whole form |

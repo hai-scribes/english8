@@ -28,6 +28,21 @@ class GeminiError(RuntimeError):
     pass
 
 
+class QuotaError(GeminiError):
+    """A refusal no retry can fix: the key's quota for this model is ZERO,
+    which is what a free-tier key gets for the image models. Every further call
+    in the run would fail the same way, so the run stops."""
+
+
+def _short(msg):
+    """The human line out of a Google error body, not the whole JSON."""
+    try:
+        body = json.loads(msg.split(": ", 1)[1])
+        return body["error"]["message"].split("\n")[0][:300]
+    except (IndexError, KeyError, ValueError):
+        return msg[:300]
+
+
 def _http(url, body, key, timeout=300):
     data = None if body is None else json.dumps(body).encode()
     req = urllib.request.Request(
@@ -51,8 +66,22 @@ def _call(model, body, key=None, retries=3):
             return transport(url, body, key)
         except GeminiError as e:
             # 429 and 5xx are worth waiting out; a 400 is our mistake and
-            # repeating it only spends time.
+            # repeating it only spends time. A 429 against a limit of 0 is not
+            # a rate limit at all — it is a plan that does not include this model.
             msg = str(e)
+            # Out of money is not a rate limit either: every later call in the
+            # run fails the same way, so stop instead of spending the budget on
+            # refusals.
+            if "credits are depleted" in msg or "billing#prepay" in msg:
+                raise QuotaError(
+                    "the Gemini account's prepaid credit has run out — top it up at "
+                    "https://ai.studio/projects (Billing), then run this again")
+            if "HTTP 429" in msg and "limit: 0" in msg:
+                raise QuotaError(
+                    f"{model}: this key's quota for it is 0 — "
+                    + ("the free tier does not include it; turn on billing for the "
+                       "key's project at https://aistudio.google.com/apikey"
+                       if "free_tier" in msg else _short(msg)))
             if attempt + 1 < retries and any(f"HTTP {c}" in msg for c in
                                              ("429", "500", "502", "503", "504")):
                 time.sleep(4 * 2 ** attempt)
