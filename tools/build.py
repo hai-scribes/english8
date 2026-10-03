@@ -1535,11 +1535,7 @@ def vocab_payload(u, lesson, a: dict, idx: int, groups: list = (), blk=None) -> 
 
 
 def vocab_html(p: dict) -> str:
-    n = len(p["words"])
-    sets = (n + p["size"] - 1) // p["size"]
     return (f'<div class="vocab" data-role="vocab" data-vocab="{e(p["id"])}">'
-            f'<p class="v-say">{n} words in {sets} set{"s" if sets != 1 else ""}. Meet each '
-            f'word, then answer questions on it. Every run asks something new.</p>'
             f'<div class="v-stage"></div></div>')
 
 
@@ -3789,7 +3785,6 @@ def page_lesson(u, L) -> str:
   <div class="pager finish" id="finish" data-after="{e(after)}">
     {prev_l}
     <span class="sp"></span>
-    <button class="btn quiet small" id="undoDone" type="button" hidden>Not finished yet</button>
     <a class="btn" id="markDone" href="{next_href}">Finish lesson ✓</a>
   </div>
 {words_sheet(u)}"""
@@ -3862,7 +3857,6 @@ def page_review(r, units) -> str:
   <div class="pager finish" id="finish">
     {prev_l}
     <span class="sp"></span>
-    <button class="btn quiet small" id="undoDone" type="button" hidden>Not finished yet</button>
     <a class="btn" id="markDone" href="../index.html">Finish checkpoint ✓</a>
   </div>"""
 

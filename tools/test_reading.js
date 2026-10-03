@@ -1031,13 +1031,20 @@ async function main() {
     ok("sheet: search finds a word by its Vietnamese", shown.length >= 1 && shown.length < 10, shown.length);
   }
 
-  /* ---- the intake's sets open in order ---------------------------------- */
+  /* ---- every set is a stack, and any of them opens at any time ---------- */
   {
     const win = await settled(load("docs/unit-01/lesson-2/index.html", null, fastPage));
     const box = win.document.querySelector('[data-role="vocab"]');
-    const later = box.querySelector('.v-sets [data-set="3"]');
-    ok("intake: a set further on cannot be opened before the ones before it",
-       !!later && later.disabled);
+    const data = JSON.parse(win.document.getElementById("page-data").textContent).vocabIntake[0];
+    const piles = box.querySelectorAll(".v-stack");
+    ok("intake: every set is on show as a stack",
+       piles.length === Math.ceil(data.words.length / data.size), piles.length);
+    const later = box.querySelector('.v-stack[data-set="3"]');
+    ok("intake: a set further on can be opened straight away", !!later && !later.disabled);
+    click(win, later);
+    const top = box.querySelector('.v-deck [aria-hidden="false"] .v-w');
+    ok("intake: and it opens on its own first word",
+       !!top && top.textContent === data.words[3 * data.size].word, top && top.textContent);
   }
 
   /* ---- the vocabulary intake: meet, recall, list -------------------------
@@ -1055,18 +1062,34 @@ async function main() {
     ok("intake: it is chunked, not run whole",
        set.size < set.words.length, set.size + " of " + set.words.length);
 
-    /* Stage 1 shows one word, and only one. */
-    const shown = box.querySelectorAll(".v-w");
-    ok("intake: stage one shows exactly one word", shown.length === 1, shown.length);
-    ok("intake: with its Vietnamese", !!box.querySelector(".v-vi"));
+    /* Stage 1 puts one word on top of the deck, and only one. */
+    click(win, box.querySelector('.v-stack[data-set="0"]'));
+    const shown = box.querySelectorAll('.v-deck [aria-hidden="false"]');
+    ok("intake: stage one shows exactly one word",
+       shown.length === 1 && !!shown[0].querySelector(".v-w"), shown.length);
+    ok("intake: with its Vietnamese", !!shown[0].querySelector(".v-vi"));
+    ok("intake: and its collocations", !!shown[0].querySelector(".v-co span"));
 
-    /* Walk the whole first set; the last card hands over to the engine. */
-    for (let i = 0; i < set.size; i++) {
-      const next = box.querySelector('[data-v="next"]');
-      if (!next) break;
-      click(win, next);
-      await new Promise(r => setTimeout(r, 20));
-    }
+    /* Going on and coming back, then leaving and reopening: a stack always
+       starts again at its first card. */
+    click(win, box.querySelector('[data-v="next"]'));
+    click(win, box.querySelector('[data-v="next"]'));
+    const third = box.querySelector('.v-deck [aria-hidden="false"] .v-w').textContent;
+    click(win, box.querySelector('[data-v="back"]'));
+    ok("intake: Back brings the card before back",
+       third === set.words[2].word
+         && box.querySelector('.v-deck [aria-hidden="false"] .v-w').textContent === set.words[1].word);
+    click(win, box.querySelector('[data-v="all"]'));
+    click(win, box.querySelector('.v-stack[data-set="0"]'));
+    ok("intake: a reopened stack starts at its first card",
+       box.querySelector('.v-deck [aria-hidden="false"] .v-w').textContent === set.words[0].word);
+
+    /* Walk the whole first set; the questions come after the last card. */
+    for (let i = 0; i < set.size; i++) click(win, box.querySelector('[data-v="next"]'));
+    ok("intake: no question is asked before the last card has gone",
+       !box.querySelector(".engine") && !!box.querySelector('.v-last[aria-hidden="false"]'));
+    click(win, box.querySelector('[data-v="next"]'));
+    await new Promise(r => setTimeout(r, 20));
     ok("intake: the last card hands over to the question engine",
        !!box.querySelector(".engine"), box.querySelector(".v-stage").innerHTML.slice(0, 60));
 
@@ -1083,10 +1106,13 @@ async function main() {
       ]),
     }, fastPage));
     const box2 = w2.document.querySelector('[data-role="vocab"]');
-    ok("intake: a returning learner lands on the set they finished",
-       !!box2.querySelector(".v-list"));
-    ok("intake: and is offered the same set again",
-       !!box2.querySelector('[data-v="retest"]'));
+    ok("intake: a returning learner finds the answered stack green, and only that one",
+       box2.querySelectorAll(".v-stack.ok").length === 1
+         && box2.querySelector('.v-stack[data-set="0"]').classList.contains("ok"));
+    click(w2, box2.querySelector('.v-stack[data-set="0"]'));
+    ok("intake: and the same set again starts from its cards, not its questions",
+       !!box2.querySelector('.v-deck [aria-hidden="false"] .v-w') && !box2.querySelector(".engine"));
+    click(w2, box2.querySelector('[data-v="all"]'));
 
     const log = (box2.querySelector(".runs") || { textContent: "" }).textContent;
     ok("intake: both attempts are listed separately",
@@ -1176,19 +1202,23 @@ async function main() {
       }
       return seen;
     };
-    for (let i = 0; i < 8; i++) {
-      const next = box.querySelector('[data-v="next"]');
-      if (!next) break;
-      click(win, next);
-      await new Promise(r => setTimeout(r, 15));
-    }
+    /* Open the first stack and go through every card to the questions. */
+    const toQuestions = async () => {
+      click(win, box.querySelector('.v-stack[data-set="0"]'));
+      for (let i = 0; i < 12 && !box.querySelector(".card.engine"); i++) {
+        click(win, box.querySelector('[data-v="next"]'));
+        await new Promise(r => setTimeout(r, 15));
+      }
+    };
+    await toQuestions();
     const run1 = await walkRun();
     const dup1 = run1.filter((x, i) => run1.indexOf(x) !== i);
     ok("variants: no question is asked twice in one run", run1.length > 8 && !dup1.length,
        run1.length + " asked; repeated: " + dup1.slice(0, 2).join(" ; "));
-    const again = box.querySelector('[data-v="retest"]');
-    if (again) click(win, again);
-    await new Promise(r => setTimeout(r, 15));
+    const pile = box.querySelector('.v-stack[data-set="0"]');
+    ok("intake: answering a set's questions turns its stack green",
+       !!pile && pile.classList.contains("ok") && box.querySelectorAll(".v-stack.ok").length === 1);
+    await toQuestions();
     const run2 = await walkRun();
     const both = run2.filter(x => run1.includes(x));
     ok("variants: running the set again asks new questions", run2.length > 8 && !both.length,
@@ -1512,9 +1542,11 @@ async function main() {
     /* Finishing a lesson records it, and records it against today. */
     const lw = await seeded({})("docs/unit-01/lesson-2/index.html");
     const fin = lw.document.querySelector("#markDone");
-    ok("finish: the lesson's primary action is Finish, and it goes straight to the next lesson",
-       fin && /Finish lesson/.test(fin.textContent) && fin.getAttribute("href") === "../lesson-3/index.html",
+    ok("finish: with the work not done, moving on is a quiet skip that still goes straight to the next lesson",
+       fin && /^Skip to Lesson 3/.test(fin.textContent) && fin.classList.contains("quiet")
+         && fin.getAttribute("href") === "../lesson-3/index.html",
        fin ? fin.textContent + " -> " + fin.getAttribute("href") : "missing");
+    ok("finish: there is no undo", !lw.document.querySelector("#undoDone"));
     fin.dispatchEvent(new lw.MouseEvent("click", { bubbles: true, cancelable: true }));
     const p = JSON.parse(lw.localStorage.getItem("en8:progress:v1") || "{}");
     const d = JSON.parse(lw.localStorage.getItem("en8:days:v1") || "{}");
@@ -1554,6 +1586,26 @@ async function main() {
        cur2.classList.contains("ok") && cur2.classList.contains("cur"));
     const prog = JSON.parse(w2.localStorage.getItem("en8:progress:v1") || "{}");
     ok("rail: completion is recorded for the other pages", !!(prog["01"] && prog["01"].complete && prog["01"].complete["3"]));
+    const fin2 = w2.document.querySelector("#markDone");
+    ok("finish: with the work done, Finish is the primary action",
+       /Finish lesson/.test(fin2.textContent) && !fin2.classList.contains("quiet"), fin2.textContent);
+
+    /* Review enrols from the work, not the button: a lesson finished but not
+       complete sends nothing; a complete one sends its items. */
+    const home = JSON.parse(/<script id="page-data"[^>]*>([\s\S]*?)<\/script>/
+      .exec(fs.readFileSync(path.join(ROOT, "docs/index.html"), "utf8"))[1]);
+    const from3 = home.review.filter(r => r.type !== "word" && r.unit === "01" && r.lesson === 3);
+    const enrolled = async progRec => {
+      const w = await settled(load("docs/index.html", null, x =>
+        x.localStorage.setItem("en8:progress:v1", JSON.stringify({ "01": progRec }))));
+      const rv = JSON.parse(w.localStorage.getItem("en8:review:v1") || "{}");
+      return from3.filter(r => rv["01:" + r.type + ":" + String(r.id).toLowerCase()]).length;
+    };
+    ok("review: Lesson 3 of unit 01 has items to enrol", from3.length > 0);
+    ok("review: a lesson finished but not complete enrols nothing",
+       (await enrolled({ lessons: { 3: 1 }, complete: {}, test: null })) === 0);
+    ok("review: a complete lesson enrols its items",
+       (await enrolled({ lessons: { 3: 1 }, complete: { 3: 1 }, test: null })) === from3.length);
   }
 
   /* ---- a timed test behaves like the real screen ---------------------------
