@@ -371,10 +371,12 @@ touching `data/cast.json` or `art/`. What must hold even without it:
 
 ### Lexis is met, not tabled
 
-`:::vocab` runs the three-stage intake in Lesson 2 (Words & Sounds) — meet the words a
-few at a time, answer on the set just met through the existing engine, then see
-the whole set with the offer to run it again. The table above it stays, as
-reference. This is **B8** (topic lexis pre-taught as a first-class step) doing
+`:::vocab` runs the intake in Lesson 2 (Words & Sounds) as stacks of cards
+(operator, 2026-10-03): every set is on show as a stack and any of them opens at
+any time; a stack always starts at its first card, one word to a card, swiped or
+stepped through; the questions on the set come after its last card, through the
+existing engine; and a stack that has been answered turns green. The table above
+it stays, as reference. This is **B8** (topic lexis pre-taught as a first-class step) doing
 the job a table never did, and it reuses `runEngine` on purpose: the engine
 already asks items as collocations (**F7**) and already schedules what it
 touches.

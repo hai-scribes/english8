@@ -535,20 +535,27 @@ function initLesson(){
   const { unit, lesson } = DATA;
   const isDone = () => isCheck ? checkDone(DATA.review) : lessonDone(unit, lesson);
   const setDone = on => isCheck ? markCheck(DATA.review, on) : markLesson(unit, lesson, on);
-  const btn = $("#markDone"), undo = $("#undoDone");
+  const btn = $("#markDone");
   const after = ($("#finish") || { dataset:{} }).dataset.after;
   const paint = () => {
     const done = isDone();
     if (btn){
       /* Finishing is a link straight to the next step (the next lesson, or
          the unit test), and the click records the lesson first. A checkpoint
-         still returns to Today, which decides what follows it. */
+         still returns to Today, which decides what follows it.
+         Moving on stays possible with work left -- a writing task saved for
+         Saturday must not block the path -- but until the page records the
+         work complete, the control says what it is: a skip, drawn quiet.
+         There is no undo: the lesson stays open from the unit page, and its
+         tick on the rail reports the work whichever way the button went. */
+      const skip = !isCheck && !done && !lessonComplete(unit, lesson);
       btn.textContent = done
         ? (isCheck ? "✓ Finished — back to Today" : "✓ Finished — " + (after || "next") + " →")
-        : (isCheck ? "Finish checkpoint ✓" : "Finish lesson ✓");
+        : isCheck ? "Finish checkpoint ✓"
+        : skip ? "Skip to " + (after || "next") + " →" : "Finish lesson ✓";
+      btn.classList.toggle("quiet", skip);
       btn.title = done || !after ? "" : "Records this lesson. Next on the path: " + after;
     }
-    if (undo) undo.hidden = !done;
     if (isCheck) return;
     /* The rail shows numbers only; name each one so hovering (or a screen
        reader) tells you which lesson it is, and mark the finished ones. */
@@ -568,7 +575,6 @@ function initLesson(){
   if (btn) btn.addEventListener("click", () => { if (!isDone()) setDone(true); });
   document.addEventListener("en8:complete", paint);
   noteProgress();
-  if (undo) undo.addEventListener("click", () => { setDone(false); paint(); });
   paint();
 }
 
@@ -924,11 +930,13 @@ function schedule(unit, type, id, ok){
 /* Every kind the unit teaches, not only its words. `DATA.review` is a flat,
    typed list built from the units' own exercises, so nothing here rehearses
    something the lessons never asked. */
-/* An item joins the cycle when the lesson that TAUGHT it is marked done, and
-   its first return is one interval later — not today. Enrolling on sight would
-   drop five hundred items into the queue on day one, and enrolling only on a
-   right answer (which is how words enter, through practice) would mean a
-   grammar target nobody practised never came back at all.
+/* An item joins the cycle when the lesson that TAUGHT it is complete -- its
+   work attempted, not merely Finish pressed, so a skipped lesson sends nothing
+   to review it never asked -- and its first return is one interval later, not
+   today. Enrolling on sight would drop five hundred items into the queue on
+   day one, and enrolling only on a right answer (which is how words enter,
+   through practice) would mean a grammar target nobody got right never came
+   back at all.
    Words keep their existing path and are not touched here. */
 function enrolReview(){
   if (DATA.kind !== "home") return;
@@ -936,7 +944,7 @@ function enrolReview(){
   let added = 0;
   for (const it of (DATA.review || [])){
     if (it.type === "word" || !it.lesson) continue;
-    if (!lessonDone(it.unit, it.lesson)) continue;
+    if (!lessonComplete(it.unit, it.lesson)) continue;
     const k = rKey(it.unit, it.type, it.id);
     if (REVIEW[k]) continue;
     REVIEW[k] = { due:t + REVIEW_DAYS, seen:0, kept:0, delayed:0 };
@@ -1187,7 +1195,7 @@ function runEngine(mode, words, unit, hostSel, opts){
     const q = st.items[st.i], w = q.w, ok = res.ok;
     if (ok) st.right++; else st.wrong.push({ q, given, why:res.why });
     /* Practice inside a lesson leaves the review schedule alone: an item
-       joins the cycle when its lesson is finished (enrolReview), never
+       joins the cycle when its lesson is complete (enrolReview), never
        because it was practised early. */
     if (opts.schedule !== false) schedule(q.w._u || st.unit, w.type || "word", w.id || w.word, ok);
     /* Once per item, not per showing: a missed item is asked again at the end
@@ -4413,29 +4421,41 @@ function initVocab(){
     const save = () => { try { localStorage.setItem(KEY, JSON.stringify(log)); } catch(e){} setTimeout(noteProgress, 0); };
     const setsDone = () => new Set(log.map(a => a.set));
 
-    function dots(si){
+    /* ---- the stacks: one per set, all on show, any of them at any time.
+       Opening one always starts at its first card; its questions come after
+       the last card; a stack that has been answered turns green. ---- */
+    function stacks(justDone){
       const done = setsDone();
-      return '<div class="v-sets" aria-label="Sets">' + sets.map((_, i) =>
-        '<button type="button" data-set="' + i + '" class="' + (i === si ? "cur" : done.has(i) ? "ok" : "")
-        + '" aria-label="Set ' + (i + 1) + '"' + (i > reachable() && i !== si ? " disabled" : "")
-        + '>' + (i + 1) + '</button>').join("") + '</div>';
+      const mixedRuns = log.filter(a => a.set === -1);
+      stage.innerHTML = '<div class="v-home"><div class="v-stacks">' + sets.map((set, i) => {
+        const runs = log.filter(a => a.set === i).slice(-4);
+        return '<div class="v-pile"><button type="button" data-set="' + i + '" class="v-stack'
+          + (done.has(i) ? " ok" : "") + (i === justDone ? " pop" : "")
+          + '" aria-label="Set ' + (i + 1) + ", " + set.length + " words" + (done.has(i) ? ", done" : "") + '">'
+          + '<i></i><i></i><span class="v-face"><b>' + (i + 1) + '</b>'
+          + '<em>' + set.length + ' words</em></span></button>'
+          + (runs.length ? '<p class="runs">' + runs.map(a => '<b>' + a.right + '/' + a.total + '</b>')
+              .join('<span class="sr-only">, </span>') + '</p>' : "")
+          + '</div>';
+      }).join("") + '</div>'
+        + (done.size ? '<div class="row v-nav"><button class="btn quiet" data-v="mixed">Mixed practice</button></div>'
+            + runsLine(mixedRuns) : "")
+        + '</div>';
+      const mx = $('[data-v="mixed"]', stage);
+      if (mx) mx.addEventListener("click", mixed);
     }
-    /* A set can be opened once the one before it has been answered: the
-       questions on a set may use any word met before it. */
-    const reachable = () => Math.max(-1, ...setsDone()) + 1;
     stage.addEventListener("click", ev => {
-      const d = ev.target.closest("[data-set]");
-      if (d && Number(d.dataset.set) <= reachable()) meet(Number(d.dataset.set), 0);
+      const d = ev.target.closest(".v-stack");
+      if (d) deck(Number(d.dataset.set));
     });
 
-    /* ---- 1. meet the words, one at a time ---- */
-    function meet(si, wi){
-      const set = sets[si], w = set[wi];
+    /* ---- one set as a deck of cards: swipe (either way), tap Next, or use
+       the arrow keys. The pointer drives the drag and the card's CSS leaves
+       vertical scrolling to the page (touch-action), so nothing here listens
+       for scroll, wheel or touchmove. ---- */
+    function wordCard(w){
       const eg = w.cloze ? esc(w.cloze).replace("\x01", "<b>" + esc(w.clozeKey) + "</b>") : "";
-      stage.innerHTML =
-        '<div class="v-card">' + dots(si)
-        + '<div class="bar"><i style="width:' + ((wi + 1) / set.length * 100) + '%"></i></div>'
-        + '<p class="v-count">Word ' + (wi + 1) + ' of ' + set.length + '</p>'
+      return '<div class="v-card">'
         + '<p class="v-w">' + esc(w.word) + '</p>'
         + '<p class="v-meta">' + (w.pos ? '<span class="v-pos">' + esc(w.pos) + '</span>' : "")
         + (w.ipa ? '<span class="v-ipa">' + esc(w.ipa) + '</span>' : "") + '</p>'
@@ -4443,17 +4463,93 @@ function initVocab(){
         + (eg ? '<p class="v-eg">' + eg + '</p>' : "")
         + (w.colloc && w.colloc.length
             ? '<p class="v-co">' + w.colloc.map(c => '<span>' + esc(c) + '</span>').join("") + '</p>' : "")
-        + '<div class="row v-nav">'
-        + (wi > 0 ? '<button class="btn quiet" data-v="back">Back</button>' : "")
-        + '<button class="btn" data-v="next">'
-        + (wi + 1 < set.length ? "Next word" : "Check these " + set.length) + '</button></div>'
         + '</div>';
-      $('[data-v="next"]', stage).addEventListener("click", () =>
-        wi + 1 < set.length ? meet(si, wi + 1) : recall(si));
-      const bk = $('[data-v="back"]', stage);
-      if (bk) bk.addEventListener("click", () => meet(si, wi - 1));
     }
+    function deck(si){
+      const set = sets[si], n = set.length;
+      let i = 0;
+      stage.innerHTML = '<div class="v-play">'
+        + '<div class="v-top"><button type="button" class="btn quiet small" data-v="all">‹ All sets</button>'
+        + '<span class="v-count"></span></div>'
+        + '<div class="bar"><i></i></div>'
+        + '<div class="v-deck" tabindex="0" aria-live="polite">' + set.map(wordCard).join("")
+        + '<div class="v-card v-last"><p class="v-w">Questions</p>'
+        + '<p class="v-vi">Answer questions on these ' + n + ' words.</p></div></div>'
+        + '<div class="row v-nav"><button type="button" class="btn quiet" data-v="back">Back</button>'
+        + '<button type="button" class="btn" data-v="next"></button></div></div>';
+      const box = $(".v-deck", stage), cards = [...box.children];
+      const back = $('[data-v="back"]', stage), next = $('[data-v="next"]', stage);
+      function paint(){
+        cards.forEach((c, k) => {
+          const d = k - i;
+          c.dataset.d = d < 0 ? "out" : d > 2 ? "deep" : String(d);
+          c.style.zIndex = String(cards.length - k);
+          c.setAttribute("aria-hidden", d === 0 ? "false" : "true");
+        });
+        box.style.setProperty("--p", "0");
+        $(".v-count", stage).textContent = i < n ? "Word " + (i + 1) + " of " + n : "";
+        $(".bar i", stage).style.width = (Math.min(i + 1, n) / n * 100) + "%";
+        back.disabled = i === 0;
+        next.textContent = i < n ? "Next" : "Start";
+      }
+      function go(step, dir){
+        if (step > 0 && i >= n) return recall(si);
+        if (step < 0 && i === 0) return;
+        if (step > 0) cards[i].style.setProperty("--dir", String(dir || 1));
+        i += step;
+        paint();
+      }
+      next.addEventListener("click", () => go(1, 1));
+      back.addEventListener("click", () => go(-1));
+      $('[data-v="all"]', stage).addEventListener("click", () => stacks());
+      box.addEventListener("keydown", ev => {
+        if (ev.key === "ArrowRight") { ev.preventDefault(); go(1, 1); }
+        else if (ev.key === "ArrowLeft") { ev.preventDefault(); go(-1); }
+      });
 
+      /* The drag. A card follows the finger and tilts; past a third of its
+         width, or flicked, it flies off the side it was thrown to and the one
+         beneath comes up. Anything less springs back. */
+      let drag = null;
+      const settle = () => {
+        if (!drag) return;
+        drag = null;
+        box.classList.remove("dragging");
+        box.style.setProperty("--p", "0");
+      };
+      box.addEventListener("pointerdown", ev => {
+        const c = cards[i];
+        if (i >= n || !c.contains(ev.target) || (ev.button !== undefined && ev.button > 0)) return;
+        drag = { card: c, id: ev.pointerId, x: ev.clientX, y: ev.clientY, dx: 0, on: false,
+                 t: ev.timeStamp, w: c.offsetWidth || 320 };
+      });
+      box.addEventListener("pointermove", ev => {
+        if (!drag || ev.pointerId !== drag.id) return;
+        const dx = ev.clientX - drag.x, dy = ev.clientY - drag.y;
+        if (!drag.on){
+          if (Math.abs(dx) < 8 || Math.abs(dx) < Math.abs(dy)) return;
+          drag.on = true;
+          box.classList.add("dragging");
+          try { drag.card.setPointerCapture(drag.id); } catch(e){}
+        }
+        drag.dx = dx;
+        drag.card.style.setProperty("--dx", dx + "px");
+        drag.card.style.setProperty("--dy", (dy * .25) + "px");
+        drag.card.style.setProperty("--rot", (dx / drag.w * 14) + "deg");
+        box.style.setProperty("--p", String(Math.min(1, Math.abs(dx) / (drag.w * .4))));
+      });
+      const release = ev => {
+        if (!drag || ev.pointerId !== drag.id) return;
+        const { dx, on, w, t } = drag;
+        const flick = Math.abs(dx) / Math.max(1, ev.timeStamp - t) > .55 && Math.abs(dx) > 30;
+        const thrown = on && ev.type === "pointerup" && (Math.abs(dx) > w * .33 || flick);
+        settle();
+        if (thrown) go(1, dx < 0 ? -1 : 1);
+      };
+      box.addEventListener("pointerup", release);
+      box.addEventListener("pointercancel", release);
+      paint();
+    }
     /* ---- one question per word, never the same one twice ----------------
        Each word has many questions in the pool (the build holds it to twelve
        or more). A run asks each word the one the learner has gone longest
@@ -4474,7 +4570,7 @@ function initVocab(){
       return w;
     }
     const byK = x => x.n !== undefined ? byN[x.n] : byN[(x.k || [])[0]];
-    function run(words, extra, met, label, logSet, si){
+    function run(words, extra, met, label, logSet){
       const used = new Set();
       const items = shuffle(words).map(w => variant(w, met, used)).filter(Boolean);
       for (const w of shuffle(words).slice(0, extra)){
@@ -4487,50 +4583,28 @@ function initVocab(){
         retry: it => { const w = byK(it); return w ? variant(w, met, used) : null; },
         onDone: r => {
           log.push({ set: logSet, right: r.right, total: r.total, at: Date.now() });
-          save(); listing(si);
+          save(); stacks(logSet);
         },
       });
     }
 
-    /* ---- 2. questions on the set just met: one on every word, then a few
-       more on some of them, each a different question ---- */
+    /* ---- the questions on a set, after its last card: one on every word,
+       then a few more on some of them, each a different question ---- */
     function recall(si){
       const set = sets[si];
-      run(set, Math.ceil(set.length / 2), metUpTo(si), "Set " + (si + 1), si, si);
+      run(set, Math.ceil(set.length / 2), metUpTo(si), null, si);
     }
 
-    /* ---- mixed: everything met so far; the words least recently asked ---- */
-    function mixed(si){
-      const met = metUpTo(Math.max(-1, ...setsDone())), words = p.words.filter(w => met.has(w.n));
+    /* ---- mixed: the sets answered so far; the words least recently asked ---- */
+    function mixed(){
+      const done = setsDone();
+      const words = sets.filter((_, i) => done.has(i)).flat();
       const pickW = drawFresh(p.id + ":w", words.map(w => Object.assign({ id: w.word }, w)), 12)
         .map(x => byN[x.n]);
-      run(pickW, 0, met, "Mixed", -1, si);
+      run(pickW, 0, metUpTo(Math.max(-1, ...done)), "Mixed", -1);
     }
 
-    /* ---- 3. the set at a glance, and where to go next ---- */
-    function listing(si){
-      const set = sets[si], last = si + 1 >= sets.length;
-      const runs = log.filter(a => a.set === si);
-      stage.innerHTML =
-        '<div class="v-card">' + dots(si)
-        + '<h3 class="v-h3">Set ' + (si + 1) + '</h3>'
-        + '<ul class="v-list">'
-        + set.map(w => '<li><b>' + esc(w.word) + '</b><span>' + esc(w.vi) + '</span></li>').join("")
-        + '</ul>' + runsLine(runs)
-        + '<div class="row v-nav">'
-        + (last ? "" : '<button class="btn" data-v="on">Next set</button>')
-        + '<button class="btn' + (last ? "" : " quiet") + '" data-v="mixed">Mixed practice</button>'
-        + '<button class="btn quiet" data-v="retest">This set again</button>'
-        + '</div></div>';
-      $('[data-v="retest"]', stage).addEventListener("click", () => recall(si));
-      $('[data-v="mixed"]', stage).addEventListener("click", () => mixed(si));
-      const on = $('[data-v="on"]', stage);
-      if (on) on.addEventListener("click", () => meet(si + 1, 0));
-    }
-
-    /* A returning learner lands on the last set they answered, not on word one. */
-    const lastSet = log.filter(a => a.set >= 0).map(a => a.set).pop();
-    if (lastSet === undefined) meet(0, 0); else listing(lastSet);
+    stacks();
   });
 }
 
