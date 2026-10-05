@@ -584,7 +584,11 @@ function paintProgress(){
     const u = el.dataset.unitProgress;
     const n = lessonsDone(u), pct = Math.round(n / LESSONS * 100);
     const fill = $(".bar i", el) || $("i", el);
-    if (fill) fill.style.width = pct + "%";
+    if (fill){
+      /* A .bar fills by scale (the stylesheet reads --v); anything else by width. */
+      if (fill.parentElement.classList.contains("bar")) fill.style.setProperty("--v", String(pct / 100));
+      else fill.style.width = pct + "%";
+    }
     const t = $("[data-progress-text]", el);
     if (t) t.textContent = n === 0 ? LESSONS + " lessons" : n + " of " + LESSONS + " done";
     if (n === LESSONS) el.classList.add("is-complete");
@@ -1101,7 +1105,8 @@ function runEngine(mode, words, unit, hostSel, opts){
       + '<span class="chip">' + esc(opts.label || MODE_LABEL[st.mode]) + '</span>'
       + '<span class="counter">' + Math.min(st.i + 1, st.items.length) + ' of ' + st.items.length + '</span>'
       + '<span class="counter sp">' + (st.mode === "test" ? "no feedback until the end" : st.right + " right") + '</span>'
-      + '</div><div class="bar"><i style="width:' + (st.i / st.items.length * 100) + '%"></i></div>'
+      + '</div><div class="bar"><i style="--v:' + (st.i / st.items.length)
+      + ';--v0:' + (st.v0 === undefined ? st.i / st.items.length : st.v0) + '"></i></div>'
       + inner + (note || "") + '</div>';
   }
 
@@ -1164,6 +1169,7 @@ function runEngine(mode, words, unit, hostSel, opts){
       note = '<p class="note small">Spelling counts. UK and US spellings are both accepted; '
            + 'two answers in one gap score nothing.</p>';
     host.innerHTML = chrome(body, note);
+    st.v0 = st.i / st.items.length;
     const li = $(".i", host);
     if (li && q.fmt === "recall-tiles"){ li.dataset.seq = ""; paintTiles(li, w); }
     const inp = $("#ans", host);
@@ -4445,8 +4451,17 @@ function initVocab(){
       if (mx) mx.addEventListener("click", mixed);
     }
     stage.addEventListener("click", ev => {
+      /* From the first press on, a stage that changes comes in with motion;
+         the stacks the page loads with are simply there. */
+      if (ev.target.closest(".v-stack, [data-v]")) stage.classList.add("is-live");
       const d = ev.target.closest(".v-stack");
-      if (d) deck(Number(d.dataset.set));
+      if (d){
+        /* The deck opens out of the pile that was pressed. */
+        const a = d.getBoundingClientRect(), b = stage.getBoundingClientRect();
+        stage.style.setProperty("--ox", (a.left + a.width / 2 - b.left) + "px");
+        stage.style.setProperty("--oy", (a.top + a.height / 2 - b.top) + "px");
+        deck(Number(d.dataset.set));
+      }
     });
 
     /* ---- one set as a deck of cards: swipe (either way), tap Next, or use
@@ -4479,72 +4494,172 @@ function initVocab(){
         + '<button type="button" class="btn" data-v="next"></button></div></div>';
       const box = $(".v-deck", stage), cards = [...box.children];
       const back = $('[data-v="back"]', stage), next = $('[data-v="next"]', stage);
+      const EASE = (getComputedStyle(box).getPropertyValue("--ease-settle") || "").trim() || "ease-out";
+      const canFly = typeof DOMMatrixReadOnly === "function" && typeof box.animate === "function";
+      const still = () => typeof matchMedia === "function"
+        && matchMedia("(prefers-reduced-motion: reduce)").matches;
       function paint(){
         cards.forEach((c, k) => {
           const d = k - i;
           c.dataset.d = d < 0 ? "out" : d > 2 ? "deep" : String(d);
           c.style.zIndex = String(cards.length - k);
+          c.style.removeProperty("--p");
           c.setAttribute("aria-hidden", d === 0 ? "false" : "true");
         });
-        box.style.setProperty("--p", "0");
         $(".v-count", stage).textContent = i < n ? "Word " + (i + 1) + " of " + n : "";
-        $(".bar i", stage).style.width = (Math.min(i + 1, n) / n * 100) + "%";
+        $(".bar i", stage).style.setProperty("--v", String(Math.min(i + 1, n) / n));
         back.disabled = i === 0;
         next.textContent = i < n ? "Next" : "Start";
       }
-      function go(step, dir){
+
+      /* ---- how a card travels ------------------------------------------
+         Where a card is right now, whoever is moving it: the finger, a
+         flight, or nothing. Read from the computed matrix, so a card caught
+         in the air is picked up exactly where it is. */
+      const pose = c => {
+        const cs = getComputedStyle(c), m = new DOMMatrixReadOnly(cs.transform);
+        return { x: m.e, y: m.f, r: Math.atan2(m.b, m.a) * 180 / Math.PI, s: Math.hypot(m.a, m.b),
+                 o: Number(cs.opacity) };
+      };
+      /* One frame of the way from a to b; t runs 1 to 0. The fade is tied to
+         the distance and kept for the far end, so a card is seen to leave. */
+      const mix = (a, b, t) => ({
+        transform: "translate(" + (b.x + (a.x - b.x) * t).toFixed(1) + "px,"
+          + (b.y + (a.y - b.y) * t).toFixed(1) + "px) rotate(" + (b.r + (a.r - b.r) * t).toFixed(2)
+          + "deg) scale(" + (b.s + (a.s - b.s) * t).toFixed(4) + ")",
+        opacity: Math.max(0, Math.min(1, a.o > b.o ? b.o + (a.o - b.o) * (1 - (1 - t) * (1 - t))
+                                                   : b.o + (a.o - b.o) * t * t)),
+      });
+      /* A damped spring from 1 to 0, one sample a frame. `v` is its starting
+         speed (per second), so a released card keeps the speed the finger
+         gave it. bounce 0 never overshoots; .2 overshoots by about 2%. */
+      function spring(v, period, bounce){
+        const w = 2 * Math.PI / period, z = 1 - bounce, out = [];
+        const wd = w * Math.sqrt(Math.max(0, 1 - z * z));
+        for (let t = 0; t <= .9; t += 1 / 60){
+          const e = Math.exp(-z * w * t);
+          const x = wd > 0 ? e * (Math.cos(wd * t) + (v + z * w) / wd * Math.sin(wd * t))
+                           : e * (1 + (v + w) * t);
+          out.push(x);
+          if (t > .12 && Math.abs(x) < .002 && Math.abs(out[out.length - 2]) < .002) break;
+        }
+        out.push(0);
+        return out;
+      }
+      const land = c => { if (c.__fly){ const a = c.__fly; c.__fly = null; a.cancel(); } delete c.dataset.fly; };
+      /* Take `card` from where it is to wherever `change` leaves it.
+         how.v (px/ms): released by a finger, so a spring that keeps that speed.
+         how.ms: a button, so a plain curve that slows into place.
+         Neither: the keyboard, or reduced motion. The change is simply made. */
+      function fly(card, change, how){
+        if (!how || !canFly || still()){
+          land(card);
+          if (!how) box.classList.add("cut");
+          change();
+          if (!how){ void box.offsetWidth; box.classList.remove("cut"); }
+          return;
+        }
+        const a = pose(card);
+        land(card);
+        card.dataset.fly = "1";
+        change();
+        const b = pose(card);
+        let an;
+        if (how.ms){
+          an = card.animate([mix(a, b, 1), mix(a, b, .5), mix(a, b, 0)], { duration: how.ms, easing: EASE });
+        } else {
+          const far = a.x - b.x;
+          const v = Math.abs(far) > 8 ? Math.max(-20, Math.min(20, how.v * 1000 / far)) : 0;
+          const ks = spring(v, how.bounce ? .5 : .4, how.bounce || 0);
+          an = card.animate(ks.map(t => mix(a, b, t)),
+                            { duration: (ks.length - 1) * 1000 / 60, easing: "linear" });
+        }
+        card.__fly = an;
+        an.onfinish = () => { if (card.__fly === an) land(card); };
+      }
+
+      /* The buttons and the drag end in the same step; only the travel differs. */
+      function go(step, dir, how){
         if (step > 0 && i >= n) return recall(si);
         if (step < 0 && i === 0) return;
-        if (step > 0) cards[i].style.setProperty("--dir", String(dir || 1));
-        i += step;
-        paint();
+        const c = cards[step > 0 ? i : i - 1];
+        if (step > 0) c.style.setProperty("--dir", String(dir || 1));
+        fly(c, () => { settle(); i += step; paint(); }, how);
       }
-      next.addEventListener("click", () => go(1, 1));
-      back.addEventListener("click", () => go(-1));
+      next.addEventListener("click", () => go(1, 1, { ms: 260 }));
+      back.addEventListener("click", () => go(-1, 0, { ms: 300 }));
       $('[data-v="all"]', stage).addEventListener("click", () => stacks());
       box.addEventListener("keydown", ev => {
         if (ev.key === "ArrowRight") { ev.preventDefault(); go(1, 1); }
         else if (ev.key === "ArrowLeft") { ev.preventDefault(); go(-1); }
       });
 
-      /* The drag. A card follows the finger and tilts; past a third of its
-         width, or flicked, it flies off the side it was thrown to and the one
-         beneath comes up. Anything less springs back. */
+      /* The drag. A card follows the finger and tilts. Let go while it is
+         moving outward, or past a third of its width, and it leaves on that
+         side at the speed it had; anything else springs back. A card that is
+         still settling can be caught again. The last card has nowhere to go,
+         so it gives a little and returns. */
       let drag = null;
+      const under = p => { for (const c of [cards[i + 1], cards[i + 2]]) if (c) c.style.setProperty("--p", p); };
       const settle = () => {
         if (!drag) return;
         drag = null;
         box.classList.remove("dragging");
-        box.style.setProperty("--p", "0");
+        under("0");
+      };
+      const hold = (c, dx, dy) => {
+        c.style.setProperty("--dx", dx + "px");
+        c.style.setProperty("--dy", dy + "px");
+        c.style.setProperty("--rot", (dx / drag.w * 14) + "deg");
+      };
+      const begin = () => {
+        drag.on = true;
+        box.classList.add("dragging");
+        try { drag.card.setPointerCapture(drag.id); } catch(e){}
       };
       box.addEventListener("pointerdown", ev => {
+        if (drag && drag.on) return;            /* a second finger changes nothing */
         const c = cards[i];
-        if (i >= n || !c.contains(ev.target) || (ev.button !== undefined && ev.button > 0)) return;
-        drag = { card: c, id: ev.pointerId, x: ev.clientX, y: ev.clientY, dx: 0, on: false,
-                 t: ev.timeStamp, w: c.offsetWidth || 320 };
+        if (!c.contains(ev.target) || (ev.button !== undefined && ev.button > 0)) return;
+        const p = c.__fly && canFly ? pose(c) : null;
+        drag = { card: c, id: ev.pointerId, x: ev.clientX - (p ? p.x : 0), y: ev.clientY - (p ? p.y * 4 : 0),
+                 dx: p ? p.x : 0, on: false, last: i >= n, w: c.offsetWidth || 320,
+                 pts: [[ev.timeStamp, ev.clientX]] };
+        if (p){
+          land(c); hold(c, p.x, p.y); begin();
+          if (!drag.last) under(String(Math.min(1, Math.abs(p.x) / (drag.w * .4))));
+        }
       });
       box.addEventListener("pointermove", ev => {
         if (!drag || ev.pointerId !== drag.id) return;
-        const dx = ev.clientX - drag.x, dy = ev.clientY - drag.y;
+        let dx = ev.clientX - drag.x;
+        const dy = ev.clientY - drag.y;
         if (!drag.on){
           if (Math.abs(dx) < 8 || Math.abs(dx) < Math.abs(dy)) return;
-          drag.on = true;
-          box.classList.add("dragging");
-          try { drag.card.setPointerCapture(drag.id); } catch(e){}
+          begin();
+        }
+        if (drag.last){
+          const lim = drag.w * .3;
+          dx = Math.sign(dx) * lim * (1 - 1 / (Math.abs(dx) / lim * .55 + 1));
         }
         drag.dx = dx;
-        drag.card.style.setProperty("--dx", dx + "px");
-        drag.card.style.setProperty("--dy", (dy * .25) + "px");
-        drag.card.style.setProperty("--rot", (dx / drag.w * 14) + "deg");
-        box.style.setProperty("--p", String(Math.min(1, Math.abs(dx) / (drag.w * .4))));
+        drag.pts.push([ev.timeStamp, ev.clientX]);
+        while (drag.pts.length > 2 && ev.timeStamp - drag.pts[0][0] > 100) drag.pts.shift();
+        hold(drag.card, dx, dy * .25);
+        if (!drag.last) under(String(Math.min(1, Math.abs(dx) / (drag.w * .4))));
       });
       const release = ev => {
         if (!drag || ev.pointerId !== drag.id) return;
-        const { dx, on, w, t } = drag;
-        const flick = Math.abs(dx) / Math.max(1, ev.timeStamp - t) > .55 && Math.abs(dx) > 30;
-        const thrown = on && ev.type === "pointerup" && (Math.abs(dx) > w * .33 || flick);
-        settle();
-        if (thrown) go(1, dx < 0 ? -1 : 1);
+        const { card, dx, on, w, last, pts } = drag;
+        if (!on){ drag = null; return; }
+        /* Speed over the last tenth of a second, in px/ms; none if the finger had stopped. */
+        const p0 = pts[0], p1 = pts[pts.length - 1];
+        const v = ev.timeStamp - p1[0] > 60 || p1[0] === p0[0] ? 0 : (p1[1] - p0[1]) / (p1[0] - p0[0]);
+        const side = dx < 0 ? -1 : 1, away = v * side;
+        const thrown = ev.type === "pointerup" && !last
+          && ((away > .4 && Math.abs(dx) > 16) || (Math.abs(dx) > w * .33 && away > -.2));
+        if (thrown) go(1, side, { v });
+        else fly(card, settle, { v: last ? 0 : v, bounce: .2 });
       };
       box.addEventListener("pointerup", release);
       box.addEventListener("pointercancel", release);
@@ -4620,6 +4735,8 @@ function initBanks(){
     try { log = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch(e){}
     const save = () => { try { localStorage.setItem(KEY, JSON.stringify(log)); } catch(e){} setTimeout(noteProgress, 0); };
 
+    /* From the first press on, the cover and the questions change places with a fade. */
+    stage.addEventListener("click", () => stage.classList.add("is-live"));
     function cover(){
       stage.innerHTML = '<div class="bk-cover">'
         + '<p class="bk-n"><b>' + p.draw + '</b> questions</p>'
@@ -4657,7 +4774,11 @@ function initBanks(){
 function initWordsSheet(){
   const dlg = $("#words");
   if (!dlg) return;
+  let closing = 0;
   const open = () => {
+    clearTimeout(closing);
+    dlg.classList.remove("is-closing");
+    if (dlg.open) return;
     if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
     document.documentElement.classList.add("sheet-open");
     /* Focus lands on the title, not the close button or the search field:
@@ -4665,15 +4786,32 @@ function initWordsSheet(){
     const h = $("#words-h", dlg);
     if (h){ h.tabIndex = -1; try { h.focus({ preventScroll:true }); } catch(e){} }
   };
-  const close = () => {
+  const shut = () => {
+    dlg.classList.remove("is-closing");
     if (dlg.close) dlg.close(); else dlg.removeAttribute("open");
     document.documentElement.classList.remove("sheet-open");
   };
+  /* A tap closes it the way it came in, and faster. Escape just closes it. */
+  const close = () => {
+    if (!dlg.hasAttribute("open") || dlg.classList.contains("is-closing")) return;
+    dlg.classList.add("is-closing");
+    const cs = getComputedStyle(dlg);
+    if (cs.animationName === "none" || !parseFloat(cs.animationDuration)) return shut();
+    clearTimeout(closing);
+    closing = setTimeout(shut, 400);
+  };
+  dlg.addEventListener("animationend", ev => {
+    if (ev.target === dlg && dlg.classList.contains("is-closing")){ clearTimeout(closing); shut(); }
+  });
   /* Without <dialog> support the browser gives no Escape; give it one. */
   if (!dlg.showModal) document.addEventListener("keydown", ev => {
     if (ev.key === "Escape" && dlg.hasAttribute("open")) close();
   });
-  dlg.addEventListener("close", () => document.documentElement.classList.remove("sheet-open"));
+  dlg.addEventListener("close", () => {
+    clearTimeout(closing);
+    dlg.classList.remove("is-closing");
+    document.documentElement.classList.remove("sheet-open");
+  });
   $$("[data-words-open]").forEach(b => b.addEventListener("click", open));
   $$("[data-words-close]", dlg).forEach(b => b.addEventListener("click", close));
   /* A tap on the dimmed page behind the sheet closes it. */

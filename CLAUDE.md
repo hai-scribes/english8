@@ -520,6 +520,11 @@ cannot see them there.
 
 ## The interface is the learner's. The reasoning is ours.
 
+`DESIGN.md` at the repo root records how the interface looks and moves — the
+tokens, the type, the motion timings and the do's and don'ts — read out of
+`tools/assets/app.css`. Read it before changing either asset file; where the
+two disagree the stylesheet is right and `DESIGN.md` is out of date.
+
 Nothing on a page explains why the page is built the way it is. No criterion
 names, no evidential markers, no CEFR levels, no citations, no "this trains X",
 no accounts of what a study found or how strong its evidence was — not in the
