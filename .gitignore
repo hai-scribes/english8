@@ -37,3 +37,6 @@ reports/.*.lock
 .artgen/
 # API keys. tools/artgen/config.py reads .secrets/gemini.key.
 .secrets/
+
+# Design-trial copies (baseline, and the versions compared against it). Local only.
+mock/
