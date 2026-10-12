@@ -1,0 +1,259 @@
+slug: learn-anywhere
+status: planned
+goal: |
+  The prototype demonstrates a static English 8 self-study course site for "Tiếng Anh 8 — Global Success" with a course home, twelve unit pages, lesson pages with marked exercises, a story reader, a word lookup page, local progress/review storage, and optional Google sign-in sync to Firestore. It shows unit and lesson navigation, toggles lesson completion, gates practice and unit tests based on lesson completion, marks exercise answers, and filters the vocabulary list.
+problem: |
+  A grade-8 learner studies alone on weekdays and needs a course site that works offline-first on one device and optionally syncs across devices. The prototype shows the happy path for navigation, marking, progress and sign-in, but it fails silently when sign-in, saving or syncing breaks, leaves locked controls unexplained, and gives no feedback while large pages parse. This spec keeps the prototype's behaviour and adds the error, empty, loading, accessibility and concurrency behaviour a production release needs, on the same surfaces the prototype demonstrated.
+
+acceptance_criteria:
+  - id: AC-1
+    user_story: "as a learner, when I open the course home I want to see the course title, its size and the main entry points so that I know where to start"
+    given: "the user opens the course home page"
+    when: "the page loads"
+    then: "displays text \"Tiếng Anh 8 — Global Success\", \"Self-study course · 12 units · 84 lessons\", \"Open Unit 01\", \"The Sea Gives Back\", and \"Look up a word\""
+    test: test_learn_anywhere_AC1_home_page_content
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/index.html:27"
+  - id: AC-2
+    user_story: "as a learner, when I click the colour theme button I want the theme to change so that I can read comfortably in my lighting"
+    given: "the user is on a page with the colour theme button showing \"◒ Auto\""
+    when: "user clicks the \"◒ Auto\" button"
+    then: "the button text changes to \"◑ Light\" and the document theme is set to light"
+    test: test_learn_anywhere_AC2_theme_button_cycles
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/assets/app.js:28"
+  - id: AC-3
+    user_story: "as a new learner, when I open a unit before doing any lesson I want practice and the test to be held back so that I work through the lessons first"
+    given: "the user opens Unit 01"
+    when: "the page loads with no lesson progress stored"
+    then: "displays text \"Leisure Time\", \"Start Lesson 1\", \"Practice & test\", \"Work through the lessons first.\", \"Start practice\", and \"Take the test\""
+    test: test_learn_anywhere_AC3_unit_page_locked_gate
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/unit-01/index.html:27"
+  - id: AC-4
+    user_story: "as a learner, when I mark a lesson complete I want it remembered so that the unit page shows what I have done"
+    given: "the user opens Unit 01 Lesson 1"
+    when: "user clicks the \"Mark lesson complete\" button"
+    then: "the button text changes to \"✓ Completed\" and the lesson completion is stored under \"en8:progress:v1\""
+    test: test_learn_anywhere_AC4_mark_lesson_complete
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/assets/app.js:347"
+  - id: AC-5
+    user_story: "as a learner, when I check my answers I want a mark for the task so that I know what I got right"
+    given: "the user is on a lesson page with a marked task"
+    when: "user clicks the \"Check answers\" button"
+    then: "the task displays a score in the form \"<score> of <total> — one mark each, nothing part-marked.\" and disables the answer inputs"
+    test: test_learn_anywhere_AC5_check_answers_scores_task
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/assets/app.js:1458"
+  - id: AC-6
+    user_story: "as a learner, when I type in the word search I want the list to narrow so that I can find a word quickly"
+    given: "the user opens the word lookup page"
+    when: "user types into the \"Search\" field"
+    then: "the word list is narrowed as the user types and the status text shows either \"405 words\" or \"<count> of 405\""
+    test: test_learn_anywhere_AC6_word_lookup_filters
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/assets/app.js:632"
+  - id: AC-7
+    user_story: "as a learner on more than one device, when I click sign in I want Google sign-in to start so that my progress can sync"
+    given: "the user is signed out"
+    when: "user clicks the \"Sign in with Google\" button"
+    then: "the prototype starts Google popup sign-in and changes the auth state to \"signing-in\""
+    test: test_learn_anywhere_AC7_google_sign_in_starts
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/assets/auth-src.mjs:536"
+
+  - id: AC-8
+    user_story: "as a learner whose sign-in popup fails or is closed, when sign-in does not complete I want to be told so that I know I am still signed out and can try again"
+    given: "the user is signed out and has clicked \"Sign in with Google\""
+    when: "the popup is blocked, closed, or the network is unreachable"
+    then: "the auth state returns to signed-out and a visible message appears beside the button: \"Could not sign in. Check your connection and try again.\"; the button is enabled again and local progress is unchanged"
+    test: test_learn_anywhere_AC8_sign_in_failure_shows_message
+    elevation_class: error_state
+    source_gap: "Google sign-in failure is only logged to console and repaints signed-out state; no visible error text is shown for popup failure."
+  - id: AC-9
+    user_story: "as a learner, when I click sign in twice quickly I want only one sign-in attempt so that I do not get stacked popups"
+    given: "the auth state is \"signing-in\""
+    when: "the user clicks \"Sign in with Google\" again within the same attempt"
+    then: "the second click is ignored, only one popup is open, and the button is disabled with the text \"Signing in…\" until the attempt resolves"
+    test: test_learn_anywhere_AC9_sign_in_double_click_ignored
+    elevation_class: concurrent
+    source_gap: implicit
+  - id: AC-10
+    user_story: "as a learner whose device storage is full or blocked, when my progress cannot be saved I want to be told so that I do not believe work is kept when it is not"
+    given: "writing to \"en8:progress:v1\" fails (storage full or blocked)"
+    when: "the user clicks \"Mark lesson complete\" or finishes a marked task"
+    then: "a visible message appears: \"Progress could not be saved on this device. Free up space or allow site storage, then try again.\"; the button does not show \"✓ Completed\" until the save succeeds"
+    test: test_learn_anywhere_AC10_progress_save_failure_visible
+    elevation_class: error_state
+    source_gap: "Progress save failure is only logged once to console for en8:progress:v1; no visible error state is shown."
+  - id: AC-11
+    user_story: "as a learner whose sync keeps failing, when the sync error appears I want a way to retry so that I do not have to wait or reload"
+    given: "a Firestore write has failed and \"Could not save just now. Trying again in a moment.\" is shown"
+    when: "the user activates the \"Try again\" button shown beside that message"
+    then: "the pending writes are retried immediately, the message clears on success, and on a second failure the message stays with the retry button enabled; each write request times out after 10 seconds"
+    test: test_learn_anywhere_AC11_sync_failure_manual_retry
+    elevation_class: error_state
+    source_gap: "Firestore sync failure displays \"Could not save just now. Trying again in a moment.\" but there is no manual retry control."
+  - id: AC-12
+    user_story: "as a learner whose search matches nothing, when I see no results I want a clear way back so that I can recover without retyping"
+    given: "the user is on the word lookup page with text typed in \"Search\" that matches no word"
+    when: "the list becomes empty"
+    then: "shows \"No word matches that. Try part of the word, or the Vietnamese.\" with a \"Clear search\" button that empties the field and restores all 405 words; the status text reads \"0 of 405\""
+    test: test_learn_anywhere_AC12_word_lookup_empty_state_recovery
+    elevation_class: empty_edge
+    source_gap: "The word lookup has an empty-result message but no recovery beyond the text \"No word matches that. Try part of the word, or the Vietnamese.\""
+  - id: AC-13
+    user_story: "as a learner on a slow phone, when a lesson or the word list is still parsing I want to see that it is loading so that I do not think the page is broken"
+    given: "the user opens a lesson page or the word lookup page and the content takes longer than 100ms to appear"
+    when: "the page is loading"
+    then: "shows a skeleton of the lesson body or word list in place of the content, with no spinner unless loading exceeds 1 second; the Search field stays visible and is enabled only once the list is ready"
+    test: test_learn_anywhere_AC13_loading_skeleton_for_heavy_pages
+    elevation_class: loading
+    source_gap: "No loading/progress indicator is shown while static lesson content or large word-list HTML is first parsed."
+  - id: AC-14
+    user_story: "as a keyboard or screen-reader learner, when a control is locked I want it to be exposed as unavailable and to say why so that I do not activate it by mistake or wonder what to do"
+    given: "the user is on a locked unit page, or on a task that has not yet been checked"
+    when: "focus moves to \"Start practice\", \"Take the test\" or \"Show answer\""
+    then: "the control is natively disabled (or ignores activation and is announced as unavailable), and a visible hint beside it reads \"Work through the lessons first.\" or \"Check your answers first.\"; focus shows a ring of at least 2px and the hint is not carried by a tooltip title alone"
+    test: test_learn_anywhere_AC14_locked_controls_explain_why
+    elevation_class: a11y
+    source_gap: "The practice and test buttons use aria-disabled without native disabled on locked unit pages."
+  - id: AC-15
+    user_story: "as a learner who wants to see the answer, when Show answer is unavailable I want to know what unlocks it so that I can get there without guessing"
+    given: "a marked task has not been checked yet"
+    when: "the \"Show answer\" button is rendered"
+    then: "it is disabled and a visible line reads \"Check your answers first.\"; after \"Check answers\" is activated the line disappears and the button is enabled"
+    test: test_learn_anywhere_AC15_show_answer_unlock_explained
+    elevation_class: permission
+    source_gap: "Exercise answer reveal buttons are disabled until checking for locked tasks; the prototype does not expose a visible explanation except button title \"Check your answers first.\""
+
+non_goals: []
+
+ui_contract:
+  elements:
+    - role: link
+      name: "English 8 Global Success"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Sign in with Google"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "◒ Auto"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: link
+      name: "Open Unit 01"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: link
+      name: "Open the story"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: link
+      name: "Look up a word"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Start review"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: link
+      name: "Leisure Time Thời gian rảnh rỗi /ʊ/ vs /uː/ Verbs of liking & disliking + V-ing vs to-V 7 lessons"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: link
+      name: "Start Lesson 1"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Start practice"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Take the test"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "▶ Hear the conversation"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Read it as a comic"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Check answers"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Show answer"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Mark lesson complete"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: textbox
+      name: "Search"
+      actions: ["input"]
+      source_screenshot: ""
+    - role: button
+      name: "Hear access"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Hear access slowly"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "📖 Full entry 1 more meaning · usage"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+
+design_refs: []
+
+entities:
+  creates:
+    - "localStorage key en8:theme"
+    - "localStorage key en8:progress:v1"
+    - "localStorage key en8:story:v1"
+    - "localStorage key en8:review:v1"
+    - "localStorage key en8:tasks:v1"
+    - "localStorage key en8:calib:v1"
+    - "localStorage key prefix en8:played:"
+    - "localStorage key prefix en8:clock:"
+    - "localStorage key prefix en8:marks:"
+    - "localStorage key prefix en8:notes:"
+    - "localStorage key prefix en8:flags:"
+    - "localStorage key prefix en8:thread:"
+    - "localStorage key en8:write:v1"
+    - "localStorage key en8:days:v1"
+    - "Firestore documents users/{uid}/kv/{encoded localStorage key}"
+  requires:
+    - "window.__EN8_FIREBASE__ from docs/assets/firebase-config.js"
+    - "Firebase Auth"
+    - "Firebase Firestore"
+    - "browser localStorage"
+    - "browser speechSynthesis"
+
+addressed_gaps:
+  - "Google sign-in failure is only logged to console and repaints signed-out state; no visible error text is shown for popup failure."
+  - "Progress save failure is only logged once to console for en8:progress:v1; no visible error state is shown."
+  - "The word lookup has an empty-result message but no recovery beyond the text \"No word matches that. Try part of the word, or the Vietnamese.\""
+  - "Firestore sync failure displays \"Could not save just now. Trying again in a moment.\" but there is no manual retry control."
+  - "No loading/progress indicator is shown while static lesson content or large word-list HTML is first parsed."
+  - "The practice and test buttons use aria-disabled without native disabled on locked unit pages."
+  - "Exercise answer reveal buttons are disabled until checking for locked tasks; the prototype does not expose a visible explanation except button title \"Check your answers first.\""
+
+unaddressed_gaps:
+  - gap: "No validation screenshot paths were present in the payload or found under .specs/designs, so visual fidelity cannot be captured in design_refs."
+    reason: "design_refs is outside this pass's remit and the screenshots do not exist; the operator must supply them at /promote review."
+  - gap: "The prototype is generated as static HTML pages with large inline JSON data rather than a production application routing/data layer."
+    reason: "This is an architecture decision, not an acceptance criterion; the site is deliberately static, so track it as a separate spec if it is ever revisited."
+  - gap: "Speech synthesis support is optional; speak buttons are hidden when no voice is available, and no alternate audio source is implemented."
+    reason: "Adding recorded audio is a new feature outside the prototype's surface; the project's own notes say the site has no speech of its own, so this needs an operator decision."
+
+elevation_summary:
+  ac_count_before: 7
+  ac_count_after: 15
+  classes_added: [error_state, concurrent, empty_edge, loading, a11y, permission]
+  cross_family_check: |
+    unable to identify extractor family — escalate to spec-collision check at /promote step 8.
+
+ok: true
