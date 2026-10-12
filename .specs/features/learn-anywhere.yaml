@@ -1,208 +1,242 @@
 slug: learn-anywhere
 status: planned
 goal: |
-  The prototype demonstrates a static English 8 self-study course site for "Tiếng Anh 8 — Global Success" with a course home, twelve unit pages, lesson pages with marked exercises, a story reader, a word lookup page, local progress/review storage, and optional Google sign-in sync to Firestore. It shows unit and lesson navigation, toggles lesson completion, gates practice and unit tests based on lesson completion, marks exercise answers, and filters the vocabulary list.
+  A learner signs in with Google and her work follows her across devices: every answer, attempt history, note, highlight and piece of writing she makes on one device is on her others, the site keeps working with no network and saves when the connection returns, every exchange with the backend is announced on the page, and a per-day record shows what she did each day of the week. Signing in is optional and changes nothing about how lessons work.
 problem: |
-  A grade-8 learner studies alone on weekdays and needs a course site that works offline-first on one device and optionally syncs across devices. The prototype shows the happy path for navigation, marking, progress and sign-in, but it fails silently when sign-in, saving or syncing breaks, leaves locked controls unexplained, and gives no feedback while large pages parse. This spec keeps the prototype's behaviour and adds the error, empty, loading, accessibility and concurrency behaviour a production release needs, on the same surfaces the prototype demonstrated.
+  A grade-8 learner studies alone on weekdays and with a tutor on Saturdays, on more than one device and often where the signal drops. Her work lived in one browser, so a second device started from nothing. The prototype proved sign-in, a local-first sync to Firestore under her own uid, a day record, visible sync states and an offline copy of the course — and two outside reviews then found about twenty ways that design lost, resurrected or exposed work (sign-out with no network, a retake undone by a save, a fast clock overruling later edits, held work readable on a shared device, a stale page after a deploy). This spec states the behaviour the corrected prototype has, as it must hold on the current app: tasks that mark each item as it is answered and have no Check button, timed tests that show only the test, completion recorded from the work, and a per-day record the site already keeps. The prototype was built on an app 64 commits older; its gate harness presses a Check button the current app does not have, so the tests for these criteria need a task driver that handles both kinds of task.
 
 acceptance_criteria:
   - id: AC-1
-    user_story: "as a learner, when I open the course home I want to see the course title, its size and the main entry points so that I know where to start"
-    given: "the user opens the course home page"
-    when: "the page loads"
-    then: "displays text \"Tiếng Anh 8 — Global Success\", \"Self-study course · 12 units · 84 lessons\", \"Open Unit 01\", \"The Sea Gives Back\", and \"Look up a word\""
-    test: test_learn_anywhere_AC1_home_page_content
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/index.html:27"
+    user_story: "as a learner on more than one device, when I click sign in I want Google sign-in to start so that my work can follow me"
+    given: "the user is signed out on any page"
+    when: "the user clicks \"Sign in with Google\""
+    then: "a Google sign-in popup opens and the auth state reads \"signing-in\" until it resolves"
+    test: test_learn_anywhere_AC1_sign_in_starts
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:540"
   - id: AC-2
-    user_story: "as a learner, when I click the colour theme button I want the theme to change so that I can read comfortably in my lighting"
-    given: "the user is on a page with the colour theme button showing \"◒ Auto\""
-    when: "user clicks the \"◒ Auto\" button"
-    then: "the button text changes to \"◑ Light\" and the document theme is set to light"
-    test: test_learn_anywhere_AC2_theme_button_cycles
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/assets/app.js:28"
+    user_story: "as a signed-in learner, when I come back to the site I want to still be signed in so that I do not sign in every day"
+    given: "the user has signed in with Google"
+    when: "the page is reloaded or another page of the site is opened"
+    then: "the header shows the account's email and a \"Sign out\" button, the \"Sign in with Google\" button is hidden, and the auth state reads \"signed-in\" without a new popup"
+    test: test_learn_anywhere_AC2_session_persists_across_pages
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:483"
   - id: AC-3
-    user_story: "as a new learner, when I open a unit before doing any lesson I want practice and the test to be held back so that I work through the lessons first"
-    given: "the user opens Unit 01"
-    when: "the page loads with no lesson progress stored"
-    then: "displays text \"Leisure Time\", \"Start Lesson 1\", \"Practice & test\", \"Work through the lessons first.\", \"Start practice\", and \"Take the test\""
-    test: test_learn_anywhere_AC3_unit_page_locked_gate
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/unit-01/index.html:27"
+    user_story: "as a learner with a phone and a laptop, when I answer a task on one I want to see it done on the other so that I can carry on anywhere"
+    given: "the user answered a marked task twice on device A while signed in, and the page reads \"Saved\""
+    when: "the same account signs in on device B, a device with no stored work"
+    then: "device B shows that task as done with the same answers, the same marks, the same score line and both attempts in its history, without the user doing anything but sign in"
+    test: test_learn_anywhere_AC3_work_follows_account_to_second_device
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:304"
   - id: AC-4
-    user_story: "as a learner, when I mark a lesson complete I want it remembered so that the unit page shows what I have done"
-    given: "the user opens Unit 01 Lesson 1"
-    when: "user clicks the \"Mark lesson complete\" button"
-    then: "the button text changes to \"✓ Completed\" and the lesson completion is stored under \"en8:progress:v1\""
-    test: test_learn_anywhere_AC4_mark_lesson_complete
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/assets/app.js:347"
+    user_story: "as a learner, when someone else signs in I want my work to stay mine so that nobody reads or changes it"
+    given: "learner X has synced work and learner Y is a different Google account"
+    when: "Y signs in on a clean device, and separately Y's credential is used to read and to write each of X's Firestore documents directly"
+    then: "Y's pages show none of X's work as done, Y can read Y's own documents, and every read and write of a document under users/<X's uid> is refused with permission denied"
+    test: test_learn_anywhere_AC4_account_isolation_enforced_by_rules
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:firestore.rules:5"
   - id: AC-5
-    user_story: "as a learner, when I check my answers I want a mark for the task so that I know what I got right"
-    given: "the user is on a lesson page with a marked task"
-    when: "user clicks the \"Check answers\" button"
-    then: "the task displays a score in the form \"<score> of <total> — one mark each, nothing part-marked.\" and disables the answer inputs"
-    test: test_learn_anywhere_AC5_check_answers_scores_task
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/assets/app.js:1458"
+    user_story: "as a learner who studies where the signal drops, when I work offline on one device while my other device is online I want both sets of work kept so that neither study session is lost"
+    given: "device A is signed in with the lesson open and loses its network; device B is signed in and online"
+    when: "the user answers one task on A offline and a different task on B, then A regains its network"
+    then: "a third, clean device signing in as the same account shows both tasks and every earlier answer as done"
+    test: test_learn_anywhere_AC5_offline_and_concurrent_work_merge
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:135"
   - id: AC-6
-    user_story: "as a learner, when I type in the word search I want the list to narrow so that I can find a word quickly"
-    given: "the user opens the word lookup page"
-    when: "user types into the \"Search\" field"
-    then: "the word list is narrowed as the user types and the status text shows either \"405 words\" or \"<count> of 405\""
-    test: test_learn_anywhere_AC6_word_lookup_filters
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/assets/app.js:632"
+    user_story: "as a learner, when the site talks to its backend I want the page to say so, so that nothing happens behind my back"
+    given: "the user is signed in on a lesson page"
+    when: "the user signs in, answers a task, loses the network and regains it"
+    then: "the status beside the account reads \"Saving…\" while a save is in flight, \"Saved\" when it lands, \"No connection. Your work is kept on this device and will be saved when you are back online.\" while offline and \"Could not save just now. Trying again in a moment.\" after a failed save; no request leaves for the backend while the status reads idle or \"Saved\""
+    test: test_learn_anywhere_AC6_every_backend_request_is_announced
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:77"
   - id: AC-7
-    user_story: "as a learner on more than one device, when I click sign in I want Google sign-in to start so that my progress can sync"
-    given: "the user is signed out"
-    when: "user clicks the \"Sign in with Google\" button"
-    then: "the prototype starts Google popup sign-in and changes the auth state to \"signing-in\""
-    test: test_learn_anywhere_AC7_google_sign_in_starts
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/assets/auth-src.mjs:536"
-
+    user_story: "as a learner, when I open a lesson I want it usable at once so that I never wait on the network to start"
+    given: "the user is signed in and has a saved attempt on a lesson"
+    when: "that lesson is opened with every backend origin unreachable"
+    then: "the lesson's tasks render and the saved attempt is shown as done; nothing in the first paint waits on a backend request"
+    test: test_learn_anywhere_AC7_render_path_makes_no_backend_reads
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:21"
   - id: AC-8
+    user_story: "as a learner on a slow phone, when I answer a task I want the page to respond at once so that sync never makes the lesson feel slow"
+    given: "the user is signed in on a lesson page with the CPU throttled four times and a phone-width viewport"
+    when: "the user commits forty attempts on a marked task"
+    then: "the 95th-percentile time from the committing tap to the next painted frame is at most 100 ms"
+    test: test_learn_anywhere_AC8_interaction_stays_instant_with_sync_on
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:235"
+  - id: AC-9
+    user_story: "as a learner, when I finish work I want to see what I did on each day so that I and my Saturday tutor can look back over the week"
+    given: "the user answers a marked task at 06:30 local time on one calendar day and another on a later day of the same week, on two devices signed in as the same account"
+    when: "either device shows any page that carries the footer"
+    then: "a \"Your days\" section lists each local calendar day worked, newest first, grouped under \"Week of <Monday's date>: you worked on <n> days.\", each day naming what was done by kind (for example \"2 tasks answered · 1 word set · 1 piece of writing\"); work done at 06:30 local is filed under that local date, never the UTC one; both days appear on both devices"
+    test: test_learn_anywhere_AC9_day_record_lists_local_days_and_week
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:4726"
+  - id: AC-10
+    user_story: "as a learner, when I spend a day on words, practice or writing I want that day counted so that the record is true"
+    given: "the user is on a lesson page"
+    when: "the user completes a Meet-the-words set, a practice-bank run, a review session, a timed writing handed in, or a marked task"
+    then: "that day's line in \"Your days\" gains that kind of work, drawn from the one per-day record the site already keeps under \"en8:days:v1\" (extended to hold these kinds alongside its review count and path steps); writing is filed once when handed in, not on each keystroke"
+    test: test_learn_anywhere_AC10_day_record_counts_every_kind_of_work_in_one_record
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:4718"
+  - id: AC-11
+    user_story: "as a learner, when I look at my days I want an account of what I did and nothing else so that the record never becomes a scoreboard"
+    given: "the user has work on two or more days"
+    when: "the \"Your days\" section is shown"
+    then: "neither it nor the page shows a streak, \"in a row\", a score, a percentage, points, badges, a level, a best, a comparison, or any minutes, hours or time spent"
+    test: test_learn_anywhere_AC11_day_record_shows_no_streak_score_or_time
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:4707"
+  - id: AC-12
+    user_story: "as a learner sitting a timed test, when the clock is running I want only the test on the page so that nothing distracts me"
+    given: "the user has started a timed reading or timed writing"
+    when: "the test is running"
+    then: "the \"Your days\" section is not visible, and no work arriving from another device redraws the page until the test has ended"
+    test: test_learn_anywhere_AC12_timed_test_shows_no_day_record_and_is_never_redrawn
+    elevation_class: concurrent
+    source_gap: "The prototype's app had no timed-test mode; the day record and the redraw for incoming work were never tried against one."
+  - id: AC-13
+    user_story: "as a learner on a shared device, when I sign out I want my work saved and then gone from the device so that the next person does not open it"
+    given: "the user is signed in with a change still being saved"
+    when: "the user clicks \"Sign out\""
+    then: "the page shows \"Saving…\", waits up to six seconds for the save, then signs out; the page is drawn again with no task shown as done, and a clean device signing in as the same account shows the change"
+    test: test_learn_anywhere_AC13_sign_out_saves_first_then_clears_device
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:549"
+  - id: AC-14
+    user_story: "as a learner with no signal, when I sign out I want my unsaved work kept safe so that signing out never loses it"
+    given: "the user is signed in, offline, and has answered a task the backend has not received"
+    when: "the user clicks \"Sign out\", then later signs in again on the same device with a connection"
+    then: "after sign-out no task is shown as done, the status reads \"Your work is kept on this device. Sign in to see it and save it.\", and the held work cannot be read as plain text from the browser's storage; after signing in again the task is shown as done and it reaches the account's other devices"
+    test: test_learn_anywhere_AC14_sign_out_offline_holds_unsaved_work_encrypted
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:181"
+  - id: AC-15
+    user_story: "as a learner, when I delete something offline and sign out I want it to stay deleted so that old work does not come back"
+    given: "the user is signed in, offline, and removes a note that was already saved"
+    when: "the user signs out and later signs in again with a connection"
+    then: "the note is absent on this device and on the account's other devices"
+    test: test_learn_anywhere_AC15_deletions_survive_offline_sign_out
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:202"
+  - id: AC-16
+    user_story: "as a learner sharing a device with a sibling, when they sign in after me I want my held work kept from them and kept for me"
+    given: "learner X signed out offline with unsaved work held on the device"
+    when: "learner Y signs in on that device, uses it, signs out, and X signs in again"
+    then: "Y is never shown X's work, X's held work is shown again once X signs in, and if X's unsaved work cannot be held when Y signs in, Y is signed out with \"This device is holding unsaved work for another account. Sign in to that account first.\" and X's work is left untouched"
+    test: test_learn_anywhere_AC16_held_work_is_not_given_to_or_destroyed_by_another_account
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:486"
+  - id: AC-17
+    user_story: "as a learner with two tabs open, when I sign out in one I want the other cleared too so that my work is not left on screen"
+    given: "the same account is signed in with two tabs open, each showing a task as done"
+    when: "the user clicks \"Sign out\" in one tab"
+    then: "both tabs end signed out and neither shows the task as done"
+    test: test_learn_anywhere_AC17_sign_out_clears_every_tab
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:444"
+  - id: AC-18
+    user_story: "as a learner, when work was done on this device while nobody was signed in I want to choose whether it joins my account so that a sibling's answers do not slip into it"
+    given: "an account has been signed in on the device before, the device is now signed out, and someone answers a task"
+    when: "an account signs in"
+    then: "the user is asked once \"Work was done on this device while nobody was signed in. Add it to your account?\"; if declined, that work appears in no device of the account and is back on the page after sign-out; on a device no account has ever used, signed-out work joins the first account without asking"
+    test: test_learn_anywhere_AC18_signed_out_work_joins_an_account_only_when_agreed
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:507"
+  - id: AC-19
+    user_story: "as a learner, when I take a task again I want the fresh attempt to stay fresh so that syncing does not hand my old answers back"
+    given: "the user has an answered, saved task"
+    when: "the user clicks \"Try it again\" and the save completes"
+    then: "the stored record for the task has no answers and keeps the history of the first attempt, and the account's other devices show the task as not done"
+    test: test_learn_anywhere_AC19_retake_is_not_undone_by_sync
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:1559"
+  - id: AC-20
+    user_story: "as a learner whose phone clock is wrong, when I change something later on another device I want the later change to win so that a wrong clock cannot overrule me"
+    given: "device A's clock is two days ahead and has saved a note; device B has a correct clock and has received it"
+    when: "the user changes the note on B and the save completes"
+    then: "B keeps the later text and a third device receives the later text"
+    test: test_learn_anywhere_AC20_fast_clock_does_not_overrule_later_change
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:61"
+  - id: AC-21
+    user_story: "as a learner, when I remove something I want it to stay removed on every device so that syncing never puts it back"
+    given: "the user is signed in and has saved highlights, a lesson marked finished, and reviewed items on a day"
+    when: "the user removes a highlight, or un-finishes a lesson, or reviews items offline on two devices, and the saves complete"
+    then: "the removed highlight and the un-finished lesson stay removed on this device and the account's other devices, the read-again rounds are never merged by position into rounds nobody ran, and the day's reviewed count includes the items reviewed on both devices"
+    test: test_learn_anywhere_AC21_edited_lists_and_counters_merge_without_resurrection
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:134"
+  - id: AC-22
+    user_story: "as a learner in the middle of an answer, when work arrives from my other device I want the page left alone so that I never lose what I am doing"
+    given: "the user is signed in on a lesson and has chosen answers not yet committed, or has a practice run open, or is typing in a text field, or touched the lesson in the last thirty seconds"
+    when: "work from another device arrives and is saved to this device"
+    then: "the page is not drawn again; the status reads \"Saved. Work from your other device will show on the next page you open.\"; once none of those holds the page is drawn again showing that work, and the user's own committed answers are still shown"
+    test: test_learn_anywhere_AC22_incoming_work_never_redraws_under_her_hands
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:250"
+  - id: AC-23
+    user_story: "as the person paying for the backend, when a learner works for an hour I want the reads and writes to stay small so that the free plan is enough"
+    given: "the user is signed in with several hundred saved keys and the device has synced before"
+    when: "the user makes one change and the save completes"
+    then: "the save reads only documents changed in the backend since this device's last read (plus the changed key), not the whole account; the whole account is read on a device's first sync and at most once a day after; no batch exceeds 500 writes; and a failing save retries after 8 seconds, doubling up to 5 minutes"
+    test: test_learn_anywhere_AC23_sync_reads_only_what_changed
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:322"
+  - id: AC-24
+    user_story: "as a learner going somewhere with no signal, when I have opened the site once I want every lesson available so that I can study anywhere"
+    given: "the user has opened any one page of the site online and the course has finished saving"
+    when: "the device is offline and the user opens a lesson never opened before"
+    then: "the lesson loads with its tasks working and its drawings shown; a device set to save data keeps only the pages it opens"
+    test: test_learn_anywhere_AC24_whole_course_loads_offline
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/sw.js:82"
+  - id: AC-25
+    user_story: "as a learner on a bad connection, when the network neither answers nor fails I want the saved lesson shown so that I am not left on a blank page"
+    given: "a lesson is saved on the device and its request to the network hangs"
+    when: "the user opens the lesson"
+    then: "the saved lesson appears within 8 seconds with its tasks working"
+    test: test_learn_anywhere_AC25_hanging_connection_falls_back_to_saved_lesson
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/sw.js:23"
+  - id: AC-26
+    user_story: "as a learner, when the site is updated I want the new version on my device so that I am never stuck on an old build or a broken mix of two"
+    given: "a device holds the previous build, including a lesson opened under it"
+    when: "a new build is published and the user opens the site online, then goes offline"
+    then: "the new build is running within three ordinary reloads; offline, every lesson is the new build's page with the new build's scripts, whichever address form it is opened by; files the new build retired are no longer kept"
+    test: test_learn_anywhere_AC26_new_build_replaces_saved_copy_without_mixing
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/sw.js:37"
+  - id: AC-27
+    user_story: "as a signed-in learner opening the site offline, when the sign-in settings cannot be fetched I want to still see that I am signed in and offline so that I am not shown a button that cannot work"
+    given: "the user signed in earlier and opens a saved page with no network"
+    when: "the page loads"
+    then: "the header shows the account and the offline status, not a \"Sign in with Google\" button that does nothing"
+    test: test_learn_anywhere_AC27_offline_page_shows_account_and_offline_state
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:230"
+  - id: AC-28
     user_story: "as a learner whose sign-in popup fails or is closed, when sign-in does not complete I want to be told so that I know I am still signed out and can try again"
     given: "the user is signed out and has clicked \"Sign in with Google\""
     when: "the popup is blocked, closed, or the network is unreachable"
-    then: "the auth state returns to signed-out and a visible message appears beside the button: \"Could not sign in. Check your connection and try again.\"; the button is enabled again and local progress is unchanged"
-    test: test_learn_anywhere_AC8_sign_in_failure_shows_message
+    then: "the auth state returns to signed-out and a visible message appears beside the button: \"Could not sign in. Check your connection and try again.\"; the button is enabled again and local work is unchanged"
+    test: test_learn_anywhere_AC28_sign_in_failure_shows_message
     elevation_class: error_state
     source_gap: "Google sign-in failure is only logged to console and repaints signed-out state; no visible error text is shown for popup failure."
-  - id: AC-9
+  - id: AC-29
     user_story: "as a learner, when I click sign in twice quickly I want only one sign-in attempt so that I do not get stacked popups"
     given: "the auth state is \"signing-in\""
     when: "the user clicks \"Sign in with Google\" again within the same attempt"
-    then: "the second click is ignored, only one popup is open, and the button is disabled with the text \"Signing in…\" until the attempt resolves"
-    test: test_learn_anywhere_AC9_sign_in_double_click_ignored
+    then: "the second click is ignored and only one popup is open until the attempt resolves"
+    test: test_learn_anywhere_AC29_sign_in_double_click_ignored
     elevation_class: concurrent
     source_gap: implicit
-  - id: AC-10
-    user_story: "as a learner whose device storage is full or blocked, when my progress cannot be saved I want to be told so that I do not believe work is kept when it is not"
-    given: "writing to \"en8:progress:v1\" fails (storage full or blocked)"
-    when: "the user clicks \"Mark lesson complete\" or finishes a marked task"
-    then: "a visible message appears: \"Progress could not be saved on this device. Free up space or allow site storage, then try again.\"; the button does not show \"✓ Completed\" until the save succeeds"
-    test: test_learn_anywhere_AC10_progress_save_failure_visible
-    elevation_class: error_state
-    source_gap: "Progress save failure is only logged once to console for en8:progress:v1; no visible error state is shown."
-  - id: AC-11
-    user_story: "as a learner whose sync keeps failing, when the sync error appears I want a way to retry so that I do not have to wait or reload"
-    given: "a Firestore write has failed and \"Could not save just now. Trying again in a moment.\" is shown"
+  - id: AC-30
+    user_story: "as a learner whose save keeps failing, when the error appears I want a way to retry so that I do not have to wait or reload"
+    given: "a save has failed and \"Could not save just now. Trying again in a moment.\" is shown"
     when: "the user activates the \"Try again\" button shown beside that message"
-    then: "the pending writes are retried immediately, the message clears on success, and on a second failure the message stays with the retry button enabled; each write request times out after 10 seconds"
-    test: test_learn_anywhere_AC11_sync_failure_manual_retry
+    then: "the save is retried immediately, the message clears on success, and on another failure the message stays with the button enabled"
+    test: test_learn_anywhere_AC30_sync_failure_manual_retry
     elevation_class: error_state
     source_gap: "Firestore sync failure displays \"Could not save just now. Trying again in a moment.\" but there is no manual retry control."
-  - id: AC-12
-    user_story: "as a learner whose search matches nothing, when I see no results I want a clear way back so that I can recover without retyping"
-    given: "the user is on the word lookup page with text typed in \"Search\" that matches no word"
-    when: "the list becomes empty"
-    then: "shows \"No word matches that. Try part of the word, or the Vietnamese.\" with a \"Clear search\" button that empties the field and restores all 405 words; the status text reads \"0 of 405\""
-    test: test_learn_anywhere_AC12_word_lookup_empty_state_recovery
-    elevation_class: empty_edge
-    source_gap: "The word lookup has an empty-result message but no recovery beyond the text \"No word matches that. Try part of the word, or the Vietnamese.\""
-  - id: AC-13
-    user_story: "as a learner on a slow phone, when a lesson or the word list is still parsing I want to see that it is loading so that I do not think the page is broken"
-    given: "the user opens a lesson page or the word lookup page and the content takes longer than 100ms to appear"
-    when: "the page is loading"
-    then: "shows a skeleton of the lesson body or word list in place of the content, with no spinner unless loading exceeds 1 second; the Search field stays visible and is enabled only once the list is ready"
-    test: test_learn_anywhere_AC13_loading_skeleton_for_heavy_pages
-    elevation_class: loading
-    source_gap: "No loading/progress indicator is shown while static lesson content or large word-list HTML is first parsed."
-  - id: AC-14
-    user_story: "as a keyboard or screen-reader learner, when a control is locked I want it to be exposed as unavailable and to say why so that I do not activate it by mistake or wonder what to do"
-    given: "the user is on a locked unit page, or on a task that has not yet been checked"
-    when: "focus moves to \"Start practice\", \"Take the test\" or \"Show answer\""
-    then: "the control is natively disabled (or ignores activation and is announced as unavailable), and a visible hint beside it reads \"Work through the lessons first.\" or \"Check your answers first.\"; focus shows a ring of at least 2px and the hint is not carried by a tooltip title alone"
-    test: test_learn_anywhere_AC14_locked_controls_explain_why
-    elevation_class: a11y
-    source_gap: "The practice and test buttons use aria-disabled without native disabled on locked unit pages."
-  - id: AC-15
-    user_story: "as a learner who wants to see the answer, when Show answer is unavailable I want to know what unlocks it so that I can get there without guessing"
-    given: "a marked task has not been checked yet"
-    when: "the \"Show answer\" button is rendered"
-    then: "it is disabled and a visible line reads \"Check your answers first.\"; after \"Check answers\" is activated the line disappears and the button is enabled"
-    test: test_learn_anywhere_AC15_show_answer_unlock_explained
-    elevation_class: permission
-    source_gap: "Exercise answer reveal buttons are disabled until checking for locked tasks; the prototype does not expose a visible explanation except button title \"Check your answers first.\""
 
-non_goals: []
+non_goals:
+  - "Google is the only way to sign in: no other sign-in providers, no email and password, and no teacher or parent view of her data."
+  - "Nothing about how lessons work on the current app is changed by this feature: marking, completion, timed tests, the six-lesson shape, the practice pools and the review queue behave exactly as they do without it."
 
 ui_contract:
   elements:
-    - role: link
-      name: "English 8 Global Success"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
     - role: button
       name: "Sign in with Google"
       actions: ["click", "keyboard-enter"]
       source_screenshot: ""
     - role: button
-      name: "◒ Auto"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: link
-      name: "Open Unit 01"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: link
-      name: "Open the story"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: link
-      name: "Look up a word"
+      name: "Sign out"
       actions: ["click", "keyboard-enter"]
       source_screenshot: ""
     - role: button
-      name: "Start review"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: link
-      name: "Leisure Time Thời gian rảnh rỗi /ʊ/ vs /uː/ Verbs of liking & disliking + V-ing vs to-V 7 lessons"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: link
-      name: "Start Lesson 1"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: button
-      name: "Start practice"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: button
-      name: "Take the test"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: button
-      name: "▶ Hear the conversation"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: button
-      name: "Read it as a comic"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: button
-      name: "Check answers"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: button
-      name: "Show answer"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: button
-      name: "Mark lesson complete"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: textbox
-      name: "Search"
-      actions: ["input"]
-      source_screenshot: ""
-    - role: button
-      name: "Hear access"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: button
-      name: "Hear access slowly"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: button
-      name: "📖 Full entry 1 more meaning · usage"
+      name: "Try again"
       actions: ["click", "keyboard-enter"]
       source_screenshot: ""
 
@@ -210,50 +244,41 @@ design_refs: []
 
 entities:
   creates:
-    - "localStorage key en8:theme"
-    - "localStorage key en8:progress:v1"
-    - "localStorage key en8:story:v1"
-    - "localStorage key en8:review:v1"
-    - "localStorage key en8:tasks:v1"
-    - "localStorage key en8:calib:v1"
-    - "localStorage key prefix en8:played:"
-    - "localStorage key prefix en8:clock:"
-    - "localStorage key prefix en8:marks:"
-    - "localStorage key prefix en8:notes:"
-    - "localStorage key prefix en8:flags:"
-    - "localStorage key prefix en8:thread:"
-    - "localStorage key en8:write:v1"
-    - "localStorage key en8:days:v1"
-    - "Firestore documents users/{uid}/kv/{encoded localStorage key}"
+    - "Firestore documents users/{uid}/kv/{encoded localStorage key}, each holding the value, a change stamp and a server time"
+    - "localStorage keys under the prefix en8-sync: (change stamps, unsent keys, read cursor, clock, held work)"
+    - "docs/sw.js, the service worker, stamped with the build's hash"
+    - "docs/precache.json, every published page and asset with a hash of its bytes"
+    - "docs/assets/auth.bundle.js, the bundled Firebase client"
+    - "firestore.rules"
   requires:
-    - "window.__EN8_FIREBASE__ from docs/assets/firebase-config.js"
-    - "Firebase Auth"
-    - "Firebase Firestore"
-    - "browser localStorage"
-    - "browser speechSynthesis"
+    - "window.__EN8_FIREBASE__ from docs/assets/firebase-config.js (project english8-add68)"
+    - "Firebase Auth with the Google provider"
+    - "Cloud Firestore, Standard edition"
+    - "browser localStorage, Cache Storage, service workers and Web Crypto"
+    - "the per-day record the site keeps under en8:days:v1"
 
 addressed_gaps:
   - "Google sign-in failure is only logged to console and repaints signed-out state; no visible error text is shown for popup failure."
-  - "Progress save failure is only logged once to console for en8:progress:v1; no visible error state is shown."
-  - "The word lookup has an empty-result message but no recovery beyond the text \"No word matches that. Try part of the word, or the Vietnamese.\""
   - "Firestore sync failure displays \"Could not save just now. Trying again in a moment.\" but there is no manual retry control."
-  - "No loading/progress indicator is shown while static lesson content or large word-list HTML is first parsed."
-  - "The practice and test buttons use aria-disabled without native disabled on locked unit pages."
-  - "Exercise answer reveal buttons are disabled until checking for locked tasks; the prototype does not expose a visible explanation except button title \"Check your answers first.\""
+  - "The prototype's app had no timed-test mode; the day record and the redraw for incoming work were never tried against one."
 
 unaddressed_gaps:
-  - gap: "No validation screenshot paths were present in the payload or found under .specs/designs, so visual fidelity cannot be captured in design_refs."
-    reason: "design_refs is outside this pass's remit and the screenshots do not exist; the operator must supply them at /promote review."
-  - gap: "The prototype is generated as static HTML pages with large inline JSON data rather than a production application routing/data layer."
-    reason: "This is an architecture decision, not an acceptance criterion; the site is deliberately static, so track it as a separate spec if it is ever revisited."
-  - gap: "Speech synthesis support is optional; speak buttons are hidden when no voice is available, and no alternate audio source is implemented."
-    reason: "Adding recorded audio is a new feature outside the prototype's surface; the project's own notes say the site has no speech of its own, so this needs an operator decision."
+  - gap: "Which attempt of a task counts as the latest is still decided by each device's own clock; both attempts are always kept in the history."
+    reason: "The prototype orders whole stored keys by a stamp that survives a wrong clock, but the time inside an attempt record is the app's own. Changing it reaches into how tasks are stored, which this feature does not alter."
+  - gap: "A save that fails because the device's storage is full is not announced on the page."
+    reason: "The elevator proposed a message tied to a lesson-complete button the current app no longer has. Storage-full handling belongs to the lesson pages and is outside this feature's non-goals; track it separately."
+  - gap: "The question about adding signed-out work uses the browser's own confirm box."
+    reason: "It works and is tested, but it has had no design pass; DESIGN.md has no pattern for a question to the learner yet."
+  - gap: "No screenshots of the prototype were captured, so design_refs is empty."
+    reason: "The header controls reuse the existing icon-button and status styles; the operator may add screenshots at review."
+  - gap: "Offline use, signing out with no connection and the pause before a redraw have only been tried in a headless browser on a laptop."
+    reason: "Real-device behaviour (a phone's storage eviction, its own offline detection) cannot be asserted by a test here; the operator tries it on her devices before release."
 
 elevation_summary:
   ac_count_before: 7
-  ac_count_after: 15
-  classes_added: [error_state, concurrent, empty_edge, loading, a11y, permission]
+  ac_count_after: 30
+  classes_added: [error_state, concurrent]
   cross_family_check: |
-    unable to identify extractor family — escalate to spec-collision check at /promote step 8.
+    Extract ran on openai and elevate on anthropic. The operator then had the criteria rewritten at /promote review (2026-10-12): the extracted criteria described the whole site as it stood on the prototype's older app, several against decisions since made on main, and covered almost none of the feature.
 
 ok: true
