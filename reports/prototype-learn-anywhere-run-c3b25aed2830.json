@@ -1,0 +1,54 @@
+{
+  "run_id": "c3b25aed2830",
+  "slug": "learn-anywhere",
+  "command": "atelier prototype run learn-anywhere --auto",
+  "launch_flags": {
+    "accept_deferred": false,
+    "accept_empty_graft": false,
+    "force": false,
+    "max_parallel": null
+  },
+  "started": "2026-10-11T06:15:14Z",
+  "finished": "2026-10-11T06:16:24Z",
+  "elapsed_sec": 70.0,
+  "exit_action": "blocked",
+  "stop_reason": "green boundary lacks a successful grafted round (no valid tournament evidence) \u2014 must-stop",
+  "milestones_advanced": 0,
+  "max_wall_clock_sec": 28800,
+  "max_milestones": 0,
+  "milestones": [
+    {
+      "milestone_id": 2,
+      "objective": "Work done on one device appears on another after signing in as the same learner, and work done offline reaches a third device once the network returns. Equally: a different account sees none of it. What she sees on one device is what she sees on the other: a task shown done on one is shown done on the other, with the same answers, marks and attempt history, without her doing anything but sign in. How that state is stored is the implementation's choice; there is no older format to preserve.",
+      "outcome": "blocked",
+      "reason": "green boundary lacks a successful grafted round (no valid tournament evidence) \u2014 must-stop",
+      "slo": {
+        "metric_id": "sync_mismatches",
+        "threshold": 0,
+        "direction": "minimize"
+      },
+      "benchmark_value": 0.0,
+      "winner_variant": 1,
+      "selection_mode": null,
+      "gate_sha256": "39e9aa41e96ce5658155d27f38ef46c2b080b7e02c94d6b5ea564d67c3f785b1",
+      "benchmark_sha256": "8b1459ac7fd0be50ddf2244469fb6df9054602226c73c419c73c5aa1a09c567e",
+      "grafted_sha": null,
+      "cycles": 1,
+      "variant_cycles": [
+        {
+          "variant_id": 1,
+          "cycles": 1
+        }
+      ],
+      "cycles_all_rounds": 1,
+      "retained_branches": [],
+      "boundary_refusal": null,
+      "best_retained": null,
+      "decision_id": null,
+      "recommendation": "proceed",
+      "report_path": "/Users/liemnguyen/Per/English 8/reports/prototype-learn-anywhere.html",
+      "terminal_causes": [],
+      "session_diagnostics": []
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "run_id": "361b659ae55c",
+  "slug": "learn-anywhere",
+  "command": "atelier prototype run learn-anywhere --auto",
+  "launch_flags": {
+    "accept_deferred": false,
+    "accept_empty_graft": false,
+    "force": false,
+    "max_parallel": null
+  },
+  "started": "2026-10-12T07:11:54Z",
+  "finished": "2026-10-12T07:18:30Z",
+  "elapsed_sec": 396.8,
+  "exit_action": "blocked",
+  "stop_reason": "typed boundary not satisfied \u2014 3 fabrication surface(s) are deferred to this boundary and need explicit confirmation: [1] Playwright's setOffline is a clean binary cut. A real phone gives you a slow net; [2] The gate checks that a sync state is surfaced and carries text; it cannot judge ; [3] The stale-build check runs against the harness's own server and a simulated depl \u2014 accept them with attended `approve-boundary --proceed --accept-risk 1,2,3` (comma-separated indices or substrings; the indices are the ones `goal honesty` prints), or pass `prototype run --auto --accept-deferred` to pre-authorize all deferred surfaces for this unattended run",
+  "milestones_advanced": 0,
+  "max_wall_clock_sec": 28800,
+  "max_milestones": 0,
+  "milestones": [
+    {
+      "milestone_id": 4,
+      "objective": "Every network request the page makes is visible in the UI while it is in flight: the sync indicator names its state, carries readable text about when it last succeeded, and says so when it fails. And the lesson pages work with no network at all, through a service worker, so 'learn everywhere' does not quietly mean 'wherever there is signal'.",
+      "outcome": "blocked",
+      "reason": "typed boundary not satisfied \u2014 3 fabrication surface(s) are deferred to this boundary and need explicit confirmation: [1] Playwright's setOffline is a clean binary cut. A real phone gives you a slow net; [2] The gate checks that a sync state is surfaced and carries text; it cannot judge ; [3] The stale-build check runs against the harness's own server and a simulated depl \u2014 accept them with attended `approve-boundary --proceed --accept-risk 1,2,3` (comma-separated indices or substrings; the indices are the ones `goal honesty` prints), or pass `prototype run --auto --accept-deferred` to pre-authorize all deferred surfaces for this unattended run",
+      "slo": {
+        "metric_id": "silent_network_ops",
+        "threshold": 0,
+        "direction": "minimize"
+      },
+      "benchmark_value": 0.0,
+      "winner_variant": 1,
+      "selection_mode": null,
+      "gate_sha256": "a0ccaa4a973433227a276d86d06c7177b455e3ebda1b24af7aef7aa815fe820a",
+      "benchmark_sha256": "e69def795d461d7fab32e27e30a341a6b80505c08ebf239a3666372fbab0dcad",
+      "grafted_sha": "99df4a5f403d7869e1700f7a5680835b0b23e37f",
+      "cycles": 1,
+      "variant_cycles": [
+        {
+          "variant_id": 1,
+          "cycles": 1
+        }
+      ],
+      "cycles_all_rounds": 1,
+      "retained_branches": [],
+      "boundary_refusal": null,
+      "best_retained": null,
+      "decision_id": null,
+      "recommendation": "proceed",
+      "report_path": "/Users/liemnguyen/Per/English 8/reports/prototype-learn-anywhere.html",
+      "terminal_causes": [],
+      "session_diagnostics": []
+    }
+  ]
+}

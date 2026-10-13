@@ -1,0 +1,11 @@
+# atelier promote record — W8.2, advisory (not HMAC-bound)
+slug: learn-anywhere
+extract_family: openai
+elevate_family: anthropic
+family_stamp: ""
+prototype_branch: prototype/learn-anywhere
+prototype_branch_head: 222ff61cba35f45cea01a6767cb4667b33e0ec31
+production_branch: learn-anywhere
+production_worktree: .worktrees/learn-anywhere
+final_spec: .worktrees/learn-anywhere/.specs/features/learn-anywhere.yaml
+promoted_at: 2026-10-12T15:07:33.000Z
