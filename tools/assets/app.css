@@ -2083,8 +2083,8 @@ body.exam-on main{animation:v-fade .24s ease-out}
 .acct-btn::after{content:"";position:absolute;inset:-.5rem -.2rem}   /* a finger-sized target */
 .acct-btn:hover{color:var(--teal)}
 .acct-btn:active:not(:disabled){transform:scale(.97)}
-.acct-btn:disabled{opacity:.55;cursor:default}
-.acct-status,.acct-err{order:10;flex:1 1 60%;font-size:.78rem;line-height:1.35;color:var(--muted);
+.acct-btn:disabled,.acct-btn[aria-disabled="true"]{opacity:.55;cursor:default}
+.acct-status,.acct-err{order:10;flex:1 1 60%;font-size:.84rem;line-height:1.35;color:var(--muted);
   text-align:right;padding:0 0 .45rem}
 .acct-err{flex-basis:100%}
 /* Empty, the status takes no room but stays in the page: it is a live region,
@@ -2096,6 +2096,7 @@ body.exam-on main{animation:v-fade .24s ease-out}
 .sync-ask{max-width:46rem;margin:.9rem auto 0;padding:.9rem 1rem;background:var(--surface);
   border:1px solid var(--rule);border-radius:var(--r-lg);width:calc(100% - 2rem);box-sizing:border-box}
 .sync-ask p{margin:0 0 .7rem}
+.sync-ask #syncAskQ{margin-bottom:.25rem}
 .sync-ask:focus{outline:none}
 .sync-ask:focus-visible{outline:3px solid color-mix(in srgb,var(--teal) 55%,transparent);outline-offset:2px}
 body.exam-on .sync-ask{display:none!important}

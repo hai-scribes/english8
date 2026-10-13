@@ -50,6 +50,7 @@ const TEXT = {
   held: "Your work is kept on this device. Sign in to see it and save it.",
   other: "This device is holding unsaved work for another account. Sign in to that account first.",
   later: "Saved. Work from your other device will show on the next page you open.",
+  stay: "Could not sign out: this device has no room to keep your unsaved work. You are still signed in.",
   signIn: "Could not sign in. Check your connection and try again.",
   ask: "Work was done on this device while nobody was signed in. Add it to your account?",
 };
@@ -202,19 +203,25 @@ function shown(){
 function paintState(t){
   /* A failure is the one state that asks something of her; it gets the
      colour as well as the words. */
-  ui.status.dataset.state = t === TEXT.failed || t === TEXT.other ? "failed" : "";
+  ui.status.dataset.state = t === TEXT.failed || t === TEXT.other || t === TEXT.stay ? "failed" : "";
 }
 function paint(){
   if (!ui) return;
   const o = owner() || user, inn = authState === "signed-in", t = shown();
   if (ui.status.textContent !== t) ui.status.textContent = t;
   paintState(t);
-  ui.retry.hidden = !(inn && statusText === TEXT.failed);
+  /* A control that goes away under the keyboard takes focus with it unless
+     focus is handed on first. */
+  const hideRetry = !(inn && statusText === TEXT.failed);
+  if (hideRetry && document.activeElement === ui.retry) ui.outBtn.focus();
+  ui.retry.hidden = hideRetry;
   ui.who.hidden = !inn;
   ui.who.textContent = inn && o ? o.email || "" : "";
   ui.outBtn.hidden = !inn;
   ui.inBtn.hidden = inn || !config();
-  ui.inBtn.disabled = authState === "signing-in";
+  /* Not `disabled`: that would drop focus to the top of the page while the
+     popup is open. A second press is ignored in signIn(). */
+  ui.inBtn.setAttribute("aria-disabled", authState === "signing-in" ? "true" : "false");
   ui.err.textContent = signInError && authState === "signed-out" ? TEXT.signIn : "";
   ui.box.hidden = false;
 }
@@ -678,9 +685,14 @@ function adopt(u, keys){
 async function restoreHeld(u){
   const held = await unpark(u.uid, false), m = meta();
   for (const k of Object.keys(held)){
-    writeWork(k, held[k].v);
+    /* Work she has just agreed to add may be under the same key: the two
+       are merged, as two devices' copies would be. */
+    const here = get(k);
+    const v = here === null || !m.dirty[k] ? held[k].v
+      : merge(k, held[k].b, here, held[k].v, m.st[k] || 0, held[k].t || 0);
+    writeWork(k, v);
     m.dirty[k] = 1;
-    m.st[k] = held[k].t || tick(m);
+    m.st[k] = v === held[k].v && held[k].t ? held[k].t : tick(m);
     try { put(K.base + k, JSON.stringify({ v: held[k].b })); } catch(e){}
   }
   saveMeta(m);
@@ -697,7 +709,7 @@ function ask(){
     card.setAttribute("role", "group");
     card.setAttribute("aria-labelledby", "syncAskQ");
     card.tabIndex = -1;
-    card.innerHTML = '<p id="syncAskQ"></p><div class="row">'
+    card.innerHTML = '<p id="syncAskQ"></p><p class="lede small">Kept separate, it stays on this device only.</p><div class="row">'
       + '<button class="btn" type="button" data-a="add">Add it</button>'
       + '<button class="btn quiet" type="button" data-a="separate">Keep it separate</button></div>';
     card.firstChild.textContent = TEXT.ask;
@@ -766,11 +778,14 @@ async function settle(u){
   if (owner()){ setAuth("signed-in"); cycle("load"); return; }
 
   /* This account is new to the device as it stands. */
-  const mine = workKeys(), real = mine.filter(k => !isIncidental(k));
+  const real = workKeys().filter(k => !isIncidental(k));
   let redraw = !!(o && o.uid !== u.uid);
   setAuth("signed-in");
   if (real.length){
-    if ((await ask()) === "add") adopt(u, mine);
+    const answer = await ask();
+    /* Counted after she answers: the question does not stop her working. */
+    const mine = workKeys();
+    if (answer === "add") adopt(u, mine);
     else {
       const keep = {};
       for (const k of mine) keep[k] = get(k);
@@ -779,7 +794,7 @@ async function settle(u){
       adopt(u, []);
       redraw = true;                       // the page still shows what was set aside
     }
-  } else adopt(u, mine);
+  } else adopt(u, workKeys());
   if (await restoreHeld(u)) redraw = true;
   paint();
   /* Not waited for: a save that hangs must not hold up the next change of
@@ -825,7 +840,13 @@ async function signOut(){
   clearTimeout(pushTimer); clearTimeout(retryTimer);
   if (unsent()){
     try { await park(o.uid); }
-    catch(e){ drop(K.leaving); ui.outBtn.disabled = false; say(TEXT.failed); return; }
+    catch(e){
+      /* Nowhere to keep it, so she is not signed out — and is told so. */
+      drop(K.leaving);
+      ui.outBtn.disabled = false;
+      say(TEXT.stay);
+      return;
+    }
   }
   clearWork();
   restoreAnon();
