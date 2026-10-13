@@ -43,7 +43,8 @@ const isIncidental = k => /^en8:(shape|comic):/.test(k);
 const TEXT = {
   saving: "Saving…",
   saved: "Saved",
-  checking: "Checking…",
+  checking: "Checking\u2026",
+  signingIn: "Signing in…",
   offline: "No connection. Your work is kept on this device and will be saved when you are back online.",
   failed: "Could not save just now. Trying again in a moment.",
   held: "Your work is kept on this device. Sign in to see it and save it.",
@@ -81,6 +82,19 @@ function saveMeta(m){
   catch(e){ metaMem = m; }
 }
 const owner = () => readJSON(K.owner, null);
+/* A tab that is signing out says so, and the others wait for it. The note
+   carries its time: a tab closed half way must not leave the device waiting
+   for ever, so a note older than half a minute, or with no time, is void. */
+function leaving(){
+  const raw = get(K.leaving);
+  if (raw === null) return false;
+  let n = null;
+  try { n = JSON.parse(raw); } catch(e){}
+  const age = n && typeof n.at === "number" ? Date.now() - n.at : -1;
+  if (age >= 0 && age < 30000) return true;
+  drop(K.leaving);
+  return false;
+}
 /* A stamp is never earlier than any this device has made or seen, so a clock
    that runs fast on one device cannot outrank a later change on another. */
 function tick(m){
@@ -101,17 +115,32 @@ function note(k, was){
   saveMeta(m);
   changed();
 }
+/* The lesson code reads a record once, keeps it in memory and writes it back
+   whole. If the stored copy has moved on since — work merged in from another
+   device while the page was held still, or another tab — a whole write would
+   put the old copy back over it. So each write is checked against what this
+   page last knew the key to hold, and where they differ the two are merged as
+   two devices' copies would be, with the page's change the later one. */
+const view = {};
+for (const k of workKeys()) view[k] = get(k);
+const known = k => (k in view ? view[k] : null);
+function reconcile(k, mine){
+  const here = get(k), was = known(k);
+  return here === was ? mine : merge(k, was, mine, here, 1, 0);
+}
 P.setItem = function(k, v){
   if (this !== LS || applying || !isWork(k)) return rawSet.call(this, k, v);
-  const was = this.getItem(k), now = String(v);
-  rawSet.call(this, k, now);
+  const was = this.getItem(k), now = reconcile(k, String(v));
+  if (now === null) rawRemove.call(this, k); else rawSet.call(this, k, now);
+  view[k] = now;
   if (was !== now) note(k, was);
 };
 P.removeItem = function(k){
   if (this !== LS || applying || !isWork(k)) return rawRemove.call(this, k);
-  const was = this.getItem(k);
-  rawRemove.call(this, k);
-  if (was !== null) note(k, was);
+  const was = this.getItem(k), now = reconcile(k, null);
+  if (now === null) rawRemove.call(this, k); else rawSet.call(this, k, now);
+  view[k] = now;
+  if (was !== now) note(k, was);
 };
 function writeWork(k, v){
   applying++;
@@ -162,6 +191,7 @@ const hasParked = () => {
    shown, a round that only looked says so; a round that saved her own work
    says "Saved", which is what she is waiting to read. */
 function shown(){
+  if (authState === "signing-in") return TEXT.signingIn;
   if (authState !== "signed-in"){
     if (isBlocked()) return TEXT.other;
     return authState === "signed-out" && hasParked() ? TEXT.held : "";
@@ -169,10 +199,16 @@ function shown(){
   if (drawLater && sayLater && (statusText === TEXT.saved || statusText === "")) return TEXT.later;
   return statusText;
 }
+function paintState(t){
+  /* A failure is the one state that asks something of her; it gets the
+     colour as well as the words. */
+  ui.status.dataset.state = t === TEXT.failed || t === TEXT.other ? "failed" : "";
+}
 function paint(){
   if (!ui) return;
   const o = owner() || user, inn = authState === "signed-in", t = shown();
   if (ui.status.textContent !== t) ui.status.textContent = t;
+  paintState(t);
   ui.retry.hidden = !(inn && statusText === TEXT.failed);
   ui.who.hidden = !inn;
   ui.who.textContent = inn && o ? o.email || "" : "";
@@ -399,12 +435,18 @@ function take(docs){
 }
 
 const DAY = 24 * 3600 * 1000, BATCH = 500;
+/* The device's work can change hands while a request is on its way. An
+   answer that comes back to a device that is no longer that account's is
+   dropped, not applied to the next account's notes. */
+let epoch = 0;
+const still = e => { if (e !== epoch) throw new Error("stale"); };
 async function pull(uid){
-  const m = meta(), now = Date.now();
+  const m = meta(), now = Date.now(), e = epoch;
   /* Everything is read the first time, and again once a day in case a change
      was missed; otherwise only what the store says changed since last time. */
   const whole = !m.cursor || !m.full || now - m.full >= DAY || now < m.full;
   const docs = whole ? await readAll(uid) : await readSince(uid, m.cursor);
+  still(e);
   const moved = take(docs);
   if (whole){
     const n = meta();
@@ -416,6 +458,7 @@ async function pull(uid){
 }
 async function push(uid){
   let sent = 0;
+  const e = epoch;
   for (;;){
     const m = meta();
     const keys = Object.keys(m.dirty).slice(0, BATCH);
@@ -436,6 +479,7 @@ async function push(uid){
       };
     });
     const j = await call("POST", storeBase() + ":commit", { writes });
+    still(e);
     const n = meta();
     keys.forEach((k, i) => {
       const r = j.writeResults && j.writeResults[i];
@@ -475,7 +519,7 @@ function cycle(why){
   return running;
 }
 async function round(why){
-  if (!user || authState !== "signed-in" || get(K.leaving)) return false;
+  if (!user || authState !== "signed-in" || leaving()) return false;
   const o = owner();
   if (!o || o.uid !== user.uid) return false;
   if (!online()){ say(TEXT.offline); return false; }
@@ -511,6 +555,7 @@ async function round(why){
     if (moved.length) arrived();
     return true;
   } catch(e){
+    if (e && e.message === "stale") return false;
     if (!online()){ say(TEXT.offline); return false; }
     say(TEXT.failed);
     /* 8 seconds, then 16, 32 ... up to five minutes; a success starts over. */
@@ -603,6 +648,7 @@ async function park(uid){
 
 /* ---------------- whose work is on the device ---------------------------- */
 function clearWork(){
+  epoch++;
   for (const k of workKeys()) writeWork(k, null);
   const gone = [];
   for (let i = 0; i < LS.length; i++){
@@ -680,7 +726,7 @@ function onUser(u){
   settling = settling.then(() => settle(u)).catch(() => {});
 }
 async function settle(u){
-  if (get(K.leaving)) return;             // a tab is signing out; it will say when it is done
+  if (leaving()) return;                  // a tab is signing out; it will say when it is done
   const o = owner();
   if (!u || !user || user.uid !== u.uid) pass = null;
   user = u;
@@ -736,8 +782,9 @@ async function settle(u){
   } else adopt(u, mine);
   if (await restoreHeld(u)) redraw = true;
   paint();
-  await cycle("sign-in");
-  if (redraw) draw();
+  /* Not waited for: a save that hangs must not hold up the next change of
+     account behind it. */
+  cycle("sign-in").then(() => { if (redraw && owner() && owner().uid === u.uid) draw(); });
 }
 
 let signingIn = false;
@@ -763,7 +810,7 @@ const LONGEST_GOODBYE = 5000;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 async function signOut(){
   const o = owner();
-  if (!o || get(K.leaving)) return;
+  if (!o || leaving()) return;
   ui.outBtn.disabled = true;
   /* Her last change is saved first. If it cannot be — no network, a store
      that fails, or no answer in time — it is held on the device. */
@@ -774,7 +821,7 @@ async function signOut(){
   while (ok && unsent() && Date.now() < end){
     ok = await Promise.race([cycle("leave"), sleep(Math.max(0, end - Date.now())).then(() => false)]);
   }
-  put(K.leaving, o.uid);
+  put(K.leaving, JSON.stringify({ uid: o.uid, at: Date.now() }));
   clearTimeout(pushTimer); clearTimeout(retryTimer);
   if (unsent()){
     try { await park(o.uid); }

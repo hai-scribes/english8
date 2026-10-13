@@ -334,10 +334,12 @@ export class Device {
      comes back, after each of its own saves, and once a minute while the tab
      is showing; this is the one a test can cause without waiting or reloading. */
   async returnToTab() {
+    /* The page may be half way through being drawn again; then it is
+       looking anyway, and there is nothing to tell it. */
     await this.page.evaluate(() => {
       document.dispatchEvent(new Event("visibilitychange"));
       window.dispatchEvent(new Event("focus"));
-    });
+    }).catch(() => {});
   }
 
   /* ---- the device's clock ----------------------------------------------- */
