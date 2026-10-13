@@ -751,4 +751,5 @@ ac_progress:
   AC-49: passing
   AC-50: passing
   AC-51: passing
-progress: 'GREEN: AC-51 passing (51/52 ACs passing)'
+  AC-52: passing
+progress: 'VERIFY: AC-52 passing (52/52 ACs passing)'
