@@ -122,6 +122,9 @@ function note(k, was){
    put the old copy back over it. So each write is checked against what this
    page last knew the key to hold, and where they differ the two are merged as
    two devices' copies would be, with the page's change the later one. */
+/* `view` is what the PAGE believes, so it records what the page wrote, never
+   the merged result: the page's memory does not learn of a merge, and its
+   next whole write has to be merged again. */
 const view = {};
 for (const k of workKeys()) view[k] = get(k);
 const known = k => (k in view ? view[k] : null);
@@ -133,14 +136,14 @@ P.setItem = function(k, v){
   if (this !== LS || applying || !isWork(k)) return rawSet.call(this, k, v);
   const was = this.getItem(k), now = reconcile(k, String(v));
   if (now === null) rawRemove.call(this, k); else rawSet.call(this, k, now);
-  view[k] = now;
+  view[k] = String(v);
   if (was !== now) note(k, was);
 };
 P.removeItem = function(k){
   if (this !== LS || applying || !isWork(k)) return rawRemove.call(this, k);
   const was = this.getItem(k), now = reconcile(k, null);
   if (now === null) rawRemove.call(this, k); else rawSet.call(this, k, now);
-  view[k] = now;
+  view[k] = null;
   if (was !== now) note(k, was);
 };
 function writeWork(k, v){
@@ -224,6 +227,10 @@ function paint(){
   ui.inBtn.setAttribute("aria-disabled", authState === "signing-in" ? "true" : "false");
   ui.err.textContent = signInError && authState === "signed-out" ? TEXT.signIn : "";
   ui.box.hidden = false;
+  /* The line at the foot of the page says where her work is kept. */
+  const foot = document.querySelector(".foot > p");
+  if (foot) foot.textContent = inn ? "Your progress is saved on this device and in your account."
+                                   : "Your progress is saved on this device.";
 }
 
 /* ---------------- the sign-in settings ---------------------------------- */

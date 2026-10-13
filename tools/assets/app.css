@@ -2091,7 +2091,9 @@ body.exam-on main{animation:v-fade .24s ease-out}
    and one that comes and goes is not announced reliably. */
 .acct-status:empty{padding:0;height:0;min-height:0}
 .acct-err:empty{display:none}
-.acct-err,.acct-status[data-state="failed"]{color:var(--clay)}
+/* Darker than the accent it comes from: this is small text on the header's
+   tinted ground, and the one sentence that must be read. */
+.acct-err,.acct-status[data-state="failed"]{color:color-mix(in srgb,var(--clay) 70%,var(--ink))}
 #syncRetry{order:11;margin:0 0 .45rem}
 .sync-ask{max-width:46rem;margin:.9rem auto 0;padding:.9rem 1rem;background:var(--surface);
   border:1px solid var(--rule);border-radius:var(--r-lg);width:calc(100% - 2rem);box-sizing:border-box}
@@ -2103,10 +2105,10 @@ body.exam-on .sync-ask{display:none!important}
 @media (max-width:560px){
   /* On a phone the address has a line to itself, under the bar. */
   .acct-who{order:9;flex:1 0 100%;max-width:none;font-size:.78rem;padding:0 0 .3rem}
-  /* Two lines at most over a lesson on a phone; the sentence is whole for a
+  /* Three lines at most over a lesson on a phone; the sentence is whole for a
      screen reader and on a wider screen. */
   .acct-status,.acct-err{text-align:left}
-  .acct-status:not(:empty){display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;
+  .acct-status:not(:empty){display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;
     padding-bottom:0;margin-bottom:.45rem}
 }
 @media (prefers-reduced-motion:reduce){ .acct-btn:active:not(:disabled){transform:none;opacity:.8} }
