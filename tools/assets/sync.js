@@ -34,6 +34,7 @@ const K = {
   parked:  "en8-sync:parked:",    // held work, encrypted
   leaving: "en8-sync:leaving",    // a tab is signing out; the others wait for it
   blocked: "en8-sync:blocked",    // another account was turned away to protect unsaved work
+  gone:    "en8-sync:gone",       // she signed out, but the browser's session could not be ended then
 };
 const isWork = k => typeof k === "string" && k.indexOf("en8:") === 0 && k !== "en8:theme";
 /* Written by a page merely loading, not by anything she did: these never
@@ -219,7 +220,7 @@ function paint(){
   if (hideRetry && document.activeElement === ui.retry) ui.outBtn.focus();
   ui.retry.hidden = hideRetry;
   ui.who.hidden = !inn;
-  ui.who.textContent = inn && o ? o.email || "" : "";
+  ui.who.textContent = ui.who.title = inn && o ? o.email || "" : "";
   ui.outBtn.hidden = !inn;
   ui.inBtn.hidden = inn || !config();
   /* Not `disabled`: that would drop focus to the top of the page while the
@@ -707,6 +708,7 @@ async function restoreHeld(u){
 }
 
 /* ---------------- the question ------------------------------------------ */
+let asking = null;               // while the question is open: how to withdraw it
 function ask(){
   return new Promise(done => {
     const was = document.activeElement;
@@ -726,9 +728,11 @@ function ask(){
     top.parentNode.insertBefore(card, top.nextSibling);
     window.scrollTo(0, 0);
     card.focus({ preventScroll: true });
+    asking = () => { asking = null; card.remove(); done("leave"); };
     card.addEventListener("click", ev => {
       const b = ev.target.closest("button[data-a]");
       if (!b) return;
+      asking = null;
       card.remove();
       /* Focus goes back to where it was; the button she pressed to sign in
          is gone by now, and Sign out stands where it stood. */
@@ -746,6 +750,14 @@ function onUser(u){
 }
 async function settle(u){
   if (leaving()) return;                  // a tab is signing out; it will say when it is done
+  /* She signed out while the sign-in client could not be reached. The
+     session it kept is ended now, before anything of hers is fetched. */
+  if (u && get(K.gone) === u.uid){
+    try { await window.EN8Auth.signOut(); drop(K.gone); } catch(e){}
+    user = null;
+    setAuth("signed-out");
+    return;
+  }
   const o = owner();
   if (!u || !user || user.uid !== u.uid) pass = null;
   user = u;
@@ -790,6 +802,13 @@ async function settle(u){
   setAuth("signed-in");
   if (real.length){
     const answer = await ask();
+    if (answer === "leave"){
+      /* She signed out instead of answering: nothing joins the account. */
+      user = null; pass = null;
+      await endSession(u.uid);
+      setAuth("signed-out");
+      return;
+    }
     /* Counted after she answers: the question does not stop her working. */
     const mine = workKeys();
     if (answer === "add") adopt(u, mine);
@@ -815,6 +834,7 @@ async function signIn(){
   signInError = false;
   if (!window.EN8Auth || !online()){ signInError = true; paint(); return; }
   signingIn = true;
+  drop(K.gone);
   setAuth("signing-in");
   try {
     await window.EN8Auth.signIn();        // the account arriving is told to onUser
@@ -830,7 +850,15 @@ async function signIn(){
    drawing the page. */
 const LONGEST_GOODBYE = 5000;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
+/* Ends the browser's own session. If the client is not there to do it — the
+   page was opened with no network — a note is left, and the session is ended
+   the next time the client loads, before it can bring her work back. */
+async function endSession(uid){
+  try { put(K.gone, uid); } catch(e){}
+  try { await window.EN8Auth.signOut(); drop(K.gone); } catch(e){}
+}
 async function signOut(){
+  if (asking){ asking(); return; }
   const o = owner();
   if (!o || leaving()) return;
   ui.outBtn.disabled = true;
@@ -859,7 +887,7 @@ async function signOut(){
   restoreAnon();
   user = null;
   pass = null;
-  try { await window.EN8Auth.signOut(); } catch(e){}
+  await endSession(o.uid);
   drop(K.owner);
   drop(K.leaving);
   setAuth("signed-out");
