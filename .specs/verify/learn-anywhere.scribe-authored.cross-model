@@ -1,0 +1,13 @@
+# Atelier W5 HMAC marker (signed by marker-sign.sh)
+slug: learn-anywhere
+marker_type: scribe-authored.cross-model
+signed_at: 2026-10-13T08:25:46Z
+cmd: scribe-author.sh --subagent-authored learn-anywhere
+payload_schema_version: 0.1.0
+key_epoch_id: a67cea4118a8
+prompt_content_address: 38566298406adf52a228dec5eb042c39e4cd5c5c4834297f8d5650060494ad92
+degraded_isolation: false
+extra:
+  manifest-sha256: 38566298406adf52a228dec5eb042c39e4cd5c5c4834297f8d5650060494ad92
+sig: ba12e64b5ab5076488f43c3fb8174b49d9d166e13a15e75532f0882765f51208
+hmac_status: signed

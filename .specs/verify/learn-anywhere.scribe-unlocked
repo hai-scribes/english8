@@ -1,0 +1,16 @@
+# Atelier W5 HMAC marker (signed by marker-sign.sh)
+slug: learn-anywhere
+marker_type: scribe-unlocked
+signed_at: 2026-10-13T09:36:34Z
+cmd: unlock-scribe-tests.sh learn-anywhere
+payload_schema_version: 1.0.0
+key_epoch_id: a67cea4118a8
+prompt_content_address: 38566298406adf52a228dec5eb042c39e4cd5c5c4834297f8d5650060494ad92
+degraded_isolation: false
+extra:
+  tier: cross-model
+  target-dir: tests
+  manifest-sha256: 38566298406adf52a228dec5eb042c39e4cd5c5c4834297f8d5650060494ad92
+  target-inventory-sha256: 527ca1bf6dd7834c1499719464e29c9a8d8699e8578255a56921b72e40f48300
+sig: 570eff8016dbcdf2da067304a985f1a15d482edae8df916f15b8eba720c35322
+hmac_status: signed
