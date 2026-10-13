@@ -1,5 +1,13 @@
 {
   "dependencies": {
     "jsdom": "^29.1.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^26.6.5",
+    "esbuild": "^0.28.2",
+    "firebase": "^13.0.0",
+    "firebase-tools": "^15.33.0",
+    "typescript": "^7.0.2"
   }
 }
