@@ -2089,6 +2089,7 @@ body.exam-on main{animation:v-fade .24s ease-out}
 .acct-status,.acct-err{order:10;flex:1 1 60%;font-size:.84rem;line-height:1.35;color:var(--muted);
   text-align:right;padding:0 0 .45rem}
 .acct-err{flex-basis:100%}
+.acct-status[data-state="brief"]{order:0;flex:0 0 auto;padding:0;white-space:nowrap;display:block;margin:0}
 /* Empty, the status takes no room but stays in the page: it is a live region,
    and one that comes and goes is not announced reliably. */
 .acct-status:empty{padding:0;height:0;min-height:0}
@@ -2110,7 +2111,7 @@ body.exam-on .sync-ask{display:none!important}
   /* Three lines at most over a lesson on a phone; the sentence is whole for a
      screen reader and on a wider screen. */
   .acct-status,.acct-err{text-align:left}
-  .acct-status:not(:empty){display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;
+  .acct-status:not(:empty):not([data-state="brief"]){display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;
     padding-bottom:0;margin-bottom:.45rem}
 }
 @media (prefers-reduced-motion:reduce){ .acct-btn:active:not(:disabled){transform:none;opacity:.8} }

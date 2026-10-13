@@ -46,6 +46,7 @@ const TEXT = {
   saved: "Saved",
   checking: "Checking\u2026",
   signingIn: "Signing in…",
+  signingOut: "Signing out…",
   offline: "No connection. Your work is kept on this device and will be saved when you are back online.",
   failed: "Could not save just now. Trying again in a moment.",
   held: "Your work is kept on this device. Sign in to see it and save it.",
@@ -205,13 +206,18 @@ function shown(){
     if (isBlocked()) return TEXT.other;
     return authState === "signed-out" && hasParked() ? TEXT.held : "";
   }
+  if (goingOut && statusText !== TEXT.saving && statusText !== TEXT.stay) return TEXT.signingOut;
   if (drawLater && sayLater && (statusText === TEXT.saved || statusText === "")) return TEXT.later;
   return statusText;
 }
 function paintState(t){
   /* A failure is the one state that asks something of her; it gets the
      colour as well as the words. */
-  ui.status.dataset.state = t === TEXT.failed || t === TEXT.other || t === TEXT.stay ? "failed" : "";
+  /* A word or two sits in the bar itself; a sentence gets a line under it.
+     So the bar keeps its height through the ordinary saving and saved. */
+  const brief = t === TEXT.saved || t === TEXT.saving || t === TEXT.checking
+    || t === TEXT.signingIn || t === TEXT.signingOut;
+  ui.status.dataset.state = t === TEXT.failed || t === TEXT.other || t === TEXT.stay ? "failed" : brief ? "brief" : "";
 }
 function paint(){
   if (!ui) return;
@@ -314,7 +320,10 @@ function mergeList(b, m, t, mineLater, fam){
   return out;
 }
 function merge3(b, m, t, mineLater, fam, depth){
-  if (same(m, t) && (!SUMMED[fam] || b === undefined || same(b, m))) return m;
+  /* Equal copies agree — except where counts are added: there, with no
+     shared start (a day both devices began separately) or a start that
+     differs from both, equal figures are two devices' work, not one's. */
+  if (same(m, t) && (!SUMMED[fam] || (b !== undefined && same(b, m)))) return m;
   if (b !== undefined && same(b, m)) return t;
   if (b !== undefined && same(b, t)) return m;
   if (fam === "tasks" && depth === 1 && isObj(m) && isObj(t)) return mergeTask(isObj(b) ? b : null, m, t, mineLater);
@@ -729,6 +738,7 @@ async function restoreHeld(u){
 /* ---------------- the question ------------------------------------------ */
 let asking = null;               // while the question is open: how to withdraw it
 let retrying = false;            // a try she asked for is on its way
+let goingOut = false;            // she pressed Sign out and it is under way
 function ask(){
   return new Promise(done => {
     const was = document.activeElement;
@@ -880,8 +890,11 @@ async function endSession(uid){
 async function signOut(){
   if (asking){ asking(); return; }
   const o = owner();
-  if (!o || leaving()) return;
-  ui.outBtn.disabled = true;
+  if (!o || leaving() || goingOut) return;
+  /* Not `disabled`, which would drop focus to the top of the page. */
+  ui.outBtn.setAttribute("aria-disabled", "true");
+  goingOut = true;
+  paint();
   /* Her last change is saved first. If it cannot be — no network, a store
      that fails, or no answer in time — it is held on the device. */
   clearTimeout(pushTimer);
@@ -898,7 +911,8 @@ async function signOut(){
     catch(e){
       /* Nowhere to keep it, so she is not signed out — and is told so. */
       drop(K.leaving);
-      ui.outBtn.disabled = false;
+      ui.outBtn.setAttribute("aria-disabled", "false");
+      goingOut = false;
       say(TEXT.stay);
       return;
     }
