@@ -413,11 +413,29 @@ export class Device {
    */
   async courseKept(timeout = 120_000) {
     const res = await this.lab.fetchSite("/precache.json");
-    const list = await res.json() as { files: Record<string, string> };
+    const list = await res.json() as { v: string; files: Record<string, string> };
     const want = Object.keys(list.files).map(u => new URL(u, SITE + "/").pathname.replace(/index\.html$/, ""));
+    /* Every listed file is kept, and every kept page is this build's: the
+       same paths kept from an earlier build do not count. */
     await expect.poll(async () => {
-      const have = new Set((await this.keptPaths()).map(p => p.split("?")[0].replace(/index\.html$/, "")));
-      return want.filter(p => !have.has(p)).length;
+      const kept = await this.page.evaluate(async () => {
+        const paths: string[] = [], builds: string[] = [];
+        for (const name of await caches.keys()) {
+          const c = await caches.open(name);
+          for (const r of await c.keys()) {
+            const u = new URL(r.url);
+            paths.push(u.pathname);
+            if (/\.html$/.test(u.pathname)) {
+              const hit = await c.match(r);
+              const m = hit ? /<html[^>]*\sdata-build="([^"]+)"/.exec(await hit.text()) : null;
+              builds.push(m ? m[1] : "");
+            }
+          }
+        }
+        return { paths, builds };
+      }).catch(() => ({ paths: [] as string[], builds: ["?"] }));
+      const have = new Set(kept.paths.map(p => p.replace(/index\.html$/, "")));
+      return want.filter(p => !have.has(p)).length + kept.builds.filter(b => b !== list.v).length;
     }, { timeout, intervals: [500, 1000, 2000] }).toBe(0);
   }
 }
@@ -536,6 +554,10 @@ export class Lab {
       serviceWorkers: "allow",
     });
     this.made.push(context);
+    /* A control that is not there is a failure in seconds, not at the end of
+       the test's whole allowance. */
+    context.setDefaultTimeout(20_000);
+    context.setDefaultNavigationTimeout(45_000);
     await context.addCookies([{ name: "en8site", value: this.id, domain: HOST, path: "/" }]);
     if (opts.at) await context.clock.install({ time: new Date(opts.at) });
     if (opts.saveData) {
