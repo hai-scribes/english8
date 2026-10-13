@@ -1,462 +1,754 @@
 slug: learn-anywhere
 status: planned
-goal: |
-  A learner signs in with Google and her work follows her across devices: every answer, attempt history, note, highlight and piece of writing she makes on one device is on her others, the site keeps working with no network and saves when the connection returns, every exchange with the backend is announced on the page, and a per-day record shows what she did each day of the week. Signing in is optional and changes nothing about how lessons work.
-problem: |
-  A grade-8 learner studies alone on weekdays and with a tutor on Saturdays, on more than one device and often where the signal drops. Her work lived in one browser, so a second device started from nothing. The prototype proved sign-in, a local-first sync to Firestore under her own uid, a day record, visible sync states and an offline copy of the course — and two outside reviews then found about twenty ways that design lost, resurrected or exposed work (sign-out with no network, a retake undone by a save, a fast clock overruling later edits, held work readable on a shared device, a stale page after a deploy). This spec states the behaviour the corrected prototype has, as it must hold on the current app: timed tests that show only the test, completion recorded from the work, a per-day record the site already keeps, and tasks that commit in different ways — many mark each item as it is answered and have no Check button, others (timed, tile, tap) commit through their own control. The prototype was built on an app 64 commits older and its gate harness presses a Check button, so the tests for these criteria need a task driver that uses each task's own way of committing.
+goal: 'A learner signs in with Google and her work follows her across devices: every
+  answer, attempt history, note, highlight and piece of writing she makes on one device
+  is on her others, the site keeps working with no network and saves when the connection
+  returns, every exchange with the backend is announced on the page, and a per-day
+  record shows what she did each day of the week. Signing in is optional and changes
+  nothing about how lessons work.
 
+  '
+problem: 'A grade-8 learner studies alone on weekdays and with a tutor on Saturdays,
+  on more than one device and often where the signal drops. Her work lived in one
+  browser, so a second device started from nothing. The prototype proved sign-in,
+  a local-first sync to Firestore under her own uid, a day record, visible sync states
+  and an offline copy of the course — and two outside reviews then found about twenty
+  ways that design lost, resurrected or exposed work (sign-out with no network, a
+  retake undone by a save, a fast clock overruling later edits, held work readable
+  on a shared device, a stale page after a deploy). This spec states the behaviour
+  the corrected prototype has, as it must hold on the current app: timed tests that
+  show only the test, completion recorded from the work, a per-day record the site
+  already keeps, and tasks that commit in different ways — many mark each item as
+  it is answered and have no Check button, others (timed, tile, tap) commit through
+  their own control. The prototype was built on an app 64 commits older and its gate
+  harness presses a Check button, so the tests for these criteria need a task driver
+  that uses each task''s own way of committing.
+
+  '
 acceptance_criteria:
-  - id: AC-1
-    user_story: "as a learner on more than one device, when I click sign in I want Google sign-in to start so that my work can follow me"
-    given: "the user is signed out on any page, with sign-in pointed at the Firebase Auth emulator"
-    when: "the user clicks \"Sign in with Google\""
-    then: "one sign-in popup opens and the auth state reads \"signing-in\" until it resolves; completing it sets the auth state to \"signed-in\""
-    test: test_learn_anywhere_AC1_sign_in_starts
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:540"
-  - id: AC-2
-    user_story: "as a signed-in learner, when I come back to the site I want to still be signed in so that I do not sign in every day"
-    given: "the user has signed in with Google"
-    when: "the page is reloaded or another page of the site is opened"
-    then: "the header shows the account's email and a \"Sign out\" button, the \"Sign in with Google\" button is hidden, and the auth state reads \"signed-in\" without a new popup"
-    test: test_learn_anywhere_AC2_session_persists_across_pages
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:483"
-  - id: AC-3
-    user_story: "as a learner who never signs in, when I use the site I want everything to work and stay on my device so that an account is never required"
-    given: "no account has ever signed in on the device"
-    when: "the user answers a task, reloads the page, and reloads again with no network"
-    then: "the task is shown as done each time, and no request is made to Firestore at any point"
-    test: test_learn_anywhere_AC3_signed_out_use_is_whole_and_local
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:21"
-  - id: AC-4
-    user_story: "as a learner with a phone and a laptop, when I answer a task on one I want to see it done on the other so that I can carry on anywhere"
-    given: "the user answered a marked task twice on device A while signed in, and the page reads \"Saved\""
-    when: "the same account signs in on device B, a device with no stored work"
-    then: "device B shows that task as done with the same answers, the same marks, the same score line and both attempts in its history in the order they were made, without the user doing anything but sign in"
-    test: test_learn_anywhere_AC4_work_follows_account_to_second_device
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:304"
-  - id: AC-5
-    user_story: "as a learner, when I sign in on a new device I want all of my work there, not only my answers, so that nothing is left behind"
-    given: "device A is signed in and holds one valid value under each kind of learner key the app writes (progress, tasks, review, story, the per-day record, writing, jots, notes, highlights, flags, reading clocks, read-again rounds, word-set and practice-bank logs, comic preference, seen words, strand checks)"
-    when: "the saves complete and the same account signs in on a clean device B"
-    then: "every one of those keys holds an equivalent value on B; the colour theme, the sync layer's own bookkeeping keys and any held work are never uploaded"
-    test: test_learn_anywhere_AC5_every_kind_of_learner_data_syncs
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:25"
-  - id: AC-6
-    user_story: "as a learner, when someone else signs in I want my work to stay mine so that nobody reads or changes it"
-    given: "learner X has synced work and learner Y is a different account, against the Firestore emulator running the shipped rules"
-    when: "Y signs in on a clean device, and Y's credential is used directly to get, list, create, update and delete documents under users/<X's uid>/kv and under users/<Y's uid>/kv"
-    then: "Y's pages show none of X's work as done; each of the five operations under X's path is refused with permission denied; the same operations under Y's own path succeed; and any path outside users/{uid} is refused for everyone"
-    test: test_learn_anywhere_AC6_account_isolation_enforced_by_rules
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:firestore.rules:5"
-  - id: AC-7
-    user_story: "as a learner who studies where the signal drops, when I work offline on one device while my other device is online I want both sets of work kept so that neither study session is lost"
-    given: "device A is signed in with the lesson open and loses its network; device B is signed in and online"
-    when: "the user answers one task on A offline and a different task on B, then A regains its network"
-    then: "a third, clean device signing in as the same account shows both tasks and every earlier answer as done"
-    test: test_learn_anywhere_AC7_offline_and_concurrent_work_merge
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:135"
-  - id: AC-8
-    user_story: "as a learner who edited the same note on two devices, when both reconnect I want both devices to agree so that they never show different text"
-    given: "two devices signed in as the same account hold the same note, and each changes it while offline"
-    when: "both reconnect and their saves complete"
-    then: "both devices and a third clean device hold the same text: the change made last by the stamps wins whole for a note or other plain text, while records that are logs of attempts keep both devices' entries"
-    test: test_learn_anywhere_AC8_concurrent_edits_to_one_note_converge
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:118"
-  - id: AC-9
-    user_story: "as a learner, when my work is being saved I want the page to say so, so that I know when it is safe"
-    given: "the user is signed in on a lesson page"
-    when: "the user answers a task"
-    then: "the status beside the account reads \"Saving…\" until the save lands and then \"Saved\""
-    test: test_learn_anywhere_AC9_saving_and_saved_are_shown
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:77"
-  - id: AC-10
-    user_story: "as a learner who has lost signal, when I keep working I want to be told my work is safe on the device so that I carry on"
-    given: "the user is signed in on a lesson page"
-    when: "the network is lost"
-    then: "within ten seconds the status reads \"No connection. Your work is kept on this device and will be saved when you are back online.\", and when the network returns the unsaved work is saved and the status reads \"Saved\""
-    test: test_learn_anywhere_AC10_offline_is_shown
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:281"
-  - id: AC-11
-    user_story: "as a learner, when a save fails I want to be told so that I am not left believing it worked"
-    given: "the user is signed in and the backend refuses or fails a save"
-    when: "the save fails"
-    then: "the status reads \"Could not save just now. Trying again in a moment.\" and the work stays on the device"
-    test: test_learn_anywhere_AC11_failed_save_is_shown
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:386"
-  - id: AC-12
-    user_story: "as a learner, when the site talks to its backend I want the page to have said so first, so that nothing happens behind my back"
-    given: "the user signs in, answers a task, goes offline, returns online and reloads, on a device whose every request is recorded with the status shown at the moment it left"
-    when: "the recorded requests are examined"
-    then: "no request to Firestore left while the status read idle or \"Saved\"; each left while it read \"Saving…\", \"Checking…\", the offline text or the error text, or while the auth state read \"signing-in\""
-    test: test_learn_anywhere_AC12_no_firestore_request_while_page_reads_idle_or_saved
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:454"
-  - id: AC-13
-    user_story: "as a learner, when I open a lesson I want it usable at once so that I never wait on the network to start"
-    given: "the user is signed in and has a saved attempt on a lesson"
-    when: "that lesson is opened with every backend origin unreachable"
-    then: "the lesson's tasks render and the saved attempt is shown as done"
-    test: test_learn_anywhere_AC13_render_path_makes_no_backend_reads
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:21"
-  - id: AC-14
-    user_story: "as a learner on a slow phone, when I answer a task I want the page to respond at once so that sync never makes the lesson feel slow"
-    given: "the user is signed in on a lesson page in headless Chromium at a 390 px wide viewport with the CPU throttled four times, the machine otherwise idle, and five warm-up attempts discarded"
-    when: "the user commits forty attempts on a task that marks each item as it is answered, each a real attempt the page then shows as committed"
-    then: "the 95th-percentile time from the committing tap to the next painted frame is at most 100 ms (the prototype measured 17 to 21 ms)"
-    test: test_learn_anywhere_AC14_interaction_stays_instant_with_sync_on
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:235"
-  - id: AC-15
-    user_story: "as a learner, when I finish work I want to see what I did on each day so that I and my Saturday tutor can look back over the week"
-    given: "the browser's timezone is Asia/Ho_Chi_Minh and its clock is set to 2026-09-08T06:30:00+07:00, then to 2026-09-10T06:30:00+07:00"
-    when: "the user answers a marked task at each of those times"
-    then: "a section headed \"Your days\" lists 10 September above 8 September under \"Week of Monday 7 September: you worked on 2 days.\", each day saying what was done (for example \"1 task answered\"); nothing is listed under 7 or 9 September"
-    test: test_learn_anywhere_AC15_day_record_files_work_under_the_local_day
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:4726"
-  - id: AC-16
-    user_story: "as a learner with two devices, when I work on each on different days I want one record of both so that the week is whole"
-    given: "the same account answers a task on device A on one day and on device B on a later day"
-    when: "each device has saved and received the other's work"
-    then: "both devices list both days in \"Your days\""
-    test: test_learn_anywhere_AC16_day_record_travels_between_devices
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:4718"
-  - id: AC-17
-    user_story: "as a learner, when I spend a day on words, practice or review I want that day counted so that the record is true"
-    given: "the user is on a lesson page"
-    when: "the user commits a marked task, finishes a Meet-the-words set, finishes a practice-bank run, and finishes a review session, on one day"
-    then: "that day's line names each kind with its count (for example \"1 task answered · 1 word set · 1 practice run · 1 review\"), drawn from the one per-day record the site already keeps under \"en8:days:v1\", which is extended to hold these kinds beside its review count and path steps; Today still reads that record as before"
-    test: test_learn_anywhere_AC17_day_record_counts_every_kind_of_work_in_one_record
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:4707"
-  - id: AC-18
-    user_story: "as a learner, when I hand in a piece of writing I want it counted once so that typing does not inflate my day"
-    given: "the user has started a timed writing"
-    when: "the user types and then hands it in"
-    then: "the day's line shows \"1 piece of writing\" after the hand-in and not before, however much was typed"
-    test: test_learn_anywhere_AC18_writing_is_filed_once_when_handed_in
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:4718"
-  - id: AC-19
-    user_story: "as a learner, when I look at my days I want an account of what I did and nothing else so that the record never becomes a scoreboard"
-    given: "the user has work on two or more days"
-    when: "the \"Your days\" section is shown"
-    then: "the section shows no streak, \"in a row\", \"days running\", score, percentage, points, badges, level, best, comparison, or any minutes, hours or time spent; the per-task score lines elsewhere on the page are unaffected"
-    test: test_learn_anywhere_AC19_day_record_shows_no_streak_score_or_time
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:4707"
-  - id: AC-20
-    user_story: "as a learner sitting a timed test, when the clock is running I want only the test on the page so that nothing distracts or interrupts me"
-    given: "the user has started a timed reading or a timed writing"
-    when: "the test is running, and work arrives from another device or a save succeeds or fails"
-    then: "\"Your days\", the account controls, the sync status and any question from this feature are not visible, the page is not drawn again, and saving carries on unseen; when the test ends they return showing the current state"
-    test: test_learn_anywhere_AC20_timed_test_shows_only_the_test
-    elevation_class: concurrent
-    source_gap: "The prototype's app had no timed-test mode; the day record and the redraw for incoming work were never tried against one."
-  - id: AC-21
-    user_story: "as a learner on a shared device, when I sign out I want my last change saved first so that it is not lost"
-    given: "the user is signed in and online with a change made less than a second ago"
-    when: "the user clicks \"Sign out\""
-    then: "the page shows \"Saving…\", the save completes, then the user is signed out; a clean device signing in as the same account shows the change"
-    test: test_learn_anywhere_AC21_sign_out_saves_first
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:549"
-  - id: AC-22
-    user_story: "as a learner on a shared device, when I sign out I want nothing of mine left on screen or readable so that the next person does not open it"
-    given: "the user is signed in with tasks, writing, a note, a highlight, progress and days all saved"
-    when: "the user signs out"
-    then: "the page is drawn again with no task done, no writing, note or highlight, no \"Your days\" entries and no account email; none of those values can be read from the browser's storage; signing in again brings all of them back"
-    test: test_learn_anywhere_AC22_sign_out_clears_everything_of_hers
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:477"
-  - id: AC-23
-    user_story: "as a learner with no signal, when I sign out I want my unsaved work kept safe so that signing out never loses it"
-    given: "the user is signed in with an answered task the backend has not received, and is offline or the save does not finish within six seconds"
-    when: "the user clicks \"Sign out\", then later signs in again on the same device with a connection"
-    then: "the user is signed out without waiting longer than six seconds; no task is shown as done; the status reads \"Your work is kept on this device. Sign in to see it and save it.\"; the held work cannot be read as plain text from the browser's storage; after signing in again the task is shown as done and it reaches the account's other devices"
-    test: test_learn_anywhere_AC23_sign_out_that_cannot_save_holds_the_work
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:181"
-  - id: AC-24
-    user_story: "as a learner, when I delete something offline and sign out I want it to stay deleted so that old work does not come back"
-    given: "the user is signed in, offline, and removes a note that was already saved"
-    when: "the user signs out and later signs in again with a connection"
-    then: "the note is absent on this device and on the account's other devices, including a clean device that syncs afterwards"
-    test: test_learn_anywhere_AC24_deletions_survive_offline_sign_out
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:202"
-  - id: AC-25
-    user_story: "as a learner sharing a device with a sibling, when they sign in after me I want my held work kept from them"
-    given: "learner X signed out offline with unsaved work held on the device"
-    when: "learner Y signs in on that device and uses it"
-    then: "Y is never shown X's work and none of it reaches Y's account"
-    test: test_learn_anywhere_AC25_held_work_is_not_shown_to_another_account
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:486"
-  - id: AC-26
-    user_story: "as a learner sharing a device, when a sibling has used it in between I want my held work still there for me"
-    given: "learner X's unsaved work is held on the device and learner Y has since signed in, worked and signed out"
-    when: "X signs in again"
-    then: "X's held work is shown as done and is saved to X's account"
-    test: test_learn_anywhere_AC26_held_work_survives_another_account
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:202"
-  - id: AC-27
-    user_story: "as a learner, when another account signs in while my unsaved work cannot be held I want it left alone so that it is not destroyed"
-    given: "X's unsaved work is on the device, a different account is signed in in its place without X having signed out, and the device's storage has no room to hold X's work"
-    when: "the other account's sign-in is noticed by the page"
-    then: "the newcomer is signed out, the status reads \"This device is holding unsaved work for another account. Sign in to that account first.\", and X's work is untouched"
-    test: test_learn_anywhere_AC27_unsaved_work_is_not_destroyed_by_an_account_switch
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:486"
-  - id: AC-28
-    user_story: "as a learner with two tabs open, when I sign out in one I want the other cleared too so that my work is not left on screen"
-    given: "the same account is signed in with two tabs open, each showing a task as done"
-    when: "the user clicks \"Sign out\" in one tab"
-    then: "both tabs end signed out and neither shows the task as done"
-    test: test_learn_anywhere_AC28_sign_out_clears_every_tab
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:444"
-  - id: AC-29
-    user_story: "as a learner, when work was done on this device while nobody was signed in I want to choose whether it joins my account so that someone else's answers do not slip into it"
-    given: "the device is signed out and someone has answered a task on it"
-    when: "an account signs in"
-    then: "the page asks once, in the page and not in a browser dialog, \"Work was done on this device while nobody was signed in. Add it to your account?\" with the buttons \"Add it\" and \"Keep it separate\"; \"Add it\" saves that work to the account; \"Keep it separate\" leaves it out of every device of the account and puts it back on the page after sign-out"
-    test: test_learn_anywhere_AC29_signed_out_work_joins_an_account_only_when_agreed
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:507"
-  - id: AC-30
-    user_story: "as a learner, when I take a task again I want the fresh attempt to stay fresh so that syncing does not hand my old answers back"
-    given: "the user has an answered, saved task that is not part of a timed test and offers \"Try it again\""
-    when: "the user clicks \"Try it again\" and the save completes"
-    then: "the stored record for the task has no answers and keeps the history of the first attempt, and the account's other devices show the task as not done"
-    test: test_learn_anywhere_AC30_retake_is_not_undone_by_sync
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:1559"
-  - id: AC-31
-    user_story: "as a learner whose phone clock is wrong, when I change something later on another device I want the later change to win so that a wrong clock cannot overrule me"
-    given: "device A's clock is two days ahead and has saved a note; device B has a correct clock and has received it"
-    when: "the user changes the note on B and the save completes"
-    then: "B keeps the later text and a third device receives the later text"
-    test: test_learn_anywhere_AC31_fast_clock_does_not_overrule_later_change
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:61"
-  - id: AC-32
-    user_story: "as a learner, when I remove a highlight I want it to stay removed on every device so that syncing never puts it back"
-    given: "the user is signed in with two saved highlights on a passage"
-    when: "the user removes one, the save completes, and a later save of anything else completes"
-    then: "one highlight remains on this device and on the account's other devices"
-    test: test_learn_anywhere_AC32_removed_highlight_stays_removed
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:134"
-  - id: AC-33
-    user_story: "as a learner, when I un-mark a lesson I had marked finished I want it to stay un-marked so that syncing does not mark it again"
-    given: "the user is signed in and a lesson is marked finished and saved, with its path step in that day's record"
-    when: "the lesson is un-marked on one device and the save completes"
-    then: "the lesson is not marked finished, and its step is absent from the day's record, on this device and on the account's other devices"
-    test: test_learn_anywhere_AC33_unfinished_lesson_stays_unfinished
-    elevation_class: concurrent
-    source_gap: "The prototype's app had no per-day list of path steps; main's record removes a step when a lesson is un-marked, which a merge by union would put back."
-  - id: AC-34
-    user_story: "as a learner, when I have run read-again rounds on two devices I want the record to show rounds I ran so that it does not invent one"
-    given: "device A has finished rounds 1 and 2 of a read-again and device B has finished round 1 of the same one"
-    when: "both saves complete"
-    then: "both devices show two rounds finished, not three"
-    test: test_learn_anywhere_AC34_read_again_rounds_are_not_merged_by_position
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:134"
-  - id: AC-35
-    user_story: "as a learner who reviewed on two devices in one day, when they sync I want the day to count both so that none of it is dropped"
-    given: "two devices signed in as the same account are offline; three review items are answered on one and two different items on the other, on the same day"
-    when: "both reconnect and their saves complete"
-    then: "that day's record counts five reviewed items on both devices"
-    test: test_learn_anywhere_AC35_reviewed_count_includes_both_devices
-    elevation_class: concurrent
-    source_gap: "The prototype's app kept no per-day review counter; main's is a single number, which a later-wins merge would reduce to one device's count."
-  - id: AC-36
-    user_story: "as a learner in the middle of an answer, when work arrives from my other device I want the page left alone so that I never lose what I am doing"
-    given: "the user is signed in on a lesson and one of these holds: answers are chosen and not yet committed; a practice or word run is open; a text field in the lesson has focus; or a pointer, key or input event reached the lesson in the last thirty seconds"
-    when: "work from another device arrives and is saved to this device"
-    then: "the page is not drawn again and the status reads \"Saved. Work from your other device will show on the next page you open.\""
-    test: test_learn_anywhere_AC36_incoming_work_does_not_redraw_under_her_hands
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:250"
-  - id: AC-37
-    user_story: "as a learner, when I have paused I want my other device's work to appear so that I do not have to reload"
-    given: "work from another device is waiting to be shown and none of the conditions that hold the page still applies any longer (with the clock advanced past thirty seconds)"
-    when: "the page next checks, or the tab is returned to"
-    then: "the page is drawn again showing that work, the user's own committed answers are still shown, and the page is drawn again at most three times in twenty seconds"
-    test: test_learn_anywhere_AC37_incoming_work_is_drawn_once_she_pauses
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:266"
-  - id: AC-38
-    user_story: "as the person paying for the backend, when a learner saves one change I want it to read only what changed so that the free plan is enough"
-    given: "the account holds 300 saved keys and the device has synced before, against an emulator whose requests are counted"
-    when: "the user makes one change and the save completes"
-    then: "the save reads fewer than ten documents, not the 300"
-    test: test_learn_anywhere_AC38_a_save_reads_only_what_changed
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:322"
-  - id: AC-39
-    user_story: "as the person paying for the backend, when a device might have missed a change I want it to catch up without reading everything on every save"
-    given: "an account with saved keys and a controllable clock"
-    when: "a device signs in for the first time, then saves again within the same day, then saves again after the clock passes 24 hours"
-    then: "the first save and the save after 24 hours read the whole account; the save in between does not"
-    test: test_learn_anywhere_AC39_whole_account_is_read_on_first_sync_and_daily
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:318"
-  - id: AC-40
-    user_story: "as a learner with a lot of local work, when I first sign in I want all of it saved so that a size limit never blocks me"
-    given: "a signed-out device holds 900 learner keys"
-    when: "an account signs in and the save completes"
-    then: "all 900 are in the backend, written in batches of at most 500, and the status reads \"Saved\""
-    test: test_learn_anywhere_AC40_large_first_upload_is_batched
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:362"
-  - id: AC-41
-    user_story: "as the person paying for the backend, when a save keeps failing I want it to try less often so that a fault does not hammer the backend"
-    given: "a signed-in device whose saves are made to fail, with a controllable clock"
-    when: "saves fail repeatedly"
-    then: "the retries come after 8, 16, 32 seconds and so on, doubling up to 5 minutes, and the next success returns the wait to 8 seconds"
-    test: test_learn_anywhere_AC41_failing_save_backs_off
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:386"
-  - id: AC-42
-    user_story: "as a learner going somewhere with no signal, when I have opened the site once I want every lesson available so that I can study anywhere"
-    given: "the user has opened one page of the site online and the service worker's record shows the current build's list of pages and assets as wholly kept"
-    when: "the device is offline and the user opens a lesson never opened before"
-    then: "the lesson loads with its tasks working and its drawings shown"
-    test: test_learn_anywhere_AC42_whole_course_loads_offline
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/sw.js:82"
-  - id: AC-43
-    user_story: "as a learner on a metered connection, when my device asks sites to save data I want only what I open kept so that the course is not downloaded behind my back"
-    given: "the browser reports navigator.connection.saveData as true"
-    when: "the user opens one lesson online"
-    then: "that lesson loads offline afterwards, and a lesson never opened does not"
-    test: test_learn_anywhere_AC43_save_data_keeps_only_opened_pages
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:4811"
-  - id: AC-44
-    user_story: "as a learner on a bad connection, when the network neither answers nor fails I want the saved lesson shown so that I am not left on a blank page"
-    given: "a lesson is kept on the device and its request to the network is held open without an answer"
-    when: "the user opens the lesson"
-    then: "the kept lesson appears within 8 seconds with its tasks working"
-    test: test_learn_anywhere_AC44_hanging_connection_falls_back_to_saved_lesson
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/sw.js:23"
-  - id: AC-45
-    user_story: "as a learner, when the site is updated I want the new version so that I am never stuck on an old build"
-    given: "a device holds the previous build"
-    when: "a new build is published and the user reloads the page online"
-    then: "the new build's script is running within three reloads"
-    test: test_learn_anywhere_AC45_new_build_reaches_a_device_online
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/sw.js:51"
-  - id: AC-46
-    user_story: "as a learner, when the site has been updated I want the offline copy to be the new build whole so that I never get an old page with new scripts or the reverse"
-    given: "a device holds the previous build, including a lesson it opened under the address ending in \"/\" and under the address ending in \"/index.html\""
-    when: "a new build is published, the user opens the site online until the new build's list is wholly kept, then goes offline and opens that lesson by each address"
-    then: "both addresses give the new build's page running the new build's scripts, and no file that only the previous build used is still kept"
-    test: test_learn_anywhere_AC46_kept_copy_is_one_build_under_every_address
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/sw.js:37"
-  - id: AC-47
-    user_story: "as a learner, when an update is cut off half way I want the lessons I had to keep working so that a bad connection never breaks the offline copy"
-    given: "a device wholly holds the previous build and a new build is published"
-    when: "the fetch of the new build's files is cut off part way, and the user goes offline and opens a lesson"
-    then: "the lesson loads and works, from one build's page and scripts together; the previous build's files are dropped only once the new build is wholly kept"
-    test: test_learn_anywhere_AC47_interrupted_update_keeps_the_previous_copy_usable
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/sw.js:121"
-  - id: AC-48
-    user_story: "as a signed-in learner opening the site offline, when the sign-in settings cannot be fetched I want to still see that I am signed in and offline so that I am not shown a button that cannot work"
-    given: "the user signed in earlier and opens a kept page with no network"
-    when: "the page loads"
-    then: "the header shows the account and the offline status, and no \"Sign in with Google\" button is offered that does nothing"
-    test: test_learn_anywhere_AC48_offline_page_shows_account_and_offline_state
-    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:230"
-  - id: AC-49
-    user_story: "as a learner using a keyboard or a screen reader, when the account and sync state change I want to be told and to reach every control so that the feature is not closed to me"
-    given: "the user navigates by keyboard with a screen reader running"
-    when: "the user signs in, a save runs, and the question about signed-out work appears"
-    then: "the sync status is a polite live region that announces each change once; \"Sign in with Google\", \"Sign out\", \"Try again\", \"Add it\" and \"Keep it separate\" are reachable by Tab, show a visible focus ring and carry those accessible names; the question takes focus when it appears and returns it when answered; and \"Your days\" is a labelled region with a heading and a list per week"
-    test: test_learn_anywhere_AC49_new_controls_are_usable_by_keyboard_and_screen_reader
-    elevation_class: a11y
-    source_gap: "The prototype marked the status as a polite live region but asked about signed-out work in a browser dialog and never had its new controls checked by keyboard or screen reader."
-  - id: AC-50
-    user_story: "as a learner whose sign-in popup fails or is closed, when sign-in does not complete I want to be told so that I know I am still signed out and can try again"
-    given: "the user is signed out and has clicked \"Sign in with Google\""
-    when: "the popup is blocked, closed, or the network is unreachable"
-    then: "the auth state returns to signed-out and a visible message appears beside the button: \"Could not sign in. Check your connection and try again.\"; the button is enabled again and local work is unchanged"
-    test: test_learn_anywhere_AC50_sign_in_failure_shows_message
-    elevation_class: error_state
-    source_gap: "Google sign-in failure is only logged to console and repaints signed-out state; no visible error text is shown for popup failure."
-  - id: AC-51
-    user_story: "as a learner, when I click sign in twice quickly I want only one sign-in attempt so that I do not get stacked popups"
-    given: "the auth state is \"signing-in\""
-    when: "the user clicks \"Sign in with Google\" again within the same attempt"
-    then: "the second click is ignored and only one popup is open until the attempt resolves"
-    test: test_learn_anywhere_AC51_sign_in_double_click_ignored
-    elevation_class: concurrent
-    source_gap: implicit
-  - id: AC-52
-    user_story: "as a learner whose save keeps failing, when the error appears I want a way to retry so that I do not have to wait or reload"
-    given: "a save has failed and \"Could not save just now. Trying again in a moment.\" is shown"
-    when: "the user activates the \"Try again\" button shown beside that message"
-    then: "the save is retried immediately, the message clears on success, and on another failure the message stays with the button enabled"
-    test: test_learn_anywhere_AC52_sync_failure_manual_retry
-    elevation_class: error_state
-    source_gap: "Firestore sync failure displays \"Could not save just now. Trying again in a moment.\" but there is no manual retry control."
-
+- id: AC-1
+  user_story: as a learner on more than one device, when I click sign in I want Google
+    sign-in to start so that my work can follow me
+  given: the user is signed out on any page, with sign-in pointed at the Firebase
+    Auth emulator
+  when: the user clicks "Sign in with Google"
+  then: one sign-in popup opens and the auth state reads "signing-in" until it resolves;
+    completing it sets the auth state to "signed-in"
+  test: test_learn_anywhere_AC1_sign_in_starts
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:540
+- id: AC-2
+  user_story: as a signed-in learner, when I come back to the site I want to still
+    be signed in so that I do not sign in every day
+  given: the user has signed in with Google
+  when: the page is reloaded or another page of the site is opened
+  then: the header shows the account's email and a "Sign out" button, the "Sign in
+    with Google" button is hidden, and the auth state reads "signed-in" without a
+    new popup
+  test: test_learn_anywhere_AC2_session_persists_across_pages
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:483
+- id: AC-3
+  user_story: as a learner who never signs in, when I use the site I want everything
+    to work and stay on my device so that an account is never required
+  given: no account has ever signed in on the device
+  when: the user answers a task, reloads the page, and reloads again with no network
+  then: the task is shown as done each time, and no request is made to Firestore at
+    any point
+  test: test_learn_anywhere_AC3_signed_out_use_is_whole_and_local
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:21
+- id: AC-4
+  user_story: as a learner with a phone and a laptop, when I answer a task on one
+    I want to see it done on the other so that I can carry on anywhere
+  given: the user answered a marked task twice on device A while signed in, and the
+    page reads "Saved"
+  when: the same account signs in on device B, a device with no stored work
+  then: device B shows that task as done with the same answers, the same marks, the
+    same score line and both attempts in its history in the order they were made,
+    without the user doing anything but sign in
+  test: test_learn_anywhere_AC4_work_follows_account_to_second_device
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:304
+- id: AC-5
+  user_story: as a learner, when I sign in on a new device I want all of my work there,
+    not only my answers, so that nothing is left behind
+  given: device A is signed in and holds one valid value under each kind of learner
+    key the app writes (progress, tasks, review, story, the per-day record, writing,
+    jots, notes, highlights, flags, reading clocks, read-again rounds, word-set and
+    practice-bank logs, comic preference, seen words, strand checks)
+  when: the saves complete and the same account signs in on a clean device B
+  then: every one of those keys holds an equivalent value on B; the colour theme,
+    the sync layer's own bookkeeping keys and any held work are never uploaded
+  test: test_learn_anywhere_AC5_every_kind_of_learner_data_syncs
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:25
+- id: AC-6
+  user_story: as a learner, when someone else signs in I want my work to stay mine
+    so that nobody reads or changes it
+  given: learner X has synced work and learner Y is a different account, against the
+    Firestore emulator running the shipped rules
+  when: Y signs in on a clean device, and Y's credential is used directly to get,
+    list, create, update and delete documents under users/<X's uid>/kv and under users/<Y's
+    uid>/kv
+  then: Y's pages show none of X's work as done; each of the five operations under
+    X's path is refused with permission denied; the same operations under Y's own
+    path succeed; and any path outside users/{uid} is refused for everyone
+  test: test_learn_anywhere_AC6_account_isolation_enforced_by_rules
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:firestore.rules:5
+- id: AC-7
+  user_story: as a learner who studies where the signal drops, when I work offline
+    on one device while my other device is online I want both sets of work kept so
+    that neither study session is lost
+  given: device A is signed in with the lesson open and loses its network; device
+    B is signed in and online
+  when: the user answers one task on A offline and a different task on B, then A regains
+    its network
+  then: a third, clean device signing in as the same account shows both tasks and
+    every earlier answer as done
+  test: test_learn_anywhere_AC7_offline_and_concurrent_work_merge
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:135
+- id: AC-8
+  user_story: as a learner who edited the same note on two devices, when both reconnect
+    I want both devices to agree so that they never show different text
+  given: two devices signed in as the same account hold the same note, and each changes
+    it while offline
+  when: both reconnect and their saves complete
+  then: 'both devices and a third clean device hold the same text: the change made
+    last by the stamps wins whole for a note or other plain text, while records that
+    are logs of attempts keep both devices'' entries'
+  test: test_learn_anywhere_AC8_concurrent_edits_to_one_note_converge
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:118
+- id: AC-9
+  user_story: as a learner, when my work is being saved I want the page to say so,
+    so that I know when it is safe
+  given: the user is signed in on a lesson page
+  when: the user answers a task
+  then: the status beside the account reads "Saving…" until the save lands and then
+    "Saved"
+  test: test_learn_anywhere_AC9_saving_and_saved_are_shown
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:77
+- id: AC-10
+  user_story: as a learner who has lost signal, when I keep working I want to be told
+    my work is safe on the device so that I carry on
+  given: the user is signed in on a lesson page
+  when: the network is lost
+  then: within ten seconds the status reads "No connection. Your work is kept on this
+    device and will be saved when you are back online.", and when the network returns
+    the unsaved work is saved and the status reads "Saved"
+  test: test_learn_anywhere_AC10_offline_is_shown
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:281
+- id: AC-11
+  user_story: as a learner, when a save fails I want to be told so that I am not left
+    believing it worked
+  given: the user is signed in and the backend refuses or fails a save
+  when: the save fails
+  then: the status reads "Could not save just now. Trying again in a moment." and
+    the work stays on the device
+  test: test_learn_anywhere_AC11_failed_save_is_shown
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:386
+- id: AC-12
+  user_story: as a learner, when the site talks to its backend I want the page to
+    have said so first, so that nothing happens behind my back
+  given: the user signs in, answers a task, goes offline, returns online and reloads,
+    on a device whose every request is recorded with the status shown at the moment
+    it left
+  when: the recorded requests are examined
+  then: no request to Firestore left while the status read idle or "Saved"; each left
+    while it read "Saving…", "Checking…", the offline text or the error text, or while
+    the auth state read "signing-in"
+  test: test_learn_anywhere_AC12_no_firestore_request_while_page_reads_idle_or_saved
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:454
+- id: AC-13
+  user_story: as a learner, when I open a lesson I want it usable at once so that
+    I never wait on the network to start
+  given: the user is signed in and has a saved attempt on a lesson
+  when: that lesson is opened with every backend origin unreachable
+  then: the lesson's tasks render and the saved attempt is shown as done
+  test: test_learn_anywhere_AC13_render_path_makes_no_backend_reads
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:21
+- id: AC-14
+  user_story: as a learner on a slow phone, when I answer a task I want the page to
+    respond at once so that sync never makes the lesson feel slow
+  given: the user is signed in on a lesson page in headless Chromium at a 390 px wide
+    viewport with the CPU throttled four times, the machine otherwise idle, and five
+    warm-up attempts discarded
+  when: the user commits forty attempts on a task that marks each item as it is answered,
+    each a real attempt the page then shows as committed
+  then: the 95th-percentile time from the committing tap to the next painted frame
+    is at most 100 ms (the prototype measured 17 to 21 ms)
+  test: test_learn_anywhere_AC14_interaction_stays_instant_with_sync_on
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:235
+- id: AC-15
+  user_story: as a learner, when I finish work I want to see what I did on each day
+    so that I and my Saturday tutor can look back over the week
+  given: the browser's timezone is Asia/Ho_Chi_Minh and its clock is set to 2026-09-08T06:30:00+07:00,
+    then to 2026-09-10T06:30:00+07:00
+  when: the user answers a marked task at each of those times
+  then: 'a section headed "Your days" lists 10 September above 8 September under "Week
+    of Monday 7 September: you worked on 2 days.", each day saying what was done (for
+    example "1 task answered"); nothing is listed under 7 or 9 September'
+  test: test_learn_anywhere_AC15_day_record_files_work_under_the_local_day
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:4726
+- id: AC-16
+  user_story: as a learner with two devices, when I work on each on different days
+    I want one record of both so that the week is whole
+  given: the same account answers a task on device A on one day and on device B on
+    a later day
+  when: each device has saved and received the other's work
+  then: both devices list both days in "Your days"
+  test: test_learn_anywhere_AC16_day_record_travels_between_devices
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:4718
+- id: AC-17
+  user_story: as a learner, when I spend a day on words, practice or review I want
+    that day counted so that the record is true
+  given: the user is on a lesson page
+  when: the user commits a marked task, finishes a Meet-the-words set, finishes a
+    practice-bank run, and finishes a review session, on one day
+  then: that day's line names each kind with its count (for example "1 task answered
+    · 1 word set · 1 practice run · 1 review"), drawn from the one per-day record
+    the site already keeps under "en8:days:v1", which is extended to hold these kinds
+    beside its review count and path steps; Today still reads that record as before
+  test: test_learn_anywhere_AC17_day_record_counts_every_kind_of_work_in_one_record
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:4707
+- id: AC-18
+  user_story: as a learner, when I hand in a piece of writing I want it counted once
+    so that typing does not inflate my day
+  given: the user has started a timed writing
+  when: the user types and then hands it in
+  then: the day's line shows "1 piece of writing" after the hand-in and not before,
+    however much was typed
+  test: test_learn_anywhere_AC18_writing_is_filed_once_when_handed_in
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:4718
+- id: AC-19
+  user_story: as a learner, when I look at my days I want an account of what I did
+    and nothing else so that the record never becomes a scoreboard
+  given: the user has work on two or more days
+  when: the "Your days" section is shown
+  then: the section shows no streak, "in a row", "days running", score, percentage,
+    points, badges, level, best, comparison, or any minutes, hours or time spent;
+    the per-task score lines elsewhere on the page are unaffected
+  test: test_learn_anywhere_AC19_day_record_shows_no_streak_score_or_time
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:4707
+- id: AC-20
+  user_story: as a learner sitting a timed test, when the clock is running I want
+    only the test on the page so that nothing distracts or interrupts me
+  given: the user has started a timed reading or a timed writing
+  when: the test is running, and work arrives from another device or a save succeeds
+    or fails
+  then: '"Your days", the account controls, the sync status and any question from
+    this feature are not visible, the page is not drawn again, and saving carries
+    on unseen; when the test ends they return showing the current state'
+  test: test_learn_anywhere_AC20_timed_test_shows_only_the_test
+  elevation_class: concurrent
+  source_gap: The prototype's app had no timed-test mode; the day record and the redraw
+    for incoming work were never tried against one.
+- id: AC-21
+  user_story: as a learner on a shared device, when I sign out I want my last change
+    saved first so that it is not lost
+  given: the user is signed in and online with a change made less than a second ago
+  when: the user clicks "Sign out"
+  then: the page shows "Saving…", the save completes, then the user is signed out;
+    a clean device signing in as the same account shows the change
+  test: test_learn_anywhere_AC21_sign_out_saves_first
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:549
+- id: AC-22
+  user_story: as a learner on a shared device, when I sign out I want nothing of mine
+    left on screen or readable so that the next person does not open it
+  given: the user is signed in with tasks, writing, a note, a highlight, progress
+    and days all saved
+  when: the user signs out
+  then: the page is drawn again with no task done, no writing, note or highlight,
+    no "Your days" entries and no account email; none of those values can be read
+    from the browser's storage; signing in again brings all of them back
+  test: test_learn_anywhere_AC22_sign_out_clears_everything_of_hers
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:477
+- id: AC-23
+  user_story: as a learner with no signal, when I sign out I want my unsaved work
+    kept safe so that signing out never loses it
+  given: the user is signed in with an answered task the backend has not received,
+    and is offline or the save does not finish within six seconds
+  when: the user clicks "Sign out", then later signs in again on the same device with
+    a connection
+  then: the user is signed out without waiting longer than six seconds; no task is
+    shown as done; the status reads "Your work is kept on this device. Sign in to
+    see it and save it."; the held work cannot be read as plain text from the browser's
+    storage; after signing in again the task is shown as done and it reaches the account's
+    other devices
+  test: test_learn_anywhere_AC23_sign_out_that_cannot_save_holds_the_work
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:181
+- id: AC-24
+  user_story: as a learner, when I delete something offline and sign out I want it
+    to stay deleted so that old work does not come back
+  given: the user is signed in, offline, and removes a note that was already saved
+  when: the user signs out and later signs in again with a connection
+  then: the note is absent on this device and on the account's other devices, including
+    a clean device that syncs afterwards
+  test: test_learn_anywhere_AC24_deletions_survive_offline_sign_out
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:202
+- id: AC-25
+  user_story: as a learner sharing a device with a sibling, when they sign in after
+    me I want my held work kept from them
+  given: learner X signed out offline with unsaved work held on the device
+  when: learner Y signs in on that device and uses it
+  then: Y is never shown X's work and none of it reaches Y's account
+  test: test_learn_anywhere_AC25_held_work_is_not_shown_to_another_account
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:486
+- id: AC-26
+  user_story: as a learner sharing a device, when a sibling has used it in between
+    I want my held work still there for me
+  given: learner X's unsaved work is held on the device and learner Y has since signed
+    in, worked and signed out
+  when: X signs in again
+  then: X's held work is shown as done and is saved to X's account
+  test: test_learn_anywhere_AC26_held_work_survives_another_account
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:202
+- id: AC-27
+  user_story: as a learner, when another account signs in while my unsaved work cannot
+    be held I want it left alone so that it is not destroyed
+  given: X's unsaved work is on the device, a different account is signed in in its
+    place without X having signed out, and the device's storage has no room to hold
+    X's work
+  when: the other account's sign-in is noticed by the page
+  then: the newcomer is signed out, the status reads "This device is holding unsaved
+    work for another account. Sign in to that account first.", and X's work is untouched
+  test: test_learn_anywhere_AC27_unsaved_work_is_not_destroyed_by_an_account_switch
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:486
+- id: AC-28
+  user_story: as a learner with two tabs open, when I sign out in one I want the other
+    cleared too so that my work is not left on screen
+  given: the same account is signed in with two tabs open, each showing a task as
+    done
+  when: the user clicks "Sign out" in one tab
+  then: both tabs end signed out and neither shows the task as done
+  test: test_learn_anywhere_AC28_sign_out_clears_every_tab
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:444
+- id: AC-29
+  user_story: as a learner, when work was done on this device while nobody was signed
+    in I want to choose whether it joins my account so that someone else's answers
+    do not slip into it
+  given: the device is signed out and someone has answered a task on it
+  when: an account signs in
+  then: the page asks once, in the page and not in a browser dialog, "Work was done
+    on this device while nobody was signed in. Add it to your account?" with the buttons
+    "Add it" and "Keep it separate"; "Add it" saves that work to the account; "Keep
+    it separate" leaves it out of every device of the account and puts it back on
+    the page after sign-out
+  test: test_learn_anywhere_AC29_signed_out_work_joins_an_account_only_when_agreed
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:507
+- id: AC-30
+  user_story: as a learner, when I take a task again I want the fresh attempt to stay
+    fresh so that syncing does not hand my old answers back
+  given: the user has an answered, saved task that is not part of a timed test and
+    offers "Try it again"
+  when: the user clicks "Try it again" and the save completes
+  then: the stored record for the task has no answers and keeps the history of the
+    first attempt, and the account's other devices show the task as not done
+  test: test_learn_anywhere_AC30_retake_is_not_undone_by_sync
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:1559
+- id: AC-31
+  user_story: as a learner whose phone clock is wrong, when I change something later
+    on another device I want the later change to win so that a wrong clock cannot
+    overrule me
+  given: device A's clock is two days ahead and has saved a note; device B has a correct
+    clock and has received it
+  when: the user changes the note on B and the save completes
+  then: B keeps the later text and a third device receives the later text
+  test: test_learn_anywhere_AC31_fast_clock_does_not_overrule_later_change
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:61
+- id: AC-32
+  user_story: as a learner, when I remove a highlight I want it to stay removed on
+    every device so that syncing never puts it back
+  given: the user is signed in with two saved highlights on a passage
+  when: the user removes one, the save completes, and a later save of anything else
+    completes
+  then: one highlight remains on this device and on the account's other devices
+  test: test_learn_anywhere_AC32_removed_highlight_stays_removed
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:134
+- id: AC-33
+  user_story: as a learner, when I un-mark a lesson I had marked finished I want it
+    to stay un-marked so that syncing does not mark it again
+  given: the user is signed in and a lesson is marked finished and saved, with its
+    path step in that day's record
+  when: the lesson is un-marked on one device and the save completes
+  then: the lesson is not marked finished, and its step is absent from the day's record,
+    on this device and on the account's other devices
+  test: test_learn_anywhere_AC33_unfinished_lesson_stays_unfinished
+  elevation_class: concurrent
+  source_gap: The prototype's app had no per-day list of path steps; main's record
+    removes a step when a lesson is un-marked, which a merge by union would put back.
+- id: AC-34
+  user_story: as a learner, when I have run read-again rounds on two devices I want
+    the record to show rounds I ran so that it does not invent one
+  given: device A has finished rounds 1 and 2 of a read-again and device B has finished
+    round 1 of the same one
+  when: both saves complete
+  then: both devices show two rounds finished, not three
+  test: test_learn_anywhere_AC34_read_again_rounds_are_not_merged_by_position
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:134
+- id: AC-35
+  user_story: as a learner who reviewed on two devices in one day, when they sync
+    I want the day to count both so that none of it is dropped
+  given: two devices signed in as the same account are offline; three review items
+    are answered on one and two different items on the other, on the same day
+  when: both reconnect and their saves complete
+  then: that day's record counts five reviewed items on both devices
+  test: test_learn_anywhere_AC35_reviewed_count_includes_both_devices
+  elevation_class: concurrent
+  source_gap: The prototype's app kept no per-day review counter; main's is a single
+    number, which a later-wins merge would reduce to one device's count.
+- id: AC-36
+  user_story: as a learner in the middle of an answer, when work arrives from my other
+    device I want the page left alone so that I never lose what I am doing
+  given: 'the user is signed in on a lesson and one of these holds: answers are chosen
+    and not yet committed; a practice or word run is open; a text field in the lesson
+    has focus; or a pointer, key or input event reached the lesson in the last thirty
+    seconds'
+  when: work from another device arrives and is saved to this device
+  then: the page is not drawn again and the status reads "Saved. Work from your other
+    device will show on the next page you open."
+  test: test_learn_anywhere_AC36_incoming_work_does_not_redraw_under_her_hands
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:250
+- id: AC-37
+  user_story: as a learner, when I have paused I want my other device's work to appear
+    so that I do not have to reload
+  given: work from another device is waiting to be shown and none of the conditions
+    that hold the page still applies any longer (with the clock advanced past thirty
+    seconds)
+  when: the page next checks, or the tab is returned to
+  then: the page is drawn again showing that work, the user's own committed answers
+    are still shown, and the page is drawn again at most three times in twenty seconds
+  test: test_learn_anywhere_AC37_incoming_work_is_drawn_once_she_pauses
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:266
+- id: AC-38
+  user_story: as the person paying for the backend, when a learner saves one change
+    I want it to read only what changed so that the free plan is enough
+  given: the account holds 300 saved keys and the device has synced before, against
+    an emulator whose requests are counted
+  when: the user makes one change and the save completes
+  then: the save reads fewer than ten documents, not the 300
+  test: test_learn_anywhere_AC38_a_save_reads_only_what_changed
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:322
+- id: AC-39
+  user_story: as the person paying for the backend, when a device might have missed
+    a change I want it to catch up without reading everything on every save
+  given: an account with saved keys and a controllable clock
+  when: a device signs in for the first time, then saves again within the same day,
+    then saves again after the clock passes 24 hours
+  then: the first save and the save after 24 hours read the whole account; the save
+    in between does not
+  test: test_learn_anywhere_AC39_whole_account_is_read_on_first_sync_and_daily
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:318
+- id: AC-40
+  user_story: as a learner with a lot of local work, when I first sign in I want all
+    of it saved so that a size limit never blocks me
+  given: a signed-out device holds 900 learner keys
+  when: an account signs in and the save completes
+  then: all 900 are in the backend, written in batches of at most 500, and the status
+    reads "Saved"
+  test: test_learn_anywhere_AC40_large_first_upload_is_batched
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:362
+- id: AC-41
+  user_story: as the person paying for the backend, when a save keeps failing I want
+    it to try less often so that a fault does not hammer the backend
+  given: a signed-in device whose saves are made to fail, with a controllable clock
+  when: saves fail repeatedly
+  then: the retries come after 8, 16, 32 seconds and so on, doubling up to 5 minutes,
+    and the next success returns the wait to 8 seconds
+  test: test_learn_anywhere_AC41_failing_save_backs_off
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:386
+- id: AC-42
+  user_story: as a learner going somewhere with no signal, when I have opened the
+    site once I want every lesson available so that I can study anywhere
+  given: the user has opened one page of the site online and the service worker's
+    record shows the current build's list of pages and assets as wholly kept
+  when: the device is offline and the user opens a lesson never opened before
+  then: the lesson loads with its tasks working and its drawings shown
+  test: test_learn_anywhere_AC42_whole_course_loads_offline
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/sw.js:82
+- id: AC-43
+  user_story: as a learner on a metered connection, when my device asks sites to save
+    data I want only what I open kept so that the course is not downloaded behind
+    my back
+  given: the browser reports navigator.connection.saveData as true
+  when: the user opens one lesson online
+  then: that lesson loads offline afterwards, and a lesson never opened does not
+  test: test_learn_anywhere_AC43_save_data_keeps_only_opened_pages
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/app.js:4811
+- id: AC-44
+  user_story: as a learner on a bad connection, when the network neither answers nor
+    fails I want the saved lesson shown so that I am not left on a blank page
+  given: a lesson is kept on the device and its request to the network is held open
+    without an answer
+  when: the user opens the lesson
+  then: the kept lesson appears within 8 seconds with its tasks working
+  test: test_learn_anywhere_AC44_hanging_connection_falls_back_to_saved_lesson
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/sw.js:23
+- id: AC-45
+  user_story: as a learner, when the site is updated I want the new version so that
+    I am never stuck on an old build
+  given: a device holds the previous build
+  when: a new build is published and the user reloads the page online
+  then: the new build's script is running within three reloads
+  test: test_learn_anywhere_AC45_new_build_reaches_a_device_online
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/sw.js:51
+- id: AC-46
+  user_story: as a learner, when the site has been updated I want the offline copy
+    to be the new build whole so that I never get an old page with new scripts or
+    the reverse
+  given: a device holds the previous build, including a lesson it opened under the
+    address ending in "/" and under the address ending in "/index.html"
+  when: a new build is published, the user opens the site online until the new build's
+    list is wholly kept, then goes offline and opens that lesson by each address
+  then: both addresses give the new build's page running the new build's scripts,
+    and no file that only the previous build used is still kept
+  test: test_learn_anywhere_AC46_kept_copy_is_one_build_under_every_address
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/sw.js:37
+- id: AC-47
+  user_story: as a learner, when an update is cut off half way I want the lessons
+    I had to keep working so that a bad connection never breaks the offline copy
+  given: a device wholly holds the previous build and a new build is published
+  when: the fetch of the new build's files is cut off part way, and the user goes
+    offline and opens a lesson
+  then: the lesson loads and works, from one build's page and scripts together; the
+    previous build's files are dropped only once the new build is wholly kept
+  test: test_learn_anywhere_AC47_interrupted_update_keeps_the_previous_copy_usable
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/sw.js:121
+- id: AC-48
+  user_story: as a signed-in learner opening the site offline, when the sign-in settings
+    cannot be fetched I want to still see that I am signed in and offline so that
+    I am not shown a button that cannot work
+  given: the user signed in earlier and opens a kept page with no network
+  when: the page loads
+  then: the header shows the account and the offline status, and no "Sign in with
+    Google" button is offered that does nothing
+  test: test_learn_anywhere_AC48_offline_page_shows_account_and_offline_state
+  source: 222ff61cba35f45cea01a6767cb4667b33e0ec31:tools/assets/auth-src.mjs:230
+- id: AC-49
+  user_story: as a learner using a keyboard or a screen reader, when the account and
+    sync state change I want to be told and to reach every control so that the feature
+    is not closed to me
+  given: the user navigates by keyboard with a screen reader running
+  when: the user signs in, a save runs, and the question about signed-out work appears
+  then: the sync status is a polite live region that announces each change once; "Sign
+    in with Google", "Sign out", "Try again", "Add it" and "Keep it separate" are
+    reachable by Tab, show a visible focus ring and carry those accessible names;
+    the question takes focus when it appears and returns it when answered; and "Your
+    days" is a labelled region with a heading and a list per week
+  test: test_learn_anywhere_AC49_new_controls_are_usable_by_keyboard_and_screen_reader
+  elevation_class: a11y
+  source_gap: The prototype marked the status as a polite live region but asked about
+    signed-out work in a browser dialog and never had its new controls checked by
+    keyboard or screen reader.
+- id: AC-50
+  user_story: as a learner whose sign-in popup fails or is closed, when sign-in does
+    not complete I want to be told so that I know I am still signed out and can try
+    again
+  given: the user is signed out and has clicked "Sign in with Google"
+  when: the popup is blocked, closed, or the network is unreachable
+  then: 'the auth state returns to signed-out and a visible message appears beside
+    the button: "Could not sign in. Check your connection and try again."; the button
+    is enabled again and local work is unchanged'
+  test: test_learn_anywhere_AC50_sign_in_failure_shows_message
+  elevation_class: error_state
+  source_gap: Google sign-in failure is only logged to console and repaints signed-out
+    state; no visible error text is shown for popup failure.
+- id: AC-51
+  user_story: as a learner, when I click sign in twice quickly I want only one sign-in
+    attempt so that I do not get stacked popups
+  given: the auth state is "signing-in"
+  when: the user clicks "Sign in with Google" again within the same attempt
+  then: the second click is ignored and only one popup is open until the attempt resolves
+  test: test_learn_anywhere_AC51_sign_in_double_click_ignored
+  elevation_class: concurrent
+  source_gap: implicit
+- id: AC-52
+  user_story: as a learner whose save keeps failing, when the error appears I want
+    a way to retry so that I do not have to wait or reload
+  given: a save has failed and "Could not save just now. Trying again in a moment."
+    is shown
+  when: the user activates the "Try again" button shown beside that message
+  then: the save is retried immediately, the message clears on success, and on another
+    failure the message stays with the button enabled
+  test: test_learn_anywhere_AC52_sync_failure_manual_retry
+  elevation_class: error_state
+  source_gap: Firestore sync failure displays "Could not save just now. Trying again
+    in a moment." but there is no manual retry control.
 non_goals:
-  - "Google is the only way to sign in: no other sign-in providers, no email and password, and no teacher or parent view of her data."
-  - "Nothing about how lessons work on the current app is changed by this feature: marking, completion, timed tests, the six-lesson shape, the practice pools and the review queue behave exactly as they do without it."
-
+- 'Google is the only way to sign in: no other sign-in providers, no email and password,
+  and no teacher or parent view of her data.'
+- 'Nothing about how lessons work on the current app is changed by this feature: marking,
+  completion, timed tests, the six-lesson shape, the practice pools and the review
+  queue behave exactly as they do without it.'
 ui_contract:
   elements:
-    - role: button
-      name: "Sign in with Google"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: button
-      name: "Sign out"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: button
-      name: "Try again"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: button
-      name: "Add it"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: button
-      name: "Keep it separate"
-      actions: ["click", "keyboard-enter"]
-      source_screenshot: ""
-    - role: status
-      name: "Sync status"
-      actions: []
-      source_screenshot: ""
-    - role: region
-      name: "Your days"
-      actions: []
-      source_screenshot: ""
-
+  - role: button
+    name: Sign in with Google
+    actions:
+    - click
+    - keyboard-enter
+    source_screenshot: ''
+  - role: button
+    name: Sign out
+    actions:
+    - click
+    - keyboard-enter
+    source_screenshot: ''
+  - role: button
+    name: Try again
+    actions:
+    - click
+    - keyboard-enter
+    source_screenshot: ''
+  - role: button
+    name: Add it
+    actions:
+    - click
+    - keyboard-enter
+    source_screenshot: ''
+  - role: button
+    name: Keep it separate
+    actions:
+    - click
+    - keyboard-enter
+    source_screenshot: ''
+  - role: status
+    name: Sync status
+    actions: []
+    source_screenshot: ''
+  - role: region
+    name: Your days
+    actions: []
+    source_screenshot: ''
 design_refs: []
-
 entities:
   creates:
-    - "Firestore documents users/{uid}/kv/{id}: id is the localStorage key with every character outside A-Z a-z 0-9 _ . - written as ~ and four hex digits (reversible, so no two keys share an id); fields are v (the stored string, or null when the key was deleted — a deletion is kept as a document, never removed), t (the change stamp: a number never earlier than any stamp the writing device has made or seen) and s (the server's time of the write, used only to ask what changed since)"
-    - "learner data: every localStorage key beginning en8: except en8:theme — these and only these are uploaded"
-    - "sync bookkeeping: localStorage keys beginning en8-sync: (change stamps, unsent keys, read cursor, clock, last config, the marker that an account has used the device) — never uploaded"
-    - "held work: localStorage keys beginning en8-sync:parked: — encrypted with a key made from the uid, never uploaded, never copied into another account"
-    - "docs/sw.js, the service worker, stamped with the build's hash"
-    - "docs/precache.json, every published page and asset with a hash of its bytes"
-    - "docs/assets/auth.bundle.js, the bundled Firebase client, and docs/assets/firebase-config.js"
-    - "firestore.rules"
+  - 'Firestore documents users/{uid}/kv/{id}: id is the localStorage key with every
+    character outside A-Z a-z 0-9 _ . - written as ~ and four hex digits (reversible,
+    so no two keys share an id); fields are v (the stored string, or null when the
+    key was deleted — a deletion is kept as a document, never removed), t (the change
+    stamp: a number never earlier than any stamp the writing device has made or seen)
+    and s (the server''s time of the write, used only to ask what changed since)'
+  - 'learner data: every localStorage key beginning en8: except en8:theme — these
+    and only these are uploaded'
+  - 'sync bookkeeping: localStorage keys beginning en8-sync: (change stamps, unsent
+    keys, read cursor, clock, last config, the marker that an account has used the
+    device) — never uploaded'
+  - 'held work: localStorage keys beginning en8-sync:parked: — encrypted with a key
+    made from the uid, never uploaded, never copied into another account'
+  - docs/sw.js, the service worker, stamped with the build's hash
+  - docs/precache.json, every published page and asset with a hash of its bytes
+  - docs/assets/auth.bundle.js, the bundled Firebase client, and docs/assets/firebase-config.js
+  - firestore.rules
   requires:
-    - "Firebase project english8-add68: Auth with the Google provider, Cloud Firestore in Standard edition"
-    - "browser localStorage, Cache Storage, service workers and Web Crypto"
-    - "the per-day record the site keeps under en8:days:v1"
-
+  - 'Firebase project english8-add68: Auth with the Google provider, Cloud Firestore
+    in Standard edition'
+  - browser localStorage, Cache Storage, service workers and Web Crypto
+  - the per-day record the site keeps under en8:days:v1
 addressed_gaps:
-  - "Firestore sync failure displays \"Could not save just now. Trying again in a moment.\" but there is no manual retry control."
-  - "Google sign-in failure is only logged to console and repaints signed-out state; no visible error text is shown for popup failure."
-  - "The prototype marked the status as a polite live region but asked about signed-out work in a browser dialog and never had its new controls checked by keyboard or screen reader."
-  - "The prototype's app had no per-day list of path steps; main's record removes a step when a lesson is un-marked, which a merge by union would put back."
-  - "The prototype's app had no timed-test mode; the day record and the redraw for incoming work were never tried against one."
-  - "The prototype's app kept no per-day review counter; main's is a single number, which a later-wins merge would reduce to one device's count."
-
+- Firestore sync failure displays "Could not save just now. Trying again in a moment."
+  but there is no manual retry control.
+- Google sign-in failure is only logged to console and repaints signed-out state;
+  no visible error text is shown for popup failure.
+- The prototype marked the status as a polite live region but asked about signed-out
+  work in a browser dialog and never had its new controls checked by keyboard or screen
+  reader.
+- The prototype's app had no per-day list of path steps; main's record removes a step
+  when a lesson is un-marked, which a merge by union would put back.
+- The prototype's app had no timed-test mode; the day record and the redraw for incoming
+  work were never tried against one.
+- The prototype's app kept no per-day review counter; main's is a single number, which
+  a later-wins merge would reduce to one device's count.
 unaddressed_gaps:
-  - gap: "Which attempt of a task counts as the latest is still decided by each device's own clock; both attempts are always kept in the history."
-    reason: "Whole stored keys are ordered by a stamp that survives a wrong clock, but the time inside an attempt record is written by the lesson code. Making it authoritative means changing how tasks store attempts, which the second non-goal rules out here; it is the first thing to take up in a follow-on."
-  - gap: "A save that fails because the device's storage is full is not announced on the page."
-    reason: "The sync layer keeps a change stamp it could not store in memory for the life of the page, so the edit is not mis-merged, but the lesson's own write can still fail silently, as it does today without this feature. Announcing it belongs to the lesson pages; track it separately."
-  - gap: "A learner cannot delete her account's stored work or export it from the site."
-    reason: "The prototype has neither. Until it is built, the operator can delete a learner's documents in the Firebase console."
-  - gap: "Deletion records are kept in the backend for good."
-    reason: "A deleted key stays as a document with a null value so that no device brings it back. At one learner's volume this never matters; compacting them safely needs every device to have seen them."
-  - gap: "No screenshots of the prototype were captured, so design_refs is empty."
-    reason: "The header controls reuse the existing icon-button and status styles and the question reuses the existing card and button styles; the operator may add screenshots at review."
-  - gap: "Offline use, signing out with no connection and the pause before a redraw have only been tried in a headless browser on a laptop."
-    reason: "A phone's storage eviction and its own offline detection cannot be asserted by a test here; the operator tries it on her devices before release."
-
+- gap: Which attempt of a task counts as the latest is still decided by each device's
+    own clock; both attempts are always kept in the history.
+  reason: Whole stored keys are ordered by a stamp that survives a wrong clock, but
+    the time inside an attempt record is written by the lesson code. Making it authoritative
+    means changing how tasks store attempts, which the second non-goal rules out here;
+    it is the first thing to take up in a follow-on.
+- gap: A save that fails because the device's storage is full is not announced on
+    the page.
+  reason: The sync layer keeps a change stamp it could not store in memory for the
+    life of the page, so the edit is not mis-merged, but the lesson's own write can
+    still fail silently, as it does today without this feature. Announcing it belongs
+    to the lesson pages; track it separately.
+- gap: A learner cannot delete her account's stored work or export it from the site.
+  reason: The prototype has neither. Until it is built, the operator can delete a
+    learner's documents in the Firebase console.
+- gap: Deletion records are kept in the backend for good.
+  reason: A deleted key stays as a document with a null value so that no device brings
+    it back. At one learner's volume this never matters; compacting them safely needs
+    every device to have seen them.
+- gap: No screenshots of the prototype were captured, so design_refs is empty.
+  reason: The header controls reuse the existing icon-button and status styles and
+    the question reuses the existing card and button styles; the operator may add
+    screenshots at review.
+- gap: Offline use, signing out with no connection and the pause before a redraw have
+    only been tried in a headless browser on a laptop.
+  reason: A phone's storage eviction and its own offline detection cannot be asserted
+    by a test here; the operator tries it on her devices before release.
 elevation_summary:
   ac_count_before: 7
   ac_count_after: 52
-  classes_added: [error_state, concurrent, a11y]
-  cross_family_check: |
-    Extract ran on openai and elevate on anthropic. The criteria were then rewritten at /promote review (2026-10-12), because the extracted ones described the whole site on the prototype's older app, and read by codex (openai) on 2026-10-13, whose findings are folded in: bundled criteria split, the score ban limited to the day record, timed tests hiding every part of this feature, sign-out split into saved and held, the full list of synced keys, concurrent edits, an interrupted update, accessibility, and the document schema.
+  classes_added:
+  - error_state
+  - concurrent
+  - a11y
+  cross_family_check: 'Extract ran on openai and elevate on anthropic. The criteria
+    were then rewritten at /promote review (2026-10-12), because the extracted ones
+    described the whole site on the prototype''s older app, and read by codex (openai)
+    on 2026-10-13, whose findings are folded in: bundled criteria split, the score
+    ban limited to the day record, timed tests hiding every part of this feature,
+    sign-out split into saved and held, the full list of synced keys, concurrent edits,
+    an interrupted update, accessibility, and the document schema.
 
+    '
 ok: true
+ac_progress:
+  AC-1: passing
+  AC-2: passing
+  AC-3: passing
+  AC-4: passing
+  AC-5: passing
+  AC-6: passing
+  AC-7: passing
+  AC-8: passing
+  AC-9: passing
+  AC-10: passing
+  AC-11: passing
+  AC-12: passing
+  AC-13: passing
+  AC-14: passing
+  AC-15: passing
+  AC-16: passing
+  AC-17: passing
+  AC-18: passing
+  AC-19: passing
+  AC-20: passing
+  AC-21: passing
+  AC-22: passing
+  AC-23: passing
+  AC-24: passing
+  AC-25: passing
+  AC-26: passing
+  AC-27: passing
+  AC-28: passing
+  AC-29: passing
+  AC-30: passing
+  AC-31: passing
+  AC-32: passing
+  AC-33: passing
+  AC-34: passing
+  AC-35: passing
+  AC-36: passing
+  AC-37: passing
+  AC-38: passing
+  AC-39: passing
+  AC-40: passing
+  AC-41: passing
+  AC-42: passing
+  AC-43: passing
+  AC-44: passing
+  AC-45: passing
+  AC-46: passing
+  AC-47: passing
+  AC-48: passing
+  AC-49: passing
+  AC-50: passing
+  AC-51: passing
+progress: 'GREEN: AC-51 passing (51/52 ACs passing)'
