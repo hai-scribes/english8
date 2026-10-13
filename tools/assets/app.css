@@ -2071,6 +2071,8 @@ body.exam-on main{animation:v-fade .24s ease-out}
    only while there is something to say. Nothing here appears during a timed
    test: the header is already put away then, and the question goes with it. */
 .top .shell{height:auto;min-height:3.2rem;flex-wrap:wrap;row-gap:0}
+/* The breadcrumb gives way first, so the bar itself never breaks in two. */
+.top .crumb{flex:1 1 0}
 .acct{display:contents}
 .acct[hidden]{display:none}
 .acct-who{font-size:.8rem;color:var(--muted);max-width:14rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -2080,22 +2082,24 @@ body.exam-on main{animation:v-fade .24s ease-out}
 .acct-btn:hover{color:var(--teal)}
 .acct-btn:active:not(:disabled){transform:scale(.97)}
 .acct-btn:disabled{opacity:.55;cursor:default}
-.acct-status,.acct-err{order:10;flex:1 0 100%;font-size:.78rem;line-height:1.35;color:var(--muted);
+.acct-status,.acct-err{order:10;flex:1 1 60%;font-size:.78rem;line-height:1.35;color:var(--muted);
   text-align:right;padding:0 0 .45rem}
+.acct-err{flex-basis:100%}
 /* Empty, the status takes no room but stays in the page: it is a live region,
    and one that comes and goes is not announced reliably. */
 .acct-status:empty{padding:0;height:0;min-height:0}
 .acct-err:empty{display:none}
 .acct-err{color:var(--clay)}
-#syncRetry{order:11;margin:0 0 .45rem auto}
-.sync-ask{max-width:var(--measure,46rem);margin:.9rem auto 0;padding:.9rem 1rem;background:var(--surface);
-  border:1px solid var(--rule);border-radius:var(--r-lg)}
+#syncRetry{order:11;margin:0 0 .45rem}
+.sync-ask{max-width:46rem;margin:0 auto .7rem;padding:.9rem 1rem;background:var(--surface);
+  border:1px solid var(--rule);border-radius:var(--r-lg);width:calc(100% - 2rem);box-sizing:border-box}
 .sync-ask p{margin:0 0 .7rem}
 .sync-ask:focus{outline:none}
 .sync-ask:focus-visible{outline:3px solid color-mix(in srgb,var(--teal) 55%,transparent);outline-offset:2px}
 body.exam-on .sync-ask{display:none!important}
 @media (max-width:560px){
-  .acct-who{max-width:7.5rem}
+  /* On a phone the address has a line to itself, under the bar. */
+  .acct-who{order:9;flex:1 0 100%;max-width:none;font-size:.74rem;padding:0 0 .3rem}
   .acct-status,.acct-err{text-align:left}
 }
 @media (prefers-reduced-motion:reduce){ .acct-btn:active:not(:disabled){transform:none;opacity:.8} }

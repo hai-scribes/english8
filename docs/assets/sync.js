@@ -641,8 +641,8 @@ function ask(){
       + '<button class="btn" type="button" data-a="add">Add it</button>'
       + '<button class="btn quiet" type="button" data-a="separate">Keep it separate</button></div>';
     card.firstChild.textContent = TEXT.ask;
-    const top = document.querySelector("header.top");
-    top.parentNode.insertBefore(card, top.nextSibling);
+    /* In the header, which stays in view: she may be anywhere down the page. */
+    document.querySelector("header.top").appendChild(card);
     card.focus();
     card.addEventListener("click", ev => {
       const b = ev.target.closest("button[data-a]");
