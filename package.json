@@ -9,5 +9,9 @@
     "firebase": "^13.0.0",
     "firebase-tools": "^15.33.0",
     "typescript": "^7.0.2"
+  },
+  "scripts": {
+    "bundle": "esbuild tools/auth-src.mjs --bundle --format=esm --minify --legal-comments=none --target=es2020 --outfile=tools/assets/auth.bundle.js",
+    "test": "bash tests/support/playwright.sh"
   }
 }

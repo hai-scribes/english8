@@ -34,6 +34,29 @@ prints the coverage and art reports underneath without failing on either.
 other nine still run on a clean checkout. `--deploy` refuses that skip, because
 a gate that excused itself has not been run.
 
+## Her work on every device (sign-in, sync, the offline copy)
+
+`README.md` §"Signing in" says what it does. What must hold when you touch it:
+
+- **Lesson code never calls the sync layer.** `tools/assets/sync.js` watches
+  `localStorage` writes; `app.js` only counts the day's work (`logDone`) and
+  paints "Your days". A new `en8:` key syncs by existing — but if two devices
+  can both add to it, give it a merge rule in `sync.js` (`MERGED`, `merge3`)
+  or the later device silently wins it whole.
+- **Nothing is requested while the page reads idle or "Saved".** Say it
+  first (`say(TEXT.saving)` / `checking`), then fetch.
+- **Never redraw under her hands**, and never during a timed test (`busy()`).
+- **`tools/assets/auth.bundle.js` is generated** from `tools/auth-src.mjs` by
+  `npm run bundle`. Do not edit it; commit it with its source.
+- **The browser tests are the behaviour list**: `bash tests/support/playwright.sh`
+  (52 tests, one per criterion of `.specs/features/learn-anywhere.yaml`; needs
+  `npm install` and a Java runtime — `tests/README.md`). They are not in
+  `gates.sh`, so run them yourself after changing `sync.js`, `sw.js`, the
+  header in `build.py`, or the day record. The timing ones want a quiet machine.
+- `firebase-config.js` is public by design; the rules in `firestore.rules`
+  are what protect her work. A change to the rules is deployed by hand in the
+  Firebase console.
+
 ## Publishing, and the account this repo pushes as
 
 **The push is the deploy.** GitHub Pages serves `docs/` from `main` directly —

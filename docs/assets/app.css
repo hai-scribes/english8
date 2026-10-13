@@ -2064,3 +2064,47 @@ body.exam-on main{animation:v-fade .24s ease-out}
 .d-nav button,.sheet-x{transition:transform .12s var(--ease),background .15s,color .15s}
 .d-nav button:active:not(:disabled),.sheet-x:active{transform:scale(.97)}
 @media (prefers-reduced-motion:reduce){ .d-nav button:active:not(:disabled),.sheet-x:active{transform:none;opacity:.8} }
+
+/* ---- the account, and what the site is doing with her work ----------------
+   One row in the header: who is signed in and the way out, or the way in.
+   The status is a sentence and gets a line of its own under the bar, shown
+   only while there is something to say. Nothing here appears during a timed
+   test: the header is already put away then, and the question goes with it. */
+.top .shell{height:auto;min-height:3.2rem;flex-wrap:wrap;row-gap:0}
+.acct{display:contents}
+.acct[hidden]{display:none}
+.acct-who{font-size:.8rem;color:var(--muted);max-width:14rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.acct-btn{font:inherit;font-size:.8rem;font-weight:550;line-height:1;background:var(--sunk);color:var(--ink);
+  border:0;border-radius:999px;padding:.55rem .8rem;cursor:pointer;white-space:nowrap;
+  transition:transform .12s var(--ease),background .15s,color .15s}
+.acct-btn:hover{color:var(--teal)}
+.acct-btn:active:not(:disabled){transform:scale(.97)}
+.acct-btn:disabled{opacity:.55;cursor:default}
+.acct-status,.acct-err{order:10;flex:1 0 100%;font-size:.78rem;line-height:1.35;color:var(--muted);
+  text-align:right;padding:0 0 .45rem}
+/* Empty, the status takes no room but stays in the page: it is a live region,
+   and one that comes and goes is not announced reliably. */
+.acct-status:empty{padding:0;height:0;min-height:0}
+.acct-err:empty{display:none}
+.acct-err{color:var(--clay)}
+#syncRetry{order:11;margin:0 0 .45rem auto}
+.sync-ask{max-width:var(--measure,46rem);margin:.9rem auto 0;padding:.9rem 1rem;background:var(--surface);
+  border:1px solid var(--rule);border-radius:var(--r-lg)}
+.sync-ask p{margin:0 0 .7rem}
+.sync-ask:focus{outline:none}
+.sync-ask:focus-visible{outline:3px solid color-mix(in srgb,var(--teal) 55%,transparent);outline-offset:2px}
+body.exam-on .sync-ask{display:none!important}
+@media (max-width:560px){
+  .acct-who{max-width:7.5rem}
+  .acct-status,.acct-err{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){ .acct-btn:active:not(:disabled){transform:none;opacity:.8} }
+
+/* ---- Your days -------------------------------------------------------------
+   What was done on each day, a week at a time. A list, not a chart. */
+.days{margin-top:1.6rem}
+.days h2{font-size:1.05rem;margin:0 0 .5rem}
+.days h3{font-size:.86rem;font-weight:550;color:var(--muted);margin:.9rem 0 .35rem}
+.days ul{list-style:none;margin:0;padding:0}
+.days li{padding:.5rem 0;border-top:.5px solid var(--rule);font-size:.92rem}
+.days li b{font-weight:600;margin-right:.5rem}

@@ -39,6 +39,14 @@ import markdown
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "units"
 OUT = ROOT / "docs"
+# The browser tests build the site a second time, somewhere else, as a later
+# build of the same sources: EN8_OUT names the folder and EN8_BUILD_SALT makes
+# the scripts and styles differ by a trailing comment, as a real edit would.
+if os.environ.get("EN8_OUT"):
+    OUT = Path(os.environ["EN8_OUT"]).resolve()
+BUILD_SALT = os.environ.get("EN8_BUILD_SALT", "")
+# Stamped into every page and the service worker once the pages are written.
+BUILD_MARK = "__EN8_BUILD__"
 # Generated, but not part of the site: the IELTS evidence register is written
 # for whoever maintains the course, not for the learner using it.
 REGISTER = ROOT / "research" / "evidence-register.md"
@@ -2837,12 +2845,22 @@ def strand(u, key, default=""):
 # itself. Eight characters is plenty to distinguish one build from the next,
 # and it is derived rather than bumped by hand, because a version nobody
 # remembers to bump is worse than none.
+SALTED = (".js", ".css")
+
+
+def _asset_bytes(path: Path) -> bytes:
+    src = path.read_bytes()
+    if BUILD_SALT and path.suffix in SALTED and path.name != "firebase-config.js":
+        src += f"\n/* build: {BUILD_SALT} */\n".encode()
+    return src
+
+
 def _asset_hash(name: str) -> str:
-    src = (Path(__file__).resolve().parent / "assets" / name).read_bytes()
-    return hashlib.sha256(src).hexdigest()[:8]
+    return hashlib.sha256(_asset_bytes(Path(__file__).resolve().parent / "assets" / name)).hexdigest()[:8]
 
 
-ASSET_V = {"css": _asset_hash("app.css"), "js": _asset_hash("app.js")}
+ASSET_V = {"css": _asset_hash("app.css"), "js": _asset_hash("app.js"),
+           "sync": _asset_hash("sync.js"), "auth": _asset_hash("auth.bundle.js")}
 
 
 def shell(*, title, depth, body, crumb, data=None, desc=""):
@@ -2880,7 +2898,7 @@ def shell(*, title, depth, body, crumb, data=None, desc=""):
     preload_tags = "\n".join(
         f'<link rel="preload" as="image" href="{e(h)}">' for h in dict.fromkeys(preload))
     return f"""<!doctype html>
-<html lang="en">
+<html lang="en" data-build="{BUILD_MARK}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -2896,6 +2914,14 @@ def shell(*, title, depth, body, crumb, data=None, desc=""):
   <a class="mark" href="{up}index.html"><b>English 8</b><span>Global Success</span></a>
   <nav class="crumb" aria-label="Breadcrumb">{crumb_html}</nav>
   <span class="sp"></span>
+  <div class="acct" id="acct" hidden>
+    <span class="acct-status" id="syncStatus" role="status" aria-label="Sync status"></span>
+    <button class="acct-btn" id="syncRetry" type="button" hidden>Try again</button>
+    <span class="acct-who" id="acctWho" hidden></span>
+    <button class="acct-btn" id="signInBtn" type="button" hidden>Sign in with Google</button>
+    <button class="acct-btn" id="signOutBtn" type="button" hidden>Sign out</button>
+    <span class="acct-err" id="signInErr" role="alert"></span>
+  </div>
   <button class="iconbtn round" id="themeBtn" type="button" aria-label="Colour theme">◐</button>
 </div></header>
 <div class="shell"><main>
@@ -2910,6 +2936,7 @@ def shell(*, title, depth, body, crumb, data=None, desc=""):
   </details>
 </footer></div>
 {data_tag}
+<script src="{up}assets/sync.js?v={ASSET_V['sync']}" data-config="{up}assets/firebase-config.js" data-auth="{up}assets/auth.bundle.js?v={ASSET_V['auth']}"></script>
 <script src="{up}assets/app.js?v={ASSET_V['js']}"></script>
 </body>
 </html>
@@ -3038,6 +3065,11 @@ def page_home(units, reviews=()) -> str:
       <p class="lede">Come back tomorrow.</p>
       <div class="row"><a class="btn quiet" id="keepGoing" href="#">Keep going</a></div>
     </div>
+  </section>
+
+  <section class="days" id="yourDays" aria-labelledby="daysTitle">
+    <h2 id="daysTitle">Your days</h2>
+    <div id="daysList"></div>
   </section>
 
   <details class="browse" id="browse">
@@ -3902,6 +3934,46 @@ def load_reviews(units) -> list:
 
 
 # -------------------------------------------------------------------- main ---
+# -------------------------------------------------------- the offline copy ---
+# A build has an id, and the service worker lives by it: a new id is a new
+# worker and a new list of files to keep. The id is a hash of everything
+# published, taken while the pages still carry a placeholder where the id
+# goes, so it depends on nothing but the sources.
+#
+# precache.json lists every page and file with a hash of its bytes. The
+# worker fetches what changed, and drops what is no longer listed. Scripts and
+# styles are listed under the address the pages ask for them by — with their
+# ?v= — so two builds' copies never share a name.
+VERSIONED = {"app.css": "css", "app.js": "js", "sync.js": "sync", "auth.bundle.js": "auth"}
+# Never kept by the worker: the settings must reach the network, and these two
+# are how a device learns there is something new.
+NOT_KEPT = {"assets/firebase-config.js", "sw.js", "precache.json", ".nojekyll"}
+
+
+def stamp_build() -> int:
+    files = sorted(f for f in OUT.rglob("*") if f.is_file()
+                   and f.relative_to(OUT).as_posix() not in NOT_KEPT)
+    h = hashlib.sha256(BUILD_SALT.encode())
+    for f in files:
+        h.update(f.relative_to(OUT).as_posix().encode())
+        h.update(hashlib.sha256(f.read_bytes()).digest())
+    build = h.hexdigest()[:12]
+    listed = {}
+    for f in files:
+        rel = f.relative_to(OUT).as_posix()
+        if f.suffix == ".html":
+            f.write_text(f.read_text(encoding="utf-8").replace(BUILD_MARK, build), encoding="utf-8")
+        name = rel
+        if rel.startswith("assets/") and f.name in VERSIONED:
+            name = f"{rel}?v={ASSET_V[VERSIONED[f.name]]}"
+        listed[name] = hashlib.sha256(f.read_bytes()).hexdigest()[:16]
+    sw = (Path(__file__).resolve().parent / "sw.js").read_text(encoding="utf-8")
+    (OUT / "sw.js").write_text(sw.replace(BUILD_MARK, build), encoding="utf-8")
+    (OUT / "precache.json").write_text(
+        json.dumps({"v": build, "files": listed}, indent=0, sort_keys=True) + "\n", encoding="utf-8")
+    return len(listed)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true", help="parse and report; write nothing")
@@ -4014,7 +4086,7 @@ def main() -> int:
     (OUT / "assets").mkdir(parents=True, exist_ok=True)
     for a in ASSETS.iterdir():
         if a.is_file():
-            shutil.copy2(a, OUT / "assets" / a.name)
+            (OUT / "assets" / a.name).write_bytes(_asset_bytes(a))
     # The cast sheets, the background plates, and the prop and effect cut-outs,
     # published under the names app.js asks for. Per-emotion drawings are not
     # copied: they are masters, and so are the un-keyed prop originals.
@@ -4062,7 +4134,9 @@ def main() -> int:
     if leaked:
         raise SystemExit("unrendered widget placeholder in: " + ", ".join(leaked[:5]))
 
-    print(f"built {pages} pages into {OUT.relative_to(ROOT)}/ — "
+    kept = stamp_build()
+    where = OUT.relative_to(ROOT) if OUT.is_relative_to(ROOT) else OUT
+    print(f"built {pages} pages into {where}/ — "
           f"{len(units)} units, {tot_ex} exercises, {tot_ans} answers, "
           f"{tot_vocab} vocabulary rows, {tot_bridge} IELTS bridges")
     print(f"        {tot_task} marked tasks ({tot_item} items), {tot_audio} listening "

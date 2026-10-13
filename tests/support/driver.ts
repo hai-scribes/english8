@@ -1128,6 +1128,9 @@ export const LEARNER_KEY_SAMPLES: Record<string, { key: string; value: string }>
     value: JSON.stringify({ "01-3-b1": { _t: 1, "3.1-1-gap-fill-1": 1, "3.1-3-choice-1": 1 } }),
   },
   thread: { key: "en8:thread:articles:06:4", value: JSON.stringify({ got: 3, all: 5 }) },
+  /* A read-again (mode "read") keeps its rounds under the same family as a
+     talk-again; it is its own kind of work on its own page. */
+  readAgain: { key: "en8:fluency:02-4-f1", value: JSON.stringify([{ secs: 41, left: 0 }, { secs: 33, left: 0 }]) },
   calib: {
     key: "en8:calib:v1",
     value: JSON.stringify({ "01": { "0": { n: 0, ok: 0 }, "1": { n: 5, ok: 5 } } }),
