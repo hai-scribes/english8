@@ -308,15 +308,22 @@ async function token(){
   pass = { t: await window.EN8Auth.token(), at: Date.now() };
   return pass.t;
 }
+/* A request the store accepts and never answers is a failed request: without
+   a limit the page would read "Saving…" for as long as it stayed open. */
+const LONGEST_ANSWER = 20000;
 async function call(method, url, body){
+  const stop = new AbortController();
+  const limit = setTimeout(() => stop.abort(), LONGEST_ANSWER);
   const send = async () => fetch(url, {
     method, headers: { authorization: "Bearer " + await token(), "content-type": "application/json" },
-    body: body ? JSON.stringify(body) : undefined,
+    body: body ? JSON.stringify(body) : undefined, signal: stop.signal,
   });
-  let res = await send();
-  if (res.status === 401){ pass = null; res = await send(); }
-  let json = null;
-  try { json = await res.json(); } catch(e){}
+  let res, json = null;
+  try {
+    res = await send();
+    if (res.status === 401){ pass = null; res = await send(); }
+    try { json = await res.json(); } catch(e){ if (stop.signal.aborted) throw e; }
+  } finally { clearTimeout(limit); }
   if (!res.ok){
     const err = new Error("store " + res.status);
     const info = Array.isArray(json) ? json[0] : json;
@@ -449,16 +456,22 @@ const unsent = () => Object.keys(meta().dirty).length > 0;
 function changed(){
   if (authState !== "signed-in" || !user) return;
   if (!online()){ say(TEXT.offline); return; }
-  if (statusText !== TEXT.failed) say(TEXT.saving);
+  /* While saves are failing, a new change waits for the next try like the
+     rest: the wait between tries is for the store's sake, not hers. */
+  if (statusText === TEXT.failed) return;
+  say(TEXT.saving);
   clearTimeout(pushTimer);
   pushTimer = setTimeout(() => cycle("save"), 700);
 }
 function cycle(why){
   if (running){ again = true; return running; }
-  running = round(why).finally(() => {
+  running = round(why).then(ok => {
     running = null;
-    if (again){ again = false; cycle("again"); }
-  });
+    const more = again;
+    again = false;
+    if (more && ok) cycle("again");        // after a failure the timer decides
+    return ok;
+  }, () => { running = null; again = false; return false; });
   return running;
 }
 async function round(why){
@@ -631,6 +644,7 @@ async function restoreHeld(u){
 /* ---------------- the question ------------------------------------------ */
 function ask(){
   return new Promise(done => {
+    const was = document.activeElement;
     const card = document.createElement("div");
     card.className = "sync-ask";
     card.id = "syncAsk";
@@ -641,14 +655,20 @@ function ask(){
       + '<button class="btn" type="button" data-a="add">Add it</button>'
       + '<button class="btn quiet" type="button" data-a="separate">Keep it separate</button></div>';
     card.firstChild.textContent = TEXT.ask;
-    /* In the header, which stays in view: she may be anywhere down the page. */
-    document.querySelector("header.top").appendChild(card);
-    card.focus();
+    /* Above the lesson, and the page is brought up to it: she may be anywhere
+       down the page, and a card pinned over her work would be in its way. */
+    const top = document.querySelector("header.top");
+    top.parentNode.insertBefore(card, top.nextSibling);
+    window.scrollTo(0, 0);
+    card.focus({ preventScroll: true });
     card.addEventListener("click", ev => {
       const b = ev.target.closest("button[data-a]");
       if (!b) return;
       card.remove();
-      if (ui && !ui.outBtn.hidden) ui.outBtn.focus();
+      /* Focus goes back to where it was; the button she pressed to sign in
+         is gone by now, and Sign out stands where it stood. */
+      if (was && was !== document.body && document.contains(was) && was.offsetParent !== null) was.focus();
+      else if (ui && !ui.outBtn.hidden) ui.outBtn.focus();
       done(b.dataset.a);
     });
   });

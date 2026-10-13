@@ -2079,6 +2079,8 @@ body.exam-on main{animation:v-fade .24s ease-out}
 .acct-btn{font:inherit;font-size:.8rem;font-weight:550;line-height:1;background:var(--sunk);color:var(--ink);
   border:0;border-radius:999px;padding:.55rem .8rem;cursor:pointer;white-space:nowrap;
   transition:transform .12s var(--ease),background .15s,color .15s}
+.acct-btn{position:relative}
+.acct-btn::after{content:"";position:absolute;inset:-.5rem -.2rem}   /* a finger-sized target */
 .acct-btn:hover{color:var(--teal)}
 .acct-btn:active:not(:disabled){transform:scale(.97)}
 .acct-btn:disabled{opacity:.55;cursor:default}
@@ -2091,7 +2093,7 @@ body.exam-on main{animation:v-fade .24s ease-out}
 .acct-err:empty{display:none}
 .acct-err{color:var(--clay)}
 #syncRetry{order:11;margin:0 0 .45rem}
-.sync-ask{max-width:46rem;margin:0 auto .7rem;padding:.9rem 1rem;background:var(--surface);
+.sync-ask{max-width:46rem;margin:.9rem auto 0;padding:.9rem 1rem;background:var(--surface);
   border:1px solid var(--rule);border-radius:var(--r-lg);width:calc(100% - 2rem);box-sizing:border-box}
 .sync-ask p{margin:0 0 .7rem}
 .sync-ask:focus{outline:none}

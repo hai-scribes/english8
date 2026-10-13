@@ -21,7 +21,7 @@
    and takes over only when every file of it is here; until then the old build
    is what an offline page gets, whole. Only then are the old build's files
    dropped. An update cut off half way therefore costs nothing. */
-const BUILD = "ce2e4c8c4db6";
+const BUILD = "e8a36b7c657a";
 const PAGES = "en8-pages-";
 const FILES = "en8-files";
 const PATIENCE = 3000;
