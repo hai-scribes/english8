@@ -2915,7 +2915,7 @@ def shell(*, title, depth, body, crumb, data=None, desc=""):
   <nav class="crumb" aria-label="Breadcrumb">{crumb_html}</nav>
   <span class="sp"></span>
   <div class="acct" id="acct" hidden>
-    <span class="acct-status" id="syncStatus" role="status" aria-label="Sync status"></span>
+    <span class="acct-status" id="syncStatus" role="status" aria-label="Sync status" tabindex="-1"></span>
     <button class="acct-btn" id="syncRetry" type="button" hidden>Try again</button>
     <span class="acct-who" id="acctWho" hidden></span>
     <button class="acct-btn" id="signInBtn" type="button" hidden>Sign in with Google</button>

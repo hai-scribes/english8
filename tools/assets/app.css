@@ -2085,6 +2085,7 @@ body.exam-on main{animation:v-fade .24s ease-out}
 .acct-btn:focus-visible{outline:3px solid var(--teal);outline-offset:2px;border-radius:999px}
 .acct-btn:active:not(:disabled){transform:scale(.97)}
 .acct-btn:disabled,.acct-btn[aria-disabled="true"]{opacity:.55;cursor:default}
+.acct-status:focus{outline:none}
 .acct-status,.acct-err{order:10;flex:1 1 60%;font-size:.84rem;line-height:1.35;color:var(--muted);
   text-align:right;padding:0 0 .45rem}
 .acct-err{flex-basis:100%}

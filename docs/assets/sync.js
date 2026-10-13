@@ -165,7 +165,11 @@ function wire(){
          inBtn: $("signInBtn"), outBtn: $("signOutBtn"), err: $("signInErr") };
   ui.inBtn.addEventListener("click", signIn);
   ui.outBtn.addEventListener("click", signOut);
-  ui.retry.addEventListener("click", () => { wait = FIRST_WAIT; clearTimeout(retryTimer); cycle("retry"); });
+  ui.retry.addEventListener("click", () => {
+    if (ui.retry.getAttribute("aria-disabled") === "true") return;
+    retrying = true;
+    wait = FIRST_WAIT; clearTimeout(retryTimer); cycle("retry");
+  });
   paint();
 }
 function setAuth(s){
@@ -216,8 +220,14 @@ function paint(){
   paintState(t);
   /* A control that goes away under the keyboard takes focus with it unless
      focus is handed on first. */
-  const hideRetry = !(inn && statusText === TEXT.failed);
-  if (hideRetry && document.activeElement === ui.retry) ui.outBtn.focus();
+  /* While a try she asked for is running the button stays where it is, not
+     pressable, so a second press cannot land on whatever took its place. When
+     it does go, focus goes to the status, which is what she is waiting on. */
+  const trying = retrying && statusText === TEXT.saving;
+  const hideRetry = !(inn && (statusText === TEXT.failed || trying));
+  if (!trying && statusText !== TEXT.failed) retrying = false;
+  ui.retry.setAttribute("aria-disabled", trying ? "true" : "false");
+  if (hideRetry && document.activeElement === ui.retry) ui.status.focus();
   ui.retry.hidden = hideRetry;
   ui.who.hidden = !inn;
   ui.who.textContent = ui.who.title = inn && o ? o.email || "" : "";
@@ -304,7 +314,7 @@ function mergeList(b, m, t, mineLater, fam){
   return out;
 }
 function merge3(b, m, t, mineLater, fam, depth){
-  if (same(m, t)) return m;
+  if (same(m, t) && (!SUMMED[fam] || b === undefined || same(b, m))) return m;
   if (b !== undefined && same(b, m)) return t;
   if (b !== undefined && same(b, t)) return m;
   if (fam === "tasks" && depth === 1 && isObj(m) && isObj(t)) return mergeTask(isObj(b) ? b : null, m, t, mineLater);
@@ -435,7 +445,13 @@ function take(docs){
       m.st[k] = d.t;
       continue;
     }
-    if (here === d.v){ delete m.dirty[k]; drop(K.base + k); m.st[k] = d.t; continue; }
+    /* The same value on both sides is agreement — except for a count each
+       device added to, where two devices each adding one arrive at the same
+       figure and the true one is higher. Its own write coming back (the same
+       stamp) is always agreement. */
+    if (here === d.v && (d.t === m.st[k] || !SUMMED[family(k)])){
+      delete m.dirty[k]; drop(K.base + k); m.st[k] = d.t; continue;
+    }
     const base = readJSON(K.base + k, { v: null }).v;
     const out = merge(k, base, here, d.v, m.st[k] || 0, d.t);
     if (out !== here){ writeWork(k, out); moved.push(k); }
@@ -478,10 +494,11 @@ async function push(uid){
     const m = meta();
     const keys = Object.keys(m.dirty).slice(0, BATCH);
     if (!keys.length) return sent;
-    const stamps = {};
+    const stamps = {}, sentAs = {};
     const writes = keys.map(k => {
       const v = get(k);
       stamps[k] = m.st[k] || 0;
+      sentAs[k] = v;
       return {
         update: { name: docName(uid, idOf(k)), fields: {
           v: v === null ? { nullValue: null } : { stringValue: v },
@@ -499,8 +516,10 @@ async function push(uid){
     keys.forEach((k, i) => {
       const r = j.writeResults && j.writeResults[i];
       n.u[k] = (r && r.updateTime) || j.commitTime || n.u[k];
-      /* Changed again while the write was on its way: it is still unsent. */
+      /* Changed again while the write was on its way: it is still unsent,
+         and what it now differs from is the copy that was just sent. */
       if ((n.st[k] || 0) === stamps[k]){ delete n.dirty[k]; drop(K.base + k); }
+      else { try { put(K.base + k, JSON.stringify({ v: sentAs[k] })); } catch(e){} }
     });
     saveMeta(n);
     sent += keys.length;
@@ -709,6 +728,7 @@ async function restoreHeld(u){
 
 /* ---------------- the question ------------------------------------------ */
 let asking = null;               // while the question is open: how to withdraw it
+let retrying = false;            // a try she asked for is on its way
 function ask(){
   return new Promise(done => {
     const was = document.activeElement;
