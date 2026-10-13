@@ -2,7 +2,7 @@
 
 The tests are Playwright (`@playwright/test`, TypeScript, Chromium). They live
 in `tests/` beside `tests/support/`. One file per criterion,
-`tests/learn-anywhere.AC-N.spec.ts`. Run with `bash tests/support/run.sh <file>`,
+`tests/learn-anywhere.AC-N.spec.ts`. Run with `bash tests/support/playwright.sh <file>`,
 which starts the Firebase Auth and Firestore emulators and the test site by
 itself. Nothing reaches Google or the real project.
 

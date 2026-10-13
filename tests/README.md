@@ -8,8 +8,8 @@ Nothing in them reaches Google or the live project.
 ```sh
 npm install                              # once
 npx playwright install chromium          # once
-bash tests/support/run.sh                # everything
-bash tests/support/run.sh tests/learn-anywhere.AC-4.spec.ts
+bash tests/support/playwright.sh                # everything
+bash tests/support/playwright.sh tests/learn-anywhere.AC-4.spec.ts
 ```
 
 The run starts the emulators and the test site itself and builds the site
@@ -36,8 +36,8 @@ Ports: site 8793, Auth 9199, Firestore 8188 (`support/ports.mjs`).
 export MAIN_ROOT="$PWD"                  # from a linked worktree
 export TYPECHECK_CMD='npx tsc -p . && node --check tools/assets/app.js'
 export BUILD_CMD='python3 tools/build.py --check'
-export TEST_CMD='bash tests/support/run.sh'
-export INTERACTION_TEST_CMD='bash tests/support/run.sh'
-export REGRESSION_BATCH_CMD='bash tests/support/run.sh'
+export TEST_CMD='bash tests/support/playwright.sh'
+export INTERACTION_TEST_CMD='bash tests/support/playwright.sh'
+export REGRESSION_BATCH_CMD='bash tests/support/playwright.sh'
 export SCRIBE_CONTEXT_PACK_CMD='cat tests/support/PACK.md'
 ```
