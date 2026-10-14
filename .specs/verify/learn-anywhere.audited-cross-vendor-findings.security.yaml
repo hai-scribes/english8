@@ -1,0 +1,10 @@
+# Pre-seeded by audit-sign.sh (per-role: security)
+findings:
+  - id: SEC-1
+    dimension: security
+    severity: MEDIUM
+    status: covered
+    description: "Held offline work can be decrypted from browser storage after the client-not-loaded sign-out path: tools/assets/sync.js derives the parked-work AES key from the uid alone, while endSession can leave the same uid readable in en8-sync:gone until the Firebase client later loads. A shared-device user with storage access can use those two localStorage values to decrypt the parked en8-sync:parked:* blob and recover unsaved task data."
+    test_name: "tests/learn-anywhere.security-held-work-key.spec.ts::security_held_work_is_not_decryptable_with_readable_storage_markers"
+    scope: in-diff
+confidence_statements: {}

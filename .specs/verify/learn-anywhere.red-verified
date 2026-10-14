@@ -1,0 +1,11 @@
+# Atelier W5 HMAC marker (signed by marker-sign.sh)
+slug: learn-anywhere
+marker_type: red-verified
+signed_at: 2026-10-13T09:35:38Z
+cmd: red-phase-check.sh learn-anywhere
+payload_schema_version: 1.0.0
+key_epoch_id: a67cea4118a8
+prompt_content_address: 066eed97fc0d3978a12d42c0116d22fe7c745d2c0fd1e333e8c49cd661778d5e
+degraded_isolation: false
+sig: a27e2c6508d5570dc26d46066bf468201ded1995e55a7f73c782ce0ddb863bc9
+hmac_status: signed

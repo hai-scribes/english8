@@ -234,6 +234,13 @@ pills. Concentric corners: an inner radius is smaller than the one around it.
   one and never added up.
 - **Question.** One at a time; a right pick glows and moves on, a wrong pick
   shows the answer in place and waits.
+- **Account.** In the header, before the theme button: the email in muted
+  text and one small `sunk` pill (*Sign out*), or the pill alone (*Sign in
+  with Google*). The status is a sentence on its own line under the bar,
+  muted, right-aligned (left on a phone), and takes no room while it has
+  nothing to say. The whole header is put away during a timed test.
+- **Your days.** On Today, under the day's card: a plain list, one line per
+  day worked, grouped by week. Not a chart, and no figure to beat.
 
 ## Do's and Don'ts
 

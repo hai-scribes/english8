@@ -1,0 +1,20 @@
+# The shape of an audit finding in .specs/verify/<slug>.audited-*-findings*.yaml,
+# as audit-sign.sh validates it.
+#
+# findings:
+#   - id: EC-1                    # required; EC- edge case, SEC- security, UX- ux review
+#     severity: HIGH | MEDIUM | LOW   # required
+#     description: >-             # required; what is wrong and where, in a sentence or two
+#       ...
+#     status: covered | open | wontfix   # required
+#     # HIGH and MEDIUM must be `covered`, and name the test that fails on the
+#     # defect and passes once it is fixed:
+#     test_name: test_<slug>_EDGE_<what>
+#     test_file: tests/<slug>.edge-<what>.spec.ts
+#     location: path:line          # optional
+#     fix: ...                     # optional
+# confidence_statements:           # one per dimension audited, 30+ characters each
+#   edge-cases: ...
+#   security: ...
+#   ux-review: ...
+findings: []

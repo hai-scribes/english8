@@ -1,0 +1,14 @@
+# Atelier W5 HMAC marker (signed by marker-sign.sh)
+slug: learn-anywhere
+marker_type: regression-t1
+signed_at: 2026-10-14T07:44:33Z
+cmd: regression-runner.sh --tier=2 --spec=learn-anywhere
+payload_schema_version: 1.0.0
+key_epoch_id: a67cea4118a8
+prompt_content_address: 89651debbef0623467146f5da2278ad4cff0f4ef84171fdda4be1b05543314f5
+degraded_isolation: false
+extra:
+  own_scope: ac-test-fallback
+  own_files: 52
+sig: 1aa6a59bbcafb2023ddfb32ff69e71c9b52a7aae6c5f6ed33d37661fa5a2773f
+hmac_status: signed

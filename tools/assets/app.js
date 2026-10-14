@@ -84,7 +84,8 @@ const LESSONS = 6;
   const days = read("en8:days:v1");
   if (days){
     for (const d of Object.keys(days)){
-      const st = (days[d] && days[d].steps) || [];
+      if (!days[d] || typeof days[d] !== "object") continue;
+      const st = Array.isArray(days[d].steps) ? days[d].steps : [];
       days[d].steps = st.filter(x => !/^\d\d:L4$/.test(x))
         .map(x => x.replace(/^(\d\d):L([5-7])$/, (_, u, l) => u + ":L" + DOWN[l]));
     }
@@ -251,14 +252,19 @@ function markCheck(n, on){
    exactly the kind of pressure nobody has evidence about. */
 const D_KEY = "en8:days:v1";
 let DAYS = (() => {
-  try { return JSON.parse(localStorage.getItem(D_KEY)) || {}; } catch(e){ return {}; }
+  try {
+    const d = JSON.parse(localStorage.getItem(D_KEY));
+    return d && typeof d === "object" && !Array.isArray(d) ? d : {};
+  } catch(e){ return {}; }
 })();
 function saveDays(){
   try { localStorage.setItem(D_KEY, JSON.stringify(DAYS)); } catch(e){}
 }
 function dayRec(){
   const t = String(todayNum());
-  if (!DAYS[t]) DAYS[t] = { reviewed:0, steps:[] };
+  if (!DAYS[t] || typeof DAYS[t] !== "object") DAYS[t] = { reviewed:0, steps:[] };
+  /* A record from elsewhere may not have the shape this page writes. */
+  if (!Array.isArray(DAYS[t].steps)) DAYS[t].steps = [];
   return DAYS[t];
 }
 function logStep(id, on){
@@ -270,6 +276,57 @@ function logStep(id, on){
 function logReviewed(){
   dayRec().reviewed++;
   saveDays();
+}
+let MARKING_TOGETHER = false;
+/* The other kinds of work a day can hold, each counted where the work is
+   committed: a marked task answered, a word set answered, a practice run
+   finished, a timed reading sat, a piece of writing handed in. Reviews are `reviewed`, above. */
+function logDone(kind){
+  const d = dayRec();
+  d[kind] = (d[kind] || 0) + 1;
+  saveDays();
+}
+
+/* "Your days", on Today: what was done on each day, newest first, a week at a
+   time. Counts of things done and nothing else -- no run of days, no figure
+   to beat, no time. A day with nothing done is not listed. */
+const DAY_NAMES = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const MONTH_NAMES = ["January","February","March","April","May","June","July","August",
+                     "September","October","November","December"];
+function dayParts(d){
+  const n = (c, one, many) => c ? [c + " " + (c === 1 ? one : many)] : [];
+  const steps = Array.isArray(d.steps) ? d.steps.filter(x => typeof x === "string") : [];
+  const lessons = steps.filter(x => /:L\d+$/.test(x)).length;
+  const tests = steps.filter(x => /:T$/.test(x)).length;
+  const checks = steps.filter(x => /^R\d+$/.test(x)).length;
+  return [].concat(
+    n(d.tasks, "task answered", "tasks answered"),
+    n(d.sets, "word set", "word sets"),
+    n(d.runs, "practice run", "practice runs"),
+    n(d.reviewed, "review", "reviews"),
+    n(d.readings, "timed reading", "timed readings"),
+    n(d.writing, "piece of writing", "pieces of writing"),
+    n(lessons, "lesson finished", "lessons finished"),
+    n(tests, "unit test", "unit tests"),
+    n(checks, "checkpoint", "checkpoints"));
+}
+function paintDays(){
+  const box = $("#yourDays"), list = $("#daysList");
+  if (!box || !list) return;
+  const dateOf = num => new Date(num * DAY);              // the day number is a local date, read as UTC
+  const label = dt => DAY_NAMES[dt.getUTCDay()] + " " + dt.getUTCDate() + " " + MONTH_NAMES[dt.getUTCMonth()];
+  const weeks = new Map();
+  Object.keys(DAYS).map(Number).filter(Number.isFinite).sort((a, b) => b - a).forEach(num => {
+    const parts = dayParts(DAYS[String(num)] || {});
+    if (!parts.length) return;
+    const monday = num - ((dateOf(num).getUTCDay() + 6) % 7);
+    if (!weeks.has(monday)) weeks.set(monday, []);
+    weeks.get(monday).push('<li><b>' + label(dateOf(num)) + '</b> ' + esc(parts.join(" \u00b7 ")) + '</li>');
+  });
+  box.hidden = false;
+  list.innerHTML = !weeks.size ? '<p class="lede small">Nothing here yet.</p>' : Array.from(weeks.entries()).map(([monday, days]) =>
+    '<h3>Week of ' + label(dateOf(monday)) + ': you worked on ' + days.length
+    + (days.length === 1 ? ' day.' : ' days.') + '</h3><ul>' + days.join("") + '</ul>').join("");
 }
 
 /* ---------------- the path -----------------------------------------------
@@ -1595,6 +1652,7 @@ function paintToday(){
   const card2 = $("#todayCard");
   if (card2) card2.classList.toggle("is-done", done);
   paintPath(step);
+  paintDays();
 }
 
 /* ================== marked tasks =========================================
@@ -2141,6 +2199,9 @@ function initTasks(){
                       at: Date.now(), given: answers, conf: conf.slice(), log };
       saveTasks();
       paintLog();
+      /* A timed reading is one sitting, marked together: the day counts the
+         reading, not each task in it. */
+      if (!MARKING_TOGETHER) logDone("tasks");
       document.dispatchEvent(new CustomEvent("en8:task-done", { detail:{ id:t.id } }));
     };
     check.addEventListener("click", commit);
@@ -4698,7 +4759,7 @@ function initVocab(){
         retry: it => { const w = byK(it); return w ? variant(w, met, used) : null; },
         onDone: r => {
           log.push({ set: logSet, right: r.right, total: r.total, at: Date.now() });
-          save(); stacks(logSet);
+          save(); logDone("sets"); stacks(logSet);
         },
       });
     }
@@ -4763,7 +4824,7 @@ function initBanks(){
           used.add(x.id);
           return Object.assign({ type: p.type }, x);
         },
-        onDone: r => { log.push({ right: r.right, total: r.total, at: Date.now() }); save(); cover(); },
+        onDone: r => { log.push({ right: r.right, total: r.total, at: Date.now() }); save(); logDone("runs"); cover(); },
       });
     }
     cover();
@@ -5160,6 +5221,7 @@ function initWrite(){
       rec.deadline = null;
       rec.committed = true;
       save();
+      logDone("writing");
       showAfter();
       root.scrollIntoView({ behavior:"smooth", block:"start" });
     };
@@ -5455,7 +5517,9 @@ function initClock(){
       const nav = $(".c-nav", root);
       if (nav) nav.hidden = true;
       if (why === "time") parts.tasks.forEach(x => { if (x.dataset.done !== "1") x.dataset.timeup = "1"; });
-      markAll();
+      MARKING_TOGETHER = true;
+      try { markAll(); } finally { MARKING_TOGETHER = false; }
+      logDone("readings");
       state.innerHTML = why === "time" ? "<b>Time.</b> Your answers are marked below."
                                        : "<b>Finished.</b> Your answers are marked below.";
       root.scrollIntoView({ behavior:"smooth", block:"start" });

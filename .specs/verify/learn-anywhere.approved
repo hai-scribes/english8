@@ -1,0 +1,15 @@
+# Atelier W5 HMAC marker (signed by marker-sign.sh)
+slug: learn-anywhere
+marker_type: approved
+signed_at: 2026-10-13T06:34:36Z
+cmd: approve-spec.sh learn-anywhere
+payload_schema_version: 1.0.0
+key_epoch_id: a67cea4118a8
+prompt_content_address: 066eed97fc0d3978a12d42c0116d22fe7c745d2c0fd1e333e8c49cd661778d5e
+degraded_isolation: false
+extra:
+  spec_sha256: 066eed97fc0d3978a12d42c0116d22fe7c745d2c0fd1e333e8c49cd661778d5e
+  base_commit: 576e3e28faecf1597c9f419fcba6ecb4c4ca2b03
+  lane: develop
+sig: 94a9d9eb2bebb3b587c9f0b1813fe8c42778a4f88b5b9fca82ac397fe086c2f3
+hmac_status: signed

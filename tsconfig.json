@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "checkJs": false,
+    "types": ["node"],
+    "lib": ["es2022", "dom", "dom.iterable"]
+  },
+  "include": ["tests/**/*.ts", "playwright.config.ts"]
+}

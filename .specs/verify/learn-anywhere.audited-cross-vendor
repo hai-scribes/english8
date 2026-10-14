@@ -1,0 +1,15 @@
+# Atelier W5 HMAC marker (signed by marker-sign.sh)
+slug: learn-anywhere
+marker_type: audited-cross-vendor
+signed_at: 2026-10-14T02:32:29Z
+cmd: audit-sign.sh post-verify learn-anywhere
+payload_schema_version: 1.0.0
+key_epoch_id: a67cea4118a8
+prompt_content_address: 839ba03ea4fe5dcd6b706969666b9ed062cc91029130685c255cca49cb91a7ec
+degraded_isolation: false
+extra:
+  provider: codex
+  findings-sha256: 839ba03ea4fe5dcd6b706969666b9ed062cc91029130685c255cca49cb91a7ec
+  write-fence: clean
+sig: d5874f597b410437b656f0e13c01c3916e3e3a52d96c47fec8cef6a4a373f8ee
+hmac_status: signed

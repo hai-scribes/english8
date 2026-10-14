@@ -1,0 +1,7 @@
+# Auditor receipt — atelier post-verify path
+slug: learn-anywhere
+marker_type: audited-cross-vendor
+written_at: 2026-10-14T02:32:29+00:00
+skip_codex: false
+write_fence: clean
+write_fence_pre_dirty_paths: 1

@@ -117,7 +117,11 @@ reads.
 | `tools/test_reading.js` | Gate: the reading screen — labels, highlighting, notes, question bar. |
 | `tools/index_sgk.py` | Generator: the recorded book's lookup index. `--check` reports drift. |
 | `tools/build.py` | Generator: markdown → the 101-page site. |
-| `tools/assets/` | `app.css` and `app.js`, copied into the build. |
+| `tools/assets/` | `app.css` and `app.js`, copied into the build — and with them `sync.js` (her work on every device), `auth.bundle.js` (generated: the sign-in client) and `firebase-config.js` (which project to sign in to). |
+| `tools/auth-src.mjs` | **Source** of `auth.bundle.js`. After editing it, or upgrading `firebase`, run `npm run bundle` and commit the result. |
+| `tools/sw.js` | The service worker, published at the site root with the build's id stamped in. Keeps the course for use with no signal. |
+| `firestore.rules` | Who may read a learner's stored work: that learner. Deployed by pasting into the Firebase console; the browser tests run against this file. |
+| `tests/` | Browser tests for signing in, syncing, the day record and the offline copy — `tests/README.md`. Not part of `gates.sh`: they need Node packages and a Java runtime. |
 | `data/cast.json` | **The comic's contract.** Characters, expressions, places, props, effects and balloon shapes. The build fails on a dialogue naming anything else. |
 | `art/cast/<slug>/<emotion>.png` | **Source.** The thirty drawings, full size and lossless, one per expression. |
 | `art/props/src/` · `art/fx/src/` | **Source.** One drawing per prop and per effect, on white. |
@@ -172,6 +176,41 @@ fresh clone installs it with
 one check the others cannot make: the committed `docs/` has to equal what
 today's sources build, which is how *never hand-edit `docs/`* and *rebuild
 before you push* stop being promises.
+
+## Signing in, and the same work on every device
+
+Signing in is optional and changes nothing about a lesson. Signed out, the
+site is what it always was: everything in the browser, nothing sent anywhere.
+
+Signed in with Google, `tools/assets/sync.js` watches the lesson code's own
+writes to `localStorage` and carries every `en8:` key except the colour theme
+to Firestore, one document per key under `users/<uid>/kv/`, and brings back
+what her other devices wrote. The lesson code is not asked to know: it reads
+and writes as before, and a lesson is drawn before the first request leaves.
+
+- **Said first.** The header reads *Saving…* or *Checking…* before a request
+  leaves and *Saved* only after the answer. With no connection it says the
+  work is kept on the device.
+- **Two devices, one record.** A key changed on both is put together where
+  that means something — attempt histories keep both devices' entries, the
+  day's counts are added, a removed highlight stays removed — and the later
+  change wins whole where it does not (a note is one piece of text).
+- **Signing out** saves first. What cannot be saved is held on the device,
+  encrypted with a key made from the account, and returns at the next sign-in
+  to that account. Nothing of hers stays readable.
+- **Work done signed out** joins an account only if she says so.
+- **Your days**, on Today, lists what was done each day from the per-day
+  record the site already kept (`en8:days:v1`), which now also counts tasks,
+  word sets, practice runs, timed readings and writing. Counts of things
+  done; never a run of days, a score or a time.
+- **No signal.** `tools/sw.js` keeps the whole course after one visit (only
+  the pages opened, on a device that asks sites to save data). A new build is
+  gathered beside the old one and takes over when it is all there.
+
+`python3 tools/build.py` writes `docs/sw.js` and `docs/precache.json` and
+stamps a build id on every page; all of it is deterministic, so `--deploy`
+still holds `docs/` to what the sources build. `bash tests/support/playwright.sh`
+runs the browser tests (`tests/README.md`).
 
 ## Marked tasks, one play, and strands
 
