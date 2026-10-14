@@ -1,5 +1,5 @@
 slug: learn-anywhere
-status: planned
+status: done
 goal: 'A learner signs in with Google and her work follows her across devices: every
   answer, attempt history, note, highlight and piece of writing she makes on one device
   is on her others, the site keeps working with no network and saves when the connection
@@ -752,4 +752,4 @@ ac_progress:
   AC-50: passing
   AC-51: passing
   AC-52: passing
-progress: 'VERIFY: AC-52 passing (52/52 ACs passing)'
+progress: done
