@@ -70,6 +70,8 @@ Each procedure prints raw to stdout from the binary, needs no framework checkout
 
 **A failed load is announced and labeled, never silently worked around** (no `atelier` on PATH, exit 7, Bash blocked). **A failed load caps the SHAPE, and NEVER lowers the LAYER.** No staged generation without `fanout`; no crew without `crew` plus a FANOUT verdict; plain read scouts on the six imperatives stay legal. **If `layer1` will not load, you are still at Layer 1** — drive the sealed-contract loop by hand: write the conditions down and run them as a checklist at every boundary, use `atelier rigor goal check` if the binary partly works, and say so in the report. Treat an untestable gate as unavailable rather than inventing one. **Your final report names the procedures loaded and any load that failed, with what it cost.**
 
+**Inbox.** `seal` prints open `atelier inbox:` items to stderr: fix each under this contract's gates, then `atelier inbox resolve <id> --note "..."`.
+
 ---
 
 # Layer 0 — the working discipline (always on, zero config)

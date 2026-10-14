@@ -119,8 +119,10 @@ Contracts this file keeps:
   * FAIL-OPEN: any crash in `gate` exits 0 → the stop is allowed. A Stop hook that
     exits non-zero would make the session unstoppable. A block is recorded in state.json
     BEFORE its reason is rendered. `gate` prints NOTHING on a
-    plain allow (a paused drive's allow carries one systemMessage line) and exactly ONE stderr line when it fails open, naming what was
-    missing or corrupt.
+    plain allow (a paused drive's allow carries one systemMessage line; so does the allow that ends a
+    drive while inbox items it surfaced are still open) and exactly ONE stderr line when it fails open, naming what was
+    missing or corrupt. One more stderr line is possible on the allow that ENDS a drive: an
+    `atelier inbox: WARNING` when the inbox re-list after the decision could not run.
   * Blocks are signalled ONLY by {"decision":"block"} on stdout with exit 0.
   * A sibling session in the same repo is never blocked (session binding).
   * Caps always win on a LIVE drive: blocks >= max_blocks or wall >= max_minutes → terminal
@@ -191,9 +193,11 @@ import hashlib
 import json
 import os
 import re
+import select
 import shlex
 import shutil
 import signal
+import stat
 import subprocess
 import sys
 import time
@@ -464,6 +468,589 @@ def load_active(ws, why=None):
             why.append(f"{cdir}: {' and '.join(missing)} missing or corrupt")
         return None, None, None
     return cdir, contract, state
+
+
+def skill_build():
+    """Which /drive ran this contract (R14.1): the sha256 of this drive.py and of
+    the SKILL.md beside it. A consumer runs its own COPY of the skill, so the
+    framework's git sha would not name what actually ran — these hashes do.
+    Never raises."""
+    here = os.path.dirname(os.path.abspath(__file__))
+    out = {}
+    for name in ("drive.py", "SKILL.md"):
+        try:
+            out[name] = sha256_file(os.path.join(here, name))
+        except OSError:
+            out[name] = None
+    return out
+
+
+# Framework switches a run can be attributed to: a loop candidate's flag and the autopilot lane's.
+FLAG_NAME_RE = re.compile(r"ATELIER_(SELFLOOP|AUTOPILOT)_[A-Z0-9_]{1,80}")
+FLAG_SECRET_RE = re.compile(r"(^|_)(KEY|TOKEN|SECRET|PASSWORD|PASSWD|AUTH|CRED|CREDENTIALS?|COOKIE|DSN)(_|$)")
+FLAG_WORDS = frozenset({"", "0", "1", "on", "off", "true", "false", "yes", "no", "inherit"})
+FLAG_INT_RE = re.compile(r"[0-9]{1,8}")
+FLAG_OTHER, FLAG_WITHHELD = "<other>", "<withheld>"
+FLAG_MAX = 32
+
+
+def env_flags():
+    """→ ({name: value}, truncated). The framework flags SET in this process's environment, for the run
+    ledger — so a later reading can tell a run that had a change switched on from one that did not. Every
+    flag-shaped name (FLAG_NAME_RE, whole name) is listed, so a name absent from a complete map was unset.
+    A VALUE is never quoted: it is stored only when it is, exactly as set, a switch word (FLAG_WORDS,
+    lower-cased) or a short integer; anything else is FLAG_OTHER — and so is a value with whitespace around
+    it (" 1", "1\r" from a CRLF env file): a switch read as `== "1"` is OFF for it, so recording the
+    stripped "1" would say on for a run that ran without the change. A name with a part that says credential
+    (FLAG_SECRET_RE) is listed as FLAG_WITHHELD — the name is not the secret, its value is never looked at.
+    At most FLAG_MAX names; `truncated` says names were cut, so absence then proves nothing. Never raises."""
+    out, cut = {}, False
+    try:
+        for name in sorted(os.environ):
+            if not FLAG_NAME_RE.fullmatch(name):
+                continue
+            if len(out) >= FLAG_MAX:
+                cut = True
+                break
+            if FLAG_SECRET_RE.search(name):
+                out[name] = FLAG_WITHHELD
+                continue
+            v = os.environ.get(name) or ""
+            out[name] = (FLAG_OTHER if v != v.strip() else v.lower() if v.lower() in FLAG_WORDS
+                         else v if FLAG_INT_RE.fullmatch(v) else FLAG_OTHER)
+    except Exception:  # noqa: BLE001 — a tagging error never fails a command
+        return {}, True
+    return out, cut
+
+
+def flag_tag():
+    """{"flags": {...}} (+ "truncated": true when names were cut) — what a seal records as `run_tag`."""
+    flags, cut = env_flags()
+    return {"flags": flags, **({"truncated": True} if cut else {})}
+
+
+INBOX_PICKUP_ENV = "DRIVE_INBOX_PICKUP"
+
+
+def inbox_project(ws):
+    """The project whose `.atelier/inbox/` this workspace answers to: the nearest
+    ancestor of `ws` (inclusive) holding `.atelier/`, searched no higher than the git
+    toplevel (the first ancestor holding `.git`) or the filesystem root. None when that
+    project has no inbox.
+
+    The walk STOPS at a home directory and at the per-machine install: it neither takes
+    the install for a project nor climbs past it (nothing above the directory holding a
+    user's install is that user's project; a walk that merely skipped it went on up into
+    shared directories such as /tmp). The install is told by what it IS, not only by
+    where $HOME points (under sudo, in a container, in CI or a harness that redirects
+    HOME, the directory holding it is not `~`): a home directory — $HOME, and the
+    account's passwd home when it can be read; or where ATELIER_HOME_OVERRIDE /
+    ATELIER_INSTALL_ROOT point; or install-SHAPED — no `atelier.yml`, the project marker
+    `atelier init` writes, and one of the install's own `projects.json`, `secrets/`,
+    `versions/`. That last test ASSUMES nothing creates those three inside a project's
+    `.atelier/` (no code path does). The SAME rule as `_inbox.project_for`."""
+    homes = {os.path.realpath(os.path.expanduser("~"))}
+    try:
+        import pwd
+        homes.add(os.path.realpath(pwd.getpwuid(os.getuid()).pw_dir))
+    except (ImportError, KeyError, OSError):  # no entry (a sandbox), no pwd module
+        pass
+
+    def install_at(c):
+        a = os.path.join(c, ".atelier")
+        for name in ("ATELIER_HOME_OVERRIDE", "ATELIER_INSTALL_ROOT"):
+            v = os.environ.get(name)
+            if v and os.path.realpath(os.path.expanduser(v)) == os.path.realpath(a):
+                return True
+        if os.path.isfile(os.path.join(a, "atelier.yml")):
+            return False
+        return (os.path.isfile(os.path.join(a, "projects.json"))
+                or os.path.isdir(os.path.join(a, "secrets"))
+                or os.path.isdir(os.path.join(a, "versions")))
+
+    p = os.path.realpath(ws)
+    while True:
+        if p in homes:
+            return None
+        if os.path.isdir(os.path.join(p, ".atelier")):
+            if install_at(p):
+                return None
+            return p if os.path.isdir(os.path.join(p, ".atelier", "inbox")) else None
+        if os.path.exists(os.path.join(p, ".git")):
+            return None
+        parent = os.path.dirname(p)
+        if parent == p:
+            return None
+        p = parent
+
+
+def inbox_pickup(ws):
+    """The /drive start boundary of R14.6/R14.7 — before anything is sealed.
+
+    When the project has an `.atelier/inbox/`, run `atelier inbox pickup --lane
+    drive` (drive.py stays stdlib-only and imports nothing of the framework):
+    an approved framework update waiting there is applied — which may replace
+    THIS drive.py, so the new file is re-executed to do the seal, carrying the
+    pickup in $DRIVE_INBOX_PICKUP — and the open inbox items are returned to
+    print. Returns {"events": [(event, payload)], "lines": [...], "resolve":
+    {id, note} | None}; the events go on the new drive's audit.jsonl after the
+    seal, and only then is the applied item resolved (`inbox_finish`) — a start
+    refused in between leaves it open for the next boundary. FAILS OPEN: no
+    `atelier` on PATH, a crash, bad JSON, a failed re-exec — one warning line,
+    and the start goes on."""
+    empty = {"events": [], "lines": [], "resolve": None}
+    carried = os.environ.pop(INBOX_PICKUP_ENV, None)
+    if carried is not None:
+        try:
+            got = json.loads(carried)
+            return {"events": [tuple(e) for e in got.get("events") or []],
+                    "lines": list(got.get("lines") or []), "resolve": got.get("resolve")}
+        except (ValueError, TypeError):
+            return empty
+    proj = inbox_project(ws)
+    if proj is None:
+        return empty
+    exe = os.environ.get("ATELIER_BIN") or shutil.which("atelier")
+    if not exe:
+        return dict(empty, lines=[
+            "atelier inbox: WARNING — .atelier/inbox/ exists but no `atelier` is on PATH; "
+            "nothing picked up (the start goes on)"])
+    # The re-exec decision below reads THIS file's bytes before and after the
+    # pickup — never the pickup's own report, which may be missing or broken
+    # after it already replaced the file.
+    before = sha256_file(me())
+    warn = []
+    try:
+        timeout = max(1, int(os.environ.get("DRIVE_INBOX_TIMEOUT") or 300))
+    except ValueError:
+        timeout = 300
+    try:
+        # Its own session: a timeout kills the WHOLE group (the refresh it runs
+        # included), so nothing keeps writing .claude/ after this seal.
+        p = subprocess.Popen([exe, "inbox", "pickup", "--project", proj, "--lane", "drive",
+                              "--boundary", "drive start", "--json", "--defer-resolve"],
+                             stdin=subprocess.DEVNULL, stdout=subprocess.PIPE,
+                             stderr=subprocess.PIPE, text=True, start_new_session=True)
+        try:
+            stdout, _err = p.communicate(timeout=timeout)
+        except subprocess.TimeoutExpired:
+            try:
+                os.killpg(p.pid, signal.SIGKILL)
+            except OSError:
+                pass
+            try:
+                p.communicate(timeout=5)
+            except Exception:  # noqa: BLE001 — never hang on a reaped group
+                pass
+            raise
+        res = json.loads(stdout)
+        if not isinstance(res, dict):
+            raise ValueError("pickup did not answer with a JSON object")
+    except Exception as exc:  # noqa: BLE001 — fail open
+        res = {}
+        warn = [f"atelier inbox: WARNING — pickup failed ({type(exc).__name__}: {exc}); "
+                "the start goes on"]
+    events = []
+    if res.get("switched"):
+        events.append(("framework_switched", res["switched"]))
+    ids = [inbox_audit_id(i.get("id")) for i in res.get("items") or [] if i.get("kind") == "bug"]
+    if ids:
+        events.append(("inbox_surfaced", {"boundary": "drive start", "items": ids}))
+    r = res.get("resolve") or None
+    out = {"events": events, "lines": warn + list(res.get("lines") or []),
+           "resolve": {"id": r.get("id"), "note": r.get("note"), "by": r.get("by"),
+                       "fingerprint": r.get("fingerprint"), "project": proj} if r else None}
+    if sha256_file(me()) != before:
+        # The update replaced this very script: the NEW drive.py seals the contract
+        # (its skill_build is what the seal records), not the code already loaded.
+        os.environ[INBOX_PICKUP_ENV] = json.dumps(out)
+        sys.stdout.flush()
+        sys.stderr.flush()
+        flags = (["-I"] if sys.flags.isolated else []) + (["-S"] if sys.flags.no_site else [])
+        try:
+            os.execv(sys.executable, [sys.executable, *flags, me(), *sys.argv[1:]])
+        except OSError as exc:
+            os.environ.pop(INBOX_PICKUP_ENV, None)
+            out["lines"].append(f"atelier inbox: WARNING — could not re-execute the updated "
+                                f"drive.py ({exc}); this start continues with the code already "
+                                "loaded")
+    return out
+
+
+# Inbox text is DATA written by another process: an id or a title is never trusted to be
+# one line, or to be safe inside a command someone is told to run.
+_INBOX_ID = re.compile(r"[A-Za-z0-9_][A-Za-z0-9._-]{0,127}")  # `_inbox.valid_id`'s grammar
+INBOX_MAX_BYTES = 4_000_000  # of a list answer; more is not read (the re-list is skipped)
+INBOX_MAX_SHOWN = 20         # items printed; the rest are counted
+INBOX_MAX_MESSAGE = 6000     # characters of the gate's systemMessage
+INBOX_DRAIN = 1       # seconds a killed list gets to be reaped, when the caller is on a budget
+INBOX_MIN = 3         # a budgeted re-list is not started with less than this left
+INBOX_CLOSE_CAP = 20  # seconds, drain included: close / abort / release, and the gate at most
+INBOX_CHECK_CAP = 10  # the same for an all-green `check`, which may run many times
+GATE_STARTED = None   # time.time() when this process began `gate` (the hook's clock)
+
+
+def inbox_id_ok(item_id):
+    """True for an id `atelier inbox resolve` accepts — the only kind a command is printed for."""
+    return (isinstance(item_id, str) and bool(_INBOX_ID.fullmatch(item_id))
+            and ".." not in item_id)
+
+
+# `_inbox._UNSAFE`'s policy: what a terminal acts on (C0 but tab / newline, DEL, C1), the
+# line / paragraph separators and the bidi controls. Zero-width joiners and variation
+# selectors are text (emoji sequences, several scripts) and are kept.
+_INBOX_UNSAFE = re.compile(
+    "[\x00-\x08\x0b-\x1f\x7f-\x9f" + "".join(map(chr, (0x061C, 0x200E, 0x200F, 0x2028, 0x2029)))
+    + f"{chr(0x202A)}-{chr(0x202E)}{chr(0x2066)}-{chr(0x2069)}]")
+
+
+def printable(text, limit=2000):
+    """`text`, cut to `limit` characters first, with every `_INBOX_UNSAFE` character and every
+    newline / tab turned into a space — one line stays one line, the text stays readable."""
+    return re.sub(r"[\n\t]", " ", _INBOX_UNSAFE.sub(" ", str(text if text is not None else "")[:limit]))
+
+
+def one_line(text, limit=160):
+    return " ".join(printable(text, limit * 4).split())[:limit]
+
+
+def inbox_audit_id(item_id):
+    """The id as an audit row records it: itself when the inbox would accept it, else a
+    bounded, one-line placeholder — `(unusable) ` + its first 80 cleaned characters — so a
+    hand-edited `id:` line of any length or content never rides the ledger. The same
+    function names an item on every row, which is how a later step matches it; the
+    placeholder is no item id to `_retro_target.py`, which never looks such an item up."""
+    if inbox_id_ok(item_id):
+        return item_id
+    if isinstance(item_id, str) and item_id.startswith("(unusable) "):
+        return one_line(item_id, 91)  # already a placeholder (read back from a row)
+    return "(unusable) " + one_line(item_id, 80)
+
+
+def inbox_shown_id(item):
+    """The item's id when the inbox would accept it — judged HERE, never by a field of the
+    answer — else a fixed placeholder: a refused id is not echoed anywhere."""
+    return item["id"] if inbox_id_ok(item.get("id")) else "(no usable id)"
+
+
+def inbox_item_lines(item):
+    """The line(s) that show one inbox item. An item whose id the inbox would refuse is
+    shown WITHOUT the id, and says which file to fix."""
+    out = [f"  - {inbox_shown_id(item)} [{one_line(item.get('kind'), 24)}] "
+           f"{one_line(item.get('title'))}  ({one_line(item.get('path'), 400)})"]
+    if not inbox_id_ok(item.get("id")):
+        out.append("      the `id:` line of that file is not an id the inbox accepts, so no "
+                   "command can resolve it — correct that line first")
+    return out
+
+
+def inbox_more_line(n, proj):
+    return (f"  … and {n} more, not shown — `atelier inbox list --project {shlex.quote(proj)}` "
+            "lists them all")
+
+
+@contextlib.contextmanager
+def inbox_row_lock(cdir, wait=2.0):
+    """Serialise "read this drive's last inbox row, write the next" between two commands
+    ending the same drive at once. Its own lock file, never the gate's: waits at most
+    `wait` seconds, then goes on without it (a duplicate row beats a stuck close).
+    The lock path is opened without blocking, without following a symlink and without
+    truncating, and must be a regular file — a FIFO or a link planted there is no lock."""
+    fd = None
+    try:
+        fd = os.open(os.path.join(cdir, ".inbox-lock"),
+                     os.O_WRONLY | os.O_CREAT | os.O_NONBLOCK | os.O_NOFOLLOW, 0o600)
+        if not stat.S_ISREG(os.fstat(fd).st_mode):
+            raise OSError("not a regular file")
+        deadline = time.time() + wait
+        while True:
+            try:
+                fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                break
+            except OSError:
+                if time.time() >= deadline:
+                    break
+                time.sleep(0.02)
+    except Exception:  # noqa: BLE001
+        pass
+    try:
+        yield
+    finally:
+        if fd is not None:
+            try:
+                os.close(fd)
+            except OSError:
+                pass
+
+
+class InboxTooBig(Exception):
+    pass
+
+
+def _read_capped(p, timeout, limit):
+    """The child's whole stdout, as text — or TimeoutExpired after `timeout` seconds, or
+    InboxTooBig once it has written more than `limit` bytes (the rest is never read)."""
+    fd, buf, deadline = p.stdout.fileno(), bytearray(), time.time() + timeout
+    while True:
+        left = deadline - time.time()
+        if left <= 0 or not select.select([fd], [], [], left)[0]:
+            raise subprocess.TimeoutExpired(p.args, timeout)
+        chunk = os.read(fd, 65536)
+        if not chunk:
+            break
+        buf += chunk
+        if len(buf) > limit:
+            raise InboxTooBig(f"`atelier inbox list` answered more than {limit} bytes")
+    p.wait(timeout=max(0.1, deadline - time.time()))
+    return buf.decode("utf-8", errors="replace")
+
+
+def _inbox_list(ws, what, total=None):
+    """`atelier inbox list --json` for the project `ws` answers to — it writes nothing.
+    → (project, [item, ...]) — items with a non-string id dropped, the rest kept; None when
+    there is no `.atelier/inbox/` (silent); or a short reason string when the list could not
+    be had (ONE warning line on stderr; `what` names the step that goes on).
+    At most $DRIVE_INBOX_TIMEOUT seconds (default 60) plus the reaping of a killed list; with
+    `total`, the whole call — reaping included — stays inside `total` seconds. The child also
+    carries its own alarm, so it ends even if this process is killed first (a grandchild in
+    another session cannot be reached from here; the list is read-only)."""
+    proj = inbox_project(ws)
+    if proj is None:
+        return None
+    if any(os.path.islink(os.path.join(proj, *parts))
+           for parts in ((".atelier",), (".atelier", "inbox"))):
+        print(f"atelier inbox: WARNING — .atelier/inbox/ is a symlink; not read (the {what} "
+              "goes on)", file=sys.stderr)
+        return "symlink"
+    exe = os.environ.get("ATELIER_BIN") or shutil.which("atelier")
+    if not exe:
+        print("atelier inbox: WARNING — .atelier/inbox/ exists but no `atelier` is on PATH; "
+              f"open items not listed (the {what} goes on)", file=sys.stderr)
+        return "no-cli"
+    try:
+        timeout = max(1, int(os.environ.get("DRIVE_INBOX_TIMEOUT") or 60))
+    except ValueError:
+        timeout = 60
+    drain = 5
+    if total is not None:
+        drain = INBOX_DRAIN
+        timeout = max(1, min(timeout, int(total) - drain))
+    try:
+        # Its own session, as at start: a timeout kills the whole group.
+        p = subprocess.Popen([exe, "inbox", "list", "--project", proj, "--json"],
+                             stdin=subprocess.DEVNULL, stdout=subprocess.PIPE,
+                             stderr=subprocess.DEVNULL, start_new_session=True,
+                             preexec_fn=lambda: signal.alarm(timeout + drain + 1))
+        try:
+            stdout = _read_capped(p, timeout, INBOX_MAX_BYTES)
+        except (subprocess.TimeoutExpired, InboxTooBig):
+            try:
+                os.killpg(p.pid, signal.SIGKILL)
+            except OSError:
+                pass
+            try:
+                p.wait(timeout=drain)
+            except Exception:  # noqa: BLE001 — never hang on a reaped group
+                pass
+            raise
+        finally:
+            p.stdout.close()
+        got = json.loads(stdout)
+        items = got.get("items") if isinstance(got, dict) else None
+        if not isinstance(items, list):
+            raise ValueError(f"`atelier inbox list` answered no item list (exit {p.returncode})")
+        return proj, [i for i in items if isinstance(i, dict) and isinstance(i.get("id"), str)]
+    except Exception as exc:  # noqa: BLE001 — fail open
+        print(f"atelier inbox: WARNING — could not list the inbox ({type(exc).__name__}: "
+              f"{one_line(exc, 200)}); the {what} goes on", file=sys.stderr)
+        return ("timeout" if isinstance(exc, subprocess.TimeoutExpired) else
+                "too-big" if isinstance(exc, InboxTooBig) else f"failed:{type(exc).__name__}")
+
+
+def inbox_at_resume(ws, cdir):
+    """The /drive resume half of R14.7 — READ-ONLY. The seal is live, so nothing is
+    applied here (R9.3): `atelier inbox list --json` (it writes nothing) gives the
+    open items; the lane's bug items (and lane-less ones) are printed as `start`
+    prints them and audited as one `inbox_surfaced` event (at: resume; a waiting
+    framework_update as `update_waiting`), which gets one line: never applied here,
+    it is considered at the next `/drive start`.
+    Silent when the project has no `.atelier/inbox/`. FAILS OPEN: at most one
+    warning line, never a failed resume."""
+    got = _inbox_list(ws, "resume")
+    if not isinstance(got, tuple):
+        return
+    items = got[1]
+    # Start's selection: any framework_update item; bug items for lane drive or no lane.
+    fw = [i for i in items if i.get("kind") == "framework_update"][:1]
+    bugs = [i for i in items if i.get("kind") == "bug" and i.get("lane") in (None, "", "drive")]
+    if fw:
+        print(f"atelier inbox: a framework update is waiting ({inbox_shown_id(fw[0])}) — "
+              "never applied mid-drive (the seal is live); it is considered at the next "
+              "`/drive start` after this drive ends", file=sys.stderr)
+    if bugs:
+        print(f"atelier inbox: {len(bugs)} open item(s) for this drive run — address each under "
+              "this lane's normal gates, then `atelier inbox resolve <id> --note \"...\"`:",
+              file=sys.stderr)
+        for i in bugs[:INBOX_MAX_SHOWN]:
+            for ln in inbox_item_lines(i):
+                print(ln, file=sys.stderr)
+        if len(bugs) > INBOX_MAX_SHOWN:
+            print(inbox_more_line(len(bugs) - INBOX_MAX_SHOWN, got[0]), file=sys.stderr)
+    ids = [inbox_audit_id(i.get("id")) for i in bugs]
+    if ids or fw:
+        # start's shape (bug ids only), plus the update that waits for the next start
+        extra = {"update_waiting": inbox_audit_id(fw[0].get("id"))} if fw else {}
+        try:
+            audit(cdir, "inbox_surfaced", boundary="drive resume", at="resume", items=ids,
+                  **extra)
+        except OSError as exc:
+            print(f"atelier inbox: WARNING — could not audit inbox_surfaced ({exc})",
+                  file=sys.stderr)
+
+
+def inbox_at_close(ws, cdir, via, total=INBOX_CLOSE_CAP, hooked=None, max_chars=None):
+    """The end of a drive — READ-ONLY, and never a gate. When this drive surfaced
+    anything from the inbox, re-list it (as `resume` does) and return the lines to show:
+    each item it surfaced (at start or a resume) that is STILL OPEN, with the command
+    that resolves it and the alternative — say in REPORT.md why it stays open — plus one
+    line for a waiting framework_update, which is not an instruction to this drive.
+    `via` is the caller: `check` (all green and the drive still open — the one moment a
+    hooked driver can still act), `close`, `abort`, `release`, or `gate` (the turn is over).
+
+    The audit says what was shown: `inbox_still_open` {at: check|close, via, told, items,
+    shown, update_waiting?} — `items` every open id, `shown` the ones displayed. `told` is `operator` from the gate (its systemMessage) and `caller`
+    from a command — `check` and `close` are operator verbs too (`atelier drive`), so who
+    typed one is not known here. A row is written only when it differs from this drive's
+    last one in `at`, items or update: four green checks are one row. A re-list that could
+    not run leaves `inbox_relist_skipped` {at, via, why} the same way, so the retro analyzer
+    (`_retro_target.py` `inbox_unresolved_at_close`) can tell it from an older skill build.
+
+    At most INBOX_MAX_SHOWN items are shown (fewer when `max_chars` is given and they
+    would not fit), then a count of the rest; the audit row keeps every id.
+
+    Nothing is resolved and nothing is refused here. Silent ([] and no row) when the drive
+    surfaced nothing or none of it is open. FAILS OPEN and stays inside `total` seconds: at
+    most one warning line on stderr, never a failed close."""
+    try:
+        surfaced = audit_events(cdir, "inbox_surfaced")
+        seen = {inbox_audit_id(i) for e in surfaced
+                for i in (e.get("items") if isinstance(e.get("items"), list) else [])
+                if isinstance(i, str)}
+        if not seen and not any(e.get("update_waiting") for e in surfaced):
+            return []
+        at = "check" if via == "check" else "close"
+
+        def skipped(why):
+            last = (audit_events(cdir, "inbox_relist_skipped") or [{}])[-1]
+            if (last.get("at"), last.get("why")) != (at, why):
+                audit(cdir, "inbox_relist_skipped", at=at, via=via, why=why)
+            return []
+
+        if total is not None and total < INBOX_MIN:
+            return skipped("no-time")
+        got = _inbox_list(ws, "stop" if via == "gate" else via, total)
+        if got is None:
+            return []
+        if not isinstance(got, tuple):
+            return skipped(got)
+        proj, items = got
+        fw = [i for i in items if i.get("kind") == "framework_update"][:1]
+        still = [i for i in items
+                 if i.get("kind") != "framework_update" and inbox_audit_id(i["id"]) in seen]
+        lines, shown = [], []
+        if fw:
+            lines.append("atelier inbox: a framework update is waiting "
+                         f"({inbox_shown_id(fw[0])}) — not applied by this drive; it is "
+                         "considered at the next `/drive start`")
+        if still:
+            if at == "close":
+                when = f"were still open when it ended ({via}) —"
+            elif hooked:
+                when = "are still open — before you end your turn (the gate ends this drive then),"
+            else:
+                when = "are still open — before you run `close`,"
+            lines.append(f"atelier inbox: {len(still)} item(s) this drive surfaced {when} "
+                         f"resolve each one, or say in {os.path.join(cdir, 'REPORT.md')} why it "
+                         "stays open:")
+            room = (max_chars or 10**9) - sum(len(ln) + 1 for ln in lines) - 300
+            for i in still[:INBOX_MAX_SHOWN]:
+                block = inbox_item_lines(i)
+                if inbox_id_ok(i["id"]):  # quoted all the same
+                    block.append(f"      atelier inbox resolve {shlex.quote(i['id'])} --project "
+                                 f"{shlex.quote(proj)} --note \"<what was done about it>\"")
+                room -= sum(len(ln) + 1 for ln in block)
+                if room < 0 and shown:  # a size-limited reader: whole items, then a count
+                    break
+                lines += block
+                shown.append(inbox_audit_id(i["id"]))
+            if len(still) > len(shown):
+                lines.append(inbox_more_line(len(still) - len(shown), proj))
+        if lines:
+            row = {"at": at, "items": [inbox_audit_id(i["id"]) for i in still],
+                   **({"update_waiting": inbox_audit_id(fw[0].get("id"))} if fw else {})}
+            with inbox_row_lock(cdir):  # two commands ending one drive at once: one row
+                last = (audit_events(cdir, "inbox_still_open") or [{}])[-1]
+                if {k: last.get(k) for k in ("at", "items", "update_waiting") if k in last} != row:
+                    # `items` is everything open; `shown` is what was actually displayed
+                    audit(cdir, "inbox_still_open", via=via, shown=shown,
+                          told="operator" if via == "gate" else "caller", **row)
+        return lines
+    except Exception as exc:  # noqa: BLE001 — an inbox problem never fails a close
+        print(f"atelier inbox: WARNING — could not re-list the inbox ({type(exc).__name__}: "
+              f"{one_line(exc, 200)}); the {'stop' if via == 'gate' else via} goes on",
+              file=sys.stderr)
+        return []
+
+
+def print_inbox_at_close(ws, cdir, via, **kw):
+    """`inbox_at_close` for a command someone ran: its lines on stderr, where `start` and
+    `resume` print theirs. Never raises."""
+    try:
+        sys.stdout.flush()
+        for ln in inbox_at_close(ws, cdir, via, **kw):
+            print(ln, file=sys.stderr)
+    except Exception:  # noqa: BLE001 — e.g. a closed stderr: the command already did its work
+        pass
+
+
+def gate_inbox_at_close(ws, cdir, contract):
+    """`inbox_at_close` for the gate, AFTER its terminal is on disk: the turn is over, so
+    the lines go to the operator as one `systemMessage`. The stop is allowed either way.
+    The re-list gets what is left of the Stop hook's own timeout (2 s kept to print), never
+    more than INBOX_CLOSE_CAP; with too little left it is skipped and the audit says so."""
+    try:
+        hook = contract.get("hook_timeout")
+        if not isinstance(hook, (int, float)) or hook <= 0:
+            hook = gate_budget(contract) / GATE_BUDGET_FRAC
+        left = hook - (time.time() - (GATE_STARTED or time.time())) - 2
+        lines = inbox_at_close(ws, cdir, "gate", total=int(min(INBOX_CLOSE_CAP, left)),
+                               max_chars=INBOX_MAX_MESSAGE)
+        if lines:
+            msg = "\n".join(lines)
+            if len(msg) > INBOX_MAX_MESSAGE:  # one item alone too long: a hard cut, last resort
+                cut = "\n… (cut — `atelier inbox list` shows the rest)"
+                msg = msg[:INBOX_MAX_MESSAGE - len(cut)] + cut
+            print(json.dumps({"systemMessage": msg}))
+    except Exception:  # noqa: BLE001 — the decision is already on disk
+        pass
+
+
+def inbox_finish(ws, picked, did):
+    """Resolve the framework_update item the pickup applied, now that its switch
+    is on this drive's audit. Fails open (a warning line)."""
+    r = picked.get("resolve")
+    exe = os.environ.get("ATELIER_BIN") or shutil.which("atelier")
+    if not r or not exe:
+        return
+    try:
+        subprocess.run([exe, "inbox", "resolve", r["id"], "--project", r.get("project") or ws,
+                        "--note", r["note"],
+                        "--run", did, "--by", r.get("by") or "lane drive"]
+                       + (["--expect-fingerprint", r["fingerprint"]] if r.get("fingerprint")
+                          else []),
+                       capture_output=True, text=True, timeout=60)
+    except Exception as exc:  # noqa: BLE001
+        print(f"atelier inbox: WARNING — could not resolve {r['id']} ({exc})", file=sys.stderr)
 
 
 def audit(cdir, event, **kw):
@@ -2163,6 +2750,8 @@ def cmd_start(a):
         if not a.why_force:
             sys.exit("--force replaces a LIVE contract: it needs --why-force '<reason>'. Re-sealing an "
                      "unfinished drive with easier conditions is the cheapest way to fake done.")
+    # R14.6/R14.7: the start is the drive's one safe boundary (nothing sealed yet).
+    picked = inbox_pickup(ws)
     conds, taken = [], []
     for spec in a.cond:
         if "=" not in spec:
@@ -2381,6 +2970,9 @@ def cmd_start(a):
         "transcript_path": transcript,
         "checkers": {c["id"]: {"path": c["checker"]["path"], "sha256": c["checker"]["sha256"]}
                      for c in ck_conds},
+        # The flags of the SEALING process. A later command can run under another environment: a
+        # verifier's `collected` row carries its own (`flags`), which is where a verdict starts to count.
+        "run_tag": flag_tag(),
     }
     if baseline:
         state["tests_baseline_sha256"] = sha256_file(os.path.join(cdir, TESTS_BASELINE))
@@ -2394,10 +2986,16 @@ def cmd_start(a):
     with open(active_path(ws), "w") as f:
         f.write(did + "\n")
     audit(cdir, "sealed", session=session, red=red, green=green, policy=contract["policy"],
+          skill_build=skill_build(), run_tag=state["run_tag"],
           contract_sha256=state["contract_sha256"], gate_budget=budget, timeout=a.timeout,
           enforcement=enforcement, enforcement_detail=enf_detail, transcript_source=tsource,
           checkers={c["id"]: c["checker"] for c in ck_conds}, protect_tests=contract["protect_tests"],
           map=cmap)
+    for ev, payload in picked["events"]:
+        audit(cdir, ev, **payload)
+    inbox_finish(ws, picked, did)
+    for line in picked["lines"]:
+        print(printable(line), file=sys.stderr)  # item text is data: one line stays one line
     pol = contract["policy"]
     print(json.dumps({
         "id": did, "dir": cdir, "session": session, "red_at_seal": red,
@@ -2641,6 +3239,10 @@ def cmd_check(a):
         print("enforcement=none: run check at every boundary; nothing blocks your stop")
         print("enforcement=none: finish with close")
     audit(cdir, "check", unmet=unmet, tampered=files + [f"checker:{i}" for i in ids] + (["state"] if bad else []))
+    if not (unmet or files or ids or bad) and state.get("outcome") is None:
+        # All green and still open: the last moment a hooked driver can act on its inbox.
+        print_inbox_at_close(ws, cdir, "check", total=INBOX_CHECK_CAP,
+                             hooked=contract.get("enforcement") == "hook")
     # Exit code so the caller can chain on it: 1 = still work to do (or a broken seal).
     sys.exit(1 if unmet or files or ids or bad else 0)
 
@@ -2699,6 +3301,7 @@ def cmd_close(a):
         audit(cdir, "closed", blocks=state["blocks"], first_green_at=state["first_green_at"])
         set_terminal(cdir, state, "met", blocks=state["blocks"], via="close")
     print(f"MET {contract['id']} — {report}")
+    print_inbox_at_close(ws, cdir, "close")  # after the terminal: it tells, it never gates
     sys.exit(0)
 
 
@@ -2835,6 +3438,8 @@ def build_block_reason(cdir, contract, state, res, stall, tbytes=0, delta_mb=0.0
 
 
 def cmd_gate(_a):
+    global GATE_STARTED
+    GATE_STARTED = time.time()
     try:
         payload = json.loads(sys.stdin.read() or "{}")
     except ValueError:
@@ -2978,15 +3583,18 @@ def _gate_locked(cdir, contract, state, ws, payload, event=None):
     if not unmet and not tampered:
         ensure_first_green(cdir, state, "gate")
         set_terminal(cdir, state, "met", blocks=state["blocks"])
+        gate_inbox_at_close(ws, cdir, contract)
         return
     wall_min = wall_minutes(state)
     if wall_min >= caps["max_minutes"]:
         set_terminal(cdir, state, "capped", cap="wall", minutes=int(wall_min), unmet=unmet,
                      tampered=tampered)
+        gate_inbox_at_close(ws, cdir, contract)
         return
     if state["blocks"] >= caps["max_blocks"]:
         set_terminal(cdir, state, "capped", cap="blocks", blocks=state["blocks"], unmet=unmet,
                      tampered=tampered)
+        gate_inbox_at_close(ws, cdir, contract)
         return
     tpath = payload.get("transcript_path") if isinstance(payload.get("transcript_path"), str) else None
     tbytes = transcript_bytes(tpath)
@@ -3301,8 +3909,11 @@ def cmd_abort(a):
     if not abort_file_present(cdir):
         sys.exit("ABORT refused: each of blocked/mechanism/evidence must be non-trivial")
     state["abort_declared"] = True
+    was = state.get("outcome")
     set_terminal(cdir, state, "aborted", blocked=a.blocked, mechanism=a.mechanism, attempts=attempts)
     print(f"aborted: {cdir}/ABORT.md — everything NOT blocked is still owed in REPORT.md")
+    if was is None:  # the step that ENDED the drive re-lists; a repeat on an ended one does not
+        print_inbox_at_close(ws, cdir, "abort")
 
 
 def cmd_note(a):
@@ -3397,6 +4008,9 @@ def cmd_resume(a):
         print("".join(open(os.path.join(cdir, "PROGRESS.md")).readlines()[-25:]))
     except OSError:
         pass
+    sys.stdout.flush()
+    # R14.7: an operator back on an open drive sees its inbox — read-only, the seal is live.
+    inbox_at_resume(ws, cdir)
 
 
 def cmd_pause(a):
@@ -3779,7 +4393,9 @@ def cmd_collect(a):
     except Exception as e:  # noqa: BLE001
         print(f"=== NOTE: stray-file check skipped ({e!r})")
     audit(cdir, "collected", agent=a.agent, first=first[:200], lines=len(lines),
-          problems=fatal, warnings=warn)
+          problems=fatal, warnings=warn,
+          # a verifier's verdict starts to count HERE, under this process's flags (not the seal's)
+          **({"run_tag": flag_tag()} if a.agent.startswith("verify") else {}))
     with open(os.path.join(cdir, "PROGRESS.md"), "a") as f:
         f.write(f"- {now_iso()} collected {a.agent}: {first[:160]}\n")
     if not fatal:
@@ -3788,6 +4404,11 @@ def cmd_collect(a):
         write_json(collected_stamp(cdir, a.agent),
                    {"ts": now_iso(), "agent": a.agent, "lines": len(lines),
                     "first": first[:200], "problems": fatal})
+        # Loop candidate, inert unless exactly "1": a same-vendor CONVERGED after a Codex verifier that
+        # did not converge is recorded as a cross-vendor waiver instead of passing silently.
+        on = os.environ.get("ATELIER_SELFLOOP_CODEX_VERIFY_ENV_MISMATCH_WAIVES_CROSS_V") == "1"
+        if on and a.agent.startswith("verify") and first == "VERDICT: CONVERGED":
+            record_cross_vendor_waiver(cdir, a.agent)
     print("=== CHECK ===")
     contract, res, unmet, files, ids, state, _, bad = observe(cdir, contract, state, ws, "collect")
     if (state.get("first_green_at") and not unmet and not (files or ids) and not bad
@@ -3802,6 +4423,55 @@ def cmd_collect(a):
     audit(cdir, "check", unmet=unmet, after=a.agent)
     # Exit 0 unless the return itself is unusable: an over-length return is truncated, not fatal.
     sys.exit(1 if fatal else 0)
+
+
+def cross_vendor_waiver(cdir, agent):
+    """The waiver a same-vendor verifier's CONVERGED amounts to, or None. Read from audit.jsonl only: the
+    LATEST `codex-verify` attempt ended without CONVERGED (no verdict / killed / no binary, or NOT-CONVERGED)
+    and `agent` is not a Codex verifier. It states what Codex's run ended on, never why — a sandbox the checks
+    did not fit, a spend cap and a real defect fixed since all read the same here; the log path is in the row."""
+    last, codex, tries = None, set(), 0
+    try:
+        with open(os.path.join(cdir, "audit.jsonl")) as f:
+            for ln in f:
+                try:
+                    rec = json.loads(ln)
+                except ValueError:
+                    continue
+                if not isinstance(rec, dict) or not str(rec.get("event") or "").startswith("codex_verify"):
+                    continue
+                codex.add(rec.get("agent"))
+                if rec["event"] in ("codex_verify", "codex_verify_failed"):
+                    last, tries = rec, tries + 1
+    except OSError:
+        return None
+    if not last or agent in codex:
+        return None
+    failed = last["event"] == "codex_verify_failed"
+    if not failed and str(last.get("verdict") or "").startswith("VERDICT: CONVERGED"):
+        return None
+    return {"agent": agent, "codex_agent": last.get("agent"), "codex_ts": last.get("ts"),
+            "codex_state": "failed" if failed else "not-converged",
+            "reason": str(last.get("reason") if failed else last.get("verdict") or "")[:300],
+            "codex_attempts": tries,
+            "codex_log": os.path.join(cdir, "agents", str(last.get("agent")), "codex.log")}
+
+
+def record_cross_vendor_waiver(cdir, agent):
+    """Put the waiver ON the ledger at the moment the same-vendor verdict starts to count (`collect`): an
+    audit row, a PROGRESS line and a line to the driver. Once per (verifier, Codex attempt)."""
+    w = cross_vendor_waiver(cdir, agent)
+    if not w or any(e.get("agent") == agent and e.get("codex_ts") == w["codex_ts"]
+                    for e in audit_events(cdir, "cross_vendor_waived")):
+        return None
+    audit(cdir, "cross_vendor_waived", cross_vendor="waived", **w)
+    line = (f"cross-vendor verification WAIVED: Codex verifier {w['codex_agent']} ended {w['codex_state']} "
+            f"({w['reason']}) after {w['codex_attempts']} attempt(s); same-vendor {agent} CONVERGED closes it")
+    with open(os.path.join(cdir, "PROGRESS.md"), "a") as f:
+        f.write(f"- {now_iso()} {line}\n")
+    print(f"=== {line}. Recorded on the ledger (audit.jsonl `cross_vendor_waived`); say why in REPORT.md, "
+          f"or re-run `codex-verify` once its environment fits. Log: {w['codex_log']}")
+    return w
 
 
 def verified_status(cdir):
@@ -3837,8 +4507,11 @@ def cmd_release(a):
     cdir, _, state = load_active(ws)
     if not cdir:
         sys.exit("no active drive")
+    was = state.get("outcome")
     set_terminal(cdir, state, "released", reason=a.reason)
     print(f"released: {cdir}")
+    if was is None:
+        print_inbox_at_close(ws, cdir, "release")
 
 
 def _add_contract_flags(p):

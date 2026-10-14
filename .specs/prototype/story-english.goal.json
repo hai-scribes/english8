@@ -309,6 +309,13 @@
       "milestone_id": 6,
       "operator": "local",
       "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-10-13T08:29:23.244Z",
+      "content_sha256": "1c65d2b3f48c1fbc343a0f75598359241ff1c2bf217d24256b11f75cd15642c4",
+      "milestone_id": 6,
+      "operator": "local",
+      "type": "milestone_gate"
     }
   ],
   "created_at": "2026-08-16T15:18:23.858Z",
@@ -1940,20 +1947,20 @@
         }
       ],
       "benchmark": {
-        "approved_at": null,
+        "approved_at": "2026-10-13T08:29:23.244Z",
         "command": "node harness/return.mjs",
-        "content_sha256": null,
+        "content_sha256": "ae5ad7d183283bdca8977a6b88ccfece07baa210a477ec25c84c77b16c759b28",
         "fixed_workload": "Every record in the operator's observation file — .specs/prototype/story-english.observations.json in the MAIN worktree, or $ATELIER_RETURNS_OBSERVATIONS — validated and counted as distinct WEEKDAY dates recorded as an unprompted open. The number is not derived from anything the build produces: the charter holds that the app's local activity log corroborates but cannot establish it, because no log distinguishes a prompted open from an unprompted one. A path resolving INSIDE the build tree is refused rather than read, so a tournament variant cannot author its own north star. The harness reads the activity log where present and reports disagreement in both directions without letting it move the metric, refuses Saturday by construction, and fails on an absent observation file so that 'nobody looked' and 'she did not come back' cannot produce the same green. coverage_min 4 forces a full weekday week, prompted days included, so the number cannot be cherry-picked. The floor is EXCLUSIVE — the reading must be strictly greater than it — so 4 is what demands at least 5 weekday records. Do not 'correct' it to 5: that would demand 6, which a five-weekday week cannot produce, and the milestone could never pass. Emits returns_unprompted and items_swept. band_tokens_emitted keeps its teeth on every boundary through the `session` interaction check, which runs harness/surfaces.mjs; baseline 0 across 103 pages.",
         "harness": "harness/return.mjs"
       },
       "gate": {
-        "approved_at": "2026-08-16T20:36:48.007Z",
+        "approved_at": "2026-10-13T08:29:23.244Z",
         "artifacts": [
           "harness/",
           "package.json",
           "package-lock.json"
         ],
-        "artifacts_sha256": "0428359727a13941fbd98b3aa3e466c517a4d2cd315c5725dec2ee045d9b2ee9",
+        "artifacts_sha256": "d265369c87a8c9e34f2f0204f6e67925dab9d78fbb3cbacdda2f32a284e91106",
         "checks": [
           {
             "kind": "build",
@@ -1968,9 +1975,9 @@
             "name": "session"
           }
         ],
-        "checks_yaml_body": "schema_version: 1\n\n# The executable gate for story-english. One shared file gates the goal; every\n# milestone declares this same scenario set, and `prototype check` runs all of\n# them. Each scenario emits its ATELIER_METRIC lines on stdout as bare numbers,\n# with the unit carried in the metric id.\n#\n# Every sweep emits a coverage count beside its result. A harness that renders\n# nothing and a harness that finds no defects produce identical output\n# otherwise, and one is a pass while the other is broken.\n#\n# These are real gates. Until the milestones build the harnesses they fail,\n# which is correct: making them green is the work, not a precondition to it.\n\nchecks:\n  # ---------------------------------------------------------------------------\n  # Curriculum and content integrity. Every prescribed target is placed, and no\n  # target has its encounter, its production and its delayed check in the same\n  # session — E5 restated as architecture, and the mechanical guard against\n  # degenerating into a lesson with a story printed above it.\n  # ---------------------------------------------------------------------------\n  - name: build\n    kind: build\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 600\n    command: |\n      set -e\n      node harness/coverage.mjs\n      node harness/support.mjs\n\n  # ---------------------------------------------------------------------------\n  # Marking correctness, gated as a PAIR. A false-negative gate alone is\n  # trivially satisfied by an engine that accepts everything, so false\n  # positives gate with it and neither number means anything without the other.\n  #\n  # Baselines on the engine being replaced: false negatives 41/62 = 0.661 over\n  # three mechanical variant classes; key_variant_coverage 275/1357 = 0.203.\n  # ---------------------------------------------------------------------------\n  - name: marking\n    kind: smoke\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 600\n    command: |\n      set -e\n      node harness/marking.mjs\n\n  # ---------------------------------------------------------------------------\n  # A real browser, real layout boxes, a real session run start to finish at\n  # phone width. This exists from milestone one deliberately: the build being\n  # replaced asserted its stylesheet as a string and grepped its own source for\n  # function names, so renaming a function failed the gate with a\n  # pixel-identical picture while a balloon landing on a face passed.\n  #\n  # Also carries the surface scan — no band number, half-band, band promise,\n  # hours-to-band claim, CEFR label, criterion name or citation reaches the\n  # learner's page.\n  # ---------------------------------------------------------------------------\n  - name: session\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund 2>/dev/null || true\"\n    timeout_seconds: 900\n    command: |\n      set -e\n      node harness/session.mjs\n      node harness/surfaces.mjs\n",
-        "checks_yaml_sha256": "3a4e516ea1cb6df486ef2d9c389a24d4a9dd712bb4982f048119a7b3666a344e",
-        "content_sha256": "03b445d7720437b6323b74d41f766b71e9daa99241ca91e585123b81244e9fb5",
+        "checks_yaml_body": "schema_version: 1\n\n# The executable gate for story-english. One shared file gates the goal; every\n# milestone declares this same scenario set, and `prototype check` runs all of\n# them. Each scenario emits its ATELIER_METRIC lines on stdout as bare numbers,\n# with the unit carried in the metric id.\n#\n# Every sweep emits a coverage count beside its result. A harness that renders\n# nothing and a harness that finds no defects produce identical output\n# otherwise, and one is a pass while the other is broken.\n#\n# These are real gates. Until the milestones build the harnesses they fail,\n# which is correct: making them green is the work, not a precondition to it.\n\nchecks:\n  # ---------------------------------------------------------------------------\n  # Curriculum and content integrity. Every prescribed target is placed, and no\n  # target has its encounter, its production and its delayed check in the same\n  # session — E5 restated as architecture, and the mechanical guard against\n  # degenerating into a lesson with a story printed above it.\n  # ---------------------------------------------------------------------------\n  - name: build\n    kind: build\n    # No `2>/dev/null || true`: node_modules is gitignored, so every tournament\n    # variant worktree starts cold and installs playwright here. Swallowing the\n    # error turned a failed install into `Cannot find package 'playwright'` a\n    # minute later inside the harness, which reads as a harness defect and sends\n    # the worker to fix code that was never broken. A setup failure must fail as\n    # setup.\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 600\n    command: |\n      set -e\n      node harness/coverage.mjs\n      node harness/support.mjs\n\n  # ---------------------------------------------------------------------------\n  # Marking correctness, gated as a PAIR. A false-negative gate alone is\n  # trivially satisfied by an engine that accepts everything, so false\n  # positives gate with it and neither number means anything without the other.\n  #\n  # Baselines on the engine being replaced: false negatives 41/62 = 0.661 over\n  # three mechanical variant classes; key_variant_coverage 275/1357 = 0.203.\n  # ---------------------------------------------------------------------------\n  - name: marking\n    kind: smoke\n    # No `2>/dev/null || true`: node_modules is gitignored, so every tournament\n    # variant worktree starts cold and installs playwright here. Swallowing the\n    # error turned a failed install into `Cannot find package 'playwright'` a\n    # minute later inside the harness, which reads as a harness defect and sends\n    # the worker to fix code that was never broken. A setup failure must fail as\n    # setup.\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 600\n    command: |\n      set -e\n      node harness/marking.mjs\n\n  # ---------------------------------------------------------------------------\n  # A real browser, real layout boxes, a real session run start to finish at\n  # phone width. This exists from milestone one deliberately: the build being\n  # replaced asserted its stylesheet as a string and grepped its own source for\n  # function names, so renaming a function failed the gate with a\n  # pixel-identical picture while a balloon landing on a face passed.\n  #\n  # Also carries the surface scan — no band number, half-band, band promise,\n  # hours-to-band claim, CEFR label, criterion name or citation reaches the\n  # learner's page.\n  # ---------------------------------------------------------------------------\n  - name: session\n    kind: interaction\n    # No `2>/dev/null || true`: node_modules is gitignored, so every tournament\n    # variant worktree starts cold and installs playwright here. Swallowing the\n    # error turned a failed install into `Cannot find package 'playwright'` a\n    # minute later inside the harness, which reads as a harness defect and sends\n    # the worker to fix code that was never broken. A setup failure must fail as\n    # setup.\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 900\n    command: |\n      set -e\n      node harness/session.mjs\n      node harness/surfaces.mjs\n",
+        "checks_yaml_sha256": "b5e9db4752a3238c392d96a438d29a0928b9b77494dd30d115d4dd8e6ec65fc9",
+        "content_sha256": "1c65d2b3f48c1fbc343a0f75598359241ff1c2bf217d24256b11f75cd15642c4",
         "required_tier": "interaction"
       },
       "honesty_review": {
@@ -2021,7 +2028,7 @@
         "metric_id": "returns_unprompted",
         "threshold": 3
       },
-      "status": "proposed",
+      "status": "approved",
       "tasks": [
         "Track weekday activity locally and make it legible on Saturday - what she read, what came back for review, what she is in the middle of. Never a score, a percentage, a total or a composite (D3, E1, A2)",
         "Ship no streak. The north-star metric IS unprompted return; a streak optimises it directly and destroys its interpretability, so after one ships you can no longer tell whether she came back for the product or the number. If ever, only after a clean baseline",
@@ -2047,5 +2054,5 @@
   "schema_version": 1,
   "slug": "story-english",
   "state": "stopped",
-  "updated_at": "2026-08-17T10:57:37.559Z"
+  "updated_at": "2026-10-13T08:29:23.515Z"
 }
