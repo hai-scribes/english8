@@ -1752,6 +1752,60 @@ async function main() {
        opts.map(o => o.querySelector("input").value).join() === "T,F,NG");
   }
 
+  /* ---- a story chapter is read when its questions are answered ------------
+     Not when a button says so. The text goes away while the three questions
+     are asked, a wrong pick still counts as answered, nothing is added up, and
+     the chapter is logged once -- on the story list and in the day record. */
+  {
+    const prog = JSON.stringify({ "01": { lessons: { 1: 1 }, test: null } });
+    const w = await settled(load("docs/story/index.html", null, w => {
+      w.matchMedia = () => ({ matches: false, addEventListener() {}, removeEventListener() {} });
+      w.localStorage.setItem("en8:progress:v1", prog);
+    }));
+    const doc = w.document, art = doc.querySelector('.sc-ch[data-chapter="01"]');
+    const D = JSON.parse(doc.getElementById("page-data").textContent);
+    const qs = D.chapters.find(c => c.nn === "01").check;
+    ok("story: every chapter carries three questions", D.chapters.every(c => (c.check || []).length === 3));
+    const done = art.querySelector(".sc-done");
+    ok("story: the chapter is not read before its questions", !w.localStorage.getItem("en8:story:v1")
+       || !JSON.parse(w.localStorage.getItem("en8:story:v1"))["01"]);
+    click(w, doc.querySelector('.sc-card[data-chapter="01"]'));
+    click(w, done);
+    const host = art.querySelector(".sc-check");
+    ok("story: the text is put away while the questions are asked",
+       [...art.querySelectorAll(".sc-part")].every(p => p.hidden) && !host.hidden);
+    const pause = ms => new Promise(r => setTimeout(r, ms));
+    for (let i = 0; i < qs.length; i++) {
+      const btns = [...host.querySelectorAll(".choices button")];
+      ok("story: question " + (i + 1) + " is asked", btns.length === 3 && host.textContent.includes(qs[i].q));
+      /* The first is answered wrong, on purpose: it must still count. */
+      const pick = btns.find(b => (b.textContent === qs[i].key) === (i > 0));
+      click(w, pick);
+      if (i === 0) {
+        ok("story: a wrong pick shows the right answer and waits",
+           !!host.querySelector(".choices button.ok") && !!host.querySelector(".choices button.no"));
+        click(w, host.querySelector(".sc-after button"));
+      } else await pause(800);
+    }
+    const S = JSON.parse(w.localStorage.getItem("en8:story:v1") || "{}");
+    ok("story: answering the three marks the chapter read", !!S["01"]);
+    ok("story: nothing on the check adds up a score", !/\d+\s*(of|\/)\s*3\s*(right|correct)|right\b/i.test(host.textContent),
+       host.textContent);
+    const days = JSON.parse(w.localStorage.getItem("en8:days:v1") || "{}");
+    const today = Object.values(days).pop() || {};
+    ok("story: the day record counts the chapter once", today.chapters === 1, JSON.stringify(today));
+    click(w, host.querySelector("[data-again]"));
+    ok("story: Read it again puts the text back", [...art.querySelectorAll(".sc-part")].every(p => !p.hidden) && host.hidden);
+    click(w, done);
+    for (let i = 0; i < qs.length; i++) {
+      click(w, [...host.querySelectorAll(".choices button")].find(b => b.textContent === qs[i].key));
+      await pause(800);
+    }
+    const days2 = JSON.parse(w.localStorage.getItem("en8:days:v1") || "{}");
+    ok("story: answering again does not count the chapter twice", (Object.values(days2).pop() || {}).chapters === 1);
+    w.close();
+  }
+
   /* ---- every page can reach its stylesheet and script ----------------------
      The story and word pages shipped at the wrong depth and loaded neither,
      so the live story page could not open a chapter. The harness here injects

@@ -305,6 +305,7 @@ function dayParts(d){
     n(d.runs, "practice run", "practice runs"),
     n(d.reviewed, "review", "reviews"),
     n(d.readings, "timed reading", "timed readings"),
+    n(d.chapters, "story chapter read", "story chapters read"),
     n(d.writing, "piece of writing", "pieces of writing"),
     n(lessons, "lesson finished", "lessons finished"),
     n(tests, "unit test", "unit tests"),
@@ -773,9 +774,14 @@ function initGate(){
    lesson page, in pieces. It stops chapter 12 spoiling unit 12, and
    level-limited choice is the moderator worth d = 0.73 against d = 0.22.
 
-   Reading is ACCOUNTED FOR: a chapter is marked read and the count shows here
-   and on the home page. Unaccountable reading measured d = 0.01, which is not
-   significantly different from doing nothing. The log IS the intervention.
+   Reading is ACCOUNTED FOR: a chapter is read when its three questions have
+   been answered with the text put away (data/story-checks.json), and the count
+   shows here, on the home page and in the day record. Unaccountable reading
+   measured d = 0.01, which is not significantly different from doing nothing.
+   It replaced a self-clicked "I have read this chapter", the weakest form of
+   account there is; the quiz after each book is what graded-reading
+   programmes (M-Reader, Xreading) use. Never scored: right or wrong, the
+   three answered is the chapter read.
 
    What it must never become: a score, a band, a reading rate, a
    words-per-minute, a streak or a comparison with anyone. It counts chapters
@@ -845,22 +851,84 @@ function initStory(){
     });
   }
 
+  /* A chapter is read when its three questions have been answered, with the
+     text put away: right or wrong, it counts, and nothing is added up. The
+     questions can be answered again, and reading it again puts the text back. */
+  const byNn = {};
+  for (const c of (DATA.chapters || [])) byNn[c.nn] = c;
+  const paintRead = nn => {
+    const art = $('.sc-ch[data-chapter="' + nn + '"]');
+    const btn = art && $(".sc-done", art), said = art && $(".sc-said", art);
+    if (btn) btn.textContent = STORY[nn] ? "Answer the questions again" : "I\u2019ve finished reading";
+    if (said) said.textContent = STORY[nn] ? "Read." : "";
+    const card = $('.sc-card[data-chapter="' + nn + '"]');
+    if (card){
+      card.classList.toggle("is-read", !!STORY[nn]);
+      $(".st", card).textContent = STORY[nn] ? "read" : "";
+    }
+  };
+  const textShown = (art, on) => {
+    for (const p of $$(".sc-part", art)) p.hidden = !on;
+    $(".sc-foot", art).hidden = !on;
+  };
+  const check = nn => {
+    const art = $('.sc-ch[data-chapter="' + nn + '"]'), host = $(".sc-check", art);
+    const items = ((byNn[nn] || {}).check || []).map(it =>
+      Object.assign({}, it, { opts: it.opts.slice().sort(() => Math.random() - .5) }));
+    if (!host || !items.length) return;
+    let i = 0;
+    textShown(art, false);
+    host.hidden = false;
+    const top = () => { if (typeof art.scrollIntoView === "function") art.scrollIntoView({ block: "start" }); };
+    top();
+    const paint = () => {
+      if (i >= items.length) return done();
+      const it = items[i];
+      host.innerHTML = '<div class="card engine"><div class="qbar"><span class="chip">About this chapter</span>'
+        + '<span class="counter">' + (i + 1) + ' of ' + items.length + '</span></div>'
+        + '<p class="e-ask">' + esc(it.q) + '</p><div class="choices">'
+        + it.opts.map((o, k) => '<button type="button" data-k="' + k + '">' + esc(o) + '</button>').join("")
+        + '</div><div class="sc-after"></div></div>';
+      for (const b of $$(".choices button", host)) b.addEventListener("click", () => pick(it, b));
+      const first = $(".choices button", host);
+      if (first){ try { first.focus({ preventScroll: true }); } catch(e){} }
+    };
+    const pick = (it, b) => {
+      const btns = $$(".choices button", host);
+      if (btns.some(x => x.disabled)) return;
+      const ok = it.opts[+b.dataset.k] === it.key;
+      for (const x of btns){
+        x.disabled = true;
+        if (it.opts[+x.dataset.k] === it.key) x.classList.add("ok");
+        else if (x === b) x.classList.add("no");
+        else x.classList.add("dim");
+      }
+      if (ok){ i++; setTimeout(paint, 700); return; }
+      const after = $(".sc-after", host);
+      after.innerHTML = '<div class="row"><button class="btn" type="button">Continue</button></div>';
+      const go = $("button", after);
+      go.addEventListener("click", () => { i++; paint(); });
+      try { go.focus({ preventScroll: true }); } catch(e){}
+    };
+    const done = () => {
+      const first = !STORY[nn];
+      STORY[nn] = Date.now();
+      saveStory();
+      if (first) logDone("chapters");
+      host.innerHTML = '<div class="card engine"><p class="e-ask" role="status">Chapter read.</p>'
+        + '<div class="row"><button class="btn" type="button" data-again>Read it again</button></div></div>';
+      $("[data-again]", host).addEventListener("click", () => {
+        host.hidden = true; host.innerHTML = ""; textShown(art, true); top();
+      });
+      paintRead(nn);
+      paintStoryCounts();
+    };
+    paint();
+  };
   for (const btn of $$(".sc-done")){
     const nn = btn.dataset.chapter;
-    if (STORY[nn]) btn.textContent = "Read — undo";
-    btn.addEventListener("click", () => {
-      if (STORY[nn]) delete STORY[nn]; else STORY[nn] = Date.now();
-      saveStory();
-      const said = btn.parentElement.querySelector(".sc-said");
-      if (said) said.textContent = STORY[nn] ? "Marked as read." : "";
-      btn.textContent = STORY[nn] ? "Read — undo" : "I have read this chapter";
-      const card = $('.sc-card[data-chapter="' + nn + '"]');
-      if (card){
-        card.classList.toggle("is-read", !!STORY[nn]);
-        $(".st", card).textContent = STORY[nn] ? "read" : "";
-      }
-      paintStoryCounts();
-    });
+    paintRead(nn);
+    btn.addEventListener("click", () => check(nn));
   }
   paintStoryCounts();
 }

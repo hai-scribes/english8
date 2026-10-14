@@ -3315,8 +3315,40 @@ def story_chapters(units) -> list:
     return out
 
 
+# A chapter is accounted for by three questions on it, answered with the text
+# put away -- not by a button saying it was read. A self-report is the weakest
+# form of the accountability `09` §2.2 found the effect depends on; a short quiz
+# after each book is what graded-reading programmes use. The questions are about
+# the chapter as a whole, so they can cross its three parts. Never scored: the
+# chapter counts as read once the three are answered, right or wrong.
+STORY_CHECKS = ROOT / "data" / "story-checks.json"
+CHECK_SIZE = 3
+
+
+def load_story_checks(chapters) -> dict:
+    data = json.loads(STORY_CHECKS.read_text(encoding="utf-8"))
+    want = {c["nn"] for c in chapters}
+    if set(data) != want:
+        raise SystemExit(f"{STORY_CHECKS}: chapters {sorted(set(data) ^ want)} "
+                         f"are in one of the story and its checks but not the other")
+    for nn, items in data.items():
+        if len(items) != CHECK_SIZE:
+            raise SystemExit(f"{STORY_CHECKS}: chapter {nn} has {len(items)} "
+                             f"questions, not {CHECK_SIZE}")
+        for i, it in enumerate(items, 1):
+            opts = it.get("opts") or []
+            if not it.get("q") or len(opts) != 3 or len(set(opts)) != 3:
+                raise SystemExit(f"{STORY_CHECKS}: chapter {nn} question {i} needs "
+                                 f"a question and three different options")
+            if it.get("key") not in opts:
+                raise SystemExit(f"{STORY_CHECKS}: chapter {nn} question {i}: the "
+                                 f"key is not one of its options")
+    return data
+
+
 def page_story(units) -> str:
     chapters = story_chapters(units)
+    checks = load_story_checks(chapters)
     by_nn = {u["nn"]: u for u in units}
     total = sum(c["words"] for c in chapters)
     name = lambda c: unit_scene(by_nn[c["nn"]]) or c["title"]
@@ -3333,8 +3365,9 @@ def page_story(units) -> str:
             f'{parts}'
             f'<div class="sc-foot">'
             f'<button class="btn sc-done" type="button" data-chapter="{c["nn"]}">'
-            f'I have read this chapter</button>'
+            f'I\'ve finished reading</button>'
             f'<span class="sc-said" role="status"></span></div>'
+            f'<div class="sc-check" data-chapter="{c["nn"]}" hidden></div>'
             f'</article>')
     cards = "".join(
         f'<button class="sc-card" type="button" data-open="{c["nn"]}" '
@@ -3371,7 +3404,8 @@ def page_story(units) -> str:
                  crumb=[("Today", "../index.html"), ("The story", "")],
                  data={"kind": "story",
                        "chapters": [{"nn": c["nn"], "num": c["num"],
-                                     "title": c["title"], "words": c["words"]}
+                                     "title": c["title"], "words": c["words"],
+                                     "check": checks[c["nn"]]}
                                     for c in chapters]},
                  desc="The twelve chapters of The Sea Gives Back, read straight "
                       "through without the exercises.")

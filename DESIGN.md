@@ -241,6 +241,10 @@ pills. Concentric corners: an inner radius is smaller than the one around it.
   nothing to say. The whole header is put away during a timed test.
 - **Your days.** On Today, under the day's card: a plain list, one line per
   day worked, grouped by week. Not a chart, and no figure to beat.
+- **Chapter check.** Under a story chapter, *I've finished reading* puts
+  the text away and asks three questions about it, one at a time, in the
+  Question style. No score; the chapter is read once the three are answered,
+  and *Read it again* brings the text back.
 
 ## Do's and Don'ts
 
