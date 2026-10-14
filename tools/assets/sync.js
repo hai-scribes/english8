@@ -782,7 +782,7 @@ async function settle(u){
   if (leaving()) return;                  // a tab is signing out; it will say when it is done
   /* She signed out while the sign-in client could not be reached. The
      session it kept is ended now, before anything of hers is fetched. */
-  if (u && get(K.gone) === u.uid){
+  if (u && get(K.gone) && get(K.gone) === await goneMark(u.uid)){
     try { await window.EN8Auth.signOut(); drop(K.gone); } catch(e){}
     user = null;
     setAuth("signed-out");
@@ -880,11 +880,16 @@ async function signIn(){
    drawing the page. */
 const LONGEST_GOODBYE = 5000;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
+/* The note names the account without holding its id: the id is what the held
+   work is locked with, and must not be left readable beside it. */
+async function goneMark(uid){
+  return hex(await crypto.subtle.digest("SHA-256", enc.encode("en8 gone " + uid))).slice(0, 32);
+}
 /* Ends the browser's own session. If the client is not there to do it — the
    page was opened with no network — a note is left, and the session is ended
    the next time the client loads, before it can bring her work back. */
 async function endSession(uid){
-  try { put(K.gone, uid); } catch(e){}
+  try { put(K.gone, await goneMark(uid)); } catch(e){}
   try { await window.EN8Auth.signOut(); drop(K.gone); } catch(e){}
 }
 async function signOut(){

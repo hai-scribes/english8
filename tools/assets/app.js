@@ -84,7 +84,8 @@ const LESSONS = 6;
   const days = read("en8:days:v1");
   if (days){
     for (const d of Object.keys(days)){
-      const st = (days[d] && days[d].steps) || [];
+      if (!days[d] || typeof days[d] !== "object") continue;
+      const st = Array.isArray(days[d].steps) ? days[d].steps : [];
       days[d].steps = st.filter(x => !/^\d\d:L4$/.test(x))
         .map(x => x.replace(/^(\d\d):L([5-7])$/, (_, u, l) => u + ":L" + DOWN[l]));
     }
@@ -251,14 +252,19 @@ function markCheck(n, on){
    exactly the kind of pressure nobody has evidence about. */
 const D_KEY = "en8:days:v1";
 let DAYS = (() => {
-  try { return JSON.parse(localStorage.getItem(D_KEY)) || {}; } catch(e){ return {}; }
+  try {
+    const d = JSON.parse(localStorage.getItem(D_KEY));
+    return d && typeof d === "object" && !Array.isArray(d) ? d : {};
+  } catch(e){ return {}; }
 })();
 function saveDays(){
   try { localStorage.setItem(D_KEY, JSON.stringify(DAYS)); } catch(e){}
 }
 function dayRec(){
   const t = String(todayNum());
-  if (!DAYS[t]) DAYS[t] = { reviewed:0, steps:[] };
+  if (!DAYS[t] || typeof DAYS[t] !== "object") DAYS[t] = { reviewed:0, steps:[] };
+  /* A record from elsewhere may not have the shape this page writes. */
+  if (!Array.isArray(DAYS[t].steps)) DAYS[t].steps = [];
   return DAYS[t];
 }
 function logStep(id, on){
@@ -289,7 +295,7 @@ const MONTH_NAMES = ["January","February","March","April","May","June","July","A
                      "September","October","November","December"];
 function dayParts(d){
   const n = (c, one, many) => c ? [c + " " + (c === 1 ? one : many)] : [];
-  const steps = d.steps || [];
+  const steps = Array.isArray(d.steps) ? d.steps.filter(x => typeof x === "string") : [];
   const lessons = steps.filter(x => /:L\d+$/.test(x)).length;
   const tests = steps.filter(x => /:T$/.test(x)).length;
   const checks = steps.filter(x => /^R\d+$/.test(x)).length;

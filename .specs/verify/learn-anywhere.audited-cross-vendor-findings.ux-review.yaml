@@ -1,0 +1,4 @@
+# Pre-seeded by audit-sign.sh (per-role: ux-review)
+findings: []
+confidence_statements:
+  ux-review: "Examined the learn-anywhere account controls, sync status live region, retry/sign-in failure flows, signed-out-work question, timed-test hiding behavior, and Your days region against design-foundations.md and the UI contract; no UX-review defects were found."

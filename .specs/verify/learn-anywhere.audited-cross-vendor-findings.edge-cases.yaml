@@ -1,0 +1,10 @@
+# Pre-seeded by audit-sign.sh (per-role: edge-cases)
+findings:
+  - id: EC-1
+    dimension: edge-cases
+    severity: MEDIUM
+    status: covered
+    description: "tools/assets/app.js trusts en8:days:v1 day records to have steps as an array; if persisted storage contains a malformed or forward-incompatible steps value, paintDays() throws during Today boot instead of degrading and showing the rest of the learner's record."
+    test_name: "tests/learn-anywhere.edge-malformed-day-record.spec.ts::test_learn_anywhere_EDGE_malformed_day_steps_do_not_break_today"
+    scope: in-diff
+confidence_statements: {}

@@ -4,7 +4,7 @@
    The config is written here and not committed: the rules file is part of the
    feature, so before it exists the store runs open and the test that asks for
    the rules fails, as it should. */
-import { spawn } from "node:child_process";
+import { execFileSync, spawn } from "node:child_process";
 import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -35,6 +35,20 @@ if (!env.JAVA_HOME && existsSync(brewJdk)) {
   env.JAVA_HOME = brewJdk;
   env.PATH = `${brewJdk}/bin:${env.PATH}`;
 }
+
+/* The store emulator's Java process can outlive a run that was stopped hard,
+   and then holds the port and the next run cannot start. One left by these
+   tests -- ours by its project id -- is ended first; anything else on the
+   port is left alone and the start fails as it would have. */
+try {
+  const pids = execFileSync("lsof", ["-t", "-nP", `-iTCP:${STORE_PORT}`, "-sTCP:LISTEN"], { encoding: "utf8" })
+    .split("\n").filter(Boolean);
+  for (const pid of pids) {
+    const cmd = execFileSync("ps", ["-o", "command=", "-p", pid], { encoding: "utf8" });
+    if (/cloud-firestore-emulator/.test(cmd) && cmd.includes(`--project_id ${PROJECT}`)) process.kill(Number(pid), "SIGTERM");
+  }
+  if (pids.length) await new Promise(r => setTimeout(r, 1500));
+} catch (e) {}
 
 const bin = join(ROOT, "node_modules", ".bin", "firebase");
 const child = spawn(bin, ["emulators:start", "--only", "auth,firestore", "--project", PROJECT, "--config", file],
