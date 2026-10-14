@@ -1,0 +1,58 @@
+{
+  "run_id": "c33f62a1d521",
+  "slug": "learn-anywhere",
+  "command": "atelier prototype run learn-anywhere --auto",
+  "launch_flags": {
+    "accept_deferred": false,
+    "accept_empty_graft": false,
+    "force": false,
+    "max_parallel": null
+  },
+  "started": "2026-10-12T07:56:10Z",
+  "finished": "2026-10-12T08:10:02Z",
+  "elapsed_sec": 832.3,
+  "exit_action": "blocked",
+  "stop_reason": "graft moved nothing \u2014 the winning variant produced no commits, so this green is evidence about the GATE, not about new work. nothing was grafted \u2014 mainline is still 99df4a5f403d and the winner's head is the milestone base, i.e. the variant produced NO commits. The gate passed against work that already existed (a pre-green milestone, or a gate that does not discriminate this milestone's objective from the previous one). Treat a green here as evidence about the GATE, not about new work. Re-run attended, or pass `--accept-empty-graft` if the milestone was genuinely already satisfied.",
+  "milestones_advanced": 0,
+  "max_wall_clock_sec": 28800,
+  "max_milestones": 0,
+  "milestones": [
+    {
+      "milestone_id": 5,
+      "objective": "With sign-in, sync, the daily record and the service worker all live, a click still answers within 100ms at the 95th percentile on a throttled phone-width browser, and the page still renders a lesson with every backend origin unreachable \u2014 meaning nothing in the render path is waiting on the network.",
+      "outcome": "blocked",
+      "reason": "graft moved nothing \u2014 the winning variant produced no commits, so this green is evidence about the GATE, not about new work. nothing was grafted \u2014 mainline is still 99df4a5f403d and the winner's head is the milestone base, i.e. the variant produced NO commits. The gate passed against work that already existed (a pre-green milestone, or a gate that does not discriminate this milestone's objective from the previous one). Treat a green here as evidence about the GATE, not about new work. Re-run attended, or pass `--accept-empty-graft` if the milestone was genuinely already satisfied.",
+      "slo": {
+        "metric_id": "p95_interaction_ms",
+        "threshold": 100,
+        "direction": "minimize"
+      },
+      "benchmark_value": 16.5,
+      "winner_variant": 1,
+      "selection_mode": null,
+      "gate_sha256": "ebba77efb18b2548b253823b1c19243b55a7bb369efdc5685d339aa8e6640f4e",
+      "benchmark_sha256": "bb9532c923af002353be92c114deba04868251a1cd0b3e32732f4ed6ae62178a",
+      "grafted_sha": "99df4a5f403d7869e1700f7a5680835b0b23e37f",
+      "cycles": 0,
+      "variant_cycles": [
+        {
+          "variant_id": 1,
+          "cycles": 0
+        },
+        {
+          "variant_id": 2,
+          "cycles": 0
+        }
+      ],
+      "cycles_all_rounds": 0,
+      "retained_branches": [],
+      "boundary_refusal": null,
+      "best_retained": null,
+      "decision_id": null,
+      "recommendation": "proceed",
+      "report_path": "/Users/liemnguyen/Per/English 8/reports/prototype-learn-anywhere.html",
+      "terminal_causes": [],
+      "session_diagnostics": []
+    }
+  ]
+}

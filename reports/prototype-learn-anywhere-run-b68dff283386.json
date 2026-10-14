@@ -1,0 +1,54 @@
+{
+  "run_id": "b68dff283386",
+  "slug": "learn-anywhere",
+  "command": "atelier prototype run learn-anywhere --auto",
+  "launch_flags": {
+    "accept_deferred": false,
+    "accept_empty_graft": false,
+    "force": false,
+    "max_parallel": null
+  },
+  "started": "2026-10-11T05:05:23Z",
+  "finished": "2026-10-11T05:07:38Z",
+  "elapsed_sec": 134.9,
+  "exit_action": "blocked",
+  "stop_reason": "graft moved nothing \u2014 the winning variant produced no commits, so this green is evidence about the GATE, not about new work. nothing was grafted \u2014 mainline is still ab87cecc8688 and the winner's head is the milestone base, i.e. the variant produced NO commits. The gate passed against work that already existed (a pre-green milestone, or a gate that does not discriminate this milestone's objective from the previous one). Treat a green here as evidence about the GATE, not about new work. Re-run attended, or pass `--accept-empty-graft` if the milestone was genuinely already satisfied.",
+  "milestones_advanced": 0,
+  "max_wall_clock_sec": 28800,
+  "max_milestones": 0,
+  "milestones": [
+    {
+      "milestone_id": 1,
+      "objective": "A learner opens a lesson page, signs in with the Google account she already has, and the page says who she is. The session survives a reload and a new tab; signing out actually ends it. Nothing about progress moves yet \u2014 this milestone establishes identity and nothing else, because every later milestone is meaningless without a stable per-account key to hang data on.",
+      "outcome": "blocked",
+      "reason": "graft moved nothing \u2014 the winning variant produced no commits, so this green is evidence about the GATE, not about new work. nothing was grafted \u2014 mainline is still ab87cecc8688 and the winner's head is the milestone base, i.e. the variant produced NO commits. The gate passed against work that already existed (a pre-green milestone, or a gate that does not discriminate this milestone's objective from the previous one). Treat a green here as evidence about the GATE, not about new work. Re-run attended, or pass `--accept-empty-graft` if the milestone was genuinely already satisfied.",
+      "slo": {
+        "metric_id": "auth_contract_violations",
+        "threshold": 0,
+        "direction": "minimize"
+      },
+      "benchmark_value": 0.0,
+      "winner_variant": 1,
+      "selection_mode": null,
+      "gate_sha256": "cb43e12f2825de2c5468eba01d64bce861f950893218c54d9f22c763bcbf8478",
+      "benchmark_sha256": "05cb8e95d6c66f0a89a45f4b06cf177de8cb27dcd5c69ecc9cc5307fc8fedef0",
+      "grafted_sha": "ab87cecc8688d34c0460aef0ec67578caeb4eb7b",
+      "cycles": 0,
+      "variant_cycles": [
+        {
+          "variant_id": 1,
+          "cycles": 0
+        }
+      ],
+      "cycles_all_rounds": 0,
+      "retained_branches": [],
+      "boundary_refusal": null,
+      "best_retained": null,
+      "decision_id": null,
+      "recommendation": "proceed",
+      "report_path": "/Users/liemnguyen/Per/English 8/reports/prototype-learn-anywhere.html",
+      "terminal_causes": [],
+      "session_diagnostics": []
+    }
+  ]
+}

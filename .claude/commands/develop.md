@@ -578,4 +578,4 @@ invariants and hook mechanics, read source directly:
 - `atelier/prompts/scribe-{red,contract}.md` — Scribe role contracts
 - `docs/atelier/ATELIER_PLAN.md` — wave-level history + parked decisions + close-time gates
 - `docs/atelier/ATELIER_REQUIREMENTS.md` — R-IDs + non-goals
-- `docs/atelier/ATELIER_USE_CASES.md` — UC1–UC27 operator flows
+- `docs/atelier/ATELIER_USE_CASES.md` — UC1–UC29 operator flows

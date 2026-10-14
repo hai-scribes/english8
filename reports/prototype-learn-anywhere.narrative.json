@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "slug": "learn-anywhere",
+  "entries": {
+    "run": {
+      "section_hash": "9b8a76f99ea50df3602912828293bc42cab06f0233bf95d629985ea65ebe6051",
+      "narrative_md": "**Run c33f62a1d521 (2026-10-12) \u2014 milestone 5, speed.**\n\nThe run stopped on an empty graft, and here that is the honest result: the build from milestone 4 already met the speed target, so neither variant had anything to change.\n\nBoth variants ran one after the other, made no commits, and passed the cumulative gate. The measured 95th-percentile click-to-paint under the 4\u00d7 CPU slowdown was 16.5 ms for variant 1 and 17.8 ms for variant 2, against a target of 100 ms. Because neither changed any code, the two readings are two measurements of the same build, and the difference between them is measurement noise, not a difference between approaches. The approaches the variants were assigned (deferring writes off the interaction; moving sync into a Web Worker) were not built.\n\nOne risk is deferred to the operator: the figure comes from headless Chromium on a laptop under an artificial slowdown. It is a comparison instrument and not a prediction of the learner's phone.\n\nNext: the operator decides the boundary (`approve-boundary learn-anywhere 5 --proceed --accept-risk 0`). That is the last milestone.\n",
+      "author": "ai",
+      "at": "2026-10-12T08:10:25.845Z"
+    }
+  }
+}

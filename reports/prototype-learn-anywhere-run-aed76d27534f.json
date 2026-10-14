@@ -1,0 +1,54 @@
+{
+  "run_id": "aed76d27534f",
+  "slug": "learn-anywhere",
+  "command": "atelier prototype run learn-anywhere --auto",
+  "launch_flags": {
+    "accept_deferred": false,
+    "accept_empty_graft": false,
+    "force": false,
+    "max_parallel": null
+  },
+  "started": "2026-10-12T06:34:03Z",
+  "finished": "2026-10-12T06:37:17Z",
+  "elapsed_sec": 193.5,
+  "exit_action": "blocked",
+  "stop_reason": "graft moved nothing \u2014 the winning variant produced no commits, so this green is evidence about the GATE, not about new work. nothing was grafted \u2014 mainline is still 9f0aeb6c6fb4 and the winner's head is the milestone base, i.e. the variant produced NO commits. The gate passed against work that already existed (a pre-green milestone, or a gate that does not discriminate this milestone's objective from the previous one). Treat a green here as evidence about the GATE, not about new work. Re-run attended, or pass `--accept-empty-graft` if the milestone was genuinely already satisfied.",
+  "milestones_advanced": 0,
+  "max_wall_clock_sec": 28800,
+  "max_milestones": 0,
+  "milestones": [
+    {
+      "milestone_id": 2,
+      "objective": "Work done on one device appears on another after signing in as the same learner, and work done offline reaches a third device once the network returns. Equally: a different account sees none of it. What she sees on one device is what she sees on the other: a task shown done on one is shown done on the other, with the same answers, marks and attempt history, without her doing anything but sign in. How that state is stored is the implementation's choice; there is no older format to preserve.",
+      "outcome": "blocked",
+      "reason": "graft moved nothing \u2014 the winning variant produced no commits, so this green is evidence about the GATE, not about new work. nothing was grafted \u2014 mainline is still 9f0aeb6c6fb4 and the winner's head is the milestone base, i.e. the variant produced NO commits. The gate passed against work that already existed (a pre-green milestone, or a gate that does not discriminate this milestone's objective from the previous one). Treat a green here as evidence about the GATE, not about new work. Re-run attended, or pass `--accept-empty-graft` if the milestone was genuinely already satisfied.",
+      "slo": {
+        "metric_id": "sync_mismatches",
+        "threshold": 0,
+        "direction": "minimize"
+      },
+      "benchmark_value": 0.0,
+      "winner_variant": 1,
+      "selection_mode": null,
+      "gate_sha256": "39e9aa41e96ce5658155d27f38ef46c2b080b7e02c94d6b5ea564d67c3f785b1",
+      "benchmark_sha256": "8b1459ac7fd0be50ddf2244469fb6df9054602226c73c419c73c5aa1a09c567e",
+      "grafted_sha": "9f0aeb6c6fb44b48c24845b40b562474c7ba6835",
+      "cycles": 0,
+      "variant_cycles": [
+        {
+          "variant_id": 1,
+          "cycles": 0
+        }
+      ],
+      "cycles_all_rounds": 0,
+      "retained_branches": [],
+      "boundary_refusal": null,
+      "best_retained": null,
+      "decision_id": null,
+      "recommendation": "proceed",
+      "report_path": "/Users/liemnguyen/Per/English 8/reports/prototype-learn-anywhere.html",
+      "terminal_causes": [],
+      "session_diagnostics": []
+    }
+  ]
+}

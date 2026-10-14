@@ -119,6 +119,8 @@ evidence in the post-mortem.
 atelier prototype run <slug> --auto --agent --compact
 ```
 
+**Inbox.** At run start (and, under `--auto`, at the top of each milestone) the driver applies an approved framework update waiting in `.atelier/inbox/` and prints any open `atelier inbox:` items to stderr — framework-found bugs in this project. Fix each under this lane's normal gates, then `atelier inbox resolve <id> --note "<what changed>"`.
+
 Run it **backgrounded** (`run_in_background: true`) — an auto run spans multiple milestones and far exceeds the 10-minute Bash ceiling. The driver loops all remaining milestones as an **out-of-process state machine** (it re-reads `goal.json` fresh each milestone — no resident session accumulates context across milestones; each verify-cycle still spawns a fresh worker). At each milestone:
 
 1. Run the milestone tournament to a terminal (same engine as the attended run).
@@ -162,6 +164,12 @@ Always name the stacked report path `reports/prototype-<slug>.html` (and the run
 - **DO NOT treat `blocked` / `stuck` / `stopped_by_cap` as "almost done" and silently re-launch.** They are terminal stop reasons with causes in the report.
 - **The final milestone's interaction-tier is non-negotiable** — "verified by build" still requires a passing `kind: interaction` scenario. W9.11 changed WHO builds it (you, at `/prototype` § "Stand up the harness"), never whether it is required.
 - **Never ask the operator to verify a build by hand.** The lane runs, drives and observes the product itself: `serve:` owns boot/readiness/teardown, and every run writes `.atelier/harness/` in the worktree (`serve.log` + per-scenario `.out.log`/`.err.log`), fed back into the next cycle automatically. "Can you open it and click through?" means the harness is incomplete — fix the harness.
-- **Run backgrounded**, not foreground; for a run that must outlive your session, hand the operator the `! atelier prototype run <slug> --auto --max-wall-clock-sec 0` form.
+- **Run backgrounded**, not foreground. A backgrounded run still lives in your session: it ends when the session does. For a run that must outlive it, hand the operator this line to type — the launch stays their keystroke, never yours:
+
+  ```bash
+  ! atelier prototype run <slug> --auto --detach --max-wall-clock-sec 0
+  ```
+
+  `--detach` runs preflight in the foreground (a red refuses, exit 9, nothing started), then starts the run in its own session and returns in seconds — so the command timeout cannot background or kill it — printing one `action: "detached"` envelope with `pid`, `log_path`, `status_path`, `stop_command`, `status_command`. Do not wait on the process. To report on it, read `reports/autopilot-<slug>.status.json`: `phase: finished` carries `action`, `reason`, `exit_code`; any other phase with a `pid` that is no longer alive is a run that was killed, not one still working. Narration and the final envelope are in `reports/run-logs/autopilot-<slug>.log`. To end it: `atelier prototype run <slug> --stop`. A second launch while it is live is refused (exit 8).
 - **Operator-initiated, not worker-callable** — it spawns worktree-mutating sessions; a supervised worker must never trigger an autonomous run. ("worker-callable" = the supervised *sub-agents* the pipeline spawns — NOT the operator's interactive Claude session. You, the AI driving the operator's session, DO run this on the operator's behalf; the restriction is on pipeline-spawned subagents, not on you.)
 - **One auto run per slug** — the per-slug lock refuses a second concurrent run (exit 8). Distinct slugs run concurrently.

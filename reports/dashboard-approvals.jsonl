@@ -1,0 +1,3 @@
+{"ts": "2026-10-13T08:29:18Z", "event": "requested", "job": "6a578cd18831dcdddc1afdc7", "slug": "story-english", "keys": ["m6"], "digest": "99dea4c84cb82be8a8d6d0d377c4c067357e1d8aab1a483bd1614f55adf5a923", "client": {"addr": "127.0.0.1", "host": "127.0.0.1:8042", "origin": "http://127.0.0.1:8042", "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.7977.78 Safari/537.36"}}
+{"ts": "2026-10-13T08:29:22Z", "event": "presence", "job": "6a578cd18831dcdddc1afdc7", "slug": "story-english", "outcome": "approved"}
+{"ts": "2026-10-13T08:29:23Z", "event": "applied", "job": "6a578cd18831dcdddc1afdc7", "slug": "story-english", "key": "m6", "ok": true, "exit": 0, "reason": null}

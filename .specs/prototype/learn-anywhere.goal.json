@@ -125,13 +125,65 @@
       "milestone_id": 5,
       "operator": "local",
       "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-10-10T20:41:42.088Z",
+      "approved_risks": [
+        "a-100ms-is-instant",
+        "a-daily-not-streak",
+        "a-emulator-fidelity",
+        "a-google-account",
+        "a-local-first-required",
+        "a-no-storage-needed",
+        "a-spark-sufficient"
+      ],
+      "content_sha256": "eb732a1b87e8a90b22e7448df51d626ca839afc17b9b882018b9b35e2bf69df5",
+      "type": "charter"
+    },
+    {
+      "approved_at": "2026-10-10T20:41:42.758Z",
+      "archived_round_id": 6,
+      "content_sha256": "cb43e12f2825de2c5468eba01d64bce861f950893218c54d9f22c763bcbf8478",
+      "milestone_id": 1,
+      "operator": "local",
+      "recheck": false,
+      "type": "milestone_gate",
+      "via": "adopt-edited-gate"
+    },
+    {
+      "approved_at": "2026-10-10T20:41:43.425Z",
+      "content_sha256": "39e9aa41e96ce5658155d27f38ef46c2b080b7e02c94d6b5ea564d67c3f785b1",
+      "milestone_id": 2,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-10-10T20:41:44.008Z",
+      "content_sha256": "a6712c35ed4257d7de3248301db8340e20662e701440c66df5df292f6a769739",
+      "milestone_id": 3,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-10-10T20:41:44.604Z",
+      "content_sha256": "a0ccaa4a973433227a276d86d06c7177b455e3ebda1b24af7aef7aa815fe820a",
+      "milestone_id": 4,
+      "operator": "local",
+      "type": "milestone_gate"
+    },
+    {
+      "approved_at": "2026-10-10T20:41:45.141Z",
+      "content_sha256": "ebba77efb18b2548b253823b1c19243b55a7bb369efdc5685d339aa8e6640f4e",
+      "milestone_id": 5,
+      "operator": "local",
+      "type": "milestone_gate"
     }
   ],
   "created_at": "2026-09-04T17:41:47.019Z",
-  "current_milestone": 1,
+  "current_milestone": null,
   "goal": {
     "charter": {
-      "approved_at": "2026-09-04T17:56:49.335Z",
+      "approved_at": "2026-10-10T20:41:42.088Z",
       "approved_risks": [
         "a-100ms-is-instant",
         "a-daily-not-streak",
@@ -156,11 +208,6 @@
           "id": "a-local-first-required",
           "provenance": "ai_inferred",
           "text": "Instant and offline together force a local-first architecture — reads and writes hit local storage synchronously and a sync engine reconciles afterwards — rather than reading through to Firestore with a cache. This is a design inference, and the falsifiable form of it is render_path_cloud_reads: if the cloud is in the render path, this assumption was wrong or was not implemented."
-        },
-        {
-          "id": "a-eleven-keys-portable",
-          "provenance": "codebase_observed",
-          "text": "The eleven existing en8: localStorage keys can be carried to a per-account record and back without changing how the marking engine, review queue or writing panel serialise anything — i.e. the sync layer can sit underneath the existing app rather than inside it. Read from the code, not verified by building it."
         },
         {
           "id": "a-daily-not-streak",
@@ -199,17 +246,17 @@
         "The learner's data is a child's schoolwork. Cross-account isolation is a safety property, not a feature, and is gated against the real rules engine rather than a stub.",
         "The Firestore emulator is a Java program and the Auth emulator is not. OpenJDK 26 is installed; the harness resolves the keg-only path itself rather than depending on a configured shell profile."
       ],
-      "content_sha256": "f8efc848dcb975f6d794e4dc53d995bc29b2f68bf52495ff3beec98336b18e9c",
+      "content_sha256": "eb732a1b87e8a90b22e7448df51d626ca839afc17b9b882018b9b35e2bf69df5",
       "deferred": {},
       "desired_outcome": "She signs in once with the Google account she already has, and from then on her work follows her: every device she signs in on shows the same progress, the same daily and weekly record of what she has done, and the same state she left. It stays instant — every interaction answers from local storage, never from a round trip — and it keeps working with no network at all, because a learner on a phone is regularly on no network. Everything the app does on her behalf is visible while it happens: there is no moment where the page is talking to a server and not saying so.",
       "kill_criteria": [
         "The learner cannot complete Google sign-in on her own phone without help — an account system a child cannot get through is worse than localStorage, which at least never asks.",
         "p95 interaction latency cannot be held at or under 100ms with sync enabled, meaning the feature made the app perceptibly slower in exchange for durability. Instant was an explicit requirement, not a nice-to-have.",
         "Cross-account isolation cannot be demonstrated against the real rules engine. Shipping a version where one account might read another's work is not an option at any level of usefulness.",
-        "Carrying the eleven existing en8: keys turns out to require changing how the marking engine or the review queue stores anything, i.e. the layer cannot go underneath the existing app and has to reach into it.",
+        "Making her state follow her requires changing what the marking engine marks, what the review queue schedules, or what any lesson teaches — i.e. the sync cannot be built without altering the curriculum behaviour the nine content gates protect.",
         "Staying inside the Spark quotas requires a sync design so coarse that work is lost between devices — in which case the honest conclusion is export/import rather than a sync that silently drops writes."
       ],
-      "problem": "One Vietnamese grade-8 learner, ~13, studies English on a phone. Everything she has done lives in eleven localStorage keys on one browser on one device: 319 marked tasks, twelve writing tasks, her highlights, her notes, her attempt history. That storage is invisible, unbacked and untransferable. Clearing site data erases a year of work with no warning and no recovery; a new phone starts her at zero; and a tablet in another room is a different learner as far as the app is concerned. She also cannot see what she has done lately — the app records every attempt but shows her no account of her own week, so 'have I done anything this week?' is a question the software holds the answer to and does not answer. The site is static, served straight from docs/ by GitHub Pages with no server between a commit and the live page, so none of this can be fixed on the page alone.",
+      "problem": "One Vietnamese grade-8 learner, ~13, studies English on a phone. Everything she does lives in `localStorage` on one browser on one device: her marked task attempts, her writing, her highlights, her notes, her attempt history. That storage is invisible, unbacked and untransferable. Clearing site data erases all of it with no warning and no recovery; a new phone starts her at zero; and a tablet in another room is a different learner as far as the app is concerned. She also cannot see what she has done lately — the app records every attempt but shows her no account of her own week, so 'have I done anything this week?' is a question the software holds the answer to and does not answer. The site is static, served straight from docs/ by GitHub Pages with no server between a commit and the live page, so none of this can be fixed on the page alone.",
       "readiness": {
         "designer": [],
         "developer": [],
@@ -218,7 +265,7 @@
       "scope": {
         "in": [
           "Sign-in with Google, from the page, ending in a session that survives a reload and a new device — and a sign-out that actually ends it",
-          "Every existing en8: local key carried to a per-account record and back: progress, task attempts, writing, highlights, notes, review queue, story reading, single-play flags",
+          "Every kind of learner state the app keeps — progress, task attempts and their history, writing, highlights, notes, review queue, story reading, single-play flags — held per account and shown the same on every device she signs in on. There is no existing data to carry: the sync layer may own storage outright and `app.js`'s save/load pairs may change or go.",
           "A dated record of the work done each day, rolled up by week, that travels with the account and is shown to the learner as an account of her own week",
           "A visible sync surface: who is signed in, what state the sync is in, when it last succeeded, and what went wrong when it did not — such that no network request the page makes is invisible while it is in flight",
           "Local-first read and write, so that every interaction is answered from local storage and reconciled afterwards; the cloud is never in the render path",
@@ -250,7 +297,7 @@
           "benchmark_candidate": "node harness/sync.mjs",
           "evidence_strength": "direct",
           "id": "sync_mismatches",
-          "measurable_form": "Number of failures of the cross-device round trip, measured with separate browser contexts as separate devices: work done on device A appears on device B after signing in as the same learner; work done offline reaches a third device after reconnecting. Target 0 with sync_roundtrips_swept >= 4.",
+          "measurable_form": "Number of failures of the cross-device round trip, measured with separate browser contexts as separate devices: work done on device A appears on device B after signing in as the same learner; work done offline reaches a third device after reconnecting. Appears means SHOWN on B's page — the task done, with the same answers, marks, score line and attempt history as on A — not present in storage. Work done offline on an open page and a concurrent edit on another device must both reach a fresh device. Target 0 with sync_roundtrips_swept >= 4.",
           "priority": "critical",
           "verification_mode": "automated"
         },
@@ -266,7 +313,7 @@
           "benchmark_candidate": "node harness/session.mjs",
           "evidence_strength": "direct",
           "id": "silent_network_ops",
-          "measurable_form": "Number of network requests to a backend origin that left the page while the visible sync indicator read idle or synced. Sampled inside the request handler at the moment the request is issued, not asserted afterwards, because a state that flickers back before an assertion runs is precisely the hidden process being looked for. Target 0, and only counted once sync_states_surfaced >= 4 proves the UI was actually driven through its states.",
+          "measurable_form": "Number of network requests to a backend origin that left the page while the visible sync indicator read idle or synced. Sampled inside the request handler at the moment the request is issued, not asserted afterwards, because a state that flickers back before an assertion runs is precisely the hidden process being looked for. Target 0, and only counted once sync_states_surfaced >= 4 proves the UI was actually driven through its states. Requests are attributed by the page's own reported state at the moment each left, across navigations; requests a service worker makes on the page's behalf are counted.",
           "priority": "critical",
           "verification_mode": "automated"
         },
@@ -274,7 +321,7 @@
           "benchmark_candidate": "node harness/speed.mjs",
           "evidence_strength": "direct",
           "id": "p95_interaction_ms",
-          "measurable_form": "95th percentile milliseconds from a click to the next painted frame, over at least 12 samples, at 390px width under a 4x CPU throttle. The 95th percentile rather than the mean, because the mean hides the occasional stall a learner is the one who notices. Target <= 100ms with speed_probes_swept >= 3.",
+          "measurable_form": "95th percentile milliseconds from a click to the next painted frame, over 40 samples, each a real committed attempt (the task reset with Try it again and filled first, untimed), so the 95th percentile is not simply the maximum and no sample times a disabled button, at 390px width under a 4x CPU throttle. The 95th percentile rather than the mean, because the mean hides the occasional stall a learner is the one who notices. Target <= 100ms with speed_probes_swept >= 3.",
           "priority": "critical",
           "verification_mode": "automated"
         },
@@ -282,7 +329,7 @@
           "benchmark_candidate": "node harness/sync.mjs",
           "evidence_strength": "direct",
           "id": "cross_account_leaks",
-          "measurable_form": "Number of times a signed-in account received another account's work, measured against the real Firestore emulator running the shipped firestore.rules. Target 0. This is the failure that exposes a child's work to a stranger, and it is the one a stub backend cannot detect at all.",
+          "measurable_form": "Number of times a signed-in account received another account's work, measured against the real Firestore emulator running the shipped firestore.rules. Target 0. This is the failure that exposes a child's work to a stranger, and it is the one a stub backend cannot detect at all. Counted two ways: a second learner's page showing any work as done before it has done any, and every document in the emulator probed for read AND write with the second learner's credential. The probe first proves that credential can read its own documents, or isolation is NOT MEASURED.",
           "priority": "guardrail",
           "verification_mode": "automated"
         },
@@ -290,7 +337,7 @@
           "benchmark_candidate": "node harness/speed.mjs",
           "evidence_strength": "direct",
           "id": "render_path_cloud_reads",
-          "measurable_form": "Number of backend requests the page waits on before it is usable, measured by loading a lesson cold with every non-origin request aborted and counting whether the lesson still rendered. Target 0. This is an architectural claim rather than a tuning one: a local-first page paints from its own storage and reconciles afterwards.",
+          "measurable_form": "Number of backend requests the page waits on before it is usable, measured by loading a lesson cold with every non-origin request aborted and counting whether the lesson still rendered. Target 0. This is an architectural claim rather than a tuning one: a local-first page paints from its own storage and reconciles afterwards. Probed signed in, with an attempt already saved: the saved attempt must be shown done with every backend origin blocked, not merely the static markup.",
           "priority": "guardrail",
           "verification_mode": "automated"
         },
@@ -474,10 +521,32 @@
           "terminal_cause": "",
           "terminal_reason": "",
           "variant_id": 1
+        },
+        {
+          "approach": "Firebase Auth signInWithPopup, config injected from a generated asset",
+          "branch": "",
+          "files_changed": [],
+          "gate": {
+            "failing": [],
+            "passed": 2,
+            "signature": "",
+            "total": 2
+          },
+          "gate_passed": true,
+          "has_diff": false,
+          "head_sha": "ab87cecc8688",
+          "measured": false,
+          "metric_unparsed": false,
+          "metric_value": 0.0,
+          "round": 7,
+          "status": "gate_passed",
+          "terminal_cause": "",
+          "terminal_reason": "",
+          "variant_id": 1
         }
       ],
       "benchmark": {
-        "approved_at": "2026-09-19T14:27:59.659Z",
+        "approved_at": "2026-10-10T20:41:42.758Z",
         "command": "node harness/identity.mjs",
         "content_sha256": "05cb8e95d6c66f0a89a45f4b06cf177de8cb27dcd5c69ecc9cc5307fc8fedef0",
         "fixed_workload": "Four sign-in contract flows driven through the page in a real Chromium against the Firebase Auth emulator: the page declares signed-out before anything happens; the Google popup flow completes and [data-en8-identity] names the learner; the signed-in state survives a reload; sign-out returns the page to signed-out.",
@@ -499,13 +568,13 @@
           "confidence": "objective",
           "rationale": "green vs SLO, winner grafted + re-gated; ready to advance"
         },
-        "recorded_at": "2026-09-19T15:23:49.738Z",
+        "recorded_at": "2026-10-11T05:07:38.618Z",
         "source": "auto",
         "status": "pending_approval",
         "theory_changes": []
       },
       "gate": {
-        "approved_at": "2026-09-19T14:27:59.659Z",
+        "approved_at": "2026-10-10T20:41:42.758Z",
         "artifacts": [
           "harness/lib.mjs",
           "harness/browser.mjs",
@@ -519,7 +588,7 @@
           "package.json",
           "package-lock.json"
         ],
-        "artifacts_sha256": "189171b20ebd5fe53882485b9b8b500b125e8146853ff561ea8a58d7a6976e19",
+        "artifacts_sha256": "ae8d77a1d166fc09c8ae2e56372ab13dc90ab13cc9a54316f3a8f0ce0f745007",
         "checks": [
           {
             "kind": "build",
@@ -532,14 +601,24 @@
         ],
         "checks_yaml_body": "schema_version: 1\n\n# Milestone 1's gate. GENERATED from learn-anywhere.checks.yaml by taking the\n# scenarios below verbatim — edit the master and regenerate, never edit here.\n#\n# The set is CUMULATIVE: milestone N carries every earlier milestone's\n# scenarios so a later milestone cannot go green by breaking an earlier one.\n# It is a per-milestone sidecar rather than the slug-level file because the\n# slug-level file demands all six, which milestone 1 cannot satisfy and should\n# not be asked to — a gate that does not discriminate this milestone from the\n# last one is how a milestone advances on work it did not do.\n#\n# Scenarios: build, identity\n\nserve:\n  setup: |\n    set -e\n    [ -d node_modules ] || npm ci --no-audit --no-fund\n    npx --no-install playwright install chromium\n    node_modules/.bin/firebase setup:emulators:firestore\n  command: \"node harness/serve.mjs\"\n  # ports.json is written only once BOTH emulators answer, so polling for it is\n  # polling for a usable stack rather than for a process that has been spawned.\n  ready_command: \"test -f .atelier/harness/ports.json\"\n  ready_timeout_seconds: 240\n  stop_timeout_seconds: 15\n\nchecks:\n  - name: build\n    kind: build\n    # No `|| true`: node_modules is gitignored, so every tournament variant\n    # worktree starts cold. Swallowing a failed install turns it into a missing\n    # package a minute later, which reads as a harness defect and sends the\n    # worker to fix code that was never broken. A setup failure must fail as\n    # setup.\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 600\n    command: \"node harness/build.mjs\"\n\n  - name: identity\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 600\n    command: \"node harness/identity.mjs\"\n",
         "checks_yaml_sha256": "7fa9fdc98cac82dd2e4f9347da7b7f57d1a0b761c552cc153b12676bb48f16a1",
-        "content_sha256": "d3556cbe9c621812fbd257a433aade287a1ce342ee792437713ad4ee20b78321",
+        "content_sha256": "cb43e12f2825de2c5468eba01d64bce861f950893218c54d9f22c763bcbf8478",
         "required_tier": "interaction"
+      },
+      "gate_timing": {
+        "measured_at": "2026-10-11T05:07:38.609Z",
+        "round_id": 7,
+        "seconds": 29.3,
+        "where": "post-graft-regate"
       },
       "honesty_review": {
         "answered": true,
         "decision_type": "correctness_call",
         "fabrication_surfaces": [
           {
+            "accepted_at_boundary": {
+              "at": "2026-10-11T05:55:25.381Z",
+              "by": "operator"
+            },
             "confirmation_needed": "The operator creates the Firebase project and Google OAuth client, and signs in once on the real site. Until that happens this milestone's green is evidence about the page, not about Google.",
             "deferred_to_boundary": true,
             "mitigation": "The flow is driven end to end rather than stubbed — the harness waits for a real popup window, completes it, and only then reads the page's state — so what is verified is the page's whole sign-in path with one component swapped. What remains unverified is exactly the swapped component.",
@@ -555,9 +634,8 @@
           }
         ],
         "question": "Where can this surface show something it invented or claim something it didn't measure? (fabricated options, fake affordances, un-validated input reaching the renderer)",
-        "reviewed_at": "2026-09-04T20:12:27.947Z",
-        "reviewed_by": "ai",
-        "stale_reason": "milestone gate/benchmark/SLO changed via amend-milestone after this review was answered — re-answer it before running"
+        "reviewed_at": "2026-10-10T20:42:13.057Z",
+        "reviewed_by": "ai"
       },
       "id": 1,
       "objective": "A learner opens a lesson page, signs in with the Google account she already has, and the page says who she is. The session survives a reload and a new tab; signing out actually ends it. Nothing about progress moves yet — this milestone establishes identity and nothing else, because every later milestone is meaningless without a stable per-account key to hang data on.",
@@ -946,6 +1024,87 @@
               "wall_spent_seconds": 755
             }
           ]
+        },
+        {
+          "gate_content_sha256": "d3556cbe9c621812fbd257a433aade287a1ce342ee792437713ad4ee20b78321",
+          "redone_at": "2026-10-10T20:41:42.544Z",
+          "rounds": [
+            {
+              "approach_directives": [
+                {
+                  "directive": "Use the Firebase JS SDK's GoogleAuthProvider with signInWithPopup, which is the documented path for a static origin and needs no redirect handler. Configuration comes from a generated assets/firebase-config.js setting window.__EN8_FIREBASE__, so the emulator branch is ordinary dev configuration rather than a test backdoor; harness/browser.mjs substitutes that file's bytes over the wire. Persistence is the SDK's own indexedDBLocalPersistence, which is what makes the session survive a reload.",
+                  "proposer": "gis-popup-firebase-auth",
+                  "recorded_at": "2026-09-19T15:20:56.823Z",
+                  "variant_id": 1
+                }
+              ],
+              "base_sha": "6a8813e4db4b3975ad255024a1f0035128cc8bb8",
+              "chain_source": "mainline",
+              "chained_base_sha": "6a8813e4db4b3975ad255024a1f0035128cc8bb8",
+              "gate_content_sha256": "d3556cbe9c621812fbd257a433aade287a1ce342ee792437713ad4ee20b78321",
+              "graft": {
+                "empty": true,
+                "empty_reason": "nothing was grafted — mainline is still 6a8813e4db4b and the winner's head is the milestone base, i.e. the variant produced NO commits. The gate passed against work that already existed (a pre-green milestone, or a gate that does not discriminate this milestone's objective from the previous one). Treat a green here as evidence about the GATE, not about new work.",
+                "grafted_sha": "6a8813e4db4b3975ad255024a1f0035128cc8bb8",
+                "method": "ff-only",
+                "ok": true,
+                "pre_mainline_sha": "6a8813e4db4b3975ad255024a1f0035128cc8bb8",
+                "status": "complete",
+                "winner_sha": "6a8813e4db4b3975ad255024a1f0035128cc8bb8"
+              },
+              "regate": {
+                "ok": true,
+                "pass_count": 2,
+                "total": 2
+              },
+              "round_id": 6,
+              "selection": {
+                "eligible_variants": [
+                  1
+                ],
+                "reason": "sole gate-passer",
+                "status": "auto",
+                "winner_variant": 1
+              },
+              "status": "grafted",
+              "variants": [
+                {
+                  "artifacts_clean": null,
+                  "base_sha": "6a8813e4db4b3975ad255024a1f0035128cc8bb8",
+                  "benchmark": {
+                    "coverage": 4.0,
+                    "cv": null,
+                    "unparsed": false,
+                    "value": 0.0
+                  },
+                  "branch": "atelier-variant/learn-anywhere/m1/r6/v1",
+                  "clean": true,
+                  "cost": {
+                    "cycles": 0
+                  },
+                  "files_changed": [],
+                  "gate": {
+                    "failing": [],
+                    "passed": 2,
+                    "signature": "",
+                    "total": 2
+                  },
+                  "gate_defect": "",
+                  "gate_passed": true,
+                  "head_sha": "6a8813e4db4b3975ad255024a1f0035128cc8bb8",
+                  "removed_guards": {},
+                  "retained": false,
+                  "session_diagnostics": [],
+                  "status": "gate_passed",
+                  "terminal_cause": "",
+                  "terminal_reason": "",
+                  "variant_id": 1,
+                  "worktree_path": ".worktrees/prototype-learn-anywhere-m1-r6-v1"
+                }
+              ],
+              "winner_variant": 1
+            }
+          ]
         }
       ],
       "risk": "The whole plan rests on a static page being able to authenticate at all. GitHub Pages serves bytes and nothing else: there is no server to hold a session, no place to keep a secret, and no redirect handler. If Google sign-in cannot complete from a static origin and persist across a reload, the entire cross-device premise fails here rather than four milestones later, and the fallback is export/import.",
@@ -955,30 +1114,31 @@
             {
               "directive": "Use the Firebase JS SDK's GoogleAuthProvider with signInWithPopup, which is the documented path for a static origin and needs no redirect handler. Configuration comes from a generated assets/firebase-config.js setting window.__EN8_FIREBASE__, so the emulator branch is ordinary dev configuration rather than a test backdoor; harness/browser.mjs substitutes that file's bytes over the wire. Persistence is the SDK's own indexedDBLocalPersistence, which is what makes the session survive a reload.",
               "proposer": "gis-popup-firebase-auth",
-              "recorded_at": "2026-09-19T15:20:56.823Z",
+              "recorded_at": "2026-10-11T05:05:24.297Z",
               "variant_id": 1
             }
           ],
-          "base_sha": "6a8813e4db4b3975ad255024a1f0035128cc8bb8",
+          "base_sha": "ab87cecc8688d34c0460aef0ec67578caeb4eb7b",
           "chain_source": "mainline",
-          "chained_base_sha": "6a8813e4db4b3975ad255024a1f0035128cc8bb8",
-          "gate_content_sha256": "d3556cbe9c621812fbd257a433aade287a1ce342ee792437713ad4ee20b78321",
+          "chained_base_sha": "ab87cecc8688d34c0460aef0ec67578caeb4eb7b",
+          "gate_content_sha256": "cb43e12f2825de2c5468eba01d64bce861f950893218c54d9f22c763bcbf8478",
           "graft": {
             "empty": true,
-            "empty_reason": "nothing was grafted — mainline is still 6a8813e4db4b and the winner's head is the milestone base, i.e. the variant produced NO commits. The gate passed against work that already existed (a pre-green milestone, or a gate that does not discriminate this milestone's objective from the previous one). Treat a green here as evidence about the GATE, not about new work.",
-            "grafted_sha": "6a8813e4db4b3975ad255024a1f0035128cc8bb8",
+            "empty_reason": "nothing was grafted — mainline is still ab87cecc8688 and the winner's head is the milestone base, i.e. the variant produced NO commits. The gate passed against work that already existed (a pre-green milestone, or a gate that does not discriminate this milestone's objective from the previous one). Treat a green here as evidence about the GATE, not about new work.",
+            "grafted_sha": "ab87cecc8688d34c0460aef0ec67578caeb4eb7b",
             "method": "ff-only",
             "ok": true,
-            "pre_mainline_sha": "6a8813e4db4b3975ad255024a1f0035128cc8bb8",
+            "pre_mainline_sha": "ab87cecc8688d34c0460aef0ec67578caeb4eb7b",
             "status": "complete",
-            "winner_sha": "6a8813e4db4b3975ad255024a1f0035128cc8bb8"
+            "winner_sha": "ab87cecc8688d34c0460aef0ec67578caeb4eb7b"
           },
           "regate": {
             "ok": true,
             "pass_count": 2,
+            "seconds": 29.3,
             "total": 2
           },
-          "round_id": 6,
+          "round_id": 7,
           "selection": {
             "eligible_variants": [
               1
@@ -991,14 +1151,14 @@
           "variants": [
             {
               "artifacts_clean": null,
-              "base_sha": "6a8813e4db4b3975ad255024a1f0035128cc8bb8",
+              "base_sha": "ab87cecc8688d34c0460aef0ec67578caeb4eb7b",
               "benchmark": {
                 "coverage": 4.0,
                 "cv": null,
                 "unparsed": false,
                 "value": 0.0
               },
-              "branch": "atelier-variant/learn-anywhere/m1/r6/v1",
+              "branch": "atelier-variant/learn-anywhere/m1/r7/v1",
               "clean": true,
               "cost": {
                 "cycles": 0
@@ -1012,7 +1172,7 @@
               },
               "gate_defect": "",
               "gate_passed": true,
-              "head_sha": "6a8813e4db4b3975ad255024a1f0035128cc8bb8",
+              "head_sha": "ab87cecc8688d34c0460aef0ec67578caeb4eb7b",
               "removed_guards": {},
               "retained": false,
               "session_diagnostics": [],
@@ -1020,7 +1180,7 @@
               "terminal_cause": "",
               "terminal_reason": "",
               "variant_id": 1,
-              "worktree_path": ".worktrees/prototype-learn-anywhere-m1-r6-v1"
+              "worktree_path": ".worktrees/prototype-learn-anywhere-m1-r7-v1"
             }
           ],
           "winner_variant": 1
@@ -1033,7 +1193,7 @@
         "metric_id": "auth_contract_violations",
         "threshold": 0
       },
-      "status": "pending_approval",
+      "status": "complete",
       "tasks": [
         "The Firebase SDK must be served from the static build, not a CDN — the page has no bundler today, so decide and implement how it gets there (vendored ESM, or an esbuild step whose output is committed) and keep tools/build.py deterministic, because the pre-push hook compares docs/ against a fresh build",
         "Mark up [data-en8-signin], [data-en8-signout], [data-en8-auth-state] and [data-en8-identity] as harness/browser.mjs documents them; the gate resolves elements by these attributes so it survives restyling",
@@ -1042,6 +1202,9 @@
       "title": "Sign in with Google, and stay signed in",
       "tournament": {
         "status": "complete"
+      },
+      "worker": {
+        "exec": true
       }
     },
     {
@@ -1053,21 +1216,65 @@
           "summary": "Leave every existing read and write in app.js untouched against localStorage, and add a layer that observes changes, mirrors them into a per-account Firestore document, and merges remote changes back in. Reads never go to the network, which is what keeps the render path clean for milestone 5. The merge needs a rule for concurrent edits on two devices — last-write-wins per key is the cheap answer and loses work; per-item merge on the task/attempt records is the honest one. firestore.rules must scope every document under the signed-in uid and deny everything else."
         }
       ],
+      "attempt_ledger": [
+        {
+          "approach": "Local-first mirror: localStorage stays the source of truth, a sync engine reconciles it",
+          "branch": "",
+          "files_changed": [],
+          "gate": {
+            "failing": [],
+            "passed": 3,
+            "signature": "",
+            "total": 3
+          },
+          "gate_passed": true,
+          "has_diff": false,
+          "head_sha": "9f0aeb6c6fb4",
+          "measured": false,
+          "metric_unparsed": false,
+          "metric_value": 0.0,
+          "round": 2,
+          "status": "gate_passed",
+          "terminal_cause": "",
+          "terminal_reason": "",
+          "variant_id": 1
+        }
+      ],
       "benchmark": {
-        "approved_at": "2026-09-19T14:27:59.880Z",
-        "command": "node harness/sync.mjs",
-        "content_sha256": "9ed17355ba722089270386553c1188b248d0a0541e9ff28a453554ae69a33eb6",
-        "fixed_workload": "Four round trips across separate browser contexts treated as separate devices, against the real Firestore emulator running the shipped firestore.rules: device A answers a marked task and syncs; device B signs in as the same learner and must receive that task; device C signs in as a different learner and must receive none of it; device A works offline and a fourth device must receive that work after A reconnects.",
+        "approved_at": "2026-10-10T20:41:43.425Z",
+        "command": "node harness/stack.mjs sync",
+        "content_sha256": "8b1459ac7fd0be50ddf2244469fb6df9054602226c73c419c73c5aa1a09c567e",
+        "fixed_workload": "Four round trips across separate browser contexts treated as separate devices, against the real Firestore emulator running the shipped firestore.rules: device A answers a marked task and retakes it; device B signs in as the same learner and must SHOW that task as A shows it (done, answers, marks, score line, two-attempt history); device C, a different learner, must show nothing done before it has answered anything, and the rules engine is then asked directly — every document read and written with C's credential; device A, page open, goes offline and answers a second task while B answers a third, A reconnects, and a fresh device D must show all three.",
         "harness": "harness/sync.mjs",
         "lifecycle": "needs_serve"
       },
       "decision_type": "correctness_call",
+      "findings": {
+        "margin_pct": null,
+        "observations": [
+          {
+            "kind": "confirms",
+            "text": "approach v1 ('Leave every existing read and write in app.js untouched against localStorage, and add a layer that observes changes, mirrors them into a per-account Firestore document, and merges remote changes back in. Reads never go to the network, which is what keeps the render path clean for milestone 5. The merge needs a rule for concurrent edits on two devices — last-write-wins per key is the cheap answer and loses work; per-item merge on the task/attempt records is the honest one. firestore.rules must scope every document under the signed-in uid and deny everything else.', proposer local-first-mirror) won the round"
+          }
+        ],
+        "proposed_next": [],
+        "recommendation": {
+          "action": "proceed",
+          "confidence": "objective",
+          "rationale": "green vs SLO, winner grafted + re-gated; ready to advance"
+        },
+        "recorded_at": "2026-10-12T06:37:17.190Z",
+        "source": "auto",
+        "status": "pending_approval",
+        "theory_changes": []
+      },
       "gate": {
-        "approved_at": "2026-09-19T14:27:59.880Z",
+        "approved_at": "2026-10-10T20:41:43.425Z",
         "artifacts": [
           "harness/lib.mjs",
           "harness/browser.mjs",
           "harness/serve.mjs",
+          "harness/stack.mjs",
           "harness/build.mjs",
           "harness/identity.mjs",
           "harness/sync.mjs",
@@ -1077,7 +1284,7 @@
           "package.json",
           "package-lock.json"
         ],
-        "artifacts_sha256": "189171b20ebd5fe53882485b9b8b500b125e8146853ff561ea8a58d7a6976e19",
+        "artifacts_sha256": "bf66dcdcda1d20c854272eadccebec228b211d6670e2006e70343cb88e1d598e",
         "checks": [
           {
             "kind": "build",
@@ -1094,8 +1301,14 @@
         ],
         "checks_yaml_body": "schema_version: 1\n\n# Milestone 2's gate. GENERATED from learn-anywhere.checks.yaml by taking the\n# scenarios below verbatim — edit the master and regenerate, never edit here.\n#\n# The set is CUMULATIVE: milestone N carries every earlier milestone's\n# scenarios so a later milestone cannot go green by breaking an earlier one.\n# It is a per-milestone sidecar rather than the slug-level file because the\n# slug-level file demands all six, which milestone 1 cannot satisfy and should\n# not be asked to — a gate that does not discriminate this milestone from the\n# last one is how a milestone advances on work it did not do.\n#\n# Scenarios: build, identity, sync\n\nserve:\n  setup: |\n    set -e\n    [ -d node_modules ] || npm ci --no-audit --no-fund\n    npx --no-install playwright install chromium\n    node_modules/.bin/firebase setup:emulators:firestore\n  command: \"node harness/serve.mjs\"\n  # ports.json is written only once BOTH emulators answer, so polling for it is\n  # polling for a usable stack rather than for a process that has been spawned.\n  ready_command: \"test -f .atelier/harness/ports.json\"\n  ready_timeout_seconds: 240\n  stop_timeout_seconds: 15\n\nchecks:\n  - name: build\n    kind: build\n    # No `|| true`: node_modules is gitignored, so every tournament variant\n    # worktree starts cold. Swallowing a failed install turns it into a missing\n    # package a minute later, which reads as a harness defect and sends the\n    # worker to fix code that was never broken. A setup failure must fail as\n    # setup.\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 600\n    command: \"node harness/build.mjs\"\n\n  - name: identity\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 600\n    command: \"node harness/identity.mjs\"\n\n  - name: sync\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 900\n    command: \"node harness/sync.mjs\"\n",
         "checks_yaml_sha256": "dca9540e3d9cd3a827730bd8d83a77f373f14d2b2e84f078ebcb3779dcc20806",
-        "content_sha256": "13505dfccf3d2f101aa4056a604495619b9eea94b8520fdbf53c4055467874a7",
+        "content_sha256": "39e9aa41e96ce5658155d27f38ef46c2b080b7e02c94d6b5ea564d67c3f785b1",
         "required_tier": "interaction"
+      },
+      "gate_timing": {
+        "measured_at": "2026-10-12T06:37:17.185Z",
+        "round_id": 2,
+        "seconds": 42.7,
+        "where": "post-graft-regate"
       },
       "honesty_review": {
         "answered": true,
@@ -1104,7 +1317,7 @@
           {
             "confirmation_needed": "",
             "deferred_to_boundary": false,
-            "mitigation": "The gate is conditioned on its own coverage: cross_account_leaks is only reported as a pass when sync_roundtrips_swept reaches 4, the SLO declares coverage_min 4, and the framework separately refuses a coverage reading of 0 whatever the floor says. Run against today's build the gate prints 'NOT MEASURED — the isolation probe never ran' and fails, which is what it did before this was fixed and passed.",
+            "mitigation": "The isolation number is counted two ways and is conditioned on its own coverage. A second learner's page must show nothing done before it has answered anything, and every document in the emulator is then read AND written with that learner's credential — after the probe first proves the credential can read its own documents, so a probe that could read nothing does not score as 0 leaks. The pass line is only printed when sync_roundtrips_swept reaches 4 and the SLO declares coverage_min 4. Run against the pre-work tree on 2026-10-10 the scenario printed 'NOT MEASURED — the isolation probe never ran' and failed.",
             "resolved": true,
             "surface": "The cross-account isolation number is the one that matters most here — it is a child's schoolwork — and 0 leaks is also what a harness that never signed anybody in reports."
           },
@@ -1116,20 +1329,208 @@
             "surface": "Two browser contexts prove data crosses a backend, but they cannot prove it crossed the RIGHT backend — a variant that satisfied the round trip through some other shared channel would look identical."
           },
           {
-            "confirmation_needed": "At the boundary, read the conflict rule the variant actually implemented and judge whether it can lose work. A last-write-wins over the whole blob passes this milestone and is the wrong answer.",
+            "accepted_at_boundary": {
+              "at": "2026-10-12T06:59:17.606Z",
+              "by": "operator"
+            },
+            "confirmation_needed": "At the boundary, read the conflict rule the variant actually implemented and judge whether two attempts at the same task on two devices can lose one. Both attempts belong in the history.",
             "deferred_to_boundary": true,
-            "mitigation": "The milestone's task ledger requires the conflict rule to be decided and written down rather than left implicit, so the boundary has something to read. The gate does not test it.",
+            "mitigation": "The milestone's task ledger requires the conflict rule to be decided and written down rather than left implicit, so the boundary has something to read. The gate tests concurrent edits to different tasks only.",
             "resolved": false,
-            "surface": "The harness never edits the same key on two devices at once, so a conflict rule that silently drops one device's work would pass every scenario in this milestone. This is the failure mode that loses a study session and leaves no trace."
+            "surface": "The harness now has device A answer one task offline while device B answers a different one, so a whole-record last-write-wins fails. It never has two devices attempt the SAME task at once, so a conflict rule that keeps one device's attempt on a task and silently drops the other's would pass every scenario in this milestone."
+          },
+          {
+            "accepted_at_boundary": {
+              "at": "2026-10-12T06:59:17.607Z",
+              "by": "operator"
+            },
+            "confirmation_needed": "At the boundary, on two browsers signed in as the same learner: write in a writing task, highlight and annotate a passage, and run a review on one, then check each is shown on the other.",
+            "deferred_to_boundary": true,
+            "mitigation": "The task ledger names every kind of state, the per-item ones included, so the omission is a visible gap against the ledger rather than a silent one. The gate does not measure it.",
+            "resolved": false,
+            "surface": "Every round trip in this scenario is a marked task. The objective and the charter say all of her state follows her — writing, highlights, notes, the review queue, story reading — and the gate drives none of those, so a build that syncs task attempts and nothing else is green here."
           }
         ],
         "question": "Where can this surface show something it invented or claim something it didn't measure? (fabricated options, fake affordances, un-validated input reaching the renderer)",
-        "reviewed_at": "2026-09-04T18:00:48.925Z",
+        "reviewed_at": "2026-10-10T07:01:43.057Z",
         "reviewed_by": "ai"
       },
       "id": 2,
-      "objective": "Work done on one device appears on another after signing in as the same learner, and work done offline reaches a third device once the network returns. Equally: a different account sees none of it. The eleven existing en8: localStorage keys are carried to a per-account record and back without changing how the marking engine, the review queue or the writing panel serialise anything.",
-      "risk": "Two risks, and the second is the serious one. First, the sync layer has to sit UNDERNEATH the existing app — if carrying the eleven keys requires reaching into how app.js stores attempts, the layer is not a layer and the cost changes shape entirely. Second, this is a child's schoolwork: a Firestore rule that lets any signed-in user read any document exposes it to strangers, and that is a defect no stub backend can detect, only the real rules engine.",
+      "objective": "Work done on one device appears on another after signing in as the same learner, and work done offline reaches a third device once the network returns. Equally: a different account sees none of it. What she sees on one device is what she sees on the other: a task shown done on one is shown done on the other, with the same answers, marks and attempt history, without her doing anything but sign in. How that state is stored is the implementation's choice; there is no older format to preserve.",
+      "redo_history": [
+        {
+          "gate_content_sha256": "39e9aa41e96ce5658155d27f38ef46c2b080b7e02c94d6b5ea564d67c3f785b1",
+          "redone_at": "2026-10-12T06:32:38.917Z",
+          "rounds": [
+            {
+              "approach_directives": [
+                {
+                  "directive": "Leave every existing read and write in app.js untouched against localStorage, and add a layer that observes changes, mirrors them into a per-account Firestore document, and merges remote changes back in. Reads never go to the network, which is what keeps the render path clean for milestone 5. The merge needs a rule for concurrent edits on two devices — last-write-wins per key is the cheap answer and loses work; per-item merge on the task/attempt records is the honest one. firestore.rules must scope every document under the signed-in uid and deny everything else.",
+                  "proposer": "local-first-mirror",
+                  "recorded_at": "2026-10-11T06:01:35.516Z",
+                  "variant_id": 1
+                }
+              ],
+              "base_sha": "ab87cecc8688d34c0460aef0ec67578caeb4eb7b",
+              "chain_source": "mainline",
+              "chained_base_sha": "ab87cecc8688d34c0460aef0ec67578caeb4eb7b",
+              "gate_content_sha256": "39e9aa41e96ce5658155d27f38ef46c2b080b7e02c94d6b5ea564d67c3f785b1",
+              "graft": {},
+              "regate": {
+                "ok": true,
+                "pass_count": 3,
+                "seconds": 69.2,
+                "total": 3
+              },
+              "round_id": 1,
+              "selection": {
+                "eligible_variants": [
+                  1
+                ],
+                "reason": "sole gate-passer",
+                "status": "auto",
+                "winner_variant": 1
+              },
+              "status": "grafted",
+              "variants": [
+                {
+                  "artifacts_clean": true,
+                  "base_sha": "ab87cecc8688d34c0460aef0ec67578caeb4eb7b",
+                  "benchmark": {
+                    "coverage": 4.0,
+                    "cv": null,
+                    "unparsed": false,
+                    "value": 0.0
+                  },
+                  "branch": "atelier-variant/learn-anywhere/m2/r1/v1",
+                  "clean": true,
+                  "cost": {
+                    "cycles": 1
+                  },
+                  "files_changed": [
+                    "docs/assets/app.css (+3/-0)",
+                    "docs/assets/auth-src.mjs (+218/-3)",
+                    "docs/assets/auth.bundle.js (+5261/-329)",
+                    "docs/index.html (+4/-3)",
+                    "docs/review-1/index.html (+4/-3)",
+                    "docs/review-2/index.html (+4/-3)",
+                    "docs/review-3/index.html (+4/-3)",
+                    "docs/review-4/index.html (+4/-3)",
+                    "docs/story/index.html (+4/-3)",
+                    "docs/unit-01/index.html (+4/-3)",
+                    "docs/unit-01/lesson-1/index.html (+4/-3)",
+                    "docs/unit-01/lesson-2/index.html (+4/-3)",
+                    "… +98 more file(s)"
+                  ],
+                  "gate": {
+                    "failing": [],
+                    "passed": 3,
+                    "signature": "",
+                    "total": 3
+                  },
+                  "gate_defect": "",
+                  "gate_passed": true,
+                  "head_sha": "9f0aeb6c6fb44b48c24845b40b562474c7ba6835",
+                  "removed_guards": {
+                    "examples": [],
+                    "files": {},
+                    "reason": "product diff unavailable (git error, or too large to scan)",
+                    "scanned": false,
+                    "total": 0
+                  },
+                  "retained": false,
+                  "session_diagnostics": [],
+                  "status": "gate_passed",
+                  "terminal_cause": "",
+                  "terminal_reason": "",
+                  "variant_id": 1,
+                  "worktree_path": ".worktrees/prototype-learn-anywhere-m2-r1-v1"
+                }
+              ],
+              "winner_variant": 1
+            }
+          ]
+        }
+      ],
+      "risk": "Two risks, and the second is the serious one. First, app.js reads its state once, at boot, and paints from it — work that arrives from another device afterwards is not on the page until something paints it again, so a build that pulls work into storage and never shows it looks finished and is not. Second, this is a child's schoolwork: a Firestore rule that lets any signed-in user read any document exposes it to strangers, and that is a defect no stub backend can detect, only the real rules engine.",
+      "rounds": [
+        {
+          "approach_directives": [
+            {
+              "directive": "Leave every existing read and write in app.js untouched against localStorage, and add a layer that observes changes, mirrors them into a per-account Firestore document, and merges remote changes back in. Reads never go to the network, which is what keeps the render path clean for milestone 5. The merge needs a rule for concurrent edits on two devices — last-write-wins per key is the cheap answer and loses work; per-item merge on the task/attempt records is the honest one. firestore.rules must scope every document under the signed-in uid and deny everything else.",
+              "proposer": "local-first-mirror",
+              "recorded_at": "2026-10-12T06:34:04.327Z",
+              "variant_id": 1
+            }
+          ],
+          "base_sha": "9f0aeb6c6fb44b48c24845b40b562474c7ba6835",
+          "chain_source": "mainline",
+          "chained_base_sha": "9f0aeb6c6fb44b48c24845b40b562474c7ba6835",
+          "gate_content_sha256": "39e9aa41e96ce5658155d27f38ef46c2b080b7e02c94d6b5ea564d67c3f785b1",
+          "graft": {
+            "empty": true,
+            "empty_reason": "nothing was grafted — mainline is still 9f0aeb6c6fb4 and the winner's head is the milestone base, i.e. the variant produced NO commits. The gate passed against work that already existed (a pre-green milestone, or a gate that does not discriminate this milestone's objective from the previous one). Treat a green here as evidence about the GATE, not about new work.",
+            "grafted_sha": "9f0aeb6c6fb44b48c24845b40b562474c7ba6835",
+            "method": "ff-only",
+            "ok": true,
+            "pre_mainline_sha": "9f0aeb6c6fb44b48c24845b40b562474c7ba6835",
+            "status": "complete",
+            "winner_sha": "9f0aeb6c6fb44b48c24845b40b562474c7ba6835"
+          },
+          "regate": {
+            "ok": true,
+            "pass_count": 3,
+            "seconds": 42.7,
+            "total": 3
+          },
+          "round_id": 2,
+          "selection": {
+            "eligible_variants": [
+              1
+            ],
+            "reason": "sole gate-passer",
+            "status": "auto",
+            "winner_variant": 1
+          },
+          "status": "grafted",
+          "variants": [
+            {
+              "artifacts_clean": null,
+              "base_sha": "9f0aeb6c6fb44b48c24845b40b562474c7ba6835",
+              "benchmark": {
+                "coverage": 4.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 0.0
+              },
+              "branch": "atelier-variant/learn-anywhere/m2/r2/v1",
+              "clean": true,
+              "cost": {
+                "cycles": 0
+              },
+              "files_changed": [],
+              "gate": {
+                "failing": [],
+                "passed": 3,
+                "signature": "",
+                "total": 3
+              },
+              "gate_defect": "",
+              "gate_passed": true,
+              "head_sha": "9f0aeb6c6fb44b48c24845b40b562474c7ba6835",
+              "removed_guards": {},
+              "retained": false,
+              "session_diagnostics": [],
+              "status": "gate_passed",
+              "terminal_cause": "",
+              "terminal_reason": "",
+              "variant_id": 1,
+              "worktree_path": ".worktrees/prototype-learn-anywhere-m2-r2-v1"
+            }
+          ],
+          "winner_variant": 1
+        }
+      ],
       "slo": {
         "coverage_metric_id": "sync_roundtrips_swept",
         "coverage_min": 4,
@@ -1137,13 +1538,19 @@
         "metric_id": "sync_mismatches",
         "threshold": 0
       },
-      "status": "approved",
+      "status": "complete",
       "tasks": [
         "Write firestore.rules in the worktree root — serve.mjs loads it from there when present and otherwise runs deny-all, so an absent file fails the isolation probe loudly rather than passing permissively",
         "Decide and document the conflict rule for the same key edited on two devices; a silent last-write-wins over the whole blob loses a session's work and would still pass a naive round-trip test",
-        "Carry all eleven en8: keys, including the per-id ones (en8:marks:<id>, en8:notes:<id>, en8:flags:<id>, en8:played:<id>) — these are the easy ones to miss because they are written from four different places in app.js"
+        "Carry every kind of learner state the app keeps, including the per-item ones (passage highlights, passage notes, question flags) — these are the easy ones to miss because they are written from different places in app.js"
       ],
-      "title": "Her work follows her, and only hers"
+      "title": "Her work follows her, and only hers",
+      "tournament": {
+        "status": "complete"
+      },
+      "worker": {
+        "exec": true
+      }
     },
     {
       "active": true,
@@ -1154,21 +1561,79 @@
           "summary": "Record each piece of work under the learner's local calendar date, appending rather than replacing, and derive the weekly view by grouping — so the week is computed, never stored, and cannot drift from the days it summarises. Show it as an account of what was done (which lessons, which tasks, how many days worked this week) and not as an achievement. The date must be the learner's local date rather than UTC, or work done in the evening in Vietnam lands on the wrong day."
         }
       ],
+      "attempt_ledger": [
+        {
+          "approach": "An append-only log keyed by local ISO date, summarised for the week",
+          "branch": "",
+          "files_changed": [
+            "docs/assets/app.css (+5/-0)",
+            "docs/assets/app.js (+57/-0)",
+            "docs/index.html (+2/-2)",
+            "docs/review-1/index.html (+2/-2)",
+            "docs/review-2/index.html (+2/-2)",
+            "docs/review-3/index.html (+2/-2)",
+            "docs/review-4/index.html (+2/-2)",
+            "docs/story/index.html (+2/-2)",
+            "docs/unit-01/index.html (+2/-2)",
+            "docs/unit-01/lesson-1/index.html (+2/-2)",
+            "docs/unit-01/lesson-2/index.html (+2/-2)",
+            "docs/unit-01/lesson-3/index.html (+2/-2)",
+            "… +95 more file(s)"
+          ],
+          "gate": {
+            "failing": [],
+            "passed": 4,
+            "signature": "",
+            "total": 4
+          },
+          "gate_passed": true,
+          "has_diff": true,
+          "head_sha": "e82fe71004fc",
+          "measured": true,
+          "metric_unparsed": false,
+          "metric_value": 0.0,
+          "round": 1,
+          "status": "gate_passed",
+          "terminal_cause": "",
+          "terminal_reason": "",
+          "variant_id": 1
+        }
+      ],
       "benchmark": {
-        "approved_at": "2026-09-19T14:28:00.101Z",
-        "command": "node harness/rhythm.mjs",
-        "content_sha256": "fb34646ae83844f568cfd6d121b2b6b431e52a0eb94db7ad968eaff991a47892",
-        "fixed_workload": "Two study sessions on two different dates inside one ISO week (Tue 2026-09-08 and Thu 2026-09-10), with the browser's clock overridden in the harness rather than in the product: work is recorded against the day it was done, day one's record survives into day two, the week is shown as a rollup in [data-en8-rhythm], and the rendered page is scanned for a streak, a score, a percentage-complete or a band number.",
+        "approved_at": "2026-10-10T20:41:44.008Z",
+        "command": "node harness/stack.mjs rhythm",
+        "content_sha256": "efe8f7617a7c816e4ce4e282b48a573cc24d5e3dcf2b979d6b25803be48b9196",
+        "fixed_workload": "Two study sessions on two different dates inside one ISO week (Tue 2026-09-08 and Thu 2026-09-10, both at 06:30 in Asia/Ho_Chi_Minh — the previous day in UTC), with the browser's clock overridden in the harness rather than in the product: work is recorded against the day it was done, day one's record survives into day two on a second device, the week is shown as a rollup in [data-en8-rhythm], and the rendered page is scanned for a streak, a score, a percentage-complete, a band number, time spent, 'in a row', or the Vietnamese streak words.",
         "harness": "harness/rhythm.mjs",
         "lifecycle": "needs_serve"
       },
       "decision_type": "correctness_call",
+      "findings": {
+        "margin_pct": null,
+        "observations": [
+          {
+            "kind": "confirms",
+            "text": "approach v1 ('Record each piece of work under the learner's local calendar date, appending rather than replacing, and derive the weekly view by grouping — so the week is computed, never stored, and cannot drift from the days it summarises. Show it as an account of what was done (which lessons, which tasks, how many days worked this week) and not as an achievement. The date must be the learner's local date rather than UTC, or work done in the evening in Vietnam lands on the wrong day.', proposer append-only-day-log) won the round"
+          }
+        ],
+        "proposed_next": [],
+        "recommendation": {
+          "action": "proceed",
+          "confidence": "objective",
+          "rationale": "green vs SLO, winner grafted + re-gated; ready to advance"
+        },
+        "recorded_at": "2026-10-12T07:08:03.333Z",
+        "source": "auto",
+        "status": "pending_approval",
+        "theory_changes": []
+      },
       "gate": {
-        "approved_at": "2026-09-19T14:28:00.101Z",
+        "approved_at": "2026-10-10T20:41:44.008Z",
         "artifacts": [
           "harness/lib.mjs",
           "harness/browser.mjs",
           "harness/serve.mjs",
+          "harness/stack.mjs",
           "harness/build.mjs",
           "harness/identity.mjs",
           "harness/sync.mjs",
@@ -1178,7 +1643,7 @@
           "package.json",
           "package-lock.json"
         ],
-        "artifacts_sha256": "189171b20ebd5fe53882485b9b8b500b125e8146853ff561ea8a58d7a6976e19",
+        "artifacts_sha256": "bf66dcdcda1d20c854272eadccebec228b211d6670e2006e70343cb88e1d598e",
         "checks": [
           {
             "kind": "build",
@@ -1199,24 +1664,34 @@
         ],
         "checks_yaml_body": "schema_version: 1\n\n# Milestone 3's gate. GENERATED from learn-anywhere.checks.yaml by taking the\n# scenarios below verbatim — edit the master and regenerate, never edit here.\n#\n# The set is CUMULATIVE: milestone N carries every earlier milestone's\n# scenarios so a later milestone cannot go green by breaking an earlier one.\n# It is a per-milestone sidecar rather than the slug-level file because the\n# slug-level file demands all six, which milestone 1 cannot satisfy and should\n# not be asked to — a gate that does not discriminate this milestone from the\n# last one is how a milestone advances on work it did not do.\n#\n# Scenarios: build, identity, sync, rhythm\n\nserve:\n  setup: |\n    set -e\n    [ -d node_modules ] || npm ci --no-audit --no-fund\n    npx --no-install playwright install chromium\n    node_modules/.bin/firebase setup:emulators:firestore\n  command: \"node harness/serve.mjs\"\n  # ports.json is written only once BOTH emulators answer, so polling for it is\n  # polling for a usable stack rather than for a process that has been spawned.\n  ready_command: \"test -f .atelier/harness/ports.json\"\n  ready_timeout_seconds: 240\n  stop_timeout_seconds: 15\n\nchecks:\n  - name: build\n    kind: build\n    # No `|| true`: node_modules is gitignored, so every tournament variant\n    # worktree starts cold. Swallowing a failed install turns it into a missing\n    # package a minute later, which reads as a harness defect and sends the\n    # worker to fix code that was never broken. A setup failure must fail as\n    # setup.\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 600\n    command: \"node harness/build.mjs\"\n\n  - name: identity\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 600\n    command: \"node harness/identity.mjs\"\n\n  - name: sync\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 900\n    command: \"node harness/sync.mjs\"\n\n  - name: rhythm\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 900\n    command: \"node harness/rhythm.mjs\"\n",
         "checks_yaml_sha256": "f82559ea84aa8e8a9691c41d6ab40999627ad5f764c80218bf9f054e9c5faecd",
-        "content_sha256": "40f98a14c8e331513e4d677b8b2842c21f5b5ad5e5913ee7c9457c09838fb682",
+        "content_sha256": "a6712c35ed4257d7de3248301db8340e20662e701440c66df5df292f6a769739",
         "required_tier": "interaction"
+      },
+      "gate_timing": {
+        "measured_at": "2026-10-12T07:08:03.322Z",
+        "round_id": 1,
+        "seconds": 55.8,
+        "where": "post-graft-regate"
       },
       "honesty_review": {
         "answered": true,
         "decision_type": "correctness_call",
         "fabrication_surfaces": [
           {
+            "accepted_at_boundary": {
+              "at": "2026-10-12T07:10:32.843Z",
+              "by": "operator"
+            },
             "confirmation_needed": "At the boundary, look at what [data-en8-rhythm] actually renders and judge whether it reads as an account of work done or as an achievement to maintain.",
             "deferred_to_boundary": true,
-            "mitigation": "The patterns cover the common English phrasings and the numeric forms. The check is a floor, not a proof.",
+            "mitigation": "The patterns cover the common English and Vietnamese phrasings and the numeric forms. The check is a floor, not a proof.",
             "resolved": false,
-            "surface": "The forbidden-surface scan is a set of regexes over the rendered page text. A streak drawn as an image, rendered in Vietnamese, or phrased around the pattern ('4 days running', 'keep it up') would not match, and the gate would report 0 forbidden surfaces on a page that had become exactly what app.js forbids."
+            "surface": "The forbidden-surface scan is a set of regexes over the rendered page text. It now covers time spent, 'in a row', points and badges, and the Vietnamese streak words, but a streak drawn as an image or phrased around the patterns ('4 days running', 'keep it up') would not match, and the gate would report 0 forbidden surfaces on a page that had become exactly what app.js forbids."
           },
           {
             "confirmation_needed": "",
             "deferred_to_boundary": false,
-            "mitigation": "The override replaces the global Date constructor and Date.now, which is every ordinary path; the two fixed dates are asserted as literal strings so there is no arithmetic to disagree about; and the local-vs-UTC hazard is named explicitly in the milestone's task ledger.",
+            "mitigation": "Both sessions run at 06:30 in Asia/Ho_Chi_Minh, which is the previous day in UTC, so a build that files work by UTC date puts the work under the wrong day and fails. The override replaces the global Date constructor and Date.now, which is every ordinary path, and the two dates are asserted as literal strings so there is no arithmetic to disagree about.",
             "resolved": true,
             "surface": "The harness overrides the browser's Date to exercise two calendar days in one run. If a variant reads the date through some path the override misses, or stores UTC while the harness asserts local, the gate could pass on a build that files evening work under the wrong day for a learner in Vietnam (UTC+7)."
           },
@@ -1229,12 +1704,108 @@
           }
         ],
         "question": "Where can this surface show something it invented or claim something it didn't measure? (fabricated options, fake affordances, un-validated input reaching the renderer)",
-        "reviewed_at": "2026-09-04T18:00:49.428Z",
+        "reviewed_at": "2026-10-10T07:01:43.268Z",
         "reviewed_by": "ai"
       },
       "id": 3,
       "objective": "The work she does is recorded against the day she did it, days roll up into a week, and the page shows her that record. An earlier day survives a later one rather than being overwritten, and the whole record travels with the account like everything else.",
       "risk": "The obvious implementation of a daily record is a streak counter, and app.js forbids exactly that in its own words over the reading log: it must never become a score, a band, a reading rate, a words-per-minute, a streak or a comparison with anyone. So the design risk is not whether dates can be stored — it is that the natural, motivating-looking version of this feature is the one the product has already ruled out, and it would look like success. The second risk is duller and likelier: a day-keyed record that overwrites rather than appends passes any single-session test.",
+      "rounds": [
+        {
+          "approach_directives": [
+            {
+              "directive": "Record each piece of work under the learner's local calendar date, appending rather than replacing, and derive the weekly view by grouping — so the week is computed, never stored, and cannot drift from the days it summarises. Show it as an account of what was done (which lessons, which tasks, how many days worked this week) and not as an achievement. The date must be the learner's local date rather than UTC, or work done in the evening in Vietnam lands on the wrong day.",
+              "proposer": "append-only-day-log",
+              "recorded_at": "2026-10-12T07:01:26.249Z",
+              "variant_id": 1
+            }
+          ],
+          "base_sha": "9f0aeb6c6fb44b48c24845b40b562474c7ba6835",
+          "chain_source": "mainline",
+          "chained_base_sha": "9f0aeb6c6fb44b48c24845b40b562474c7ba6835",
+          "gate_content_sha256": "a6712c35ed4257d7de3248301db8340e20662e701440c66df5df292f6a769739",
+          "graft": {
+            "grafted_sha": "e82fe71004fc8833e862cdb4a2dbd1dd4875bb1a",
+            "method": "ff-only",
+            "ok": true,
+            "pre_mainline_sha": "9f0aeb6c6fb44b48c24845b40b562474c7ba6835",
+            "status": "complete",
+            "winner_sha": "e82fe71004fc8833e862cdb4a2dbd1dd4875bb1a"
+          },
+          "regate": {
+            "ok": true,
+            "pass_count": 4,
+            "seconds": 55.8,
+            "total": 4
+          },
+          "round_id": 1,
+          "selection": {
+            "eligible_variants": [
+              1
+            ],
+            "reason": "sole gate-passer",
+            "status": "auto",
+            "winner_variant": 1
+          },
+          "status": "grafted",
+          "variants": [
+            {
+              "artifacts_clean": true,
+              "base_sha": "9f0aeb6c6fb44b48c24845b40b562474c7ba6835",
+              "benchmark": {
+                "coverage": 4.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 0.0
+              },
+              "branch": "atelier-variant/learn-anywhere/m3/r1/v1",
+              "clean": true,
+              "cost": {
+                "cycles": 1
+              },
+              "files_changed": [
+                "docs/assets/app.css (+5/-0)",
+                "docs/assets/app.js (+57/-0)",
+                "docs/index.html (+2/-2)",
+                "docs/review-1/index.html (+2/-2)",
+                "docs/review-2/index.html (+2/-2)",
+                "docs/review-3/index.html (+2/-2)",
+                "docs/review-4/index.html (+2/-2)",
+                "docs/story/index.html (+2/-2)",
+                "docs/unit-01/index.html (+2/-2)",
+                "docs/unit-01/lesson-1/index.html (+2/-2)",
+                "docs/unit-01/lesson-2/index.html (+2/-2)",
+                "docs/unit-01/lesson-3/index.html (+2/-2)",
+                "… +95 more file(s)"
+              ],
+              "gate": {
+                "failing": [],
+                "passed": 4,
+                "signature": "",
+                "total": 4
+              },
+              "gate_defect": "",
+              "gate_passed": true,
+              "head_sha": "e82fe71004fc8833e862cdb4a2dbd1dd4875bb1a",
+              "removed_guards": {
+                "examples": [],
+                "files": {},
+                "reason": "product diff unavailable (git error, or too large to scan)",
+                "scanned": false,
+                "total": 0
+              },
+              "retained": false,
+              "session_diagnostics": [],
+              "status": "gate_passed",
+              "terminal_cause": "",
+              "terminal_reason": "",
+              "variant_id": 1,
+              "worktree_path": ".worktrees/prototype-learn-anywhere-m3-r1-v1"
+            }
+          ],
+          "winner_variant": 1
+        }
+      ],
       "slo": {
         "coverage_metric_id": "rhythm_days_swept",
         "coverage_min": 4,
@@ -1242,12 +1813,18 @@
         "metric_id": "rhythm_defects",
         "threshold": 0
       },
-      "status": "approved",
+      "status": "complete",
       "tasks": [
         "Use the learner's LOCAL date, not UTC — Vietnam is UTC+7, so an evening session would otherwise be filed under the next day",
         "Render the record in [data-en8-rhythm] as an account of work done; the gate fails on the word 'streak', on a percentage-complete and on a band number, per app.js's own rule and CLAUDE.md"
       ],
-      "title": "An account of her own week"
+      "title": "An account of her own week",
+      "tournament": {
+        "status": "complete"
+      },
+      "worker": {
+        "exec": true
+      }
     },
     {
       "active": true,
@@ -1258,21 +1835,79 @@
           "summary": "Route every backend call through one place that raises the indicator before the request and lowers it after, so visibility is structural rather than remembered at each call site — the measurement is per-request, so one forgotten path fails the gate. For offline, cache-first for the content-hashed assets (they are immutable by construction, so this is safe) and network-first with a cache fallback for the HTML documents, which is what stops a cached page pinning an old asset hash forever."
         }
       ],
+      "attempt_ledger": [
+        {
+          "approach": "A single status region driven by the sync engine, and a network-first service worker for documents",
+          "branch": "",
+          "files_changed": [
+            "docs/assets/app.js (+21/-0)",
+            "docs/index.html (+1/-1)",
+            "docs/review-1/index.html (+1/-1)",
+            "docs/review-2/index.html (+1/-1)",
+            "docs/review-3/index.html (+1/-1)",
+            "docs/review-4/index.html (+1/-1)",
+            "docs/story/index.html (+1/-1)",
+            "docs/sw.js (+45/-0)",
+            "docs/unit-01/index.html (+1/-1)",
+            "docs/unit-01/lesson-1/index.html (+1/-1)",
+            "docs/unit-01/lesson-2/index.html (+1/-1)",
+            "docs/unit-01/lesson-3/index.html (+1/-1)",
+            "… +96 more file(s)"
+          ],
+          "gate": {
+            "failing": [],
+            "passed": 5,
+            "signature": "",
+            "total": 5
+          },
+          "gate_passed": true,
+          "has_diff": true,
+          "head_sha": "99df4a5f403d",
+          "measured": true,
+          "metric_unparsed": false,
+          "metric_value": 0.0,
+          "round": 1,
+          "status": "gate_passed",
+          "terminal_cause": "",
+          "terminal_reason": "",
+          "variant_id": 1
+        }
+      ],
       "benchmark": {
-        "approved_at": "2026-09-19T14:28:00.283Z",
-        "command": "node harness/session.mjs",
-        "content_sha256": "c29a875ac4c3912c1a154cf76e8bbe43f59361bda55ea47bc3e014ce03ab002c",
-        "fixed_workload": "One full session at 390px driven through five steps — indicator present before sign-in, sign-in narrated with readable detail text, an answer saved while the indicator shows syncing, the lesson loaded and usable with the context set offline, and the whole request log audited. Every request is timestamped against the sync-state the UI was showing at the moment it left; requests to the site's own origin are excluded by origin rather than by guesswork.",
+        "approved_at": "2026-10-10T20:41:44.604Z",
+        "command": "node harness/stack.mjs session",
+        "content_sha256": "e69def795d461d7fab32e27e30a341a6b80505c08ebf239a3666372fbab0dcad",
+        "fixed_workload": "One full session at 390px driven through six steps — indicator present before sign-in, sign-in narrated with readable detail text, an answer saved while the indicator shows syncing, the lesson loaded and usable with the context set offline, showing `offline` within 10 s, a simulated deploy after which the new app.js must reach this device within three ordinary reloads, and the whole request log audited. Every request is timestamped against the sync-state the UI was showing at the moment it left; requests to the site's own origin are excluded by origin rather than by guesswork.",
         "harness": "harness/session.mjs",
         "lifecycle": "needs_serve"
       },
       "decision_type": "correctness_call",
+      "findings": {
+        "margin_pct": null,
+        "observations": [
+          {
+            "kind": "confirms",
+            "text": "approach v1 ('Route every backend call through one place that raises the indicator before the request and lowers it after, so visibility is structural rather than remembered at each call site — the measurement is per-request, so one forgotten path fails the gate. For offline, cache-first for the content-hashed assets (they are immutable by construction, so this is safe) and network-first with a cache fallback for the HTML documents, which is what stops a cached page pinning an old asset hash forever.', proposer one-status-region-network-first-sw) won the round"
+          }
+        ],
+        "proposed_next": [],
+        "recommendation": {
+          "action": "proceed",
+          "confidence": "objective",
+          "rationale": "green vs SLO, winner grafted + re-gated; ready to advance"
+        },
+        "recorded_at": "2026-10-12T07:18:30.548Z",
+        "source": "auto",
+        "status": "pending_approval",
+        "theory_changes": []
+      },
       "gate": {
-        "approved_at": "2026-09-19T14:28:00.283Z",
+        "approved_at": "2026-10-10T20:41:44.604Z",
         "artifacts": [
           "harness/lib.mjs",
           "harness/browser.mjs",
           "harness/serve.mjs",
+          "harness/stack.mjs",
           "harness/build.mjs",
           "harness/identity.mjs",
           "harness/sync.mjs",
@@ -1282,7 +1917,7 @@
           "package.json",
           "package-lock.json"
         ],
-        "artifacts_sha256": "189171b20ebd5fe53882485b9b8b500b125e8146853ff561ea8a58d7a6976e19",
+        "artifacts_sha256": "bf66dcdcda1d20c854272eadccebec228b211d6670e2006e70343cb88e1d598e",
         "checks": [
           {
             "kind": "build",
@@ -1307,8 +1942,14 @@
         ],
         "checks_yaml_body": "schema_version: 1\n\n# Milestone 4's gate. GENERATED from learn-anywhere.checks.yaml by taking the\n# scenarios below verbatim — edit the master and regenerate, never edit here.\n#\n# The set is CUMULATIVE: milestone N carries every earlier milestone's\n# scenarios so a later milestone cannot go green by breaking an earlier one.\n# It is a per-milestone sidecar rather than the slug-level file because the\n# slug-level file demands all six, which milestone 1 cannot satisfy and should\n# not be asked to — a gate that does not discriminate this milestone from the\n# last one is how a milestone advances on work it did not do.\n#\n# Scenarios: build, identity, sync, rhythm, session\n\nserve:\n  setup: |\n    set -e\n    [ -d node_modules ] || npm ci --no-audit --no-fund\n    npx --no-install playwright install chromium\n    node_modules/.bin/firebase setup:emulators:firestore\n  command: \"node harness/serve.mjs\"\n  # ports.json is written only once BOTH emulators answer, so polling for it is\n  # polling for a usable stack rather than for a process that has been spawned.\n  ready_command: \"test -f .atelier/harness/ports.json\"\n  ready_timeout_seconds: 240\n  stop_timeout_seconds: 15\n\nchecks:\n  - name: build\n    kind: build\n    # No `|| true`: node_modules is gitignored, so every tournament variant\n    # worktree starts cold. Swallowing a failed install turns it into a missing\n    # package a minute later, which reads as a harness defect and sends the\n    # worker to fix code that was never broken. A setup failure must fail as\n    # setup.\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 600\n    command: \"node harness/build.mjs\"\n\n  - name: identity\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 600\n    command: \"node harness/identity.mjs\"\n\n  - name: sync\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 900\n    command: \"node harness/sync.mjs\"\n\n  - name: rhythm\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 900\n    command: \"node harness/rhythm.mjs\"\n\n  - name: session\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 900\n    command: \"node harness/session.mjs\"\n",
         "checks_yaml_sha256": "44a9f5bcfe9b2a842865e643c3663cfab0d2680c1be5f896aa5875e37c6a1d53",
-        "content_sha256": "1190c34681775a33a7b33b19ec05bf72183eaae9a408f0b49ef292d7094e4b2e",
+        "content_sha256": "a0ccaa4a973433227a276d86d06c7177b455e3ebda1b24af7aef7aa815fe820a",
         "required_tier": "interaction"
+      },
+      "gate_timing": {
+        "measured_at": "2026-10-12T07:18:30.538Z",
+        "round_id": 1,
+        "seconds": 48.7,
+        "where": "post-graft-regate"
       },
       "honesty_review": {
         "answered": true,
@@ -1317,11 +1958,15 @@
           {
             "confirmation_needed": "",
             "deferred_to_boundary": false,
-            "mitigation": "There is no such route available: the site is static on GitHub Pages with no server of its own, so nothing can be proxied through its origin. A service worker cannot hide traffic either — requests it makes still surface to the page's request handler.",
+            "mitigation": "There is no such route available: the site is static on GitHub Pages with no server of its own, so nothing can be proxied through its origin. A service worker cannot hide traffic either — requests it makes on the page's behalf are attributed to it and counted, and each request is judged by the state the page reported at the moment it left, across navigations.",
             "resolved": true,
             "surface": "silent_network_ops counts requests to origins OTHER than the site's own. A design that routed backend traffic through the site's origin would become invisible to the count, and the headline metric of this whole lane would read 0 while the page talked to a server without saying so."
           },
           {
+            "accepted_at_boundary": {
+              "at": "2026-10-12T07:52:43.796Z",
+              "by": "operator"
+            },
             "confirmation_needed": "At the boundary, check what the sync surface does when a request is slow rather than absent — whether it has a timeout and a readable way back.",
             "deferred_to_boundary": true,
             "mitigation": "The gate proves the offline path exists and that the indicator names the offline state. It does not prove the degraded-network path.",
@@ -1329,20 +1974,131 @@
             "surface": "Playwright's setOffline is a clean binary cut. A real phone gives you a slow network, a captive portal, a request that hangs for thirty seconds — and a page that handles a clean disconnection can still strand a learner on a bad connection with a spinner and no way out."
           },
           {
+            "accepted_at_boundary": {
+              "at": "2026-10-12T07:52:43.797Z",
+              "by": "operator"
+            },
             "confirmation_needed": "At the boundary, read the actual strings, including the failure strings.",
             "deferred_to_boundary": true,
             "mitigation": "The milestone's task ledger requires the states to read as English she can act on, and CLAUDE.md's audience rule binds this surface as much as any lesson page. Neither is machine-checkable.",
             "resolved": false,
             "surface": "The gate checks that a sync state is surfaced and carries text; it cannot judge whether that text means anything to a thirteen-year-old. 'Error: FIRESTORE_UNAVAILABLE' satisfies every assertion here."
+          },
+          {
+            "accepted_at_boundary": {
+              "at": "2026-10-12T07:52:43.797Z",
+              "by": "operator"
+            },
+            "confirmation_needed": "At the boundary, read the service worker's strategy for documents and for hashed assets, and after the first real deploy confirm on a phone that a reload reaches the new build.",
+            "deferred_to_boundary": true,
+            "mitigation": "The simulated deploy changes what a real deploy changes — the hashed query strings in the HTML and the app.js behind them — so a worker that pins the HTML or ignores the hash fails. The live host's caching is outside the gate.",
+            "resolved": false,
+            "surface": "The stale-build check runs against the harness's own server and a simulated deploy. GitHub Pages serves assets with its own cache lifetime, which the harness does not reproduce, so a service worker that picks up a new build in three reloads here could still hold an old one for longer on the live site."
           }
         ],
         "question": "Where can this surface show something it invented or claim something it didn't measure? (fabricated options, fake affordances, un-validated input reaching the renderer)",
-        "reviewed_at": "2026-09-04T18:00:50.094Z",
+        "reviewed_at": "2026-10-10T07:01:43.524Z",
         "reviewed_by": "ai"
       },
       "id": 4,
       "objective": "Every network request the page makes is visible in the UI while it is in flight: the sync indicator names its state, carries readable text about when it last succeeded, and says so when it fails. And the lesson pages work with no network at all, through a service worker, so 'learn everywhere' does not quietly mean 'wherever there is signal'.",
       "risk": "This is the requirement a reasonable implementation satisfies invisibly and still fails: sync that works perfectly but says nothing is exactly what was ruled out. Measuring it is the difficulty — an assertion made after the fact sees a state that has already flickered back to synced, so the gate samples the indicator inside the request handler at the moment each request is issued. The service worker carries its own risk in the other direction: build.py content-hashes app.js and app.css into their query strings, so caching the HTML that names those hashes is how a service worker ships stale code to a device that will not update.",
+      "rounds": [
+        {
+          "approach_directives": [
+            {
+              "directive": "Route every backend call through one place that raises the indicator before the request and lowers it after, so visibility is structural rather than remembered at each call site — the measurement is per-request, so one forgotten path fails the gate. For offline, cache-first for the content-hashed assets (they are immutable by construction, so this is safe) and network-first with a cache fallback for the HTML documents, which is what stops a cached page pinning an old asset hash forever.",
+              "proposer": "one-status-region-network-first-sw",
+              "recorded_at": "2026-10-12T07:11:54.500Z",
+              "variant_id": 1
+            }
+          ],
+          "base_sha": "e82fe71004fc8833e862cdb4a2dbd1dd4875bb1a",
+          "chain_source": "mainline",
+          "chained_base_sha": "e82fe71004fc8833e862cdb4a2dbd1dd4875bb1a",
+          "gate_content_sha256": "a0ccaa4a973433227a276d86d06c7177b455e3ebda1b24af7aef7aa815fe820a",
+          "graft": {
+            "grafted_sha": "99df4a5f403d7869e1700f7a5680835b0b23e37f",
+            "method": "ff-only",
+            "ok": true,
+            "pre_mainline_sha": "e82fe71004fc8833e862cdb4a2dbd1dd4875bb1a",
+            "status": "complete",
+            "winner_sha": "99df4a5f403d7869e1700f7a5680835b0b23e37f"
+          },
+          "regate": {
+            "ok": true,
+            "pass_count": 5,
+            "seconds": 48.7,
+            "total": 5
+          },
+          "round_id": 1,
+          "selection": {
+            "eligible_variants": [
+              1
+            ],
+            "reason": "sole gate-passer",
+            "status": "auto",
+            "winner_variant": 1
+          },
+          "status": "grafted",
+          "variants": [
+            {
+              "artifacts_clean": true,
+              "base_sha": "e82fe71004fc8833e862cdb4a2dbd1dd4875bb1a",
+              "benchmark": {
+                "coverage": 4.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 0.0
+              },
+              "branch": "atelier-variant/learn-anywhere/m4/r1/v1",
+              "clean": true,
+              "cost": {
+                "cycles": 1
+              },
+              "files_changed": [
+                "docs/assets/app.js (+21/-0)",
+                "docs/index.html (+1/-1)",
+                "docs/review-1/index.html (+1/-1)",
+                "docs/review-2/index.html (+1/-1)",
+                "docs/review-3/index.html (+1/-1)",
+                "docs/review-4/index.html (+1/-1)",
+                "docs/story/index.html (+1/-1)",
+                "docs/sw.js (+45/-0)",
+                "docs/unit-01/index.html (+1/-1)",
+                "docs/unit-01/lesson-1/index.html (+1/-1)",
+                "docs/unit-01/lesson-2/index.html (+1/-1)",
+                "docs/unit-01/lesson-3/index.html (+1/-1)",
+                "… +96 more file(s)"
+              ],
+              "gate": {
+                "failing": [],
+                "passed": 5,
+                "signature": "",
+                "total": 5
+              },
+              "gate_defect": "",
+              "gate_passed": true,
+              "head_sha": "99df4a5f403d7869e1700f7a5680835b0b23e37f",
+              "removed_guards": {
+                "examples": [],
+                "files": {},
+                "reason": "product diff unavailable (git error, or too large to scan)",
+                "scanned": false,
+                "total": 0
+              },
+              "retained": false,
+              "session_diagnostics": [],
+              "status": "gate_passed",
+              "terminal_cause": "",
+              "terminal_reason": "",
+              "variant_id": 1,
+              "worktree_path": ".worktrees/prototype-learn-anywhere-m4-r1-v1"
+            }
+          ],
+          "winner_variant": 1
+        }
+      ],
       "slo": {
         "coverage_metric_id": "sync_states_surfaced",
         "coverage_min": 4,
@@ -1350,13 +2106,19 @@
         "metric_id": "silent_network_ops",
         "threshold": 0
       },
-      "status": "approved",
+      "status": "complete",
       "tasks": [
         "Every state has to read as English a thirteen-year-old can act on, including the failure states — CLAUDE.md's audience rule binds this surface as much as any lesson page, so no error codes and no jargon",
         "The service worker must be emitted by tools/build.py at the site root with the right scope, and must not cache the HTML in a way that pins a stale app.js hash",
         "Check the offline path against the real assets — the cast sheets and background plates are what a lesson page actually loads"
       ],
-      "title": "Nothing happens that she cannot see, and nothing needs the network"
+      "title": "Nothing happens that she cannot see, and nothing needs the network",
+      "tournament": {
+        "status": "complete"
+      },
+      "worker": {
+        "exec": true
+      }
     },
     {
       "active": true,
@@ -1372,21 +2134,91 @@
           "summary": "Do the mirroring, merging and Firestore traffic on a worker thread so the main thread only ever posts a message, which bounds interaction cost by construction rather than by scheduling care. More moving parts — the Firebase SDK has to run in a worker context, and the visible indicator now needs messages back — and worth it only if it actually wins on the measurement."
         }
       ],
+      "attempt_ledger": [
+        {
+          "approach": "Coalesce writes and defer them off the interaction",
+          "branch": "",
+          "files_changed": [],
+          "gate": {
+            "failing": [],
+            "passed": 6,
+            "signature": "",
+            "total": 6
+          },
+          "gate_passed": true,
+          "has_diff": false,
+          "head_sha": "99df4a5f403d",
+          "measured": false,
+          "metric_unparsed": false,
+          "metric_value": 16.5,
+          "round": 1,
+          "status": "gate_passed",
+          "terminal_cause": "",
+          "terminal_reason": "",
+          "variant_id": 1
+        },
+        {
+          "approach": "Move the sync engine into a Web Worker",
+          "branch": "",
+          "files_changed": [],
+          "gate": {
+            "failing": [],
+            "passed": 6,
+            "signature": "",
+            "total": 6
+          },
+          "gate_passed": true,
+          "has_diff": false,
+          "head_sha": "99df4a5f403d",
+          "measured": false,
+          "metric_unparsed": false,
+          "metric_value": 17.8,
+          "round": 1,
+          "status": "gate_passed",
+          "terminal_cause": "",
+          "terminal_reason": "",
+          "variant_id": 2
+        }
+      ],
       "benchmark": {
-        "approved_at": "2026-09-19T14:28:00.467Z",
-        "command": "node harness/speed.mjs",
-        "content_sha256": "e47604e88c8b956dffdb9635e457da422984093cf3241614111872e4f7d75fd6",
-        "fixed_workload": "Three probes at 390px under a 4x CPU throttle, signed in with sync live: a cold load with every non-origin request aborted (the lesson must still render, proving the cloud is not in the render path); at least twelve click-to-next-painted-frame samples reported at the 95th percentile; and total long-task time from a PerformanceObserver.",
+        "approved_at": "2026-10-10T20:41:45.141Z",
+        "command": "node harness/stack.mjs speed",
+        "content_sha256": "bb9532c923af002353be92c114deba04868251a1cd0b3e32732f4ed6ae62178a",
+        "fixed_workload": "Three probes at 390px under a 4x CPU throttle, signed in with sync live: a cold load with every non-origin request aborted (the lesson must render with the attempt saved earlier shown done, proving the cloud is not in the render path); forty committed-attempt samples, click to next painted frame, reported at the 95th percentile; and total long-task time from a PerformanceObserver.",
         "harness": "harness/speed.mjs",
         "lifecycle": "needs_serve"
       },
       "decision_type": "perf_bakeoff",
+      "findings": {
+        "margin_pct": 83.5,
+        "observations": [
+          {
+            "kind": "confirms",
+            "text": "approach v1 ('Keep the sync engine on the main thread but take it out of the interaction: batch storage changes into one debounced flush, schedule it with requestIdleCallback so it never shares a frame with a click, and diff before writing so an unchanged key costs nothing. Cheapest to build and easiest to reason about; the risk is that a large flush still lands as one long task.', proposer coalesce-and-defer) won the round"
+          },
+          {
+            "kind": "new",
+            "text": "winner 16.5 vs SLO 100 (minimize) — margin 84% (comfortable)"
+          }
+        ],
+        "proposed_next": [],
+        "recommendation": {
+          "action": "proceed",
+          "confidence": "objective",
+          "rationale": "green vs SLO, winner grafted + re-gated; ready to advance"
+        },
+        "recorded_at": "2026-10-12T08:10:02.103Z",
+        "source": "auto",
+        "status": "pending_approval",
+        "theory_changes": []
+      },
       "gate": {
-        "approved_at": "2026-09-19T14:28:00.467Z",
+        "approved_at": "2026-10-10T20:41:45.141Z",
         "artifacts": [
           "harness/lib.mjs",
           "harness/browser.mjs",
           "harness/serve.mjs",
+          "harness/stack.mjs",
           "harness/build.mjs",
           "harness/identity.mjs",
           "harness/sync.mjs",
@@ -1396,7 +2228,7 @@
           "package.json",
           "package-lock.json"
         ],
-        "artifacts_sha256": "189171b20ebd5fe53882485b9b8b500b125e8146853ff561ea8a58d7a6976e19",
+        "artifacts_sha256": "bf66dcdcda1d20c854272eadccebec228b211d6670e2006e70343cb88e1d598e",
         "checks": [
           {
             "kind": "build",
@@ -1425,14 +2257,24 @@
         ],
         "checks_yaml_body": "schema_version: 1\n\n# Milestone 5's gate. GENERATED from learn-anywhere.checks.yaml by taking the\n# scenarios below verbatim — edit the master and regenerate, never edit here.\n#\n# The set is CUMULATIVE: milestone N carries every earlier milestone's\n# scenarios so a later milestone cannot go green by breaking an earlier one.\n# It is a per-milestone sidecar rather than the slug-level file because the\n# slug-level file demands all six, which milestone 1 cannot satisfy and should\n# not be asked to — a gate that does not discriminate this milestone from the\n# last one is how a milestone advances on work it did not do.\n#\n# Scenarios: build, identity, sync, rhythm, session, speed\n\nserve:\n  setup: |\n    set -e\n    [ -d node_modules ] || npm ci --no-audit --no-fund\n    npx --no-install playwright install chromium\n    node_modules/.bin/firebase setup:emulators:firestore\n  command: \"node harness/serve.mjs\"\n  # ports.json is written only once BOTH emulators answer, so polling for it is\n  # polling for a usable stack rather than for a process that has been spawned.\n  ready_command: \"test -f .atelier/harness/ports.json\"\n  ready_timeout_seconds: 240\n  stop_timeout_seconds: 15\n\nchecks:\n  - name: build\n    kind: build\n    # No `|| true`: node_modules is gitignored, so every tournament variant\n    # worktree starts cold. Swallowing a failed install turns it into a missing\n    # package a minute later, which reads as a harness defect and sends the\n    # worker to fix code that was never broken. A setup failure must fail as\n    # setup.\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 600\n    command: \"node harness/build.mjs\"\n\n  - name: identity\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 600\n    command: \"node harness/identity.mjs\"\n\n  - name: sync\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 900\n    command: \"node harness/sync.mjs\"\n\n  - name: rhythm\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 900\n    command: \"node harness/rhythm.mjs\"\n\n  - name: session\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 900\n    command: \"node harness/session.mjs\"\n\n  - name: speed\n    kind: interaction\n    setup: \"[ -d node_modules ] || npm ci --no-audit --no-fund\"\n    timeout_seconds: 900\n    command: \"node harness/speed.mjs\"\n",
         "checks_yaml_sha256": "53085eeb54b12d0bb20d0c897e34fb171a98074f671ccfd8e6822a82824cca47",
-        "content_sha256": "85d41f56313f5e09dc9c7651b8359cddb2ab0631aa08145bae76635040f79bdb",
+        "content_sha256": "ebba77efb18b2548b253823b1c19243b55a7bb369efdc5685d339aa8e6640f4e",
         "required_tier": "interaction"
+      },
+      "gate_timing": {
+        "measured_at": "2026-10-12T08:10:02.080Z",
+        "round_id": 1,
+        "seconds": 82.8,
+        "where": "post-graft-regate"
       },
       "honesty_review": {
         "answered": true,
         "decision_type": "perf_bakeoff",
         "fabrication_surfaces": [
           {
+            "accepted_at_boundary": {
+              "at": "2026-10-12T08:56:08.902Z",
+              "by": "operator"
+            },
             "confirmation_needed": "At the boundary, treat the number as a ranking between variants and as a regression guard, not as a claim about the learner's device. The claim about her device needs her device.",
             "deferred_to_boundary": true,
             "mitigation": "The measurement is at least honest about being relative: the same harness, the same throttle and the same viewport across every variant, reported at the 95th percentile rather than the mean, with plausibility bounds set so an implausibly good reading stops the boundary instead of certifying it. It is a comparison instrument, not a prediction of her phone.",
@@ -1442,7 +2284,7 @@
           {
             "confirmation_needed": "",
             "deferred_to_boundary": false,
-            "mitigation": "This milestone's gate is cumulative — build, identity, sync, rhythm and session all run alongside speed, so a variant that weakened sync to win on latency fails the sync and session scenarios in the same cycle. Turning the feature off is not available as a strategy.",
+            "mitigation": "This milestone's gate is cumulative — build, identity, sync, rhythm and session all run alongside speed, so a variant that weakened sync to win on latency fails the sync and session scenarios in the same cycle. Turning the feature off is not available as a strategy. Each latency sample is also a real committed attempt — the task reset and filled first — and the scenario fails when fewer than 36 of 40 clicks commit, so a click that does nothing cannot be timed as a fast one.",
             "resolved": true,
             "surface": "A variant could hit 100ms by doing less: syncing rarely, syncing nothing, or dropping the observer that makes cross-device work happen at all. Fast is easy if correctness is optional."
           },
@@ -1456,19 +2298,144 @@
           {
             "confirmation_needed": "",
             "deferred_to_boundary": false,
-            "mitigation": "The probe counts rendered .task[data-task] elements rather than merely observing that navigation completed, so an empty shell fails. The probe count itself is the coverage metric, so a run where the probe never executed reports NOT MEASURED rather than 0.",
+            "mitigation": "The probe runs signed in with an attempt already saved and requires that attempt to be shown done with every backend origin blocked, so static markup alone fails. The probe count itself is the coverage metric, so a run where the probe never executed reports NOT MEASURED rather than 0.",
             "resolved": true,
-            "surface": "render_path_cloud_reads is measured by aborting every non-origin request and checking the lesson still renders. A page that rendered an empty shell with no tasks would abort-and-render just fine."
+            "surface": "render_path_cloud_reads is measured by blocking every backend origin and checking the lesson still renders. A page that rendered the static markup with none of her saved work would block-and-render just fine."
+          },
+          {
+            "confirmation_needed": "",
+            "deferred_to_boundary": false,
+            "mitigation": "The run is configured with max_parallel 1, so variants run one after another and each reading is taken with no rival variant on the machine.",
+            "resolved": true,
+            "surface": "The latency number is taken on the machine that is also running the tournament, so a second variant building and booting its own emulator at the same time would be measured as this variant's slowness."
           }
         ],
         "question": "Where could the winning benchmark number be fabricated or unmeasured? (harness prints a constant, the workload is not actually exercised, the value is parsed from the wrong line)",
-        "reviewed_at": "2026-09-04T18:00:50.475Z",
+        "reviewed_at": "2026-10-10T07:01:43.716Z",
         "reviewed_by": "ai"
       },
       "id": 5,
       "n_variants": 2,
       "objective": "With sign-in, sync, the daily record and the service worker all live, a click still answers within 100ms at the 95th percentile on a throttled phone-width browser, and the page still renders a lesson with every backend origin unreachable — meaning nothing in the render path is waiting on the network.",
       "risk": "Everything before this milestone adds work to the same main thread that draws the lesson. The failure is not a crash but a slow slide: an observer on every storage write, a merge on every change, a service worker in front of every fetch, each defensible alone and together perceptible. Two variants race here rather than one because the fix is a genuine design choice — where the sync work is done, and how often — and racing measured alternatives is the only honest way to pick between them.",
+      "rounds": [
+        {
+          "approach_directives": [
+            {
+              "directive": "Keep the sync engine on the main thread but take it out of the interaction: batch storage changes into one debounced flush, schedule it with requestIdleCallback so it never shares a frame with a click, and diff before writing so an unchanged key costs nothing. Cheapest to build and easiest to reason about; the risk is that a large flush still lands as one long task.",
+              "proposer": "coalesce-and-defer",
+              "recorded_at": "2026-10-12T07:56:11.137Z",
+              "variant_id": 1
+            },
+            {
+              "directive": "Do the mirroring, merging and Firestore traffic on a worker thread so the main thread only ever posts a message, which bounds interaction cost by construction rather than by scheduling care. More moving parts — the Firebase SDK has to run in a worker context, and the visible indicator now needs messages back — and worth it only if it actually wins on the measurement.",
+              "proposer": "worker-offload",
+              "recorded_at": "2026-10-12T07:56:11.867Z",
+              "variant_id": 2
+            }
+          ],
+          "base_sha": "99df4a5f403d7869e1700f7a5680835b0b23e37f",
+          "chain_source": "mainline",
+          "chained_base_sha": "99df4a5f403d7869e1700f7a5680835b0b23e37f",
+          "gate_content_sha256": "ebba77efb18b2548b253823b1c19243b55a7bb369efdc5685d339aa8e6640f4e",
+          "graft": {
+            "empty": true,
+            "empty_reason": "nothing was grafted — mainline is still 99df4a5f403d and the winner's head is the milestone base, i.e. the variant produced NO commits. The gate passed against work that already existed (a pre-green milestone, or a gate that does not discriminate this milestone's objective from the previous one). Treat a green here as evidence about the GATE, not about new work.",
+            "grafted_sha": "99df4a5f403d7869e1700f7a5680835b0b23e37f",
+            "method": "ff-only",
+            "ok": true,
+            "pre_mainline_sha": "99df4a5f403d7869e1700f7a5680835b0b23e37f",
+            "status": "complete",
+            "winner_sha": "99df4a5f403d7869e1700f7a5680835b0b23e37f"
+          },
+          "regate": {
+            "ok": true,
+            "pass_count": 6,
+            "seconds": 82.8,
+            "total": 6
+          },
+          "round_id": 1,
+          "selection": {
+            "eligible_variants": [
+              1,
+              2
+            ],
+            "reason": "best minimize metric 16.5 vs 17.8",
+            "status": "deterministic",
+            "winner_variant": 1
+          },
+          "status": "grafted",
+          "variants": [
+            {
+              "artifacts_clean": null,
+              "base_sha": "99df4a5f403d7869e1700f7a5680835b0b23e37f",
+              "benchmark": {
+                "coverage": 3.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 16.5
+              },
+              "branch": "atelier-variant/learn-anywhere/m5/r1/v1",
+              "clean": true,
+              "cost": {
+                "cycles": 0
+              },
+              "files_changed": [],
+              "gate": {
+                "failing": [],
+                "passed": 6,
+                "signature": "",
+                "total": 6
+              },
+              "gate_defect": "",
+              "gate_passed": true,
+              "head_sha": "99df4a5f403d7869e1700f7a5680835b0b23e37f",
+              "removed_guards": {},
+              "retained": false,
+              "session_diagnostics": [],
+              "status": "gate_passed",
+              "terminal_cause": "",
+              "terminal_reason": "",
+              "variant_id": 1,
+              "worktree_path": ".worktrees/prototype-learn-anywhere-m5-r1-v1"
+            },
+            {
+              "artifacts_clean": null,
+              "base_sha": "99df4a5f403d7869e1700f7a5680835b0b23e37f",
+              "benchmark": {
+                "coverage": 3.0,
+                "cv": null,
+                "unparsed": false,
+                "value": 17.8
+              },
+              "branch": "atelier-variant/learn-anywhere/m5/r1/v2",
+              "clean": true,
+              "cost": {
+                "cycles": 0
+              },
+              "files_changed": [],
+              "gate": {
+                "failing": [],
+                "passed": 6,
+                "signature": "",
+                "total": 6
+              },
+              "gate_defect": "",
+              "gate_passed": true,
+              "head_sha": "99df4a5f403d7869e1700f7a5680835b0b23e37f",
+              "removed_guards": {},
+              "retained": false,
+              "session_diagnostics": [],
+              "status": "gate_passed",
+              "terminal_cause": "",
+              "terminal_reason": "",
+              "variant_id": 2,
+              "worktree_path": ".worktrees/prototype-learn-anywhere-m5-r1-v2"
+            }
+          ],
+          "winner_variant": 1
+        }
+      ],
       "slo": {
         "coverage_metric_id": "speed_probes_swept",
         "coverage_min": 3,
@@ -1478,13 +2445,16 @@
         "plausible_min": 0.5,
         "threshold": 100
       },
-      "status": "approved",
+      "status": "complete",
       "tasks": [
         "Measure with everything switched on; a number taken with sync disabled measures the build that already existed",
         "render_path_cloud_reads must be 0 — this is architectural, not tuning: the page paints from local storage and reconciles afterwards",
         "The nine content gates must still be green; the whole feature lands in the same app.js that renders 103 pages of curriculum"
       ],
       "title": "Still instant, with all of it switched on",
+      "tournament": {
+        "status": "complete"
+      },
       "worker": {
         "exec": true
       }
@@ -1493,8 +2463,9 @@
   "run": {
     "chain_rounds": false,
     "max_cycles_per_milestone": 100,
+    "max_parallel": 1,
     "max_rounds": 1,
-    "max_wall_minutes": 60,
+    "max_wall_minutes": 150,
     "n_variants": 2,
     "no_progress_limit": 3,
     "worker": {
@@ -1504,6 +2475,6 @@
   },
   "schema_version": 1,
   "slug": "learn-anywhere",
-  "state": "pending_approval",
-  "updated_at": "2026-09-19T15:23:49.738Z"
+  "state": "complete",
+  "updated_at": "2026-10-12T08:56:08.914Z"
 }

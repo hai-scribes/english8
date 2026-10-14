@@ -1,0 +1,174 @@
+slug: learn-anywhere
+status: planned
+goal: |
+  The prototype demonstrates a static English 8 self-study course site for "Tiếng Anh 8 — Global Success" with a course home, twelve unit pages, lesson pages with marked exercises, a story reader, a word lookup page, local progress/review storage, and optional Google sign-in sync to Firestore. It shows unit and lesson navigation, toggles lesson completion, gates practice and unit tests based on lesson completion, marks exercise answers, and filters the vocabulary list.
+
+non_goals: []
+prototype_only: true
+
+acceptance_criteria:
+  - id: AC-1
+    given: "the user opens the course home page"
+    when: "the page loads"
+    then: "displays text \"Tiếng Anh 8 — Global Success\", \"Self-study course · 12 units · 84 lessons\", \"Open Unit 01\", \"The Sea Gives Back\", and \"Look up a word\""
+    test: test_learn_anywhere_AC1_home_page_content
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/index.html:27"
+  - id: AC-2
+    given: "the user is on a page with the colour theme button showing \"◒ Auto\""
+    when: "user clicks the \"◒ Auto\" button"
+    then: "the button text changes to \"◑ Light\" and the document theme is set to light"
+    test: test_learn_anywhere_AC2_theme_button_cycles
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/assets/app.js:28"
+  - id: AC-3
+    given: "the user opens Unit 01"
+    when: "the page loads with no lesson progress stored"
+    then: "displays text \"Leisure Time\", \"Start Lesson 1\", \"Practice & test\", \"Work through the lessons first.\", \"Start practice\", and \"Take the test\""
+    test: test_learn_anywhere_AC3_unit_page_locked_gate
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/unit-01/index.html:27"
+  - id: AC-4
+    given: "the user opens Unit 01 Lesson 1"
+    when: "user clicks the \"Mark lesson complete\" button"
+    then: "the button text changes to \"✓ Completed\" and the lesson completion is stored under \"en8:progress:v1\""
+    test: test_learn_anywhere_AC4_mark_lesson_complete
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/assets/app.js:347"
+  - id: AC-5
+    given: "the user is on a lesson page with a marked task"
+    when: "user clicks the \"Check answers\" button"
+    then: "the task displays a score in the form \"<score> of <total> — one mark each, nothing part-marked.\" and disables the answer inputs"
+    test: test_learn_anywhere_AC5_check_answers_scores_task
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/assets/app.js:1458"
+  - id: AC-6
+    given: "the user opens the word lookup page"
+    when: "user types into the \"Search\" field"
+    then: "the word list is narrowed as the user types and the status text shows either \"405 words\" or \"<count> of 405\""
+    test: test_learn_anywhere_AC6_word_lookup_filters
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/assets/app.js:632"
+  - id: AC-7
+    given: "the user is signed out"
+    when: "user clicks the \"Sign in with Google\" button"
+    then: "the prototype starts Google popup sign-in and changes the auth state to \"signing-in\""
+    test: test_learn_anywhere_AC7_google_sign_in_starts
+    source: "222ff61cba35f45cea01a6767cb4667b33e0ec31:docs/assets/auth-src.mjs:536"
+
+ui_contract:
+  elements:
+    - role: link
+      name: "English 8 Global Success"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Sign in with Google"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "◒ Auto"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: link
+      name: "Open Unit 01"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: link
+      name: "Open the story"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: link
+      name: "Look up a word"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Start review"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: link
+      name: "Leisure Time Thời gian rảnh rỗi /ʊ/ vs /uː/ Verbs of liking & disliking + V-ing vs to-V 7 lessons"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: link
+      name: "Start Lesson 1"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Start practice"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Take the test"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "▶ Hear the conversation"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Read it as a comic"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Check answers"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Show answer"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Mark lesson complete"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: textbox
+      name: "Search"
+      actions: ["input"]
+      source_screenshot: ""
+    - role: button
+      name: "Hear access"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "Hear access slowly"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+    - role: button
+      name: "📖 Full entry 1 more meaning · usage"
+      actions: ["click", "keyboard-enter"]
+      source_screenshot: ""
+
+design_refs: []
+
+entities:
+  creates:
+    - "localStorage key en8:theme"
+    - "localStorage key en8:progress:v1"
+    - "localStorage key en8:story:v1"
+    - "localStorage key en8:review:v1"
+    - "localStorage key en8:tasks:v1"
+    - "localStorage key en8:calib:v1"
+    - "localStorage key prefix en8:played:"
+    - "localStorage key prefix en8:clock:"
+    - "localStorage key prefix en8:marks:"
+    - "localStorage key prefix en8:notes:"
+    - "localStorage key prefix en8:flags:"
+    - "localStorage key prefix en8:thread:"
+    - "localStorage key en8:write:v1"
+    - "localStorage key en8:days:v1"
+    - "Firestore documents users/{uid}/kv/{encoded localStorage key}"
+  requires:
+    - "window.__EN8_FIREBASE__ from docs/assets/firebase-config.js"
+    - "Firebase Auth"
+    - "Firebase Firestore"
+    - "browser localStorage"
+    - "browser speechSynthesis"
+
+prototype_gaps:
+  - "No validation screenshot paths were present in the payload or found under .specs/designs, so visual fidelity cannot be captured in design_refs."
+  - "The prototype is generated as static HTML pages with large inline JSON data rather than a production application routing/data layer."
+  - "The practice and test buttons use aria-disabled without native disabled on locked unit pages."
+  - "Google sign-in failure is only logged to console and repaints signed-out state; no visible error text is shown for popup failure."
+  - "Progress save failure is only logged once to console for en8:progress:v1; no visible error state is shown."
+  - "The word lookup has an empty-result message but no recovery beyond the text \"No word matches that. Try part of the word, or the Vietnamese.\""
+  - "Speech synthesis support is optional; speak buttons are hidden when no voice is available, and no alternate audio source is implemented."
+  - "Firestore sync failure displays \"Could not save just now. Trying again in a moment.\" but there is no manual retry control."
+  - "No loading/progress indicator is shown while static lesson content or large word-list HTML is first parsed."
+  - "Exercise answer reveal buttons are disabled until checking for locked tasks; the prototype does not expose a visible explanation except button title \"Check your answers first.\""
+
+ok: true

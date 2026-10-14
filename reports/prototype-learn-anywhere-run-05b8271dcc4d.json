@@ -1,0 +1,54 @@
+{
+  "run_id": "05b8271dcc4d",
+  "slug": "learn-anywhere",
+  "command": "atelier prototype run learn-anywhere --auto",
+  "launch_flags": {
+    "accept_deferred": false,
+    "accept_empty_graft": false,
+    "force": false,
+    "max_parallel": null
+  },
+  "started": "2026-10-12T07:01:25Z",
+  "finished": "2026-10-12T07:08:03Z",
+  "elapsed_sec": 398.0,
+  "exit_action": "blocked",
+  "stop_reason": "typed boundary not satisfied \u2014 1 fabrication surface(s) are deferred to this boundary and need explicit confirmation: [0] The forbidden-surface scan is a set of regexes over the rendered page text. It n \u2014 accept them with attended `approve-boundary --proceed --accept-risk 0` (comma-separated indices or substrings; the indices are the ones `goal honesty` prints), or pass `prototype run --auto --accept-deferred` to pre-authorize all deferred surfaces for this unattended run",
+  "milestones_advanced": 0,
+  "max_wall_clock_sec": 28800,
+  "max_milestones": 0,
+  "milestones": [
+    {
+      "milestone_id": 3,
+      "objective": "The work she does is recorded against the day she did it, days roll up into a week, and the page shows her that record. An earlier day survives a later one rather than being overwritten, and the whole record travels with the account like everything else.",
+      "outcome": "blocked",
+      "reason": "typed boundary not satisfied \u2014 1 fabrication surface(s) are deferred to this boundary and need explicit confirmation: [0] The forbidden-surface scan is a set of regexes over the rendered page text. It n \u2014 accept them with attended `approve-boundary --proceed --accept-risk 0` (comma-separated indices or substrings; the indices are the ones `goal honesty` prints), or pass `prototype run --auto --accept-deferred` to pre-authorize all deferred surfaces for this unattended run",
+      "slo": {
+        "metric_id": "rhythm_defects",
+        "threshold": 0,
+        "direction": "minimize"
+      },
+      "benchmark_value": 0.0,
+      "winner_variant": 1,
+      "selection_mode": null,
+      "gate_sha256": "a6712c35ed4257d7de3248301db8340e20662e701440c66df5df292f6a769739",
+      "benchmark_sha256": "efe8f7617a7c816e4ce4e282b48a573cc24d5e3dcf2b979d6b25803be48b9196",
+      "grafted_sha": "e82fe71004fc8833e862cdb4a2dbd1dd4875bb1a",
+      "cycles": 1,
+      "variant_cycles": [
+        {
+          "variant_id": 1,
+          "cycles": 1
+        }
+      ],
+      "cycles_all_rounds": 1,
+      "retained_branches": [],
+      "boundary_refusal": null,
+      "best_retained": null,
+      "decision_id": null,
+      "recommendation": "proceed",
+      "report_path": "/Users/liemnguyen/Per/English 8/reports/prototype-learn-anywhere.html",
+      "terminal_causes": [],
+      "session_diagnostics": []
+    }
+  ]
+}

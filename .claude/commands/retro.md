@@ -3,6 +3,42 @@ disable-model-invocation: true
 ---
 
 
+## Step 0: Another project's past runs (`project=<path|name|id>`)
+
+When `$ARGUMENTS` contains `project=<P>`, this is a retro of a DOWNSTREAM project's recorded
+runs, not of this session (R14.3). Skip Steps 1–6 entirely and run:
+
+```bash
+atelier retro --project "<P>" [--run <ID> | --since <DATE-or-DATETIME>] [--lane <lane>] --json
+```
+
+Map `run=<ID>` OR `since=<...>` (never both — the CLI rejects the pair) and `lane=<lane>` from
+`$ARGUMENTS`; nothing else. `since` is `YYYY-MM-DD` (from that day, 00:00 UTC) or an ISO-8601
+datetime (from that instant; no offset = UTC). `run` matches exactly, else as a unique prefix
+(stderr then says `resolved by prefix to <id>`). The CLI is deterministic (NG16), read-only over
+that project, and reads the framework's own trace digest wherever you run it from. Exit codes —
+show stderr verbatim and stop on any non-zero:
+
+- **2** — ambiguous project (candidates listed), unknown project, a bad date, or `--run` with
+  `--since`.
+- **7** — no run matches `run=`, or a prefix matches several (candidates listed).
+- **4** — `--record` refused (not a framework checkout, or a `--mined` inside the project).
+
+If stderr or `problems` says the trace digest is missing or absent, session totals are NOT
+measured (they are `null`, not 0) — say so; never report "no sessions". Then narrate from the
+JSON only, never from memory:
+
+1. One line per run: lane, command, outcome/status, duration, BILLED sessions and cost
+   (`nearby_sessions` only overlapped the run in time — mention them, never add their cost).
+2. **Framework-side findings** (surface `framework:*`): what went wrong, the evidence lines, the
+   likely mechanism — read the framework code it points at before naming a cause.
+3. **Downstream-side findings**: the project's own bugs/ops issues, with evidence.
+4. Next actions. Offer — do not run without the operator's yes — `atelier retro --project "<P>" …
+   --record`, which files the framework-side findings into `reports/selfloop/mined.jsonl` for the
+   self-improvement loop.
+
+Never edit the downstream repo from here (R14.7).
+
 ## Step 1: Resolve the window
 
 ```bash
@@ -23,7 +59,7 @@ Envelope fields:
 | `codex_scope` | `pipeline-only` (default) / `full` — Step 5.2 inputs |
 | `evidence_path` / `codex_evidence_path` / `digest_path` / `codex_inputs_path` / `codex_output_path` / `notes_tmp_path` | reuse — do not recompute |
 
-Argument grammar (combinable, any order): `since-last` (default), `last=<N>m\|h\|d`, `since=<ISO>`, `<spec-id>`/`<slug>`, `+codex` / `-codex`, `+codex-full` (full-scope bias-check; implies `+codex`).
+Argument grammar (combinable, any order): `project=<P>` (Step 0 — another project's runs), `since-last` (default), `last=<N>m\|h\|d`, `since=<ISO>`, `<spec-id>`/`<slug>`, `+codex` / `-codex`, `+codex-full` (full-scope bias-check; implies `+codex`).
 
 ## Step 2: In-session friction notes
 
