@@ -54,20 +54,25 @@ The user's request: $ARGUMENTS
 
    STOP message form: `"Pipeline env not configured. Missing: TYPECHECK_CMD, INTERACTION_TEST_CMD. Export them via .envrc.atelier / direnv / shell, then re-run atelier doctor to confirm."` Always list **which** vars are missing.
 
-   **Backend-unit CLOSE (unit-scope regression — live-run 2026-06-14):**
+   **No-scenario CLOSE (unit-scope regression — live-run 2026-06-14):**
    `regression-runner` resolves scope from interaction **scenarios** in
-   `.specs/regression-scenarios.yaml`. A pure backend-unit spec (no
-   `contracts.*`, no `design_refs`) registers none, so the runner now
-   **auto-detects unit scope**: it resolves the spec's OWN unit-test files
-   (from each AC's `test:` name, falling back to `entities_touched` stems),
-   runs them via `$REGRESSION_BATCH_CMD` as the T1 set, and binds
-   `.regression-t1` + `.regression-t2` to `sha256(spec + test files)` (no
-   scenario manifest needed). `--tier=2 --spec=<slug>` just works — the
-   tests actually run (not a vacuous pass) and CLOSE is unblocked.
-   Requires `$REGRESSION_BATCH_CMD` set (e.g. `python3 -m pytest -q`). If
-   the runner can't resolve any unit-test file it stays on the scenario
-   path (the old zero-scope behavior); name your test in the AC `test:`
-   field so it resolves.
+   `.specs/regression-scenarios.yaml`. A spec that registers none — of any
+   kind: backend-unit, contract, or UI with Playwright AC tests — makes
+   the runner **auto-detect unit scope**: it resolves the spec's OWN AC
+   test files (from each AC's `test:` name, falling back to
+   `entities_touched` stems; a matched doc, data file or asset under
+   `tests/` is dropped and named in the log), runs them as the T1
+   set through the same dispatch as scenarios (`$REGRESSION_BATCH_CMD`,
+   else `$INTERACTION_TEST_CMD`), and binds `.regression-t1` +
+   `.regression-t2` to `sha256(spec + test files [+ manifest])`. The
+   fallback replaces only the own-feature scope: at tier 2 related
+   features' registered scenarios still run as the T2 delta. A spec WITH
+   registered scenarios stays on the scenario path.
+   `--tier=2 --spec=<slug>` just works — the tests actually run (not a
+   vacuous pass) and CLOSE is unblocked. If neither a scenario nor an AC
+   test file resolves, the runner REFUSES (exit 2, "NOTHING TO REGRESS",
+   no marker) — it never prints PASSED over zero tests; name your test in
+   the AC `test:` field so it resolves.
 
 2. **Working-tree hygiene (WARN, don't block).** Run `git status
    --porcelain` once. Two buckets, both emit WARN lines:
@@ -276,8 +281,9 @@ signatures.
 
 **Scribe vs non-Scribe RED.** The `RED with Scribe` flow below —
 `scribe-author.sh`, `red-phase-check.sh`, `unlock-scribe-tests.sh` —
-applies only when Scribe is in scope: UI specs (any `design_refs`) AND
-backend specs declaring `contracts.*`. **Backend specs with neither
+applies only when Scribe is in scope: UI specs (a `design` /
+`ui_contract` key, or a non-empty `design_refs`) AND backend specs
+declaring `contracts.api` / `contracts.database`. **Specs with neither
 skip all three steps**: Builder writes the unit/contract test directly,
 runs it to confirm it fails, then proceeds to GREEN.
 
@@ -288,19 +294,52 @@ Ordering: **SPEC → SCRIBE (locked tests) → RED verify → UNLOCK → GREEN
 
 1. **Tier 1 — Codex.** `bash "$(atelier path --hook scribe-author.sh)" post-red <slug>`.
    - Exit 0, `.scribe-authored.cross-vendor` marker present → step 4.
-   - Exit 0, stdout starts with `SKIP:` and no marker → all-unit-routed
-     spec (every AC went to `unit_test_covers`); skip steps 4–5.
+   - Exit 0, stderr says `NOT CROSS-VENDOR`, and the marker is
+     `.scribe-authored.cross-model` (no cross-vendor one) → the configured
+     scribe is the session's own family (single-model mode, e.g.
+     `gate_routing.scribe: claude`): the tests are finalized as same-vendor
+     fresh eyes, not a cross-vendor pass → step 4, skipping step 2 (the
+     marker step 2 would produce already exists).
+   - Exit 0, stdout starts with `SKIP:` and no marker → Scribe does not
+     apply (no UI surface, no `contracts.*`); skip steps 2–5.
    - Exit 2 `SCRIBE-FALLBACK-NEEDED` → step 2.
-   - Exit 1 → config error.
+   - Exit 2 `SCRIBE-WRITE-FENCE-BLOCKED` → the dispatch changed a spec, a
+     marker, an unlock target dir or `.git/` (or the fence returned no
+     verdict afterwards); its result was discarded and nothing was
+     restored. Inspect the tree as the message says, then step 2.
+   - Exit 2 `SCRIBE-WRITE-FENCE-UNAVAILABLE` → the write fence could not
+     take its snapshot, so Tier 1 was never dispatched: nothing changed and
+     there is nothing to inspect. Repair the framework install and re-run,
+     or step 2.
+   - Exit 1 → BLOCKED before or after the dispatch; the message says which.
+     Not a Tier-2 case. Before: spec not found, the spec kind cannot be
+     determined (unparseable YAML / no PyYAML), already authored, empty
+     `ui_contract.elements`, re-author threshold, an invalid
+     `SCRIBE_UI_FRAMEWORK`, a context pack (`SCRIBE_CONTEXT_PACK_CMD`) that
+     failed or was BLOCKed by sanitisation, or a required framework helper
+     missing or broken — including the signer (below). After: the router
+     exited with something other than 0 or 2, or a pre-sign check failed.
+   - **No signer, no marker.** `scribe-author.sh` and `audit-sign.sh` load
+     `marker-sign.sh` before doing anything else. If it is missing, empty
+     or broken they exit 1 with `BLOCKED: … required helper … is missing or
+     broken`, dispatch nothing and write NO marker — there is no unsigned
+     placeholder. Repair the install; do not route to Tier 2 (Tier 2 signs
+     with the same helper).
 
 2. **Tier 2 — Different-model Claude subagent.** Dispatch `Agent` with
    a model DIFFERENT from this session (Opus→Sonnet/Haiku;
    Sonnet→Opus/Haiku). Brief:
-   - Prompt: `atelier/prompts/scribe-red.md`.
+   - Prompt: the file the `SCRIBE-FALLBACK-NEEDED` line names
+     (`scribe-red.md` for a UI spec, `scribe-contract.md` for `contracts.*`).
    - Spec YAML + `ui_contract` + every `design_refs` PNG.
    - Write dir: `.specs/verify/<slug>/scribe-tests/` (NOT project test
      dir — locked pre-unlock).
-   - Framework detected from `$INTERACTION_TEST_CMD`.
+   - Framework: `$SCRIBE_UI_FRAMEWORK` if set (a known name, else an
+     error); else a framework named in `$INTERACTION_TEST_CMD` as a
+     whole word (`npx playwright test`, `run-cypress.sh`); else what
+     the project is set up for (`playwright.config.*`,
+     `cypress.config.*`, package.json devDependencies). A wrapper's
+     name that names none (`bash tests/run.sh`) is not a framework.
    - Hard rule: do NOT read any implementation file. Emit strict JSON
      manifest only.
 
@@ -310,27 +349,80 @@ Ordering: **SPEC → SCRIBE (locked tests) → RED verify → UNLOCK → GREEN
    blocks — fix Codex or the subagent path. There is no same-model
    fallback.
 
-4. **Red-phase false-pass guard.** `bash "$(atelier path --hook red-phase-check.sh)" <slug>` — runs tests in place against `$INTERACTION_TEST_CMD`.
-   - Exit 0 → `.red-verified` signed → step 5.
-   - Exit 1 → one or more tests passed pre-implementation. Re-enter RED
-     with stronger Scribe; do NOT hand-edit scribe-authored files
-     (hash-lock).
-   - Exit 2 → inconclusive; continue with documented note.
+4. **Red-phase false-pass guard.** `bash "$(atelier path --hook red-phase-check.sh)" <slug>` — copies the staged tests to the dir unlock will move them to, runs them from there against `$INTERACTION_TEST_CMD` (`$TEST_CMD` for contract specs), and removes the copies again. It signs only on POSITIVE EVIDENCE that a test executed and failed; a non-zero exit alone is not a red proof.
+   - Exit 0 → `.red-verified` signed → step 5. Evidence is one of: the
+     runner's own summary counts a failed test; the test imports an
+     implementation module that does not exist yet (a QUALIFIED red — the
+     hook prints `unresolved import: <module>` and the marker records
+     `red_by_unresolved_import`; check each module is implementation, not
+     a test helper); a project `RED_FAILURE_PATTERNS` entry (recorded as
+     `red_by_project_pattern`); or a script-style test (`bash x.sh`,
+     `node x.js` run directly), whose own exit status is the verdict.
+   - Exit 1 → BLOCKED, no marker. Either a test passed pre-implementation
+     (re-enter RED with stronger Scribe; do NOT hand-edit scribe-authored
+     files), or nothing was run: an AC test name matches no declaration, no
+     AC test file is on disk, a staged test cannot be placed (its
+     destination holds a different file, or its target dir is outside the
+     project, inside the staging dir, or under `.git/` or `.specs/`),
+     another red-phase run or an unlock holds the slug, the placement
+     ledger (`.specs/verify/<slug>/.red-placed`) is a symlink or has a line
+     that does not check out (nothing is removed; the line is shown), or
+     the framework install is broken in one of these ways (the message
+     names the file): a sourced helper is missing or does not load
+     (`_safe-source.sh`, `_target-admit.sh`, `_project-root.sh`,
+     `marker-sign.sh` — checked before anything is placed), `plan-cli.py`
+     is missing, or `plan-cli.py` printed nothing.
+   - Exit 2 → inconclusive, NO marker; the reason is printed (with the
+     output tail when a test was run). Nothing to run it with: no
+     `$TEST_CMD` / `$INTERACTION_TEST_CMD` for the route, or no AC has a
+     `test:` entry. A run that proves nothing: runner missing / killed /
+     misused, no tests collected, a syntax error, a file that never loaded,
+     the test's own helper missing, an import that is mistyped / leaves the
+     project / names an undeclared package, or a file with no live test
+     (none, or only skipped / todo / inside a skipped suite — a declaration
+     or method merely NAMED `test` / `it` is not one). A
+     `RED_FAILURE_PATTERNS` entry never rescues any of those. Or a python
+     helper that FAILED: the spec resolver or spec-kind loader (unparseable
+     YAML, no PyYAML), the classifier YAML, the result classifier or its JS
+     lexer, or `plan-cli.py` exiting non-zero. Fix it and re-run; do not
+     continue to unlock (unlock requires `.red-verified`).
+   - Knobs: `ATELIER_RED_STRICT_IMPORTS=1` (every unresolved import is
+     exit 2), `ATELIER_RED_RUN_IN_PLACE=1` (the runner really runs staged
+     files where they are; recorded as `run_in_place` in the marker),
+     `RED_INCONCLUSIVE_PATTERNS` / `RED_FAILURE_PATTERNS` (a runner whose
+     wording the check does not know).
+   - The two pattern lists can also live in the project, one regex per line: `.atelier/config/red-inconclusive-patterns` and `.atelier/config/red-failure-patterns`.
 
-5. **Unlock:** `bash "$(atelier path --hook unlock-scribe-tests.sh)" <slug>` — moves files to project test dir, writes `.scribe-unlocked`, re-verifies hash.
+5. **Unlock:** `bash "$(atelier path --hook unlock-scribe-tests.sh)" <slug>` — re-verifies the manifest hash, moves the files to the project test dir, writes `.scribe-unlocked`.
+   - Exit 1 → BLOCKED, nothing moved: a marker is missing or does not
+     verify (`.scribe-authored.*`, `.red-verified` — run step 4), the staged
+     files no longer match the manifest, a destination is a symlink or holds
+     a different file, a `red-phase-check.sh` for the slug is still running
+     (wait for it), or a framework helper is missing or broken (named;
+     `plan-cli.py` printing nothing counts).
+   - Exit 2 → the target dir was refused, nothing moved or created: it is
+     outside the project, the staging dir itself, under `.git/` or
+     `.specs/`, or holds a control character. Fix `ac.test` in the spec,
+     then re-run.
+   - If a red-phase run was killed mid-way, its copies of the tests are
+     still at their destination. Unlock adopts them (it says so for each)
+     and consumes the red-phase ledger; nothing needs cleaning by hand.
 
 6. Enter GREEN. Builder may read (not modify) the unlocked tests.
 
 **Assertion lock.** GREEN/VERIFY may update selectors + setup; **do NOT
 change assertion values** (expected text, URLs, counts). If an
 assertion must change, the AC is wrong — update spec, re-enter RED.
-Enforced by `verify-test-assertions.sh` with a whole-file hash-lock
-against the Scribe manifest.
+**Not mechanically enforced today** — this rule is yours to hold. No
+checker is shipped: there is no `verify-test-assertions.sh`, so do NOT
+invoke one. (`.scribe-unlocked` records `manifest-sha256` +
+`target-inventory-sha256`, which is what such a checker would compare
+against.)
 
 #### Scribe correction loop
 
-If Scribe-authored tests are wrong: **do NOT hand-edit** (hash-lock
-blocks GREEN) and **do NOT author as Builder** (destroys the role
+If Scribe-authored tests are wrong: **do NOT hand-edit** (the assertion
+lock above) and **do NOT author as Builder** (destroys the role
 boundary). Fix the input that caused Scribe to fail, then re-invoke:
 `bash "$(atelier path --hook scribe-author.sh)" post-red <slug>` — auto-clears any prior
 `.scribe-unlocked`.
@@ -380,9 +472,12 @@ Never modify a test to make it pass — fix implementation. Typecheck
 runs post-edit; fix errors immediately.
 
 **Circuit breaker trip** (3 consecutive failures on same test/error) →
-suggest `bash "${ATELIER_CODEX_QA_BIN:?codex-qa not configured}" edge-cases <slug>`,
-OR ask user. (Slot unset → operator wires `$ATELIER_CODEX_QA_BIN`
-to a script implementing the per-role dispatch contract.)
+suggest `bash "${ATELIER_CODEX_QA_BIN:-$(atelier path --script codex-qa-review.sh)}" edge-cases <slug>`,
+OR ask user. (Slot unset → the SHIPPED `atelier/scripts/codex-qa-review.sh`
+runs; it prints `SKIP:` and exits 0 when Codex is unavailable. An
+operator may override the slot with their own per-role dispatcher. Any
+non-zero exit means nothing ran — treat it as unavailable, never as a
+clean scan.)
 
 ### Phase: VERIFY
 
@@ -396,12 +491,51 @@ to a script implementing the per-role dispatch contract.)
    UX quality against the design. For changes spanning 3+ files / new
    deps / arch / perf, do a conditional deeper read. No hook, no marker
    — your judgment.
-3. **Auditor (Gate G) — always, blocking.** Tier 1 first:
-   `bash "$(atelier path --hook audit-sign.sh)" post-verify <slug>`; on
-   `CODEX-FALLBACK-NEEDED` (exit 2) cascade to a different-model subagent
-   reviewing per the role prompts in `atelier/prompts/auditor/`
-   (edge-cases / security / ux-review). Seals `.audited-*` (2-tier
-   cascade; mechanics in `atelier/hooks/audit-sign.sh`).
+3. **Auditor (Gate G) — always, blocking.** Tier 1:
+   `bash "$(atelier path --hook audit-sign.sh)" post-verify <slug>`.
+   - Exit 0 → signed: `.audited-cross-vendor`, or `.audited-cross-model`
+     when stderr says `NOT CROSS-VENDOR` (the auditor was the session's own
+     family, or fell back to it). Both pass the gate. Commit the marker, its
+     `…-findings.receipt` and `…-signed-findings.{md,yaml}` (the bytes the
+     marker's `findings-sha256` binds) together.
+   - **Covering tests run before any sign** (every route). Each test a
+     `covered` finding names is run from the project root, outside the
+     auditor's sandbox, with `$INTERACTION_TEST_CMD` (UI spec, or a `.sh`
+     test) or `$TEST_CMD` (red-phase-check's routing), and must PASS: the
+     auditor writes it failing, so the audit signs only once the defect is
+     fixed. A test that fails, cannot be found, cannot be run or outlives
+     its per-file bound (`ATELIER_AUDIT_COVERING_TEST_TIMEOUT_S`, default
+     600s; its process tree is killed) → exit 1
+     `BLOCKED: … covering test(s) did not pass`, naming each finding. Fix
+     the defect, then re-run the SAME command without `--redispatch` (the
+     findings are reused and the tests run again). Red-on-old-code is not
+     checked. `ATELIER_AUDIT_COVERING_TESTS=unrun` signs without running
+     them and records `covering-tests: unrun-by-operator` in the signed
+     marker — the operator's call, never yours.
+   - Exit 2 `AUDIT-FALLBACK-NEEDED` → Tier 2. Every such message lists
+     the same four things; follow it literally: the auditor role prompts
+     (edge-cases, security; ux-review for a UI spec), the two files the
+     subagent writes — `.specs/verify/<slug>.audited-cross-model-findings.md`
+     and `.yaml`, prose tagged `[subagent:<model>]` — and the command to
+     run next,
+     `bash "$(atelier path --hook audit-sign.sh)" --subagent-reviewed <slug>`.
+     (Not the `…audited-cross-vendor-findings.*` files Tier 1 left: those
+     are reference only.)
+   - Exit 1 `BLOCKED: … required helper … is missing or broken` → the
+     install is broken (see "No signer, no marker" in RED): nothing was
+     dispatched, nothing signed. Repair it; this is not a Tier-2 case.
+   - Exit 1, "the findings did not validate" → nothing signed; the message
+     names the findings files it kept. A re-run REUSES them (re-validates,
+     does not re-run the auditor): fix the YAML and re-run, or append
+     `--redispatch` (post-verify only) to discard them and audit again.
+     Never `rm` findings by hand and never edit them to launder a finding:
+     a HIGH/MEDIUM finding signs only as `covered` by a real test (written
+     failing, passing once the defect is fixed — see above).
+   - Exit 1, "the VALIDATOR is broken" → the findings were not judged; do
+     not edit or re-dispatch. Repair the framework install, re-run.
+   - Exit 3 / 4 → the auditor asked to reopen: RED+GREEN (3) or GREEN (4)
+     markers were rewound, nothing signed; re-enter that phase. Exit 5 →
+     the rewind was partial; follow the message.
 
 **Not yet wired (do NOT invoke a missing hook):** the dedicated V2
 gate hooks — `run-interaction.sh`, `ui-contract-check.sh` (UI-CONTRACT),
@@ -537,6 +671,16 @@ TWIN/FUZZ/SOAK). Regression runs FIRST.
    - Set `progress: done` (hand-edit — no CLI flips `progress:`).
    - Set `status: done` via **`atelier spec set-status <slug> done`** (validated,
      idempotent, comment-preserving — do not hand-edit the `status:` line).
+     It refuses without a VALID `.audited-cross-vendor`/`-model` marker,
+     without a VALID `.regression-t2`, and when a regression marker's
+     `code_tree` ≠ the current app code (the refusal lists the paths; re-run
+     regression). Opt-outs, loud: `ATELIER_REQUIRE_AUDITED=0`,
+     `ATELIER_REQUIRE_REGRESSION=0` (t2 presence),
+     `ATELIER_REQUIRE_REGRESSION_CODE_MATCH=0` (tree match only).
+     **Static-site / content projects:** `code_tree` ignores `*.md` and media
+     by default. When those ARE the product, re-admit them in
+     `.atelier/atelier.yml` — `code_tree: {include: ["**/*.md"]}` — and use
+     `exclude: [...]` for generated paths that are not app code.
 
    Then edit `product.yaml`: flip the spec's row to `status: done` and
    update the feature's `description` if any of the spec's outcomes

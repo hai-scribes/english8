@@ -1949,7 +1949,12 @@ def workspace_trusted(ws):
 # session, drive or not); `install-hook` stays as an explicit opt-in for a session that never
 # invokes /drive.
 
-HOOK_COMMAND = ("sh -c 'exec python3 \"${CLAUDE_PROJECT_DIR:-.}"
+# The outer launcher is `/bin/sh`, not `sh`: the harness looks the first word up on PATH before
+# any line of this file runs, so a `sh` planted in an earlier PATH entry replaced the gate
+# outright. `python3` inside is still a PATH lookup. A copy an older install-hook wrote starts
+# on the bare `sh`; HOOK_MARKERS still match it, so hook-status finds it and uninstall-hook
+# removes it exactly as before.
+HOOK_COMMAND = ("/bin/sh -c 'exec python3 \"${CLAUDE_PROJECT_DIR:-.}"
                 "/.claude/skills/drive/drive.py\" gate'")
 HOOK_MARKERS = ('drive.py" gate', "drive.py gate")
 SKILL_HOOK_LABEL = "skill"

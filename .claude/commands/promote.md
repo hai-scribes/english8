@@ -28,6 +28,7 @@ The runner mechanically refuses (exit 1) if:
 - State is `promoted` or `dropped` (one-way transitions; can't re-promote).
 - `.specs/verify/<slug>.approved` already exists (Gate E was signed via standard flow; promotion would stomp).
 - Production branch `<slug>` or worktree `.worktrees/<slug>/` already exists.
+- The prototype branch has no commits beyond its base, or has commits and **no net change** (an empty delta — the commits cancel out, or all of the lane's work is already in its base). The dry-run refuses this too: there is nothing to extract.
 
 ## Step 2 — Confirm user-validated the prototype out-of-band
 
@@ -44,6 +45,8 @@ atelier prototype promote <slug> --dry-run
 ```
 
 This validates state file + prompts + dispatcher availability + branch/worktree collisions WITHOUT actually invoking LLMs. Surface the output to the user.
+
+The dry-run also ends `READY: NO` with **exit 1** when the lane's delta cannot be located — the condition the real run refuses as `could not build the extraction payload`. The line says which kind it is: `a git call failed while locating the lane's delta` (re-run once; a one-off failure clears) or the lane's delta `has no starting point` (permanent — the lane and its base share no history, or the base / default branch names no commit in this repository; re-running will not clear it, so surface the message, which names what to check).
 
 If no dispatcher is wired for a role (no `/setup-models` provider and no exported `$ATELIER_SPEC_*_BIN` override), the dry-run shows it as `<unwired>` and exits 3 (INFRA). **Do NOT push the slash command `/setup-models` onto the operator as a manual step.** You (the AI driving this command) can run the underlying `atelier setup-models` CLI inline — this is the same workflow `/setup-models` encodes, just invoked from this `/promote` context. Per R6.4.b discipline, internalize it.
 
@@ -76,21 +79,41 @@ The runner narrates `[1/4]…[4/4]` progress to stderr:
 
 ```
 [1/4] Extracting candidate spec via provider=codex (built-in dispatcher) ...
-      → family=openai; candidate at .specs/verify/<slug>.spec-candidate.yaml
+      → family=openai; model=<model>; candidate at .specs/verify/<slug>.spec-candidate.yaml
+      lane-scope: 6 in delta, 1 outside, 0 unresolvable, 1 uncited of 8 criteria
+        outside       AC-3  tools/app.js:2
+        uncited       AC-8  (no source:)
 [2/4] Elevating candidate via provider=gemini (built-in dispatcher) ...
-      → family=google; elevated spec at <tmp>
-[3/4] Final spec written to .specs/features/<slug>.yaml
-[4/4] Fresh production worktree created at .worktrees/<slug> (branch=<slug>, base=main)
+      → family=google; model=<model>; elevated spec at <tmp>
+[3/4] Fresh production worktree created at .worktrees/<slug> (branch=<slug>, base=main)
+[4/4] Spec seeded into worktree at .worktrees/<slug>/.specs/features/<slug>.yaml (committed on <slug>)
 ```
 
+**The `lane-scope:` line is always printed** (and repeated as `lane scope:` in the final summary). Between extract and elevate the runner checks every criterion's `source:` against the lines the prototype lane actually added — mechanically, no model call:
+
+- `in delta` — the cite lands on a line the lane added or changed.
+- `outside` — the cite lands on a line or file that pre-dates the lane. The criterion describes the application the lane was built on, not what the lane added; `/develop` would rebuild it from scratch.
+- `unresolvable` — the criterion has a `source:` that cannot be checked: not `<path>:<line>`, a path or line the prototype head does not have, or a revision other than the prototype head.
+- `uncited` — the criterion has no `source:` at all.
+
+Each outside, unresolvable and uncited criterion is named under the line, and outside / unresolvable ones draw a `LANE-SCOPE WARNING`. The verdict per criterion is written to `.specs/verify/<slug>.spec-candidate.scope.json` **in the main checkout** (not the production worktree) — Step 5.5 reads it. If the line reads `NOT CHECKED — the scope check failed (exit N)`, nothing was verified and there is no report. By default the check only warns; `ATELIER_PROMOTE_SCOPE_STRICT=1` makes it refuse before the elevate call (below).
+
 Exit ladder:
-- `0` — promotion complete. Surface the runner's terminal output verbatim.
-- `1` — operational failure (state-not-open / branch collision / worktree collision / already-approved).
+- `0` — promotion complete. Surface the runner's terminal output verbatim, including the `lane scope:` line.
+- `1` — operational failure or refusal. Nothing was promoted and the prototype state stays `open` in every case. Read which one it is from the runner's message:
+  - state-not-open / branch collision / worktree collision / already-approved (Step 1).
+  - **Empty delta** — the message says the prototype branch `has N commit(s) but no` … `changes relative to '<base>'` (the commits cancel out, or all of the lane's work is already in its base), or that it `has no commits` beyond its base. No model was called. Confirm with the `git diff <fork> prototype/<slug> --stat` line the runner prints; the operator either commits real work in `.worktrees/prototype-<slug>/` and re-runs, or `/drop-prototype <slug>`.
+  - **Payload not built** — `could not build the extraction payload` with the reason above it (a git call failed, or the base / head does not resolve). No model was called. Retry once; if it repeats, surface the reason — do not work around it.
+  - **Could not read / could not count** — the recorded base or the lane tip `could not be read`, the runner `could not check that` the lane descends from its base, or it `could not count the commits` on the lane. A git call failed or a commit is missing from this repository (shallow clone, pruned base). This is NOT a lane that left its base (`no longer descends`) and NOT an empty lane: surface the message and the fixes it lists, and never suggest `/drop-prototype` for it.
+  - **The extractor declined** — `the Spec Extractor declined to write a spec for '<slug>' (candidate is \`ok: false\`)`, followed by its `blocked_reason:` and `suggestion:`. The prototype is too thin to specify. Nothing was elevated. Surface both lines verbatim; the fix is in the prototype worktree (`.worktrees/prototype-<slug>/`): act on the suggestion, commit, re-run `atelier prototype promote <slug>`. Do NOT retry unchanged, and do NOT hand-write a spec from the kept candidate (`.specs/verify/<slug>.spec-candidate.yaml`).
+  - **Strict lane-scope refusal** — `lane-scope: REFUSED (strict) — <why>` then `ATELIER_PROMOTE_SCOPE_STRICT is on — refusing before elevate`. Fires only when the operator's environment sets `ATELIER_PROMOTE_SCOPE_STRICT` (1/true/yes/on; any other non-empty value warns and is treated as on) and: a criterion is outside or unresolvable, or no criterion is in the delta, or the check could not run. Nothing was elevated; the candidate and `<slug>.spec-candidate.scope.json` are kept. Read the report, list the outside and unresolvable criteria to the operator, then `AskUserQuestion`: **Re-run** (`atelier prototype promote <slug>` — the extractor is a model and a second pass may cite the lane's own lines) / **Proceed without strict** (re-run with `ATELIER_PROMOTE_SCOPE_STRICT=0` in that one Bash call, and prune the named criteria at Step 5.5) / **Stop**. Never unset strict on your own initiative — the operator turned it on.
 - `2` — invalid args (bad slug shape).
 - `3` — INFRA (extract or elevate dispatcher timeout / unavailable / malformed output, or a built-in provider whose required model env is unset — caught at pre-flight, before any LLM call).
 - `4` — same family for extract + elevate on a project that has not declared single-model. With both roles on `/setup-models` providers this fires at pre-flight (dry-run included), before any LLM call.
   A project that HAS declared it (`ATELIER_MODEL_FAMILY_STAMP=single-family`) is accepted and
   the spec is stamped, so exit 4 means the pairing was unintended.
+
+**Every run leaves a run record** (not the Step 3 dry-run): one record in the project's `.specs/.orchestra/events/promote-<slug>.jsonl`, opened when the runner finds the lane's state file and closed on every exit above with what happened (the one exception is a runner killed outright with SIGKILL, which cannot close anything: its record reads `active`, then `abandoned` after 24 h or at the slug's next promote) — `promoted` (awaiting Gate E), `refused`, `errored`, `timed_out` or `interrupted`, and the reason (`empty-delta`, `candidate-not-ok`, `lane-scope-refused`, `extract-timeout`, `commit-count-failed`, …). Every refusal carries a name of its own; a run that broke at no stop the runner names — an extract or elevate envelope it could not use, an unplanned death — reads `exit <N> during <stage>` (`exit 3 during elevate`), which says where, not why: the why is the runner's message. `atelier runs list --project . --lane promote` lists them; `atelier runs show --project . <run_id>` shows one. Nothing here needs it for the flow — the exit code and the runner's message decide the next step — but it is what `atelier monitor` and `atelier retro` see of this promote (as a run record: no analyzer yet judges a promote's outcome, so a refused or errored promote raises no finding), and where an earlier attempt's refusal can be read back. If the runner prints `WARNING — RUN RECORD NOT WRITTEN`, the promote itself is unaffected: surface the line and carry on; do not retry the promote for it. A promote stopped with Ctrl-C, SIGTERM or SIGHUP stops at once — the model pass in flight is ended with it, not left running — and closes its record as `interrupted`; so does one whose output reader goes away (`… | head`), which exits 141. The exception is a signal that arrives after the promotion has landed, when only the final report and the close hook remain: the record stays `promoted` and the exit is `0` — treat it as the exit-0 case.
 
 On exit 3, retry once if the dispatcher might be transient (rate limit, API hiccup). If persistent, **do NOT push a manual fix onto the operator** — `AskUserQuestion`:
 
@@ -116,6 +139,8 @@ If "Re-pick": run the inline setup-models workflow from Step 3 with the swapped 
 atelier spec validate <slug>
 ```
 
+**From here on, work in the production worktree.** The runner seeded and committed the elevated spec at `.worktrees/<slug>/.specs/features/<slug>.yaml` — the main checkout has no copy. Every `.specs/features/<slug>.yaml` path and every `atelier spec validate <slug>` in Steps 5–6 means that worktree: prefix your own Bash calls with `cd .worktrees/<slug> &&` (or use absolute paths), and read/edit the spec there.
+
 This runs the framework's spec-completeness gate: existing-context resolution, ui_contract reconciliation against design PNG (if any), scope classifier, hub-coverage validation. If validation fails:
 - Exit 1 (FAIL) — fix the elevated spec via standard editing, OR re-run promote (the slug is already promoted; you'd need to `/drop-prototype <slug>` first and re-prototype — heavy).
 - Exit 2 (INFRA) — retry once Codex recovers.
@@ -130,11 +155,24 @@ Per `ATELIER_PLAN.md § W8.4.13` + ADR-W8.4.13-1, this step is the **mandatory d
    - `intent.goal` (verbatim)
    - `intent.non_goals` (verbatim list)
 
-2. **Elevated spec proposal** (read `.specs/features/<slug>.yaml`):
+2. **Elevated spec proposal** (read `.worktrees/<slug>/.specs/features/<slug>.yaml` — the production worktree's copy, the only one):
    - `goal:` (paragraph from Extractor, may have been informed by intake intent)
    - `acceptance_criteria[]` with `id`, `given`/`when`/`then`, and existing `user_story:` (if Elevator populated — should be present once W8.4.13 is fully wired)
    - `non_goals:` (should be empty `[]` post-Elevator)
    - `prototype_gaps:` (from Extractor — observed omissions; useful when intake skipped)
+
+3. **Lane-scope report** — read `.specs/verify/<slug>.spec-candidate.scope.json` from the **main checkout** (the runner's summary prints the path beside `lane scope:`; it is NOT in the production worktree). It carries the counts (`criteria`, `in_delta`, `outside_delta`, `unresolvable`, `uncited`) and one `rows[]` entry per criterion: `id`, `source`, `verdict`, and the `path` / `line` the cite resolved to.
+
+**Lane-scope review comes first, and BEFORE Gate E.** If the report has any row whose `verdict` is `outside_delta` or `unresolvable`:
+
+- List every such criterion to the operator: its `id`, its `then`, its `source`, and which of the two it is. Say what each means — `outside_delta`: it cites code that pre-dates the lane, so it specifies the application the lane was built on and `/develop` would rebuild that from scratch; `unresolvable`: its cite cannot be checked, so nothing says whether the lane added it.
+- `AskUserQuestion` **for each one**: **DELETE** (the lane did not add this — the usual answer for `outside_delta`) / **KEEP** (the operator vouches for it; for `unresolvable`, fix `source:` to a `<path>:<line>` the lane added) / **EDIT**.
+- Apply the answers to `.worktrees/<slug>/.specs/features/<slug>.yaml`. The report is about the extractor's CANDIDATE; the elevator may have reworded a criterion, so match by `id`, and by `source:` when ids moved.
+- Also tell the operator how many criteria are `uncited` and name them — no decision is required for these, but nothing was checked about them.
+- **Then read the elevated spec's `scope_flags:`** (production worktree copy). The Elevator is handed the lane's delta and this same report, and is told to *flag, not elaborate*: every candidate criterion it would not build on is listed there with `id`, `verdict` (`outside_delta` / `unresolvable` / `uncited`, or `elevator_judgement` when the report said `in_delta` but the diff shows the behaviour pre-dates the lane — typically a cite into a page the lane's build re-stamped), `source` and a one-sentence `reason`. Any `elevator_judgement` or `uncited` entry the report did not already put in front of the operator gets the same DELETE / KEEP / EDIT question. Every ADDED criterion carries `extends:` (the candidate criterion it hardens) and `source:` (the lane-added line it attaches to): when the operator DELETEs a criterion, delete the added criteria that `extends:` it too; and an added criterion whose `extends:` names a flagged criterion, or that has no `extends:`, is itself off-scope — list it and ask. If the runner printed `the elevator runs WITHOUT lane context`, the added criteria have no `source:`: check each against the prototype's diff with the operator.
+- **A deletion is three edits, not one.** Nothing validates these ids against each other, so when the operator DELETEs a criterion: (1) delete the criterion; (2) remove its `scope_flags` entry (an entry naming a criterion that no longer exists is a dangling id in the sealed spec); (3) delete every added criterion whose `extends:` names it — or, if the operator wants to keep one, re-point its `extends:` at a surviving criterion and say so. When an added criterion is deleted on its own, also drop it from `addressed_gaps` if that list quotes it. After the edits, check that no `scope_flags[].id` and no `extends:` is dangling before going on.
+
+If the summary said `lane scope:   NOT CHECKED`, there is no report: say so, and check each criterion's `source:` against the prototype's diff by hand with the operator before going on. If every row is `in_delta`, say that in one line and move on. **Do NOT proceed to Step 6 with an `outside_delta` or `unresolvable` criterion the operator has not ruled on.**
 
 **Present to operator via `AskUserQuestion`:**
 
@@ -164,12 +202,12 @@ If `intent_captured: false`:
 >
 > Author `non_goals[]` items now (one per line; or leave empty). Then confirm per-AC `user_story:` per the Elevator's draft.
 
-**Apply operator choices** by editing `.specs/features/<slug>.yaml` directly:
+**Apply operator choices** by editing `.worktrees/<slug>/.specs/features/<slug>.yaml` directly:
 - Set `goal:` per operator's KEEP/REPLACE/EDIT decision
 - Set `non_goals: [...]` to the operator-authored list
 - For each AC, set `user_story:` per operator confirmation/edit
 
-**Re-validate after edits:**
+**Re-validate after edits** (in the production worktree, as in Step 5):
 
 ```bash
 atelier spec validate <slug>
@@ -181,10 +219,10 @@ This step is the only path from intake intent → sealed `non_goals[]`. The oper
 
 ## Step 6 — User review via AskUserQuestion
 
-Read `.specs/features/<slug>.yaml` (now with operator-authored `non_goals[]` + confirmed `user_story:` per AC from Step 5.5) and present a summary to the user. Ask: "Approve / Revise / Reject."
+Read `.worktrees/<slug>/.specs/features/<slug>.yaml` (the production worktree's copy — now with operator-authored `non_goals[]` + confirmed `user_story:` per AC from Step 5.5) and present a summary to the user. Ask: "Approve / Revise / Reject."
 
-- Approve → run `bash "$(atelier path --hook approve-spec.sh)" <slug>` to sign Gate E (the HMAC anchor; subsequent flow is UC2).
-- Revise → user dictates edits; apply directly to `.specs/features/<slug>.yaml`; loop back to Step 5 (and Step 5.5 if goals/non_goals/user_story change).
+- Approve → sign Gate E **from the production worktree**, where the spec lives: `cd .worktrees/<slug> && bash "$(atelier path --hook approve-spec.sh)" <slug>` (the HMAC anchor; subsequent flow is UC2). The promote-record stays in the main checkout's `.specs/verify/`; approve-spec looks there too — do NOT copy it into the worktree, and do NOT set `PROTOTYPE_LANE_LOCK_HELD`. A refusal names both places it looked.
+- Revise → user dictates edits; apply directly to `.worktrees/<slug>/.specs/features/<slug>.yaml`; loop back to Step 5 (and Step 5.5 if goals/non_goals/user_story change).
 - Reject → suggest `/drop-prototype <slug>` to clean up.
 
 ## Step 6.5 — Post-Gate-E intake cleanup
@@ -204,7 +242,7 @@ After Gate E approval + intake cleanup, surface this envelope to the operator as
 ```
 Promotion complete + Gate E signed.
 
-  spec:        .specs/features/<slug>.yaml
+  spec:        .worktrees/<slug>/.specs/features/<slug>.yaml
   prod branch: <slug>
   prod worktree: .worktrees/<slug>/
 

@@ -4,7 +4,7 @@ hooks:
   Stop:
     - hooks:
         - type: command
-          command: "sh -c 'G=\"${ATELIER_HOME_OVERRIDE:-${ATELIER_INSTALL_ROOT:-${ATELIER_HOME:-$HOME/.atelier}}}/bin/rigor-goal-stop-gate\"; [ ! -x \"$G\" ] || exec \"$G\"'"
+          command: "/bin/sh -c 'G=\"${ATELIER_HOME_OVERRIDE:-${ATELIER_INSTALL_ROOT:-${ATELIER_HOME:-$HOME/.atelier}}}/bin/rigor-goal-stop-gate\"; [ ! -x \"$G\" ] || exec \"$G\"'"
 ---
 
 You are applying **Reasoning Discipline** (`/rigor`) to the task below — a disciplined-reasoning / anti-confident-wrong-answer procedure. Your failures on hard work won't look like failures; they'll look like polished answers that happen to be wrong.

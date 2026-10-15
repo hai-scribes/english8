@@ -26,13 +26,14 @@ Do NOT deep-read every changed file yet. Step 2 narrows the list.
 
 ### Step 2: Codex Pre-Filter (mechanical scan)
 
-Run `bash "${ATELIER_CODEX_QA_BIN:-/dev/null}" code-review "<review-target>"` and capture the output. This offloads line-level mechanical review to Codex before you spend tokens. (Slot unset / fallback to `/dev/null` → invocation fails → falls through to the SKIP row per the table.)
+Run `bash "${ATELIER_CODEX_QA_BIN:-$(atelier path --script codex-qa-review.sh)}" code-review "<review-target>"` and capture the output. This offloads line-level mechanical review to Codex before you spend tokens. (Slot unset → the SHIPPED `atelier/scripts/codex-qa-review.sh` runs; it prints `SKIP:` and exits 0 whenever Codex cannot run, so an unavailable Codex reaches the SKIP row below rather than looking like a clean review.)
 
 | Outcome | Action |
 |---|---|
 | Exit 0 with findings | Use as seed for Step 3. |
 | Exit 0 with `SKIP:` line (codex disabled / CLI missing) | Proceed to Step 3 unseeded; note "Codex unavailable — full self-review." |
 | Exit 2 (rate-limited) | Same as SKIP; note in report. |
+| Any other non-zero exit (the `atelier path` resolver failed, or the slot points at something that is not this dispatcher) | Treat as SKIP, and say **"Codex unavailable — slot misconfigured"** in the report. Do NOT read it as a clean result: nothing ran. |
 
 Codex handles these well — trust its findings unless you can disprove them from the diff:
 - Line-level logic bugs (off-by-one, null checks, wrong comparisons)

@@ -12,7 +12,7 @@ No done specs → report "No done specs found. Nothing to reconcile." and stop.
 
 ## Step 2: Codex Drift Pre-Filter
 
-Run `bash "${ATELIER_CODEX_QA_BIN:-/dev/null}" reconcile-drift "<scope>"` where `<scope>` is the spec id/slug or `all`. Codex reads specs + source, checks `git log` since spec mtime, and emits strict JSON drift candidates. (Slot unset / fallback to `/dev/null` → invocation fails with exit ≠ 0 → falls through to the SKIP row below per the table.)
+Run `bash "${ATELIER_CODEX_QA_BIN:-$(atelier path --script codex-qa-review.sh)}" reconcile-drift "<scope>"` where `<scope>` is the spec id/slug or `all`. Codex reads specs + source, checks `git log` since spec mtime, and emits strict JSON drift candidates. (Slot unset → the SHIPPED `atelier/scripts/codex-qa-review.sh` runs; it prints `SKIP:` and exits 0 whenever Codex cannot run, so an unavailable Codex reaches the SKIP row below rather than looking like a clean scan.)
 
 | Outcome | Action |
 |---|---|
@@ -20,6 +20,7 @@ Run `bash "${ATELIER_CODEX_QA_BIN:-/dev/null}" reconcile-drift "<scope>"` where 
 | Exit 0 with `SKIP:` (codex disabled / CLI missing) | Fall back to full manual scan (old behavior — see "Manual fallback" below). Note "Codex unavailable" in the Step 6 report. |
 | Exit 2 (rate-limited) | Same as SKIP. |
 | JSON parse fails | Treat as SKIP; note in report. |
+| Any other non-zero exit (the `atelier path` resolver failed, or the slot points at something that is not this dispatcher) | Treat as SKIP, and say **"Codex unavailable — slot misconfigured"** in the report. Do NOT read it as a clean result: nothing ran. |
 
 Codex output shape:
 

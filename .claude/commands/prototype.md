@@ -66,7 +66,7 @@ This atomically creates branch `prototype/<slug>` and worktree `.worktrees/proto
 
 ## Step 4 — Stand up the harness (do this FIRST)
 
-`prototype start` returns `harness_brief` (also at `harness.brief`), and it **is your instruction** — it states what to produce (a way to RUN the thing, a `serve:` block if it serves with the port bound from `${ATELIER_VARIANT_PORT:-…}`, ≥1 `kind: interaction` scenario that asserts observable output, cheap `build`/`smoke` signals, an idempotent `setup:`), and where the logs land. Read it from the envelope; it is not reproduced here, so it cannot drift from what the substrate enforces.
+`prototype start` returns `harness_brief` (also at `harness.brief`), and it **is your instruction** — it states what to produce (a way to RUN the thing, a `serve:` block if it serves with the port bound from `${ATELIER_VARIANT_PORT:-…}`, ≥1 `kind: interaction` scenario that asserts observable output on the surface a person uses, cheap `build`/`smoke` signals, an idempotent `setup:`), and where the logs land. Read it from the envelope; it is not reproduced here, so it cannot drift from what the substrate enforces.
 
 While `harness.ready` is false this lane cannot run, drive or observe its own build — every "does it actually work?" question gets handed back to the operator, and `/prototype-auto` has nothing to certify against. **Build the harness before you build features.** This is your job, not the operator's: the framework owns the contract, you own the tooling choice, and a Next.js app, a Rust CLI, an HTTP API and a Flutter target need four different harnesses. Do not prescribe from habit.
 
@@ -77,6 +77,7 @@ Three things the brief does not cover, because they bind the harness to the *goa
 - **The scenario `name`s you pick here become a milestone's `gate.checks` names.** `approve-milestone` refuses unless the two sets match exactly — so choose names you are willing to reuse verbatim, or the freeze later fails for a reason that looks unrelated to anything you did here.
 - **The harness must exist before any gate freeze.** `approve-milestone` hash-binds checks.yaml into the milestone gate, and a variant that edits its own measuring stick is disqualified — so a goal run will *not* bootstrap a harness mid-tournament. Build it here.
 - **Never weaken the gate to make it green.** `command: "true"`, an assertion-free interaction check, or a quietly deleted scenario buys a green that certifies nothing.
+- **Label a check by the surface it drives.** An `interaction` check drives the product the way a person reaches it (the window, the page, the command they type). A check that reaches a test-only endpoint, hook or automation seam is `kind: smoke` however much it asserts. A product whose only unattended seam is such an endpoint cannot be certified by it: label those checks `smoke`, and say so — when the lane becomes a goal, the surface a person uses is a `deferred_to_boundary` honesty surface whose `confirmation_needed` says what a person must do there.
 
 ## Step 5 — Stop here, or add a measurable goal
 

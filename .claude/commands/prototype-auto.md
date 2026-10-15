@@ -134,7 +134,7 @@ A **whole-run governor** guarantees termination: `--max-wall-clock-sec` (default
 
 ## Step 3 — Narrate + report the outcome
 
-When the backgrounded run exits, read the result envelope. The driver re-rendered the **single stacked report** `reports/prototype-<slug>.html` (every milestone stacked + a run-summary section). Its SPINE — verdict, SLO, every auto-boundary decision, the blocked tally — is **deterministic** (the unattended driver never calls an LLM, so the report stays byte-deterministic and crash-safe). You, the attended session that launched the run, now add the **readable AI narrative** on top:
+When the backgrounded run exits, read the result envelope. The driver re-rendered the **single stacked report** `reports/prototype-<slug>.html` (the Roadmap — per milestone: functional and non-functional features, what you can do after it, what it achieves, and now the measured result beside each target — then every milestone stacked + a run-summary section). The roadmap text is the `roadmap` block supplied at plan time (`/prototype-goal` Step 3); you never author or edit the HTML. Its SPINE — verdict, SLO, every auto-boundary decision, the blocked tally — is **deterministic** (the unattended driver never calls an LLM, so the report stays byte-deterministic and crash-safe). You, the attended session that launched the run, now add the **readable AI narrative** on top:
 
 ```bash
 atelier prototype goal report <slug> --emit-model        # deterministic facts + per-section section_hash (incl. the 'run' summary)

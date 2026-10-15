@@ -6,7 +6,7 @@ hooks:
   Stop:
     - hooks:
         - type: command
-          command: "sh -c 'exec python3 \"${CLAUDE_PROJECT_DIR:-.}/.claude/skills/drive/drive.py\" gate'"
+          command: "/bin/sh -c 'exec python3 \"${CLAUDE_PROJECT_DIR:-.}/.claude/skills/drive/drive.py\" gate'"
           timeout: 600
 ---
 

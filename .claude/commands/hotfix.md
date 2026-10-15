@@ -34,7 +34,7 @@ Error message matches report. No other tests newly broken.
 
 Minimum change. No refactor, no edge-improvements.
 
-**Codex circuit breaker tripped** → suggest `bash "${ATELIER_CODEX_QA_BIN:?codex-qa not configured}" bug-adjacent <changed-files>` OR ask user. (Slot unset → operator wires `$ATELIER_CODEX_QA_BIN` per the dispatcher contract; until then this branch is operator-decision-only.)
+**Codex circuit breaker tripped** → suggest `bash "${ATELIER_CODEX_QA_BIN:-$(atelier path --script codex-qa-review.sh)}" bug-adjacent <changed-files>` OR ask user. (Slot unset → the SHIPPED `atelier/scripts/codex-qa-review.sh` runs; it prints `SKIP:` and exits 0 when Codex is unavailable. An operator may override the slot with their own per-role dispatcher. Any non-zero exit means nothing ran — treat it as unavailable, never as a clean scan.)
 
 ## Step 4: Verify
 
@@ -97,12 +97,16 @@ Fix touches a feature with a `done` spec → add to Step 6 report:
 Spec impact: Fix touches feature #N (<name>) — run /reconcile N if behavior changed.
 ```
 
-Fix resolves an open bug ticket (`kind: bug` spec) → close now. **Precondition (Gate C):** the bug spec's AC(s) — `register-bug` seeds `AC-1` from your reproduction text — must already appear in `regression-scenarios.yaml` (under `covers[].acs` for the bug's `feature_id`, or under `unit_test_covers` for a logic-only AC). Step 5.5 should have created or extended this entry; if you're in Outcome D ("no manifest"), you cannot close the bug spec from `/hotfix` — promote to Outcome C first.
+Fix resolves an open bug ticket (`kind: bug` spec) → close now, in this order:
 
-```bash
-atelier spec set-status <bug-spec-slug> done
-```
-Mention the spec slug in the commit body so the link survives in git log.
+1. **Precondition (Gate C):** the bug spec's AC(s) — `register-bug` seeds `AC-1` from your reproduction text — must already appear in `regression-scenarios.yaml` (under `covers[].acs` for the bug's `feature_id`, or under `unit_test_covers` for a logic-only AC). Step 5.5 should have created or extended this entry; if you're in Outcome D ("no manifest"), you cannot close the bug spec from `/hotfix` — promote to Outcome C first.
+2. **Re-run regression if Steps 5 / 5.5 changed anything.** Did Step 5 (bug-adjacent tests) or Step 5.5 (scenario create/extend) add or edit any test, scenario or app file? Then re-run the Step 4.5 regression now — `set-status` refuses a regression marker signed against code that has since changed (`code_tree`), and the marker must cover the tests you just added.
+3. Close:
+   ```bash
+   atelier spec set-status <bug-spec-slug> done
+   ```
+   A `kind: bug` spec with no `.regression-t2` is exempt from set-status's audit-marker and `.regression-t2`-presence checks (this lane has no Auditor and runs tier 1), but not from the code match.
+4. Mention the spec slug in the commit body so the link survives in git log.
 
 ## Step 6: Commit
 
