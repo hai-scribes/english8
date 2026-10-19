@@ -6,6 +6,7 @@
 .atelier/supervision.local.yaml
 .atelier/command-version.yaml
 .atelier/.refresh-commands.lock
+.atelier/retro/.selfcheck-close.lock
 .worktrees/
 .specs/prototype/*.cap-lock
 reports/*.lock
